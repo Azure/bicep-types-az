@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [UserAssignedIdentity](#userassignedidentity): Describes the identity of the application.
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 63, pattern: "^[a-zA-Z0-9]+(-[a-zA-Z0-9]+)*"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ServerProperties](#serverproperties): Properties of the server.
 * **sku**: [Sku](#sku): The SKU (pricing tier) of the server.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
@@ -29,7 +29,7 @@
 ### Properties
 * **apiVersion**: '2022-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, pattern: "^[-\w\._]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ServerBackupProperties](#serverbackupproperties) (ReadOnly): The properties of a server backup.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DBforPostgreSQL/flexibleServers/backups' (ReadOnly, DeployTimeConstant): The resource type
@@ -39,7 +39,7 @@
 ### Properties
 * **apiVersion**: '2022-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, pattern: "^[-\w\._]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ConfigurationProperties](#configurationproperties): The properties of a configuration.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DBforPostgreSQL/flexibleServers/configurations' (ReadOnly, DeployTimeConstant): The resource type
@@ -49,7 +49,7 @@
 ### Properties
 * **apiVersion**: '2022-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, pattern: "^[-\w\._]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DatabaseProperties](#databaseproperties): The properties of a database.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DBforPostgreSQL/flexibleServers/databases' (ReadOnly, DeployTimeConstant): The resource type
@@ -59,7 +59,7 @@
 ### Properties
 * **apiVersion**: '2022-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, pattern: "^[-\w\._]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [FirewallRuleProperties](#firewallruleproperties) (Required): The properties of a firewall rule.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DBforPostgreSQL/flexibleServers/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
@@ -99,8 +99,8 @@
 
 ## DatabaseProperties
 ### Properties
-* **charset**: string: The charset of the database.
-* **collation**: string: The collation of the database.
+* **charset**: string {pattern: "^[a-zA-Z]+\w*$"}: The charset of the database.
+* **collation**: string {pattern: "^[a-zA-Z\-]+([. ]|\w)*$"}: The collation of the database.
 
 ## DataEncryption
 ### Properties
@@ -110,8 +110,8 @@
 
 ## FirewallRuleProperties
 ### Properties
-* **endIpAddress**: string (Required): The end IP address of the server firewall rule. Must be IPv4 format.
-* **startIpAddress**: string (Required): The start IP address of the server firewall rule. Must be IPv4 format.
+* **endIpAddress**: string {pattern: "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"} (Required): The end IP address of the server firewall rule. Must be IPv4 format.
+* **startIpAddress**: string {pattern: "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"} (Required): The start IP address of the server firewall rule. Must be IPv4 format.
 
 ## HighAvailability
 ### Properties
@@ -141,7 +141,7 @@
 ## ServerProperties
 ### Properties
 * **administratorLogin**: string: The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).
-* **administratorLoginPassword**: string (WriteOnly): The administrator login password (required for server creation).
+* **administratorLoginPassword**: string {secure} (WriteOnly): The administrator login password (required for server creation).
 * **authConfig**: [AuthConfig](#authconfig): AuthConfig properties of a server.
 * **availabilityZone**: string: availability zone information of the server.
 * **backup**: [Backup](#backup): Backup properties of a server.

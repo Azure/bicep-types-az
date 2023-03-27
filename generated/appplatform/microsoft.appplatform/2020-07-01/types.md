@@ -242,8 +242,8 @@
 ## PersistentDisk
 ### Properties
 * **mountPath**: string: Mount path of the persistent disk
-* **sizeInGB**: int: Size of the persistent disk in GB
-* **usedInGB**: int (ReadOnly): Size of the used persistent disk in GB
+* **sizeInGB**: int {minValue: 0, maxValue: 50}: Size of the persistent disk in GB
+* **usedInGB**: int {minValue: 0, maxValue: 50} (ReadOnly): Size of the used persistent disk in GB
 
 ## RequiredTraffic
 ### Properties
@@ -262,7 +262,7 @@
 ## TemporaryDisk
 ### Properties
 * **mountPath**: string: Mount path of the temporary disk
-* **sizeInGB**: int: Size of the temporary disk in GB
+* **sizeInGB**: int {minValue: 0, maxValue: 5}: Size of the temporary disk in GB
 
 ## TestKeys
 ### Properties

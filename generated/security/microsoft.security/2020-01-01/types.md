@@ -245,7 +245,7 @@
 * **allowedSourceAddressPrefix**: string: Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".
 * **allowedSourceAddressPrefixes**: string[]: Mutually exclusive with the "allowedSourceAddressPrefix" parameter.
 * **maxRequestAccessDuration**: string (Required): Maximum duration requests can be made for. In ISO 8601 duration format. Minimum 5 minutes, maximum 1 day
-* **number**: int (Required)
+* **number**: int {minValue: 0, maxValue: 65535} (Required)
 * **protocol**: '*' | 'TCP' | 'UDP' | string (Required)
 
 ## JitNetworkAccessRequest
@@ -261,7 +261,7 @@
 * **allowedSourceAddressPrefixes**: string[]: Mutually exclusive with the "allowedSourceAddressPrefix" parameter.
 * **endTimeUtc**: string (Required): The date & time at which the request ends in UTC
 * **mappedPort**: int: The port which is mapped to this port's `number` in the Azure Firewall, if applicable
-* **number**: int (Required)
+* **number**: int {minValue: 0, maxValue: 65535} (Required)
 * **status**: 'Initiated' | 'Revoked' | string (Required): The status of the port
 * **statusReason**: 'Expired' | 'NewerRequestInitiated' | 'UserRequested' | string (Required): A description of why the `status` has its value
 
@@ -333,12 +333,12 @@
 * **type**: 'LogAnalytics' (Required): There can be multiple identifiers of different type per alert, this field specify the identifier type.
 * **workspaceId**: string (ReadOnly): The LogAnalytics workspace id that stores this alert.
 * **workspaceResourceGroup**: string (ReadOnly): The azure resource group for the LogAnalytics workspace storing this alert
-* **workspaceSubscriptionId**: string (ReadOnly): The azure subscription id for the LogAnalytics workspace storing this alert.
+* **workspaceSubscriptionId**: string {pattern: "^[0-9A-Fa-f]{8}-([0-9A-Fa-f]{4}-){3}[0-9A-Fa-f]{12}$"} (ReadOnly): The azure subscription id for the LogAnalytics workspace storing this alert.
 
 
 ## Rule
 ### Properties
-* **destinationPort**: int: The rule's destination port
+* **destinationPort**: int {minValue: 0, maxValue: 65535}: The rule's destination port
 * **direction**: 'Inbound' | 'Outbound' | string: The rule's direction
 * **ipAddresses**: string[]: The remote IP addresses that should be able to communicate with the Azure resource on the rule's destination port and protocol
 * **name**: string: The name of the rule
@@ -346,21 +346,21 @@
 
 ## ScoreDetails
 ### Properties
-* **current**: int (ReadOnly): Current score
-* **max**: int (ReadOnly): Maximum score available
-* **percentage**: int (ReadOnly): Ratio of the current score divided by the maximum. Rounded to 4 digits after the decimal point
+* **current**: int {minValue: 0} (ReadOnly): Current score
+* **max**: int {minValue: 0} (ReadOnly): Maximum score available
+* **percentage**: int {minValue: 0, maxValue: 1} (ReadOnly): Ratio of the current score divided by the maximum. Rounded to 4 digits after the decimal point
 
 ## SecureScoreItemProperties
 ### Properties
 * **displayName**: string (ReadOnly): The initiative’s name
 * **score**: [ScoreDetails](#scoredetails) (ReadOnly): score object
-* **weight**: int (ReadOnly): The relative weight for each subscription. Used when calculating an aggregated secure score for multiple subscriptions.
+* **weight**: int {minValue: 0} (ReadOnly): The relative weight for each subscription. Used when calculating an aggregated secure score for multiple subscriptions.
 
 ## SecurityAssessmentMetadataPartnerData
 ### Properties
 * **partnerName**: string (Required): Name of the company of the partner
 * **productName**: string: Name of the product of the partner that created the assessment
-* **secret**: string (Required): Secret to authenticate the partner and verify it created the assessment - write only
+* **secret**: string {secure} (Required): Secret to authenticate the partner and verify it created the assessment - write only
 
 ## SecurityAssessmentMetadataProperties
 ### Properties
@@ -380,7 +380,7 @@
 ## SecurityAssessmentPartnerData
 ### Properties
 * **partnerName**: string (Required): Name of the company of the partner
-* **secret**: string (Required): secret to authenticate the partner - write only
+* **secret**: string {secure} (Required): secret to authenticate the partner - write only
 
 ## SecurityAssessmentProperties
 ### Properties

@@ -6,7 +6,7 @@
 * **apiVersion**: '2022-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[a-z][a-z0-9]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [MigrationResourceProperties](#migrationresourceproperties): Migration resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -14,8 +14,8 @@
 
 ## AdminCredentials
 ### Properties
-* **sourceServerPassword**: string (Required, WriteOnly)
-* **targetServerPassword**: string (Required, WriteOnly)
+* **sourceServerPassword**: string {secure} (Required, WriteOnly)
+* **targetServerPassword**: string {secure} (Required, WriteOnly)
 
 ## DBServerMetadata
 ### Properties

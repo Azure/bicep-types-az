@@ -5,7 +5,7 @@
 ### Properties
 * **apiVersion**: '2022-11-16-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[-a-zA-Z0-9_]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ReportProperties](#reportproperties) (Required): Report property.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.AppComplianceAutomation/reports' (ReadOnly, DeployTimeConstant): The resource type

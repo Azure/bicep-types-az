@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ResourceIdentity](#resourceidentity): Msi identity of the resource
 * **location**: string (Required): The location of the resource. This will be one of the supported and registered Azure Regions (e.g. West US, East US, Southeast Asia, etc.). The region of a resource cannot be changed once it is created, but if an identical region is specified on update the request will succeed.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 24, pattern: "^[-\w\.]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [JobProperties](#jobproperties) (Required): Properties of a job.
 * **sku**: [Sku](#sku) (Required): The sku type.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
@@ -67,9 +67,9 @@
 
 ## ContactInfo
 ### Properties
-* **contactName**: string (Required): Contact name of the person.
+* **contactName**: string {minLength: 1} (Required): Contact name of the person.
 * **mobile**: string: Mobile number of the contact person.
-* **phone**: string (Required): Phone number of the contact person.
+* **phone**: string {minLength: 1} (Required): Phone number of the contact person.
 * **phoneExtension**: string: Phone extension number of the contact person.
 
 ## CopyLogDetails
@@ -129,7 +129,7 @@ Until this is true, the TotalBytesToProcess may not be valid.
 * **Discriminator**: dataAccountType
 
 ### Base Properties
-* **sharePassword**: string (WriteOnly): Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+
+* **sharePassword**: string {secure} (WriteOnly): Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+
 
 ### ManagedDiskDetails
 #### Properties
@@ -319,7 +319,7 @@ Until this is true, the TotalBytesToProcess may not be valid.
 ## ImportDiskDetails
 ### Properties
 * **backupManifestCloudPath**: string (ReadOnly): Path to backed up manifest, only returned if enableManifestBackup is true.
-* **bitLockerKey**: string (Required): BitLocker key used to encrypt the disk.
+* **bitLockerKey**: string {secure} (Required): BitLocker key used to encrypt the disk.
 * **manifestFile**: string (Required): The relative path of the manifest file on the disk.
 * **manifestHash**: string (Required): The Base16-encoded MD5 hash of the manifest file on the disk.
 
@@ -416,7 +416,7 @@ Until this is true, the TotalBytesToProcess may not be valid.
 
 ### CustomerDiskJobSecrets
 #### Properties
-* **carrierAccountNumber**: string (ReadOnly): Carrier Account Number of the customer
+* **carrierAccountNumber**: string {secure} (ReadOnly): Carrier Account Number of the customer
 * **diskSecrets**: [DiskSecret](#disksecret)[] (ReadOnly): Contains the list of secrets object for that device.
 * **jobSecretsType**: 'DataBoxCustomerDisk' (Required): Used to indicate what type of job secrets object.
 
@@ -462,7 +462,7 @@ possibility is that mitigation might happen by customer or service or by ops
 
 ## PackageCarrierDetails
 ### Properties
-* **carrierAccountNumber**: string: Carrier Account Number of customer for customer disk.
+* **carrierAccountNumber**: string {secure}: Carrier Account Number of customer for customer disk.
 * **carrierName**: string: Name of the carrier.
 * **trackingId**: string: Tracking Id of shipment.
 

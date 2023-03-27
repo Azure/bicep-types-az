@@ -6,7 +6,7 @@
 * **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 6, maxLength: 50} (Required, DeployTimeConstant): The resource name
 * **properties**: [ClusterProperties](#clusterproperties): Event Hubs Cluster properties supplied in responses in List or Get operations.
 * **sku**: [ClusterSku](#clustersku): Properties of the cluster SKU.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -19,7 +19,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [Identity](#identity): Properties of BYOK Identity description
 * **location**: string: Resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 6, maxLength: 50} (Required, DeployTimeConstant): The resource name
 * **properties**: [EHNamespaceProperties](#ehnamespaceproperties): Namespace properties supplied for create namespace operation.
 * **sku**: [Sku](#sku): Properties of sku resource
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -30,7 +30,7 @@
 ### Properties
 * **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1} (Required, DeployTimeConstant): The resource name
 * **properties**: [AuthorizationRuleProperties](#authorizationruleproperties): Properties supplied to create or update AuthorizationRule
 * **type**: 'Microsoft.EventHub/namespaces/authorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -39,7 +39,7 @@
 ### Properties
 * **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 50} (Required, DeployTimeConstant): The resource name
 * **properties**: [ArmDisasterRecoveryProperties](#armdisasterrecoveryproperties): Properties required to the Create Or Update Alias(Disaster Recovery configurations)
 * **type**: 'Microsoft.EventHub/namespaces/disasterRecoveryConfigs' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -48,7 +48,7 @@
 ### Properties
 * **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1} (Required, DeployTimeConstant): The resource name
 * **properties**: [AuthorizationRuleProperties](#authorizationruleproperties) (ReadOnly): Properties supplied to create or update AuthorizationRule
 * **type**: 'Microsoft.EventHub/namespaces/disasterRecoveryConfigs/authorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -57,7 +57,7 @@
 ### Properties
 * **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 256} (Required, DeployTimeConstant): The resource name
 * **properties**: [EventhubProperties](#eventhubproperties): Properties supplied to the Create Or Update Event Hub operation.
 * **type**: 'Microsoft.EventHub/namespaces/eventhubs' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -66,7 +66,7 @@
 ### Properties
 * **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1} (Required, DeployTimeConstant): The resource name
 * **properties**: [AuthorizationRuleProperties](#authorizationruleproperties): Properties supplied to create or update AuthorizationRule
 * **type**: 'Microsoft.EventHub/namespaces/eventhubs/authorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -75,7 +75,7 @@
 ### Properties
 * **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 50} (Required, DeployTimeConstant): The resource name
 * **properties**: [ConsumerGroupProperties](#consumergroupproperties): Single item in List or Get Consumer group operation
 * **type**: 'Microsoft.EventHub/namespaces/eventhubs/consumergroups' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -84,7 +84,7 @@
 ### Properties
 * **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1} (Required, DeployTimeConstant): The resource name
 * **properties**: [IpFilterRuleProperties](#ipfilterruleproperties): Properties supplied to create or update IpFilterRules
 * **type**: 'Microsoft.EventHub/namespaces/ipfilterrules' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -111,7 +111,7 @@
 ### Properties
 * **apiVersion**: '2018-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1} (Required, DeployTimeConstant): The resource name
 * **properties**: [VirtualNetworkRuleProperties](#virtualnetworkruleproperties): Properties supplied to create or update VirtualNetworkRules
 * **type**: 'Microsoft.EventHub/namespaces/virtualnetworkrules' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -177,8 +177,8 @@
 * **destination**: [Destination](#destination): Properties of Destination where capture will be stored. (Storage Account, Blob Names)
 * **enabled**: bool: A value that indicates whether capture description is enabled.
 * **encoding**: 'Avro' | 'AvroDeflate': Enumerates the possible values for the encoding format of capture description. Note: 'AvroDeflate' will be deprecated in New API Version
-* **intervalInSeconds**: int: The time window allows you to set the frequency with which the capture to Azure Blobs will happen, value should between 60 to 900 seconds
-* **sizeLimitInBytes**: int: The size window defines the amount of data built up in your Event Hub before an capture operation, value should be between 10485760 to 524288000 bytes
+* **intervalInSeconds**: int {minValue: 60, maxValue: 900}: The time window allows you to set the frequency with which the capture to Azure Blobs will happen, value should between 60 to 900 seconds
+* **sizeLimitInBytes**: int {minValue: 10485760, maxValue: 524288000}: The size window defines the amount of data built up in your Event Hub before an capture operation, value should be between 10485760 to 524288000 bytes
 * **skipEmptyArchives**: bool: A value that indicates whether to Skip Empty Archives
 
 ## ClusterProperties
@@ -190,7 +190,7 @@
 
 ## ClusterSku
 ### Properties
-* **capacity**: int: The quantity of Event Hubs Cluster Capacity Units contained in this cluster.
+* **capacity**: int {minValue: 1}: The quantity of Event Hubs Cluster Capacity Units contained in this cluster.
 * **name**: 'Dedicated' | string (Required): Name of this SKU.
 
 ## ConnectionState
@@ -222,7 +222,7 @@
 * **encryption**: [Encryption](#encryption): Properties of BYOK Encryption description
 * **isAutoInflateEnabled**: bool: Value that indicates whether AutoInflate is enabled for eventhub namespace.
 * **kafkaEnabled**: bool: Value that indicates whether Kafka is enabled for eventhub namespace.
-* **maximumThroughputUnits**: int: Upper limit of throughput units when AutoInflate is enabled, value should be within 0 to 20 throughput units. ( '0' if AutoInflateEnabled = true)
+* **maximumThroughputUnits**: int {minValue: 0, maxValue: 20}: Upper limit of throughput units when AutoInflate is enabled, value should be within 0 to 20 throughput units. ( '0' if AutoInflateEnabled = true)
 * **metricId**: string (ReadOnly): Identifier for Azure Insights metrics.
 * **provisioningState**: string (ReadOnly): Provisioning state of the Namespace.
 * **serviceBusEndpoint**: string (ReadOnly): Endpoint you can use to perform Service Bus operations.
@@ -239,8 +239,8 @@
 ### Properties
 * **captureDescription**: [CaptureDescription](#capturedescription): Properties of capture description
 * **createdAt**: string (ReadOnly): Exact time the Event Hub was created.
-* **messageRetentionInDays**: int: Number of days to retain the events for this Event Hub, value should be 1 to 7 days
-* **partitionCount**: int: Number of partitions created for the Event Hub, allowed values are from 1 to 32 partitions.
+* **messageRetentionInDays**: int {minValue: 1}: Number of days to retain the events for this Event Hub, value should be 1 to 7 days
+* **partitionCount**: int {minValue: 1}: Number of partitions created for the Event Hub, allowed values are from 1 to 32 partitions.
 * **partitionIds**: string[] (ReadOnly): Current number of shards on the Event Hub.
 * **status**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | 'ReceiveDisabled' | 'Renaming' | 'Restoring' | 'SendDisabled' | 'Unknown': Enumerates the possible values for the status of the Event Hub.
 * **updatedAt**: string (ReadOnly): The exact time the message was updated.
@@ -292,7 +292,7 @@
 
 ## Sku
 ### Properties
-* **capacity**: int: The Event Hubs throughput units, value should be 0 to 20 throughput units.
+* **capacity**: int {minValue: 0}: The Event Hubs throughput units, value should be 0 to 20 throughput units.
 * **name**: 'Basic' | 'Standard' | string (Required): Name of this SKU.
 * **tier**: 'Basic' | 'Standard' | string: The billing tier of this particular SKU.
 

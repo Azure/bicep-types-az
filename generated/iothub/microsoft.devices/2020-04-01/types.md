@@ -20,7 +20,7 @@
 * **certificate**: string (WriteOnly): base-64 representation of the X509 leaf certificate .cer file or just .pem file content.
 * **etag**: string (ReadOnly): The entity tag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[A-Za-z0-9-._]{1,64}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [CertificateProperties](#certificateproperties) (ReadOnly): The description of an X509 CA Certificate.
 * **type**: 'Microsoft.Devices/IotHubs/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -67,7 +67,7 @@
 ### Properties
 * **defaultTtlAsIso8601**: string: The default time to live for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
 * **feedback**: [FeedbackProperties](#feedbackproperties): The properties of the feedback queue for cloud-to-device messages.
-* **maxDeliveryCount**: int: The max delivery count for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
+* **maxDeliveryCount**: int {minValue: 1, maxValue: 100}: The max delivery count for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
 
 ## EnrichmentProperties
 ### Properties
@@ -99,7 +99,7 @@
 ## FeedbackProperties
 ### Properties
 * **lockDurationAsIso8601**: string: The lock duration for the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
-* **maxDeliveryCount**: int: The number of times the IoT hub attempts to deliver a message on the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
+* **maxDeliveryCount**: int {minValue: 1, maxValue: 100}: The number of times the IoT hub attempts to deliver a message on the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
 * **ttlAsIso8601**: string: The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
 
 ## IotHubLocationDescription
@@ -157,7 +157,7 @@
 ## MessagingEndpointProperties
 ### Properties
 * **lockDurationAsIso8601**: string: The lock duration. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.
-* **maxDeliveryCount**: int: The number of times the IoT hub attempts to deliver a message. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.
+* **maxDeliveryCount**: int {minValue: 1, maxValue: 100}: The number of times the IoT hub attempts to deliver a message. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.
 * **ttlAsIso8601**: string: The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.
 
 ## PrivateEndpoint
@@ -167,7 +167,7 @@
 ## PrivateEndpointConnection
 ### Properties
 * **id**: string (ReadOnly): The resource identifier.
-* **name**: string (ReadOnly): The resource name.
+* **name**: string {pattern: "^(?![0-9]+$)(?!-)[a-zA-Z0-9-]{2,49}[a-zA-Z0-9]$"} (ReadOnly): The resource name.
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (Required): The properties of a private endpoint connection
 * **type**: string (ReadOnly): The resource type.
 
@@ -192,7 +192,7 @@
 * **condition**: string: The condition that is evaluated to apply the routing rule. If no condition is provided, it evaluates to true by default. For grammar, see: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language
 * **endpointNames**: string[] (Required): The list of endpoints to which messages that satisfy the condition are routed. Currently only one endpoint is allowed.
 * **isEnabled**: bool (Required): Used to specify whether a route is enabled.
-* **name**: string (Required): The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.
+* **name**: string {pattern: "^[A-Za-z0-9-._]{1,64}$"} (Required): The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.
 * **source**: 'DeviceJobLifecycleEvents' | 'DeviceLifecycleEvents' | 'DeviceMessages' | 'Invalid' | 'TwinChangeEvents' | string (Required): The source that the routing rule is to be applied to, such as DeviceMessages.
 
 ## RoutingEndpoints
@@ -209,7 +209,7 @@
 * **endpointUri**: string: The url of the event hub endpoint. It must include the protocol sb://
 * **entityPath**: string: Event hub name on the event hub namespace
 * **id**: string: Id of the event hub endpoint
-* **name**: string (Required): The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.
+* **name**: string {pattern: "^[A-Za-z0-9-._]{1,64}$"} (Required): The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.
 * **resourceGroup**: string: The name of the resource group of the event hub endpoint.
 * **subscriptionId**: string: The subscription identifier of the event hub endpoint.
 
@@ -227,7 +227,7 @@
 * **endpointUri**: string: The url of the service bus queue endpoint. It must include the protocol sb://
 * **entityPath**: string: Queue name on the service bus namespace
 * **id**: string: Id of the service bus queue endpoint
-* **name**: string (Required): The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types. The name need not be the same as the actual queue name.
+* **name**: string {pattern: "^[A-Za-z0-9-._]{1,64}$"} (Required): The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types. The name need not be the same as the actual queue name.
 * **resourceGroup**: string: The name of the resource group of the service bus queue endpoint.
 * **subscriptionId**: string: The subscription identifier of the service bus queue endpoint.
 
@@ -238,22 +238,22 @@
 * **endpointUri**: string: The url of the service bus topic endpoint. It must include the protocol sb://
 * **entityPath**: string: Queue name on the service bus topic
 * **id**: string: Id of the service bus topic endpoint
-* **name**: string (Required): The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.  The name need not be the same as the actual topic name.
+* **name**: string {pattern: "^[A-Za-z0-9-._]{1,64}$"} (Required): The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.  The name need not be the same as the actual topic name.
 * **resourceGroup**: string: The name of the resource group of the service bus topic endpoint.
 * **subscriptionId**: string: The subscription identifier of the service bus topic endpoint.
 
 ## RoutingStorageContainerProperties
 ### Properties
 * **authenticationType**: 'identityBased' | 'keyBased' | string: Method used to authenticate against the storage endpoint
-* **batchFrequencyInSeconds**: int: Time interval at which blobs are written to storage. Value should be between 60 and 720 seconds. Default value is 300 seconds.
+* **batchFrequencyInSeconds**: int {minValue: 60, maxValue: 720}: Time interval at which blobs are written to storage. Value should be between 60 and 720 seconds. Default value is 300 seconds.
 * **connectionString**: string: The connection string of the storage account.
 * **containerName**: string (Required): The name of storage container in the storage account.
 * **encoding**: 'Avro' | 'AvroDeflate' | 'JSON' | string: Encoding that is used to serialize messages to blobs. Supported values are 'avro', 'avrodeflate', and 'JSON'. Default value is 'avro'.
 * **endpointUri**: string: The url of the storage endpoint. It must include the protocol https://
 * **fileNameFormat**: string: File name format for the blob. Default format is {iothub}/{partition}/{YYYY}/{MM}/{DD}/{HH}/{mm}. All parameters are mandatory but can be reordered.
 * **id**: string: Id of the storage container endpoint
-* **maxChunkSizeInBytes**: int: Maximum number of bytes for each blob written to storage. Value should be between 10485760(10MB) and 524288000(500MB). Default value is 314572800(300MB).
-* **name**: string (Required): The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.
+* **maxChunkSizeInBytes**: int {minValue: 10485760, maxValue: 524288000}: Maximum number of bytes for each blob written to storage. Value should be between 10485760(10MB) and 524288000(500MB). Default value is 314572800(300MB).
+* **name**: string {pattern: "^[A-Za-z0-9-._]{1,64}$"} (Required): The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.
 * **resourceGroup**: string: The name of the resource group of the storage account.
 * **subscriptionId**: string: The subscription identifier of the storage account.
 

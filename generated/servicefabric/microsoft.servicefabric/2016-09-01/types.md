@@ -36,8 +36,8 @@
 
 ## ClusterHealthPolicy
 ### Properties
-* **maxPercentUnhealthyApplications**: int: The maximum allowed percentage of unhealthy applications before reporting an error. For example, to allow 10% of applications to be unhealthy, this value would be 10.
-* **maxPercentUnhealthyNodes**: int: The maximum allowed percentage of unhealthy nodes before reporting an error. For example, to allow 10% of nodes to be unhealthy, this value would be 10.
+* **maxPercentUnhealthyApplications**: int {minValue: 0, maxValue: 100}: The maximum allowed percentage of unhealthy applications before reporting an error. For example, to allow 10% of applications to be unhealthy, this value would be 10.
+* **maxPercentUnhealthyNodes**: int {minValue: 0, maxValue: 100}: The maximum allowed percentage of unhealthy nodes before reporting an error. For example, to allow 10% of nodes to be unhealthy, this value would be 10.
 
 ## ClusterProperties
 ### Properties
@@ -63,9 +63,9 @@
 
 ## ClusterUpgradeDeltaHealthPolicy
 ### Properties
-* **maxPercentDeltaUnhealthyApplications**: int (Required): Additional unhealthy applications percentage
-* **maxPercentDeltaUnhealthyNodes**: int (Required): Additional unhealthy nodes percentage
-* **maxPercentUpgradeDomainDeltaUnhealthyNodes**: int (Required): Additional unhealthy nodes percentage per upgrade domain
+* **maxPercentDeltaUnhealthyApplications**: int {minValue: 0, maxValue: 100} (Required): Additional unhealthy applications percentage
+* **maxPercentDeltaUnhealthyNodes**: int {minValue: 0, maxValue: 100} (Required): Additional unhealthy nodes percentage
+* **maxPercentUpgradeDomainDeltaUnhealthyNodes**: int {minValue: 0, maxValue: 100} (Required): Additional unhealthy nodes percentage per upgrade domain
 
 ## ClusterUpgradePolicy
 ### Properties
@@ -111,7 +111,7 @@
 * **name**: string (Required): Name of the node type
 * **placementProperties**: [NodeTypeDescriptionPlacementProperties](#nodetypedescriptionplacementproperties): The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run
 * **reverseProxyEndpointPort**: int: Endpoint used by reverse proxy
-* **vmInstanceCount**: int (Required): The number of node instances in the node type
+* **vmInstanceCount**: int {minValue: 1, maxValue: 2147483647} (Required): The number of node instances in the node type
 
 ## NodeTypeDescriptionCapacities
 ### Properties

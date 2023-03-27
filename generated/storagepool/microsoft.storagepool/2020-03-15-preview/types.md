@@ -6,7 +6,7 @@
 * **apiVersion**: '2020-03-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 90, pattern: "^[-\w\._]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DiskPoolCreatePropertiesOrDiskPoolProperties](#diskpoolcreatepropertiesordiskpoolproperties) (Required): Properties for Disk pool create request.
 * **systemData**: [SystemMetadata](#systemmetadata) (ReadOnly): Resource metadata required by ARM RPC
 * **tags**: [DiskPoolCreateTags](#diskpoolcreatetags): Resource tags.
@@ -65,8 +65,8 @@
 
 ## IscsiTargetCredentials
 ### Properties
-* **password**: string (Required): Password for Challenge Handshake Authentication Protocol (CHAP) authentication.
-* **username**: string (Required): Username for Challenge Handshake Authentication Protocol (CHAP) authentication.
+* **password**: string {minLength: 12, maxLength: 255, pattern: "^[-\w_0-9A-Za-z]*$"} (Required): Password for Challenge Handshake Authentication Protocol (CHAP) authentication.
+* **username**: string {minLength: 7, maxLength: 511} (Required): Username for Challenge Handshake Authentication Protocol (CHAP) authentication.
 
 ## SystemMetadata
 ### Properties

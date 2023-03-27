@@ -25,8 +25,8 @@
 ### Properties
 * **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string (ReadOnly): Resource kind.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **kind**: string {maxLength: 10} (ReadOnly): Resource kind.
+* **name**: string {maxLength: 32} (Required, DeployTimeConstant): The resource name
 * **properties**: [SettingsProperties](#settingsproperties): The properties of the setting.
 * **type**: 'Microsoft.CostManagement/settings' (ReadOnly, DeployTimeConstant): The resource type
 

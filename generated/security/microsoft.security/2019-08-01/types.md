@@ -462,5 +462,5 @@
 ## UserDefinedResourcesProperties
 ### Properties
 * **query**: string (Required): Azure Resource Graph query which represents the security solution's user defined resources. Required to start with "where type != "Microsoft.Devices/IotHubs""
-* **querySubscriptions**: string[] (Required): List of Azure subscription ids on which the user defined resources query should be executed.
+* **querySubscriptions**: (string {pattern: "^[0-9A-Fa-f]{8}-([0-9A-Fa-f]{4}-){3}[0-9A-Fa-f]{12}$"})[] (Required): List of Azure subscription ids on which the user defined resources query should be executed.
 

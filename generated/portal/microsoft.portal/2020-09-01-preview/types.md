@@ -6,7 +6,7 @@
 * **apiVersion**: '2020-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Resource location
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 64} (Required, DeployTimeConstant): The resource name
 * **properties**: [DashboardProperties](#dashboardproperties): The shared dashboard properties.
 * **tags**: [DashboardTags](#dashboardtags): Resource tags
 * **type**: 'Microsoft.Portal/dashboards' (ReadOnly, DeployTimeConstant): The resource type

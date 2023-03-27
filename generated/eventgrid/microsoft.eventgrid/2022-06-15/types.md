@@ -608,7 +608,7 @@ This property is currently not used and reserved for future usage.
 context will fail. If specified, the allowed values are between 1 to the value of defaultMaximumExpirationTimeInDays specified in PartnerConfiguration.
 If not specified, the default value will be the value of defaultMaximumExpirationTimeInDays specified in PartnerConfiguration or 7 if this value is not specified.
 * **partnerName**: string: The partner name.
-* **partnerRegistrationImmutableId**: string: The immutableId of the corresponding partner registration.
+* **partnerRegistrationImmutableId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The immutableId of the corresponding partner registration.
 
 ## PartnerAuthorization
 ### Properties
@@ -654,7 +654,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 
 ## PartnerRegistrationProperties
 ### Properties
-* **partnerRegistrationImmutableId**: string: The immutableId of the corresponding partner registration.
+* **partnerRegistrationImmutableId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The immutableId of the corresponding partner registration.
 Note: This property is marked for deprecation and is not supported in any future GA API version
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the partner registration.
 
@@ -678,7 +678,7 @@ created partner topic.
 * **expirationTimeIfNotActivatedUtc**: string: Expiration time of the partner topic. If this timer expires while the partner topic is still never activated,
 the partner topic and corresponding event channel are deleted.
 * **messageForActivation**: string: Context or helpful message that can be used during the approval process by the subscriber.
-* **partnerRegistrationImmutableId**: string: The immutableId of the corresponding partner registration.
+* **partnerRegistrationImmutableId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The immutableId of the corresponding partner registration.
 * **partnerTopicFriendlyDescription**: string: Friendly description about the topic. This can be set by the publisher/partner to show custom description for the customer partner topic.
 This will be helpful to remove any ambiguity of the origin of creation of the partner topic for the customer.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'IdleDueToMirroredChannelResourceDeletion' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the partner topic.
@@ -818,7 +818,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 ### Properties
 * **organizationName**: string: Official name of the Partner.
 * **partnerDisplayName**: string: Display name of the verified partner.
-* **partnerRegistrationImmutableId**: string: ImmutableId of the corresponding partner registration.
+* **partnerRegistrationImmutableId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: ImmutableId of the corresponding partner registration.
 * **partnerTopicDetails**: [PartnerDetails](#partnerdetails): Details of the partner topic scenario.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: Provisioning state of the verified partner.
 
@@ -828,7 +828,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 * **azureActiveDirectoryTenantId**: string: The Azure Active Directory Tenant ID to get the access token that will be included as the bearer token in delivery requests.
 * **deliveryAttributeMappings**: [DeliveryAttributeMapping](#deliveryattributemapping)[]: Delivery attribute details.
 * **endpointBaseUrl**: string (ReadOnly): The base URL that represents the endpoint of the destination of an event subscription.
-* **endpointUrl**: string: The URL that represents the endpoint of the destination of an event subscription.
+* **endpointUrl**: string {secure}: The URL that represents the endpoint of the destination of an event subscription.
 * **maxEventsPerBatch**: int: Maximum number of events per batch.
 * **preferredBatchSizeInKilobytes**: int: Preferred batch size in Kilobytes.
 

@@ -6,7 +6,7 @@
 * **apiVersion**: '2017-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The location of the container registry. This cannot be changed after the resource is created.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 5, maxLength: 50, pattern: "^[a-zA-Z0-9]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [RegistryPropertiesCreateParametersOrRegistryProperties](#registrypropertiescreateparametersorregistryproperties): The properties that the container registry will be created with.
 * **sku**: [Sku](#sku) (Required): The SKU of the container registry.
 * **tags**: [RegistryCreateParametersTags](#registrycreateparameterstags): The tags for the container registry.

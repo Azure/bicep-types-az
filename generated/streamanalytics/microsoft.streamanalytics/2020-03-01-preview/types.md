@@ -49,7 +49,7 @@
 
 ## ClusterSku
 ### Properties
-* **capacity**: int: Denotes the number of streaming units the cluster can support. Valid values for this property are multiples of 36 with a minimum value of 36 and maximum value of 216. Required on PUT (CreateOrUpdate) requests.
+* **capacity**: int {minValue: 36, maxValue: 396}: Denotes the number of streaming units the cluster can support. Valid values for this property are multiples of 36 with a minimum value of 36 and maximum value of 216. Required on PUT (CreateOrUpdate) requests.
 * **name**: 'Default' | string: Specifies the SKU name of the cluster. Required on PUT (CreateOrUpdate) requests.
 
 ## PrivateEndpointProperties

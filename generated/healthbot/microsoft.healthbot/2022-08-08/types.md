@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [Identity](#identity): The identity of the Azure Health Bot.
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 2, maxLength: 64, pattern: "^[a-zA-Z0-9][a-zA-Z0-9_.-]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [HealthBotProperties](#healthbotproperties): The set of properties specific to Azure Health Bot resource.
 * **sku**: [Sku](#sku) (Required): SKU of the Azure Health Bot.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource
@@ -22,7 +22,7 @@
 ## HealthBotKey
 ### Properties
 * **keyName**: string: The name of the key.
-* **value**: string: The value of the key.
+* **value**: string {secure}: The value of the key.
 
 ## HealthBotKeysResponse
 ### Properties

@@ -6,7 +6,7 @@
 * **apiVersion**: '2017-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The region in which to create the account.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 24, pattern: "^[-\w\._]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [BatchAccountBasePropertiesOrBatchAccountProperties](#batchaccountbasepropertiesorbatchaccountproperties): The properties of the Batch account.
 * **tags**: [BatchAccountCreateParametersTags](#batchaccountcreateparameterstags): The user specified tags associated with the account.
 * **type**: 'Microsoft.Batch/batchAccounts' (ReadOnly, DeployTimeConstant): The resource type

@@ -6,7 +6,7 @@
 * **apiVersion**: '2014-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Namespace location.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 6, maxLength: 50} (Required, DeployTimeConstant): The resource name
 * **properties**: [NamespaceProperties](#namespaceproperties): Properties of the Namespace supplied for create or update Namespace operation
 * **sku**: [Sku](#sku): SKU parameters supplied to the create Namespace operation
 * **tags**: [NamespaceCreateOrUpdateParametersTags](#namespacecreateorupdateparameterstags): Namespace tags.
@@ -18,7 +18,7 @@
 * **apiVersion**: '2014-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Data center location.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 50} (Required, DeployTimeConstant): The resource name
 * **properties**: [SharedAccessAuthorizationRuleProperties](#sharedaccessauthorizationruleproperties): Properties supplied to create or update SharedAccessAuthorizationRule
 * **type**: 'Microsoft.EventHub/namespaces/AuthorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -28,7 +28,7 @@
 * **apiVersion**: '2014-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Location of the resource.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 50} (Required, DeployTimeConstant): The resource name
 * **properties**: [EventHubProperties](#eventhubproperties): Properties supplied to the Create Or Update Event Hub operation.
 * **type**: 'Microsoft.EventHub/namespaces/eventhubs' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -38,7 +38,7 @@
 * **apiVersion**: '2014-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Data center location.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 50} (Required, DeployTimeConstant): The resource name
 * **properties**: [SharedAccessAuthorizationRuleProperties](#sharedaccessauthorizationruleproperties): Properties supplied to create or update SharedAccessAuthorizationRule
 * **type**: 'Microsoft.EventHub/namespaces/eventhubs/authorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -48,7 +48,7 @@
 * **apiVersion**: '2014-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Location of the resource.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 50} (Required, DeployTimeConstant): The resource name
 * **properties**: [ConsumerGroupProperties](#consumergroupproperties): Properties supplied to the Create Or Update Consumer Group operation.
 * **type**: 'Microsoft.EventHub/namespaces/eventhubs/consumergroups' (ReadOnly, DeployTimeConstant): The resource type
 

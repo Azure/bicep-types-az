@@ -36,7 +36,7 @@
 
 ## AKSProperties
 ### Properties
-* **agentCount**: int: Number of agents
+* **agentCount**: int {minValue: 1}: Number of agents
 * **agentVMSize**: string: Agent virtual machine size
 * **clusterFqdn**: string: Cluster full qualified domain name
 * **sslConfiguration**: [SslConfiguration](#sslconfiguration): SSL configuration

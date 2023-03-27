@@ -172,7 +172,7 @@
 ### Properties
 * **apiVersion**: '2022-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 100, pattern: "^[-\w]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ScheduleProperties](#scheduleproperties): Properties of a Schedule resource
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DevCenter/projects/pools/schedules' (ReadOnly, DeployTimeConstant): The resource type
@@ -275,8 +275,8 @@
 
 ## ManagedServiceIdentity
 ### Properties
-* **principalId**: string (ReadOnly): The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
-* **tenantId**: string (ReadOnly): The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
+* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
 * **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned' | string (Required): Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed).
 * **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.
 
@@ -284,7 +284,7 @@
 ### Properties
 * **domainJoinType**: 'AzureADJoin' | 'HybridAzureADJoin' | string (Required): AAD Join type.
 * **domainName**: string: Active Directory domain name
-* **domainPassword**: string: The password for the account used to join domain
+* **domainPassword**: string {secure}: The password for the account used to join domain
 * **domainUsername**: string: The username of an Active Directory account (user or service account) that has permissions to create computer objects in Active Directory. Required format: admin@contoso.com.
 * **healthCheckStatus**: 'Failed' | 'Passed' | 'Pending' | 'Running' | 'Unknown' | 'Warning' | string (ReadOnly): Overall health status of the network connection. Health checks are run on creation, update, and periodically to validate the network connection.
 * **networkingResourceGroupName**: string: The name for resource group where NICs will be placed.
@@ -411,8 +411,8 @@
 
 ## UserAssignedIdentity
 ### Properties
-* **clientId**: string (ReadOnly): The client ID of the assigned identity.
-* **principalId**: string (ReadOnly): The principal ID of the assigned identity.
+* **clientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The client ID of the assigned identity.
+* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The principal ID of the assigned identity.
 
 ## UserRoleAssignmentRoles
 ### Properties

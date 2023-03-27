@@ -6,7 +6,7 @@
 * **apiVersion**: '2021-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The location of the Template Spec. It cannot be changed after Template Spec creation. It must be one of the supported Azure locations.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 90, pattern: "^[-\w\._\(\)]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [TemplateSpecProperties](#templatespecproperties): Template Spec properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TemplateSpecTags](#templatespectags): Resource tags.
@@ -18,7 +18,7 @@
 * **apiVersion**: '2021-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The location of the Template Spec Version. It must match the location of the parent Template Spec.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 90, pattern: "^[-\w\._\(\)]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [TemplateSpecVersionProperties](#templatespecversionproperties) (Required): Template Spec Version properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TemplateSpecVersionTags](#templatespecversiontags): Resource tags.
@@ -40,8 +40,8 @@
 
 ## TemplateSpecProperties
 ### Properties
-* **description**: string: Template Spec description.
-* **displayName**: string: Template Spec display name.
+* **description**: string {maxLength: 4096}: Template Spec description.
+* **displayName**: string {maxLength: 64}: Template Spec display name.
 * **metadata**: any: The Template Spec metadata. Metadata is an open-ended object and is typically a collection of key-value pairs.
 * **versions**: [TemplateSpecPropertiesVersions](#templatespecpropertiesversions) (ReadOnly): High-level information about the versions within this Template Spec. The keys are the version names. Only populated if the $expand query parameter is set to 'versions'.
 
@@ -63,7 +63,7 @@
 
 ## TemplateSpecVersionProperties
 ### Properties
-* **description**: string: Template Spec version description.
+* **description**: string {maxLength: 4096}: Template Spec version description.
 * **linkedTemplates**: [LinkedTemplateArtifact](#linkedtemplateartifact)[]: An array of linked template artifacts.
 * **mainTemplate**: any: The main Azure Resource Manager template content.
 * **metadata**: any: The version metadata. Metadata is an open-ended object and is typically a collection of key-value pairs.

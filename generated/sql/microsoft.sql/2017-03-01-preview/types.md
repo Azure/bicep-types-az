@@ -234,7 +234,7 @@
 ### Properties
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [JobExecutionProperties](#jobexecutionproperties) (ReadOnly): Resource properties.
 * **type**: 'Microsoft.Sql/servers/jobAgents/jobs/executions' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -252,7 +252,7 @@
 ### Properties
 * **apiVersion**: '2017-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [JobExecutionProperties](#jobexecutionproperties) (ReadOnly): Resource properties.
 * **type**: 'Microsoft.Sql/servers/jobAgents/jobs/executions/steps/targets' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -402,7 +402,7 @@ Prerequisites for using managed identity authentication:
 1. Assign SQL Server a system-assigned managed identity in Azure Active Directory (AAD).
 2. Grant SQL Server identity access to the storage account by adding 'Storage Blob Data Contributor' RBAC role to the server identity.
 For more information, see [Auditing to storage using Managed Identity authentication](https://go.microsoft.com/fwlink/?linkid=2114355)
-* **storageAccountSubscriptionId**: string: Specifies the blob storage subscription Id.
+* **storageAccountSubscriptionId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Specifies the blob storage subscription Id.
 * **storageEndpoint**: string: Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled is required.
 
 ## DatabaseProperties
@@ -428,7 +428,7 @@ RestoreLongTermRetentionBackup: Creates a database by restoring from a long term
 Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWarehouse edition.
 * **creationDate**: string (ReadOnly): The creation date of the database (ISO8601 format).
 * **currentServiceObjectiveName**: string (ReadOnly): The current service level objective name of the database.
-* **databaseId**: string (ReadOnly): The ID of the database.
+* **databaseId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The ID of the database.
 * **defaultSecondaryLocation**: string (ReadOnly): The default secondary region for this database.
 * **elasticPoolId**: string: The resource identifier of the elastic pool containing this database.
 * **failoverGroupId**: string (ReadOnly): Failover Group resource identifier that this database belongs to.
@@ -548,7 +548,7 @@ Prerequisites for using managed identity authentication:
 1. Assign SQL Server a system-assigned managed identity in Azure Active Directory (AAD).
 2. Grant SQL Server identity access to the storage account by adding 'Storage Blob Data Contributor' RBAC role to the server identity.
 For more information, see [Auditing to storage using Managed Identity authentication](https://go.microsoft.com/fwlink/?linkid=2114355)
-* **storageAccountSubscriptionId**: string: Specifies the blob storage subscription Id.
+* **storageAccountSubscriptionId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Specifies the blob storage subscription Id.
 * **storageEndpoint**: string: Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled is required.
 
 ## ExtendedServerBlobAuditingPolicyProperties
@@ -636,7 +636,7 @@ Prerequisites for using managed identity authentication:
 1. Assign SQL Server a system-assigned managed identity in Azure Active Directory (AAD).
 2. Grant SQL Server identity access to the storage account by adding 'Storage Blob Data Contributor' RBAC role to the server identity.
 For more information, see [Auditing to storage using Managed Identity authentication](https://go.microsoft.com/fwlink/?linkid=2114355)
-* **storageAccountSubscriptionId**: string: Specifies the blob storage subscription Id.
+* **storageAccountSubscriptionId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Specifies the blob storage subscription Id.
 * **storageEndpoint**: string: Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled is required.
 
 ## JobAgentProperties
@@ -655,7 +655,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **currentAttempts**: int: Number of times the job execution has been attempted.
 * **currentAttemptStartTime**: string (ReadOnly): Start time of the current attempt.
 * **endTime**: string (ReadOnly): The time that the job execution completed.
-* **jobExecutionId**: string (ReadOnly): The unique identifier of the job execution.
+* **jobExecutionId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The unique identifier of the job execution.
 * **jobVersion**: int (ReadOnly): The job version number.
 * **lastMessage**: string (ReadOnly): The last status or error message.
 * **lifecycle**: 'Canceled' | 'Created' | 'Failed' | 'InProgress' | 'Skipped' | 'Succeeded' | 'SucceededWithSkipped' | 'TimedOut' | 'WaitingForChildJobExecutions' | 'WaitingForRetry' | string (ReadOnly): The detailed state of the job execution.
@@ -706,7 +706,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **resourceGroupName**: string: The output destination resource group.
 * **schemaName**: string: The output destination schema.
 * **serverName**: string (Required): The output destination server name.
-* **subscriptionId**: string: The output destination subscription id.
+* **subscriptionId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The output destination subscription id.
 * **tableName**: string (Required): The output destination table.
 * **type**: 'SqlDatabase' | string: The output destination type.
 
@@ -775,8 +775,8 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ### Properties
 * **administratorType**: 'ActiveDirectory' | string (Required): Type of the managed instance administrator.
 * **login**: string (Required): Login name of the managed instance administrator.
-* **sid**: string (Required): SID (object ID) of the managed instance administrator.
-* **tenantId**: string: Tenant ID of the managed instance administrator.
+* **sid**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required): SID (object ID) of the managed instance administrator.
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Tenant ID of the managed instance administrator.
 
 ## RestorableDroppedManagedDatabaseProperties
 ### Properties
@@ -896,7 +896,7 @@ Prerequisites for using managed identity authentication:
 1. Assign SQL Server a system-assigned managed identity in Azure Active Directory (AAD).
 2. Grant SQL Server identity access to the storage account by adding 'Storage Blob Data Contributor' RBAC role to the server identity.
 For more information, see [Auditing to storage using Managed Identity authentication](https://go.microsoft.com/fwlink/?linkid=2114355)
-* **storageAccountSubscriptionId**: string: Specifies the blob storage subscription Id.
+* **storageAccountSubscriptionId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Specifies the blob storage subscription Id.
 * **storageEndpoint**: string: Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled is required.
 
 ## ServerDnsAliasProperties

@@ -8,7 +8,7 @@
 * **identity**: [Identity](#identity): The identity of the resource.
 * **kind**: 'BlobStorage' | 'BlockBlobStorage' | 'FileStorage' | 'Storage' | 'StorageV2' (Required): Required. Indicates the type of storage account.
 * **location**: string (Required): Required. Gets or sets the location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 24} (Required, DeployTimeConstant): The resource name
 * **properties**: [StorageAccountPropertiesCreateParametersOrStorageAccountProperties](#storageaccountpropertiescreateparametersorstorageaccountproperties): The parameters used to create the storage account.
 * **sku**: [Sku](#sku) (Required): Required. Gets or sets the SKU name.
 * **tags**: [StorageAccountCreateParametersTags](#storageaccountcreateparameterstags): Gets or sets a list of key value pairs that describe the resource. These tags can be used for viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key with a length no greater than 128 characters and a value with a length no greater than 256 characters.
@@ -29,7 +29,7 @@
 * **apiVersion**: '2018-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource Etag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 63} (Required, DeployTimeConstant): The resource name
 * **properties**: [ContainerProperties](#containerproperties): Properties of the blob container.
 * **type**: 'Microsoft.Storage/storageAccounts/blobServices/containers' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -123,15 +123,15 @@
 
 ## DateAfterCreation
 ### Properties
-* **daysAfterCreationGreaterThan**: int (Required): Integer value indicating the age in days after creation
+* **daysAfterCreationGreaterThan**: int {minValue: 0} (Required): Integer value indicating the age in days after creation
 
 ## DateAfterModification
 ### Properties
-* **daysAfterModificationGreaterThan**: int (Required): Integer value indicating the age in days after last modification
+* **daysAfterModificationGreaterThan**: int {minValue: 0} (Required): Integer value indicating the age in days after last modification
 
 ## DeleteRetentionPolicy
 ### Properties
-* **days**: int: Indicates the number of days that the deleted blob should be retained. The minimum specified value can be 1 and the maximum value can be 365.
+* **days**: int {minValue: 1, maxValue: 365}: Indicates the number of days that the deleted blob should be retained. The minimum specified value can be 1 and the maximum value can be 365.
 * **enabled**: bool: Indicates whether DeleteRetentionPolicy is enabled for the Blob service.
 
 ## Encryption
@@ -274,7 +274,7 @@
 * **rscl**: string: The response header override for content language.
 * **rsct**: string: The response header override for content type.
 * **signedExpiry**: string: The time at which the shared access signature becomes invalid.
-* **signedIdentifier**: string: A unique value up to 64 characters in length that correlates to an access policy specified for the container, queue, or table.
+* **signedIdentifier**: string {maxLength: 64}: A unique value up to 64 characters in length that correlates to an access policy specified for the container, queue, or table.
 * **signedIp**: string: An IP address or a range of IP addresses from which to accept requests.
 * **signedPermission**: 'a' | 'c' | 'd' | 'l' | 'p' | 'r' | 'u' | 'w' | string: The signed permissions for the service SAS. Possible values include: Read (r), Write (w), Delete (d), List (l), Add (a), Create (c), Update (u) and Process (p).
 * **signedProtocol**: 'https' | 'https,http': The protocol permitted for a request made with the account SAS.

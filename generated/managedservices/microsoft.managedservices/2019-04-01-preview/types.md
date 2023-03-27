@@ -21,7 +21,7 @@
 
 ## Authorization
 ### Properties
-* **delegatedRoleDefinitionIds**: string[]: The delegatedRoleDefinitionIds field is required when the roleDefinitionId refers to the User Access Administrator Role. It is the list of role definition ids which define all the permissions that the user in the authorization can assign to other security groups/service principals/users.
+* **delegatedRoleDefinitionIds**: (string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"})[]: The delegatedRoleDefinitionIds field is required when the roleDefinitionId refers to the User Access Administrator Role. It is the list of role definition ids which define all the permissions that the user in the authorization can assign to other security groups/service principals/users.
 * **principalId**: string (Required): Principal Id of the security group/service principal/user that would be assigned permissions to the projected subscription
 * **principalIdDisplayName**: string: Display name of the principal Id.
 * **roleDefinitionId**: string (Required): The role definition identifier. This role will define all the permissions that the security group/service principal/user must have on the projected subscription. This role cannot be an owner role.

@@ -6,7 +6,7 @@
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 5, maxLength: 64, pattern: "^[a-zA-Z0-9]+([-a-zA-Z0-9]?[a-zA-Z0-9])*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [FrontDoorProperties](#frontdoorproperties): Properties of the Front Door Load Balancer
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/frontDoors' (ReadOnly, DeployTimeConstant): The resource type
@@ -16,7 +16,7 @@
 ### Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 255, pattern: "^[a-zA-Z0-9]+(-*[a-zA-Z0-9])*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [FrontendEndpointProperties](#frontendendpointproperties) (ReadOnly): Properties of the Frontend endpoint
 * **type**: 'Microsoft.Network/frontDoors/frontendEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -25,7 +25,7 @@
 ### Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 90, pattern: "^[a-zA-Z0-9]+(-*[a-zA-Z0-9])*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [RulesEngineProperties](#rulesengineproperties): Properties of the Rules Engine Configuration.
 * **type**: 'Microsoft.Network/frontDoors/rulesEngines' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -34,13 +34,13 @@
 * **address**: string: Location of the backend (IP address or FQDN)
 * **backendHostHeader**: string: The value to use as the host header sent to the backend. If blank or unspecified, this defaults to the incoming host.
 * **enabledState**: 'Disabled' | 'Enabled' | string: Whether to enable use of this backend. Permitted values are 'Enabled' or 'Disabled'
-* **httpPort**: int: The HTTP TCP port number. Must be between 1 and 65535.
-* **httpsPort**: int: The HTTPS TCP port number. Must be between 1 and 65535.
-* **priority**: int: Priority to use for load balancing. Higher priorities will not be used for load balancing if any lower priority backend is healthy.
+* **httpPort**: int {minValue: 1, maxValue: 65535}: The HTTP TCP port number. Must be between 1 and 65535.
+* **httpsPort**: int {minValue: 1, maxValue: 65535}: The HTTPS TCP port number. Must be between 1 and 65535.
+* **priority**: int {minValue: 1, maxValue: 5}: Priority to use for load balancing. Higher priorities will not be used for load balancing if any lower priority backend is healthy.
 * **privateEndpointStatus**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout' | string (ReadOnly): The Approval status for the connection to the Private Link
 * **privateLinkAlias**: string: The Alias of the Private Link resource. Populating this optional field indicates that this backend is 'Private'
 * **privateLinkApprovalMessage**: string: A custom message to be included in the approval request to connect to the Private Link
-* **weight**: int: Weight of this endpoint for load balancing purposes.
+* **weight**: int {minValue: 1, maxValue: 1000}: Weight of this endpoint for load balancing purposes.
 
 ## BackendPool
 ### Properties
@@ -59,7 +59,7 @@
 ## BackendPoolsSettings
 ### Properties
 * **enforceCertificateNameCheck**: 'Disabled' | 'Enabled' | string: Whether to enforce certificate name check on HTTPS requests to all backend pools. No effect on non-HTTPS requests.
-* **sendRecvTimeoutSeconds**: int: Send and receive timeout on forwarding request to the backend. When timeout is reached, the request fails and returns.
+* **sendRecvTimeoutSeconds**: int {minValue: 16}: Send and receive timeout on forwarding request to the backend. When timeout is reached, the request fails and returns.
 
 ## CacheConfiguration
 ### Properties

@@ -7,7 +7,7 @@
 * **etag**: string: Gets a unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {maxLength: 128} (Required, DeployTimeConstant): The resource name
 * **properties**: [CdnWebApplicationFirewallPolicyProperties](#cdnwebapplicationfirewallpolicyproperties): Properties of the web application firewall policy.
 * **sku**: [Sku](#sku) (Required): The pricing tier (defines a CDN provider, feature list and rate) of the CdnWebApplicationFirewallPolicy.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -131,7 +131,7 @@
 * **enabledState**: 'Disabled' | 'Enabled' | string: Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.
 * **matchConditions**: [MatchCondition](#matchcondition)[] (Required): List of match conditions.
 * **name**: string (Required): Defines the name of the custom rule
-* **priority**: int (Required): Defines in what order this rule be evaluated in the overall list of custom rules
+* **priority**: int {minValue: 0, maxValue: 1000} (Required): Defines in what order this rule be evaluated in the overall list of custom rules
 
 ## CustomRuleList
 ### Properties
@@ -145,8 +145,8 @@
 ## DeepCreatedOriginProperties
 ### Properties
 * **hostName**: string (Required): The address of the origin. It can be a domain name, IPv4 address, or IPv6 address.
-* **httpPort**: int: The value of the HTTP port. Must be between 1 and 65535
-* **httpsPort**: int: The value of the HTTPS port. Must be between 1 and 65535
+* **httpPort**: int {minValue: 1, maxValue: 65535}: The value of the HTTP port. Must be between 1 and 65535
+* **httpsPort**: int {minValue: 1, maxValue: 65535}: The value of the HTTPS port. Must be between 1 and 65535
 
 ## DeliveryRule
 ### Properties
@@ -347,7 +347,7 @@
 
 ## ManagedRuleSet
 ### Properties
-* **anomalyScore**: int: Verizon only : If the rule set supports anomaly detection mode, this describes the threshold for blocking requests.
+* **anomalyScore**: int {minValue: 0, maxValue: 20}: Verizon only : If the rule set supports anomaly detection mode, this describes the threshold for blocking requests.
 * **ruleGroupOverrides**: [ManagedRuleGroupOverride](#managedrulegroupoverride)[]: Defines the rule overrides to apply to the rule set.
 * **ruleSetType**: string (Required): Defines the rule set type to use.
 * **ruleSetVersion**: string (Required): Defines the version of the rule set to use.
@@ -368,14 +368,14 @@
 ## OriginProperties
 ### Properties
 * **hostName**: string (Required): The address of the origin. Domain names, IPv4 addresses, and IPv6 addresses are supported.
-* **httpPort**: int: The value of the HTTP port. Must be between 1 and 65535.
-* **httpsPort**: int: The value of the https port. Must be between 1 and 65535.
+* **httpPort**: int {minValue: 1, maxValue: 65535}: The value of the HTTP port. Must be between 1 and 65535.
+* **httpsPort**: int {minValue: 1, maxValue: 65535}: The value of the https port. Must be between 1 and 65535.
 * **provisioningState**: string (ReadOnly): Provisioning status of the origin.
 * **resourceState**: 'Active' | 'Creating' | 'Deleting' | string (ReadOnly): Resource status of the origin.
 
 ## PolicySettings
 ### Properties
-* **defaultCustomBlockResponseBody**: string: If the action type is block, customer can override the response body. The body must be specified in base64 encoding.
+* **defaultCustomBlockResponseBody**: string {pattern: "^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=|[A-Za-z0-9+/]{4})$"}: If the action type is block, customer can override the response body. The body must be specified in base64 encoding.
 * **defaultCustomBlockResponseStatusCode**: int: If the action type is block, this field defines the default customer overridable http response status code.
 * **defaultRedirectUrl**: string: If action type is redirect, this field represents the default redirect URL for the client.
 * **enabledState**: 'Disabled' | 'Enabled' | string: describes if the policy is in enabled state or disabled state
@@ -409,9 +409,9 @@
 * **enabledState**: 'Disabled' | 'Enabled' | string: Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.
 * **matchConditions**: [MatchCondition](#matchcondition)[] (Required): List of match conditions.
 * **name**: string (Required): Defines the name of the custom rule
-* **priority**: int (Required): Defines in what order this rule be evaluated in the overall list of custom rules
-* **rateLimitDurationInMinutes**: int (Required): Defines rate limit duration. Default is 1 minute.
-* **rateLimitThreshold**: int (Required): Defines rate limit threshold.
+* **priority**: int {minValue: 0, maxValue: 1000} (Required): Defines in what order this rule be evaluated in the overall list of custom rules
+* **rateLimitDurationInMinutes**: int {minValue: 0, maxValue: 60} (Required): Defines rate limit duration. Default is 1 minute.
+* **rateLimitThreshold**: int {minValue: 0} (Required): Defines rate limit threshold.
 
 ## RateLimitRuleList
 ### Properties

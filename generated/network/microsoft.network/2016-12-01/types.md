@@ -293,7 +293,7 @@
 
 ## ApplicationGatewayConnectionDraining
 ### Properties
-* **drainTimeoutInSec**: int (Required): The number of seconds connection draining is active. Acceptable values are from 1 second to 3600 seconds.
+* **drainTimeoutInSec**: int {minValue: 1, maxValue: 3600} (Required): The number of seconds connection draining is active. Acceptable values are from 1 second to 3600 seconds.
 * **enabled**: bool (Required): Whether connection draining is enabled or not.
 
 ## ApplicationGatewayFrontendIPConfiguration

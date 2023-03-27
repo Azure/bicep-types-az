@@ -9,7 +9,7 @@
 * **identity**: [Identity](#identity): Identity for the resource.
 * **kind**: string: The Kind of the resource.
 * **location**: string: The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 2, maxLength: 64, pattern: "^[a-zA-Z0-9][a-zA-Z0-9_.-]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [AccountProperties](#accountproperties): Properties of Cognitive Services account.
 * **sku**: [Sku](#sku): The resource model definition representing SKU
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
@@ -37,7 +37,7 @@
 * **identity**: [Identity](#identity) (ReadOnly): Identity for the resource.
 * **kind**: string (ReadOnly): The Kind of the resource.
 * **location**: string (ReadOnly): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 2, maxLength: 64, pattern: "^[a-zA-Z0-9][a-zA-Z0-9_.-]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [AccountProperties](#accountproperties) (ReadOnly): Properties of Cognitive Services account.
 * **sku**: [Sku](#sku) (ReadOnly): The resource model definition representing SKU
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
@@ -96,16 +96,16 @@
 
 ## ApiProperties
 ### Properties
-* **aadClientId**: string: (Metrics Advisor Only) The Azure AD Client Id (Application Id).
-* **aadTenantId**: string: (Metrics Advisor Only) The Azure AD Tenant Id.
-* **eventHubConnectionString**: string: (Personalization Only) The flag to enable statistics of Bing Search.
+* **aadClientId**: string {maxLength: 500}: (Metrics Advisor Only) The Azure AD Client Id (Application Id).
+* **aadTenantId**: string {maxLength: 500}: (Metrics Advisor Only) The Azure AD Tenant Id.
+* **eventHubConnectionString**: string {maxLength: 1000, pattern: "^( *)Endpoint=sb://(.*);( *)SharedAccessKeyName=(.*);( *)SharedAccessKey=(.*)$"}: (Personalization Only) The flag to enable statistics of Bing Search.
 * **qnaAzureSearchEndpointId**: string: (QnAMaker Only) The Azure Search endpoint id of QnAMaker.
 * **qnaAzureSearchEndpointKey**: string: (QnAMaker Only) The Azure Search endpoint key of QnAMaker.
 * **qnaRuntimeEndpoint**: string: (QnAMaker Only) The runtime endpoint of QnAMaker.
 * **statisticsEnabled**: bool: (Bing Search Only) The flag to enable statistics of Bing Search.
-* **storageAccountConnectionString**: string: (Personalization Only) The storage account connection string.
-* **superUser**: string: (Metrics Advisor Only) The super user of Metrics Advisor.
-* **websiteName**: string: (Metrics Advisor Only) The website name of Metrics Advisor.
+* **storageAccountConnectionString**: string {maxLength: 1000, pattern: "^(( *)DefaultEndpointsProtocol=(http|https)( *);( *))?AccountName=(.*)AccountKey=(.*)EndpointSuffix=(.*)$"}: (Personalization Only) The storage account connection string.
+* **superUser**: string {maxLength: 500}: (Metrics Advisor Only) The super user of Metrics Advisor.
+* **websiteName**: string {maxLength: 500}: (Metrics Advisor Only) The website name of Metrics Advisor.
 ### Additional Properties
 * **Additional Properties Type**: any
 

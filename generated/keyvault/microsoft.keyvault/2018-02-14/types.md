@@ -6,7 +6,7 @@
 * **apiVersion**: '2018-02-14' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The supported Azure location where the key vault should be created.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {pattern: "^[a-zA-Z0-9-]{3,24}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [VaultProperties](#vaultproperties) (Required): Properties of the vault
 * **tags**: [VaultCreateOrUpdateParametersTags](#vaultcreateorupdateparameterstags): The tags that will be assigned to the key vault.
 * **type**: 'Microsoft.KeyVault/vaults' (ReadOnly, DeployTimeConstant): The resource type
@@ -38,17 +38,17 @@
 * **apiVersion**: '2018-02-14' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): Azure location of the key vault resource.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {pattern: "^[a-zA-Z0-9-]{1,127}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [SecretProperties](#secretproperties) (Required): Properties of the secret
 * **tags**: [SecretCreateOrUpdateParametersTags](#secretcreateorupdateparameterstags): The tags that will be assigned to the secret.
 * **type**: 'Microsoft.KeyVault/vaults/secrets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AccessPolicyEntry
 ### Properties
-* **applicationId**: string: Application ID of the client making request on behalf of a principal
+* **applicationId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Application ID of the client making request on behalf of a principal
 * **objectId**: string (Required): The object ID of a user, service principal or security group in the Azure Active Directory tenant for the vault. The object ID must be unique for the list of access policies.
 * **permissions**: [Permissions](#permissions) (Required): Permissions the identity has for keys, secrets and certificates.
-* **tenantId**: string (Required): The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required): The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.
 
 ## IPRule
 ### Properties
@@ -140,7 +140,7 @@
 * **networkAcls**: [NetworkRuleSet](#networkruleset): Rules governing the accessibility of the key vault from specific network locations.
 * **privateEndpointConnections**: [PrivateEndpointConnectionItem](#privateendpointconnectionitem)[] (ReadOnly): List of private endpoint connections associated with the key vault.
 * **sku**: [Sku](#sku) (Required): SKU details
-* **tenantId**: string (Required): The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required): The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.
 * **vaultUri**: string: The URI of the vault for performing operations on keys and secrets.
 
 ## VirtualNetworkRule

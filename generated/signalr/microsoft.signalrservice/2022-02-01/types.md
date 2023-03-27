@@ -211,7 +211,7 @@ Allowed values: Standard_S1, Free_F1
 - EnableMessagingLogs: "true"/"false", to enable/disable the connectivity log category respectively.
 - EnableLiveTrace: Live Trace allows you to know what's happening inside Azure SignalR service, it will give you live traces in real time, it will be helpful when you developing your own Azure SignalR based web application or self-troubleshooting some issues. Please note that live traces are counted as outbound messages that will be charged. Values allowed: "true"/"false", to enable/disable live trace feature.
 * **properties**: [SignalRFeatureProperties](#signalrfeatureproperties): Optional properties related to this feature.
-* **value**: string (Required): Value of the feature flag. See Azure SignalR service document https://docs.microsoft.com/azure/azure-signalr/ for allowed values.
+* **value**: string {minLength: 1, maxLength: 128} (Required): Value of the feature flag. See Azure SignalR service document https://docs.microsoft.com/azure/azure-signalr/ for allowed values.
 
 ## SignalRFeatureProperties
 ### Properties
@@ -220,10 +220,10 @@ Allowed values: Standard_S1, Free_F1
 
 ## SignalRKeys
 ### Properties
-* **primaryConnectionString**: string: Connection string constructed via the primaryKey
-* **primaryKey**: string: The primary access key.
-* **secondaryConnectionString**: string: Connection string constructed via the secondaryKey
-* **secondaryKey**: string: The secondary access key.
+* **primaryConnectionString**: string {secure}: Connection string constructed via the primaryKey
+* **primaryKey**: string {secure}: The primary access key.
+* **secondaryConnectionString**: string {secure}: Connection string constructed via the secondaryKey
+* **secondaryKey**: string {secure}: The secondary access key.
 
 ## SignalRNetworkACLs
 ### Properties

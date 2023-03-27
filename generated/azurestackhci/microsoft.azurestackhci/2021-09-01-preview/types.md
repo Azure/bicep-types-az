@@ -39,7 +39,7 @@
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): The extendedLocation of the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 64} (Required, DeployTimeConstant): The resource name
 * **properties**: [GalleryimagesProperties](#galleryimagesproperties): Properties of a gallery image resource
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -52,7 +52,7 @@
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): The extendedLocation of the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 64} (Required, DeployTimeConstant): The resource name
 * **properties**: [MarketplacegalleryimagesProperties](#marketplacegalleryimagesproperties): Properties of a marketplace gallery image resource
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -65,7 +65,7 @@
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): The extendedLocation of the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 64} (Required, DeployTimeConstant): The resource name
 * **properties**: [NetworkinterfacesProperties](#networkinterfacesproperties): Properties of a network interface resource
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -78,7 +78,7 @@
 * **extendedLocation**: [StoragecontainersExtendedLocation](#storagecontainersextendedlocation)
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The resource location
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 64} (Required, DeployTimeConstant): The resource name
 * **properties**: [StoragecontainersProperties](#storagecontainersproperties): Properties of a storage container resource
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [StoragecontainersTags](#storagecontainerstags): Resource tags
@@ -91,7 +91,7 @@
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): The extendedLocation of the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 64} (Required, DeployTimeConstant): The resource name
 * **properties**: [VirtualharddisksProperties](#virtualharddisksproperties): Properties of a virtual hard disk resource
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -105,7 +105,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [Identity](#identity): Identity for the resource.
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 64} (Required, DeployTimeConstant): The resource name
 * **properties**: [VirtualmachinesProperties](#virtualmachinesproperties): Properties of a virtual machine resource
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -150,7 +150,7 @@
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): The extendedLocation of the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 64} (Required, DeployTimeConstant): The resource name
 * **properties**: [VirtualnetworksProperties](#virtualnetworksproperties): Properties of a virtual network resource
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -269,7 +269,7 @@
 * **containerName**: string: Container Name for storage container
 * **hyperVGeneration**: 'V1' | 'V2' | string: The hypervisor generation of the Virtual Machine [V1, V2]
 * **identifier**: [GalleryImageIdentifier](#galleryimageidentifier): This is the gallery image definition identifier.
-* **imagePath**: string: location of the image the gallery image should be created from
+* **imagePath**: string {secure}: location of the image the gallery image should be created from
 * **osType**: 'Linux' | 'Windows': operating system type that the gallery image uses. Expected to be linux or windows
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): Provisioning state of the gallery image.
 * **resourceName**: string: name of the object to be used in moc
@@ -328,7 +328,7 @@
 
 ## GuestCredential
 ### Properties
-* **password**: string (WriteOnly): The password to connect with the guest.
+* **password**: string {secure} (WriteOnly): The password to connect with the guest.
 * **username**: string: The username to connect with the guest.
 
 ## HttpProxyConfiguration
@@ -611,7 +611,7 @@
 
 ## VirtualmachinesPropertiesOsProfile
 ### Properties
-* **adminPassword**: string (WriteOnly): AdminPassword - admin password
+* **adminPassword**: string {secure} (WriteOnly): AdminPassword - admin password
 * **adminUsername**: string: AdminUsername - admin username
 * **computerName**: string: ComputerName - name of the compute
 * **linuxConfiguration**: [VirtualmachinesPropertiesOsProfileLinuxConfiguration](#virtualmachinespropertiesosprofilelinuxconfiguration): LinuxConfiguration - linux specific configuration values for the virtual machine
@@ -630,7 +630,7 @@
 
 ## VirtualmachinesPropertiesOsProfileLinuxConfigurationSshPublicKeysItem
 ### Properties
-* **keyData**: string: KeyData - SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Li      nux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).
+* **keyData**: string {secure}: KeyData - SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Li      nux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).
 * **path**: string: Path - Specifies the full path on the created VM where ssh public key is stored. If the file already exists, the specified key is appended to the file. Example: /home/user/.ssh/authorized_keys
 
 ## VirtualmachinesPropertiesOsProfileWindowsConfiguration
@@ -646,7 +646,7 @@
 
 ## VirtualmachinesPropertiesOsProfileWindowsConfigurationSshPublicKeysItem
 ### Properties
-* **keyData**: string: KeyData - SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Li      nux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).
+* **keyData**: string {secure}: KeyData - SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Li      nux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).
 * **path**: string: Path - Specifies the full path on the created VM where ssh public key is stored. If the file already exists, the specified key is appended to the file. Example: /home/user/.ssh/authorized_keys
 
 ## VirtualmachinesPropertiesSecurityProfile

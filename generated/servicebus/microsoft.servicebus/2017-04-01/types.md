@@ -6,7 +6,7 @@
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The Geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {minLength: 6, maxLength: 50} (Required, DeployTimeConstant): The resource name
 * **properties**: [SBNamespaceProperties](#sbnamespaceproperties): Properties of the namespace.
 * **sku**: [SBSku](#sbsku): Properties of Sku
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags
@@ -17,7 +17,7 @@
 ### Properties
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 50} (Required, DeployTimeConstant): The resource name
 * **properties**: [SBAuthorizationRuleProperties](#sbauthorizationruleproperties): AuthorizationRule properties.
 * **type**: 'Microsoft.ServiceBus/namespaces/AuthorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -26,7 +26,7 @@
 ### Properties
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 50} (Required, DeployTimeConstant): The resource name
 * **properties**: [ArmDisasterRecoveryProperties](#armdisasterrecoveryproperties): Properties required to the Create Or Update Alias(Disaster Recovery configurations)
 * **type**: 'Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -35,7 +35,7 @@
 ### Properties
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 50} (Required, DeployTimeConstant): The resource name
 * **properties**: [SBAuthorizationRuleProperties](#sbauthorizationruleproperties) (ReadOnly): AuthorizationRule properties.
 * **type**: 'Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs/AuthorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -62,7 +62,7 @@
 ### Properties
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1} (Required, DeployTimeConstant): The resource name
 * **properties**: [SBQueueProperties](#sbqueueproperties): Queue Properties
 * **type**: 'Microsoft.ServiceBus/namespaces/queues' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -71,7 +71,7 @@
 ### Properties
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 50} (Required, DeployTimeConstant): The resource name
 * **properties**: [SBAuthorizationRuleProperties](#sbauthorizationruleproperties): AuthorizationRule properties.
 * **type**: 'Microsoft.ServiceBus/namespaces/queues/authorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -80,7 +80,7 @@
 ### Properties
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1} (Required, DeployTimeConstant): The resource name
 * **properties**: [SBTopicProperties](#sbtopicproperties): Properties of topic resource.
 * **type**: 'Microsoft.ServiceBus/namespaces/topics' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -89,7 +89,7 @@
 ### Properties
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 50} (Required, DeployTimeConstant): The resource name
 * **properties**: [SBAuthorizationRuleProperties](#sbauthorizationruleproperties): AuthorizationRule properties.
 * **type**: 'Microsoft.ServiceBus/namespaces/topics/authorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -98,7 +98,7 @@
 ### Properties
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 50} (Required, DeployTimeConstant): The resource name
 * **properties**: [SBSubscriptionProperties](#sbsubscriptionproperties): Properties of subscriptions resource.
 * **type**: 'Microsoft.ServiceBus/namespaces/topics/subscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -107,7 +107,7 @@
 ### Properties
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 50} (Required, DeployTimeConstant): The resource name
 * **properties**: [Ruleproperties](#ruleproperties): Properties of Rule resource
 * **type**: 'Microsoft.ServiceBus/namespaces/topics/subscriptions/rules' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -325,7 +325,7 @@
 
 ## SqlFilter
 ### Properties
-* **compatibilityLevel**: int: This property is reserved for future use. An integer value showing the compatibility level, currently hard-coded to 20.
+* **compatibilityLevel**: int {minValue: 20, maxValue: 20}: This property is reserved for future use. An integer value showing the compatibility level, currently hard-coded to 20.
 * **requiresPreprocessing**: bool: Value that indicates whether the rule action requires preprocessing.
 * **sqlExpression**: string: The SQL expression. e.g. MyProperty='ABC'
 

@@ -960,8 +960,8 @@
 
 ## ManagedServiceIdentity
 ### Properties
-* **principalId**: string (ReadOnly): Principal Id of managed service identity.
-* **tenantId**: string (ReadOnly): Tenant of managed service identity.
+* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): Principal Id of managed service identity.
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): Tenant of managed service identity.
 * **type**: 'None' | 'SystemAssigned' | 'UserAssigned' | string (Required): Type of managed service identity. The type 'SystemAssigned' includes an implicitly created identity. The type 'None' will remove any identities from the resource.
 * **userAssignedIdentities**: [ManagedServiceIdentityUserAssignedIdentities](#managedserviceidentityuserassignedidentities): The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}
 

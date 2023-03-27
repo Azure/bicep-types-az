@@ -159,7 +159,7 @@
 ## EnvironmentVariable
 ### Properties
 * **name**: string (Required): The name of the environment variable.
-* **secureValue**: string: The value of the secure environment variable.
+* **secureValue**: string {secure}: The value of the secure environment variable.
 * **value**: string: The value of the environment variable.
 
 ## Event
@@ -191,7 +191,7 @@
 ### Properties
 * **identity**: string: The identity for the private registry.
 * **identityUrl**: string: The identity URL for the private registry.
-* **password**: string: The password for the private registry.
+* **password**: string {secure}: The password for the private registry.
 * **server**: string (Required): The Docker image registry server without a protocol such as "http" and "https".
 * **username**: string: The username for the private registry.
 
@@ -229,8 +229,8 @@
 * **logType**: 'ContainerInsights' | 'ContainerInstanceLogs' | string: The log type to be used.
 * **metadata**: [LogAnalyticsMetadata](#loganalyticsmetadata): Metadata for log analytics.
 * **workspaceId**: string (Required): The workspace id for log analytics
-* **workspaceKey**: string (Required): The workspace key for log analytics
-* **workspaceResourceId**: string: The workspace resource id for log analytics
+* **workspaceKey**: string {secure} (Required): The workspace key for log analytics
+* **workspaceResourceId**: string {secure}: The workspace resource id for log analytics
 
 ## LogAnalyticsMetadata
 ### Properties

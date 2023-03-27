@@ -7,7 +7,7 @@
 * **etag**: string: Gets a unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[a-zA-Z0-9_\-\(\)\.]*[^\.]$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ProfileProperties](#profileproperties): The properties of a Profile
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/NetworkExperimentProfiles' (ReadOnly, DeployTimeConstant): The resource type
@@ -18,7 +18,7 @@
 * **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[a-zA-Z0-9_\-\(\)\.]*[^\.]$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ExperimentProperties](#experimentproperties): The properties of an Experiment
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/NetworkExperimentProfiles/Experiments' (ReadOnly, DeployTimeConstant): The resource type

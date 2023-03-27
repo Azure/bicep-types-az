@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ResourceIdentity](#resourceidentity): The identity block returned by ARM resource that supports managed identity.
 * **location**: string: The location where the resource is to be deployed.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^(?!.*-$)[^-][a-zA-Z0-9-]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ConfigurationProfileResourceProperties](#configurationprofileresourceproperties): The properties of a configuration profile.
 * **systemData**: [SystemData](#systemdata): Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources
 * **type**: 'Microsoft.ChangeAnalysis/profile' (ReadOnly, DeployTimeConstant): The resource type
@@ -29,8 +29,8 @@
 
 ## ResourceIdentity
 ### Properties
-* **principalId**: string (ReadOnly): The principal id of the identity. This property will only be provided for a system-assigned identity.
-* **tenantId**: string (ReadOnly): The tenant id associated with the resource's identity. This property will only be provided for a system-assigned identity.
+* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The principal id of the identity. This property will only be provided for a system-assigned identity.
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The tenant id associated with the resource's identity. This property will only be provided for a system-assigned identity.
 * **type**: 'None' | 'SystemAssigned' | string: The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identities.
 
 ## SystemData

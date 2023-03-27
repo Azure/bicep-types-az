@@ -6,7 +6,7 @@
 * **apiVersion**: '2019-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The region in which to create the account.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 24, pattern: "^[-\w\._]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [BatchAccountCreatePropertiesOrBatchAccountProperties](#batchaccountcreatepropertiesorbatchaccountproperties): The properties of the Batch account.
 * **tags**: [BatchAccountCreateParametersTags](#batchaccountcreateparameterstags): The user-specified tags associated with the account.
 * **type**: 'Microsoft.Batch/batchAccounts' (ReadOnly, DeployTimeConstant): The resource type
@@ -17,7 +17,7 @@
 * **apiVersion**: '2019-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The ETag of the resource, used for concurrency statements.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 64, pattern: "^[a-zA-Z0-9_-]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ApplicationProperties](#applicationproperties): The properties associated with the Application.
 * **type**: 'Microsoft.Batch/batchAccounts/applications' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -27,7 +27,7 @@
 * **apiVersion**: '2019-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The ETag of the resource, used for concurrency statements.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 64, pattern: "^[a-zA-Z0-9_-][a-zA-Z0-9_.-]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ApplicationPackageProperties](#applicationpackageproperties): The properties associated with the Application Package.
 * **type**: 'Microsoft.Batch/batchAccounts/applications/versions' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -37,7 +37,7 @@
 * **apiVersion**: '2019-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The ETag of the resource, used for concurrency statements.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 5, maxLength: 45, pattern: "^[\w]+-[\w]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [CertificateCreateOrUpdatePropertiesOrCertificateProperties](#certificatecreateorupdatepropertiesorcertificateproperties): The properties associated with the certificate.
 * **type**: 'Microsoft.Batch/batchAccounts/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -47,7 +47,7 @@
 * **apiVersion**: '2019-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The ETag of the resource, used for concurrency statements.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 64, pattern: "^[a-zA-Z0-9_-]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [PoolProperties](#poolproperties): The properties associated with the pool.
 * **type**: 'Microsoft.Batch/batchAccounts/pools' (ReadOnly, DeployTimeConstant): The resource type
 

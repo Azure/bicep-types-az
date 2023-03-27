@@ -87,7 +87,7 @@
 ### Properties
 * **encryption**: [AccountEncryption](#accountencryption): The account encryption properties.
 * **keyDelivery**: [KeyDelivery](#keydelivery): The Key Delivery properties for Media Services account.
-* **mediaServiceId**: string (ReadOnly): The Media Services account ID.
+* **mediaServiceId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The Media Services account ID.
 * **storageAccounts**: [StorageAccount](#storageaccount)[]: The storage accounts for this resource.
 * **storageAuthentication**: 'ManagedIdentity' | 'System' | string
 

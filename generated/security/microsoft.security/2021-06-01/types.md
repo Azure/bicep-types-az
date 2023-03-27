@@ -84,7 +84,7 @@
 ### Properties
 * **partnerName**: string (Required): Name of the company of the partner
 * **productName**: string: Name of the product of the partner that created the assessment
-* **secret**: string (Required): Secret to authenticate the partner and verify it created the assessment - write only
+* **secret**: string {secure} (Required): Secret to authenticate the partner and verify it created the assessment - write only
 
 ## SecurityAssessmentMetadataProperties
 ### Properties
@@ -109,7 +109,7 @@
 * **displayName**: string (Required): User friendly display name of the assessment
 * **implementationEffort**: 'High' | 'Low' | 'Moderate' | string: The implementation effort required to remediate this assessment
 * **partnerData**: [SecurityAssessmentMetadataPartnerData](#securityassessmentmetadatapartnerdata): Describes the partner that created the assessment
-* **plannedDeprecationDate**: string
+* **plannedDeprecationDate**: string {pattern: "^[0-9]{2}/[0-9]{4}$"}
 * **policyDefinitionId**: string (ReadOnly): Azure resource ID of the policy definition that turns this assessment calculation on
 * **preview**: bool: True if this assessment is in preview release status
 * **publishDates**: [SecurityAssessmentMetadataPropertiesResponsePublishDates](#securityassessmentmetadatapropertiesresponsepublishdates)
@@ -122,13 +122,13 @@
 
 ## SecurityAssessmentMetadataPropertiesResponsePublishDates
 ### Properties
-* **GA**: string
-* **public**: string (Required)
+* **GA**: string {pattern: "^([0-9]{2}/){2}[0-9]{4}$"}
+* **public**: string {pattern: "^([0-9]{2}/){2}[0-9]{4}$"} (Required)
 
 ## SecurityAssessmentPartnerData
 ### Properties
 * **partnerName**: string (Required): Name of the company of the partner
-* **secret**: string (Required): secret to authenticate the partner - write only
+* **secret**: string {secure} (Required): secret to authenticate the partner - write only
 
 ## SecurityAssessmentPropertiesBaseAdditionalData
 ### Properties

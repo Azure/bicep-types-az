@@ -6,7 +6,7 @@
 * **apiVersion**: '2021-03-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Location of the resource.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 63, pattern: "^[a-z][a-z0-9]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DelegatedControllerProperties](#delegatedcontrollerproperties) (ReadOnly): Properties of the provision operation request.
 * **tags**: [ControllerResourceTags](#controllerresourcetags): The resource tags.
 * **type**: 'Microsoft.DelegatedNetwork/controller' (ReadOnly, DeployTimeConstant): The resource type
@@ -17,7 +17,7 @@
 * **apiVersion**: '2021-03-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Location of the resource.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 63, pattern: "^[a-z][a-z0-9]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DelegatedSubnetProperties](#delegatedsubnetproperties): Properties of the provision operation request.
 * **tags**: [DelegatedSubnetResourceTags](#delegatedsubnetresourcetags): The resource tags.
 * **type**: 'Microsoft.DelegatedNetwork/delegatedSubnets' (ReadOnly, DeployTimeConstant): The resource type
@@ -30,7 +30,7 @@
 * **identity**: [OrchestratorIdentity](#orchestratoridentity): The identity of the orchestrator
 * **kind**: 'Kubernetes' | string (Required): The kind of workbook. Choices are user and shared.
 * **location**: string: Location of the resource.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 63, pattern: "^[a-z][a-z0-9]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [OrchestratorResourceProperties](#orchestratorresourceproperties): Properties of the provision operation request.
 * **tags**: [OrchestratorResourceTags](#orchestratorresourcetags): The resource tags.
 * **type**: 'Microsoft.DelegatedNetwork/orchestrators' (ReadOnly, DeployTimeConstant): The resource type

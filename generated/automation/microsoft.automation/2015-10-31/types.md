@@ -27,7 +27,7 @@
 * **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (WriteOnly): Gets or sets the location of the resource.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DscCompilationJobCreatePropertiesOrDscCompilationJobProperties](#dsccompilationjobcreatepropertiesordsccompilationjobproperties) (Required): Gets or sets the list of compilation job properties.
 * **tags**: [DscCompilationJobCreateParametersTags](#dsccompilationjobcreateparameterstags) (WriteOnly): Gets or sets the tags attached to the resource.
 * **type**: 'Microsoft.Automation/automationAccounts/compilationjobs' (ReadOnly, DeployTimeConstant): The resource type
@@ -76,7 +76,7 @@
 ### Properties
 * **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [JobCreatePropertiesOrJobProperties](#jobcreatepropertiesorjobproperties) (Required): Gets or sets the list of job properties.
 * **type**: 'Microsoft.Automation/automationAccounts/jobs' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -85,7 +85,7 @@
 ### Properties
 * **apiVersion**: '2015-10-31' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [JobScheduleCreatePropertiesOrJobScheduleProperties](#jobschedulecreatepropertiesorjobscheduleproperties) (Required): Gets or sets the list of job schedule properties.
 * **type**: 'Microsoft.Automation/automationAccounts/jobSchedules' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -322,7 +322,7 @@
 * **endTime**: string (ReadOnly): Gets the end time of the job.
 * **exception**: string (ReadOnly): Gets the exception of the job.
 * **incrementNodeConfigurationBuild**: bool (WriteOnly): If a new build version of NodeConfiguration is required.
-* **jobId**: string (ReadOnly): Gets the id of the job.
+* **jobId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): Gets the id of the job.
 * **lastModifiedTime**: string (ReadOnly): Gets the last modified time of the job.
 * **lastStatusModifiedTime**: string (ReadOnly): Gets the last status modified time of the job.
 * **parameters**: [DscCompilationJobCreatePropertiesParameters](#dsccompilationjobcreatepropertiesparameters): Gets or sets the parameters of the job.
@@ -393,7 +393,7 @@
 * **creationTime**: string (ReadOnly): Gets or sets the creation time of the job.
 * **endTime**: string (ReadOnly): Gets or sets the end time of the job.
 * **exception**: string (ReadOnly): Gets or sets the exception of the job.
-* **jobId**: string (ReadOnly): Gets or sets the id of the job.
+* **jobId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): Gets or sets the id of the job.
 * **jobScheduleId**: string (ReadOnly): Gets or sets the id of job schedule.
 * **lastModifiedTime**: string (ReadOnly): Gets or sets the last modified time of the job.
 * **lastStatusModifiedTime**: string (ReadOnly): Gets or sets the last status modified time of the job.

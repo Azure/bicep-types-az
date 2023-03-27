@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ImageTemplateIdentity](#imagetemplateidentity) (Required): The identity of the image template, if configured.
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[A-Za-z0-9-_.]{1,64}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ImageTemplateProperties](#imagetemplateproperties): The properties of the image template
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -18,7 +18,7 @@
 ### Properties
 * **apiVersion**: '2022-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[A-Za-z0-9-_.]{1,64}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [RunOutputProperties](#runoutputproperties) (ReadOnly): The properties of the run output
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.VirtualMachineImages/imageTemplates/runOutputs' (ReadOnly, DeployTimeConstant): The resource type
@@ -28,7 +28,7 @@
 ### Properties
 * **apiVersion**: '2022-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[A-Za-z0-9-_.]{1,64}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [TriggerProperties](#triggerproperties): The properties of a trigger
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.VirtualMachineImages/imageTemplates/triggers' (ReadOnly, DeployTimeConstant): The resource type
@@ -40,7 +40,7 @@
 
 ### DistributeVersionerLatest
 #### Properties
-* **major**: int: Major version for the generated version number. Determine what is "latest" based on versions with this value as the major version. -1 is equivalent to leaving it unset.
+* **major**: int {minValue: -1}: Major version for the generated version number. Determine what is "latest" based on versions with this value as the major version. -1 is equivalent to leaving it unset.
 * **scheme**: 'Latest' (Required): Version numbering scheme to be used.
 
 ### DistributeVersionerSource
@@ -90,7 +90,7 @@
 * **filters**: string[]: Array of filters to select updates to apply. Omit or specify empty array to use the default (no filter). Refer to above link for examples and detailed description of this field.
 * **searchCriteria**: string: Criteria to search updates. Omit or specify empty string to use the default (search all). Refer to above link for examples and detailed description of this field.
 * **type**: 'WindowsUpdate' (Required): The type of customization tool you want to use on the Image. For example, "Shell" can be shell customizer
-* **updateLimit**: int: Maximum number of updates to apply at a time. Omit or specify 0 to use the default (1000)
+* **updateLimit**: int {minValue: 0}: Maximum number of updates to apply at a time. Omit or specify 0 to use the default (1000)
 
 
 ## ImageTemplateDistributor
@@ -98,7 +98,7 @@
 
 ### Base Properties
 * **artifactTags**: [ImageTemplateDistributorArtifactTags](#imagetemplatedistributorartifacttags): Tags that will be applied to the artifact once it has been created/updated by the distributor.
-* **runOutputName**: string (Required): The name to be used for the associated RunOutput.
+* **runOutputName**: string {pattern: "^[A-Za-z0-9-_.]{1,64}$"} (Required): The name to be used for the associated RunOutput.
 
 ### ImageTemplateManagedImageDistributor
 #### Properties
@@ -173,7 +173,7 @@
 
 ## ImageTemplateProperties
 ### Properties
-* **buildTimeoutInMinutes**: int: Maximum duration to wait while building the image template (includes all customizations, optimization, validations, and distributions). Omit or specify 0 to use the default (4 hours).
+* **buildTimeoutInMinutes**: int {minValue: 0, maxValue: 960}: Maximum duration to wait while building the image template (includes all customizations, optimization, validations, and distributions). Omit or specify 0 to use the default (4 hours).
 * **customize**: [ImageTemplateCustomizer](#imagetemplatecustomizer)[]: Specifies the properties used to describe the customization steps of the image, like Image source etc
 * **distribute**: [ImageTemplateDistributor](#imagetemplatedistributor)[] (Required): The distribution targets where the image output needs to go to.
 * **exactStagingResourceGroup**: string (ReadOnly): The staging resource group id in the same subscription as the image template that will be used to build the image. This read-only field differs from 'stagingResourceGroup' only if the value specified in the 'stagingResourceGroup' field is empty.
@@ -229,7 +229,7 @@
 
 ## ImageTemplateVmProfile
 ### Properties
-* **osDiskSizeGB**: int: Size of the OS disk in GB. Omit or specify 0 to use Azure's default OS disk size.
+* **osDiskSizeGB**: int {minValue: 0}: Size of the OS disk in GB. Omit or specify 0 to use Azure's default OS disk size.
 * **userAssignedIdentities**: string[]: Optional array of resource IDs of user assigned managed identities to be configured on the build VM and validation VM. This may include the identity of the image template.
 * **vmSize**: string: Size of the virtual machine used to build, customize and capture images. Omit or specify empty string to use the default (Standard_D1_v2 for Gen1 images and Standard_D2ds_v4 for Gen2 images).
 * **vnetConfig**: [VirtualNetworkConfig](#virtualnetworkconfig): Optional configuration of the virtual network to use to deploy the build VM and validation VM in. Omit if no specific virtual network needs to be used.
@@ -263,7 +263,7 @@
 ## TargetRegion
 ### Properties
 * **name**: string (Required): The name of the region.
-* **replicaCount**: int: The number of replicas of the Image Version to be created in this region. Omit to use the default (1).
+* **replicaCount**: int {minValue: 1}: The number of replicas of the Image Version to be created in this region. Omit to use the default (1).
 * **storageAccountType**: 'Premium_LRS' | 'Standard_LRS' | 'Standard_ZRS' | string: Specifies the storage account type to be used to store the image in this region. Omit to use the default (Standard_LRS).
 
 ## TrackedResourceTags

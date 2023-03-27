@@ -152,7 +152,7 @@
 * **kind**: 'AverageLoad' (Required): The type of auto scaling trigger
 * **lowerLoadThreshold**: int (Required): Lower load threshold (if average load is below this threshold, service will scale down).
 * **metric**: [AutoScalingMetric](#autoscalingmetric) (Required): Description of the metric that is used for scaling.
-* **scaleIntervalInSeconds**: int (Required): Scale interval that indicates how often will this trigger be checked.
+* **scaleIntervalInSeconds**: int {minValue: 60} (Required): Scale interval that indicates how often will this trigger be checked.
 * **upperLoadThreshold**: int (Required): Upper load threshold (if average load is above this threshold, service will scale up).
 
 

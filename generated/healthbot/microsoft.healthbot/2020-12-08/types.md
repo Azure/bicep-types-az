@@ -6,7 +6,7 @@
 * **apiVersion**: '2020-12-08' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 2, maxLength: 64, pattern: "^[a-zA-Z0-9][a-zA-Z0-9_.-]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [HealthBotProperties](#healthbotproperties): The set of properties specific to Healthbot resource.
 * **sku**: [Sku](#sku) (Required): SKU of the HealthBot.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource

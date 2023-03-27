@@ -14,7 +14,7 @@
 ### Properties
 * **apiVersion**: '2017-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [SubscriptionDefinitionProperties](#subscriptiondefinitionproperties) (ReadOnly): the subscription definition properties
 * **type**: 'Microsoft.Subscription/subscriptionOperations' (ReadOnly, DeployTimeConstant): The resource type
 

@@ -6,7 +6,7 @@
 * **apiVersion**: '2022-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 32, pattern: "^[a-zA-Z0-9]+(-*[a-zA-Z0-9])*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [LiveEventProperties](#liveeventproperties): The live event properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -17,7 +17,7 @@
 ### Properties
 * **apiVersion**: '2022-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 256, pattern: "^([a-zA-Z0-9])+(-*[a-zA-Z0-9])*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [LiveOutputProperties](#liveoutputproperties): Live output properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Media/mediaservices/liveEvents/liveOutputs' (ReadOnly, DeployTimeConstant): The resource type
@@ -27,7 +27,7 @@
 ### Properties
 * **apiVersion**: '2022-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1} (Required, DeployTimeConstant): The resource name
 * **properties**: [LiveOutputProperties](#liveoutputproperties) (ReadOnly): Live output properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.Media/mediaservices/liveEvents/liveOutputs/operationLocations' (ReadOnly, DeployTimeConstant): The resource type
@@ -38,7 +38,7 @@
 * **apiVersion**: '2022-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1} (Required, DeployTimeConstant): The resource name
 * **properties**: [LiveEventProperties](#liveeventproperties) (ReadOnly): The live event properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Resource tags.
@@ -50,7 +50,7 @@
 * **apiVersion**: '2022-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 24, pattern: "^[a-zA-Z0-9]+(-*[a-zA-Z0-9])*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [StreamingEndpointProperties](#streamingendpointproperties): The streaming endpoint properties.
 * **sku**: [ArmStreamingEndpointCurrentSku](#armstreamingendpointcurrentsku): The streaming endpoint sku.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
@@ -63,7 +63,7 @@
 * **apiVersion**: '2022-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1} (Required, DeployTimeConstant): The resource name
 * **properties**: [StreamingEndpointProperties](#streamingendpointproperties) (ReadOnly): The streaming endpoint properties.
 * **sku**: [ArmStreamingEndpointCurrentSku](#armstreamingendpointcurrentsku) (ReadOnly): The streaming endpoint sku.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.

@@ -6,7 +6,7 @@
 * **apiVersion**: '2022-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 24, pattern: "^[-\w\.]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [AddressProperties](#addressproperties) (Required): Properties of an address.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Represents resource creation and update time.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.

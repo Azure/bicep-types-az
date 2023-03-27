@@ -46,8 +46,8 @@
 
 ## EncryptionIdentity
 ### Properties
-* **principalId**: string (ReadOnly): The principal identifier associated with the encryption.
-* **tenantId**: string (ReadOnly): The tenant identifier associated with the encryption.
+* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The principal identifier associated with the encryption.
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The tenant identifier associated with the encryption.
 * **type**: 'SystemAssigned': The type of encryption being used. Currently the only supported type is 'SystemAssigned'.
 
 ## FirewallRuleProperties

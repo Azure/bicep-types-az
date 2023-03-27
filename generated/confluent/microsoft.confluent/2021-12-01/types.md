@@ -35,12 +35,12 @@
 
 ## OfferDetail
 ### Properties
-* **id**: string (Required): Offer Id
-* **planId**: string (Required): Offer Plan Id
-* **planName**: string (Required): Offer Plan Name
-* **publisherId**: string (Required): Publisher Id
+* **id**: string {maxLength: 50} (Required): Offer Id
+* **planId**: string {maxLength: 50} (Required): Offer Plan Id
+* **planName**: string {maxLength: 50} (Required): Offer Plan Name
+* **publisherId**: string {maxLength: 50} (Required): Publisher Id
 * **status**: 'Failed' | 'InProgress' | 'PendingFulfillmentStart' | 'Reinstated' | 'Started' | 'Subscribed' | 'Succeeded' | 'Suspended' | 'Unsubscribed' | 'Updating' | string (ReadOnly): SaaS Offer Status
-* **termUnit**: string (Required): Offer Plan Term unit
+* **termUnit**: string {maxLength: 25} (Required): Offer Plan Term unit
 
 ## OrganizationResourceProperties
 ### Properties
@@ -67,7 +67,7 @@
 
 ## UserDetail
 ### Properties
-* **emailAddress**: string (Required): Email address
-* **firstName**: string: First name
-* **lastName**: string: Last name
+* **emailAddress**: string {pattern: "^\S+@\S+\.\S+$"} (Required): Email address
+* **firstName**: string {maxLength: 50}: First name
+* **lastName**: string {maxLength: 50}: Last name
 

@@ -122,7 +122,7 @@
 * **container**: string (Required): The name of the container where exports will be uploaded. If the container does not exist it will be created.
 * **resourceId**: string: The resource id of the storage account where exports will be delivered. This is not required if a sasToken and storageAccount are specified.
 * **rootFolderPath**: string: The name of the directory where exports will be uploaded.
-* **sasToken**: string: A SAS token for the storage account. For a restricted set of Azure customers this together with storageAccount can be specified instead of resourceId. Note: the value returned by the API for this property will always be obfuscated. Returning this same obfuscated value will not result in the SAS token being updated. To update this value a new SAS token must be specified.
+* **sasToken**: string {secure}: A SAS token for the storage account. For a restricted set of Azure customers this together with storageAccount can be specified instead of resourceId. Note: the value returned by the API for this property will always be obfuscated. Returning this same obfuscated value will not result in the SAS token being updated. To update this value a new SAS token must be specified.
 * **storageAccount**: string: The storage account where exports will be uploaded. For a restricted set of Azure customers this together with sasToken can be specified instead of resourceId.
 
 ## ExportDeliveryInfo
@@ -195,7 +195,7 @@
 * **message**: string: Optional message to be added in the email. Length is limited to 250 characters.
 * **regionalFormat**: string: Regional format used for formatting date/time and currency values in the email.
 * **subject**: string (Required): Subject of the email. Length is limited to 70 characters.
-* **to**: string[] (Required): Array of email addresses.
+* **to**: (string {pattern: "^[A-Za-z0-9._%+-]+@(?:[A-Za-z0-9-]+\.)+[A-Za-z]{2,}$"})[] (Required): Array of email addresses.
 
 ## PivotProperties
 ### Properties

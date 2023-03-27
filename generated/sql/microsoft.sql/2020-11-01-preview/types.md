@@ -259,7 +259,7 @@
 ### Properties
 * **apiVersion**: '2020-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedInstanceOperationProperties](#managedinstanceoperationproperties) (ReadOnly): Resource properties.
 * **type**: 'Microsoft.Sql/managedInstances/operations' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -759,7 +759,7 @@ az sql elastic-pool list-editions -l <location> -o table
 ### Properties
 * **apiVersion**: '2020-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [JobExecutionProperties](#jobexecutionproperties) (ReadOnly): Resource properties.
 * **type**: 'Microsoft.Sql/servers/jobAgents/jobs/executions' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -777,7 +777,7 @@ az sql elastic-pool list-editions -l <location> -o table
 ### Properties
 * **apiVersion**: '2020-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [JobExecutionProperties](#jobexecutionproperties) (ReadOnly): Resource properties.
 * **type**: 'Microsoft.Sql/servers/jobAgents/jobs/executions/steps/targets' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -910,8 +910,8 @@ az sql elastic-pool list-editions -l <location> -o table
 * **administratorType**: 'ActiveDirectory' | string (Required): Type of the sever administrator.
 * **azureADOnlyAuthentication**: bool (ReadOnly): Azure Active Directory only Authentication enabled.
 * **login**: string (Required): Login name of the server administrator.
-* **sid**: string (Required): SID (object ID) of the server administrator.
-* **tenantId**: string: Tenant ID of the administrator.
+* **sid**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required): SID (object ID) of the server administrator.
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Tenant ID of the administrator.
 
 ## AdvisorProperties
 ### Properties
@@ -1048,13 +1048,13 @@ or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033
 The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
 * **retentionDays**: int: Specifies the number of days to keep in the audit logs in the storage account.
 * **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the audit. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
-* **storageAccountAccessKey**: string (WriteOnly): Specifies the identifier key of the auditing storage account. 
+* **storageAccountAccessKey**: string {secure} (WriteOnly): Specifies the identifier key of the auditing storage account. 
 If state is Enabled and storageEndpoint is specified, not specifying the storageAccountAccessKey will use SQL server system-assigned managed identity to access the storage.
 Prerequisites for using managed identity authentication:
 1. Assign SQL Server a system-assigned managed identity in Azure Active Directory (AAD).
 2. Grant SQL Server identity access to the storage account by adding 'Storage Blob Data Contributor' RBAC role to the server identity.
 For more information, see [Auditing to storage using Managed Identity authentication](https://go.microsoft.com/fwlink/?linkid=2114355)
-* **storageAccountSubscriptionId**: string: Specifies the blob storage subscription Id.
+* **storageAccountSubscriptionId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Specifies the blob storage subscription Id.
 * **storageEndpoint**: string: Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled is required.
 
 ## DatabaseColumnProperties
@@ -1097,7 +1097,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 * **currentBackupStorageRedundancy**: 'Geo' | 'Local' | 'Zone' | string (ReadOnly): The storage account type used to store backups for this database.
 * **currentServiceObjectiveName**: string (ReadOnly): The current service level objective name of the database.
 * **currentSku**: [Sku](#sku) (ReadOnly): The name and tier of the SKU.
-* **databaseId**: string (ReadOnly): The ID of the database.
+* **databaseId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The ID of the database.
 * **defaultSecondaryLocation**: string (ReadOnly): The default secondary region for this database.
 * **earliestRestoreDate**: string (ReadOnly): This records the earliest start date and time that restore is available for this database (ISO8601 format).
 * **elasticPoolId**: string: The resource identifier of the elastic pool containing this database.
@@ -1256,13 +1256,13 @@ or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033
 The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
 * **retentionDays**: int: Specifies the number of days to keep in the audit logs in the storage account.
 * **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the audit. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
-* **storageAccountAccessKey**: string (WriteOnly): Specifies the identifier key of the auditing storage account. 
+* **storageAccountAccessKey**: string {secure} (WriteOnly): Specifies the identifier key of the auditing storage account. 
 If state is Enabled and storageEndpoint is specified, not specifying the storageAccountAccessKey will use SQL server system-assigned managed identity to access the storage.
 Prerequisites for using managed identity authentication:
 1. Assign SQL Server a system-assigned managed identity in Azure Active Directory (AAD).
 2. Grant SQL Server identity access to the storage account by adding 'Storage Blob Data Contributor' RBAC role to the server identity.
 For more information, see [Auditing to storage using Managed Identity authentication](https://go.microsoft.com/fwlink/?linkid=2114355)
-* **storageAccountSubscriptionId**: string: Specifies the blob storage subscription Id.
+* **storageAccountSubscriptionId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Specifies the blob storage subscription Id.
 * **storageEndpoint**: string: Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled is required.
 
 ## ExtendedServerBlobAuditingPolicyProperties
@@ -1351,13 +1351,13 @@ or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033
 The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
 * **retentionDays**: int: Specifies the number of days to keep in the audit logs in the storage account.
 * **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the audit. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
-* **storageAccountAccessKey**: string (WriteOnly): Specifies the identifier key of the auditing storage account. 
+* **storageAccountAccessKey**: string {secure} (WriteOnly): Specifies the identifier key of the auditing storage account. 
 If state is Enabled and storageEndpoint is specified, not specifying the storageAccountAccessKey will use SQL server system-assigned managed identity to access the storage.
 Prerequisites for using managed identity authentication:
 1. Assign SQL Server a system-assigned managed identity in Azure Active Directory (AAD).
 2. Grant SQL Server identity access to the storage account by adding 'Storage Blob Data Contributor' RBAC role to the server identity.
 For more information, see [Auditing to storage using Managed Identity authentication](https://go.microsoft.com/fwlink/?linkid=2114355)
-* **storageAccountSubscriptionId**: string: Specifies the blob storage subscription Id.
+* **storageAccountSubscriptionId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Specifies the blob storage subscription Id.
 * **storageEndpoint**: string: Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled is required.
 
 ## FailoverGroupProperties
@@ -1423,7 +1423,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **currentAttempts**: int: Number of times the job execution has been attempted.
 * **currentAttemptStartTime**: string (ReadOnly): Start time of the current attempt.
 * **endTime**: string (ReadOnly): The time that the job execution completed.
-* **jobExecutionId**: string (ReadOnly): The unique identifier of the job execution.
+* **jobExecutionId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The unique identifier of the job execution.
 * **jobVersion**: int (ReadOnly): The job version number.
 * **lastMessage**: string (ReadOnly): The last status or error message.
 * **lifecycle**: 'Canceled' | 'Created' | 'Failed' | 'InProgress' | 'Skipped' | 'Succeeded' | 'SucceededWithSkipped' | 'TimedOut' | 'WaitingForChildJobExecutions' | 'WaitingForRetry' | string (ReadOnly): The detailed state of the job execution.
@@ -1474,7 +1474,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **resourceGroupName**: string: The output destination resource group.
 * **schemaName**: string: The output destination schema.
 * **serverName**: string (Required): The output destination server name.
-* **subscriptionId**: string: The output destination subscription id.
+* **subscriptionId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The output destination subscription id.
 * **tableName**: string (Required): The output destination table.
 * **type**: 'SqlDatabase' | string: The output destination type.
 
@@ -1553,8 +1553,8 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ### Properties
 * **administratorType**: 'ActiveDirectory' | string (Required): Type of the managed instance administrator.
 * **login**: string (Required): Login name of the managed instance administrator.
-* **sid**: string (Required): SID (object ID) of the managed instance administrator.
-* **tenantId**: string: Tenant ID of the managed instance administrator.
+* **sid**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required): SID (object ID) of the managed instance administrator.
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Tenant ID of the managed instance administrator.
 
 ## ManagedInstanceAzureADOnlyAuthProperties
 ### Properties
@@ -1574,8 +1574,8 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **azureADOnlyAuthentication**: bool: Azure Active Directory only Authentication enabled.
 * **login**: string: Login name of the server administrator.
 * **principalType**: 'Application' | 'Group' | 'User' | string: Principal Type of the sever administrator.
-* **sid**: string: SID (object ID) of the server administrator.
-* **tenantId**: string: Tenant ID of the administrator.
+* **sid**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: SID (object ID) of the server administrator.
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Tenant ID of the administrator.
 
 ## ManagedInstanceKeyProperties
 ### Properties
@@ -1834,8 +1834,8 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 
 ## ResourceIdentity
 ### Properties
-* **principalId**: string (ReadOnly): The Azure Active Directory principal id.
-* **tenantId**: string (ReadOnly): The Azure Active Directory tenant id.
+* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The Azure Active Directory principal id.
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The Azure Active Directory tenant id.
 * **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' | string: The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.
 * **userAssignedIdentities**: [ResourceIdentityUserAssignedIdentities](#resourceidentityuserassignedidentities): The resource ids of the user assigned identities to use
 
@@ -1991,13 +1991,13 @@ or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033
 The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
 * **retentionDays**: int: Specifies the number of days to keep in the audit logs in the storage account.
 * **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the audit. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
-* **storageAccountAccessKey**: string (WriteOnly): Specifies the identifier key of the auditing storage account. 
+* **storageAccountAccessKey**: string {secure} (WriteOnly): Specifies the identifier key of the auditing storage account. 
 If state is Enabled and storageEndpoint is specified, not specifying the storageAccountAccessKey will use SQL server system-assigned managed identity to access the storage.
 Prerequisites for using managed identity authentication:
 1. Assign SQL Server a system-assigned managed identity in Azure Active Directory (AAD).
 2. Grant SQL Server identity access to the storage account by adding 'Storage Blob Data Contributor' RBAC role to the server identity.
 For more information, see [Auditing to storage using Managed Identity authentication](https://go.microsoft.com/fwlink/?linkid=2114355)
-* **storageAccountSubscriptionId**: string: Specifies the blob storage subscription Id.
+* **storageAccountSubscriptionId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Specifies the blob storage subscription Id.
 * **storageEndpoint**: string: Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled is required.
 
 ## ServerDevOpsAuditSettingsProperties
@@ -2013,13 +2013,13 @@ PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{
 For more information, see [Diagnostic Settings REST API](https://go.microsoft.com/fwlink/?linkid=2033207)
 or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033043)
 * **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the audit. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
-* **storageAccountAccessKey**: string (WriteOnly): Specifies the identifier key of the auditing storage account. 
+* **storageAccountAccessKey**: string {secure} (WriteOnly): Specifies the identifier key of the auditing storage account. 
 If state is Enabled and storageEndpoint is specified, not specifying the storageAccountAccessKey will use SQL server system-assigned managed identity to access the storage.
 Prerequisites for using managed identity authentication:
 1. Assign SQL Server a system-assigned managed identity in Azure Active Directory (AAD).
 2. Grant SQL Server identity access to the storage account by adding 'Storage Blob Data Contributor' RBAC role to the server identity.
 For more information, see [Auditing to storage using Managed Identity authentication](https://go.microsoft.com/fwlink/?linkid=2114355)
-* **storageAccountSubscriptionId**: string: Specifies the blob storage subscription Id.
+* **storageAccountSubscriptionId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Specifies the blob storage subscription Id.
 * **storageEndpoint**: string: Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled is required.
 
 ## ServerDnsAliasProperties
@@ -2032,8 +2032,8 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **azureADOnlyAuthentication**: bool: Azure Active Directory only Authentication enabled.
 * **login**: string: Login name of the server administrator.
 * **principalType**: 'Application' | 'Group' | 'User' | string: Principal Type of the sever administrator.
-* **sid**: string: SID (object ID) of the server administrator.
-* **tenantId**: string: Tenant ID of the administrator.
+* **sid**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: SID (object ID) of the server administrator.
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Tenant ID of the administrator.
 
 ## ServerFirewallRuleProperties
 ### Properties
@@ -2152,7 +2152,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **password**: string (WriteOnly): Password of the member database in the sync member.
 * **privateEndpointName**: string (ReadOnly): Private endpoint name of the sync member if use private link connection is enabled, for sync members in Azure.
 * **serverName**: string: Server name of the member database in the sync member
-* **sqlServerDatabaseId**: string: SQL Server database id of the sync member.
+* **sqlServerDatabaseId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: SQL Server database id of the sync member.
 * **syncAgentId**: string: ARM resource id of the sync agent in the sync member.
 * **syncDirection**: 'Bidirectional' | 'OneWayHubToMember' | 'OneWayMemberToHub' | string: Sync direction of the sync member.
 * **syncMemberAzureDatabaseResourceId**: string: ARM resource id of the sync member logical database, for sync members in Azure.
@@ -2238,8 +2238,8 @@ For more information, see [Auditing to storage using Managed Identity authentica
 
 ## UserIdentity
 ### Properties
-* **clientId**: string (ReadOnly): The Azure Active Directory client id.
-* **principalId**: string (ReadOnly): The Azure Active Directory principal id.
+* **clientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The Azure Active Directory client id.
+* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The Azure Active Directory principal id.
 
 ## VirtualClusterProperties
 ### Properties

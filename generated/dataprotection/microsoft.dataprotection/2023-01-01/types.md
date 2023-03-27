@@ -71,7 +71,7 @@
 ### Properties
 * **apiVersion**: '2023-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[A-Za-z0-9]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ResourceGuardProxyBase](#resourceguardproxybase): ResourceGuardProxyBaseResource properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DataProtection/backupVaults/backupResourceGuardProxies' (ReadOnly, DeployTimeConstant): The resource type

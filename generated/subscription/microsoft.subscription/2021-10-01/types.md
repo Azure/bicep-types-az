@@ -16,7 +16,7 @@
 * **apiVersion**: '2021-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **blockSubscriptionsIntoTenant**: bool (WriteOnly): Blocks the entering of subscriptions into user's tenant.
 * **blockSubscriptionsLeavingTenant**: bool (WriteOnly): Blocks the leaving of subscriptions from user's tenant.
-* **exemptedPrincipals**: string[] (WriteOnly): List of user objectIds that are exempted from the set subscription tenant policies for the user's tenant.
+* **exemptedPrincipals**: (string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"})[] (WriteOnly): List of user objectIds that are exempted from the set subscription tenant policies for the user's tenant.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [TenantPolicy](#tenantpolicy) (ReadOnly): Tenant policy properties.
@@ -72,6 +72,6 @@ For Legacy EA - /billingAccounts/{billingAccountName}/enrollmentAccounts/{enroll
 ### Properties
 * **blockSubscriptionsIntoTenant**: bool: Blocks the entering of subscriptions into user's tenant.
 * **blockSubscriptionsLeavingTenant**: bool: Blocks the leaving of subscriptions from user's tenant.
-* **exemptedPrincipals**: string[]: List of user objectIds that are exempted from the set subscription tenant policies for the user's tenant.
+* **exemptedPrincipals**: (string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"})[]: List of user objectIds that are exempted from the set subscription tenant policies for the user's tenant.
 * **policyId**: string (ReadOnly): Policy Id.
 

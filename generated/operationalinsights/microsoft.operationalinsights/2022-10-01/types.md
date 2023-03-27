@@ -8,7 +8,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [Identity](#identity): The identity of the resource.
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 4, maxLength: 63, pattern: "^[A-Za-z0-9][A-Za-z0-9-]+[A-Za-z0-9]$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [WorkspaceProperties](#workspaceproperties): Workspace properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -105,11 +105,11 @@
 * **provisioningState**: 'Deleting' | 'InProgress' | 'Succeeded' | 'Updating' | string (ReadOnly): Table's current provisioning state. If set to 'updating', indicates a resource lock due to ongoing operation, forbidding any update to the table until the ongoing operation is concluded.
 * **restoredLogs**: [RestoredLogs](#restoredlogs): Parameters of the restore operation that initiated this table.
 * **resultStatistics**: [ResultStatistics](#resultstatistics) (ReadOnly): Search job execution statistics.
-* **retentionInDays**: int: The table retention in days, between 4 and 730. Setting this property to -1 will default to the workspace retention.
+* **retentionInDays**: int {minValue: 4, maxValue: 730}: The table retention in days, between 4 and 730. Setting this property to -1 will default to the workspace retention.
 * **retentionInDaysAsDefault**: bool (ReadOnly): True - Value originates from workspace retention in days, False - Customer specific.
 * **schema**: [Schema](#schema): Table schema.
 * **searchResults**: [SearchResults](#searchresults): Parameters of the search job that initiated this table.
-* **totalRetentionInDays**: int: The table total retention in days, between 4 and 2555. Setting this property to -1 will default to table retention.
+* **totalRetentionInDays**: int {minValue: 4, maxValue: 2555}: The table total retention in days, between 4 and 2555. Setting this property to -1 will default to table retention.
 * **totalRetentionInDaysAsDefault**: bool (ReadOnly): True - Value originates from retention in days, False - Customer specific.
 
 ## TrackedResourceTags

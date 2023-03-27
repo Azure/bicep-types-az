@@ -210,10 +210,10 @@ Allowed values: Standard_S1, Free_F1
 
 ## WebPubSubKeys
 ### Properties
-* **primaryConnectionString**: string: Connection string constructed via the primaryKey
-* **primaryKey**: string: The primary access key.
-* **secondaryConnectionString**: string: Connection string constructed via the secondaryKey
-* **secondaryKey**: string: The secondary access key.
+* **primaryConnectionString**: string {secure}: Connection string constructed via the primaryKey
+* **primaryKey**: string {secure}: The primary access key.
+* **secondaryConnectionString**: string {secure}: Connection string constructed via the secondaryKey
+* **secondaryKey**: string {secure}: The secondary access key.
 
 ## WebPubSubNetworkACLs
 ### Properties

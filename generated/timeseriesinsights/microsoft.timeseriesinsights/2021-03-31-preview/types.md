@@ -8,7 +8,7 @@
 * **apiVersion**: '2021-03-31-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The location of the resource.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {minLength: 1, maxLength: 90, pattern: "^[-\w\._\(\)]+$"} (Required, DeployTimeConstant): The resource name
 * **sku**: [Sku](#sku) (Required): The sku determines the type of environment, either Gen1 (S1 or S2) or Gen2 (L1). For Gen1 environments the sku determines the capacity of the environment, the ingress rate, and the billing rate.
 * **tags**: [CreateOrUpdateTrackedResourcePropertiesTags](#createorupdatetrackedresourcepropertiestags): Key-value pairs of additional properties for the resource.
 * **type**: 'Microsoft.TimeSeriesInsights/environments' (ReadOnly, DeployTimeConstant): The resource type
@@ -29,7 +29,7 @@
 ### Properties
 * **apiVersion**: '2021-03-31-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {minLength: 1, maxLength: 90, pattern: "^[-\w\._\(\)]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [AccessPolicyResourceProperties](#accesspolicyresourceproperties) (Required)
 * **type**: 'Microsoft.TimeSeriesInsights/environments/accessPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -42,7 +42,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **localTimestamp**: [LocalTimestamp](#localtimestamp) (WriteOnly): An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn't specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.
 * **location**: string (Required): The location of the resource.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {minLength: 1, maxLength: 90, pattern: "^[-\w\._\(\)]+$"} (Required, DeployTimeConstant): The resource name
 * **tags**: [CreateOrUpdateTrackedResourcePropertiesTags](#createorupdatetrackedresourcepropertiestags): Key-value pairs of additional properties for the resource.
 * **type**: 'Microsoft.TimeSeriesInsights/environments/eventSources' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -72,7 +72,7 @@
 * **apiVersion**: '2021-03-31-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The location of the resource.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {minLength: 3, maxLength: 63, pattern: "^[A-Za-z0-9]"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ReferenceDataSetCreationPropertiesOrReferenceDataSetResourceProperties](#referencedatasetcreationpropertiesorreferencedatasetresourceproperties) (Required): Properties used to create a reference data set.
 * **tags**: [CreateOrUpdateTrackedResourcePropertiesTags](#createorupdatetrackedresourcepropertiestags): Key-value pairs of additional properties for the resource.
 * **type**: 'Microsoft.TimeSeriesInsights/environments/referenceDataSets' (ReadOnly, DeployTimeConstant): The resource type
@@ -126,7 +126,7 @@
 ### Properties
 * **creationTime**: string (ReadOnly): The time the resource was created.
 * **dataAccessFqdn**: string (ReadOnly): The fully qualified domain name used to access the environment data, e.g. to query the environment's events or upload reference data for the environment.
-* **dataAccessId**: string (ReadOnly): An id used to access the environment data, e.g. to query the environment's events or upload reference data for the environment.
+* **dataAccessId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): An id used to access the environment data, e.g. to query the environment's events or upload reference data for the environment.
 * **dataRetentionTime**: string (Required): ISO8601 timespan specifying the minimum number of days the environment's events will be available for query.
 * **partitionKeyProperties**: [TimeSeriesIdProperty](#timeseriesidproperty)[]: The list of event properties which will be used to partition data in the environment. Currently, only a single partition key property is supported.
 * **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
@@ -137,7 +137,7 @@
 ### Properties
 * **creationTime**: string (ReadOnly): The time the resource was created.
 * **dataAccessFqdn**: string (ReadOnly): The fully qualified domain name used to access the environment data, e.g. to query the environment's events or upload reference data for the environment.
-* **dataAccessId**: string (ReadOnly): An id used to access the environment data, e.g. to query the environment's events or upload reference data for the environment.
+* **dataAccessId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): An id used to access the environment data, e.g. to query the environment's events or upload reference data for the environment.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): The list of private endpoint connections to the environment.
 * **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
 * **publicNetworkAccess**: 'disabled' | 'enabled' | string: This value can be set to 'enabled' to avoid breaking changes on existing customer resources and templates. If set to 'disabled', traffic over public interface is not allowed, and private endpoint connections would be the exclusive access method.
@@ -221,7 +221,7 @@
 
 ## Sku
 ### Properties
-* **capacity**: int (Required): The capacity of the sku. For Gen1 environments, this value can be changed to support scale out of environments after they have been created.
+* **capacity**: int {minValue: 1, maxValue: 10} (Required): The capacity of the sku. For Gen1 environments, this value can be changed to support scale out of environments after they have been created.
 * **name**: 'L1' | 'P1' | 'S1' | 'S2' | string (Required): The name of this SKU.
 
 ## TimeSeriesIdProperty
@@ -240,8 +240,8 @@
 
 ## WarmStoragePropertiesUsageStateDetails
 ### Properties
-* **currentCount**: int: A value that represents the number of properties used by the environment for S1/S2 SKU and number of properties used by Warm Store for PAYG SKU
-* **maxCount**: int: A value that represents the maximum number of properties used allowed by the environment for S1/S2 SKU and maximum number of properties allowed by Warm Store for PAYG SKU.
+* **currentCount**: int {minValue: 1, maxValue: 10}: A value that represents the number of properties used by the environment for S1/S2 SKU and number of properties used by Warm Store for PAYG SKU
+* **maxCount**: int {minValue: 1, maxValue: 10}: A value that represents the maximum number of properties used allowed by the environment for S1/S2 SKU and maximum number of properties allowed by Warm Store for PAYG SKU.
 
 ## WarmStoreConfigurationProperties
 ### Properties

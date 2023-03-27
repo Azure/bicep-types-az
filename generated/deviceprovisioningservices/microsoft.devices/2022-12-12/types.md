@@ -22,7 +22,7 @@
 * **apiVersion**: '2022-12-12' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The entity tag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {maxLength: 256} (Required, DeployTimeConstant): The resource name
 * **properties**: [CertificateProperties](#certificateproperties): properties of a certificate
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Devices/provisioningServices/certificates' (ReadOnly, DeployTimeConstant): The resource type
@@ -102,7 +102,7 @@ Indicates if the DPS instance has Data Residency enabled, removing the cross geo
 ## PrivateEndpointConnection
 ### Properties
 * **id**: string (ReadOnly): The resource identifier.
-* **name**: string (ReadOnly): The resource name.
+* **name**: string {pattern: "^(?![0-9]+$)(?!-)[a-zA-Z0-9-]{2,49}[a-zA-Z0-9]$"} (ReadOnly): The resource name.
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (Required): The properties of a private endpoint connection
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: string (ReadOnly): The resource type.

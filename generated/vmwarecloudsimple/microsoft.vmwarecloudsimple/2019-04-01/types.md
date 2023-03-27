@@ -6,7 +6,7 @@
 * **apiVersion**: '2019-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): Azure region
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[a-zA-Z0-9]([-_.a-zA-Z0-9]*[a-zA-Z0-9])?$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DedicatedCloudNodeProperties](#dedicatedcloudnodeproperties) (ReadOnly): Dedicated Cloud Nodes properties
 * **sku**: [Sku](#sku) (ReadOnly): Dedicated Cloud Nodes SKU
 * **tags**: [Tags](#tags) (ReadOnly): Dedicated Cloud Nodes tags
@@ -18,7 +18,7 @@
 * **apiVersion**: '2019-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Azure region
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {pattern: "^[a-zA-Z0-9]([-_.a-zA-Z0-9]*[a-zA-Z0-9])?$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DedicatedCloudServiceProperties](#dedicatedcloudserviceproperties): The properties of Dedicated Node Service
 * **tags**: [Tags](#tags): The list of tags
 * **type**: 'Microsoft.VMwareCloudSimple/dedicatedCloudServices' (ReadOnly, DeployTimeConstant): The resource type
@@ -46,7 +46,7 @@
 * **privateCloudId**: string (ReadOnly): Private Cloud Id
 * **privateCloudName**: string (ReadOnly): Resource Pool Name
 * **provisioningState**: string (ReadOnly): The provisioning status of the resource
-* **purchaseId**: string (Required): purchase id
+* **purchaseId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required): purchase id
 * **skuDescription**: [SkuDescription](#skudescription): Dedicated Cloud Nodes SKU's description
 * **status**: 'unused' | 'used' (ReadOnly): Node status, indicates is private cloud set up on this node or not
 * **vmwareClusterName**: string (ReadOnly): VMWare Cluster Name
@@ -60,7 +60,7 @@
 
 ## GuestOSCustomization
 ### Properties
-* **dnsServers**: string[]: List of dns servers to use
+* **dnsServers**: (string {pattern: "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])[.]){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"})[]: List of dns servers to use
 * **hostName**: string: Virtual Machine hostname
 * **password**: string: Password for login
 * **policyId**: string: id of customization policy
@@ -69,12 +69,12 @@
 ## GuestOsnicCustomization
 ### Properties
 * **allocation**: 'dynamic' | 'static' | string: IP address allocation method
-* **dnsServers**: string[]: List of dns servers to use
-* **gateway**: string[]: Gateway addresses assigned to nic
-* **ipAddress**: string: Static ip address for nic
-* **mask**: string: Network mask for nic
-* **primaryWinsServer**: string: primary WINS server for Windows
-* **secondaryWinsServer**: string: secondary WINS server for Windows
+* **dnsServers**: (string {pattern: "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])[.]){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"})[]: List of dns servers to use
+* **gateway**: (string {pattern: "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])[.]){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"})[]: Gateway addresses assigned to nic
+* **ipAddress**: string {pattern: "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])[.]){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"}: Static ip address for nic
+* **mask**: string {pattern: "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])[.]){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"}: Network mask for nic
+* **primaryWinsServer**: string {pattern: "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])[.]){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"}: primary WINS server for Windows
+* **secondaryWinsServer**: string {pattern: "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])[.]){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"}: secondary WINS server for Windows
 
 ## ResourcePool
 ### Properties

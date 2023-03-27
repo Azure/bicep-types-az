@@ -208,7 +208,7 @@
 
 ## BasicLoginInformation
 ### Properties
-* **password**: string (WriteOnly): Login password.
+* **password**: string {secure} (WriteOnly): Login password.
 * **username**: string: Login username.
 
 ## DataControllerProperties
@@ -284,16 +284,16 @@
 
 ## KeytabInformation
 ### Properties
-* **keytab**: string (WriteOnly): A base64-encoded keytab.
+* **keytab**: string {secure} (WriteOnly): A base64-encoded keytab.
 
 ## LogAnalyticsWorkspaceConfig
 ### Properties
-* **primaryKey**: string (WriteOnly): Primary key of the workspace
-* **workspaceId**: string: Azure Log Analytics workspace ID
+* **primaryKey**: string {secure} (WriteOnly): Primary key of the workspace
+* **workspaceId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Azure Log Analytics workspace ID
 
 ## OnPremiseProperty
 ### Properties
-* **id**: string (Required): A globally unique ID identifying the associated Kubernetes cluster
+* **id**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required): A globally unique ID identifying the associated Kubernetes cluster
 * **publicSigningKey**: string (Required): Certificate that contains the Kubernetes cluster public key used to verify signing
 * **signingCertificateThumbprint**: string: Unique thumbprint returned to customer to verify the certificate being uploaded
 
@@ -330,13 +330,13 @@
 
 ## SqlAvailabilityGroupMultiDatabaseReplicaResourceProperties
 ### Properties
-* **groupDatabaseId**: string: ID GUID of the database for availability group.
+* **groupDatabaseId**: string {pattern: "^[A-Za-z0-9]{8}-([A-Za-z0-9]{4}-){3}[A-Za-z0-9]{12}$"}: ID GUID of the database for availability group.
 * **provisioningState**: string (ReadOnly): The provisioning state of the Arc-enabled SQL Server availability group resource.
 * **value**: [SqlAvailabilityGroupDatabaseReplicaResourceProperties](#sqlavailabilitygroupdatabasereplicaresourceproperties)[]: Array of  Arc Sql Availability Group Database Replicas.
 
 ## SqlAvailabilityGroupProperties
 ### Properties
-* **availabilityGroupId**: string (Required): Id GUID of the availability group.
+* **availabilityGroupId**: string {pattern: "^[A-Za-z0-9]{8}-([A-Za-z0-9]{4}-){3}[A-Za-z0-9]{12}$"} (Required): Id GUID of the availability group.
 * **availabilityGroupName**: string (Required): The name of the availability group.
 * **basicFeatures**: bool: SQL Server basic availability group.
 * **clusterTypeDesc**: string: SQL Server availability group cluster type description
@@ -353,7 +353,7 @@
 ### Properties
 * **configure**: [AvailabilityGroupConfigure](#availabilitygroupconfigure): null
 * **provisioningState**: string (ReadOnly): The provisioning state of the Arc-enabled SQL Server availability group resource.
-* **replicaId**: string: ID GUID of the availability group.
+* **replicaId**: string {pattern: "^[A-Za-z0-9]{8}-([A-Za-z0-9]{4}-){3}[A-Za-z0-9]{12}$"}: ID GUID of the availability group.
 * **replicaName**: string: the replica name.
 * **state**: [AvailabilityGroupState](#availabilitygroupstate): null
 
@@ -396,7 +396,7 @@
 
 ## SqlServerAvailabilityGroupResourceProperties
 ### Properties
-* **availabilityGroupId**: string (Required): ID GUID of the availability group.
+* **availabilityGroupId**: string {pattern: "^[A-Za-z0-9]{8}-([A-Za-z0-9]{4}-){3}[A-Za-z0-9]{12}$"} (Required): ID GUID of the availability group.
 * **availabilityGroupName**: string: the availability group name.
 * **configure**: [AvailabilityGroupConfigure](#availabilitygroupconfigure): null
 * **provisioningState**: string (ReadOnly): The provisioning state of the Arc-enabled SQL Server availability group resource.
@@ -406,7 +406,7 @@
 ### Properties
 * **backupInformation**: [SqlServerDatabaseResourcePropertiesBackupInformation](#sqlserverdatabaseresourcepropertiesbackupinformation)
 * **collationName**: string: Collation of the database.
-* **compatibilityLevel**: int: Compatibility level of the database
+* **compatibilityLevel**: int {minValue: 80, maxValue: 200}: Compatibility level of the database
 * **databaseCreationDate**: string: Creation date of the database.
 * **databaseOptions**: [SqlServerDatabaseResourcePropertiesDatabaseOptions](#sqlserverdatabaseresourcepropertiesdatabaseoptions): List of features that are enabled for the database
 * **isReadOnly**: bool: Whether the database is read only or not.
@@ -511,9 +511,9 @@
 ## UploadServicePrincipal
 ### Properties
 * **authority**: string: Authority for the service principal. Example: https://login.microsoftonline.com/
-* **clientId**: string: Client ID of the service principal for uploading data.
-* **clientSecret**: string (WriteOnly): Secret of the service principal
-* **tenantId**: string: Tenant ID of the service principal.
+* **clientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Client ID of the service principal for uploading data.
+* **clientSecret**: string {secure} (WriteOnly): Secret of the service principal
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Tenant ID of the service principal.
 
 ## UploadWatermark
 ### Properties

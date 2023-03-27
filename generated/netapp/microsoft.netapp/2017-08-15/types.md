@@ -72,27 +72,27 @@
 
 ## PoolProperties
 ### Properties
-* **poolId**: string (ReadOnly): UUID v4 used to identify the Pool
+* **poolId**: string {minLength: 36, maxLength: 36, pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"} (ReadOnly): UUID v4 used to identify the Pool
 * **provisioningState**: string (ReadOnly): Azure lifecycle management
 * **serviceLevel**: 'Premium' | 'Standard' | 'Ultra' | string: The service level of the file system
-* **size**: int: Provisioned size of the pool (in bytes). Allowed values are in 4TiB chunks (value must be multiply of 4398046511104).
+* **size**: int {minValue: 4398046511104, maxValue: 549755813888000}: Provisioned size of the pool (in bytes). Allowed values are in 4TiB chunks (value must be multiply of 4398046511104).
 
 ## SnapshotProperties
 ### Properties
 * **creationDate**: string (ReadOnly): The creation date of the snapshot
-* **fileSystemId**: string (Required): UUID v4 used to identify the FileSystem
+* **fileSystemId**: string {minLength: 36, maxLength: 36, pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"} (Required): UUID v4 used to identify the FileSystem
 * **provisioningState**: string (ReadOnly): Azure lifecycle management
-* **snapshotId**: string (ReadOnly): UUID v4 used to identify the Snapshot
+* **snapshotId**: string {minLength: 36, maxLength: 36, pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"} (ReadOnly): UUID v4 used to identify the Snapshot
 
 ## VolumeProperties
 ### Properties
 * **creationToken**: string (Required): A unique file path for the volume. Used when creating mount targets
 * **exportPolicy**: [VolumePropertiesExportPolicy](#volumepropertiesexportpolicy): Export policy rule
-* **fileSystemId**: string (ReadOnly): Unique FileSystem Identifier.
+* **fileSystemId**: string {minLength: 36, maxLength: 36, pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"} (ReadOnly): Unique FileSystem Identifier.
 * **provisioningState**: string (ReadOnly): Azure lifecycle management
 * **serviceLevel**: 'Premium' | 'Standard' | 'Ultra' | string (Required): The service level of the file system
 * **subnetId**: string: The Azure Resource URI for a delegated subnet. Must have the delegation Microsoft.NetApp/volumes
-* **usageThreshold**: int: Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. Minimum size is 100 GiB. Upper limit is 100TiB.
+* **usageThreshold**: int {minValue: 107374182400, maxValue: 109951162777600}: Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. Minimum size is 100 GiB. Upper limit is 100TiB.
 
 ## VolumePropertiesExportPolicy
 ### Properties

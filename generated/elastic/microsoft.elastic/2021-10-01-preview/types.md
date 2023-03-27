@@ -46,11 +46,11 @@
 
 ## CompanyInfo
 ### Properties
-* **business**: string: Business of the company
-* **country**: string: Country of the company location.
-* **domain**: string: Domain of the company
-* **employeesNumber**: string: Number of employees in the company
-* **state**: string: State of the company location.
+* **business**: string {maxLength: 64}: Business of the company
+* **country**: string {maxLength: 64}: Country of the company location.
+* **domain**: string {maxLength: 250}: Domain of the company
+* **employeesNumber**: string {maxLength: 20}: Number of employees in the company
+* **state**: string {maxLength: 64}: State of the company location.
 
 ## DeploymentInfoResponse
 ### Properties
@@ -151,10 +151,10 @@
 ## UserInfo
 ### Properties
 * **companyInfo**: [CompanyInfo](#companyinfo): Company information of the user to be passed to partners.
-* **companyName**: string: Company name of the user
-* **emailAddress**: string: Email of the user used by Elastic for contacting them if needed
-* **firstName**: string: First name of the user
-* **lastName**: string: Last name of the user
+* **companyName**: string {maxLength: 64}: Company name of the user
+* **emailAddress**: string {pattern: "^([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@"]+)*)@(([a-zA-Z-_0-9]+\.)+[a-zA-Z]{2,})$"}: Email of the user used by Elastic for contacting them if needed
+* **firstName**: string {maxLength: 50}: First name of the user
+* **lastName**: string {maxLength: 50}: Last name of the user
 
 ## VMHostListResponse
 ### Properties

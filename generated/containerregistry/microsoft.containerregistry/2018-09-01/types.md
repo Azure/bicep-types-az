@@ -15,7 +15,7 @@
 * **apiVersion**: '2018-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The location of the resource. This cannot be changed after the resource is created.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 5, maxLength: 50, pattern: "^[a-zA-Z0-9-_]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [TaskProperties](#taskproperties): The properties of a task.
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.ContainerRegistry/registries/tasks' (ReadOnly, DeployTimeConstant): The resource type
@@ -207,7 +207,7 @@ the source registry during the run.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the task.
 * **status**: 'Disabled' | 'Enabled' | string: The current status of task.
 * **step**: [TaskStepProperties](#taskstepproperties) (Required): The properties of a task step.
-* **timeout**: int: Run timeout in seconds.
+* **timeout**: int {minValue: 300, maxValue: 28800}: Run timeout in seconds.
 * **trigger**: [TriggerProperties](#triggerproperties): The properties that describe all triggers for the task.
 
 ## TaskStepProperties

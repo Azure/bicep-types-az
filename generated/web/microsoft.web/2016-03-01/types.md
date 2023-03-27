@@ -287,7 +287,7 @@ where RDWORKERNAME is Machine name below and RoleInstance name in parenthesis
 * **level**: 'Critical' | 'Information' | 'NonUrgentSuggestion' | 'Warning': Level of impact indicating how critical this rule is.
 * **message**: string: Localized name of the rule (Good for UI).
 * **name**: string: Unique name of the rule.
-* **recommendationId**: string: Recommendation ID of an associated recommendation object tied to the rule, if exists.
+* **recommendationId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Recommendation ID of an associated recommendation object tied to the rule, if exists.
 If such an object doesn't exist, it is set to null.
 * **tags**: string[]: An array of category tags that the rule contains.
 

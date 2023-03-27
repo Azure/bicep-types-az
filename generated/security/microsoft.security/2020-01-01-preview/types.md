@@ -85,15 +85,15 @@
 
 ## ScoreDetails
 ### Properties
-* **current**: int (ReadOnly): Current score
-* **max**: int (ReadOnly): Maximum score available
-* **percentage**: int (ReadOnly): Ratio of the current score divided by the maximum. Rounded to 4 digits after the decimal point
+* **current**: int {minValue: 0} (ReadOnly): Current score
+* **max**: int {minValue: 0} (ReadOnly): Maximum score available
+* **percentage**: int {minValue: 0, maxValue: 1} (ReadOnly): Ratio of the current score divided by the maximum. Rounded to 4 digits after the decimal point
 
 ## SecureScoreItemProperties
 ### Properties
 * **displayName**: string (ReadOnly): The initiative’s name
 * **score**: [ScoreDetails](#scoredetails) (ReadOnly): score object
-* **weight**: int (ReadOnly): The relative weight for each subscription. Used when calculating an aggregated secure score for multiple subscriptions.
+* **weight**: int {minValue: 0} (ReadOnly): The relative weight for each subscription. Used when calculating an aggregated secure score for multiple subscriptions.
 
 ## SecurityContactProperties
 ### Properties

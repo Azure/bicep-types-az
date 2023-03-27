@@ -6,7 +6,7 @@
 * **apiVersion**: '2019-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The location of the resource. This cannot be changed after the resource is created.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 5, maxLength: 50, pattern: "^[a-zA-Z0-9_-]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ConfigurationStoreProperties](#configurationstoreproperties): The properties of a configuration store.
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.AppConfiguration/configurationStores' (ReadOnly, DeployTimeConstant): The resource type

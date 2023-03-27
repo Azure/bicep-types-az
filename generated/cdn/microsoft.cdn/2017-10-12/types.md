@@ -67,8 +67,8 @@
 ## DeepCreatedOriginProperties
 ### Properties
 * **hostName**: string (Required): The address of the origin. It can be a domain name, IPv4 address, or IPv6 address.
-* **httpPort**: int: The value of the HTTP port. Must be between 1 and 65535
-* **httpsPort**: int: The value of the HTTPS port. Must be between 1 and 65535
+* **httpPort**: int {minValue: 1, maxValue: 65535}: The value of the HTTP port. Must be between 1 and 65535
+* **httpsPort**: int {minValue: 1, maxValue: 65535}: The value of the HTTPS port. Must be between 1 and 65535
 
 ## DeliveryRule
 ### Properties
@@ -135,8 +135,8 @@
 ## OriginProperties
 ### Properties
 * **hostName**: string (Required): The address of the origin. Domain names, IPv4 addresses, and IPv6 addresses are supported.
-* **httpPort**: int: The value of the HTTP port. Must be between 1 and 65535.
-* **httpsPort**: int: The value of the https port. Must be between 1 and 65535.
+* **httpPort**: int {minValue: 1, maxValue: 65535}: The value of the HTTP port. Must be between 1 and 65535.
+* **httpsPort**: int {minValue: 1, maxValue: 65535}: The value of the https port. Must be between 1 and 65535.
 * **provisioningState**: string (ReadOnly): Provisioning status of the origin.
 * **resourceState**: 'Active' | 'Creating' | 'Deleting' | string (ReadOnly): Resource status of the origin.
 

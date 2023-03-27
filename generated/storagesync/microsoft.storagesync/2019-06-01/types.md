@@ -113,44 +113,44 @@
 * **serverLocalPath**: string: Server Local path.
 * **serverResourceId**: string: Server Resource Id.
 * **syncStatus**: [ServerEndpointSyncStatus](#serverendpointsyncstatus) (ReadOnly): Server Endpoint sync status
-* **tierFilesOlderThanDays**: int: Tier files older than days.
-* **volumeFreeSpacePercent**: int: Level of free space to be maintained by Cloud Tiering if it is enabled.
+* **tierFilesOlderThanDays**: int {minValue: 0, maxValue: 2147483647}: Tier files older than days.
+* **volumeFreeSpacePercent**: int {minValue: 0, maxValue: 100}: Level of free space to be maintained by Cloud Tiering if it is enabled.
 
 ## ServerEndpointFilesNotSyncingError
 ### Properties
 * **errorCode**: int (ReadOnly): Error code (HResult)
-* **persistentCount**: int (ReadOnly): Count of persistent files not syncing with the specified error code
-* **transientCount**: int (ReadOnly): Count of transient files not syncing with the specified error code
+* **persistentCount**: int {minValue: 0} (ReadOnly): Count of persistent files not syncing with the specified error code
+* **transientCount**: int {minValue: 0} (ReadOnly): Count of transient files not syncing with the specified error code
 
 ## ServerEndpointRecallError
 ### Properties
-* **count**: int (ReadOnly): Count of occurences of the error
+* **count**: int {minValue: 0} (ReadOnly): Count of occurences of the error
 * **errorCode**: int (ReadOnly): Error code (HResult)
 
 ## ServerEndpointRecallStatus
 ### Properties
 * **lastUpdatedTimestamp**: string (ReadOnly): Last updated timestamp
 * **recallErrors**: [ServerEndpointRecallError](#serverendpointrecallerror)[] (ReadOnly): Array of recall errors
-* **totalRecallErrorsCount**: int (ReadOnly): Total count of recall errors.
+* **totalRecallErrorsCount**: int {minValue: 0} (ReadOnly): Total count of recall errors.
 
 ## ServerEndpointSyncActivityStatus
 ### Properties
-* **appliedBytes**: int (ReadOnly): Applied bytes
-* **appliedItemCount**: int (ReadOnly): Applied item count.
-* **perItemErrorCount**: int (ReadOnly): Per item error count
+* **appliedBytes**: int {minValue: 0} (ReadOnly): Applied bytes
+* **appliedItemCount**: int {minValue: 0} (ReadOnly): Applied item count.
+* **perItemErrorCount**: int {minValue: 0} (ReadOnly): Per item error count
 * **timestamp**: string (ReadOnly): Timestamp when properties were updated
-* **totalBytes**: int (ReadOnly): Total bytes (if available)
-* **totalItemCount**: int (ReadOnly): Total item count (if available)
+* **totalBytes**: int {minValue: 0} (ReadOnly): Total bytes (if available)
+* **totalItemCount**: int {minValue: 0} (ReadOnly): Total item count (if available)
 
 ## ServerEndpointSyncSessionStatus
 ### Properties
 * **filesNotSyncingErrors**: [ServerEndpointFilesNotSyncingError](#serverendpointfilesnotsyncingerror)[] (ReadOnly): Array of per-item errors coming from the last sync session.
-* **lastSyncPerItemErrorCount**: int (ReadOnly): Last sync per item error count.
+* **lastSyncPerItemErrorCount**: int {minValue: 0} (ReadOnly): Last sync per item error count.
 * **lastSyncResult**: int (ReadOnly): Last sync result (HResult)
 * **lastSyncSuccessTimestamp**: string (ReadOnly): Last sync success timestamp
 * **lastSyncTimestamp**: string (ReadOnly): Last sync timestamp
-* **persistentFilesNotSyncingCount**: int (ReadOnly): Count of persistent files not syncing.
-* **transientFilesNotSyncingCount**: int (ReadOnly): Count of transient files not syncing.
+* **persistentFilesNotSyncingCount**: int {minValue: 0} (ReadOnly): Count of persistent files not syncing.
+* **transientFilesNotSyncingCount**: int {minValue: 0} (ReadOnly): Count of transient files not syncing.
 
 ## ServerEndpointSyncStatus
 ### Properties
@@ -161,7 +161,7 @@
 * **lastUpdatedTimestamp**: string (ReadOnly): Last Updated Timestamp
 * **offlineDataTransferStatus**: 'Complete' | 'InProgress' | 'NotRunning' | 'Stopping' | string (ReadOnly): Offline Data Transfer State
 * **syncActivity**: 'Download' | 'Upload' | 'UploadAndDownload' | string (ReadOnly): Sync activity
-* **totalPersistentFilesNotSyncingCount**: int (ReadOnly): Total count of persistent files not syncing (combined upload + download).
+* **totalPersistentFilesNotSyncingCount**: int {minValue: 0} (ReadOnly): Total count of persistent files not syncing (combined upload + download).
 * **uploadActivity**: [ServerEndpointSyncActivityStatus](#serverendpointsyncactivitystatus) (ReadOnly): Upload sync activity
 * **uploadHealth**: 'Error' | 'Healthy' | 'NoActivity' | 'SyncBlockedForChangeDetectionPostRestore' | 'SyncBlockedForRestore' | string (ReadOnly): Upload Health Status.
 * **uploadStatus**: [ServerEndpointSyncSessionStatus](#serverendpointsyncsessionstatus) (ReadOnly): Upload Status
