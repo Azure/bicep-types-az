@@ -145,7 +145,7 @@
 * **serverResourceId**: string (ReadOnly): Azure Database Server resource Id
 * **sku**: string (Required): The name of the server SKU, e.g. Standard_D32s_v4
 * **sslEnforcementEnabled**: 'Disabled' | 'Enabled' | string: Whether to enable SSL enforcement on the database
-* **storageInGB**: int: Database storage size in GB
+* **storageInGB**: int {minValue: 1}: Database storage size in GB
 * **storageIops**: int: Storage IOPS for the server
 * **storageSku**: string: SKU name for database storage
 * **tier**: 'Burstable' | 'GeneralPurpose' | 'MemoryOptimized' (Required): Tier of the server SKU
@@ -247,7 +247,7 @@
 ## FileshareProfile
 ### Properties
 * **shareName**: string (ReadOnly): File share name
-* **shareSizeInGB**: int: File share size in GB
+* **shareSizeInGB**: int {minValue: 1}: File share size in GB
 * **shareType**: 'AzureFiles' | 'NfsOnController' | string (Required): Share type
 * **storageResourceId**: string (ReadOnly): File share storage resource id
 * **storageType**: 'Premium_LRS' | 'Standard_GRS' | 'Standard_LRS' | 'Standard_ZRS' | string (Required): File share backing storage type
@@ -264,7 +264,7 @@
 ## HighAvailabilitySoftwareConfiguration
 ### Properties
 * **fencingClientId**: string (Required): The fencing client id.
-* **fencingClientPassword**: string (Required): The fencing client id secret/password. The secret should never expire. This will be used pacemaker to start/stop the cluster VMs.
+* **fencingClientPassword**: string {secure} (Required): The fencing client id secret/password. The secret should never expire. This will be used pacemaker to start/stop the cluster VMs.
 
 ## ImageReference
 ### Properties
@@ -392,7 +392,7 @@
 
 ## OSProfile
 ### Properties
-* **adminPassword**: string: Specifies the password of the administrator account. <br><br> **Minimum-length (Windows):** 8 characters <br><br> **Minimum-length (Linux):** 6 characters <br><br> **Max-length (Windows):** 123 characters <br><br> **Max-length (Linux):** 72 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!" <br><br> For resetting the password, see [How to reset the Remote Desktop service or its login password in a Windows VM](https://docs.microsoft.com/troubleshoot/azure/virtual-machines/reset-rdp) <br><br> For resetting root password, see [Manage users, SSH, and check or repair disks on Azure Linux VMs using the VMAccess Extension](https://docs.microsoft.com/troubleshoot/azure/virtual-machines/troubleshoot-ssh-connection)
+* **adminPassword**: string {secure}: Specifies the password of the administrator account. <br><br> **Minimum-length (Windows):** 8 characters <br><br> **Minimum-length (Linux):** 6 characters <br><br> **Max-length (Windows):** 123 characters <br><br> **Max-length (Linux):** 72 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!" <br><br> For resetting the password, see [How to reset the Remote Desktop service or its login password in a Windows VM](https://docs.microsoft.com/troubleshoot/azure/virtual-machines/reset-rdp) <br><br> For resetting root password, see [Manage users, SSH, and check or repair disks on Azure Linux VMs using the VMAccess Extension](https://docs.microsoft.com/troubleshoot/azure/virtual-machines/troubleshoot-ssh-connection)
 * **adminUsername**: string: Specifies the name of the administrator account. <br><br> This property cannot be updated after the VM is created. <br><br> **Windows-only restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length (Linux):** 1  character <br><br> **Max-length (Linux):** 64 characters <br><br> **Max-length (Windows):** 20 characters.
 * **osConfiguration**: [OSConfiguration](#osconfiguration): Specifies Windows operating system settings on the virtual machine.
 
@@ -449,7 +449,7 @@
 ### DB2ProviderInstanceProperties
 #### Properties
 * **dbName**: string: Gets or sets the db2 database name.
-* **dbPassword**: string: Gets or sets the db2 database password.
+* **dbPassword**: string {secure}: Gets or sets the db2 database password.
 * **dbPasswordUri**: string: Gets or sets the key vault URI to secret with the database password.
 * **dbPort**: string: Gets or sets the db2 database sql port.
 * **dbUsername**: string: Gets or sets the db2 database user name.
@@ -461,7 +461,7 @@
 
 ### MsSqlServerProviderInstanceProperties
 #### Properties
-* **dbPassword**: string: Gets or sets the database password.
+* **dbPassword**: string {secure}: Gets or sets the database password.
 * **dbPasswordUri**: string: Gets or sets the key vault URI to secret with the database password.
 * **dbPort**: string: Gets or sets the database sql port.
 * **dbUsername**: string: Gets or sets the database user name.
@@ -491,7 +491,7 @@
 ### HanaDbProviderInstanceProperties
 #### Properties
 * **dbName**: string: Gets or sets the hana database name.
-* **dbPassword**: string: Gets or sets the database password.
+* **dbPassword**: string {secure}: Gets or sets the database password.
 * **dbPasswordUri**: string: Gets or sets the key vault URI to secret with the database password.
 * **dbSslCertificateUri**: string: Gets or sets the blob URI to SSL certificate for the DB.
 * **dbUsername**: string: Gets or sets the database user name.
@@ -510,7 +510,7 @@
 * **sapHostFileEntries**: string[]: Gets or sets the list of HostFile Entries
 * **sapHostname**: string: Gets or sets the target virtual machine IP Address/FQDN.
 * **sapInstanceNr**: string: Gets or sets the instance number of SAP NetWeaver.
-* **sapPassword**: string: Sets the SAP password.
+* **sapPassword**: string {secure}: Sets the SAP password.
 * **sapPasswordUri**: string: Gets or sets the key vault URI to secret with the SAP password.
 * **sapPortNumber**: string: Gets or sets the SAP HTTP port number.
 * **sapSid**: string: Gets or sets the SAP System Identifier
@@ -658,7 +658,7 @@
 * **sapFqdn**: string (Required): The FQDN to set for the SAP system during install.
 * **softwareInstallationType**: 'ServiceInitiated' (Required): The SAP software installation Type.
 * **softwareVersion**: string (Required): The software version to install.
-* **sshPrivateKey**: string (Required): The SSH private key.
+* **sshPrivateKey**: string {secure} (Required): The SSH private key.
 
 
 ## SshConfiguration
@@ -667,7 +667,7 @@
 
 ## SshKeyPair
 ### Properties
-* **privateKey**: string: SSH private key.
+* **privateKey**: string {secure}: SSH private key.
 * **publicKey**: string: SSH public key
 
 ## SshPublicKey
@@ -733,8 +733,8 @@
 
 ## UserAssignedIdentity
 ### Properties
-* **clientId**: string (ReadOnly): The client ID of the assigned identity.
-* **principalId**: string (ReadOnly): The principal ID of the assigned identity.
+* **clientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The client ID of the assigned identity.
+* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The principal ID of the assigned identity.
 
 ## UserAssignedServiceIdentity
 ### Properties
@@ -754,8 +754,8 @@
 
 ## VmssNodesProfile
 ### Properties
-* **autoScaleMaxCount**: int: Maximum number of nodes for autoscale
-* **autoScaleMinCount**: int: Minimum number of nodes for autoscale
+* **autoScaleMaxCount**: int {minValue: 1}: Maximum number of nodes for autoscale
+* **autoScaleMinCount**: int {minValue: 1}: Minimum number of nodes for autoscale
 * **dataDisks**: [DiskInfo](#diskinfo)[]: Data disks details. This property is not in use right now
 * **name**: string: VM or VMSS name
 * **nodeResourceIds**: string[] (ReadOnly): VM/VMSS resource ARM Ids

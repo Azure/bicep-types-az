@@ -7,7 +7,7 @@
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9]{0,62}[a-zA-Z0-9])$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [BareMetalMachineProperties](#baremetalmachineproperties) (Required): The list of the resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -20,7 +20,7 @@
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9-_]{0,28}[a-zA-Z0-9])$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [CloudServicesNetworkProperties](#cloudservicesnetworkproperties): The list of the resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -32,7 +32,7 @@
 * **apiVersion**: '2022-12-12-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9-_]{0,28}[a-zA-Z0-9])$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ClusterManagerProperties](#clustermanagerproperties) (Required): The list of the resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -45,7 +45,7 @@
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster manager associated with the cluster.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9-_]{0,28}[a-zA-Z0-9])$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ClusterProperties](#clusterproperties) (Required): The list of the resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -58,7 +58,7 @@
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9-_]{0,28}[a-zA-Z0-9])$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [BareMetalMachineKeySetProperties](#baremetalmachinekeysetproperties) (Required): The list of the resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -71,7 +71,7 @@
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9-_]{0,28}[a-zA-Z0-9])$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [BmcKeySetProperties](#bmckeysetproperties) (Required): The list of the resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -84,7 +84,7 @@
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^default$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ClusterMetricsConfigurationProperties](#clustermetricsconfigurationproperties) (Required): The list of the resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -97,7 +97,7 @@
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9-_]{0,28}[a-zA-Z0-9])$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DefaultCniNetworkProperties](#defaultcninetworkproperties) (Required): The list of the resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -110,7 +110,7 @@
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9-_]{0,61}[a-zA-Z0-9])$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [HybridAksClusterProperties](#hybridaksclusterproperties) (Required): The list of the resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -123,7 +123,7 @@
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9-_]{0,28}[a-zA-Z0-9])$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [L2NetworkProperties](#l2networkproperties) (Required): The list of the resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -136,7 +136,7 @@
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9-_]{0,28}[a-zA-Z0-9])$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [L3NetworkProperties](#l3networkproperties) (Required): The list of the resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -149,7 +149,7 @@
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9-_]{0,28}[a-zA-Z0-9])$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [RackProperties](#rackproperties) (Required): The list of the resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -172,7 +172,7 @@
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9-_]{0,28}[a-zA-Z0-9])$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [StorageApplianceProperties](#storageapplianceproperties) (Required): The list of the resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -185,7 +185,7 @@
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9-_]{0,28}[a-zA-Z0-9])$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [TrunkedNetworkProperties](#trunkednetworkproperties) (Required): The list of the resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -198,7 +198,7 @@
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9]{0,62}[a-zA-Z0-9])$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [VirtualMachineProperties](#virtualmachineproperties) (Required): The list of the resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -211,7 +211,7 @@
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster manager associated with the cluster this virtual machine is created on.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^default$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ConsoleProperties](#consoleproperties) (Required): The list of the resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -224,7 +224,7 @@
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9]{0,28}[a-zA-Z0-9])$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [VolumeProperties](#volumeproperties) (Required): The list of the resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -232,20 +232,20 @@
 
 ## AdministrativeCredentials
 ### Properties
-* **password**: string (Required): The password of the administrator of the device used during initialization.
-* **username**: string (Required): The username of the administrator of the device used during initialization.
+* **password**: string {secure, minLength: 1} (Required): The password of the administrator of the device used during initialization.
+* **username**: string {minLength: 1} (Required): The username of the administrator of the device used during initialization.
 
 ## BareMetalMachineConfigurationData
 ### Properties
 * **bmcConnectionString**: string (ReadOnly): The connection string for the baseboard management controller including IP address and protocol.
 * **bmcCredentials**: [AdministrativeCredentials](#administrativecredentials) (Required): AdministrativeCredentials represents the admin credentials for the device requiring password-based authentication.
-* **bmcMacAddress**: string (Required): The MAC address of the BMC for this machine.
-* **bootMacAddress**: string (Required): The MAC address associated with the PXE NIC card.
-* **machineDetails**: string: The free-form additional information about the machine, e.g. an asset tag.
-* **machineName**: string: The user-provided name for the bare metal machine created from this specification.
+* **bmcMacAddress**: string {pattern: "^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$"} (Required): The MAC address of the BMC for this machine.
+* **bootMacAddress**: string {pattern: "^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$"} (Required): The MAC address associated with the PXE NIC card.
+* **machineDetails**: string {maxLength: 256}: The free-form additional information about the machine, e.g. an asset tag.
+* **machineName**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9]{0,62}[a-zA-Z0-9])$"}: The user-provided name for the bare metal machine created from this specification.
 If not provided, the machine name will be generated programmatically.
-* **rackSlot**: int (Required): The slot the physical machine is in the rack based on the BOM configuration.
-* **serialNumber**: string (Required): The serial number of the machine. Hardware suppliers may use an alternate value. For example, service tag.
+* **rackSlot**: int {minValue: 1, maxValue: 256} (Required): The slot the physical machine is in the rack based on the BOM configuration.
+* **serialNumber**: string {maxLength: 64} (Required): The serial number of the machine. Hardware suppliers may use an alternate value. For example, service tag.
 
 ## BareMetalMachineKeySetProperties
 ### Properties
@@ -255,7 +255,7 @@ If not provided, the machine name will be generated programmatically.
 * **expiration**: string (Required): The date and time after which the users in this key set will be removed from the bare metal machines.
 * **jumpHostsAllowed**: string[] (Required): The list of IP addresses of jump hosts with management network access from which a login will be allowed for the users.
 * **lastValidation**: string (ReadOnly): The last time this key set was validated.
-* **osGroupName**: string: The name of the group that users will be assigned to on the operating system of the machines.
+* **osGroupName**: string {maxLength: 32, pattern: "^([A-Za-z]([A-Za-z0-9]*))$"}: The name of the group that users will be assigned to on the operating system of the machines.
 * **privilegeLevel**: 'Standard' | 'Superuser' | string (Required): The access level allowed for the users in this key set.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): The provisioning state of the bare metal machine key set.
 * **userList**: [KeySetUser](#keysetuser)[] (Required): The unique list of permitted users.
@@ -265,8 +265,8 @@ If not provided, the machine name will be generated programmatically.
 ### Properties
 * **bmcConnectionString**: string (Required): The connection string for the baseboard management controller including IP address and protocol.
 * **bmcCredentials**: [AdministrativeCredentials](#administrativecredentials) (Required): AdministrativeCredentials represents the admin credentials for the device requiring password-based authentication.
-* **bmcMacAddress**: string (Required): The MAC address of the BMC device.
-* **bootMacAddress**: string (Required): The MAC address of a NIC connected to the PXE network.
+* **bmcMacAddress**: string {pattern: "^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$"} (Required): The MAC address of the BMC device.
+* **bootMacAddress**: string {pattern: "^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$"} (Required): The MAC address of a NIC connected to the PXE network.
 * **clusterId**: string (ReadOnly): The resource ID of the cluster this bare metal machine is associated with.
 * **cordonStatus**: 'Cordoned' | 'Uncordoned' | string (ReadOnly): The cordon status of the bare metal machine.
 * **detailedStatus**: 'Available' | 'Deprovisioning' | 'Error' | 'Preparing' | 'Provisioned' | 'Provisioning' | string (ReadOnly): The more detailed status of the bare metal machine.
@@ -276,8 +276,8 @@ If not provided, the machine name will be generated programmatically.
 * **hybridAksClustersAssociatedIds**: string[] (ReadOnly): The list of the resource IDs for the HybridAksClusters that have nodes hosted on this bare metal machine.
 * **kubernetesNodeName**: string (ReadOnly): The name of this machine represented by the host object in the Cluster's Kubernetes control plane.
 * **kubernetesVersion**: string (ReadOnly): The version of Kubernetes running on this machine.
-* **machineDetails**: string (Required): The custom details provided by the customer.
-* **machineName**: string (Required): The OS-level hostname assigned to this machine.
+* **machineDetails**: string {maxLength: 256} (Required): The custom details provided by the customer.
+* **machineName**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9]{0,62}[a-zA-Z0-9])$"} (Required): The OS-level hostname assigned to this machine.
 * **machineSkuId**: string (Required): The unique internal identifier of the bare metal machine SKU.
 * **oamIpv4Address**: string (ReadOnly): The IPv4 address that is assigned to the bare metal machine during the cluster deployment.
 * **oamIpv6Address**: string (ReadOnly): The IPv6 address that is assigned to the bare metal machine during the cluster deployment.
@@ -285,16 +285,16 @@ If not provided, the machine name will be generated programmatically.
 * **powerState**: 'Off' | 'On' | string (ReadOnly): The power state derived from the baseboard management controller.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): The provisioning state of the bare metal machine.
 * **rackId**: string (Required): The resource ID of the rack where this bare metal machine resides.
-* **rackSlot**: int (Required): The rack slot in which this bare metal machine is located, ordered from the bottom up i.e. the lowest slot is 1.
+* **rackSlot**: int {minValue: 1, maxValue: 256} (Required): The rack slot in which this bare metal machine is located, ordered from the bottom up i.e. the lowest slot is 1.
 * **readyState**: 'False' | 'True' | string (ReadOnly): The indicator of whether the bare metal machine is ready to receive workloads.
-* **serialNumber**: string (Required): The serial number of the bare metal machine.
+* **serialNumber**: string {minLength: 1, maxLength: 64} (Required): The serial number of the bare metal machine.
 * **serviceTag**: string (ReadOnly): The discovered value of the machine's service tag.
 * **virtualMachinesAssociatedIds**: string[] (ReadOnly): The list of the resource IDs for the VirtualMachines that are hosted on this bare metal machine.
 
 ## BgpPeer
 ### Properties
-* **asNumber**: int (Required): The ASN (Autonomous System Number) of the BGP peer.
-* **password**: string (WriteOnly): The password for this peering neighbor. It defaults to no password if not specified.
+* **asNumber**: int {minValue: 0, maxValue: 4294967295} (Required): The ASN (Autonomous System Number) of the BGP peer.
+* **password**: string {secure, maxLength: 80, pattern: "^[a-zA-Z0-9]{0,80}$"} (WriteOnly): The password for this peering neighbor. It defaults to no password if not specified.
 * **peerIp**: string (Required): The IPv4 or IPv6 address to peer with the associated CNI Network. The IP version type will drive a peering with the same version type from the Default CNI Network. For example, IPv4 to IPv4 or IPv6 to IPv6.
 
 ## BmcKeySetProperties
@@ -363,7 +363,7 @@ If not provided, the machine name will be generated programmatically.
 
 ## ClusterMetricsConfigurationProperties
 ### Properties
-* **collectionInterval**: int (Required): The interval in minutes by which metrics will be collected.
+* **collectionInterval**: int {minValue: 1, maxValue: 1440} (Required): The interval in minutes by which metrics will be collected.
 * **detailedStatus**: 'Applied' | 'Error' | 'Processing' | string (ReadOnly): The more detailed status of the metrics configuration.
 * **detailedStatusMessage**: string (ReadOnly): The descriptive message about the current detailed status.
 * **disabledMetrics**: string[] (ReadOnly): The list of metrics that are available for the cluster but disabled at the moment.
@@ -379,7 +379,7 @@ If not provided, the machine name will be generated programmatically.
 * **clusterConnectionStatus**: 'Connected' | 'Timeout' | 'Undefined' | string (ReadOnly): The latest heartbeat status between the cluster manager and the cluster.
 * **clusterExtendedLocation**: [ExtendedLocation](#extendedlocation) (ReadOnly): The extended location (custom location) that represents the cluster's control plane location.
 This extended location is used to route the requests of child objects of the cluster that are handled by the platform operator.
-* **clusterLocation**: string: The customer-provided location information to identify where the cluster resides.
+* **clusterLocation**: string {maxLength: 256}: The customer-provided location information to identify where the cluster resides.
 * **clusterManagerConnectionStatus**: 'Connected' | 'Unreachable' | string (ReadOnly): The latest connectivity status between cluster manager and the cluster.
 * **clusterManagerId**: string (ReadOnly): The resource ID of the cluster manager that manages this cluster. This is set by the Cluster Manager when the cluster is created.
 * **clusterServicePrincipal**: [ServicePrincipalInformation](#serviceprincipalinformation): ServicePrincipalInformation represents the details of the service principal to be used by the cluster during Arc Appliance installation.
@@ -404,7 +404,7 @@ This extended location is used when creating provisioned clusters (Hybrid AKS cl
 * **bgpPeers**: [BgpPeer](#bgppeer)[]: The list of BgpPeer entities that the Hybrid AKS cluster will peer with in addition to peering that occurs automatically with the switch fabric.
 * **communityAdvertisements**: [CommunityAdvertisement](#communityadvertisement)[]: The list of prefix community advertisement properties. Each prefix community specifies a prefix, and the
 communities that should be associated with that prefix when it is announced.
-* **nodeMeshPassword**: string (WriteOnly): The password of the Calico node mesh. It defaults to a randomly-generated string when not provided.
+* **nodeMeshPassword**: string {secure, maxLength: 80, pattern: "^[a-zA-Z0-9]{0,80}$"} (WriteOnly): The password of the Calico node mesh. It defaults to a randomly-generated string when not provided.
 * **serviceExternalPrefixes**: string[]: The subnet blocks in CIDR format for Kubernetes service external IPs to be advertised over BGP.
 * **serviceLoadBalancerPrefixes**: string[]: The subnet blocks in CIDR format for Kubernetes load balancers. Load balancer IPs will only be advertised if they
 are within one of these blocks.
@@ -442,7 +442,7 @@ is IPV4 or DualStack.
 is IPV6 or DualStack.
 * **l3IsolationDomainId**: string (Required): The resource ID of the Network Fabric l3IsolationDomain.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): The provisioning state of the default CNI network.
-* **vlan**: int (Required): The VLAN from the l3IsolationDomain that is used for this network.
+* **vlan**: int {minValue: 1, maxValue: 4094} (Required): The VLAN from the l3IsolationDomain that is used for this network.
 
 ## EgressEndpoint
 ### Properties
@@ -452,7 +452,7 @@ is IPV6 or DualStack.
 ## EndpointDependency
 ### Properties
 * **domainName**: string (Required): The domain name of the dependency.
-* **port**: int: The port of this endpoint.
+* **port**: int {minValue: 1, maxValue: 65535}: The port of this endpoint.
 
 ## ExtendedLocation
 ### Properties
@@ -482,7 +482,7 @@ is IPV6 or DualStack.
 * **associatedNetworkIds**: string[] (Required): The list of resource IDs for the workload networks associated with the Hybrid AKS cluster. It can be any of l2Networks, l3Networks, or trunkedNetworks resources. This field will also contain one cloudServicesNetwork and one defaultCniNetwork.
 * **cloudServicesNetworkId**: string (ReadOnly): The resource ID of the associated cloud services network.
 * **clusterId**: string (ReadOnly): The resource ID of the Network Cloud cluster hosting the Hybrid AKS cluster.
-* **controlPlaneCount**: int (Required): The number of control plane node VMs.
+* **controlPlaneCount**: int {minValue: 1} (Required): The number of control plane node VMs.
 * **controlPlaneNodes**: [NodeConfiguration](#nodeconfiguration)[] (ReadOnly): The list of node configurations detailing associated VMs that are part of the control plane nodes of this Hybrid AKS cluster.
 * **defaultCniNetworkId**: string (ReadOnly): The resource ID of the associated default CNI network.
 * **detailedStatus**: 'Available' | 'Error' | 'Provisioning' | string (ReadOnly): The more detailed status of this Hybrid AKS cluster.
@@ -495,21 +495,21 @@ is IPV6 or DualStack.
 
 ## ImageRepositoryCredentials
 ### Properties
-* **password**: string (Required): The password or token used to access an image in the target repository.
+* **password**: string {secure, minLength: 1} (Required): The password or token used to access an image in the target repository.
 * **registryUrl**: string (Required): The URL of the authentication server used to validate the repository credentials.
-* **username**: string (Required): The username used to access an image in the target repository.
+* **username**: string {minLength: 1} (Required): The username used to access an image in the target repository.
 
 ## KeySetUser
 ### Properties
 * **azureUserName**: string (Required): The Azure Active Directory user name (email name).
-* **description**: string: The free-form description for this user.
+* **description**: string {maxLength: 256}: The free-form description for this user.
 * **sshPublicKey**: [SshPublicKey](#sshpublickey) (Required): SshPublicKey represents the public key used to authenticate with the virtual machine through SSH.
 
 ## KeySetUserStatus
 ### Properties
 * **azureUserName**: string (ReadOnly): The Azure Active Directory user name (email name).
 * **status**: 'Active' | 'Invalid' | string (ReadOnly): The indicator of whether the user is currently deployed for access.
-* **statusMessage**: string (ReadOnly): The additional information describing the current status of this user, if any available.
+* **statusMessage**: string {maxLength: 256} (ReadOnly): The additional information describing the current status of this user, if any available.
 
 ## L2NetworkProperties
 ### Properties
@@ -518,7 +518,7 @@ is IPV6 or DualStack.
 * **detailedStatusMessage**: string (ReadOnly): The descriptive message about the current detailed status.
 * **hybridAksClustersAssociatedIds**: string[] (ReadOnly): The list of Hybrid AKS cluster resource ID(s) that are associated with this L2 network.
 * **hybridAksPluginType**: 'DPDK' | 'OSDevice' | 'SRIOV' | string: The network plugin type for Hybrid AKS.
-* **interfaceName**: string: The default interface name for this L2 network in the virtual machine. This name can be overridden by the name supplied in the network attachment configuration of that virtual machine.
+* **interfaceName**: string {maxLength: 12, pattern: "^[a-zA-Z0-9@._-]*$"}: The default interface name for this L2 network in the virtual machine. This name can be overridden by the name supplied in the network attachment configuration of that virtual machine.
 * **l2IsolationDomainId**: string (Required): The resource ID of the Network Fabric l2IsolationDomain.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): The provisioning state of the L2 network.
 * **virtualMachinesAssociatedIds**: string[] (ReadOnly): The list of virtual machine resource ID(s), excluding any Hybrid AKS virtual machines, that are currently using this L2 network.
@@ -531,7 +531,7 @@ is IPV6 or DualStack.
 * **hybridAksClustersAssociatedIds**: string[] (ReadOnly): The list of Hybrid AKS cluster resource IDs that are associated with this L3 network.
 * **hybridAksIpamEnabled**: 'False' | 'True' | string: The indicator of whether or not to disable IPAM allocation on the network attachment definition injected into the Hybrid AKS Cluster.
 * **hybridAksPluginType**: 'DPDK' | 'OSDevice' | 'SRIOV' | string: The network plugin type for Hybrid AKS.
-* **interfaceName**: string: The default interface name for this L3 network in the virtual machine. This name can be overridden by the name supplied in the network attachment configuration of that virtual machine.
+* **interfaceName**: string {maxLength: 12, pattern: "^[a-zA-Z0-9@._-]*$"}: The default interface name for this L3 network in the virtual machine. This name can be overridden by the name supplied in the network attachment configuration of that virtual machine.
 * **ipAllocationType**: 'DualStack' | 'IPV4' | 'IPV6' | string: The type of the IP address allocation, defaulted to "DualStack".
 * **ipv4ConnectedPrefix**: string: The IPV4 prefix (CIDR) assigned to this L3 network. Required when the IP allocation type
 is IPV4 or DualStack.
@@ -577,7 +577,7 @@ is IPV6 or DualStack.
 ## ManagedResourceGroupConfiguration
 ### Properties
 * **location**: string: The location of the managed resource group. If not specified, the location of the parent resource is chosen.
-* **name**: string: The name for the managed resource group. If not specified, the unique name is automatically generated.
+* **name**: string {maxLength: 75}: The name for the managed resource group. If not specified, the unique name is automatically generated.
 
 ## NetworkAttachment
 ### Properties
@@ -605,7 +605,7 @@ Static - this field must contain an IPv6 address range from within the range spe
 Dynamic - this field is read-only, but will be populated with an range from within the subnet specified in the attached network.
 Disabled - this field will be empty.
 * **macAddress**: string (ReadOnly): The MAC address of the interface for the virtual machine that corresponds to this network attachment.
-* **networkAttachmentName**: string: The associated network's interface name.
+* **networkAttachmentName**: string {maxLength: 15}: The associated network's interface name.
 If specified, the network attachment name has a maximum length of 15 characters and must be unique to this virtual machine.
 If the user doesn’t specify this value, the default interface name of the network resource will be used.
 For a CloudServicesNetwork resource, this name will be ignored.
@@ -654,23 +654,23 @@ For a CloudServicesNetwork resource, this name will be ignored.
 
 ## RackDefinition
 ### Properties
-* **availabilityZone**: string: The zone name used for this rack when created.
+* **availabilityZone**: string {pattern: "^[a-zA-Z0-9]{1,10}$"}: The zone name used for this rack when created.
 * **bareMetalMachineConfigurationData**: [BareMetalMachineConfigurationData](#baremetalmachineconfigurationdata)[]: The unordered list of bare metal machine configuration.
 * **networkRackId**: string (Required): The resource ID of the network rack that matches this rack definition.
-* **rackLocation**: string: The free-form description of the rack's location.
-* **rackSerialNumber**: string (Required): The unique identifier for the rack within Network Cloud cluster. An alternate unique alphanumeric value other than a serial number may be provided if desired.
+* **rackLocation**: string {maxLength: 256}: The free-form description of the rack's location.
+* **rackSerialNumber**: string {minLength: 1, maxLength: 64} (Required): The unique identifier for the rack within Network Cloud cluster. An alternate unique alphanumeric value other than a serial number may be provided if desired.
 * **rackSkuId**: string (Required): The resource ID of the sku for the rack being added.
 * **storageApplianceConfigurationData**: [StorageApplianceConfigurationData](#storageapplianceconfigurationdata)[]: The list of storage appliance configuration data for this rack.
 
 ## RackProperties
 ### Properties
-* **availabilityZone**: string (Required): The value that will be used for machines in this rack to represent the availability zones that can be referenced by Hybrid AKS Clusters for node arrangement.
+* **availabilityZone**: string {pattern: "^[a-zA-Z0-9]{1,10}$"} (Required): The value that will be used for machines in this rack to represent the availability zones that can be referenced by Hybrid AKS Clusters for node arrangement.
 * **clusterId**: string (ReadOnly): The resource ID of the cluster the rack is created for. This value is set when the rack is created by the cluster.
 * **detailedStatus**: 'Available' | 'Error' | 'Provisioning' | string (ReadOnly): The more detailed status of the rack.
 * **detailedStatusMessage**: string (ReadOnly): The descriptive message about the current detailed status.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): The provisioning state of the rack resource.
-* **rackLocation**: string (Required): The free-form description of the rack location. (e.g. “DTN Datacenter, Floor 3, Isle 9, Rack 2B”)
-* **rackSerialNumber**: string (Required): The unique identifier for the rack within Network Cloud cluster. An alternate unique alphanumeric value other than a serial number may be provided if desired.
+* **rackLocation**: string {maxLength: 256} (Required): The free-form description of the rack location. (e.g. “DTN Datacenter, Floor 3, Isle 9, Rack 2B”)
+* **rackSerialNumber**: string {minLength: 1, maxLength: 64} (Required): The unique identifier for the rack within Network Cloud cluster. An alternate unique alphanumeric value other than a serial number may be provided if desired.
 * **rackSkuId**: string (Required): The SKU for the rack.
 
 ## RackSkuProperties
@@ -687,20 +687,20 @@ For a CloudServicesNetwork resource, this name will be ignored.
 ## ServicePrincipalInformation
 ### Properties
 * **applicationId**: string (Required): The application ID, also known as client ID, of the service principal.
-* **password**: string (Required): The password of the service principal.
+* **password**: string {secure} (Required): The password of the service principal.
 * **principalId**: string (Required): The principal ID, also known as the object ID, of the service principal.
 * **tenantId**: string (Required): The tenant ID, also known as the directory ID, of the tenant in which the service principal is created.
 
 ## SshPublicKey
 ### Properties
-* **keyData**: string (Required): The public ssh key of the user.
+* **keyData**: string {minLength: 1} (Required): The public ssh key of the user.
 
 ## StorageApplianceConfigurationData
 ### Properties
 * **adminCredentials**: [AdministrativeCredentials](#administrativecredentials) (Required): AdministrativeCredentials represents the admin credentials for the device requiring password-based authentication.
-* **rackSlot**: int (Required): The slot that storage appliance is in the rack based on the BOM configuration.
+* **rackSlot**: int {minValue: 1, maxValue: 256} (Required): The slot that storage appliance is in the rack based on the BOM configuration.
 * **serialNumber**: string (Required): The serial number of the appliance.
-* **storageApplianceName**: string: The user-provided name for the storage appliance that will be created from this specification.
+* **storageApplianceName**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9-_]{0,28}[a-zA-Z0-9])$"}: The user-provided name for the storage appliance that will be created from this specification.
 
 ## StorageApplianceProperties
 ### Properties
@@ -713,7 +713,7 @@ For a CloudServicesNetwork resource, this name will be ignored.
 * **managementIpv4Address**: string (ReadOnly): The endpoint for the management interface of the storage appliance.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): The provisioning state of the storage appliance.
 * **rackId**: string (Required): The resource ID of the rack where this storage appliance resides.
-* **rackSlot**: int (Required): The slot the storage appliance is in the rack based on the BOM configuration.
+* **rackSlot**: int {minValue: 1, maxValue: 256} (Required): The slot the storage appliance is in the rack based on the BOM configuration.
 * **remoteVendorManagementFeature**: 'Supported' | 'Unsupported' | string (ReadOnly): The indicator of whether the storage appliance supports remote vendor management.
 * **remoteVendorManagementStatus**: 'Disabled' | 'Enabled' | 'Unsupported' | string (ReadOnly): The indicator of whether the remote vendor management feature is enabled or disabled, or unsupported if it is an unsupported feature.
 * **serialNumber**: string (Required): The serial number for the storage appliance.
@@ -835,7 +835,7 @@ For a CloudServicesNetwork resource, this name will be ignored.
 * **detailedStatusMessage**: string (ReadOnly): The descriptive message about the current detailed status.
 * **hybridAksClustersAssociatedIds**: string[] (ReadOnly): The list of Hybrid AKS cluster resource IDs that are associated with this trunked network.
 * **hybridAksPluginType**: 'DPDK' | 'OSDevice' | 'SRIOV' | string: The network plugin type for Hybrid AKS.
-* **interfaceName**: string: The default interface name for this trunked network in the virtual machine. This name can be overridden by the name supplied in the network attachment configuration of that virtual machine.
+* **interfaceName**: string {maxLength: 12, pattern: "^[a-zA-Z0-9@._-]*$"}: The default interface name for this trunked network in the virtual machine. This name can be overridden by the name supplied in the network attachment configuration of that virtual machine.
 * **isolationDomainIds**: string[] (Required): The list of resource IDs representing the Network Fabric isolation domains. It can be any combination of l2IsolationDomain and l3IsolationDomain resources.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): The provisioning state of the trunked network.
 * **virtualMachinesAssociatedIds**: string[] (ReadOnly): The list of virtual machine resource IDs, excluding any Hybrid AKS virtual machines, that are currently using this trunked network.
@@ -845,27 +845,27 @@ For a CloudServicesNetwork resource, this name will be ignored.
 ### Properties
 * **grouping**: 'PerCluster' | 'PerRack' | string (Required): Selection of how the type evaluation is applied to the cluster calculation.
 * **type**: 'CountSuccess' | 'PercentSuccess' | string (Required): Selection of how the threshold should be evaluated.
-* **value**: int (Required): The numeric threshold value.
+* **value**: int {minValue: 0} (Required): The numeric threshold value.
 
 ## VirtualMachinePlacementHint
 ### Properties
 * **hintType**: 'Affinity' | 'AntiAffinity' | string (Required): The specification of whether this hint supports affinity or anti-affinity with the referenced resources.
-* **resourceId**: string (Required): The resource ID of the target object that the placement hints will be checked against, e.g., the bare metal node to host the virtual machine.
+* **resourceId**: string {minLength: 1} (Required): The resource ID of the target object that the placement hints will be checked against, e.g., the bare metal node to host the virtual machine.
 * **schedulingExecution**: 'Hard' | 'Soft' | string (Required): The indicator of whether the hint is a hard or soft requirement during scheduling.
 * **scope**: 'Machine' | 'Rack' | string (Required): The scope for the virtual machine affinity or anti-affinity placement hint. It should always be "Machine" in the case of node affinity.
 
 ## VirtualMachineProperties
 ### Properties
-* **adminUsername**: string (Required): The name of the administrator to which the ssh public keys will be added into the authorized keys.
+* **adminUsername**: string {minLength: 1, maxLength: 32, pattern: "^[a-z_][a-z0-9_]{0,31}$"} (Required): The name of the administrator to which the ssh public keys will be added into the authorized keys.
 * **bareMetalMachineId**: string (ReadOnly): The resource ID of the bare metal machine the virtual machine has landed to.
 * **bootMethod**: 'BIOS' | 'UEFI' | string: Selects the boot method for the virtual machine.
 * **cloudServicesNetworkAttachment**: [NetworkAttachment](#networkattachment) (Required): NetworkAttachment represents the single network attachment.
 * **clusterId**: string (ReadOnly): The resource ID of the cluster the virtual machine is created for.
-* **cpuCores**: int (Required): The number of CPU cores in the virtual machine.
+* **cpuCores**: int {minValue: 2} (Required): The number of CPU cores in the virtual machine.
 * **detailedStatus**: 'Available' | 'Error' | 'Provisioning' | string (ReadOnly): The more detailed status of the virtual machine.
 * **detailedStatusMessage**: string (ReadOnly): The descriptive message about the current detailed status.
 * **isolateEmulatorThread**: 'False' | 'True' | string: Field Deprecated, the value will be ignored if provided. The indicator of whether one of the specified CPU cores is isolated to run the emulator thread for this virtual machine.
-* **memorySizeGB**: int (Required): The memory size of the virtual machine in GB.
+* **memorySizeGB**: int {minValue: 1} (Required): The memory size of the virtual machine in GB.
 * **networkAttachments**: [NetworkAttachment](#networkattachment)[]: The list of network attachments to the virtual machine.
 * **networkData**: string: The Base64 encoded cloud-init network data.
 * **placementHints**: [VirtualMachinePlacementHint](#virtualmachineplacementhint)[]: The scheduling hints for the virtual machine.
@@ -887,5 +887,5 @@ For a CloudServicesNetwork resource, this name will be ignored.
 * **detailedStatusMessage**: string (ReadOnly): The descriptive message about the current detailed status.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): The provisioning state of the volume.
 * **serialNumber**: string (ReadOnly): The unique identifier of the volume.
-* **sizeMiB**: int (Required): The size of the allocation for this volume in Mebibytes.
+* **sizeMiB**: int {minValue: 1} (Required): The size of the allocation for this volume in Mebibytes.
 

@@ -758,7 +758,7 @@ The default value is 2Gi, this should not exceed build service agent pool memory
 ### Properties
 * **appInsightsAgentVersions**: [ApplicationInsightsAgentVersions](#applicationinsightsagentversions): Indicates the versions of application insight agent
 * **appInsightsInstrumentationKey**: string: Target application insight instrumentation key, null or whitespace include empty will disable monitoringSettings
-* **appInsightsSamplingRate**: int: Indicates the sampling rate of application insight agent, should be in range [0.0, 100.0]
+* **appInsightsSamplingRate**: int {minValue: 0, maxValue: 100}: Indicates the sampling rate of application insight agent, should be in range [0.0, 100.0]
 * **error**: [Error](#error): Error when apply Monitoring Setting changes.
 * **provisioningState**: 'Failed' | 'NotAvailable' | 'Succeeded' | 'Updating' | string (ReadOnly): State of the Monitoring Setting.
 * **traceEnabled**: bool: Indicates whether enable the trace functionality, which will be deprecated since api version 2020-11-01-preview. Please leverage appInsightsInstrumentationKey to indicate if monitoringSettings enabled or not
@@ -782,8 +782,8 @@ The default value is 2Gi, this should not exceed build service agent pool memory
 ## PersistentDisk
 ### Properties
 * **mountPath**: string: Mount path of the persistent disk
-* **sizeInGB**: int: Size of the persistent disk in GB
-* **usedInGB**: int (ReadOnly): Size of the used persistent disk in GB
+* **sizeInGB**: int {minValue: 0, maxValue: 50}: Size of the persistent disk in GB
+* **usedInGB**: int {minValue: 0, maxValue: 50} (ReadOnly): Size of the used persistent disk in GB
 
 ## Probe
 ### Properties
@@ -879,7 +879,7 @@ Possible enum values:
 
 ### StorageAccount
 #### Properties
-* **accountKey**: string (Required, WriteOnly): The account key of the Azure Storage Account.
+* **accountKey**: string {secure} (Required, WriteOnly): The account key of the Azure Storage Account.
 * **accountName**: string (Required): The account name of the Azure Storage Account.
 * **storageType**: 'StorageAccount' (Required): The type of the storage.
 
@@ -905,7 +905,7 @@ Possible enum values:
 ## TemporaryDisk
 ### Properties
 * **mountPath**: string: Mount path of the temporary disk
-* **sizeInGB**: int: Size of the temporary disk in GB
+* **sizeInGB**: int {minValue: 0, maxValue: 5}: Size of the temporary disk in GB
 
 ## TestKeys
 ### Properties

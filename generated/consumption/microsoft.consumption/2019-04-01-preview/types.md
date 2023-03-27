@@ -47,7 +47,7 @@
 
 ## Filters
 ### Properties
-* **meters**: string[]: The list of filters on meters (GUID), mandatory for budgets of usage category.
+* **meters**: (string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"})[]: The list of filters on meters (GUID), mandatory for budgets of usage category.
 * **resourceGroups**: string[]: The list of filters on resource groups, allowed at subscription level only.
 * **resources**: string[]: The list of filters on resources.
 * **tags**: [FiltersTags](#filterstags): The dictionary of filters on tags.
@@ -89,7 +89,7 @@
 * **currencyCode**: string (ReadOnly): Currency Code
 * **includedQuantity**: int (ReadOnly): Included quality for an offer
 * **meterDetails**: [MeterDetails](#meterdetails) (ReadOnly): The details about the meter. By default this is not populated, unless it's specified in $expand.
-* **meterId**: string (ReadOnly): The meter id (GUID)
+* **meterId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The meter id (GUID)
 * **offerId**: string (ReadOnly): Offer Id
 * **partNumber**: string (ReadOnly): Part Number
 * **unitOfMeasure**: string (ReadOnly): Unit of measure

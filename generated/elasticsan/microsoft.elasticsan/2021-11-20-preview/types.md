@@ -6,7 +6,7 @@
 * **apiVersion**: '2021-11-20-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The geo-location where the resource lives.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 24, pattern: "^[A-Za-z0-9]+((-|_)[a-z0-9A-Z]+)*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ElasticSanProperties](#elasticsanproperties) (Required): Properties of ElasticSan.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Resource metadata required by ARM RPC
 * **tags**: [ResourceTags](#resourcetags): Azure resource tags.
@@ -17,7 +17,7 @@
 ### Properties
 * **apiVersion**: '2021-11-20-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 63, pattern: "^[A-Za-z0-9]+((-|_)[a-z0-9A-Z]+)*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [VolumeGroupProperties](#volumegroupproperties): Properties of VolumeGroup.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Resource metadata required by ARM RPC
 * **tags**: [ResourceTags](#resourcetags): Azure resource tags.
@@ -28,7 +28,7 @@
 ### Properties
 * **apiVersion**: '2021-11-20-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 63, pattern: "^[a-z0-9]+(-[a-z0-9A-Z]+)*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [VolumeProperties](#volumeproperties): Properties of Volume.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Resource metadata required by ARM RPC
 * **tags**: [ResourceTags](#resourcetags): Azure resource tags.

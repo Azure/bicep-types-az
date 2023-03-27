@@ -938,7 +938,7 @@ from source app. Otherwise, application settings from source app are retained.
 * **cloneCustomHostNames**: bool: <code>true</code> to clone custom hostnames from source app; otherwise, <code>false</code>.
 * **cloneSourceControl**: bool: <code>true</code> to clone source control from source app; otherwise, <code>false</code>.
 * **configureLoadBalancing**: bool: <code>true</code> to configure load balancing for source and destination app.
-* **correlationId**: string: Correlation ID of cloning operation. This ID ties multiple cloning operations
+* **correlationId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Correlation ID of cloning operation. This ID ties multiple cloning operations
 together to use the same snapshot.
 * **hostingEnvironment**: string: App Service Environment.
 * **ignoreQuotas**: bool: <code>true</code> if quotas should be ignored; otherwise, <code>false</code>.
@@ -1039,7 +1039,7 @@ This is used during restore with overwrite connection strings options.
 * **retentionInDays**: int: Retention in days.
 Remove files older than X days.
 0 or lower means no retention.
-* **retentionInMb**: int: Maximum size in megabytes that http log files can use.
+* **retentionInMb**: int {minValue: 25, maxValue: 100}: Maximum size in megabytes that http log files can use.
 When reached old log files will be removed to make space for new ones.
 Value can range between 25 and 100.
 

@@ -222,7 +222,7 @@
 * **enabled**: bool: Indicates whether the information type is enabled or not.
 * **keywords**: [InformationProtectionKeyword](#informationprotectionkeyword)[]: The information type keywords.
 * **order**: int: The order of the information type.
-* **recommendedLabelId**: string: The recommended label id to be associated with this information type.
+* **recommendedLabelId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The recommended label id to be associated with this information type.
 
 ## IoTSecurityAggregatedAlertProperties
 ### Properties
@@ -526,7 +526,7 @@
 ## UserDefinedResourcesProperties
 ### Properties
 * **query**: string (Required): Azure Resource Graph query which represents the security solution's user defined resources. Required to start with "where type != "Microsoft.Devices/IotHubs""
-* **querySubscriptions**: string[] (Required): List of Azure subscription ids on which the user defined resources query should be executed.
+* **querySubscriptions**: (string {pattern: "^[0-9A-Fa-f]{8}-([0-9A-Fa-f]{4}-){3}[0-9A-Fa-f]{12}$"})[] (Required): List of Azure subscription ids on which the user defined resources query should be executed.
 
 ## WorkspaceSettingProperties
 ### Properties

@@ -59,7 +59,7 @@
 
 ## RetentionPolicy
 ### Properties
-* **days**: int (Required): the number of days for the retention in days. A value of 0 will retain the events indefinitely.
+* **days**: int {minValue: 0} (Required): the number of days for the retention in days. A value of 0 will retain the events indefinitely.
 * **enabled**: bool (Required): a value indicating whether the retention policy is enabled.
 
 ## RuleAction
@@ -88,7 +88,7 @@
 
 ### LocationThresholdRuleCondition
 #### Properties
-* **failedLocationCount**: int (Required): the number of locations that must fail to activate the alert.
+* **failedLocationCount**: int {minValue: 0} (Required): the number of locations that must fail to activate the alert.
 * **odata.type**: 'Microsoft.Azure.Management.Insights.Models.LocationThresholdRuleCondition' (Required): specifies the type of condition. This can be one of three types: ManagementEventRuleCondition (occurrences of management events), LocationThresholdRuleCondition (based on the number of failures of a web test), and ThresholdRuleCondition (based on the threshold of a metric).
 * **windowSize**: string: the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
 

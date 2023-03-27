@@ -60,11 +60,11 @@
 
 ## OpenShiftClusterAdminKubeconfig
 ### Properties
-* **kubeconfig**: string: The base64-encoded kubeconfig file.
+* **kubeconfig**: string {secure}: The base64-encoded kubeconfig file.
 
 ## OpenShiftClusterCredentials
 ### Properties
-* **kubeadminPassword**: string: The password for the kubeadmin user.
+* **kubeadminPassword**: string {secure}: The password for the kubeadmin user.
 * **kubeadminUsername**: string: The username for the kubeadmin user.
 
 ## OpenShiftClusterProperties

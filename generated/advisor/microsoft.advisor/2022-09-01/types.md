@@ -63,7 +63,7 @@
 * **resourceMetadata**: [ResourceMetadata](#resourcemetadata): Metadata of resource that was assessed
 * **risk**: 'Error' | 'None' | 'Warning' | string: The potential risk of not implementing the recommendation.
 * **shortDescription**: [ShortDescription](#shortdescription): A summary of the recommendation.
-* **suppressionIds**: string[]: The list of snoozed and dismissed rules for the recommendation.
+* **suppressionIds**: (string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"})[]: The list of snoozed and dismissed rules for the recommendation.
 
 ## RecommendationPropertiesActionsItem
 ### Properties

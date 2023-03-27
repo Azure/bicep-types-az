@@ -679,7 +679,7 @@ This property is currently not used and reserved for future usage.
 context will fail. If specified, the allowed values are between 1 to the value of defaultMaximumExpirationTimeInDays specified in PartnerConfiguration.
 If not specified, the default value will be the value of defaultMaximumExpirationTimeInDays specified in PartnerConfiguration or 7 if this value is not specified.
 * **partnerName**: string: The partner name.
-* **partnerRegistrationImmutableId**: string: The immutableId of the corresponding partner registration.
+* **partnerRegistrationImmutableId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The immutableId of the corresponding partner registration.
 
 ## PartnerAuthorization
 ### Properties
@@ -734,7 +734,7 @@ created under this resource group.
 * **expirationTimeIfNotActivatedUtc**: string: Expiration time of the partner destination. If this timer expires and the partner destination was never activated,
 the partner destination and corresponding channel are deleted.
 * **messageForActivation**: string: Context or helpful message that can be used during the approval process.
-* **partnerRegistrationImmutableId**: string: The immutable Id of the corresponding partner registration.
+* **partnerRegistrationImmutableId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The immutable Id of the corresponding partner registration.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: Provisioning state of the partner destination.
 
 ## PartnerDetails
@@ -783,7 +783,7 @@ followed by the country code. The remaining digits are then followed. Only digit
 length cannot exceed 16 digits including country code. Examples of valid phone numbers are: +1 515 123 4567 and
 +966 7 5115 2471. Examples of invalid phone numbers are: +1 (515) 123-4567, 1 515 123 4567 and +966 121 5115 24 7 551 1234 43
 * **partnerName**: string: Official name of the partner name. For example: "Contoso".
-* **partnerRegistrationImmutableId**: string: The immutableId of the corresponding partner registration.
+* **partnerRegistrationImmutableId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The immutableId of the corresponding partner registration.
 * **partnerResourceTypeDescription**: string: Short description of the partner resource type. The length of this description should not exceed 256 characters.
 * **partnerResourceTypeDisplayName**: string: Display name of the partner resource type.
 * **partnerResourceTypeName**: string: Name of the partner resource type.
@@ -812,7 +812,7 @@ created partner topic.
 * **expirationTimeIfNotActivatedUtc**: string: Expiration time of the partner topic. If this timer expires while the partner topic is still never activated,
 the partner topic and corresponding event channel are deleted.
 * **messageForActivation**: string: Context or helpful message that can be used during the approval process by the subscriber.
-* **partnerRegistrationImmutableId**: string: The immutableId of the corresponding partner registration.
+* **partnerRegistrationImmutableId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The immutableId of the corresponding partner registration.
 * **partnerTopicFriendlyDescription**: string: Friendly description about the topic. This can be set by the publisher/partner to show custom description for the customer partner topic.
 This will be helpful to remove any ambiguity of the origin of creation of the partner topic for the customer.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the partner topic.
@@ -968,7 +968,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 * **organizationName**: string: Official name of the Partner.
 * **partnerDestinationDetails**: [PartnerDetails](#partnerdetails): Details of the partner destination scenario.
 * **partnerDisplayName**: string: Display name of the verified partner.
-* **partnerRegistrationImmutableId**: string: ImmutableId of the corresponding partner registration.
+* **partnerRegistrationImmutableId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: ImmutableId of the corresponding partner registration.
 * **partnerTopicDetails**: [PartnerDetails](#partnerdetails): Details of the partner topic scenario.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: Provisioning state of the verified partner.
 
@@ -978,7 +978,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 * **azureActiveDirectoryTenantId**: string: The Azure Active Directory Tenant ID to get the access token that will be included as the bearer token in delivery requests.
 * **deliveryAttributeMappings**: [DeliveryAttributeMapping](#deliveryattributemapping)[]: Delivery attribute details.
 * **endpointBaseUrl**: string (ReadOnly): The base URL that represents the endpoint of the destination of an event subscription.
-* **endpointUrl**: string: The URL that represents the endpoint of the destination of an event subscription.
+* **endpointUrl**: string {secure}: The URL that represents the endpoint of the destination of an event subscription.
 * **maxEventsPerBatch**: int: Maximum number of events per batch.
 * **preferredBatchSizeInKilobytes**: int: Preferred batch size in Kilobytes.
 

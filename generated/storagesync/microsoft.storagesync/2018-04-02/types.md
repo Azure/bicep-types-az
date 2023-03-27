@@ -117,7 +117,7 @@
 * **serverLocalPath**: string: Server Local path.
 * **serverResourceId**: string: Server Resource Id.
 * **syncStatus**: any (ReadOnly): Sync Health Status
-* **volumeFreeSpacePercent**: int: Level of free space to be maintained by Cloud Tiering if it is enabled.
+* **volumeFreeSpacePercent**: int {minValue: 0, maxValue: 100}: Level of free space to be maintained by Cloud Tiering if it is enabled.
 
 ## ServerEndpointCreateParametersTags
 ### Properties

@@ -6,7 +6,7 @@
 * **apiVersion**: '2019-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Region where the Azure resource is located.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 63, pattern: "^[a-zA-Z0-9]([_-]*[a-zA-Z0-9])*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ControllerProperties](#controllerproperties) (Required)
 * **sku**: [Sku](#sku) (Required): Model representing SKU for Azure Dev Spaces Controller.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Tags for the Azure resource.

@@ -8,7 +8,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ApiManagementServiceIdentity](#apimanagementserviceidentity): Managed service identity of the Api Management service.
 * **location**: string (Required): Resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 50, pattern: "^[a-zA-Z](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ApiManagementServiceProperties](#apimanagementserviceproperties) (Required): Properties of the API Management service.
 * **sku**: [ApiManagementServiceSkuProperties](#apimanagementserviceskuproperties) (Required): SKU properties of the API Management service.
 * **tags**: [ApimResourceTags](#apimresourcetags): Resource tags.
@@ -19,7 +19,7 @@
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 256, pattern: "^[^*#&+:<>?]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ApiCreateOrUpdatePropertiesOrApiContractProperties](#apicreateorupdatepropertiesorapicontractproperties): Api entity create of update properties.
 * **type**: 'Microsoft.ApiManagement/service/apis' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -28,7 +28,7 @@
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 80, pattern: "^[^*#&+:<>?]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DiagnosticContractProperties](#diagnosticcontractproperties): Diagnostic entity contract properties.
 * **type**: 'Microsoft.ApiManagement/service/apis/diagnostics' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -37,7 +37,7 @@
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 256, pattern: "^[^*#&+:<>?]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [IssueContractProperties](#issuecontractproperties): Properties of the Issue.
 * **type**: 'Microsoft.ApiManagement/service/apis/issues' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -46,7 +46,7 @@
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 256, pattern: "^[^*#&+:<>?]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [IssueAttachmentContractProperties](#issueattachmentcontractproperties): Properties of the Issue Attachment.
 * **type**: 'Microsoft.ApiManagement/service/apis/issues/attachments' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -55,7 +55,7 @@
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 256, pattern: "^[^*#&+:<>?]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [IssueCommentContractProperties](#issuecommentcontractproperties): Properties of the Issue Comment.
 * **type**: 'Microsoft.ApiManagement/service/apis/issues/comments' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -64,7 +64,7 @@
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 80} (Required, DeployTimeConstant): The resource name
 * **properties**: [OperationContractProperties](#operationcontractproperties): Properties of the Operation Contract.
 * **type**: 'Microsoft.ApiManagement/service/apis/operations' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -82,7 +82,7 @@
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 80, pattern: "^[^*#&+:<>?]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [TagContractProperties](#tagcontractproperties) (ReadOnly): Tag entity contract properties.
 * **type**: 'Microsoft.ApiManagement/service/apis/operations/tags' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -100,7 +100,7 @@
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 80, pattern: "^[^*#&+:<>?]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ApiReleaseContractProperties](#apireleasecontractproperties): ApiRelease entity contract properties.
 * **type**: 'Microsoft.ApiManagement/service/apis/releases' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -109,7 +109,7 @@
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 80, pattern: "^[^*#&+:<>?]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [SchemaContractProperties](#schemacontractproperties): Properties of the Schema.
 * **type**: 'Microsoft.ApiManagement/service/apis/schemas' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -118,7 +118,7 @@
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 80, pattern: "^[^*#&+:<>?]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [TagDescriptionBasePropertiesOrTagDescriptionContractProperties](#tagdescriptionbasepropertiesortagdescriptioncontractproperties): Properties supplied to Create TagDescription operation.
 * **type**: 'Microsoft.ApiManagement/service/apis/tagDescriptions' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -127,7 +127,7 @@
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 80, pattern: "^[^*#&+:<>?]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [TagContractProperties](#tagcontractproperties) (ReadOnly): Tag entity contract properties.
 * **type**: 'Microsoft.ApiManagement/service/apis/tags' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -136,7 +136,7 @@
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 80, pattern: "^[^*#&+:<>?]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ApiVersionSetContractProperties](#apiversionsetcontractproperties): Api VersionSet contract properties.
 * **type**: 'Microsoft.ApiManagement/service/apiVersionSets' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -145,7 +145,7 @@
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 80, pattern: "^[^*#&+:<>?]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [AuthorizationServerContractProperties](#authorizationservercontractproperties): Properties of the External OAuth authorization server Contract.
 * **type**: 'Microsoft.ApiManagement/service/authorizationServers' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -154,7 +154,7 @@
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 80} (Required, DeployTimeConstant): The resource name
 * **properties**: [BackendContractProperties](#backendcontractproperties): Backend entity contract properties.
 * **type**: 'Microsoft.ApiManagement/service/backends' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -163,7 +163,7 @@
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 80, pattern: "^[^*#&+:<>?]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [CacheContractProperties](#cachecontractproperties): Cache properties details.
 * **type**: 'Microsoft.ApiManagement/service/caches' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -172,7 +172,7 @@
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 80, pattern: "^[^*#&+:<>?]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [CertificateCreateOrUpdatePropertiesOrCertificateContractProperties](#certificatecreateorupdatepropertiesorcertificatecontractproperties): Certificate create or update properties details.
 * **type**: 'Microsoft.ApiManagement/service/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -181,7 +181,7 @@
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 80, pattern: "^[^*#&+:<>?]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DiagnosticContractProperties](#diagnosticcontractproperties): Diagnostic entity contract properties.
 * **type**: 'Microsoft.ApiManagement/service/diagnostics' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -190,7 +190,7 @@
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 80} (Required, DeployTimeConstant): The resource name
 * **properties**: [GatewayContractProperties](#gatewaycontractproperties): Gateway details.
 * **type**: 'Microsoft.ApiManagement/service/gateways' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -199,7 +199,7 @@
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 80} (Required, DeployTimeConstant): The resource name
 * **properties**: [AssociationContractProperties](#associationcontractproperties): Association entity contract properties.
 * **type**: 'Microsoft.ApiManagement/service/gateways/apis' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -208,7 +208,7 @@
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 80} (Required, DeployTimeConstant): The resource name
 * **properties**: [GatewayHostnameConfigurationContractProperties](#gatewayhostnameconfigurationcontractproperties): Gateway hostname configuration details.
 * **type**: 'Microsoft.ApiManagement/service/gateways/hostnameConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -217,7 +217,7 @@
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 256} (Required, DeployTimeConstant): The resource name
 * **properties**: [GroupCreateParametersPropertiesOrGroupContractProperties](#groupcreateparameterspropertiesorgroupcontractproperties): Properties supplied to Create Group operation.
 * **type**: 'Microsoft.ApiManagement/service/groups' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -226,7 +226,7 @@
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 80} (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.ApiManagement/service/groups/users' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/identityProviders@2019-12-01-preview
@@ -243,7 +243,7 @@
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 256, pattern: "^[^*#&+:<>?]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [IssueContractProperties](#issuecontractproperties) (ReadOnly): Properties of the Issue.
 * **type**: 'Microsoft.ApiManagement/service/issues' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -252,7 +252,7 @@
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {maxLength: 256, pattern: "^[^*#&+:<>?]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [LoggerContractProperties](#loggercontractproperties): Logger entity contract properties.
 * **type**: 'Microsoft.ApiManagement/service/loggers' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -261,7 +261,7 @@
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {maxLength: 256, pattern: "^[^*#&+:<>?]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [NamedValueCreateContractPropertiesOrNamedValueContractProperties](#namedvaluecreatecontractpropertiesornamedvaluecontractproperties): NamedValue entity contract properties for PUT operation.
 * **type**: 'Microsoft.ApiManagement/service/namedValues' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -287,7 +287,7 @@
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 80} (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.ApiManagement/service/notifications/recipientUsers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/openidConnectProviders@2019-12-01-preview
@@ -295,7 +295,7 @@
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {maxLength: 256, pattern: "^[^*#&+:<>?]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [OpenidConnectProviderContractProperties](#openidconnectprovidercontractproperties): OpenId Connect Provider contract properties.
 * **type**: 'Microsoft.ApiManagement/service/openidConnectProviders' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -344,7 +344,7 @@
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 256} (Required, DeployTimeConstant): The resource name
 * **properties**: [ProductContractProperties](#productcontractproperties): Product entity contract properties.
 * **type**: 'Microsoft.ApiManagement/service/products' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -353,7 +353,7 @@
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 256, pattern: "^[^*#&+:<>?]+$"} (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.ApiManagement/service/products/apis' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/products/groups@2019-12-01-preview
@@ -361,7 +361,7 @@
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 256} (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.ApiManagement/service/products/groups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/products/policies@2019-12-01-preview
@@ -378,7 +378,7 @@
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 80, pattern: "^[^*#&+:<>?]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [TagContractProperties](#tagcontractproperties) (ReadOnly): Tag entity contract properties.
 * **type**: 'Microsoft.ApiManagement/service/products/tags' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -387,7 +387,7 @@
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {maxLength: 256, pattern: "^[^*#&+:<>?]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [SubscriptionCreateParameterPropertiesOrSubscriptionContractProperties](#subscriptioncreateparameterpropertiesorsubscriptioncontractproperties): Subscription contract properties.
 * **type**: 'Microsoft.ApiManagement/service/subscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -396,7 +396,7 @@
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 80, pattern: "^[^*#&+:<>?]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [TagContractProperties](#tagcontractproperties): Properties supplied to Create Tag operation.
 * **type**: 'Microsoft.ApiManagement/service/tags' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -414,7 +414,7 @@
 ### Properties
 * **apiVersion**: '2019-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 80} (Required, DeployTimeConstant): The resource name
 * **properties**: [UserCreateParameterPropertiesOrUserContractProperties](#usercreateparameterpropertiesorusercontractproperties): User entity create contract properties.
 * **type**: 'Microsoft.ApiManagement/service/users' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -477,24 +477,24 @@
 
 ## ApiCreateOrUpdatePropertiesOrApiContractProperties
 ### Properties
-* **apiRevision**: string: Describes the Revision of the Api. If no value is provided, default revision 1 is created
-* **apiRevisionDescription**: string: Description of the Api Revision.
+* **apiRevision**: string {minLength: 1, maxLength: 100}: Describes the Revision of the Api. If no value is provided, default revision 1 is created
+* **apiRevisionDescription**: string {maxLength: 256}: Description of the Api Revision.
 * **apiType**: 'http' | 'soap' | string (WriteOnly): Type of Api to create. 
  * `http` creates a SOAP to REST API 
  * `soap` creates a SOAP pass-through API .
-* **apiVersion**: string: Indicates the Version identifier of the API if the API is versioned
-* **apiVersionDescription**: string: Description of the Api Version.
+* **apiVersion**: string {maxLength: 100}: Indicates the Version identifier of the API if the API is versioned
+* **apiVersionDescription**: string {maxLength: 256}: Description of the Api Version.
 * **apiVersionSet**: [ApiVersionSetContractDetails](#apiversionsetcontractdetails): Version set details
 * **apiVersionSetId**: string: A resource identifier for the related ApiVersionSet.
 * **authenticationSettings**: [AuthenticationSettingsContract](#authenticationsettingscontract): Collection of authentication settings included into this API.
 * **description**: string: Description of the API. May include HTML formatting tags.
-* **displayName**: string: API name. Must be 1 to 300 characters long.
+* **displayName**: string {minLength: 1, maxLength: 300}: API name. Must be 1 to 300 characters long.
 * **format**: 'openapi' | 'openapi+json' | 'openapi+json-link' | 'openapi-link' | 'swagger-json' | 'swagger-link-json' | 'wadl-link-json' | 'wadl-xml' | 'wsdl' | 'wsdl-link' | string (WriteOnly): Format of the Content in which the API is getting imported.
 * **isCurrent**: bool: Indicates if API revision is current api revision.
 * **isOnline**: bool (ReadOnly): Indicates if API revision is accessible via the gateway.
-* **path**: string (Required): Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.
+* **path**: string {maxLength: 400} (Required): Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.
 * **protocols**: ('http' | 'https')[]: Describes on which protocols the operations in this API can be invoked.
-* **serviceUrl**: string: Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.
+* **serviceUrl**: string {maxLength: 2000}: Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.
 * **sourceApiId**: string: API identifier of the source API.
 * **subscriptionKeyParameterNames**: [SubscriptionKeyParameterNamesContract](#subscriptionkeyparameternamescontract): Protocols over which API is made available.
 * **subscriptionRequired**: bool: Specifies whether an API or Product subscription is required for accessing the API.
@@ -514,8 +514,8 @@
 
 ## ApiManagementServiceIdentity
 ### Properties
-* **principalId**: string (ReadOnly): The principal id of the identity.
-* **tenantId**: string (ReadOnly): The client tenant id of the identity.
+* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The principal id of the identity.
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The client tenant id of the identity.
 * **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned' | string (Required): The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the service.
 * **userAssignedIdentities**: [ApiManagementServiceIdentityUserAssignedIdentities](#apimanagementserviceidentityuserassignedidentities): The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
@@ -541,13 +541,13 @@ dictionary key references will be ARM resource ids in the form:
 * **gatewayUrl**: string (ReadOnly): Gateway URL of the API Management service.
 * **hostnameConfigurations**: [HostnameConfiguration](#hostnameconfiguration)[]: Custom hostname configuration of the API Management service.
 * **managementApiUrl**: string (ReadOnly): Management API endpoint URL of the API Management service.
-* **notificationSenderEmail**: string: Email address from which the notification will be sent.
+* **notificationSenderEmail**: string {maxLength: 100}: Email address from which the notification will be sent.
 * **portalUrl**: string (ReadOnly): Publisher portal endpoint Url of the API Management service.
 * **privateIPAddresses**: string[] (ReadOnly): Private Static Load Balanced IP addresses of the API Management service in Primary region which is deployed in an Internal Virtual Network. Available only for Basic, Standard and Premium SKU.
 * **provisioningState**: string (ReadOnly): The current provisioning state of the API Management service which can be one of the following: Created/Activating/Succeeded/Updating/Failed/Stopped/Terminating/TerminationFailed/Deleted.
 * **publicIPAddresses**: string[] (ReadOnly): Public Static Load Balanced IP addresses of the API Management service in Primary region. Available only for Basic, Standard and Premium SKU.
-* **publisherEmail**: string (Required): Publisher email.
-* **publisherName**: string (Required): Publisher name.
+* **publisherEmail**: string {maxLength: 100} (Required): Publisher email.
+* **publisherName**: string {maxLength: 100} (Required): Publisher name.
 * **scmUrl**: string (ReadOnly): SCM endpoint URL of the API Management service.
 * **targetProvisioningState**: string (ReadOnly): The provisioning state of the API Management service, which is targeted by the long running operation started on the service.
 * **virtualNetworkConfiguration**: [VirtualNetworkConfiguration](#virtualnetworkconfiguration): Virtual network configuration of the API Management service.
@@ -586,10 +586,10 @@ dictionary key references will be ARM resource ids in the form:
 ## ApiVersionSetContractProperties
 ### Properties
 * **description**: string: Description of API Version Set.
-* **displayName**: string (Required): Name of API Version Set
-* **versionHeaderName**: string: Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.
+* **displayName**: string {minLength: 1, maxLength: 100} (Required): Name of API Version Set
+* **versionHeaderName**: string {minLength: 1, maxLength: 100}: Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.
 * **versioningScheme**: 'Header' | 'Query' | 'Segment' | string (Required): An value that determines where the API Version identifier will be located in a HTTP request.
-* **versionQueryName**: string: Name of query parameter that indicates the API Version if versioningScheme is set to `query`.
+* **versionQueryName**: string {minLength: 1, maxLength: 100}: Name of query parameter that indicates the API Version if versioningScheme is set to `query`.
 
 ## AssociationContractProperties
 ### Properties
@@ -608,10 +608,10 @@ dictionary key references will be ARM resource ids in the form:
 * **clientAuthenticationMethod**: ('Basic' | 'Body' | string)[]: Method of authentication supported by the token endpoint of this authorization server. Possible values are Basic and/or Body. When Body is specified, client credentials and other parameters are passed within the request body in the application/x-www-form-urlencoded format.
 * **clientId**: string (Required): Client or app id registered with this authorization server.
 * **clientRegistrationEndpoint**: string (Required): Optional reference to a page where client or app registration for this authorization server is performed. Contains absolute URL to entity being referenced.
-* **clientSecret**: string: Client or app secret registered with this authorization server. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
+* **clientSecret**: string {secure}: Client or app secret registered with this authorization server. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
 * **defaultScope**: string: Access token scope that is going to be requested by default. Can be overridden at the API level. Should be provided in the form of a string containing space-delimited values.
 * **description**: string: Description of the authorization server. Can contain HTML formatting tags.
-* **displayName**: string (Required): User-friendly authorization server name.
+* **displayName**: string {minLength: 1, maxLength: 50} (Required): User-friendly authorization server name.
 * **grantTypes**: ('authorizationCode' | 'clientCredentials' | 'implicit' | 'resourceOwnerPassword' | string)[] (Required): Form of an authorization grant, which the client uses to request the access token.
 * **resourceOwnerPassword**: string: Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner password.
 * **resourceOwnerUsername**: string: Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner username.
@@ -621,20 +621,20 @@ dictionary key references will be ARM resource ids in the form:
 
 ## BackendAuthorizationHeaderCredentials
 ### Properties
-* **parameter**: string (Required): Authentication Parameter value.
-* **scheme**: string (Required): Authentication Scheme name.
+* **parameter**: string {minLength: 1, maxLength: 300} (Required): Authentication Parameter value.
+* **scheme**: string {minLength: 1, maxLength: 100} (Required): Authentication Scheme name.
 
 ## BackendContractProperties
 ### Properties
 * **credentials**: [BackendCredentialsContract](#backendcredentialscontract): Backend Credentials Contract Properties
-* **description**: string: Backend Description.
+* **description**: string {minLength: 1, maxLength: 2000}: Backend Description.
 * **properties**: [BackendProperties](#backendproperties): Backend Properties contract
 * **protocol**: 'http' | 'soap' | string (Required): Backend communication protocol.
 * **proxy**: [BackendProxyContract](#backendproxycontract): Backend Proxy Contract Properties
-* **resourceId**: string: Management Uri of the Resource in External System. This url can be the Arm Resource Id of Logic Apps, Function Apps or Api Apps.
-* **title**: string: Backend Title.
+* **resourceId**: string {minLength: 1, maxLength: 2000}: Management Uri of the Resource in External System. This url can be the Arm Resource Id of Logic Apps, Function Apps or Api Apps.
+* **title**: string {minLength: 1, maxLength: 300}: Backend Title.
 * **tls**: [BackendTlsProperties](#backendtlsproperties): Backend TLS Properties
-* **url**: string (Required): Runtime Url of the Backend.
+* **url**: string {minLength: 1, maxLength: 2000} (Required): Runtime Url of the Backend.
 
 ## BackendCredentialsContract
 ### Properties
@@ -660,7 +660,7 @@ dictionary key references will be ARM resource ids in the form:
 ## BackendProxyContract
 ### Properties
 * **password**: string: Password to connect to the WebProxy Server
-* **url**: string (Required): WebProxy Server AbsoluteUri property which includes the entire URI stored in the Uri instance, including all fragments and query strings.
+* **url**: string {minLength: 1, maxLength: 2000} (Required): WebProxy Server AbsoluteUri property which includes the entire URI stored in the Uri instance, including all fragments and query strings.
 * **username**: string: Username to connect to the WebProxy server
 
 ## BackendServiceFabricClusterProperties
@@ -678,13 +678,13 @@ dictionary key references will be ARM resource ids in the form:
 
 ## BodyDiagnosticSettings
 ### Properties
-* **bytes**: int: Number of request body bytes to log.
+* **bytes**: int {maxValue: 8192}: Number of request body bytes to log.
 
 ## CacheContractProperties
 ### Properties
-* **connectionString**: string (Required): Runtime connection string to cache
-* **description**: string: Cache description
-* **resourceId**: string: Original uri of entity in external system cache points to
+* **connectionString**: string {maxLength: 300} (Required): Runtime connection string to cache
+* **description**: string {maxLength: 2000}: Cache description
+* **resourceId**: string {maxLength: 2000}: Original uri of entity in external system cache points to
 
 ## CertificateConfiguration
 ### Properties
@@ -732,22 +732,22 @@ dictionary key references will be ARM resource ids in the form:
 
 ## EmailTemplateParametersContractProperties
 ### Properties
-* **description**: string: Template parameter description.
-* **name**: string: Template parameter name.
-* **title**: string: Template parameter title.
+* **description**: string {minLength: 1, maxLength: 256, pattern: "^[A-Za-z0-9-._]+$"}: Template parameter description.
+* **name**: string {minLength: 1, maxLength: 256, pattern: "^[A-Za-z0-9-._]+$"}: Template parameter name.
+* **title**: string {minLength: 1, maxLength: 4096}: Template parameter title.
 
 ## EmailTemplateUpdateParameterPropertiesOrEmailTemplateContractProperties
 ### Properties
-* **body**: string: Email Template Body. This should be a valid XDocument
+* **body**: string {minLength: 1}: Email Template Body. This should be a valid XDocument
 * **description**: string: Description of the Email Template.
 * **isDefault**: bool (ReadOnly): Whether the template is the default template provided by Api Management or has been edited.
 * **parameters**: [EmailTemplateParametersContractProperties](#emailtemplateparameterscontractproperties)[]: Email Template Parameter values.
-* **subject**: string: Subject of the Template.
+* **subject**: string {minLength: 1, maxLength: 1000}: Subject of the Template.
 * **title**: string: Title of the Template.
 
 ## GatewayContractProperties
 ### Properties
-* **description**: string: Gateway description
+* **description**: string {maxLength: 1000}: Gateway description
 * **locationData**: [ResourceLocationDataContract](#resourcelocationdatacontract): Gateway location.
 
 ## GatewayHostnameConfigurationContractProperties
@@ -764,8 +764,8 @@ dictionary key references will be ARM resource ids in the form:
 ## GroupContractProperties
 ### Properties
 * **builtIn**: bool (ReadOnly): true if the group is one of the three system groups (Administrators, Developers, or Guests); otherwise false.
-* **description**: string: Group description. Can contain HTML formatting tags.
-* **displayName**: string (Required): Group name.
+* **description**: string {maxLength: 1000}: Group description. Can contain HTML formatting tags.
+* **displayName**: string {minLength: 1, maxLength: 300} (Required): Group name.
 * **externalId**: string: For external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory `aad://<tenant>.onmicrosoft.com/groups/<group object id>`; otherwise the value is null.
 * **type**: 'custom' | 'external' | 'system': Group type.
 
@@ -773,7 +773,7 @@ dictionary key references will be ARM resource ids in the form:
 ### Properties
 * **builtIn**: bool (ReadOnly): true if the group is one of the three system groups (Administrators, Developers, or Guests); otherwise false.
 * **description**: string: Group description.
-* **displayName**: string (Required): Group name.
+* **displayName**: string {minLength: 1, maxLength: 300} (Required): Group name.
 * **externalId**: string: Identifier of the external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory `aad://<tenant>.onmicrosoft.com/groups/<group object id>`; otherwise the value is null.
 * **type**: 'custom' | 'external' | 'system': Group type.
 
@@ -797,13 +797,13 @@ dictionary key references will be ARM resource ids in the form:
 ### Properties
 * **allowedTenants**: string[]: List of Allowed Tenants when configuring Azure Active Directory login.
 * **authority**: string: OpenID Connect discovery endpoint hostname for AAD or AAD B2C.
-* **clientId**: string (Required): Client Id of the Application in the external Identity Provider. It is App ID for Facebook login, Client ID for Google login, App ID for Microsoft.
-* **clientSecret**: string (Required): Client secret of the Application in external Identity Provider, used to authenticate login request. For example, it is App Secret for Facebook login, API Key for Google login, Public Key for Microsoft. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
-* **passwordResetPolicyName**: string: Password Reset Policy Name. Only applies to AAD B2C Identity Provider.
-* **profileEditingPolicyName**: string: Profile Editing Policy Name. Only applies to AAD B2C Identity Provider.
-* **signinPolicyName**: string: Signin Policy Name. Only applies to AAD B2C Identity Provider.
+* **clientId**: string {minLength: 1} (Required): Client Id of the Application in the external Identity Provider. It is App ID for Facebook login, Client ID for Google login, App ID for Microsoft.
+* **clientSecret**: string {secure, minLength: 1} (Required): Client secret of the Application in external Identity Provider, used to authenticate login request. For example, it is App Secret for Facebook login, API Key for Google login, Public Key for Microsoft. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
+* **passwordResetPolicyName**: string {minLength: 1}: Password Reset Policy Name. Only applies to AAD B2C Identity Provider.
+* **profileEditingPolicyName**: string {minLength: 1}: Profile Editing Policy Name. Only applies to AAD B2C Identity Provider.
+* **signinPolicyName**: string {minLength: 1}: Signin Policy Name. Only applies to AAD B2C Identity Provider.
 * **signinTenant**: string: The TenantId to use instead of Common when logging into Active Directory
-* **signupPolicyName**: string: Signup Policy Name. Only applies to AAD B2C Identity Provider.
+* **signupPolicyName**: string {minLength: 1}: Signup Policy Name. Only applies to AAD B2C Identity Provider.
 * **type**: 'aad' | 'aadB2C' | 'facebook' | 'google' | 'microsoft' | 'twitter' | string: Identity Provider Type identifier.
 
 ## IssueAttachmentContractProperties
@@ -831,7 +831,7 @@ dictionary key references will be ARM resource ids in the form:
 ### Properties
 * **credentials**: [LoggerContractPropertiesCredentials](#loggercontractpropertiescredentials) (Required): The name and SendRule connection string of the event hub for azureEventHub logger.
 Instrumentation key for applicationInsights logger.
-* **description**: string: Logger description.
+* **description**: string {maxLength: 256}: Logger description.
 * **isBuffered**: bool: Whether records are buffered in the logger before publishing. Default is assumed to be true.
 * **loggerType**: 'applicationInsights' | 'azureEventHub' | string (Required): Logger type.
 * **resourceId**: string: Azure Resource Id of a log target (either Azure Event Hub resource or Azure Application Insights resource).
@@ -843,16 +843,16 @@ Instrumentation key for applicationInsights logger.
 
 ## NamedValueCreateContractPropertiesOrNamedValueContractProperties
 ### Properties
-* **displayName**: string (Required): Unique name of NamedValue. It may contain only letters, digits, period, dash, and underscore characters.
+* **displayName**: string {minLength: 1, maxLength: 256, pattern: "^[A-Za-z0-9-._]+$"} (Required): Unique name of NamedValue. It may contain only letters, digits, period, dash, and underscore characters.
 * **secret**: bool: Determines whether the value is a secret and should be encrypted or not. Default value is false.
 * **tags**: string[]: Optional tags that when provided can be used to filter the NamedValue list.
-* **value**: string (Required): Value of the NamedValue. Can contain policy expressions. It may not be empty or consist only of whitespace. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
+* **value**: string {minLength: 1, maxLength: 4096} (Required): Value of the NamedValue. Can contain policy expressions. It may not be empty or consist only of whitespace. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
 
 ## NotificationContractProperties
 ### Properties
 * **description**: string: Description of the Notification.
 * **recipients**: [RecipientsContractProperties](#recipientscontractproperties): Recipient Parameter values.
-* **title**: string (Required): Title of the Notification.
+* **title**: string {minLength: 1, maxLength: 1000} (Required): Title of the Notification.
 
 ## OAuth2AuthenticationSettingsContract
 ### Properties
@@ -867,21 +867,21 @@ Instrumentation key for applicationInsights logger.
 ## OpenidConnectProviderContractProperties
 ### Properties
 * **clientId**: string (Required): Client ID of developer console which is the client application.
-* **clientSecret**: string: Client Secret of developer console which is the client application.
+* **clientSecret**: string {secure}: Client Secret of developer console which is the client application.
 * **description**: string: User-friendly description of OpenID Connect Provider.
-* **displayName**: string (Required): User-friendly OpenID Connect Provider name.
+* **displayName**: string {maxLength: 50} (Required): User-friendly OpenID Connect Provider name.
 * **metadataEndpoint**: string (Required): Metadata endpoint URI.
 
 ## OperationContractProperties
 ### Properties
-* **description**: string: Description of the operation. May include HTML formatting tags.
-* **displayName**: string (Required): Operation Name.
+* **description**: string {maxLength: 1000}: Description of the operation. May include HTML formatting tags.
+* **displayName**: string {minLength: 1, maxLength: 300} (Required): Operation Name.
 * **method**: string (Required): A Valid HTTP Operation Method. Typical Http Methods like GET, PUT, POST but not limited by only them.
 * **policies**: string: Operation Policies
 * **request**: [RequestContract](#requestcontract): An entity containing request details.
 * **responses**: [ResponseContract](#responsecontract)[]: Array of Operation responses.
 * **templateParameters**: [ParameterContract](#parametercontract)[]: Collection of URL template parameters.
-* **urlTemplate**: string (Required): Relative URL template identifying the target resource for this operation. May include parameters. Example: /customers/{cid}/orders/{oid}/?date={date}
+* **urlTemplate**: string {minLength: 1, maxLength: 1000} (Required): Relative URL template identifying the target resource for this operation. May include parameters. Example: /customers/{cid}/orders/{oid}/?date={date}
 
 ## ParameterContract
 ### Properties
@@ -907,7 +907,7 @@ Instrumentation key for applicationInsights logger.
 * **subscriptions**: [SubscriptionsDelegationSettingsProperties](#subscriptionsdelegationsettingsproperties): Subscriptions delegation settings.
 * **url**: string: A delegation Url.
 * **userRegistration**: [RegistrationDelegationSettingsProperties](#registrationdelegationsettingsproperties): User registration delegation settings.
-* **validationKey**: string: A base64-encoded validation key to validate, that a request is coming from Azure API Management.
+* **validationKey**: string {secure}: A base64-encoded validation key to validate, that a request is coming from Azure API Management.
 
 ## PortalSettingValidationKeyContract
 ### Properties
@@ -925,8 +925,8 @@ Instrumentation key for applicationInsights logger.
 ## ProductContractProperties
 ### Properties
 * **approvalRequired**: bool: whether subscription approval is required. If false, new subscriptions will be approved automatically enabling developers to call the product’s APIs immediately after subscribing. If true, administrators must manually approve the subscription before the developer can any of the product’s APIs. Can be present only if subscriptionRequired property is present and has a value of true.
-* **description**: string: Product description. May include HTML formatting tags.
-* **displayName**: string (Required): Product name.
+* **description**: string {minLength: 1, maxLength: 1000}: Product description. May include HTML formatting tags.
+* **displayName**: string {minLength: 1, maxLength: 300} (Required): Product name.
 * **state**: 'notPublished' | 'published': whether product is published or not. Published products are discoverable by users of developer portal. Non published products are visible only to administrators. Default state of Product is notPublished.
 * **subscriptionRequired**: bool: Whether a product subscription is required for accessing APIs included in this product. If true, the product is referred to as "protected" and a valid subscription key is required for a request to an API included in the product to succeed. If false, the product is referred to as "open" and requests to an API included in the product can be made without a subscription key. If property is omitted when creating a new product it's value is assumed to be true.
 * **subscriptionsLimit**: int: Whether the number of subscriptions a user can have to this product at the same time. Set to null or omit to allow unlimited per user subscriptions. Can be present only if subscriptionRequired property is present and has a value of true.
@@ -962,10 +962,10 @@ Instrumentation key for applicationInsights logger.
 
 ## ResourceLocationDataContract
 ### Properties
-* **city**: string: The city or locality where the resource is located.
-* **countryOrRegion**: string: The country or region where the resource is located.
-* **district**: string: The district, state, or province where the resource is located.
-* **name**: string (Required): A canonical name for the geographic or physical location.
+* **city**: string {maxLength: 256}: The city or locality where the resource is located.
+* **countryOrRegion**: string {maxLength: 256}: The country or region where the resource is located.
+* **district**: string {maxLength: 256}: The district, state, or province where the resource is located.
+* **name**: string {maxLength: 256} (Required): A canonical name for the geographic or physical location.
 
 ## ResponseContract
 ### Properties
@@ -976,7 +976,7 @@ Instrumentation key for applicationInsights logger.
 
 ## SamplingSettings
 ### Properties
-* **percentage**: int: Rate of sampling for fixed-rate sampling.
+* **percentage**: int {minValue: 0, maxValue: 100}: Rate of sampling for fixed-rate sampling.
 * **samplingType**: 'fixed' | string: Sampling type.
 
 ## SchemaContractProperties
@@ -993,14 +993,14 @@ Instrumentation key for applicationInsights logger.
 ### Properties
 * **allowTracing**: bool: Determines whether tracing can be enabled
 * **createdDate**: string (ReadOnly): Subscription creation date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-* **displayName**: string (Required): Subscription name.
+* **displayName**: string {minLength: 1, maxLength: 100} (Required): Subscription name.
 * **endDate**: string (ReadOnly): Date when subscription was cancelled or expired. The setting is for audit purposes only and the subscription is not automatically cancelled. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
 * **expirationDate**: string (ReadOnly): Subscription expiration date. The setting is for audit purposes only and the subscription is not automatically expired. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
 * **notificationDate**: string (ReadOnly): Upcoming subscription expiration notification date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
 * **ownerId**: string: User (user id path) for whom subscription is being created in form /users/{userId}
-* **primaryKey**: string: Primary subscription key. If not specified during request key will be generated automatically.
+* **primaryKey**: string {minLength: 1, maxLength: 256}: Primary subscription key. If not specified during request key will be generated automatically.
 * **scope**: string (Required): Scope like /products/{productId} or /apis or /apis/{apiId}.
-* **secondaryKey**: string: Secondary subscription key. If not specified during request key will be generated automatically.
+* **secondaryKey**: string {minLength: 1, maxLength: 256}: Secondary subscription key. If not specified during request key will be generated automatically.
 * **startDate**: string (ReadOnly): Subscription activation date. The setting is for audit purposes only and the subscription is not automatically activated. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
 * **state**: 'active' | 'cancelled' | 'expired' | 'rejected' | 'submitted' | 'suspended': Initial subscription state. If no value is specified, subscription is created with Submitted state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.
 * **stateComment**: string (ReadOnly): Optional subscription comment added by an administrator.
@@ -1012,8 +1012,8 @@ Instrumentation key for applicationInsights logger.
 
 ## SubscriptionKeysContract
 ### Properties
-* **primaryKey**: string: Subscription primary key.
-* **secondaryKey**: string: Subscription secondary key.
+* **primaryKey**: string {minLength: 1, maxLength: 256}: Subscription primary key.
+* **secondaryKey**: string {minLength: 1, maxLength: 256}: Subscription secondary key.
 
 ## SubscriptionsDelegationSettingsProperties
 ### Properties
@@ -1021,14 +1021,14 @@ Instrumentation key for applicationInsights logger.
 
 ## TagContractProperties
 ### Properties
-* **displayName**: string (Required): Tag name.
+* **displayName**: string {minLength: 1, maxLength: 160} (Required): Tag name.
 
 ## TagDescriptionBasePropertiesOrTagDescriptionContractProperties
 ### Properties
 * **description**: string: Description of the Tag.
-* **displayName**: string (ReadOnly): Tag name.
+* **displayName**: string {minLength: 1, maxLength: 160} (ReadOnly): Tag name.
 * **externalDocsDescription**: string: Description of the external resources describing the tag.
-* **externalDocsUrl**: string: Absolute URL of external resources describing the tag.
+* **externalDocsUrl**: string {maxLength: 2000}: Absolute URL of external resources describing the tag.
 * **tagId**: string (ReadOnly): Identifier of the tag in the form of /tags/{tagId}
 
 ## TermsOfServiceProperties
@@ -1046,11 +1046,11 @@ Instrumentation key for applicationInsights logger.
 ### Properties
 * **appType**: 'developerPortal' | string (WriteOnly): Determines the type of application which send the create user request. Default is old publisher portal.
 * **confirmation**: 'invite' | 'signup' | string (WriteOnly): Determines the type of confirmation e-mail that will be sent to the newly created user.
-* **email**: string (Required): Email address. Must not be empty and must be unique within the service instance.
-* **firstName**: string (Required): First name.
+* **email**: string {minLength: 1, maxLength: 254} (Required): Email address. Must not be empty and must be unique within the service instance.
+* **firstName**: string {minLength: 1, maxLength: 100} (Required): First name.
 * **groups**: [GroupContractProperties](#groupcontractproperties)[] (ReadOnly): Collection of groups user is part of.
 * **identities**: [UserIdentityContract](#useridentitycontract)[]: Collection of user identities.
-* **lastName**: string (Required): Last name.
+* **lastName**: string {minLength: 1, maxLength: 100} (Required): Last name.
 * **note**: string: Optional note about a user set by the administrator.
 * **password**: string (WriteOnly): User Password. If no value is provided, a default password is generated.
 * **registrationDate**: string (ReadOnly): Date of user registration. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
@@ -1069,7 +1069,7 @@ Instrumentation key for applicationInsights logger.
 ## VirtualNetworkConfiguration
 ### Properties
 * **subnetname**: string (ReadOnly): The name of the subnet.
-* **subnetResourceId**: string: The full resource ID of a subnet in a virtual network to deploy the API Management service in.
+* **subnetResourceId**: string {pattern: "^/subscriptions/[^/]*/resourceGroups/[^/]*/providers/Microsoft.(ClassicNetwork|Network)/virtualNetworks/[^/]*/subnets/[^/]*$"}: The full resource ID of a subnet in a virtual network to deploy the API Management service in.
 * **vnetid**: string (ReadOnly): The virtual network ID. This is typically a GUID. Expect a null GUID by default.
 
 ## X509CertificateName

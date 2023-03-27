@@ -150,7 +150,7 @@
 
 ## RealtimeConfiguration
 ### Properties
-* **maxConcurrentCalls**: int: Specifies the maximum concurrent calls that can be made to the web service. Minimum value: 4, Maximum value: 200.
+* **maxConcurrentCalls**: int {minValue: 4, maxValue: 200}: Specifies the maximum concurrent calls that can be made to the web service. Minimum value: 4, Maximum value: 200.
 
 ## ResourceTags
 ### Properties

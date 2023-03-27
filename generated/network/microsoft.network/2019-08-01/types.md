@@ -41,7 +41,7 @@
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {maxLength: 128} (Required, DeployTimeConstant): The resource name
 * **properties**: [WebApplicationFirewallPolicyPropertiesFormat](#webapplicationfirewallpolicypropertiesformat): Properties of the web application firewall policy.
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies' (ReadOnly, DeployTimeConstant): The resource type
@@ -352,7 +352,7 @@
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1} (Required, DeployTimeConstant): The resource name
 * **properties**: [LocalNetworkGatewayPropertiesFormat](#localnetworkgatewaypropertiesformat) (Required): Properties of the local network gateway.
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/localNetworkGateways' (ReadOnly, DeployTimeConstant): The resource type
@@ -837,8 +837,8 @@
 
 ## ApplicationGatewayAutoscaleConfiguration
 ### Properties
-* **maxCapacity**: int: Upper bound on number of Application Gateway capacity.
-* **minCapacity**: int (Required): Lower bound on number of Application Gateway capacity.
+* **maxCapacity**: int {minValue: 2}: Upper bound on number of Application Gateway capacity.
+* **minCapacity**: int {minValue: 0} (Required): Lower bound on number of Application Gateway capacity.
 
 ## ApplicationGatewayAvailableSslOptionsPropertiesFormat
 ### Properties
@@ -893,7 +893,7 @@
 
 ## ApplicationGatewayConnectionDraining
 ### Properties
-* **drainTimeoutInSec**: int (Required): The number of seconds connection draining is active. Acceptable values are from 1 second to 3600 seconds.
+* **drainTimeoutInSec**: int {minValue: 1, maxValue: 3600} (Required): The number of seconds connection draining is active. Acceptable values are from 1 second to 3600 seconds.
 * **enabled**: bool (Required): Whether connection draining is enabled or not.
 
 ## ApplicationGatewayCustomError
@@ -1016,7 +1016,7 @@
 * **minServers**: int: Minimum number of servers that are always marked healthy. Default value is 0.
 * **path**: string: Relative path of probe. Valid path starts from '/'. Probe is sent to <Protocol>://<host>:<port><path>.
 * **pickHostNameFromBackendHttpSettings**: bool: Whether the host header should be picked from the backend http settings. Default value is false.
-* **port**: int: Custom port which will be used for probing the backend servers. The valid value ranges from 1 to 65535. In case not set, port from http settings will be used. This property is valid for Standard_v2 and WAF_v2 only.
+* **port**: int {minValue: 1, maxValue: 65535}: Custom port which will be used for probing the backend servers. The valid value ranges from 1 to 65535. In case not set, port from http settings will be used. This property is valid for Standard_v2 and WAF_v2 only.
 * **protocol**: 'Http' | 'Https' | string: The protocol used for the probe.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the probe resource.
 * **timeout**: int: The probe timeout in seconds. Probe marked as failed if valid response is not received with this timeout period. Acceptable values are from 1 second to 86400 seconds.
@@ -1082,7 +1082,7 @@
 * **backendAddressPool**: [SubResource](#subresource): Backend address pool resource of the application gateway.
 * **backendHttpSettings**: [SubResource](#subresource): Backend http settings resource of the application gateway.
 * **httpListener**: [SubResource](#subresource): Http listener resource of the application gateway.
-* **priority**: int: Priority of the request routing rule.
+* **priority**: int {minValue: 1, maxValue: 20000}: Priority of the request routing rule.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the request routing rule resource.
 * **redirectConfiguration**: [SubResource](#subresource): Redirect configuration resource of the application gateway.
 * **rewriteRuleSet**: [SubResource](#subresource): Rewrite Rule Set resource in Basic rule of the application gateway.
@@ -1191,10 +1191,10 @@
 * **disabledRuleGroups**: [ApplicationGatewayFirewallDisabledRuleGroup](#applicationgatewayfirewalldisabledrulegroup)[]: The disabled rule groups.
 * **enabled**: bool (Required): Whether the web application firewall is enabled or not.
 * **exclusions**: [ApplicationGatewayFirewallExclusion](#applicationgatewayfirewallexclusion)[]: The exclusion list.
-* **fileUploadLimitInMb**: int: Maximum file upload size in Mb for WAF.
+* **fileUploadLimitInMb**: int {minValue: 0}: Maximum file upload size in Mb for WAF.
 * **firewallMode**: 'Detection' | 'Prevention' | string (Required): Web application firewall mode.
-* **maxRequestBodySize**: int: Maximum request body size for WAF.
-* **maxRequestBodySizeInKb**: int: Maximum request body size in Kb for WAF.
+* **maxRequestBodySize**: int {minValue: 8, maxValue: 128}: Maximum request body size for WAF.
+* **maxRequestBodySizeInKb**: int {minValue: 8, maxValue: 128}: Maximum request body size in Kb for WAF.
 * **requestBodyCheck**: bool: Whether allow WAF to check request Body.
 * **ruleSetType**: string (Required): The type of the web application firewall rule set. Possible values are: 'OWASP'.
 * **ruleSetVersion**: string (Required): The version of the rule set type.
@@ -1239,13 +1239,13 @@
 ## AzureFirewallApplicationRuleCollectionPropertiesFormat
 ### Properties
 * **action**: [AzureFirewallRCAction](#azurefirewallrcaction): The action type of a rule collection.
-* **priority**: int: Priority of the application rule collection resource.
+* **priority**: int {minValue: 100, maxValue: 65000}: Priority of the application rule collection resource.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the application rule collection resource.
 * **rules**: [AzureFirewallApplicationRule](#azurefirewallapplicationrule)[]: Collection of rules used by a application rule collection.
 
 ## AzureFirewallApplicationRuleProtocol
 ### Properties
-* **port**: int: Port number for the protocol, cannot be greater than 64000. This field is optional.
+* **port**: int {minValue: 0, maxValue: 64000}: Port number for the protocol, cannot be greater than 64000. This field is optional.
 * **protocolType**: 'Http' | 'Https' | 'Mssql' | string: Protocol type.
 
 ## AzureFirewallIPConfiguration
@@ -1287,7 +1287,7 @@
 ## AzureFirewallNatRuleCollectionProperties
 ### Properties
 * **action**: [AzureFirewallNatRCAction](#azurefirewallnatrcaction): The action type of a NAT rule collection.
-* **priority**: int: Priority of the NAT rule collection resource.
+* **priority**: int {minValue: 100, maxValue: 65000}: Priority of the NAT rule collection resource.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the NAT rule collection resource.
 * **rules**: [AzureFirewallNatRule](#azurefirewallnatrule)[]: Collection of rules used by a NAT rule collection.
 
@@ -1310,7 +1310,7 @@
 ## AzureFirewallNetworkRuleCollectionPropertiesFormat
 ### Properties
 * **action**: [AzureFirewallRCAction](#azurefirewallrcaction): The action type of a rule collection.
-* **priority**: int: Priority of the network rule collection resource.
+* **priority**: int {minValue: 100, maxValue: 65000}: Priority of the network rule collection resource.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the network rule collection resource.
 * **rules**: [AzureFirewallNetworkRule](#azurefirewallnetworkrule)[]: Collection of rules used by a network rule collection.
 
@@ -1553,7 +1553,7 @@
 * **ipv6PeeringConfig**: [Ipv6ExpressRouteCircuitPeeringConfig](#ipv6expressroutecircuitpeeringconfig): The IPv6 peering configuration.
 * **lastModifiedBy**: string: Who was the last to modify the peering.
 * **microsoftPeeringConfig**: [ExpressRouteCircuitPeeringConfig](#expressroutecircuitpeeringconfig): The Microsoft peering configuration.
-* **peerASN**: int: The peer ASN.
+* **peerASN**: int {minValue: 1, maxValue: 4294967295}: The peer ASN.
 * **peeredConnections**: [PeerExpressRouteCircuitConnection](#peerexpressroutecircuitconnection)[] (ReadOnly): The list of peered circuit connections associated with Azure Private Peering for this circuit.
 * **peeringType**: 'AzurePrivatePeering' | 'AzurePublicPeering' | 'MicrosoftPeering' | string: The peering type.
 * **primaryAzurePort**: string: The primary port.
@@ -1638,7 +1638,7 @@
 * **ipv6PeeringConfig**: [Ipv6ExpressRouteCircuitPeeringConfig](#ipv6expressroutecircuitpeeringconfig): The IPv6 peering configuration.
 * **lastModifiedBy**: string: Who was the last to modify the peering.
 * **microsoftPeeringConfig**: [ExpressRouteCircuitPeeringConfig](#expressroutecircuitpeeringconfig): The Microsoft peering configuration.
-* **peerASN**: int: The peer ASN.
+* **peerASN**: int {minValue: 1, maxValue: 4294967295}: The peer ASN.
 * **peeringType**: 'AzurePrivatePeering' | 'AzurePublicPeering' | 'MicrosoftPeering' | string: The peering type.
 * **primaryAzurePort**: string (ReadOnly): The primary port.
 * **primaryPeerAddressPrefix**: string: The primary address prefix.
@@ -1750,7 +1750,7 @@
 
 ### Base Properties
 * **name**: string: The name of the rule.
-* **priority**: int: Priority of the Firewall Policy Rule resource.
+* **priority**: int {minValue: 100, maxValue: 65000}: Priority of the Firewall Policy Rule resource.
 
 ### FirewallPolicyFilterRule
 #### Properties
@@ -1794,12 +1794,12 @@
 
 ## FirewallPolicyRuleConditionApplicationProtocol
 ### Properties
-* **port**: int: Port number for the protocol, cannot be greater than 64000.
+* **port**: int {minValue: 0, maxValue: 64000}: Port number for the protocol, cannot be greater than 64000.
 * **protocolType**: 'Http' | 'Https' | string: Protocol type.
 
 ## FirewallPolicyRuleGroupProperties
 ### Properties
-* **priority**: int: Priority of the Firewall Policy Rule Group resource.
+* **priority**: int {minValue: 100, maxValue: 65000}: Priority of the Firewall Policy Rule Group resource.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the firewall policy rule group resource.
 * **rules**: [FirewallPolicyRule](#firewallpolicyrule)[]: Group of Firewall Policy rules.
 
@@ -2259,8 +2259,8 @@
 
 ## PolicySettings
 ### Properties
-* **fileUploadLimitInMb**: int: Maximum file upload size in Mb for WAF.
-* **maxRequestBodySizeInKb**: int: Maximum request body size in Kb for WAF.
+* **fileUploadLimitInMb**: int {minValue: 0}: Maximum file upload size in Mb for WAF.
+* **maxRequestBodySizeInKb**: int {minValue: 8, maxValue: 128}: Maximum request body size in Kb for WAF.
 * **mode**: 'Detection' | 'Prevention' | string: Describes if it is in detection mode or prevention mode at policy level.
 * **requestBodyCheck**: bool: Whether to allow WAF to check request Body.
 * **state**: 'Disabled' | 'Enabled' | string: Describes if the policy is in enabled state or disabled state.
@@ -3036,7 +3036,7 @@
 
 ## VirtualRouterPeeringProperties
 ### Properties
-* **peerAsn**: int: Peer ASN.
+* **peerAsn**: int {minValue: 1, maxValue: 4294967295}: Peer ASN.
 * **peerIp**: string: Peer IP.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the resource.
 
@@ -3046,7 +3046,7 @@
 * **hostedSubnet**: [SubResource](#subresource): The Subnet on which VirtualRouter is hosted.
 * **peerings**: [SubResource](#subresource)[] (ReadOnly): List of references to VirtualRouterPeerings
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the resource.
-* **virtualRouterAsn**: int: VirtualRouter ASN.
+* **virtualRouterAsn**: int {minValue: 1, maxValue: 4294967295}: VirtualRouter ASN.
 * **virtualRouterIps**: string[]: VirtualRouter IPs
 
 ## VirtualWanProperties
@@ -3241,7 +3241,7 @@
 * **action**: 'Allow' | 'Block' | 'Log' | string (Required): Type of Actions.
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **matchConditions**: [MatchCondition](#matchcondition)[] (Required): List of match conditions.
-* **name**: string: The name of the resource that is unique within a policy. This name can be used to access the resource.
+* **name**: string {maxLength: 128}: The name of the resource that is unique within a policy. This name can be used to access the resource.
 * **priority**: int (Required): Describes priority of the rule. Rules with a lower value will be evaluated before rules with a higher value.
 * **ruleType**: 'Invalid' | 'MatchRule' | string (Required): Describes type of rule.
 

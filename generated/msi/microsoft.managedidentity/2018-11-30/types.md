@@ -24,10 +24,10 @@
 
 ## SystemAssignedIdentityProperties
 ### Properties
-* **clientId**: string (ReadOnly): The id of the app associated with the identity. This is a random generated UUID by MSI.
+* **clientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The id of the app associated with the identity. This is a random generated UUID by MSI.
 * **clientSecretUrl**: string (ReadOnly): The ManagedServiceIdentity DataPlane URL that can be queried to obtain the identity credentials.
-* **principalId**: string (ReadOnly): The id of the service principal object associated with the created identity.
-* **tenantId**: string (ReadOnly): The id of the tenant which the identity belongs to.
+* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The id of the service principal object associated with the created identity.
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The id of the tenant which the identity belongs to.
 
 ## SystemAssignedIdentityTags
 ### Properties
@@ -41,7 +41,7 @@
 
 ## UserAssignedIdentityProperties
 ### Properties
-* **clientId**: string (ReadOnly): The id of the app associated with the identity. This is a random generated UUID by MSI.
-* **principalId**: string (ReadOnly): The id of the service principal object associated with the created identity.
-* **tenantId**: string (ReadOnly): The id of the tenant which the identity belongs to.
+* **clientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The id of the app associated with the identity. This is a random generated UUID by MSI.
+* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The id of the service principal object associated with the created identity.
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The id of the tenant which the identity belongs to.
 

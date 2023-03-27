@@ -46,7 +46,7 @@
 
 ## CreateDataLakeStoreAccountPropertiesOrDataLakeStoreAccountProperties
 ### Properties
-* **accountId**: string (ReadOnly): The unique identifier associated with this Data Lake Store account.
+* **accountId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The unique identifier associated with this Data Lake Store account.
 * **creationTime**: string (ReadOnly): The account creation time.
 * **currentTier**: 'Commitment_100TB' | 'Commitment_10TB' | 'Commitment_1PB' | 'Commitment_1TB' | 'Commitment_500TB' | 'Commitment_5PB' | 'Consumption' (ReadOnly): The commitment tier in use for the current month.
 * **defaultGroup**: string: The default owner group for all new folders and files created in the Data Lake Store account.
@@ -106,8 +106,8 @@
 
 ## EncryptionIdentity
 ### Properties
-* **principalId**: string (ReadOnly): The principal identifier associated with the encryption.
-* **tenantId**: string (ReadOnly): The tenant identifier associated with the encryption.
+* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The principal identifier associated with the encryption.
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The tenant identifier associated with the encryption.
 * **type**: 'SystemAssigned' (Required): The type of encryption being used. Currently the only supported type is 'SystemAssigned'.
 
 ## KeyVaultMetaInfo

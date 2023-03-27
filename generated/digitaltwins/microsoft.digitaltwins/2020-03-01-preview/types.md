@@ -6,7 +6,7 @@
 * **apiVersion**: '2020-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 64} (Required, DeployTimeConstant): The resource name
 * **properties**: [DigitalTwinsProperties](#digitaltwinsproperties): DigitalTwins instance properties.
 * **sku**: [DigitalTwinsSkuInfo](#digitaltwinsskuinfo): This property is reserved for future use, and will be ignored/omitted
 * **tags**: [DigitalTwinsResourceTags](#digitaltwinsresourcetags): The resource tags.
@@ -17,7 +17,7 @@
 ### Properties
 * **apiVersion**: '2020-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 64, pattern: "^[A-Za-z0-9-._]{1,64}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DigitalTwinsEndpointResourceProperties](#digitaltwinsendpointresourceproperties): DigitalTwinsInstance endpoint resource properties.
 * **type**: 'Microsoft.DigitalTwins/digitalTwinsInstances/endpoints' (ReadOnly, DeployTimeConstant): The resource type
 

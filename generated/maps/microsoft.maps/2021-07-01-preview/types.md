@@ -39,7 +39,7 @@
 ## CreatorProperties
 ### Properties
 * **provisioningState**: string (ReadOnly): The state of the resource provisioning, terminal states: Succeeded, Failed, Canceled
-* **storageUnits**: int (Required): The storage units to be allocated. Integer values from 1 to 100, inclusive.
+* **storageUnits**: int {minValue: 1, maxValue: 100} (Required): The storage units to be allocated. Integer values from 1 to 100, inclusive.
 
 ## LinkedResource
 ### Properties

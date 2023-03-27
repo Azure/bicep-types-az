@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **location**: string (Required): Resource Location.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {pattern: "[a-zA-Z0-9][a-zA-Z0-9\.-]+"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DomainProperties](#domainproperties): Domain resource specific properties
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.DomainRegistration/domains' (ReadOnly, DeployTimeConstant): The resource type

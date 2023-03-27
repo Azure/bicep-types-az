@@ -92,7 +92,7 @@
 ### Properties
 * **apiVersion**: '2023-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "[ A-Za-z0-9_@./#&+-]*"} (Required, DeployTimeConstant): The resource name
 * **properties**: [MarketplaceImageVersionProperties](#marketplaceimageversionproperties) (ReadOnly)
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/publishers/offers/skus/versions' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -288,7 +288,7 @@
 ## AsymmetricEncryptedSecret
 ### Properties
 * **encryptionAlgorithm**: 'AES256' | 'None' | 'RSAES_PKCS1_v_1_5' | string (Required): The algorithm used to encrypt "Value".
-* **encryptionCertThumbprint**: string: Thumbprint certificate used to encrypt \"Value\". If the value is unencrypted, it will be null.
+* **encryptionCertThumbprint**: string {secure}: Thumbprint certificate used to encrypt \"Value\". If the value is unencrypted, it will be null.
 * **value**: string (Required): The value of the secret.
 
 ## Authentication
@@ -466,7 +466,7 @@
 
 ## FileTriggerProperties
 ### Properties
-* **customContextTag**: string: A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module.
+* **customContextTag**: string {maxLength: 192}: A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module.
 * **sinkInfo**: [RoleSinkInfo](#rolesinkinfo) (Required): Role sink info.
 * **sourceInfo**: [FileSourceInfo](#filesourceinfo) (Required): File event source details.
 
@@ -706,7 +706,7 @@ by the already existing properties
 
 ## PeriodicTimerProperties
 ### Properties
-* **customContextTag**: string: A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module.
+* **customContextTag**: string {maxLength: 192}: A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module.
 * **sinkInfo**: [RoleSinkInfo](#rolesinkinfo) (Required): Role Sink information.
 * **sourceInfo**: [PeriodicTimerSourceInfo](#periodictimersourceinfo) (Required): Periodic timer details.
 

@@ -7,7 +7,7 @@
 * **etag**: string: Gets a unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {maxLength: 128} (Required, DeployTimeConstant): The resource name
 * **properties**: [WebApplicationFirewallPolicyProperties](#webapplicationfirewallpolicyproperties): Properties of the web application firewall policy.
 * **sku**: [Sku](#sku): The pricing tier of web application firewall policy. Defaults to Classic_AzureFrontDoor if not specified.
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
@@ -18,10 +18,10 @@
 * **action**: 'Allow' | 'Block' | 'Log' | 'Redirect' | string (Required): Describes what action to be applied when rule matches.
 * **enabledState**: 'Disabled' | 'Enabled' | string: Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.
 * **matchConditions**: [MatchCondition](#matchcondition)[] (Required): List of match conditions.
-* **name**: string: Describes the name of the rule.
+* **name**: string {maxLength: 128}: Describes the name of the rule.
 * **priority**: int (Required): Describes priority of the rule. Rules with a lower value will be evaluated before rules with a higher value.
-* **rateLimitDurationInMinutes**: int: Time window for resetting the rate limit count. Default is 1 minute.
-* **rateLimitThreshold**: int: Number of allowed requests per client within the time window.
+* **rateLimitDurationInMinutes**: int {minValue: 0, maxValue: 5}: Time window for resetting the rate limit count. Default is 1 minute.
+* **rateLimitThreshold**: int {minValue: 0}: Number of allowed requests per client within the time window.
 * **ruleType**: 'MatchRule' | 'RateLimitRule' | string (Required): Describes type of rule.
 
 ## CustomRuleList
@@ -74,7 +74,7 @@
 
 ## PolicySettings
 ### Properties
-* **customBlockResponseBody**: string: If the action type is block, customer can override the response body. The body must be specified in base64 encoding.
+* **customBlockResponseBody**: string {pattern: "^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=|[A-Za-z0-9+/]{4})$"}: If the action type is block, customer can override the response body. The body must be specified in base64 encoding.
 * **customBlockResponseStatusCode**: int: If the action type is block, customer can override the response status code.
 * **enabledState**: 'Disabled' | 'Enabled' | string: Describes if the policy is in enabled or disabled state. Defaults to Enabled if not specified.
 * **mode**: 'Detection' | 'Prevention' | string: Describes if it is in detection mode or prevention mode at policy level.

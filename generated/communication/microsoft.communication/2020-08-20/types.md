@@ -6,7 +6,7 @@
 * **apiVersion**: '2020-08-20' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The Azure location where the CommunicationService is running.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 63, pattern: "^[-\w]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [CommunicationServiceProperties](#communicationserviceproperties): The properties of the service.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [TaggedResourceTags](#taggedresourcetags): Tags of the service which is a list of key value pairs that describe the resource.

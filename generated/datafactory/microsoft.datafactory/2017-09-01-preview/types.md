@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [FactoryIdentity](#factoryidentity): Managed service identity of the factory.
 * **location**: string: The resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 63, pattern: "^[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [FactoryProperties](#factoryproperties): Properties of the factory.
 * **tags**: [ResourceTags](#resourcetags): The resource tags.
 * **type**: 'Microsoft.DataFactory/factories' (ReadOnly, DeployTimeConstant): The resource type
@@ -18,7 +18,7 @@
 * **apiVersion**: '2017-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Etag identifies change in the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 260, pattern: "^[A-Za-z0-9_][^<>*#.%&:\\+?/]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [Dataset](#dataset) (Required): Dataset properties.
 * **type**: 'Microsoft.DataFactory/factories/datasets' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -28,7 +28,7 @@
 * **apiVersion**: '2017-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Etag identifies change in the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 63, pattern: "^[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [IntegrationRuntime](#integrationruntime) (Required): Integration runtime properties.
 * **type**: 'Microsoft.DataFactory/factories/integrationRuntimes' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -38,7 +38,7 @@
 * **apiVersion**: '2017-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Etag identifies change in the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 260, pattern: "^[A-Za-z0-9_][^<>*#.%&:\\+?/]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [LinkedService](#linkedservice) (Required): Properties of linked service.
 * **type**: 'Microsoft.DataFactory/factories/linkedservices' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -48,7 +48,7 @@
 * **apiVersion**: '2017-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Etag identifies change in the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 260, pattern: "^[A-Za-z0-9_][^<>*#.%&:\\+?/]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [Pipeline](#pipeline) (Required): Properties of the pipeline.
 * **type**: 'Microsoft.DataFactory/factories/pipelines' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -58,7 +58,7 @@
 * **apiVersion**: '2017-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Etag identifies change in the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 260, pattern: "^[A-Za-z0-9_][^<>*#.%&:\\+?/]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [Trigger](#trigger) (Required): Properties of the trigger.
 * **type**: 'Microsoft.DataFactory/factories/triggers' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -230,7 +230,7 @@
 ## ActivityPolicy
 ### Properties
 * **retry**: any: Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.
-* **retryIntervalInSeconds**: int: Interval between each retry attempt (in seconds). The default is 30 sec.
+* **retryIntervalInSeconds**: int {minValue: 30, maxValue: 86400}: Interval between each retry attempt (in seconds). The default is 30 sec.
 * **secureOutput**: bool: When set to true, Output from activity is considered as secure and will not be logged to monitoring.
 * **timeout**: any: Specifies the timeout for the activity to run. The default timeout is 7 days. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 ### Additional Properties
@@ -928,8 +928,8 @@
 
 ## FactoryIdentity
 ### Properties
-* **principalId**: string (ReadOnly): The principal id of the identity.
-* **tenantId**: string (ReadOnly): The client tenant id of the identity.
+* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The principal id of the identity.
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The client tenant id of the identity.
 * **type**: 'SystemAssigned' (Required): The identity type. Currently the only supported type is 'SystemAssigned'.
 
 ## FactoryProperties
@@ -972,7 +972,7 @@
 ## ForEachActivityTypeProperties
 ### Properties
 * **activities**: [Activity](#activity)[] (Required): List of activities to execute .
-* **batchCount**: int: Batch count to be used for controlling the number of parallel execution (when isSequential is set to false).
+* **batchCount**: int {maxValue: 50}: Batch count to be used for controlling the number of parallel execution (when isSequential is set to false).
 * **isSequential**: bool: Should the loop be executed in sequence or in parallel (max 50)
 * **items**: [Expression](#expression) (Required): Collection to iterate.
 
@@ -1255,9 +1255,9 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## IntegrationRuntimeComputeProperties
 ### Properties
 * **location**: string: The location for managed integration runtime. The supported regions could be found on https://docs.microsoft.com/en-us/azure/data-factory/data-factory-data-movement-activities
-* **maxParallelExecutionsPerNode**: int: Maximum parallel executions count per node for managed integration runtime.
+* **maxParallelExecutionsPerNode**: int {minValue: 1}: Maximum parallel executions count per node for managed integration runtime.
 * **nodeSize**: string: The node size requirement to managed integration runtime.
-* **numberOfNodes**: int: The required number of nodes for managed integration runtime.
+* **numberOfNodes**: int {minValue: 1}: The required number of nodes for managed integration runtime.
 * **vNetProperties**: [IntegrationRuntimeVNetProperties](#integrationruntimevnetproperties): VNet properties for managed integration runtime.
 ### Additional Properties
 * **Additional Properties Type**: any
@@ -1282,7 +1282,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## IntegrationRuntimeSsisCatalogInfo
 ### Properties
 * **catalogAdminPassword**: [SecureString](#securestring): The password of the administrator user account of the catalog database.
-* **catalogAdminUserName**: string: The administrator user name of catalog database.
+* **catalogAdminUserName**: string {minLength: 1, maxLength: 128}: The administrator user name of catalog database.
 * **catalogPricingTier**: string: The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/
 * **catalogServerEndpoint**: string: The catalog database server URL.
 ### Additional Properties
@@ -1868,7 +1868,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### Properties
 * **activities**: [Activity](#activity)[]: List of activities in pipeline.
 * **annotations**: any[]: List of tags that can be used for describing the Pipeline.
-* **concurrency**: int: The max number of concurrent runs for the pipeline.
+* **concurrency**: int {minValue: 1}: The max number of concurrent runs for the pipeline.
 * **description**: string: The description of the pipeline.
 * **parameters**: [ParameterDefinitionSpecification](#parameterdefinitionspecification): List of parameters for pipeline.
 

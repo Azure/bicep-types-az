@@ -253,7 +253,7 @@
 ### Properties
 * **encryptionAlgorithm**: 'AES256' | 'None' | 'RSAES_PKCS1_v_1_5' | string (Required): The algorithm used to encrypt "Value".
 * **encryptionCertThumbprint**: string: Thumbprint certificate used to encrypt \"Value\". If the value is unencrypted, it will be null.
-* **value**: string (Required): The value of the secret.
+* **value**: string {secure} (Required): The value of the secret.
 
 ## Authentication
 ### Properties
@@ -365,7 +365,7 @@
 
 ## FileTriggerProperties
 ### Properties
-* **customContextTag**: string: A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module.
+* **customContextTag**: string {maxLength: 192}: A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module.
 * **sinkInfo**: [RoleSinkInfo](#rolesinkinfo) (Required): Role sink info.
 * **sourceInfo**: [FileSourceInfo](#filesourceinfo) (Required): File event source details.
 
@@ -575,7 +575,7 @@ by the already existing properties
 
 ## PeriodicTimerProperties
 ### Properties
-* **customContextTag**: string: A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module.
+* **customContextTag**: string {maxLength: 192}: A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module.
 * **sinkInfo**: [RoleSinkInfo](#rolesinkinfo) (Required): Role Sink information.
 * **sourceInfo**: [PeriodicTimerSourceInfo](#periodictimersourceinfo) (Required): Periodic timer details.
 

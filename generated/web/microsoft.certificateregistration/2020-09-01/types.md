@@ -52,7 +52,7 @@
 * **serialNumber**: string (ReadOnly): Current serial number of the certificate.
 * **signedCertificate**: [CertificateDetails](#certificatedetails) (ReadOnly): Signed certificate.
 * **status**: 'Canceled' | 'Denied' | 'Expired' | 'Issued' | 'NotSubmitted' | 'PendingRekey' | 'Pendingissuance' | 'Pendingrevocation' | 'Revoked' | 'Unused' (ReadOnly): Current order status.
-* **validityInYears**: int: Duration in years (must be between 1 and 3).
+* **validityInYears**: int {minValue: 1, maxValue: 3}: Duration in years (must be between 1 and 3).
 
 ## AppServiceCertificateOrderPropertiesCertificates
 ### Properties

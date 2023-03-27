@@ -6,7 +6,7 @@
 * **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {minLength: 1, maxLength: 64, pattern: "^[a-zA-Z][a-zA-Z0-9]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [HubPropertiesFormat](#hubpropertiesformat): Properties of hub.
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.CustomerInsights/hubs' (ReadOnly, DeployTimeConstant): The resource type
@@ -16,7 +16,7 @@
 ### Properties
 * **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {minLength: 1, maxLength: 50, pattern: "^[A-Za-z0-9]$|^[A-Za-z0-9][\w-\.]*[A-Za-z0-9]$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [AuthorizationPolicy](#authorizationpolicy): The authorization policy.
 * **type**: 'Microsoft.CustomerInsights/hubs/authorizationPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -25,7 +25,7 @@
 ### Properties
 * **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {minLength: 1, maxLength: 128, pattern: "^[a-zA-Z][a-zA-Z0-9_]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [Connector](#connector): Properties of connector.
 * **type**: 'Microsoft.CustomerInsights/hubs/connectors' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -34,7 +34,7 @@
 ### Properties
 * **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {minLength: 1, maxLength: 128, pattern: "^[a-zA-Z][a-zA-Z0-9_]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ConnectorMapping](#connectormapping): The connector mapping definition.
 * **type**: 'Microsoft.CustomerInsights/hubs/connectors/mappings' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -43,7 +43,7 @@
 ### Properties
 * **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {minLength: 1, maxLength: 128, pattern: "^[a-zA-Z][a-zA-Z0-9_]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [InteractionTypeDefinition](#interactiontypedefinition): The Interaction Type Definition
 * **type**: 'Microsoft.CustomerInsights/hubs/interactions' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -52,7 +52,7 @@
 ### Properties
 * **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {minLength: 1, maxLength: 512, pattern: "^[a-zA-Z][a-zA-Z0-9_]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [KpiDefinition](#kpidefinition): Defines the KPI Threshold limits.
 * **type**: 'Microsoft.CustomerInsights/hubs/kpi' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -61,7 +61,7 @@
 ### Properties
 * **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {minLength: 1, maxLength: 512, pattern: "^[a-zA-Z][a-zA-Z0-9_]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [LinkDefinition](#linkdefinition): The definition of Link.
 * **type**: 'Microsoft.CustomerInsights/hubs/links' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -70,7 +70,7 @@
 ### Properties
 * **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {minLength: 1, maxLength: 512} (Required, DeployTimeConstant): The resource name
 * **properties**: [Prediction](#prediction): The prediction definition.
 * **type**: 'Microsoft.CustomerInsights/hubs/predictions' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -79,7 +79,7 @@
 ### Properties
 * **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {minLength: 1, maxLength: 128, pattern: "^[a-zA-Z][a-zA-Z0-9_]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ProfileTypeDefinition](#profiletypedefinition): The profile type definition.
 * **type**: 'Microsoft.CustomerInsights/hubs/profiles' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -88,7 +88,7 @@
 ### Properties
 * **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {minLength: 1, maxLength: 512, pattern: "^[a-zA-Z][a-zA-Z0-9_]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [RelationshipLinkDefinition](#relationshiplinkdefinition): The definition of relationship link.
 * **type**: 'Microsoft.CustomerInsights/hubs/relationshipLinks' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -97,7 +97,7 @@
 ### Properties
 * **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {minLength: 1, maxLength: 512, pattern: "^[a-zA-Z][a-zA-Z0-9_]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [RelationshipDefinition](#relationshipdefinition): The definition of Relationship.
 * **type**: 'Microsoft.CustomerInsights/hubs/relationships' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -106,7 +106,7 @@
 ### Properties
 * **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {minLength: 1, maxLength: 128, pattern: "^[a-zA-Z][a-zA-Z0-9_]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [RoleAssignment](#roleassignment): The Role Assignment definition.
 * **type**: 'Microsoft.CustomerInsights/hubs/roleAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -115,7 +115,7 @@
 ### Properties
 * **apiVersion**: '2017-04-26' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 512} (Required, DeployTimeConstant): The resource name
 * **properties**: [View](#view): The view in Customer 360 web application.
 * **type**: 'Microsoft.CustomerInsights/hubs/views' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -250,8 +250,8 @@
 
 ## HubBillingInfoFormat
 ### Properties
-* **maxUnits**: int: The maximum number of units can be used.  One unit is 10,000 Profiles and 100,000 Interactions.
-* **minUnits**: int: The minimum number of units will be billed. One unit is 10,000 Profiles and 100,000 Interactions.
+* **maxUnits**: int {minValue: 1, maxValue: 10}: The maximum number of units can be used.  One unit is 10,000 Profiles and 100,000 Interactions.
+* **minUnits**: int {minValue: 1, maxValue: 10}: The minimum number of units will be billed. One unit is 10,000 Profiles and 100,000 Interactions.
 * **skuName**: string: The sku name.
 
 ## HubPropertiesFormat

@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [DigitalTwinsIdentity](#digitaltwinsidentity): The managed identity for the DigitalTwinsInstance.
 * **location**: string (Required): The resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 63, pattern: "^(?!-)[A-Za-z0-9-]{3,63}(?<!-)$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DigitalTwinsProperties](#digitaltwinsproperties): DigitalTwins instance properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the DigitalTwinsInstance.
 * **tags**: [DigitalTwinsResourceTags](#digitaltwinsresourcetags): The resource tags.
@@ -18,7 +18,7 @@
 ### Properties
 * **apiVersion**: '2021-06-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 2, maxLength: 49, pattern: "^(?![0-9]+$)(?!-)[a-zA-Z0-9-]{2,49}[a-zA-Z0-9]$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DigitalTwinsEndpointResourceProperties](#digitaltwinsendpointresourceproperties) (Required): DigitalTwinsInstance endpoint resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DigitalTwins/digitalTwinsInstances/endpoints' (ReadOnly, DeployTimeConstant): The resource type
@@ -38,7 +38,7 @@
 ### Properties
 * **apiVersion**: '2021-06-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 2, maxLength: 49, pattern: "^(?![0-9]+$)(?!-)[a-zA-Z0-9-]{2,49}[a-zA-Z0-9]$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [TimeSeriesDatabaseConnectionProperties](#timeseriesdatabaseconnectionproperties): Properties of a specific time series database connection.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DigitalTwins/digitalTwinsInstances/timeSeriesDatabaseConnections' (ReadOnly, DeployTimeConstant): The resource type
@@ -62,21 +62,21 @@
 ### Base Properties
 * **authenticationType**: 'IdentityBased' | 'KeyBased' | string: Specifies the authentication type being used for connecting to the endpoint. Defaults to 'KeyBased'. If 'KeyBased' is selected, a connection string must be specified (at least the primary connection string). If 'IdentityBased' is select, the endpointUri and entityPath properties must be specified.
 * **createdTime**: string (ReadOnly): Time when the Endpoint was added to DigitalTwinsInstance.
-* **deadLetterSecret**: string: Dead letter storage secret for key-based authentication. Will be obfuscated during read.
+* **deadLetterSecret**: string {secure}: Dead letter storage secret for key-based authentication. Will be obfuscated during read.
 * **deadLetterUri**: string: Dead letter storage URL for identity-based authentication.
 * **provisioningState**: 'Canceled' | 'Deleted' | 'Deleting' | 'Disabled' | 'Failed' | 'Moving' | 'Provisioning' | 'Restoring' | 'Succeeded' | 'Suspending' | 'Warning' | string (ReadOnly): The provisioning state.
 
 ### EventGrid
 #### Properties
-* **accessKey1**: string (Required): EventGrid secondary accesskey. Will be obfuscated during read.
-* **accessKey2**: string: EventGrid secondary accesskey. Will be obfuscated during read.
+* **accessKey1**: string {secure} (Required): EventGrid secondary accesskey. Will be obfuscated during read.
+* **accessKey2**: string {secure}: EventGrid secondary accesskey. Will be obfuscated during read.
 * **endpointType**: 'EventGrid' (Required): The type of Digital Twins endpoint
 * **TopicEndpoint**: string (Required): EventGrid Topic Endpoint.
 
 ### EventHub
 #### Properties
-* **connectionStringPrimaryKey**: string: PrimaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
-* **connectionStringSecondaryKey**: string: SecondaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
+* **connectionStringPrimaryKey**: string {secure}: PrimaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
+* **connectionStringSecondaryKey**: string {secure}: SecondaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
 * **endpointType**: 'EventHub' (Required): The type of Digital Twins endpoint
 * **endpointUri**: string: The URL of the EventHub namespace for identity-based authentication. It must include the protocol 'sb://'.
 * **entityPath**: string: The EventHub name in the EventHub namespace for identity-based authentication.
@@ -86,8 +86,8 @@
 * **endpointType**: 'ServiceBus' (Required): The type of Digital Twins endpoint
 * **endpointUri**: string: The URL of the ServiceBus namespace for identity-based authentication. It must include the protocol 'sb://'.
 * **entityPath**: string: The ServiceBus Topic name for identity-based authentication.
-* **primaryConnectionString**: string: PrimaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
-* **secondaryConnectionString**: string: SecondaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
+* **primaryConnectionString**: string {secure}: PrimaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
+* **secondaryConnectionString**: string {secure}: SecondaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
 
 
 ## DigitalTwinsIdentity
@@ -117,7 +117,7 @@
 ## PrivateEndpointConnection
 ### Properties
 * **id**: string (ReadOnly): The resource identifier.
-* **name**: string (ReadOnly): The resource name.
+* **name**: string {pattern: "^(?![0-9]+$)(?!-)[a-zA-Z0-9-]{2,49}[a-zA-Z0-9]$"} (ReadOnly): The resource name.
 * **properties**: [ConnectionProperties](#connectionproperties) (Required): The connection properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the private endpoint connection.
 * **type**: string (ReadOnly): The resource type.

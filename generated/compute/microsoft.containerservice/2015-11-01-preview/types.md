@@ -13,7 +13,7 @@
 
 ## ContainerServiceAgentPoolProfile
 ### Properties
-* **count**: int: No. of agents (VMs) that will host docker containers
+* **count**: int {minValue: 1, maxValue: 100}: No. of agents (VMs) that will host docker containers
 * **dnsPrefix**: string (Required): DNS prefix to be used to create FQDN for this agent pool
 * **fqdn**: string (ReadOnly): FQDN for the agent pool
 * **name**: string (Required): Unique name of the agent pool profile within the context of the subscription and resource group

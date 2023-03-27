@@ -404,7 +404,7 @@
 * **skuDescription**: string (ReadOnly): The sku description of the Azure plan for the subscription.
 * **skuId**: string: The sku ID of the Azure plan for the subscription.
 * **subscriptionBillingStatus**: 'Abandoned' | 'Active' | 'Deleted' | 'Inactive' | 'Warning' | string: The current billing status of the subscription.
-* **subscriptionId**: string (ReadOnly): The ID of the subscription.
+* **subscriptionId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The ID of the subscription.
 
 ## CustomerPolicyProperties
 ### Properties

@@ -88,8 +88,8 @@
 ## AssignmentProperties
 ### Properties
 * **blueprintId**: string: ID of the Blueprint definition resource.
-* **description**: string: Multi-line explain this resource.
-* **displayName**: string: One-liner string explain this resource.
+* **description**: string {maxLength: 500}: Multi-line explain this resource.
+* **displayName**: string {maxLength: 256}: One-liner string explain this resource.
 * **locks**: [AssignmentLockSettings](#assignmentlocksettings): Defines how Blueprint-managed resources will be locked.
 * **parameters**: [ParameterValueCollection](#parametervaluecollection) (Required): Blueprint parameter values.
 * **provisioningState**: 'canceled' | 'cancelling' | 'creating' | 'deleting' | 'deploying' | 'failed' | 'locking' | 'succeeded' | 'validating' | 'waiting' | string (ReadOnly): State of the assignment.
@@ -103,8 +103,8 @@
 
 ## BlueprintProperties
 ### Properties
-* **description**: string: Multi-line explain this resource.
-* **displayName**: string: One-liner string explain this resource.
+* **description**: string {maxLength: 500}: Multi-line explain this resource.
+* **displayName**: string {maxLength: 256}: One-liner string explain this resource.
 * **layout**: any: Layout view of the blueprint, for UI reference.
 * **parameters**: [ParameterDefinitionCollection](#parameterdefinitioncollection): Parameters required by this Blueprint definition.
 * **resourceGroups**: [ResourceGroupDefinitionCollection](#resourcegroupdefinitioncollection): Resource group placeholders defined by this Blueprint definition.
@@ -142,9 +142,9 @@
 
 ## ParameterDefinitionMetadata
 ### Properties
-* **description**: string: Description of this parameter/resourceGroup.
-* **displayName**: string: DisplayName of this parameter/resourceGroup.
-* **strongType**: string: StrongType for UI to render rich experience during assignment time.
+* **description**: string {maxLength: 500}: Description of this parameter/resourceGroup.
+* **displayName**: string {maxLength: 256}: DisplayName of this parameter/resourceGroup.
+* **strongType**: string {maxLength: 64}: StrongType for UI to render rich experience during assignment time.
 
 ## ParameterValueBase
 ### Properties
@@ -168,8 +168,8 @@
 ## PolicyAssignmentArtifactProperties
 ### Properties
 * **dependsOn**: string[]: Artifacts which need to be deployed before the specified artifact.
-* **description**: string: Multi-line explain this resource.
-* **displayName**: string: One-liner string explain this resource.
+* **description**: string {maxLength: 500}: Multi-line explain this resource.
+* **displayName**: string {maxLength: 256}: One-liner string explain this resource.
 * **parameters**: [ParameterValueCollection](#parametervaluecollection) (Required): Parameter values for the policy definition.
 * **policyDefinitionId**: string (Required): Azure resource ID of the policy definition.
 * **resourceGroup**: string: Name of the resource group placeholder to which the policy will be assigned.
@@ -177,9 +177,9 @@
 ## PublishedBlueprintProperties
 ### Properties
 * **blueprintName**: string: Name of the Blueprint definition.
-* **changeNotes**: string: Version-specific change notes
-* **description**: string: Multi-line explain this resource.
-* **displayName**: string: One-liner string explain this resource.
+* **changeNotes**: string {maxLength: 500}: Version-specific change notes
+* **description**: string {maxLength: 500}: Multi-line explain this resource.
+* **displayName**: string {maxLength: 256}: One-liner string explain this resource.
 * **parameters**: [ParameterDefinitionCollection](#parameterdefinitioncollection): Parameters required by this Blueprint definition.
 * **resourceGroups**: [ResourceGroupDefinitionCollection](#resourcegroupdefinitioncollection): Resource group placeholders defined by this Blueprint definition.
 * **status**: [BlueprintStatus](#blueprintstatus) (ReadOnly): Status of the Blueprint. This field is readonly.
@@ -188,9 +188,9 @@
 ## ResourceGroupDefinition
 ### Properties
 * **dependsOn**: string[]: Artifacts which need to be deployed before this resource group.
-* **location**: string: Location of this resourceGroup, leave empty if the resource group location will be specified during the Blueprint assignment.
+* **location**: string {maxLength: 90}: Location of this resourceGroup, leave empty if the resource group location will be specified during the Blueprint assignment.
 * **metadata**: [ParameterDefinitionMetadata](#parameterdefinitionmetadata): User-friendly properties for this resource group.
-* **name**: string: Name of this resourceGroup, leave empty if the resource group name will be specified during the Blueprint assignment.
+* **name**: string {minLength: 1, maxLength: 90}: Name of this resourceGroup, leave empty if the resource group name will be specified during the Blueprint assignment.
 
 ## ResourceGroupDefinitionCollection
 ### Properties
@@ -205,7 +205,7 @@
 ## ResourceGroupValue
 ### Properties
 * **location**: string: Location of the resource group
-* **name**: string: Name of the resource group
+* **name**: string {minLength: 1, maxLength: 90}: Name of the resource group
 
 ## ResourceGroupValueCollection
 ### Properties
@@ -215,8 +215,8 @@
 ## RoleAssignmentArtifactProperties
 ### Properties
 * **dependsOn**: string[]: Artifacts which need to be deployed before the specified artifact.
-* **description**: string: Multi-line explain this resource.
-* **displayName**: string: One-liner string explain this resource.
+* **description**: string {maxLength: 500}: Multi-line explain this resource.
+* **displayName**: string {maxLength: 256}: One-liner string explain this resource.
 * **principalIds**: any (Required): Array of user or group identities in Azure Active Directory. The roleDefinition will apply to these identity.
 * **resourceGroup**: string: RoleAssignment will be scope to this resourceGroup, if left empty, it would scope to the subscription.
 * **roleDefinitionId**: string (Required): Azure resource ID of the RoleDefinition.
@@ -224,8 +224,8 @@
 ## TemplateArtifactProperties
 ### Properties
 * **dependsOn**: string[]: Artifacts which need to be deployed before the specified artifact.
-* **description**: string: Multi-line explain this resource.
-* **displayName**: string: One-liner string explain this resource.
+* **description**: string {maxLength: 500}: Multi-line explain this resource.
+* **displayName**: string {maxLength: 256}: One-liner string explain this resource.
 * **parameters**: [ParameterValueCollection](#parametervaluecollection) (Required): Template parameter values.
 * **resourceGroup**: string: If applicable, the name of the resource group placeholder to which the template will be deployed.
 * **template**: any (Required): The Azure Resource Manager template body.

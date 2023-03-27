@@ -13,7 +13,7 @@
 
 ## ContainerServiceAgentPoolProfile
 ### Properties
-* **count**: int (Required): Number of agents (VMs) to host docker containers. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1.
+* **count**: int {minValue: 1, maxValue: 100} (Required): Number of agents (VMs) to host docker containers. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1.
 * **dnsPrefix**: string (Required): DNS prefix to be used to create the FQDN for the agent pool.
 * **fqdn**: string (ReadOnly): FQDN for the agent pool.
 * **name**: string (Required): Unique name of the agent pool profile in the context of the subscription and resource group.
@@ -29,7 +29,7 @@
 
 ## ContainerServiceLinuxProfile
 ### Properties
-* **adminUsername**: string (Required): The administrator username to use for Linux VMs.
+* **adminUsername**: string {pattern: "^[a-z][a-z0-9_-]*$"} (Required): The administrator username to use for Linux VMs.
 * **ssh**: [ContainerServiceSshConfiguration](#containerservicesshconfiguration) (Required): The ssh key configuration for Linux VMs.
 
 ## ContainerServiceMasterProfile
@@ -74,8 +74,8 @@
 
 ## ContainerServiceWindowsProfile
 ### Properties
-* **adminPassword**: string (Required): The administrator password to use for Windows VMs.
-* **adminUsername**: string (Required): The administrator username to use for Windows VMs.
+* **adminPassword**: string {pattern: "^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%\^&\*\(\)])[a-zA-Z\d!@#$%\^&\*\(\)]{12,123}$"} (Required): The administrator password to use for Windows VMs.
+* **adminUsername**: string {pattern: "^[a-zA-Z0-9]+([._]?[a-zA-Z0-9]+)*$"} (Required): The administrator username to use for Windows VMs.
 
 ## ResourceTags
 ### Properties

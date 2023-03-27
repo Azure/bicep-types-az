@@ -74,13 +74,13 @@
 
 ## FirewallRuleProperties
 ### Properties
-* **endIpAddress**: string (Required): The end IP address of the server firewall rule. Must be IPv4 format.
-* **startIpAddress**: string (Required): The start IP address of the server firewall rule. Must be IPv4 format.
+* **endIpAddress**: string {pattern: "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"} (Required): The end IP address of the server firewall rule. Must be IPv4 format.
+* **startIpAddress**: string {pattern: "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"} (Required): The start IP address of the server firewall rule. Must be IPv4 format.
 
 ## ResourceIdentity
 ### Properties
-* **principalId**: string (ReadOnly): The Azure Active Directory principal id.
-* **tenantId**: string (ReadOnly): The Azure Active Directory tenant id.
+* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The Azure Active Directory principal id.
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The Azure Active Directory tenant id.
 * **type**: 'SystemAssigned' | string: The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.
 
 ## SecurityAlertPolicyProperties
@@ -107,7 +107,7 @@
 * **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of a server.
 * **masterServerId**: string (ReadOnly): The master server id of a replica server.
 * **minimalTlsVersion**: 'TLS1_0' | 'TLS1_1' | 'TLS1_2' | 'TLSEnforcementDisabled' | string: Enforce a minimal Tls version for the server.
-* **replicaCapacity**: int (ReadOnly): The maximum number of replicas that a master server can have.
+* **replicaCapacity**: int {minValue: 0} (ReadOnly): The maximum number of replicas that a master server can have.
 * **replicationRole**: string (ReadOnly): The replication role of the server.
 * **sslEnforcement**: 'Disabled' | 'Enabled': Enable ssl enforcement or not when connect to server.
 * **storageProfile**: [StorageProfile](#storageprofile): Storage profile of a server.
@@ -117,7 +117,7 @@
 ### ServerPropertiesForDefaultCreate
 #### Properties
 * **administratorLogin**: string (Required, WriteOnly): The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).
-* **administratorLoginPassword**: string (Required, WriteOnly): The password of the administrator login.
+* **administratorLoginPassword**: string {secure} (Required, WriteOnly): The password of the administrator login.
 * **createMode**: 'Default' (Required): The mode to create a new server.
 
 ### ServerPropertiesForGeoRestore
@@ -139,7 +139,7 @@
 
 ## Sku
 ### Properties
-* **capacity**: int: The scale up/out capacity, representing server's compute units.
+* **capacity**: int {minValue: 0}: The scale up/out capacity, representing server's compute units.
 * **family**: string: The family of hardware.
 * **name**: string (Required): The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.
 * **size**: string: The size code, to be interpreted by resource as appropriate.

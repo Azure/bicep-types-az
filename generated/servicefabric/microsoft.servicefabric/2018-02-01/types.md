@@ -57,13 +57,13 @@
 ## ClusterHealthPolicy
 ### Properties
 * **applicationHealthPolicies**: [ApplicationHealthPolicyMap](#applicationhealthpolicymap): Defines the application health policy map used to evaluate the health of an application or one of its children entities.
-* **maxPercentUnhealthyApplications**: int: The maximum allowed percentage of unhealthy applications before reporting an error. For example, to allow 10% of applications to be unhealthy, this value would be 10.
+* **maxPercentUnhealthyApplications**: int {minValue: 0, maxValue: 100}: The maximum allowed percentage of unhealthy applications before reporting an error. For example, to allow 10% of applications to be unhealthy, this value would be 10.
 
 The percentage represents the maximum tolerated percentage of applications that can be unhealthy before the cluster is considered in error.
 If the percentage is respected but there is at least one unhealthy application, the health is evaluated as Warning.
 This is calculated by dividing the number of unhealthy applications over the total number of application instances in the cluster, excluding applications of application types that are included in the ApplicationTypeHealthPolicyMap.
 The computation rounds up to tolerate one failure on small numbers of applications. Default percentage is zero.
-* **maxPercentUnhealthyNodes**: int: The maximum allowed percentage of unhealthy nodes before reporting an error. For example, to allow 10% of nodes to be unhealthy, this value would be 10.
+* **maxPercentUnhealthyNodes**: int {minValue: 0, maxValue: 100}: The maximum allowed percentage of unhealthy nodes before reporting an error. For example, to allow 10% of nodes to be unhealthy, this value would be 10.
 
 The percentage represents the maximum tolerated percentage of nodes that can be unhealthy before the cluster is considered in error.
 If the percentage is respected but there is at least one unhealthy node, the health is evaluated as Warning.
@@ -120,13 +120,13 @@ In large clusters, some nodes will always be down or out for repairs, so this pe
 ## ClusterUpgradeDeltaHealthPolicy
 ### Properties
 * **applicationDeltaHealthPolicies**: [ApplicationDeltaHealthPolicyMap](#applicationdeltahealthpolicymap): Defines the application delta health policy map used to evaluate the health of an application or one of its child entities when upgrading the cluster.
-* **maxPercentDeltaUnhealthyApplications**: int (Required): The maximum allowed percentage of applications health degradation allowed during cluster upgrades.
+* **maxPercentDeltaUnhealthyApplications**: int {minValue: 0, maxValue: 100} (Required): The maximum allowed percentage of applications health degradation allowed during cluster upgrades.
 The delta is measured between the state of the applications at the beginning of upgrade and the state of the applications at the time of the health evaluation.
 The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits. System services are not included in this.
-* **maxPercentDeltaUnhealthyNodes**: int (Required): The maximum allowed percentage of nodes health degradation allowed during cluster upgrades.
+* **maxPercentDeltaUnhealthyNodes**: int {minValue: 0, maxValue: 100} (Required): The maximum allowed percentage of nodes health degradation allowed during cluster upgrades.
 The delta is measured between the state of the nodes at the beginning of upgrade and the state of the nodes at the time of the health evaluation.
 The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits.
-* **maxPercentUpgradeDomainDeltaUnhealthyNodes**: int (Required): The maximum allowed percentage of upgrade domain nodes health degradation allowed during cluster upgrades.
+* **maxPercentUpgradeDomainDeltaUnhealthyNodes**: int {minValue: 0, maxValue: 100} (Required): The maximum allowed percentage of upgrade domain nodes health degradation allowed during cluster upgrades.
 The delta is measured between the state of the upgrade domain nodes at the beginning of upgrade and the state of the upgrade domain nodes at the time of the health evaluation.
 The check is performed after every upgrade domain upgrade completion for all completed upgrade domains to make sure the state of the upgrade domains is within tolerated limits.
 
@@ -177,7 +177,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 * **name**: string (Required): The name of the node type.
 * **placementProperties**: [NodeTypeDescriptionPlacementProperties](#nodetypedescriptionplacementproperties): The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run.
 * **reverseProxyEndpointPort**: int: The endpoint used by reverse proxy.
-* **vmInstanceCount**: int (Required): The number of nodes in the node type. This count should match the capacity property in the corresponding VirtualMachineScaleSet resource.
+* **vmInstanceCount**: int {minValue: 1, maxValue: 2147483647} (Required): The number of nodes in the node type. This count should match the capacity property in the corresponding VirtualMachineScaleSet resource.
 
 ## NodeTypeDescriptionCapacities
 ### Properties
@@ -206,7 +206,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 
 ## ServiceTypeDeltaHealthPolicy
 ### Properties
-* **maxPercentDeltaUnhealthyServices**: int: The maximum allowed percentage of services health degradation allowed during cluster upgrades.
+* **maxPercentDeltaUnhealthyServices**: int {minValue: 0, maxValue: 100}: The maximum allowed percentage of services health degradation allowed during cluster upgrades.
 The delta is measured between the state of the services at the beginning of upgrade and the state of the services at the time of the health evaluation.
 The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits.
 
@@ -217,7 +217,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 
 ## ServiceTypeHealthPolicy
 ### Properties
-* **maxPercentUnhealthyServices**: int: The maximum percentage of services allowed to be unhealthy before your application is considered in error.
+* **maxPercentUnhealthyServices**: int {minValue: 0, maxValue: 100}: The maximum percentage of services allowed to be unhealthy before your application is considered in error.
 
 ## ServiceTypeHealthPolicyMap
 ### Properties

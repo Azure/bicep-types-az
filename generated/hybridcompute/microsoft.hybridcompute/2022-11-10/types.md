@@ -130,7 +130,7 @@
 * **city**: string: The city or locality where the resource is located.
 * **countryOrRegion**: string: The country or region where the resource is located
 * **district**: string: The district, state, or province where the resource is located.
-* **name**: string (Required): A canonical name for the geographic or physical location.
+* **name**: string {maxLength: 256} (Required): A canonical name for the geographic or physical location.
 
 ## MachineExtension
 ### Properties

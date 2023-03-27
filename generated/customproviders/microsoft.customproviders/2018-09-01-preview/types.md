@@ -15,7 +15,7 @@
 * **apiVersion**: '2018-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Resource location
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 64} (Required, DeployTimeConstant): The resource name
 * **properties**: [CustomRPManifestProperties](#customrpmanifestproperties): The manifest for the custom resource provider
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.CustomProviders/resourceProviders' (ReadOnly, DeployTimeConstant): The resource type
@@ -27,7 +27,7 @@
 
 ## CustomRPActionRouteDefinition
 ### Properties
-* **endpoint**: string (Required): The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}')
+* **endpoint**: string {pattern: "^https://.+"} (Required): The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}')
 * **name**: string (Required): The name of the route definition. This becomes the name for the ARM extension (e.g. '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}')
 * **routingType**: 'Proxy' | string: The routing types that are supported for action requests.
 
@@ -40,13 +40,13 @@
 
 ## CustomRPResourceTypeRouteDefinition
 ### Properties
-* **endpoint**: string (Required): The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}')
+* **endpoint**: string {pattern: "^https://.+"} (Required): The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}')
 * **name**: string (Required): The name of the route definition. This becomes the name for the ARM extension (e.g. '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}')
 * **routingType**: 'Proxy' | 'Proxy,Cache' | string: The routing types that are supported for resource requests.
 
 ## CustomRPValidations
 ### Properties
-* **specification**: string (Required): A link to the validation specification. The specification must be hosted on raw.githubusercontent.com.
+* **specification**: string {pattern: "^https://raw.githubusercontent.com/.+"} (Required): A link to the validation specification. The specification must be hosted on raw.githubusercontent.com.
 * **validationType**: 'Swagger' | string: The type of validation to run against a matching request.
 
 ## ResourceTags

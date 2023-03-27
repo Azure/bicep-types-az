@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ImageTemplateIdentity](#imagetemplateidentity) (Required): The identity of the image template, if configured.
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[A-Za-z0-9-_.]{1,64}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ImageTemplateProperties](#imagetemplateproperties): The properties of the image template
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -60,7 +60,7 @@
 * **filters**: string[]: Array of filters to select updates to apply. Omit or specify empty array to use the default (no filter). Refer to above link for examples and detailed description of this field.
 * **searchCriteria**: string: Criteria to search updates. Omit or specify empty string to use the default (search all). Refer to above link for examples and detailed description of this field.
 * **type**: 'WindowsUpdate' (Required): The type of customization tool you want to use on the Image. For example, "Shell" can be shell customizer
-* **updateLimit**: int: Maximum number of updates to apply at a time. Omit or specify 0 to use the default (1000)
+* **updateLimit**: int {minValue: 0}: Maximum number of updates to apply at a time. Omit or specify 0 to use the default (1000)
 
 
 ## ImageTemplateDistributor
@@ -68,7 +68,7 @@
 
 ### Base Properties
 * **artifactTags**: [ImageTemplateDistributorArtifactTags](#imagetemplatedistributorartifacttags): Tags that will be applied to the artifact once it has been created/updated by the distributor.
-* **runOutputName**: string (Required): The name to be used for the associated RunOutput.
+* **runOutputName**: string {pattern: "^[A-Za-z0-9-_.]{1,64}$"} (Required): The name to be used for the associated RunOutput.
 
 ### ImageTemplateManagedImageDistributor
 #### Properties
@@ -114,7 +114,7 @@
 
 ## ImageTemplateProperties
 ### Properties
-* **buildTimeoutInMinutes**: int: Maximum duration to wait while building the image template. Omit or specify 0 to use the default (4 hours).
+* **buildTimeoutInMinutes**: int {minValue: 0, maxValue: 960}: Maximum duration to wait while building the image template. Omit or specify 0 to use the default (4 hours).
 * **customize**: [ImageTemplateCustomizer](#imagetemplatecustomizer)[]: Specifies the properties used to describe the customization steps of the image, like Image source etc
 * **distribute**: [ImageTemplateDistributor](#imagetemplatedistributor)[] (Required): The distribution targets where the image output needs to go to.
 * **lastRunStatus**: [ImageTemplateLastRunStatus](#imagetemplatelastrunstatus) (ReadOnly): State of 'run' that is currently executing or was last executed.
@@ -151,7 +151,7 @@
 
 ## ImageTemplateVmProfile
 ### Properties
-* **osDiskSizeGB**: int: Size of the OS disk in GB. Omit or specify 0 to use Azure's default OS disk size.
+* **osDiskSizeGB**: int {minValue: 0}: Size of the OS disk in GB. Omit or specify 0 to use Azure's default OS disk size.
 * **userAssignedIdentities**: string[]: Optional array of resource IDs of user assigned managed identities to be configured on the build VM. This may include the identity of the image template.
 * **vmSize**: string: Size of the virtual machine used to build, customize and capture images. Omit or specify empty string to use the default (Standard_D2ds_v4).
 * **vnetConfig**: [VirtualNetworkConfig](#virtualnetworkconfig): Optional configuration of the virtual network to use to deploy the build virtual machine in. Omit if no specific virtual network needs to be used.

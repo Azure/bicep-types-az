@@ -294,7 +294,7 @@
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1} (Required, DeployTimeConstant): The resource name
 * **properties**: [LocalNetworkGatewayPropertiesFormat](#localnetworkgatewaypropertiesformat) (Required): Properties of the local network gateway.
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/localNetworkGateways' (ReadOnly, DeployTimeConstant): The resource type
@@ -669,7 +669,7 @@
 
 ## ApplicationGatewayAutoscaleConfiguration
 ### Properties
-* **minCapacity**: int (Required): Lower bound on number of Application Gateway instances
+* **minCapacity**: int {minValue: 2} (Required): Lower bound on number of Application Gateway instances
 
 ## ApplicationGatewayAvailableSslOptionsPropertiesFormat
 ### Properties
@@ -724,7 +724,7 @@
 
 ## ApplicationGatewayConnectionDraining
 ### Properties
-* **drainTimeoutInSec**: int (Required): The number of seconds connection draining is active. Acceptable values are from 1 second to 3600 seconds.
+* **drainTimeoutInSec**: int {minValue: 1, maxValue: 3600} (Required): The number of seconds connection draining is active. Acceptable values are from 1 second to 3600 seconds.
 * **enabled**: bool (Required): Whether connection draining is enabled or not.
 
 ## ApplicationGatewayCustomError
@@ -1010,10 +1010,10 @@
 * **disabledRuleGroups**: [ApplicationGatewayFirewallDisabledRuleGroup](#applicationgatewayfirewalldisabledrulegroup)[]: The disabled rule groups.
 * **enabled**: bool (Required): Whether the web application firewall is enabled or not.
 * **exclusions**: [ApplicationGatewayFirewallExclusion](#applicationgatewayfirewallexclusion)[]: The exclusion list.
-* **fileUploadLimitInMb**: int: Maximum file upload size in Mb for WAF.
+* **fileUploadLimitInMb**: int {minValue: 0, maxValue: 500}: Maximum file upload size in Mb for WAF.
 * **firewallMode**: 'Detection' | 'Prevention' | string (Required): Web application firewall mode.
-* **maxRequestBodySize**: int: Maximum request body size for WAF.
-* **maxRequestBodySizeInKb**: int: Maximum request body size in Kb for WAF.
+* **maxRequestBodySize**: int {minValue: 8, maxValue: 128}: Maximum request body size for WAF.
+* **maxRequestBodySizeInKb**: int {minValue: 8, maxValue: 128}: Maximum request body size in Kb for WAF.
 * **requestBodyCheck**: bool: Whether allow WAF to check request Body.
 * **ruleSetType**: string (Required): The type of the web application firewall rule set. Possible values are: 'OWASP'.
 * **ruleSetVersion**: string (Required): The version of the rule set type.
@@ -1058,13 +1058,13 @@
 ## AzureFirewallApplicationRuleCollectionPropertiesFormat
 ### Properties
 * **action**: [AzureFirewallRCAction](#azurefirewallrcaction): The action type of a rule collection
-* **priority**: int: Priority of the application rule collection resource.
+* **priority**: int {minValue: 100, maxValue: 65000}: Priority of the application rule collection resource.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: The provisioning state of the resource.
 * **rules**: [AzureFirewallApplicationRule](#azurefirewallapplicationrule)[]: Collection of rules used by a application rule collection.
 
 ## AzureFirewallApplicationRuleProtocol
 ### Properties
-* **port**: int: Port number for the protocol, cannot be greater than 64000. This field is optional.
+* **port**: int {minValue: 0, maxValue: 64000}: Port number for the protocol, cannot be greater than 64000. This field is optional.
 * **protocolType**: 'Http' | 'Https' | string: Protocol type
 
 ## AzureFirewallIPConfiguration
@@ -1106,7 +1106,7 @@
 ## AzureFirewallNatRuleCollectionProperties
 ### Properties
 * **action**: [AzureFirewallNatRCAction](#azurefirewallnatrcaction): The action type of a NAT rule collection
-* **priority**: int: Priority of the NAT rule collection resource.
+* **priority**: int {minValue: 100, maxValue: 65000}: Priority of the NAT rule collection resource.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: The provisioning state of the resource.
 * **rules**: [AzureFirewallNatRule](#azurefirewallnatrule)[]: Collection of rules used by a NAT rule collection.
 
@@ -1129,7 +1129,7 @@
 ## AzureFirewallNetworkRuleCollectionPropertiesFormat
 ### Properties
 * **action**: [AzureFirewallRCAction](#azurefirewallrcaction): The action type of a rule collection
-* **priority**: int: Priority of the network rule collection resource.
+* **priority**: int {minValue: 100, maxValue: 65000}: Priority of the network rule collection resource.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: The provisioning state of the resource.
 * **rules**: [AzureFirewallNetworkRule](#azurefirewallnetworkrule)[]: Collection of rules used by a network rule collection.
 
@@ -1325,7 +1325,7 @@
 * **ipv6PeeringConfig**: [Ipv6ExpressRouteCircuitPeeringConfig](#ipv6expressroutecircuitpeeringconfig): The IPv6 peering configuration.
 * **lastModifiedBy**: string: Gets whether the provider or the customer last modified the peering.
 * **microsoftPeeringConfig**: [ExpressRouteCircuitPeeringConfig](#expressroutecircuitpeeringconfig): The Microsoft peering configuration.
-* **peerASN**: int: The peer ASN.
+* **peerASN**: int {minValue: 1, maxValue: 4294967295}: The peer ASN.
 * **peeringType**: 'AzurePrivatePeering' | 'AzurePublicPeering' | 'MicrosoftPeering' | string: The peering type.
 * **primaryAzurePort**: string: The primary port.
 * **primaryPeerAddressPrefix**: string: The primary address prefix.
@@ -1409,7 +1409,7 @@
 * **ipv6PeeringConfig**: [Ipv6ExpressRouteCircuitPeeringConfig](#ipv6expressroutecircuitpeeringconfig): The IPv6 peering configuration.
 * **lastModifiedBy**: string: Gets whether the provider or the customer last modified the peering.
 * **microsoftPeeringConfig**: [ExpressRouteCircuitPeeringConfig](#expressroutecircuitpeeringconfig): The Microsoft peering configuration.
-* **peerASN**: int: The peer ASN.
+* **peerASN**: int {minValue: 1, maxValue: 4294967295}: The peer ASN.
 * **peeringType**: 'AzurePrivatePeering' | 'AzurePublicPeering' | 'MicrosoftPeering' | string: The peering type.
 * **primaryAzurePort**: string (ReadOnly): The primary port.
 * **primaryPeerAddressPrefix**: string: The primary address prefix.

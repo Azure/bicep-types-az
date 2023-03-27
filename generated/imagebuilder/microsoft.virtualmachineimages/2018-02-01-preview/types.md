@@ -6,7 +6,7 @@
 * **apiVersion**: '2018-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Resource location
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[A-Za-z0-9-_]{1,64}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ImageTemplateProperties](#imagetemplateproperties)
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.VirtualMachineImages/imageTemplates' (ReadOnly, DeployTimeConstant): The resource type
@@ -28,7 +28,7 @@
 
 ### Base Properties
 * **artifactTags**: [ImageTemplateDistributorArtifactTags](#imagetemplatedistributorartifacttags): Tags that will be applied to the artifact once it has been created/updated by the distributor.
-* **runOutputName**: string (Required): The name to be used for the associated RunOutput.
+* **runOutputName**: string {pattern: "^[A-Za-z0-9-_]{1,64}$"} (Required): The name to be used for the associated RunOutput.
 
 ### ImageTemplateManagedImageDistributor
 #### Properties

@@ -48,6 +48,6 @@
 
 ## RetentionPolicy
 ### Properties
-* **days**: int (Required): the number of days for the retention in days. A value of 0 will retain the events indefinitely.
+* **days**: int {minValue: 0} (Required): the number of days for the retention in days. A value of 0 will retain the events indefinitely.
 * **enabled**: bool (Required): a value indicating whether the retention policy is enabled.
 

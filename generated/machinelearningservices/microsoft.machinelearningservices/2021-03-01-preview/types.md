@@ -22,7 +22,7 @@
 * **identity**: [ResourceIdentity](#resourceidentity): Service identity associated with a resource.
 * **kind**: string: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type.
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9\-_]{0,254}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [BatchEndpoint](#batchendpoint) (Required): [Required] Additional attributes of the entity.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): System data associated with resource provider
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -36,7 +36,7 @@
 * **identity**: [ResourceIdentity](#resourceidentity): Service identity associated with a resource.
 * **kind**: string: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type.
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9\-_]{0,254}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [BatchDeployment](#batchdeployment) (Required): [Required] Additional attributes of the entity.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): System data associated with resource provider
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -47,7 +47,7 @@
 ### Properties
 * **apiVersion**: '2021-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9\-_]{0,254}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [CodeContainer](#codecontainer) (Required): [Required] Additional attributes of the entity.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): System data associated with resource provider
 * **type**: 'Microsoft.MachineLearningServices/workspaces/codes' (ReadOnly, DeployTimeConstant): The resource type
@@ -90,7 +90,7 @@
 ### Properties
 * **apiVersion**: '2021-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9\-_]{0,254}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DataContainer](#datacontainer) (Required): [Required] Additional attributes of the entity.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): System data associated with resource provider
 * **type**: 'Microsoft.MachineLearningServices/workspaces/data' (ReadOnly, DeployTimeConstant): The resource type
@@ -110,7 +110,7 @@
 ### Properties
 * **apiVersion**: '2021-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9\-_]{0,254}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DatastoreProperties](#datastoreproperties) (Required): [Required] Additional attributes of the entity.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): System data associated with resource provider
 * **type**: 'Microsoft.MachineLearningServices/workspaces/datastores' (ReadOnly, DeployTimeConstant): The resource type
@@ -120,7 +120,7 @@
 ### Properties
 * **apiVersion**: '2021-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9\-_]{0,254}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [EnvironmentContainer](#environmentcontainer) (Required): [Required] Additional attributes of the entity.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): System data associated with resource provider
 * **type**: 'Microsoft.MachineLearningServices/workspaces/environments' (ReadOnly, DeployTimeConstant): The resource type
@@ -140,7 +140,7 @@
 ### Properties
 * **apiVersion**: '2021-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9\-_]{0,254}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [JobBase](#jobbase) (Required): [Required] Additional attributes of the entity.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): System data associated with resource provider
 * **type**: 'Microsoft.MachineLearningServices/workspaces/jobs' (ReadOnly, DeployTimeConstant): The resource type
@@ -150,7 +150,7 @@
 ### Properties
 * **apiVersion**: '2021-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9\-_]{0,254}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [LabelingJob](#labelingjob) (Required): [Required] Additional attributes of the entity.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): System data associated with resource provider
 * **type**: 'Microsoft.MachineLearningServices/workspaces/labelingJobs' (ReadOnly, DeployTimeConstant): The resource type
@@ -160,7 +160,7 @@
 ### Properties
 * **apiVersion**: '2021-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9\-_]{0,254}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ModelContainer](#modelcontainer) (Required): [Required] Additional attributes of the entity.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): System data associated with resource provider
 * **type**: 'Microsoft.MachineLearningServices/workspaces/models' (ReadOnly, DeployTimeConstant): The resource type
@@ -183,7 +183,7 @@
 * **identity**: [ResourceIdentity](#resourceidentity): Service identity associated with a resource.
 * **kind**: string: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type.
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9\-_]{0,254}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [OnlineEndpoint](#onlineendpoint) (Required): [Required] Additional attributes of the entity.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): System data associated with resource provider
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -197,7 +197,7 @@
 * **identity**: [ResourceIdentity](#resourceidentity): Service identity associated with a resource.
 * **kind**: string: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type.
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9\-_]{0,254}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [OnlineDeployment](#onlinedeployment) (Required): [Required] Additional attributes of the entity.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): System data associated with resource provider
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -269,14 +269,14 @@
 
 ## AksNetworkingConfiguration
 ### Properties
-* **dnsServiceIP**: string: An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.
-* **dockerBridgeCidr**: string: A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.
-* **serviceCidr**: string: A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.
+* **dnsServiceIP**: string {pattern: "^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$"}: An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.
+* **dockerBridgeCidr**: string {pattern: "^([0-9]{1,3}\.){3}[0-9]{1,3}(\/([0-9]|[1-2][0-9]|3[0-2]))?$"}: A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.
+* **serviceCidr**: string {pattern: "^([0-9]{1,3}\.){3}[0-9]{1,3}(\/([0-9]|[1-2][0-9]|3[0-2]))?$"}: A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.
 * **subnetId**: string: Virtual network subnet resource ID the compute nodes belong to
 
 ## AKSProperties
 ### Properties
-* **agentCount**: int: Number of agents
+* **agentCount**: int {minValue: 0}: Number of agents
 * **agentVmSize**: string: Agent virtual machine size
 * **aksNetworkingConfiguration**: [AksNetworkingConfiguration](#aksnetworkingconfiguration): AKS networking configuration for vnet
 * **clusterFqdn**: string: Cluster full qualified domain name
@@ -333,7 +333,7 @@
 
 ### IdAssetReference
 #### Properties
-* **assetId**: string (Required): [Required] ARM resource ID of the asset.
+* **assetId**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] ARM resource ID of the asset.
 * **referenceType**: 'Id' (Required): [Required] Specifies the type of asset reference.
 
 ### OutputPathAssetReference
@@ -430,7 +430,7 @@ This property will always be returned as null. AuthKey values must be retrieved 
 ## CodeConfiguration
 ### Properties
 * **codeId**: string: ARM resource ID of the code asset.
-* **scoringScript**: string (Required): [Required] The script to execute on startup. eg. "score.py"
+* **scoringScript**: string {minLength: 1, pattern: "[a-zA-Z0-9_]"} (Required): [Required] The script to execute on startup. eg. "score.py"
 
 ## CodeContainer
 ### Properties
@@ -453,7 +453,7 @@ This property will always be returned as null. AuthKey values must be retrieved 
 * **datastoreId**: string: ARM resource ID of the datastore where the asset is located.
 * **description**: string: The asset description text.
 * **isAnonymous**: bool: If the name version are system generated (anonymous registration).
-* **path**: string (Required): [Required] The path of the file/directory in the datastore.
+* **path**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] The path of the file/directory in the datastore.
 * **properties**: [CodeVersionProperties](#codeversionproperties): The asset property dictionary.
 * **tags**: [CodeVersionTags](#codeversiontags): Tag dictionary. Tags can be added, removed, and updated.
 
@@ -704,61 +704,61 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 
 ### AzureBlobContents
 #### Properties
-* **accountName**: string (Required): [Required] Storage account name.
-* **containerName**: string (Required): [Required] Storage account container name.
+* **accountName**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] Storage account name.
+* **containerName**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] Storage account container name.
 * **contentsType**: 'AzureBlob' (Required): [Required] Storage type backing the datastore.
 * **credentials**: [DatastoreCredentials](#datastorecredentials) (Required): [Required] Account credentials.
-* **endpoint**: string (Required): [Required] Azure cloud endpoint for the storage account.
-* **protocol**: string (Required): [Required] Protocol used to communicate with the storage account.
+* **endpoint**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] Azure cloud endpoint for the storage account.
+* **protocol**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] Protocol used to communicate with the storage account.
 
 ### AzureDataLakeGen1Contents
 #### Properties
 * **contentsType**: 'AzureDataLakeGen1' (Required): [Required] Storage type backing the datastore.
 * **credentials**: [DatastoreCredentials](#datastorecredentials) (Required): [Required] Account credentials.
-* **storeName**: string (Required): [Required] Azure Data Lake store name.
+* **storeName**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] Azure Data Lake store name.
 
 ### AzureDataLakeGen2Contents
 #### Properties
-* **accountName**: string (Required): [Required] Storage account name.
-* **containerName**: string (Required): [Required] Storage account container name.
+* **accountName**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] Storage account name.
+* **containerName**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] Storage account container name.
 * **contentsType**: 'AzureDataLakeGen2' (Required): [Required] Storage type backing the datastore.
 * **credentials**: [DatastoreCredentials](#datastorecredentials) (Required): [Required] Account credentials.
-* **endpoint**: string (Required): [Required] Azure cloud endpoint for the storage account.
-* **protocol**: string (Required): [Required] Protocol used to communicate with the storage account.
+* **endpoint**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] Azure cloud endpoint for the storage account.
+* **protocol**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] Protocol used to communicate with the storage account.
 
 ### AzureFileContents
 #### Properties
-* **accountName**: string (Required): [Required] Storage account name.
-* **containerName**: string (Required): [Required] Storage account container name.
+* **accountName**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] Storage account name.
+* **containerName**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] Storage account container name.
 * **contentsType**: 'AzureFile' (Required): [Required] Storage type backing the datastore.
 * **credentials**: [DatastoreCredentials](#datastorecredentials) (Required): [Required] Account credentials.
-* **endpoint**: string (Required): [Required] Azure cloud endpoint for the storage account.
-* **protocol**: string (Required): [Required] Protocol used to communicate with the storage account.
+* **endpoint**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] Azure cloud endpoint for the storage account.
+* **protocol**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] Protocol used to communicate with the storage account.
 
 ### AzurePostgreSqlContents
 #### Properties
 * **contentsType**: 'AzurePostgreSql' (Required): [Required] Storage type backing the datastore.
 * **credentials**: [DatastoreCredentials](#datastorecredentials) (Required): [Required] Account credentials.
-* **databaseName**: string (Required): [Required] Azure SQL database name.
+* **databaseName**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] Azure SQL database name.
 * **enableSSL**: bool: Whether the Azure PostgreSQL server requires SSL.
-* **endpoint**: string (Required): [Required] Azure cloud endpoint for the database.
+* **endpoint**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] Azure cloud endpoint for the database.
 * **portNumber**: int (Required): [Required] Azure SQL server port.
-* **serverName**: string (Required): [Required] Azure SQL server name.
+* **serverName**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] Azure SQL server name.
 
 ### AzureSqlDatabaseContents
 #### Properties
 * **contentsType**: 'AzureSqlDatabase' (Required): [Required] Storage type backing the datastore.
 * **credentials**: [DatastoreCredentials](#datastorecredentials) (Required): [Required] Account credentials.
-* **databaseName**: string (Required): [Required] Azure SQL database name.
-* **endpoint**: string (Required): [Required] Azure cloud endpoint for the database.
+* **databaseName**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] Azure SQL database name.
+* **endpoint**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] Azure cloud endpoint for the database.
 * **portNumber**: int (Required): [Required] Azure SQL server port.
-* **serverName**: string (Required): [Required] Azure SQL server name.
+* **serverName**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] Azure SQL server name.
 
 ### GlusterFsContents
 #### Properties
 * **contentsType**: 'GlusterFs' (Required): [Required] Storage type backing the datastore.
-* **serverAddress**: string (Required): [Required] GlusterFS server address (can be the IP address or server name).
-* **volumeName**: string (Required): [Required] GlusterFS volume name.
+* **serverAddress**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] GlusterFS server address (can be the IP address or server name).
+* **volumeName**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] GlusterFS volume name.
 
 
 ## DatastoreCredentials
@@ -774,12 +774,12 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 ### CertificateDatastoreCredentials
 #### Properties
 * **authorityUrl**: string: Authority URL used for authentication.
-* **clientId**: string (Required): [Required] Service principal client ID.
+* **clientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required): [Required] Service principal client ID.
 * **credentialsType**: 'Certificate' (Required): [Required] Credential type used to authentication with storage.
 * **resourceUri**: string: Resource the service principal has access to.
 * **secrets**: [CertificateDatastoreSecrets](#certificatedatastoresecrets) (WriteOnly): Service principal secrets.
-* **tenantId**: string (Required): [Required] ID of the tenant to which the service principal belongs.
-* **thumbprint**: string (Required): [Required] Thumbprint of the certificate used for authentication.
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required): [Required] ID of the tenant to which the service principal belongs.
+* **thumbprint**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] Thumbprint of the certificate used for authentication.
 
 ### NoneDatastoreCredentials
 #### Properties
@@ -794,17 +794,17 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 ### ServicePrincipalDatastoreCredentials
 #### Properties
 * **authorityUrl**: string: Authority URL used for authentication.
-* **clientId**: string (Required): [Required] Service principal client ID.
+* **clientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required): [Required] Service principal client ID.
 * **credentialsType**: 'ServicePrincipal' (Required): [Required] Credential type used to authentication with storage.
 * **resourceUri**: string: Resource the service principal has access to.
 * **secrets**: [ServicePrincipalDatastoreSecrets](#serviceprincipaldatastoresecrets) (WriteOnly): Service principal secrets.
-* **tenantId**: string (Required): [Required] ID of the tenant to which the service principal belongs.
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required): [Required] ID of the tenant to which the service principal belongs.
 
 ### SqlAdminDatastoreCredentials
 #### Properties
 * **credentialsType**: 'SqlAdmin' (Required): [Required] Credential type used to authentication with storage.
 * **secrets**: [SqlAdminDatastoreSecrets](#sqladmindatastoresecrets) (WriteOnly): SQL database secrets.
-* **userId**: string (Required): [Required] SQL database user name.
+* **userId**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] SQL database user name.
 
 
 ## DatastoreProperties
@@ -868,7 +868,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 * **datastoreId**: string: ARM resource ID of the datastore where the asset is located.
 * **description**: string: The asset description text.
 * **isAnonymous**: bool: If the name version are system generated (anonymous registration).
-* **path**: string (Required): [Required] The path of the file/directory in the datastore.
+* **path**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] The path of the file/directory in the datastore.
 * **properties**: [DataVersionProperties](#dataversionproperties): The asset property dictionary.
 * **tags**: [DataVersionTags](#dataversiontags): Tag dictionary. Tags can be added, removed, and updated.
 
@@ -919,13 +919,13 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 * **context**: string: Path to a snapshot of the Docker Context. This property is only valid if Dockerfile is specified.
 The path is relative to the asset path which must contain a single Blob URI value.
 <seealso href="https://docs.docker.com/engine/context/working-with-contexts/" />
-* **dockerfile**: string (Required): [Required] Docker command line instructions to assemble an image.
+* **dockerfile**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] Docker command line instructions to assemble an image.
 <seealso href="https://repo2docker.readthedocs.io/en/latest/config_files.html#dockerfile-advanced-environments" />
 * **dockerSpecificationType**: 'Build' (Required): [Required] Docker specification must be either Build or Image
 
 ### DockerImage
 #### Properties
-* **dockerImageUri**: string (Required): [Required] Image name of a custom base image.
+* **dockerImageUri**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] Image name of a custom base image.
 <seealso href="https://docs.microsoft.com/en-us/azure/machine-learning/how-to-deploy-custom-docker-image#use-a-custom-base-image" />
 * **dockerSpecificationType**: 'Image' (Required): [Required] Docker specification must be either Build or Image
 
@@ -1063,9 +1063,9 @@ The path is relative to the asset path which must contain a single Blob URI valu
 
 ### ManagedIdentity
 #### Properties
-* **clientId**: string: Specifies a user-assigned identity by client ID. For system-assigned, do not set this field.
+* **clientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Specifies a user-assigned identity by client ID. For system-assigned, do not set this field.
 * **identityType**: 'Managed' (Required): [Required] Specifies the type of identity framework.
-* **objectId**: string: Specifies a user-assigned identity by object ID. For system-assigned, do not set this field.
+* **objectId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Specifies a user-assigned identity by object ID. For system-assigned, do not set this field.
 * **resourceId**: string: Specifies a user-assigned identity by ARM resource ID. For system-assigned, do not set this field.
 
 
@@ -1099,7 +1099,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
 ### CommandJob
 #### Properties
 * **codeId**: string: ARM resource ID of the code asset.
-* **command**: string (Required): [Required] The command to execute on startup of the job. eg. "python train.py"
+* **command**: string {minLength: 1, pattern: "[a-zA-Z0-9_]"} (Required): [Required] The command to execute on startup of the job. eg. "python train.py"
 * **compute**: [ComputeConfiguration](#computeconfiguration) (Required): [Required] Compute binding for the job.
 * **distribution**: [DistributionConfiguration](#distributionconfiguration): Distribution configuration of the job. If set, this should be one of Mpi, Tensorflow, PyTorch, or null.
 * **environmentId**: string: The ARM resource ID of the Environment specification for the job.
@@ -1216,7 +1216,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
 * **labelingJobMediaProperties**: [LabelingJobMediaProperties](#labelingjobmediaproperties): Media type specific properties in the job.
 * **mlAssistConfiguration**: [MLAssistConfiguration](#mlassistconfiguration): Configuration of MLAssist feature in the job.
 * **progressMetrics**: [ProgressMetrics](#progressmetrics) (ReadOnly): Progress metrics of the job.
-* **projectId**: string (ReadOnly): Internal id of the job(Previously called project).
+* **projectId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): Internal id of the job(Previously called project).
 * **properties**: [LabelingJobProperties](#labelingjobproperties): The asset property dictionary.
 * **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): Specifies the labeling job provisioning state.
 * **status**: 'CancelRequested' | 'Canceled' | 'Completed' | 'Failed' | 'Finalizing' | 'NotResponding' | 'NotStarted' | 'Paused' | 'Preparing' | 'Provisioning' | 'Queued' | 'Running' | 'Starting' | 'Unknown' | string (ReadOnly): Status of the job.
@@ -1271,24 +1271,24 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
 
 ## ListNotebookKeysResult
 ### Properties
-* **primaryAccessKey**: string (ReadOnly)
-* **secondaryAccessKey**: string (ReadOnly)
+* **primaryAccessKey**: string {secure} (ReadOnly)
+* **secondaryAccessKey**: string {secure} (ReadOnly)
 
 ## ListNotebookKeysResult
 ### Properties
-* **primaryAccessKey**: string (ReadOnly)
-* **secondaryAccessKey**: string (ReadOnly)
+* **primaryAccessKey**: string {secure} (ReadOnly)
+* **secondaryAccessKey**: string {secure} (ReadOnly)
 
 ## ListStorageAccountKeysResult
 ### Properties
-* **userStorageKey**: string (ReadOnly)
+* **userStorageKey**: string {secure} (ReadOnly)
 
 ## ListWorkspaceKeysResult
 ### Properties
-* **appInsightsInstrumentationKey**: string (ReadOnly)
+* **appInsightsInstrumentationKey**: string {secure} (ReadOnly)
 * **containerRegistryCredentials**: [RegistryListCredentialsResult](#registrylistcredentialsresult) (ReadOnly)
 * **notebookAccessKeys**: [ListNotebookKeysResult](#listnotebookkeysresult) (ReadOnly)
-* **userStorageKey**: string (ReadOnly)
+* **userStorageKey**: string {secure} (ReadOnly)
 * **userStorageResourceId**: string (ReadOnly)
 
 ## MLAssistConfiguration
@@ -1319,7 +1319,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
 * **description**: string: The asset description text.
 * **flavors**: [ModelVersionFlavors](#modelversionflavors): Mapping of model flavors to their properties.
 * **isAnonymous**: bool: If the name version are system generated (anonymous registration).
-* **path**: string (Required): [Required] The path of the file/directory in the datastore.
+* **path**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] The path of the file/directory in the datastore.
 * **properties**: [ModelVersionProperties](#modelversionproperties): The asset property dictionary.
 * **tags**: [ModelVersionTags](#modelversiontags): Tag dictionary. Tags can be added, removed, and updated.
 
@@ -1353,12 +1353,12 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
 
 ## NotebookAccessTokenResult
 ### Properties
-* **accessToken**: string (ReadOnly)
+* **accessToken**: string {secure} (ReadOnly)
 * **expiresIn**: int (ReadOnly)
 * **hostName**: string (ReadOnly)
 * **notebookResourceId**: string (ReadOnly)
 * **publicDns**: string (ReadOnly)
-* **refreshToken**: string (ReadOnly)
+* **refreshToken**: string {secure} (ReadOnly)
 * **scope**: string (ReadOnly)
 * **tokenType**: string (ReadOnly)
 
@@ -1376,7 +1376,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
 ## Objective
 ### Properties
 * **goal**: 'Maximize' | 'Minimize' | string (Required): [Required] Defines supported metric goals for hyperparameter tuning
-* **primaryMetric**: string (Required): [Required] Name of the metric to optimize.
+* **primaryMetric**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] Name of the metric to optimize.
 
 ## OnlineDeployment
 * **Discriminator**: endpointComputeType
@@ -1573,7 +1573,7 @@ optional
 
 ## Route
 ### Properties
-* **path**: string (Required): [Required] The path for the route.
+* **path**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] The path for the route.
 * **port**: int (Required): [Required] The port for the route.
 
 ## SasDatastoreSecrets
@@ -1706,7 +1706,7 @@ optional
 ## TrialComponent
 ### Properties
 * **codeId**: string: ARM resource ID of the code asset.
-* **command**: string (Required): [Required] The command to execute on startup of the job. eg. "python train.py"
+* **command**: string {minLength: 1, pattern: "[a-zA-Z0-9_]"} (Required): [Required] The command to execute on startup of the job. eg. "python train.py"
 * **distribution**: [DistributionConfiguration](#distributionconfiguration): Distribution configuration of the job. If set, this should be one of Mpi, Tensorflow, PyTorch, or null.
 * **environmentId**: string: The ARM resource ID of the Environment specification for the job.
 * **environmentVariables**: [TrialComponentEnvironmentVariables](#trialcomponentenvironmentvariables): Environment variables included in the job.

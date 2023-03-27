@@ -100,8 +100,8 @@
 * **serverLocalPath**: string: Server Local path.
 * **serverResourceId**: string: Server Resource Id.
 * **syncStatus**: any (ReadOnly): Sync Health Status
-* **tierFilesOlderThanDays**: int: Tier files older than days.
-* **volumeFreeSpacePercent**: int: Level of free space to be maintained by Cloud Tiering if it is enabled.
+* **tierFilesOlderThanDays**: int {minValue: 0, maxValue: 2147483647}: Tier files older than days.
+* **volumeFreeSpacePercent**: int {minValue: 0, maxValue: 100}: Level of free space to be maintained by Cloud Tiering if it is enabled.
 
 ## StorageSyncServiceCreateParametersTags
 ### Properties

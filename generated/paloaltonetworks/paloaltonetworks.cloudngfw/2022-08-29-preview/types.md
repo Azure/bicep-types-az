@@ -322,7 +322,7 @@
 ### Properties
 * **billingCycle**: 'MONTHLY' | 'WEEKLY' | string (Required): different billing cycles like MONTHLY/WEEKLY
 * **effectiveDate**: string (ReadOnly): date when plan was applied
-* **planId**: string (Required): plan id as published by Liftr.PAN
+* **planId**: string {maxLength: 50} (Required): plan id as published by Liftr.PAN
 * **usageType**: 'COMMITTED' | 'PAYG' | string: different usage type like PAYG/COMMITTED
 
 ## PredefinedUrlCategoriesResponse

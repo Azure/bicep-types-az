@@ -7,7 +7,7 @@
 * **etag**: string: ETag of the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Datacenter location of the API Management service.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 50, pattern: "^[a-zA-Z](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ApiManagementServiceProperties](#apimanagementserviceproperties): Properties of the API Management service.
 * **sku**: [ApiManagementServiceSkuProperties](#apimanagementserviceskuproperties): SKU properties of the API Management service.
 * **tags**: [ApiManagementServiceBaseParametersTags](#apimanagementservicebaseparameterstags): API Management service tags. A maximum of 10 tags can be provided for a resource, and each tag must have a key no greater than 128 characters (and a value no greater than 256 characters).
@@ -21,11 +21,11 @@
 * **content**: any (ReadOnly): Response content bytes.
 * **description**: string (WriteOnly): Description of the API. May include HTML formatting tags.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **path**: string (Required, WriteOnly): Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.
+* **name**: string {minLength: 1, maxLength: 256, pattern: "^[^*#&+:<>?]+$"} (Required, DeployTimeConstant): The resource name
+* **path**: string {maxLength: 400} (Required, WriteOnly): Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.
 * **protocols**: ('Http' | 'Https')[] (Required, WriteOnly): Describes on which protocols the operations in this API can be invoked.
 * **requestId**: string (ReadOnly)
-* **serviceUrl**: string (Required, WriteOnly): Absolute URL of the backend service implementing this API.
+* **serviceUrl**: string {minLength: 1, maxLength: 2000} (Required, WriteOnly): Absolute URL of the backend service implementing this API.
 * **statusCode**: 'Accepted' | 'Conflict' | 'Continue' | 'Created' | 'NotFound' | 'OK' (ReadOnly)
 * **subscriptionKeyParameterNames**: [SubscriptionKeyParameterNamesContract](#subscriptionkeyparameternamescontract) (WriteOnly): Protocols over which API is made available.
 * **type**: 'Microsoft.ApiManagement/service/apis' (ReadOnly, DeployTimeConstant): The resource type
@@ -34,15 +34,15 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-07-07' (ReadOnly, DeployTimeConstant): The resource api version
-* **description**: string: Description of the operation. May include HTML formatting tags.
+* **description**: string {maxLength: 1000}: Description of the operation. May include HTML formatting tags.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **method**: string (Required): A Valid HTTP Operation Method. Typical Http Methods like GET, PUT, POST but not limited by only them.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 256, pattern: "^[^*#&+:<>?]+$"} (Required, DeployTimeConstant): The resource name
 * **request**: [RequestContract](#requestcontract): An entity containing request details.
 * **responses**: [ResultContract](#resultcontract)[]: Array of Operation responses.
 * **templateParameters**: [ParameterContract](#parametercontract)[]: Collection of URL template parameters.
 * **type**: 'Microsoft.ApiManagement/service/apis/operations' (ReadOnly, DeployTimeConstant): The resource type
-* **urlTemplate**: string (Required): Relative URL template identifying the target resource for this operation. May include parameters. Example: /customers/{cid}/orders/{oid}/?date={date}
+* **urlTemplate**: string {minLength: 1, maxLength: 1000} (Required): Relative URL template identifying the target resource for this operation. May include parameters. Example: /customers/{cid}/orders/{oid}/?date={date}
 
 ## Resource Microsoft.ApiManagement/service/authorizationServers@2016-07-07
 * **Valid Scope(s)**: ResourceGroup
@@ -59,7 +59,7 @@
 * **description**: string: Description of the authorization server. Can contain HTML formatting tags.
 * **grantTypes**: ('authorizationCode' | 'clientCredentials' | 'implicit' | 'resourceOwnerPassword')[] (Required): Form of an authorization grant, which the client uses to request the access token.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {maxLength: 256, pattern: "^[^*#&+:<>?]+$"} (Required, DeployTimeConstant): The resource name
 * **resourceOwnerPassword**: string: Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner password.
 * **resourceOwnerUsername**: string: Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner username.
 * **supportState**: bool: If true, authorization server will include state parameter from the authorization request to its response. Client may use state parameter to raise protocol security.
@@ -71,9 +71,9 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-07-07' (ReadOnly, DeployTimeConstant): The resource api version
-* **host**: string (Required): Host attribute of the backend. Host is a pure hostname without a port or suffix, for example backend.contoso.com. Must not be empty.
+* **host**: string {minLength: 1, maxLength: 255} (Required): Host attribute of the backend. Host is a pure hostname without a port or suffix, for example backend.contoso.com. Must not be empty.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 255, pattern: "^[^*#&+:<>?]+$"} (Required, DeployTimeConstant): The resource name
 * **skipCertificateChainValidation**: bool: Flag indicating whether SSL certificate chain validation should be skipped when using self-signed certificates for this backend host.
 * **type**: 'Microsoft.ApiManagement/service/backends' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -84,7 +84,7 @@
 * **data**: string (Required, WriteOnly): Base 64 encoded certificate using the application/x-pkcs12 representation.
 * **expirationDate**: string (ReadOnly): Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {minLength: 1, maxLength: 256, pattern: "^[^*#&+:<>?]+$"} (Required, DeployTimeConstant): The resource name
 * **password**: string (Required, WriteOnly): Password for the Certificate
 * **subject**: string (ReadOnly): Subject attribute of the certificate.
 * **thumbprint**: string (ReadOnly): Thumbprint of the certificate.
@@ -98,7 +98,7 @@
 * **description**: string: Group description.
 * **externalId**: string: Identifier for an external group.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 256, pattern: "^[^*#&+:<>?]+$"} (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.ApiManagement/service/groups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/groups/users@2016-07-07
@@ -106,7 +106,7 @@
 ### Properties
 * **apiVersion**: '2016-07-07' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 256, pattern: "^[^*#&+:<>?]+$"} (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.ApiManagement/service/groups/users' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/identityProviders@2016-07-07
@@ -114,8 +114,8 @@
 ### Properties
 * **allowedTenants**: string[]: List of Allowed Tenants when configuring Azure Active Directory login.
 * **apiVersion**: '2016-07-07' (ReadOnly, DeployTimeConstant): The resource api version
-* **clientId**: string (Required): Client Id of the Application in the external Identity Provider. It is App ID for Facebook login, Client ID for Google login, App ID for Microsoft.
-* **clientSecret**: string (Required): Client secret of the Application in external Identity Provider, used to authenticate login request. For example, it is App Secret for Facebook login, API Key for Google login, Public Key for Microsoft.
+* **clientId**: string {minLength: 1} (Required): Client Id of the Application in the external Identity Provider. It is App ID for Facebook login, Client ID for Google login, App ID for Microsoft.
+* **clientSecret**: string {minLength: 1} (Required): Client secret of the Application in external Identity Provider, used to authenticate login request. For example, it is App Secret for Facebook login, API Key for Google login, Public Key for Microsoft.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'aad' | 'facebook' | 'google' | 'microsoft' | 'twitter' | string (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.ApiManagement/service/identityProviders' (ReadOnly, DeployTimeConstant): The resource type
@@ -128,7 +128,7 @@
 * **description**: string: Logger description.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **isBuffered**: bool: Whether records are buffered in the logger before publishing. Default is assumed to be true.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {maxLength: 256, pattern: "^[^*#&+:<>?]+$"} (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.ApiManagement/service/loggers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/openidConnectProviders@2016-07-07
@@ -140,7 +140,7 @@
 * **description**: string: User-friendly description of OpenID Connect Provider.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **metadataEndpoint**: string (Required): Metadata endpoint URI.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {maxLength: 256, pattern: "^[^*#&+:<>?]+$"} (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.ApiManagement/service/openidConnectProviders' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/products@2016-07-07
@@ -148,9 +148,9 @@
 ### Properties
 * **apiVersion**: '2016-07-07' (ReadOnly, DeployTimeConstant): The resource api version
 * **approvalRequired**: bool: whether subscription approval is required. If false, new subscriptions will be approved automatically enabling developers to call the product’s APIs immediately after subscribing. If true, administrators must manually approve the subscription before the developer can any of the product’s APIs. Can be present only if subscriptionRequired property is present and has a value of true.
-* **description**: string: Product description. May include HTML formatting tags.
+* **description**: string {minLength: 1, maxLength: 1000}: Product description. May include HTML formatting tags.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 256, pattern: "^[^*#&+:<>?]+$"} (Required, DeployTimeConstant): The resource name
 * **state**: 'NotPublished' | 'Published': whether product is published or not. Published products are discoverable by users of developer portal. Non published products are visible only to administrators. Default state of Product is NotPublished.
 * **subscriptionRequired**: bool: Whether a product subscription is required for accessing APIs included in this product. If true, the product is referred to as "protected" and a valid subscription key is required for a request to an API included in the product to succeed. If false, the product is referred to as "open" and requests to an API included in the product can be made without a subscription key. If property is omitted when creating a new product it's value is assumed to be true.
 * **subscriptionsLimit**: int: Whether the number of subscriptions a user can have to this product at the same time. Set to null or omit to allow unlimited per user subscriptions. Can be present only if subscriptionRequired property is present and has a value of true.
@@ -162,7 +162,7 @@
 ### Properties
 * **apiVersion**: '2016-07-07' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 256, pattern: "^[^*#&+:<>?]+$"} (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.ApiManagement/service/products/apis' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/products/groups@2016-07-07
@@ -170,7 +170,7 @@
 ### Properties
 * **apiVersion**: '2016-07-07' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 256, pattern: "^[^*#&+:<>?]+$"} (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.ApiManagement/service/products/groups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/properties@2016-07-07
@@ -178,11 +178,11 @@
 ### Properties
 * **apiVersion**: '2016-07-07' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {maxLength: 256, pattern: "^[^*#&+:<>?]+$"} (Required, DeployTimeConstant): The resource name
 * **secret**: bool: Determines whether the value is a secret and should be encrypted or not. Default value is false.
 * **tags**: string[]: Optional tags that when provided can be used to filter the property list.
 * **type**: 'Microsoft.ApiManagement/service/properties' (ReadOnly, DeployTimeConstant): The resource type
-* **value**: string (Required): Value of the property. Can contain policy expressions. It may not be empty or consist only of whitespace.
+* **value**: string {minLength: 1, maxLength: 4096} (Required): Value of the property. Can contain policy expressions. It may not be empty or consist only of whitespace.
 
 ## Resource Microsoft.ApiManagement/service/subscriptions@2016-07-07
 * **Valid Scope(s)**: ResourceGroup
@@ -192,11 +192,11 @@
 * **endDate**: string (ReadOnly): Date when subscription was cancelled or expired. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
 * **expirationDate**: string (ReadOnly): Subscription expiration date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {minLength: 1, maxLength: 256, pattern: "^[^*#&+:<>?]+$"} (Required, DeployTimeConstant): The resource name
 * **notificationDate**: string (ReadOnly): Upcoming subscription expiration notification date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-* **primaryKey**: string: Primary subscription key. If not specified during request key will be generated automatically.
+* **primaryKey**: string {minLength: 1, maxLength: 256}: Primary subscription key. If not specified during request key will be generated automatically.
 * **productId**: string (Required): Product (product id path) for which subscription is being created in form /products/{productId}
-* **secondaryKey**: string: Secondary subscription key. If not specified during request key will be generated automatically.
+* **secondaryKey**: string {minLength: 1, maxLength: 256}: Secondary subscription key. If not specified during request key will be generated automatically.
 * **startDate**: string (ReadOnly): Subscription activation date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
 * **state**: 'Active' | 'Cancelled' | 'Expired' | 'Rejected' | 'Submitted' | 'Suspended': Initial subscription state. If no value is specified, subscription is created with Submitted state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.
 * **stateComment**: string (ReadOnly): Optional subscription comment added by an administrator.
@@ -207,12 +207,12 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-07-07' (ReadOnly, DeployTimeConstant): The resource api version
-* **email**: string (Required): Email address. Must not be empty and must be unique within the service instance.
-* **firstName**: string (Required): First name.
+* **email**: string {minLength: 1, maxLength: 254} (Required): Email address. Must not be empty and must be unique within the service instance.
+* **firstName**: string {minLength: 1, maxLength: 100} (Required): First name.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identities**: [UserIdentityContract](#useridentitycontract)[] (ReadOnly): Collection of user identities.
-* **lastName**: string (Required): Last name.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **lastName**: string {minLength: 1, maxLength: 100} (Required): Last name.
+* **name**: string {minLength: 1, maxLength: 256, pattern: "^[^*#&+:<>?]+$"} (Required, DeployTimeConstant): The resource name
 * **note**: string: Optional note about a user set by the administrator.
 * **password**: string (Required, WriteOnly): User Password.
 * **registrationDate**: string (ReadOnly): Date of user registration. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
@@ -223,7 +223,7 @@
 ### Properties
 * **location**: string (Required): The location name of the additional region among Azure Data center regions.
 * **skuType**: 'Developer' | 'Premium' | 'Standard' (Required): The SKU type in the location.
-* **skuUnitCount**: int: The SKU Unit count at the location. The maximum SKU Unit count depends on the SkuType. Maximum allowed for Developer SKU is 1, for Standard SKU is 4, and for Premium SKU is 10, at a location.
+* **skuUnitCount**: int {maxValue: 10}: The SKU Unit count at the location. The maximum SKU Unit count depends on the SkuType. Maximum allowed for Developer SKU is 1, for Standard SKU is 4, and for Premium SKU is 10, at a location.
 * **staticIPs**: string[] (ReadOnly): Static IP addresses of the location's virtual machines.
 * **vpnconfiguration**: [VirtualNetworkConfiguration](#virtualnetworkconfiguration): Virtual network configuration for the location.
 
@@ -242,7 +242,7 @@
 * **managementApiUrl**: string (ReadOnly): Management API endpoint URL of the API Management service.
 * **portalUrl**: string (ReadOnly): Publisher portal endpoint Url of the API Management service.
 * **provisioningState**: string (ReadOnly): The current provisioning state of the API Management service which can be one of the following: Created/Activating/Succeeded/Updating/Failed/Stopped/Terminating/TerminationFailed/Deleted.
-* **publisherEmail**: string (Required): Publisher email.
+* **publisherEmail**: string {maxLength: 100} (Required): Publisher email.
 * **publisherName**: string (Required): Publisher name.
 * **runtimeUrl**: string (ReadOnly): Proxy endpoint URL of the API Management service.
 * **scmUrl**: string (ReadOnly): SCM endpoint URL of the API Management service.
@@ -312,7 +312,7 @@
 ### Properties
 * **description**: string: Operation response description.
 * **representations**: [RepresentationContract](#representationcontract)[]: Collection of operation response representations.
-* **statusCode**: int (Required): Operation response HTTP status code.
+* **statusCode**: int {minValue: 100, maxValue: 599} (Required): Operation response HTTP status code.
 
 ## SubscriptionKeyParameterNamesContract
 ### Properties

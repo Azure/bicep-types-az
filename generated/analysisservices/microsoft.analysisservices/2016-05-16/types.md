@@ -6,7 +6,7 @@
 * **apiVersion**: '2016-05-16' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Location of the Analysis Services resource.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 63, pattern: "^[a-z][a-z0-9]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [AnalysisServicesServerProperties](#analysisservicesserverproperties): Properties of the provision operation request.
 * **sku**: [ResourceSku](#resourcesku) (Required): The SKU of the Analysis Services resource.
 * **tags**: [ResourceTags](#resourcetags): Key-value pairs of additional resource provisioning properties.
@@ -24,7 +24,7 @@
 
 ## ResourceSku
 ### Properties
-* **capacity**: int: The number of instances in the read only query pool.
+* **capacity**: int {minValue: 1, maxValue: 8}: The number of instances in the read only query pool.
 * **name**: string (Required): Name of the SKU level.
 * **tier**: 'Basic' | 'Development' | 'Standard' | string: The name of the Azure pricing tier to which the SKU applies.
 

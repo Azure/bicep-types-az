@@ -607,7 +607,7 @@
 * **hostEntityId**: string (ReadOnly): The Host entity id that contains the account in case it is a local account (not domain joined)
 * **isDomainJoined**: bool (ReadOnly): Determines whether this is a domain account.
 * **ntDomain**: string (ReadOnly): The NetBIOS domain name as it appears in the alert format domain/username. Examples: NT AUTHORITY.
-* **objectGuid**: string (ReadOnly): The objectGUID attribute is a single-value attribute that is the unique identifier for the object, assigned by active directory.
+* **objectGuid**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The objectGUID attribute is a single-value attribute that is the unique identifier for the object, assigned by active directory.
 * **puid**: string (ReadOnly): The Azure Active Directory Passport User ID.
 * **sid**: string (ReadOnly): The account security identifier, e.g. S-1-5-18.
 * **upnSuffix**: string (ReadOnly): The user principal name suffix for the account, in some cases it is also the domain name. Examples: contoso.com.
@@ -615,7 +615,7 @@
 ## ActionRequestPropertiesOrActionResponseProperties
 ### Properties
 * **logicAppResourceId**: string (Required): Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.
-* **triggerUri**: string (Required, WriteOnly): Logic App Callback URL for this specific workflow.
+* **triggerUri**: string {secure} (Required, WriteOnly): Logic App Callback URL for this specific workflow.
 * **workflowId**: string (ReadOnly): The name of the logic app's workflow.
 
 ## ActivityEntityQueriesProperties
@@ -694,7 +694,7 @@
 * **isDefaultSettings**: bool (Required): Determines whether this anomaly security ml analytics settings is a default settings
 * **lastModifiedUtc**: string (ReadOnly): The last time that this SecurityMLAnalyticsSettings has been modified.
 * **requiredDataConnectors**: [SecurityMLAnalyticsSettingsDataSource](#securitymlanalyticssettingsdatasource)[]: The required data sources for this SecurityMLAnalyticsSettings
-* **settingsDefinitionId**: string: The anomaly settings definition Id
+* **settingsDefinitionId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The anomaly settings definition Id
 * **settingsStatus**: 'Flighting' | 'Production' | string (Required): The anomaly SecurityMLAnalyticsSettings status
 * **tactics**: ('Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'ImpairProcessControl' | 'InhibitResponseFunction' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | 'Reconnaissance' | 'ResourceDevelopment' | string)[]: The tactics of the SecurityMLAnalyticsSettings
 * **techniques**: string[]: The techniques of the SecurityMLAnalyticsSettings
@@ -767,10 +767,10 @@
 * **actions**: [AutomationRuleAction](#automationruleaction)[] (Required): The actions to execute when the automation rule is triggered.
 * **createdBy**: [ClientInfo](#clientinfo) (ReadOnly): Information on the client (user or application) that made some action
 * **createdTimeUtc**: string (ReadOnly): The time the automation rule was created.
-* **displayName**: string (Required): The display name of the automation rule.
+* **displayName**: string {maxLength: 500} (Required): The display name of the automation rule.
 * **lastModifiedBy**: [ClientInfo](#clientinfo) (ReadOnly): Information on the client (user or application) that made some action
 * **lastModifiedTimeUtc**: string (ReadOnly): The last time the automation rule was updated.
-* **order**: int (Required): The order of execution of the automation rule.
+* **order**: int {minValue: 1, maxValue: 1000} (Required): The order of execution of the automation rule.
 * **triggeringLogic**: [AutomationRuleTriggeringLogic](#automationruletriggeringlogic) (Required): Describes automation rule triggering logic.
 
 ## AutomationRulePropertyArrayChangedValuesCondition
@@ -878,7 +878,7 @@
 ### Properties
 * **email**: string: The email of the client.
 * **name**: string: The name of the client.
-* **objectId**: string: The object id of the client.
+* **objectId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The object id of the client.
 * **userPrincipalName**: string: The user principal name of the client.
 
 ## CloudApplicationEntityProperties
@@ -1396,7 +1396,7 @@
 ### Properties
 * **assignedTo**: string: The name of the user the incident is assigned to.
 * **email**: string: The email of the user the incident is assigned to.
-* **objectId**: string: The object id of the user the incident is assigned to.
+* **objectId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The object id of the user the incident is assigned to.
 * **ownerType**: 'Group' | 'Unknown' | 'User' | string: The type of the owner the incident is assigned to.
 * **userPrincipalName**: string: The user principal name of the user the incident is assigned to.
 
@@ -1456,7 +1456,7 @@
 * **hostEntityId**: string (ReadOnly): The Host entity id of this device
 * **importance**: 'High' | 'Low' | 'Normal' | 'Unknown' | string: Device importance, determines if the device classified as 'crown jewel'
 * **iotHubEntityId**: string (ReadOnly): The AzureResource entity id of the IoT Hub
-* **iotSecurityAgentId**: string (ReadOnly): The ID of the security agent running on the device
+* **iotSecurityAgentId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The ID of the security agent running on the device
 * **ipAddressEntityId**: string (ReadOnly): The IP entity if of this device
 * **isAuthorized**: bool (ReadOnly): Determines whether the device classified as authorized device
 * **isProgramming**: bool (ReadOnly): Determines whether the device classified as programming device
@@ -1488,7 +1488,7 @@
 ### Properties
 * **additionalData**: [EntityCommonPropertiesAdditionalData](#entitycommonpropertiesadditionaldata) (ReadOnly): A bag of custom fields that should be part of the entity and will be presented to the user.
 * **displayName**: string (ReadOnly): The mailbox's display name
-* **externalDirectoryObjectId**: string (ReadOnly): The AzureAD identifier of mailbox. Similar to AadUserId in account entity but this property is specific to mailbox object on office side
+* **externalDirectoryObjectId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The AzureAD identifier of mailbox. Similar to AadUserId in account entity but this property is specific to mailbox object on office side
 * **friendlyName**: string (ReadOnly): The graph item display name which is a short humanly readable description of the graph item instance. This property is optional and might be system generated.
 * **mailboxPrimaryAddress**: string (ReadOnly): The mailbox's primary address
 * **upn**: string (ReadOnly): The mailbox's UPN
@@ -1528,7 +1528,7 @@
 * **friendlyName**: string (ReadOnly): The graph item display name which is a short humanly readable description of the graph item instance. This property is optional and might be system generated.
 * **internetMessageId**: string (ReadOnly): The internet message id of this mail message
 * **language**: string (ReadOnly): The language of this mail message
-* **networkMessageId**: string (ReadOnly): The network message id of this mail message
+* **networkMessageId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The network message id of this mail message
 * **p1Sender**: string (ReadOnly): The p1 sender's email address
 * **p1SenderDisplayName**: string (ReadOnly): The p1 sender's display name
 * **p1SenderDomain**: string (ReadOnly): The p1 sender's domain
@@ -1842,7 +1842,7 @@
 ## PlaybookActionProperties
 ### Properties
 * **logicAppResourceId**: string: The resource id of the playbook resource.
-* **tenantId**: string: The tenant id of the playbook resource.
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The tenant id of the playbook resource.
 
 ## ProcessEntityProperties
 ### Properties
@@ -2004,7 +2004,7 @@
 * **additionalData**: [EntityCommonPropertiesAdditionalData](#entitycommonpropertiesadditionaldata) (ReadOnly): A bag of custom fields that should be part of the entity and will be presented to the user.
 * **distinguishedName**: string (ReadOnly): The group distinguished name
 * **friendlyName**: string (ReadOnly): The graph item display name which is a short humanly readable description of the graph item instance. This property is optional and might be system generated.
-* **objectGuid**: string (ReadOnly): A single-value attribute that is the unique identifier for the object, assigned by active directory.
+* **objectGuid**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): A single-value attribute that is the unique identifier for the object, assigned by active directory.
 * **sid**: string (ReadOnly): The SID attribute is a single-value attribute that specifies the security identifier (SID) of the group
 
 ## SecurityMLAnalyticsSettingsDataSource
@@ -2032,14 +2032,14 @@
 ### Properties
 * **additionalData**: [EntityCommonPropertiesAdditionalData](#entitycommonpropertiesadditionaldata) (ReadOnly): A bag of custom fields that should be part of the entity and will be presented to the user.
 * **friendlyName**: string (ReadOnly): The graph item display name which is a short humanly readable description of the graph item instance. This property is optional and might be system generated.
-* **networkMessageId**: string (ReadOnly): The network message id of email to which submission belongs
+* **networkMessageId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The network message id of email to which submission belongs
 * **recipient**: string (ReadOnly): The recipient of the mail
 * **reportType**: string (ReadOnly): The submission type for the given instance. This maps to Junk, Phish, Malware or NotJunk.
 * **sender**: string (ReadOnly): The sender of the mail
 * **senderIp**: string (ReadOnly): The sender's IP
 * **subject**: string (ReadOnly): The subject of submission mail
 * **submissionDate**: string (ReadOnly): The submission date
-* **submissionId**: string (ReadOnly): The submission id
+* **submissionId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The submission id
 * **submitter**: string (ReadOnly): The submitter
 * **timestamp**: string (ReadOnly): The Time stamp when the message is received (Mail)
 
@@ -2214,7 +2214,7 @@
 ### Properties
 * **email**: string (ReadOnly): The email of the user.
 * **name**: string (ReadOnly): The name of the user.
-* **objectId**: string: The object id of the user.
+* **objectId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The object id of the user.
 
 ## ValidationError
 ### Properties

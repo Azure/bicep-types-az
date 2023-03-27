@@ -120,17 +120,17 @@
 * **healthProbeSettings**: [HealthProbeParameters](#healthprobeparameters): Health probe settings to the origin that is used to determine the health of the origin.
 * **origins**: [ResourceReference](#resourcereference)[] (Required): The source of the content being delivered via CDN within given origin group.
 * **responseBasedOriginErrorDetectionSettings**: [ResponseBasedOriginErrorDetectionParameters](#responsebasedoriginerrordetectionparameters): The JSON object that contains the properties to determine origin health using real requests/responses.This property is currently not supported.
-* **trafficRestorationTimeToHealedOrNewEndpointsInMinutes**: int: Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
+* **trafficRestorationTimeToHealedOrNewEndpointsInMinutes**: int {minValue: 0, maxValue: 50}: Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
 
 ## DeepCreatedOriginProperties
 ### Properties
 * **enabled**: bool: Origin is enabled for load balancing or not. By default, origin is always enabled.
 * **hostName**: string (Required): The address of the origin. It can be a domain name, IPv4 address, or IPv6 address. This should be unique across all origins in an endpoint.
-* **httpPort**: int: The value of the HTTP port. Must be between 1 and 65535.
-* **httpsPort**: int: The value of the HTTPS port. Must be between 1 and 65535.
+* **httpPort**: int {minValue: 1, maxValue: 65535}: The value of the HTTP port. Must be between 1 and 65535.
+* **httpsPort**: int {minValue: 1, maxValue: 65535}: The value of the HTTPS port. Must be between 1 and 65535.
 * **originHostHeader**: string: The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default. If endpoint uses multiple origins for load balancing, then the host header at endpoint is ignored and this one is considered.
-* **priority**: int: Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5.
-* **weight**: int: Weight of the origin in given origin group for load balancing. Must be between 1 and 1000
+* **priority**: int {minValue: 1, maxValue: 5}: Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5.
+* **weight**: int {minValue: 1, maxValue: 1000}: Weight of the origin in given origin group for load balancing. Must be between 1 and 1000
 
 ## DeliveryRule
 ### Properties
@@ -296,15 +296,15 @@
 
 ## HealthProbeParameters
 ### Properties
-* **probeIntervalInSeconds**: int: The number of seconds between health probes.Default is 240sec.
+* **probeIntervalInSeconds**: int {minValue: 1, maxValue: 255}: The number of seconds between health probes.Default is 240sec.
 * **probePath**: string: The path relative to the origin that is used to determine the health of the origin.
 * **probeProtocol**: 'Http' | 'Https' | 'NotSet': Protocol to use for health probe.
 * **probeRequestType**: 'GET' | 'HEAD' | 'NotSet': The type of health probe request that is made.
 
 ## HttpErrorRangeParameters
 ### Properties
-* **begin**: int: The inclusive start of the http status code range.
-* **end**: int: The inclusive end of the http status code range.
+* **begin**: int {minValue: 100, maxValue: 999}: The inclusive start of the http status code range.
+* **end**: int {minValue: 100, maxValue: 999}: The inclusive end of the http status code range.
 
 ## HttpVersionMatchConditionParameters
 ### Properties
@@ -344,19 +344,19 @@
 * **provisioningState**: string (ReadOnly): Provisioning status of the origin group.
 * **resourceState**: 'Active' | 'Creating' | 'Deleting' | string (ReadOnly): Resource status of the origin group.
 * **responseBasedOriginErrorDetectionSettings**: [ResponseBasedOriginErrorDetectionParameters](#responsebasedoriginerrordetectionparameters): The JSON object that contains the properties to determine origin health using real requests/responses. This property is currently not supported.
-* **trafficRestorationTimeToHealedOrNewEndpointsInMinutes**: int: Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
+* **trafficRestorationTimeToHealedOrNewEndpointsInMinutes**: int {minValue: 0, maxValue: 50}: Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
 
 ## OriginProperties
 ### Properties
 * **enabled**: bool: Origin is enabled for load balancing or not
 * **hostName**: string: The address of the origin. Domain names, IPv4 addresses, and IPv6 addresses are supported.This should be unique across all origins in an endpoint.
-* **httpPort**: int: The value of the HTTP port. Must be between 1 and 65535.
-* **httpsPort**: int: The value of the HTTPS port. Must be between 1 and 65535.
+* **httpPort**: int {minValue: 1, maxValue: 65535}: The value of the HTTP port. Must be between 1 and 65535.
+* **httpsPort**: int {minValue: 1, maxValue: 65535}: The value of the HTTPS port. Must be between 1 and 65535.
 * **originHostHeader**: string: The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default. If endpoint uses multiple origins for load balancing, then the host header at endpoint is ignored and this one is considered.
-* **priority**: int: Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5
+* **priority**: int {minValue: 1, maxValue: 5}: Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5
 * **provisioningState**: string (ReadOnly): Provisioning status of the origin.
 * **resourceState**: 'Active' | 'Creating' | 'Deleting' | string (ReadOnly): Resource status of the origin.
-* **weight**: int: Weight of the origin in given origin group for load balancing. Must be between 1 and 1000
+* **weight**: int {minValue: 1, maxValue: 1000}: Weight of the origin in given origin group for load balancing. Must be between 1 and 1000
 
 ## PostArgsMatchConditionParameters
 ### Properties
@@ -435,7 +435,7 @@
 ### Properties
 * **httpErrorRanges**: [HttpErrorRangeParameters](#httperrorrangeparameters)[]: The list of Http status code ranges that are considered as server errors for origin and it is marked as unhealthy.
 * **responseBasedDetectedErrorTypes**: 'None' | 'TcpAndHttpErrors' | 'TcpErrorsOnly': Type of response errors for real user requests for which origin will be deemed unhealthy
-* **responseBasedFailoverThresholdPercentage**: int: The percentage of failed requests in the sample where failover should trigger.
+* **responseBasedFailoverThresholdPercentage**: int {minValue: 0, maxValue: 100}: The percentage of failed requests in the sample where failover should trigger.
 
 ## Sku
 ### Properties

@@ -15,14 +15,14 @@
 
 ## LoadTestProperties
 ### Properties
-* **dataPlaneURI**: string (ReadOnly): Resource data plane URI.
-* **description**: string: Description of the resource.
+* **dataPlaneURI**: string {maxLength: 2083} (ReadOnly): Resource data plane URI.
+* **description**: string {maxLength: 512}: Description of the resource.
 * **provisioningState**: 'Canceled' | 'Deleted' | 'Failed' | 'Succeeded' | string (ReadOnly): Resource provisioning state.
 
 ## SystemAssignedServiceIdentity
 ### Properties
-* **principalId**: string (ReadOnly): The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
-* **tenantId**: string (ReadOnly): The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
+* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
 * **type**: 'None' | 'SystemAssigned' | string (Required): Type of managed service identity (either system assigned, or none).
 
 ## SystemData

@@ -63,7 +63,7 @@
 * **canBeInvestigated**: bool (ReadOnly): Whether this alert can be investigated with Azure Security Center
 * **compromisedEntity**: string (ReadOnly): The entity that the incident happened on
 * **confidenceReasons**: [AlertConfidenceReason](#alertconfidencereason)[]: reasons the alert got the confidenceScore value
-* **confidenceScore**: int (ReadOnly): level of confidence we have on the alert
+* **confidenceScore**: int {minValue: 0, maxValue: 1} (ReadOnly): level of confidence we have on the alert
 * **correlationKey**: string (ReadOnly): Alerts with the same CorrelationKey will be grouped together in Ibiza.
 * **description**: string (ReadOnly): Description of the incident and what it means
 * **detectedTimeUtc**: string (ReadOnly): The time the incident was detected by the vendor

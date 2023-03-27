@@ -6,7 +6,7 @@
 * **apiVersion**: '2019-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The location of the resource. This cannot be changed after the resource is created.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 20, pattern: "^[a-zA-Z0-9-]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [AgentPoolProperties](#agentpoolproperties): The properties associated with the agent pool
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
@@ -29,7 +29,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [IdentityProperties](#identityproperties): Identity for the resource.
 * **location**: string: The location of the resource
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 5, maxLength: 50, pattern: "^[a-zA-Z0-9-]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [TaskRunProperties](#taskrunproperties): The properties associated with the task run, i.e., request and result of the run
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.ContainerRegistry/registries/taskRuns' (ReadOnly, DeployTimeConstant): The resource type
@@ -41,7 +41,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [IdentityProperties](#identityproperties): Identity for the resource.
 * **location**: string (Required): The location of the resource. This cannot be changed after the resource is created.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 5, maxLength: 50, pattern: "^[a-zA-Z0-9-_]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [TaskProperties](#taskproperties): The properties of a task.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
@@ -259,7 +259,7 @@ executing a build step.
 * **sourceLocation**: string: The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
 If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.
 * **target**: string: The name of the target build stage for the docker build.
-* **timeout**: int: Run timeout in seconds.
+* **timeout**: int {minValue: 300, maxValue: 28800}: Run timeout in seconds.
 * **type**: 'DockerBuildRequest' (Required): The type of the run request.
 
 ### EncodedTaskRunRequest
@@ -271,7 +271,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 * **platform**: [PlatformProperties](#platformproperties) (Required): The platform properties against which the run has to happen.
 * **sourceLocation**: string: The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
 If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.
-* **timeout**: int: Run timeout in seconds.
+* **timeout**: int {minValue: 300, maxValue: 28800}: Run timeout in seconds.
 * **type**: 'EncodedTaskRunRequest' (Required): The type of the run request.
 * **values**: [SetValue](#setvalue)[]: The collection of overridable values that can be passed when running a task.
 
@@ -283,7 +283,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 * **sourceLocation**: string: The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
 If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.
 * **taskFilePath**: string (Required): The template/definition file path relative to the source.
-* **timeout**: int: Run timeout in seconds.
+* **timeout**: int {minValue: 300, maxValue: 28800}: Run timeout in seconds.
 * **type**: 'FileTaskRunRequest' (Required): The type of the run request.
 * **values**: [SetValue](#setvalue)[]: The collection of overridable values that can be passed when running a task.
 * **valuesFilePath**: string: The values/parameters file path relative to the source.
@@ -377,7 +377,7 @@ the source registry during the run.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the task.
 * **status**: 'Disabled' | 'Enabled' | string: The current status of task.
 * **step**: [TaskStepProperties](#taskstepproperties): The properties of a task step.
-* **timeout**: int: Run timeout in seconds.
+* **timeout**: int {minValue: 300, maxValue: 28800}: Run timeout in seconds.
 * **trigger**: [TriggerProperties](#triggerproperties): The properties that describe all triggers for the task.
 
 ## TaskRun

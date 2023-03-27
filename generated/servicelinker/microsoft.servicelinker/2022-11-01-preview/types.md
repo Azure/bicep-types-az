@@ -64,7 +64,7 @@
 ### ServicePrincipalCertificateAuthInfo
 #### Properties
 * **authType**: 'servicePrincipalCertificate' (Required): The authentication type.
-* **certificate**: string (Required): ServicePrincipal certificate for servicePrincipal auth.
+* **certificate**: string {secure} (Required): ServicePrincipal certificate for servicePrincipal auth.
 * **clientId**: string (Required): Application clientId for servicePrincipal auth.
 * **deleteOrUpdateBehavior**: 'Default' | 'ForcedCleanup' | string: Indicates whether to clean up previous operation when Linker is updating or deleting
 * **principalId**: string (Required): Principal Id for servicePrincipal auth.
@@ -77,7 +77,7 @@
 * **deleteOrUpdateBehavior**: 'Default' | 'ForcedCleanup' | string: Indicates whether to clean up previous operation when Linker is updating or deleting
 * **principalId**: string (Required): Principal Id for servicePrincipal auth.
 * **roles**: string[]: Optional, this value specifies the Azure roles to be assigned. Automatically
-* **secret**: string (Required): Secret for servicePrincipal auth.
+* **secret**: string {secure} (Required): Secret for servicePrincipal auth.
 * **userName**: string: Username created in the database which is mapped to a user in AAD.
 
 ### SystemAssignedIdentityAuthInfo
@@ -248,7 +248,7 @@
 ### ValueSecretInfo
 #### Properties
 * **secretType**: 'rawValue' (Required): The secret type.
-* **value**: string: The actual value of the secret.
+* **value**: string {secure}: The actual value of the secret.
 
 
 ## SecretStore

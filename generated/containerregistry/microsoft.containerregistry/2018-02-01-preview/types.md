@@ -15,7 +15,7 @@
 * **apiVersion**: '2018-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The location of the resource. This cannot be changed after the resource is created.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 5, maxLength: 50, pattern: "^[a-zA-Z0-9]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [BuildTaskProperties](#buildtaskproperties): The properties of a build task.
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.ContainerRegistry/registries/buildTasks' (ReadOnly, DeployTimeConstant): The resource type
@@ -25,7 +25,7 @@
 ### Properties
 * **apiVersion**: '2018-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 5, maxLength: 50, pattern: "^[a-zA-Z0-9]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [BuildStepProperties](#buildstepproperties): The properties of a build step.
 * **type**: 'Microsoft.ContainerRegistry/registries/buildTasks/steps' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -104,7 +104,7 @@
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the build task.
 * **sourceRepository**: [SourceRepositoryProperties](#sourcerepositoryproperties) (Required): The properties that describes the source(code) for the build task.
 * **status**: 'Disabled' | 'Enabled' | string: The current status of build task.
-* **timeout**: int: Build timeout in seconds.
+* **timeout**: int {minValue: 300, maxValue: 28800}: Build timeout in seconds.
 
 ## GitCommitTrigger
 ### Properties

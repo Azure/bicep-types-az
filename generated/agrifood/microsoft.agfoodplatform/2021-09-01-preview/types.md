@@ -19,7 +19,7 @@
 * **additionalApiProperties**: [ExtensionInstallationRequestAdditionalApiProperties](#extensioninstallationrequestadditionalapiproperties) (WriteOnly): Additional Api Properties.
 * **apiVersion**: '2021-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): The ETag value to implement optimistic concurrency.
-* **extensionVersion**: string (WriteOnly): Extension Version.
+* **extensionVersion**: string {minLength: 3, maxLength: 10} (WriteOnly): Extension Version.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ExtensionProperties](#extensionproperties) (ReadOnly): Extension resource properties.
@@ -52,7 +52,7 @@
 * **apiVersion**: '2021-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): The ETag value to implement optimistic concurrency.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[a-zA-Z]{3,50}[.][a-zA-Z]{3,100}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [SolutionProperties](#solutionproperties): Solution resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.AgFoodPlatform/farmBeats/solutions' (ReadOnly, DeployTimeConstant): The resource type
@@ -62,7 +62,7 @@
 ### Properties
 * **apiVersion**: '2021-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[a-zA-Z]{3,50}[.][a-zA-Z]{3,100}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [FarmBeatsExtensionProperties](#farmbeatsextensionproperties) (ReadOnly): FarmBeatsExtension properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.AgFoodPlatform/farmBeatsExtensionDefinitions' (ReadOnly, DeployTimeConstant): The resource type
@@ -72,14 +72,14 @@
 ### Properties
 * **apiVersion**: '2021-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[a-zA-Z]{3,50}[.][a-zA-Z]{3,100}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [FarmBeatsSolutionProperties](#farmbeatssolutionproperties) (ReadOnly): FarmBeatsSolution properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.AgFoodPlatform/farmBeatsSolutionDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ApiProperties
 ### Properties
-* **apiFreshnessTimeInMinutes**: int: Interval in minutes for which the weather data for the api needs to be refreshed.
+* **apiFreshnessTimeInMinutes**: int {minValue: 0, maxValue: 10080}: Interval in minutes for which the weather data for the api needs to be refreshed.
 
 ## DetailedInformation
 ### Properties
@@ -117,8 +117,8 @@
 * **extensionApiDocsLink**: string (ReadOnly): Extension api docs link.
 * **extensionAuthLink**: string (ReadOnly): Extension auth link.
 * **extensionCategory**: string (ReadOnly): Extension category. e.g. weather/sensor/satellite.
-* **extensionId**: string (ReadOnly): Extension Id.
-* **installedExtensionVersion**: string (ReadOnly): Installed extension version.
+* **extensionId**: string {pattern: "^[a-zA-Z]{3,50}[.][a-zA-Z]{3,100}$"} (ReadOnly): Extension Id.
+* **installedExtensionVersion**: string {pattern: "^([1-9]|10).\d$"} (ReadOnly): Installed extension version.
 
 ## ExtensionPropertiesAdditionalApiProperties
 ### Properties
@@ -127,18 +127,18 @@
 
 ## FarmBeatsExtensionProperties
 ### Properties
-* **description**: string (ReadOnly): Textual description.
+* **description**: string {minLength: 2, maxLength: 500} (ReadOnly): Textual description.
 * **detailedInformation**: [DetailedInformation](#detailedinformation)[] (ReadOnly): Detailed information which shows summary of requested data.
 Used in descriptive get extension metadata call.
 Information for weather category per api included are apisSupported,
 customParameters, PlatformParameters and Units supported.
 * **extensionApiDocsLink**: string (ReadOnly): FarmBeatsExtension api docs link.
 * **extensionAuthLink**: string (ReadOnly): FarmBeatsExtension auth link.
-* **extensionCategory**: string (ReadOnly): Category of the extension. e.g. weather/sensor/satellite.
-* **farmBeatsExtensionId**: string (ReadOnly): FarmBeatsExtension ID.
-* **farmBeatsExtensionName**: string (ReadOnly): FarmBeatsExtension name.
-* **farmBeatsExtensionVersion**: string (ReadOnly): FarmBeatsExtension version.
-* **publisherId**: string (ReadOnly): Publisher ID.
+* **extensionCategory**: string {minLength: 2, maxLength: 100} (ReadOnly): Category of the extension. e.g. weather/sensor/satellite.
+* **farmBeatsExtensionId**: string {minLength: 2, maxLength: 100, pattern: "^[a-zA-Z]{3,50}[.][a-zA-Z]{3,100}$"} (ReadOnly): FarmBeatsExtension ID.
+* **farmBeatsExtensionName**: string {minLength: 2, maxLength: 100} (ReadOnly): FarmBeatsExtension name.
+* **farmBeatsExtensionVersion**: string {minLength: 2, maxLength: 100, pattern: "^([1-9]|10).\d$"} (ReadOnly): FarmBeatsExtension version.
+* **publisherId**: string {minLength: 2, maxLength: 100} (ReadOnly): Publisher ID.
 * **targetResourceType**: string (ReadOnly): Target ResourceType of the farmBeatsExtension.
 
 ## FarmBeatsProperties
@@ -151,7 +151,7 @@ customParameters, PlatformParameters and Units supported.
 
 ## FarmBeatsSolutionProperties
 ### Properties
-* **accessFBApplicationId**: string (ReadOnly): Application id of the multi tenant application to be used by partner to access FarmBeats data.
+* **accessFBApplicationId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): Application id of the multi tenant application to be used by partner to access FarmBeats data.
 * **accessFBApplicationName**: string (ReadOnly): Application name of the multi tenant application to be used by partner to access FarmBeatsData.
 * **actionIds**: string[] (ReadOnly): List of ActionIds needed to make the SaaS multi tenant application access relevant fb data.
 * **dataAccessScopes**: string[] (ReadOnly): Gets scope of the FarmBeats data access that's required for processing solution request to partner.
@@ -166,7 +166,7 @@ For working with WeatherScope we need FarmHierarchy info implies 'farmerId', 're
 * **partnerTenantId**: string (ReadOnly): Solution Partner Tenant Id.
 * **roleId**: string (ReadOnly): Role Id of the SaaS multi tenant application to access relevant fb data.
 * **roleName**: string (ReadOnly): Role Name of the SaaS multi tenant application to access relevant fb data.
-* **saaSApplicationId**: string (ReadOnly): Application id of the SaaS multi tenant application.
+* **saaSApplicationId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): Application id of the SaaS multi tenant application.
 
 ## FarmBeatsSolutionPropertiesEvaluatedOutputsDictionary
 ### Properties
@@ -180,8 +180,8 @@ For working with WeatherScope we need FarmHierarchy info implies 'farmerId', 're
 
 ## Identity
 ### Properties
-* **principalId**: string (ReadOnly): The principal ID of resource identity. The value must be an UUID.
-* **tenantId**: string (ReadOnly): The tenant ID of resource. The value must be an UUID.
+* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The principal ID of resource identity. The value must be an UUID.
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The tenant ID of resource. The value must be an UUID.
 * **type**: 'SystemAssigned': The identity type.
 
 ## Insight
@@ -289,14 +289,14 @@ For working with WeatherScope we need FarmHierarchy info implies 'farmerId', 're
 
 ## SolutionProperties
 ### Properties
-* **marketplacePublisherId**: string (Required): SaaS application Publisher Id.
-* **offerId**: string (Required): SaaS application Offer Id.
+* **marketplacePublisherId**: string {minLength: 1} (Required): SaaS application Publisher Id.
+* **offerId**: string {minLength: 1} (Required): SaaS application Offer Id.
 * **partnerId**: string (ReadOnly): Partner Id of the Solution.
-* **planId**: string (Required): SaaS application Plan Id.
-* **saasSubscriptionId**: string (Required): SaaS subscriptionId of the installed SaaS application.
-* **saasSubscriptionName**: string (Required): SaaS subscription name of the installed SaaS application.
+* **planId**: string {minLength: 1} (Required): SaaS application Plan Id.
+* **saasSubscriptionId**: string {minLength: 1} (Required): SaaS subscriptionId of the installed SaaS application.
+* **saasSubscriptionName**: string {minLength: 1} (Required): SaaS subscription name of the installed SaaS application.
 * **solutionId**: string (ReadOnly): Solution Id.
-* **termId**: string (Required): SaaS application Term Id.
+* **termId**: string {minLength: 1} (Required): SaaS application Term Id.
 ### Additional Properties
 * **Additional Properties Type**: any
 
@@ -316,6 +316,6 @@ For working with WeatherScope we need FarmHierarchy info implies 'farmerId', 're
 
 ## UnitSystemsInfo
 ### Properties
-* **key**: string (Required): UnitSystem key sent as part of ProviderInput.
+* **key**: string {minLength: 2, maxLength: 100} (Required): UnitSystem key sent as part of ProviderInput.
 * **values**: string[] (Required): List of unit systems supported by this data provider.
 

@@ -75,9 +75,9 @@ When creating a new application with application capacity defined, the product o
 
 ## ApplicationResourceProperties
 ### Properties
-* **maximumNodes**: int: The maximum number of nodes where Service Fabric will reserve capacity for this application. Note that this does not mean that the services of this application will be placed on all of those nodes. By default, the value of this property is zero and it means that the services can be placed on any node.
+* **maximumNodes**: int {minValue: 0}: The maximum number of nodes where Service Fabric will reserve capacity for this application. Note that this does not mean that the services of this application will be placed on all of those nodes. By default, the value of this property is zero and it means that the services can be placed on any node.
 * **metrics**: [ApplicationMetricDescription](#applicationmetricdescription)[]: List of application capacity metric description.
-* **minimumNodes**: int: The minimum number of nodes where Service Fabric will reserve capacity for this application. Note that this does not mean that the services of this application will be placed on all of those nodes. If this property is set to zero, no capacity will be reserved. The value of this property cannot be more than the value of the MaximumNodes property.
+* **minimumNodes**: int {minValue: 0}: The minimum number of nodes where Service Fabric will reserve capacity for this application. Note that this does not mean that the services of this application will be placed on all of those nodes. If this property is set to zero, no capacity will be reserved. The value of this property cannot be more than the value of the MaximumNodes property.
 * **parameters**: [ApplicationParameterList](#applicationparameterlist): List of application parameters with overridden values from their default values specified in the application manifest.
 * **provisioningState**: string (ReadOnly): The current deployment or provisioning state, which only appears in the response
 * **removeApplicationCapacity**: bool: Remove the current application capacity settings.
@@ -128,9 +128,9 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 
 ## ArmServiceTypeHealthPolicy
 ### Properties
-* **maxPercentUnhealthyPartitionsPerService**: int: The maximum percentage of partitions per service allowed to be unhealthy before your application is considered in error.
-* **maxPercentUnhealthyReplicasPerPartition**: int: The maximum percentage of replicas per partition allowed to be unhealthy before your application is considered in error.
-* **maxPercentUnhealthyServices**: int: The maximum percentage of services allowed to be unhealthy before your application is considered in error.
+* **maxPercentUnhealthyPartitionsPerService**: int {minValue: 0, maxValue: 100}: The maximum percentage of partitions per service allowed to be unhealthy before your application is considered in error.
+* **maxPercentUnhealthyReplicasPerPartition**: int {minValue: 0, maxValue: 100}: The maximum percentage of replicas per partition allowed to be unhealthy before your application is considered in error.
+* **maxPercentUnhealthyServices**: int {minValue: 0, maxValue: 100}: The maximum percentage of services allowed to be unhealthy before your application is considered in error.
 
 ## ArmServiceTypeHealthPolicyMap
 ### Properties
@@ -162,8 +162,8 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 
 ## ClusterHealthPolicy
 ### Properties
-* **maxPercentUnhealthyApplications**: int: The maximum allowed percentage of unhealthy applications before reporting an error. For example, to allow 10% of applications to be unhealthy, this value would be 10.
-* **maxPercentUnhealthyNodes**: int: The maximum allowed percentage of unhealthy nodes before reporting an error. For example, to allow 10% of nodes to be unhealthy, this value would be 10.
+* **maxPercentUnhealthyApplications**: int {minValue: 0, maxValue: 100}: The maximum allowed percentage of unhealthy applications before reporting an error. For example, to allow 10% of applications to be unhealthy, this value would be 10.
+* **maxPercentUnhealthyNodes**: int {minValue: 0, maxValue: 100}: The maximum allowed percentage of unhealthy nodes before reporting an error. For example, to allow 10% of nodes to be unhealthy, this value would be 10.
 
 ## ClusterProperties
 ### Properties
@@ -210,9 +210,9 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 
 ## ClusterUpgradeDeltaHealthPolicy
 ### Properties
-* **maxPercentDeltaUnhealthyApplications**: int (Required): The maximum allowed percentage of applications health degradation allowed during cluster upgrades. The delta is measured between the state of the applications at the beginning of upgrade and the state of the applications at the time of the health evaluation. The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits. System services are not included in this.
-* **maxPercentDeltaUnhealthyNodes**: int (Required): The maximum allowed percentage of nodes health degradation allowed during cluster upgrades. The delta is measured between the state of the nodes at the beginning of upgrade and the state of the nodes at the time of the health evaluation. The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits.
-* **maxPercentUpgradeDomainDeltaUnhealthyNodes**: int (Required): The maximum allowed percentage of upgrade domain nodes health degradation allowed during cluster upgrades. The delta is measured between the state of the upgrade domain nodes at the beginning of upgrade and the state of the upgrade domain nodes at the time of the health evaluation. The check is performed after every upgrade domain upgrade completion for all completed upgrade domains to make sure the state of the upgrade domains is within tolerated limits.
+* **maxPercentDeltaUnhealthyApplications**: int {minValue: 0, maxValue: 100} (Required): The maximum allowed percentage of applications health degradation allowed during cluster upgrades. The delta is measured between the state of the applications at the beginning of upgrade and the state of the applications at the time of the health evaluation. The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits. System services are not included in this.
+* **maxPercentDeltaUnhealthyNodes**: int {minValue: 0, maxValue: 100} (Required): The maximum allowed percentage of nodes health degradation allowed during cluster upgrades. The delta is measured between the state of the nodes at the beginning of upgrade and the state of the nodes at the time of the health evaluation. The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits.
+* **maxPercentUpgradeDomainDeltaUnhealthyNodes**: int {minValue: 0, maxValue: 100} (Required): The maximum allowed percentage of upgrade domain nodes health degradation allowed during cluster upgrades. The delta is measured between the state of the upgrade domain nodes at the beginning of upgrade and the state of the upgrade domain nodes at the time of the health evaluation. The check is performed after every upgrade domain upgrade completion for all completed upgrade domains to make sure the state of the upgrade domains is within tolerated limits.
 
 ## ClusterUpgradePolicy
 ### Properties
@@ -261,7 +261,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 * **name**: string (Required): The name of the node type.
 * **placementProperties**: [NodeTypeDescriptionPlacementProperties](#nodetypedescriptionplacementproperties): The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run.
 * **reverseProxyEndpointPort**: int: The endpoint used by reverse proxy.
-* **vmInstanceCount**: int (Required): The number of nodes in the node type. This count should match the capacity property in the corresponding VirtualMachineScaleSet resource.
+* **vmInstanceCount**: int {minValue: 1, maxValue: 2147483647} (Required): The number of nodes in the node type. This count should match the capacity property in the corresponding VirtualMachineScaleSet resource.
 
 ## NodeTypeDescriptionCapacities
 ### Properties
@@ -338,16 +338,16 @@ should be split between the partition ‘Count’
 ### StatefulServiceProperties
 #### Properties
 * **hasPersistedState**: bool: A flag indicating whether this is a persistent service which stores states on the local disk. If it is then the value of this property is true, if not it is false.
-* **minReplicaSetSize**: int: The minimum replica set size as a number.
+* **minReplicaSetSize**: int {minValue: 1}: The minimum replica set size as a number.
 * **quorumLossWaitDuration**: string: The maximum duration for which a partition is allowed to be in a state of quorum loss, represented in ISO 8601 format (hh:mm:ss.s).
 * **replicaRestartWaitDuration**: string: The duration between when a replica goes down and when a new replica is created, represented in ISO 8601 format (hh:mm:ss.s).
 * **serviceKind**: 'Stateful' (Required): The kind of service (Stateless or Stateful).
 * **standByReplicaKeepDuration**: string: The definition on how long StandBy replicas should be maintained before being removed, represented in ISO 8601 format (hh:mm:ss.s).
-* **targetReplicaSetSize**: int: The target replica set size as a number.
+* **targetReplicaSetSize**: int {minValue: 1}: The target replica set size as a number.
 
 ### StatelessServiceProperties
 #### Properties
-* **instanceCount**: int: The instance count.
+* **instanceCount**: int {minValue: -1}: The instance count.
 * **serviceKind**: 'Stateless' (Required): The kind of service (Stateless or Stateful).
 
 

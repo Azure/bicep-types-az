@@ -135,7 +135,7 @@
 
 ## BasicLoginInformation
 ### Properties
-* **password**: string (WriteOnly): Login password.
+* **password**: string {secure} (WriteOnly): Login password.
 * **username**: string: Login username.
 
 ## DataControllerProperties
@@ -211,16 +211,16 @@
 
 ## KeytabInformation
 ### Properties
-* **keytab**: string (WriteOnly): A base64-encoded keytab.
+* **keytab**: string {secure} (WriteOnly): A base64-encoded keytab.
 
 ## LogAnalyticsWorkspaceConfig
 ### Properties
-* **primaryKey**: string (WriteOnly): Primary key of the workspace
-* **workspaceId**: string: Azure Log Analytics workspace ID
+* **primaryKey**: string {secure} (WriteOnly): Primary key of the workspace
+* **workspaceId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Azure Log Analytics workspace ID
 
 ## OnPremiseProperty
 ### Properties
-* **id**: string (Required): A globally unique ID identifying the associated Kubernetes cluster
+* **id**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required): A globally unique ID identifying the associated Kubernetes cluster
 * **publicSigningKey**: string (Required): Certificate that contains the Kubernetes cluster public key used to verify signing
 * **signingCertificateThumbprint**: string: Unique thumbprint returned to customer to verify the certificate being uploaded
 
@@ -283,7 +283,7 @@
 ### Properties
 * **backupInformation**: [SqlServerDatabaseResourcePropertiesBackupInformation](#sqlserverdatabaseresourcepropertiesbackupinformation)
 * **collationName**: string: Collation of the database.
-* **compatibilityLevel**: int: Compatibility level of the database
+* **compatibilityLevel**: int {minValue: 80, maxValue: 200}: Compatibility level of the database
 * **databaseCreationDate**: string: Creation date of the database.
 * **databaseOptions**: [SqlServerDatabaseResourcePropertiesDatabaseOptions](#sqlserverdatabaseresourcepropertiesdatabaseoptions): List of features that are enabled for the database
 * **isReadOnly**: bool: Whether the database is read only or not.
@@ -368,9 +368,9 @@
 ## UploadServicePrincipal
 ### Properties
 * **authority**: string: Authority for the service principal. Example: https://login.microsoftonline.com/
-* **clientId**: string: Client ID of the service principal for uploading data.
-* **clientSecret**: string (WriteOnly): Secret of the service principal
-* **tenantId**: string: Tenant ID of the service principal.
+* **clientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Client ID of the service principal for uploading data.
+* **clientSecret**: string {secure} (WriteOnly): Secret of the service principal
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Tenant ID of the service principal.
 
 ## UploadWatermark
 ### Properties
