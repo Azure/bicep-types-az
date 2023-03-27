@@ -118,7 +118,7 @@
 * **city**: string: The city or locality where the resource is located.
 * **countryOrRegion**: string: The country or region where the resource is located
 * **district**: string: The district, state, or province where the resource is located.
-* **name**: string (Required): A canonical name for the geographic or physical location.
+* **name**: string {maxLength: 256} (Required): A canonical name for the geographic or physical location.
 
 ## Plan
 ### Properties
@@ -148,9 +148,12 @@
 * **binaryBuffer**: any (ReadOnly)
 * **encryptionProperties**: [EncryptionProperties](#encryptionproperties): TestType1 encryption properties
 * **locationData**: [LocationData](#locationdata) (ReadOnly): Metadata pertaining to the geographic location of the resource.
+* **password**: string {secure, pattern: "^[a-zA-Z0-9\.]$"}
+* **percentageProperty**: int {minValue: 0, maxValue: 100} (ReadOnly)
 * **skuTier**: 'Basic' | 'Free' | 'Premium' | 'Standard': This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.
 * **stringEnum**: 'Bar' | 'Foo' | string: Description for a basic enum property.
 * **subnetId**: string (ReadOnly): A fully-qualified resource ID
+* **uuidProperty**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}
 
 ## TestType1Properties
 ### Properties
@@ -159,9 +162,12 @@
 * **binaryBuffer**: any
 * **encryptionProperties**: [EncryptionProperties](#encryptionproperties): TestType1 encryption properties
 * **locationData**: [LocationData](#locationdata): Metadata pertaining to the geographic location of the resource.
+* **password**: string {secure, pattern: "^[a-zA-Z0-9\.]$"}
+* **percentageProperty**: int {minValue: 0, maxValue: 100}
 * **skuTier**: 'Basic' | 'Free' | 'Premium' | 'Standard': This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.
 * **stringEnum**: 'Bar' | 'Foo' | string: Description for a basic enum property.
 * **subnetId**: string: A fully-qualified resource ID
+* **uuidProperty**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}
 
 ## TrackedResourceTags
 ### Properties

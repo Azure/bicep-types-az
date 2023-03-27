@@ -1,7 +1,25 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import { AnySchema, ArraySchema, ByteArraySchema, ChoiceSchema, ComplexSchema, ConstantSchema, DictionarySchema, ObjectSchema, PrimitiveSchema, Property, Schema, SchemaType, SealedChoiceSchema, StringSchema } from "@autorest/codemodel";
+import {
+  AnySchema,
+  ArraySchema,
+  ByteArraySchema,
+  ChoiceSchema,
+  ComplexSchema,
+  ConstantSchema,
+  CredentialSchema,
+  DictionarySchema,
+  NumberSchema,
+  ObjectSchema,
+  PrimitiveSchema,
+  Property,
+  Schema,
+  SchemaType,
+  SealedChoiceSchema,
+  StringSchema,
+  UriSchema,
+} from "@autorest/codemodel";
 import { Channel, AutorestExtensionHost } from "@autorest/extension-base";
 import { BuiltInTypeKind, DiscriminatedObjectType, ObjectTypeProperty, ObjectTypePropertyFlags, ResourceFlags, TypeBaseKind, TypeFactory, TypeReference } from "bicep-types";
 import { uniq, keys, Dictionary, chain } from 'lodash';
@@ -440,6 +458,7 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
         return factory.addBooleanType();
       case SchemaType.Integer:
       case SchemaType.Number:
+        return convertNumberSchema(schema as NumberSchema);
       case SchemaType.UnixTime:
         return factory.addIntegerType();
       case SchemaType.Object:
@@ -457,11 +476,51 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
       case SchemaType.Duration:
       case SchemaType.Credential:
       case SchemaType.ArmId:
-        return factory.addStringType();
+        return convertStringSchema(schema);
       default:
         logWarning(`Unrecognized known property type: "${schema.type}"`);
         return factory.addAnyType();
     }
+  }
+
+  function convertNumberSchema(schema: NumberSchema): number {
+    let minimum: number|undefined = schema.minimum;
+    if (minimum !== undefined && schema.exclusiveMinimum) {
+      minimum += 1;
+    }
+
+    let maximum: number|undefined = schema.maximum;
+    if (maximum !== undefined && schema.exclusiveMaximum) {
+      maximum -= 1;
+    }
+
+    return factory.addIntegerType(minimum, maximum);
+  }
+
+  function convertStringSchema(schema: PrimitiveSchema): number {
+    const secret: true|undefined = schema.extensions?.['x-ms-secret'] === true ? true : undefined;
+    let minLength: number|undefined;
+    let maxLength: number|undefined;
+    let pattern: string|undefined;
+
+    switch (schema.type) {
+      case SchemaType.Uri:
+      case SchemaType.String:
+      case SchemaType.Credential:
+        const refinableSchema = (schema as CredentialSchema | StringSchema | UriSchema);
+        minLength = refinableSchema.minLength;
+        maxLength = refinableSchema.maxLength;
+        pattern = refinableSchema.pattern;
+        break;
+      case SchemaType.Uuid:
+        // In JSON Schema, the following refinements are implicit in the string format of 'uuid'
+        minLength = 36;
+        maxLength = 36;
+        pattern = "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$";
+        break;
+    }
+
+    return factory.addStringType(secret, minLength, maxLength, pattern);
   }
 
   function isStringSchema(schema: PrimitiveSchema): boolean

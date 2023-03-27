@@ -92,6 +92,15 @@
         "encryptionProperties": {
           "$ref": "../../../../../common-types/resource-management/v3/types.json#/definitions/encryptionProperties",
           "description": "TestType1 encryption properties"
+        },
+        "password": {
+          "type": "string",
+          "x-ms-secret": true,
+          "pattern": "^[a-zA-Z0-9\\.]$"
+        },
+        "uuidProperty": {
+          "type": "string",
+          "format": "uuid"
         }
       }
     },
@@ -124,6 +133,11 @@
               }
             ]
           }
+        },
+        "percentageProperty": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
         }
       }
     },
