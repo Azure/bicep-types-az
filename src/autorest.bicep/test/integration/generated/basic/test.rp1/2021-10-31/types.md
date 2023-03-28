@@ -82,7 +82,7 @@
 ## Function listArrayOfFoos (Test.Rp1/testType1@2021-10-31)
 * **Resource**: Test.Rp1/testType1
 * **ApiVersion**: 2021-10-31
-* **Output**: [FoosResponse](#foosresponse)[]
+* **Output**: [FoosResponse](#foosresponse)[] {minLength: 1, maxLength: 10}
 
 ## Function listFoos (Test.Rp1/testType1@2021-10-31)
 * **Resource**: Test.Rp1/testType1

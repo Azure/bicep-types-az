@@ -271,7 +271,7 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
         {});
     }
 
-    return factory.addObjectType(definitionName, properties, additionalProperties);
+    return factory.addObjectType(definitionName, properties, additionalProperties, schema.extensions?.['x-ms-secret']);
   }
 
   function combineAndThrowIfNull<TSchema extends Schema>(putSchema: TSchema | undefined, getSchema: TSchema | undefined) {
@@ -714,12 +714,13 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
   }
 
   function parseArrayType(putSchema: ArraySchema | undefined, getSchema: ArraySchema | undefined) {
+    const combinedSchema = combineAndThrowIfNull(putSchema, getSchema);
     const itemType = parseType(putSchema?.elementType, getSchema?.elementType);
     if (itemType === undefined) {
-      return factory.addArrayType(factory.addAnyType());
+      return factory.addArrayType(factory.addAnyType(), combinedSchema.minItems, combinedSchema.maxItems);
     }
 
-    return factory.addArrayType(itemType);
+    return factory.addArrayType(itemType, combinedSchema.minItems, combinedSchema.maxItems);
   }
 
   function createObjectTypeProperty(type: TypeReference, flags: ObjectTypePropertyFlags, description?: string): ObjectTypeProperty {

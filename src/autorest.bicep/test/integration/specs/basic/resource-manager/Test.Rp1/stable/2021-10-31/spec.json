@@ -184,7 +184,9 @@
       "type": "array",
       "items": {
         "$ref": "#/definitions/FoosResponse"
-      }
+      },
+      "minItems": 1,
+      "maxItems": 10
     },
     "DiscriminatedUnionTestType": {
       "allOf": [
