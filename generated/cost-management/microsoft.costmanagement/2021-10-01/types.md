@@ -187,7 +187,7 @@
 ### Properties
 * **name**: string (Required): The name of the column to use in comparison.
 * **operator**: 'Contains' | 'In' | string (Required): The operator to use for comparison.
-* **values**: string[] (Required): Array of values to use for comparison
+* **values**: string[] {minLength: 1} (Required): Array of values to use for comparison
 
 ## ReportConfigDataset
 ### Properties
@@ -195,7 +195,7 @@
 * **configuration**: [ReportConfigDatasetConfiguration](#reportconfigdatasetconfiguration): Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.
 * **filter**: [ReportConfigFilter](#reportconfigfilter): Has filter expression to use in the report.
 * **granularity**: 'Daily' | 'Monthly' | string: The granularity of rows in the report.
-* **grouping**: [ReportConfigGrouping](#reportconfiggrouping)[]: Array of group by expression to use in the report. Report can have up to 2 group by clauses.
+* **grouping**: [ReportConfigGrouping](#reportconfiggrouping)[] {maxLength: 2}: Array of group by expression to use in the report. Report can have up to 2 group by clauses.
 * **sorting**: [ReportConfigSorting](#reportconfigsorting)[]: Array of order by expression to use in the report.
 
 ## ReportConfigDatasetAggregation
@@ -217,9 +217,9 @@
 
 ## ReportConfigFilter
 ### Properties
-* **and**: [ReportConfigFilter](#reportconfigfilter)[]: The logical "AND" expression. Must have at least 2 items.
+* **and**: [ReportConfigFilter](#reportconfigfilter)[] {minLength: 2}: The logical "AND" expression. Must have at least 2 items.
 * **dimensions**: [ReportConfigComparisonExpression](#reportconfigcomparisonexpression): Has comparison expression for a dimension
-* **or**: [ReportConfigFilter](#reportconfigfilter)[]: The logical "OR" expression. Must have at least 2 items.
+* **or**: [ReportConfigFilter](#reportconfigfilter)[] {minLength: 2}: The logical "OR" expression. Must have at least 2 items.
 * **tags**: [ReportConfigComparisonExpression](#reportconfigcomparisonexpression): Has comparison expression for a tag
 
 ## ReportConfigGrouping

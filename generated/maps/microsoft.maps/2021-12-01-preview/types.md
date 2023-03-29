@@ -58,7 +58,7 @@
 
 ## CorsRules
 ### Properties
-* **corsRules**: [CorsRule](#corsrule)[]: The list of CORS rules. You can include up to five CorsRule elements in the request.
+* **corsRules**: [CorsRule](#corsrule)[] {maxLength: 5}: The list of CORS rules. You can include up to five CorsRule elements in the request.
 
 ## CreatorProperties
 ### Properties
@@ -93,7 +93,7 @@
 ### Properties
 * **cors**: [CorsRules](#corsrules): Specifies CORS rules for the Blob service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the Blob service.
 * **disableLocalAuth**: bool: Allows toggle functionality on Azure Policy to disable Azure Maps local authentication support. This will disable Shared Keys authentication from any usage.
-* **linkedResources**: [LinkedResource](#linkedresource)[]: Sets the resources to be used for Managed Identities based operations for the Map account resource.
+* **linkedResources**: [LinkedResource](#linkedresource)[] {maxLength: 10}: Sets the resources to be used for Managed Identities based operations for the Map account resource.
 * **provisioningState**: string (ReadOnly): The provisioning state of the Map account resource.
 * **uniqueId**: string (ReadOnly): A unique identifier for the maps account
 

@@ -213,6 +213,7 @@
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## UserInfo
+*Secure*
 ### Properties
 * **emailAddress**: string {pattern: "^[A-Za-z0-9._%+-]+@(?:[A-Za-z0-9-]+\.)+[A-Za-z]{2,}$"}: Email of the user used by Datadog for contacting them if needed
 * **name**: string {maxLength: 50}: Name of the user

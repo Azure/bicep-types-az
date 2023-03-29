@@ -135,9 +135,9 @@
 * **naptConfiguration**: [NaptConfiguration](#naptconfiguration): The Network Address and Port Translation configuration.
 If not specified the attached data network uses a default NAPT configuration with NAPT enabled.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | string (ReadOnly): The provisioning state of the attached data network resource.
-* **userEquipmentAddressPoolPrefix**: (string {pattern: "^(([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])(\/([0-9]|[1-2][0-9]|3[0-2]))$"})[]: The user equipment address pool prefixes for the attached data network that are dynamically assigned by the core to UEs when they set up a PDU session.
+* **userEquipmentAddressPoolPrefix**: (string {pattern: "^(([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])(\/([0-9]|[1-2][0-9]|3[0-2]))$"})[] {minLength: 1}: The user equipment address pool prefixes for the attached data network that are dynamically assigned by the core to UEs when they set up a PDU session.
 At least one of userEquipmentAddressPoolPrefix and userEquipmentStaticAddressPoolPrefix must be defined. If both are defined then they must be the same size.
-* **userEquipmentStaticAddressPoolPrefix**: (string {pattern: "^(([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])(\/([0-9]|[1-2][0-9]|3[0-2]))$"})[]: The user equipment address pool prefixes for the attached data network that are statically assigned by the core to UEs when they set up a PDU session.
+* **userEquipmentStaticAddressPoolPrefix**: (string {pattern: "^(([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])(\/([0-9]|[1-2][0-9]|3[0-2]))$"})[] {minLength: 1}: The user equipment address pool prefixes for the attached data network that are statically assigned by the core to UEs when they set up a PDU session.
 The mapping of static IP to sim is configured in staticIpConfiguration on the sim resource.
 At least one of userEquipmentAddressPoolPrefix and userEquipmentStaticAddressPoolPrefix must be defined. If both are defined then they must be the same size.
 * **userPlaneDataInterface**: [InterfaceProperties](#interfaceproperties) (Required): The user plane interface on the data network. In 5G networks this is called as N6 interface whereas in 4G networks this is called as SGi interface.
@@ -153,9 +153,9 @@ At least one of userEquipmentAddressPoolPrefix and userEquipmentStaticAddressPoo
 ## DataNetworkConfiguration
 ### Properties
 * **5qi**: int {minValue: 1, maxValue: 127}: Default QoS Flow 5G QoS Indicator value.  The 5QI identifies a specific QoS forwarding treatment to be provided to a flow. This must not be a standardized 5QI value selecting a GBR (Guaranteed Bit Rate) QoS.  The illegal GBR 5QI values are: 1, 2, 3, 4, 65, 66, 67, 71, 72, 73, 74, 75, 76, 82, 83, 84, and 85. See 3GPP TS23.501 section 5.7.2.1 for a full description of the 5Qi parameter, and table 5.7.4-1 for the definition of which are the GBR 5QI values.
-* **additionalAllowedSessionTypes**: ('IPv4' | 'IPv6' | string)[]: Allowed session types in addition to the default session type.  Must not duplicate the default session type.
+* **additionalAllowedSessionTypes**: ('IPv4' | 'IPv6' | string)[] {maxLength: 1}: Allowed session types in addition to the default session type.  Must not duplicate the default session type.
 * **allocationAndRetentionPriorityLevel**: int {minValue: 1, maxValue: 15}: Default QoS Flow allocation and retention priority (ARP) level. Flows with higher priority preempt flows with lower priority, if the settings of `preemptionCapability` and `preemptionVulnerability` allow it. 1 is the highest level of priority. If this field is not specified then `5qi` is used to derive the ARP value. See 3GPP TS23.501 section 5.7.2.2 for a full description of the ARP parameters.
-* **allowedServices**: [ServiceResourceId](#serviceresourceid)[] (Required): List of Services that can be used as part of this Sim Policy. The list must not contain duplicate items and must contain at least one item.
+* **allowedServices**: [ServiceResourceId](#serviceresourceid)[] {minLength: 1} (Required): List of Services that can be used as part of this Sim Policy. The list must not contain duplicate items and must contain at least one item.
 * **dataNetwork**: [DataNetworkResourceId](#datanetworkresourceid) (Required): A reference to the Data Network that these settings apply to
 * **defaultSessionType**: 'IPv4' | 'IPv6' | string: The default PDU session type, which is used if the UE does not request a specific session type.
 * **preemptionCapability**: 'MayPreempt' | 'NotPreempt' | string: Default QoS Flow preemption capability.  The Preemption Capability of a QoS Flow controls whether it can preempt another QoS Flow with a lower priority level. See 3GPP TS23.501 section 5.7.2.2 for a full description of the ARP parameters.
@@ -216,7 +216,7 @@ If not specified and NAPT is enabled, this range defaults to 1,024 - 65,535. (Po
 * **ruleName**: string {maxLength: 64, pattern: "^(?!(default|requested|service)$)[a-zA-Z0-9][a-zA-Z0-9_-]*$"} (Required): The name of the rule. This must be unique within the parent Service. You must not use any of the following reserved strings - `default`, `requested` or `service`.
 * **rulePrecedence**: int {minValue: 0, maxValue: 255} (Required): A precedence value that is used to decide between PCC Rules when identifying the QoS values to use for a particular Sim. A lower value means a higher priority. This value should be unique among all PCC Rules configured in the Mobile Network.
 * **ruleQosPolicy**: [PccRuleQosPolicy](#pccruleqospolicy): The QoS policy to use for packets matching this rule. If this field is null then the Service will define the QoS settings.
-* **serviceDataFlowTemplates**: [ServiceDataFlowTemplate](#servicedataflowtemplate)[] (Required): The set of service data flow templates to use for this PCC Rule.
+* **serviceDataFlowTemplates**: [ServiceDataFlowTemplate](#servicedataflowtemplate)[] {minLength: 1} (Required): The set of service data flow templates to use for this PCC Rule.
 * **trafficControl**: 'Blocked' | 'Enabled' | string: Determines whether flows that match this PCC Rule are permitted.
 
 ## PccRuleQosPolicy
@@ -261,13 +261,13 @@ If not specified and NAPT is enabled, this range defaults to 1,024 - 65,535. (Po
 ### Properties
 * **direction**: 'Bidirectional' | 'Downlink' | 'Uplink' | string (Required): The direction of this flow.
 * **ports**: (string {pattern: "^([1-9]|[1-9][0-9]{1,3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])(-([1-9]|[1-9][0-9]{1,3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5]))?$"})[]: The port(s) to which UEs will connect for this flow. You can specify zero or more ports or port ranges. If you specify one or more ports or port ranges then you must specify a value other than `ip` in the `protocol` field. This is an optional setting. If you do not specify it then connections will be allowed on all ports. Port ranges must be specified as <FirstPort>-<LastPort>. For example: [`8080`, `8082-8085`].
-* **protocol**: (string {pattern: "^(ip|[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$"})[] (Required): A list of the allowed protocol(s) for this flow. If you want this flow to be able to use any protocol within the internet protocol suite, use the value `ip`. If you only want to allow a selection of protocols, you must use the corresponding IANA Assigned Internet Protocol Number for each protocol, as described in https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml. For example, for UDP, you must use 17. If you use the value `ip` then you must leave the field `port` unspecified.
-* **remoteIpList**: (string {pattern: "^(any|(([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])(\/([0-9]|[1-2][0-9]|3[0-2])))$"})[] (Required): The remote IP address(es) to which UEs will connect for this flow. If you want to allow connections on any IP address, use the value `any`. Otherwise, you must provide each of the remote IP addresses to which Fusion Core will connect for this flow. You must provide each IP address in CIDR notation, including the netmask (for example, 192.0.2.54/24).
+* **protocol**: (string {pattern: "^(ip|[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$"})[] {minLength: 1} (Required): A list of the allowed protocol(s) for this flow. If you want this flow to be able to use any protocol within the internet protocol suite, use the value `ip`. If you only want to allow a selection of protocols, you must use the corresponding IANA Assigned Internet Protocol Number for each protocol, as described in https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml. For example, for UDP, you must use 17. If you use the value `ip` then you must leave the field `port` unspecified.
+* **remoteIpList**: (string {pattern: "^(any|(([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])(\/([0-9]|[1-2][0-9]|3[0-2])))$"})[] {minLength: 1} (Required): The remote IP address(es) to which UEs will connect for this flow. If you want to allow connections on any IP address, use the value `any`. Otherwise, you must provide each of the remote IP addresses to which Fusion Core will connect for this flow. You must provide each IP address in CIDR notation, including the netmask (for example, 192.0.2.54/24).
 * **templateName**: string {maxLength: 64, pattern: "^(?!(default|requested|service)$)[a-zA-Z0-9][a-zA-Z0-9_-]*$"} (Required): The name of the SDF template. This must be unique within the parent PccRuleConfiguration. You must not use any of the following reserved strings - `default`, `requested` or `service`.
 
 ## ServicePropertiesFormat
 ### Properties
-* **pccRules**: [PccRuleConfiguration](#pccruleconfiguration)[] (Required): The set of PCC Rules that make up this service.
+* **pccRules**: [PccRuleConfiguration](#pccruleconfiguration)[] {minLength: 1} (Required): The set of PCC Rules that make up this service.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | string (ReadOnly): The provisioning state of the service resource.
 * **servicePrecedence**: int {minValue: 0, maxValue: 255} (Required): A precedence value that is used to decide between services when identifying the QoS values to use for a particular Sim. A lower value means a higher priority. This value should be unique among all services configured in the Mobile Network.
 * **serviceQosPolicy**: [QosPolicy](#qospolicy): The QoS policy to use for packets matching this service. This can be overridden for particular flows using the ruleQosPolicy field in a PccRuleConfiguration. If this field is null then the UE's simPolicy will define the QoS settings.
@@ -287,7 +287,7 @@ If not specified and NAPT is enabled, this range defaults to 1,024 - 65,535. (Po
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | string (ReadOnly): The provisioning state of the sim policy resource.
 * **registrationTimer**: int {minValue: 30}: Interval for the UE periodic registration update procedure, in seconds.
 * **rfspIndex**: int {minValue: 1, maxValue: 256}: RAT/Frequency Selection Priority Index, defined in 3GPP TS 36.413.  This is an optional setting and by default is unspecified.
-* **sliceConfigurations**: [SliceConfiguration](#sliceconfiguration)[] (Required): The allowed slices and the settings to use for them. The list must not contain duplicate items and must contain at least one item.
+* **sliceConfigurations**: [SliceConfiguration](#sliceconfiguration)[] {minLength: 1} (Required): The allowed slices and the settings to use for them. The list must not contain duplicate items and must contain at least one item.
 * **ueAmbr**: [Ambr](#ambr) (Required): Aggregate maximum bit rate across all non-GBR QoS flows of all PDU sessions of a given UE. See 3GPP TS23.501 section 5.7.2.6 for a full description of the UE-AMBR.
 
 ## SimPolicyResourceId
@@ -305,7 +305,7 @@ If not specified and NAPT is enabled, this range defaults to 1,024 - 65,535. (Po
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | string (ReadOnly): The provisioning state of the sim resource.
 * **simPolicy**: [SimPolicyResourceId](#simpolicyresourceid): The simPolicy used by this sim.
 * **simState**: 'Disabled' | 'Enabled' | 'Invalid' | string (ReadOnly): The state of the sim resource.
-* **staticIpConfiguration**: [SimStaticIpProperties](#simstaticipproperties)[]: A list of static IP addresses assigned to this sim. Each address is assigned at a defined network scope, made up of {attached data network, slice}.
+* **staticIpConfiguration**: [SimStaticIpProperties](#simstaticipproperties)[] {minLength: 1}: A list of static IP addresses assigned to this sim. Each address is assigned at a defined network scope, made up of {attached data network, slice}.
 
 ## SimStaticIpProperties
 ### Properties
@@ -324,7 +324,7 @@ If not specified and NAPT is enabled, this range defaults to 1,024 - 65,535. (Po
 
 ## SliceConfiguration
 ### Properties
-* **dataNetworkConfigurations**: [DataNetworkConfiguration](#datanetworkconfiguration)[] (Required): The allowed data networks and the settings to use for them. The list must not contain duplicate items and must contain at least one item.
+* **dataNetworkConfigurations**: [DataNetworkConfiguration](#datanetworkconfiguration)[] {minLength: 1} (Required): The allowed data networks and the settings to use for them. The list must not contain duplicate items and must contain at least one item.
 * **defaultDataNetwork**: [DataNetworkResourceId](#datanetworkresourceid) (Required): The default data network to use if the UE does not explicitly specify it.  Configuration for this object must exist in the `dataNetworkConfigurations` map.
 * **slice**: [SliceResourceId](#sliceresourceid) (Required): A reference to the Slice that these settings apply to
 

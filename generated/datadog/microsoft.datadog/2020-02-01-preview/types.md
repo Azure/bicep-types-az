@@ -200,6 +200,7 @@
 * **name**: string (Required): Name of the SKU.
 
 ## UserInfo
+*Secure*
 ### Properties
 * **emailAddress**: string {pattern: "^[A-Za-z0-9._%+-]+@(?:[A-Za-z0-9-]+\.)+[A-Za-z]{2,}$"}: Email of the user used by Datadog for contacting them if needed
 * **name**: string {maxLength: 50}: Name of the user

@@ -49,7 +49,7 @@
 ### Properties
 * **allowedHeaders**: string[]: The request headers that the origin domain may specify on the CORS request.
 * **allowedMethods**: string[]: The methods (HTTP request verbs) that the origin domain may use for a CORS request.
-* **allowedOrigins**: string[] (Required): The origin domains that are permitted to make a request against the service via CORS.
+* **allowedOrigins**: string[] {minLength: 1} (Required): The origin domains that are permitted to make a request against the service via CORS.
 * **exposedHeaders**: string[]: The response headers to expose to CORS clients.
 * **maxAgeInSeconds**: int {minValue: 0}: The number of seconds that the client/browser should cache a preflight response.
 

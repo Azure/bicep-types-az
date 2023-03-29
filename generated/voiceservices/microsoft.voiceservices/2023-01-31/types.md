@@ -34,7 +34,7 @@
 * **e911Type**: 'DirectToEsrp' | 'Standard' | string (Required): How to handle 911 calls
 * **emergencyDialStrings**: string[]: A list of dial strings used for emergency calling.
 * **onPremMcpEnabled**: bool: Whether an on-premises Mobile Control Point is in use.
-* **platforms**: ('OperatorConnect' | 'TeamsPhoneMobile' | string)[] (Required): What platforms to support
+* **platforms**: ('OperatorConnect' | 'TeamsPhoneMobile' | string)[] {minLength: 1} (Required): What platforms to support
 * **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): Resource provisioning state.
 * **serviceLocations**: [ServiceRegionProperties](#serviceregionproperties)[] (Required): The regions in which to deploy the resources needed for Teams Calling
 * **status**: 'ChangePending' | 'Complete' | string (ReadOnly): The current status of the deployment.

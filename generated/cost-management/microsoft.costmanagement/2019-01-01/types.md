@@ -47,7 +47,7 @@
 ### Properties
 * **name**: string (Required): The name of the column to use in comparison.
 * **operator**: 'In' | string (Required): The operator to use for comparison.
-* **values**: string[] (Required): Array of values to use for comparison
+* **values**: string[] {minLength: 1} (Required): Array of values to use for comparison
 
 ## QueryDataset
 ### Properties
@@ -55,7 +55,7 @@
 * **configuration**: [QueryDatasetConfiguration](#querydatasetconfiguration): Has configuration information for the data in the export. The configuration will be ignored if aggregation and grouping are provided.
 * **filter**: [QueryFilter](#queryfilter): The filter expression to use in the query. Please reference our Query API REST documentation for how to properly format the filter.
 * **granularity**: 'Daily' | 'Hourly' | string: The granularity of rows in the query.
-* **grouping**: [QueryGrouping](#querygrouping)[]: Array of group by expression to use in the query. Query can have up to 2 group by clauses.
+* **grouping**: [QueryGrouping](#querygrouping)[] {maxLength: 2}: Array of group by expression to use in the query. Query can have up to 2 group by clauses.
 * **sorting**: [QuerySortingConfiguration](#querysortingconfiguration)[]: Array of sorting by columns in query.
 
 ## QueryDatasetAggregation
@@ -76,10 +76,10 @@
 
 ## QueryFilter
 ### Properties
-* **and**: [QueryFilter](#queryfilter)[]: The logical "AND" expression. Must have at least 2 items.
+* **and**: [QueryFilter](#queryfilter)[] {minLength: 2}: The logical "AND" expression. Must have at least 2 items.
 * **dimension**: [QueryComparisonExpression](#querycomparisonexpression): Has comparison expression for a dimension
 * **not**: [QueryFilter](#queryfilter): The logical "NOT" expression.
-* **or**: [QueryFilter](#queryfilter)[]: The logical "OR" expression. Must have at least 2 items.
+* **or**: [QueryFilter](#queryfilter)[] {minLength: 2}: The logical "OR" expression. Must have at least 2 items.
 * **tag**: [QueryComparisonExpression](#querycomparisonexpression): Has comparison expression for a tag
 
 ## QueryGrouping

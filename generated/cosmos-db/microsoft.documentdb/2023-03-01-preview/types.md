@@ -1033,7 +1033,7 @@
 * **connectionString**: string (ReadOnly): The default mongo connection string for the cluster.
 * **createMode**: 'Default' | 'PointInTimeRestore' | 'Restore' | string (WriteOnly): The mode to create a mongo cluster.
 * **earliestRestoreTime**: string (ReadOnly): Earliest restore timestamp in UTC ISO8601 format.
-* **nodeGroupSpecs**: [NodeGroupSpec](#nodegroupspec)[]: The list of node group specs in the cluster.
+* **nodeGroupSpecs**: [NodeGroupSpec](#nodegroupspec)[] {minLength: 1}: The list of node group specs in the cluster.
 * **provisioningState**: 'Canceled' | 'Dropping' | 'Failed' | 'InProgress' | 'Succeeded' | 'Updating' | string (ReadOnly): A provisioning state of the mongo cluster.
 * **restoreParameters**: [MongoClusterRestoreParameters](#mongoclusterrestoreparameters) (WriteOnly): Parameters used for restore operations
 * **serverVersion**: string: The Mongo DB server version. Defaults to the latest available version if not specified.

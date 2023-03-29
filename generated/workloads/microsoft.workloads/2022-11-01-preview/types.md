@@ -110,7 +110,7 @@
 ### Properties
 * **availabilitySetName**: string: The full name for availability set. In case name is not provided, it will be defaulted to {SID}-ASCS-AvSet.
 * **loadBalancer**: [LoadBalancerResourceNames](#loadbalancerresourcenames): The resource names object for load balancer and related resources.
-* **virtualMachines**: [VirtualMachineResourceNames](#virtualmachineresourcenames)[]: The list of names for all ASCS virtual machines to be deployed. The number of entries in this list should be equal to the number VMs to be created for ASCS layer. At maximum, there can be two virtual machines at this layer: ASCS and ERS.
+* **virtualMachines**: [VirtualMachineResourceNames](#virtualmachineresourcenames)[] {maxLength: 2}: The list of names for all ASCS virtual machines to be deployed. The number of entries in this list should be equal to the number VMs to be created for ASCS layer. At maximum, there can be two virtual machines at this layer: ASCS and ERS.
 
 ## CentralServerVmDetails
 ### Properties
@@ -130,7 +130,7 @@
 ### Properties
 * **availabilitySetName**: string: The full name for availability set. In case name is not provided, it will be defaulted to {SID}-DB-AvSet.
 * **loadBalancer**: [LoadBalancerResourceNames](#loadbalancerresourcenames): The resource names object for load balancer and related resources.
-* **virtualMachines**: [VirtualMachineResourceNames](#virtualmachineresourcenames)[]: The list of virtual machine naming details.
+* **virtualMachines**: [VirtualMachineResourceNames](#virtualmachineresourcenames)[] {maxLength: 2}: The list of virtual machine naming details.
 
 ## DatabaseVmDetails
 ### Properties
@@ -276,9 +276,9 @@
 
 ## LoadBalancerResourceNames
 ### Properties
-* **backendPoolNames**: string[]: The list of backend pool names. Currently, ACSS deploys only one backend pool and hence, size of this list should be 1
-* **frontendIpConfigurationNames**: string[]: The list of frontend IP configuration names. If provided as input, size of this list should be 2 for cs layer and should be 1 for database layer.
-* **healthProbeNames**: string[]: The list of health probe names. If provided as input, size of this list should be 2 for cs layer and should be 1 for database layer.
+* **backendPoolNames**: string[] {maxLength: 1}: The list of backend pool names. Currently, ACSS deploys only one backend pool and hence, size of this list should be 1
+* **frontendIpConfigurationNames**: string[] {maxLength: 2}: The list of frontend IP configuration names. If provided as input, size of this list should be 2 for cs layer and should be 1 for database layer.
+* **healthProbeNames**: string[] {maxLength: 2}: The list of health probe names. If provided as input, size of this list should be 2 for cs layer and should be 1 for database layer.
 * **loadBalancerName**: string: The full resource name for load balancer. If this value is not provided, load balancer will be name as {ASCS/DB}-loadBalancer.
 
 ## ManagedRGConfiguration
@@ -698,7 +698,7 @@
 ### Properties
 * **dataDiskNames**: [VirtualMachineResourceNamesDataDiskNames](#virtualmachineresourcenamesdatadisknames): The full resource names for virtual machine data disks. This is a dictionary containing list of names of data disks per volume. Currently supported volumes for database layer are ['hana/data', 'hana/log', hana/shared', 'usr/sap', 'os', 'backup']. For application and cs layers, only 'default' volume is supported
 * **hostName**: string: The full name for virtual-machine's host (computer name). Currently, ACSS only supports host names which are less than or equal to 13 characters long. If this value is not provided, vmName will be used as host name.
-* **networkInterfaces**: [NetworkInterfaceResourceNames](#networkinterfaceresourcenames)[]: The list of network interface name objects for the selected virtual machine. Currently, only one network interface is supported per virtual machine.
+* **networkInterfaces**: [NetworkInterfaceResourceNames](#networkinterfaceresourcenames)[] {maxLength: 1}: The list of network interface name objects for the selected virtual machine. Currently, only one network interface is supported per virtual machine.
 * **osDiskName**: string: The full name for OS disk attached to the VM. If this value is not provided, it will be named by ARM as per its default naming standards (prefixed with vm name). There is only one OS disk attached per Virtual Machine.
 * **vmName**: string: The full name for virtual machine. The length of this field can be upto 64 characters. If name is not provided, service uses a default name based on the deployment type. For SingleServer, default name is {SID}vm. In case of HA-AvZone systems, default name will be {SID}{app/ascs/db}z{a/b}vm with an incrementor at the end in case of more than 1 vm per layer. For distributed and HA-AvSet systems, default name will be {SID}{app/ascs/db}vm with an incrementor at the end in case of more than 1 vm per layer.
 

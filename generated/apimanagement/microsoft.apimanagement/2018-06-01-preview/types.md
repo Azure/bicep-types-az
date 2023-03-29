@@ -542,7 +542,7 @@
 ## BackendCredentialsContract
 ### Properties
 * **authorization**: [BackendAuthorizationHeaderCredentials](#backendauthorizationheadercredentials): Authorization header authentication
-* **certificate**: string[]: List of Client Certificate Thumbprint.
+* **certificate**: string[] {maxLength: 32}: List of Client Certificate Thumbprint.
 * **header**: [BackendCredentialsContractHeader](#backendcredentialscontractheader): Header Parameter description.
 * **query**: [BackendCredentialsContractQuery](#backendcredentialscontractquery): Query Parameter description.
 
@@ -668,7 +668,7 @@
 
 ## IdentityProviderContractProperties
 ### Properties
-* **allowedTenants**: string[]: List of Allowed Tenants when configuring Azure Active Directory login.
+* **allowedTenants**: string[] {maxLength: 32}: List of Allowed Tenants when configuring Azure Active Directory login.
 * **authority**: string: OpenID Connect discovery endpoint hostname for AAD or AAD B2C.
 * **clientId**: string {minLength: 1} (Required): Client Id of the Application in the external Identity Provider. It is App ID for Facebook login, Client ID for Google login, App ID for Microsoft.
 * **clientSecret**: string {minLength: 1} (Required): Client secret of the Application in external Identity Provider, used to authenticate login request. For example, it is App Secret for Facebook login, API Key for Google login, Public Key for Microsoft.
@@ -797,7 +797,7 @@ Instrumentation key for applicationInsights logger.
 ### Properties
 * **displayName**: string {minLength: 1, maxLength: 256, pattern: "^[A-Za-z0-9-._]+$"} (Required): Unique name of Property. It may contain only letters, digits, period, dash, and underscore characters.
 * **secret**: bool: Determines whether the value is a secret and should be encrypted or not. Default value is false.
-* **tags**: string[]: Optional tags that when provided can be used to filter the property list.
+* **tags**: string[] {maxLength: 32}: Optional tags that when provided can be used to filter the property list.
 * **value**: string {minLength: 1, maxLength: 4096} (Required): Value of the property. Can contain policy expressions. It may not be empty or consist only of whitespace.
 
 ## RecipientsContractProperties
