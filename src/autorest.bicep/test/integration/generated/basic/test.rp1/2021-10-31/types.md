@@ -148,7 +148,7 @@
 * **binaryBuffer**: any (ReadOnly)
 * **encryptionProperties**: [EncryptionProperties](#encryptionproperties): TestType1 encryption properties
 * **locationData**: [LocationData](#locationdata) (ReadOnly): Metadata pertaining to the geographic location of the resource.
-* **password**: string {secure, pattern: "^[a-zA-Z0-9\.]$"}
+* **password**: string {sensitive, pattern: "^[a-zA-Z0-9\.]$"}
 * **percentageProperty**: int {minValue: 0, maxValue: 100} (ReadOnly)
 * **skuTier**: 'Basic' | 'Free' | 'Premium' | 'Standard': This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.
 * **stringEnum**: 'Bar' | 'Foo' | string: Description for a basic enum property.
@@ -162,7 +162,7 @@
 * **binaryBuffer**: any
 * **encryptionProperties**: [EncryptionProperties](#encryptionproperties): TestType1 encryption properties
 * **locationData**: [LocationData](#locationdata): Metadata pertaining to the geographic location of the resource.
-* **password**: string {secure, pattern: "^[a-zA-Z0-9\.]$"}
+* **password**: string {sensitive, pattern: "^[a-zA-Z0-9\.]$"}
 * **percentageProperty**: int {minValue: 0, maxValue: 100}
 * **skuTier**: 'Basic' | 'Free' | 'Premium' | 'Standard': This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.
 * **stringEnum**: 'Bar' | 'Foo' | string: Description for a basic enum property.
