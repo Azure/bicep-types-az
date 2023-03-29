@@ -937,8 +937,8 @@ dictionary key references will be ARM resource ids in the form:
 ## BackendCredentialsContract
 ### Properties
 * **authorization**: [BackendAuthorizationHeaderCredentials](#backendauthorizationheadercredentials): Authorization header authentication
-* **certificate**: string[]: List of Client Certificate Thumbprints. Will be ignored if certificatesIds are provided.
-* **certificateIds**: string[]: List of Client Certificate Ids.
+* **certificate**: string[] {maxLength: 32}: List of Client Certificate Thumbprints. Will be ignored if certificatesIds are provided.
+* **certificateIds**: string[] {maxLength: 32}: List of Client Certificate Ids.
 * **header**: [BackendCredentialsContractHeader](#backendcredentialscontractheader): Header Parameter description.
 * **query**: [BackendCredentialsContractQuery](#backendcredentialscontractquery): Query Parameter description.
 
@@ -1147,7 +1147,7 @@ dictionary key references will be ARM resource ids in the form:
 
 ## IdentityProviderCreateContractPropertiesOrIdentityProviderContractProperties
 ### Properties
-* **allowedTenants**: string[]: List of Allowed Tenants when configuring Azure Active Directory login.
+* **allowedTenants**: string[] {maxLength: 32}: List of Allowed Tenants when configuring Azure Active Directory login.
 * **authority**: string: OpenID Connect discovery endpoint hostname for AAD or AAD B2C.
 * **clientId**: string {minLength: 1} (Required): Client Id of the Application in the external Identity Provider. It is App ID for Facebook login, Client ID for Google login, App ID for Microsoft.
 * **clientLibrary**: string {maxLength: 16}: The client library to be used in the developer portal. Only applies to AAD and AAD B2C Identity Provider.
@@ -1211,7 +1211,7 @@ Instrumentation key for applicationInsights logger.
 * **displayName**: string {minLength: 1, maxLength: 256, pattern: "^[A-Za-z0-9-._]+$"} (Required): Unique name of NamedValue. It may contain only letters, digits, period, dash, and underscore characters.
 * **keyVault**: [KeyVaultContractCreatePropertiesOrKeyVaultContractProperties](#keyvaultcontractcreatepropertiesorkeyvaultcontractproperties): KeyVault location details of the namedValue.
 * **secret**: bool: Determines whether the value is a secret and should be encrypted or not. Default value is false.
-* **tags**: string[]: Optional tags that when provided can be used to filter the NamedValue list.
+* **tags**: string[] {maxLength: 32}: Optional tags that when provided can be used to filter the NamedValue list.
 * **value**: string {maxLength: 4096}: Value of the NamedValue. Can contain policy expressions. It may not be empty or consist only of whitespace. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
 
 ## NamedValueSecretContract

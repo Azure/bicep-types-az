@@ -245,7 +245,7 @@
 ### WorkloadNetworkDhcpRelay
 #### Properties
 * **dhcpType**: 'RELAY' (Required): Type of DHCP: SERVER or RELAY.
-* **serverAddresses**: string[]: DHCP Relay Addresses. Max 3.
+* **serverAddresses**: string[] {minLength: 1, maxLength: 3}: DHCP Relay Addresses. Max 3.
 
 ### WorkloadNetworkDhcpServer
 #### Properties

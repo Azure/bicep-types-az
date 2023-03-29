@@ -83,7 +83,7 @@
 
 ## Branch
 ### Properties
-* **actions**: [Action](#action)[] (Required): List of actions.
+* **actions**: [Action](#action)[] {minLength: 1} (Required): List of actions.
 * **name**: string {minLength: 1} (Required): String of the branch name.
 
 ## CapabilityProperties
@@ -105,9 +105,9 @@
 
 ## ExperimentProperties
 ### Properties
-* **selectors**: [Selector](#selector)[] (Required): List of selectors.
+* **selectors**: [Selector](#selector)[] {minLength: 1} (Required): List of selectors.
 * **startOnCreation**: bool: A boolean value that indicates if experiment should be started on creation or not.
-* **steps**: [Step](#step)[] (Required): List of steps.
+* **steps**: [Step](#step)[] {minLength: 1} (Required): List of steps.
 
 ## KeyValuePair
 ### Properties
@@ -123,12 +123,12 @@
 ## Selector
 ### Properties
 * **id**: string {minLength: 1} (Required): String of the selector ID.
-* **targets**: [TargetReference](#targetreference)[] (Required): List of Target references.
+* **targets**: [TargetReference](#targetreference)[] {minLength: 1} (Required): List of Target references.
 * **type**: 'List' | 'Percent' | 'Random' | 'Tag' (Required): Enum of the selector type.
 
 ## Step
 ### Properties
-* **branches**: [Branch](#branch)[] (Required): List of branches.
+* **branches**: [Branch](#branch)[] {minLength: 1} (Required): List of branches.
 * **name**: string {minLength: 1} (Required): String of the step name.
 
 ## SystemData

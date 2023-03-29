@@ -438,6 +438,7 @@
 * **name**: string (Required): The parameter name
 
 ### PSCredentialExecutionParameter
+*Secure*
 #### Properties
 * **password**: string: password for login
 * **type**: 'Credential' (Required): The type of execution parameter
@@ -515,7 +516,7 @@
 ### WorkloadNetworkDhcpRelay
 #### Properties
 * **dhcpType**: 'RELAY' (Required): Type of DHCP: SERVER or RELAY.
-* **serverAddresses**: string[]: DHCP Relay Addresses. Max 3.
+* **serverAddresses**: string[] {minLength: 1, maxLength: 3}: DHCP Relay Addresses. Max 3.
 
 ### WorkloadNetworkDhcpServer
 #### Properties

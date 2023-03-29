@@ -33,7 +33,7 @@
 ## DataPoolProperties
 ### Properties
 * **dataPoolId**: string (ReadOnly): The Data Pool's data-plane ID
-* **locations**: [DataPoolLocation](#datapoollocation)[]: Gets or sets the collection of locations where Data Pool resources should be created.
+* **locations**: [DataPoolLocation](#datapoollocation)[] {minLength: 1}: Gets or sets the collection of locations where Data Pool resources should be created.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): Gets the status of the data pool at the time the operation was called.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 

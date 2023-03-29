@@ -36,7 +36,7 @@
 
 ## Notification
 ### Properties
-* **contactEmails**: string[] (Required): Email addresses to send the budget notification to when the threshold is exceeded.
+* **contactEmails**: string[] {minLength: 1, maxLength: 50} (Required): Email addresses to send the budget notification to when the threshold is exceeded.
 * **contactRoles**: string[]: Contact roles to send the budget notification to when the threshold is exceeded.
 * **enabled**: bool (Required): The notification is enabled or not.
 * **operator**: 'EqualTo' | 'GreaterThan' | 'GreaterThanOrEqualTo' | string (Required): The comparison operator.

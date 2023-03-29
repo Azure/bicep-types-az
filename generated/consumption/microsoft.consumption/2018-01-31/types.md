@@ -47,9 +47,9 @@
 
 ## Filters
 ### Properties
-* **meters**: string[]: The list of filters on meters, mandatory for budgets of usage category.
-* **resourceGroups**: string[]: The list of filters on resource groups, allowed at subscription level only.
-* **resources**: string[]: The list of filters on resources.
+* **meters**: string[] {maxLength: 10}: The list of filters on meters, mandatory for budgets of usage category.
+* **resourceGroups**: string[] {maxLength: 10}: The list of filters on resource groups, allowed at subscription level only.
+* **resources**: string[] {maxLength: 10}: The list of filters on resources.
 
 ## MeterDetails
 ### Properties
@@ -63,8 +63,8 @@
 
 ## Notification
 ### Properties
-* **contactEmails**: string[] (Required): Email addresses to send the budget notification to when the threshold is exceeded.
-* **contactGroups**: string[]: Action groups to send the budget notification to when the threshold is exceeded.
+* **contactEmails**: string[] {minLength: 1, maxLength: 50} (Required): Email addresses to send the budget notification to when the threshold is exceeded.
+* **contactGroups**: string[] {maxLength: 50}: Action groups to send the budget notification to when the threshold is exceeded.
 * **contactRoles**: string[]: Contact roles to send the budget notification to when the threshold is exceeded.
 * **enabled**: bool (Required): The notification is enabled or not.
 * **operator**: 'EqualTo' | 'GreaterThan' | 'GreaterThanOrEqualTo' | string (Required): The comparison operator.

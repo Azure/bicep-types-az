@@ -447,7 +447,7 @@ is IPV6 or DualStack.
 ## EgressEndpoint
 ### Properties
 * **category**: string (Required): The descriptive category name of endpoints accessible by the AKS agent node. For example, azure-resource-management, API server, etc. The platform egress endpoints provided by default will use the category 'default'.
-* **endpoints**: [EndpointDependency](#endpointdependency)[] (Required): The list of endpoint dependencies.
+* **endpoints**: [EndpointDependency](#endpointdependency)[] {minLength: 1} (Required): The list of endpoint dependencies.
 
 ## EndpointDependency
 ### Properties
@@ -836,10 +836,10 @@ For a CloudServicesNetwork resource, this name will be ignored.
 * **hybridAksClustersAssociatedIds**: string[] (ReadOnly): The list of Hybrid AKS cluster resource IDs that are associated with this trunked network.
 * **hybridAksPluginType**: 'DPDK' | 'OSDevice' | 'SRIOV' | string: The network plugin type for Hybrid AKS.
 * **interfaceName**: string {maxLength: 12, pattern: "^[a-zA-Z0-9@._-]*$"}: The default interface name for this trunked network in the virtual machine. This name can be overridden by the name supplied in the network attachment configuration of that virtual machine.
-* **isolationDomainIds**: string[] (Required): The list of resource IDs representing the Network Fabric isolation domains. It can be any combination of l2IsolationDomain and l3IsolationDomain resources.
+* **isolationDomainIds**: string[] {minLength: 1} (Required): The list of resource IDs representing the Network Fabric isolation domains. It can be any combination of l2IsolationDomain and l3IsolationDomain resources.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): The provisioning state of the trunked network.
 * **virtualMachinesAssociatedIds**: string[] (ReadOnly): The list of virtual machine resource IDs, excluding any Hybrid AKS virtual machines, that are currently using this trunked network.
-* **vlans**: int[] (Required): The list of vlans that are selected from the isolation domains for trunking.
+* **vlans**: int[] {minLength: 1} (Required): The list of vlans that are selected from the isolation domains for trunking.
 
 ## ValidationThreshold
 ### Properties

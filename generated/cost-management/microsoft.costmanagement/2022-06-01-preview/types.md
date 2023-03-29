@@ -20,7 +20,7 @@
 ### Properties
 * **message**: string: Optional message to be added in the email. Length is limited to 250 characters.
 * **subject**: string (Required): Subject of the email. Length is limited to 70 characters.
-* **to**: (string {pattern: "^[A-Za-z0-9._%+-]+@(?:[A-Za-z0-9-]+\.)+[A-Za-z]{2,}$"})[] (Required): Array of email addresses.
+* **to**: (string {pattern: "^[A-Za-z0-9._%+-]+@(?:[A-Za-z0-9-]+\.)+[A-Za-z]{2,}$"})[] {minLength: 1, maxLength: 20} (Required): Array of email addresses.
 
 ## ScheduledActionProperties
 ### Properties

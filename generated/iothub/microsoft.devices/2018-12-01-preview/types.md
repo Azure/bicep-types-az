@@ -76,7 +76,7 @@
 ## FallbackRouteProperties
 ### Properties
 * **condition**: string: The condition which is evaluated in order to apply the fallback route. If the condition is not provided it will evaluate to true by default. For grammar, See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language
-* **endpointNames**: string[] (Required): The list of endpoints to which the messages that satisfy the condition are routed to. Currently only 1 endpoint is allowed.
+* **endpointNames**: string[] {minLength: 1, maxLength: 1} (Required): The list of endpoints to which the messages that satisfy the condition are routed to. Currently only 1 endpoint is allowed.
 * **isEnabled**: bool (Required): Used to specify whether the fallback route is enabled.
 * **name**: string: The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.
 * **source**: 'DeviceJobLifecycleEvents' | 'DeviceLifecycleEvents' | 'DeviceMessages' | 'Invalid' | 'TwinChangeEvents' | string (Required): The source to which the routing rule is to be applied to. For example, DeviceMessages
@@ -155,7 +155,7 @@
 ## RouteProperties
 ### Properties
 * **condition**: string: The condition that is evaluated to apply the routing rule. If no condition is provided, it evaluates to true by default. For grammar, see: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language
-* **endpointNames**: string[] (Required): The list of endpoints to which messages that satisfy the condition are routed. Currently only one endpoint is allowed.
+* **endpointNames**: string[] {minLength: 1, maxLength: 1} (Required): The list of endpoints to which messages that satisfy the condition are routed. Currently only one endpoint is allowed.
 * **isEnabled**: bool (Required): Used to specify whether a route is enabled.
 * **name**: string {pattern: "^[A-Za-z0-9-._]{1,64}$"} (Required): The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.
 * **source**: 'DeviceJobLifecycleEvents' | 'DeviceLifecycleEvents' | 'DeviceMessages' | 'Invalid' | 'TwinChangeEvents' | string (Required): The source that the routing rule is to be applied to, such as DeviceMessages.

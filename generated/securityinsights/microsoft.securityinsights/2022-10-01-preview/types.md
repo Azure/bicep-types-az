@@ -734,7 +734,7 @@
 
 ## AutomationRuleBooleanCondition
 ### Properties
-* **innerConditions**: [AutomationRuleCondition](#automationrulecondition)[]
+* **innerConditions**: [AutomationRuleCondition](#automationrulecondition)[] {minLength: 2, maxLength: 10}
 * **operator**: 'And' | 'Or' | string
 
 ## AutomationRuleCondition
@@ -770,7 +770,7 @@
 
 ## AutomationRuleProperties
 ### Properties
-* **actions**: [AutomationRuleAction](#automationruleaction)[] (Required): The actions to execute when the automation rule is triggered.
+* **actions**: [AutomationRuleAction](#automationruleaction)[] {maxLength: 20} (Required): The actions to execute when the automation rule is triggered.
 * **createdBy**: [ClientInfo](#clientinfo) (ReadOnly): Information on the client (user or application) that made some action
 * **createdTimeUtc**: string (ReadOnly): The time the automation rule was created.
 * **displayName**: string {maxLength: 500} (Required): The display name of the automation rule.
@@ -788,7 +788,7 @@
 ### Properties
 * **arrayConditionType**: 'AnyItem' | string
 * **arrayType**: 'CustomDetailValues' | 'CustomDetails' | string
-* **itemConditions**: [AutomationRuleCondition](#automationrulecondition)[]
+* **itemConditions**: [AutomationRuleCondition](#automationrulecondition)[] {maxLength: 10}
 
 ## AutomationRulePropertyValuesChangedCondition
 ### Properties
@@ -805,7 +805,7 @@
 
 ## AutomationRuleTriggeringLogic
 ### Properties
-* **conditions**: [AutomationRuleCondition](#automationrulecondition)[]: The conditions to evaluate to determine if the automation rule should be triggered on a given object.
+* **conditions**: [AutomationRuleCondition](#automationrulecondition)[] {maxLength: 50}: The conditions to evaluate to determine if the automation rule should be triggered on a given object.
 * **expirationTimeUtc**: string: Determines when the automation rule should automatically expire and be disabled.
 * **isEnabled**: bool (Required): Determines whether the automation rule is enabled or disabled.
 * **triggersOn**: 'Alerts' | 'Incidents' | string (Required)

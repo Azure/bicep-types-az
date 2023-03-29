@@ -47,9 +47,9 @@
 
 ## Filter
 ### Properties
-* **meters**: (string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"})[]: The list of filters on meters (GUID), mandatory for budgets of usage category.
-* **resourceGroups**: string[]: The list of filters on resource groups, allowed at subscription level only.
-* **resources**: string[]: The list of filters on resources.
+* **meters**: (string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"})[] {maxLength: 10}: The list of filters on meters (GUID), mandatory for budgets of usage category.
+* **resourceGroups**: string[] {maxLength: 10}: The list of filters on resource groups, allowed at subscription level only.
+* **resources**: string[] {maxLength: 10}: The list of filters on resources.
 * **tags**: [FilterTags](#filtertags): The dictionary of filters on tags.
 
 ## FilterTags
@@ -71,8 +71,8 @@
 
 ## Notification
 ### Properties
-* **contactEmails**: string[] (Required): Email addresses to send the budget notification to when the threshold is exceeded. Must have at least one contact email or contact group specified at the Subscription or Resource Group scopes. All other scopes must have at least one contact email specified.
-* **contactGroups**: string[]: Action groups to send the budget notification to when the threshold is exceeded. Must be provided as a fully qualified Azure resource id. Only supported at Subscription or Resource Group scopes.
+* **contactEmails**: string[] {maxLength: 50} (Required): Email addresses to send the budget notification to when the threshold is exceeded. Must have at least one contact email or contact group specified at the Subscription or Resource Group scopes. All other scopes must have at least one contact email specified.
+* **contactGroups**: string[] {maxLength: 50}: Action groups to send the budget notification to when the threshold is exceeded. Must be provided as a fully qualified Azure resource id. Only supported at Subscription or Resource Group scopes.
 * **contactRoles**: string[]: Contact roles to send the budget notification to when the threshold is exceeded.
 * **enabled**: bool (Required): The notification is enabled or not.
 * **operator**: 'EqualTo' | 'GreaterThan' | 'GreaterThanOrEqualTo' | string (Required): The comparison operator.
