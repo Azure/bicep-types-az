@@ -1271,24 +1271,24 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
 
 ## ListNotebookKeysResult
 ### Properties
-* **primaryAccessKey**: string {secure} (ReadOnly)
-* **secondaryAccessKey**: string {secure} (ReadOnly)
+* **primaryAccessKey**: string {sensitive} (ReadOnly)
+* **secondaryAccessKey**: string {sensitive} (ReadOnly)
 
 ## ListNotebookKeysResult
 ### Properties
-* **primaryAccessKey**: string {secure} (ReadOnly)
-* **secondaryAccessKey**: string {secure} (ReadOnly)
+* **primaryAccessKey**: string {sensitive} (ReadOnly)
+* **secondaryAccessKey**: string {sensitive} (ReadOnly)
 
 ## ListStorageAccountKeysResult
 ### Properties
-* **userStorageKey**: string {secure} (ReadOnly)
+* **userStorageKey**: string {sensitive} (ReadOnly)
 
 ## ListWorkspaceKeysResult
 ### Properties
-* **appInsightsInstrumentationKey**: string {secure} (ReadOnly)
+* **appInsightsInstrumentationKey**: string {sensitive} (ReadOnly)
 * **containerRegistryCredentials**: [RegistryListCredentialsResult](#registrylistcredentialsresult) (ReadOnly)
 * **notebookAccessKeys**: [ListNotebookKeysResult](#listnotebookkeysresult) (ReadOnly)
-* **userStorageKey**: string {secure} (ReadOnly)
+* **userStorageKey**: string {sensitive} (ReadOnly)
 * **userStorageResourceId**: string (ReadOnly)
 
 ## MLAssistConfiguration
@@ -1353,12 +1353,12 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
 
 ## NotebookAccessTokenResult
 ### Properties
-* **accessToken**: string {secure} (ReadOnly)
+* **accessToken**: string {sensitive} (ReadOnly)
 * **expiresIn**: int (ReadOnly)
 * **hostName**: string (ReadOnly)
 * **notebookResourceId**: string (ReadOnly)
 * **publicDns**: string (ReadOnly)
-* **refreshToken**: string {secure} (ReadOnly)
+* **refreshToken**: string {sensitive} (ReadOnly)
 * **scope**: string (ReadOnly)
 * **tokenType**: string (ReadOnly)
 

@@ -95,7 +95,7 @@
 ## ClusterProperties
 ### Properties
 * **administratorLogin**: string (ReadOnly): The administrator's login name of the servers in the cluster.
-* **administratorLoginPassword**: string {secure} (WriteOnly): The password of the administrator login. Required for creation.
+* **administratorLoginPassword**: string {sensitive} (WriteOnly): The password of the administrator login. Required for creation.
 * **citusVersion**: string: The Citus extension version on all cluster servers.
 * **coordinatorEnablePublicIpAccess**: bool: If public access is enabled on coordinator.
 * **coordinatorServerEdition**: string: The edition of a coordinator server (default: GeneralPurpose). Required for creation.
@@ -195,7 +195,7 @@
 
 ## RoleProperties
 ### Properties
-* **password**: string {secure} (Required, WriteOnly): The password of the cluster role.
+* **password**: string {sensitive} (Required, WriteOnly): The password of the cluster role.
 * **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): Provisioning state of the role
 
 ## ServerConfigurationProperties

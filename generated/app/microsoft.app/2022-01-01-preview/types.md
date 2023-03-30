@@ -193,15 +193,15 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 
 ## AzureCredentials
 ### Properties
-* **clientId**: string {secure} (WriteOnly): Client Id.
-* **clientSecret**: string {secure} (WriteOnly): Client Secret.
+* **clientId**: string {sensitive} (WriteOnly): Client Id.
+* **clientSecret**: string {sensitive} (WriteOnly): Client Secret.
 * **subscriptionId**: string: Subscription Id.
-* **tenantId**: string {secure} (WriteOnly): Tenant Id.
+* **tenantId**: string {sensitive} (WriteOnly): Tenant Id.
 
 ## AzureFileProperties
 ### Properties
 * **accessMode**: 'ReadOnly' | 'ReadWrite' | string: Access mode for storage
-* **accountKey**: string {secure}: Storage account key for azure file.
+* **accountKey**: string {sensitive}: Storage account key for azure file.
 * **accountName**: string: Storage account name for azure file.
 * **shareName**: string: Azure file share name.
 
@@ -219,7 +219,7 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 * **expirationDate**: string (ReadOnly): Certificate expiration date.
 * **issueDate**: string (ReadOnly): Certificate issue Date.
 * **issuer**: string (ReadOnly): Certificate issuer.
-* **password**: string {secure} (WriteOnly): Certificate password.
+* **password**: string {sensitive} (WriteOnly): Certificate password.
 * **provisioningState**: 'Canceled' | 'DeleteFailed' | 'Failed' | 'Pending' | 'Succeeded' | string (ReadOnly): Provisioning state of the certificate.
 * **publicKeyHash**: string (ReadOnly): Public key hash.
 * **subjectName**: string (ReadOnly): Subject name of the certificate.
@@ -296,7 +296,7 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 ## ContainerAppSecret
 ### Properties
 * **name**: string (ReadOnly): Secret Name.
-* **value**: string {secure} (ReadOnly): Secret Value.
+* **value**: string {sensitive} (ReadOnly): Secret Value.
 
 ## ContainerResources
 ### Properties
@@ -494,7 +494,7 @@ configuration settings of the custom Open ID Connect provider.
 ## LogAnalyticsConfiguration
 ### Properties
 * **customerId**: string: Log analytics customer id
-* **sharedKey**: string {secure} (WriteOnly): Log analytics customer key
+* **sharedKey**: string {sensitive} (WriteOnly): Log analytics customer key
 
 ## Login
 ### Properties
@@ -580,7 +580,7 @@ supported
 
 ## RegistryInfo
 ### Properties
-* **registryPassword**: string {secure} (WriteOnly): registry secret.
+* **registryPassword**: string {sensitive} (WriteOnly): registry secret.
 * **registryUrl**: string: registry server Url.
 * **registryUserName**: string: registry username.
 
@@ -633,7 +633,7 @@ as they were at the creation time
 ## Secret
 ### Properties
 * **name**: string: Secret Name.
-* **value**: string {secure} (WriteOnly): Secret Value.
+* **value**: string {sensitive} (WriteOnly): Secret Value.
 
 ## SecretsCollection
 ### Properties

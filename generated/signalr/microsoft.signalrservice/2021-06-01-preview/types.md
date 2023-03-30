@@ -151,10 +151,10 @@ Allowed values: Standard_S1, Free_F1
 
 ## SignalRKeys
 ### Properties
-* **primaryConnectionString**: string {secure} (WriteOnly): Connection string constructed via the primaryKey
-* **primaryKey**: string {secure} (WriteOnly): The primary access key.
-* **secondaryConnectionString**: string {secure} (WriteOnly): Connection string constructed via the secondaryKey
-* **secondaryKey**: string {secure} (WriteOnly): The secondary access key.
+* **primaryConnectionString**: string {sensitive} (WriteOnly): Connection string constructed via the primaryKey
+* **primaryKey**: string {sensitive} (WriteOnly): The primary access key.
+* **secondaryConnectionString**: string {sensitive} (WriteOnly): Connection string constructed via the secondaryKey
+* **secondaryKey**: string {sensitive} (WriteOnly): The secondary access key.
 
 ## SignalRNetworkACLs
 ### Properties

@@ -38,7 +38,7 @@
 ## CustomLocationPropertiesAuthentication
 ### Properties
 * **type**: string: The type of the Custom Locations authentication
-* **value**: string {secure} (WriteOnly): The kubeconfig value.
+* **value**: string {sensitive} (WriteOnly): The kubeconfig value.
 
 ## Identity
 ### Properties

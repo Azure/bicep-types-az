@@ -269,7 +269,7 @@
 * **containerName**: string: Container Name for storage container
 * **hyperVGeneration**: 'V1' | 'V2' | string: The hypervisor generation of the Virtual Machine [V1, V2]
 * **identifier**: [GalleryImageIdentifier](#galleryimageidentifier): This is the gallery image definition identifier.
-* **imagePath**: string {secure}: location of the image the gallery image should be created from
+* **imagePath**: string {sensitive}: location of the image the gallery image should be created from
 * **osType**: 'Linux' | 'Windows': operating system type that the gallery image uses. Expected to be linux or windows
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): Provisioning state of the gallery image.
 * **resourceName**: string: name of the object to be used in moc
@@ -328,7 +328,7 @@
 
 ## GuestCredential
 ### Properties
-* **password**: string {secure} (WriteOnly): The password to connect with the guest.
+* **password**: string {sensitive} (WriteOnly): The password to connect with the guest.
 * **username**: string: The username to connect with the guest.
 
 ## HttpProxyConfiguration
@@ -611,7 +611,7 @@
 
 ## VirtualmachinesPropertiesOsProfile
 ### Properties
-* **adminPassword**: string {secure} (WriteOnly): AdminPassword - admin password
+* **adminPassword**: string {sensitive} (WriteOnly): AdminPassword - admin password
 * **adminUsername**: string: AdminUsername - admin username
 * **computerName**: string: ComputerName - name of the compute
 * **linuxConfiguration**: [VirtualmachinesPropertiesOsProfileLinuxConfiguration](#virtualmachinespropertiesosprofilelinuxconfiguration): LinuxConfiguration - linux specific configuration values for the virtual machine
@@ -630,7 +630,7 @@
 
 ## VirtualmachinesPropertiesOsProfileLinuxConfigurationSshPublicKeysItem
 ### Properties
-* **keyData**: string {secure}: KeyData - SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Li      nux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).
+* **keyData**: string {sensitive}: KeyData - SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Li      nux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).
 * **path**: string: Path - Specifies the full path on the created VM where ssh public key is stored. If the file already exists, the specified key is appended to the file. Example: /home/user/.ssh/authorized_keys
 
 ## VirtualmachinesPropertiesOsProfileWindowsConfiguration
@@ -646,7 +646,7 @@
 
 ## VirtualmachinesPropertiesOsProfileWindowsConfigurationSshPublicKeysItem
 ### Properties
-* **keyData**: string {secure}: KeyData - SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Li      nux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).
+* **keyData**: string {sensitive}: KeyData - SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Li      nux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).
 * **path**: string: Path - Specifies the full path on the created VM where ssh public key is stored. If the file already exists, the specified key is appended to the file. Example: /home/user/.ssh/authorized_keys
 
 ## VirtualmachinesPropertiesSecurityProfile

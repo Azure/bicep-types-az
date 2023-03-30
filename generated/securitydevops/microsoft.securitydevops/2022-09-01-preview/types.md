@@ -86,7 +86,7 @@ Disabled - ActionableRemediation is disabled.
 
 ## AuthorizationInfo
 ### Properties
-* **code**: string {secure}: Gets or sets one-time OAuth code to exchange for refresh and access tokens.
+* **code**: string {sensitive}: Gets or sets one-time OAuth code to exchange for refresh and access tokens.
 
 Only used during PUT operations. The secret is cleared during GET.
 In general, RPaaS does not return any property marked as a secret.
@@ -133,7 +133,7 @@ In general, RPaaS does not return any property marked as a secret.
 
 ## GitHubConnectorProperties
 ### Properties
-* **code**: string {secure}: Gets or sets one-time OAuth code to exchange for refresh and access tokens.
+* **code**: string {sensitive}: Gets or sets one-time OAuth code to exchange for refresh and access tokens.
 
 Only used during PUT operations. The secret is cleared during GET.
 In general, RPaaS does not return any property marked as a secret.

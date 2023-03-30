@@ -1851,7 +1851,7 @@ If <code>false</code>, this App Service Plan will not perform availability zone 
 * **artifactStorageMountPath**: string
 * **artifactStorageNodeName**: string
 * **frontEndServiceConfiguration**: [FrontEndConfiguration](#frontendconfiguration)
-* **kubeConfig**: string {secure} (WriteOnly)
+* **kubeConfig**: string {sensitive} (WriteOnly)
 
 ## ArmIdWrapper
 ### Properties
@@ -1991,7 +1991,7 @@ Remove blobs older than X days.
 
 ## AzureStorageInfoValue
 ### Properties
-* **accessKey**: string {secure}: Access key for the storage account.
+* **accessKey**: string {sensitive}: Access key for the storage account.
 * **accountName**: string: Name of the storage account.
 * **mountPath**: string: Path to mount the storage within the site's runtime environment.
 * **shareName**: string: Name of the file share (container name, for Blob storage).
@@ -2402,7 +2402,7 @@ This is used during restore with overwrite connection strings options.
 ### Properties
 * **configurationFiles**: [StaticSiteDatabaseConnectionConfigurationFileOverview](#staticsitedatabaseconnectionconfigurationfileoverview)[] (ReadOnly): A list of configuration files associated with this database connection.
 * **connectionIdentity**: string: If present, the identity is used in conjunction with connection string to connect to the database. Use of the system-assigned managed identity is indicated with the string 'SystemAssigned', while use of a user-assigned managed identity is indicated with the resource id of the managed identity resource.
-* **connectionString**: string {secure}: The connection string to use to connect to the database.
+* **connectionString**: string {sensitive}: The connection string to use to connect to the database.
 * **region**: string (Required): The region of the database resource.
 * **resourceId**: string (Required): The resource id of the database.
 
@@ -2672,7 +2672,7 @@ Value can range between 25 and 100.
 ## GitHubActionContainerConfiguration
 ### Properties
 * **imageName**: string: The image name for the build.
-* **password**: string {secure}: The password used to upload the image to the container registry.
+* **password**: string {sensitive}: The password used to upload the image to the container registry.
 * **serverUrl**: string: The server URL for the container registry where the build will be hosted.
 * **username**: string: The username used to upload the image to the container registry.
 
@@ -2929,7 +2929,7 @@ FrontEnd Service ArtifactsStorageType etc.
 ## LogAnalyticsConfiguration
 ### Properties
 * **customerId**: string
-* **sharedKey**: string {secure} (WriteOnly)
+* **sharedKey**: string {sensitive} (WriteOnly)
 
 ## Login
 ### Properties
@@ -3482,7 +3482,7 @@ as they were at the creation time
 ## Secret
 ### Properties
 * **name**: string: Secret Name.
-* **value**: string {secure} (WriteOnly): Secret Value.
+* **value**: string {sensitive} (WriteOnly): Secret Value.
 
 ## SecretsCollection
 ### Properties
@@ -3854,7 +3854,7 @@ This must be of the form /subscriptions/{subscriptionName}/resourceGroups/{resou
 ### Properties
 * **applicableEnvironmentsMode**: string (Required): State indicating if basic auth is enabled and for what environments it is active.
 * **environments**: string[]: The list of enabled environments for Basic Auth if ApplicableEnvironmentsMode is set to SpecifiedEnvironments.
-* **password**: string {secure}: The password for basic auth.
+* **password**: string {sensitive}: The password for basic auth.
 * **secretState**: string (ReadOnly): State indicating if basic auth has a secret and what type it is.
 * **secretUrl**: string: Url to the secret in Key Vault.
 

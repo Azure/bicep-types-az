@@ -879,7 +879,7 @@ Possible enum values:
 
 ### StorageAccount
 #### Properties
-* **accountKey**: string {secure} (Required, WriteOnly): The account key of the Azure Storage Account.
+* **accountKey**: string {sensitive} (Required, WriteOnly): The account key of the Azure Storage Account.
 * **accountName**: string (Required): The account name of the Azure Storage Account.
 * **storageType**: 'StorageAccount' (Required): The type of the storage.
 

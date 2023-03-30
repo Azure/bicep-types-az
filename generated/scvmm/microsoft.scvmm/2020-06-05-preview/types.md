@@ -208,7 +208,7 @@
 
 ## OsProfile
 ### Properties
-* **adminPassword**: string {secure} (WriteOnly): Admin password of the virtual machine.
+* **adminPassword**: string {sensitive} (WriteOnly): Admin password of the virtual machine.
 * **computerName**: string: Gets or sets computer name.
 * **osName**: string (ReadOnly): Gets or sets os name.
 * **osType**: 'Linux' | 'Other' | 'Windows' | string (ReadOnly): Gets or sets the type of the os.
@@ -333,7 +333,7 @@
 
 ## VMMServerPropertiesCredentials
 ### Properties
-* **password**: string {secure} (WriteOnly): Credentials to use to connect to VMMServer.
+* **password**: string {sensitive} (WriteOnly): Credentials to use to connect to VMMServer.
 * **username**: string: Username to use to connect to VMMServer.
 
 ## VMMServerTags

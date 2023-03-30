@@ -136,7 +136,7 @@
 * **database**: string: This element is associated with the datasource element. This is the name of the database that output will be written to.
 * **deltaSnapshotQuery**: string: This element is associated with the datasource element. This query is used to fetch incremental changes from the SQL database. To use this option, we recommend using temporal tables in Azure SQL Database.
 * **fullSnapshotQuery**: string: This element is associated with the datasource element. This query is used to fetch data from the sql database.
-* **password**: string {secure}: This element is associated with the datasource element. This is the password that will be used to connect to the SQL Database instance.
+* **password**: string {sensitive}: This element is associated with the datasource element. This is the password that will be used to connect to the SQL Database instance.
 * **refreshRate**: string: This element is associated with the datasource element. This indicates how frequently the data will be fetched from the database. It is of DateTime format.
 * **refreshType**: 'RefreshPeriodicallyWithDelta' | 'RefreshPeriodicallyWithFull' | 'Static' | string: Indicates the type of data refresh option.
 * **server**: string: This element is associated with the datasource element. This is the name of the server that contains the database that will be written to.
@@ -146,14 +146,14 @@
 ## AzureSynapseOutputDataSourceProperties
 ### Properties
 * **database**: string: The name of the Azure SQL database. Required on PUT (CreateOrReplace) requests.
-* **password**: string {secure}: The password that will be used to connect to the Azure SQL database. Required on PUT (CreateOrReplace) requests.
+* **password**: string {sensitive}: The password that will be used to connect to the Azure SQL database. Required on PUT (CreateOrReplace) requests.
 * **server**: string: The name of the SQL server containing the Azure SQL database. Required on PUT (CreateOrReplace) requests.
 * **table**: string: The name of the table in the Azure SQL database. Required on PUT (CreateOrReplace) requests.
 * **user**: string: The user name that will be used to connect to the Azure SQL database. Required on PUT (CreateOrReplace) requests.
 
 ## AzureTableOutputDataSourceProperties
 ### Properties
-* **accountKey**: string {secure}: The account key for the Azure Storage account. Required on PUT (CreateOrReplace) requests.
+* **accountKey**: string {sensitive}: The account key for the Azure Storage account. Required on PUT (CreateOrReplace) requests.
 * **accountName**: string: The name of the Azure Storage account. Required on PUT (CreateOrReplace) requests.
 * **batchSize**: int: The number of rows to write to the Azure Table at a time.
 * **columnsToRemove**: string[]: If specified, each item in the array is the name of a column to remove (if present) from output event entities.

@@ -129,7 +129,7 @@ Until this is true, the TotalBytesToProcess may not be valid.
 * **Discriminator**: dataAccountType
 
 ### Base Properties
-* **sharePassword**: string {secure} (WriteOnly): Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+
+* **sharePassword**: string {sensitive} (WriteOnly): Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+
 
 ### ManagedDiskDetails
 #### Properties
@@ -319,7 +319,7 @@ Until this is true, the TotalBytesToProcess may not be valid.
 ## ImportDiskDetails
 ### Properties
 * **backupManifestCloudPath**: string (ReadOnly): Path to backed up manifest, only returned if enableManifestBackup is true.
-* **bitLockerKey**: string {secure} (Required): BitLocker key used to encrypt the disk.
+* **bitLockerKey**: string {sensitive} (Required): BitLocker key used to encrypt the disk.
 * **manifestFile**: string (Required): The relative path of the manifest file on the disk.
 * **manifestHash**: string (Required): The Base16-encoded MD5 hash of the manifest file on the disk.
 
@@ -416,7 +416,7 @@ Until this is true, the TotalBytesToProcess may not be valid.
 
 ### CustomerDiskJobSecrets
 #### Properties
-* **carrierAccountNumber**: string {secure} (ReadOnly): Carrier Account Number of the customer
+* **carrierAccountNumber**: string {sensitive} (ReadOnly): Carrier Account Number of the customer
 * **diskSecrets**: [DiskSecret](#disksecret)[] (ReadOnly): Contains the list of secrets object for that device.
 * **jobSecretsType**: 'DataBoxCustomerDisk' (Required): Used to indicate what type of job secrets object.
 
@@ -462,7 +462,7 @@ possibility is that mitigation might happen by customer or service or by ops
 
 ## PackageCarrierDetails
 ### Properties
-* **carrierAccountNumber**: string {secure}: Carrier Account Number of customer for customer disk.
+* **carrierAccountNumber**: string {sensitive}: Carrier Account Number of customer for customer disk.
 * **carrierName**: string: Name of the carrier.
 * **trackingId**: string: Tracking Id of shipment.
 

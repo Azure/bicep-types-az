@@ -710,7 +710,7 @@ dictionary key references will be ARM resource ids in the form:
 * **clientAuthenticationMethod**: ('Basic' | 'Body' | string)[]: Method of authentication supported by the token endpoint of this authorization server. Possible values are Basic and/or Body. When Body is specified, client credentials and other parameters are passed within the request body in the application/x-www-form-urlencoded format.
 * **clientId**: string (Required): Client or app id registered with this authorization server.
 * **clientRegistrationEndpoint**: string (Required): Optional reference to a page where client or app registration for this authorization server is performed. Contains absolute URL to entity being referenced.
-* **clientSecret**: string {secure}: Client or app secret registered with this authorization server. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
+* **clientSecret**: string {sensitive}: Client or app secret registered with this authorization server. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
 * **defaultScope**: string: Access token scope that is going to be requested by default. Can be overridden at the API level. Should be provided in the form of a string containing space-delimited values.
 * **description**: string: Description of the authorization server. Can contain HTML formatting tags.
 * **displayName**: string {minLength: 1, maxLength: 50} (Required): User-friendly authorization server name.
@@ -948,7 +948,7 @@ dictionary key references will be ARM resource ids in the form:
 * **allowedTenants**: string[] {maxLength: 32}: List of Allowed Tenants when configuring Azure Active Directory login.
 * **authority**: string: OpenID Connect discovery endpoint hostname for AAD or AAD B2C.
 * **clientId**: string {minLength: 1} (Required): Client Id of the Application in the external Identity Provider. It is App ID for Facebook login, Client ID for Google login, App ID for Microsoft.
-* **clientSecret**: string {secure, minLength: 1} (Required): Client secret of the Application in external Identity Provider, used to authenticate login request. For example, it is App Secret for Facebook login, API Key for Google login, Public Key for Microsoft. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
+* **clientSecret**: string {sensitive, minLength: 1} (Required): Client secret of the Application in external Identity Provider, used to authenticate login request. For example, it is App Secret for Facebook login, API Key for Google login, Public Key for Microsoft. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
 * **passwordResetPolicyName**: string {minLength: 1}: Password Reset Policy Name. Only applies to AAD B2C Identity Provider.
 * **profileEditingPolicyName**: string {minLength: 1}: Profile Editing Policy Name. Only applies to AAD B2C Identity Provider.
 * **signinPolicyName**: string {minLength: 1}: Signin Policy Name. Only applies to AAD B2C Identity Provider.
@@ -1034,7 +1034,7 @@ Instrumentation key for applicationInsights logger.
 ## OpenidConnectProviderContractProperties
 ### Properties
 * **clientId**: string (Required): Client ID of developer console which is the client application.
-* **clientSecret**: string {secure}: Client Secret of developer console which is the client application.
+* **clientSecret**: string {sensitive}: Client Secret of developer console which is the client application.
 * **description**: string: User-friendly description of OpenID Connect Provider.
 * **displayName**: string {maxLength: 50} (Required): User-friendly OpenID Connect Provider name.
 * **metadataEndpoint**: string (Required): Metadata endpoint URI.
@@ -1089,7 +1089,7 @@ Instrumentation key for applicationInsights logger.
 * **subscriptions**: [SubscriptionsDelegationSettingsProperties](#subscriptionsdelegationsettingsproperties): Subscriptions delegation settings.
 * **url**: string: A delegation Url.
 * **userRegistration**: [RegistrationDelegationSettingsProperties](#registrationdelegationsettingsproperties): User registration delegation settings.
-* **validationKey**: string {secure}: A base64-encoded validation key to validate, that a request is coming from Azure API Management.
+* **validationKey**: string {sensitive}: A base64-encoded validation key to validate, that a request is coming from Azure API Management.
 
 ## PortalRevisionContractProperties
 ### Properties
@@ -1179,9 +1179,9 @@ Instrumentation key for applicationInsights logger.
 * **expirationDate**: string: Subscription expiration date. The setting is for audit purposes only and the subscription is not automatically expired. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
 * **notificationDate**: string: Upcoming subscription expiration notification date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
 * **ownerId**: string: The user resource identifier of the subscription owner. The value is a valid relative URL in the format of /users/{userId} where {userId} is a user identifier.
-* **primaryKey**: string {secure, minLength: 1, maxLength: 256}: Subscription primary key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
+* **primaryKey**: string {sensitive, minLength: 1, maxLength: 256}: Subscription primary key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
 * **scope**: string (Required): Scope like /products/{productId} or /apis or /apis/{apiId}.
-* **secondaryKey**: string {secure, minLength: 1, maxLength: 256}: Subscription secondary key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
+* **secondaryKey**: string {sensitive, minLength: 1, maxLength: 256}: Subscription secondary key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
 * **startDate**: string: Subscription activation date. The setting is for audit purposes only and the subscription is not automatically activated. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
 * **state**: 'active' | 'cancelled' | 'expired' | 'rejected' | 'submitted' | 'suspended' (Required): Subscription state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.
 * **stateComment**: string: Optional subscription comment added by an administrator when the state is changed to the 'rejected'.

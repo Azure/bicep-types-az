@@ -1773,8 +1773,8 @@ This is optional value to provide, if not provided, AutoML will default this to 
 * **extensionPrincipalId**: string: Extension principal-id.
 * **instanceTypes**: [KubernetesPropertiesInstanceTypes](#kubernetespropertiesinstancetypes): Instance Type Schema
 * **namespace**: string: Compute namespace
-* **relayConnectionString**: string {secure}: Relay connection string.
-* **serviceBusConnectionString**: string {secure}: ServiceBus connection string.
+* **relayConnectionString**: string {sensitive}: Relay connection string.
+* **serviceBusConnectionString**: string {sensitive}: ServiceBus connection string.
 * **vcName**: string: VC name.
 
 ## KubernetesPropertiesInstanceTypes
@@ -1784,24 +1784,24 @@ This is optional value to provide, if not provided, AutoML will default this to 
 
 ## ListNotebookKeysResult
 ### Properties
-* **primaryAccessKey**: string {secure} (ReadOnly)
-* **secondaryAccessKey**: string {secure} (ReadOnly)
+* **primaryAccessKey**: string {sensitive} (ReadOnly)
+* **secondaryAccessKey**: string {sensitive} (ReadOnly)
 
 ## ListNotebookKeysResult
 ### Properties
-* **primaryAccessKey**: string {secure} (ReadOnly)
-* **secondaryAccessKey**: string {secure} (ReadOnly)
+* **primaryAccessKey**: string {sensitive} (ReadOnly)
+* **secondaryAccessKey**: string {sensitive} (ReadOnly)
 
 ## ListStorageAccountKeysResult
 ### Properties
-* **userStorageKey**: string {secure} (ReadOnly)
+* **userStorageKey**: string {sensitive} (ReadOnly)
 
 ## ListWorkspaceKeysResult
 ### Properties
-* **appInsightsInstrumentationKey**: string {secure} (ReadOnly)
+* **appInsightsInstrumentationKey**: string {sensitive} (ReadOnly)
 * **containerRegistryCredentials**: [RegistryListCredentialsResult](#registrylistcredentialsresult) (ReadOnly)
 * **notebookAccessKeys**: [ListNotebookKeysResult](#listnotebookkeysresult) (ReadOnly)
-* **userStorageKey**: string {secure} (ReadOnly)
+* **userStorageKey**: string {sensitive} (ReadOnly)
 * **userStorageResourceId**: string (ReadOnly)
 
 ## ManagedServiceIdentity
@@ -1887,12 +1887,12 @@ This is optional value to provide, if not provided, AutoML will default this to 
 
 ## NotebookAccessTokenResult
 ### Properties
-* **accessToken**: string {secure} (ReadOnly)
+* **accessToken**: string {sensitive} (ReadOnly)
 * **expiresIn**: int (ReadOnly)
 * **hostName**: string (ReadOnly)
 * **notebookResourceId**: string (ReadOnly)
 * **publicDns**: string (ReadOnly)
-* **refreshToken**: string {secure} (ReadOnly)
+* **refreshToken**: string {sensitive} (ReadOnly)
 * **scope**: string (ReadOnly)
 * **tokenType**: string (ReadOnly)
 
@@ -2373,9 +2373,9 @@ Configure this parameter with a higher value than 300 secs, if more time is need
 
 ## SslConfiguration
 ### Properties
-* **cert**: string {secure}: Cert data
+* **cert**: string {sensitive}: Cert data
 * **cname**: string: CNAME of the cert
-* **key**: string {secure}: Key data
+* **key**: string {sensitive}: Key data
 * **leafDomainLabel**: string: Leaf domain label of public endpoint
 * **overwriteExistingDomain**: bool: Indicates whether to overwrite existing domain label.
 * **status**: 'Auto' | 'Disabled' | 'Enabled' | string: Enable or disable ssl for scoring
@@ -2555,8 +2555,8 @@ The expression should follow NCronTab format.
 ## UserAccountCredentials
 ### Properties
 * **adminUserName**: string (Required): Name of the administrator user account which can be used to SSH to nodes.
-* **adminUserPassword**: string {secure}: Password of the administrator user account.
-* **adminUserSshPublicKey**: string {secure}: SSH public key of the administrator user account.
+* **adminUserPassword**: string {sensitive}: Password of the administrator user account.
+* **adminUserSshPublicKey**: string {sensitive}: SSH public key of the administrator user account.
 
 ## UserAssignedIdentities
 ### Properties
@@ -2584,8 +2584,8 @@ The expression should follow NCronTab format.
 ## VirtualMachineSshCredentials
 ### Properties
 * **password**: string: Password of admin account
-* **privateKeyData**: string {secure}: Private key data
-* **publicKeyData**: string {secure}: Public key data
+* **privateKeyData**: string {sensitive}: Private key data
+* **publicKeyData**: string {sensitive}: Public key data
 * **username**: string: Username of admin account
 
 ## WorkspaceConnectionManagedIdentity

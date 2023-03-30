@@ -637,7 +637,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 * **azureActiveDirectoryApplicationIdOrUri**: string: The Azure Active Directory Application ID or URI to get the access token that will be included as the bearer token in delivery requests.
 * **azureActiveDirectoryTenantId**: string: The Azure Active Directory Tenant ID to get the access token that will be included as the bearer token in delivery requests.
 * **endpointBaseUrl**: string (ReadOnly): The base URL that represents the endpoint of the destination of an event subscription.
-* **endpointUrl**: string {secure}: The URL that represents the endpoint of the destination of an event subscription.
+* **endpointUrl**: string {sensitive}: The URL that represents the endpoint of the destination of an event subscription.
 * **maxEventsPerBatch**: int: Maximum number of events per batch.
 * **preferredBatchSizeInKilobytes**: int: Preferred batch size in Kilobytes.
 

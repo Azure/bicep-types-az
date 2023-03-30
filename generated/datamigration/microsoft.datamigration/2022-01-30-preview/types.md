@@ -95,8 +95,8 @@
 
 ## AuthenticationKeys
 ### Properties
-* **authKey1**: string {secure}: The first authentication key.
-* **authKey2**: string {secure}: The second authentication key.
+* **authKey1**: string {sensitive}: The first authentication key.
+* **authKey2**: string {sensitive}: The second authentication key.
 
 ## AzureActiveDirectoryApp
 ### Properties
@@ -107,7 +107,7 @@
 
 ## AzureBlob
 ### Properties
-* **accountKey**: string {secure}: Storage Account Key.
+* **accountKey**: string {sensitive}: Storage Account Key.
 * **blobContainerName**: string: Blob container name where backups are stored.
 * **storageAccountResourceId**: string: Resource Id of the storage account where backups are stored.
 
@@ -2262,13 +2262,13 @@
 * **authentication**: string: Authentication type.
 * **dataSource**: string: Data source.
 * **encryptConnection**: bool: Whether to encrypt connection or not.
-* **password**: string {secure}: Password to connect to source SQL.
+* **password**: string {sensitive}: Password to connect to source SQL.
 * **trustServerCertificate**: bool: Whether to trust server certificate or not.
 * **userName**: string: User name to connect to source SQL.
 
 ## SqlFileShare
 ### Properties
-* **password**: string {secure} (WriteOnly): Password for username to access file share location.
+* **password**: string {sensitive} (WriteOnly): Password for username to access file share location.
 * **path**: string: Location as SMB share or local drive where backups are placed.
 * **username**: string: Username to access the file share location for backups.
 

@@ -14,8 +14,8 @@
 
 ## AdminCredentials
 ### Properties
-* **sourceServerPassword**: string {secure} (Required, WriteOnly)
-* **targetServerPassword**: string {secure} (Required, WriteOnly)
+* **sourceServerPassword**: string {sensitive} (Required, WriteOnly)
+* **targetServerPassword**: string {sensitive} (Required, WriteOnly)
 
 ## DBServerMetadata
 ### Properties

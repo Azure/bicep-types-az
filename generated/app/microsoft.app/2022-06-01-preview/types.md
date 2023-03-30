@@ -307,15 +307,15 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 
 ## AzureCredentials
 ### Properties
-* **clientId**: string {secure} (WriteOnly): Client Id.
-* **clientSecret**: string {secure} (WriteOnly): Client Secret.
+* **clientId**: string {sensitive} (WriteOnly): Client Id.
+* **clientSecret**: string {sensitive} (WriteOnly): Client Secret.
 * **subscriptionId**: string: Subscription Id.
-* **tenantId**: string {secure} (WriteOnly): Tenant Id.
+* **tenantId**: string {sensitive} (WriteOnly): Tenant Id.
 
 ## AzureFileProperties
 ### Properties
 * **accessMode**: 'ReadOnly' | 'ReadWrite' | string: Access mode for storage
-* **accountKey**: string {secure}: Storage account key for azure file.
+* **accountKey**: string {sensitive}: Storage account key for azure file.
 * **accountName**: string: Storage account name for azure file.
 * **shareName**: string: Azure file share name.
 
@@ -333,7 +333,7 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 * **expirationDate**: string (ReadOnly): Certificate expiration date.
 * **issueDate**: string (ReadOnly): Certificate issue Date.
 * **issuer**: string (ReadOnly): Certificate issuer.
-* **password**: string {secure} (WriteOnly): Certificate password.
+* **password**: string {sensitive} (WriteOnly): Certificate password.
 * **provisioningState**: 'Canceled' | 'DeleteFailed' | 'Failed' | 'Pending' | 'Succeeded' | string (ReadOnly): Provisioning state of the certificate.
 * **publicKeyHash**: string (ReadOnly): Public key hash.
 * **subjectAlternativeNames**: string[] (ReadOnly): Subject alternative names the certificate applies to.
@@ -360,7 +360,7 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 ## ConnectedEnvironmentProperties
 ### Properties
 * **customDomainConfiguration**: [CustomDomainConfiguration](#customdomainconfiguration): Custom domain configuration for the environment
-* **daprAIConnectionString**: string {secure}: Application Insights connection string used by Dapr to export Service to Service communication telemetry
+* **daprAIConnectionString**: string {sensitive}: Application Insights connection string used by Dapr to export Service to Service communication telemetry
 * **defaultDomain**: string (ReadOnly): Default Domain Name for the cluster
 * **deploymentErrors**: string (ReadOnly): Any errors that occurred during deployment or deployment validation
 * **provisioningState**: 'Canceled' | 'Failed' | 'InfrastructureSetupComplete' | 'InfrastructureSetupInProgress' | 'InitializationInProgress' | 'ScheduledForDelete' | 'Succeeded' | 'Waiting' | string (ReadOnly): Provisioning state of the Kubernetes Environment.
@@ -428,7 +428,7 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 ## ContainerAppSecret
 ### Properties
 * **name**: string (ReadOnly): Secret Name.
-* **value**: string {secure} (ReadOnly): Secret Value.
+* **value**: string {sensitive} (ReadOnly): Secret Value.
 
 ## ContainerResources
 ### Properties
@@ -449,7 +449,7 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 
 ## CustomDomainConfiguration
 ### Properties
-* **certificatePassword**: string {secure}: Certificate password
+* **certificatePassword**: string {sensitive}: Certificate password
 * **certificateValue**: any: PFX or PEM blob
 * **customDomainVerificationId**: string (ReadOnly): Id used to verify domain name ownership
 * **dnsSuffix**: string: Dns suffix for the environment domain
@@ -534,7 +534,7 @@ eg: azure-servicebus, redis etc.
 ## DaprSecret
 ### Properties
 * **name**: string (ReadOnly): Secret Name.
-* **value**: string {secure} (ReadOnly): Secret Value.
+* **value**: string {sensitive} (ReadOnly): Secret Value.
 
 ## DaprSecretsCollection
 ### Properties
@@ -746,7 +746,7 @@ configuration settings of the custom Open ID Connect provider.
 ## LogAnalyticsConfiguration
 ### Properties
 * **customerId**: string: Log analytics customer id
-* **sharedKey**: string {secure} (WriteOnly): Log analytics customer key
+* **sharedKey**: string {sensitive} (WriteOnly): Log analytics customer key
 
 ## Login
 ### Properties
@@ -777,8 +777,8 @@ Note that URLs within the current domain are always implicitly allowed.
 app logs to a destination. Currently only "log-analytics" is
 supported
 * **customDomainConfiguration**: [CustomDomainConfiguration](#customdomainconfiguration): Custom domain configuration for the environment
-* **daprAIConnectionString**: string {secure}: Application Insights connection string used by Dapr to export Service to Service communication telemetry
-* **daprAIInstrumentationKey**: string {secure}: Azure Monitor instrumentation key used by Dapr to export Service to Service communication telemetry
+* **daprAIConnectionString**: string {sensitive}: Application Insights connection string used by Dapr to export Service to Service communication telemetry
+* **daprAIInstrumentationKey**: string {sensitive}: Azure Monitor instrumentation key used by Dapr to export Service to Service communication telemetry
 * **defaultDomain**: string (ReadOnly): Default Domain Name for the cluster
 * **deploymentErrors**: string (ReadOnly): Any errors that occurred during deployment or deployment validation
 * **eventStreamEndpoint**: string (ReadOnly): The endpoint of the eventstream of the Environment.
@@ -843,7 +843,7 @@ supported
 
 ## RegistryInfo
 ### Properties
-* **registryPassword**: string {secure} (WriteOnly): registry secret.
+* **registryPassword**: string {sensitive} (WriteOnly): registry secret.
 * **registryUrl**: string: registry server Url.
 * **registryUserName**: string: registry username.
 
@@ -900,7 +900,7 @@ as they were at the creation time
 ## Secret
 ### Properties
 * **name**: string: Secret Name.
-* **value**: string {secure} (WriteOnly): Secret Value.
+* **value**: string {sensitive} (WriteOnly): Secret Value.
 
 ## SecretsCollection
 ### Properties

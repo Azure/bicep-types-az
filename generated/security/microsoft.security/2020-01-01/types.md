@@ -360,7 +360,7 @@
 ### Properties
 * **partnerName**: string (Required): Name of the company of the partner
 * **productName**: string: Name of the product of the partner that created the assessment
-* **secret**: string {secure} (Required): Secret to authenticate the partner and verify it created the assessment - write only
+* **secret**: string {sensitive} (Required): Secret to authenticate the partner and verify it created the assessment - write only
 
 ## SecurityAssessmentMetadataProperties
 ### Properties
@@ -380,7 +380,7 @@
 ## SecurityAssessmentPartnerData
 ### Properties
 * **partnerName**: string (Required): Name of the company of the partner
-* **secret**: string {secure} (Required): secret to authenticate the partner - write only
+* **secret**: string {sensitive} (Required): secret to authenticate the partner - write only
 
 ## SecurityAssessmentProperties
 ### Properties

@@ -15,7 +15,7 @@
 
 ## FileSystemResourceProperties
 ### Properties
-* **adminPassword**: string {secure} (Required): Initial administrator password of the resource
+* **adminPassword**: string {sensitive} (Required): Initial administrator password of the resource
 * **availabilityZone**: string: Availability zone
 * **clusterLoginUrl**: string: File system Id of the resource
 * **delegatedSubnetId**: string (Required): Delegated subnet id for Vnet injection
@@ -67,5 +67,5 @@
 
 ## UserDetails
 ### Properties
-* **email**: string {secure} (Required): User Email
+* **email**: string {sensitive} (Required): User Email
 

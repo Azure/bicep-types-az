@@ -324,7 +324,7 @@
 ### AcceleratorBasicAuthSetting
 #### Properties
 * **authType**: 'BasicAuth' (Required): The type of the auth setting.
-* **password**: string {secure} (WriteOnly): Password of git repository basic auth.
+* **password**: string {sensitive} (WriteOnly): Password of git repository basic auth.
 * **username**: string (Required): Username of git repository basic auth.
 
 ### AcceleratorPublicSetting
@@ -334,9 +334,9 @@
 ### AcceleratorSshSetting
 #### Properties
 * **authType**: 'SSH' (Required): The type of the auth setting.
-* **hostKey**: string {secure} (WriteOnly): Public SSH Key of git repository.
-* **hostKeyAlgorithm**: string {secure} (WriteOnly): SSH Key algorithm of git repository.
-* **privateKey**: string {secure} (WriteOnly): Private SSH Key algorithm of git repository.
+* **hostKey**: string {sensitive} (WriteOnly): Public SSH Key of git repository.
+* **hostKeyAlgorithm**: string {sensitive} (WriteOnly): SSH Key algorithm of git repository.
+* **privateKey**: string {sensitive} (WriteOnly): Private SSH Key algorithm of git repository.
 
 
 ## AcceleratorGitRepository
@@ -796,7 +796,7 @@ The default value is 2Gi, this should not exceed build service agent pool memory
 ## DevToolPortalSsoProperties
 ### Properties
 * **clientId**: string: The public identifier for the application
-* **clientSecret**: string {secure}: The secret known only to the application and the authorization server
+* **clientSecret**: string {sensitive}: The secret known only to the application and the authorization server
 * **metadataUrl**: string: The URI of a JSON file with generic OIDC provider configuration.
 * **scopes**: string[]: It defines the specific actions applications can be allowed to do on a user's behalf
 
@@ -1097,7 +1097,7 @@ Possible enum values:
 
 ### StorageAccount
 #### Properties
-* **accountKey**: string {secure} (Required, WriteOnly): The account key of the Azure Storage Account.
+* **accountKey**: string {sensitive} (Required, WriteOnly): The account key of the Azure Storage Account.
 * **accountName**: string (Required): The account name of the Azure Storage Account.
 * **storageType**: 'StorageAccount' (Required): The type of the storage.
 

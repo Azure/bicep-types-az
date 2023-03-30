@@ -158,7 +158,7 @@
 ### ServerPropertiesForDefaultCreate
 #### Properties
 * **administratorLogin**: string (Required, WriteOnly): The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).
-* **administratorLoginPassword**: string {secure} (Required, WriteOnly): The password of the administrator login.
+* **administratorLoginPassword**: string {sensitive} (Required, WriteOnly): The password of the administrator login.
 * **createMode**: 'Default' (Required): The mode to create a new server.
 
 ### ServerPropertiesForGeoRestore

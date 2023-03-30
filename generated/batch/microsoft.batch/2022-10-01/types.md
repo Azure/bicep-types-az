@@ -138,17 +138,17 @@
 
 ## AzureBlobFileSystemConfiguration
 ### Properties
-* **accountKey**: string {secure}: This property is mutually exclusive with both sasKey and identity; exactly one must be specified.
+* **accountKey**: string {sensitive}: This property is mutually exclusive with both sasKey and identity; exactly one must be specified.
 * **accountName**: string (Required): The Azure Storage Account name.
 * **blobfuseOptions**: string: These are 'net use' options in Windows and 'mount' options in Linux.
 * **containerName**: string (Required): The Azure Blob Storage Container name.
 * **identityReference**: [ComputeNodeIdentityReference](#computenodeidentityreference): This property is mutually exclusive with both accountKey and sasKey; exactly one must be specified.
 * **relativeMountPath**: string (Required): All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
-* **sasKey**: string {secure}: This property is mutually exclusive with both accountKey and identity; exactly one must be specified.
+* **sasKey**: string {sensitive}: This property is mutually exclusive with both accountKey and identity; exactly one must be specified.
 
 ## AzureFileShareConfiguration
 ### Properties
-* **accountKey**: string {secure} (Required): The Azure Storage account key.
+* **accountKey**: string {sensitive} (Required): The Azure Storage account key.
 * **accountName**: string (Required): The Azure Storage account name.
 * **azureFileUrl**: string (Required): This is of the form 'https://{account}.file.core.windows.net/'.
 * **mountOptions**: string: These are 'net use' options in Windows and 'mount' options in Linux.
@@ -212,7 +212,7 @@
 * **data**: string (Required, WriteOnly): The maximum size is 10KB.
 * **deleteCertificateError**: [DeleteCertificateError](#deletecertificateerror) (ReadOnly): This is only returned when the certificate provisioningState is 'Failed'.
 * **format**: 'Cer' | 'Pfx': The format of the certificate - either Pfx or Cer. If omitted, the default is Pfx.
-* **password**: string {secure} (WriteOnly): This must not be specified if the certificate format is Cer.
+* **password**: string {sensitive} (WriteOnly): This must not be specified if the certificate format is Cer.
 * **previousProvisioningState**: 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly): The previous provisioned state of the resource
 * **previousProvisioningStateTransitionTime**: string (ReadOnly): The time at which the certificate entered its previous state.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' (ReadOnly)
@@ -231,7 +231,7 @@
 ## CifsMountConfiguration
 ### Properties
 * **mountOptions**: string: These are 'net use' options in Windows and 'mount' options in Linux.
-* **password**: string {secure} (Required): The password to use for authentication against the CIFS file system.
+* **password**: string {sensitive} (Required): The password to use for authentication against the CIFS file system.
 * **relativeMountPath**: string (Required): All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
 * **source**: string (Required): The URI of the file system to mount.
 * **userName**: string (Required): The user to use for authentication against the CIFS file system.
@@ -254,7 +254,7 @@
 ## ContainerRegistry
 ### Properties
 * **identityReference**: [ComputeNodeIdentityReference](#computenodeidentityreference): The reference to a user assigned identity associated with the Batch pool which a compute node will use.
-* **password**: string {secure}: The password to log into the registry server.
+* **password**: string {sensitive}: The password to log into the registry server.
 * **registryServer**: string: If omitted, the default is "docker.io".
 * **username**: string: The user name to log into the registry server.
 
@@ -358,7 +358,7 @@
 ## LinuxUserConfiguration
 ### Properties
 * **gid**: int: The uid and gid properties must be specified together or not at all. If not specified the underlying operating system picks the gid.
-* **sshPrivateKey**: string {secure}: The private key must not be password protected. The private key is used to automatically configure asymmetric-key based authentication for SSH between nodes in a Linux pool when the pool's enableInterNodeCommunication property is true (it is ignored if enableInterNodeCommunication is false). It does this by placing the key pair into the user's .ssh directory. If not specified, password-less SSH is not configured between nodes (no modification of the user's .ssh directory is done).
+* **sshPrivateKey**: string {sensitive}: The private key must not be password protected. The private key is used to automatically configure asymmetric-key based authentication for SSH between nodes in a Linux pool when the pool's enableInterNodeCommunication property is true (it is ignored if enableInterNodeCommunication is false). It does this by placing the key pair into the user's .ssh directory. If not specified, password-less SSH is not configured between nodes (no modification of the user's .ssh directory is done).
 * **uid**: int: The uid and gid properties must be specified together or not at all. If not specified the underlying operating system picks the uid.
 
 ## MetadataItem
@@ -534,7 +534,7 @@ Warning: This property is deprecated and will be removed after February, 2024. P
 * **elevationLevel**: 'Admin' | 'NonAdmin': nonAdmin - The auto user is a standard user without elevated access. admin - The auto user is a user with elevated access and operates with full Administrator permissions. The default value is nonAdmin.
 * **linuxUserConfiguration**: [LinuxUserConfiguration](#linuxuserconfiguration): This property is ignored if specified on a Windows pool. If not specified, the user is created with the default options.
 * **name**: string (Required): The name of the user account. Names can contain any Unicode characters up to a maximum length of 20.
-* **password**: string {secure} (Required): The password for the user account.
+* **password**: string {sensitive} (Required): The password for the user account.
 * **windowsUserConfiguration**: [WindowsUserConfiguration](#windowsuserconfiguration): This property can only be specified if the user is on a Windows pool. If not specified and on a Windows pool, the user is created with the default options.
 
 ## UserAssignedIdentities

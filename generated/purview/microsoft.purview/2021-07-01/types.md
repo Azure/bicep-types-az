@@ -30,8 +30,8 @@
 
 ## AccessKeys
 ### Properties
-* **atlasKafkaPrimaryEndpoint**: string {secure}: Gets or sets the primary connection string.
-* **atlasKafkaSecondaryEndpoint**: string {secure}: Gets or sets the secondary connection string.
+* **atlasKafkaPrimaryEndpoint**: string {sensitive}: Gets or sets the primary connection string.
+* **atlasKafkaSecondaryEndpoint**: string {sensitive}: Gets or sets the secondary connection string.
 
 ## AccountProperties
 ### Properties

@@ -372,7 +372,7 @@
 * **forceUpdateTag**: string: A unique string. If changed the script will be applied again.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | string (ReadOnly): The provisioned state of the resource.
 * **scriptUrl**: string (Required): The url to the KQL script blob file.
-* **scriptUrlSasToken**: string {secure} (Required, WriteOnly): The SaS token.
+* **scriptUrlSasToken**: string {sensitive} (Required, WriteOnly): The SaS token.
 
 ## SystemData
 ### Properties

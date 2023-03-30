@@ -421,8 +421,8 @@
 ## ModelDockerSectionBaseImageRegistry
 ### Properties
 * **address**: string
-* **password**: string {secure}
-* **username**: string {secure}
+* **password**: string {sensitive}
+* **username**: string {sensitive}
 
 ## ModelEnvironmentDefinitionDocker
 ### Properties
@@ -553,7 +553,7 @@ The path specified gets used to call the user script.
 
 ## RGitHubPackage
 ### Properties
-* **authToken**: string {secure}: Personal access token to install from a private repo
+* **authToken**: string {sensitive}: Personal access token to install from a private repo
 * **repository**: string: Repository address in the format username/repo[/subdir][@ref|#pull].
 
 ## ScaleSettings

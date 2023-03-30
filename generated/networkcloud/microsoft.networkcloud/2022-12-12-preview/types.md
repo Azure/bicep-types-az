@@ -232,7 +232,7 @@
 
 ## AdministrativeCredentials
 ### Properties
-* **password**: string {secure, minLength: 1} (Required): The password of the administrator of the device used during initialization.
+* **password**: string {sensitive, minLength: 1} (Required): The password of the administrator of the device used during initialization.
 * **username**: string {minLength: 1} (Required): The username of the administrator of the device used during initialization.
 
 ## BareMetalMachineConfigurationData
@@ -294,7 +294,7 @@ If not provided, the machine name will be generated programmatically.
 ## BgpPeer
 ### Properties
 * **asNumber**: int {minValue: 0, maxValue: 4294967295} (Required): The ASN (Autonomous System Number) of the BGP peer.
-* **password**: string {secure, maxLength: 80, pattern: "^[a-zA-Z0-9]{0,80}$"} (WriteOnly): The password for this peering neighbor. It defaults to no password if not specified.
+* **password**: string {sensitive, maxLength: 80, pattern: "^[a-zA-Z0-9]{0,80}$"} (WriteOnly): The password for this peering neighbor. It defaults to no password if not specified.
 * **peerIp**: string (Required): The IPv4 or IPv6 address to peer with the associated CNI Network. The IP version type will drive a peering with the same version type from the Default CNI Network. For example, IPv4 to IPv4 or IPv6 to IPv6.
 
 ## BmcKeySetProperties
@@ -404,7 +404,7 @@ This extended location is used when creating provisioned clusters (Hybrid AKS cl
 * **bgpPeers**: [BgpPeer](#bgppeer)[]: The list of BgpPeer entities that the Hybrid AKS cluster will peer with in addition to peering that occurs automatically with the switch fabric.
 * **communityAdvertisements**: [CommunityAdvertisement](#communityadvertisement)[]: The list of prefix community advertisement properties. Each prefix community specifies a prefix, and the
 communities that should be associated with that prefix when it is announced.
-* **nodeMeshPassword**: string {secure, maxLength: 80, pattern: "^[a-zA-Z0-9]{0,80}$"} (WriteOnly): The password of the Calico node mesh. It defaults to a randomly-generated string when not provided.
+* **nodeMeshPassword**: string {sensitive, maxLength: 80, pattern: "^[a-zA-Z0-9]{0,80}$"} (WriteOnly): The password of the Calico node mesh. It defaults to a randomly-generated string when not provided.
 * **serviceExternalPrefixes**: string[]: The subnet blocks in CIDR format for Kubernetes service external IPs to be advertised over BGP.
 * **serviceLoadBalancerPrefixes**: string[]: The subnet blocks in CIDR format for Kubernetes load balancers. Load balancer IPs will only be advertised if they
 are within one of these blocks.
@@ -495,7 +495,7 @@ is IPV6 or DualStack.
 
 ## ImageRepositoryCredentials
 ### Properties
-* **password**: string {secure, minLength: 1} (Required): The password or token used to access an image in the target repository.
+* **password**: string {sensitive, minLength: 1} (Required): The password or token used to access an image in the target repository.
 * **registryUrl**: string (Required): The URL of the authentication server used to validate the repository credentials.
 * **username**: string {minLength: 1} (Required): The username used to access an image in the target repository.
 
@@ -687,7 +687,7 @@ For a CloudServicesNetwork resource, this name will be ignored.
 ## ServicePrincipalInformation
 ### Properties
 * **applicationId**: string (Required): The application ID, also known as client ID, of the service principal.
-* **password**: string {secure} (Required): The password of the service principal.
+* **password**: string {sensitive} (Required): The password of the service principal.
 * **principalId**: string (Required): The principal ID, also known as the object ID, of the service principal.
 * **tenantId**: string (Required): The tenant ID, also known as the directory ID, of the tenant in which the service principal is created.
 

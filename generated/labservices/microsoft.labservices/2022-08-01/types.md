@@ -83,7 +83,7 @@
 
 ## Credentials
 ### Properties
-* **password**: string {secure} (WriteOnly): The password for the user. This is required for the TemplateVM createOption.
+* **password**: string {sensitive} (WriteOnly): The password for the user. This is required for the TemplateVM createOption.
 * **username**: string (Required): The username to use when signing in to lab VMs.
 
 ## Identity

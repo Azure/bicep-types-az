@@ -26,9 +26,9 @@
 ## IngestionConnectionString
 ### Properties
 * **location**: string (ReadOnly): The region where ingested logs and data resides
-* **value**: string {secure} (ReadOnly): Connection string value
+* **value**: string {sensitive} (ReadOnly): Connection string value
 
 ## IngestionSettingToken
 ### Properties
-* **token**: string {secure} (ReadOnly): The token is used for correlating security data and logs with the resources in the subscription.
+* **token**: string {sensitive} (ReadOnly): The token is used for correlating security data and logs with the resources in the subscription.
 

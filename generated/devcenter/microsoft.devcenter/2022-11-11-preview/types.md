@@ -301,7 +301,7 @@
 ### Properties
 * **domainJoinType**: 'AzureADJoin' | 'HybridAzureADJoin' | string (Required): AAD Join type.
 * **domainName**: string: Active Directory domain name
-* **domainPassword**: string {secure}: The password for the account used to join domain
+* **domainPassword**: string {sensitive}: The password for the account used to join domain
 * **domainUsername**: string: The username of an Active Directory account (user or service account) that has permissions to create computer objects in Active Directory. Required format: admin@contoso.com.
 * **healthCheckStatus**: 'Failed' | 'Passed' | 'Pending' | 'Running' | 'Unknown' | 'Warning' | string (ReadOnly): Overall health status of the network connection. Health checks are run on creation, update, and periodically to validate the network connection.
 * **networkingResourceGroupName**: string: The name for resource group where NICs will be placed.

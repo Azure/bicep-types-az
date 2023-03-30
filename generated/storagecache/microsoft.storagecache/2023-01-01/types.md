@@ -44,7 +44,7 @@
 
 ## CacheActiveDirectorySettingsCredentials
 ### Properties
-* **password**: string {secure} (Required): Plain text password of the Active Directory domain administrator. This value is stored encrypted and not returned on response.
+* **password**: string {sensitive} (Required): Plain text password of the Active Directory domain administrator. This value is stored encrypted and not returned on response.
 * **username**: string (Required): Username of the Active Directory domain administrator. This value is stored encrypted and not returned on response.
 
 ## CacheDirectorySettings
@@ -144,7 +144,7 @@
 ## CacheUsernameDownloadSettingsCredentials
 ### Properties
 * **bindDn**: string: The Bind Distinguished Name identity to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.
-* **bindPassword**: string {secure}: The Bind password to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.
+* **bindPassword**: string {sensitive}: The Bind password to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.
 
 ## ClfsTarget
 ### Properties
@@ -202,7 +202,7 @@
 * **primingJobPercentComplete**: int {minValue: 0, maxValue: 100} (ReadOnly): The current progress of the priming job, as a percentage.
 * **primingJobState**: 'Complete' | 'Paused' | 'Queued' | 'Running' | string (ReadOnly): The state of the priming operation.
 * **primingJobStatus**: string (ReadOnly): The status code of the priming job.
-* **primingManifestUrl**: string {secure} (Required, WriteOnly): The URL for the priming manifest file to download. This file must be readable from the HPC Cache. When the file is in Azure blob storage the URL should include a Shared Access Signature (SAS) granting read permissions on the blob.
+* **primingManifestUrl**: string {sensitive} (Required, WriteOnly): The URL for the priming manifest file to download. This file must be readable from the HPC Cache. When the file is in Azure blob storage the URL should include a Shared Access Signature (SAS) granting read permissions on the blob.
 
 ## StorageTargetProperties
 ### Properties

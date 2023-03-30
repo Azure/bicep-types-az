@@ -288,7 +288,7 @@
 ## AsymmetricEncryptedSecret
 ### Properties
 * **encryptionAlgorithm**: 'AES256' | 'None' | 'RSAES_PKCS1_v_1_5' | string (Required): The algorithm used to encrypt "Value".
-* **encryptionCertThumbprint**: string {secure}: Thumbprint certificate used to encrypt \"Value\". If the value is unencrypted, it will be null.
+* **encryptionCertThumbprint**: string {sensitive}: Thumbprint certificate used to encrypt \"Value\". If the value is unencrypted, it will be null.
 * **value**: string (Required): The value of the secret.
 
 ## Authentication

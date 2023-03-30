@@ -1303,7 +1303,7 @@ or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033
 The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
 * **retentionDays**: int: Specifies the number of days to keep in the audit logs in the storage account.
 * **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the audit. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
-* **storageAccountAccessKey**: string {secure} (WriteOnly): Specifies the identifier key of the auditing storage account. 
+* **storageAccountAccessKey**: string {sensitive} (WriteOnly): Specifies the identifier key of the auditing storage account. 
 If state is Enabled and storageEndpoint is specified, not specifying the storageAccountAccessKey will use SQL server system-assigned managed identity to access the storage.
 Prerequisites for using managed identity authentication:
 1. Assign SQL Server a system-assigned managed identity in Azure Active Directory (AAD).
@@ -1322,7 +1322,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ## DatabaseExtensionsProperties
 ### Properties
 * **administratorLogin**: string (WriteOnly): Administrator login name.
-* **administratorLoginPassword**: string {secure} (WriteOnly): Administrator login password.
+* **administratorLoginPassword**: string {sensitive} (WriteOnly): Administrator login password.
 * **authenticationType**: string (WriteOnly): Authentication type: SQL authentication or AD password.
 * **databaseEdition**: string (WriteOnly): Database edition for the newly created database in the case of an import operation.
 * **maxSizeBytes**: string (WriteOnly): Database max size in bytes for the newly created database in the case of an import operation.
@@ -1611,7 +1611,7 @@ or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033
 The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
 * **retentionDays**: int: Specifies the number of days to keep in the audit logs in the storage account.
 * **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the audit. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
-* **storageAccountAccessKey**: string {secure} (WriteOnly): Specifies the identifier key of the auditing storage account. 
+* **storageAccountAccessKey**: string {sensitive} (WriteOnly): Specifies the identifier key of the auditing storage account. 
 If state is Enabled and storageEndpoint is specified, not specifying the storageAccountAccessKey will use SQL server system-assigned managed identity to access the storage.
 Prerequisites for using managed identity authentication:
 1. Assign SQL Server a system-assigned managed identity in Azure Active Directory (AAD).
@@ -1711,7 +1711,7 @@ or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033
 The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
 * **retentionDays**: int: Specifies the number of days to keep in the audit logs in the storage account.
 * **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the audit. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
-* **storageAccountAccessKey**: string {secure} (WriteOnly): Specifies the identifier key of the auditing storage account. 
+* **storageAccountAccessKey**: string {sensitive} (WriteOnly): Specifies the identifier key of the auditing storage account. 
 If state is Enabled and storageEndpoint is specified, not specifying the storageAccountAccessKey will use SQL server system-assigned managed identity to access the storage.
 Prerequisites for using managed identity authentication:
 1. Assign SQL Server a system-assigned managed identity in Azure Active Directory (AAD).
@@ -2080,7 +2080,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ## ManagedInstanceProperties
 ### Properties
 * **administratorLogin**: string: Administrator username for the managed instance. Can only be specified when the managed instance is being created (and is required for creation).
-* **administratorLoginPassword**: string {secure} (WriteOnly): The administrator login password (required for managed instance creation).
+* **administratorLoginPassword**: string {sensitive} (WriteOnly): The administrator login password (required for managed instance creation).
 * **administrators**: [ManagedInstanceExternalAdministrator](#managedinstanceexternaladministrator): The Azure Active Directory administrator of the server.
 * **collation**: string: Collation of the managed instance.
 * **currentBackupStorageRedundancy**: 'Geo' | 'GeoZone' | 'Local' | 'Zone' | string (ReadOnly): The storage account type used to store backups for this instance. The options are Local (LocallyRedundantStorage), Zone (ZoneRedundantStorage), Geo (GeoRedundantStorage) and GeoZone(GeoZoneRedundantStorage)
@@ -2455,7 +2455,7 @@ or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033
 The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
 * **retentionDays**: int: Specifies the number of days to keep in the audit logs in the storage account.
 * **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the audit. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
-* **storageAccountAccessKey**: string {secure} (WriteOnly): Specifies the identifier key of the auditing storage account. 
+* **storageAccountAccessKey**: string {sensitive} (WriteOnly): Specifies the identifier key of the auditing storage account. 
 If state is Enabled and storageEndpoint is specified, not specifying the storageAccountAccessKey will use SQL server system-assigned managed identity to access the storage.
 Prerequisites for using managed identity authentication:
 1. Assign SQL Server a system-assigned managed identity in Azure Active Directory (AAD).
@@ -2482,7 +2482,7 @@ For more information, see [Diagnostic Settings REST API](https://go.microsoft.co
 or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033043)
 * **isManagedIdentityInUse**: bool: Specifies whether Managed Identity is used to access blob storage
 * **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the audit. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
-* **storageAccountAccessKey**: string {secure} (WriteOnly): Specifies the identifier key of the auditing storage account. 
+* **storageAccountAccessKey**: string {sensitive} (WriteOnly): Specifies the identifier key of the auditing storage account. 
 If state is Enabled and storageEndpoint is specified, not specifying the storageAccountAccessKey will use SQL server system-assigned managed identity to access the storage.
 Prerequisites for using managed identity authentication:
 1. Assign SQL Server a system-assigned managed identity in Azure Active Directory (AAD).
@@ -2530,7 +2530,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ## ServerProperties
 ### Properties
 * **administratorLogin**: string: Administrator username for the server. Once created it cannot be changed.
-* **administratorLoginPassword**: string {secure} (WriteOnly): The administrator login password (required for server creation).
+* **administratorLoginPassword**: string {sensitive} (WriteOnly): The administrator login password (required for server creation).
 * **administrators**: [ServerExternalAdministrator](#serverexternaladministrator): The Azure Active Directory administrator of the server.
 * **federatedClientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The Client id used for cross tenant CMK scenario
 * **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of the server.
@@ -2642,7 +2642,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **conflictLoggingRetentionInDays**: int: Conflict logging retention period.
 * **conflictResolutionPolicy**: 'HubWin' | 'MemberWin' | string: Conflict resolution policy of the sync group.
 * **enableConflictLogging**: bool: If conflict logging is enabled.
-* **hubDatabasePassword**: string {secure} (WriteOnly): Password for the sync group hub database credential.
+* **hubDatabasePassword**: string {sensitive} (WriteOnly): Password for the sync group hub database credential.
 * **hubDatabaseUserName**: string: User name for the sync group hub database credential.
 * **interval**: int: Sync interval of the sync group.
 * **lastSyncTime**: string (ReadOnly): Last sync time of the sync group.

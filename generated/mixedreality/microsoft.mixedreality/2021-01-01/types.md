@@ -44,13 +44,13 @@
 
 ## AccountKeys
 ### Properties
-* **primaryKey**: string {secure} (ReadOnly): value of primary key.
-* **secondaryKey**: string {secure} (ReadOnly): value of secondary key.
+* **primaryKey**: string {sensitive} (ReadOnly): value of primary key.
+* **secondaryKey**: string {sensitive} (ReadOnly): value of secondary key.
 
 ## AccountKeys
 ### Properties
-* **primaryKey**: string {secure} (ReadOnly): value of primary key.
-* **secondaryKey**: string {secure} (ReadOnly): value of secondary key.
+* **primaryKey**: string {sensitive} (ReadOnly): value of primary key.
+* **secondaryKey**: string {sensitive} (ReadOnly): value of secondary key.
 
 ## Identity
 ### Properties

@@ -141,7 +141,7 @@
 ## ServerProperties
 ### Properties
 * **administratorLogin**: string: The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).
-* **administratorLoginPassword**: string {secure} (WriteOnly): The administrator login password (required for server creation).
+* **administratorLoginPassword**: string {sensitive} (WriteOnly): The administrator login password (required for server creation).
 * **authConfig**: [AuthConfig](#authconfig): AuthConfig properties of a server.
 * **availabilityZone**: string: availability zone information of the server.
 * **backup**: [Backup](#backup): Backup properties of a server.
