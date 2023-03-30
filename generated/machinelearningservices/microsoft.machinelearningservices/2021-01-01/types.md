@@ -469,24 +469,24 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 
 ## ListNotebookKeysResult
 ### Properties
-* **primaryAccessKey**: string {secure} (ReadOnly)
-* **secondaryAccessKey**: string {secure} (ReadOnly)
+* **primaryAccessKey**: string {sensitive} (ReadOnly)
+* **secondaryAccessKey**: string {sensitive} (ReadOnly)
 
 ## ListNotebookKeysResult
 ### Properties
-* **primaryAccessKey**: string {secure} (ReadOnly)
-* **secondaryAccessKey**: string {secure} (ReadOnly)
+* **primaryAccessKey**: string {sensitive} (ReadOnly)
+* **secondaryAccessKey**: string {sensitive} (ReadOnly)
 
 ## ListStorageAccountKeysResult
 ### Properties
-* **userStorageKey**: string {secure} (ReadOnly)
+* **userStorageKey**: string {sensitive} (ReadOnly)
 
 ## ListWorkspaceKeysResult
 ### Properties
-* **appInsightsInstrumentationKey**: string {secure} (ReadOnly)
+* **appInsightsInstrumentationKey**: string {sensitive} (ReadOnly)
 * **containerRegistryCredentials**: [RegistryListCredentialsResult](#registrylistcredentialsresult) (ReadOnly)
 * **notebookAccessKeys**: [ListNotebookKeysResult](#listnotebookkeysresult) (ReadOnly)
-* **userStorageKey**: string {secure} (ReadOnly)
+* **userStorageKey**: string {sensitive} (ReadOnly)
 * **userStorageResourceId**: string (ReadOnly)
 
 ## MachineLearningServiceError
@@ -520,8 +520,8 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 ## ModelDockerSectionBaseImageRegistry
 ### Properties
 * **address**: string
-* **password**: string {secure}
-* **username**: string {secure}
+* **password**: string {sensitive}
+* **username**: string {sensitive}
 
 ## ModelEnvironmentDefinitionDocker
 ### Properties
@@ -580,12 +580,12 @@ The path specified gets used to call the user script.
 
 ## NotebookAccessTokenResult
 ### Properties
-* **accessToken**: string {secure} (ReadOnly)
+* **accessToken**: string {sensitive} (ReadOnly)
 * **expiresIn**: int (ReadOnly)
 * **hostName**: string (ReadOnly)
 * **notebookResourceId**: string (ReadOnly)
 * **publicDns**: string (ReadOnly)
-* **refreshToken**: string {secure} (ReadOnly)
+* **refreshToken**: string {sensitive} (ReadOnly)
 * **scope**: string (ReadOnly)
 * **tokenType**: string (ReadOnly)
 
@@ -680,7 +680,7 @@ The path specified gets used to call the user script.
 
 ## RGitHubPackage
 ### Properties
-* **authToken**: string {secure}: Personal access token to install from a private repo
+* **authToken**: string {sensitive}: Personal access token to install from a private repo
 * **repository**: string: Repository address in the format username/repo[/subdir][@ref|#pull].
 
 ## ScaleSettings

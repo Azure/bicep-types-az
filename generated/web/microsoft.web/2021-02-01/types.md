@@ -1614,7 +1614,7 @@ If <code>false</code>, this App Service Plan will not perform availability zone 
 * **artifactStorageMountPath**: string
 * **artifactStorageNodeName**: string
 * **frontEndServiceConfiguration**: [FrontEndConfiguration](#frontendconfiguration)
-* **kubeConfig**: string {secure} (WriteOnly)
+* **kubeConfig**: string {sensitive} (WriteOnly)
 
 ## ArmIdWrapper
 ### Properties
@@ -1737,7 +1737,7 @@ Remove blobs older than X days.
 
 ## AzureStorageInfoValue
 ### Properties
-* **accessKey**: string {secure}: Access key for the storage account.
+* **accessKey**: string {sensitive}: Access key for the storage account.
 * **accountName**: string: Name of the storage account.
 * **mountPath**: string: Path to mount the storage within the site's runtime environment.
 * **shareName**: string: Name of the file share (container name, for Blob storage).
@@ -2218,7 +2218,7 @@ Value can range between 25 and 100.
 ## GitHubActionContainerConfiguration
 ### Properties
 * **imageName**: string: The image name for the build.
-* **password**: string {secure}: The password used to upload the image to the container registry.
+* **password**: string {sensitive}: The password used to upload the image to the container registry.
 * **serverUrl**: string: The server URL for the container registry where the build will be hosted.
 * **username**: string: The username used to upload the image to the container registry.
 
@@ -2446,7 +2446,7 @@ FrontEnd Service ArtifactsStorageType etc.
 ## LogAnalyticsConfiguration
 ### Properties
 * **customerId**: string
-* **sharedKey**: string {secure} (WriteOnly)
+* **sharedKey**: string {sensitive} (WriteOnly)
 
 ## Login
 ### Properties

@@ -582,7 +582,7 @@
 ## ActionRequestPropertiesOrActionResponseProperties
 ### Properties
 * **logicAppResourceId**: string (Required): Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.
-* **triggerUri**: string {secure} (Required, WriteOnly): Logic App Callback URL for this specific workflow.
+* **triggerUri**: string {sensitive} (Required, WriteOnly): Logic App Callback URL for this specific workflow.
 * **workflowId**: string (ReadOnly): The name of the logic app's workflow.
 
 ## ActivityEntityQueriesProperties
@@ -2106,7 +2106,7 @@
 * **provider**: string (Required): The provider of the watchlist
 * **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): The provisioning state of the watchlist resource.
 * **rawContent**: string: The raw content that represents to watchlist items to create. In case of csv/tsv content type, it's the content of the file that will parsed by the endpoint
-* **sasUri**: string {secure}: The Shared Access Signature (SAS) URI under which the large csv watchlist file is located and from which the watchlist and its items will be created
+* **sasUri**: string {sensitive}: The Shared Access Signature (SAS) URI under which the large csv watchlist file is located and from which the watchlist and its items will be created
 * **source**: string: The filename of the watchlist, called 'source'
 * **sourceType**: 'Local file' | 'Remote storage' | string: The sourceType of the watchlist
 * **tenantId**: string: The tenantId where the watchlist belongs to

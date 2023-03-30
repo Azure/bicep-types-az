@@ -152,9 +152,9 @@
 * **ldapSearchScope**: [LdapSearchScopeOpt](#ldapsearchscopeopt): LDAP Search scope options
 * **ldapSigning**: bool: Specifies whether or not the LDAP traffic needs to be signed.
 * **organizationalUnit**: string: The Organizational Unit (OU) within the Windows Active Directory
-* **password**: string {secure}: Plain text password of Active Directory domain administrator, value is masked in the response
+* **password**: string {sensitive}: Plain text password of Active Directory domain administrator, value is masked in the response
 * **securityOperators**: (string {minLength: 1, maxLength: 255})[]: Domain Users in the Active directory to be given SeSecurityPrivilege privilege (Needed for SMB Continuously available shares for SQL). A list of unique usernames without domain specifier
-* **serverRootCACertificate**: string {secure, minLength: 1, maxLength: 10240}: When LDAP over SSL/TLS is enabled, the LDAP client is required to have base64 encoded Active Directory Certificate Service's self-signed root CA certificate, this optional parameter is used only for dual protocol with LDAP user-mapping volumes.
+* **serverRootCACertificate**: string {sensitive, minLength: 1, maxLength: 10240}: When LDAP over SSL/TLS is enabled, the LDAP client is required to have base64 encoded Active Directory Certificate Service's self-signed root CA certificate, this optional parameter is used only for dual protocol with LDAP user-mapping volumes.
 * **site**: string: The Active Directory site the service will limit Domain Controller discovery to
 * **smbServerName**: string: NetBIOS name of the SMB server. This name will be registered as a computer account in the AD and used to mount volumes
 * **status**: 'Created' | 'Deleted' | 'Error' | 'InUse' | 'Updating' | string (ReadOnly): Status of the Active Directory

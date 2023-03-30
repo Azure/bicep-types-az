@@ -92,7 +92,7 @@
 ## EnvironmentVariable
 ### Properties
 * **name**: string (Required): The name of the environment variable.
-* **secureValue**: string {secure}: The value of the secure environment variable.
+* **secureValue**: string {sensitive}: The value of the secure environment variable.
 * **value**: string: The value of the environment variable.
 
 ## ErrorAdditionalInfo
@@ -134,7 +134,7 @@
 
 ## StorageAccountConfiguration
 ### Properties
-* **storageAccountKey**: string {secure}: The storage account access key.
+* **storageAccountKey**: string {sensitive}: The storage account access key.
 * **storageAccountName**: string: The storage account name.
 
 ## SystemData

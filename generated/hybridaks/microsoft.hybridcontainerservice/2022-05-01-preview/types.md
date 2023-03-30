@@ -70,7 +70,7 @@
 * **enableAzureRbac**: bool: Whether to enable Azure RBAC for Kubernetes authorization.
 * **managed**: bool: Whether to enable managed AAD.
 * **serverAppID**: string: The server AAD application ID.
-* **serverAppSecret**: string {secure} (WriteOnly): The server AAD application secret.
+* **serverAppSecret**: string {sensitive} (WriteOnly): The server AAD application secret.
 * **tenantID**: string: The AAD tenant ID to use for authentication. If not specified, will use the tenant of the deployment subscription.
 
 ## AddonProfiles
@@ -211,7 +211,7 @@
 * **httpProxy**: string: The HTTP proxy server endpoint to use.
 * **httpsProxy**: string: The HTTPS proxy server endpoint to use.
 * **noProxy**: string[]: The endpoints that should not go through proxy.
-* **password**: string {secure} (WriteOnly): Password to use for connecting to proxy server
+* **password**: string {sensitive} (WriteOnly): Password to use for connecting to proxy server
 * **trustedCa**: string: Alternative CA cert to use for connecting to proxy servers.
 * **username**: string: Username to use for connecting to proxy server
 
@@ -476,7 +476,7 @@
 
 ## WindowsProfileOrWindowsProfileResponse
 ### Properties
-* **adminPassword**: string {secure} (WriteOnly): AdminPassword - Specifies the password of the administrator account. <br><br> **Minimum-length:** 8 characters <br><br> **Max-length:** 123 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!"
+* **adminPassword**: string {sensitive} (WriteOnly): AdminPassword - Specifies the password of the administrator account. <br><br> **Minimum-length:** 8 characters <br><br> **Max-length:** 123 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!"
 * **adminUsername**: string: AdminUsername - Specifies the name of the administrator account. <br><br> **restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length:** 1 character <br><br> **Max-length:** 20 characters
 * **enableCsiProxy**: bool: EnableCSIProxy - Whether to enable CSI proxy.
 * **licenseType**: 'None' | 'Windows_Server' | string: LicenseType - The licenseType to use for Windows VMs. Windows_Server is used to enable Azure Hybrid User Benefits for Windows VMs. Possible values include: 'None', 'Windows_Server'

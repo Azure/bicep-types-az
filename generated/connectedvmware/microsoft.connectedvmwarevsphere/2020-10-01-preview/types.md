@@ -223,7 +223,7 @@
 
 ## GuestCredential
 ### Properties
-* **password**: string {secure} (WriteOnly): Gets or sets the password to connect with the guest.
+* **password**: string {sensitive} (WriteOnly): Gets or sets the password to connect with the guest.
 * **username**: string: Gets or sets username to connect with the guest.
 
 ## HardwareProfile
@@ -404,7 +404,7 @@ that the nic is connected to.
 
 ## OsProfile
 ### Properties
-* **adminPassword**: string {secure} (WriteOnly): Gets or sets administrator password.
+* **adminPassword**: string {sensitive} (WriteOnly): Gets or sets administrator password.
 * **adminUsername**: string: Gets or sets administrator username.
 * **computerName**: string: Gets or sets computer name.
 * **osName**: string (ReadOnly): Gets or sets os name.
@@ -491,7 +491,7 @@ This property is used in relative allocation between resource consumers.
 
 ## VICredential
 ### Properties
-* **password**: string {secure} (WriteOnly): Gets or sets the password to connect with the vCenter.
+* **password**: string {sensitive} (WriteOnly): Gets or sets the password to connect with the vCenter.
 * **username**: string: Gets or sets username to connect with the vCenter.
 
 ## VirtualDisk

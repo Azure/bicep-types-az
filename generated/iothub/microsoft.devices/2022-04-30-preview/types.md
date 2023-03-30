@@ -268,9 +268,9 @@
 * **name**: string {pattern: "^[A-Za-z0-9-._]{1,64}$"} (Required): The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.
 * **partitionKeyName**: string: The name of the partition key associated with this cosmos DB sql collection if one exists. This is an optional parameter.
 * **partitionKeyTemplate**: string: The template for generating a synthetic partition key value for use with this cosmos DB sql collection. The template must include at least one of the following placeholders: {iothub}, {deviceid}, {DD}, {MM}, and {YYYY}. Any one placeholder may be specified at most once, but order and non-placeholder components are arbitrary. This parameter is only required if PartitionKeyName is specified.
-* **primaryKey**: string {secure}: The primary key of the cosmos DB account.
+* **primaryKey**: string {sensitive}: The primary key of the cosmos DB account.
 * **resourceGroup**: string: The name of the resource group of the cosmos DB account.
-* **secondaryKey**: string {secure}: The secondary key of the cosmos DB account.
+* **secondaryKey**: string {sensitive}: The secondary key of the cosmos DB account.
 * **subscriptionId**: string: The subscription identifier of the cosmos DB account.
 
 ## RoutingEndpoints
@@ -284,7 +284,7 @@
 ## RoutingEventHubProperties
 ### Properties
 * **authenticationType**: 'identityBased' | 'keyBased' | string: Method used to authenticate against the event hub endpoint
-* **connectionString**: string {secure}: The connection string of the event hub endpoint.
+* **connectionString**: string {sensitive}: The connection string of the event hub endpoint.
 * **endpointUri**: string: The url of the event hub endpoint. It must include the protocol sb://
 * **entityPath**: string: Event hub name on the event hub namespace
 * **id**: string: Id of the event hub endpoint
@@ -303,7 +303,7 @@
 ## RoutingServiceBusQueueEndpointProperties
 ### Properties
 * **authenticationType**: 'identityBased' | 'keyBased' | string: Method used to authenticate against the service bus queue endpoint
-* **connectionString**: string {secure}: The connection string of the service bus queue endpoint.
+* **connectionString**: string {sensitive}: The connection string of the service bus queue endpoint.
 * **endpointUri**: string: The url of the service bus queue endpoint. It must include the protocol sb://
 * **entityPath**: string: Queue name on the service bus namespace
 * **id**: string: Id of the service bus queue endpoint
@@ -315,7 +315,7 @@
 ## RoutingServiceBusTopicEndpointProperties
 ### Properties
 * **authenticationType**: 'identityBased' | 'keyBased' | string: Method used to authenticate against the service bus topic endpoint
-* **connectionString**: string {secure}: The connection string of the service bus topic endpoint.
+* **connectionString**: string {sensitive}: The connection string of the service bus topic endpoint.
 * **endpointUri**: string: The url of the service bus topic endpoint. It must include the protocol sb://
 * **entityPath**: string: Queue name on the service bus topic
 * **id**: string: Id of the service bus topic endpoint
@@ -328,7 +328,7 @@
 ### Properties
 * **authenticationType**: 'identityBased' | 'keyBased' | string: Method used to authenticate against the storage endpoint
 * **batchFrequencyInSeconds**: int {minValue: 60, maxValue: 720}: Time interval at which blobs are written to storage. Value should be between 60 and 720 seconds. Default value is 300 seconds.
-* **connectionString**: string {secure}: The connection string of the storage account.
+* **connectionString**: string {sensitive}: The connection string of the storage account.
 * **containerName**: string (Required): The name of storage container in the storage account.
 * **encoding**: 'Avro' | 'AvroDeflate' | 'JSON' | string: Encoding that is used to serialize messages to blobs. Supported values are 'avro', 'avrodeflate', and 'JSON'. Default value is 'avro'.
 * **endpointUri**: string: The url of the storage endpoint. It must include the protocol https://

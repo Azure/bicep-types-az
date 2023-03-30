@@ -116,7 +116,7 @@
 ## ServerProperties
 ### Properties
 * **administratorLogin**: string: The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).
-* **administratorLoginPassword**: string {secure} (WriteOnly): The password of the administrator login (required for server creation).
+* **administratorLoginPassword**: string {sensitive} (WriteOnly): The password of the administrator login (required for server creation).
 * **availabilityZone**: string: availability Zone information of the server.
 * **backup**: [Backup](#backup): Backup related properties of a server.
 * **createMode**: 'Default' | 'GeoRestore' | 'PointInTimeRestore' | 'Replica' | string (WriteOnly): The mode to create a new MySQL server.

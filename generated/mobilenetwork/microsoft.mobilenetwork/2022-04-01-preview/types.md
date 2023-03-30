@@ -370,11 +370,11 @@ If not specified and NAPT is enabled, this range defaults to 1,024 - 49,999.
 
 ## SimPropertiesFormat
 ### Properties
-* **authenticationKey**: string {secure, pattern: "^[0-9a-fA-F]{32}$"} (WriteOnly): The Ki value for the SIM.
+* **authenticationKey**: string {sensitive, pattern: "^[0-9a-fA-F]{32}$"} (WriteOnly): The Ki value for the SIM.
 * **deviceType**: string: An optional free-form text field that can be used to record the device type this SIM is associated with, for example 'Video camera'. The Azure portal allows SIMs to be grouped and filtered based on this value.
 * **integratedCircuitCardIdentifier**: string {pattern: "^89[0-9]{17,18}$"}: The integrated circuit card ID (ICCID) for the SIM.
 * **internationalMobileSubscriberIdentity**: string {pattern: "^[0-9]{5,15}$"} (Required): The international mobile subscriber identity (IMSI) for the SIM.
-* **operatorKeyCode**: string {secure, pattern: "^[0-9a-fA-F]{32}$"} (WriteOnly): The Opc value for the SIM.
+* **operatorKeyCode**: string {sensitive, pattern: "^[0-9a-fA-F]{32}$"} (WriteOnly): The Opc value for the SIM.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleted' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | string (ReadOnly): The provisioning state of the SIM resource.
 * **simPolicy**: [SimPolicyResourceId](#simpolicyresourceid): The SIM policy used by this SIM.
 * **simState**: 'Disabled' | 'Enabled' | 'Invalid' | string (ReadOnly): The state of the SIM resource.

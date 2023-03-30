@@ -253,7 +253,7 @@
 ### Properties
 * **encryptionAlgorithm**: 'AES256' | 'None' | 'RSAES_PKCS1_v_1_5' | string (Required): The algorithm used to encrypt "Value".
 * **encryptionCertThumbprint**: string: Thumbprint certificate used to encrypt \"Value\". If the value is unencrypted, it will be null.
-* **value**: string {secure} (Required): The value of the secret.
+* **value**: string {sensitive} (Required): The value of the secret.
 
 ## Authentication
 ### Properties

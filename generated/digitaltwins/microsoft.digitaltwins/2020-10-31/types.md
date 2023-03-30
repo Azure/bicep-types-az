@@ -25,27 +25,27 @@
 
 ### Base Properties
 * **createdTime**: string (ReadOnly): Time when the Endpoint was added to DigitalTwinsInstance.
-* **deadLetterSecret**: string {secure}: Dead letter storage secret. Will be obfuscated during read.
+* **deadLetterSecret**: string {sensitive}: Dead letter storage secret. Will be obfuscated during read.
 * **provisioningState**: 'Canceled' | 'Deleted' | 'Deleting' | 'Disabled' | 'Failed' | 'Moving' | 'Provisioning' | 'Restoring' | 'Succeeded' | 'Suspending' | 'Warning' | string (ReadOnly): The provisioning state.
 
 ### EventGrid
 #### Properties
-* **accessKey1**: string {secure} (Required): EventGrid secondary accesskey. Will be obfuscated during read.
-* **accessKey2**: string {secure}: EventGrid secondary accesskey. Will be obfuscated during read.
+* **accessKey1**: string {sensitive} (Required): EventGrid secondary accesskey. Will be obfuscated during read.
+* **accessKey2**: string {sensitive}: EventGrid secondary accesskey. Will be obfuscated during read.
 * **endpointType**: 'EventGrid' (Required): The type of Digital Twins endpoint
 * **TopicEndpoint**: string (Required): EventGrid Topic Endpoint
 
 ### EventHub
 #### Properties
-* **connectionStringPrimaryKey**: string {secure} (Required): PrimaryConnectionString of the endpoint. Will be obfuscated during read.
-* **connectionStringSecondaryKey**: string {secure}: SecondaryConnectionString of the endpoint. Will be obfuscated during read.
+* **connectionStringPrimaryKey**: string {sensitive} (Required): PrimaryConnectionString of the endpoint. Will be obfuscated during read.
+* **connectionStringSecondaryKey**: string {sensitive}: SecondaryConnectionString of the endpoint. Will be obfuscated during read.
 * **endpointType**: 'EventHub' (Required): The type of Digital Twins endpoint
 
 ### ServiceBus
 #### Properties
 * **endpointType**: 'ServiceBus' (Required): The type of Digital Twins endpoint
-* **primaryConnectionString**: string {secure} (Required): PrimaryConnectionString of the endpoint. Will be obfuscated during read.
-* **secondaryConnectionString**: string {secure}: SecondaryConnectionString of the endpoint. Will be obfuscated during read.
+* **primaryConnectionString**: string {sensitive} (Required): PrimaryConnectionString of the endpoint. Will be obfuscated during read.
+* **secondaryConnectionString**: string {sensitive}: SecondaryConnectionString of the endpoint. Will be obfuscated during read.
 
 
 ## DigitalTwinsProperties

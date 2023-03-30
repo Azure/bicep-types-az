@@ -220,7 +220,7 @@
 
 ## ExpressRouteConnectionInformation
 ### Properties
-* **expressRouteAuthorizationKey**: string {secure} (Required): Authorization key for the circuit, must be of type Microsoft.Network/expressRouteCircuits/authorizations. The Auth Key is a mandatory attribute.
+* **expressRouteAuthorizationKey**: string {sensitive} (Required): Authorization key for the circuit, must be of type Microsoft.Network/expressRouteCircuits/authorizations. The Auth Key is a mandatory attribute.
 * **expressRouteCircuitId**: string (Required): The express route circuit Azure resource ID, must be of type Microsoft.Network/expressRouteCircuits/circuitName. The ExpressRoute Circuit is a mandatory attribute.
 
 ## ExternalNetworkProperties
@@ -523,7 +523,7 @@
 ## NetworkFabricPropertiesTerminalServerConfiguration
 ### Properties
 * **networkDeviceId**: string (ReadOnly): ARM Resource ID used for the NetworkDevice.
-* **password**: string {secure}: Password for the terminal server connection.
+* **password**: string {sensitive}: Password for the terminal server connection.
 * **primaryIpv4Prefix**: string: IPv4 Address Prefix of CE-PE interconnect links. Default value is 172.31.0.0/31. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
 * **primaryIpv6Prefix**: string: IPv6 Address Prefix of CE-PE interconnect links. Default value is 3FFE:FFFF:0:CD30::a0/126. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
 * **secondaryIpv4Prefix**: string: Secondary IPv4 Address Prefix of CE-PE interconnect links. Default value is 172.31.0.20/31. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.

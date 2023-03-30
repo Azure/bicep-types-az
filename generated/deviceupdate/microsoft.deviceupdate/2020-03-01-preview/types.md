@@ -76,7 +76,7 @@
 ## DiagnosticStorageProperties
 ### Properties
 * **authenticationType**: 'KeyBased' | string (Required): Authentication Type
-* **connectionString**: string {secure}: ConnectionString of the diagnostic storage account
+* **connectionString**: string {sensitive}: ConnectionString of the diagnostic storage account
 * **resourceId**: string (Required): ResourceId of the diagnostic storage account
 
 ## GroupConnectivityInformation
@@ -105,8 +105,8 @@
 
 ## IotHubSettings
 ### Properties
-* **eventHubConnectionString**: string {secure}: EventHub connection string.
-* **ioTHubConnectionString**: string {secure}: IoTHub connection string.
+* **eventHubConnectionString**: string {sensitive}: EventHub connection string.
+* **ioTHubConnectionString**: string {sensitive}: IoTHub connection string.
 * **resourceId**: string {minLength: 108, maxLength: 244} (Required): IoTHub resource ID
 
 ## ManagedServiceIdentity

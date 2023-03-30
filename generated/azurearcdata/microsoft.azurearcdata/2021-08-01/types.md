@@ -41,7 +41,7 @@
 
 ## BasicLoginInformation
 ### Properties
-* **password**: string {secure} (WriteOnly): Login password.
+* **password**: string {sensitive} (WriteOnly): Login password.
 * **username**: string: Login username.
 
 ## DataControllerProperties
@@ -94,7 +94,7 @@
 
 ## LogAnalyticsWorkspaceConfig
 ### Properties
-* **primaryKey**: string {secure} (WriteOnly): Primary key of the workspace
+* **primaryKey**: string {sensitive} (WriteOnly): Primary key of the workspace
 * **workspaceId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Azure Log Analytics workspace ID
 
 ## OnPremiseProperty
@@ -187,7 +187,7 @@
 ### Properties
 * **authority**: string: Authority for the service principal. Example: https://login.microsoftonline.com/
 * **clientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Client ID of the service principal for uploading data.
-* **clientSecret**: string {secure} (WriteOnly): Secret of the service principal
+* **clientSecret**: string {sensitive} (WriteOnly): Secret of the service principal
 * **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Tenant ID of the service principal.
 
 ## UploadWatermark

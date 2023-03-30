@@ -1750,8 +1750,8 @@ This is optional value to provide, if not provided, AutoML will default this to 
 * **extensionPrincipalId**: string: Extension principal-id.
 * **instanceTypes**: [KubernetesPropertiesInstanceTypes](#kubernetespropertiesinstancetypes): Instance Type Schema
 * **namespace**: string: Compute namespace
-* **relayConnectionString**: string {secure}: Relay connection string.
-* **serviceBusConnectionString**: string {secure}: ServiceBus connection string.
+* **relayConnectionString**: string {sensitive}: Relay connection string.
+* **serviceBusConnectionString**: string {sensitive}: ServiceBus connection string.
 * **vcName**: string: VC name.
 
 ## KubernetesPropertiesInstanceTypes
@@ -1761,24 +1761,24 @@ This is optional value to provide, if not provided, AutoML will default this to 
 
 ## ListNotebookKeysResult
 ### Properties
-* **primaryAccessKey**: string {secure} (ReadOnly)
-* **secondaryAccessKey**: string {secure} (ReadOnly)
+* **primaryAccessKey**: string {sensitive} (ReadOnly)
+* **secondaryAccessKey**: string {sensitive} (ReadOnly)
 
 ## ListNotebookKeysResult
 ### Properties
-* **primaryAccessKey**: string {secure} (ReadOnly)
-* **secondaryAccessKey**: string {secure} (ReadOnly)
+* **primaryAccessKey**: string {sensitive} (ReadOnly)
+* **secondaryAccessKey**: string {sensitive} (ReadOnly)
 
 ## ListStorageAccountKeysResult
 ### Properties
-* **userStorageKey**: string {secure} (ReadOnly)
+* **userStorageKey**: string {sensitive} (ReadOnly)
 
 ## ListWorkspaceKeysResult
 ### Properties
-* **appInsightsInstrumentationKey**: string {secure} (ReadOnly)
+* **appInsightsInstrumentationKey**: string {sensitive} (ReadOnly)
 * **containerRegistryCredentials**: [RegistryListCredentialsResult](#registrylistcredentialsresult) (ReadOnly)
 * **notebookAccessKeys**: [ListNotebookKeysResult](#listnotebookkeysresult) (ReadOnly)
-* **userStorageKey**: string {secure} (ReadOnly)
+* **userStorageKey**: string {sensitive} (ReadOnly)
 * **userStorageResourceId**: string (ReadOnly)
 
 ## ManagedServiceIdentity
@@ -1872,12 +1872,12 @@ Applied when validation dataset is not provided.
 
 ## NotebookAccessTokenResult
 ### Properties
-* **accessToken**: string {secure} (ReadOnly)
+* **accessToken**: string {sensitive} (ReadOnly)
 * **expiresIn**: int (ReadOnly)
 * **hostName**: string (ReadOnly)
 * **notebookResourceId**: string (ReadOnly)
 * **publicDns**: string (ReadOnly)
-* **refreshToken**: string {secure} (ReadOnly)
+* **refreshToken**: string {sensitive} (ReadOnly)
 * **scope**: string (ReadOnly)
 * **tokenType**: string (ReadOnly)
 

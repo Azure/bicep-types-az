@@ -271,5 +271,5 @@
 
 ## VirtualHardDisk
 ### Properties
-* **uri**: string {secure} (WriteOnly): Specifies the virtual hard disk's uri.
+* **uri**: string {sensitive} (WriteOnly): Specifies the virtual hard disk's uri.
 

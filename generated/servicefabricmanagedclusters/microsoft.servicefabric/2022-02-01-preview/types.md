@@ -169,7 +169,7 @@ This name must be the full Arm Resource ID for the referenced application type v
 ## ManagedClusterProperties
 ### Properties
 * **addonFeatures**: ('BackupRestoreService' | 'DnsService' | 'ResourceMonitorService' | string)[]: List of add-on features to enable on the cluster.
-* **adminPassword**: string {secure}: VM admin user password.
+* **adminPassword**: string {sensitive}: VM admin user password.
 * **adminUserName**: string (Required): VM admin user name.
 * **allowRdpAccess**: bool: Setting this to true enables RDP access to the VM. The default NSG rule opens RDP port to Internet which can be overridden with custom Network Security Rules. The default value for this setting is false.
 * **applicationTypeVersionsCleanupPolicy**: [ApplicationTypeVersionsCleanupPolicy](#applicationtypeversionscleanuppolicy): The policy used to clean up unused versions.

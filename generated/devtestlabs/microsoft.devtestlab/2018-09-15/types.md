@@ -626,11 +626,11 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 * **notes**: string: The notes of the virtual machine.
 * **ownerObjectId**: string: The object identifier of the owner of the virtual machine.
 * **ownerUserPrincipalName**: string: The user principal name of the virtual machine owner.
-* **password**: string {secure}: The password of the virtual machine administrator.
+* **password**: string {sensitive}: The password of the virtual machine administrator.
 * **planId**: string: The id of the plan associated with the virtual machine image
 * **scheduleParameters**: [ScheduleCreationParameter](#schedulecreationparameter)[]: Virtual Machine schedules to be created
 * **size**: string: The size of the virtual machine.
-* **sshKey**: string {secure}: The SSH key of the virtual machine administrator.
+* **sshKey**: string {sensitive}: The SSH key of the virtual machine administrator.
 * **storageType**: string: Storage type to use for virtual machine (i.e. Standard, Premium).
 * **userName**: string: The user name of the virtual machine.
 
@@ -666,12 +666,12 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 * **osType**: string (ReadOnly): The OS type of the virtual machine.
 * **ownerObjectId**: string: The object identifier of the owner of the virtual machine.
 * **ownerUserPrincipalName**: string: The user principal name of the virtual machine owner.
-* **password**: string {secure}: The password of the virtual machine administrator.
+* **password**: string {sensitive}: The password of the virtual machine administrator.
 * **planId**: string: The id of the plan associated with the virtual machine image
 * **provisioningState**: string (ReadOnly): The provisioning status of the resource.
 * **scheduleParameters**: [ScheduleCreationParameter](#schedulecreationparameter)[]: Virtual Machine schedules to be created
 * **size**: string: The size of the virtual machine.
-* **sshKey**: string {secure}: The SSH key of the virtual machine administrator.
+* **sshKey**: string {sensitive}: The SSH key of the virtual machine administrator.
 * **storageType**: string: Storage type to use for virtual machine (i.e. Standard, Premium).
 * **uniqueIdentifier**: string (ReadOnly): The unique immutable identifier of a resource (Guid).
 * **userName**: string: The user name of the virtual machine.

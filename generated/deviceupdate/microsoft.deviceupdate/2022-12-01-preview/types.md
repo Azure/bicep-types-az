@@ -79,7 +79,7 @@
 ## DiagnosticStorageProperties
 ### Properties
 * **authenticationType**: 'KeyBased' | string (Required): Authentication Type
-* **connectionString**: string {secure}: ConnectionString of the diagnostic storage account
+* **connectionString**: string {sensitive}: ConnectionString of the diagnostic storage account
 * **resourceId**: string (Required): ResourceId of the diagnostic storage account
 
 ## Encryption

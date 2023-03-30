@@ -22,7 +22,7 @@
 ## HealthBotKey
 ### Properties
 * **keyName**: string: The name of the key.
-* **value**: string {secure}: The value of the key.
+* **value**: string {sensitive}: The value of the key.
 
 ## HealthBotKeysResponse
 ### Properties

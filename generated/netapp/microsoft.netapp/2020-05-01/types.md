@@ -99,7 +99,7 @@
 * **domain**: string: Name of the Active Directory domain
 * **kdcIP**: string {pattern: "^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)((, ?)(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?))*$"}: kdc server IP addresses for the active directory machine. This optional parameter is used only while creating kerberos volume.
 * **organizationalUnit**: string: The Organizational Unit (OU) within the Windows Active Directory
-* **password**: string {secure}: Plain text password of Active Directory domain administrator, value is masked in the response
+* **password**: string {sensitive}: Plain text password of Active Directory domain administrator, value is masked in the response
 * **site**: string: The Active Directory site the service will limit Domain Controller discovery to
 * **smbServerName**: string: NetBIOS name of the SMB server. This name will be registered as a computer account in the AD and used to mount volumes
 * **status**: string: Status of the Active Directory
