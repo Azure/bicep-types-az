@@ -1,24 +1,74 @@
-# Microsoft.ResourceHealth @ 2022-05-01
+# Microsoft.ResourceHealth @ 2022-10-01
 
-## Resource Microsoft.ResourceHealth/events@2022-05-01 (ReadOnly)
+## Resource Microsoft.ResourceHealth/emergingIssues@2022-10-01 (ReadOnly)
+* **Valid Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2022-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'default' | string (Required, DeployTimeConstant): The resource name
+* **properties**: [EmergingIssue](#emergingissue) (ReadOnly): The emerging issue entity properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.ResourceHealth/emergingIssues' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.ResourceHealth/events@2022-10-01 (ReadOnly)
 * **Valid Scope(s)**: Tenant, Subscription
 ### Properties
-* **apiVersion**: '2022-05-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2022-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [EventProperties](#eventproperties) (ReadOnly): Properties of event.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ResourceHealth/events' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ResourceHealth/events/impactedResources@2022-05-01 (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.ResourceHealth/events/impactedResources@2022-10-01 (ReadOnly)
+* **Valid Scope(s)**: Tenant, Subscription
 ### Properties
-* **apiVersion**: '2022-05-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2022-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [EventImpactedResourceProperties](#eventimpactedresourceproperties) (ReadOnly): Properties of impacted resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ResourceHealth/events/impactedResources' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.ResourceHealth/metadata@2022-10-01 (ReadOnly)
+* **Valid Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2022-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [MetadataEntityProperties](#metadataentityproperties) (ReadOnly): The metadata entity properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.ResourceHealth/metadata' (ReadOnly, DeployTimeConstant): The resource type
+
+## Function listSecurityAdvisoryImpactedResources (Microsoft.ResourceHealth/events@2022-10-01)
+* **Resource**: Microsoft.ResourceHealth/events
+* **ApiVersion**: 2022-10-01
+* **Output**: [EventImpactedResourceListResult](#eventimpactedresourcelistresult)
+
+## EmergingIssue
+### Properties
+* **refreshTimestamp**: string: Timestamp for when last time refreshed for ongoing emerging issue.
+* **statusActiveEvents**: [StatusActiveEvent](#statusactiveevent)[]: The list of emerging issues of active event type.
+* **statusBanners**: [StatusBanner](#statusbanner)[]: The list of emerging issues of banner type.
+
+## EmergingIssueImpact
+### Properties
+* **id**: string: The impacted service id.
+* **name**: string: The impacted service name.
+* **regions**: [ImpactedRegion](#impactedregion)[]: The list of impacted regions for corresponding emerging issues.
+
+## EventImpactedResource
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [EventImpactedResourceProperties](#eventimpactedresourceproperties): Properties of impacted resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+
+## EventImpactedResourceListResult
+### Properties
+* **nextLink**: string: The URI to fetch the next page of events. Call ListNext() with this URI to fetch the next page of impacted resource.
+* **value**: [EventImpactedResource](#eventimpactedresource)[] (Required): The list of eventImpactedResources.
 
 ## EventImpactedResourceProperties
 ### Properties
@@ -90,6 +140,11 @@
 * **impactedRegions**: [ImpactedServiceRegion](#impactedserviceregion)[]: List regions impacted by the service health event.
 * **impactedService**: string: Impacted service name.
 
+## ImpactedRegion
+### Properties
+* **id**: string: The impacted region id.
+* **name**: string: The impacted region name.
+
 ## ImpactedServiceRegion
 ### Properties
 * **impactedRegion**: string: Impacted region name.
@@ -116,6 +171,39 @@
 ### Properties
 * **localizedValue**: string: Localized display text of link.
 * **value**: string: Display text of link.
+
+## MetadataEntityProperties
+### Properties
+* **applicableScenarios**: 'Alerts' | string[]: The list of scenarios applicable to this metadata entity.
+* **dependsOn**: string[]: The list of keys on which this entity depends on.
+* **displayName**: string: The display name.
+* **supportedValues**: [MetadataSupportedValueDetail](#metadatasupportedvaluedetail)[]: The list of supported values.
+
+## MetadataSupportedValueDetail
+### Properties
+* **displayName**: string: The display name.
+* **id**: string: The id.
+* **resourceTypes**: string[]: The list of associated resource types.
+
+## StatusActiveEvent
+### Properties
+* **cloud**: string: The cloud type of this active event.
+* **description**: string: The details of active event.
+* **impacts**: [EmergingIssueImpact](#emergingissueimpact)[]: The list of emerging issues impacts.
+* **lastModifiedTime**: string: The last time modified on this banner.
+* **published**: bool: The boolean value of this active event if published or not.
+* **severity**: 'Error' | 'Information' | 'Warning' | string: The severity level of this active event.
+* **stage**: 'Active' | 'Archived' | 'Resolve' | string: The stage of this active event.
+* **startTime**: string: The impact start time on this active event.
+* **title**: string: The active event title.
+* **trackingId**: string: The tracking id of this active event.
+
+## StatusBanner
+### Properties
+* **cloud**: string: The cloud type of this banner.
+* **lastModifiedTime**: string: The last time modified on this banner.
+* **message**: string: The details of banner.
+* **title**: string: The banner title.
 
 ## SystemData
 ### Properties

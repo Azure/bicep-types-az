@@ -1029,7 +1029,7 @@ application used for sign-in.
 * **outboundSettings**: [ManagedEnvironmentOutboundSettings](#managedenvironmentoutboundsettings): Configuration used to control the Environment Egress outbound traffic
 * **platformReservedCidr**: string: IP range in CIDR notation that can be reserved for environment infrastructure IP addresses. Must not overlap with any other provided IP ranges.
 * **platformReservedDnsIP**: string: An IP address from the IP range defined by platformReservedCidr that will be reserved for the internal DNS server.
-* **runtimeSubnetId**: string: Resource ID of a subnet that Container App containers are injected into. This subnet must be in the same VNET as the subnet defined in infrastructureSubnetId. Must not overlap with any other provided IP ranges.
+* **runtimeSubnetId**: string: This field is deprecated and not used. If you wish to provide your own subnet that Container App containers are injected into, then you should leverage the infrastructureSubnetId.
 
 ## Volume
 ### Properties

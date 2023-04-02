@@ -1,9 +1,9 @@
-# Microsoft.App @ 2022-06-01-preview
+# Microsoft.App @ 2022-11-01-preview
 
-## Resource Microsoft.App/connectedEnvironments@2022-06-01-preview
+## Resource Microsoft.App/connectedEnvironments@2022-11-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2022-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2022-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): The complex type of the extended location.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
@@ -13,10 +13,10 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.App/connectedEnvironments' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.App/connectedEnvironments/certificates@2022-06-01-preview
+## Resource Microsoft.App/connectedEnvironments/certificates@2022-11-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2022-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2022-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
@@ -25,131 +25,146 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.App/connectedEnvironments/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.App/connectedEnvironments/daprComponents@2022-06-01-preview
+## Resource Microsoft.App/connectedEnvironments/daprComponents@2022-11-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2022-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2022-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DaprComponentProperties](#daprcomponentproperties): Dapr Component resource specific properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.App/connectedEnvironments/daprComponents' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.App/connectedEnvironments/storages@2022-06-01-preview
+## Resource Microsoft.App/connectedEnvironments/storages@2022-11-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2022-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2022-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ConnectedEnvironmentStorageProperties](#connectedenvironmentstorageproperties): Storage properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.App/connectedEnvironments/storages' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.App/containerApps@2022-06-01-preview
+## Resource Microsoft.App/containerApps@2022-11-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2022-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2022-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): The complex type of the extended location.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): managed identities for the Container App to interact with other Azure services without maintaining any secrets or credentials in code.
 * **location**: string (Required): The geo-location where the resource lives
+* **managedBy**: string: The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ContainerAppProperties](#containerappproperties): ContainerApp resource specific properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.App/containerApps' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.App/containerApps/authConfigs@2022-06-01-preview
+## Resource Microsoft.App/containerApps/authConfigs@2022-11-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2022-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2022-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AuthConfigProperties](#authconfigproperties): AuthConfig resource specific properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.App/containerApps/authConfigs' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.App/containerApps/detectorProperties@2022-06-01-preview (ReadOnly)
+## Resource Microsoft.App/containerApps/detectorProperties@2022-11-01-preview (ReadOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2022-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2022-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (ReadOnly): The complex type of the extended location.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity) (ReadOnly): managed identities for the Container App to interact with other Azure services without maintaining any secrets or credentials in code.
 * **location**: string (ReadOnly): The geo-location where the resource lives
+* **managedBy**: string (ReadOnly): The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
 * **name**: 'rootApi' (Required, DeployTimeConstant): The resource name
 * **properties**: [ContainerAppProperties](#containerappproperties) (ReadOnly): ContainerApp resource specific properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.App/containerApps/detectorProperties' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.App/containerApps/detectorProperties/revisions@2022-06-01-preview (ReadOnly)
+## Resource Microsoft.App/containerApps/detectorProperties/revisions@2022-11-01-preview (ReadOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2022-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2022-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [RevisionProperties](#revisionproperties) (ReadOnly): Revision resource specific properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.App/containerApps/detectorProperties/revisions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.App/containerApps/detectors@2022-06-01-preview (ReadOnly)
+## Resource Microsoft.App/containerApps/detectors@2022-11-01-preview (ReadOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2022-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2022-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DiagnosticsProperties](#diagnosticsproperties) (ReadOnly): Diagnostics resource specific properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.App/containerApps/detectors' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.App/containerApps/revisions@2022-06-01-preview (ReadOnly)
+## Resource Microsoft.App/containerApps/revisions@2022-11-01-preview (ReadOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2022-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2022-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [RevisionProperties](#revisionproperties) (ReadOnly): Revision resource specific properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.App/containerApps/revisions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.App/containerApps/revisions/replicas@2022-06-01-preview (ReadOnly)
+## Resource Microsoft.App/containerApps/revisions/replicas@2022-11-01-preview (ReadOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2022-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2022-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ReplicaProperties](#replicaproperties) (ReadOnly): Replica resource specific properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.App/containerApps/revisions/replicas' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.App/containerApps/sourcecontrols@2022-06-01-preview
+## Resource Microsoft.App/containerApps/sourcecontrols@2022-11-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2022-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2022-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SourceControlProperties](#sourcecontrolproperties): SourceControl resource specific properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.App/containerApps/sourcecontrols' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.App/managedEnvironments@2022-06-01-preview
+## Resource Microsoft.App/jobs@2022-11-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2022-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2022-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Managed identities needed by a container app job to interact with other Azure services to not maintain any secrets or credentials in code.
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [JobProperties](#jobproperties): Container Apps Job resource specific properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: 'Microsoft.App/jobs' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.App/managedEnvironments@2022-11-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2022-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string: Kind of the Environment.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedEnvironmentProperties](#managedenvironmentproperties): Managed environment resource specific properties
-* **sku**: [EnvironmentSkuProperties](#environmentskuproperties): SKU properties of the Environment.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.App/managedEnvironments' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.App/managedEnvironments/certificates@2022-06-01-preview
+## Resource Microsoft.App/managedEnvironments/certificates@2022-11-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2022-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2022-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
@@ -158,67 +173,84 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.App/managedEnvironments/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.App/managedEnvironments/daprComponents@2022-06-01-preview
+## Resource Microsoft.App/managedEnvironments/daprComponents@2022-11-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2022-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2022-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DaprComponentProperties](#daprcomponentproperties): Dapr Component resource specific properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.App/managedEnvironments/daprComponents' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.App/managedEnvironments/detectorProperties@2022-06-01-preview (ReadOnly)
+## Resource Microsoft.App/managedEnvironments/detectorProperties@2022-11-01-preview (ReadOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2022-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2022-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **kind**: string (ReadOnly): Kind of the Environment.
 * **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: 'rootApi' (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedEnvironmentProperties](#managedenvironmentproperties) (ReadOnly): Managed environment resource specific properties
-* **sku**: [EnvironmentSkuProperties](#environmentskuproperties) (ReadOnly): SKU properties of the Environment.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.App/managedEnvironments/detectorProperties' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.App/managedEnvironments/detectors@2022-06-01-preview (ReadOnly)
+## Resource Microsoft.App/managedEnvironments/detectors@2022-11-01-preview (ReadOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2022-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2022-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DiagnosticsProperties](#diagnosticsproperties) (ReadOnly): Diagnostics resource specific properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.App/managedEnvironments/detectors' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.App/managedEnvironments/storages@2022-06-01-preview
+## Resource Microsoft.App/managedEnvironments/managedCertificates@2022-11-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2022-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2022-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ManagedCertificateProperties](#managedcertificateproperties): Certificate resource specific properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: 'Microsoft.App/managedEnvironments/managedCertificates' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.App/managedEnvironments/storages@2022-11-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2022-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedEnvironmentStorageProperties](#managedenvironmentstorageproperties): Storage properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.App/managedEnvironments/storages' (ReadOnly, DeployTimeConstant): The resource type
 
-## Function listCustomHostNameAnalysis (Microsoft.App/containerApps@2022-06-01-preview)
+## Function listCustomHostNameAnalysis (Microsoft.App/containerApps@2022-11-01-preview)
 * **Resource**: Microsoft.App/containerApps
-* **ApiVersion**: 2022-06-01-preview
+* **ApiVersion**: 2022-11-01-preview
 * **Output**: [CustomHostnameAnalysisResult](#customhostnameanalysisresult)
 
-## Function listSecrets (Microsoft.App/containerApps@2022-06-01-preview)
-* **Resource**: Microsoft.App/containerApps
-* **ApiVersion**: 2022-06-01-preview
-* **Output**: [SecretsCollection](#secretscollection)
-
-## Function listSecrets (Microsoft.App/managedEnvironments/daprComponents@2022-06-01-preview)
-* **Resource**: Microsoft.App/managedEnvironments/daprComponents
-* **ApiVersion**: 2022-06-01-preview
+## Function listSecrets (Microsoft.App/connectedEnvironments/daprComponents@2022-11-01-preview)
+* **Resource**: Microsoft.App/connectedEnvironments/daprComponents
+* **ApiVersion**: 2022-11-01-preview
 * **Output**: [DaprSecretsCollection](#daprsecretscollection)
 
-## Function listSecrets (Microsoft.App/connectedEnvironments/daprComponents@2022-06-01-preview)
-* **Resource**: Microsoft.App/connectedEnvironments/daprComponents
-* **ApiVersion**: 2022-06-01-preview
+## Function listSecrets (Microsoft.App/containerApps@2022-11-01-preview)
+* **Resource**: Microsoft.App/containerApps
+* **ApiVersion**: 2022-11-01-preview
+* **Output**: [SecretsCollection](#secretscollection)
+
+## Function listSecrets (Microsoft.App/jobs@2022-11-01-preview)
+* **Resource**: Microsoft.App/jobs
+* **ApiVersion**: 2022-11-01-preview
+* **Output**: [JobSecretsCollection](#jobsecretscollection)
+
+## Function listSecrets (Microsoft.App/managedEnvironments/daprComponents@2022-11-01-preview)
+* **Resource**: Microsoft.App/managedEnvironments/daprComponents
+* **ApiVersion**: 2022-11-01-preview
 * **Output**: [DaprSecretsCollection](#daprsecretscollection)
 
 ## AllowedAudiencesValidation
@@ -417,16 +449,19 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 * **customDomainVerificationId**: string (ReadOnly): Id used to verify domain name ownership
 * **environmentId**: string: Resource ID of environment.
 * **eventStreamEndpoint**: string (ReadOnly): The endpoint of the eventstream of the container app.
+* **latestReadyRevisionName**: string (ReadOnly): Name of the latest ready revision of the Container App.
 * **latestRevisionFqdn**: string (ReadOnly): Fully Qualified Domain Name of the latest revision of the Container App.
 * **latestRevisionName**: string (ReadOnly): Name of the latest revision of the Container App.
 * **managedEnvironmentId**: string: Deprecated. Resource ID of the Container App's environment.
 * **outboundIpAddresses**: string[] (ReadOnly): Outbound IP Addresses for container app.
 * **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): Provisioning state of the Container App.
 * **template**: [Template](#template): Container App versioned application definition.
-* **workloadProfileType**: string: Workload profile type to pin for container app execution.
+* **workloadProfileName**: string: Workload profile name to pin for container app execution.
 
 ## ContainerAppSecret
 ### Properties
+* **identity**: string (ReadOnly): Resource ID of a managed identity to authenticate with Azure Key Vault, or System to use a system-assigned identity.
+* **keyVaultUrl**: string (ReadOnly): Azure Key Vault URL pointing to the secret referenced by the container app.
 * **name**: string (ReadOnly): Secret Name.
 * **value**: string (ReadOnly): Secret Value.
 
@@ -441,10 +476,19 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 * **convention**: 'FixedTime' | 'IdentityProviderDerived': The convention used when determining the session cookie's expiration.
 * **timeToExpiration**: string: The time after the request is made when the session cookie should expire.
 
+## CorsPolicy
+### Properties
+* **allowCredentials**: bool: Specifies whether the resource allows credentials
+* **allowedHeaders**: string[]: Specifies the content for the access-control-allow-headers header
+* **allowedMethods**: string[]: Specifies the content for the access-control-allow-methods header
+* **allowedOrigins**: string[] (Required): Specifies the content for the access-control-allow-origins header
+* **exposeHeaders**: string[]: Specifies the content for the access-control-expose-headers header
+* **maxAge**: int: Specifies the content for the access-control-max-age header
+
 ## CustomDomain
 ### Properties
 * **bindingType**: 'Disabled' | 'SniEnabled' | string: Custom Domain binding type.
-* **certificateId**: string: Resource Id of the Certificate to be bound to this hostname.
+* **certificateId**: string: Resource Id of the Certificate to be bound to this hostname. Must exist in the Managed Environment.
 * **name**: string (Required): Hostname.
 
 ## CustomDomainConfiguration
@@ -524,6 +568,10 @@ eg: azure-servicebus, redis etc.
 * **secrets**: [Secret](#secret)[]: Collection of secrets used by a Dapr component
 * **secretStoreComponent**: string: Name of a Dapr component to retrieve component secrets from
 * **version**: string: Component version
+
+## DaprConfiguration
+### Properties
+* **version**: string (ReadOnly): The version of Dapr
 
 ## DaprMetadata
 ### Properties
@@ -611,10 +659,6 @@ eg: azure-servicebus, redis etc.
 ### Properties
 * **id**: string (ReadOnly): Unique topic identifier
 * **pesId**: string (ReadOnly): PES identifier
-
-## EnvironmentSkuProperties
-### Properties
-* **name**: 'Consumption' | 'Premium' | string (Required): Name of the Sku.
 
 ## EnvironmentVar
 ### Properties
@@ -712,14 +756,21 @@ configuration settings of the custom Open ID Connect provider.
 ## Ingress
 ### Properties
 * **allowInsecure**: bool: Bool indicating if HTTP connections to is allowed. If set to false HTTP connections are automatically redirected to HTTPS connections
+* **clientCertificateMode**: 'accept' | 'ignore' | 'require' | string: Client certificate mode for mTLS authentication. Ignore indicates server drops client certificate on forwarding. Accept indicates server forwards client certificate but does not require a client certificate. Require indicates server requires a client certificate.
+* **corsPolicy**: [CorsPolicy](#corspolicy): CORS policy for container app
 * **customDomains**: [CustomDomain](#customdomain)[]: custom domain bindings for Container Apps' hostnames.
 * **exposedPort**: int: Exposed Port in containers for TCP traffic from ingress
 * **external**: bool: Bool indicating if app exposes an external http endpoint
 * **fqdn**: string (ReadOnly): Hostname.
 * **ipSecurityRestrictions**: [IpSecurityRestrictionRule](#ipsecurityrestrictionrule)[]: Rules to restrict incoming IP address.
+* **stickySessions**: [IngressStickySessions](#ingressstickysessions): Sticky Sessions for Single Revision Mode
 * **targetPort**: int: Target Port in containers for traffic from ingress
 * **traffic**: [TrafficWeight](#trafficweight)[]: Traffic weights for app's revisions
 * **transport**: 'auto' | 'http' | 'http2' | 'tcp' | string: Ingress transport protocol
+
+## IngressStickySessions
+### Properties
+* **affinity**: 'none' | 'sticky' | string: Sticky Session Affinity
 
 ## InitContainer
 ### Properties
@@ -738,10 +789,55 @@ configuration settings of the custom Open ID Connect provider.
 * **ipAddressRange**: string (Required): CIDR notation to match incoming IP address
 * **name**: string (Required): Name for the IP restriction rule.
 
+## JobConfiguration
+### Properties
+* **manualTriggerConfig**: [JobConfigurationManualTriggerConfig](#jobconfigurationmanualtriggerconfig): Manual trigger configuration for a single execution job. Properties replicaCompletionCount and parallelism would be set to 1 by default
+* **registries**: [RegistryCredentials](#registrycredentials)[]: Collection of private container registry credentials used by a Container apps job
+* **replicaRetryLimit**: int: Maximum number of retries before failing the job.
+* **replicaTimeout**: int (Required): Maximum number of seconds a replica is allowed to run.
+* **scheduleTriggerConfig**: [JobConfigurationScheduleTriggerConfig](#jobconfigurationscheduletriggerconfig): Cron formatted repeating trigger schedule ("* * * * *") for cronjobs. Properties completions and parallelism would be set to 1 by default
+* **secrets**: [Secret](#secret)[]: Collection of secrets used by a Container Apps Job
+* **triggerType**: 'Event' | 'Manual' | 'Scheduled' | string (Required): Trigger type of the job
+
+## JobConfigurationManualTriggerConfig
+### Properties
+* **parallelism**: int: Number of parallel replicas of a job that can run at a given time.
+* **replicaCompletionCount**: int: Minimum number of successful replica completions before overall job completion.
+
+## JobConfigurationScheduleTriggerConfig
+### Properties
+* **cronExpression**: string (Required): Cron formatted repeating schedule ("* * * * *") of a Cron Job.
+* **parallelism**: int: Number of parallel replicas of a job that can run at a given time.
+* **replicaCompletionCount**: int: Minimum number of successful replica completions before overall job completion.
+
+## JobProperties
+### Properties
+* **configuration**: [JobConfiguration](#jobconfiguration): Container Apps Job configuration properties.
+* **environmentId**: string: Resource ID of environment.
+* **eventStreamEndpoint**: string (ReadOnly): The endpoint of the eventstream of the container apps job.
+* **outboundIpAddresses**: string[] (ReadOnly): Outbound IP Addresses of a container apps job.
+* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): Provisioning state of the Container Apps Job.
+* **template**: [JobTemplate](#jobtemplate): Container Apps job definition.
+* **workloadProfileName**: string: Workload profile name to pin for container apps job execution.
+
+## JobSecretsCollection
+### Properties
+* **value**: [Secret](#secret)[] (Required): Collection of resources.
+
+## JobTemplate
+### Properties
+* **containers**: [Container](#container)[]: List of container definitions for the Container App.
+* **initContainers**: [InitContainer](#initcontainer)[]: List of specialized containers that run before app containers.
+* **volumes**: [Volume](#volume)[]: List of volume definitions for the Container App.
+
 ## JwtClaimChecks
 ### Properties
 * **allowedClientApplications**: string[]: The list of the allowed client applications.
 * **allowedGroups**: string[]: The list of the allowed groups.
+
+## KedaConfiguration
+### Properties
+* **version**: string (ReadOnly): The version of Keda
 
 ## LogAnalyticsConfiguration
 ### Properties
@@ -766,10 +862,13 @@ Note that URLs within the current domain are always implicitly allowed.
 ### Properties
 * **scopes**: string[]: A list of the scopes that should be requested while authenticating.
 
-## ManagedEnvironmentOutboundSettings
+## ManagedCertificateProperties
 ### Properties
-* **outBoundType**: 'LoadBalancer' | 'UserDefinedRouting' | string: Outbound type for the cluster
-* **virtualNetworkApplianceIp**: string: Virtual Appliance IP used as the Egress controller for the Environment
+* **domainControlValidation**: 'CNAME' | 'HTTP' | 'TXT' | string: Selected type of domain control validation for managed certificates.
+* **error**: string (ReadOnly): Any error occurred during the certificate provision.
+* **provisioningState**: 'Canceled' | 'DeleteFailed' | 'Failed' | 'Pending' | 'Succeeded' | string (ReadOnly): Provisioning state of the certificate.
+* **subjectName**: string: Subject name of the certificate.
+* **validationToken**: string (ReadOnly): A TXT token used for DNS TXT domain control validation when issuing this type of managed certificates.
 
 ## ManagedEnvironmentProperties
 ### Properties
@@ -779,9 +878,12 @@ supported
 * **customDomainConfiguration**: [CustomDomainConfiguration](#customdomainconfiguration): Custom domain configuration for the environment
 * **daprAIConnectionString**: string: Application Insights connection string used by Dapr to export Service to Service communication telemetry
 * **daprAIInstrumentationKey**: string: Azure Monitor instrumentation key used by Dapr to export Service to Service communication telemetry
+* **daprConfiguration**: [DaprConfiguration](#daprconfiguration): The configuration of Dapr component.
 * **defaultDomain**: string (ReadOnly): Default Domain Name for the cluster
 * **deploymentErrors**: string (ReadOnly): Any errors that occurred during deployment or deployment validation
 * **eventStreamEndpoint**: string (ReadOnly): The endpoint of the eventstream of the Environment.
+* **infrastructureResourceGroup**: string: Name of the platform-managed resource group created for the Managed Environment to host infrastructure resources. If a subnet ID is provided, this resource group will be created in the same subscription as the subnet.
+* **kedaConfiguration**: [KedaConfiguration](#kedaconfiguration): The configuration of Keda component.
 * **provisioningState**: 'Canceled' | 'Failed' | 'InfrastructureSetupComplete' | 'InfrastructureSetupInProgress' | 'InitializationInProgress' | 'ScheduledForDelete' | 'Succeeded' | 'UpgradeFailed' | 'UpgradeRequested' | 'Waiting' | string (ReadOnly): Provisioning state of the Environment.
 * **staticIp**: string (ReadOnly): Static IP of the Environment
 * **vnetConfiguration**: [VnetConfiguration](#vnetconfiguration): Vnet configuration for the environment
@@ -899,12 +1001,19 @@ as they were at the creation time
 
 ## Secret
 ### Properties
+* **identity**: string: Resource ID of a managed identity to authenticate with Azure Key Vault, or System to use a system-assigned identity.
+* **keyVaultUrl**: string: Azure Key Vault URL pointing to the secret referenced by the container app.
 * **name**: string: Secret Name.
 * **value**: string (WriteOnly): Secret Value.
 
 ## SecretsCollection
 ### Properties
 * **value**: [ContainerAppSecret](#containerappsecret)[] (Required): Collection of resources.
+
+## SecretVolumeItem
+### Properties
+* **path**: string: Path to project secret to. If no path is provided, path defaults to name of secret listed in secretRef.
+* **secretRef**: string: Name of the Container App secret from which to pull the secret value.
 
 ## SourceControlProperties
 ### Properties
@@ -977,6 +1086,16 @@ as they were at the creation time
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## TrafficWeight
 ### Properties
 * **label**: string: Associates a traffic label with a revision
@@ -1010,18 +1129,17 @@ application used for sign-in.
 ## VnetConfiguration
 ### Properties
 * **dockerBridgeCidr**: string: CIDR notation IP range assigned to the Docker bridge, network. Must not overlap with any other provided IP ranges.
-* **infrastructureSubnetId**: string: Resource ID of a subnet for infrastructure components. This subnet must be in the same VNET as the subnet defined in runtimeSubnetId. Must not overlap with any other provided IP ranges.
-* **internal**: bool: Boolean indicating the environment only has an internal load balancer. These environments do not have a public static IP resource. They must provide runtimeSubnetId and infrastructureSubnetId if enabling this property
-* **outboundSettings**: [ManagedEnvironmentOutboundSettings](#managedenvironmentoutboundsettings): Configuration used to control the Environment Egress outbound traffic
+* **infrastructureSubnetId**: string: Resource ID of a subnet for infrastructure components. Must not overlap with any other provided IP ranges.
+* **internal**: bool: Boolean indicating the environment only has an internal load balancer. These environments do not have a public static IP resource. They must provide infrastructureSubnetId if enabling this property
 * **platformReservedCidr**: string: IP range in CIDR notation that can be reserved for environment infrastructure IP addresses. Must not overlap with any other provided IP ranges.
 * **platformReservedDnsIP**: string: An IP address from the IP range defined by platformReservedCidr that will be reserved for the internal DNS server.
-* **runtimeSubnetId**: string: This field is deprecated and not used. If you wish to provide your own subnet that Container App containers are injected into, then you should leverage the infrastructureSubnetId.
 
 ## Volume
 ### Properties
 * **name**: string: Volume name.
-* **storageName**: string: Name of storage resource. No need to provide for EmptyDir.
-* **storageType**: 'AzureFile' | 'EmptyDir' | string: Storage type for the volume. If not provided, use EmptyDir.
+* **secrets**: [SecretVolumeItem](#secretvolumeitem)[]: List of secrets to be added in volume. If no secrets are provided, all secrets in collection will be added to volume.
+* **storageName**: string: Name of storage resource. No need to provide for EmptyDir and Secret.
+* **storageType**: 'AzureFile' | 'EmptyDir' | 'Secret' | string: Storage type for the volume. If not provided, use EmptyDir.
 
 ## VolumeMount
 ### Properties
@@ -1030,7 +1148,8 @@ application used for sign-in.
 
 ## WorkloadProfile
 ### Properties
-* **maximumCount**: int (Required): The maximum capacity.
-* **minimumCount**: int (Required): The minimum capacity.
+* **maximumCount**: int: The maximum capacity.
+* **minimumCount**: int: The minimum capacity.
+* **name**: string (Required): Workload profile type for the workloads to run on.
 * **workloadProfileType**: string (Required): Workload profile type for the workloads to run on.
 

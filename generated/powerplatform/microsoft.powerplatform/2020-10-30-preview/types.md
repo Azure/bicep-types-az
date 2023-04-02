@@ -91,6 +91,7 @@
 ## Properties
 ### Properties
 * **encryption**: [PropertiesEncryption](#propertiesencryption): The encryption settings for a configuration store.
+* **healthStatus**: 'Healthy' | 'Undetermined' | 'Unhealthy' | string: The health status of the resource.
 * **lockbox**: [PropertiesLockbox](#propertieslockbox): Settings concerning lockbox.
 * **networkInjection**: [PropertiesNetworkInjection](#propertiesnetworkinjection): Settings concerning network injection.
 * **systemId**: string (ReadOnly): The internally assigned unique identifier of the resource.
