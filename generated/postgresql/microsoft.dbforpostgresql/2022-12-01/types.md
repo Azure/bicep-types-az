@@ -154,7 +154,7 @@
 * **network**: [Network](#network): Network properties of a server.
 * **pointInTimeUTC**: string (WriteOnly): Restore point creation time (ISO8601 format), specifying the time to restore from. It's required when 'createMode' is 'PointInTimeRestore' or 'GeoRestore'.
 * **replicaCapacity**: int: Replicas allowed for a server.
-* **replicationRole**: 'AsyncReplica' | 'GeoAsyncReplica' | 'GeoSyncReplica' | 'None' | 'Primary' | 'Secondary' | 'SyncReplica' | 'WalReplica' | string: Replication role of the server
+* **replicationRole**: 'AsyncReplica' | 'GeoAsyncReplica' | 'None' | 'Primary' | string: Replication role of the server
 * **sourceServerResourceId**: string (WriteOnly): The source server resource ID to restore from. It's required when 'createMode' is 'PointInTimeRestore' or 'GeoRestore' or 'Replica'.
 * **state**: 'Disabled' | 'Dropping' | 'Ready' | 'Starting' | 'Stopped' | 'Stopping' | 'Updating' | string (ReadOnly): A state of a server that is visible to user.
 * **storage**: [Storage](#storage): Storage properties of a server.
