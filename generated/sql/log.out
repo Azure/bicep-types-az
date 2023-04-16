@@ -1,6 +1,6 @@
 WARNING: Unable to parse swagger path "Microsoft.Sql/stable/2014-04-01-legacy/sql.core_legacy.json"
 WARNING: Unable to parse swagger path "Microsoft.Sql/stable/2014-04-01-legacy/usages_legacy.json"
-AutoRest code generation utility [cli version: 3.6.3; node: v16.19.1]
+AutoRest code generation utility [cli version: 3.6.3; node: v16.20.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.

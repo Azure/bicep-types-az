@@ -155,16 +155,16 @@
 ## ManagedHsmProperties
 ### Properties
 * **createMode**: 'default' | 'recover' (WriteOnly): The create mode to indicate whether the resource is being created or is being recovered from a deleted resource.
-* **enablePurgeProtection**: bool: Property specifying whether protection against purge is enabled for this managed HSM pool. Setting this property to true activates protection against purge for this managed HSM pool and its content - only the Managed HSM service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible.
-* **enableSoftDelete**: bool: Property to specify whether the 'soft delete' functionality is enabled for this managed HSM pool. If it's not set to any value(true or false) when creating new managed HSM pool, it will be set to true by default. Once set to true, it cannot be reverted to false.
+* **enablePurgeProtection**: bool: Property specifying whether protection against purge is enabled for this managed HSM pool. Setting this property to true activates protection against purge for this managed HSM pool and its content - only the Managed HSM service may initiate a hard, irrecoverable deletion. Enabling this functionality is irreversible.
+* **enableSoftDelete**: bool: Property to specify whether the 'soft delete' functionality is enabled for this managed HSM pool. Soft delete is enabled by default for all managed HSMs and is immutable.
 * **hsmUri**: string (ReadOnly): The URI of the managed hsm pool for performing operations on keys.
 * **initialAdminObjectIds**: string[]: Array of initial administrators object ids for this managed hsm pool.
 * **networkAcls**: [MhsmNetworkRuleSet](#mhsmnetworkruleset): Rules governing the accessibility of the key vault from specific network locations.
 * **privateEndpointConnections**: [MhsmPrivateEndpointConnectionItem](#mhsmprivateendpointconnectionitem)[] (ReadOnly): List of private endpoint connections associated with the managed hsm pool.
 * **provisioningState**: 'Activated' | 'Deleting' | 'Failed' | 'Provisioning' | 'Restoring' | 'SecurityDomainRestore' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state.
-* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Control permission for data plane traffic coming from public networks while private endpoint is enabled.
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Control permission to the managed HSM from public networks.
 * **scheduledPurgeDate**: string (ReadOnly): The scheduled purge date in UTC.
-* **softDeleteRetentionInDays**: int: softDelete data retention days. It accepts >=7 and <=90.
+* **softDeleteRetentionInDays**: int: Soft deleted data retention days. When you delete an HSM or a key, it will remain recoverable for the configured retention period or for a default period of 90 days. It accepts values between 7 and 90.
 * **statusMessage**: string (ReadOnly): Resource Status Message.
 * **tenantId**: string: The Azure Active Directory tenant ID that should be used for authenticating requests to the managed HSM pool.
 
@@ -181,7 +181,7 @@
 ## ManagedHsmSku
 ### Properties
 * **family**: 'B' | string (Required): SKU Family of the managed HSM Pool
-* **name**: 'Custom_B32' | 'Standard_B1' (Required): SKU of the managed HSM Pool
+* **name**: 'Custom_B32' | 'Custom_B6' | 'Standard_B1' (Required): SKU of the managed HSM Pool
 
 ## MhsmipRule
 ### Properties
