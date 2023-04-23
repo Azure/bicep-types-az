@@ -1085,7 +1085,7 @@
 
 ### AzureBlobFSSink
 #### Properties
-* **copyBehavior**: any: The type of copy behavior for copy sink.
+* **copyBehavior**: any: The type of copy behavior for copy sink. Type: string (or Expression with resultType string).
 * **metadata**: [MetadataItem](#metadataitem)[]: Specify the custom metadata to be added to sink data. Type: array of objects (or Expression with resultType array of objects).
 * **type**: 'AzureBlobFSSink' (Required): Copy sink type.
 
@@ -1104,7 +1104,7 @@
 
 ### AzureDataLakeStoreSink
 #### Properties
-* **copyBehavior**: any: The type of copy behavior for copy sink.
+* **copyBehavior**: any: The type of copy behavior for copy sink. Type: string (or Expression with resultType string).
 * **enableAdlsSingleFileParallel**: any: Single File Parallel.
 * **type**: 'AzureDataLakeStoreSink' (Required): Copy sink type.
 
@@ -5301,7 +5301,8 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## SetVariableActivityTypeProperties
 ### Properties
-* **value**: any: Value to be set. Could be a static value or Expression
+* **setSystemVariable**: bool: If set to true, it sets the pipeline run return value.
+* **value**: any: Value to be set. Could be a static value or Expression.
 * **variableName**: string: Name of the variable whose value needs to be set.
 
 ## SftpServerLinkedServiceTypeProperties
@@ -5591,7 +5592,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### AzureBlobFSReadSettings
 #### Properties
 * **deleteFilesAfterCompletion**: any: Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
-* **enablePartitionDiscovery**: bool: Indicates whether to enable partition discovery.
+* **enablePartitionDiscovery**: any: Indicates whether to enable partition discovery. Type: boolean (or Expression with resultType boolean).
 * **fileListPath**: any: Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
 * **modifiedDatetimeEnd**: any: The end of file's modified datetime. Type: string (or Expression with resultType string).
 * **modifiedDatetimeStart**: any: The start of file's modified datetime. Type: string (or Expression with resultType string).
@@ -5618,7 +5619,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### AzureDataLakeStoreReadSettings
 #### Properties
 * **deleteFilesAfterCompletion**: any: Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
-* **enablePartitionDiscovery**: bool: Indicates whether to enable partition discovery.
+* **enablePartitionDiscovery**: any: Indicates whether to enable partition discovery. Type: boolean (or Expression with resultType boolean).
 * **fileListPath**: any: Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
 * **listAfter**: any: Lists files after the value (exclusive) based on file/folder names’ lexicographical order. Applies under the folderPath in data set, and filter files/sub-folders under the folderPath. Type: string (or Expression with resultType string).
 * **listBefore**: any: Lists files before the value (inclusive) based on file/folder names’ lexicographical order. Applies under the folderPath in data set, and filter files/sub-folders under the folderPath. Type: string (or Expression with resultType string).
@@ -5758,7 +5759,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ### AzureDataLakeStoreWriteSettings
 #### Properties
-* **expiryDateTime**: any: Specifies the expiry time of the written files. The time is applied to the UTC time zone in the format of "2018-12-01T05:00:00Z". Default value is NULL. Type: integer (or Expression with resultType integer).
+* **expiryDateTime**: any: Specifies the expiry time of the written files. The time is applied to the UTC time zone in the format of "2018-12-01T05:00:00Z". Default value is NULL. Type: string (or Expression with resultType string).
 * **type**: 'AzureDataLakeStoreWriteSettings' (Required): The write setting type.
 
 ### AzureFileStorageWriteSettings

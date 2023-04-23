@@ -1,4 +1,4 @@
-AutoRest code generation utility [cli version: 3.6.3; node: v16.19.1]
+AutoRest code generation utility [cli version: 3.6.3; node: v16.20.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 warning | SkippedSemanticValidation | Semantic validation was skipped.
@@ -6,6 +6,7 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'CertificateObjectGlobalRulestackResource' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from CertificateObjectGlobalRulestackResource
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'CertificateObjectLocalRulestackResource' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from CertificateObjectLocalRulestackResource
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'FirewallResource' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from FirewallResource
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'FirewallStatusResource' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from FirewallStatusResource
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'FqdnListGlobalRulestackResource' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from FqdnListGlobalRulestackResource
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'FqdnListLocalRulestackResource' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from FqdnListLocalRulestackResource
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'GlobalRulestackResource' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from GlobalRulestackResource

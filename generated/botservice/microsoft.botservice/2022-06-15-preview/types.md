@@ -4,7 +4,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-06-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string: Entity Tag
+* **etag**: string: Entity Tag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: 'azurebot' | 'bot' | 'designer' | 'function' | 'sdk' | string: Required. Gets or sets the Kind of the resource.
 * **location**: string: Specifies the location of the resource.
@@ -19,7 +19,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-06-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string: Entity Tag
+* **etag**: string: Entity Tag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: 'azurebot' | 'bot' | 'designer' | 'function' | 'sdk' | string: Required. Gets or sets the Kind of the resource.
 * **location**: string: Specifies the location of the resource.
@@ -34,7 +34,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-06-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string: Entity Tag
+* **etag**: string: Entity Tag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: 'azurebot' | 'bot' | 'designer' | 'function' | 'sdk' | string: Required. Gets or sets the Kind of the resource.
 * **location**: string: Specifies the location of the resource.
@@ -233,7 +233,7 @@
 
 ## ConnectionSetting
 ### Properties
-* **etag**: string: Entity Tag
+* **etag**: string: Entity Tag.
 * **id**: string (ReadOnly): Specifies the resource ID.
 * **kind**: 'azurebot' | 'bot' | 'designer' | 'function' | 'sdk' | string: Required. Gets or sets the Kind of the resource.
 * **location**: string: Specifies the location of the resource.
@@ -253,6 +253,8 @@
 ### Properties
 * **clientId**: string: Client Id associated with the Connection Setting.
 * **clientSecret**: string: Client Secret associated with the Connection Setting
+* **id**: string: Id of the Connection Setting.
+* **name**: string: Name of the Connection Setting.
 * **parameters**: [ConnectionSettingParameter](#connectionsettingparameter)[]: Service Provider Parameters associated with the Connection Setting
 * **provisioningState**: string: Provisioning state of the resource
 * **scopes**: string: Scopes associated with the Connection Setting
@@ -344,7 +346,7 @@
 ### Properties
 * **changedTime**: string: Changed time of the resource
 * **entityTag**: string: Entity tag of the resource
-* **etag**: string: Entity Tag
+* **etag**: string: Entity Tag.
 * **id**: string (ReadOnly): Specifies the resource ID.
 * **kind**: 'azurebot' | 'bot' | 'designer' | 'function' | 'sdk' | string: Required. Gets or sets the Kind of the resource.
 * **location**: string: Specifies the location of the resource.
