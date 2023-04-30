@@ -34,13 +34,13 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.DBforMySQL/flexibleServers/backups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DBforMySQL/flexibleServers/configurations@2021-12-01-preview (ReadOnly)
+## Resource Microsoft.DBforMySQL/flexibleServers/configurations@2021-12-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ConfigurationProperties](#configurationproperties) (ReadOnly): The properties of a configuration.
+* **properties**: [ConfigurationProperties](#configurationproperties): The properties of a configuration.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **type**: 'Microsoft.DBforMySQL/flexibleServers/configurations' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -81,9 +81,11 @@
 ## ConfigurationProperties
 ### Properties
 * **allowedValues**: string (ReadOnly): Allowed values of the configuration.
+* **currentValue**: string: Current value of the configuration.
 * **dataType**: string (ReadOnly): Data type of the configuration.
 * **defaultValue**: string (ReadOnly): Default value of the configuration.
 * **description**: string (ReadOnly): Description of the configuration.
+* **documentationLink**: string (ReadOnly): The link used to get the document from community or Azure site.
 * **isConfigPendingRestart**: 'False' | 'True' | string (ReadOnly): If is the configuration pending restart or not.
 * **isDynamicConfig**: 'False' | 'True' | string (ReadOnly): If is the configuration dynamic.
 * **isReadOnly**: 'False' | 'True' | string (ReadOnly): If is the configuration read only.
@@ -175,6 +177,7 @@
 * **autoGrow**: 'Disabled' | 'Enabled' | string: Enable Storage Auto Grow or not.
 * **autoIoScaling**: 'Disabled' | 'Enabled' | string: Enable IO Auto Scaling or not.
 * **iops**: int: Storage IOPS for a server.
+* **logOnDisk**: 'Disabled' | 'Enabled' | string: Enable Log On Disk or not.
 * **storageSizeGB**: int: Max storage size allowed for a server.
 * **storageSku**: string (ReadOnly): The sku name of the server storage.
 

@@ -52,6 +52,7 @@
 * **links**: [Link](#link)[]: Useful links of event.
 * **platformInitiated**: bool: Is true if the event is platform initiated.
 * **priority**: int: Priority level of the event. Has value from 0 to 23. 0 is the highest priority. Service issue events have higher priority followed by planned maintenance and health advisory. Critical events have higher priority followed by error, warning and informational. Furthermore, active events have higher priority than resolved.
+* **reason**: string: The reason for the Incident
 * **recommendedActions**: [EventPropertiesRecommendedActions](#eventpropertiesrecommendedactions): Recommended actions of event.
 * **status**: 'Active' | 'Resolved' | string: Current status of event.
 * **summary**: string: Summary text of event.
@@ -64,6 +65,8 @@
 ## EventPropertiesArticle
 ### Properties
 * **articleContent**: string: Article content of event.
+* **articleId**: string: Article Id
+* **parameters**: any: It provides a map of parameter name and value
 
 ## EventPropertiesRecommendedActions
 ### Properties

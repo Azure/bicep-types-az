@@ -1,4 +1,4 @@
-AutoRest code generation utility [cli version: 3.6.3; node: v16.19.1]
+AutoRest code generation utility [cli version: 3.6.3; node: v16.20.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -99,17 +99,17 @@ warning | PreCheck/SchemaMissingType | The schema 'ConnectionSettingParameter' w
 warning | PreCheck/SchemaMissingType | The schema 'ConnectionSettingProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/stable/2022-09-15/botservice.json:3128:5
 warning | PreCheck/SchemaMissingType | The schema 'ConnectionSettingResponseList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/stable/2022-09-15/botservice.json:3186:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/stable/2022-09-15/botservice.json:3194:5
 warning | PreCheck/SchemaMissingType | The schema 'ServiceProviderResponseList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/stable/2022-09-15/botservice.json:3203:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/stable/2022-09-15/botservice.json:3211:5
 warning | PreCheck/SchemaMissingType | The schema 'ServiceProviderParameter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/stable/2022-09-15/botservice.json:3220:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/stable/2022-09-15/botservice.json:3228:5
 warning | PreCheck/SchemaMissingType | The schema 'ServiceProviderProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/stable/2022-09-15/botservice.json:3272:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/stable/2022-09-15/botservice.json:3280:5
 warning | PreCheck/SchemaMissingType | The schema 'Error' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/stable/2022-09-15/botservice.json:3319:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/stable/2022-09-15/botservice.json:3327:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/stable/2022-09-15/botservice.json:3328:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/stable/2022-09-15/botservice.json:3336:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourceBase' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -197,17 +197,17 @@ warning | PreCheck/SchemaMissingType | The schema 'ConnectionSettingParameter' w
 warning | PreCheck/SchemaMissingType | The schema 'ConnectionSettingProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2022-06-15-preview/botservice.json:3129:5
 warning | PreCheck/SchemaMissingType | The schema 'ConnectionSettingResponseList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2022-06-15-preview/botservice.json:3187:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2022-06-15-preview/botservice.json:3195:5
 warning | PreCheck/SchemaMissingType | The schema 'ServiceProviderResponseList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2022-06-15-preview/botservice.json:3204:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2022-06-15-preview/botservice.json:3212:5
 warning | PreCheck/SchemaMissingType | The schema 'ServiceProviderParameter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2022-06-15-preview/botservice.json:3221:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2022-06-15-preview/botservice.json:3229:5
 warning | PreCheck/SchemaMissingType | The schema 'ServiceProviderProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2022-06-15-preview/botservice.json:3273:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2022-06-15-preview/botservice.json:3281:5
 warning | PreCheck/SchemaMissingType | The schema 'Error' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2022-06-15-preview/botservice.json:3320:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2022-06-15-preview/botservice.json:3328:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2022-06-15-preview/botservice.json:3329:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2022-06-15-preview/botservice.json:3337:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourceBase' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -247,65 +247,65 @@ warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:1426:5
 warning | PreCheck/SchemaMissingType | The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:1471:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:1479:5
 warning | PreCheck/SchemaMissingType | The schema 'BotProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:1542:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:1550:5
 warning | PreCheck/SchemaMissingType | The schema 'BotResponseList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:1755:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:1763:5
 warning | PreCheck/SchemaMissingType | The schema 'AlexaChannelProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:1920:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:1928:5
 warning | PreCheck/SchemaMissingType | The schema 'FacebookChannelProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:1963:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:1971:5
 warning | PreCheck/SchemaMissingType | The schema 'FacebookPage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:2003:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:2011:5
 warning | PreCheck/SchemaMissingType | The schema 'EmailChannelProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:2036:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:2044:5
 warning | PreCheck/SchemaMissingType | The schema 'MsTeamsChannelProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:2115:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:2123:5
 warning | PreCheck/SchemaMissingType | The schema 'SkypeChannelProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:2167:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:2175:5
 warning | PreCheck/SchemaMissingType | The schema 'KikChannelProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:2232:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:2240:5
 warning | PreCheck/SchemaMissingType | The schema 'WebChatChannelProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:2273:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:2281:5
 warning | PreCheck/SchemaMissingType | The schema 'DirectLineChannelProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:2309:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:2317:5
 warning | PreCheck/SchemaMissingType | The schema 'TelegramChannelProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:2351:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:2359:5
 warning | PreCheck/SchemaMissingType | The schema 'SmsChannelProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:2388:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:2396:5
 warning | PreCheck/SchemaMissingType | The schema 'SlackChannelProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:2435:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:2443:5
 warning | PreCheck/SchemaMissingType | The schema 'LineChannelProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:2510:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:2518:5
 warning | PreCheck/SchemaMissingType | The schema 'LineRegistration' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:2535:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:2543:5
 warning | PreCheck/SchemaMissingType | The schema 'DirectLineSpeechChannelProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:2574:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:2582:5
 warning | PreCheck/SchemaMissingType | The schema 'ChannelResponseList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:2710:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:2718:5
 warning | PreCheck/SchemaMissingType | The schema 'WebChatSite' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:2727:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:2735:5
 warning | PreCheck/SchemaMissingType | The schema 'DirectLineSite' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:2738:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:2746:5
 warning | PreCheck/SchemaMissingType | The schema 'ConnectionItemName' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:2983:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:2991:5
 warning | PreCheck/SchemaMissingType | The schema 'ConnectionSettingParameter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:2993:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:3001:5
 warning | PreCheck/SchemaMissingType | The schema 'ConnectionSettingProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:3007:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:3015:5
 warning | PreCheck/SchemaMissingType | The schema 'ConnectionSettingResponseList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:3065:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:3081:5
 warning | PreCheck/SchemaMissingType | The schema 'ServiceProviderResponseList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:3082:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:3098:5
 warning | PreCheck/SchemaMissingType | The schema 'ServiceProviderParameter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:3099:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:3115:5
 warning | PreCheck/SchemaMissingType | The schema 'ServiceProviderProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:3151:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:3167:5
 warning | PreCheck/SchemaMissingType | The schema 'Error' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:3198:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:3214:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:3207:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/botservice/resource-manager/Microsoft.BotService/preview/2021-05-01-preview/botservice.json:3223:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourceBase' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'

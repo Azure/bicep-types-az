@@ -114,6 +114,7 @@
 * **ports**: [ContainerPort](#containerport)[]: The exposed ports on the container instance.
 * **readinessProbe**: [ContainerProbe](#containerprobe): The readiness probe.
 * **resources**: [ResourceRequirements](#resourcerequirements) (Required): The resource requirements of the container instance.
+* **securityContext**: [SecurityContextDefinition](#securitycontextdefinition): The container security properties.
 * **volumeMounts**: [VolumeMount](#volumemount)[]: The volume mounts available to the container instance.
 
 ## ContainerPropertiesInstanceView
@@ -206,6 +207,7 @@
 * **environmentVariables**: [EnvironmentVariable](#environmentvariable)[]: The environment variables to set in the init container.
 * **image**: string: The image of the init container.
 * **instanceView**: [InitContainerPropertiesDefinitionInstanceView](#initcontainerpropertiesdefinitioninstanceview) (ReadOnly): The instance view of the init container. Only valid in response.
+* **securityContext**: [SecurityContextDefinition](#securitycontextdefinition): The container security properties.
 * **volumeMounts**: [VolumeMount](#volumemount)[]: The volume mounts available to the init container.
 
 ## InitContainerPropertiesDefinitionInstanceView
@@ -268,6 +270,20 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## SecurityContextCapabilitiesDefinition
+### Properties
+* **add**: string[]: The capabilities to add to the container.
+* **drop**: string[]: The capabilities to drop from the container.
+
+## SecurityContextDefinition
+### Properties
+* **allowPrivilegeEscalation**: bool: A boolean value indicating whether the init process can elevate its privileges
+* **capabilities**: [SecurityContextCapabilitiesDefinition](#securitycontextcapabilitiesdefinition): The capabilities to add or drop from a container.
+* **privileged**: bool: The flag to determine if the container permissions is elevated to Privileged.
+* **runAsGroup**: int: Sets the User GID for the container.
+* **runAsUser**: int: Sets the User UID for the container.
+* **seccompProfile**: string: a base64 encoded string containing the contents of the JSON in the seccomp profile
 
 ## UserAssignedIdentities
 ### Properties

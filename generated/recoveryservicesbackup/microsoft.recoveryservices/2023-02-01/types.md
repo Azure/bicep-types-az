@@ -758,13 +758,14 @@ InProgress | Failed | Succeeded
 
 ## PrivateEndpointConnection
 ### Properties
+* **groupIds**: 'AzureBackup' | 'AzureBackup_secondary' | 'AzureSiteRecovery' | string[]: Group Ids for the Private Endpoint
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): Gets or sets private endpoint associated with the private endpoint connection
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate): Gets or sets private link service connection state
 * **provisioningState**: 'Deleting' | 'Failed' | 'Pending' | 'Succeeded' | string: Gets or sets provisioning state of the private endpoint connection
 
 ## PrivateLinkServiceConnectionState
 ### Properties
-* **actionRequired**: string: Gets or sets actions required
+* **actionsRequired**: string: Gets or sets actions required
 * **description**: string: Gets or sets description
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string: Gets or sets the status
 
