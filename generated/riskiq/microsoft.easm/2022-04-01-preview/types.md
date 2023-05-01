@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ResourceBaseProperties](#resourcebaseproperties): Workspace properties.
+* **properties**: [WorkspaceResourceProperties](#workspaceresourceproperties): Workspace properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Easm/workspaces' (ReadOnly, DeployTimeConstant): The resource type
@@ -28,10 +28,6 @@
 * **displayName**: string: Label display name.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'ConfiguringApplication' | 'Creating' | 'CreatingArtifacts' | 'DeletingArtifacts' | 'Failed' | 'InstallingApplication' | 'MigratingApplicationData' | 'NotSpecified' | 'ProvisioningResources' | 'RunningValidations' | 'Succeeded' | string (ReadOnly): Resource provisioning state.
 
-## ResourceBaseProperties
-### Properties
-* **provisioningState**: 'Accepted' | 'Canceled' | 'ConfiguringApplication' | 'Creating' | 'CreatingArtifacts' | 'DeletingArtifacts' | 'Failed' | 'InstallingApplication' | 'MigratingApplicationData' | 'NotSpecified' | 'ProvisioningResources' | 'RunningValidations' | 'Succeeded' | string (ReadOnly): Resource provisioning state.
-
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
@@ -45,4 +41,9 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## WorkspaceResourceProperties
+### Properties
+* **dataPlaneEndpoint**: string (ReadOnly): Data plane endpoint.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'ConfiguringApplication' | 'Creating' | 'CreatingArtifacts' | 'DeletingArtifacts' | 'Failed' | 'InstallingApplication' | 'MigratingApplicationData' | 'NotSpecified' | 'ProvisioningResources' | 'RunningValidations' | 'Succeeded' | string (ReadOnly): Resource provisioning state.
 

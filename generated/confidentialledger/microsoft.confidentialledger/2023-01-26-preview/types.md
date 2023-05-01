@@ -8,9 +8,8 @@
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [LedgerProperties](#ledgerproperties): Properties of Confidential Ledger Resource.
-* **runningState**: 'Active' | 'Paused' | 'Pausing' | 'Resuming' | 'Unknown' | string: Object representing RunningState for Ledger.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [Tags](#tags): Additional tags for Confidential Ledger
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.ConfidentialLedger/ledgers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ConfidentialLedger/managedCCFs@2023-01-26-preview
@@ -51,6 +50,7 @@
 * **ledgerType**: 'Private' | 'Public' | 'Unknown' | string: Type of Confidential Ledger
 * **ledgerUri**: string (ReadOnly): Endpoint for calling Ledger Service.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): Provisioning state of Ledger Resource
+* **runningState**: 'Active' | 'Paused' | 'Pausing' | 'Resuming' | 'Unknown' | string: Object representing RunningState for Ledger.
 
 ## ManagedCCFProperties
 ### Properties
@@ -77,7 +77,7 @@
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
-## Tags
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

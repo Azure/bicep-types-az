@@ -739,7 +739,7 @@
 
 ## ProfileProperties
 ### Properties
-* **extendedProperties**: [ProfilePropertiesExtendedProperties](#profilepropertiesextendedproperties): Key-Value pair representing additional properties for profiles.
+* **extendedProperties**: [ProfilePropertiesExtendedProperties](#profilepropertiesextendedproperties) (ReadOnly): Key-Value pair representing additional properties for profiles.
 * **frontDoorId**: string (ReadOnly): The Id of the frontdoor.
 * **originResponseTimeoutSeconds**: int: Send and receive timeout on forwarding request to the origin. When timeout is reached, the request fails and returns.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning status of the profile.
@@ -877,6 +877,12 @@
 
 ### AzureFirstPartyManagedCertificateParameters
 #### Properties
+* **certificateAuthority**: string (ReadOnly): Certificate issuing authority.
+* **expirationDate**: string (ReadOnly): Certificate expiration date.
+* **secretSource**: [ResourceReference](#resourcereference) (ReadOnly): Resource reference to the Azure Key Vault certificate. Expected to be in format of /subscriptions/{​​​​​​​​​subscriptionId}​​​​​​​​​/resourceGroups/{​​​​​​​​​resourceGroupName}​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​/providers/Microsoft.KeyVault/vaults/{vaultName}​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​/secrets/{certificateName}​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+* **subject**: string (ReadOnly): Subject name in the certificate.
+* **subjectAlternativeNames**: string[]: The list of SANs.
+* **thumbprint**: string (ReadOnly): Certificate thumbprint.
 * **type**: 'AzureFirstPartyManagedCertificate' (Required): The type of the secret resource.
 
 ### CustomerCertificateParameters
