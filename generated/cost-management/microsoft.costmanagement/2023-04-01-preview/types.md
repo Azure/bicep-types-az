@@ -1,30 +1,40 @@
-# Microsoft.CostManagement @ 2022-10-01
+# Microsoft.CostManagement @ 2023-04-01-preview
 
-## Resource Microsoft.CostManagement/alerts@2022-10-01 (ReadOnly)
+## Resource Microsoft.CostManagement/alerts@2023-04-01-preview (ReadOnly)
 * **Valid Scope(s)**: Unknown
 ### Properties
-* **apiVersion**: '2022-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AlertProperties](#alertproperties) (ReadOnly): Alert properties.
 * **type**: 'Microsoft.CostManagement/alerts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.CostManagement/exports@2022-10-01
+## Resource Microsoft.CostManagement/budgets@2023-04-01-preview
 * **Valid Scope(s)**: Unknown
 ### Properties
-* **apiVersion**: '2022-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **eTag**: string: eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [BudgetProperties](#budgetproperties): The properties of the budget.
+* **type**: 'Microsoft.CostManagement/budgets' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.CostManagement/exports@2023-04-01-preview
+* **Valid Scope(s)**: Unknown
+### Properties
+* **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ExportProperties](#exportproperties): The properties of the export.
 * **type**: 'Microsoft.CostManagement/exports' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.CostManagement/scheduledActions@2022-10-01
+## Resource Microsoft.CostManagement/scheduledActions@2023-04-01-preview
 * **Valid Scope(s)**: Unknown
 ### Properties
-* **apiVersion**: '2022-10-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **eTag**: string (ReadOnly): Resource Etag. For update calls, eTag is optional and can be specified to achieve optimistic concurrency. Fetch the resource's eTag by doing a 'GET' call first and then including the latest eTag as part of the request body or 'If-Match' header while performing the update. For create calls, eTag is not required.
+* **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **eTag**: string (ReadOnly): Resource Etag. For update calls, eTag is mandatory. Fetch the resource's eTag by doing a 'GET' call first and then including the latest eTag as part of the request body or 'If-Match' header while performing the update. For create calls, eTag is not required.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: 'Email' | 'InsightAlert' | string: Kind of the scheduled action.
 * **name**: string (Required, DeployTimeConstant): The resource name
@@ -32,10 +42,10 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Kind of the scheduled action.
 * **type**: 'Microsoft.CostManagement/scheduledActions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.CostManagement/views@2022-10-01
+## Resource Microsoft.CostManagement/views@2023-04-01-preview
 * **Valid Scope(s)**: Unknown
 ### Properties
-* **apiVersion**: '2022-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
@@ -87,6 +97,110 @@
 * **triggeredBy**: string: notificationId that triggered this alert
 * **unit**: string: unit of currency being used
 
+## BudgetComparisonExpression
+### Properties
+* **name**: string (Required): The name of the column to use in comparison.
+* **operator**: 'In' | string (Required): The operator to use for comparison.
+* **values**: string[] (Required): Array of values to use for comparison
+
+## BudgetFilter
+### Properties
+* **and**: [BudgetFilterProperties](#budgetfilterproperties)[]: The logical "AND" expression. Must have at least 2 items.
+
+ Supported for CategoryType(s): Cost.
+* **dimensions**: [BudgetComparisonExpression](#budgetcomparisonexpression): Has comparison expression for a dimension.
+
+ Supported for CategoryType(s): Cost, ReservationUtilization.
+
+Supported dimension names for **CategoryType: ReservationUtilization** 
+- ReservationId
+- ReservedResourceType
+* **tags**: [BudgetComparisonExpression](#budgetcomparisonexpression): Has comparison expression for a tag.
+
+ Supported for CategoryType(s): Cost.
+
+## BudgetFilterProperties
+### Properties
+* **dimensions**: [BudgetComparisonExpression](#budgetcomparisonexpression): Has comparison expression for a dimension.
+
+ Supported for CategoryType(s): Cost, ReservationUtilization.
+
+Supported dimension names for **CategoryType: ReservationUtilization** 
+- ReservationId
+- ReservedResourceType
+* **tags**: [BudgetComparisonExpression](#budgetcomparisonexpression): Has comparison expression for a tag.
+
+ Supported for CategoryType(s): Cost.
+
+## BudgetProperties
+### Properties
+* **amount**: int: The total amount of cost to track with the budget.
+
+ Supported for CategoryType(s): Cost.
+
+ Required for CategoryType(s): Cost.
+* **category**: 'Cost' | 'ReservationUtilization' | string (Required): The category of the budget.
+- 'Cost' defines a Budget.
+- 'ReservationUtilization' defines a Reservation Utilization Alert Rule.
+* **currentSpend**: [CurrentSpend](#currentspend) (ReadOnly): The current amount of cost which is being tracked for a budget.
+
+ Supported for CategoryType(s): Cost.
+* **filter**: [BudgetFilter](#budgetfilter): May be used to filter budgets by user-specified dimensions and/or tags.
+
+ Supported for CategoryType(s): Cost, ReservationUtilization.
+* **forecastSpend**: [ForecastSpend](#forecastspend) (ReadOnly): The forecasted cost which is being tracked for a budget.
+
+ Supported for CategoryType(s): Cost.
+* **notifications**: [BudgetPropertiesNotifications](#budgetpropertiesnotifications): Dictionary of notifications associated with the budget.
+
+ Supported for CategoryType(s): Cost, ReservationUtilization.
+
+- Constraints for **CategoryType: Cost** - Budget can have up to 5 notifications with thresholdType: Actual and 5 notifications with thresholdType: Forecasted.
+- Constraints for **CategoryType: ReservationUtilization** - Only one notification allowed. thresholdType is not applicable.
+* **timeGrain**: 'Annually' | 'BillingAnnual' | 'BillingMonth' | 'BillingQuarter' | 'Last30Days' | 'Last7Days' | 'Monthly' | 'Quarterly' | string (Required): The time covered by a budget. Tracking of the amount will be reset based on the time grain.
+
+Supported for CategoryType(s): Cost, ReservationUtilization.
+
+ Supported timeGrainTypes for **CategoryType: Cost**
+
+- Monthly
+- Quarterly
+- Annually
+- BillingMonth*
+- BillingQuarter*
+- BillingAnnual*
+
+  *only supported for Web Direct customers.
+
+ Supported timeGrainTypes for **CategoryType: ReservationUtilization**
+- Last7Days
+- Last30Days
+
+ Required for CategoryType(s): Cost, ReservationUtilization.
+* **timePeriod**: [BudgetTimePeriod](#budgettimeperiod) (Required): The time period that defines the active period of the budget. The budget will evaluate data on or after the startDate and will expire on the endDate.
+
+ Supported for CategoryType(s): Cost, ReservationUtilization.
+
+ Required for CategoryType(s): Cost, ReservationUtilization.
+
+## BudgetPropertiesNotifications
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [Notification](#notification)
+
+## BudgetTimePeriod
+### Properties
+* **endDate**: string: The end date for the budget.
+
+- Constraints for **CategoryType: Cost** - No constraints. If not provided, we default this to 10 years from the start date.
+
+- Constraints for **CategoryType: ReservationUtilization** - End date cannot be more than 3 years after the start date.
+* **startDate**: string (Required): The start date for the budget.
+
+- Constraints for **CategoryType: Cost** - Must be first of the month and should be less than the end date. Budget start date must be on or after June 1, 2017. Future start date should not be more than twelve months. Past start date should  be selected within the timegrain period.
+
+- Constraints for **CategoryType: ReservationUtilization** - Must be on or after the current date and less than the end date.
+
 ## CommonExportProperties
 ### Properties
 * **definition**: [ExportDefinition](#exportdefinition) (Required): Has the definition for the export.
@@ -96,9 +210,14 @@
 * **partitionData**: bool: If set to true, exported data will be partitioned by size and placed in a blob directory together with a manifest file. Note: this option is currently available only for Microsoft Customer Agreement commerce scopes.
 * **runHistory**: [ExportExecutionListResult](#exportexecutionlistresult): If requested, has the most recent run history for the export.
 
+## CurrentSpend
+### Properties
+* **amount**: int (ReadOnly): The total amount of cost which is being tracked by the budget.
+* **unit**: string (ReadOnly): The unit of measure for the budget amount.
+
 ## ErrorDetails
 ### Properties
-* **code**: string (ReadOnly): Error code.
+* **code**: int (ReadOnly): Error code.
 * **message**: string (ReadOnly): Error message indicating why the operation failed.
 
 ## ExportDataset
@@ -151,10 +270,10 @@
 ## ExportRun
 ### Properties
 * **eTag**: string: eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
-* **id**: string (ReadOnly): Resource Id.
-* **name**: string (ReadOnly): Resource name.
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string (ReadOnly): The name of the resource
 * **properties**: [ExportRunProperties](#exportrunproperties): The properties of the export run.
-* **type**: string (ReadOnly): Resource type.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## ExportRunProperties
 ### Properties
@@ -183,11 +302,57 @@
 ### Properties
 * **fileFormats**: 'Csv' | string[]: Destination of the view data. Currently only CSV format is supported.
 
+## ForecastSpend
+### Properties
+* **amount**: int (ReadOnly): The forecasted cost for the total time period which is being tracked by the budget. This value is only provided if the budget contains a forecast alert type.
+* **unit**: string (ReadOnly): The unit of measure for the budget amount.
+
 ## KpiProperties
 ### Properties
 * **enabled**: bool: show the KPI in the UI?
 * **id**: string: ID of resource related to metric (budget).
 * **type**: 'Budget' | 'Forecast' | string: KPI type (Forecast, Budget).
+
+## Notification
+### Properties
+* **contactEmails**: string[] (Required): Email addresses to send the notification to when the threshold is breached. Must have at least one contact email or contact group specified at the Subscription or Resource Group scopes. All other scopes must have at least one contact email specified.
+
+ Supported for CategoryType(s): Cost, ReservationUtilization.
+* **contactGroups**: string[]: Subscription or Resource Group scopes only. Action groups to send the notification to when the threshold is exceeded. Must be provided as a fully qualified Azure resource id.
+
+ Supported for CategoryType(s): Cost.
+* **contactRoles**: string[]: Subscription or Resource Group scopes only. Contact roles to send the notification to when the threshold is breached.
+
+ Supported for CategoryType(s): Cost.
+* **enabled**: bool (Required): The notification is enabled or not.
+
+ Supported for CategoryType(s): Cost, ReservationUtilization.
+* **frequency**: 'Daily' | 'Monthly' | 'Weekly' | string: Frequency of a notification. Represents how long the notification will be silent after triggering an alert for a threshold breach. If not specified, the frequency will be set by default based on the timeGrain (Weekly when timeGrain: Last7Days, Monthly when timeGrain: Last30Days).
+
+ Supported for CategoryType(s): ReservationUtilization.
+* **locale**: 'cs-cz' | 'da-dk' | 'de-de' | 'en-gb' | 'en-us' | 'es-es' | 'fr-fr' | 'hu-hu' | 'it-it' | 'ja-jp' | 'ko-kr' | 'nb-no' | 'nl-nl' | 'pl-pl' | 'pt-br' | 'pt-pt' | 'ru-ru' | 'sv-se' | 'tr-tr' | 'zh-cn' | 'zh-tw' | string: Language in which the recipient will receive the notification, 
+
+ Supported for CategoryType(s): Cost, ReservationUtilization.
+* **operator**: 'EqualTo' | 'GreaterThan' | 'GreaterThanOrEqualTo' | 'LessThan' | string (Required): The comparison operator.
+
+ Supported for CategoryType(s): Cost, ReservationUtilization.
+
+ Supported operators for **CategoryType: Cost**
+- GreaterThan
+- GreaterThanOrEqualTo
+
+ Supported operators for **CategoryType: ReservationUtilization**
+- LessThan
+* **threshold**: int (Required): Threshold value associated with a notification. It is always percent with a maximum of 2 decimal places.
+
+ Supported for CategoryType(s): Cost, ReservationUtilization.
+
+ **CategoryType: Cost** - Must be between 0 and 1000. Notification is sent when the cost exceeded the threshold.
+
+ **CategoryType: ReservationUtilization** - Must be between 0 and 100. Notification is sent when a reservation has a utilization percentage below the threshold.
+* **thresholdType**: 'Actual' | 'Forecasted' | string: The type of threshold.
+
+ Supported for CategoryType(s): Cost.
 
 ## NotificationProperties
 ### Properties
