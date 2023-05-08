@@ -1123,6 +1123,15 @@
           {
             "labels": [
               "Service Attention",
+              "Managed Identity"
+            ],
+            "mentionees": [
+              "varunkch"
+            ]
+          },
+          {
+            "labels": [
+              "Service Attention",
               "Managed Services"
             ],
             "mentionees": [
