@@ -4547,6 +4547,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### Properties
 * **connectionString**: any (Required): The MongoDB Atlas connection string. Type: string, SecureString or AzureKeyVaultSecretReference. Type: string, SecureString or AzureKeyVaultSecretReference.
 * **database**: any (Required): The name of the MongoDB Atlas database that you want to access. Type: string (or Expression with resultType string).
+* **mongoDbAtlasDriverVersion**: any: The MongoDB Atlas Driver version that you want to choose. Allowed value are 2.10.4 and 2.19.0. Type: string (or Expression with resultType string).
 
 ## MongoDbCollectionDatasetTypeProperties
 ### Properties

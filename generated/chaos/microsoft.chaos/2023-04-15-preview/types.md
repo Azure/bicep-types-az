@@ -96,29 +96,20 @@
 
 ## CapabilityTypeProperties
 ### Properties
+* **azureRBACActions**: string[]: Control plane actions necessary to execute capability type.
+* **azureRBACDataActions**: string[]: Data plane actions necessary to execute capability type.
 * **description**: string (ReadOnly): Localized string of the description.
 * **displayName**: string (ReadOnly): Localized string of the display name.
 * **kind**: string (ReadOnly): String of the kind of this Capability Type.
 * **parametersSchema**: string (ReadOnly): URL to retrieve JSON schema of the Capability Type parameters.
-* **permissionsNecessary**: [CapabilityTypePropertiesPermissionsNecessary](#capabilitytypepropertiespermissionsnecessary) (ReadOnly): Array of control and data plane actions necessary to execute capability type.
 * **publisher**: string (ReadOnly): String of the Publisher that this Capability Type extends.
 * **runtimeProperties**: [CapabilityTypePropertiesRuntimeProperties](#capabilitytypepropertiesruntimeproperties): Runtime properties of this Capability Type.
 * **targetType**: string (ReadOnly): String of the Target Type that this Capability Type extends.
 * **urn**: string (ReadOnly): String of the URN for this Capability Type.
 
-## CapabilityTypePropertiesPermissionsNecessary
-### Properties
-* **actions**: string[]: Control plane actions necessary to execute capability type.
-* **dataActions**: string[]: Control plane actions necessary to execute capability type.
-
 ## CapabilityTypePropertiesRuntimeProperties
 ### Properties
 * **kind**: string (ReadOnly): String of the kind of the resource's action type (continuous or discrete).
-
-## ComponentsEwb5TmSchemasUserassignedidentitiesAdditionalproperties
-### Properties
-* **clientId**: string (ReadOnly): The client id of user assigned identity.
-* **principalId**: string (ReadOnly): The principal id of user assigned identity.
 
 ## ExperimentProperties
 ### Properties
@@ -147,7 +138,7 @@
 * **principalId**: string (ReadOnly): GUID that represents the principal ID of this resource identity.
 * **tenantId**: string (ReadOnly): GUID that represents the tenant ID of this resource identity.
 * **type**: 'None' | 'SystemAssigned' | 'UserAssigned' (Required): String of the resource identity type.
-* **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): The list of user identities associated with the experiment. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+* **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): The list of user identities associated with the Experiment. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
 
 ## Selector
 * **Discriminator**: type
@@ -211,5 +202,10 @@
 ## UserAssignedIdentities
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [ComponentsEwb5TmSchemasUserassignedidentitiesAdditionalproperties](#componentsewb5tmschemasuserassignedidentitiesadditionalproperties)
+* **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
+
+## UserAssignedIdentity
+### Properties
+* **clientId**: string (ReadOnly): The client ID of the assigned identity.
+* **principalId**: string (ReadOnly): The principal ID of the assigned identity.
 

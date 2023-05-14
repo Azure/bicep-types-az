@@ -98,7 +98,7 @@
 
 ## ErrorDetails
 ### Properties
-* **code**: int (ReadOnly): Error code.
+* **code**: string (ReadOnly): Error code.
 * **message**: string (ReadOnly): Error message indicating why the operation failed.
 
 ## ExportDataset
