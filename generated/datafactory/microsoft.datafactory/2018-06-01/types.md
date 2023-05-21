@@ -135,6 +135,8 @@
 * **dependsOn**: [ActivityDependency](#activitydependency)[]: Activity depends on condition.
 * **description**: string: Activity description.
 * **name**: string (Required): Activity name.
+* **onInactiveMarkAs**: 'Failed' | 'Skipped' | 'Succeeded' | string: Status result of the activity when the state is set to Inactive. This is an optional property and if not provided when the activity is inactive, the status will be Succeeded by default.
+* **state**: 'Active' | 'Inactive' | string: Activity state. This is an optional property and if not provided, the state will be Active by default.
 * **userProperties**: [UserProperty](#userproperty)[]: Activity user properties.
 
 ### AppendVariableActivity
@@ -1374,6 +1376,7 @@
 ### AmazonRdsForSqlServerSource
 #### Properties
 * **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **isolationLevel**: any: Specifies the transaction locking behavior for the SQL source. Allowed values: ReadCommitted/ReadUncommitted/RepeatableRead/Serializable/Snapshot. The default value is ReadCommitted. Type: string (or Expression with resultType string).
 * **partitionOption**: any: The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
 * **partitionSettings**: [SqlPartitionSettings](#sqlpartitionsettings): The settings that will be leveraged for Sql source partitioning.
 * **produceAdditionalTypes**: any: Which additional types to produce.
@@ -1447,6 +1450,7 @@
 ### AzureSqlSource
 #### Properties
 * **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **isolationLevel**: any: Specifies the transaction locking behavior for the SQL source. Allowed values: ReadCommitted/ReadUncommitted/RepeatableRead/Serializable/Snapshot. The default value is ReadCommitted. Type: string (or Expression with resultType string).
 * **partitionOption**: any: The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
 * **partitionSettings**: [SqlPartitionSettings](#sqlpartitionsettings): The settings that will be leveraged for Sql source partitioning.
 * **produceAdditionalTypes**: any: Which additional types to produce.
@@ -1976,6 +1980,7 @@
 ### SqlDWSource
 #### Properties
 * **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **isolationLevel**: any: Specifies the transaction locking behavior for the SQL source. Allowed values: ReadCommitted/ReadUncommitted/RepeatableRead/Serializable/Snapshot. The default value is ReadCommitted. Type: string (or Expression with resultType string).
 * **partitionOption**: any: The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
 * **partitionSettings**: [SqlPartitionSettings](#sqlpartitionsettings): The settings that will be leveraged for Sql source partitioning.
 * **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
@@ -1987,6 +1992,7 @@
 ### SqlMISource
 #### Properties
 * **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **isolationLevel**: any: Specifies the transaction locking behavior for the SQL source. Allowed values: ReadCommitted/ReadUncommitted/RepeatableRead/Serializable/Snapshot. The default value is ReadCommitted. Type: string (or Expression with resultType string).
 * **partitionOption**: any: The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
 * **partitionSettings**: [SqlPartitionSettings](#sqlpartitionsettings): The settings that will be leveraged for Sql source partitioning.
 * **produceAdditionalTypes**: any: Which additional types to produce.
@@ -1999,6 +2005,7 @@
 ### SqlServerSource
 #### Properties
 * **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **isolationLevel**: any: Specifies the transaction locking behavior for the SQL source. Allowed values: ReadCommitted/ReadUncommitted/RepeatableRead/Serializable/Snapshot. The default value is ReadCommitted. Type: string (or Expression with resultType string).
 * **partitionOption**: any: The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
 * **partitionSettings**: [SqlPartitionSettings](#sqlpartitionsettings): The settings that will be leveraged for Sql source partitioning.
 * **produceAdditionalTypes**: any: Which additional types to produce.
@@ -4547,6 +4554,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### Properties
 * **connectionString**: any (Required): The MongoDB Atlas connection string. Type: string, SecureString or AzureKeyVaultSecretReference. Type: string, SecureString or AzureKeyVaultSecretReference.
 * **database**: any (Required): The name of the MongoDB Atlas database that you want to access. Type: string (or Expression with resultType string).
+* **mongoDbAtlasDriverVersion**: any: The MongoDB Atlas Driver version that you want to choose. Allowed value are 2.10.4 and 2.19.0. Type: string (or Expression with resultType string).
 
 ## MongoDbCollectionDatasetTypeProperties
 ### Properties
@@ -5819,17 +5827,25 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## SynapseNotebookActivityTypeProperties
 ### Properties
 * **conf**: any: Spark configuration properties, which will override the 'conf' of the notebook you provide.
+* **configurationType**: 'Artifact' | 'Customized' | 'Default' | string: The type of the spark config.
 * **driverSize**: any: Number of core and memory to be used for driver allocated in the specified Spark pool for the session, which will be used for overriding 'driverCores' and 'driverMemory' of the notebook you provide. Type: string (or Expression with resultType string).
 * **executorSize**: any: Number of core and memory to be used for executors allocated in the specified Spark pool for the session, which will be used for overriding 'executorCores' and 'executorMemory' of the notebook you provide. Type: string (or Expression with resultType string).
 * **notebook**: [SynapseNotebookReference](#synapsenotebookreference) (Required): Synapse notebook reference.
 * **numExecutors**: any: Number of executors to launch for this session, which will override the 'numExecutors' of the notebook you provide. Type: integer (or Expression with resultType integer).
 * **parameters**: [SynapseNotebookActivityTypePropertiesParameters](#synapsenotebookactivitytypepropertiesparameters): Notebook parameters.
+* **sparkConfig**: [SynapseNotebookActivityTypePropertiesSparkConfig](#synapsenotebookactivitytypepropertiessparkconfig): Spark configuration property.
 * **sparkPool**: [BigDataPoolParametrizationReference](#bigdatapoolparametrizationreference): The name of the big data pool which will be used to execute the notebook.
+* **targetSparkConfiguration**: [SparkConfigurationParametrizationReference](#sparkconfigurationparametrizationreference): The spark configuration of the spark job.
 
 ## SynapseNotebookActivityTypePropertiesParameters
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [NotebookParameter](#notebookparameter)
+
+## SynapseNotebookActivityTypePropertiesSparkConfig
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## SynapseNotebookReference
 ### Properties

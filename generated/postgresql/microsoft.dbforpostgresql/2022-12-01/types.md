@@ -128,8 +128,8 @@
 
 ## Network
 ### Properties
-* **delegatedSubnetResourceId**: string: delegated subnet arm resource id.
-* **privateDnsZoneArmResourceId**: string: private dns zone arm resource id.
+* **delegatedSubnetResourceId**: string: Delegated subnet arm resource id. This is required to be passed during create, in case we want the server to be VNET injected, i.e. Private access server. During update, pass this only if we want to update the value for Private DNS zone.
+* **privateDnsZoneArmResourceId**: string: Private dns zone arm resource id. This is required to be passed during create, in case we want the server to be VNET injected, i.e. Private access server. During update, pass this only if we want to update the value for Private DNS zone.
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' | string (ReadOnly): public network access is enabled or not
 
 ## ServerBackupProperties
@@ -151,7 +151,7 @@
 * **highAvailability**: [HighAvailability](#highavailability): High availability properties of a server.
 * **maintenanceWindow**: [MaintenanceWindow](#maintenancewindow): Maintenance window properties of a server.
 * **minorVersion**: string (ReadOnly): The minor version of the server.
-* **network**: [Network](#network): Network properties of a server.
+* **network**: [Network](#network): Network properties of a server. This Network property is required to be passed only in case you want the server to be Private access server.
 * **pointInTimeUTC**: string (WriteOnly): Restore point creation time (ISO8601 format), specifying the time to restore from. It's required when 'createMode' is 'PointInTimeRestore' or 'GeoRestore'.
 * **replicaCapacity**: int: Replicas allowed for a server.
 * **replicationRole**: 'AsyncReplica' | 'GeoAsyncReplica' | 'None' | 'Primary' | string: Replication role of the server
