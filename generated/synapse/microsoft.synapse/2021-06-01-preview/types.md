@@ -539,6 +539,7 @@
 * **apiVersion**: '2021-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **properties**: {trustedServiceBypassEnabled: true/false}
 * **type**: 'Microsoft.Synapse/workspaces/trustedServiceByPassConfiguration' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Synapse/workspaces/vulnerabilityAssessments@2021-06-01-preview
