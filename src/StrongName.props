@@ -1,0 +1,8 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!-- TF_BUILD is a read-only predefined variable in ADO. It is set to True when starting a build task. -->
+  <PropertyGroup Condition="'$(TF_BUILD)' == 'True'">
+    <SignAssembly>true</SignAssembly>  
+    <DelaySign>true</DelaySign> 
+    <AssemblyOriginatorKeyFile Condition="'$(AssemblyOriginatorKeyFile)' == ''">$(MSBuildThisFileDirectory)35MSSharedLib1024.snk</AssemblyOriginatorKeyFile>    
+  </PropertyGroup>
+</Project>
