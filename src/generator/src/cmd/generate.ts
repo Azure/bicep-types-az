@@ -50,6 +50,7 @@ executeSynchronous(async () => {
   // this file is deliberately gitignored as it'll be overwritten when using --single-path
   // it's used to generate the git commit message
   await mkdir(outputBaseDir, { recursive: true });
+  const subdirsCreated = new Set<string>();
   const summaryLogger = await getLogger(`${outputBaseDir}/summary.log`);
 
   // use consistent sorting to make log changes easier to review
@@ -74,9 +75,12 @@ executeSynchronous(async () => {
       await generateAutorestConfig(logger, readmePath, bicepReadmePath, config);
       await generateSchema(logger, readmePath, tmpOutputDir, logLevel, waitForDebugger);
 
-      // remove all previously-generated files and copy over results
-      await rm(outputDir, { recursive: true, force: true, });
-      await mkdir(outputDir, { recursive: true });
+      if (!subdirsCreated.has(outputDir)) {
+        subdirsCreated.add(outputDir);
+        // remove all previously-generated files and copy over results
+        await rm(outputDir, { recursive: true, force: true, });
+        await mkdir(outputDir, { recursive: true });
+      }
       await copyRecursive(tmpOutputDir, outputDir);
     } catch (err) {
       logErr(logger, err);
