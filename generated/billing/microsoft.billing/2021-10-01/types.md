@@ -63,6 +63,7 @@
 * **consumptionCostCenter**: string: The cost center applied to the subscription. This field is only available for consumption subscriptions of Microsoft Customer Agreement Type billing accounts.
 * **customerDisplayName**: string (ReadOnly): The name of the customer for whom the subscription was created. The field is applicable only for Microsoft Partner Agreement billing accounts.
 * **customerId**: string: The ID of the customer for whom the subscription was created. The field is applicable only for Microsoft Partner Agreement billing accounts.
+* **customerName**: string (ReadOnly): The name of the customer for whom the subscription was created. The field is applicable only for Microsoft Partner Agreement billing accounts.
 * **displayName**: string: The name of the subscription.
 * **enrollmentAccountDisplayName**: string (ReadOnly): The enrollment Account name associated with the subscription. This field is available only for the Enterprise Agreement billing accounts.
 * **enrollmentAccountId**: string (ReadOnly): The enrollment Account ID associated with the subscription. This field is available only for the Enterprise Agreement billing accounts.
@@ -102,6 +103,7 @@
 * **consumptionCostCenter**: string: The cost center applied to the subscription. This field is only available for consumption subscriptions of Microsoft Customer Agreement Type billing accounts.
 * **customerDisplayName**: string (ReadOnly): The name of the customer for whom the subscription was created. The field is applicable only for Microsoft Partner Agreement billing accounts.
 * **customerId**: string: The ID of the customer for whom the subscription was created. The field is applicable only for Microsoft Partner Agreement billing accounts.
+* **customerName**: string (ReadOnly): The name of the customer for whom the subscription was created. The field is applicable only for Microsoft Partner Agreement billing accounts.
 * **displayName**: string: The name of the subscription.
 * **enrollmentAccountDisplayName**: string (ReadOnly): The enrollment Account name associated with the subscription. This field is available only for the Enterprise Agreement billing accounts.
 * **enrollmentAccountId**: string (ReadOnly): The enrollment Account ID associated with the subscription. This field is available only for the Enterprise Agreement billing accounts.
