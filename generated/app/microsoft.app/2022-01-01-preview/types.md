@@ -129,8 +129,8 @@
 
 ## AppLogsConfiguration
 ### Properties
-* **destination**: string: Logs destination
-* **logAnalyticsConfiguration**: [LogAnalyticsConfiguration](#loganalyticsconfiguration): Log Analytics configuration
+* **destination**: string: Logs destination, can be 'log-analytics', 'azure-monitor' or 'none'
+* **logAnalyticsConfiguration**: [LogAnalyticsConfiguration](#loganalyticsconfiguration): Log Analytics configuration, must only be provided when destination is configured as 'log-analytics'
 
 ## AppRegistration
 ### Properties

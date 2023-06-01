@@ -43,6 +43,15 @@ warning | DeprecatedConfig | Using directive.38.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.39.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.48.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.49.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.50.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -85,6 +94,243 @@ warning | DeprecatedConfig | Using directive.38.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.39.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.48.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.49.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.50.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'DatabaseAccountsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:7270:5
+warning | PreCheck/SchemaMissingType | The schema 'SqlDatabaseListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:7297:5
+warning | PreCheck/SchemaMissingType | The schema 'SqlContainerListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:7310:5
+warning | PreCheck/SchemaMissingType | The schema 'SqlStoredProcedureListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:7323:5
+warning | PreCheck/SchemaMissingType | The schema 'SqlUserDefinedFunctionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:7336:5
+warning | PreCheck/SchemaMissingType | The schema 'SqlTriggerListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:7349:5
+warning | PreCheck/SchemaMissingType | The schema 'MongoDBDatabaseListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:7362:5
+warning | PreCheck/SchemaMissingType | The schema 'MongoDBCollectionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:7375:5
+warning | PreCheck/SchemaMissingType | The schema 'TableListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:7388:5
+warning | PreCheck/SchemaMissingType | The schema 'CassandraKeyspaceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:7401:5
+warning | PreCheck/SchemaMissingType | The schema 'CassandraTableListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:7414:5
+warning | PreCheck/SchemaMissingType | The schema 'GremlinDatabaseListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:7427:5
+warning | PreCheck/SchemaMissingType | The schema 'GremlinGraphListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:7440:5
+warning | PreCheck/SchemaMissingType | The schema 'ErrorResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:7467:5
+warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:7480:5
+warning | PreCheck/SchemaMissingType | The schema 'FailoverPolicies' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:7489:5
+warning | PreCheck/SchemaMissingType | The schema 'RegionForOnlineOffline' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:7525:5
+warning | PreCheck/SchemaMissingType | The schema 'ClientEncryptionKeyGetProperties-resource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:7671:9
+warning | PreCheck/SchemaMissingType | The schema 'ThroughputSettingsGetProperties-resource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:7761:9
+warning | PreCheck/SchemaMissingType | The schema 'GraphResourceGetProperties-options' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:7801:9
+warning | PreCheck/SchemaMissingType | The schema 'SqlDatabaseGetProperties-resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:7830:9
+warning | PreCheck/SchemaMissingType | The schema 'SqlDatabaseGetProperties-options' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:7850:9
+warning | PreCheck/SchemaMissingType | The schema 'SqlContainerGetProperties-resource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:7879:9
+warning | PreCheck/SchemaMissingType | The schema 'SqlContainerGetProperties-options' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:7889:9
+warning | PreCheck/SchemaMissingType | The schema 'SqlStoredProcedureGetProperties-resource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:7918:9
+warning | PreCheck/SchemaMissingType | The schema 'SqlUserDefinedFunctionGetProperties-resource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:7950:9
+warning | PreCheck/SchemaMissingType | The schema 'SqlTriggerGetProperties-resource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:7982:9
+warning | PreCheck/SchemaMissingType | The schema 'MongoDBDatabaseGetProperties-resource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:8014:9
+warning | PreCheck/SchemaMissingType | The schema 'MongoDBDatabaseGetProperties-options' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:8024:9
+warning | PreCheck/SchemaMissingType | The schema 'MongoDBCollectionGetProperties-resource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:8053:9
+warning | PreCheck/SchemaMissingType | The schema 'MongoDBCollectionGetProperties-options' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:8063:9
+warning | PreCheck/SchemaMissingType | The schema 'TableGetProperties-resource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:8092:9
+warning | PreCheck/SchemaMissingType | The schema 'TableGetProperties-options' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:8102:9
+warning | PreCheck/SchemaMissingType | The schema 'CassandraKeyspaceGetProperties-resource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:8131:9
+warning | PreCheck/SchemaMissingType | The schema 'CassandraKeyspaceGetProperties-options' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:8141:9
+warning | PreCheck/SchemaMissingType | The schema 'CassandraTableGetProperties-resource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:8170:9
+warning | PreCheck/SchemaMissingType | The schema 'CassandraTableGetProperties-options' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:8180:9
+warning | PreCheck/SchemaMissingType | The schema 'GremlinDatabaseGetProperties-resource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:8209:9
+warning | PreCheck/SchemaMissingType | The schema 'GremlinDatabaseGetProperties-options' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:8219:9
+warning | PreCheck/SchemaMissingType | The schema 'GremlinGraphGetProperties-resource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:8248:9
+warning | PreCheck/SchemaMissingType | The schema 'GremlinGraphGetProperties-options' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:8258:9
+warning | PreCheck/SchemaMissingType | The schema 'CassandraViewGetProperties-resource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:8287:9
+warning | PreCheck/SchemaMissingType | The schema 'CassandraViewGetProperties-options' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:8297:9
+warning | PreCheck/SchemaMissingType | The schema 'DatabaseAccountListReadOnlyKeysResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:8957:5
+warning | PreCheck/SchemaMissingType | The schema 'DatabaseAccountListKeysResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:8972:5
+warning | PreCheck/SchemaMissingType | The schema 'DatabaseAccountConnectionString' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:8992:5
+warning | PreCheck/SchemaMissingType | The schema 'DatabaseAccountListConnectionStringsResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:9042:5
+warning | PreCheck/SchemaMissingType | The schema 'PhysicalPartitionThroughputInfoResultProperties-resource' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:9874:9
+warning | PreCheck/SchemaMissingType | The schema 'ManagedServiceIdentity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:10832:5
+warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:11002:9
+warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:11025:5
+warning | PreCheck/SchemaMissingType | The schema 'UsagesResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:11041:5
+warning | PreCheck/SchemaMissingType | The schema 'Usage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:11054:5
+warning | PreCheck/SchemaMissingType | The schema 'PartitionUsagesResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:11085:5
+warning | PreCheck/SchemaMissingType | The schema 'PartitionUsage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:11098:5
+warning | PreCheck/SchemaMissingType | The schema 'MetricDefinitionsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:11118:5
+warning | PreCheck/SchemaMissingType | The schema 'MetricDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:11131:5
+warning | PreCheck/SchemaMissingType | The schema 'MetricAvailability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:11175:5
+warning | PreCheck/SchemaMissingType | The schema 'MetricListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:11190:5
+warning | PreCheck/SchemaMissingType | The schema 'Metric' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:11203:5
+warning | PreCheck/SchemaMissingType | The schema 'MetricName' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:11242:5
+warning | PreCheck/SchemaMissingType | The schema 'MetricValue' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:11257:5
+warning | PreCheck/SchemaMissingType | The schema 'PercentileMetricListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:11298:5
+warning | PreCheck/SchemaMissingType | The schema 'PercentileMetric' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:11311:5
+warning | PreCheck/SchemaMissingType | The schema 'PercentileMetricValue' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:11350:5
+warning | PreCheck/SchemaMissingType | The schema 'PartitionMetricListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:11402:5
+warning | PreCheck/SchemaMissingType | The schema 'PartitionMetric' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/cosmos-db.json:11415:5
+warning | PreCheck/SchemaMissingType | The schema 'NotebookWorkspaceConnectionInfoResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/notebook.json:417:5
+warning | PreCheck/SchemaMissingType | The schema 'SqlRoleDefinitionResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/rbac.json:401:5
+warning | PreCheck/SchemaMissingType | The schema 'SqlRoleDefinitionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/rbac.json:483:5
+warning | PreCheck/SchemaMissingType | The schema 'SqlRoleAssignmentListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-15-preview/rbac.json:541:5
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorResponse' (4 differences):
+  - properties.code: {"$ref":"#/components/schemas/schemas:33","description":"Error code."} => <none>
+  - properties.message: {"$ref":"#/components/schemas/schemas:34","description":"Error message indicating why the operation failed."} => <none>
+  - properties.error: <none> => {"description":"The error object.","$ref":"#/components/schemas/schemas:1481"}
+  - title: <none> => "Error response"
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProvisioningState' (2 differences):
+  - enum: <none> => ["Succeeded","Failed","Canceled","InProgress","Updating","Dropping"]
+  - x-ms-enum: <none> => {"name":"ProvisioningState","modelAsString":true}
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (2 differences):
+  - properties.id.description: "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}" => "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+  - properties.systemData: <none> => {"readOnly":true,"type":"object","description":"Azure Resource Manager metadata containing createdBy and modifiedBy information.","$ref":"#/components/schemas/schemas:1242"}
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProxyResource' (1 differences):
+  - allOf.0.$ref: "#/components/schemas/schemas:1176" => "#/components/schemas/schemas:1447"
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'DatabaseAccountGetResults' has a property 'identity' that is already declared the parent schema 'ARMResourceProperties' but isn't significantly different. The property has been removed from DatabaseAccountGetResults
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'DatabaseAccountCreateUpdateParameters' has a property 'identity' that is already declared the parent schema 'ARMResourceProperties' but isn't significantly different. The property has been removed from DatabaseAccountCreateUpdateParameters
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'RestoreParameters' has a property 'restoreSource' that is already declared the parent schema 'RestoreParametersBase' but isn't significantly different. The property has been removed from RestoreParameters
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'RestoreParameters' has a property 'restoreTimestampInUtc' that is already declared the parent schema 'RestoreParametersBase' but isn't significantly different. The property has been removed from RestoreParameters
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ProxyResource' -> 'ProxyResourceAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'Resource' -> 'ResourceAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorResponse' -> 'ErrorResponseAutoGenerated'
+warning | Skipping DatabaseAccounts_ListMetrics due to required query parameter "filter"
+warning | Skipping Database_ListMetrics due to required query parameter "filter"
+warning | Skipping Collection_ListMetrics due to required query parameter "filter"
+warning | Skipping CollectionRegion_ListMetrics due to required query parameter "filter"
+warning | Skipping DatabaseAccountRegion_ListMetrics due to required query parameter "filter"
+warning | Skipping PercentileSourceTarget_ListMetrics due to required query parameter "filter"
+warning | Skipping PercentileTarget_ListMetrics due to required query parameter "filter"
+warning | Skipping Percentile_ListMetrics due to required query parameter "filter"
+warning | Skipping CollectionPartitionRegion_ListMetrics due to required query parameter "filter"
+warning | Skipping CollectionPartition_ListMetrics due to required query parameter "filter"
+warning | Skipping PartitionKeyRangeId_ListMetrics due to required query parameter "filter"
+warning | Skipping PartitionKeyRangeIdRegion_ListMetrics due to required query parameter "filter"
+warning | Unrecognized property type: byte-array. Returning 'any'.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.29.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.30.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.31.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.35.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.36.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.37.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.38.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.39.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.48.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.49.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.50.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseAccountsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2023-04-15/cosmos-db.json:5838:5
@@ -276,6 +522,15 @@ warning | DeprecatedConfig | Using directive.38.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.39.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.48.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.49.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.50.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseAccountsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2023-03-15/cosmos-db.json:5838:5
@@ -467,6 +722,15 @@ warning | DeprecatedConfig | Using directive.38.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.39.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.48.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.49.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.50.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseAccountsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2023-03-01-preview/cosmos-db.json:7131:5
@@ -686,6 +950,15 @@ warning | DeprecatedConfig | Using directive.38.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.39.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.48.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.49.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.50.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseAccountsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-11-15-preview/cosmos-db.json:7131:5
@@ -889,6 +1162,15 @@ warning | DeprecatedConfig | Using directive.38.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.39.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.48.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.49.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.50.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseAccountsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-11-15/cosmos-db.json:5838:5
@@ -1080,6 +1362,15 @@ warning | DeprecatedConfig | Using directive.38.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.39.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.48.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.49.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.50.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseAccountsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-08-15-preview/cosmos-db.json:6391:5
@@ -1282,6 +1573,15 @@ warning | DeprecatedConfig | Using directive.38.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.39.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.48.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.49.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.50.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseAccountsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-08-15/cosmos-db.json:5126:5
@@ -1471,6 +1771,15 @@ warning | DeprecatedConfig | Using directive.38.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.39.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.48.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.49.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.50.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseAccountsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-05-15-preview/cosmos-db.json:6147:5
@@ -1673,6 +1982,15 @@ warning | DeprecatedConfig | Using directive.38.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.39.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.48.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.49.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.50.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseAccountsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2022-05-15/cosmos-db.json:5126:5
@@ -1862,6 +2180,15 @@ warning | DeprecatedConfig | Using directive.38.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.39.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.48.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.49.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.50.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseAccountsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2022-02-15-preview/cosmos-db.json:6147:5
@@ -2064,6 +2391,15 @@ warning | DeprecatedConfig | Using directive.38.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.39.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.48.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.49.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.50.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseAccountsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2021-11-15-preview/cosmos-db.json:5781:5
@@ -2264,6 +2600,15 @@ warning | DeprecatedConfig | Using directive.38.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.39.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.48.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.49.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.50.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseAccountsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2021-10-15/cosmos-db.json:5126:5
@@ -2452,6 +2797,15 @@ warning | DeprecatedConfig | Using directive.38.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.39.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.48.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.49.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.50.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseAccountsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2021-10-15-preview/cosmos-db.json:5781:5
@@ -2652,6 +3006,15 @@ warning | DeprecatedConfig | Using directive.38.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.39.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.48.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.49.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.50.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseAccountsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2021-07-01-preview/cosmos-db.json:5639:5
@@ -2849,6 +3212,15 @@ warning | DeprecatedConfig | Using directive.38.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.39.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.48.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.49.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.50.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseAccountsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2021-06-15/cosmos-db.json:5054:5
@@ -3037,6 +3409,15 @@ warning | DeprecatedConfig | Using directive.38.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.39.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.48.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.49.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.50.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseAccountsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2021-05-15/cosmos-db.json:5051:5
@@ -3225,6 +3606,15 @@ warning | DeprecatedConfig | Using directive.38.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.39.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.48.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.49.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.50.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseAccountsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2021-04-15/cosmos-db.json:5051:5
@@ -3413,6 +3803,15 @@ warning | DeprecatedConfig | Using directive.38.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.39.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.48.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.49.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.50.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseAccountsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2021-04-01-preview/cosmos-db.json:5280:5
@@ -3624,6 +4023,15 @@ warning | DeprecatedConfig | Using directive.38.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.39.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.48.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.49.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.50.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseAccountsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2021-03-15/cosmos-db.json:5051:5
@@ -3818,6 +4226,15 @@ warning | DeprecatedConfig | Using directive.38.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.39.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.48.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.49.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.50.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseAccountsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2021-03-01-preview/cosmos-db.json:5228:5
@@ -4026,6 +4443,15 @@ warning | DeprecatedConfig | Using directive.38.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.39.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.48.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.49.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.50.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseAccountsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2021-01-15/cosmos-db.json:5051:5
@@ -4220,6 +4646,15 @@ warning | DeprecatedConfig | Using directive.38.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.39.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.48.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.49.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.50.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseAccountsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2020-09-01/cosmos-db.json:5051:5
@@ -4412,6 +4847,15 @@ warning | DeprecatedConfig | Using directive.38.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.39.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.48.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.49.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.50.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2019-08-01-preview/privateEndpointConnection.json:216:5
@@ -4458,6 +4902,15 @@ warning | DeprecatedConfig | Using directive.38.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.39.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.48.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.49.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.50.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseAccountsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/preview/2020-06-01-preview/cosmos-db.json:4304:5
@@ -4666,6 +5119,15 @@ warning | DeprecatedConfig | Using directive.38.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.39.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.48.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.49.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.50.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseAccountsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2020-04-01/cosmos-db.json:4931:5
@@ -4846,6 +5308,15 @@ warning | DeprecatedConfig | Using directive.38.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.39.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.48.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.49.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.50.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseAccountsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2020-03-01/cosmos-db.json:4931:5
@@ -5026,6 +5497,15 @@ warning | DeprecatedConfig | Using directive.38.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.39.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.48.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.49.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.50.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseAccountsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2019-12-12/cosmos-db.json:4187:5
@@ -5188,6 +5668,15 @@ warning | DeprecatedConfig | Using directive.38.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.39.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.48.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.49.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.50.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseAccountsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2019-08-01/cosmos-db.json:4187:5
@@ -5350,6 +5839,15 @@ warning | DeprecatedConfig | Using directive.38.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.39.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.48.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.49.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.50.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseAccountsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2015-04-08/cosmos-db.json:3653:5
@@ -5480,6 +5978,15 @@ warning | DeprecatedConfig | Using directive.38.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.39.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.48.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.49.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.50.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseAccountsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2014-04-01/cosmos-db.json:3653:5
@@ -5610,6 +6117,15 @@ warning | DeprecatedConfig | Using directive.38.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.39.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.48.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.49.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.50.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseAccountsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2015-11-06/cosmos-db.json:3653:5
@@ -5740,6 +6256,15 @@ warning | DeprecatedConfig | Using directive.38.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.39.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.48.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.49.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.50.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseAccountsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2016-03-19/cosmos-db.json:3653:5
@@ -5870,6 +6395,15 @@ warning | DeprecatedConfig | Using directive.38.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.39.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.48.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.49.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.50.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DatabaseAccountsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2016-03-31/cosmos-db.json:3653:5
