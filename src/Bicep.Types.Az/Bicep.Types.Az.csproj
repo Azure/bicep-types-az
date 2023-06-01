@@ -8,9 +8,6 @@
     <Description>Bicep types generated from public Azure OpenAPI specs</Description>
   </PropertyGroup>
 
-    <!-- Need to sign the assembly with a strong name in Official Build. -->
-  <Import Project="$(EnlistmentRoot)\StrongName.props" />
-
   <ItemGroup>
     <PackageReference Include="Azure.Bicep.Types" Version="0.3.99" />
   </ItemGroup>

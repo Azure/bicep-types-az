@@ -9,7 +9,6 @@
     <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
     <RestoreLockedMode Condition="'$(CI)' == 'true'">true</RestoreLockedMode>
     <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
-    <EnlistmentRoot>$(MSBuildThisFileDirectory.TrimEnd('\\'))</EnlistmentRoot>
   </PropertyGroup>
 
   <ItemGroup>
