@@ -98,7 +98,7 @@
 
 ## ErrorDetails
 ### Properties
-* **code**: int (ReadOnly): Error code.
+* **code**: string (ReadOnly): Error code.
 * **message**: string (ReadOnly): Error message indicating why the operation failed.
 
 ## ExportDataset
@@ -297,7 +297,7 @@
 * **chart**: 'Area' | 'GroupedColumn' | 'Line' | 'StackedColumn' | 'Table' | string: Chart type of the main view in Cost Analysis. Required.
 * **createdOn**: string (ReadOnly): Date the user created this view.
 * **currency**: string (ReadOnly): Currency of the current view.
-* **dateRange**: string (ReadOnly): Date range of the current view.
+* **dateRange**: string: Date range of the current view.
 * **displayName**: string: User input name of the view. Required.
 * **kpis**: [KpiProperties](#kpiproperties)[]: List of KPIs to show in Cost Analysis UI.
 * **metric**: 'AHUB' | 'ActualCost' | 'AmortizedCost' | string: Metric to use when displaying costs.

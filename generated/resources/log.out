@@ -120,40 +120,225 @@ warning | DeprecatedConfig | Using directive.57.suppress which is deprecated and
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Operation' (4 differences):
-  - properties.name.$ref: "#/components/schemas/schemas:70" => "#/components/schemas/schemas:141"
+  - properties.name.$ref: "#/components/schemas/schemas:70" => "#/components/schemas/schemas:142"
   - properties.name.description: "Operation name: {provider}/{resource}/{operation}" => "The name of the operation, as per Resource-Based Access Control (RBAC). Examples: \"Microsoft.Compute/virtualMachines/write\", \"Microsoft.Compute/virtualMachines/capture/action\""
   - properties.name.readOnly: <none> => true
-  - properties.display.$ref: "#/components/schemas/schemas:71" => "#/components/schemas/schemas:142"
+  - properties.display.$ref: "#/components/schemas/schemas:71" => "#/components/schemas/schemas:143"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Operation-display' (12 differences):
-  - properties.provider.$ref: "#/components/schemas/schemas:72" => "#/components/schemas/schemas:143"
+  - properties.provider.$ref: "#/components/schemas/schemas:72" => "#/components/schemas/schemas:144"
   - properties.provider.description: "Service provider: Microsoft.Resources" => "The localized friendly form of the resource provider name, e.g. \"Microsoft Monitoring Insights\" or \"Microsoft Compute\"."
   - properties.provider.readOnly: <none> => true
-  - properties.resource.$ref: "#/components/schemas/schemas:73" => "#/components/schemas/schemas:144"
+  - properties.resource.$ref: "#/components/schemas/schemas:73" => "#/components/schemas/schemas:145"
   - properties.resource.description: "Resource on which the operation is performed: Profile, endpoint, etc." => "The localized friendly name of the resource type related to this operation. E.g. \"Virtual Machines\" or \"Job Schedule Collections\"."
   - properties.resource.readOnly: <none> => true
-  - properties.operation.$ref: "#/components/schemas/schemas:74" => "#/components/schemas/schemas:145"
+  - properties.operation.$ref: "#/components/schemas/schemas:74" => "#/components/schemas/schemas:146"
   - properties.operation.description: "Operation type: Read, write, delete, etc." => "The concise, localized friendly name for the operation; suitable for dropdowns. E.g. \"Create or Update Virtual Machine\", \"Restart Virtual Machine\"."
   - properties.operation.readOnly: <none> => true
-  - properties.description.$ref: "#/components/schemas/schemas:75" => "#/components/schemas/schemas:146"
+  - properties.description.$ref: "#/components/schemas/schemas:75" => "#/components/schemas/schemas:147"
   - properties.description.description: "Description of the operation." => "The short, localized friendly description of the operation; suitable for tool tips and detailed views."
   - properties.description.readOnly: <none> => true
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'OperationListResult' (4 differences):
-  - properties.value.$ref: "#/components/schemas/schemas:79" => "#/components/schemas/schemas:150"
+  - properties.value.$ref: "#/components/schemas/schemas:79" => "#/components/schemas/schemas:151"
   - properties.value.readOnly: <none> => true
-  - properties.nextLink.$ref: "#/components/schemas/schemas:80" => "#/components/schemas/schemas:151"
+  - properties.nextLink.$ref: "#/components/schemas/schemas:80" => "#/components/schemas/schemas:152"
   - properties.nextLink.readOnly: <none> => true
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorResponse' (7 differences):
   - title: "Error response" => "Error Response"
-  - properties.error: {"description":"The error object.","$ref":"#/components/schemas/schemas:234"} => <none>
-  - properties.code: <none> => {"$ref":"#/components/schemas/schemas:333","description":"The error code.","readOnly":true}
-  - properties.message: <none> => {"$ref":"#/components/schemas/schemas:334","description":"The error message.","readOnly":true}
-  - properties.target: <none> => {"$ref":"#/components/schemas/schemas:335","description":"The error target.","readOnly":true}
-  - properties.details: <none> => {"x-ms-identifiers":["message","target"],"$ref":"#/components/schemas/schemas:336","description":"The error details.","readOnly":true}
-  - properties.additionalInfo: <none> => {"x-ms-identifiers":[],"$ref":"#/components/schemas/schemas:337","description":"The error additional info.","readOnly":true}
+  - properties.error: {"description":"The error object.","$ref":"#/components/schemas/schemas:235"} => <none>
+  - properties.code: <none> => {"$ref":"#/components/schemas/schemas:334","description":"The error code.","readOnly":true}
+  - properties.message: <none> => {"$ref":"#/components/schemas/schemas:335","description":"The error message.","readOnly":true}
+  - properties.target: <none> => {"$ref":"#/components/schemas/schemas:336","description":"The error target.","readOnly":true}
+  - properties.details: <none> => {"x-ms-identifiers":["message","target"],"$ref":"#/components/schemas/schemas:337","description":"The error details.","readOnly":true}
+  - properties.additionalInfo: <none> => {"x-ms-identifiers":[],"$ref":"#/components/schemas/schemas:338","description":"The error additional info.","readOnly":true}
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'OperationListResult' -> 'OperationListResultAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'Operation' -> 'OperationAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'OperationDisplay' -> 'OperationDisplayAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorResponse' -> 'ErrorResponseAutoGenerated'
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.29.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.30.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.31.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.35.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.36.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.37.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.38.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.39.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.48.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.49.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.50.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.51.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.52.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.53.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.54.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.55.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.56.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.57.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.29.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.30.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.31.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.35.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.36.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.37.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.38.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.39.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.48.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.49.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.50.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.51.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.52.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.53.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.54.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.55.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.56.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.57.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.29.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.30.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.31.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.35.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.36.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.37.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.38.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.39.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.48.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.49.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.50.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.51.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.52.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.53.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.54.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.55.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.56.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.57.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Skipping path '/{policyAssignmentId}': Unable to locate "/providers/" segment
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -384,191 +569,6 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.29.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.30.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.31.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.35.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.36.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.37.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.38.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.39.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.48.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.49.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.50.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.51.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.52.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.53.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.54.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.55.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.56.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.57.suppress which is deprecated and will be removed in the future.
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping path '/{policyAssignmentId}': Unable to locate "/providers/" segment
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.29.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.30.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.31.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.35.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.36.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.37.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.38.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.39.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.48.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.49.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.50.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.51.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.52.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.53.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.54.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.55.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.56.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.57.suppress which is deprecated and will be removed in the future.
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.29.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.30.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.31.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.35.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.36.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.37.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.38.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.39.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.48.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.49.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.50.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.51.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.52.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.53.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.54.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.55.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.56.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.57.suppress which is deprecated and will be removed in the future.
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.

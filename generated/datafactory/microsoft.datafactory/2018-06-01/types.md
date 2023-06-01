@@ -13,6 +13,16 @@
 * **tags**: [ResourceTags](#resourcetags): The resource tags.
 * **type**: 'Microsoft.DataFactory/factories' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.DataFactory/factories/adfcdcs@2018-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): Etag identifies change in the resource.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ChangeDataCapture](#changedatacapture) (Required): Properties of the change data capture.
+* **type**: 'Microsoft.DataFactory/factories/adfcdcs' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.DataFactory/factories/credentials@2018-06-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -135,6 +145,8 @@
 * **dependsOn**: [ActivityDependency](#activitydependency)[]: Activity depends on condition.
 * **description**: string: Activity description.
 * **name**: string (Required): Activity name.
+* **onInactiveMarkAs**: 'Failed' | 'Skipped' | 'Succeeded' | string: Status result of the activity when the state is set to Inactive. This is an optional property and if not provided when the activity is inactive, the status will be Succeeded by default.
+* **state**: 'Active' | 'Inactive' | string: Activity state. This is an optional property and if not provided, the state will be Active by default.
 * **userProperties**: [UserProperty](#userproperty)[]: Activity user properties.
 
 ### AppendVariableActivity
@@ -969,6 +981,20 @@
 * **dependsOn**: [PipelineReference](#pipelinereference)[] (Required): Upstream Pipelines.
 * **runDimension**: string (Required): Run Dimension property that needs to be emitted by upstream pipelines.
 
+## ChangeDataCapture
+### Properties
+* **allowVNetOverride**: bool: A boolean to determine if the vnet configuration needs to be overwritten.
+* **description**: string: The description of the change data capture.
+* **folder**: [ChangeDataCaptureFolder](#changedatacapturefolder): The folder that this CDC is in. If not specified, CDC will appear at the root level.
+* **Policy**: [MapperPolicy](#mapperpolicy) (Required): CDC policy
+* **SourceConnectionsInfo**: [MapperSourceConnectionsInfo](#mappersourceconnectionsinfo)[] (Required): List of sources connections that can be used as sources in the CDC.
+* **status**: string: Status of the CDC as to if it is running or stopped.
+* **TargetConnectionsInfo**: [MapperTargetConnectionsInfo](#mappertargetconnectionsinfo)[] (Required): List of target connections that can be used as sources in the CDC.
+
+## ChangeDataCaptureFolder
+### Properties
+* **name**: string: The name of the folder that this CDC is in.
+
 ## CmdkeySetupTypeProperties
 ### Properties
 * **password**: [SecretBase](#secretbase) (Required): The password of data source access.
@@ -1374,6 +1400,7 @@
 ### AmazonRdsForSqlServerSource
 #### Properties
 * **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **isolationLevel**: any: Specifies the transaction locking behavior for the SQL source. Allowed values: ReadCommitted/ReadUncommitted/RepeatableRead/Serializable/Snapshot. The default value is ReadCommitted. Type: string (or Expression with resultType string).
 * **partitionOption**: any: The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
 * **partitionSettings**: [SqlPartitionSettings](#sqlpartitionsettings): The settings that will be leveraged for Sql source partitioning.
 * **produceAdditionalTypes**: any: Which additional types to produce.
@@ -1447,6 +1474,7 @@
 ### AzureSqlSource
 #### Properties
 * **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **isolationLevel**: any: Specifies the transaction locking behavior for the SQL source. Allowed values: ReadCommitted/ReadUncommitted/RepeatableRead/Serializable/Snapshot. The default value is ReadCommitted. Type: string (or Expression with resultType string).
 * **partitionOption**: any: The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
 * **partitionSettings**: [SqlPartitionSettings](#sqlpartitionsettings): The settings that will be leveraged for Sql source partitioning.
 * **produceAdditionalTypes**: any: Which additional types to produce.
@@ -1758,7 +1786,7 @@
 * **allowedGroups**: any: The groups containing all the users. Type: array of strings (or Expression with resultType array of strings).
 * **dateFilterColumn**: any: The Column to apply the <paramref name="StartTime"/> and <paramref name="EndTime"/>. Type: string (or Expression with resultType string).
 * **endTime**: any: End time of the requested range for this dataset. Type: string (or Expression with resultType string).
-* **outputColumns**: any: The columns to be read out from the Office 365 table. Type: array of objects (or Expression with resultType array of objects). Example: [ { "name": "Id" }, { "name": "CreatedDateTime" } ]
+* **outputColumns**: any: The columns to be read out from the Office 365 table. Type: array of objects (or Expression with resultType array of objects). itemType: OutputColumn. Example: [ { "name": "Id" }, { "name": "CreatedDateTime" } ]
 * **startTime**: any: Start time of the requested range for this dataset. Type: string (or Expression with resultType string).
 * **type**: 'Office365Source' (Required): Copy source type.
 * **userScopeFilterUri**: any: The user scope uri. Type: string (or Expression with resultType string).
@@ -1976,6 +2004,7 @@
 ### SqlDWSource
 #### Properties
 * **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **isolationLevel**: any: Specifies the transaction locking behavior for the SQL source. Allowed values: ReadCommitted/ReadUncommitted/RepeatableRead/Serializable/Snapshot. The default value is ReadCommitted. Type: string (or Expression with resultType string).
 * **partitionOption**: any: The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
 * **partitionSettings**: [SqlPartitionSettings](#sqlpartitionsettings): The settings that will be leveraged for Sql source partitioning.
 * **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
@@ -1987,6 +2016,7 @@
 ### SqlMISource
 #### Properties
 * **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **isolationLevel**: any: Specifies the transaction locking behavior for the SQL source. Allowed values: ReadCommitted/ReadUncommitted/RepeatableRead/Serializable/Snapshot. The default value is ReadCommitted. Type: string (or Expression with resultType string).
 * **partitionOption**: any: The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
 * **partitionSettings**: [SqlPartitionSettings](#sqlpartitionsettings): The settings that will be leveraged for Sql source partitioning.
 * **produceAdditionalTypes**: any: Which additional types to produce.
@@ -1999,6 +2029,7 @@
 ### SqlServerSource
 #### Properties
 * **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **isolationLevel**: any: Specifies the transaction locking behavior for the SQL source. Allowed values: ReadCommitted/ReadUncommitted/RepeatableRead/Serializable/Snapshot. The default value is ReadCommitted. Type: string (or Expression with resultType string).
 * **partitionOption**: any: The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
 * **partitionSettings**: [SqlPartitionSettings](#sqlpartitionsettings): The settings that will be leveraged for Sql source partitioning.
 * **produceAdditionalTypes**: any: Which additional types to produce.
@@ -2285,6 +2316,14 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
+
+## DataMapperMapping
+### Properties
+* **attributeMappingInfo**: [MapperAttributeMappings](#mapperattributemappings): This holds the user provided attribute mapping information.
+* **sourceConnectionReference**: [MapperConnectionReference](#mapperconnectionreference): The connection reference for the source connection.
+* **sourceDenormalizeInfo**: any: This holds the source denormalization information used while joining multiple sources.
+* **sourceEntityName**: string: Name of the source table
+* **targetEntityName**: string: Name of the target table
 
 ## Dataset
 * **Discriminator**: type
@@ -4497,6 +4536,80 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **referenceName**: string (Required): Reference ManagedVirtualNetwork name.
 * **type**: 'ManagedVirtualNetworkReference' | string (Required): Managed Virtual Network reference type.
 
+## MapperAttributeMapping
+### Properties
+* **attributeReference**: [MapperAttributeReference](#mapperattributereference): Reference of the source column used in the mapping. It is used for 'Direct' mapping type only.
+* **attributeReferences**: [MapperAttributeReference](#mapperattributereference)[]: List of references for source columns. It is used for 'Derived' and 'Aggregate' type mappings only.
+* **expression**: string: Expression used for 'Aggregate' and 'Derived' type mapping.
+* **functionName**: string: Name of the function used for 'Aggregate' and 'Derived' (except 'Advanced') type mapping.
+* **name**: string: Name of the target column.
+* **type**: 'Aggregate' | 'Derived' | 'Direct' | string: Type of the CDC attribute mapping. Note: 'Advanced' mapping type is also saved as 'Derived'.
+
+## MapperAttributeMappings
+### Properties
+* **attributeMappings**: [MapperAttributeMapping](#mapperattributemapping)[]: List of attribute mappings.
+
+## MapperAttributeReference
+### Properties
+* **entity**: string: Name of the table.
+* **entityConnectionReference**: [MapperConnectionReference](#mapperconnectionreference): The connection reference for the connection.
+* **name**: string: Name of the column.
+
+## MapperConnection
+### Properties
+* **commonDslConnectorProperties**: [MapperDslConnectorProperties](#mapperdslconnectorproperties)[]: List of name/value pairs for connection properties.
+* **isInlineDataset**: bool: A boolean indicating whether linked service is of type inline dataset. Currently only inline datasets are supported.
+* **linkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
+* **linkedServiceType**: string: Type of the linked service e.g.: AzureBlobFS.
+* **type**: 'linkedservicetype' | string (Required): Type of connection via linked service or dataset.
+
+## MapperConnectionReference
+### Properties
+* **connectionName**: string: Name of the connection
+* **type**: 'linkedservicetype' | string: Type of connection via linked service or dataset.
+
+## MapperDslConnectorProperties
+### Properties
+* **name**: string: Name of the property.
+* **value**: any: Value of the property.
+
+## MapperPolicy
+### Properties
+* **mode**: string: Mode of running the CDC: batch vs continuous.
+* **recurrence**: [MapperPolicyRecurrence](#mapperpolicyrecurrence): Defines the frequency and interval for running the CDC for batch mode.
+
+## MapperPolicyRecurrence
+### Properties
+* **frequency**: 'Hour' | 'Minute' | 'Second' | string: Frequency of period in terms of 'Hour', 'Minute' or 'Second'.
+* **interval**: int: Actual interval value as per chosen frequency.
+
+## MapperSourceConnectionsInfo
+### Properties
+* **Connection**: [MapperConnection](#mapperconnection): Source connection details.
+* **SourceEntities**: [MapperTable](#mappertable)[]: List of source tables for a source connection.
+
+## MapperTable
+### Properties
+* **name**: string: Name of the table.
+* **properties**: [MapperTableProperties](#mappertableproperties): Table properties.
+
+## MapperTableProperties
+### Properties
+* **dslConnectorProperties**: [MapperDslConnectorProperties](#mapperdslconnectorproperties)[]: List of name/value pairs for connection properties.
+* **schema**: [MapperTableSchema](#mappertableschema)[]: List of columns for the source table.
+
+## MapperTableSchema
+### Properties
+* **dataType**: string: Data type of the column.
+* **name**: string: Name of the column.
+
+## MapperTargetConnectionsInfo
+### Properties
+* **Connection**: [MapperConnection](#mapperconnection): Source connection details.
+* **DataMapperMappings**: [DataMapperMapping](#datamappermapping)[]: List of table mappings.
+* **Relationships**: any[]: List of relationship info among the tables.
+* **TargetEntities**: [MapperTable](#mappertable)[]: List of source tables for a target connection.
+
 ## MappingDataFlowTypeProperties
 ### Properties
 * **script**: string: DataFlow script.
@@ -4547,6 +4660,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### Properties
 * **connectionString**: any (Required): The MongoDB Atlas connection string. Type: string, SecureString or AzureKeyVaultSecretReference. Type: string, SecureString or AzureKeyVaultSecretReference.
 * **database**: any (Required): The name of the MongoDB Atlas database that you want to access. Type: string (or Expression with resultType string).
+* **mongoDbAtlasDriverVersion**: any: The MongoDB Atlas Driver version that you want to choose. Allowed value are 2.10.4 and 2.19.0. Type: string (or Expression with resultType string).
 
 ## MongoDbCollectionDatasetTypeProperties
 ### Properties
@@ -5819,17 +5933,25 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## SynapseNotebookActivityTypeProperties
 ### Properties
 * **conf**: any: Spark configuration properties, which will override the 'conf' of the notebook you provide.
+* **configurationType**: 'Artifact' | 'Customized' | 'Default' | string: The type of the spark config.
 * **driverSize**: any: Number of core and memory to be used for driver allocated in the specified Spark pool for the session, which will be used for overriding 'driverCores' and 'driverMemory' of the notebook you provide. Type: string (or Expression with resultType string).
 * **executorSize**: any: Number of core and memory to be used for executors allocated in the specified Spark pool for the session, which will be used for overriding 'executorCores' and 'executorMemory' of the notebook you provide. Type: string (or Expression with resultType string).
 * **notebook**: [SynapseNotebookReference](#synapsenotebookreference) (Required): Synapse notebook reference.
 * **numExecutors**: any: Number of executors to launch for this session, which will override the 'numExecutors' of the notebook you provide. Type: integer (or Expression with resultType integer).
 * **parameters**: [SynapseNotebookActivityTypePropertiesParameters](#synapsenotebookactivitytypepropertiesparameters): Notebook parameters.
+* **sparkConfig**: [SynapseNotebookActivityTypePropertiesSparkConfig](#synapsenotebookactivitytypepropertiessparkconfig): Spark configuration property.
 * **sparkPool**: [BigDataPoolParametrizationReference](#bigdatapoolparametrizationreference): The name of the big data pool which will be used to execute the notebook.
+* **targetSparkConfiguration**: [SparkConfigurationParametrizationReference](#sparkconfigurationparametrizationreference): The spark configuration of the spark job.
 
 ## SynapseNotebookActivityTypePropertiesParameters
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [NotebookParameter](#notebookparameter)
+
+## SynapseNotebookActivityTypePropertiesSparkConfig
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## SynapseNotebookReference
 ### Properties

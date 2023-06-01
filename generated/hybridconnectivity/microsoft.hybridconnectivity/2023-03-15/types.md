@@ -29,6 +29,7 @@
 ## Function listIngressGatewayCredentials (Microsoft.HybridConnectivity/endpoints@2023-03-15)
 * **Resource**: Microsoft.HybridConnectivity/endpoints
 * **ApiVersion**: 2023-03-15
+* **Input**: [ListIngressGatewayCredentialsRequest](#listingressgatewaycredentialsrequest)
 * **Output**: [IngressGatewayResource](#ingressgatewayresource)
 
 ## Function listManagedProxyDetails (Microsoft.HybridConnectivity/endpoints@2023-03-15)
@@ -65,6 +66,10 @@
 ## ListCredentialsRequest
 ### Properties
 * **serviceName**: 'SSH' | 'WAC' | string: The name of the service. If not provided, the request will by pass the generation of service configuration token
+
+## ListIngressGatewayCredentialsRequest
+### Properties
+* **serviceName**: 'SSH' | 'WAC' | string: The name of the service.
 
 ## ManagedProxyRequest
 ### Properties
