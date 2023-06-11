@@ -20,3 +20,22 @@ warning | Skipping GlobalRulestack_listAdvancedSecurityObjects due to required q
 warning | Skipping GlobalRulestack_listSecurityServices due to required query parameter "type"
 warning | Skipping LocalRulestacks_listAdvancedSecurityObjects due to required query parameter "type"
 warning | Skipping LocalRulestacks_listSecurityServices due to required query parameter "type"
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'CertificateObjectGlobalRulestackResource' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from CertificateObjectGlobalRulestackResource
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'CertificateObjectLocalRulestackResource' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from CertificateObjectLocalRulestackResource
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'FirewallResource' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from FirewallResource
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'FirewallStatusResource' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from FirewallStatusResource
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'FqdnListGlobalRulestackResource' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from FqdnListGlobalRulestackResource
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'FqdnListLocalRulestackResource' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from FqdnListLocalRulestackResource
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'GlobalRulestackResource' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from GlobalRulestackResource
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'LocalRulesResource' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from LocalRulesResource
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'LocalRulestackResource' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from LocalRulestackResource
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'PostRulesResource' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from PostRulesResource
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'PreRulesResource' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from PreRulesResource
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'PrefixListGlobalRulestackResource' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from PrefixListGlobalRulestackResource
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'PrefixListResource' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from PrefixListResource
+warning | Skipping GlobalRulestack_listAdvancedSecurityObjects due to required query parameter "type"
+warning | Skipping GlobalRulestack_listSecurityServices due to required query parameter "type"
+warning | Skipping LocalRulestacks_listAdvancedSecurityObjects due to required query parameter "type"
+warning | Skipping LocalRulestacks_listSecurityServices due to required query parameter "type"

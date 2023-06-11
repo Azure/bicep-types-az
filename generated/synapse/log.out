@@ -48,7 +48,7 @@ warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionForP
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionForPrivateLinkHub_ResourceCollectionResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'PrivateEndpointConnectionForPrivateLinkHubBasic' (5 differences):
-  - properties.id.$ref: "#/components/schemas/schemas:92" => "#/components/schemas/schemas:1320"
+  - properties.id.$ref: "#/components/schemas/schemas:92" => "#/components/schemas/schemas:1273"
   - properties.id.description: "identifier" => <none>
   - properties.id.readOnly: true => <none>
   - properties.properties.description: "Properties of private endpoint connection for private link hub" => <none>

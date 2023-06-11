@@ -12,29 +12,41 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.ManagedNetworkFabric/accessControlLists' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ManagedNetworkFabric/ipCommunityLists@2023-02-01-preview
+## Resource Microsoft.ManagedNetworkFabric/ipCommunities@2023-02-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [IpCommunityListProperties](#ipcommunitylistproperties): Resource properties.
+* **properties**: [IpCommunityProperties](#ipcommunityproperties): Resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
-* **type**: 'Microsoft.ManagedNetworkFabric/ipCommunityLists' (ReadOnly, DeployTimeConstant): The resource type
+* **type**: 'Microsoft.ManagedNetworkFabric/ipCommunities' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ManagedNetworkFabric/ipPrefixLists@2023-02-01-preview
+## Resource Microsoft.ManagedNetworkFabric/ipExtendedCommunities@2023-02-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [IpPrefixListProperties](#ipprefixlistproperties) (Required): Resource properties.
+* **properties**: [IpExtendedCommunityProperties](#ipextendedcommunityproperties): Resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
-* **type**: 'Microsoft.ManagedNetworkFabric/ipPrefixLists' (ReadOnly, DeployTimeConstant): The resource type
+* **type**: 'Microsoft.ManagedNetworkFabric/ipExtendedCommunities' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.ManagedNetworkFabric/ipPrefixes@2023-02-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2023-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [IpPrefixProperties](#ipprefixproperties) (Required): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: 'Microsoft.ManagedNetworkFabric/ipPrefixes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ManagedNetworkFabric/l2IsolationDomains@2023-02-01-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -214,9 +226,37 @@
 * **interval**: int (ReadOnly): interval in milliseconds. Example: 300.
 * **multiplier**: int (ReadOnly): Multiplier for the Bfd Configuration. Example: 3.
 
-## Components1Qbx3T1SchemasRoutepolicypropertiesPropertiesConditionsItemsPropertiesActionPropertiesSet
+## Components161Cc9RSchemasRoutepolicypropertiesPropertiesStatementsItemsPropertiesActionPropertiesIpcommunitypropertiesPropertiesSet
 ### Properties
-* **set**: [RoutePolicyPropertiesConditionsProperties](#routepolicypropertiesconditionsproperties): Route policy set manipulations.
+* **ipCommunityIds**: string[]: List of IPCommunity resource IDs.
+
+## Components1Kfv65GSchemasRoutepolicypropertiesPropertiesStatementsItemsPropertiesActionPropertiesIpextendedcommunityproperties
+### Properties
+* **add**: [Components7D7R0BSchemasRoutepolicypropertiesPropertiesStatementsItemsPropertiesActionPropertiesIpextendedcommunitypropertiesPropertiesAdd](#components7d7r0bschemasroutepolicypropertiespropertiesstatementsitemspropertiesactionpropertiesipextendedcommunitypropertiespropertiesadd): Route policy add manipulations.
+* **delete**: [Components1X40N8RSchemasRoutepolicypropertiesPropertiesStatementsItemsPropertiesActionPropertiesIpextendedcommunitypropertiesPropertiesDelete](#components1x40n8rschemasroutepolicypropertiespropertiesstatementsitemspropertiesactionpropertiesipextendedcommunitypropertiespropertiesdelete): Route policy delete manipulations.
+* **set**: [ComponentsRhkgy3SchemasRoutepolicypropertiesPropertiesStatementsItemsPropertiesActionPropertiesIpextendedcommunitypropertiesPropertiesSet](#componentsrhkgy3schemasroutepolicypropertiespropertiesstatementsitemspropertiesactionpropertiesipextendedcommunitypropertiespropertiesset): Route policy set manipulations.
+
+## Components1X40N8RSchemasRoutepolicypropertiesPropertiesStatementsItemsPropertiesActionPropertiesIpextendedcommunitypropertiesPropertiesDelete
+### Properties
+* **ipExtendedCommunityIds**: string[]: List of IPExtendedCommunity resource IDs.
+
+## Components7D7R0BSchemasRoutepolicypropertiesPropertiesStatementsItemsPropertiesActionPropertiesIpextendedcommunitypropertiesPropertiesAdd
+### Properties
+* **ipExtendedCommunityIds**: string[]: List of IPExtendedCommunity resource IDs.
+
+## ComponentsRhkgy3SchemasRoutepolicypropertiesPropertiesStatementsItemsPropertiesActionPropertiesIpextendedcommunitypropertiesPropertiesSet
+### Properties
+* **ipExtendedCommunityIds**: string[]: List of IPExtendedCommunity resource IDs.
+
+## ComponentsTsen4NSchemasRoutepolicypropertiesPropertiesStatementsItemsPropertiesActionPropertiesIpcommunitypropertiesPropertiesDelete
+### Properties
+* **ipCommunityIds**: string[]: List of IPCommunity resource IDs.
+
+## ComponentsUm13JfSchemasRoutepolicypropertiesPropertiesStatementsItemsPropertiesActionPropertiesIpcommunityproperties
+### Properties
+* **add**: [RoutePolicyPropertiesStatementsProperties](#routepolicypropertiesstatementsproperties): Route policy add manipulations.
+* **delete**: [ComponentsTsen4NSchemasRoutepolicypropertiesPropertiesStatementsItemsPropertiesActionPropertiesIpcommunitypropertiesPropertiesDelete](#componentstsen4nschemasroutepolicypropertiespropertiesstatementsitemspropertiesactionpropertiesipcommunitypropertiespropertiesdelete): Route policy delete manipulations.
+* **set**: [Components161Cc9RSchemasRoutepolicypropertiesPropertiesStatementsItemsPropertiesActionPropertiesIpcommunitypropertiesPropertiesSet](#components161cc9rschemasroutepolicypropertiespropertiesstatementsitemspropertiesactionpropertiesipcommunitypropertiespropertiesset): Route policy set manipulations.
 
 ## ExpressRouteConnectionInformation
 ### Properties
@@ -242,10 +282,10 @@
 * **fabricASN**: int (ReadOnly): Fabric ASN number. Example 65001
 * **mtu**: int: MTU to use for option A peering.
 * **peerASN**: int: Peer ASN number.Example : 28
-* **primaryIpv4Prefix**: string: IPv4 Address Prefix of CE-PE interconnect links. Default value is 172.23.1.0/31. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
-* **primaryIpv6Prefix**: string: IPv6 Address Prefix of CE-PE interconnect links. Default value is 3FFE:FFFF:0:CD30::a1/126. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
-* **secondaryIpv4Prefix**: string: Secondary IPv4 Address Prefix of CE-PE interconnect links. Default value is 172.23.1.2/31. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
-* **secondaryIpv6Prefix**: string: Secondary IPv6 Address Prefix of CE-PE interconnect links. Default value is 3FFE:FFFF:0:CD30::a1/126. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
+* **primaryIpv4Prefix**: string: IPv4 Address Prefix of CE-PE interconnect links. Example: 172.31.0.0/31. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
+* **primaryIpv6Prefix**: string: IPv6 Address Prefix of CE-PE interconnect links. Example: 3FFE:FFFF:0:CD30::a0/126. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
+* **secondaryIpv4Prefix**: string: Secondary IPv4 Address Prefix of CE-PE interconnect links. Example: 172.31.0.20/31. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
+* **secondaryIpv6Prefix**: string: Secondary IPv6 Address Prefix of CE-PE interconnect links. Example: 3FFE:FFFF:0:CD30::a4/126. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
 * **vlanId**: int: Vlan identifier. Example : 501
 
 ## InternalNetworkPatchablePropertiesBgpConfiguration
@@ -316,36 +356,34 @@
 * **staticRouteConfiguration**: [InternalNetworkPatchablePropertiesStaticRouteConfiguration](#internalnetworkpatchablepropertiesstaticrouteconfiguration): staticRouteConfiguration model.
 * **vlanId**: int (Required): Vlan identifier. Example: 1001.
 
-## IpCommunityListProperties
+## IpCommunityProperties
 ### Properties
-* **action**: 'allow' | 'deny' | string (Required): action. Example: allow | deny.
-* **advertise**: 'false' | 'true' | string (Required): noAdvertise. Example: true | false.
+* **action**: 'Deny' | 'Permit' | string (Required): Action to be taken on the configuration. Example: Permit | Deny.
 * **annotation**: string: Switch configuration description.
-* **communityMembers**: [IpCommunityListPropertiesCommunityMembersItem](#ipcommunitylistpropertiescommunitymembersitem)[]: Ip Community List communityMembers.
-* **evpnEsImportRouteTargets**: [IpCommunityListPropertiesEvpnEsImportRouteTargetsItem](#ipcommunitylistpropertiesevpnesimportroutetargetsitem)[]: Ip Community List evpnEsImportRouteTargets.
-* **export**: 'false' | 'true' | string (Required): noExport. Example: true | false.
-* **gshut**: 'false' | 'true' | string: Graceful Shutdown (GSHUT). Example: true | false.
-* **internet**: 'false' | 'true' | string: Internet access. Example: true | false.
-* **localAS**: 'false' | 'true' | string (Required): Local Autonomous System. Example: true | false.
+* **communityMembers**: string[] (Required): List the communityMembers of IP Community .
+* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Gets the provisioning state of the resource.
+* **wellKnownCommunities**: 'GShut' | 'Internet' | 'LocalAS' | 'NoAdvertise' | 'NoExport' | string[]: Supported well known Community List.
+
+## IpExtendedCommunityProperties
+### Properties
+* **action**: 'Deny' | 'Permit' | string (Required): Action to be taken on the configuration. Example: Permit | Deny.
+* **annotation**: string: Switch configuration description.
+* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Gets the provisioning state of the resource.
+* **routeTargets**: string[] (Required): Route Target List.The expected formats are ASN(plain):NN >> example 4294967294:50, ASN.ASN:NN >> example 65533.65333:40, IP-address:NN >> example 10.10.10.10:65535. The possible values of ASN,NN are in range of 0-65535, ASN(plain) is in range of 0-4294967295.
+
+## IpPrefixProperties
+### Properties
+* **annotation**: string: Switch configuration description.
+* **ipPrefixRules**: [IpPrefixPropertiesIpPrefixRulesItem](#ipprefixpropertiesipprefixrulesitem)[] (Required): IpPrefix contains the list of IP PrefixRules objects.
 * **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Gets the provisioning state of the resource.
 
-## IpCommunityListPropertiesCommunityMembersItem
+## IpPrefixPropertiesIpPrefixRulesItem
 ### Properties
-* **annotation**: string: Switch configuration description.
-* **communityMember**: string (Required): communityMember of the Ip Community List. Example: 100:200
-
-## IpCommunityListPropertiesEvpnEsImportRouteTargetsItem
-### Properties
-* **annotation**: string: Switch configuration description.
-* **evpnEsImportRouteTarget**: string (Required): evpnEsImportRouteTarget of the Ip Community List. Example: 100:400
-
-## IpPrefixListProperties
-### Properties
-* **action**: 'allow' | 'deny' | string (Required): action. Example: allow | deny.
-* **annotation**: string: Switch configuration description.
-* **networkAddress**: string (Required): networkAddress. Example:1.1.1.0/24 | 1.1.10.10.
-* **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Gets the provisioning state of the resource.
-* **sequenceNumber**: int (Required): sequenceNumber of the Ip Prefix List.
+* **action**: 'Deny' | 'Permit' | string (Required): Action to be taken on the configuration. Example: Permit | Deny.
+* **condition**: 'EqualTo' | 'GreaterThanOrEqualTo' | 'LesserThanOrEqualTo' | string: Specify prefix-list bounds.
+* **networkPrefix**: string (Required): Network Prefix specifying IPv4/IPv6 packets to be permitted or denied. Example: 1.1.1.0/24 | 3FFE:FFFF:0:CD30::/126
+* **sequenceNumber**: int (Required): Sequence to insert to/delete from existing route. Prefix lists are evaluated starting with the lowest sequence number and continue down the list until a match is made. Once a match is made, the permit or deny statement is applied to that network and the rest of the list is ignored.
+* **subnetMaskLength**: int: SubnetMaskLength gives the minimum NetworkPrefix length to be matched.Possible values for IPv4 are 1 - 32. Possible values of IPv6 are 1 - 128.
 
 ## L2IsolationDomainProperties
 ### Properties
@@ -395,10 +433,10 @@
 * **fabricASN**: int (ReadOnly): ASN of CE devices for CE/PE connectivity.
 * **importRoutePolicyId**: string: importRoutePolicyId
 * **peerASN**: int: ASN of PE devices for CE/PE connectivity.Example : 28
-* **primaryIpv4Prefix**: string: IPv4 Address Prefix of CE-PE interconnect links. Default value is 172.31.0.0/31. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
-* **primaryIpv6Prefix**: string: IPv6 Address Prefix of CE-PE interconnect links. Default value is 3FFE:FFFF:0:CD30::a0/126. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
-* **secondaryIpv4Prefix**: string: Secondary IPv4 Address Prefix of CE-PE interconnect links. Default value is 172.31.0.20/31. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
-* **secondaryIpv6Prefix**: string: Secondary IPv6 Address Prefix of CE-PE interconnect links. Default value is 3FFE:FFFF:0:CD30::a4/126. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
+* **primaryIpv4Prefix**: string: IPv4 Address Prefix of CE-PE interconnect links. Example: 172.31.0.0/31. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
+* **primaryIpv6Prefix**: string: IPv6 Address Prefix of CE-PE interconnect links. Example: 3FFE:FFFF:0:CD30::a0/126. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
+* **secondaryIpv4Prefix**: string: Secondary IPv4 Address Prefix of CE-PE interconnect links. Example: 172.31.0.20/31. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
+* **secondaryIpv6Prefix**: string: Secondary IPv6 Address Prefix of CE-PE interconnect links. Example: 3FFE:FFFF:0:CD30::a4/126. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
 * **vlanId**: int: VLAN for CE/PE Layer 3 connectivity.Example : 501
 
 ## NetworkDeviceProperties
@@ -484,8 +522,8 @@
 ### Properties
 * **annotation**: string: Switch configuration description.
 * **fabricASN**: int (Required): ASN of CE devices for CE/PE connectivity.
-* **ipv4Prefix**: string: IPv4Prefix for Management Network. Default value : 10.1.0.0/19.
-* **ipv6Prefix**: string: IPv6Prefix for Management Network. Default value 3FFE:FFFF:0:CD40::/59.
+* **ipv4Prefix**: string: IPv4Prefix for Management Network. Example: 10.1.0.0/19.
+* **ipv6Prefix**: string: IPv6Prefix for Management Network. Example: 3FFE:FFFF:0:CD40::/59.
 * **l2IsolationDomains**: string[] (ReadOnly): List of L2IsolationDomain resource IDs under the Network Fabric.
 * **l3IsolationDomains**: string[] (ReadOnly): List of L3IsolationDomain resource IDs under the Network Fabric.
 * **managementNetworkConfiguration**: [NetworkFabricPropertiesManagementNetworkConfiguration](#networkfabricpropertiesmanagementnetworkconfiguration) (Required): Configuration to be used to setup the management network.
@@ -508,26 +546,26 @@
 ### Properties
 * **administrativeState**: 'Disabled' | 'Enabled' | string (ReadOnly): Indicates configuration state. Example: Enabled | Disabled.
 * **networkToNetworkInterconnectId**: string (ReadOnly): Gets the networkToNetworkInterconnectId of the resource.
-* **optionAProperties**: [OptionAPropertiesAutoGenerated](#optionapropertiesautogenerated): option A properties
-* **optionBProperties**: [OptionBPropertiesAutoGenerated](#optionbpropertiesautogenerated) (Required): option B properties
-* **peeringOption**: 'OptionA' | 'OptionB' | string: Peering option list.
+* **optionAProperties**: [OptionAProperties](#optionaproperties): option A properties
+* **optionBProperties**: [OptionBPropertiesAutoGenerated](#optionbpropertiesautogenerated): option B properties
+* **peeringOption**: 'OptionA' | 'OptionB' | string (Required): Peering option list.
 
 ## NetworkFabricPropertiesManagementNetworkConfigurationWorkloadVpnConfiguration
 ### Properties
 * **administrativeState**: 'Disabled' | 'Enabled' | string (ReadOnly): Indicates configuration state. Example: enabled | disabled.
 * **networkToNetworkInterconnectId**: string (ReadOnly): Gets the networkToNetworkInterconnectId of the resource.
-* **optionAProperties**: [OptionAPropertiesAutoGenerated](#optionapropertiesautogenerated): option A properties object
-* **optionBProperties**: [OptionBPropertiesAutoGenerated](#optionbpropertiesautogenerated) (Required): option B properties object
-* **peeringOption**: 'OptionA' | 'OptionB' | string: Peering option list.
+* **optionAProperties**: [OptionAProperties](#optionaproperties): option A properties object
+* **optionBProperties**: [OptionBPropertiesAutoGenerated](#optionbpropertiesautogenerated): option B properties object
+* **peeringOption**: 'OptionA' | 'OptionB' | string (Required): Peering option list.
 
 ## NetworkFabricPropertiesTerminalServerConfiguration
 ### Properties
 * **networkDeviceId**: string (ReadOnly): ARM Resource ID used for the NetworkDevice.
 * **password**: string: Password for the terminal server connection.
-* **primaryIpv4Prefix**: string: IPv4 Address Prefix of CE-PE interconnect links. Default value is 172.31.0.0/31. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
-* **primaryIpv6Prefix**: string: IPv6 Address Prefix of CE-PE interconnect links. Default value is 3FFE:FFFF:0:CD30::a0/126. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
-* **secondaryIpv4Prefix**: string: Secondary IPv4 Address Prefix of CE-PE interconnect links. Default value is 172.31.0.20/31. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
-* **secondaryIpv6Prefix**: string: Secondary IPv6 Address Prefix of CE-PE interconnect links. Default value is 3FFE:FFFF:0:CD30::a4/126. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
+* **primaryIpv4Prefix**: string: IPv4 Address Prefix of CE-PE interconnect links. Example: 172.31.0.0/31. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
+* **primaryIpv6Prefix**: string: IPv6 Address Prefix of CE-PE interconnect links. Example: 3FFE:FFFF:0:CD30::a0/126. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
+* **secondaryIpv4Prefix**: string: Secondary IPv4 Address Prefix of CE-PE interconnect links. Example: 172.31.0.20/31. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
+* **secondaryIpv6Prefix**: string: Secondary IPv6 Address Prefix of CE-PE interconnect links. Example: 3FFE:FFFF:0:CD30::a4/126. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
 * **serialNumber**: string: Serial Number of Terminal server.
 * **username**: string: Username for the terminal server connection.
 
@@ -580,6 +618,7 @@
 * **isManagementType**: 'False' | 'True' | string (Required): Configuration to use NNI for Infrastructure Management. Example: True/False.
 * **layer2Configuration**: [NetworkToNetworkInterconnectPropertiesLayer2Configuration](#networktonetworkinterconnectpropertieslayer2configuration): Common properties for Layer2Configuration.
 * **layer3Configuration**: [Layer3Configuration](#layer3configuration): Common properties for Layer3Configuration.
+* **nniType**: 'CE' | 'NPB' | string: Type of NNI used. Example: CE | NPB
 * **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Gets the provisioning state of the resource.
 * **useOptionB**: 'False' | 'True' | string (Required): Based on this parameter the layer2/layer3 is made as mandatory. Example: True/False
 
@@ -589,16 +628,16 @@
 * **mtu**: int (Required): MTU of the packets between PE & CE.
 * **portCount**: int: Number of ports connected between PE/CE. Maximum value depends on FabricSKU.
 
-## OptionAPropertiesAutoGenerated
+## OptionAProperties
 ### Properties
 * **bfdConfiguration**: [OptionAPropertiesBfdConfiguration](#optionapropertiesbfdconfiguration): BFD Configuration properties.
 * **mtu**: int: MTU to use for option A peering.
 * **peerASN**: int: Peer ASN number.Example : 28
-* **primaryIpv4Prefix**: string: IPv4 Address Prefix of CE-PE interconnect links. Default value is 172.31.0.0/31. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
-* **primaryIpv6Prefix**: string: IPv6 Address Prefix of CE-PE interconnect links. Default value is 3FFE:FFFF:0:CD30::a0/126. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
-* **secondaryIpv4Prefix**: string: Secondary IPv4 Address Prefix of CE-PE interconnect links. Default value is 172.31.0.20/31. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
-* **secondaryIpv6Prefix**: string: Secondary IPv6 Address Prefix of CE-PE interconnect links. Default value is 3FFE:FFFF:0:CD30::a4/126. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
-* **vlanId**: int: Vlan Id.Example : 501
+* **primaryIpv4Prefix**: string: IPv4 Address Prefix of CE-PE interconnect links. Example: 172.31.0.0/31. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
+* **primaryIpv6Prefix**: string: IPv6 Address Prefix of CE-PE interconnect links. Example: 3FFE:FFFF:0:CD30::a0/126. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
+* **secondaryIpv4Prefix**: string: Secondary IPv4 Address Prefix of CE-PE interconnect links. Example: 172.31.0.20/31. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
+* **secondaryIpv6Prefix**: string: Secondary IPv6 Address Prefix of CE-PE interconnect links. Example: 3FFE:FFFF:0:CD30::a4/126. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
+* **vlanId**: int: Vlan identifier. Example : 501
 
 ## OptionAPropertiesBfdConfiguration
 ### Properties
@@ -618,33 +657,32 @@
 ## RoutePolicyProperties
 ### Properties
 * **annotation**: string: Switch configuration description.
-* **conditions**: [RoutePolicyPropertiesConditionsItem](#routepolicypropertiesconditionsitem)[]: Route Policy conditions.
-* **description**: string: Route Policy description.
 * **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Gets the provisioning state of the resource.
+* **statements**: [RoutePolicyPropertiesStatementsItem](#routepolicypropertiesstatementsitem)[] (Required): Route Policy statements.
 
-## RoutePolicyPropertiesConditionsItem
+## RoutePolicyPropertiesStatementsItem
 ### Properties
-* **action**: [RoutePolicyPropertiesConditionsItemAction](#routepolicypropertiesconditionsitemaction): Route policy action properties.
+* **action**: [RoutePolicyPropertiesStatementsItemAction](#routepolicypropertiesstatementsitemaction) (Required): Route policy action properties.
 * **annotation**: string: Switch configuration description.
-* **match**: [RoutePolicyPropertiesConditionsItemMatch](#routepolicypropertiesconditionsitemmatch): Route policy match properties.
-* **sequenceNumber**: int: sequenceNumber of the route policy.
+* **condition**: [RoutePolicyPropertiesStatementsItemCondition](#routepolicypropertiesstatementsitemcondition) (Required): Route policy condition properties.
+* **sequenceNumber**: int (Required): Sequence to insert to/delete from existing route.
 
-## RoutePolicyPropertiesConditionsItemAction
+## RoutePolicyPropertiesStatementsItemAction
 ### Properties
-* **action**: string: action. Example: accept | deny.
-* **set**: [Components1Qbx3T1SchemasRoutepolicypropertiesPropertiesConditionsItemsPropertiesActionPropertiesSet](#components1qbx3t1schemasroutepolicypropertiespropertiesconditionsitemspropertiesactionpropertiesset)
+* **actionType**: 'Deny' | 'Permit' | string (Required): action. Example: Permit | Deny.
+* **ipCommunityProperties**: [ComponentsUm13JfSchemasRoutepolicypropertiesPropertiesStatementsItemsPropertiesActionPropertiesIpcommunityproperties](#componentsum13jfschemasroutepolicypropertiespropertiesstatementsitemspropertiesactionpropertiesipcommunityproperties): ipCommunity Properties.
+* **ipExtendedCommunityProperties**: [Components1Kfv65GSchemasRoutepolicypropertiesPropertiesStatementsItemsPropertiesActionPropertiesIpextendedcommunityproperties](#components1kfv65gschemasroutepolicypropertiespropertiesstatementsitemspropertiesactionpropertiesipextendedcommunityproperties): IP Extended Community Properties.
+* **localPreference**: int: localPreference of the route policy.
 
-## RoutePolicyPropertiesConditionsItemMatch
+## RoutePolicyPropertiesStatementsItemCondition
 ### Properties
-* **accessControlListIds**: string[]: accessControlListIds. Arm Resource Ids of AccessControlLists.
-* **ipCommunityListIds**: string[]: ipCommunityListIds. Arm Resource Ids of IpCommunityLists.
-* **ipExtendedCommunityListIds**: string[]: ipExtendedCommunityListIds. Arm Resource Ids of IpCommunityLists.
-* **ipPrefixListIds**: string[]: ipPrefixListIds. Arm Resource Ids of IpPrefixLists.
+* **ipCommunityIds**: string[]: List of IPCommunity resource IDs.
+* **ipExtendedCommunityIds**: string[]: List of IPExtendedCommunity resource IDs.
+* **ipPrefixId**: string: Arm Resource Id of IpPrefix.
 
-## RoutePolicyPropertiesConditionsProperties
+## RoutePolicyPropertiesStatementsProperties
 ### Properties
-* **ipCommunityListIds**: string[]: ipCommunityListIds. Arm Resource Ids of IpCommunityLists.
-* **ipExtendedCommunityListIds**: string[]: ipExtendedCommunityListIds. Arm Resource Ids of IpCommunityLists.
+* **ipCommunityIds**: string[]: List of IPCommunity resource IDs.
 
 ## SystemData
 ### Properties
@@ -654,6 +692,11 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TrackedResourceTags
 ### Properties
