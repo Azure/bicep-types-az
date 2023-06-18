@@ -312,7 +312,8 @@ warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (2 differences):
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (3 differences):
+  - properties.id.$ref: "#/components/schemas/schemas:365" => "#/components/schemas/schemas:449"
   - properties.id.description: "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}" => "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
   - properties.systemData: <none> => {"readOnly":true,"type":"object","description":"Azure Resource Manager metadata containing createdBy and modifiedBy information.","$ref":"#/components/schemas/schemas:341"}
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorResponse' (7 differences):

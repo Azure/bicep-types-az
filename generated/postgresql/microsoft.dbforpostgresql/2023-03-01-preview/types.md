@@ -264,8 +264,8 @@
 ### Properties
 * **autoGrow**: 'Disabled' | 'Enabled' | string: Flag to enable / disable Storage Auto grow for flexible server.
 * **iops**: int (ReadOnly): Storage tier IOPS quantity.
-* **iopsTier**: 'P1' | 'P10' | 'P15' | 'P2' | 'P20' | 'P3' | 'P30' | 'P4' | 'P40' | 'P50' | 'P6' | 'P60' | 'P70' | 'P80' | string: Name of storage tier for IOPS.
 * **storageSizeGB**: int: Max storage allowed for a server.
+* **tier**: 'P1' | 'P10' | 'P15' | 'P2' | 'P20' | 'P3' | 'P30' | 'P4' | 'P40' | 'P50' | 'P6' | 'P60' | 'P70' | 'P80' | string: Name of storage tier for IOPS.
 
 ## SystemData
 ### Properties
