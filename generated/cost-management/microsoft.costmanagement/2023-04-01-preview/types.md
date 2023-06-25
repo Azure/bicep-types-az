@@ -26,6 +26,8 @@
 * **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **identity**: [SystemAssignedServiceIdentity](#systemassignedserviceidentity): The managed identity associated with Export
+* **location**: string: The location of the Export's managed identity. Only required when utilizing managed identity.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ExportProperties](#exportproperties): The properties of the export.
 * **type**: 'Microsoft.CostManagement/exports' (ReadOnly, DeployTimeConstant): The resource type
@@ -217,7 +219,7 @@ Supported for CategoryType(s): Cost, ReservationUtilization.
 
 ## ErrorDetails
 ### Properties
-* **code**: int (ReadOnly): Error code.
+* **code**: string (ReadOnly): Error code.
 * **message**: string (ReadOnly): Error message indicating why the operation failed.
 
 ## ExportDataset
@@ -446,6 +448,12 @@ Supported for CategoryType(s): Cost, ReservationUtilization.
 * **hourOfDay**: int: UTC time at which cost analysis data will be emailed.
 * **startDate**: string (Required): The start date and time of the scheduled action (UTC).
 * **weeksOfMonth**: 'First' | 'Fourth' | 'Last' | 'Second' | 'Third' | string[]: Weeks in which cost analysis data will be emailed. This property is applicable when frequency is Monthly and used in combination with daysOfWeek.
+
+## SystemAssignedServiceIdentity
+### Properties
+* **principalId**: string (ReadOnly): The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
+* **tenantId**: string (ReadOnly): The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
+* **type**: 'None' | 'SystemAssigned' | string (Required): Type of managed service identity (either system assigned, or none).
 
 ## SystemData
 ### Properties
