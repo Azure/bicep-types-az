@@ -128,6 +128,8 @@
 ## SecuritySettings
 ### Properties
 * **immutabilitySettings**: [ImmutabilitySettings](#immutabilitysettings): Immutability Settings of a vault
+* **multiUserAuthorization**: 'Disabled' | 'Enabled' | 'Invalid' | string (ReadOnly): MUA Settings of a vault
+* **softDeleteSettings**: [SoftDeleteSettings](#softdeletesettings): Soft delete Settings of a vault
 
 ## Sku
 ### Properties
@@ -136,6 +138,11 @@
 * **name**: 'RS0' | 'Standard' | string (Required): Name of SKU is RS0 (Recovery Services 0th version) and the tier is standard tier. They do not have affect on backend storage redundancy or any other vault settings. To manage storage redundancy, use the backupstorageconfig
 * **size**: string: The sku size
 * **tier**: string: The Sku tier.
+
+## SoftDeleteSettings
+### Properties
+* **softDeleteRetentionPeriodInDays**: int: Soft delete retention period in days
+* **softDeleteState**: 'AlwaysON' | 'Disabled' | 'Enabled' | 'Invalid' | string
 
 ## SystemData
 ### Properties

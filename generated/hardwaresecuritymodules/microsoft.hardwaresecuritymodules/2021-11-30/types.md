@@ -10,7 +10,7 @@
 * **properties**: [DedicatedHsmProperties](#dedicatedhsmproperties) (Required): Properties of the dedicated HSM
 * **sku**: [Sku](#sku): SKU details
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource
-* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **tags**: [DedicatedHsmResourceTags](#dedicatedhsmresourcetags): Resource tags
 * **type**: 'Microsoft.HardwareSecurityModules/dedicatedHSMs' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: The Dedicated Hsm zones.
 
@@ -26,6 +26,11 @@
 * **stampId**: string: This field will be used when RP does not support Availability zones.
 * **statusMessage**: string (ReadOnly): Resource Status Message.
 
+## DedicatedHsmResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## NetworkInterface
 ### Properties
 * **id**: string (ReadOnly): The ARM resource id in the form of /subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/...
@@ -35,11 +40,6 @@
 ### Properties
 * **networkInterfaces**: [NetworkInterface](#networkinterface)[]: Specifies the list of resource Ids for the network interfaces associated with the dedicated HSM.
 * **subnet**: [ApiEntityReference](#apientityreference): Specifies the identifier of the subnet.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## Sku
 ### Properties

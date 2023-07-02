@@ -1,65 +1,114 @@
-AutoRest code generation utility [cli version: 3.6.3; node: v16.20.0]
+AutoRest code generation utility [cli version: 3.6.3; node: v16.20.1]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Modeler/MissingType | The schema 'components·15yg3x7·schemas·operation·properties·properties·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurearcdata/resource-manager/Microsoft.AzureArcData/preview/2023-01-15-preview/operations.json#/components/schemas/components·15yg3x7·schemas·operation·properties·properties·additionalproperties
 warning | Modeler/MissingType | The schema 'components·v8tp23·schemas·sqlmanagedinstancek8sraw·additionalproperties' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurearcdata/resource-manager/Microsoft.AzureArcData/preview/2023-01-15-preview/sqlManagedInstances.json#/components/schemas/components·v8tp23·schemas·sqlmanagedinstancek8sraw·additionalproperties
+warning | Modeler/MissingType | The schema 'components·178wsfv·schemas·sqlmanagedinstancek8sspec·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurearcdata/resource-manager/Microsoft.AzureArcData/preview/2023-01-15-preview/sqlManagedInstances.json#/components/schemas/components·178wsfv·schemas·sqlmanagedinstancek8sspec·additionalproperties
+warning | Modeler/MissingType | The schema 'components·15fvntg·schemas·k8sscheduling·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurearcdata/resource-manager/Microsoft.AzureArcData/preview/2023-01-15-preview/sqlManagedInstances.json#/components/schemas/components·15fvntg·schemas·k8sscheduling·additionalproperties
+warning | Modeler/MissingType | The schema 'components·1pqex2j·schemas·k8sschedulingoptions·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurearcdata/resource-manager/Microsoft.AzureArcData/preview/2023-01-15-preview/sqlManagedInstances.json#/components/schemas/components·1pqex2j·schemas·k8sschedulingoptions·additionalproperties
+warning | Modeler/MissingType | The schema 'components·1ia2mml·schemas·k8sresourcerequirements·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurearcdata/resource-manager/Microsoft.AzureArcData/preview/2023-01-15-preview/sqlManagedInstances.json#/components/schemas/components·1ia2mml·schemas·k8sresourcerequirements·additionalproperties
+warning | Modeler/MissingType | The schema 'components·154qvsh·schemas·k8ssecurity·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurearcdata/resource-manager/Microsoft.AzureArcData/preview/2023-01-15-preview/sqlManagedInstances.json#/components/schemas/components·154qvsh·schemas·k8ssecurity·additionalproperties
+warning | Modeler/MissingType | The schema 'components·dqmnci·schemas·k8ssettings·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurearcdata/resource-manager/Microsoft.AzureArcData/preview/2023-01-15-preview/sqlManagedInstances.json#/components/schemas/components·dqmnci·schemas·k8ssettings·additionalproperties
 warning | Modeler/MissingType | The schema 'components·fa6978·schemas·failovergroupproperties·additionalproperties' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurearcdata/resource-manager/Microsoft.AzureArcData/preview/2023-01-15-preview/failoverGroups.json#/components/schemas/components·fa6978·schemas·failovergroupproperties·additionalproperties
 warning | Modeler/MissingType | The schema 'components·kbg7h6·schemas·failovergroupspec·additionalproperties' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurearcdata/resource-manager/Microsoft.AzureArcData/preview/2023-01-15-preview/failoverGroups.json#/components/schemas/components·kbg7h6·schemas·failovergroupspec·additionalproperties
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Modeler/MissingType | The schema 'components·19hsk3z·schemas·activedirectoryconnectorstatus·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurearcdata/resource-manager/Microsoft.AzureArcData/preview/2023-01-15-preview/activeDirectoryConnectors.json#/components/schemas/components·19hsk3z·schemas·activedirectoryconnectorstatus·additionalproperties
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Modeler/MissingType | The schema 'components·15yg3x7·schemas·operation·properties·properties·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurearcdata/resource-manager/Microsoft.AzureArcData/preview/2022-06-15-preview/operations.json#/components/schemas/components·15yg3x7·schemas·operation·properties·properties·additionalproperties
+warning | Modeler/MissingType | The schema 'components·v8tp23·schemas·sqlmanagedinstancek8sraw·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurearcdata/resource-manager/Microsoft.AzureArcData/preview/2022-06-15-preview/sqlManagedInstances.json#/components/schemas/components·v8tp23·schemas·sqlmanagedinstancek8sraw·additionalproperties
+warning | Modeler/MissingType | The schema 'components·178wsfv·schemas·sqlmanagedinstancek8sspec·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurearcdata/resource-manager/Microsoft.AzureArcData/preview/2022-06-15-preview/sqlManagedInstances.json#/components/schemas/components·178wsfv·schemas·sqlmanagedinstancek8sspec·additionalproperties
+warning | Modeler/MissingType | The schema 'components·15fvntg·schemas·k8sscheduling·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurearcdata/resource-manager/Microsoft.AzureArcData/preview/2022-06-15-preview/sqlManagedInstances.json#/components/schemas/components·15fvntg·schemas·k8sscheduling·additionalproperties
+warning | Modeler/MissingType | The schema 'components·1pqex2j·schemas·k8sschedulingoptions·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurearcdata/resource-manager/Microsoft.AzureArcData/preview/2022-06-15-preview/sqlManagedInstances.json#/components/schemas/components·1pqex2j·schemas·k8sschedulingoptions·additionalproperties
+warning | Modeler/MissingType | The schema 'components·1ia2mml·schemas·k8sresourcerequirements·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurearcdata/resource-manager/Microsoft.AzureArcData/preview/2022-06-15-preview/sqlManagedInstances.json#/components/schemas/components·1ia2mml·schemas·k8sresourcerequirements·additionalproperties
+warning | Modeler/MissingType | The schema 'components·19hsk3z·schemas·activedirectoryconnectorstatus·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurearcdata/resource-manager/Microsoft.AzureArcData/preview/2022-06-15-preview/activeDirectoryConnectors.json#/components/schemas/components·19hsk3z·schemas·activedirectoryconnectorstatus·additionalproperties
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Modeler/MissingType | The schema 'components·15yg3x7·schemas·operation·properties·properties·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurearcdata/resource-manager/Microsoft.AzureArcData/preview/2022-03-01-preview/operations.json#/components/schemas/components·15yg3x7·schemas·operation·properties·properties·additionalproperties
+warning | Modeler/MissingType | The schema 'components·v8tp23·schemas·sqlmanagedinstancek8sraw·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurearcdata/resource-manager/Microsoft.AzureArcData/preview/2022-03-01-preview/sqlManagedInstances.json#/components/schemas/components·v8tp23·schemas·sqlmanagedinstancek8sraw·additionalproperties
+warning | Modeler/MissingType | The schema 'components·178wsfv·schemas·sqlmanagedinstancek8sspec·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurearcdata/resource-manager/Microsoft.AzureArcData/preview/2022-03-01-preview/sqlManagedInstances.json#/components/schemas/components·178wsfv·schemas·sqlmanagedinstancek8sspec·additionalproperties
+warning | Modeler/MissingType | The schema 'components·15fvntg·schemas·k8sscheduling·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurearcdata/resource-manager/Microsoft.AzureArcData/preview/2022-03-01-preview/sqlManagedInstances.json#/components/schemas/components·15fvntg·schemas·k8sscheduling·additionalproperties
+warning | Modeler/MissingType | The schema 'components·1pqex2j·schemas·k8sschedulingoptions·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurearcdata/resource-manager/Microsoft.AzureArcData/preview/2022-03-01-preview/sqlManagedInstances.json#/components/schemas/components·1pqex2j·schemas·k8sschedulingoptions·additionalproperties
+warning | Modeler/MissingType | The schema 'components·1ia2mml·schemas·k8sresourcerequirements·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurearcdata/resource-manager/Microsoft.AzureArcData/preview/2022-03-01-preview/sqlManagedInstances.json#/components/schemas/components·1ia2mml·schemas·k8sresourcerequirements·additionalproperties
+warning | Modeler/MissingType | The schema 'components·19hsk3z·schemas·activedirectoryconnectorstatus·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurearcdata/resource-manager/Microsoft.AzureArcData/preview/2022-03-01-preview/activeDirectoryConnectors.json#/components/schemas/components·19hsk3z·schemas·activedirectoryconnectorstatus·additionalproperties
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Modeler/MissingType | The schema 'components·15yg3x7·schemas·operation·properties·properties·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurearcdata/resource-manager/Microsoft.AzureArcData/stable/2021-11-01/operations.json#/components/schemas/components·15yg3x7·schemas·operation·properties·properties·additionalproperties
+warning | Modeler/MissingType | The schema 'components·v8tp23·schemas·sqlmanagedinstancek8sraw·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurearcdata/resource-manager/Microsoft.AzureArcData/stable/2021-11-01/sqlManagedInstances.json#/components/schemas/components·v8tp23·schemas·sqlmanagedinstancek8sraw·additionalproperties
+warning | Modeler/MissingType | The schema 'components·178wsfv·schemas·sqlmanagedinstancek8sspec·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurearcdata/resource-manager/Microsoft.AzureArcData/stable/2021-11-01/sqlManagedInstances.json#/components/schemas/components·178wsfv·schemas·sqlmanagedinstancek8sspec·additionalproperties
+warning | Modeler/MissingType | The schema 'components·15fvntg·schemas·k8sscheduling·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurearcdata/resource-manager/Microsoft.AzureArcData/stable/2021-11-01/sqlManagedInstances.json#/components/schemas/components·15fvntg·schemas·k8sscheduling·additionalproperties
+warning | Modeler/MissingType | The schema 'components·1pqex2j·schemas·k8sschedulingoptions·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurearcdata/resource-manager/Microsoft.AzureArcData/stable/2021-11-01/sqlManagedInstances.json#/components/schemas/components·1pqex2j·schemas·k8sschedulingoptions·additionalproperties
+warning | Modeler/MissingType | The schema 'components·1ia2mml·schemas·k8sresourcerequirements·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurearcdata/resource-manager/Microsoft.AzureArcData/stable/2021-11-01/sqlManagedInstances.json#/components/schemas/components·1ia2mml·schemas·k8sresourcerequirements·additionalproperties
+warning | Modeler/MissingType | The schema 'components·grox4h·schemas·k8sresourcerequirements·properties·requests·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurearcdata/resource-manager/Microsoft.AzureArcData/stable/2021-11-01/sqlManagedInstances.json#/components/schemas/components·grox4h·schemas·k8sresourcerequirements·properties·requests·additionalproperties
+warning | Modeler/MissingType | The schema 'components·1m7mj4e·schemas·k8sresourcerequirements·properties·limits·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurearcdata/resource-manager/Microsoft.AzureArcData/stable/2021-11-01/sqlManagedInstances.json#/components/schemas/components·1m7mj4e·schemas·k8sresourcerequirements·properties·limits·additionalproperties
 warning | Unrecognized property type: any-object. Returning 'any'.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Modeler/MissingType | The schema 'components·15yg3x7·schemas·operation·properties·properties·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurearcdata/resource-manager/Microsoft.AzureArcData/stable/2021-08-01/azurearcdata.json#/components/schemas/components·15yg3x7·schemas·operation·properties·properties·additionalproperties
+warning | Modeler/MissingType | The schema 'components·v8tp23·schemas·sqlmanagedinstancek8sraw·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurearcdata/resource-manager/Microsoft.AzureArcData/stable/2021-08-01/azurearcdata.json#/components/schemas/components·v8tp23·schemas·sqlmanagedinstancek8sraw·additionalproperties
+warning | Modeler/MissingType | The schema 'components·178wsfv·schemas·sqlmanagedinstancek8sspec·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurearcdata/resource-manager/Microsoft.AzureArcData/stable/2021-08-01/azurearcdata.json#/components/schemas/components·178wsfv·schemas·sqlmanagedinstancek8sspec·additionalproperties
+warning | Modeler/MissingType | The schema 'components·15fvntg·schemas·k8sscheduling·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurearcdata/resource-manager/Microsoft.AzureArcData/stable/2021-08-01/azurearcdata.json#/components/schemas/components·15fvntg·schemas·k8sscheduling·additionalproperties
+warning | Modeler/MissingType | The schema 'components·1pqex2j·schemas·k8sschedulingoptions·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurearcdata/resource-manager/Microsoft.AzureArcData/stable/2021-08-01/azurearcdata.json#/components/schemas/components·1pqex2j·schemas·k8sschedulingoptions·additionalproperties
+warning | Modeler/MissingType | The schema 'components·1ia2mml·schemas·k8sresourcerequirements·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurearcdata/resource-manager/Microsoft.AzureArcData/stable/2021-08-01/azurearcdata.json#/components/schemas/components·1ia2mml·schemas·k8sresourcerequirements·additionalproperties
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Modeler/MissingType | The schema 'components·15yg3x7·schemas·operation·properties·properties·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurearcdata/resource-manager/Microsoft.AzureArcData/preview/2021-07-01-preview/azurearcdata.json#/components/schemas/components·15yg3x7·schemas·operation·properties·properties·additionalproperties
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Modeler/MissingType | The schema 'components·15yg3x7·schemas·operation·properties·properties·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurearcdata/resource-manager/Microsoft.AzureArcData/preview/2021-06-01-preview/azurearcdata.json#/components/schemas/components·15yg3x7·schemas·operation·properties·properties·additionalproperties
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
