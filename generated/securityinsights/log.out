@@ -1,9 +1,91 @@
-AutoRest code generation utility [cli version: 3.6.3; node: v16.20.0]
+AutoRest code generation utility [cli version: 3.6.3; node: v16.20.1]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'paths·1j3lu7w·subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsoft-operationalinsights-workspaces-workspacename-providers-microsoft-securityinsights-sourcecontrols-sourcecontrolid-delete·post·requestbody·content·application-json·schema' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/preview/2023-06-01-preview/SourceControls.json:953:5
+warning | PreCheck/SchemaMissingType | The schema 'CodelessUiConnectorConfigProperties-graphQueriesItem' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/preview/2023-06-01-preview/dataConnectors.json:2393:11
+warning | PreCheck/SchemaMissingType | The schema 'CodelessUiConnectorConfigProperties-sampleQueriesItem' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/preview/2023-06-01-preview/dataConnectors.json:2405:11
+warning | PreCheck/SchemaMissingType | The schema 'CodelessUiConnectorConfigProperties-dataTypesItem' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/preview/2023-06-01-preview/dataConnectors.json:2417:11
+warning | PreCheck/SchemaMissingType | The schema 'CodelessUiConnectorConfigProperties-connectivityCriteriaItem' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/preview/2023-06-01-preview/dataConnectors.json:2429:11
+warning | PreCheck/SchemaMissingType | The schema 'CodelessUiConnectorConfigProperties-instructionStepsItem' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/preview/2023-06-01-preview/dataConnectors.json:2449:11
+warning | PreCheck/SchemaMissingType | The schema 'Permissions-resourceProviderItem' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/preview/2023-06-01-preview/dataConnectors.json:2825:11
+warning | PreCheck/SchemaMissingType | The schema 'Permissions-customsItem' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/preview/2023-06-01-preview/dataConnectors.json:2837:11
+warning | PreCheck/SchemaMissingType | The schema 'InstructionSteps-instructionsItem' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/preview/2023-06-01-preview/dataConnectors.json:2933:11
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'packageList' (1 differences):
+  - properties.value.$ref: "#/components/schemas/schemas:330" => "#/components/schemas/schemas:341"
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'packageModel' (1 differences):
+  - properties.properties.$ref: "#/components/schemas/schemas:332" => "#/components/schemas/schemas:343"
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'packageProperties' (4 differences):
+  - properties.contentId.description: "The package id" => "The content id of the package"
+  - properties.installedVersion: <none> => {"$ref":"#/components/schemas/schemas:759","description":"The version of the installed package, null or absent means not installed."}
+  - properties.resourceId: <none> => {"$ref":"#/components/schemas/schemas:757","description":"The metadata resource id."}
+  - properties.packagedContent: <none> => {"$ref":"#/components/schemas/schemas:345","description":"the json to deploy"}
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'metadataDependencies' (3 differences):
+  - properties.kind.$ref: "#/components/schemas/kind" => "#/components/schemas/schemas:760"
+  - properties.criteria.x-ms-identifiers: [] => <none>
+  - properties.criteria.$ref: "#/components/schemas/schemas:337" => "#/components/schemas/schemas:777"
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'metadataDependencies' (2 differences):
+  - properties.criteria.x-ms-identifiers.0: <none> => "contentId"
+  - properties.criteria.$ref: "#/components/schemas/schemas:337" => "#/components/schemas/schemas:1591"
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'templateList' (1 differences):
+  - properties.value.$ref: "#/components/schemas/schemas:348" => "#/components/schemas/schemas:355"
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'templateModel' (1 differences):
+  - properties.properties.$ref: "#/components/schemas/schemas:351" => "#/components/schemas/schemas:358"
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'templateProperties' (4 differences):
+  - properties.parentId: {"$ref":"#/components/schemas/schemas:758","description":"Full parent resource ID of the content item the template is for.  This is the full resource ID including the scope (subscription and resource group)"} => <none>
+  - properties.packagedContent: {"$ref":"#/components/schemas/schemas:352","description":"the json to deploy"} => <none>
+  - properties.mainTemplate: <none> => {"$ref":"#/components/schemas/schemas:359","description":"The JSON of the ARM template to deploy active content"}
+  - required.5: <none> => "packageId"
+warning | Modeler/MissingType | The schema 'components·1qaufw0·schemas·threatintelligenceindicatorproperties·properties·extensions·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/preview/2023-06-01-preview/ThreatIntelligence.json#/components/schemas/components·1qaufw0·schemas·threatintelligenceindicatorproperties·properties·extensions·additionalproperties
+warning | Modeler/MissingType | The schema 'components·18aj315·schemas·triggeredanalyticsrulerunproperties·properties·rulerunadditionaldata·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/preview/2023-06-01-preview/TriggeredAnalyticsRuleRuns.json#/components/schemas/components·18aj315·schemas·triggeredanalyticsrulerunproperties·properties·rulerunadditionaldata·additionalproperties
+warning | Modeler/MissingType | The schema 'components·2sbdb2·schemas·watchlistitemproperties·properties·itemskeyvalue·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/preview/2023-06-01-preview/Watchlists.json#/components/schemas/components·2sbdb2·schemas·watchlistitemproperties·properties·itemskeyvalue·additionalproperties
+warning | Modeler/MissingType | The schema 'components·84fvid·schemas·watchlistitemproperties·properties·entitymapping·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/preview/2023-06-01-preview/Watchlists.json#/components/schemas/components·84fvid·schemas·watchlistitemproperties·properties·entitymapping·additionalproperties
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'PackageList' -> 'PackageListAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'PackageModel' -> 'PackageModelAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'PackageProperties' -> 'PackagePropertiesAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'MetadataDependencies' -> 'MetadataDependenciesAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'MetadataDependencies' -> 'MetadataDependenciesAutoGenerated2'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'TemplateList' -> 'TemplateListAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'TemplateModel' -> 'TemplateModelAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'TemplateProperties' -> 'TemplatePropertiesAutoGenerated'
+warning | Skipping Entities_Queries due to required query parameter "kind"
+warning | Skipping IPGeodata_Get due to required query parameter "ipAddress"
+warning | Skipping DomainWhois_Get due to required query parameter "domain"
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/listRepositories': Unable to find type segments
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -120,7 +202,7 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'metadataDependencie
   - properties.criteria.$ref: "#/components/schemas/schemas:328" => "#/components/schemas/schemas:768"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'metadataDependencies' (2 differences):
   - properties.criteria.x-ms-identifiers.0: <none> => "contentId"
-  - properties.criteria.$ref: "#/components/schemas/schemas:328" => "#/components/schemas/schemas:1542"
+  - properties.criteria.$ref: "#/components/schemas/schemas:328" => "#/components/schemas/schemas:1550"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'templateList' (1 differences):
   - properties.value.$ref: "#/components/schemas/schemas:339" => "#/components/schemas/schemas:346"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'templateModel' (1 differences):

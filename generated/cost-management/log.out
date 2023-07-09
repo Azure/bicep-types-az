@@ -1,4 +1,4 @@
-AutoRest code generation utility [cli version: 3.6.3; node: v16.20.0]
+AutoRest code generation utility [cli version: 3.6.3; node: v16.20.1]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -28,6 +28,8 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -55,6 +57,8 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'GenerateDetailedCostReportDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2023-03-01/costmanagement.generatedetailedcostreport.json:224:5
@@ -110,6 +114,8 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'GenerateDetailedCostReportDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2023-04-01-preview/costmanagement.generatedetailedcostreport.json:224:5
@@ -160,6 +166,8 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'GenerateDetailedCostReportDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2022-10-01/costmanagement.generatedetailedcostreport.json:224:5
@@ -210,6 +218,8 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'TagInheritanceSetting' (2 differences):
@@ -256,6 +266,8 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'TagInheritanceSetting' (2 differences):
@@ -302,6 +314,8 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'AlertProperties-details-resourceGroupFilterItem' has no type or format information whatsoever. Location:
@@ -340,6 +354,8 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -369,6 +385,8 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'GenerateDetailedCostReportDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2021-10-01/costmanagement.generatedetailedcostreport.json:223:5
@@ -421,6 +439,8 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -450,6 +470,8 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -479,6 +501,8 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -508,6 +532,8 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -537,6 +563,8 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2021-01-01/costmanagement.exports.json:406:5
@@ -586,6 +614,8 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2020-06-01/costmanagement.json:1136:5
@@ -709,6 +739,8 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2020-12-01-preview/costmanagement.exports.json:406:5
@@ -758,6 +790,8 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2020-03-01-preview/costallocation.json:253:5
@@ -789,6 +823,8 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ReportConfigDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-11-01/costmanagement.json:1439:5
@@ -929,6 +965,8 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-10-01/costmanagement.json:678:5
@@ -1000,6 +1038,8 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-09-01/costmanagement.json:609:5
@@ -1071,6 +1111,8 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorBase' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-04-01-preview/costmanagement.json:594:5
@@ -1142,6 +1184,8 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2019-01-01/costmanagement.json:585:5
@@ -1213,6 +1257,8 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorBase' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2019-03-01-preview/costmanagement.json:1928:5
@@ -1292,6 +1338,8 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/stable/2018-05-31/costmanagement.json:811:5
@@ -1359,6 +1407,8 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-08-01-preview/costmanagement.json:2717:9
@@ -1438,6 +1488,8 @@ warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ErrorDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cost-management/resource-manager/Microsoft.CostManagement/preview/2018-12-01-preview/costmanagement.json:1182:5

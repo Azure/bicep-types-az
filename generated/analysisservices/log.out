@@ -1,5 +1,5 @@
 WARNING: Unable to parse swagger path "Microsoft.AnalysisServices/preview/2017-08-01-beta/analysisservices.json"
-AutoRest code generation utility [cli version: 3.6.3; node: v16.20.0]
+AutoRest code generation utility [cli version: 3.6.3; node: v16.20.1]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 warning | SkippedSemanticValidation | Semantic validation was skipped.

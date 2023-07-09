@@ -344,6 +344,7 @@
 
 ### SetVariableActivity
 #### Properties
+* **policy**: [SecureInputOutputPolicy](#secureinputoutputpolicy): Activity policy.
 * **type**: 'SetVariable' (Required): Type of activity.
 * **typeProperties**: [SetVariableActivityTypeProperties](#setvariableactivitytypeproperties) (Required): Set Variable activity properties.
 
@@ -808,6 +809,7 @@
 
 ## AzureMLServiceLinkedServiceTypeProperties
 ### Properties
+* **authentication**: any: Type of authentication (Required to specify MSI) used to connect to AzureML. Type: string (or Expression with resultType string).
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **mlWorkspaceName**: any (Required): Azure ML Service workspace name. Type: string (or Expression with resultType string).
 * **resourceGroupName**: any (Required): Azure ML Service workspace resource group name. Type: string (or Expression with resultType string).
@@ -986,10 +988,10 @@
 * **allowVNetOverride**: bool: A boolean to determine if the vnet configuration needs to be overwritten.
 * **description**: string: The description of the change data capture.
 * **folder**: [ChangeDataCaptureFolder](#changedatacapturefolder): The folder that this CDC is in. If not specified, CDC will appear at the root level.
-* **Policy**: [MapperPolicy](#mapperpolicy) (Required): CDC policy
-* **SourceConnectionsInfo**: [MapperSourceConnectionsInfo](#mappersourceconnectionsinfo)[] (Required): List of sources connections that can be used as sources in the CDC.
+* **policy**: [MapperPolicy](#mapperpolicy) (Required): CDC policy
+* **sourceConnectionsInfo**: [MapperSourceConnectionsInfo](#mappersourceconnectionsinfo)[] (Required): List of sources connections that can be used as sources in the CDC.
 * **status**: string: Status of the CDC as to if it is running or stopped.
-* **TargetConnectionsInfo**: [MapperTargetConnectionsInfo](#mappertargetconnectionsinfo)[] (Required): List of target connections that can be used as sources in the CDC.
+* **targetConnectionsInfo**: [MapperTargetConnectionsInfo](#mappertargetconnectionsinfo)[] (Required): List of target connections that can be used as sources in the CDC.
 
 ## ChangeDataCaptureFolder
 ### Properties
@@ -1889,7 +1891,7 @@
 #### Properties
 * **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **query**: any: Database query. Type: string (or Expression with resultType string).
-* **readBehavior**: 'Query' | 'QueryAll' | string: The read behavior for the operation. Default is Query.
+* **readBehavior**: any: The read behavior for the operation. Default is Query. Allowed values: Query/QueryAll. Type: string (or Expression with resultType string).
 * **type**: 'SalesforceServiceCloudSource' (Required): Copy source type.
 
 ### SalesforceSource
@@ -1897,7 +1899,7 @@
 * **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **query**: any: Database query. Type: string (or Expression with resultType string).
 * **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-* **readBehavior**: 'Query' | 'QueryAll' | string: The read behavior for the operation. Default is Query.
+* **readBehavior**: any: The read behavior for the operation. Default is Query. Allowed values: Query/QueryAll. Type: string (or Expression with resultType string).
 * **type**: 'SalesforceSource' (Required): Copy source type.
 
 ### SapBwSource
@@ -4585,8 +4587,8 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## MapperSourceConnectionsInfo
 ### Properties
-* **Connection**: [MapperConnection](#mapperconnection): Source connection details.
-* **SourceEntities**: [MapperTable](#mappertable)[]: List of source tables for a source connection.
+* **connection**: [MapperConnection](#mapperconnection): Source connection details.
+* **sourceEntities**: [MapperTable](#mappertable)[]: List of source tables for a source connection.
 
 ## MapperTable
 ### Properties
@@ -4605,10 +4607,10 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## MapperTargetConnectionsInfo
 ### Properties
-* **Connection**: [MapperConnection](#mapperconnection): Source connection details.
-* **DataMapperMappings**: [DataMapperMapping](#datamappermapping)[]: List of table mappings.
-* **Relationships**: any[]: List of relationship info among the tables.
-* **TargetEntities**: [MapperTable](#mappertable)[]: List of source tables for a target connection.
+* **connection**: [MapperConnection](#mapperconnection): Source connection details.
+* **dataMapperMappings**: [DataMapperMapping](#datamappermapping)[]: List of table mappings.
+* **relationships**: any[]: List of relationship info among the tables.
+* **targetEntities**: [MapperTable](#mappertable)[]: List of source tables for a target connection.
 
 ## MappingDataFlowTypeProperties
 ### Properties
@@ -4660,7 +4662,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### Properties
 * **connectionString**: any (Required): The MongoDB Atlas connection string. Type: string, SecureString or AzureKeyVaultSecretReference. Type: string, SecureString or AzureKeyVaultSecretReference.
 * **database**: any (Required): The name of the MongoDB Atlas database that you want to access. Type: string (or Expression with resultType string).
-* **mongoDbAtlasDriverVersion**: any: The MongoDB Atlas Driver version that you want to choose. Allowed value are 2.10.4 and 2.19.0. Type: string (or Expression with resultType string).
+* **driverVersion**: any: The driver version that you want to choose. Allowed value are v1 and v2. Type: string (or Expression with resultType string).
 
 ## MongoDbCollectionDatasetTypeProperties
 ### Properties
@@ -5405,6 +5407,11 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **type**: 'SecureString' (Required): Type of the secret.
 * **value**: string (Required): Value of secure string.
 
+
+## SecureInputOutputPolicy
+### Properties
+* **secureInput**: bool: When set to true, Input from activity is considered as secure and will not be logged to monitoring.
+* **secureOutput**: bool: When set to true, Output from activity is considered as secure and will not be logged to monitoring.
 
 ## SecureString
 ### Properties

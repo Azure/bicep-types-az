@@ -1,4 +1,4 @@
-AutoRest code generation utility [cli version: 3.6.3; node: v16.20.0]
+AutoRest code generation utility [cli version: 3.6.3; node: v16.20.1]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -255,7 +255,8 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorResponse' (4 d
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProvisioningState' (2 differences):
   - enum: <none> => ["Succeeded","Failed","Canceled","InProgress","Updating","Dropping"]
   - x-ms-enum: <none> => {"name":"ProvisioningState","modelAsString":true}
-warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (2 differences):
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (3 differences):
+  - properties.id.$ref: "#/components/schemas/schemas:1177" => "#/components/schemas/schemas:1448"
   - properties.id.description: "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}" => "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
   - properties.systemData: <none> => {"readOnly":true,"type":"object","description":"Azure Resource Manager metadata containing createdBy and modifiedBy information.","$ref":"#/components/schemas/schemas:1242"}
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProxyResource' (1 differences):
@@ -883,7 +884,8 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorResponse' (4 d
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProvisioningState' (2 differences):
   - enum: <none> => ["Succeeded","Failed","Canceled","InProgress","Updating","Dropping"]
   - x-ms-enum: <none> => {"name":"ProvisioningState","modelAsString":true}
-warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (2 differences):
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (3 differences):
+  - properties.id.$ref: "#/components/schemas/schemas:1159" => "#/components/schemas/schemas:1430"
   - properties.id.description: "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}" => "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
   - properties.systemData: <none> => {"readOnly":true,"type":"object","description":"Azure Resource Manager metadata containing createdBy and modifiedBy information.","$ref":"#/components/schemas/schemas:1224"}
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProxyResource' (1 differences):
