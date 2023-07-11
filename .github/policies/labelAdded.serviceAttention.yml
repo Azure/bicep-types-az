@@ -21,9 +21,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - Azure/aks-pm
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -33,9 +31,7 @@ configuration:
             mentionees:
             - liadtal
             - yairgil
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -45,9 +41,7 @@ configuration:
             mentionees:
             - josephkwchan
             - jennyhunter-msft
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -56,9 +50,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - Azure/deployments-owners
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -67,9 +59,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - rthorn17
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -79,9 +69,7 @@ configuration:
             mentionees:
             - josephkwchan
             - jennyhunter-msft
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -90,9 +78,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - MSEvanhi
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -101,9 +87,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - MSEvanhi
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -113,9 +97,7 @@ configuration:
             mentionees:
             - LizMS
             - cbrooksmsft
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -125,9 +107,7 @@ configuration:
             mentionees:
             - mojayara
             - Prasanna-Padmanabhan
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -138,9 +118,7 @@ configuration:
             - athipp
             - taiwu
             - minghan
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -150,9 +128,7 @@ configuration:
             mentionees:
             - adrianhall
             - KedarJoshi
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -161,9 +137,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - azmonapplicationinsights
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -173,9 +147,7 @@ configuration:
             mentionees:
             - antcp
             - AzureAppServiceCLI
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -185,9 +157,7 @@ configuration:
             mentionees:
             - shenmuxiaosen
             - avanigupta
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -199,9 +169,7 @@ configuration:
             - jim-minter
             - julienstroheker
             - amanohar
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -210,9 +178,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - anilba06
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -222,9 +188,7 @@ configuration:
             mentionees:
             - darshanhs90
             - AshishGargMicrosoft
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -233,9 +197,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - jaspkaur28
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -246,9 +208,7 @@ configuration:
             - divka78
             - amitchat
             - aishu
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -260,9 +220,7 @@ configuration:
             - sarathys
             - bganapa
             - rakku-ms
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -277,9 +235,7 @@ configuration:
             - mksuni
             - bgklein
             - mscurrell
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -288,9 +244,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - matthchr
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -299,9 +253,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - cabbpt
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -311,9 +263,7 @@ configuration:
             mentionees:
             - alex-frankel
             - filizt
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -322,9 +272,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - sgellock
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -333,9 +281,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - maertendMSFT
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -344,9 +290,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - assafi
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -356,9 +300,7 @@ configuration:
             mentionees:
             - ctstone
             - anrothMSFT
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -368,9 +310,7 @@ configuration:
             mentionees:
             - yingqunpku
             - bowgong
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -380,9 +320,7 @@ configuration:
             mentionees:
             - areddish
             - tburns10
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -393,9 +331,7 @@ configuration:
             - ryogok
             - TFR258
             - tburns10
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -406,9 +342,7 @@ configuration:
             - JinyuID
             - dipidoo
             - SteveMSFT
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -418,9 +352,7 @@ configuration:
             mentionees:
             - bingisbestest
             - nerajput1607
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -429,9 +361,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - swmachan
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -441,9 +371,7 @@ configuration:
             mentionees:
             - robch
             - oscholz
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -453,9 +381,7 @@ configuration:
             mentionees:
             - cahann
             - kayousef
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -464,9 +390,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - swiftarrow11
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -475,9 +399,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - dwaijam
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -486,9 +408,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - metanMSFT
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -497,9 +417,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - olduroja
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -509,9 +427,7 @@ configuration:
             mentionees:
             - jaggerbodas-ms
             - arwong
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -520,9 +436,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - yangyuan
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -532,9 +446,7 @@ configuration:
             mentionees:
             - ms-premp
             - qiaozha
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -550,9 +462,7 @@ configuration:
             - GabstaMSFT
             - ramankumarlive
             - ushnaarshadkhan
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -562,9 +472,7 @@ configuration:
             mentionees:
             - TravisCragg-MSFT
             - GabstaMSFT
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -574,9 +482,7 @@ configuration:
             mentionees:
             - TravisCragg-MSFT
             - sandeepraichura
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -587,9 +493,7 @@ configuration:
             - TravisCragg-MSFT
             - ramankumarlive
             - ushnaarshadkhan
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -599,9 +503,7 @@ configuration:
             mentionees:
             - Drewm3
             - TravisCragg-MSFT
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -615,9 +517,7 @@ configuration:
             - sandeepraichura
             - hilaryw29
             - GabstaMSFT
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -627,9 +527,7 @@ configuration:
             mentionees:
             - TravisCragg-MSFT
             - hilaryw29
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -638,9 +536,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - akashkeshari
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -649,9 +545,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - macolso
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -662,9 +556,7 @@ configuration:
             - toddysm
             - luisdlp
             - northtyphoon
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -676,9 +568,7 @@ configuration:
             - jwilder
             - thomas1206
             - seanmck
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -693,9 +583,7 @@ configuration:
             - simorenoh
             - simplynaveen20
             - abinav2307
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -704,9 +592,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - shefymk
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -716,9 +602,7 @@ configuration:
             mentionees:
             - manoharp
             - MSEvanhi
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -727,9 +611,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - adriankjohnson
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -738,9 +620,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - arindamc
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -752,9 +632,7 @@ configuration:
             - matdickson
             - manuaery
             - madhurinms
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -765,9 +643,7 @@ configuration:
             - a-t-mason
             - ganzee
             - manuaery
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -776,9 +652,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - ingave
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -789,9 +663,7 @@ configuration:
             - Jingshu923
             - zhangyd2015
             - Frey-Wang
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -800,9 +672,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - sumantmehtams
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -811,9 +681,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - sumantmehtams
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -822,9 +690,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - sumantmehtams
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -833,9 +699,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - idear1203
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -844,9 +708,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - sumantmehtams
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -856,9 +718,7 @@ configuration:
             mentionees:
             - radjaram
             - kavitham10
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -868,9 +728,7 @@ configuration:
             mentionees:
             - raedJarrar
             - jifems
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -880,9 +738,7 @@ configuration:
             mentionees:
             - v-anvashist
             - V-hmusukula
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -893,9 +749,7 @@ configuration:
             - yuzorMa
             - johnsta
             - greenie-msft
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -904,9 +758,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - Tanmayeekamath
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -915,9 +767,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - nberdy
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -927,9 +777,7 @@ configuration:
             mentionees:
             - sourabhguha
             - inesk-vt
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -938,9 +786,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - jfggdl
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -949,9 +795,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - Saglodha
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -961,9 +805,7 @@ configuration:
             mentionees:
             - Stefanus Hinardi
             - Francisco-Gamino
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -973,9 +815,7 @@ configuration:
             mentionees:
             - dkershaw10
             - baywet
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -985,9 +825,7 @@ configuration:
             mentionees:
             - mgreenegit
             - vivlingaiah
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -998,9 +836,7 @@ configuration:
             - aim-for-better
             - idear1203
             - deshriva
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1010,9 +846,7 @@ configuration:
             mentionees:
             - romahamu
             - omzevall
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1021,9 +855,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - madhurinms
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1034,9 +866,7 @@ configuration:
             - RandalliLama
             - schaabs
             - jlichwa
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1045,9 +875,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - NarayanThiru
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1060,9 +888,7 @@ configuration:
             - zoharHenMicrosoft
             - sagivf
             - Aviv-Yaniv
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1071,9 +897,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - Tanmayeekamath
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1082,9 +906,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - Azure/azure-logicapps-team
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1093,9 +915,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - minamnmik
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1104,9 +924,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - azureml-github
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1115,9 +933,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - azureml-github
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1126,9 +942,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - aashishb
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1137,9 +951,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - varunkch
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1148,9 +960,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - Lighthouse-Azure
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1160,9 +970,7 @@ configuration:
             mentionees:
             - ambhatna
             - savjani
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1171,9 +979,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - prbansa
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1182,9 +988,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - akucer
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1193,9 +997,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - shijojoy
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1204,9 +1006,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - kpiteira
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1216,9 +1016,7 @@ configuration:
             mentionees:
             - SameergMS
             - dadunl
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1227,9 +1025,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - AzMonEssential
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1238,9 +1034,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - AzMonEssential
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1249,9 +1043,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - AzMonEssential
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1260,9 +1052,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - AzMonEssential
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1271,9 +1061,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - AzmonAlerts
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1282,9 +1070,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - AzmonActionG
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1293,9 +1079,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - AzmonLogA
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1304,9 +1088,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - azmonapplicationinsights
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1316,9 +1098,7 @@ configuration:
             mentionees:
             - ambhatna
             - savjani
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1327,9 +1107,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - aznetsuppgithub
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1338,9 +1116,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - appgwsuppgithub
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1350,9 +1126,7 @@ configuration:
             mentionees:
             - t-bzhan
             - gxue
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1361,9 +1135,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - ddossuppgithub
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1372,9 +1144,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - exrsuppgithub
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1383,9 +1153,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - fwsuppgithub
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1394,9 +1162,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - cdnfdsuppgithub
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1405,9 +1171,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - slbsupportgithub
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1416,9 +1180,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - vnetsuppgithub
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1427,9 +1189,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - netwatchsuppgithub
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1438,9 +1198,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - dnssuppgithub
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1449,9 +1207,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - tmsuppgithub
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1460,9 +1216,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - vpngwsuppgithub
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1471,9 +1225,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - tjsomasundaram
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1482,9 +1234,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - AzmonLogA
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1494,9 +1244,7 @@ configuration:
             mentionees:
             - aperezcloud
             - kenieva
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1505,9 +1253,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - kenieva
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1519,9 +1265,7 @@ configuration:
             - lfittl-msft
             - sr-msft
             - niklarin
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1531,9 +1275,7 @@ configuration:
             mentionees:
             - pvrk
             - adityabalaji-msft
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1542,9 +1284,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - Sharmistha-Rai
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1553,9 +1293,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - yegu-ms
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1564,9 +1302,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - jfggdl
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1575,9 +1311,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - Rkapso
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1587,9 +1321,7 @@ configuration:
             mentionees:
             - darshanhs90
             - AshishGargMicrosoft
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1598,9 +1330,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - chiragg4u
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1609,9 +1339,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - stephbaron
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1620,9 +1348,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - derek1ee
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1634,9 +1360,7 @@ configuration:
             - tjacobhi
             - markheff
             - miwelsh
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1645,9 +1369,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - chlahav
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1656,9 +1378,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - Saglodha
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1669,9 +1389,7 @@ configuration:
             - QingChenmsft
             - vaishnavk
             - juhacket
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1681,9 +1399,7 @@ configuration:
             mentionees:
             - arerlend
             - alzimmermsft
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1693,9 +1409,7 @@ configuration:
             mentionees:
             - sffamily
             - chenkennt
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1704,9 +1418,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - azureSQLGitHub
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1715,9 +1427,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - azureSQLGitHub
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1726,9 +1436,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - azureSQLGitHub
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1737,9 +1445,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - azureSQLGitHub
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1748,9 +1454,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - azureSQLGitHub
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1759,9 +1463,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - azureSQLGitHub
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1770,9 +1472,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - azureSQLGitHub
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1781,9 +1481,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - xgithubtriage
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1795,9 +1493,7 @@ configuration:
             - ganzee
             - manuaery
             - patelkunal
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1806,9 +1502,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - atpham256
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1819,9 +1513,7 @@ configuration:
             - anuragdalmia
             - shilpigautam
             - ramaganesan-rg
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1833,9 +1525,7 @@ configuration:
             - mit2nil
             - aygoya
             - ganganarayanan
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1845,9 +1535,7 @@ configuration:
             mentionees:
             - wonner
             - yanjungao718
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1856,9 +1544,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - klaaslanghout
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1867,9 +1553,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - Shipra1Mishra
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1878,9 +1562,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - zhusijia26
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1890,9 +1572,7 @@ configuration:
             mentionees:
             - AzureAppServiceCLI
             - antcp
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1901,9 +1581,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - vnetsuppgithub
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1912,9 +1590,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - vwansuppgithub
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1923,9 +1599,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - nvasuppgithub
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1934,9 +1608,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - bastionsuppgithub
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1945,9 +1617,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - Azure/azure-iot-cli-triage
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1956,9 +1626,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - kushagraThapur
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1967,9 +1635,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - privlinksuppgithub
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1979,9 +1645,7 @@ configuration:
             mentionees:
             - rpsqrd
             - edyoung
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -1990,9 +1654,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - amirkeren
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -2005,9 +1667,7 @@ configuration:
             - zoharHenMicrosoft
             - sagivf
             - Aviv-Yaniv
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -2016,9 +1676,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - acsdevx-msft
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -2027,9 +1685,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - ccmaxpcrew
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -2038,9 +1694,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - Aniththa
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -2049,9 +1703,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - Aniththa
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -2060,9 +1712,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - nishankgu
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -2071,9 +1721,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - abeomor
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -2082,9 +1730,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - SturgeonMi
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -2093,9 +1739,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - alainli0928
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -2104,9 +1748,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - kvijaykannan
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -2115,9 +1757,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - shivanissambare
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -2126,9 +1766,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - lostmygithubaccount
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -2137,9 +1775,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - shbijlan
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -2148,9 +1784,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - minthigpen
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -2159,9 +1793,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - keijik
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -2170,9 +1802,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - lostmygithubaccount
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -2181,9 +1811,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - rastala
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -2194,9 +1822,7 @@ configuration:
             - ShichaoQiu
             - yuwzho
             - yucwan
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -2205,9 +1831,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - ccmaxpcrew
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -2216,9 +1840,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - ccmaxpcrew
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -2227,9 +1849,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - ccmixpdevs
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -2238,9 +1858,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - ccmixpdevs
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -2249,9 +1867,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - ccmbpxpcrew
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -2260,9 +1876,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - ccmbpxpcrew
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -2271,9 +1885,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - TiagoCrewGitHubIssues
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -2282,9 +1894,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - TiagoCrewGitHubIssues
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -2293,9 +1903,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - ccmshowbackdevs
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -2304,9 +1912,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - CraigWiand
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -2319,9 +1925,7 @@ configuration:
             - rajkumar-rangaraj
             - TimothyMothra
             - vishweshbankwar
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -2330,9 +1934,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - ccmshowbackdevs
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       - if:
         - hasLabel:
@@ -2341,9 +1943,7 @@ configuration:
         - mentionUsers:
             mentionees:
             - calvinsID
-            replyTemplate: Thanks for the feedback! We are routing this to the appropriate
-              team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo
-              for troubleshooting help.
+            replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
             assignMentionees: false
       description:
 onFailure:
