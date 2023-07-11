@@ -1,4 +1,3 @@
----
 id: labelAdded.serviceAttention
 name: GitOps.PullRequestIssueManagement
 description: Tags service team members when "Service Attention" label is added
