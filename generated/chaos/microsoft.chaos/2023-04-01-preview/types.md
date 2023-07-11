@@ -96,8 +96,8 @@
 
 ## CapabilityTypeProperties
 ### Properties
-* **azureRBACActions**: string[]: Control plane actions necessary to execute capability type.
-* **azureRBACDataActions**: string[]: Data plane actions necessary to execute capability type.
+* **azureRbacActions**: string[]: Control plane actions necessary to execute capability type.
+* **azureRbacDataActions**: string[]: Data plane actions necessary to execute capability type.
 * **description**: string (ReadOnly): Localized string of the description.
 * **displayName**: string (ReadOnly): Localized string of the display name.
 * **kind**: string (ReadOnly): String of the kind of this Capability Type.

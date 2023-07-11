@@ -49,6 +49,13 @@
 * **properties**: [TransformationProperties](#transformationproperties): The properties that are associated with a transformation. Required on PUT (CreateOrReplace) requests.
 * **type**: 'Microsoft.StreamAnalytics/streamingjobs/transformations' (ReadOnly, DeployTimeConstant): The resource type
 
+## AzureDataExplorerOutputDataSourceProperties
+### Properties
+* **authenticationMode**: 'ConnectionString' | 'Msi' | 'UserToken' | string: Authentication Mode.
+* **cluster**: string: The name of the Azure Data Explorer cluster. Required on PUT (CreateOrReplace) requests.
+* **database**: string: The name of the Azure Data Explorer database. Required on PUT (CreateOrReplace) requests.
+* **table**: string: The name of the Azure Table. Required on PUT (CreateOrReplace) requests.
+
 ## AzureDataLakeStoreOutputDataSourceProperties
 ### Properties
 * **accountName**: string: The name of the Azure Data Lake Store account. Required on PUT (CreateOrReplace) requests.
@@ -365,7 +372,12 @@
 * **principalId**: string (ReadOnly): The principalId of the identity.
 * **tenantId**: string (ReadOnly): The tenantId of the identity.
 * **type**: string: The type of identity, can be SystemAssigned or UserAssigned.
-* **userAssignedIdentities**: any: The user assigned identities associated with the streaming job resource.
+* **userAssignedIdentities**: [IdentityUserAssignedIdentities](#identityuserassignedidentities): The user assigned identities associated with the streaming job resource.
+
+## IdentityUserAssignedIdentities
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## Input
 ### Properties
@@ -464,6 +476,11 @@
 #### Properties
 * **properties**: [EventHubOutputDataSourceProperties](#eventhuboutputdatasourceproperties): The properties that are associated with an Event Hub output. Required on PUT (CreateOrReplace) requests.
 * **type**: 'Microsoft.EventHub/EventHub' (Required): Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
+
+### AzureDataExplorerOutputDataSource
+#### Properties
+* **properties**: [AzureDataExplorerOutputDataSourceProperties](#azuredataexploreroutputdatasourceproperties): The properties that are associated with an Azure Data Explorer output. Required on PUT (CreateOrReplace) requests.
+* **type**: 'Microsoft.Kusto/clusters/databases' (Required): Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
 
 ### EventHubOutputDataSource
 #### Properties

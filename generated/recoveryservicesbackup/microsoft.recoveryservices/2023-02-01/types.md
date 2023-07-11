@@ -431,7 +431,8 @@ eg: number of bytes transferred etc
 * **enhancedSecurityState**: 'Disabled' | 'Enabled' | 'Invalid' | string: Enabled or Disabled.
 * **isSoftDeleteFeatureStateEditable**: bool: Is soft delete feature state editable
 * **resourceGuardOperationRequests**: string[]: ResourceGuard Operation Requests
-* **softDeleteFeatureState**: 'Disabled' | 'Enabled' | 'Invalid' | string: Soft Delete feature state
+* **softDeleteFeatureState**: 'AlwaysON' | 'Disabled' | 'Enabled' | 'Invalid' | string: Soft Delete feature state
+* **softDeleteRetentionPeriodInDays**: int: Soft delete retention period in days
 * **storageModelType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant' | 'ReadAccessGeoZoneRedundant' | 'ZoneRedundant' | string: Storage type.
 * **storageType**: 'GeoRedundant' | 'Invalid' | 'LocallyRedundant' | 'ReadAccessGeoZoneRedundant' | 'ZoneRedundant' | string: Storage type.
 * **storageTypeState**: 'Invalid' | 'Locked' | 'Unlocked' | string: Locked or Unlocked. Once a machine is registered against a resource, the storageTypeState is always Locked.
@@ -585,6 +586,7 @@ InProgress | Failed | Succeeded
 ### Properties
 * **additionalDetail**: string (ReadOnly): Error Additional Detail in case the status is non-success.
 * **errorDetail**: [ErrorDetail](#errordetail): Error Detail in case the status is non-success.
+* **protectableItemCount**: any (ReadOnly): Dictionary to store the count of ProtectableItems with key POType.
 * **status**: string: Status for the Inquiry Validation.
 
 ## InstantRPAdditionalDetails
@@ -787,7 +789,7 @@ InProgress | Failed | Succeeded
 * **policyId**: string: ID of the backup policy with which this item is backed up.
 * **policyName**: string: Name of the policy used for protection
 * **resourceGuardOperationRequests**: string[]: ResourceGuardOperationRequests on which LAC check will be performed
-* **softDeleteRetentionPeriod**: int: Soft delete retention period in days
+* **softDeleteRetentionPeriodInDays**: int: Soft delete retention period in days
 * **sourceResourceId**: string: ARM ID of the resource to be backed up.
 * **workloadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDBInstance' | 'SAPHanaDatabase' | 'SQLDB' | 'SQLDataBase' | 'Sharepoint' | 'SystemState' | 'VM' | 'VMwareVM' | string (ReadOnly): Type of workload this item represents.
 

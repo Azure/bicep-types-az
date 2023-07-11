@@ -1,4 +1,4 @@
-AutoRest code generation utility [cli version: 3.6.3; node: v16.20.0]
+AutoRest code generation utility [cli version: 3.6.3; node: v16.20.1]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -18,6 +18,10 @@ warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -35,37 +39,13 @@ warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/EmptyParentSchemaWarning | Schema 'AccessReviewDecisionUserSignInInsightProperties' has an allOf list with an empty object schema as a parent, removing it.
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/authorization/resource-manager/Microsoft.Authorization/preview/2021-12-01-preview/authorization-AccessReviewCalls.json:3373:9
-warning | PreCheck/EmptyParentSchemaWarning | Schema 'AccessReviewDecisionUserIdentity' has an allOf list with an empty object schema as a parent, removing it.
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/authorization/resource-manager/Microsoft.Authorization/preview/2021-12-01-preview/authorization-AccessReviewCalls.json:3510:9
-warning | PreCheck/EmptyParentSchemaWarning | Schema 'AccessReviewDecisionServicePrincipalIdentity' has an allOf list with an empty object schema as a parent, removing it.
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/authorization/resource-manager/Microsoft.Authorization/preview/2021-12-01-preview/authorization-AccessReviewCalls.json:3531:9
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Modeler/MissingType | The schema 'AccessReviewDecisionInsightProperties-insightCreatedDateTime' has no type or format information whatsoever. Location:
-   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/authorization/resource-manager/Microsoft.Authorization/preview/2021-12-01-preview/authorization-AccessReviewCalls.json#/components/schemas/AccessReviewDecisionInsightProperties-insightCreatedDateTime
-warning | Modeler/MissingType | The schema 'AccessReviewDecisionUserSignInInsightProperties-lastSignInDateTime' has no type or format information whatsoever. Location:
-   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/authorization/resource-manager/Microsoft.Authorization/preview/2021-12-01-preview/authorization-AccessReviewCalls.json#/components/schemas/AccessReviewDecisionUserSignInInsightProperties-lastSignInDateTime
-warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Skipping path '/{roleId}': Unable to locate "/providers/" segment
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -83,7 +63,17 @@ warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'ClassicAdministratorProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/authorization/resource-manager/Microsoft.Authorization/stable/2015-07-01/authorization-ClassicAdminCalls.json:78:5
+warning | PreCheck/SchemaMissingType | The schema 'ClassicAdministrator' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/authorization/resource-manager/Microsoft.Authorization/stable/2015-07-01/authorization-ClassicAdminCalls.json:91:5
+warning | PreCheck/SchemaMissingType | The schema 'ClassicAdministratorListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/authorization/resource-manager/Microsoft.Authorization/stable/2015-07-01/authorization-ClassicAdminCalls.json:113:5
 warning | PreCheck/SchemaMissingType | The schema 'RoleDefinitionFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/authorization/resource-manager/Microsoft.Authorization/stable/2015-07-01/authorization-RoleDefinitionsCalls.json:398:5
 warning | PreCheck/SchemaMissingType | The schema 'RoleDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -116,12 +106,6 @@ warning | PreCheck/SchemaMissingType | The schema 'RoleAssignmentProperties' wit
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/authorization/resource-manager/Microsoft.Authorization/stable/2015-07-01/authorization-RoleAssignmentsCalls.json:617:5
 warning | PreCheck/SchemaMissingType | The schema 'RoleAssignmentCreateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/authorization/resource-manager/Microsoft.Authorization/stable/2015-07-01/authorization-RoleAssignmentsCalls.json:634:5
-warning | PreCheck/SchemaMissingType | The schema 'ClassicAdministratorProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/authorization/resource-manager/Microsoft.Authorization/stable/2015-07-01/authorization-ClassicAdminCalls.json:78:5
-warning | PreCheck/SchemaMissingType | The schema 'ClassicAdministrator' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/authorization/resource-manager/Microsoft.Authorization/stable/2015-07-01/authorization-ClassicAdminCalls.json:91:5
-warning | PreCheck/SchemaMissingType | The schema 'ClassicAdministratorListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/authorization/resource-manager/Microsoft.Authorization/stable/2015-07-01/authorization-ClassicAdminCalls.json:113:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/{roleAssignmentId}': Unable to locate "/providers/" segment
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -141,25 +125,10 @@ warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/{roleAssignmentId}': Unable to locate "/providers/" segment
@@ -180,6 +149,67 @@ warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/EmptyParentSchemaWarning | Schema 'AccessReviewDecisionUserSignInInsightProperties' has an allOf list with an empty object schema as a parent, removing it.
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/authorization/resource-manager/Microsoft.Authorization/preview/2021-12-01-preview/authorization-AccessReviewCalls.json:3373:9
+warning | PreCheck/EmptyParentSchemaWarning | Schema 'AccessReviewDecisionUserIdentity' has an allOf list with an empty object schema as a parent, removing it.
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/authorization/resource-manager/Microsoft.Authorization/preview/2021-12-01-preview/authorization-AccessReviewCalls.json:3510:9
+warning | PreCheck/EmptyParentSchemaWarning | Schema 'AccessReviewDecisionServicePrincipalIdentity' has an allOf list with an empty object schema as a parent, removing it.
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/authorization/resource-manager/Microsoft.Authorization/preview/2021-12-01-preview/authorization-AccessReviewCalls.json:3531:9
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Modeler/MissingType | The schema 'AccessReviewDecisionInsightProperties-insightCreatedDateTime' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/authorization/resource-manager/Microsoft.Authorization/preview/2021-12-01-preview/authorization-AccessReviewCalls.json#/components/schemas/AccessReviewDecisionInsightProperties-insightCreatedDateTime
+warning | Modeler/MissingType | The schema 'AccessReviewDecisionUserSignInInsightProperties-lastSignInDateTime' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/authorization/resource-manager/Microsoft.Authorization/preview/2021-12-01-preview/authorization-AccessReviewCalls.json#/components/schemas/AccessReviewDecisionUserSignInInsightProperties-lastSignInDateTime
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Skipping path '/{roleAssignmentId}': Unable to locate "/providers/" segment
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -199,6 +229,56 @@ warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/EmptyParentSchemaWarning | Schema 'AccessReviewDecisionResourceAzureRole' has an allOf list with an empty object schema as a parent, removing it.
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/authorization/resource-manager/Microsoft.Authorization/preview/2021-11-16-preview/authorization-AccessReviewCalls.json:2328:9
@@ -225,6 +305,10 @@ warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/EmptyParentSchemaWarning | Schema 'AccessReviewDecisionUserIdentity' has an allOf list with an empty object schema as a parent, removing it.
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/authorization/resource-manager/Microsoft.Authorization/preview/2021-07-01-preview/authorization-AccessReviewCalls.json:1855:9
@@ -248,6 +332,10 @@ warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'AccessReviewScheduleDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/authorization/resource-manager/Microsoft.Authorization/preview/2021-03-01-preview/authorization-AccessReviewCalls.json:1050:5
@@ -313,6 +401,10 @@ warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'RoleAssignmentApprovalActorIdentity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/authorization/resource-manager/Microsoft.Authorization/preview/2021-01-01-preview/authorization-RoleAssignmentApprovalCalls.json:664:5
@@ -346,6 +438,10 @@ warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/EmptyParentSchemaWarning | Schema 'UserDecisionTarget' has an allOf list with an empty object schema as a parent, removing it.
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/authorization/resource-manager/Microsoft.Authorization/preview/2018-05-01-preview/authorization-AccessReviewCalls.json:1565:9
@@ -369,6 +465,10 @@ warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -388,6 +488,10 @@ warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'RoleAssignmentFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/authorization/resource-manager/Microsoft.Authorization/preview/2018-01-01-preview/authorization-RoleAssignmentsCalls.json:547:5
@@ -420,6 +524,56 @@ warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/{roleAssignmentId}': Unable to locate "/providers/" segment
@@ -440,64 +594,10 @@ warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping path '/{roleAssignmentId}': Unable to locate "/providers/" segment
-warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/{roleId}': Unable to locate "/providers/" segment
@@ -518,6 +618,10 @@ warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/{roleAssignmentId}': Unable to locate "/providers/" segment
@@ -538,6 +642,10 @@ warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'RoleAssignmentFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/authorization/resource-manager/Microsoft.Authorization/preview/2018-09-01-preview/authorization-RoleAssignmentsCalls.json:547:5
@@ -570,6 +678,10 @@ warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'RoleAssignmentFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/authorization/resource-manager/Microsoft.Authorization/preview/2017-10-01-preview/authorization-RoleAssignmentsCalls.json:551:5

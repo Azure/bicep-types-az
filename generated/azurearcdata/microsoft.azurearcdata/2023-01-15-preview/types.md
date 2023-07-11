@@ -180,6 +180,24 @@
 ### Additional Properties
 * **Additional Properties Type**: any
 
+## K8SActiveDirectory
+### Properties
+* **accountName**: string: Account name for AAD
+* **connector**: [K8SActiveDirectoryConnector](#k8sactivedirectoryconnector)
+* **encryptionTypes**: string[]: An array of encryption types
+* **keytabSecret**: string: Keytab secret used to authenticate with Active Directory.
+
+## K8SActiveDirectoryConnector
+### Properties
+* **name**: string: Name of the connector
+* **namespace**: string: Name space of the connector
+
+## K8SNetworkSettings
+### Properties
+* **forceencryption**: int: If 1, then SQL Server forces all connections to be encrypted. By default, this option is 0
+* **tlsciphers**: string: Specifies which ciphers are allowed by SQL Server for TLS
+* **tlsprotocols**: string: A comma-separated list of which TLS protocols are allowed by SQL Server
+
 ## K8SResourceRequirements
 ### Properties
 * **limits**: [K8SResourceRequirementsLimits](#k8sresourcerequirementslimits): Limits for a kubernetes resource type (e.g 'cpu', 'memory'). The 'cpu' request must be less than or equal to 'cpu' limit. Default 'cpu' is 2, minimum is 1. Default 'memory' is '4Gi', minimum is '2Gi. If sku.tier is GeneralPurpose, maximum 'cpu' is 24 and maximum 'memory' is '128Gi'.
@@ -208,6 +226,26 @@
 * **resources**: [K8SResourceRequirements](#k8sresourcerequirements): The kubernetes resource limits and requests used to restrict or reserve resource usage.
 ### Additional Properties
 * **Additional Properties Type**: any
+
+## K8SSecurity
+### Properties
+* **activeDirectory**: [K8SActiveDirectory](#k8sactivedirectory): The kubernetes active directory information.
+* **adminLoginSecret**: string: Admin login secret key
+* **serviceCertificateSecret**: string: Service certificate secret used
+* **transparentDataEncryption**: [K8StransparentDataEncryption](#k8stransparentdataencryption): Transparent data encryption information.
+### Additional Properties
+* **Additional Properties Type**: any
+
+## K8SSettings
+### Properties
+* **network**: [K8SNetworkSettings](#k8snetworksettings): The kubernetes network settings information.
+### Additional Properties
+* **Additional Properties Type**: any
+
+## K8StransparentDataEncryption
+### Properties
+* **mode**: string: Transparent data encryption mode. Can be Service Managed, Customer managed or disabled
+* **protectorSecret**: string: Protector secret for customer managed Transparent data encryption mode
 
 ## KeytabInformation
 ### Properties
@@ -252,6 +290,8 @@
 ### Properties
 * **replicas**: int: This option specifies the number of SQL Managed Instance replicas that will be deployed in your Kubernetes cluster for high availability purposes. If sku.tier is BusinessCritical, allowed values are '2' or '3' with default of '3'. If sku.tier is GeneralPurpose, replicas must be '1'.
 * **scheduling**: [K8SScheduling](#k8sscheduling): The kubernetes scheduling information.
+* **security**: [K8SSecurity](#k8ssecurity): The kubernetes security information.
+* **settings**: [K8SSettings](#k8ssettings): The kubernetes settings information.
 ### Additional Properties
 * **Additional Properties Type**: any
 
