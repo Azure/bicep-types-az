@@ -9,14 +9,11 @@ configuration:
     scheduledSearches: []
     eventResponderTasks:
     - if:
-      - or:
-        - payloadType: Issues
-      - isAction:
-          action: Opened
+      - payloadType: Issues
+      - labelAdded:
+          label: Service Attention
       then:
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: AKS
         then:
@@ -24,10 +21,8 @@ configuration:
             mentionees:
             - Azure/aks-pm
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Alerts Management
         then:
@@ -36,10 +31,8 @@ configuration:
             - liadtal
             - yairgil
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: ARM
         then:
@@ -48,10 +41,8 @@ configuration:
             - josephkwchan
             - jennyhunter-msft
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: ARM - Templates
         then:
@@ -59,10 +50,8 @@ configuration:
             mentionees:
             - Azure/deployments-owners
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: ARM - Tags
         then:
@@ -70,10 +59,8 @@ configuration:
             mentionees:
             - rthorn17
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: ARM - Core
         then:
@@ -82,10 +69,8 @@ configuration:
             - josephkwchan
             - jennyhunter-msft
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: ARM - Managed Applications
         then:
@@ -93,10 +78,8 @@ configuration:
             mentionees:
             - MSEvanhi
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: ARM - Service Catalog
         then:
@@ -104,10 +87,8 @@ configuration:
             mentionees:
             - MSEvanhi
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: ARM - RBAC
         then:
@@ -116,10 +97,8 @@ configuration:
             - LizMS
             - cbrooksmsft
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Advisor
         then:
@@ -128,10 +107,8 @@ configuration:
             - mojayara
             - Prasanna-Padmanabhan
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Analysis Services
         then:
@@ -141,10 +118,8 @@ configuration:
             - taiwu
             - minghan
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: API Management
         then:
@@ -153,10 +128,8 @@ configuration:
             - adrianhall
             - KedarJoshi
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Application Insights
         then:
@@ -164,10 +137,8 @@ configuration:
             mentionees:
             - azmonapplicationinsights
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: App Services
         then:
@@ -176,10 +147,8 @@ configuration:
             - antcp
             - AzureAppServiceCLI
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: App Configuration
         then:
@@ -188,10 +157,8 @@ configuration:
             - shenmuxiaosen
             - avanigupta
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: ARO
         then:
@@ -202,10 +169,8 @@ configuration:
             - julienstroheker
             - amanohar
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Attestation
         then:
@@ -213,10 +178,8 @@ configuration:
             mentionees:
             - anilba06
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Authorization
         then:
@@ -225,10 +188,8 @@ configuration:
             - darshanhs90
             - AshishGargMicrosoft
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Automation
         then:
@@ -236,10 +197,8 @@ configuration:
             mentionees:
             - jaspkaur28
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: AVS
         then:
@@ -249,10 +208,8 @@ configuration:
             - amitchat
             - aishu
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Azure Stack
         then:
@@ -263,10 +220,8 @@ configuration:
             - bganapa
             - rakku-ms
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Batch
         then:
@@ -280,10 +235,8 @@ configuration:
             - bgklein
             - mscurrell
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: BatchAI
         then:
@@ -291,10 +244,8 @@ configuration:
             mentionees:
             - matthchr
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Billing
         then:
@@ -302,10 +253,8 @@ configuration:
             mentionees:
             - cabbpt
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Blueprint
         then:
@@ -314,10 +263,8 @@ configuration:
             - alex-frankel
             - filizt
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Bot Service
         then:
@@ -325,10 +272,8 @@ configuration:
             mentionees:
             - sgellock
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Cloud Shell
         then:
@@ -336,10 +281,8 @@ configuration:
             mentionees:
             - maertendMSFT
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Cognitive - Text Analytics
         then:
@@ -347,10 +290,8 @@ configuration:
             mentionees:
             - assafi
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Cognitive - Form Recognizer
         then:
@@ -359,10 +300,8 @@ configuration:
             - ctstone
             - anrothMSFT
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Cognitive - Anomaly Detector
         then:
@@ -371,10 +310,8 @@ configuration:
             - yingqunpku
             - bowgong
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Cognitive - Custom Vision
         then:
@@ -383,10 +320,8 @@ configuration:
             - areddish
             - tburns10
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Cognitive - Computer Vision
         then:
@@ -396,10 +331,8 @@ configuration:
             - TFR258
             - tburns10
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Cognitive - Face
         then:
@@ -409,10 +342,8 @@ configuration:
             - dipidoo
             - SteveMSFT
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Cognitive - QnA Maker
         then:
@@ -421,10 +352,8 @@ configuration:
             - bingisbestest
             - nerajput1607
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Cognitive - Translator
         then:
@@ -432,10 +361,8 @@ configuration:
             mentionees:
             - swmachan
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Cognitive - Speech
         then:
@@ -444,10 +371,8 @@ configuration:
             - robch
             - oscholz
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Cognitive - LUIS
         then:
@@ -456,10 +381,8 @@ configuration:
             - cahann
             - kayousef
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Cognitive - Content Moderator
         then:
@@ -467,10 +390,8 @@ configuration:
             mentionees:
             - swiftarrow11
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Cognitive - Personalizer
         then:
@@ -478,10 +399,8 @@ configuration:
             mentionees:
             - dwaijam
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Cognitive - Immersive Reader
         then:
@@ -489,10 +408,8 @@ configuration:
             mentionees:
             - metanMSFT
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Cognitive - Ink Recognizer
         then:
@@ -500,10 +417,8 @@ configuration:
             mentionees:
             - olduroja
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Cognitive - Bing
         then:
@@ -512,10 +427,8 @@ configuration:
             - jaggerbodas-ms
             - arwong
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Cognitive - Mgmt
         then:
@@ -523,10 +436,8 @@ configuration:
             mentionees:
             - yangyuan
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Commerce
         then:
@@ -535,10 +446,8 @@ configuration:
             - ms-premp
             - qiaozha
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Compute
         then:
@@ -553,10 +462,8 @@ configuration:
             - ramankumarlive
             - ushnaarshadkhan
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Compute - Extensions
         then:
@@ -565,10 +472,8 @@ configuration:
             - TravisCragg-MSFT
             - GabstaMSFT
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Compute - Images
         then:
@@ -577,10 +482,8 @@ configuration:
             - TravisCragg-MSFT
             - sandeepraichura
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Compute - Managed Disks
         then:
@@ -590,10 +493,8 @@ configuration:
             - ramankumarlive
             - ushnaarshadkhan
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Compute - RDFE
         then:
@@ -602,10 +503,8 @@ configuration:
             - Drewm3
             - TravisCragg-MSFT
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Compute - VM
         then:
@@ -618,10 +517,8 @@ configuration:
             - hilaryw29
             - GabstaMSFT
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Compute - VMSS
         then:
@@ -630,10 +527,8 @@ configuration:
             - TravisCragg-MSFT
             - hilaryw29
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Connected Kubernetes
         then:
@@ -641,10 +536,8 @@ configuration:
             mentionees:
             - akashkeshari
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Container Instances
         then:
@@ -652,10 +545,8 @@ configuration:
             mentionees:
             - macolso
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Container Registry
         then:
@@ -665,10 +556,8 @@ configuration:
             - luisdlp
             - northtyphoon
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Container Service
         then:
@@ -679,10 +568,8 @@ configuration:
             - thomas1206
             - seanmck
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Cosmos
         then:
@@ -696,10 +583,8 @@ configuration:
             - simplynaveen20
             - abinav2307
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Customer Insights
         then:
@@ -707,10 +592,8 @@ configuration:
             mentionees:
             - shefymk
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Custom Providers
         then:
@@ -719,10 +602,8 @@ configuration:
             - manoharp
             - MSEvanhi
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: CycleCloud
         then:
@@ -730,10 +611,8 @@ configuration:
             mentionees:
             - adriankjohnson
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Data Bricks
         then:
@@ -741,10 +620,8 @@ configuration:
             mentionees:
             - arindamc
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: DataBox
         then:
@@ -755,10 +632,8 @@ configuration:
             - manuaery
             - madhurinms
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: DataBox Edge
         then:
@@ -768,10 +643,8 @@ configuration:
             - ganzee
             - manuaery
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Data Catalog
         then:
@@ -779,10 +652,8 @@ configuration:
             mentionees:
             - ingave
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Data Factory
         then:
@@ -792,10 +663,8 @@ configuration:
             - zhangyd2015
             - Frey-Wang
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Data Lake
         then:
@@ -803,10 +672,8 @@ configuration:
             mentionees:
             - sumantmehtams
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Data Lake Storage Gen1
         then:
@@ -814,10 +681,8 @@ configuration:
             mentionees:
             - sumantmehtams
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Data Lake Storage Gen2
         then:
@@ -825,10 +690,8 @@ configuration:
             mentionees:
             - sumantmehtams
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Data Lake Analytics
         then:
@@ -836,10 +699,8 @@ configuration:
             mentionees:
             - idear1203
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Data Lake Store
         then:
@@ -847,10 +708,8 @@ configuration:
             mentionees:
             - sumantmehtams
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Data Migration
         then:
@@ -859,10 +718,8 @@ configuration:
             - radjaram
             - kavitham10
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Data Share
         then:
@@ -871,10 +728,8 @@ configuration:
             - raedJarrar
             - jifems
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: DevOps
         then:
@@ -883,10 +738,8 @@ configuration:
             - v-anvashist
             - V-hmusukula
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Dev Spaces
         then:
@@ -896,10 +749,8 @@ configuration:
             - johnsta
             - greenie-msft
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Devtestlab
         then:
@@ -907,10 +758,8 @@ configuration:
             mentionees:
             - Tanmayeekamath
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Device Provisioning Service
         then:
@@ -918,10 +767,8 @@ configuration:
             mentionees:
             - nberdy
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Digital Twins
         then:
@@ -930,10 +777,8 @@ configuration:
             - sourabhguha
             - inesk-vt
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Event Grid
         then:
@@ -941,10 +786,8 @@ configuration:
             mentionees:
             - jfggdl
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Event Hubs
         then:
@@ -952,10 +795,8 @@ configuration:
             mentionees:
             - Saglodha
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Functions
         then:
@@ -964,10 +805,8 @@ configuration:
             - Stefanus Hinardi
             - Francisco-Gamino
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Graph.Microsoft
         then:
@@ -976,10 +815,8 @@ configuration:
             - dkershaw10
             - baywet
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Guest Configuration
         then:
@@ -988,10 +825,8 @@ configuration:
             - mgreenegit
             - vivlingaiah
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: HDInsight
         then:
@@ -1001,10 +836,8 @@ configuration:
             - idear1203
             - deshriva
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: HPC Cache
         then:
@@ -1013,10 +846,8 @@ configuration:
             - romahamu
             - omzevall
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Import Export
         then:
@@ -1024,10 +855,8 @@ configuration:
             mentionees:
             - madhurinms
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: KeyVault
         then:
@@ -1037,10 +866,8 @@ configuration:
             - schaabs
             - jlichwa
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Kubernetes Configuration
         then:
@@ -1048,10 +875,8 @@ configuration:
             mentionees:
             - NarayanThiru
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Azure Data Explorer
         then:
@@ -1063,10 +888,8 @@ configuration:
             - sagivf
             - Aviv-Yaniv
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Lab Services
         then:
@@ -1074,10 +897,8 @@ configuration:
             mentionees:
             - Tanmayeekamath
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Logic App
         then:
@@ -1085,10 +906,8 @@ configuration:
             mentionees:
             - Azure/azure-logicapps-team
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: LOUIS
         then:
@@ -1096,10 +915,8 @@ configuration:
             mentionees:
             - minamnmik
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Machine Learning
         then:
@@ -1107,10 +924,8 @@ configuration:
             mentionees:
             - azureml-github
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Machine Learning Compute
         then:
@@ -1118,10 +933,8 @@ configuration:
             mentionees:
             - azureml-github
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Machine Learning Experimentation
         then:
@@ -1129,10 +942,8 @@ configuration:
             mentionees:
             - aashishb
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Managed Identity
         then:
@@ -1140,10 +951,8 @@ configuration:
             mentionees:
             - varunkch
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Managed Services
         then:
@@ -1151,10 +960,8 @@ configuration:
             mentionees:
             - Lighthouse-Azure
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: MariaDB
         then:
@@ -1163,10 +970,8 @@ configuration:
             - ambhatna
             - savjani
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Marketplace Ordering
         then:
@@ -1174,10 +979,8 @@ configuration:
             mentionees:
             - prbansa
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Media Services
         then:
@@ -1185,10 +988,8 @@ configuration:
             mentionees:
             - akucer
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Migrate
         then:
@@ -1196,10 +997,8 @@ configuration:
             mentionees:
             - shijojoy
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Mobile Engagement
         then:
@@ -1207,10 +1006,8 @@ configuration:
             mentionees:
             - kpiteira
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Monitor
         then:
@@ -1219,10 +1016,8 @@ configuration:
             - SameergMS
             - dadunl
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Monitor - Autoscale
         then:
@@ -1230,10 +1025,8 @@ configuration:
             mentionees:
             - AzMonEssential
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Monitor - ActivityLogs
         then:
@@ -1241,10 +1034,8 @@ configuration:
             mentionees:
             - AzMonEssential
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Monitor - Metrics
         then:
@@ -1252,10 +1043,8 @@ configuration:
             mentionees:
             - AzMonEssential
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Monitor - Diagnostic Settings
         then:
@@ -1263,10 +1052,8 @@ configuration:
             mentionees:
             - AzMonEssential
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Monitor - Alerts
         then:
@@ -1274,10 +1061,8 @@ configuration:
             mentionees:
             - AzmonAlerts
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Monitor - ActionGroups
         then:
@@ -1285,10 +1070,8 @@ configuration:
             mentionees:
             - AzmonActionG
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Monitor - LogAnalytics
         then:
@@ -1296,10 +1079,8 @@ configuration:
             mentionees:
             - AzmonLogA
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Monitor - ApplicationInsights
         then:
@@ -1307,10 +1088,8 @@ configuration:
             mentionees:
             - azmonapplicationinsights
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: MySQL
         then:
@@ -1319,10 +1098,8 @@ configuration:
             - ambhatna
             - savjani
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Network
         then:
@@ -1330,10 +1107,8 @@ configuration:
             mentionees:
             - aznetsuppgithub
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Network - Application Gateway
         then:
@@ -1341,10 +1116,8 @@ configuration:
             mentionees:
             - appgwsuppgithub
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Network - CDN
         then:
@@ -1353,10 +1126,8 @@ configuration:
             - t-bzhan
             - gxue
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Network - DDOS Protection
         then:
@@ -1364,10 +1135,8 @@ configuration:
             mentionees:
             - ddossuppgithub
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Network - ExpressRoute
         then:
@@ -1375,10 +1144,8 @@ configuration:
             mentionees:
             - exrsuppgithub
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Network - Firewall
         then:
@@ -1386,10 +1153,8 @@ configuration:
             mentionees:
             - fwsuppgithub
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Network - Front Door
         then:
@@ -1397,10 +1162,8 @@ configuration:
             mentionees:
             - cdnfdsuppgithub
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Network - Load Balancer
         then:
@@ -1408,10 +1171,8 @@ configuration:
             mentionees:
             - slbsupportgithub
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Network - Virtual Network NAT
         then:
@@ -1419,10 +1180,8 @@ configuration:
             mentionees:
             - vnetsuppgithub
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Network - Network Watcher
         then:
@@ -1430,10 +1189,8 @@ configuration:
             mentionees:
             - netwatchsuppgithub
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Network - DNS
         then:
@@ -1441,10 +1198,8 @@ configuration:
             mentionees:
             - dnssuppgithub
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Network - Traffic Manager
         then:
@@ -1452,10 +1207,8 @@ configuration:
             mentionees:
             - tmsuppgithub
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Network - VPN Gateway
         then:
@@ -1463,10 +1216,8 @@ configuration:
             mentionees:
             - vpngwsuppgithub
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Notification Hub
         then:
@@ -1474,10 +1225,8 @@ configuration:
             mentionees:
             - tjsomasundaram
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Operational Insights
         then:
@@ -1485,10 +1234,8 @@ configuration:
             mentionees:
             - AzmonLogA
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Policy
         then:
@@ -1497,10 +1244,8 @@ configuration:
             - aperezcloud
             - kenieva
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Policy Insights
         then:
@@ -1508,10 +1253,8 @@ configuration:
             mentionees:
             - kenieva
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: PostgreSQL
         then:
@@ -1522,10 +1265,8 @@ configuration:
             - sr-msft
             - niklarin
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Recovery Services Backup
         then:
@@ -1534,10 +1275,8 @@ configuration:
             - pvrk
             - adityabalaji-msft
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Recovery Services Site-Recovery
         then:
@@ -1545,10 +1284,8 @@ configuration:
             mentionees:
             - Sharmistha-Rai
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Redis Cache
         then:
@@ -1556,10 +1293,8 @@ configuration:
             mentionees:
             - yegu-ms
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Relay
         then:
@@ -1567,10 +1302,8 @@ configuration:
             mentionees:
             - jfggdl
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Reservations
         then:
@@ -1578,10 +1311,8 @@ configuration:
             mentionees:
             - Rkapso
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Resource Authorization
         then:
@@ -1590,10 +1321,8 @@ configuration:
             - darshanhs90
             - AshishGargMicrosoft
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Resource Graph
         then:
@@ -1601,10 +1330,8 @@ configuration:
             mentionees:
             - chiragg4u
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Resource Health
         then:
@@ -1612,10 +1339,8 @@ configuration:
             mentionees:
             - stephbaron
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Scheduler
         then:
@@ -1623,10 +1348,8 @@ configuration:
             mentionees:
             - derek1ee
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Search
         then:
@@ -1637,10 +1360,8 @@ configuration:
             - markheff
             - miwelsh
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Security
         then:
@@ -1648,10 +1369,8 @@ configuration:
             mentionees:
             - chlahav
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Service Bus
         then:
@@ -1659,10 +1378,8 @@ configuration:
             mentionees:
             - Saglodha
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Service Fabric
         then:
@@ -1672,10 +1389,8 @@ configuration:
             - vaishnavk
             - juhacket
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Schema Registry
         then:
@@ -1684,10 +1399,8 @@ configuration:
             - arerlend
             - alzimmermsft
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: SignalR
         then:
@@ -1696,10 +1409,8 @@ configuration:
             - sffamily
             - chenkennt
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: SQL
         then:
@@ -1707,10 +1418,8 @@ configuration:
             mentionees:
             - azureSQLGitHub
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: SQL - VM
         then:
@@ -1718,10 +1427,8 @@ configuration:
             mentionees:
             - azureSQLGitHub
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: SQL - Backup & Restore
         then:
@@ -1729,10 +1436,8 @@ configuration:
             mentionees:
             - azureSQLGitHub
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: SQL - Data Security
         then:
@@ -1740,10 +1445,8 @@ configuration:
             mentionees:
             - azureSQLGitHub
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: SQL - Elastic Jobs
         then:
@@ -1751,10 +1454,8 @@ configuration:
             mentionees:
             - azureSQLGitHub
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: SQL - Managed Instance
         then:
@@ -1762,10 +1463,8 @@ configuration:
             mentionees:
             - azureSQLGitHub
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: SQL - Replication & Failover
         then:
@@ -1773,10 +1472,8 @@ configuration:
             mentionees:
             - azureSQLGitHub
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Storage
         then:
@@ -1784,10 +1481,8 @@ configuration:
             mentionees:
             - xgithubtriage
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Storsimple
         then:
@@ -1798,10 +1493,8 @@ configuration:
             - manuaery
             - patelkunal
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Stream Analytics
         then:
@@ -1809,10 +1502,8 @@ configuration:
             mentionees:
             - atpham256
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Subscription
         then:
@@ -1822,10 +1513,8 @@ configuration:
             - shilpigautam
             - ramaganesan-rg
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Support
         then:
@@ -1836,10 +1525,8 @@ configuration:
             - aygoya
             - ganganarayanan
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Synapse
         then:
@@ -1848,10 +1535,8 @@ configuration:
             - wonner
             - yanjungao718
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Tables
         then:
@@ -1859,10 +1544,8 @@ configuration:
             mentionees:
             - klaaslanghout
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: TimeseriesInsights
         then:
@@ -1870,10 +1553,8 @@ configuration:
             mentionees:
             - Shipra1Mishra
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: vFXT
         then:
@@ -1881,10 +1562,8 @@ configuration:
             mentionees:
             - zhusijia26
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Web Apps
         then:
@@ -1893,10 +1572,8 @@ configuration:
             - AzureAppServiceCLI
             - antcp
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Network - Virtual Network
         then:
@@ -1904,10 +1581,8 @@ configuration:
             mentionees:
             - vnetsuppgithub
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Network - Virtual WAN
         then:
@@ -1915,10 +1590,8 @@ configuration:
             mentionees:
             - vwansuppgithub
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Network - Network Virtual Appliance
         then:
@@ -1926,10 +1599,8 @@ configuration:
             mentionees:
             - nvasuppgithub
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Network - Bastion
         then:
@@ -1937,10 +1608,8 @@ configuration:
             mentionees:
             - bastionsuppgithub
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: IoT/CLI
         then:
@@ -1948,7 +1617,7 @@ configuration:
             mentionees:
             - Azure/azure-iot-cli-triage
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
         - hasLabel:
             label: Azure.Spring - Cosmos
@@ -1957,10 +1626,8 @@ configuration:
             mentionees:
             - kushagraThapur
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Network - Private Link
         then:
@@ -1968,10 +1635,8 @@ configuration:
             mentionees:
             - privlinksuppgithub
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Azure arc enabled servers
         then:
@@ -1980,10 +1645,8 @@ configuration:
             - rpsqrd
             - edyoung
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: SecurityInsights
         then:
@@ -1991,10 +1654,8 @@ configuration:
             mentionees:
             - amirkeren
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Azure Data Explorer
         then:
@@ -2006,10 +1667,8 @@ configuration:
             - sagivf
             - Aviv-Yaniv
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Communication
         then:
@@ -2017,10 +1676,8 @@ configuration:
             mentionees:
             - acsdevx-msft
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Cost Management and Consumption
         then:
@@ -2028,21 +1685,17 @@ configuration:
             mentionees:
             - ccmaxpcrew
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
         - hasLabel:
             label: ML-AutoML
-        - hasLabel:
-            label: Service Attention
         then:
         - mentionUsers:
             mentionees:
             - Aniththa
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: ML-Hyperdrive
         then:
@@ -2050,10 +1703,8 @@ configuration:
             mentionees:
             - Aniththa
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: ML-Compute
         then:
@@ -2061,10 +1712,8 @@ configuration:
             mentionees:
             - nishankgu
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: ML-Core UI
         then:
@@ -2072,10 +1721,8 @@ configuration:
             mentionees:
             - abeomor
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: ML-Data4ML
         then:
@@ -2083,10 +1730,8 @@ configuration:
             mentionees:
             - SturgeonMi
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: ML-Designer
         then:
@@ -2094,10 +1739,8 @@ configuration:
             mentionees:
             - alainli0928
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: ML-Data Labeling
         then:
@@ -2105,10 +1748,8 @@ configuration:
             mentionees:
             - kvijaykannan
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: ML-Inference
         then:
@@ -2116,10 +1757,8 @@ configuration:
             mentionees:
             - shivanissambare
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: ML-MLOps
         then:
@@ -2127,67 +1766,55 @@ configuration:
             mentionees:
             - lostmygithubaccount
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
         - hasLabel:
             label: ML-Pipelines
-        - hasLabel:
-            label: Service Attention
         then:
         - mentionUsers:
             mentionees:
             - shbijlan
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
         - hasLabel:
             label: ML-Responsible AI
-        - hasLabel:
-            label: Service Attention
         then:
         - mentionUsers:
             mentionees:
             - minthigpen
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
         - hasLabel:
             label: ML-Reinforcement Learning
-        - hasLabel:
-            label: Service Attention
         then:
         - mentionUsers:
             mentionees:
             - keijik
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
         - hasLabel:
             label: ML-Training
-        - hasLabel:
-            label: Service Attention
         then:
         - mentionUsers:
             mentionees:
             - lostmygithubaccount
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
         - hasLabel:
             label: ML-Workspace Management
-        - hasLabel:
-            label: Service Attention
         then:
         - mentionUsers:
             mentionees:
             - rastala
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
         - hasLabel:
             label: Spring Cloud
-        - hasLabel:
-            label: Service Attention
         then:
         - mentionUsers:
             mentionees:
@@ -2195,10 +1822,8 @@ configuration:
             - yuwzho
             - yucwan
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Cost Management-Budget
         then:
@@ -2206,10 +1831,8 @@ configuration:
             mentionees:
             - ccmaxpcrew
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Consumption-Budget
         then:
@@ -2217,10 +1840,8 @@ configuration:
             mentionees:
             - ccmaxpcrew
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Cost Management-Query
         then:
@@ -2228,10 +1849,8 @@ configuration:
             mentionees:
             - ccmixpdevs
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Consumption-Query
         then:
@@ -2239,10 +1858,8 @@ configuration:
             mentionees:
             - ccmixpdevs
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Cost Management-Billing
         then:
@@ -2250,10 +1867,8 @@ configuration:
             mentionees:
             - ccmbpxpcrew
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Consumption-Billing
         then:
@@ -2261,10 +1876,8 @@ configuration:
             mentionees:
             - ccmbpxpcrew
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Cost Management-UsageDetailsAndExport
         then:
@@ -2272,10 +1885,8 @@ configuration:
             mentionees:
             - TiagoCrewGitHubIssues
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Consumption-UsageDetailsandExport
         then:
@@ -2283,10 +1894,8 @@ configuration:
             mentionees:
             - TiagoCrewGitHubIssues
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Consumption- RIandShowBack
         then:
@@ -2294,10 +1903,8 @@ configuration:
             mentionees:
             - ccmshowbackdevs
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Serial Console
         then:
@@ -2305,12 +1912,10 @@ configuration:
             mentionees:
             - CraigWiand
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
         - hasLabel:
             label: Monitor - Exporter
-        - hasLabel:
-            label: Service Attention
         then:
         - mentionUsers:
             mentionees:
@@ -2320,10 +1925,8 @@ configuration:
             - TimothyMothra
             - vishweshbankwar
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: Cost Management-RIandShowBack
         then:
@@ -2331,10 +1934,8 @@ configuration:
             mentionees:
             - ccmshowbackdevs
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
+            assignMentionees: false
       - if:
-        - hasLabel:
-            label: Service Attention
         - hasLabel:
             label: ContainerApp
         then:
@@ -2342,7 +1943,7 @@ configuration:
             mentionees:
             - calvinsID
             replyTemplate: Thanks for the feedback! We are routing this to the appropriate team for follow-up. cc ${mentionees}. Please see https://aka.ms/biceptypesinfo for troubleshooting help.
-            assignMentionees: False
-      description: 
-onFailure: 
-onSuccess: 
+            assignMentionees: false
+      description:
+onFailure:
+onSuccess:
