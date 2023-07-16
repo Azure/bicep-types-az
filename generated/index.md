@@ -3,14 +3,17 @@
 ### dynatrace.observability/monitors
 * **Link**: [2021-09-01](dynatrace/dynatrace.observability/2021-09-01/types.md#resource-dynatraceobservabilitymonitors2021-09-01)
 * **Link**: [2021-09-01-preview](dynatrace/dynatrace.observability/2021-09-01-preview/types.md#resource-dynatraceobservabilitymonitors2021-09-01-preview)
+* **Link**: [2023-04-27](dynatrace/dynatrace.observability/2023-04-27/types.md#resource-dynatraceobservabilitymonitors2023-04-27)
 
 ### dynatrace.observability/monitors/singlesignonconfigurations
 * **Link**: [2021-09-01](dynatrace/dynatrace.observability/2021-09-01/types.md#resource-dynatraceobservabilitymonitorssinglesignonconfigurations2021-09-01)
 * **Link**: [2021-09-01-preview](dynatrace/dynatrace.observability/2021-09-01-preview/types.md#resource-dynatraceobservabilitymonitorssinglesignonconfigurations2021-09-01-preview)
+* **Link**: [2023-04-27](dynatrace/dynatrace.observability/2023-04-27/types.md#resource-dynatraceobservabilitymonitorssinglesignonconfigurations2023-04-27)
 
 ### dynatrace.observability/monitors/tagrules
 * **Link**: [2021-09-01](dynatrace/dynatrace.observability/2021-09-01/types.md#resource-dynatraceobservabilitymonitorstagrules2021-09-01)
 * **Link**: [2021-09-01-preview](dynatrace/dynatrace.observability/2021-09-01-preview/types.md#resource-dynatraceobservabilitymonitorstagrules2021-09-01-preview)
+* **Link**: [2023-04-27](dynatrace/dynatrace.observability/2023-04-27/types.md#resource-dynatraceobservabilitymonitorstagrules2023-04-27)
 
 ## microsoft.aad
 ### microsoft.aad/domainservices
@@ -7827,12 +7830,18 @@
 ## microsoft.elasticsan
 ### microsoft.elasticsan/elasticsans
 * **Link**: [2021-11-20-preview](elasticsan/microsoft.elasticsan/2021-11-20-preview/types.md#resource-microsoftelasticsanelasticsans2021-11-20-preview)
+* **Link**: [2022-12-01-preview](elasticsan/microsoft.elasticsan/2022-12-01-preview/types.md#resource-microsoftelasticsanelasticsans2022-12-01-preview)
+
+### microsoft.elasticsan/elasticsans/privateendpointconnections
+* **Link**: [2022-12-01-preview](elasticsan/microsoft.elasticsan/2022-12-01-preview/types.md#resource-microsoftelasticsanelasticsansprivateendpointconnections2022-12-01-preview)
 
 ### microsoft.elasticsan/elasticsans/volumegroups
 * **Link**: [2021-11-20-preview](elasticsan/microsoft.elasticsan/2021-11-20-preview/types.md#resource-microsoftelasticsanelasticsansvolumegroups2021-11-20-preview)
+* **Link**: [2022-12-01-preview](elasticsan/microsoft.elasticsan/2022-12-01-preview/types.md#resource-microsoftelasticsanelasticsansvolumegroups2022-12-01-preview)
 
 ### microsoft.elasticsan/elasticsans/volumegroups/volumes
 * **Link**: [2021-11-20-preview](elasticsan/microsoft.elasticsan/2021-11-20-preview/types.md#resource-microsoftelasticsanelasticsansvolumegroupsvolumes2021-11-20-preview)
+* **Link**: [2022-12-01-preview](elasticsan/microsoft.elasticsan/2022-12-01-preview/types.md#resource-microsoftelasticsanelasticsansvolumegroupsvolumes2022-12-01-preview)
 
 ## microsoft.engagementfabric
 ### microsoft.engagementfabric/accounts
@@ -10026,6 +10035,7 @@
 * **Link**: [2021-09-01-preview](maintenance/microsoft.maintenance/2021-09-01-preview/types.md#resource-microsoftmaintenanceapplyupdates2021-09-01-preview)
 * **Link**: [2022-07-01-preview](maintenance/microsoft.maintenance/2022-07-01-preview/types.md#resource-microsoftmaintenanceapplyupdates2022-07-01-preview)
 * **Link**: [2022-11-01-preview](maintenance/microsoft.maintenance/2022-11-01-preview/types.md#resource-microsoftmaintenanceapplyupdates2022-11-01-preview)
+* **Link**: [2023-04-01](maintenance/microsoft.maintenance/2023-04-01/types.md#resource-microsoftmaintenanceapplyupdates2023-04-01)
 
 ### microsoft.maintenance/configurationassignments
 * **Link**: [2018-06-01-preview](maintenance/microsoft.maintenance/2018-06-01-preview/types.md#resource-microsoftmaintenanceconfigurationassignments2018-06-01-preview)
@@ -10036,6 +10046,7 @@
 * **Link**: [2021-09-01-preview](maintenance/microsoft.maintenance/2021-09-01-preview/types.md#resource-microsoftmaintenanceconfigurationassignments2021-09-01-preview)
 * **Link**: [2022-07-01-preview](maintenance/microsoft.maintenance/2022-07-01-preview/types.md#resource-microsoftmaintenanceconfigurationassignments2022-07-01-preview)
 * **Link**: [2022-11-01-preview](maintenance/microsoft.maintenance/2022-11-01-preview/types.md#resource-microsoftmaintenanceconfigurationassignments2022-11-01-preview)
+* **Link**: [2023-04-01](maintenance/microsoft.maintenance/2023-04-01/types.md#resource-microsoftmaintenanceconfigurationassignments2023-04-01)
 
 ### microsoft.maintenance/maintenanceconfigurations
 * **Link**: [2018-06-01-preview](maintenance/microsoft.maintenance/2018-06-01-preview/types.md#resource-microsoftmaintenancemaintenanceconfigurations2018-06-01-preview)
@@ -10046,6 +10057,7 @@
 * **Link**: [2021-09-01-preview](maintenance/microsoft.maintenance/2021-09-01-preview/types.md#resource-microsoftmaintenancemaintenanceconfigurations2021-09-01-preview)
 * **Link**: [2022-07-01-preview](maintenance/microsoft.maintenance/2022-07-01-preview/types.md#resource-microsoftmaintenancemaintenanceconfigurations2022-07-01-preview)
 * **Link**: [2022-11-01-preview](maintenance/microsoft.maintenance/2022-11-01-preview/types.md#resource-microsoftmaintenancemaintenanceconfigurations2022-11-01-preview)
+* **Link**: [2023-04-01](maintenance/microsoft.maintenance/2023-04-01/types.md#resource-microsoftmaintenancemaintenanceconfigurations2023-04-01)
 
 ### microsoft.maintenance/publicmaintenanceconfigurations
 * **Link**: [2020-07-01-preview](maintenance/microsoft.maintenance/2020-07-01-preview/types.md#resource-microsoftmaintenancepublicmaintenanceconfigurations2020-07-01-preview)
@@ -10054,6 +10066,7 @@
 * **Link**: [2021-09-01-preview](maintenance/microsoft.maintenance/2021-09-01-preview/types.md#resource-microsoftmaintenancepublicmaintenanceconfigurations2021-09-01-preview)
 * **Link**: [2022-07-01-preview](maintenance/microsoft.maintenance/2022-07-01-preview/types.md#resource-microsoftmaintenancepublicmaintenanceconfigurations2022-07-01-preview)
 * **Link**: [2022-11-01-preview](maintenance/microsoft.maintenance/2022-11-01-preview/types.md#resource-microsoftmaintenancepublicmaintenanceconfigurations2022-11-01-preview)
+* **Link**: [2023-04-01](maintenance/microsoft.maintenance/2023-04-01/types.md#resource-microsoftmaintenancepublicmaintenanceconfigurations2023-04-01)
 
 ## microsoft.managedidentity
 ### microsoft.managedidentity/identities
@@ -19554,26 +19567,32 @@
 ### microsoft.storagemover/storagemovers
 * **Link**: [2022-07-01-preview](storagemover/microsoft.storagemover/2022-07-01-preview/types.md#resource-microsoftstoragemoverstoragemovers2022-07-01-preview)
 * **Link**: [2023-03-01](storagemover/microsoft.storagemover/2023-03-01/types.md#resource-microsoftstoragemoverstoragemovers2023-03-01)
+* **Link**: [2023-07-01-preview](storagemover/microsoft.storagemover/2023-07-01-preview/types.md#resource-microsoftstoragemoverstoragemovers2023-07-01-preview)
 
 ### microsoft.storagemover/storagemovers/agents
 * **Link**: [2022-07-01-preview](storagemover/microsoft.storagemover/2022-07-01-preview/types.md#resource-microsoftstoragemoverstoragemoversagents2022-07-01-preview)
 * **Link**: [2023-03-01](storagemover/microsoft.storagemover/2023-03-01/types.md#resource-microsoftstoragemoverstoragemoversagents2023-03-01)
+* **Link**: [2023-07-01-preview](storagemover/microsoft.storagemover/2023-07-01-preview/types.md#resource-microsoftstoragemoverstoragemoversagents2023-07-01-preview)
 
 ### microsoft.storagemover/storagemovers/endpoints
 * **Link**: [2022-07-01-preview](storagemover/microsoft.storagemover/2022-07-01-preview/types.md#resource-microsoftstoragemoverstoragemoversendpoints2022-07-01-preview)
 * **Link**: [2023-03-01](storagemover/microsoft.storagemover/2023-03-01/types.md#resource-microsoftstoragemoverstoragemoversendpoints2023-03-01)
+* **Link**: [2023-07-01-preview](storagemover/microsoft.storagemover/2023-07-01-preview/types.md#resource-microsoftstoragemoverstoragemoversendpoints2023-07-01-preview)
 
 ### microsoft.storagemover/storagemovers/projects
 * **Link**: [2022-07-01-preview](storagemover/microsoft.storagemover/2022-07-01-preview/types.md#resource-microsoftstoragemoverstoragemoversprojects2022-07-01-preview)
 * **Link**: [2023-03-01](storagemover/microsoft.storagemover/2023-03-01/types.md#resource-microsoftstoragemoverstoragemoversprojects2023-03-01)
+* **Link**: [2023-07-01-preview](storagemover/microsoft.storagemover/2023-07-01-preview/types.md#resource-microsoftstoragemoverstoragemoversprojects2023-07-01-preview)
 
 ### microsoft.storagemover/storagemovers/projects/jobdefinitions
 * **Link**: [2022-07-01-preview](storagemover/microsoft.storagemover/2022-07-01-preview/types.md#resource-microsoftstoragemoverstoragemoversprojectsjobdefinitions2022-07-01-preview)
 * **Link**: [2023-03-01](storagemover/microsoft.storagemover/2023-03-01/types.md#resource-microsoftstoragemoverstoragemoversprojectsjobdefinitions2023-03-01)
+* **Link**: [2023-07-01-preview](storagemover/microsoft.storagemover/2023-07-01-preview/types.md#resource-microsoftstoragemoverstoragemoversprojectsjobdefinitions2023-07-01-preview)
 
 ### microsoft.storagemover/storagemovers/projects/jobdefinitions/jobruns
 * **Link**: [2022-07-01-preview](storagemover/microsoft.storagemover/2022-07-01-preview/types.md#resource-microsoftstoragemoverstoragemoversprojectsjobdefinitionsjobruns2022-07-01-preview)
 * **Link**: [2023-03-01](storagemover/microsoft.storagemover/2023-03-01/types.md#resource-microsoftstoragemoverstoragemoversprojectsjobdefinitionsjobruns2023-03-01)
+* **Link**: [2023-07-01-preview](storagemover/microsoft.storagemover/2023-07-01-preview/types.md#resource-microsoftstoragemoverstoragemoversprojectsjobdefinitionsjobruns2023-07-01-preview)
 
 ## microsoft.storagepool
 ### microsoft.storagepool/diskpools

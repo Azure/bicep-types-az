@@ -146,6 +146,7 @@
 * **meterId**: string (ReadOnly): The meter id (GUID)
 * **offerId**: string (ReadOnly): Offer Id
 * **partNumber**: string (ReadOnly): Part Number
+* **savingsPlan**: [SavingsPlan](#savingsplan) (ReadOnly): SavingsPlan Details
 * **unitOfMeasure**: string (ReadOnly): Unit of measure
 * **unitPrice**: int (ReadOnly): Unit Price
 
@@ -158,4 +159,10 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## SavingsPlan
+### Properties
+* **effectivePrice**: int (ReadOnly): SavingsPlan Effective Price
+* **marketPrice**: int (ReadOnly): SavingsPlan Market Price
+* **term**: string (ReadOnly): SavingsPlan term
 
