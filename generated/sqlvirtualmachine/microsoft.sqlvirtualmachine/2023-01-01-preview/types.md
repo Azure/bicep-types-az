@@ -27,7 +27,7 @@
 ### Properties
 * **apiVersion**: '2023-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ResourceIdentity](#resourceidentity): Azure Active Directory identity of the server.
+* **identity**: [ResourceIdentity](#resourceidentity): DO NOT USE. This value will be deprecated. Azure Active Directory identity of the server.
 * **location**: string (Required): Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SqlVirtualMachineProperties](#sqlvirtualmachineproperties): Resource properties.
@@ -80,6 +80,7 @@
 
 ## AutoPatchingSettings
 ### Properties
+* **additionalVmPatch**: 'MicrosoftUpdate' | 'NotSet' | string: Additional Patch to be enable or enabled on the SQL Virtual Machine.
 * **dayOfWeek**: 'Everyday' | 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday': Day of week to apply the patch on.
 * **enable**: bool: Enable or disable autopatching on SQL virtual machine.
 * **maintenanceWindowDuration**: int: Duration of patching.

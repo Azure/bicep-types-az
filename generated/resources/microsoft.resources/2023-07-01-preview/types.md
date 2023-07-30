@@ -12,9 +12,9 @@
 ## ChangeAttributes
 ### Properties
 * **changedBy**: string (ReadOnly): The entity that made the change(s)
-* **changedByType**: 'Application' | 'ManagedIdentity' | 'User' | string (ReadOnly): The entity type that made the change(s)
+* **changedByType**: 'Application' | 'ManagedIdentity' | 'Unknown' | 'User' | string (ReadOnly): The entity type that made the change(s)
 * **changesCount**: int (ReadOnly): The number of changes this resource captures
-* **clientType**: 'CLI' | 'Portal' | 'SDK' | string (ReadOnly): Client used to make the changes
+* **clientType**: string (ReadOnly): Client used to make the changes
 * **correlationId**: string (ReadOnly): The ARM correlation ID of the change resource
 * **isTruncated**: bool (ReadOnly): The flag indicating whether property changes dictionary was truncated in this resource
 * **newResourceSnapshotId**: string (ReadOnly): The GUID of the new snapshot
