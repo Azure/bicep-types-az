@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@types/jest": "^27.4.1",
-    "@types/node": "^20.4.4",
+    "@types/node": "^20.4.5",
     "@typescript-eslint/eslint-plugin": "^6.1.0",
     "@typescript-eslint/parser": "^6.1.0",
     "colors": "^1.4.0",
