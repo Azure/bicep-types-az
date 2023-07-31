@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DelegatedControllerProperties](#delegatedcontrollerproperties) (ReadOnly): Properties of the provision operation request.
+* **properties**: [DelegatedControllerProperties](#delegatedcontrollerproperties): Properties of the provision operation request.
 * **tags**: [ControllerResourceTags](#controllerresourcetags): The resource tags.
 * **type**: 'Microsoft.DelegatedNetwork/controller' (ReadOnly, DeployTimeConstant): The resource type
 

@@ -109,7 +109,7 @@
 * **retentionInDaysAsDefault**: bool (ReadOnly): True - Value originates from workspace retention in days, False - Customer specific.
 * **schema**: [Schema](#schema): Table schema.
 * **searchResults**: [SearchResults](#searchresults): Parameters of the search job that initiated this table.
-* **totalRetentionInDays**: int: The table total retention in days, between 4 and 2555. Setting this property to -1 will default to table retention.
+* **totalRetentionInDays**: int: The table total retention in days, between 4 and 2556. Setting this property to -1 will default to table retention.
 * **totalRetentionInDaysAsDefault**: bool (ReadOnly): True - Value originates from retention in days, False - Customer specific.
 
 ## TrackedResourceTags

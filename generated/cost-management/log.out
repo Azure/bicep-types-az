@@ -223,7 +223,7 @@ warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'TagInheritanceSetting' (2 differences):
-  - properties.properties.$ref: "#/components/schemas/schemas:215" => "#/components/schemas/schemas:258"
+  - properties.properties.$ref: "#/components/schemas/schemas:203" => "#/components/schemas/schemas:245"
   - properties.properties.title: "Tag Inheritance properties" => <none>
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'TagInheritanceProperties' (1 differences):
   - properties.preferContainerTags.description: "Prefer Container tags to override container tags with resource tags in case of conflicts." => "When resource has the same tag as subscription or resource group and this property is set to true - the subscription or resource group tag will be applied. If subscription and resource group tags are also the same, subscription tag will be applied."

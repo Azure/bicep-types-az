@@ -429,7 +429,7 @@ eg: number of bytes transferred etc
 ## BackupResourceVaultConfig
 ### Properties
 * **enhancedSecurityState**: 'Disabled' | 'Enabled' | 'Invalid' | string: Enabled or Disabled.
-* **isSoftDeleteFeatureStateEditable**: bool: Is soft delete feature state editable
+* **isSoftDeleteFeatureStateEditable**: bool: This flag is no longer in use. Please use 'softDeleteFeatureState' to set the soft delete state for the vault
 * **resourceGuardOperationRequests**: string[]: ResourceGuard Operation Requests
 * **softDeleteFeatureState**: 'AlwaysON' | 'Disabled' | 'Enabled' | 'Invalid' | string: Soft Delete feature state
 * **softDeleteRetentionPeriodInDays**: int: Soft delete retention period in days
