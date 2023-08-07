@@ -1,0 +1,870 @@
+{
+  "id": "https://schema.management.azure.com/schemas/2016-06-01/Microsoft.Web.json#",
+  "title": "Microsoft.Web",
+  "description": "Microsoft Web Resource Types",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "resourceDefinitions": {
+    "connectionGateways": {
+      "description": "Microsoft.Web/connectionGateways",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2016-06-01"
+          ],
+          "type": "string"
+        },
+        "etag": {
+          "description": "Resource ETag",
+          "type": "string"
+        },
+        "location": {
+          "description": "Resource location",
+          "type": "string"
+        },
+        "name": {
+          "description": "The connection gateway name",
+          "type": "string"
+        },
+        "properties": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ConnectionGatewayDefinitionProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "Resource tags",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.Web/connectionGateways"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "connections": {
+      "description": "Microsoft.Web/connections",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2016-06-01"
+          ],
+          "type": "string"
+        },
+        "etag": {
+          "description": "Resource ETag",
+          "type": "string"
+        },
+        "location": {
+          "description": "Resource location",
+          "type": "string"
+        },
+        "name": {
+          "description": "Connection name",
+          "type": "string"
+        },
+        "properties": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ApiConnectionDefinitionProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "Resource tags",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.Web/connections"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "customApis": {
+      "description": "Microsoft.Web/customApis",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2016-06-01"
+          ],
+          "type": "string"
+        },
+        "etag": {
+          "description": "Resource ETag",
+          "type": "string"
+        },
+        "location": {
+          "description": "Resource location",
+          "type": "string"
+        },
+        "name": {
+          "description": "API name",
+          "type": "string"
+        },
+        "properties": {
+          "description": "Custom API properties",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/CustomApiPropertiesDefinition"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "Resource tags",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.Web/customApis"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    }
+  },
+  "definitions": {
+    "ApiConnectionDefinitionProperties": {
+      "properties": {
+        "api": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ApiReference"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "changedTime": {
+          "description": "Timestamp of last connection change",
+          "format": "date-time",
+          "type": "string"
+        },
+        "createdTime": {
+          "description": "Timestamp of the connection creation",
+          "format": "date-time",
+          "type": "string"
+        },
+        "customParameterValues": {
+          "description": "Dictionary of custom parameter values",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "displayName": {
+          "description": "Display name",
+          "type": "string"
+        },
+        "nonSecretParameterValues": {
+          "description": "Dictionary of nonsecret parameter values",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "parameterValues": {
+          "description": "Dictionary of parameter values",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "statuses": {
+          "description": "Status of the connection",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/ConnectionStatusDefinition"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "testLinks": {
+          "description": "Links to test the API connection",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/ApiConnectionTestLink"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ApiConnectionTestLink": {
+      "description": "API connection properties",
+      "properties": {
+        "method": {
+          "description": "HTTP Method",
+          "type": "string"
+        },
+        "requestUri": {
+          "description": "Test link request URI",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "ApiOAuthSettings": {
+      "description": "OAuth settings for the connection provider",
+      "properties": {
+        "clientId": {
+          "description": "Resource provider client id",
+          "type": "string"
+        },
+        "clientSecret": {
+          "description": "Client Secret needed for OAuth",
+          "type": "string"
+        },
+        "customParameters": {
+          "description": "OAuth parameters key is the name of parameter",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "$ref": "#/definitions/ApiOAuthSettingsParameter"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "identityProvider": {
+          "description": "Identity provider",
+          "type": "string"
+        },
+        "properties": {
+          "description": "Read only properties for this oauth setting.",
+          "oneOf": [
+            {
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "redirectUrl": {
+          "description": "Url",
+          "type": "string"
+        },
+        "scopes": {
+          "description": "OAuth scopes",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ApiOAuthSettingsParameter": {
+      "description": "OAuth settings for the API",
+      "properties": {
+        "options": {
+          "description": "Options available to this parameter",
+          "oneOf": [
+            {
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "uiDefinition": {
+          "description": "UI definitions per culture as caller can specify the culture",
+          "oneOf": [
+            {
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "value": {
+          "description": "Value of the setting",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "ApiReference": {
+      "properties": {
+        "brandColor": {
+          "description": "Brand color",
+          "type": "string"
+        },
+        "description": {
+          "description": "The custom API description",
+          "type": "string"
+        },
+        "displayName": {
+          "description": "The display name",
+          "type": "string"
+        },
+        "iconUri": {
+          "description": "The icon URI",
+          "type": "string"
+        },
+        "id": {
+          "description": "Resource reference id",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the API",
+          "type": "string"
+        },
+        "swagger": {
+          "description": "The JSON representation of the swagger",
+          "oneOf": [
+            {
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "description": "Resource reference type",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "ApiResourceBackendService": {
+      "description": "The API backend service",
+      "properties": {
+        "serviceUrl": {
+          "description": "The service URL",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "ApiResourceDefinitions": {
+      "description": "API Definitions",
+      "properties": {
+        "modifiedSwaggerUrl": {
+          "description": "The modified swagger URL",
+          "type": "string"
+        },
+        "originalSwaggerUrl": {
+          "description": "The original swagger URL",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "ConnectionError": {
+      "description": "Connection error",
+      "properties": {
+        "etag": {
+          "description": "Resource ETag",
+          "type": "string"
+        },
+        "location": {
+          "description": "Resource location",
+          "type": "string"
+        },
+        "properties": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ConnectionErrorProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "Resource tags",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ConnectionErrorProperties": {
+      "properties": {
+        "code": {
+          "description": "Code of the status",
+          "type": "string"
+        },
+        "message": {
+          "description": "Description of the status",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "ConnectionGatewayDefinitionProperties": {
+      "properties": {
+        "backendUri": {
+          "description": "The URI of the backend",
+          "type": "string"
+        },
+        "connectionGatewayInstallation": {
+          "description": "The gateway installation reference",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ConnectionGatewayReference"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "contactInformation": {
+          "description": "The gateway admin",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "description": {
+          "description": "The gateway description",
+          "type": "string"
+        },
+        "displayName": {
+          "description": "The gateway display name",
+          "type": "string"
+        },
+        "machineName": {
+          "description": "The machine name of the gateway",
+          "type": "string"
+        },
+        "status": {
+          "description": "The gateway status",
+          "oneOf": [
+            {
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ConnectionGatewayReference": {
+      "description": "The gateway installation reference",
+      "properties": {
+        "id": {
+          "description": "Resource reference id",
+          "type": "string"
+        },
+        "location": {
+          "description": "Resource reference location",
+          "type": "string"
+        },
+        "name": {
+          "description": "Resource reference name",
+          "type": "string"
+        },
+        "type": {
+          "description": "Resource reference type",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "ConnectionParameter": {
+      "description": "Connection provider parameters",
+      "properties": {
+        "oAuthSettings": {
+          "description": "OAuth settings for the connection provider",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ApiOAuthSettings"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "description": "Type of the parameter",
+          "oneOf": [
+            {
+              "enum": [
+                "string",
+                "securestring",
+                "secureobject",
+                "int",
+                "bool",
+                "object",
+                "array",
+                "oauthSetting",
+                "connection"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ConnectionStatusDefinition": {
+      "description": "Connection status",
+      "properties": {
+        "error": {
+          "description": "Connection error",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ConnectionError"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "status": {
+          "description": "The gateway status",
+          "type": "string"
+        },
+        "target": {
+          "description": "Target of the error",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "CustomApiPropertiesDefinition": {
+      "description": "Custom API properties",
+      "properties": {
+        "apiDefinitions": {
+          "description": "API Definitions",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ApiResourceDefinitions"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "apiType": {
+          "description": "The API type",
+          "oneOf": [
+            {
+              "enum": [
+                "NotSpecified",
+                "Rest",
+                "Soap"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "backendService": {
+          "description": "The API backend service",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ApiResourceBackendService"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "brandColor": {
+          "description": "Brand color",
+          "type": "string"
+        },
+        "capabilities": {
+          "description": "The custom API capabilities",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "connectionParameters": {
+          "description": "Connection parameters",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "$ref": "#/definitions/ConnectionParameter"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "description": {
+          "description": "The custom API description",
+          "type": "string"
+        },
+        "displayName": {
+          "description": "The display name",
+          "type": "string"
+        },
+        "iconUri": {
+          "description": "The icon URI",
+          "type": "string"
+        },
+        "runtimeUrls": {
+          "description": "Runtime URLs",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "swagger": {
+          "description": "The JSON representation of the swagger",
+          "oneOf": [
+            {
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "wsdlDefinition": {
+          "description": "The WSDL definition",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/WsdlDefinition"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "WsdlDefinition": {
+      "description": "The WSDL definition",
+      "properties": {
+        "content": {
+          "description": "The WSDL content",
+          "type": "string"
+        },
+        "importMethod": {
+          "description": "The WSDL import method",
+          "oneOf": [
+            {
+              "enum": [
+                "NotSpecified",
+                "SoapToRest",
+                "SoapPassThrough"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "service": {
+          "description": "The service with name and endpoint names",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/WsdlService"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "url": {
+          "description": "The WSDL URL",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "WsdlService": {
+      "description": "The service with name and endpoint names",
+      "properties": {
+        "endpointQualifiedNames": {
+          "description": "List of the endpoints' qualified names",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "qualifiedName": {
+          "description": "The service's qualified name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "qualifiedName"
+      ],
+      "type": "object"
+    }
+  }
+}

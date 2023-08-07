@@ -1,0 +1,7 @@
+{
+  "id": "https://schema.management.azure.com/schemas/2015-04-01/microsoft.gallery.admin.json#",
+  "title": "microsoft.gallery.admin",
+  "description": "microsoft gallery.admin Resource Types",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {}
+}

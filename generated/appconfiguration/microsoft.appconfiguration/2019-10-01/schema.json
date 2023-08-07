@@ -1,0 +1,159 @@
+{
+  "id": "https://schema.management.azure.com/schemas/2019-10-01/Microsoft.AppConfiguration.json#",
+  "title": "Microsoft.AppConfiguration",
+  "description": "Microsoft AppConfiguration Resource Types",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "resourceDefinitions": {
+    "configurationStores": {
+      "description": "Microsoft.AppConfiguration/configurationStores",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2019-10-01"
+          ],
+          "type": "string"
+        },
+        "identity": {
+          "description": "The managed identity information, if configured.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ResourceIdentity"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "location": {
+          "description": "The location of the resource. This cannot be changed after the resource is created.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the configuration store.",
+          "oneOf": [
+            {
+              "maxLength": 50,
+              "minLength": 5,
+              "pattern": "^[a-zA-Z0-9_-]*$",
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "properties": {
+          "description": "The properties of a configuration store.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ConfigurationStoreProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "sku": {
+          "description": "The sku of the configuration store.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/Sku"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "The tags of the resource.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.AppConfiguration/configurationStores"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    }
+  },
+  "definitions": {
+    "ConfigurationStoreProperties": {
+      "description": "The properties of a configuration store.",
+      "properties": {},
+      "type": "object"
+    },
+    "ResourceIdentity": {
+      "properties": {
+        "type": {
+          "description": "The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identities.",
+          "oneOf": [
+            {
+              "enum": [
+                "None",
+                "SystemAssigned",
+                "UserAssigned",
+                "SystemAssigned, UserAssigned"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "userAssignedIdentities": {
+          "description": "The list of user-assigned identities associated with the resource. The user-assigned identity dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "$ref": "#/definitions/UserIdentity"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "Sku": {
+      "description": "Describes a configuration store SKU.",
+      "properties": {
+        "name": {
+          "description": "The SKU name of the configuration store.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "UserIdentity": {
+      "properties": {},
+      "type": "object"
+    }
+  }
+}

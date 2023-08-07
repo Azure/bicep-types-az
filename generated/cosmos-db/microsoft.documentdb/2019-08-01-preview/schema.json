@@ -1,0 +1,109 @@
+{
+  "id": "https://schema.management.azure.com/schemas/2019-08-01-preview/Microsoft.DocumentDB.json#",
+  "title": "Microsoft.DocumentDB",
+  "description": "Microsoft DocumentDB Resource Types",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "resourceDefinitions": {
+    "databaseAccounts_privateEndpointConnections": {
+      "description": "Microsoft.DocumentDB/databaseAccounts/privateEndpointConnections",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2019-08-01-preview"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the private endpoint connection.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "Resource properties.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/PrivateEndpointConnectionProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.DocumentDB/databaseAccounts/privateEndpointConnections"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    }
+  },
+  "definitions": {
+    "PrivateEndpointConnectionProperties": {
+      "description": "Properties of a private endpoint connection.",
+      "properties": {
+        "groupId": {
+          "description": "Group id of the private endpoint.",
+          "type": "string"
+        },
+        "privateEndpoint": {
+          "description": "Private endpoint which the connection belongs to.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/PrivateEndpointProperty"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "privateLinkServiceConnectionState": {
+          "description": "Connection State of the Private Endpoint Connection.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/PrivateLinkServiceConnectionStateProperty"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "provisioningState": {
+          "description": "Provisioning state of the private endpoint.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "PrivateEndpointProperty": {
+      "description": "Private endpoint which the connection belongs to.",
+      "properties": {
+        "id": {
+          "description": "Resource id of the private endpoint.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "PrivateLinkServiceConnectionStateProperty": {
+      "description": "Connection State of the Private Endpoint Connection.",
+      "properties": {
+        "description": {
+          "description": "The private link service connection description.",
+          "type": "string"
+        },
+        "status": {
+          "description": "The private link service connection status.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    }
+  }
+}

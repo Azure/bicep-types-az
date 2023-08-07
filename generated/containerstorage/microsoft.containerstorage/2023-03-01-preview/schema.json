@@ -1,0 +1,641 @@
+{
+  "id": "https://schema.management.azure.com/schemas/2023-03-01-preview/Microsoft.ContainerStorage.json#",
+  "title": "Microsoft.ContainerStorage",
+  "description": "Microsoft ContainerStorage Resource Types",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "resourceDefinitions": {
+    "pools": {
+      "description": "Microsoft.ContainerStorage/pools",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2023-03-01-preview"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "The geo-location where the resource lives",
+          "type": "string"
+        },
+        "name": {
+          "description": "Pool Object",
+          "oneOf": [
+            {
+              "pattern": "^[a-zA-Z0-9-]{3,24}$",
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "properties": {
+          "description": "The resource-specific properties for this resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/PoolProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "resources": {
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/definitions/pools_volumes_childResource"
+              },
+              {
+                "$ref": "#/definitions/pools_volumeSnapshots_childResource"
+              }
+            ]
+          },
+          "type": "array"
+        },
+        "tags": {
+          "description": "Resource tags.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.ContainerStorage/pools"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "pools_volumeSnapshots": {
+      "description": "Microsoft.ContainerStorage/pools/volumeSnapshots",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2023-03-01-preview"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "Volume Snapshot Resource",
+          "oneOf": [
+            {
+              "pattern": "^[a-zA-Z0-9-]{3,24}$",
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "properties": {
+          "description": "The resource-specific properties for this resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/VolumeSnapshotProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.ContainerStorage/pools/volumeSnapshots"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "pools_volumes": {
+      "description": "Microsoft.ContainerStorage/pools/volumes",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2023-03-01-preview"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "Volume Resource",
+          "oneOf": [
+            {
+              "pattern": "^[a-zA-Z0-9-]{3,24}$",
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "properties": {
+          "description": "The resource-specific properties for this resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/VolumeProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.ContainerStorage/pools/volumes"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    }
+  },
+  "definitions": {
+    "DiskPoolProperties": {
+      "description": "Disk Pool Properties",
+      "properties": {
+        "csiParams": {
+          "description": "List of KV pairs to set in StorageClass to configure CSI driver.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "disks": {
+          "description": "Only required if individual disk selection is desired. Path to disk, e.g. <nodename>:/dev/sda or WWN. Supports specifying multiple disks (same syntax as tags).",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "maxVolumeCapacityGiB": {
+          "description": "Maximum capacity of the volumes in GiB the user intends to create. Default 512.",
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ElasticSanPoolProperties": {
+      "description": "Elastic San Pool Properties",
+      "properties": {
+        "resourceGroup": {
+          "description": "Resource group of an existing SAN.",
+          "type": "string"
+        },
+        "sanName": {
+          "description": "Name of an existing SAN.",
+          "type": "string"
+        },
+        "volumeGroup": {
+          "description": "Volume group of an existing SAN.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "sanName",
+        "resourceGroup",
+        "volumeGroup"
+      ],
+      "type": "object"
+    },
+    "EphemeralPoolProperties": {
+      "description": "Ephemeral Pool Properties",
+      "properties": {
+        "diskFormat": {
+          "description": "Consent to format the local disks.",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "diskSelector": {
+          "description": "Template name or KV pairs containing disk selection criteria, e.g. model=\"Microsoft NVMe Direct Disk\" to match all Lsv2 NVMe disks.",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "disks": {
+          "description": "Only required if individual disk selection is desired. Path to disk, e.g. <nodename>:/dev/sda or WWN. Supports specifying multiple disks (same syntax as tags).",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "diskSelector",
+        "disks"
+      ],
+      "type": "object"
+    },
+    "PoolProperties": {
+      "description": "Pool Properties",
+      "properties": {
+        "assignments": {
+          "description": "List of resources that should have access to the pool. Typically ARM references to AKS clusters or ACI Container Groups. For local and standard this must be a single reference. For portable there can be many.",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "diskPoolProperties": {
+          "description": "Disk Pool Properties",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/DiskPoolProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "elasticSanPoolProperties": {
+          "description": "Elastic San Pool Properties",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ElasticSanPoolProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "ephemeralPoolProperties": {
+          "description": "Ephemeral Pool Properties",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/EphemeralPoolProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "poolCapacityGiB": {
+          "description": "Initial capacity of the pool in GiB.",
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "poolType": {
+          "description": "Type of the Pool: ephemeral, disk, managed, or elasticsan.",
+          "oneOf": [
+            {
+              "oneOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "zones": {
+          "description": "List of availability zones that resources can be created in.",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "poolType",
+        "zones",
+        "poolCapacityGiB",
+        "assignments",
+        "elasticSanPoolProperties"
+      ],
+      "type": "object"
+    },
+    "VolumeProperties": {
+      "description": "Volume Properties",
+      "properties": {
+        "capacityGiB": {
+          "description": "Requested capacity in GiB",
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "labels": {
+          "description": "String KV pairs indicating labels",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "mountOptions": {
+          "description": "List of string mount options",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "reclaimPolicy": {
+          "description": "Reclaim Policy, Delete or Retain",
+          "oneOf": [
+            {
+              "enum": [
+                "Delete",
+                "Retain"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "volumeMode": {
+          "description": "Indicates how the volume should be attached",
+          "oneOf": [
+            {
+              "enum": [
+                "Filesystem",
+                "Raw"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "labels",
+        "capacityGiB",
+        "volumeMode",
+        "reclaimPolicy",
+        "mountOptions"
+      ],
+      "type": "object"
+    },
+    "VolumeSnapshotProperties": {
+      "description": "Volume Snapshot Properties",
+      "properties": {
+        "mountOptions": {
+          "description": "List of string mount options",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "reclaimPolicy": {
+          "description": "Reclaim Policy, Delete or Retain",
+          "oneOf": [
+            {
+              "enum": [
+                "Delete",
+                "Retain"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "source": {
+          "description": "Reference to the source volume",
+          "type": "string"
+        },
+        "volumeMode": {
+          "description": "Indicates how the volumes created from the snapshot should be attached",
+          "oneOf": [
+            {
+              "enum": [
+                "Filesystem",
+                "Raw"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "source",
+        "volumeMode",
+        "reclaimPolicy",
+        "mountOptions"
+      ],
+      "type": "object"
+    },
+    "pools_volumeSnapshots_childResource": {
+      "description": "Microsoft.ContainerStorage/pools/volumeSnapshots",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2023-03-01-preview"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "Volume Snapshot Resource",
+          "oneOf": [
+            {
+              "pattern": "^[a-zA-Z0-9-]{3,24}$",
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "properties": {
+          "description": "The resource-specific properties for this resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/VolumeSnapshotProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "volumeSnapshots"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "pools_volumes_childResource": {
+      "description": "Microsoft.ContainerStorage/pools/volumes",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2023-03-01-preview"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "Volume Resource",
+          "oneOf": [
+            {
+              "pattern": "^[a-zA-Z0-9-]{3,24}$",
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "properties": {
+          "description": "The resource-specific properties for this resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/VolumeProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "volumes"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    }
+  }
+}

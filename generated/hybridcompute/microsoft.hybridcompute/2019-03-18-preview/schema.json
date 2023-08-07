@@ -1,0 +1,103 @@
+{
+  "id": "https://schema.management.azure.com/schemas/2019-03-18-preview/Microsoft.HybridCompute.json#",
+  "title": "Microsoft.HybridCompute",
+  "description": "Microsoft HybridCompute Resource Types",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "resourceDefinitions": {
+    "machines": {
+      "description": "Microsoft.HybridCompute/machines",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2019-03-18-preview"
+          ],
+          "type": "string"
+        },
+        "identity": {
+          "description": "Hybrid Compute Machine Managed Identity",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/Identity"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "location": {
+          "description": "Resource location",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the hybrid machine.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "Hybrid Compute Machine properties",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/MachineProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "Resource tags",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.HybridCompute/machines"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    }
+  },
+  "definitions": {
+    "Identity": {
+      "description": "Managed Identity.",
+      "properties": {
+        "type": {
+          "description": "The identity type.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "MachineProperties": {
+      "description": "Describes the properties of a hybrid machine.",
+      "properties": {
+        "clientPublicKey": {
+          "description": "Public Key that the client provides to be used during initial resource onboarding",
+          "type": "string"
+        },
+        "physicalLocation": {
+          "description": "Resource's Physical Location",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    }
+  }
+}

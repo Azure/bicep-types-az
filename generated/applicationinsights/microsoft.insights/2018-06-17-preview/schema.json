@@ -1,0 +1,7 @@
+{
+  "id": "https://schema.management.azure.com/schemas/2018-06-17-preview/microsoft.insights.json#",
+  "title": "microsoft.insights",
+  "description": "microsoft insights Resource Types",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {}
+}

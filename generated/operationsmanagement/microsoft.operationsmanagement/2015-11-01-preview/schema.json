@@ -1,0 +1,302 @@
+{
+  "id": "https://schema.management.azure.com/schemas/2015-11-01-preview/Microsoft.OperationsManagement.json#",
+  "title": "Microsoft.OperationsManagement",
+  "description": "Microsoft OperationsManagement Resource Types",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "resourceDefinitions": {
+    "ManagementConfigurations": {
+      "description": "Microsoft.OperationsManagement/ManagementConfigurations",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2015-11-01-preview"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "Resource location",
+          "type": "string"
+        },
+        "name": {
+          "description": "User Management Configuration Name.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "Properties for ManagementConfiguration object supported by the OperationsManagement resource provider.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ManagementConfigurationProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.OperationsManagement/ManagementConfigurations"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "solutions": {
+      "description": "Microsoft.OperationsManagement/solutions",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2015-11-01-preview"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "Resource location",
+          "type": "string"
+        },
+        "name": {
+          "description": "User Solution Name.",
+          "type": "string"
+        },
+        "plan": {
+          "description": "Plan for solution object supported by the OperationsManagement resource provider.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/SolutionPlan"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "properties": {
+          "description": "Properties for solution object supported by the OperationsManagement resource provider.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/SolutionProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "Resource tags",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.OperationsManagement/solutions"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    }
+  },
+  "extension_resourceDefinitions": {
+    "ManagementAssociations": {
+      "description": "Microsoft.OperationsManagement/ManagementAssociations",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2015-11-01-preview"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "Resource location",
+          "type": "string"
+        },
+        "name": {
+          "description": "User ManagementAssociation Name.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "Properties for ManagementAssociation object supported by the OperationsManagement resource provider.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ManagementAssociationProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.OperationsManagement/ManagementAssociations"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    }
+  },
+  "definitions": {
+    "ArmTemplateParameter": {
+      "description": "Parameter to pass to ARM template",
+      "properties": {
+        "name": {
+          "description": "name of the parameter.",
+          "type": "string"
+        },
+        "value": {
+          "description": "value for the parameter. In Jtoken ",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "ManagementAssociationProperties": {
+      "description": "ManagementAssociation properties supported by the OperationsManagement resource provider.",
+      "properties": {
+        "applicationId": {
+          "description": "The applicationId of the appliance for this association.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "applicationId"
+      ],
+      "type": "object"
+    },
+    "ManagementConfigurationProperties": {
+      "description": "ManagementConfiguration properties supported by the OperationsManagement resource provider.",
+      "properties": {
+        "applicationId": {
+          "description": "The applicationId of the appliance for this Management.",
+          "type": "string"
+        },
+        "parameters": {
+          "description": "Parameters to run the ARM template",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/ArmTemplateParameter"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "parentResourceType": {
+          "description": "The type of the parent resource.",
+          "type": "string"
+        },
+        "template": {
+          "description": "The Json object containing the ARM template to deploy",
+          "oneOf": [
+            {
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "parentResourceType",
+        "parameters",
+        "template"
+      ],
+      "type": "object"
+    },
+    "SolutionPlan": {
+      "description": "Plan for solution object supported by the OperationsManagement resource provider.",
+      "properties": {
+        "name": {
+          "description": "name of the solution to be created. For Microsoft published solution it should be in the format of solutionType(workspaceName). SolutionType part is case sensitive. For third party solution, it can be anything.",
+          "type": "string"
+        },
+        "product": {
+          "description": "name of the solution to enabled/add. For Microsoft published gallery solution it should be in the format of OMSGallery/<solutionType>. This is case sensitive",
+          "type": "string"
+        },
+        "promotionCode": {
+          "description": "promotionCode, Not really used now, can you left as empty",
+          "type": "string"
+        },
+        "publisher": {
+          "description": "Publisher name. For gallery solution, it is Microsoft.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "SolutionProperties": {
+      "description": "Solution properties supported by the OperationsManagement resource provider.",
+      "properties": {
+        "containedResources": {
+          "description": "The azure resources that will be contained within the solutions. They will be locked and gets deleted automatically when the solution is deleted.",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "referencedResources": {
+          "description": "The resources that will be referenced from this solution. Deleting any of those solution out of band will break the solution.",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "workspaceResourceId": {
+          "description": "The azure resourceId for the workspace where the solution will be deployed/enabled.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "workspaceResourceId"
+      ],
+      "type": "object"
+    }
+  }
+}

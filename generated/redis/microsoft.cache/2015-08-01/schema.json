@@ -1,0 +1,209 @@
+{
+  "id": "https://schema.management.azure.com/schemas/2015-08-01/Microsoft.Cache.json#",
+  "title": "Microsoft.Cache",
+  "description": "Microsoft Cache Resource Types",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "resourceDefinitions": {
+    "Redis": {
+      "description": "Microsoft.Cache/Redis",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2015-08-01"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "Resource location.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the Redis cache.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "Redis cache properties.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/RedisProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "Resource tags.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.Cache/Redis"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    }
+  },
+  "definitions": {
+    "RedisProperties": {
+      "description": "Parameters supplied to CreateOrUpdate Redis operation.",
+      "properties": {
+        "enableNonSslPort": {
+          "description": "If the value is true, then the non-SLL Redis server port (6379) will be enabled.",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "redisConfiguration": {
+          "description": "All Redis Settings. Few possible keys: rdb-backup-enabled,rdb-storage-connection-string,rdb-backup-frequency,maxmemory-delta,maxmemory-policy,notify-keyspace-events,maxmemory-samples,slowlog-log-slower-than,slowlog-max-len,list-max-ziplist-entries,list-max-ziplist-value,hash-max-ziplist-entries,hash-max-ziplist-value,set-max-intset-entries,zset-max-ziplist-entries,zset-max-ziplist-value etc.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "redisVersion": {
+          "description": "RedisVersion parameter has been deprecated. As such, it is no longer necessary to provide this parameter and any value specified is ignored.",
+          "type": "string"
+        },
+        "shardCount": {
+          "description": "The number of shards to be created on a Premium Cluster Cache.",
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "sku": {
+          "description": "What SKU of Redis cache to deploy.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/Sku"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "staticIP": {
+          "description": "Required when deploying a Redis cache inside an existing Azure Virtual Network.",
+          "type": "string"
+        },
+        "subnet": {
+          "description": "Required when deploying a Redis cache inside an existing Azure Virtual Network.",
+          "type": "string"
+        },
+        "tenantSettings": {
+          "description": "tenantSettings",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "virtualNetwork": {
+          "description": "The exact ARM resource ID of the virtual network to deploy the Redis cache in. Example format: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/Microsoft.ClassicNetwork/VirtualNetworks/vnet1",
+          "type": "string"
+        }
+      },
+      "required": [
+        "sku"
+      ],
+      "type": "object"
+    },
+    "Sku": {
+      "description": "SKU parameters supplied to the create Redis operation.",
+      "properties": {
+        "capacity": {
+          "description": "What size of Redis cache to deploy. Valid values: for C family (0, 1, 2, 3, 4, 5, 6), for P family (1, 2, 3, 4).",
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "family": {
+          "description": "Which family to use. Valid values: (C, P).",
+          "oneOf": [
+            {
+              "enum": [
+                "C",
+                "P"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "name": {
+          "description": "What type of Redis cache to deploy. Valid values: (Basic, Standard, Premium).",
+          "oneOf": [
+            {
+              "enum": [
+                "Basic",
+                "Standard",
+                "Premium"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "name",
+        "family",
+        "capacity"
+      ],
+      "type": "object"
+    }
+  }
+}

@@ -1,0 +1,706 @@
+{
+  "id": "https://schema.management.azure.com/schemas/2017-06-05-preview/Microsoft.StorageSync.json#",
+  "title": "Microsoft.StorageSync",
+  "description": "Microsoft StorageSync Resource Types",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "resourceDefinitions": {
+    "storageSyncServices": {
+      "description": "Microsoft.StorageSync/storageSyncServices",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2017-06-05-preview"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "The location of the resource.",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of Storage Sync Service resource.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "Storage Sync Service properties.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/StorageSyncServiceProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "resources": {
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/definitions/storageSyncServices_syncGroups_childResource"
+              },
+              {
+                "$ref": "#/definitions/storageSyncServices_registeredServers_childResource"
+              }
+            ]
+          },
+          "type": "array"
+        },
+        "tags": {
+          "description": "The tags of the resource.",
+          "oneOf": [
+            {
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.StorageSync/storageSyncServices"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "storageSyncServices_registeredServers": {
+      "description": "Microsoft.StorageSync/storageSyncServices/registeredServers",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2017-06-05-preview"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "GUID identifying the on-premises server.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "RegisteredServer properties.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/RegisteredServerProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.StorageSync/storageSyncServices/registeredServers"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "storageSyncServices_syncGroups": {
+      "description": "Microsoft.StorageSync/storageSyncServices/syncGroups",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2017-06-05-preview"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of Sync Group resource.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "SyncGroup properties.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/SyncGroupProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "resources": {
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/definitions/storageSyncServices_syncGroups_cloudEndpoints_childResource"
+              },
+              {
+                "$ref": "#/definitions/storageSyncServices_syncGroups_serverEndpoints_childResource"
+              }
+            ]
+          },
+          "type": "array"
+        },
+        "type": {
+          "enum": [
+            "Microsoft.StorageSync/storageSyncServices/syncGroups"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "storageSyncServices_syncGroups_cloudEndpoints": {
+      "description": "Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2017-06-05-preview"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of Cloud Endpoint object.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "Cloud Endpoint properties.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/CloudEndpointProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "storageSyncServices_syncGroups_serverEndpoints": {
+      "description": "Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2017-06-05-preview"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of Server Endpoint object.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "Server Endpoint properties.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ServerEndpointProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    }
+  },
+  "definitions": {
+    "CloudEndpointProperties": {
+      "description": "CloudEndpoint Properties object.",
+      "properties": {
+        "friendlyName": {
+          "description": "Friendly Name",
+          "type": "string"
+        },
+        "lastWorkflowId": {
+          "description": "CloudEndpoint lastWorkflowId",
+          "type": "string"
+        },
+        "partnershipId": {
+          "description": "Partnership Id",
+          "type": "string"
+        },
+        "provisioningState": {
+          "description": "CloudEndpoint Provisioning State",
+          "type": "string"
+        },
+        "storageAccount": {
+          "description": "Storage Account name.",
+          "type": "string"
+        },
+        "storageAccountKey": {
+          "description": "Storage Account access key.",
+          "type": "string"
+        },
+        "storageAccountResourceId": {
+          "description": "Storage Account Resource Id",
+          "type": "string"
+        },
+        "storageAccountShareName": {
+          "description": "Storage Account Share name",
+          "type": "string"
+        },
+        "storageAccountTenantId": {
+          "description": "Storage Account Tenant Id",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "RegisteredServerProperties": {
+      "description": "RegisteredServer Properties object.",
+      "properties": {
+        "agentVersion": {
+          "description": "Registered Server Agent Version",
+          "type": "string"
+        },
+        "clusterId": {
+          "description": "Registered Server clusterId",
+          "type": "string"
+        },
+        "clusterName": {
+          "description": "Registered Server clusterName",
+          "type": "string"
+        },
+        "lastHeartBeat": {
+          "description": "Registered Server last heart beat",
+          "type": "string"
+        },
+        "lastWorkflowId": {
+          "description": "Registered Server lastWorkflowId",
+          "type": "string"
+        },
+        "provisioningState": {
+          "description": "Registered Server Provisioning State",
+          "type": "string"
+        },
+        "serverCertificate": {
+          "description": "Registered Server Certificate",
+          "type": "string"
+        },
+        "serverId": {
+          "description": "Registered Server serverId",
+          "type": "string"
+        },
+        "serverManagementtErrorCode": {
+          "description": "Registered Server Management Error Code",
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "serverOSVersion": {
+          "description": "Registered Server OS Version",
+          "type": "string"
+        },
+        "serverRole": {
+          "description": "Registered Server serverRole",
+          "type": "string"
+        },
+        "storageSyncServiceUid": {
+          "description": "Registered Server storageSyncServiceUid",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "ServerEndpointProperties": {
+      "description": "ServerEndpoint Properties object.",
+      "properties": {
+        "byteProgress": {
+          "description": "Bytes in progress",
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "byteTotal": {
+          "description": "Bytes total",
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "cloudTiering": {
+          "description": "Cloud Tiering.",
+          "oneOf": [
+            {
+              "enum": [
+                "on",
+                "off"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "currentProgressType": {
+          "description": "current progress type.",
+          "oneOf": [
+            {
+              "enum": [
+                "none",
+                "initialize",
+                "download",
+                "upload",
+                "recall"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "friendlyName": {
+          "description": "Friendly Name",
+          "type": "string"
+        },
+        "itemDownloadErrorCount": {
+          "description": "Item download error count.",
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "itemProgressCount": {
+          "description": "Item Progress Count",
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "itemTotalCount": {
+          "description": "Item Total Count",
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "itemUploadErrorCount": {
+          "description": "Item Upload Error Count.",
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "lastSyncSuccess": {
+          "description": "Last Sync Success",
+          "format": "date-time",
+          "type": "string"
+        },
+        "lastWorkflowId": {
+          "description": "ServerEndpoint lastWorkflowId",
+          "type": "string"
+        },
+        "provisioningState": {
+          "description": "ServerEndpoint Provisioning State",
+          "type": "string"
+        },
+        "serverLocalPath": {
+          "description": "Server Local path.",
+          "type": "string"
+        },
+        "serverResourceId": {
+          "description": "Server Resource Id.",
+          "type": "string"
+        },
+        "syncErrorContext": {
+          "description": "sync error context.",
+          "type": "string"
+        },
+        "syncErrorDirection": {
+          "description": "Sync Error Direction.",
+          "oneOf": [
+            {
+              "enum": [
+                "none",
+                "initialize",
+                "download",
+                "upload",
+                "recall"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "syncErrorState": {
+          "description": "Sync Error State",
+          "type": "string"
+        },
+        "syncErrorStateTimestamp": {
+          "description": "Sync Error State Timestamp",
+          "format": "date-time",
+          "type": "string"
+        },
+        "totalProgress": {
+          "description": "Total progress",
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "volumeFreeSpacePercent": {
+          "description": "Level of free space to be maintained by Cloud Tiering if it is enabled.",
+          "oneOf": [
+            {
+              "maximum": 100,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "StorageSyncServiceProperties": {
+      "description": "Storage Sync Service Properties object.",
+      "properties": {},
+      "type": "object"
+    },
+    "SyncGroupProperties": {
+      "description": "SyncGroup Properties object.",
+      "properties": {
+        "uniqueId": {
+          "description": "Unique Id",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "storageSyncServices_registeredServers_childResource": {
+      "description": "Microsoft.StorageSync/storageSyncServices/registeredServers",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2017-06-05-preview"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "GUID identifying the on-premises server.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "RegisteredServer properties.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/RegisteredServerProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "registeredServers"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "storageSyncServices_syncGroups_childResource": {
+      "description": "Microsoft.StorageSync/storageSyncServices/syncGroups",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2017-06-05-preview"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of Sync Group resource.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "SyncGroup properties.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/SyncGroupProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "syncGroups"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "storageSyncServices_syncGroups_cloudEndpoints_childResource": {
+      "description": "Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2017-06-05-preview"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of Cloud Endpoint object.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "Cloud Endpoint properties.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/CloudEndpointProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "cloudEndpoints"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "storageSyncServices_syncGroups_serverEndpoints_childResource": {
+      "description": "Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2017-06-05-preview"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of Server Endpoint object.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "Server Endpoint properties.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ServerEndpointProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "serverEndpoints"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    }
+  }
+}

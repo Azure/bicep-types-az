@@ -1,0 +1,652 @@
+{
+  "id": "https://schema.management.azure.com/schemas/2022-08-01/Nginx.NginxPlus.json#",
+  "title": "Nginx.NginxPlus",
+  "description": "Nginx NginxPlus Resource Types",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "resourceDefinitions": {
+    "nginxDeployments": {
+      "description": "Nginx.NginxPlus/nginxDeployments",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2022-08-01"
+          ],
+          "type": "string"
+        },
+        "identity": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/IdentityProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "location": {
+          "description": "",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of targeted Nginx deployment",
+          "type": "string"
+        },
+        "properties": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/NginxDeploymentProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "resources": {
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/definitions/nginxDeployments_certificates_childResource"
+              },
+              {
+                "$ref": "#/definitions/nginxDeployments_configurations_childResource"
+              }
+            ]
+          },
+          "type": "array"
+        },
+        "sku": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ResourceSku"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "Dictionary of <string>",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Nginx.NginxPlus/nginxDeployments"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "nginxDeployments_certificates": {
+      "description": "Nginx.NginxPlus/nginxDeployments/certificates",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2022-08-01"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of certificate",
+          "type": "string"
+        },
+        "properties": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/NginxCertificateProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "Dictionary of <string>",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Nginx.NginxPlus/nginxDeployments/certificates"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "nginxDeployments_configurations": {
+      "description": "Nginx.NginxPlus/nginxDeployments/configurations",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2022-08-01"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of configuration, only 'default' is supported value due to the singleton of Nginx conf",
+          "type": "string"
+        },
+        "properties": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/NginxConfigurationProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "Dictionary of <string>",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Nginx.NginxPlus/nginxDeployments/configurations"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    }
+  },
+  "definitions": {
+    "IdentityProperties": {
+      "properties": {
+        "type": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "SystemAssigned",
+                "UserAssigned",
+                "SystemAssigned, UserAssigned",
+                "None"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "userAssignedIdentities": {
+          "description": "Dictionary of <UserIdentityProperties>",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "$ref": "#/definitions/UserIdentityProperties"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "NginxCertificateProperties": {
+      "properties": {
+        "certificateVirtualPath": {
+          "description": "",
+          "type": "string"
+        },
+        "keyVaultSecretId": {
+          "description": "",
+          "type": "string"
+        },
+        "keyVirtualPath": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "NginxConfigurationFile": {
+      "properties": {
+        "content": {
+          "description": "",
+          "type": "string"
+        },
+        "virtualPath": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "NginxConfigurationPackage": {
+      "properties": {
+        "data": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "NginxConfigurationProperties": {
+      "properties": {
+        "files": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/NginxConfigurationFile"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "package": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/NginxConfigurationPackage"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "protectedFiles": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/NginxConfigurationFile"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "rootFile": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "NginxDeploymentProperties": {
+      "properties": {
+        "enableDiagnosticsSupport": {
+          "description": "",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "logging": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/NginxLogging"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "managedResourceGroup": {
+          "description": "The managed resource group to deploy VNet injection related network resources.",
+          "type": "string"
+        },
+        "networkProfile": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/NginxNetworkProfile"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "NginxFrontendIPConfiguration": {
+      "properties": {
+        "privateIPAddresses": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/NginxPrivateIPAddress"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "publicIPAddresses": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/NginxPublicIPAddress"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "NginxLogging": {
+      "properties": {
+        "storageAccount": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/NginxStorageAccount"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "NginxNetworkInterfaceConfiguration": {
+      "properties": {
+        "subnetId": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "NginxNetworkProfile": {
+      "properties": {
+        "frontEndIPConfiguration": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/NginxFrontendIPConfiguration"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "networkInterfaceConfiguration": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/NginxNetworkInterfaceConfiguration"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "NginxPrivateIPAddress": {
+      "properties": {
+        "privateIPAddress": {
+          "description": "",
+          "type": "string"
+        },
+        "privateIPAllocationMethod": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "Static",
+                "Dynamic"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "subnetId": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "NginxPublicIPAddress": {
+      "properties": {
+        "id": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "NginxStorageAccount": {
+      "properties": {
+        "accountName": {
+          "description": "",
+          "type": "string"
+        },
+        "containerName": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "ResourceSku": {
+      "properties": {
+        "name": {
+          "description": "Name of the SKU.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "UserIdentityProperties": {
+      "properties": {},
+      "type": "object"
+    },
+    "nginxDeployments_certificates_childResource": {
+      "description": "Nginx.NginxPlus/nginxDeployments/certificates",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2022-08-01"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of certificate",
+          "type": "string"
+        },
+        "properties": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/NginxCertificateProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "Dictionary of <string>",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "certificates"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "nginxDeployments_configurations_childResource": {
+      "description": "Nginx.NginxPlus/nginxDeployments/configurations",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2022-08-01"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of configuration, only 'default' is supported value due to the singleton of Nginx conf",
+          "type": "string"
+        },
+        "properties": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/NginxConfigurationProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "Dictionary of <string>",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "configurations"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    }
+  }
+}
