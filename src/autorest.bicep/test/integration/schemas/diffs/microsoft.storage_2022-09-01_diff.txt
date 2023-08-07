@@ -1,0 +1,496 @@
+ {
+   resourceDefinitions: {
+     storageAccounts: {
+       required: [
+         ...
+-        "kind"
+-        "location"
+         ...
+-        "sku"
++        "properties"
+         ...
+       ]
+     }
+     storageAccounts_blobServices: {
+       required: [
+         ...
+         ...
++        "properties"
+         ...
+       ]
+     }
+     storageAccounts_blobServices_containers: {
+       required: [
+         ...
+         ...
++        "properties"
+         ...
+       ]
+     }
+     storageAccounts_blobServices_containers_immutabilityPolicies: {
+       required: [
+         ...
+         ...
++        "properties"
+         ...
+       ]
+     }
+     storageAccounts_encryptionScopes: {
+       required: [
+         ...
+         ...
++        "properties"
+         ...
+       ]
+     }
+     storageAccounts_fileServices: {
+       required: [
+         ...
+         ...
++        "properties"
+         ...
+       ]
+     }
+     storageAccounts_fileServices_shares: {
+       required: [
+         ...
+         ...
++        "properties"
+         ...
+       ]
+     }
+     storageAccounts_inventoryPolicies: {
+       properties: {
+-        systemData: {
+-          oneOf: [
+-            {
+-              $ref: "#/definitions/SystemData"
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "Metadata pertaining to creation and last modification of the resource."
+-        }
+       }
+       required: [
+         ...
+         ...
++        "properties"
+         ...
+       ]
+     }
+     storageAccounts_localUsers: {
+       properties: {
+-        systemData: {
+-          oneOf: [
+-            {
+-              $ref: "#/definitions/SystemData"
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "Metadata pertaining to creation and last modification of the resource."
+-        }
+       }
+       required: [
+         ...
+         ...
++        "properties"
+         ...
+       ]
+     }
+     storageAccounts_managementPolicies: {
+       required: [
+         ...
+         ...
++        "properties"
+         ...
+       ]
+     }
+     storageAccounts_objectReplicationPolicies: {
+       required: [
+         ...
+         ...
++        "properties"
+         ...
+       ]
+     }
+     storageAccounts_privateEndpointConnections: {
+       required: [
+         ...
+         ...
++        "properties"
+         ...
+       ]
+     }
+     storageAccounts_queueServices: {
+       required: [
+         ...
+         ...
++        "properties"
+         ...
+       ]
+     }
+     storageAccounts_queueServices_queues: {
+       required: [
+         ...
+         ...
++        "properties"
+         ...
+       ]
+     }
+     storageAccounts_tableServices: {
+       required: [
+         ...
+         ...
++        "properties"
+         ...
+       ]
+     }
+     storageAccounts_tableServices_tables: {
+       required: [
+         ...
+         ...
++        "properties"
+         ...
+       ]
+     }
+   }
+   definitions: {
+-    SystemData: {
+-      type: "object"
+-      properties: {
+-        createdAt: {
+-          type: "string"
+-          format: "date-time"
+-          description: "The timestamp of resource creation (UTC)."
+-        }
+-        createdBy: {
+-          type: "string"
+-          description: "The identity that created the resource."
+-        }
+-        createdByType: {
+-          oneOf: [
+-            {
+-              type: "string"
+-              enum: [
+-                "User"
+-                "Application"
+-                "ManagedIdentity"
+-                "Key"
+-              ]
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "The type of identity that created the resource."
+-        }
+-        lastModifiedAt: {
+-          type: "string"
+-          format: "date-time"
+-          description: "The timestamp of resource last modification (UTC)"
+-        }
+-        lastModifiedBy: {
+-          type: "string"
+-          description: "The identity that last modified the resource."
+-        }
+-        lastModifiedByType: {
+-          oneOf: [
+-            {
+-              type: "string"
+-              enum: [
+-                "User"
+-                "Application"
+-                "ManagedIdentity"
+-                "Key"
+-              ]
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "The type of identity that last modified the resource."
+-        }
+-      }
+-      description: "Metadata pertaining to creation and last modification of the resource."
+-    }
+     DateAfterCreation: {
+       properties: {
+         daysAfterCreationGreaterThan: {
+           oneOf: [
+             {
+-              multipleOf: 1
+             }
+             ...
+           ]
+         }
+         daysAfterLastTierChangeGreaterThan: {
+           oneOf: [
+             {
+-              multipleOf: 1
+             }
+             ...
+           ]
+         }
+       }
+     }
+     DateAfterModification: {
+       properties: {
+         daysAfterCreationGreaterThan: {
+           oneOf: [
+             {
+-              multipleOf: 1
+             }
+             ...
+           ]
+         }
+         daysAfterLastAccessTimeGreaterThan: {
+           oneOf: [
+             {
+-              multipleOf: 1
+             }
+             ...
+           ]
+         }
+         daysAfterLastTierChangeGreaterThan: {
+           oneOf: [
+             {
+-              multipleOf: 1
+             }
+             ...
+           ]
+         }
+         daysAfterModificationGreaterThan: {
+           oneOf: [
+             {
+-              multipleOf: 1
+             }
+             ...
+           ]
+         }
+       }
+     }
+     PrivateEndpointConnectionProperties: {
+       properties: {
+-        provisioningState: {
+-          oneOf: [
+-            {
+-              type: "string"
+-              enum: [
+-                "Succeeded"
+-                "Creating"
+-                "Deleting"
+-                "Failed"
+-              ]
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "The provisioning state of the private endpoint connection resource."
+-        }
+       }
+     }
+     Sku: {
+       properties: {
+-        tier: {
+-          oneOf: [
+-            {
+-              type: "string"
+-              enum: [
+-                "Standard"
+-                "Premium"
+-              ]
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-        }
+       }
+     }
+     storageAccounts_blobServices_childResource: {
+       properties: {
+         name: {
+-          type: "string"
+-          enum: [
+-            "default"
+-          ]
++          oneOf: [
++            {
++              enum: [
++                "default"
++              ]
++              type: "string"
++            }
++            {
++              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++            }
++          ]
+         }
+       }
+     }
+     storageAccounts_blobServices_containers_immutabilityPolicies_childResource: {
+       properties: {
+         name: {
+-          type: "string"
+-          enum: [
+-            "default"
+-          ]
++          oneOf: [
++            {
++              enum: [
++                "default"
++              ]
++              type: "string"
++            }
++            {
++              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++            }
++          ]
+         }
+       }
+     }
+     storageAccounts_fileServices_childResource: {
+       properties: {
+         name: {
+-          type: "string"
+-          enum: [
+-            "default"
+-          ]
++          oneOf: [
++            {
++              enum: [
++                "default"
++              ]
++              type: "string"
++            }
++            {
++              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++            }
++          ]
+         }
+       }
+     }
+     storageAccounts_inventoryPolicies_childResource: {
+       properties: {
+-        systemData: {
+-          oneOf: [
+-            {
+-              $ref: "#/definitions/SystemData"
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "Metadata pertaining to creation and last modification of the resource."
+-        }
+         name: {
+-          type: "string"
+-          enum: [
+-            "default"
+-          ]
++          oneOf: [
++            {
++              enum: [
++                "default"
++              ]
++              type: "string"
++            }
++            {
++              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++            }
++          ]
+         }
+       }
+     }
+     storageAccounts_localUsers_childResource: {
+       properties: {
+-        systemData: {
+-          oneOf: [
+-            {
+-              $ref: "#/definitions/SystemData"
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "Metadata pertaining to creation and last modification of the resource."
+-        }
+       }
+     }
+     storageAccounts_managementPolicies_childResource: {
+       properties: {
+         name: {
+-          type: "string"
+-          enum: [
+-            "default"
+-          ]
++          oneOf: [
++            {
++              enum: [
++                "default"
++              ]
++              type: "string"
++            }
++            {
++              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++            }
++          ]
+         }
+       }
+     }
+     storageAccounts_queueServices_childResource: {
+       properties: {
+         name: {
+-          type: "string"
+-          enum: [
+-            "default"
+-          ]
++          oneOf: [
++            {
++              enum: [
++                "default"
++              ]
++              type: "string"
++            }
++            {
++              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++            }
++          ]
+         }
+       }
+     }
+     storageAccounts_tableServices_childResource: {
+       properties: {
+         name: {
+-          type: "string"
+-          enum: [
+-            "default"
+-          ]
++          oneOf: [
++            {
++              enum: [
++                "default"
++              ]
++              type: "string"
++            }
++            {
++              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++            }
++          ]
+         }
+       }
+     }
+     TagFilter: {
+       properties: {
+         value: {
+-          minLength: 0
+         }
+       }
+     }
+   }
+ }

@@ -1,0 +1,59 @@
+ {
+   resourceDefinitions: {
+     workspaces: {
+       required: [
+         ...
+-        "location"
+         ...
+         ...
+         ...
+       ]
+     }
+   }
+   definitions: {
+     WorkspaceFeatures: {
++      additionalProperties: {
++      }
+       properties: {
+-        additionalProperties: {
+-          oneOf: [
+-            {
+-              type: "object"
+-              additionalProperties: {
+-                type: "object"
+-                properties: {
+-                }
+-              }
+-              properties: {
+-              }
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "Unmatched properties from the message are deserialized this collection"
+-        }
+       }
+     }
+     WorkspaceSku: {
+       properties: {
+         capacityReservationLevel: {
+           oneOf: [
+             {
+-              type: "integer"
++              oneOf: [
++                {
++                  type: "integer"
++                }
++                {
++                  $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++                }
++              ]
+             }
+             ...
+           ]
+         }
+       }
+     }
+   }
+ }

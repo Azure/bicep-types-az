@@ -106,6 +106,10 @@ ${err}
 
   // build the type index
   await buildTypeIndex(defaultLogger, outputBaseDir);
+  await buildSchemaIndex(defaultLogger, outputBaseDir);
+
+  // log if there are any type dirs with no corresponding readme (e.g. if a swagger directory has been removed).
+  await logStaleReadmes(defaultLogger, outputBaseDir, specsPath, readmePaths);
 });
 
 function normalizeJsonPath(jsonPath: string) {
@@ -198,6 +202,7 @@ async function generateSchema(logger: ILogger, readme: string, outputBaseDir: st
     `--level=${logLevel}`,
     `--multiapi`,
     '--title=none',
+    '--arm-schema=true',
     // This is necessary to avoid failures such as "ERROR: Semantic violation: Discriminator must be a required property." blocking type generation.
     // In an ideal world, we'd raise issues in https://github.com/Azure/azure-rest-api-specs and force RP teams to fix them, but this isn't very practical
     // as new validations are added continuously, and there's often quite a lag before teams will fix them - we don't want to be blocked by this in generating types.
@@ -238,6 +243,102 @@ async function findReadmePaths(specsPath: string) {
       .split(path.sep)
       .some(parent => parent == 'resource-manager');
   });
+}
+
+async function logStaleReadmes(logger: ILogger, outputBaseDir: string, specsPath: string, readmePaths: string[]) {
+  const typesPaths = await findRecursive(outputBaseDir, filePath => {
+    return path.basename(filePath) === 'types.json';
+  });
+
+  const typesBasePaths = typesPaths.map(p => path.relative(outputBaseDir, p).split(path.sep)[0].toLowerCase());
+  const readmeBasePaths = readmePaths.map(p => path.relative(specsPath, p).split(path.sep)[0].toLowerCase());
+
+  const staleBasePaths = typesBasePaths
+    .filter(p => !readmeBasePaths.includes(p))
+    .filter((value, index, array) => array.indexOf(value) === index);
+
+  if (staleBasePaths.length > 0) {
+    logOut(logger, `Found the following type folders which have no corresponding readme: '${staleBasePaths.join("', '")}'. Cleaning them up.`);
+  }
+
+  for (const basePath of staleBasePaths) {
+    await rm(`${outputBaseDir}/${basePath}`, { recursive: true, force: true, });
+  }
+}
+
+async function buildSchemaIndex(logger: ILogger, baseDir: string) {
+  type scopeType = 'tenant' | 'mg' | 'subscription' | 'rg';
+  const schemaPaths = await findRecursive(baseDir, filePath => {
+    return path.basename(filePath) === 'schema.json';
+  });
+
+  const index: Record<scopeType, Record<string, string>> = {
+    tenant: {},
+    mg: {},
+    subscription: {},
+    rg: {},
+  };
+
+  for (const schemaPath of schemaPaths) {
+    const content = await readFile(schemaPath, { encoding: 'utf8' });
+    const schema = JSON.parse(content);
+
+    const scopeMapping: Record<string, scopeType[]> = {
+      'resourceDefinitions': ['rg'],
+      'subscription_resourceDefinitions': ['subscription'],
+      'managementGroup_resourceDefinitions': ['mg'],
+      'tenant_resourceDefinitions': ['tenant'],
+      'unknown_resourceDefinitions': ['tenant', 'mg', 'subscription', 'rg'],
+    }
+
+    for (const scopeName in scopeMapping) {
+      const scopes = scopeMapping[scopeName];
+      
+      for (const definition in schema[scopeName] || {}) {
+        // temporary logging to debug failure
+        logOut(logger, `Processing ${scopeName}, ${definition} in schema ${schemaPath}`);
+
+        const type = schema[scopeName][definition].properties.type.enum[0];
+        const apiVersion = schema[scopeName][definition].properties.apiVersion.enum[0];
+
+        for (const scope of scopes) {
+          const schemaRef = `https://schema.management.azure.com/schemas/${path.relative(baseDir, schemaPath)}#/${scopeName}/${definition}`;
+          const indexKey = `${type}#${apiVersion}`.toLowerCase();
+
+          if (index[scope][indexKey]) {
+            logOut(logger, `WARNING: Found duplicate schema at scope "${scope}" for type "${type}" with apiVersion "${apiVersion}"`);
+            continue;
+          }
+    
+          index[scope][indexKey] = schemaRef;
+        }
+      }
+    }
+  }
+
+  const getResourcesDefinition = (schemaIndex: Record<string, string>) => ({ 
+    allOf: [
+      {
+        '$ref': 'https://schema.management.azure.com/schemas/common/definitions.json#/definitions/resourceBase',
+      },
+      {
+        oneOf: Object.values(schemaIndex).map(x => ({ '$ref': x })),
+      }
+    ]
+  });
+
+  const output = {
+    id: 'https://schema.management.azure.com/schemas.json',
+    '$schema': 'http://json-schema.org/draft-04/schema#',
+    definitions: {
+      TenantResources: getResourcesDefinition(index['tenant']),
+      ManagementGroupResources: getResourcesDefinition(index['mg']),
+      SubscriptionResources: getResourcesDefinition(index['subscription']),
+      ResourceGroupResources: getResourcesDefinition(index['rg']),
+    },
+  };
+
+  await writeFile(`${baseDir}/schemas.json`, JSON.stringify(output, null, 2));
 }
 
 async function buildTypeIndex(logger: ILogger, baseDir: string) {

@@ -1,0 +1,620 @@
+ {
+   resourceDefinitions: {
+     managedHSMs: {
+       properties: {
+-        systemData: {
+-          oneOf: [
+-            {
+-              $ref: "#/definitions/SystemData"
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "Metadata pertaining to creation and last modification of the key vault resource."
+-        }
+       }
+     }
+     managedHSMs_privateEndpointConnections: {
+       properties: {
+-        systemData: {
+-          oneOf: [
+-            {
+-              $ref: "#/definitions/SystemData"
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "Metadata pertaining to creation and last modification of the key vault resource."
+-        }
+         properties: {
+           oneOf: [
+             {
+-              $ref: "#/definitions/MHSMPrivateEndpointConnectionProperties"
++              $ref: "#/definitions/MhsmPrivateEndpointConnectionProperties"
+             }
+             ...
+           ]
+         }
+       }
+     }
+     vaults: {
+       required: [
+         ...
+-        "location"
+         ...
+         ...
+         ...
+       ]
+     }
+   }
+   definitions: {
+-    MHSMIPRule: {
+-      type: "object"
+-      properties: {
+-        value: {
+-          type: "string"
+-          description: "An IPv4 address range in CIDR notation, such as '124.56.78.91' (simple IP address) or '124.56.78.0/24' (all addresses that start with 124.56.78)."
+-        }
+-      }
+-      required: [
+-        "value"
+-      ]
+-      description: "A rule governing the accessibility of a managed HSM pool from a specific IP address or IP range."
+-    }
+-    MHSMNetworkRuleSet: {
+-      type: "object"
+-      properties: {
+-        bypass: {
+-          oneOf: [
+-            {
+-              type: "string"
+-              enum: [
+-                "AzureServices"
+-                "None"
+-              ]
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "Tells what traffic can bypass network rules. This can be 'AzureServices' or 'None'.  If not specified the default is 'AzureServices'."
+-        }
+-        defaultAction: {
+-          oneOf: [
+-            {
+-              type: "string"
+-              enum: [
+-                "Allow"
+-                "Deny"
+-              ]
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated."
+-        }
+-        ipRules: {
+-          oneOf: [
+-            {
+-              type: "array"
+-              items: {
+-                $ref: "#/definitions/MHSMIPRule"
+-              }
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "The list of IP address rules."
+-        }
+-        virtualNetworkRules: {
+-          oneOf: [
+-            {
+-              type: "array"
+-              items: {
+-                $ref: "#/definitions/MHSMVirtualNetworkRule"
+-              }
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "The list of virtual network rules."
+-        }
+-      }
+-      description: "A set of rules governing the network accessibility of a managed hsm pool."
+-    }
+-    MHSMPrivateEndpoint: {
+-      type: "object"
+-      properties: {
+-      }
+-      description: "Private endpoint object properties."
+-    }
+-    MHSMPrivateEndpointConnectionProperties: {
+-      type: "object"
+-      properties: {
+-        privateEndpoint: {
+-          oneOf: [
+-            {
+-              $ref: "#/definitions/MHSMPrivateEndpoint"
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "Private endpoint object properties."
+-        }
+-        privateLinkServiceConnectionState: {
+-          oneOf: [
+-            {
+-              $ref: "#/definitions/MHSMPrivateLinkServiceConnectionState"
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "An object that represents the approval state of the private link connection."
+-        }
+-        provisioningState: {
+-          oneOf: [
+-            {
+-              type: "string"
+-              enum: [
+-                "Succeeded"
+-                "Creating"
+-                "Updating"
+-                "Deleting"
+-                "Failed"
+-                "Disconnected"
+-              ]
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "Provisioning state of the private endpoint connection."
+-        }
+-      }
+-      description: "Properties of the private endpoint connection resource."
+-    }
+-    MHSMPrivateLinkServiceConnectionState: {
+-      type: "object"
+-      properties: {
+-        actionsRequired: {
+-          oneOf: [
+-            {
+-              type: "string"
+-              enum: [
+-                "None"
+-              ]
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "A message indicating if changes on the service provider require any updates on the consumer."
+-        }
+-        description: {
+-          type: "string"
+-          description: "The reason for approval or rejection."
+-        }
+-        status: {
+-          oneOf: [
+-            {
+-              type: "string"
+-              enum: [
+-                "Pending"
+-                "Approved"
+-                "Rejected"
+-                "Disconnected"
+-              ]
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "Indicates whether the connection has been approved, rejected or removed by the key vault owner."
+-        }
+-      }
+-      description: "An object that represents the approval state of the private link connection."
+-    }
+-    MHSMVirtualNetworkRule: {
+-      type: "object"
+-      properties: {
+-        id: {
+-          type: "string"
+-          description: "Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'."
+-        }
+-      }
+-      required: [
+-        "id"
+-      ]
+-      description: "A rule governing the accessibility of a managed hsm pool from a specific virtual network."
+-    }
+-    SystemData: {
+-      type: "object"
+-      properties: {
+-        createdAt: {
+-          type: "string"
+-          format: "date-time"
+-          description: "The timestamp of the key vault resource creation (UTC)."
+-        }
+-        createdBy: {
+-          type: "string"
+-          description: "The identity that created the key vault resource."
+-        }
+-        createdByType: {
+-          oneOf: [
+-            {
+-              type: "string"
+-              enum: [
+-                "User"
+-                "Application"
+-                "ManagedIdentity"
+-                "Key"
+-              ]
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "The type of identity that created the key vault resource."
+-        }
+-        lastModifiedAt: {
+-          type: "string"
+-          format: "date-time"
+-          description: "The timestamp of the key vault resource last modification (UTC)."
+-        }
+-        lastModifiedBy: {
+-          type: "string"
+-          description: "The identity that last modified the key vault resource."
+-        }
+-        lastModifiedByType: {
+-          oneOf: [
+-            {
+-              type: "string"
+-              enum: [
+-                "User"
+-                "Application"
+-                "ManagedIdentity"
+-                "Key"
+-              ]
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "The type of identity that last modified the key vault resource."
+-        }
+-      }
+-      description: "Metadata pertaining to creation and last modification of the key vault resource."
+-    }
++    MhsmNetworkRuleSet: {
++      description: "A set of rules governing the network accessibility of a managed hsm pool."
++      properties: {
++        bypass: {
++          description: "Tells what traffic can bypass network rules. This can be 'AzureServices' or 'None'.  If not specified the default is 'AzureServices'."
++          oneOf: [
++            {
++              enum: [
++                "AzureServices"
++                "None"
++              ]
++              type: "string"
++            }
++            {
++              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++            }
++          ]
++        }
++        defaultAction: {
++          description: "The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated."
++          oneOf: [
++            {
++              enum: [
++                "Allow"
++                "Deny"
++              ]
++              type: "string"
++            }
++            {
++              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++            }
++          ]
++        }
++        ipRules: {
++          description: "The list of IP address rules."
++          oneOf: [
++            {
++              items: {
++                $ref: "#/definitions/MhsmipRule"
++              }
++              type: "array"
++            }
++            {
++              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++            }
++          ]
++        }
++        virtualNetworkRules: {
++          description: "The list of virtual network rules."
++          oneOf: [
++            {
++              items: {
++                $ref: "#/definitions/MhsmVirtualNetworkRule"
++              }
++              type: "array"
++            }
++            {
++              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++            }
++          ]
++        }
++      }
++      type: "object"
++    }
++    MhsmPrivateEndpoint: {
++      description: "Private endpoint object properties."
++      properties: {
++      }
++      type: "object"
++    }
++    MhsmPrivateEndpointConnectionProperties: {
++      description: "Properties of the private endpoint connection resource."
++      properties: {
++        privateEndpoint: {
++          description: "Properties of the private endpoint object."
++          oneOf: [
++            {
++              $ref: "#/definitions/MhsmPrivateEndpoint"
++            }
++            {
++              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++            }
++          ]
++        }
++        privateLinkServiceConnectionState: {
++          description: "Approval state of the private link connection."
++          oneOf: [
++            {
++              $ref: "#/definitions/MhsmPrivateLinkServiceConnectionState"
++            }
++            {
++              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++            }
++          ]
++        }
++        provisioningState: {
++          description: "Provisioning state of the private endpoint connection."
++          oneOf: [
++            {
++              enum: [
++                "Succeeded"
++                "Creating"
++                "Updating"
++                "Deleting"
++                "Failed"
++                "Disconnected"
++              ]
++              type: "string"
++            }
++            {
++              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++            }
++          ]
++        }
++      }
++      type: "object"
++    }
++    MhsmPrivateLinkServiceConnectionState: {
++      description: "An object that represents the approval state of the private link connection."
++      properties: {
++        actionsRequired: {
++          description: "A message indicating if changes on the service provider require any updates on the consumer."
++          oneOf: [
++            {
++              enum: [
++                "None"
++              ]
++              type: "string"
++            }
++            {
++              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++            }
++          ]
++        }
++        description: {
++          description: "The reason for approval or rejection."
++          type: "string"
++        }
++        status: {
++          description: "Indicates whether the connection has been approved, rejected or removed by the key vault owner."
++          oneOf: [
++            {
++              enum: [
++                "Pending"
++                "Approved"
++                "Rejected"
++                "Disconnected"
++              ]
++              type: "string"
++            }
++            {
++              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++            }
++          ]
++        }
++      }
++      type: "object"
++    }
++    MhsmVirtualNetworkRule: {
++      description: "A rule governing the accessibility of a managed hsm pool from a specific virtual network."
++      properties: {
++        id: {
++          description: "Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'."
++          type: "string"
++        }
++      }
++      required: [
++        "id"
++      ]
++      type: "object"
++    }
++    MhsmipRule: {
++      description: "A rule governing the accessibility of a managed HSM pool from a specific IP address or IP range."
++      properties: {
++        value: {
++          description: "An IPv4 address range in CIDR notation, such as '124.56.78.91' (simple IP address) or '124.56.78.0/24' (all addresses that start with 124.56.78)."
++          type: "string"
++        }
++      }
++      required: [
++        "value"
++      ]
++      type: "object"
++    }
+     KeyAttributes: {
+       properties: {
+         exportable: {
+           oneOf: [
+             {
+-              default: false
+             }
+             ...
+           ]
+         }
+       }
+     }
+     KeyReleasePolicy: {
+       properties: {
+         contentType: {
+-          default: "application/json; charset=utf-8"
+         }
+         data: {
+-          format: "base64url"
+         }
+       }
+     }
+     ManagedHsmKeyReleasePolicy: {
+       properties: {
+         contentType: {
+-          default: "application/json; charset=utf-8"
+         }
+         data: {
+-          format: "base64url"
+         }
+       }
+     }
+     ManagedHsmProperties: {
+       properties: {
+         enablePurgeProtection: {
+           oneOf: [
+             {
+-              default: true
+             }
+             ...
+           ]
+         }
+         enableSoftDelete: {
+           oneOf: [
+             {
+-              default: true
+             }
+             ...
+           ]
+         }
+         networkAcls: {
+           oneOf: [
+             {
+-              $ref: "#/definitions/MHSMNetworkRuleSet"
++              $ref: "#/definitions/MhsmNetworkRuleSet"
+             }
+             ...
+           ]
+         }
+         softDeleteRetentionInDays: {
+           oneOf: [
+             {
+-              default: "90"
+             }
+             ...
+           ]
+         }
+       }
+     }
+     ManagedHsmSku: {
+       properties: {
+         name: {
+           oneOf: [
+             {
+               enum: [
+                 ...
++                "Custom_B6"
+                 ...
+               ]
+             }
+             ...
+           ]
+         }
+       }
+     }
+     managedHSMs_privateEndpointConnections_childResource: {
+       properties: {
+-        systemData: {
+-          oneOf: [
+-            {
+-              $ref: "#/definitions/SystemData"
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "Metadata pertaining to creation and last modification of the key vault resource."
+-        }
+         properties: {
+           oneOf: [
+             {
+-              $ref: "#/definitions/MHSMPrivateEndpointConnectionProperties"
++              $ref: "#/definitions/MhsmPrivateEndpointConnectionProperties"
+             }
+             ...
+           ]
+         }
+       }
+     }
+     VaultProperties: {
+       properties: {
+         enableRbacAuthorization: {
+           oneOf: [
+             {
+-              default: false
+             }
+             ...
+           ]
+         }
+         enableSoftDelete: {
+           oneOf: [
+             {
+-              default: true
+             }
+             ...
+           ]
+         }
+         publicNetworkAccess: {
+-          default: "enabled"
+         }
+         softDeleteRetentionInDays: {
+           oneOf: [
+             {
+-              default: "90"
+             }
+             ...
+           ]
+         }
+       }
+     }
+   }
+ }

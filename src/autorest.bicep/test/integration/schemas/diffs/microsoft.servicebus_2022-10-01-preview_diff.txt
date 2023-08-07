@@ -1,0 +1,138 @@
+ {
+   resourceDefinitions: {
+     namespaces: {
+       required: [
+         ...
+-        "location"
+         ...
+         ...
+         ...
+       ]
+     }
+   }
+   definitions: {
+     Action: {
+       properties: {
+         requiresPreprocessing: {
+           oneOf: [
+             {
+-              default: true
+             }
+             ...
+           ]
+         }
+       }
+     }
+     CorrelationFilter: {
+       properties: {
+         requiresPreprocessing: {
+           oneOf: [
+             {
+-              default: true
+             }
+             ...
+           ]
+         }
+       }
+     }
+     namespaces_migrationConfigurations_childResource: {
+       properties: {
+         name: {
+-          type: "string"
+-          enum: [
+-            "$default"
+-          ]
++          oneOf: [
++            {
++              enum: [
++                "$default"
++              ]
++              type: "string"
++            }
++            {
++              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++            }
++          ]
+         }
+       }
+     }
+     namespaces_networkRuleSets_childResource: {
+       properties: {
+         name: {
+-          type: "string"
+-          enum: [
+-            "default"
+-          ]
++          oneOf: [
++            {
++              enum: [
++                "default"
++              ]
++              type: "string"
++            }
++            {
++              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++            }
++          ]
+         }
+       }
+     }
+     SBQueueProperties: {
+       properties: {
+         autoDeleteOnIdle: {
+-          format: "duration"
+         }
+         defaultMessageTimeToLive: {
+-          format: "duration"
+         }
+         duplicateDetectionHistoryTimeWindow: {
+-          format: "duration"
+         }
+         lockDuration: {
+-          format: "duration"
+         }
+       }
+     }
+     SBSubscriptionProperties: {
+       properties: {
+         autoDeleteOnIdle: {
+-          format: "duration"
+         }
+         defaultMessageTimeToLive: {
+-          format: "duration"
+         }
+         duplicateDetectionHistoryTimeWindow: {
+-          format: "duration"
+         }
+         lockDuration: {
+-          format: "duration"
+         }
+       }
+     }
+     SBTopicProperties: {
+       properties: {
+         autoDeleteOnIdle: {
+-          format: "duration"
+         }
+         defaultMessageTimeToLive: {
+-          format: "duration"
+         }
+         duplicateDetectionHistoryTimeWindow: {
+-          format: "duration"
+         }
+       }
+     }
+     SqlFilter: {
+       properties: {
+         requiresPreprocessing: {
+           oneOf: [
+             {
+-              default: true
+             }
+             ...
+           ]
+         }
+       }
+     }
+   }
+ }

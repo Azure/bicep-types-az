@@ -1,0 +1,119 @@
+ {
+   resourceDefinitions: {
+     actionGroups: {
+       required: [
+         ...
+-        "location"
+         ...
+         ...
+         ...
+       ]
+     }
+   }
+   definitions: {
+     ActionGroup: {
+       properties: {
+         enabled: {
+           oneOf: [
+             {
+-              default: true
+             }
+             ...
+           ]
+         }
+       }
+     }
+     ArmRoleReceiver: {
+       properties: {
+         useCommonAlertSchema: {
+           oneOf: [
+             {
+-              default: false
+             }
+             ...
+           ]
+         }
+       }
+     }
+     AutomationRunbookReceiver: {
+       properties: {
+         useCommonAlertSchema: {
+           oneOf: [
+             {
+-              default: false
+             }
+             ...
+           ]
+         }
+       }
+     }
+     AzureFunctionReceiver: {
+       properties: {
+         useCommonAlertSchema: {
+           oneOf: [
+             {
+-              default: false
+             }
+             ...
+           ]
+         }
+       }
+     }
+     EmailReceiver: {
+       properties: {
+         useCommonAlertSchema: {
+           oneOf: [
+             {
+-              default: false
+             }
+             ...
+           ]
+         }
+       }
+     }
+     EventHubReceiver: {
+       properties: {
+         useCommonAlertSchema: {
+           oneOf: [
+             {
+-              default: false
+             }
+             ...
+           ]
+         }
+       }
+     }
+     LogicAppReceiver: {
+       properties: {
+         useCommonAlertSchema: {
+           oneOf: [
+             {
+-              default: false
+             }
+             ...
+           ]
+         }
+       }
+     }
+     WebhookReceiver: {
+       properties: {
+         useAadAuth: {
+           oneOf: [
+             {
+-              default: false
+             }
+             ...
+           ]
+         }
+         useCommonAlertSchema: {
+           oneOf: [
+             {
+-              default: false
+             }
+             ...
+           ]
+         }
+       }
+     }
+   }
+ }
