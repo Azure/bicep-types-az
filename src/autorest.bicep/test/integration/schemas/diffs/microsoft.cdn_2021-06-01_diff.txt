@@ -1,0 +1,1790 @@
+ {
+   resourceDefinitions: {
+     cdnWebApplicationFirewallPolicies: {
+       required: [
+         ...
+-        "location"
+         ...
+         ...
+-        "sku"
+         ...
+       ]
+     }
+     profiles: {
+       required: [
+         ...
+-        "location"
+         ...
+         ...
+-        "sku"
+         ...
+       ]
+     }
+     profiles_afdEndpoints: {
+       required: [
+         ...
+-        "location"
+         ...
+         ...
+         ...
+       ]
+     }
+     profiles_endpoints: {
+       required: [
+         ...
+-        "location"
+         ...
+         ...
+         ...
+       ]
+     }
+   }
+   definitions: {
+-    AzureFirstPartyManagedCertificateParameters: {
+-      type: "object"
+-      properties: {
+-        type: {
+-          type: "string"
+-          enum: [
+-            "AzureFirstPartyManagedCertificate"
+-          ]
+-        }
+-      }
+-      required: [
+-        "type"
+-      ]
+-      description: "Azure FirstParty Managed Certificate provided by other first party resource providers to enable HTTPS."
+-    }
+-    CustomerCertificateParameters: {
+-      type: "object"
+-      properties: {
+-        secretSource: {
+-          oneOf: [
+-            {
+-              $ref: "#/definitions/ResourceReference"
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "Reference to another resource."
+-        }
+-        secretVersion: {
+-          type: "string"
+-          description: "Version of the secret to be used"
+-        }
+-        subjectAlternativeNames: {
+-          oneOf: [
+-            {
+-              type: "array"
+-              items: {
+-                type: "string"
+-              }
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "The list of SANs."
+-        }
+-        type: {
+-          type: "string"
+-          enum: [
+-            "CustomerCertificate"
+-          ]
+-        }
+-        useLatestVersion: {
+-          oneOf: [
+-            {
+-              type: "boolean"
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "Whether to use the latest version for the certificate"
+-        }
+-      }
+-      required: [
+-        "secretSource"
+-        "type"
+-      ]
+-      description: "Customer Certificate used for https"
+-    }
+-    DeliveryRuleAction1: {
+-      type: "object"
+-      oneOf: [
+-        {
+-          $ref: "#/definitions/UrlRedirectAction"
+-        }
+-        {
+-          $ref: "#/definitions/UrlSigningAction"
+-        }
+-        {
+-          $ref: "#/definitions/OriginGroupOverrideAction"
+-        }
+-        {
+-          $ref: "#/definitions/UrlRewriteAction"
+-        }
+-        {
+-          $ref: "#/definitions/DeliveryRuleRequestHeaderAction"
+-        }
+-        {
+-          $ref: "#/definitions/DeliveryRuleResponseHeaderAction"
+-        }
+-        {
+-          $ref: "#/definitions/DeliveryRuleCacheExpirationAction"
+-        }
+-        {
+-          $ref: "#/definitions/DeliveryRuleCacheKeyQueryStringAction"
+-        }
+-        {
+-          $ref: "#/definitions/DeliveryRuleRouteConfigurationOverrideAction"
+-        }
+-      ]
+-      properties: {
+-      }
+-      description: "An action for the delivery rule."
+-    }
+-    DeliveryRuleCacheExpirationAction: {
+-      type: "object"
+-      properties: {
+-        name: {
+-          type: "string"
+-          enum: [
+-            "CacheExpiration"
+-          ]
+-        }
+-        parameters: {
+-          oneOf: [
+-            {
+-              $ref: "#/definitions/CacheExpirationActionParameters"
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "Defines the parameters for the cache expiration action."
+-        }
+-      }
+-      required: [
+-        "name"
+-        "parameters"
+-      ]
+-      description: "Defines the cache expiration action for the delivery rule."
+-    }
+-    DeliveryRuleCacheKeyQueryStringAction: {
+-      type: "object"
+-      properties: {
+-        name: {
+-          type: "string"
+-          enum: [
+-            "CacheKeyQueryString"
+-          ]
+-        }
+-        parameters: {
+-          oneOf: [
+-            {
+-              $ref: "#/definitions/CacheKeyQueryStringActionParameters"
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "Defines the parameters for the cache-key query string action."
+-        }
+-      }
+-      required: [
+-        "name"
+-        "parameters"
+-      ]
+-      description: "Defines the cache-key query string action for the delivery rule."
+-    }
+-    DeliveryRuleClientPortCondition: {
+-      type: "object"
+-      properties: {
+-        name: {
+-          type: "string"
+-          enum: [
+-            "ClientPort"
+-          ]
+-        }
+-        parameters: {
+-          oneOf: [
+-            {
+-              $ref: "#/definitions/ClientPortMatchConditionParameters"
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "Defines the parameters for ClientPort match conditions"
+-        }
+-      }
+-      required: [
+-        "name"
+-        "parameters"
+-      ]
+-      description: "Defines the ClientPort condition for the delivery rule."
+-    }
+-    DeliveryRuleCookiesCondition: {
+-      type: "object"
+-      properties: {
+-        name: {
+-          type: "string"
+-          enum: [
+-            "Cookies"
+-          ]
+-        }
+-        parameters: {
+-          oneOf: [
+-            {
+-              $ref: "#/definitions/CookiesMatchConditionParameters"
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "Defines the parameters for Cookies match conditions"
+-        }
+-      }
+-      required: [
+-        "name"
+-        "parameters"
+-      ]
+-      description: "Defines the Cookies condition for the delivery rule."
+-    }
+-    DeliveryRuleHostNameCondition: {
+-      type: "object"
+-      properties: {
+-        name: {
+-          type: "string"
+-          enum: [
+-            "HostName"
+-          ]
+-        }
+-        parameters: {
+-          oneOf: [
+-            {
+-              $ref: "#/definitions/HostNameMatchConditionParameters"
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "Defines the parameters for HostName match conditions"
+-        }
+-      }
+-      required: [
+-        "name"
+-        "parameters"
+-      ]
+-      description: "Defines the HostName condition for the delivery rule."
+-    }
+-    DeliveryRuleHttpVersionCondition: {
+-      type: "object"
+-      properties: {
+-        name: {
+-          type: "string"
+-          enum: [
+-            "HttpVersion"
+-          ]
+-        }
+-        parameters: {
+-          oneOf: [
+-            {
+-              $ref: "#/definitions/HttpVersionMatchConditionParameters"
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "Defines the parameters for HttpVersion match conditions"
+-        }
+-      }
+-      required: [
+-        "name"
+-        "parameters"
+-      ]
+-      description: "Defines the HttpVersion condition for the delivery rule."
+-    }
+-    DeliveryRuleIsDeviceCondition: {
+-      type: "object"
+-      properties: {
+-        name: {
+-          type: "string"
+-          enum: [
+-            "IsDevice"
+-          ]
+-        }
+-        parameters: {
+-          oneOf: [
+-            {
+-              $ref: "#/definitions/IsDeviceMatchConditionParameters"
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "Defines the parameters for IsDevice match conditions"
+-        }
+-      }
+-      required: [
+-        "name"
+-        "parameters"
+-      ]
+-      description: "Defines the IsDevice condition for the delivery rule."
+-    }
+-    DeliveryRulePostArgsCondition: {
+-      type: "object"
+-      properties: {
+-        name: {
+-          type: "string"
+-          enum: [
+-            "PostArgs"
+-          ]
+-        }
+-        parameters: {
+-          oneOf: [
+-            {
+-              $ref: "#/definitions/PostArgsMatchConditionParameters"
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "Defines the parameters for PostArgs match conditions"
+-        }
+-      }
+-      required: [
+-        "name"
+-        "parameters"
+-      ]
+-      description: "Defines the PostArgs condition for the delivery rule."
+-    }
+-    DeliveryRuleQueryStringCondition: {
+-      type: "object"
+-      properties: {
+-        name: {
+-          type: "string"
+-          enum: [
+-            "QueryString"
+-          ]
+-        }
+-        parameters: {
+-          oneOf: [
+-            {
+-              $ref: "#/definitions/QueryStringMatchConditionParameters"
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "Defines the parameters for QueryString match conditions"
+-        }
+-      }
+-      required: [
+-        "name"
+-        "parameters"
+-      ]
+-      description: "Defines the QueryString condition for the delivery rule."
+-    }
+-    DeliveryRuleRemoteAddressCondition: {
+-      type: "object"
+-      properties: {
+-        name: {
+-          type: "string"
+-          enum: [
+-            "RemoteAddress"
+-          ]
+-        }
+-        parameters: {
+-          oneOf: [
+-            {
+-              $ref: "#/definitions/RemoteAddressMatchConditionParameters"
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "Defines the parameters for RemoteAddress match conditions"
+-        }
+-      }
+-      required: [
+-        "name"
+-        "parameters"
+-      ]
+-      description: "Defines the RemoteAddress condition for the delivery rule."
+-    }
+-    DeliveryRuleRequestBodyCondition: {
+-      type: "object"
+-      properties: {
+-        name: {
+-          type: "string"
+-          enum: [
+-            "RequestBody"
+-          ]
+-        }
+-        parameters: {
+-          oneOf: [
+-            {
+-              $ref: "#/definitions/RequestBodyMatchConditionParameters"
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "Defines the parameters for RequestBody match conditions"
+-        }
+-      }
+-      required: [
+-        "name"
+-        "parameters"
+-      ]
+-      description: "Defines the RequestBody condition for the delivery rule."
+-    }
+-    DeliveryRuleRequestHeaderAction: {
+-      type: "object"
+-      properties: {
+-        name: {
+-          type: "string"
+-          enum: [
+-            "ModifyRequestHeader"
+-          ]
+-        }
+-        parameters: {
+-          oneOf: [
+-            {
+-              $ref: "#/definitions/HeaderActionParameters"
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "Defines the parameters for the request header action."
+-        }
+-      }
+-      required: [
+-        "name"
+-        "parameters"
+-      ]
+-      description: "Defines the request header action for the delivery rule."
+-    }
+-    DeliveryRuleRequestHeaderCondition: {
+-      type: "object"
+-      properties: {
+-        name: {
+-          type: "string"
+-          enum: [
+-            "RequestHeader"
+-          ]
+-        }
+-        parameters: {
+-          oneOf: [
+-            {
+-              $ref: "#/definitions/RequestHeaderMatchConditionParameters"
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "Defines the parameters for RequestHeader match conditions"
+-        }
+-      }
+-      required: [
+-        "name"
+-        "parameters"
+-      ]
+-      description: "Defines the RequestHeader condition for the delivery rule."
+-    }
+-    DeliveryRuleRequestMethodCondition: {
+-      type: "object"
+-      properties: {
+-        name: {
+-          type: "string"
+-          enum: [
+-            "RequestMethod"
+-          ]
+-        }
+-        parameters: {
+-          oneOf: [
+-            {
+-              $ref: "#/definitions/RequestMethodMatchConditionParameters"
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "Defines the parameters for RequestMethod match conditions"
+-        }
+-      }
+-      required: [
+-        "name"
+-        "parameters"
+-      ]
+-      description: "Defines the RequestMethod condition for the delivery rule."
+-    }
+-    DeliveryRuleRequestSchemeCondition: {
+-      type: "object"
+-      properties: {
+-        name: {
+-          type: "string"
+-          enum: [
+-            "RequestScheme"
+-          ]
+-        }
+-        parameters: {
+-          oneOf: [
+-            {
+-              $ref: "#/definitions/RequestSchemeMatchConditionParameters"
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "Defines the parameters for RequestScheme match conditions "
+-        }
+-      }
+-      required: [
+-        "name"
+-        "parameters"
+-      ]
+-      description: "Defines the RequestScheme condition for the delivery rule."
+-    }
+-    DeliveryRuleRequestUriCondition: {
+-      type: "object"
+-      properties: {
+-        name: {
+-          type: "string"
+-          enum: [
+-            "RequestUri"
+-          ]
+-        }
+-        parameters: {
+-          oneOf: [
+-            {
+-              $ref: "#/definitions/RequestUriMatchConditionParameters"
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "Defines the parameters for RequestUri match conditions"
+-        }
+-      }
+-      required: [
+-        "name"
+-        "parameters"
+-      ]
+-      description: "Defines the RequestUri condition for the delivery rule."
+-    }
+-    DeliveryRuleResponseHeaderAction: {
+-      type: "object"
+-      properties: {
+-        name: {
+-          type: "string"
+-          enum: [
+-            "ModifyResponseHeader"
+-          ]
+-        }
+-        parameters: {
+-          oneOf: [
+-            {
+-              $ref: "#/definitions/HeaderActionParameters"
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "Defines the parameters for the request header action."
+-        }
+-      }
+-      required: [
+-        "name"
+-        "parameters"
+-      ]
+-      description: "Defines the response header action for the delivery rule."
+-    }
+-    DeliveryRuleRouteConfigurationOverrideAction: {
+-      type: "object"
+-      properties: {
+-        name: {
+-          type: "string"
+-          enum: [
+-            "RouteConfigurationOverride"
+-          ]
+-        }
+-        parameters: {
+-          oneOf: [
+-            {
+-              $ref: "#/definitions/RouteConfigurationOverrideActionParameters"
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "Defines the parameters for the route configuration override action."
+-        }
+-      }
+-      required: [
+-        "name"
+-        "parameters"
+-      ]
+-      description: "Defines the route configuration override action for the delivery rule. Only applicable to Frontdoor Standard/Premium Profiles."
+-    }
+-    DeliveryRuleServerPortCondition: {
+-      type: "object"
+-      properties: {
+-        name: {
+-          type: "string"
+-          enum: [
+-            "ServerPort"
+-          ]
+-        }
+-        parameters: {
+-          oneOf: [
+-            {
+-              $ref: "#/definitions/ServerPortMatchConditionParameters"
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "Defines the parameters for ServerPort match conditions"
+-        }
+-      }
+-      required: [
+-        "name"
+-        "parameters"
+-      ]
+-      description: "Defines the ServerPort condition for the delivery rule."
+-    }
+-    DeliveryRuleSocketAddrCondition: {
+-      type: "object"
+-      properties: {
+-        name: {
+-          type: "string"
+-          enum: [
+-            "SocketAddr"
+-          ]
+-        }
+-        parameters: {
+-          oneOf: [
+-            {
+-              $ref: "#/definitions/SocketAddrMatchConditionParameters"
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "Defines the parameters for SocketAddress match conditions"
+-        }
+-      }
+-      required: [
+-        "name"
+-        "parameters"
+-      ]
+-      description: "Defines the SocketAddress condition for the delivery rule."
+-    }
+-    DeliveryRuleSslProtocolCondition: {
+-      type: "object"
+-      properties: {
+-        name: {
+-          type: "string"
+-          enum: [
+-            "SslProtocol"
+-          ]
+-        }
+-        parameters: {
+-          oneOf: [
+-            {
+-              $ref: "#/definitions/SslProtocolMatchConditionParameters"
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "Defines the parameters for SslProtocol match conditions"
+-        }
+-      }
+-      required: [
+-        "name"
+-        "parameters"
+-      ]
+-      description: "Defines the SslProtocol condition for the delivery rule."
+-    }
+-    DeliveryRuleUrlFileExtensionCondition: {
+-      type: "object"
+-      properties: {
+-        name: {
+-          type: "string"
+-          enum: [
+-            "UrlFileExtension"
+-          ]
+-        }
+-        parameters: {
+-          oneOf: [
+-            {
+-              $ref: "#/definitions/UrlFileExtensionMatchConditionParameters"
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "Defines the parameters for UrlFileExtension match conditions"
+-        }
+-      }
+-      required: [
+-        "name"
+-        "parameters"
+-      ]
+-      description: "Defines the UrlFileExtension condition for the delivery rule."
+-    }
+-    DeliveryRuleUrlFileNameCondition: {
+-      type: "object"
+-      properties: {
+-        name: {
+-          type: "string"
+-          enum: [
+-            "UrlFileName"
+-          ]
+-        }
+-        parameters: {
+-          oneOf: [
+-            {
+-              $ref: "#/definitions/UrlFileNameMatchConditionParameters"
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "Defines the parameters for UrlFilename match conditions"
+-        }
+-      }
+-      required: [
+-        "name"
+-        "parameters"
+-      ]
+-      description: "Defines the UrlFileName condition for the delivery rule."
+-    }
+-    DeliveryRuleUrlPathCondition: {
+-      type: "object"
+-      properties: {
+-        name: {
+-          type: "string"
+-          enum: [
+-            "UrlPath"
+-          ]
+-        }
+-        parameters: {
+-          oneOf: [
+-            {
+-              $ref: "#/definitions/UrlPathMatchConditionParameters"
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "Defines the parameters for UrlPath match conditions"
+-        }
+-      }
+-      required: [
+-        "name"
+-        "parameters"
+-      ]
+-      description: "Defines the UrlPath condition for the delivery rule."
+-    }
+-    ManagedCertificateParameters: {
+-      type: "object"
+-      properties: {
+-        type: {
+-          type: "string"
+-          enum: [
+-            "ManagedCertificate"
+-          ]
+-        }
+-      }
+-      required: [
+-        "type"
+-      ]
+-      description: "Managed Certificate used for https"
+-    }
+-    OriginGroupOverrideAction: {
+-      type: "object"
+-      properties: {
+-        name: {
+-          type: "string"
+-          enum: [
+-            "OriginGroupOverride"
+-          ]
+-        }
+-        parameters: {
+-          oneOf: [
+-            {
+-              $ref: "#/definitions/OriginGroupOverrideActionParameters"
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "Defines the parameters for the origin group override action."
+-        }
+-      }
+-      required: [
+-        "name"
+-        "parameters"
+-      ]
+-      description: "Defines the origin group override action for the delivery rule."
+-    }
+-    SecurityPolicyWebApplicationFirewallParameters: {
+-      type: "object"
+-      properties: {
+-        associations: {
+-          oneOf: [
+-            {
+-              type: "array"
+-              items: {
+-                $ref: "#/definitions/SecurityPolicyWebApplicationFirewallAssociation"
+-              }
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "Waf associations"
+-        }
+-        type: {
+-          type: "string"
+-          enum: [
+-            "WebApplicationFirewall"
+-          ]
+-        }
+-        wafPolicy: {
+-          oneOf: [
+-            {
+-              $ref: "#/definitions/ResourceReference"
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "Reference to another resource."
+-        }
+-      }
+-      required: [
+-        "type"
+-      ]
+-      description: "The json object containing security policy waf parameters"
+-    }
+-    UrlRedirectAction: {
+-      type: "object"
+-      properties: {
+-        name: {
+-          type: "string"
+-          enum: [
+-            "UrlRedirect"
+-          ]
+-        }
+-        parameters: {
+-          oneOf: [
+-            {
+-              $ref: "#/definitions/UrlRedirectActionParameters"
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "Defines the parameters for the url redirect action."
+-        }
+-      }
+-      required: [
+-        "name"
+-        "parameters"
+-      ]
+-      description: "Defines the url redirect action for the delivery rule."
+-    }
+-    UrlRewriteAction: {
+-      type: "object"
+-      properties: {
+-        name: {
+-          type: "string"
+-          enum: [
+-            "UrlRewrite"
+-          ]
+-        }
+-        parameters: {
+-          oneOf: [
+-            {
+-              $ref: "#/definitions/UrlRewriteActionParameters"
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "Defines the parameters for the url rewrite action."
+-        }
+-      }
+-      required: [
+-        "name"
+-        "parameters"
+-      ]
+-      description: "Defines the url rewrite action for the delivery rule."
+-    }
+-    UrlSigningAction: {
+-      type: "object"
+-      properties: {
+-        name: {
+-          type: "string"
+-          enum: [
+-            "UrlSigning"
+-          ]
+-        }
+-        parameters: {
+-          oneOf: [
+-            {
+-              $ref: "#/definitions/UrlSigningActionParameters"
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "Defines the parameters for the Url Signing action."
+-        }
+-      }
+-      required: [
+-        "name"
+-        "parameters"
+-      ]
+-      description: "Defines the url signing action for the delivery rule."
+-    }
+-    UrlSigningKeyParameters: {
+-      type: "object"
+-      properties: {
+-        keyId: {
+-          type: "string"
+-          description: "Defines the customer defined key Id. This id will exist in the incoming request to indicate the key used to form the hash."
+-        }
+-        secretSource: {
+-          oneOf: [
+-            {
+-              $ref: "#/definitions/ResourceReference"
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "Reference to another resource."
+-        }
+-        secretVersion: {
+-          type: "string"
+-          description: "Version of the secret to be used"
+-        }
+-        type: {
+-          type: "string"
+-          enum: [
+-            "UrlSigningKey"
+-          ]
+-        }
+-      }
+-      required: [
+-        "keyId"
+-        "secretSource"
+-        "type"
+-      ]
+-      description: "Url signing key parameters"
+-    }
++    DeliveryRuleActionAutoGenerated: {
++      description: "An action for the delivery rule."
++      oneOf: [
++        {
++          description: "Defines the cache expiration action for the delivery rule."
++          properties: {
++            parameters: {
++              description: "Defines the parameters for the action."
++              oneOf: [
++                {
++                  $ref: "#/definitions/CacheExpirationActionParameters"
++                }
++                {
++                  $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++                }
++              ]
++            }
++          }
++          required: [
++            "parameters"
++          ]
++          type: "object"
++        }
++        {
++          description: "Defines the cache-key query string action for the delivery rule."
++          properties: {
++            parameters: {
++              description: "Defines the parameters for the action."
++              oneOf: [
++                {
++                  $ref: "#/definitions/CacheKeyQueryStringActionParameters"
++                }
++                {
++                  $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++                }
++              ]
++            }
++          }
++          required: [
++            "parameters"
++          ]
++          type: "object"
++        }
++        {
++          description: "Defines the request header action for the delivery rule."
++          properties: {
++            parameters: {
++              description: "Defines the parameters for the action."
++              oneOf: [
++                {
++                  $ref: "#/definitions/HeaderActionParameters"
++                }
++                {
++                  $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++                }
++              ]
++            }
++          }
++          required: [
++            "parameters"
++          ]
++          type: "object"
++        }
++        {
++          description: "Defines the response header action for the delivery rule."
++          properties: {
++            parameters: {
++              description: "Defines the parameters for the action."
++              oneOf: [
++                {
++                  $ref: "#/definitions/HeaderActionParameters"
++                }
++                {
++                  $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++                }
++              ]
++            }
++          }
++          required: [
++            "parameters"
++          ]
++          type: "object"
++        }
++        {
++          description: "Defines the origin group override action for the delivery rule."
++          properties: {
++            parameters: {
++              description: "Defines the parameters for the action."
++              oneOf: [
++                {
++                  $ref: "#/definitions/OriginGroupOverrideActionParameters"
++                }
++                {
++                  $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++                }
++              ]
++            }
++          }
++          required: [
++            "parameters"
++          ]
++          type: "object"
++        }
++        {
++          description: "Defines the route configuration override action for the delivery rule. Only applicable to Frontdoor Standard/Premium Profiles."
++          properties: {
++            parameters: {
++              description: "Defines the parameters for the action."
++              oneOf: [
++                {
++                  $ref: "#/definitions/RouteConfigurationOverrideActionParameters"
++                }
++                {
++                  $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++                }
++              ]
++            }
++          }
++          required: [
++            "parameters"
++          ]
++          type: "object"
++        }
++        {
++          description: "Defines the url redirect action for the delivery rule."
++          properties: {
++            parameters: {
++              description: "Defines the parameters for the action."
++              oneOf: [
++                {
++                  $ref: "#/definitions/UrlRedirectActionParameters"
++                }
++                {
++                  $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++                }
++              ]
++            }
++          }
++          required: [
++            "parameters"
++          ]
++          type: "object"
++        }
++        {
++          description: "Defines the url rewrite action for the delivery rule."
++          properties: {
++            parameters: {
++              description: "Defines the parameters for the action."
++              oneOf: [
++                {
++                  $ref: "#/definitions/UrlRewriteActionParameters"
++                }
++                {
++                  $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++                }
++              ]
++            }
++          }
++          required: [
++            "parameters"
++          ]
++          type: "object"
++        }
++        {
++          description: "Defines the url signing action for the delivery rule."
++          properties: {
++            parameters: {
++              description: "Defines the parameters for the action."
++              oneOf: [
++                {
++                  $ref: "#/definitions/UrlSigningActionParameters"
++                }
++                {
++                  $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++                }
++              ]
++            }
++          }
++          required: [
++            "parameters"
++          ]
++          type: "object"
++        }
++      ]
++      properties: {
++      }
++      type: "object"
++    }
+     AFDOriginProperties: {
+-      required: [
+-        "hostName"
+-      ]
+       properties: {
+         enforceCertificateNameCheck: {
+           oneOf: [
+             {
+-              default: true
+             }
+             ...
+           ]
+         }
+       }
+     }
+     DeliveryRule: {
+       properties: {
+         actions: {
+           oneOf: [
+             {
+               items: {
+-                $ref: "#/definitions/DeliveryRuleAction1"
++                $ref: "#/definitions/DeliveryRuleActionAutoGenerated"
+               }
+             }
+             ...
+           ]
+         }
+       }
+     }
+     DeliveryRuleCondition: {
+       oneOf: [
+         {
+-          $ref: "#/definitions/DeliveryRuleRemoteAddressCondition"
++          properties: {
++            parameters: {
++              description: "Defines the parameters for the condition."
++              oneOf: [
++                {
++                  $ref: "#/definitions/ClientPortMatchConditionParameters"
++                }
++                {
++                  $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++                }
++              ]
++            }
++          }
++          required: [
++            "parameters"
++          ]
++          type: "object"
+         }
+         {
+-          $ref: "#/definitions/DeliveryRuleUrlFileExtensionCondition"
++          properties: {
++            parameters: {
++              description: "Defines the parameters for the condition."
++              oneOf: [
++                {
++                  $ref: "#/definitions/RequestHeaderMatchConditionParameters"
++                }
++                {
++                  $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++                }
++              ]
++            }
++          }
++          required: [
++            "parameters"
++          ]
++          type: "object"
+         }
+         {
+-          $ref: "#/definitions/DeliveryRuleUrlFileNameCondition"
++          properties: {
++            parameters: {
++              description: "Defines the parameters for the condition."
++              oneOf: [
++                {
++                  $ref: "#/definitions/RequestMethodMatchConditionParameters"
++                }
++                {
++                  $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++                }
++              ]
++            }
++          }
++          required: [
++            "parameters"
++          ]
++          type: "object"
+         }
+         {
+-          $ref: "#/definitions/DeliveryRuleHttpVersionCondition"
++          properties: {
++            parameters: {
++              description: "Defines the parameters for the condition."
++              oneOf: [
++                {
++                  $ref: "#/definitions/RequestSchemeMatchConditionParameters"
++                }
++                {
++                  $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++                }
++              ]
++            }
++          }
++          required: [
++            "parameters"
++          ]
++          type: "object"
+         }
+         {
+-          $ref: "#/definitions/DeliveryRuleCookiesCondition"
++          properties: {
++            parameters: {
++              description: "Defines the parameters for the condition."
++              oneOf: [
++                {
++                  $ref: "#/definitions/RequestUriMatchConditionParameters"
++                }
++                {
++                  $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++                }
++              ]
++            }
++          }
++          required: [
++            "parameters"
++          ]
++          type: "object"
+         }
+         {
+-          $ref: "#/definitions/DeliveryRuleIsDeviceCondition"
++          properties: {
++            parameters: {
++              description: "Defines the parameters for the condition."
++              oneOf: [
++                {
++                  $ref: "#/definitions/ServerPortMatchConditionParameters"
++                }
++                {
++                  $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++                }
++              ]
++            }
++          }
++          required: [
++            "parameters"
++          ]
++          type: "object"
+         }
+         {
+-          $ref: "#/definitions/DeliveryRuleSocketAddrCondition"
++          properties: {
++            parameters: {
++              description: "Defines the parameters for the condition."
++              oneOf: [
++                {
++                  $ref: "#/definitions/SocketAddrMatchConditionParameters"
++                }
++                {
++                  $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++                }
++              ]
++            }
++          }
++          required: [
++            "parameters"
++          ]
++          type: "object"
+         }
+         {
+-          $ref: "#/definitions/DeliveryRuleClientPortCondition"
++          properties: {
++            parameters: {
++              description: "Defines the parameters for the condition."
++              oneOf: [
++                {
++                  $ref: "#/definitions/SslProtocolMatchConditionParameters"
++                }
++                {
++                  $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++                }
++              ]
++            }
++          }
++          required: [
++            "parameters"
++          ]
++          type: "object"
+         }
+         {
+-          $ref: "#/definitions/DeliveryRuleServerPortCondition"
++          properties: {
++            parameters: {
++              description: "Defines the parameters for the condition."
++              oneOf: [
++                {
++                  $ref: "#/definitions/UrlFileExtensionMatchConditionParameters"
++                }
++                {
++                  $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++                }
++              ]
++            }
++          }
++          required: [
++            "parameters"
++          ]
++          type: "object"
+         }
+         {
+-          $ref: "#/definitions/DeliveryRuleHostNameCondition"
++          properties: {
++            parameters: {
++              description: "Defines the parameters for the condition."
++              oneOf: [
++                {
++                  $ref: "#/definitions/UrlFileNameMatchConditionParameters"
++                }
++                {
++                  $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++                }
++              ]
++            }
++          }
++          required: [
++            "parameters"
++          ]
++          type: "object"
+         }
+         {
+-          $ref: "#/definitions/DeliveryRuleSslProtocolCondition"
++          properties: {
++            parameters: {
++              description: "Defines the parameters for the condition."
++              oneOf: [
++                {
++                  $ref: "#/definitions/UrlPathMatchConditionParameters"
++                }
++                {
++                  $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++                }
++              ]
++            }
++          }
++          required: [
++            "parameters"
++          ]
++          type: "object"
+         }
+         {
+-          $ref: "#/definitions/DeliveryRuleRequestMethodCondition"
++          properties: {
++            parameters: {
++              description: "Defines the parameters for the condition."
++              oneOf: [
++                {
++                  $ref: "#/definitions/CookiesMatchConditionParameters"
++                }
++                {
++                  $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++                }
++              ]
++            }
++          }
++          required: [
++            "parameters"
++          ]
++          type: "object"
+         }
+         {
+-          $ref: "#/definitions/DeliveryRuleQueryStringCondition"
++          properties: {
++            parameters: {
++              description: "Defines the parameters for the condition."
++              oneOf: [
++                {
++                  $ref: "#/definitions/HostNameMatchConditionParameters"
++                }
++                {
++                  $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++                }
++              ]
++            }
++          }
++          required: [
++            "parameters"
++          ]
++          type: "object"
+         }
+         {
+-          $ref: "#/definitions/DeliveryRulePostArgsCondition"
++          properties: {
++            parameters: {
++              description: "Defines the parameters for the condition."
++              oneOf: [
++                {
++                  $ref: "#/definitions/HttpVersionMatchConditionParameters"
++                }
++                {
++                  $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++                }
++              ]
++            }
++          }
++          required: [
++            "parameters"
++          ]
++          type: "object"
+         }
+         {
+-          $ref: "#/definitions/DeliveryRuleRequestUriCondition"
++          properties: {
++            parameters: {
++              description: "Defines the parameters for the condition."
++              oneOf: [
++                {
++                  $ref: "#/definitions/IsDeviceMatchConditionParameters"
++                }
++                {
++                  $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++                }
++              ]
++            }
++          }
++          required: [
++            "parameters"
++          ]
++          type: "object"
+         }
+         {
+-          $ref: "#/definitions/DeliveryRuleRequestHeaderCondition"
++          properties: {
++            parameters: {
++              description: "Defines the parameters for the condition."
++              oneOf: [
++                {
++                  $ref: "#/definitions/PostArgsMatchConditionParameters"
++                }
++                {
++                  $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++                }
++              ]
++            }
++          }
++          required: [
++            "parameters"
++          ]
++          type: "object"
+         }
+         {
+-          $ref: "#/definitions/DeliveryRuleRequestBodyCondition"
++          properties: {
++            parameters: {
++              description: "Defines the parameters for the condition."
++              oneOf: [
++                {
++                  $ref: "#/definitions/QueryStringMatchConditionParameters"
++                }
++                {
++                  $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++                }
++              ]
++            }
++          }
++          required: [
++            "parameters"
++          ]
++          type: "object"
+         }
+         {
+-          $ref: "#/definitions/DeliveryRuleRequestSchemeCondition"
++          properties: {
++            parameters: {
++              description: "Defines the parameters for the condition."
++              oneOf: [
++                {
++                  $ref: "#/definitions/RemoteAddressMatchConditionParameters"
++                }
++                {
++                  $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++                }
++              ]
++            }
++          }
++          required: [
++            "parameters"
++          ]
++          type: "object"
+         }
+         {
+-          $ref: "#/definitions/DeliveryRuleUrlPathCondition"
++          properties: {
++            parameters: {
++              description: "Defines the parameters for the condition."
++              oneOf: [
++                {
++                  $ref: "#/definitions/RequestBodyMatchConditionParameters"
++                }
++                {
++                  $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++                }
++              ]
++            }
++          }
++          required: [
++            "parameters"
++          ]
++          type: "object"
+         }
+       ]
+     }
+     PolicySettings: {
+       properties: {
+         defaultCustomBlockResponseStatusCode: {
+           oneOf: [
+             {
+-              type: "integer"
++              oneOf: [
++                {
++                  type: "integer"
++                }
++                {
++                  $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++                }
++              ]
+             }
+             ...
+           ]
+         }
+       }
+     }
+     profiles_afdEndpoints_childResource: {
+       required: [
+         ...
+-        "location"
+         ...
+         ...
+         ...
+       ]
+     }
+     profiles_endpoints_childResource: {
+       required: [
+         ...
+-        "location"
+         ...
+         ...
+         ...
+       ]
+     }
+     RouteProperties: {
+-      required: [
+-        "originGroup"
+-      ]
+     }
+     RuleProperties: {
+-      required: [
+-        "actions"
+-        "order"
+-      ]
+       properties: {
+         actions: {
+           oneOf: [
+             {
+               items: {
+-                $ref: "#/definitions/DeliveryRuleAction1"
++                $ref: "#/definitions/DeliveryRuleActionAutoGenerated"
+               }
+             }
+             ...
+           ]
+         }
+       }
+     }
+     SecretParameters: {
+       oneOf: [
+         {
+-          $ref: "#/definitions/UrlSigningKeyParameters"
++          properties: {
++          }
++          type: "object"
+         }
+         {
+-          $ref: "#/definitions/ManagedCertificateParameters"
++          properties: {
++            secretSource: {
++              description: "Resource reference to the Azure Key Vault certificate. Expected to be in format of /subscriptions/{​​​​​​​​​subscriptionId}​​​​​​​​​/resourceGroups/{​​​​​​​​​resourceGroupName}​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​/providers/Microsoft.KeyVault/vaults/{vaultName}​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​/secrets/{certificateName}​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​"
++              oneOf: [
++                {
++                  $ref: "#/definitions/ResourceReference"
++                }
++                {
++                  $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++                }
++              ]
++            }
++            secretVersion: {
++              description: "Version of the secret to be used"
++              type: "string"
++            }
++            subjectAlternativeNames: {
++              description: "The list of SANs."
++              oneOf: [
++                {
++                  items: {
++                    type: "string"
++                  }
++                  type: "array"
++                }
++                {
++                  $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++                }
++              ]
++            }
++            useLatestVersion: {
++              description: "Whether to use the latest version for the certificate"
++              oneOf: [
++                {
++                  type: "boolean"
++                }
++                {
++                  $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++                }
++              ]
++            }
++          }
++          required: [
++            "secretSource"
++          ]
++          type: "object"
+         }
+         {
+-          $ref: "#/definitions/CustomerCertificateParameters"
++          properties: {
++          }
++          type: "object"
+         }
+         {
+-          $ref: "#/definitions/AzureFirstPartyManagedCertificateParameters"
++          properties: {
++            keyId: {
++              description: "Defines the customer defined key Id. This id will exist in the incoming request to indicate the key used to form the hash."
++              type: "string"
++            }
++            secretSource: {
++              description: "Resource reference to the Azure Key Vault secret. Expected to be in format of /subscriptions/{​​​​​​​​​subscriptionId}​​​​​​​​​/resourceGroups/{​​​​​​​​​resourceGroupName}​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​/providers/Microsoft.KeyVault/vaults/{vaultName}​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​/secrets/{secretName}​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​"
++              oneOf: [
++                {
++                  $ref: "#/definitions/ResourceReference"
++                }
++                {
++                  $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++                }
++              ]
++            }
++            secretVersion: {
++              description: "Version of the secret to be used"
++              type: "string"
++            }
++          }
++          required: [
++            "keyId"
++            "secretSource"
++          ]
++          type: "object"
+         }
+       ]
+     }
+     SecurityPolicyPropertiesParameters: {
+       oneOf: [
+         {
+-          $ref: "#/definitions/SecurityPolicyWebApplicationFirewallParameters"
++          properties: {
++            associations: {
++              description: "Waf associations"
++              oneOf: [
++                {
++                  items: {
++                    $ref: "#/definitions/SecurityPolicyWebApplicationFirewallAssociation"
++                  }
++                  type: "array"
++                }
++                {
++                  $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++                }
++              ]
++            }
++            wafPolicy: {
++              description: "Resource ID."
++              oneOf: [
++                {
++                  $ref: "#/definitions/ResourceReference"
++                }
++                {
++                  $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++                }
++              ]
++            }
++          }
++          type: "object"
+         }
+       ]
+     }
+   }
+ }

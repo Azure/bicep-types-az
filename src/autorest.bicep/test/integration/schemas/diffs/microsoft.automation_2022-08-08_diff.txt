@@ -1,0 +1,91 @@
+ {
+   resourceDefinitions: {
+     automationAccounts_runbooks_draft: {
+-      type: "object"
+     }
+   }
+   definitions: {
+     automationAccounts_runbooks_draft_childResource: {
+-      type: "object"
+       oneOf: [
+         {
+           properties: {
+             name: {
+-              type: "string"
+-              enum: [
+-                "content"
+-              ]
++              oneOf: [
++                {
++                  enum: [
++                    "content"
++                  ]
++                  type: "string"
++                }
++                {
++                  $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++                }
++              ]
+             }
+           }
+         }
+         {
+           properties: {
+             name: {
+-              type: "string"
+-              enum: [
+-                "testJob"
+-              ]
++              oneOf: [
++                {
++                  enum: [
++                    "testJob"
++                  ]
++                  type: "string"
++                }
++                {
++                  $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++                }
++              ]
+             }
+           }
+         }
+       ]
+     }
+     EncryptionPropertiesIdentity: {
+       properties: {
+         userAssignedIdentity: {
+-          type: "object"
+-          properties: {
+-          }
++          oneOf: [
++            {
++              properties: {
++              }
++              type: "object"
++            }
++            {
++              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++            }
++          ]
+         }
+       }
+     }
+     ScheduleCreateOrUpdateProperties: {
+       properties: {
+         interval: {
+-          type: "object"
+-          properties: {
+-          }
+         }
+       }
+     }
+     SourceControlSyncJobCreateProperties: {
+       properties: {
+         commitId: {
+-          minLength: 0
+         }
+       }
+     }
+   }
+ }

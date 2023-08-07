@@ -1,0 +1,382 @@
+ {
+   definitions: {
+-    Components1jq1t4ischemasmanagedserviceidentitypropertiesuserassignedidentitiesadditionalproperties: {
+-      type: "object"
+-      properties: {
+-      }
+-    }
+-    ContinuousModeBackupPolicy: {
+-      type: "object"
+-      properties: {
+-        type: {
+-          type: "string"
+-          enum: [
+-            "Continuous"
+-          ]
+-        }
+-      }
+-      required: [
+-        "type"
+-      ]
+-      description: "The object representing continuous mode backup policy."
+-    }
+-    DatabaseAccountKeysMetadata: {
+-      type: "object"
+-      properties: {
+-      }
+-      description: "The metadata related to each access key for the given Cosmos DB database account."
+-    }
+-    PeriodicModeBackupPolicy: {
+-      type: "object"
+-      properties: {
+-        periodicModeProperties: {
+-          oneOf: [
+-            {
+-              $ref: "#/definitions/PeriodicModeProperties"
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "Configuration values for periodic mode backup"
+-        }
+-        type: {
+-          type: "string"
+-          enum: [
+-            "Periodic"
+-          ]
+-        }
+-      }
+-      required: [
+-        "type"
+-      ]
+-      description: "The object representing periodic mode backup policy."
+-    }
++    Components1Jq1T4ISchemasManagedserviceidentityPropertiesUserassignedidentitiesAdditionalproperties: {
++      properties: {
++      }
++      type: "object"
++    }
+     BackupPolicy: {
+       oneOf: [
+         {
+-          $ref: "#/definitions/PeriodicModeBackupPolicy"
++          properties: {
++          }
++          type: "object"
+         }
+         {
+-          $ref: "#/definitions/ContinuousModeBackupPolicy"
++          properties: {
++            periodicModeProperties: {
++              description: "Configuration values for periodic mode backup"
++              oneOf: [
++                {
++                  $ref: "#/definitions/PeriodicModeProperties"
++                }
++                {
++                  $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++                }
++              ]
++            }
++          }
++          type: "object"
+         }
+       ]
+     }
+     ClientEncryptionKeyResource: {
+       properties: {
+         wrappedDataEncryptionKey: {
+-          oneOf: [
+-            {
+-              type: "string"
+-              pattern: "^(?:[A-Za-z0-9+\\/]{4})*(?:[A-Za-z0-9+\\/]{2}==|[A-Za-z0-9+\\/]{3}=)?$"
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+         }
+       }
+     }
+     DatabaseAccountCreateUpdateProperties: {
+       properties: {
+-        keysMetadata: {
+-          oneOf: [
+-            {
+-              $ref: "#/definitions/DatabaseAccountKeysMetadata"
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "The metadata related to each access key for the given Cosmos DB database account."
+-        }
+       }
+     }
+     databaseAccounts_cassandraKeyspaces_tables_throughputSettings_childResource: {
+       properties: {
+         name: {
+-          type: "string"
+-          enum: [
+-            "default"
+-          ]
++          oneOf: [
++            {
++              enum: [
++                "default"
++              ]
++              type: "string"
++            }
++            {
++              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++            }
++          ]
+         }
+       }
+     }
+     databaseAccounts_cassandraKeyspaces_throughputSettings_childResource: {
+       properties: {
+         name: {
+-          type: "string"
+-          enum: [
+-            "default"
+-          ]
++          oneOf: [
++            {
++              enum: [
++                "default"
++              ]
++              type: "string"
++            }
++            {
++              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++            }
++          ]
+         }
+       }
+     }
+     databaseAccounts_gremlinDatabases_graphs_throughputSettings_childResource: {
+       properties: {
+         name: {
+-          type: "string"
+-          enum: [
+-            "default"
+-          ]
++          oneOf: [
++            {
++              enum: [
++                "default"
++              ]
++              type: "string"
++            }
++            {
++              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++            }
++          ]
+         }
+       }
+     }
+     databaseAccounts_gremlinDatabases_throughputSettings_childResource: {
+       properties: {
+         name: {
+-          type: "string"
+-          enum: [
+-            "default"
+-          ]
++          oneOf: [
++            {
++              enum: [
++                "default"
++              ]
++              type: "string"
++            }
++            {
++              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++            }
++          ]
+         }
+       }
+     }
+     databaseAccounts_mongodbDatabases_collections_throughputSettings_childResource: {
+       properties: {
+         name: {
+-          type: "string"
+-          enum: [
+-            "default"
+-          ]
++          oneOf: [
++            {
++              enum: [
++                "default"
++              ]
++              type: "string"
++            }
++            {
++              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++            }
++          ]
+         }
+       }
+     }
+     databaseAccounts_mongodbDatabases_throughputSettings_childResource: {
+       properties: {
+         name: {
+-          type: "string"
+-          enum: [
+-            "default"
+-          ]
++          oneOf: [
++            {
++              enum: [
++                "default"
++              ]
++              type: "string"
++            }
++            {
++              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++            }
++          ]
+         }
+       }
+     }
+     databaseAccounts_notebookWorkspaces_childResource: {
+       properties: {
+         name: {
+-          type: "string"
+-          enum: [
+-            "default"
+-          ]
++          oneOf: [
++            {
++              enum: [
++                "default"
++              ]
++              type: "string"
++            }
++            {
++              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++            }
++          ]
+         }
+       }
+     }
+     databaseAccounts_sqlDatabases_containers_throughputSettings_childResource: {
+       properties: {
+         name: {
+-          type: "string"
+-          enum: [
+-            "default"
+-          ]
++          oneOf: [
++            {
++              enum: [
++                "default"
++              ]
++              type: "string"
++            }
++            {
++              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++            }
++          ]
+         }
+       }
+     }
+     databaseAccounts_sqlDatabases_throughputSettings_childResource: {
+       properties: {
+         name: {
+-          type: "string"
+-          enum: [
+-            "default"
+-          ]
++          oneOf: [
++            {
++              enum: [
++                "default"
++              ]
++              type: "string"
++            }
++            {
++              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++            }
++          ]
+         }
+       }
+     }
+     databaseAccounts_tables_throughputSettings_childResource: {
+       properties: {
+         name: {
+-          type: "string"
+-          enum: [
+-            "default"
+-          ]
++          oneOf: [
++            {
++              enum: [
++                "default"
++              ]
++              type: "string"
++            }
++            {
++              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++            }
++          ]
+         }
+       }
+     }
+     Location: {
+       properties: {
+-        provisioningState: {
+-          type: "string"
+-          description: "The status of the Cosmos DB account at the time the operation was called. The status can be one of following. 'Creating' – the Cosmos DB account is being created. When an account is in Creating state, only properties that are specified as input for the Create Cosmos DB account operation are returned. 'Succeeded' – the Cosmos DB account is active for use. 'Updating' – the Cosmos DB account is being updated. 'Deleting' – the Cosmos DB account is being deleted. 'Failed' – the Cosmos DB account failed creation. 'DeletionFailed' – the Cosmos DB account deletion failed."
+-        }
+       }
+     }
+     ManagedServiceIdentity: {
+       properties: {
+         userAssignedIdentities: {
+           oneOf: [
+             {
+               additionalProperties: {
+-                $ref: "#/definitions/Components1jq1t4ischemasmanagedserviceidentitypropertiesuserassignedidentitiesadditionalproperties"
++                $ref: "#/definitions/Components1Jq1T4ISchemasManagedserviceidentityPropertiesUserassignedidentitiesAdditionalproperties"
+               }
+             }
+             ...
+           ]
+         }
+       }
+     }
+     MongoRoleDefinitionResource: {
+       properties: {
+         type: {
+           oneOf: [
+             {
+-              type: "string"
+-              enum: [
+-                "BuiltInRole"
+-                "CustomRole"
+-              ]
++              oneOf: [
++                {
++                  type: "integer"
++                }
++                {
++                  $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++                }
++              ]
+             }
+             ...
+           ]
+         }
+       }
+     }
+     VirtualNetworkRule: {
+       properties: {
+         id: {
+-          format: "arm-id"
+         }
+       }
+     }
+   }
+ }

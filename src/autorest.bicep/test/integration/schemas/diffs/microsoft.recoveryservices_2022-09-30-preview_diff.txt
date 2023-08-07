@@ -1,0 +1,122 @@
+ {
+   resourceDefinitions: {
+     vaults: {
+       properties: {
+-        systemData: {
+-          oneOf: [
+-            {
+-              $ref: "#/definitions/SystemData"
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "Metadata pertaining to creation and last modification of the resource."
+-        }
+       }
+       required: [
+         ...
+-        "location"
+         ...
+         ...
+         ...
+       ]
+     }
+   }
+   definitions: {
+-    SystemData: {
+-      type: "object"
+-      properties: {
+-        createdAt: {
+-          type: "string"
+-          format: "date-time"
+-          description: "The timestamp of resource creation (UTC)."
+-        }
+-        createdBy: {
+-          type: "string"
+-          description: "The identity that created the resource."
+-        }
+-        createdByType: {
+-          oneOf: [
+-            {
+-              type: "string"
+-              enum: [
+-                "User"
+-                "Application"
+-                "ManagedIdentity"
+-                "Key"
+-              ]
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "The type of identity that created the resource."
+-        }
+-        lastModifiedAt: {
+-          type: "string"
+-          format: "date-time"
+-          description: "The type of identity that last modified the resource."
+-        }
+-        lastModifiedBy: {
+-          type: "string"
+-          description: "The identity that last modified the resource."
+-        }
+-        lastModifiedByType: {
+-          oneOf: [
+-            {
+-              type: "string"
+-              enum: [
+-                "User"
+-                "Application"
+-                "ManagedIdentity"
+-                "Key"
+-              ]
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+-          description: "The type of identity that last modified the resource."
+-        }
+-      }
+-      description: "Metadata pertaining to creation and last modification of the resource."
+-    }
+     RawCertificateData: {
+       properties: {
+         certificate: {
+-          oneOf: [
+-            {
+-              type: "string"
+-              pattern: "^(?:[A-Za-z0-9+\\/]{4})*(?:[A-Za-z0-9+\\/]{2}==|[A-Za-z0-9+\\/]{3}=)?$"
+-            }
+-            {
+-              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+-            }
+-          ]
+         }
+       }
+     }
+     vaults_extendedInformation_childResource: {
+       properties: {
+         name: {
+-          type: "string"
+-          enum: [
+-            "vaultExtendedInfo"
+-          ]
++          oneOf: [
++            {
++              enum: [
++                "vaultExtendedInfo"
++              ]
++              type: "string"
++            }
++            {
++              $ref: "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
++            }
++          ]
+         }
+       }
+     }
+   }
+ }
