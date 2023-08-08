@@ -1,0 +1,7 @@
+{
+  "id": "https://schema.management.azure.com/schemas/2019-05-01/Microsoft.Fabric.Admin.json#",
+  "title": "Microsoft.Fabric.Admin",
+  "description": "Microsoft Fabric.Admin Resource Types",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {}
+}

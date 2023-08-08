@@ -1,0 +1,118 @@
+ {
+   resourceDefinitions: {
+     registries: {
+       required: [
+         ...
+-        "location"
+         ...
+         ...
+-        "sku"
+         ...
+       ]
+     }
+     registries_replications: {
+       required: [
+         ...
+-        "location"
+         ...
+         ...
+         ...
+       ]
+     }
+     registries_webhooks: {
+       required: [
+         ...
+-        "location"
+         ...
+         ...
+         ...
+       ]
+     }
+   }
+   definitions: {
+     registries_replications_childResource: {
+       required: [
+         ...
+-        "location"
+         ...
+         ...
+         ...
+       ]
+     }
+     registries_webhooks_childResource: {
+       required: [
+         ...
+-        "location"
+         ...
+         ...
+         ...
+       ]
+     }
+     RegistryProperties: {
+       properties: {
+         adminUserEnabled: {
+           oneOf: [
+             {
+-              default: false
+             }
+             ...
+           ]
+         }
+         anonymousPullEnabled: {
+           oneOf: [
+             {
+-              default: false
+             }
+             ...
+           ]
+         }
+       }
+     }
+     ReplicationProperties: {
+       properties: {
+         regionEndpointEnabled: {
+           oneOf: [
+             {
+-              default: true
+             }
+             ...
+           ]
+         }
+       }
+     }
+     RetentionPolicy: {
+       properties: {
+         days: {
+           oneOf: [
+             {
+-              default: "7"
+             }
+             ...
+           ]
+         }
+       }
+     }
+     SoftDeletePolicy: {
+       properties: {
+         retentionDays: {
+           oneOf: [
+             {
+-              default: "7"
+             }
+             ...
+           ]
+         }
+       }
+     }
+     SyncProperties: {
+       properties: {
+         messageTtl: {
+-          format: "duration"
+         }
+         syncWindow: {
+-          format: "duration"
+         }
+       }
+     }
+   }
+ }

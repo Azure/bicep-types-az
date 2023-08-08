@@ -1,0 +1,4337 @@
+{
+  "id": "https://schema.management.azure.com/schemas/2018-09-15/Microsoft.DevTestLab.json#",
+  "title": "Microsoft.DevTestLab",
+  "description": "Microsoft DevTestLab Resource Types",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "resourceDefinitions": {
+    "labs": {
+      "description": "Microsoft.DevTestLab/labs",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2018-09-15"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "The location of the resource.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the lab.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The properties of the resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/LabProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "resources": {
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/definitions/labs_costs_childResource"
+              },
+              {
+                "$ref": "#/definitions/labs_users_childResource"
+              },
+              {
+                "$ref": "#/definitions/labs_formulas_childResource"
+              },
+              {
+                "$ref": "#/definitions/labs_schedules_childResource"
+              },
+              {
+                "$ref": "#/definitions/labs_customimages_childResource"
+              },
+              {
+                "$ref": "#/definitions/labs_servicerunners_childResource"
+              },
+              {
+                "$ref": "#/definitions/labs_artifactsources_childResource"
+              },
+              {
+                "$ref": "#/definitions/labs_virtualmachines_childResource"
+              },
+              {
+                "$ref": "#/definitions/labs_virtualnetworks_childResource"
+              },
+              {
+                "$ref": "#/definitions/labs_notificationchannels_childResource"
+              }
+            ]
+          },
+          "type": "array"
+        },
+        "tags": {
+          "description": "The tags of the resource.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.DevTestLab/labs"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "labs_artifactsources": {
+      "description": "Microsoft.DevTestLab/labs/artifactsources",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2018-09-15"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "The location of the resource.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the artifact source.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The properties of the resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ArtifactSourceProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "The tags of the resource.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.DevTestLab/labs/artifactsources"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "labs_costs": {
+      "description": "Microsoft.DevTestLab/labs/costs",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2018-09-15"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "The location of the resource.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the cost.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The properties of the resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/LabCostProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "The tags of the resource.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.DevTestLab/labs/costs"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "labs_customimages": {
+      "description": "Microsoft.DevTestLab/labs/customimages",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2018-09-15"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "The location of the resource.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the custom image.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The properties of the resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/CustomImageProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "The tags of the resource.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.DevTestLab/labs/customimages"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "labs_formulas": {
+      "description": "Microsoft.DevTestLab/labs/formulas",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2018-09-15"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "The location of the resource.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the formula.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The properties of the resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/FormulaProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "The tags of the resource.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.DevTestLab/labs/formulas"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "labs_notificationchannels": {
+      "description": "Microsoft.DevTestLab/labs/notificationchannels",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2018-09-15"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "The location of the resource.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the notification channel.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The properties of the resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/NotificationChannelProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "The tags of the resource.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.DevTestLab/labs/notificationchannels"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "labs_policysets_policies": {
+      "description": "Microsoft.DevTestLab/labs/policysets/policies",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2018-09-15"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "The location of the resource.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the policy.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The properties of the resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/PolicyProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "The tags of the resource.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.DevTestLab/labs/policysets/policies"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "labs_schedules": {
+      "description": "Microsoft.DevTestLab/labs/schedules",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2018-09-15"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "The location of the resource.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the schedule.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The properties of the resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ScheduleProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "The tags of the resource.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.DevTestLab/labs/schedules"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "labs_servicerunners": {
+      "description": "Microsoft.DevTestLab/labs/servicerunners",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2018-09-15"
+          ],
+          "type": "string"
+        },
+        "identity": {
+          "description": "The identity of the resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/IdentityProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "location": {
+          "description": "The location of the resource.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the service runner.",
+          "type": "string"
+        },
+        "tags": {
+          "description": "The tags of the resource.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.DevTestLab/labs/servicerunners"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "labs_users": {
+      "description": "Microsoft.DevTestLab/labs/users",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2018-09-15"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "The location of the resource.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the user profile.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The properties of the resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/UserProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "resources": {
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/definitions/labs_users_disks_childResource"
+              },
+              {
+                "$ref": "#/definitions/labs_users_secrets_childResource"
+              },
+              {
+                "$ref": "#/definitions/labs_users_environments_childResource"
+              },
+              {
+                "$ref": "#/definitions/labs_users_servicefabrics_childResource"
+              }
+            ]
+          },
+          "type": "array"
+        },
+        "tags": {
+          "description": "The tags of the resource.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.DevTestLab/labs/users"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "labs_users_disks": {
+      "description": "Microsoft.DevTestLab/labs/users/disks",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2018-09-15"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "The location of the resource.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the disk.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The properties of the resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/DiskProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "The tags of the resource.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.DevTestLab/labs/users/disks"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "labs_users_environments": {
+      "description": "Microsoft.DevTestLab/labs/users/environments",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2018-09-15"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "The location of the resource.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the environment.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The properties of the resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/EnvironmentProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "The tags of the resource.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.DevTestLab/labs/users/environments"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "labs_users_secrets": {
+      "description": "Microsoft.DevTestLab/labs/users/secrets",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2018-09-15"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "The location of the resource.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the secret.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The properties of the resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/SecretProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "The tags of the resource.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.DevTestLab/labs/users/secrets"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "labs_users_servicefabrics": {
+      "description": "Microsoft.DevTestLab/labs/users/servicefabrics",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2018-09-15"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "The location of the resource.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the service fabric.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The properties of the resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ServiceFabricProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "resources": {
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/definitions/labs_users_servicefabrics_schedules_childResource"
+              }
+            ]
+          },
+          "type": "array"
+        },
+        "tags": {
+          "description": "The tags of the resource.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.DevTestLab/labs/users/servicefabrics"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "labs_users_servicefabrics_schedules": {
+      "description": "Microsoft.DevTestLab/labs/users/servicefabrics/schedules",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2018-09-15"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "The location of the resource.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the schedule.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The properties of the resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ScheduleProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "The tags of the resource.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.DevTestLab/labs/users/servicefabrics/schedules"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "labs_virtualmachines": {
+      "description": "Microsoft.DevTestLab/labs/virtualmachines",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2018-09-15"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "The location of the resource.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the virtual machine.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The properties of the resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/LabVirtualMachineProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "resources": {
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/definitions/labs_virtualmachines_schedules_childResource"
+              }
+            ]
+          },
+          "type": "array"
+        },
+        "tags": {
+          "description": "The tags of the resource.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.DevTestLab/labs/virtualmachines"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "labs_virtualmachines_schedules": {
+      "description": "Microsoft.DevTestLab/labs/virtualmachines/schedules",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2018-09-15"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "The location of the resource.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the schedule.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The properties of the resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ScheduleProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "The tags of the resource.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.DevTestLab/labs/virtualmachines/schedules"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "labs_virtualnetworks": {
+      "description": "Microsoft.DevTestLab/labs/virtualnetworks",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2018-09-15"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "The location of the resource.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the virtual network.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The properties of the resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/VirtualNetworkProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "The tags of the resource.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.DevTestLab/labs/virtualnetworks"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "schedules": {
+      "description": "Microsoft.DevTestLab/schedules",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2018-09-15"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "The location of the resource.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the schedule.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The properties of the resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ScheduleProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "The tags of the resource.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.DevTestLab/schedules"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    }
+  },
+  "definitions": {
+    "ArmTemplateParameterProperties": {
+      "description": "Properties of an Azure Resource Manager template parameter.",
+      "properties": {
+        "name": {
+          "description": "The name of the template parameter.",
+          "type": "string"
+        },
+        "value": {
+          "description": "The value of the template parameter.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "ArtifactInstallProperties": {
+      "description": "Properties of an artifact.",
+      "properties": {
+        "artifactId": {
+          "description": "The artifact's identifier.",
+          "type": "string"
+        },
+        "artifactTitle": {
+          "description": "The artifact's title.",
+          "type": "string"
+        },
+        "deploymentStatusMessage": {
+          "description": "The status message from the deployment.",
+          "type": "string"
+        },
+        "installTime": {
+          "description": "The time that the artifact starts to install on the virtual machine.",
+          "format": "date-time",
+          "type": "string"
+        },
+        "parameters": {
+          "description": "The parameters of the artifact.",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/ArtifactParameterProperties"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "status": {
+          "description": "The status of the artifact.",
+          "type": "string"
+        },
+        "vmExtensionStatusMessage": {
+          "description": "The status message from the virtual machine extension.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "ArtifactParameterProperties": {
+      "description": "Properties of an artifact parameter.",
+      "properties": {
+        "name": {
+          "description": "The name of the artifact parameter.",
+          "type": "string"
+        },
+        "value": {
+          "description": "The value of the artifact parameter.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "ArtifactSourceProperties": {
+      "description": "Properties of an artifact source.",
+      "properties": {
+        "armTemplateFolderPath": {
+          "description": "The folder containing Azure Resource Manager templates.",
+          "type": "string"
+        },
+        "branchRef": {
+          "description": "The artifact source's branch reference.",
+          "type": "string"
+        },
+        "displayName": {
+          "description": "The artifact source's display name.",
+          "type": "string"
+        },
+        "folderPath": {
+          "description": "The folder containing artifacts.",
+          "type": "string"
+        },
+        "securityToken": {
+          "description": "The security token to authenticate to the artifact source.",
+          "type": "string"
+        },
+        "sourceType": {
+          "description": "The artifact source's type.",
+          "oneOf": [
+            {
+              "enum": [
+                "VsoGit",
+                "GitHub",
+                "StorageAccount"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "status": {
+          "description": "Indicates if the artifact source is enabled (values: Enabled, Disabled).",
+          "oneOf": [
+            {
+              "enum": [
+                "Enabled",
+                "Disabled"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "uri": {
+          "description": "The artifact source's URI.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "AttachNewDataDiskOptions": {
+      "description": "Properties to attach new disk to the Virtual Machine.",
+      "properties": {
+        "diskName": {
+          "description": "The name of the disk to be attached.",
+          "type": "string"
+        },
+        "diskSizeGiB": {
+          "description": "Size of the disk to be attached in Gibibytes.",
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "diskType": {
+          "description": "The storage type for the disk (i.e. Standard, Premium).",
+          "oneOf": [
+            {
+              "enum": [
+                "Standard",
+                "Premium",
+                "StandardSSD"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "BulkCreationParameters": {
+      "description": "Parameters for creating multiple virtual machines as a single action.",
+      "properties": {
+        "instanceCount": {
+          "description": "The number of virtual machine instances to create.",
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "CostThresholdProperties": {
+      "description": "Properties of a cost threshold item.",
+      "properties": {
+        "displayOnChart": {
+          "description": "Indicates whether this threshold will be displayed on cost charts.",
+          "oneOf": [
+            {
+              "enum": [
+                "Enabled",
+                "Disabled"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "notificationSent": {
+          "description": "Indicates the datetime when notifications were last sent for this threshold.",
+          "type": "string"
+        },
+        "percentageThreshold": {
+          "description": "The value of the percentage cost threshold.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/PercentageCostThresholdProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "sendNotificationWhenExceeded": {
+          "description": "Indicates whether notifications will be sent when this threshold is exceeded.",
+          "oneOf": [
+            {
+              "enum": [
+                "Enabled",
+                "Disabled"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "thresholdId": {
+          "description": "The ID of the cost threshold item.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "CustomImageProperties": {
+      "description": "Properties of a custom image.",
+      "properties": {
+        "author": {
+          "description": "The author of the custom image.",
+          "type": "string"
+        },
+        "customImagePlan": {
+          "description": "Storage information about the plan related to this custom image",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/CustomImagePropertiesFromPlan"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "dataDiskStorageInfo": {
+          "description": "Storage information about the data disks present in the custom image",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/DataDiskStorageTypeInfo"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "description": {
+          "description": "The description of the custom image.",
+          "type": "string"
+        },
+        "isPlanAuthorized": {
+          "description": "Whether or not the custom images underlying offer/plan has been enabled for programmatic deployment",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "managedImageId": {
+          "description": "The Managed Image Id backing the custom image.",
+          "type": "string"
+        },
+        "managedSnapshotId": {
+          "description": "The Managed Snapshot Id backing the custom image.",
+          "type": "string"
+        },
+        "vhd": {
+          "description": "The VHD from which the image is to be created.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/CustomImagePropertiesCustom"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "vm": {
+          "description": "The virtual machine from which the image is to be created.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/CustomImagePropertiesFromVm"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "CustomImagePropertiesCustom": {
+      "description": "Properties for creating a custom image from a VHD.",
+      "properties": {
+        "imageName": {
+          "description": "The image name.",
+          "type": "string"
+        },
+        "osType": {
+          "description": "The OS type of the custom image (i.e. Windows, Linux)",
+          "oneOf": [
+            {
+              "enum": [
+                "Windows",
+                "Linux",
+                "None"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "sysPrep": {
+          "description": "Indicates whether sysprep has been run on the VHD.",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "osType"
+      ],
+      "type": "object"
+    },
+    "CustomImagePropertiesFromPlan": {
+      "description": "Properties for plan on a custom image.",
+      "properties": {
+        "id": {
+          "description": "The id of the plan, equivalent to name of the plan",
+          "type": "string"
+        },
+        "offer": {
+          "description": "The offer for the plan from the marketplace image the custom image is derived from",
+          "type": "string"
+        },
+        "publisher": {
+          "description": "The publisher for the plan from the marketplace image the custom image is derived from",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "CustomImagePropertiesFromVm": {
+      "description": "Properties for creating a custom image from a virtual machine.",
+      "properties": {
+        "linuxOsInfo": {
+          "description": "The Linux OS information of the VM.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/LinuxOsInfo"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "sourceVmId": {
+          "description": "The source vm identifier.",
+          "type": "string"
+        },
+        "windowsOsInfo": {
+          "description": "The Windows OS information of the VM.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/WindowsOsInfo"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "DataDiskProperties": {
+      "description": "Request body for adding a new or existing data disk to a virtual machine.",
+      "properties": {
+        "attachNewDataDiskOptions": {
+          "description": "Specifies options to attach a new disk to the virtual machine.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/AttachNewDataDiskOptions"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "existingLabDiskId": {
+          "description": "Specifies the existing lab disk id to attach to virtual machine.",
+          "type": "string"
+        },
+        "hostCaching": {
+          "description": "Caching option for a data disk (i.e. None, ReadOnly, ReadWrite).",
+          "oneOf": [
+            {
+              "enum": [
+                "None",
+                "ReadOnly",
+                "ReadWrite"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "DataDiskStorageTypeInfo": {
+      "description": "Storage information about the data disks present in the custom image",
+      "properties": {
+        "lun": {
+          "description": "Disk Lun",
+          "type": "string"
+        },
+        "storageType": {
+          "description": "Disk Storage Type",
+          "oneOf": [
+            {
+              "enum": [
+                "Standard",
+                "Premium",
+                "StandardSSD"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "DayDetails": {
+      "description": "Properties of a daily schedule.",
+      "properties": {
+        "time": {
+          "description": "The time of day the schedule will occur.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "DiskProperties": {
+      "description": "Properties of a disk.",
+      "properties": {
+        "diskBlobName": {
+          "description": "When backed by a blob, the name of the VHD blob without extension.",
+          "type": "string"
+        },
+        "diskSizeGiB": {
+          "description": "The size of the disk in Gibibytes.",
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "diskType": {
+          "description": "The storage type for the disk (i.e. Standard, Premium).",
+          "oneOf": [
+            {
+              "enum": [
+                "Standard",
+                "Premium",
+                "StandardSSD"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "diskUri": {
+          "description": "When backed by a blob, the URI of underlying blob.",
+          "type": "string"
+        },
+        "hostCaching": {
+          "description": "The host caching policy of the disk (i.e. None, ReadOnly, ReadWrite).",
+          "type": "string"
+        },
+        "leasedByLabVmId": {
+          "description": "The resource ID of the VM to which this disk is leased.",
+          "type": "string"
+        },
+        "managedDiskId": {
+          "description": "When backed by managed disk, this is the ID of the compute disk resource.",
+          "type": "string"
+        },
+        "storageAccountId": {
+          "description": "When backed by a blob, the storage account where the blob is.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "EnvironmentDeploymentProperties": {
+      "description": "Properties of an environment deployment.",
+      "properties": {
+        "armTemplateId": {
+          "description": "The Azure Resource Manager template's identifier.",
+          "type": "string"
+        },
+        "parameters": {
+          "description": "The parameters of the Azure Resource Manager template.",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/ArmTemplateParameterProperties"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "EnvironmentProperties": {
+      "description": "Properties of an environment.",
+      "properties": {
+        "armTemplateDisplayName": {
+          "description": "The display name of the Azure Resource Manager template that produced the environment.",
+          "type": "string"
+        },
+        "deploymentProperties": {
+          "description": "The deployment properties of the environment.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/EnvironmentDeploymentProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "Event": {
+      "description": "An event to be notified for.",
+      "properties": {
+        "eventName": {
+          "description": "The event type for which this notification is enabled (i.e. AutoShutdown, Cost)",
+          "oneOf": [
+            {
+              "enum": [
+                "AutoShutdown",
+                "Cost"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "FormulaProperties": {
+      "description": "Properties of a formula.",
+      "properties": {
+        "description": {
+          "description": "The description of the formula.",
+          "type": "string"
+        },
+        "formulaContent": {
+          "description": "The content of the formula.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/LabVirtualMachineCreationParameter"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "osType": {
+          "description": "The OS type of the formula.",
+          "type": "string"
+        },
+        "vm": {
+          "description": "Information about a VM from which a formula is to be created.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/FormulaPropertiesFromVm"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "FormulaPropertiesFromVm": {
+      "description": "Information about a VM from which a formula is to be created.",
+      "properties": {
+        "labVmId": {
+          "description": "The identifier of the VM from which a formula is to be created.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "GalleryImageReference": {
+      "description": "The reference information for an Azure Marketplace image.",
+      "properties": {
+        "offer": {
+          "description": "The offer of the gallery image.",
+          "type": "string"
+        },
+        "osType": {
+          "description": "The OS type of the gallery image.",
+          "type": "string"
+        },
+        "publisher": {
+          "description": "The publisher of the gallery image.",
+          "type": "string"
+        },
+        "sku": {
+          "description": "The SKU of the gallery image.",
+          "type": "string"
+        },
+        "version": {
+          "description": "The version of the gallery image.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "HourDetails": {
+      "description": "Properties of an hourly schedule.",
+      "properties": {
+        "minute": {
+          "description": "Minutes of the hour the schedule will run.",
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "IdentityProperties": {
+      "description": "Properties of a managed identity",
+      "properties": {
+        "clientSecretUrl": {
+          "description": "The client secret URL of the identity.",
+          "type": "string"
+        },
+        "principalId": {
+          "description": "The principal id of resource identity.",
+          "type": "string"
+        },
+        "tenantId": {
+          "description": "The tenant identifier of resource.",
+          "type": "string"
+        },
+        "type": {
+          "description": "Managed identity.",
+          "oneOf": [
+            {
+              "enum": [
+                "None",
+                "SystemAssigned",
+                "UserAssigned",
+                "SystemAssigned,UserAssigned"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "InboundNatRule": {
+      "description": "A rule for NAT - exposing a VM's port (backendPort) on the public IP address using a load balancer.",
+      "properties": {
+        "backendPort": {
+          "description": "The port to which the external traffic will be redirected.",
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "frontendPort": {
+          "description": "The external endpoint port of the inbound connection. Possible values range between 1 and 65535, inclusive. If unspecified, a value will be allocated automatically.",
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "transportProtocol": {
+          "description": "The transport protocol for the endpoint.",
+          "oneOf": [
+            {
+              "enum": [
+                "Tcp",
+                "Udp"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "LabAnnouncementProperties": {
+      "description": "Properties of a lab's announcement banner",
+      "properties": {
+        "enabled": {
+          "description": "Is the lab announcement active/enabled at this time?",
+          "oneOf": [
+            {
+              "enum": [
+                "Enabled",
+                "Disabled"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "expirationDate": {
+          "description": "The time at which the announcement expires (null for never)",
+          "format": "date-time",
+          "type": "string"
+        },
+        "expired": {
+          "description": "Has this announcement expired?",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "markdown": {
+          "description": "The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.",
+          "type": "string"
+        },
+        "title": {
+          "description": "The plain text title for the lab announcement",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "LabCostProperties": {
+      "description": "Properties of a cost item.",
+      "properties": {
+        "createdDate": {
+          "description": "The creation date of the cost.",
+          "format": "date-time",
+          "type": "string"
+        },
+        "currencyCode": {
+          "description": "The currency code of the cost.",
+          "type": "string"
+        },
+        "endDateTime": {
+          "description": "The end time of the cost data.",
+          "format": "date-time",
+          "type": "string"
+        },
+        "startDateTime": {
+          "description": "The start time of the cost data.",
+          "format": "date-time",
+          "type": "string"
+        },
+        "targetCost": {
+          "description": "The target cost properties",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/TargetCostProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "LabProperties": {
+      "description": "Properties of a lab.",
+      "properties": {
+        "announcement": {
+          "description": "The properties of any lab announcement associated with this lab",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/LabAnnouncementProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "environmentPermission": {
+          "description": "The access rights to be granted to the user when provisioning an environment",
+          "oneOf": [
+            {
+              "enum": [
+                "Reader",
+                "Contributor"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "extendedProperties": {
+          "description": "Extended properties of the lab used for experimental features",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "labStorageType": {
+          "description": "Type of storage used by the lab. It can be either Premium or Standard. Default is Premium.",
+          "oneOf": [
+            {
+              "enum": [
+                "Standard",
+                "Premium",
+                "StandardSSD"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "mandatoryArtifactsResourceIdsLinux": {
+          "description": "The ordered list of artifact resource IDs that should be applied on all Linux VM creations by default, prior to the artifacts specified by the user.",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "mandatoryArtifactsResourceIdsWindows": {
+          "description": "The ordered list of artifact resource IDs that should be applied on all Windows VM creations by default, prior to the artifacts specified by the user.",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "premiumDataDisks": {
+          "description": "The setting to enable usage of premium data disks.\r\nWhen its value is 'Enabled', creation of standard or premium data disks is allowed.\r\nWhen its value is 'Disabled', only creation of standard data disks is allowed.",
+          "oneOf": [
+            {
+              "enum": [
+                "Disabled",
+                "Enabled"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "support": {
+          "description": "The properties of any lab support message associated with this lab",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/LabSupportProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "LabSupportProperties": {
+      "description": "Properties of a lab's support banner",
+      "properties": {
+        "enabled": {
+          "description": "Is the lab support banner active/enabled at this time?",
+          "oneOf": [
+            {
+              "enum": [
+                "Enabled",
+                "Disabled"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "markdown": {
+          "description": "The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "LabVirtualMachineCreationParameter": {
+      "description": "Properties for creating a virtual machine.",
+      "properties": {
+        "location": {
+          "description": "The location of the new virtual machine or environment",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the virtual machine or environment",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The properties of the resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/LabVirtualMachineCreationParameterProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "The tags of the resource.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "LabVirtualMachineCreationParameterProperties": {
+      "description": "Properties for virtual machine creation.",
+      "properties": {
+        "allowClaim": {
+          "description": "Indicates whether another user can take ownership of the virtual machine",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "artifacts": {
+          "description": "The artifacts to be installed on the virtual machine.",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/ArtifactInstallProperties"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "bulkCreationParameters": {
+          "description": "The number of virtual machine instances to create.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/BulkCreationParameters"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "createdDate": {
+          "description": "The creation date of the virtual machine.",
+          "format": "date-time",
+          "type": "string"
+        },
+        "customImageId": {
+          "description": "The custom image identifier of the virtual machine.",
+          "type": "string"
+        },
+        "dataDiskParameters": {
+          "description": "New or existing data disks to attach to the virtual machine after creation",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/DataDiskProperties"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "disallowPublicIpAddress": {
+          "description": "Indicates whether the virtual machine is to be created without a public IP address.",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "environmentId": {
+          "description": "The resource ID of the environment that contains this virtual machine, if any.",
+          "type": "string"
+        },
+        "expirationDate": {
+          "description": "The expiration date for VM.",
+          "format": "date-time",
+          "type": "string"
+        },
+        "galleryImageReference": {
+          "description": "The Microsoft Azure Marketplace image reference of the virtual machine.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/GalleryImageReference"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "isAuthenticationWithSshKey": {
+          "description": "Indicates whether this virtual machine uses an SSH key for authentication.",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "labSubnetName": {
+          "description": "The lab subnet name of the virtual machine.",
+          "type": "string"
+        },
+        "labVirtualNetworkId": {
+          "description": "The lab virtual network identifier of the virtual machine.",
+          "type": "string"
+        },
+        "networkInterface": {
+          "description": "The network interface properties.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/NetworkInterfaceProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "notes": {
+          "description": "The notes of the virtual machine.",
+          "type": "string"
+        },
+        "ownerObjectId": {
+          "description": "The object identifier of the owner of the virtual machine.",
+          "type": "string"
+        },
+        "ownerUserPrincipalName": {
+          "description": "The user principal name of the virtual machine owner.",
+          "type": "string"
+        },
+        "password": {
+          "description": "The password of the virtual machine administrator.",
+          "type": "string"
+        },
+        "planId": {
+          "description": "The id of the plan associated with the virtual machine image",
+          "type": "string"
+        },
+        "scheduleParameters": {
+          "description": "Virtual Machine schedules to be created",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/ScheduleCreationParameter"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "size": {
+          "description": "The size of the virtual machine.",
+          "type": "string"
+        },
+        "sshKey": {
+          "description": "The SSH key of the virtual machine administrator.",
+          "type": "string"
+        },
+        "storageType": {
+          "description": "Storage type to use for virtual machine (i.e. Standard, Premium).",
+          "type": "string"
+        },
+        "userName": {
+          "description": "The user name of the virtual machine.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "LabVirtualMachineProperties": {
+      "description": "Properties of a virtual machine.",
+      "properties": {
+        "allowClaim": {
+          "description": "Indicates whether another user can take ownership of the virtual machine",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "artifacts": {
+          "description": "The artifacts to be installed on the virtual machine.",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/ArtifactInstallProperties"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "createdDate": {
+          "description": "The creation date of the virtual machine.",
+          "format": "date-time",
+          "type": "string"
+        },
+        "customImageId": {
+          "description": "The custom image identifier of the virtual machine.",
+          "type": "string"
+        },
+        "dataDiskParameters": {
+          "description": "New or existing data disks to attach to the virtual machine after creation",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/DataDiskProperties"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "disallowPublicIpAddress": {
+          "description": "Indicates whether the virtual machine is to be created without a public IP address.",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "environmentId": {
+          "description": "The resource ID of the environment that contains this virtual machine, if any.",
+          "type": "string"
+        },
+        "expirationDate": {
+          "description": "The expiration date for VM.",
+          "format": "date-time",
+          "type": "string"
+        },
+        "galleryImageReference": {
+          "description": "The Microsoft Azure Marketplace image reference of the virtual machine.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/GalleryImageReference"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "isAuthenticationWithSshKey": {
+          "description": "Indicates whether this virtual machine uses an SSH key for authentication.",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "labSubnetName": {
+          "description": "The lab subnet name of the virtual machine.",
+          "type": "string"
+        },
+        "labVirtualNetworkId": {
+          "description": "The lab virtual network identifier of the virtual machine.",
+          "type": "string"
+        },
+        "networkInterface": {
+          "description": "The network interface properties.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/NetworkInterfaceProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "notes": {
+          "description": "The notes of the virtual machine.",
+          "type": "string"
+        },
+        "ownerObjectId": {
+          "description": "The object identifier of the owner of the virtual machine.",
+          "type": "string"
+        },
+        "ownerUserPrincipalName": {
+          "description": "The user principal name of the virtual machine owner.",
+          "type": "string"
+        },
+        "password": {
+          "description": "The password of the virtual machine administrator.",
+          "type": "string"
+        },
+        "planId": {
+          "description": "The id of the plan associated with the virtual machine image",
+          "type": "string"
+        },
+        "scheduleParameters": {
+          "description": "Virtual Machine schedules to be created",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/ScheduleCreationParameter"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "size": {
+          "description": "The size of the virtual machine.",
+          "type": "string"
+        },
+        "sshKey": {
+          "description": "The SSH key of the virtual machine administrator.",
+          "type": "string"
+        },
+        "storageType": {
+          "description": "Storage type to use for virtual machine (i.e. Standard, Premium).",
+          "type": "string"
+        },
+        "userName": {
+          "description": "The user name of the virtual machine.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "LinuxOsInfo": {
+      "description": "Information about a Linux OS.",
+      "properties": {
+        "linuxOsState": {
+          "description": "The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).",
+          "oneOf": [
+            {
+              "enum": [
+                "NonDeprovisioned",
+                "DeprovisionRequested",
+                "DeprovisionApplied"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "NetworkInterfaceProperties": {
+      "description": "Properties of a network interface.",
+      "properties": {
+        "dnsName": {
+          "description": "The DNS name.",
+          "type": "string"
+        },
+        "privateIpAddress": {
+          "description": "The private IP address.",
+          "type": "string"
+        },
+        "publicIpAddress": {
+          "description": "The public IP address.",
+          "type": "string"
+        },
+        "publicIpAddressId": {
+          "description": "The resource ID of the public IP address.",
+          "type": "string"
+        },
+        "rdpAuthority": {
+          "description": "The RdpAuthority property is a server DNS host name or IP address followed by the service port number for RDP (Remote Desktop Protocol).",
+          "type": "string"
+        },
+        "sharedPublicIpAddressConfiguration": {
+          "description": "The configuration for sharing a public IP address across multiple virtual machines.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/SharedPublicIpAddressConfiguration"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "sshAuthority": {
+          "description": "The SshAuthority property is a server DNS host name or IP address followed by the service port number for SSH.",
+          "type": "string"
+        },
+        "subnetId": {
+          "description": "The resource ID of the sub net.",
+          "type": "string"
+        },
+        "virtualNetworkId": {
+          "description": "The resource ID of the virtual network.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "NotificationChannelProperties": {
+      "description": "Properties of a schedule.",
+      "properties": {
+        "description": {
+          "description": "Description of notification.",
+          "type": "string"
+        },
+        "emailRecipient": {
+          "description": "The email recipient to send notifications to (can be a list of semi-colon separated email addresses).",
+          "type": "string"
+        },
+        "events": {
+          "description": "The list of event for which this notification is enabled.",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/Event"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "notificationLocale": {
+          "description": "The locale to use when sending a notification (fallback for unsupported languages is EN).",
+          "type": "string"
+        },
+        "webHookUrl": {
+          "description": "The webhook URL to send notifications to.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "NotificationSettings": {
+      "description": "Notification settings for a schedule.",
+      "properties": {
+        "emailRecipient": {
+          "description": "The email recipient to send notifications to (can be a list of semi-colon separated email addresses).",
+          "type": "string"
+        },
+        "notificationLocale": {
+          "description": "The locale to use when sending a notification (fallback for unsupported languages is EN).",
+          "type": "string"
+        },
+        "status": {
+          "description": "If notifications are enabled for this schedule (i.e. Enabled, Disabled).",
+          "oneOf": [
+            {
+              "enum": [
+                "Enabled",
+                "Disabled"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "timeInMinutes": {
+          "description": "Time in minutes before event at which notification will be sent.",
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "webhookUrl": {
+          "description": "The webhook URL to which the notification will be sent.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "PercentageCostThresholdProperties": {
+      "description": "Properties of a percentage cost threshold.",
+      "properties": {
+        "thresholdValue": {
+          "description": "The cost threshold value.",
+          "oneOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "PolicyProperties": {
+      "description": "Properties of a Policy.",
+      "properties": {
+        "description": {
+          "description": "The description of the policy.",
+          "type": "string"
+        },
+        "evaluatorType": {
+          "description": "The evaluator type of the policy (i.e. AllowedValuesPolicy, MaxValuePolicy).",
+          "oneOf": [
+            {
+              "enum": [
+                "AllowedValuesPolicy",
+                "MaxValuePolicy"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "factData": {
+          "description": "The fact data of the policy.",
+          "type": "string"
+        },
+        "factName": {
+          "description": "The fact name of the policy (e.g. LabVmCount, LabVmSize, MaxVmsAllowedPerLab, etc.",
+          "oneOf": [
+            {
+              "enum": [
+                "UserOwnedLabVmCount",
+                "UserOwnedLabPremiumVmCount",
+                "LabVmCount",
+                "LabPremiumVmCount",
+                "LabVmSize",
+                "GalleryImage",
+                "UserOwnedLabVmCountInSubnet",
+                "LabTargetCost",
+                "EnvironmentTemplate",
+                "ScheduleEditPermission"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "status": {
+          "description": "The status of the policy.",
+          "oneOf": [
+            {
+              "enum": [
+                "Enabled",
+                "Disabled"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "threshold": {
+          "description": "The threshold of the policy (i.e. a number for MaxValuePolicy, and a JSON array of values for AllowedValuesPolicy).",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "Port": {
+      "description": "Properties of a network port.",
+      "properties": {
+        "backendPort": {
+          "description": "Backend port of the target virtual machine.",
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "transportProtocol": {
+          "description": "Protocol type of the port.",
+          "oneOf": [
+            {
+              "enum": [
+                "Tcp",
+                "Udp"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ScheduleCreationParameter": {
+      "description": "Properties for creating a schedule.",
+      "properties": {
+        "name": {
+          "description": "The name of the virtual machine or environment",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The properties of the schedule.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ScheduleCreationParameterProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "The tags of the resource.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ScheduleCreationParameterProperties": {
+      "description": "Properties for schedule creation.",
+      "properties": {
+        "dailyRecurrence": {
+          "description": "If the schedule will occur once each day of the week, specify the daily recurrence.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/DayDetails"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "hourlyRecurrence": {
+          "description": "If the schedule will occur multiple times a day, specify the hourly recurrence.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/HourDetails"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "notificationSettings": {
+          "description": "Notification settings.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/NotificationSettings"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "status": {
+          "description": "The status of the schedule (i.e. Enabled, Disabled)",
+          "oneOf": [
+            {
+              "enum": [
+                "Enabled",
+                "Disabled"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "targetResourceId": {
+          "description": "The resource ID to which the schedule belongs",
+          "type": "string"
+        },
+        "taskType": {
+          "description": "The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart).",
+          "type": "string"
+        },
+        "timeZoneId": {
+          "description": "The time zone ID (e.g. China Standard Time, Greenland Standard Time, Pacific Standard time, etc.). The possible values for this property can be found in `IReadOnlyCollection<string> TimeZoneConverter.TZConvert.KnownWindowsTimeZoneIds` (https://github.com/mattjohnsonpint/TimeZoneConverter/blob/main/README.md)",
+          "type": "string"
+        },
+        "weeklyRecurrence": {
+          "description": "If the schedule will occur only some days of the week, specify the weekly recurrence.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/WeekDetails"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ScheduleProperties": {
+      "description": "Properties of a schedule.",
+      "properties": {
+        "dailyRecurrence": {
+          "description": "If the schedule will occur once each day of the week, specify the daily recurrence.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/DayDetails"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "hourlyRecurrence": {
+          "description": "If the schedule will occur multiple times a day, specify the hourly recurrence.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/HourDetails"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "notificationSettings": {
+          "description": "Notification settings.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/NotificationSettings"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "status": {
+          "description": "The status of the schedule (i.e. Enabled, Disabled)",
+          "oneOf": [
+            {
+              "enum": [
+                "Enabled",
+                "Disabled"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "targetResourceId": {
+          "description": "The resource ID to which the schedule belongs",
+          "type": "string"
+        },
+        "taskType": {
+          "description": "The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart).",
+          "type": "string"
+        },
+        "timeZoneId": {
+          "description": "The time zone ID (e.g. China Standard Time, Greenland Standard Time, Pacific Standard time, etc.). The possible values for this property can be found in `IReadOnlyCollection<string> TimeZoneConverter.TZConvert.KnownWindowsTimeZoneIds` (https://github.com/mattjohnsonpint/TimeZoneConverter/blob/main/README.md)",
+          "type": "string"
+        },
+        "weeklyRecurrence": {
+          "description": "If the schedule will occur only some days of the week, specify the weekly recurrence.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/WeekDetails"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "SecretProperties": {
+      "description": "Properties of a secret.",
+      "properties": {
+        "value": {
+          "description": "The value of the secret for secret creation.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "ServiceFabricProperties": {
+      "description": "Properties of a service fabric.",
+      "properties": {
+        "environmentId": {
+          "description": "The resource id of the environment under which the service fabric resource is present",
+          "type": "string"
+        },
+        "externalServiceFabricId": {
+          "description": "The backing service fabric resource's id",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "SharedPublicIpAddressConfiguration": {
+      "description": "Properties of a virtual machine that determine how it is connected to a load balancer.",
+      "properties": {
+        "inboundNatRules": {
+          "description": "The incoming NAT rules",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/InboundNatRule"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "Subnet": {
+      "description": "Subnet information.",
+      "properties": {
+        "allowPublicIp": {
+          "description": "The permission policy of the subnet for allowing public IP addresses (i.e. Allow, Deny)).",
+          "oneOf": [
+            {
+              "enum": [
+                "Default",
+                "Deny",
+                "Allow"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "labSubnetName": {
+          "description": "The name of the subnet as seen in the lab.",
+          "type": "string"
+        },
+        "resourceId": {
+          "description": "The resource ID of the subnet.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "SubnetOverride": {
+      "description": "Property overrides on a subnet of a virtual network.",
+      "properties": {
+        "labSubnetName": {
+          "description": "The name given to the subnet within the lab.",
+          "type": "string"
+        },
+        "resourceId": {
+          "description": "The resource ID of the subnet.",
+          "type": "string"
+        },
+        "sharedPublicIpAddressConfiguration": {
+          "description": "Properties that virtual machines on this subnet will share.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/SubnetSharedPublicIpAddressConfiguration"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "useInVmCreationPermission": {
+          "description": "Indicates whether this subnet can be used during virtual machine creation (i.e. Allow, Deny).",
+          "oneOf": [
+            {
+              "enum": [
+                "Default",
+                "Deny",
+                "Allow"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "usePublicIpAddressPermission": {
+          "description": "Indicates whether public IP addresses can be assigned to virtual machines on this subnet (i.e. Allow, Deny).",
+          "oneOf": [
+            {
+              "enum": [
+                "Default",
+                "Deny",
+                "Allow"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "virtualNetworkPoolName": {
+          "description": "The virtual network pool associated with this subnet.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "SubnetSharedPublicIpAddressConfiguration": {
+      "description": "Configuration for public IP address sharing.",
+      "properties": {
+        "allowedPorts": {
+          "description": "Backend ports that virtual machines on this subnet are allowed to expose",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/Port"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "TargetCostProperties": {
+      "description": "Properties of a cost target.",
+      "properties": {
+        "costThresholds": {
+          "description": "Cost thresholds.",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/CostThresholdProperties"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "cycleEndDateTime": {
+          "description": "Reporting cycle end date.",
+          "format": "date-time",
+          "type": "string"
+        },
+        "cycleStartDateTime": {
+          "description": "Reporting cycle start date.",
+          "format": "date-time",
+          "type": "string"
+        },
+        "cycleType": {
+          "description": "Reporting cycle type.",
+          "oneOf": [
+            {
+              "enum": [
+                "CalendarMonth",
+                "Custom"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "status": {
+          "description": "Target cost status",
+          "oneOf": [
+            {
+              "enum": [
+                "Enabled",
+                "Disabled"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "target": {
+          "description": "Lab target cost",
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "UserIdentity": {
+      "description": "Identity attributes of a lab user.",
+      "properties": {
+        "appId": {
+          "description": "Set to the app Id of the client JWT making the request.",
+          "type": "string"
+        },
+        "objectId": {
+          "description": "Set to the object Id of the client JWT making the request. Not all users have object Id. For CSP (reseller) scenarios for example, object Id is not available.",
+          "type": "string"
+        },
+        "principalId": {
+          "description": "Set to the principal Id of the client JWT making the request. Service principal will not have the principal Id.",
+          "type": "string"
+        },
+        "principalName": {
+          "description": "Set to the principal name / UPN of the client JWT making the request.",
+          "type": "string"
+        },
+        "tenantId": {
+          "description": "Set to the tenant ID of the client JWT making the request.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "UserProperties": {
+      "description": "Properties of a lab user profile.",
+      "properties": {
+        "identity": {
+          "description": "The identity of the user.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/UserIdentity"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "secretStore": {
+          "description": "The secret store of the user.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/UserSecretStore"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "UserSecretStore": {
+      "description": "Properties of a user's secret store.",
+      "properties": {
+        "keyVaultId": {
+          "description": "The ID of the user's Key vault.",
+          "type": "string"
+        },
+        "keyVaultUri": {
+          "description": "The URI of the user's Key vault.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "VirtualNetworkProperties": {
+      "description": "Properties of a virtual network.",
+      "properties": {
+        "allowedSubnets": {
+          "description": "The allowed subnets of the virtual network.",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/Subnet"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "description": {
+          "description": "The description of the virtual network.",
+          "type": "string"
+        },
+        "externalProviderResourceId": {
+          "description": "The Microsoft.Network resource identifier of the virtual network.",
+          "type": "string"
+        },
+        "subnetOverrides": {
+          "description": "The subnet overrides of the virtual network.",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/SubnetOverride"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "WeekDetails": {
+      "description": "Properties of a weekly schedule.",
+      "properties": {
+        "time": {
+          "description": "The time of the day the schedule will occur.",
+          "type": "string"
+        },
+        "weekdays": {
+          "description": "The days of the week for which the schedule is set (e.g. Sunday, Monday, Tuesday, etc.).",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "WindowsOsInfo": {
+      "description": "Information about a Windows OS.",
+      "properties": {
+        "windowsOsState": {
+          "description": "The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).",
+          "oneOf": [
+            {
+              "enum": [
+                "NonSysprepped",
+                "SysprepRequested",
+                "SysprepApplied"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "labs_artifactsources_childResource": {
+      "description": "Microsoft.DevTestLab/labs/artifactsources",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2018-09-15"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "The location of the resource.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the artifact source.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The properties of the resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ArtifactSourceProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "The tags of the resource.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "artifactsources"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "labs_costs_childResource": {
+      "description": "Microsoft.DevTestLab/labs/costs",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2018-09-15"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "The location of the resource.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the cost.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The properties of the resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/LabCostProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "The tags of the resource.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "costs"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "labs_customimages_childResource": {
+      "description": "Microsoft.DevTestLab/labs/customimages",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2018-09-15"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "The location of the resource.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the custom image.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The properties of the resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/CustomImageProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "The tags of the resource.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "customimages"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "labs_formulas_childResource": {
+      "description": "Microsoft.DevTestLab/labs/formulas",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2018-09-15"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "The location of the resource.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the formula.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The properties of the resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/FormulaProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "The tags of the resource.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "formulas"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "labs_notificationchannels_childResource": {
+      "description": "Microsoft.DevTestLab/labs/notificationchannels",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2018-09-15"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "The location of the resource.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the notification channel.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The properties of the resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/NotificationChannelProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "The tags of the resource.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "notificationchannels"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "labs_schedules_childResource": {
+      "description": "Microsoft.DevTestLab/labs/schedules",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2018-09-15"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "The location of the resource.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the schedule.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The properties of the resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ScheduleProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "The tags of the resource.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "schedules"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "labs_servicerunners_childResource": {
+      "description": "Microsoft.DevTestLab/labs/servicerunners",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2018-09-15"
+          ],
+          "type": "string"
+        },
+        "identity": {
+          "description": "The identity of the resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/IdentityProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "location": {
+          "description": "The location of the resource.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the service runner.",
+          "type": "string"
+        },
+        "tags": {
+          "description": "The tags of the resource.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "servicerunners"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "labs_users_childResource": {
+      "description": "Microsoft.DevTestLab/labs/users",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2018-09-15"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "The location of the resource.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the user profile.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The properties of the resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/UserProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "The tags of the resource.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "users"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "labs_users_disks_childResource": {
+      "description": "Microsoft.DevTestLab/labs/users/disks",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2018-09-15"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "The location of the resource.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the disk.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The properties of the resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/DiskProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "The tags of the resource.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "disks"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "labs_users_environments_childResource": {
+      "description": "Microsoft.DevTestLab/labs/users/environments",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2018-09-15"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "The location of the resource.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the environment.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The properties of the resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/EnvironmentProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "The tags of the resource.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "environments"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "labs_users_secrets_childResource": {
+      "description": "Microsoft.DevTestLab/labs/users/secrets",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2018-09-15"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "The location of the resource.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the secret.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The properties of the resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/SecretProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "The tags of the resource.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "secrets"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "labs_users_servicefabrics_childResource": {
+      "description": "Microsoft.DevTestLab/labs/users/servicefabrics",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2018-09-15"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "The location of the resource.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the service fabric.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The properties of the resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ServiceFabricProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "The tags of the resource.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "servicefabrics"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "labs_users_servicefabrics_schedules_childResource": {
+      "description": "Microsoft.DevTestLab/labs/users/servicefabrics/schedules",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2018-09-15"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "The location of the resource.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the schedule.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The properties of the resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ScheduleProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "The tags of the resource.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "schedules"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "labs_virtualmachines_childResource": {
+      "description": "Microsoft.DevTestLab/labs/virtualmachines",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2018-09-15"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "The location of the resource.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the virtual machine.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The properties of the resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/LabVirtualMachineProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "The tags of the resource.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "virtualmachines"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "labs_virtualmachines_schedules_childResource": {
+      "description": "Microsoft.DevTestLab/labs/virtualmachines/schedules",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2018-09-15"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "The location of the resource.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the schedule.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The properties of the resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ScheduleProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "The tags of the resource.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "schedules"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "labs_virtualnetworks_childResource": {
+      "description": "Microsoft.DevTestLab/labs/virtualnetworks",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2018-09-15"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "The location of the resource.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the virtual network.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The properties of the resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/VirtualNetworkProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "The tags of the resource.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "virtualnetworks"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    }
+  }
+}

@@ -1,0 +1,651 @@
+{
+  "id": "https://schema.management.azure.com/schemas/2022-05-01-preview/Microsoft.EdgeOrder.json#",
+  "title": "Microsoft.EdgeOrder",
+  "description": "Microsoft EdgeOrder Resource Types",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "resourceDefinitions": {
+    "addresses": {
+      "description": "Microsoft.EdgeOrder/addresses",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2022-05-01-preview"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "The geo-location where the resource lives",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the address Resource within the specified resource group. address names must be between 3 and 24 characters in length and use any alphanumeric and underscore only.",
+          "oneOf": [
+            {
+              "maxLength": 24,
+              "minLength": 3,
+              "pattern": "^[-\\w\\.]+$",
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "properties": {
+          "description": "Properties of an address.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/AddressProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "Resource tags.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.EdgeOrder/addresses"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "orderItems": {
+      "description": "Microsoft.EdgeOrder/orderItems",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2022-05-01-preview"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "The geo-location where the resource lives",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the order item.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "Order item properties.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/OrderItemProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "Resource tags.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.EdgeOrder/orderItems"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    }
+  },
+  "definitions": {
+    "AdditionalConfiguration": {
+      "description": "Additional Configuration details.",
+      "properties": {
+        "hierarchyInformation": {
+          "description": "Hierarchy of the product which uniquely identifies the configuration.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/HierarchyInformation"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "quantity": {
+          "description": "Quantity of the product.",
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "hierarchyInformation",
+        "quantity"
+      ],
+      "type": "object"
+    },
+    "AddressDetails": {
+      "description": "Address details for an order item.",
+      "properties": {
+        "forwardAddress": {
+          "description": "Customer address and contact details.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/AddressProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "forwardAddress"
+      ],
+      "type": "object"
+    },
+    "AddressProperties": {
+      "description": "Address Properties.",
+      "properties": {
+        "contactDetails": {
+          "description": "Contact details for the address.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ContactDetails"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "shippingAddress": {
+          "description": "Shipping details for the address.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ShippingAddress"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "contactDetails"
+      ],
+      "type": "object"
+    },
+    "ContactDetails": {
+      "description": "Contact Details.",
+      "properties": {
+        "contactName": {
+          "description": "Contact name of the person.",
+          "type": "string"
+        },
+        "emailList": {
+          "description": "List of Email-ids to be notified about job progress.",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "mobile": {
+          "description": "Mobile number of the contact person.",
+          "type": "string"
+        },
+        "phone": {
+          "description": "Phone number of the contact person.",
+          "type": "string"
+        },
+        "phoneExtension": {
+          "description": "Phone extension number of the contact person.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "contactName",
+        "phone",
+        "emailList"
+      ],
+      "type": "object"
+    },
+    "DisplayInfo": {
+      "description": "Describes product display information.",
+      "properties": {},
+      "type": "object"
+    },
+    "EncryptionPreferences": {
+      "description": "Preferences related to the double encryption.",
+      "properties": {
+        "doubleEncryptionStatus": {
+          "description": "Double encryption status as entered by the customer. It is compulsory to give this parameter if the 'Deny' or 'Disabled' policy is configured.",
+          "oneOf": [
+            {
+              "enum": [
+                "Disabled",
+                "Enabled"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "HierarchyInformation": {
+      "description": "Holds details about product hierarchy information.",
+      "properties": {
+        "configurationName": {
+          "description": "Represents configuration name that uniquely identifies configuration.",
+          "type": "string"
+        },
+        "productFamilyName": {
+          "description": "Represents product family name that uniquely identifies product family.",
+          "type": "string"
+        },
+        "productLineName": {
+          "description": "Represents product line name that uniquely identifies product line.",
+          "type": "string"
+        },
+        "productName": {
+          "description": "Represents product name that uniquely identifies product.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "ManagementResourcePreferences": {
+      "description": "Management resource preference to link device.",
+      "properties": {
+        "preferredManagementResourceId": {
+          "description": "Customer preferred Management resource ARM ID.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "NotificationPreference": {
+      "description": "Notification preference for a job stage.",
+      "properties": {
+        "sendNotification": {
+          "description": "Notification is required or not.",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "stageName": {
+          "description": "Name of the stage.",
+          "oneOf": [
+            {
+              "enum": [
+                "Shipped",
+                "Delivered"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "stageName",
+        "sendNotification"
+      ],
+      "type": "object"
+    },
+    "OrderItemDetails": {
+      "description": "Order item details.",
+      "properties": {
+        "notificationEmailList": {
+          "description": "Additional notification email list.",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "orderItemMode": {
+          "description": "Defines the mode of the Order item.",
+          "oneOf": [
+            {
+              "enum": [
+                "Default",
+                "DoNotFulfill"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "orderItemType": {
+          "description": "Order item type.",
+          "oneOf": [
+            {
+              "enum": [
+                "Purchase",
+                "Rental"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "preferences": {
+          "description": "Customer notification Preferences.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/Preferences"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "productDetails": {
+          "description": "Unique identifier for configuration.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ProductDetails"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "productDetails",
+        "orderItemType"
+      ],
+      "type": "object"
+    },
+    "OrderItemProperties": {
+      "description": "Represents order item properties.",
+      "properties": {
+        "addressDetails": {
+          "description": "Represents shipping and return address for order item.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/AddressDetails"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "orderId": {
+          "description": "Id of the order to which order item belongs to.",
+          "type": "string"
+        },
+        "orderItemDetails": {
+          "description": "Represents order item details.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/OrderItemDetails"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "orderItemDetails",
+        "addressDetails",
+        "orderId"
+      ],
+      "type": "object"
+    },
+    "Preferences": {
+      "description": "Preferences related to the order.",
+      "properties": {
+        "encryptionPreferences": {
+          "description": "Preferences related to the Encryption.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/EncryptionPreferences"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "managementResourcePreferences": {
+          "description": "Preferences related to the Management resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ManagementResourcePreferences"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "notificationPreferences": {
+          "description": "Notification preferences.",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/NotificationPreference"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "transportPreferences": {
+          "description": "Preferences related to the shipment logistics of the order.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/TransportPreferences"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ProductDetails": {
+      "description": "Represents product details.",
+      "properties": {
+        "displayInfo": {
+          "description": "Display details of the product.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/DisplayInfo"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "hierarchyInformation": {
+          "description": "Hierarchy of the product which uniquely identifies the product.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/HierarchyInformation"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "optInAdditionalConfigurations": {
+          "description": "List of additional configurations customer wants in the order item apart from the ones included in the base configuration.",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/AdditionalConfiguration"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "hierarchyInformation"
+      ],
+      "type": "object"
+    },
+    "ShippingAddress": {
+      "description": "Shipping address where customer wishes to receive the device.",
+      "properties": {
+        "addressType": {
+          "description": "Type of address.",
+          "oneOf": [
+            {
+              "enum": [
+                "None",
+                "Residential",
+                "Commercial"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "city": {
+          "description": "Name of the City.",
+          "type": "string"
+        },
+        "companyName": {
+          "description": "Name of the company.",
+          "type": "string"
+        },
+        "country": {
+          "description": "Name of the Country.",
+          "type": "string"
+        },
+        "postalCode": {
+          "description": "Postal code.",
+          "type": "string"
+        },
+        "stateOrProvince": {
+          "description": "Name of the State or Province.",
+          "type": "string"
+        },
+        "streetAddress1": {
+          "description": "Street Address line 1.",
+          "type": "string"
+        },
+        "streetAddress2": {
+          "description": "Street Address line 2.",
+          "type": "string"
+        },
+        "streetAddress3": {
+          "description": "Street Address line 3.",
+          "type": "string"
+        },
+        "zipExtendedCode": {
+          "description": "Extended Zip Code.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "streetAddress1",
+        "country"
+      ],
+      "type": "object"
+    },
+    "TransportPreferences": {
+      "description": "Preferences related to the shipment logistics of the sku.",
+      "properties": {
+        "preferredShipmentType": {
+          "description": "Indicates Shipment Logistics type that the customer preferred.",
+          "oneOf": [
+            {
+              "enum": [
+                "CustomerManaged",
+                "MicrosoftManaged"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "preferredShipmentType"
+      ],
+      "type": "object"
+    }
+  }
+}

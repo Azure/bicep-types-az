@@ -1,0 +1,186 @@
+{
+  "id": "https://schema.management.azure.com/schemas/2020-12-01-preview/Microsoft.ConfidentialLedger.json#",
+  "title": "Microsoft.ConfidentialLedger",
+  "description": "Microsoft ConfidentialLedger Resource Types",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "resourceDefinitions": {
+    "ledgers": {
+      "description": "Microsoft.ConfidentialLedger/ledgers",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2020-12-01-preview"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "The Azure location where the Confidential Ledger is running.",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of the Confidential Ledger",
+          "oneOf": [
+            {
+              "pattern": "^[a-zA-Z0-9]",
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "properties": {
+          "description": "Properties of Confidential Ledger Resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/LedgerProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "Additional tags for Confidential Ledger",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.ConfidentialLedger/ledgers"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    }
+  },
+  "definitions": {
+    "AADBasedSecurityPrincipal": {
+      "description": "AAD based security principal with associated Ledger RoleName",
+      "properties": {
+        "ledgerRoleName": {
+          "description": "LedgerRole associated with the Security Principal of Ledger",
+          "oneOf": [
+            {
+              "enum": [
+                "Reader",
+                "Contributor",
+                "Administrator"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "principalId": {
+          "description": "UUID/GUID based Principal Id of the Security Principal",
+          "type": "string"
+        },
+        "tenantId": {
+          "description": "UUID/GUID based Tenant Id of the Security Principal",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "CertBasedSecurityPrincipal": {
+      "description": "Cert based security principal with Ledger RoleName",
+      "properties": {
+        "cert": {
+          "description": "Public key of the user cert (.pem or .cer)",
+          "type": "string"
+        },
+        "ledgerRoleName": {
+          "description": "LedgerRole associated with the Security Principal of Ledger",
+          "oneOf": [
+            {
+              "enum": [
+                "Reader",
+                "Contributor",
+                "Administrator"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "LedgerProperties": {
+      "description": "Additional Confidential Ledger properties.",
+      "properties": {
+        "aadBasedSecurityPrincipals": {
+          "description": "Array of all AAD based Security Principals.",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/AADBasedSecurityPrincipal"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "certBasedSecurityPrincipals": {
+          "description": "Array of all cert based Security Principals.",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/CertBasedSecurityPrincipal"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "ledgerStorageAccount": {
+          "description": "Name of the Blob Storage Account for saving ledger files",
+          "type": "string"
+        },
+        "ledgerType": {
+          "description": "Type of Confidential Ledger",
+          "oneOf": [
+            {
+              "enum": [
+                "Unknown",
+                "Public",
+                "Private"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    }
+  }
+}

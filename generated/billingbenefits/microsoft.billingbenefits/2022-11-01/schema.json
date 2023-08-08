@@ -1,0 +1,468 @@
+{
+  "id": "https://schema.management.azure.com/schemas/2022-11-01/Microsoft.BillingBenefits.json#",
+  "title": "Microsoft.BillingBenefits",
+  "description": "Microsoft BillingBenefits Resource Types",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "tenant_resourceDefinitions": {
+    "reservationOrderAliases": {
+      "description": "Microsoft.BillingBenefits/reservationOrderAliases",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2022-11-01"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "The Azure Region where the reservation benefits are applied to.",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of the reservation order alias",
+          "oneOf": [
+            {
+              "pattern": "^[a-zA-Z0-9_\\-\\.]+$",
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "properties": {
+          "description": "Reservation order alias request properties",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ReservationOrderAliasRequestProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "sku": {
+          "description": "Reservation order SKU",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/Sku"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.BillingBenefits/reservationOrderAliases"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "savingsPlanOrderAliases": {
+      "description": "Microsoft.BillingBenefits/savingsPlanOrderAliases",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2022-11-01"
+          ],
+          "type": "string"
+        },
+        "kind": {
+          "description": "Resource provider kind",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of the savings plan order alias",
+          "oneOf": [
+            {
+              "pattern": "^[a-zA-Z0-9_\\-\\.]+$",
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "properties": {
+          "description": "Savings plan order alias properties",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/SavingsPlanOrderAliasProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "sku": {
+          "description": "Savings plan SKU",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/Sku"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.BillingBenefits/savingsPlanOrderAliases"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    }
+  },
+  "definitions": {
+    "AppliedScopeProperties": {
+      "description": "Properties specific to applied scope type. Not required if not applicable.",
+      "properties": {
+        "displayName": {
+          "description": "Display name",
+          "type": "string"
+        },
+        "managementGroupId": {
+          "description": "Fully-qualified identifier of the management group where the benefit must be applied.",
+          "type": "string"
+        },
+        "resourceGroupId": {
+          "description": "Fully-qualified identifier of the resource group.",
+          "type": "string"
+        },
+        "subscriptionId": {
+          "description": "Fully-qualified identifier of the subscription.",
+          "type": "string"
+        },
+        "tenantId": {
+          "description": "Tenant ID where the benefit is applied.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "Commitment": {
+      "description": "Commitment towards the benefit.",
+      "properties": {
+        "amount": {
+          "description": "",
+          "oneOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "currencyCode": {
+          "description": "The ISO 4217 3-letter currency code for the currency used by this purchase record.",
+          "type": "string"
+        },
+        "grain": {
+          "description": "Commitment grain.",
+          "oneOf": [
+            {
+              "enum": [
+                "Hourly"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ReservationOrderAliasRequestProperties": {
+      "description": "Reservation properties",
+      "properties": {
+        "appliedScopeProperties": {
+          "description": "Properties specific to applied scope type. Not required if not applicable.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/AppliedScopeProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "appliedScopeType": {
+          "description": "Type of the Applied Scope.",
+          "oneOf": [
+            {
+              "enum": [
+                "Single",
+                "Shared",
+                "ManagementGroup"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "billingPlan": {
+          "description": "Represents the billing plan in ISO 8601 format. Required only for monthly billing plans.",
+          "oneOf": [
+            {
+              "enum": [
+                "P1M"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "billingScopeId": {
+          "description": "Subscription that will be charged for purchasing the benefit",
+          "type": "string"
+        },
+        "displayName": {
+          "description": "Display name",
+          "type": "string"
+        },
+        "quantity": {
+          "description": "Total Quantity of the SKUs purchased in the Reservation.",
+          "oneOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "renew": {
+          "description": "Setting this to true will automatically purchase a new benefit on the expiration date time.",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "reservedResourceProperties": {
+          "description": "Properties specific to each reserved resource type. Not required if not applicable.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ReservationOrderAliasRequestPropertiesReservedResourceProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "reservedResourceType": {
+          "description": "The type of the resource that is being reserved.",
+          "oneOf": [
+            {
+              "enum": [
+                "VirtualMachines",
+                "SqlDatabases",
+                "SuseLinux",
+                "CosmosDb",
+                "RedHat",
+                "SqlDataWarehouse",
+                "VMwareCloudSimple",
+                "RedHatOsa",
+                "Databricks",
+                "AppService",
+                "ManagedDisk",
+                "BlockBlob",
+                "RedisCache",
+                "AzureDataExplorer",
+                "MySql",
+                "MariaDb",
+                "PostgreSql",
+                "DedicatedHost",
+                "SapHana",
+                "SqlAzureHybridBenefit",
+                "AVS",
+                "DataFactory",
+                "NetAppStorage",
+                "AzureFiles",
+                "SqlEdge",
+                "VirtualMachineSoftware"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "reviewDateTime": {
+          "description": "This is the date-time when the Azure Hybrid Benefit needs to be reviewed.",
+          "format": "date-time",
+          "type": "string"
+        },
+        "term": {
+          "description": "Represent benefit term in ISO 8601 format.",
+          "oneOf": [
+            {
+              "enum": [
+                "P1Y",
+                "P3Y",
+                "P5Y"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ReservationOrderAliasRequestPropertiesReservedResourceProperties": {
+      "description": "Properties specific to each reserved resource type. Not required if not applicable.",
+      "properties": {
+        "instanceFlexibility": {
+          "description": "Turning this on will apply the reservation discount to other VMs in the same VM size group.",
+          "oneOf": [
+            {
+              "enum": [
+                "On",
+                "Off"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "SavingsPlanOrderAliasProperties": {
+      "description": "Savings plan properties",
+      "properties": {
+        "appliedScopeProperties": {
+          "description": "Properties specific to applied scope type. Not required if not applicable.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/AppliedScopeProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "appliedScopeType": {
+          "description": "Type of the Applied Scope.",
+          "oneOf": [
+            {
+              "enum": [
+                "Single",
+                "Shared",
+                "ManagementGroup"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "billingPlan": {
+          "description": "Represents the billing plan in ISO 8601 format. Required only for monthly billing plans.",
+          "oneOf": [
+            {
+              "enum": [
+                "P1M"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "billingScopeId": {
+          "description": "Subscription that will be charged for purchasing the benefit",
+          "type": "string"
+        },
+        "commitment": {
+          "description": "Commitment towards the benefit.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/Commitment"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "displayName": {
+          "description": "Display name",
+          "type": "string"
+        },
+        "renew": {
+          "description": "Setting this to true will automatically purchase a new benefit on the expiration date time.",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "term": {
+          "description": "Represent benefit term in ISO 8601 format.",
+          "oneOf": [
+            {
+              "enum": [
+                "P1Y",
+                "P3Y",
+                "P5Y"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "Sku": {
+      "description": "The SKU to be applied for this resource",
+      "properties": {
+        "name": {
+          "description": "Name of the SKU to be applied",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    }
+  }
+}

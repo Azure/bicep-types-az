@@ -1,0 +1,4 @@
+ {
+-  id: "https://schema.management.azure.com/schemas/2022-05-01/Microsoft.Network.FrontDoor.json#"
++  id: "https://schema.management.azure.com/schemas/2022-05-01/Microsoft.Network.json#"
+ }

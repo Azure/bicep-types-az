@@ -1,0 +1,135 @@
+{
+  "id": "https://schema.management.azure.com/schemas/2022-11-16-preview/Microsoft.AppComplianceAutomation.json#",
+  "title": "Microsoft.AppComplianceAutomation",
+  "description": "Microsoft AppComplianceAutomation Resource Types",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "tenant_resourceDefinitions": {
+    "reports": {
+      "description": "Microsoft.AppComplianceAutomation/reports",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2022-11-16-preview"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "Report Name.",
+          "oneOf": [
+            {
+              "pattern": "^[-a-zA-Z0-9_]+$",
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "properties": {
+          "description": "Report property.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ReportProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.AppComplianceAutomation/reports"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    }
+  },
+  "definitions": {
+    "ReportProperties": {
+      "description": "Report's properties.",
+      "properties": {
+        "offerGuid": {
+          "description": "Report offer Guid.",
+          "type": "string"
+        },
+        "resources": {
+          "description": "List of resource data.",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/ResourceMetadata"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "timeZone": {
+          "description": "Report collection trigger time's time zone, the available list can be obtained by executing \"Get-TimeZone -ListAvailable\" in PowerShell.\r\nAn example of valid timezone id is \"Pacific Standard Time\".",
+          "type": "string"
+        },
+        "triggerTime": {
+          "description": "Report collection trigger time.",
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "required": [
+        "timeZone",
+        "triggerTime",
+        "resources"
+      ],
+      "type": "object"
+    },
+    "ResourceMetadata": {
+      "description": "Single resource Id's metadata.",
+      "properties": {
+        "resourceId": {
+          "description": "Resource Id - e.g. \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/virtualMachines/vm1\".",
+          "type": "string"
+        },
+        "resourceKind": {
+          "description": "Resource kind.",
+          "type": "string"
+        },
+        "resourceName": {
+          "description": "Resource name.",
+          "type": "string"
+        },
+        "resourceType": {
+          "description": "Resource type.",
+          "type": "string"
+        },
+        "tags": {
+          "description": "Resource's tag type.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "resourceId"
+      ],
+      "type": "object"
+    }
+  }
+}

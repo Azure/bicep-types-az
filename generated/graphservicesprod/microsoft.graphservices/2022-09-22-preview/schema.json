@@ -1,0 +1,89 @@
+{
+  "id": "https://schema.management.azure.com/schemas/2022-09-22-preview/Microsoft.GraphServices.json#",
+  "title": "Microsoft.GraphServices",
+  "description": "Microsoft GraphServices Resource Types",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "resourceDefinitions": {
+    "accounts": {
+      "description": "Microsoft.GraphServices/accounts",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2022-09-22-preview"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "Location of the resource.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "Property bag from billing account",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/AccountResourceProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "resource tags.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.GraphServices/accounts"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    }
+  },
+  "definitions": {
+    "AccountResourceProperties": {
+      "description": "Property bag from billing account",
+      "properties": {
+        "appId": {
+          "description": "Customer owned application ID",
+          "oneOf": [
+            {
+              "pattern": "(^[A-Za-z0-9]{8}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{12}?)$",
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "appId"
+      ],
+      "type": "object"
+    }
+  }
+}

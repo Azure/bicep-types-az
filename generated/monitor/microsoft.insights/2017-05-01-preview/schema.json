@@ -1,0 +1,214 @@
+{
+  "id": "https://schema.management.azure.com/schemas/2017-05-01-preview/Microsoft.Insights.json#",
+  "title": "Microsoft.Insights",
+  "description": "Microsoft Insights Resource Types",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "unknown_resourceDefinitions": {
+    "diagnosticSettings": {
+      "description": "Microsoft.Insights/diagnosticSettings",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2017-05-01-preview"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the diagnostic setting.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "Properties of a Diagnostic Settings Resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/DiagnosticSettings"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.Insights/diagnosticSettings"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    }
+  },
+  "definitions": {
+    "DiagnosticSettings": {
+      "description": "The diagnostic settings.",
+      "properties": {
+        "eventHubAuthorizationRuleId": {
+          "description": "The resource Id for the event hub authorization rule.",
+          "type": "string"
+        },
+        "eventHubName": {
+          "description": "The name of the event hub. If none is specified, the default event hub will be selected.",
+          "type": "string"
+        },
+        "logAnalyticsDestinationType": {
+          "description": "A string indicating whether the export to Log Analytics should use the default destination type, i.e. AzureDiagnostics, or use a destination type constructed as follows: <normalized service identity>_<normalized category name>. Possible values are: Dedicated and null (null is default.)",
+          "type": "string"
+        },
+        "logs": {
+          "description": "The list of logs settings.",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/LogSettings"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "metrics": {
+          "description": "The list of metric settings.",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/MetricSettings"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "serviceBusRuleId": {
+          "description": "The service bus rule Id of the diagnostic setting. This is here to maintain backwards compatibility.",
+          "type": "string"
+        },
+        "storageAccountId": {
+          "description": "The resource ID of the storage account to which you would like to send Diagnostic Logs.",
+          "type": "string"
+        },
+        "workspaceId": {
+          "description": "The full ARM resource ID of the Log Analytics workspace to which you would like to send Diagnostic Logs. Example: /subscriptions/4b9e8510-67ab-4e9a-95a9-e2f1e570ea9c/resourceGroups/insights-integration/providers/Microsoft.OperationalInsights/workspaces/viruela2",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "LogSettings": {
+      "description": "Part of MultiTenantDiagnosticSettings. Specifies the settings for a particular log.",
+      "properties": {
+        "category": {
+          "description": "Name of a Diagnostic Log category for a resource type this setting is applied to. To obtain the list of Diagnostic Log categories for a resource, first perform a GET diagnostic settings operation.",
+          "type": "string"
+        },
+        "enabled": {
+          "description": "a value indicating whether this log is enabled.",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "retentionPolicy": {
+          "description": "the retention policy for this log.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/RetentionPolicy"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "enabled"
+      ],
+      "type": "object"
+    },
+    "MetricSettings": {
+      "description": "Part of MultiTenantDiagnosticSettings. Specifies the settings for a particular metric.",
+      "properties": {
+        "category": {
+          "description": "Name of a Diagnostic Metric category for a resource type this setting is applied to. To obtain the list of Diagnostic metric categories for a resource, first perform a GET diagnostic settings operation.",
+          "type": "string"
+        },
+        "enabled": {
+          "description": "a value indicating whether this category is enabled.",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "retentionPolicy": {
+          "description": "the retention policy for this category.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/RetentionPolicy"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "timeGrain": {
+          "description": "the timegrain of the metric in ISO8601 format.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "enabled"
+      ],
+      "type": "object"
+    },
+    "RetentionPolicy": {
+      "description": "Specifies the retention policy for the log.",
+      "properties": {
+        "days": {
+          "description": "the number of days for the retention in days. A value of 0 will retain the events indefinitely.",
+          "oneOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "enabled": {
+          "description": "a value indicating whether the retention policy is enabled.",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "enabled",
+        "days"
+      ],
+      "type": "object"
+    }
+  }
+}

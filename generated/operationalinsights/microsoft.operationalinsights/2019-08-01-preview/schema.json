@@ -1,0 +1,455 @@
+{
+  "id": "https://schema.management.azure.com/schemas/2019-08-01-preview/Microsoft.OperationalInsights.json#",
+  "title": "Microsoft.OperationalInsights",
+  "description": "Microsoft OperationalInsights Resource Types",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "resourceDefinitions": {
+    "clusters": {
+      "description": "Microsoft.OperationalInsights/clusters",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2019-08-01-preview"
+          ],
+          "type": "string"
+        },
+        "identity": {
+          "description": "The identity of the resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/Identity"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "location": {
+          "description": "Resource location",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the Log Analytics cluster.",
+          "oneOf": [
+            {
+              "maxLength": 63,
+              "minLength": 4,
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9-]+[A-Za-z0-9]$",
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "properties": {
+          "description": "Log Analytics cluster properties.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ClusterProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "sku": {
+          "description": "The sku properties.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/Sku"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "Resource tags",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.OperationalInsights/clusters"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "workspaces_dataExports": {
+      "description": "Microsoft.OperationalInsights/workspaces/dataExports",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2019-08-01-preview"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "The data export rule name.",
+          "oneOf": [
+            {
+              "maxLength": 63,
+              "minLength": 4,
+              "pattern": "^[A-Za-z][A-Za-z0-9-]+[A-Za-z0-9]$",
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "properties": {
+          "description": "data export properties.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/DataExportProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.OperationalInsights/workspaces/dataExports"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "workspaces_linkedServices": {
+      "description": "Microsoft.OperationalInsights/workspaces/linkedServices",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2019-08-01-preview"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of the linkedServices resource",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The properties of the linked service.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/LinkedServiceProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.OperationalInsights/workspaces/linkedServices"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "workspaces_linkedStorageAccounts": {
+      "description": "Microsoft.OperationalInsights/workspaces/linkedStorageAccounts",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2019-08-01-preview"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "Linked storage accounts type.",
+          "oneOf": [
+            {
+              "enum": [
+                "CustomLogs",
+                "AzureWatson"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "properties": {
+          "description": "Linked storage accounts properties.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/LinkedStorageAccountsProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.OperationalInsights/workspaces/linkedStorageAccounts"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    }
+  },
+  "definitions": {
+    "ClusterProperties": {
+      "description": "Cluster properties.",
+      "properties": {
+        "keyVaultProperties": {
+          "description": "The associated key properties.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/KeyVaultProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "nextLink": {
+          "description": "The link used to get the next page of recommendations.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "DataExportProperties": {
+      "description": "Data Export properties.",
+      "properties": {
+        "createdDate": {
+          "description": "The latest data export rule modification time.",
+          "type": "string"
+        },
+        "dataExportId": {
+          "description": "The data export rule ID.",
+          "type": "string"
+        },
+        "destination": {
+          "description": "destination properties.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/Destination"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "enable": {
+          "description": "Active when enabled.",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "lastModifiedDate": {
+          "description": "Date and time when the export was last modified.",
+          "type": "string"
+        },
+        "tableNames": {
+          "description": "An array of tables to export, for example: [“Heartbeat, SecurityEvent”].",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "tableNames"
+      ],
+      "type": "object"
+    },
+    "Destination": {
+      "description": "Destination properties.",
+      "properties": {
+        "metaData": {
+          "description": "destination meta data.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/DestinationMetaData"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "resourceId": {
+          "description": "The destination resource ID. This can be copied from the Properties entry of the destination resource in Azure.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "resourceId"
+      ],
+      "type": "object"
+    },
+    "DestinationMetaData": {
+      "description": "Destination meta data.",
+      "properties": {
+        "eventHubName": {
+          "description": "Optional. Allows to define an Event Hub name. Not applicable when destination is Storage Account.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "Identity": {
+      "description": "Identity for the resource.",
+      "properties": {
+        "type": {
+          "description": "The identity type.",
+          "oneOf": [
+            {
+              "enum": [
+                "SystemAssigned",
+                "None"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "type": "object"
+    },
+    "KeyVaultProperties": {
+      "properties": {
+        "keyName": {
+          "description": "The name of the key associated with the Log Analytics cluster.",
+          "type": "string"
+        },
+        "keyVaultUri": {
+          "description": "The Key Vault uri which holds they key associated with the Log Analytics cluster.",
+          "type": "string"
+        },
+        "keyVersion": {
+          "description": "The version of the key associated with the Log Analytics cluster.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "LinkedServiceProperties": {
+      "description": "Linked service properties.",
+      "properties": {
+        "resourceId": {
+          "description": "The resource id of the resource that will be linked to the workspace. This should be used for linking resources which require read access",
+          "type": "string"
+        },
+        "writeAccessResourceId": {
+          "description": "The resource id of the resource that will be linked to the workspace. This should be used for linking resources which require write access",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "LinkedStorageAccountsProperties": {
+      "description": "Linked storage accounts properties.",
+      "properties": {
+        "storageAccountIds": {
+          "description": "Linked storage accounts resources ids.",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "Sku": {
+      "properties": {
+        "capacity": {
+          "description": "The capacity value",
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "name": {
+          "description": "The name of the SKU.",
+          "oneOf": [
+            {
+              "enum": [
+                "CapacityReservation"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    }
+  }
+}

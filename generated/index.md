@@ -87,7 +87,7 @@
 
 ## microsoft.agfoodplatform
 ### microsoft.agfoodplatform/farmbeats
-* **Link**: [2020-05-12-preview](agfood/microsoft.agfoodplatform/2020-05-12-preview/types.md#resource-microsoftagfoodplatformfarmbeats2020-05-12-preview)
+* **Link**: [2020-05-12-preview](agrifood/microsoft.agfoodplatform/2020-05-12-preview/types.md#resource-microsoftagfoodplatformfarmbeats2020-05-12-preview)
 * **Link**: [2021-09-01-preview](agrifood/microsoft.agfoodplatform/2021-09-01-preview/types.md#resource-microsoftagfoodplatformfarmbeats2021-09-01-preview)
 * **Link**: [2023-06-01-preview](agrifood/microsoft.agfoodplatform/2023-06-01-preview/types.md#resource-microsoftagfoodplatformfarmbeats2023-06-01-preview)
 
@@ -95,7 +95,7 @@
 * **Link**: [2023-06-01-preview](agrifood/microsoft.agfoodplatform/2023-06-01-preview/types.md#resource-microsoftagfoodplatformfarmbeatsdataconnectors2023-06-01-preview)
 
 ### microsoft.agfoodplatform/farmbeats/extensions
-* **Link**: [2020-05-12-preview](agfood/microsoft.agfoodplatform/2020-05-12-preview/types.md#resource-microsoftagfoodplatformfarmbeatsextensions2020-05-12-preview)
+* **Link**: [2020-05-12-preview](agrifood/microsoft.agfoodplatform/2020-05-12-preview/types.md#resource-microsoftagfoodplatformfarmbeatsextensions2020-05-12-preview)
 * **Link**: [2021-09-01-preview](agrifood/microsoft.agfoodplatform/2021-09-01-preview/types.md#resource-microsoftagfoodplatformfarmbeatsextensions2021-09-01-preview)
 * **Link**: [2023-06-01-preview](agrifood/microsoft.agfoodplatform/2023-06-01-preview/types.md#resource-microsoftagfoodplatformfarmbeatsextensions2023-06-01-preview)
 
@@ -2709,34 +2709,6 @@
 * **Link**: [2022-06-01](batch/microsoft.batch/2022-06-01/types.md#resource-microsoftbatchbatchaccountsprivatelinkresources2022-06-01)
 * **Link**: [2022-10-01](batch/microsoft.batch/2022-10-01/types.md#resource-microsoftbatchbatchaccountsprivatelinkresources2022-10-01)
 * **Link**: [2023-05-01](batch/microsoft.batch/2023-05-01/types.md#resource-microsoftbatchbatchaccountsprivatelinkresources2023-05-01)
-
-## microsoft.batchai
-### microsoft.batchai/clusters
-* **Link**: [2017-09-01-preview](batchai/microsoft.batchai/2017-09-01-preview/types.md#resource-microsoftbatchaiclusters2017-09-01-preview)
-* **Link**: [2018-03-01](batchai/microsoft.batchai/2018-03-01/types.md#resource-microsoftbatchaiclusters2018-03-01)
-
-### microsoft.batchai/fileservers
-* **Link**: [2017-09-01-preview](batchai/microsoft.batchai/2017-09-01-preview/types.md#resource-microsoftbatchaifileservers2017-09-01-preview)
-* **Link**: [2018-03-01](batchai/microsoft.batchai/2018-03-01/types.md#resource-microsoftbatchaifileservers2018-03-01)
-
-### microsoft.batchai/jobs
-* **Link**: [2017-09-01-preview](batchai/microsoft.batchai/2017-09-01-preview/types.md#resource-microsoftbatchaijobs2017-09-01-preview)
-* **Link**: [2018-03-01](batchai/microsoft.batchai/2018-03-01/types.md#resource-microsoftbatchaijobs2018-03-01)
-
-### microsoft.batchai/workspaces
-* **Link**: [2018-05-01](batchai/microsoft.batchai/2018-05-01/types.md#resource-microsoftbatchaiworkspaces2018-05-01)
-
-### microsoft.batchai/workspaces/clusters
-* **Link**: [2018-05-01](batchai/microsoft.batchai/2018-05-01/types.md#resource-microsoftbatchaiworkspacesclusters2018-05-01)
-
-### microsoft.batchai/workspaces/experiments
-* **Link**: [2018-05-01](batchai/microsoft.batchai/2018-05-01/types.md#resource-microsoftbatchaiworkspacesexperiments2018-05-01)
-
-### microsoft.batchai/workspaces/experiments/jobs
-* **Link**: [2018-05-01](batchai/microsoft.batchai/2018-05-01/types.md#resource-microsoftbatchaiworkspacesexperimentsjobs2018-05-01)
-
-### microsoft.batchai/workspaces/fileservers
-* **Link**: [2018-05-01](batchai/microsoft.batchai/2018-05-01/types.md#resource-microsoftbatchaiworkspacesfileservers2018-05-01)
 
 ## microsoft.billing
 ### microsoft.billing/billingaccounts

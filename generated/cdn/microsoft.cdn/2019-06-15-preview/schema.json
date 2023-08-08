@@ -1,0 +1,3236 @@
+{
+  "id": "https://schema.management.azure.com/schemas/2019-06-15-preview/Microsoft.Cdn.json#",
+  "title": "Microsoft.Cdn",
+  "description": "Microsoft Cdn Resource Types",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "resourceDefinitions": {
+    "CdnWebApplicationFirewallPolicies": {
+      "description": "Microsoft.Cdn/CdnWebApplicationFirewallPolicies",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2019-06-15-preview"
+          ],
+          "type": "string"
+        },
+        "etag": {
+          "description": "Gets a unique read-only string that changes whenever the resource is updated.",
+          "type": "string"
+        },
+        "location": {
+          "description": "Resource location.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the CdnWebApplicationFirewallPolicy.",
+          "maxLength": 128,
+          "type": "string"
+        },
+        "properties": {
+          "description": "Properties of the web application firewall policy.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/CdnWebApplicationFirewallPolicyProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "sku": {
+          "description": "The pricing tier (defines a CDN provider, feature list and rate) of the CdnWebApplicationFirewallPolicy.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/Sku"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "Resource tags.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.Cdn/CdnWebApplicationFirewallPolicies"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "profiles": {
+      "description": "Microsoft.Cdn/profiles",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2019-06-15-preview"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "Resource location.",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of the CDN profile which is unique within the resource group.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The JSON object that contains the properties required to create a profile.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ProfileProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "resources": {
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/definitions/profiles_endpoints_childResource"
+              }
+            ]
+          },
+          "type": "array"
+        },
+        "sku": {
+          "description": "The pricing tier (defines a CDN provider, feature list and rate) of the CDN profile.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/Sku"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "Resource tags.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.Cdn/profiles"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "profiles_endpoints": {
+      "description": "Microsoft.Cdn/profiles/endpoints",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2019-06-15-preview"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "Resource location.",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of the endpoint under the profile which is unique globally.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The JSON object that contains the properties required to create an endpoint.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/EndpointProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "resources": {
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/definitions/profiles_endpoints_customDomains_childResource"
+              }
+            ]
+          },
+          "type": "array"
+        },
+        "tags": {
+          "description": "Resource tags.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.Cdn/profiles/endpoints"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "profiles_endpoints_customDomains": {
+      "description": "Microsoft.Cdn/profiles/endpoints/customDomains",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2019-06-15-preview"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of the custom domain within an endpoint.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The JSON object that contains the properties of the custom domain to create.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/CustomDomainPropertiesParameters"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.Cdn/profiles/endpoints/customDomains"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    }
+  },
+  "definitions": {
+    "CacheExpirationActionParameters": {
+      "description": "Defines the parameters for the cache expiration action.",
+      "properties": {
+        "@odata.type": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "#Microsoft.Azure.Cdn.Models.DeliveryRuleCacheExpirationActionParameters"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "cacheBehavior": {
+          "description": "Caching behavior for the requests",
+          "oneOf": [
+            {
+              "enum": [
+                "BypassCache",
+                "Override",
+                "SetIfMissing"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "cacheDuration": {
+          "description": "The duration for which the content needs to be cached. Allowed format is [d.]hh:mm:ss",
+          "type": "string"
+        },
+        "cacheType": {
+          "description": "The level at which the content needs to be cached.",
+          "oneOf": [
+            {
+              "enum": [
+                "All"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "@odata.type",
+        "cacheBehavior",
+        "cacheType"
+      ],
+      "type": "object"
+    },
+    "CacheKeyQueryStringActionParameters": {
+      "description": "Defines the parameters for the cache-key query string action.",
+      "properties": {
+        "@odata.type": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "#Microsoft.Azure.Cdn.Models.DeliveryRuleCacheKeyQueryStringBehaviorActionParameters"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "queryParameters": {
+          "description": "query parameters to include or exclude (comma separated).",
+          "type": "string"
+        },
+        "queryStringBehavior": {
+          "description": "Caching behavior for the requests",
+          "oneOf": [
+            {
+              "enum": [
+                "Include",
+                "IncludeAll",
+                "Exclude",
+                "ExcludeAll"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "@odata.type",
+        "queryStringBehavior"
+      ],
+      "type": "object"
+    },
+    "CdnWebApplicationFirewallPolicyProperties": {
+      "description": "Defines CDN web application firewall policy properties.",
+      "properties": {
+        "customRules": {
+          "description": "Describes custom rules inside the policy.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/CustomRuleList"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "managedRules": {
+          "description": "Describes managed rules inside the policy.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ManagedRuleSetList"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "policySettings": {
+          "description": "Describes  policySettings for policy",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/PolicySettings"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "rateLimitRules": {
+          "description": "Describes rate limit rules inside the policy.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/RateLimitRuleList"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "CookiesMatchConditionParameters": {
+      "description": "Defines the parameters for Cookies match conditions",
+      "properties": {
+        "@odata.type": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "#Microsoft.Azure.Cdn.Models.DeliveryRuleCookiesConditionParameters"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "matchValues": {
+          "description": "The match value for the condition of the delivery rule",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "negateCondition": {
+          "description": "Describes if this is negate condition or not",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "operator": {
+          "description": "Describes operator to be matched",
+          "oneOf": [
+            {
+              "enum": [
+                "Any",
+                "Equal",
+                "Contains",
+                "BeginsWith",
+                "EndsWith",
+                "LessThan",
+                "LessThanOrEqual",
+                "GreaterThan",
+                "GreaterThanOrEqual"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "selector": {
+          "description": "Name of Cookies to be matched",
+          "type": "string"
+        },
+        "transforms": {
+          "description": "List of transforms",
+          "oneOf": [
+            {
+              "items": {
+                "enum": [
+                  "Lowercase",
+                  "Uppercase"
+                ],
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "@odata.type",
+        "selector",
+        "operator",
+        "matchValues"
+      ],
+      "type": "object"
+    },
+    "CustomDomainPropertiesParameters": {
+      "description": "The JSON object that contains the properties of the custom domain to create.",
+      "properties": {
+        "hostName": {
+          "description": "The host name of the custom domain. Must be a domain name.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "hostName"
+      ],
+      "type": "object"
+    },
+    "CustomRule": {
+      "description": "Defines the common attributes for a custom rule that can be included in a waf policy",
+      "properties": {
+        "action": {
+          "description": "Describes what action to be applied when rule matches",
+          "oneOf": [
+            {
+              "enum": [
+                "Allow",
+                "Block",
+                "Log",
+                "Redirect"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "enabledState": {
+          "description": "Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.",
+          "oneOf": [
+            {
+              "enum": [
+                "Disabled",
+                "Enabled"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "matchConditions": {
+          "description": "List of match conditions.",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/MatchCondition"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "name": {
+          "description": "Defines the name of the custom rule",
+          "type": "string"
+        },
+        "priority": {
+          "description": "Defines in what order this rule be evaluated in the overall list of custom rules",
+          "oneOf": [
+            {
+              "maximum": 1000,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "name",
+        "priority",
+        "matchConditions",
+        "action"
+      ],
+      "type": "object"
+    },
+    "CustomRuleList": {
+      "description": "Defines contents of custom rules",
+      "properties": {
+        "rules": {
+          "description": "List of rules",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/CustomRule"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "DeepCreatedOrigin": {
+      "description": "The main origin of CDN content which is added when creating a CDN endpoint.",
+      "properties": {
+        "name": {
+          "description": "Origin name",
+          "type": "string"
+        },
+        "properties": {
+          "description": "Properties of the origin created on the CDN endpoint.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/DeepCreatedOriginProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "DeepCreatedOriginProperties": {
+      "description": "Properties of the origin created on the CDN endpoint.",
+      "properties": {
+        "hostName": {
+          "description": "The address of the origin. It can be a domain name, IPv4 address, or IPv6 address.",
+          "type": "string"
+        },
+        "httpPort": {
+          "description": "The value of the HTTP port. Must be between 1 and 65535",
+          "oneOf": [
+            {
+              "maximum": 65535,
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "httpsPort": {
+          "description": "The value of the HTTPS port. Must be between 1 and 65535",
+          "oneOf": [
+            {
+              "maximum": 65535,
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "hostName"
+      ],
+      "type": "object"
+    },
+    "DeliveryRule": {
+      "description": "A rule that specifies a set of actions and conditions",
+      "properties": {
+        "actions": {
+          "description": "A list of actions that are executed when all the conditions of a rule are satisfied.",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/DeliveryRuleActionAutoGenerated"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "conditions": {
+          "description": "A list of conditions that must be matched for the actions to be executed",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/DeliveryRuleCondition"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "name": {
+          "description": "Name of the rule",
+          "type": "string"
+        },
+        "order": {
+          "description": "The order in which the rules are applied for the endpoint. Possible values {0,1,2,3,………}. A rule with a lesser order will be applied before a rule with a greater order. Rule with order 0 is a special rule. It does not require any condition and actions listed in it will always be applied.",
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "order",
+        "actions"
+      ],
+      "type": "object"
+    },
+    "DeliveryRuleActionAutoGenerated": {
+      "description": "An action for the delivery rule.",
+      "oneOf": [
+        {
+          "description": "Defines the cache expiration action for the delivery rule.",
+          "properties": {
+            "parameters": {
+              "description": "Defines the parameters for the action.",
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/CacheExpirationActionParameters"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            }
+          },
+          "required": [
+            "parameters"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Defines the cache-key query string action for the delivery rule.",
+          "properties": {
+            "parameters": {
+              "description": "Defines the parameters for the action.",
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/CacheKeyQueryStringActionParameters"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            }
+          },
+          "required": [
+            "parameters"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Defines the request header action for the delivery rule.",
+          "properties": {
+            "parameters": {
+              "description": "Defines the parameters for the action.",
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/HeaderActionParameters"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            }
+          },
+          "required": [
+            "parameters"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Defines the response header action for the delivery rule.",
+          "properties": {
+            "parameters": {
+              "description": "Defines the parameters for the action.",
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/HeaderActionParameters"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            }
+          },
+          "required": [
+            "parameters"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Defines the url redirect action for the delivery rule.",
+          "properties": {
+            "parameters": {
+              "description": "Defines the parameters for the action.",
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/UrlRedirectActionParameters"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            }
+          },
+          "required": [
+            "parameters"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Defines the url rewrite action for the delivery rule.",
+          "properties": {
+            "parameters": {
+              "description": "Defines the parameters for the action.",
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/UrlRewriteActionParameters"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            }
+          },
+          "required": [
+            "parameters"
+          ],
+          "type": "object"
+        }
+      ],
+      "properties": {},
+      "type": "object"
+    },
+    "DeliveryRuleCondition": {
+      "description": "A condition for the delivery rule.",
+      "oneOf": [
+        {
+          "description": "Defines the Cookies condition for the delivery rule.",
+          "properties": {
+            "parameters": {
+              "description": "Defines the parameters for the condition.",
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/CookiesMatchConditionParameters"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            }
+          },
+          "required": [
+            "parameters"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Defines the HttpVersion condition for the delivery rule.",
+          "properties": {
+            "parameters": {
+              "description": "Defines the parameters for the condition.",
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/HttpVersionMatchConditionParameters"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            }
+          },
+          "required": [
+            "parameters"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Defines the IsDevice condition for the delivery rule.",
+          "properties": {
+            "parameters": {
+              "description": "Defines the parameters for the condition.",
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/IsDeviceMatchConditionParameters"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            }
+          },
+          "required": [
+            "parameters"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Defines the PostArgs condition for the delivery rule.",
+          "properties": {
+            "parameters": {
+              "description": "Defines the parameters for the condition.",
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/PostArgsMatchConditionParameters"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            }
+          },
+          "required": [
+            "parameters"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Defines the QueryString condition for the delivery rule.",
+          "properties": {
+            "parameters": {
+              "description": "Defines the parameters for the condition.",
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/QueryStringMatchConditionParameters"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            }
+          },
+          "required": [
+            "parameters"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Defines the RemoteAddress condition for the delivery rule.",
+          "properties": {
+            "parameters": {
+              "description": "Defines the parameters for the condition.",
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/RemoteAddressMatchConditionParameters"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            }
+          },
+          "required": [
+            "parameters"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Defines the RequestBody condition for the delivery rule.",
+          "properties": {
+            "parameters": {
+              "description": "Defines the parameters for the condition.",
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/RequestBodyMatchConditionParameters"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            }
+          },
+          "required": [
+            "parameters"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Defines the RequestHeader condition for the delivery rule.",
+          "properties": {
+            "parameters": {
+              "description": "Defines the parameters for the condition.",
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/RequestHeaderMatchConditionParameters"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            }
+          },
+          "required": [
+            "parameters"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Defines the RequestMethod condition for the delivery rule.",
+          "properties": {
+            "parameters": {
+              "description": "Defines the parameters for the condition.",
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/RequestMethodMatchConditionParameters"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            }
+          },
+          "required": [
+            "parameters"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Defines the RequestScheme condition for the delivery rule.",
+          "properties": {
+            "parameters": {
+              "description": "Defines the parameters for the condition.",
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/RequestSchemeMatchConditionParameters"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            }
+          },
+          "required": [
+            "parameters"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Defines the RequestUri condition for the delivery rule.",
+          "properties": {
+            "parameters": {
+              "description": "Defines the parameters for the condition.",
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/RequestUriMatchConditionParameters"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            }
+          },
+          "required": [
+            "parameters"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Defines the UrlFileExtension condition for the delivery rule.",
+          "properties": {
+            "parameters": {
+              "description": "Defines the parameters for the condition.",
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/UrlFileExtensionMatchConditionParameters"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            }
+          },
+          "required": [
+            "parameters"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Defines the UrlFileName condition for the delivery rule.",
+          "properties": {
+            "parameters": {
+              "description": "Defines the parameters for the condition.",
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/UrlFileNameMatchConditionParameters"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            }
+          },
+          "required": [
+            "parameters"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Defines the UrlPath condition for the delivery rule.",
+          "properties": {
+            "parameters": {
+              "description": "Defines the parameters for the condition.",
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/UrlPathMatchConditionParameters"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            }
+          },
+          "required": [
+            "parameters"
+          ],
+          "type": "object"
+        }
+      ],
+      "properties": {},
+      "type": "object"
+    },
+    "EndpointProperties": {
+      "description": "The JSON object that contains the properties required to create an endpoint.",
+      "properties": {
+        "contentTypesToCompress": {
+          "description": "List of content types on which compression applies. The value should be a valid MIME type.",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "deliveryPolicy": {
+          "description": "A policy that specifies the delivery rules to be used for an endpoint.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/EndpointPropertiesUpdateParametersDeliveryPolicy"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "geoFilters": {
+          "description": "List of rules defining the user's geo access within a CDN endpoint. Each geo filter defines an access rule to a specified path or content, e.g. block APAC for path /pictures/",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/GeoFilter"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "isCompressionEnabled": {
+          "description": "Indicates whether content compression is enabled on CDN. Default value is false. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be compressed on CDN when requested content is smaller than 1 byte or larger than 1 MB.",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "isHttpAllowed": {
+          "description": "Indicates whether HTTP traffic is allowed on the endpoint. Default value is true. At least one protocol (HTTP or HTTPS) must be allowed.",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "isHttpsAllowed": {
+          "description": "Indicates whether HTTPS traffic is allowed on the endpoint. Default value is true. At least one protocol (HTTP or HTTPS) must be allowed.",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "optimizationType": {
+          "description": "Specifies what scenario the customer wants this CDN endpoint to optimize for, e.g. Download, Media services. With this information, CDN can apply scenario driven optimization.",
+          "oneOf": [
+            {
+              "enum": [
+                "GeneralWebDelivery",
+                "GeneralMediaStreaming",
+                "VideoOnDemandMediaStreaming",
+                "LargeFileDownload",
+                "DynamicSiteAcceleration"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "originHostHeader": {
+          "description": "The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default.",
+          "type": "string"
+        },
+        "originPath": {
+          "description": "A directory path on the origin that CDN can use to retrieve content from, e.g. contoso.cloudapp.net/originpath.",
+          "type": "string"
+        },
+        "origins": {
+          "description": "The source of the content being delivered via CDN.",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/DeepCreatedOrigin"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "probePath": {
+          "description": "Path to a file hosted on the origin which helps accelerate delivery of the dynamic content and calculate the most optimal routes for the CDN. This is relative to the origin path.",
+          "type": "string"
+        },
+        "queryStringCachingBehavior": {
+          "description": "Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.",
+          "oneOf": [
+            {
+              "enum": [
+                "IgnoreQueryString",
+                "BypassCaching",
+                "UseQueryString",
+                "NotSet"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "webApplicationFirewallPolicyLink": {
+          "description": "Defines the Web Application Firewall policy for the endpoint (if applicable)",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/EndpointPropertiesUpdateParametersWebApplicationFirewallPolicyLink"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "origins"
+      ],
+      "type": "object"
+    },
+    "EndpointPropertiesUpdateParametersDeliveryPolicy": {
+      "description": "A policy that specifies the delivery rules to be used for an endpoint.",
+      "properties": {
+        "description": {
+          "description": "User-friendly description of the policy.",
+          "type": "string"
+        },
+        "rules": {
+          "description": "A list of the delivery rules.",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/DeliveryRule"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "rules"
+      ],
+      "type": "object"
+    },
+    "EndpointPropertiesUpdateParametersWebApplicationFirewallPolicyLink": {
+      "description": "Defines the Web Application Firewall policy for the endpoint (if applicable)",
+      "properties": {
+        "id": {
+          "description": "Resource ID.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "GeoFilter": {
+      "description": "Rules defining user's geo access within a CDN endpoint.",
+      "properties": {
+        "action": {
+          "description": "Action of the geo filter, i.e. allow or block access.",
+          "oneOf": [
+            {
+              "enum": [
+                "Block",
+                "Allow"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "countryCodes": {
+          "description": "Two letter country codes defining user country access in a geo filter, e.g. AU, MX, US.",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "relativePath": {
+          "description": "Relative path applicable to geo filter. (e.g. '/mypictures', '/mypicture/kitty.jpg', and etc.)",
+          "type": "string"
+        }
+      },
+      "required": [
+        "relativePath",
+        "action",
+        "countryCodes"
+      ],
+      "type": "object"
+    },
+    "HeaderActionParameters": {
+      "description": "Defines the parameters for the request header action.",
+      "properties": {
+        "@odata.type": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "headerAction": {
+          "description": "Action to perform",
+          "oneOf": [
+            {
+              "enum": [
+                "Append",
+                "Overwrite",
+                "Delete"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "headerName": {
+          "description": "Name of the header to modify",
+          "type": "string"
+        },
+        "value": {
+          "description": "Value for the specified action",
+          "type": "string"
+        }
+      },
+      "required": [
+        "@odata.type",
+        "headerAction",
+        "headerName"
+      ],
+      "type": "object"
+    },
+    "HttpVersionMatchConditionParameters": {
+      "description": "Defines the parameters for HttpVersion match conditions",
+      "properties": {
+        "@odata.type": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "#Microsoft.Azure.Cdn.Models.DeliveryRuleHttpVersionConditionParameters"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "matchValues": {
+          "description": "The match value for the condition of the delivery rule",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "negateCondition": {
+          "description": "Describes if this is negate condition or not",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "operator": {
+          "description": "Describes operator to be matched",
+          "oneOf": [
+            {
+              "enum": [
+                "Equal"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "@odata.type",
+        "operator",
+        "matchValues"
+      ],
+      "type": "object"
+    },
+    "IsDeviceMatchConditionParameters": {
+      "description": "Defines the parameters for IsDevice match conditions",
+      "properties": {
+        "@odata.type": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "#Microsoft.Azure.Cdn.Models.DeliveryRuleIsDeviceConditionParameters"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "matchValues": {
+          "description": "The match value for the condition of the delivery rule",
+          "oneOf": [
+            {
+              "items": {
+                "enum": [
+                  "Mobile",
+                  "Desktop"
+                ],
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "negateCondition": {
+          "description": "Describes if this is negate condition or not",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "operator": {
+          "description": "Describes operator to be matched",
+          "oneOf": [
+            {
+              "enum": [
+                "Equal"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "transforms": {
+          "description": "List of transforms",
+          "oneOf": [
+            {
+              "items": {
+                "enum": [
+                  "Lowercase",
+                  "Uppercase"
+                ],
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "@odata.type",
+        "operator",
+        "matchValues"
+      ],
+      "type": "object"
+    },
+    "ManagedRuleGroupOverride": {
+      "description": "Defines a managed rule group override setting.",
+      "properties": {
+        "ruleGroupName": {
+          "description": "Describes the managed rule group within the rule set to override",
+          "type": "string"
+        },
+        "rules": {
+          "description": "List of rules that will be disabled. If none specified, all rules in the group will be disabled.",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/ManagedRuleOverride"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "ruleGroupName"
+      ],
+      "type": "object"
+    },
+    "ManagedRuleOverride": {
+      "description": "Defines a managed rule group override setting.",
+      "properties": {
+        "action": {
+          "description": "Describes the override action to be applied when rule matches.",
+          "oneOf": [
+            {
+              "enum": [
+                "Allow",
+                "Block",
+                "Log",
+                "Redirect"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "enabledState": {
+          "description": "Describes if the managed rule is in enabled or disabled state. Defaults to Disabled if not specified.",
+          "oneOf": [
+            {
+              "enum": [
+                "Disabled",
+                "Enabled"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "ruleId": {
+          "description": "Identifier for the managed rule.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "ruleId"
+      ],
+      "type": "object"
+    },
+    "ManagedRuleSet": {
+      "description": "Defines a managed rule set.",
+      "properties": {
+        "anomalyScore": {
+          "description": "Verizon only : If the rule set supports anomaly detection mode, this describes the threshold for blocking requests.",
+          "oneOf": [
+            {
+              "maximum": 20,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "ruleGroupOverrides": {
+          "description": "Defines the rule overrides to apply to the rule set.",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/ManagedRuleGroupOverride"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "ruleSetType": {
+          "description": "Defines the rule set type to use.",
+          "type": "string"
+        },
+        "ruleSetVersion": {
+          "description": "Defines the version of the rule set to use.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "ruleSetType",
+        "ruleSetVersion"
+      ],
+      "type": "object"
+    },
+    "ManagedRuleSetList": {
+      "description": "Defines the list of managed rule sets for the policy.",
+      "properties": {
+        "managedRuleSets": {
+          "description": "List of rule sets.",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/ManagedRuleSet"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "MatchCondition": {
+      "description": "Define match conditions",
+      "properties": {
+        "matchValue": {
+          "description": "List of possible match values.",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "matchVariable": {
+          "description": "Match variable to compare against.",
+          "oneOf": [
+            {
+              "enum": [
+                "RemoteAddress",
+                "RequestMethod",
+                "QueryString",
+                "PostArgs",
+                "RequestUri",
+                "RequestHeader",
+                "RequestBody",
+                "RequestScheme",
+                "UrlPath",
+                "UrlFileExtension",
+                "UrlFileName",
+                "HttpVersion",
+                "Cookies",
+                "IsDevice",
+                "RemoteAddr",
+                "SocketAddr"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "negateCondition": {
+          "description": "Describes if the result of this condition should be negated.",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "operator": {
+          "description": "Describes operator to be matched",
+          "oneOf": [
+            {
+              "enum": [
+                "Any",
+                "IPMatch",
+                "GeoMatch",
+                "Equal",
+                "Contains",
+                "LessThan",
+                "GreaterThan",
+                "LessThanOrEqual",
+                "GreaterThanOrEqual",
+                "BeginsWith",
+                "EndsWith",
+                "RegEx"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "selector": {
+          "description": "Selector can used to match a specific key for QueryString, Cookies, RequestHeader or PostArgs.",
+          "type": "string"
+        },
+        "transforms": {
+          "description": "List of transforms.",
+          "oneOf": [
+            {
+              "items": {
+                "enum": [
+                  "Lowercase",
+                  "Uppercase",
+                  "Trim",
+                  "UrlDecode",
+                  "UrlEncode",
+                  "RemoveNulls"
+                ],
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "matchVariable",
+        "operator",
+        "matchValue"
+      ],
+      "type": "object"
+    },
+    "PolicySettings": {
+      "description": "Defines contents of a web application firewall global configuration",
+      "properties": {
+        "defaultCustomBlockResponseBody": {
+          "description": "If the action type is block, customer can override the response body. The body must be specified in base64 encoding.",
+          "oneOf": [
+            {
+              "pattern": "^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=|[A-Za-z0-9+/]{4})$",
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "defaultCustomBlockResponseStatusCode": {
+          "description": "If the action type is block, this field defines the default customer overridable http response status code.",
+          "oneOf": [
+            {
+              "oneOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "defaultRedirectUrl": {
+          "description": "If action type is redirect, this field represents the default redirect URL for the client.",
+          "type": "string"
+        },
+        "enabledState": {
+          "description": "describes if the policy is in enabled state or disabled state",
+          "oneOf": [
+            {
+              "enum": [
+                "Disabled",
+                "Enabled"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "mode": {
+          "description": "Describes if it is in detection mode or prevention mode at policy level.",
+          "oneOf": [
+            {
+              "enum": [
+                "Prevention",
+                "Detection"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "PostArgsMatchConditionParameters": {
+      "description": "Defines the parameters for PostArgs match conditions",
+      "properties": {
+        "@odata.type": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "#Microsoft.Azure.Cdn.Models.DeliveryRulePostArgsConditionParameters"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "matchValues": {
+          "description": "The match value for the condition of the delivery rule",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "negateCondition": {
+          "description": "Describes if this is negate condition or not",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "operator": {
+          "description": "Describes operator to be matched",
+          "oneOf": [
+            {
+              "enum": [
+                "Any",
+                "Equal",
+                "Contains",
+                "BeginsWith",
+                "EndsWith",
+                "LessThan",
+                "LessThanOrEqual",
+                "GreaterThan",
+                "GreaterThanOrEqual"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "selector": {
+          "description": "Name of PostArg to be matched",
+          "type": "string"
+        },
+        "transforms": {
+          "description": "List of transforms",
+          "oneOf": [
+            {
+              "items": {
+                "enum": [
+                  "Lowercase",
+                  "Uppercase"
+                ],
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "@odata.type",
+        "selector",
+        "operator",
+        "matchValues"
+      ],
+      "type": "object"
+    },
+    "ProfileProperties": {
+      "description": "The JSON object that contains the properties required to create a profile.",
+      "properties": {},
+      "type": "object"
+    },
+    "QueryStringMatchConditionParameters": {
+      "description": "Defines the parameters for QueryString match conditions",
+      "properties": {
+        "@odata.type": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "#Microsoft.Azure.Cdn.Models.DeliveryRuleQueryStringConditionParameters"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "matchValues": {
+          "description": "The match value for the condition of the delivery rule",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "negateCondition": {
+          "description": "Describes if this is negate condition or not",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "operator": {
+          "description": "Describes operator to be matched",
+          "oneOf": [
+            {
+              "enum": [
+                "Any",
+                "Equal",
+                "Contains",
+                "BeginsWith",
+                "EndsWith",
+                "LessThan",
+                "LessThanOrEqual",
+                "GreaterThan",
+                "GreaterThanOrEqual"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "transforms": {
+          "description": "List of transforms",
+          "oneOf": [
+            {
+              "items": {
+                "enum": [
+                  "Lowercase",
+                  "Uppercase"
+                ],
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "@odata.type",
+        "operator",
+        "matchValues"
+      ],
+      "type": "object"
+    },
+    "RateLimitRule": {
+      "description": "Defines a rate limiting rule that can be included in a waf policy",
+      "properties": {
+        "action": {
+          "description": "Describes what action to be applied when rule matches",
+          "oneOf": [
+            {
+              "enum": [
+                "Allow",
+                "Block",
+                "Log",
+                "Redirect"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "enabledState": {
+          "description": "Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.",
+          "oneOf": [
+            {
+              "enum": [
+                "Disabled",
+                "Enabled"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "matchConditions": {
+          "description": "List of match conditions.",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/MatchCondition"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "name": {
+          "description": "Defines the name of the custom rule",
+          "type": "string"
+        },
+        "priority": {
+          "description": "Defines in what order this rule be evaluated in the overall list of custom rules",
+          "oneOf": [
+            {
+              "maximum": 1000,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "rateLimitDurationInMinutes": {
+          "description": "Defines rate limit duration. Default is 1 minute.",
+          "oneOf": [
+            {
+              "maximum": 60,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "rateLimitThreshold": {
+          "description": "Defines rate limit threshold.",
+          "oneOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "rateLimitThreshold",
+        "rateLimitDurationInMinutes",
+        "name",
+        "priority",
+        "matchConditions",
+        "action"
+      ],
+      "type": "object"
+    },
+    "RateLimitRuleList": {
+      "description": "Defines contents of rate limit rules",
+      "properties": {
+        "rules": {
+          "description": "List of rules",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/RateLimitRule"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "RemoteAddressMatchConditionParameters": {
+      "description": "Defines the parameters for RemoteAddress match conditions",
+      "properties": {
+        "@odata.type": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "#Microsoft.Azure.Cdn.Models.DeliveryRuleRemoteAddressConditionParameters"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "matchValues": {
+          "description": "Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "negateCondition": {
+          "description": "Describes if this is negate condition or not",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "operator": {
+          "description": "Describes operator to be matched",
+          "oneOf": [
+            {
+              "enum": [
+                "Any",
+                "IPMatch",
+                "GeoMatch"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "transforms": {
+          "description": "List of transforms",
+          "oneOf": [
+            {
+              "items": {
+                "enum": [
+                  "Lowercase",
+                  "Uppercase"
+                ],
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "@odata.type",
+        "operator",
+        "matchValues"
+      ],
+      "type": "object"
+    },
+    "RequestBodyMatchConditionParameters": {
+      "description": "Defines the parameters for RequestBody match conditions",
+      "properties": {
+        "@odata.type": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "#Microsoft.Azure.Cdn.Models.DeliveryRuleRequestBodyConditionParameters"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "matchValues": {
+          "description": "The match value for the condition of the delivery rule",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "negateCondition": {
+          "description": "Describes if this is negate condition or not",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "operator": {
+          "description": "Describes operator to be matched",
+          "oneOf": [
+            {
+              "enum": [
+                "Any",
+                "Equal",
+                "Contains",
+                "BeginsWith",
+                "EndsWith",
+                "LessThan",
+                "LessThanOrEqual",
+                "GreaterThan",
+                "GreaterThanOrEqual"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "transforms": {
+          "description": "List of transforms",
+          "oneOf": [
+            {
+              "items": {
+                "enum": [
+                  "Lowercase",
+                  "Uppercase"
+                ],
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "@odata.type",
+        "operator",
+        "matchValues"
+      ],
+      "type": "object"
+    },
+    "RequestHeaderMatchConditionParameters": {
+      "description": "Defines the parameters for RequestHeader match conditions",
+      "properties": {
+        "@odata.type": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "#Microsoft.Azure.Cdn.Models.DeliveryRuleRequestHeaderConditionParameters"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "matchValues": {
+          "description": "The match value for the condition of the delivery rule",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "negateCondition": {
+          "description": "Describes if this is negate condition or not",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "operator": {
+          "description": "Describes operator to be matched",
+          "oneOf": [
+            {
+              "enum": [
+                "Any",
+                "Equal",
+                "Contains",
+                "BeginsWith",
+                "EndsWith",
+                "LessThan",
+                "LessThanOrEqual",
+                "GreaterThan",
+                "GreaterThanOrEqual"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "selector": {
+          "description": "Name of Header to be matched",
+          "type": "string"
+        },
+        "transforms": {
+          "description": "List of transforms",
+          "oneOf": [
+            {
+              "items": {
+                "enum": [
+                  "Lowercase",
+                  "Uppercase"
+                ],
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "@odata.type",
+        "selector",
+        "operator",
+        "matchValues"
+      ],
+      "type": "object"
+    },
+    "RequestMethodMatchConditionParameters": {
+      "description": "Defines the parameters for RequestMethod match conditions",
+      "properties": {
+        "@odata.type": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "#Microsoft.Azure.Cdn.Models.DeliveryRuleRequestMethodConditionParameters"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "matchValues": {
+          "description": "The match value for the condition of the delivery rule",
+          "oneOf": [
+            {
+              "items": {
+                "enum": [
+                  "GET",
+                  "HEAD",
+                  "POST",
+                  "PUT",
+                  "DELETE",
+                  "OPTIONS",
+                  "TRACE"
+                ],
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "negateCondition": {
+          "description": "Describes if this is negate condition or not",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "operator": {
+          "description": "Describes operator to be matched",
+          "oneOf": [
+            {
+              "enum": [
+                "Equal"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "@odata.type",
+        "operator",
+        "matchValues"
+      ],
+      "type": "object"
+    },
+    "RequestSchemeMatchConditionParameters": {
+      "description": "Defines the parameters for RequestScheme match conditions ",
+      "properties": {
+        "@odata.type": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "#Microsoft.Azure.Cdn.Models.DeliveryRuleRequestSchemeConditionParameters"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "matchValues": {
+          "description": "The match value for the condition of the delivery rule",
+          "oneOf": [
+            {
+              "items": {
+                "enum": [
+                  "HTTP",
+                  "HTTPS"
+                ],
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "negateCondition": {
+          "description": "Describes if this is negate condition or not",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "operator": {
+          "description": "Describes operator to be matched",
+          "oneOf": [
+            {
+              "enum": [
+                "Equal"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "@odata.type",
+        "operator",
+        "matchValues"
+      ],
+      "type": "object"
+    },
+    "RequestUriMatchConditionParameters": {
+      "description": "Defines the parameters for RequestUri match conditions",
+      "properties": {
+        "@odata.type": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "#Microsoft.Azure.Cdn.Models.DeliveryRuleRequestUriConditionParameters"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "matchValues": {
+          "description": "The match value for the condition of the delivery rule",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "negateCondition": {
+          "description": "Describes if this is negate condition or not",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "operator": {
+          "description": "Describes operator to be matched",
+          "oneOf": [
+            {
+              "enum": [
+                "Any",
+                "Equal",
+                "Contains",
+                "BeginsWith",
+                "EndsWith",
+                "LessThan",
+                "LessThanOrEqual",
+                "GreaterThan",
+                "GreaterThanOrEqual"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "transforms": {
+          "description": "List of transforms",
+          "oneOf": [
+            {
+              "items": {
+                "enum": [
+                  "Lowercase",
+                  "Uppercase"
+                ],
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "@odata.type",
+        "operator",
+        "matchValues"
+      ],
+      "type": "object"
+    },
+    "Sku": {
+      "description": "The pricing tier (defines a CDN provider, feature list and rate) of the CDN profile.",
+      "properties": {
+        "name": {
+          "description": "Name of the pricing tier.",
+          "oneOf": [
+            {
+              "enum": [
+                "Standard_Verizon",
+                "Premium_Verizon",
+                "Custom_Verizon",
+                "Standard_Akamai",
+                "Standard_ChinaCdn",
+                "Standard_Microsoft",
+                "Premium_ChinaCdn"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "UrlFileExtensionMatchConditionParameters": {
+      "description": "Defines the parameters for UrlFileExtension match conditions",
+      "properties": {
+        "@odata.type": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "#Microsoft.Azure.Cdn.Models.DeliveryRuleUrlFileExtensionMatchConditionParameters"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "matchValues": {
+          "description": "The match value for the condition of the delivery rule",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "negateCondition": {
+          "description": "Describes if this is negate condition or not",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "operator": {
+          "description": "Describes operator to be matched",
+          "oneOf": [
+            {
+              "enum": [
+                "Any",
+                "Equal",
+                "Contains",
+                "BeginsWith",
+                "EndsWith",
+                "LessThan",
+                "LessThanOrEqual",
+                "GreaterThan",
+                "GreaterThanOrEqual"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "transforms": {
+          "description": "List of transforms",
+          "oneOf": [
+            {
+              "items": {
+                "enum": [
+                  "Lowercase",
+                  "Uppercase"
+                ],
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "@odata.type",
+        "operator",
+        "matchValues"
+      ],
+      "type": "object"
+    },
+    "UrlFileNameMatchConditionParameters": {
+      "description": "Defines the parameters for UrlFilename match conditions",
+      "properties": {
+        "@odata.type": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "#Microsoft.Azure.Cdn.Models.DeliveryRuleUrlFilenameConditionParameters"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "matchValues": {
+          "description": "The match value for the condition of the delivery rule",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "negateCondition": {
+          "description": "Describes if this is negate condition or not",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "operator": {
+          "description": "Describes operator to be matched",
+          "oneOf": [
+            {
+              "enum": [
+                "Any",
+                "Equal",
+                "Contains",
+                "BeginsWith",
+                "EndsWith",
+                "LessThan",
+                "LessThanOrEqual",
+                "GreaterThan",
+                "GreaterThanOrEqual"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "transforms": {
+          "description": "List of transforms",
+          "oneOf": [
+            {
+              "items": {
+                "enum": [
+                  "Lowercase",
+                  "Uppercase"
+                ],
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "@odata.type",
+        "operator",
+        "matchValues"
+      ],
+      "type": "object"
+    },
+    "UrlPathMatchConditionParameters": {
+      "description": "Defines the parameters for UrlPath match conditions",
+      "properties": {
+        "@odata.type": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "#Microsoft.Azure.Cdn.Models.DeliveryRuleUrlPathMatchConditionParameters"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "matchValues": {
+          "description": "The match value for the condition of the delivery rule",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "negateCondition": {
+          "description": "Describes if this is negate condition or not",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "operator": {
+          "description": "Describes operator to be matched",
+          "oneOf": [
+            {
+              "enum": [
+                "Any",
+                "Equal",
+                "Contains",
+                "BeginsWith",
+                "EndsWith",
+                "LessThan",
+                "LessThanOrEqual",
+                "GreaterThan",
+                "GreaterThanOrEqual",
+                "Wildcard"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "transforms": {
+          "description": "List of transforms",
+          "oneOf": [
+            {
+              "items": {
+                "enum": [
+                  "Lowercase",
+                  "Uppercase"
+                ],
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "@odata.type",
+        "operator",
+        "matchValues"
+      ],
+      "type": "object"
+    },
+    "UrlRedirectActionParameters": {
+      "description": "Defines the parameters for the url redirect action.",
+      "properties": {
+        "@odata.type": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "#Microsoft.Azure.Cdn.Models.DeliveryRuleUrlRedirectActionParameters"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "customFragment": {
+          "description": "Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include the #.",
+          "type": "string"
+        },
+        "customHostname": {
+          "description": "Host to redirect. Leave empty to use the incoming host as the destination host.",
+          "type": "string"
+        },
+        "customPath": {
+          "description": "The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.",
+          "type": "string"
+        },
+        "customQueryString": {
+          "description": "The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in <key>=<value> format. ? and & will be added automatically so do not include them.",
+          "type": "string"
+        },
+        "destinationProtocol": {
+          "description": "Protocol to use for the redirect. The default value is MatchRequest",
+          "oneOf": [
+            {
+              "enum": [
+                "MatchRequest",
+                "Http",
+                "Https"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "redirectType": {
+          "description": "The redirect type the rule will use when redirecting traffic.",
+          "oneOf": [
+            {
+              "enum": [
+                "Moved",
+                "Found",
+                "TemporaryRedirect",
+                "PermanentRedirect"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "@odata.type",
+        "redirectType"
+      ],
+      "type": "object"
+    },
+    "UrlRewriteActionParameters": {
+      "description": "Defines the parameters for the url rewrite action.",
+      "properties": {
+        "@odata.type": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "#Microsoft.Azure.Cdn.Models.DeliveryRuleUrlRewriteActionParameters"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "destination": {
+          "description": "Define the destination path for be used in the rewrite. This will overwrite the source pattern ",
+          "type": "string"
+        },
+        "preserveUnmatchedPath": {
+          "description": "If True, the remaining path after the source pattern will be appended to the new destination path.  ",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "sourcePattern": {
+          "description": "define a request URI pattern that identifies the type of requests that may be rewritten. Currently, source pattern uses a prefix-based match. To match all URL paths, use \"/\" as the source pattern value. To match only the root directory and re-write this path, use the origin path field",
+          "type": "string"
+        }
+      },
+      "required": [
+        "@odata.type",
+        "sourcePattern",
+        "destination"
+      ],
+      "type": "object"
+    },
+    "profiles_endpoints_childResource": {
+      "description": "Microsoft.Cdn/profiles/endpoints",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2019-06-15-preview"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "Resource location.",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of the endpoint under the profile which is unique globally.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The JSON object that contains the properties required to create an endpoint.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/EndpointProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "Resource tags.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "endpoints"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "profiles_endpoints_customDomains_childResource": {
+      "description": "Microsoft.Cdn/profiles/endpoints/customDomains",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2019-06-15-preview"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of the custom domain within an endpoint.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The JSON object that contains the properties of the custom domain to create.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/CustomDomainPropertiesParameters"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "customDomains"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    }
+  }
+}

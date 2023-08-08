@@ -1,0 +1,368 @@
+{
+  "id": "https://schema.management.azure.com/schemas/2023-05-18-preview/Microsoft.DelegatedNetwork.json#",
+  "title": "Microsoft.DelegatedNetwork",
+  "description": "Microsoft DelegatedNetwork Resource Types",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "resourceDefinitions": {
+    "controller": {
+      "description": "Microsoft.DelegatedNetwork/controller",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2023-05-18-preview"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "Location of the resource.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource. It must be a minimum of 3 characters, and a maximum of 63.",
+          "oneOf": [
+            {
+              "maxLength": 63,
+              "minLength": 3,
+              "pattern": "^[a-z][a-z0-9]*$",
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "properties": {
+          "description": "Properties of the provision operation request.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/DelegatedControllerProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "The resource tags.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.DelegatedNetwork/controller"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "delegatedSubnets": {
+      "description": "Microsoft.DelegatedNetwork/delegatedSubnets",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2023-05-18-preview"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "Location of the resource.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource. It must be a minimum of 3 characters, and a maximum of 63.",
+          "oneOf": [
+            {
+              "maxLength": 63,
+              "minLength": 3,
+              "pattern": "^[a-z][a-z0-9]*$",
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "properties": {
+          "description": "Properties of the provision operation request.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/DelegatedSubnetProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "The resource tags.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.DelegatedNetwork/delegatedSubnets"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "orchestrators": {
+      "description": "Microsoft.DelegatedNetwork/orchestrators",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2023-05-18-preview"
+          ],
+          "type": "string"
+        },
+        "identity": {
+          "description": "The identity of the orchestrator",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/OrchestratorIdentity"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "kind": {
+          "description": "The kind of workbook. Choices are user and shared.",
+          "oneOf": [
+            {
+              "enum": [
+                "Kubernetes"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "location": {
+          "description": "Location of the resource.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource. It must be a minimum of 3 characters, and a maximum of 63.",
+          "oneOf": [
+            {
+              "maxLength": 63,
+              "minLength": 3,
+              "pattern": "^[a-z][a-z0-9]*$",
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "properties": {
+          "description": "Properties of the provision operation request.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/OrchestratorResourceProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "The resource tags.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.DelegatedNetwork/orchestrators"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    }
+  },
+  "definitions": {
+    "ControllerDetails": {
+      "description": "controller details",
+      "properties": {
+        "id": {
+          "description": "controller arm resource id",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "DelegatedControllerProperties": {
+      "description": "Properties of Delegated controller resource.",
+      "properties": {
+        "purpose": {
+          "description": "The purpose of the dnc controller resource.",
+          "oneOf": [
+            {
+              "enum": [
+                "test",
+                "prod"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "DelegatedSubnetProperties": {
+      "description": "Properties of delegated subnet",
+      "properties": {
+        "controllerDetails": {
+          "description": "Properties of the controller.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ControllerDetails"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "subnetDetails": {
+          "description": "subnet details",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/SubnetDetails"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "OrchestratorIdentity": {
+      "properties": {
+        "type": {
+          "description": "The type of identity used for orchestrator cluster. Type 'SystemAssigned' will use an implicitly created identity orchestrator clusters",
+          "oneOf": [
+            {
+              "enum": [
+                "SystemAssigned",
+                "None"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "OrchestratorResourceProperties": {
+      "description": "Properties of orchestrator",
+      "properties": {
+        "apiServerEndpoint": {
+          "description": "K8s APIServer url. Either one of apiServerEndpoint or privateLinkResourceId can be specified",
+          "type": "string"
+        },
+        "clusterRootCA": {
+          "description": "RootCA certificate of kubernetes cluster base64 encoded",
+          "type": "string"
+        },
+        "controllerDetails": {
+          "description": "Properties of the controller.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ControllerDetails"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "orchestratorAppId": {
+          "description": "AAD ID used with apiserver",
+          "type": "string"
+        },
+        "orchestratorTenantId": {
+          "description": "TenantID of server App ID",
+          "type": "string"
+        },
+        "privateLinkResourceId": {
+          "description": "private link arm resource id. Either one of apiServerEndpoint or privateLinkResourceId can be specified",
+          "type": "string"
+        }
+      },
+      "required": [
+        "controllerDetails"
+      ],
+      "type": "object"
+    },
+    "SubnetDetails": {
+      "description": "Properties of orchestrator",
+      "properties": {
+        "id": {
+          "description": "subnet arm resource id",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    }
+  }
+}

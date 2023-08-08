@@ -1,0 +1,21 @@
+ {
+   resourceDefinitions: {
+     userAssignedIdentities: {
+       required: [
+         ...
+-        "location"
+         ...
+         ...
+       ]
+     }
+   }
+   definitions: {
+     FederatedIdentityCredentialProperties: {
+       properties: {
+         issuer: {
+-          format: "uri"
+         }
+       }
+     }
+   }
+ }

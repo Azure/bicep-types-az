@@ -1,0 +1,175 @@
+{
+  "id": "https://schema.management.azure.com/schemas/2022-04-01-preview/Microsoft.Easm.json#",
+  "title": "Microsoft.Easm",
+  "description": "Microsoft Easm Resource Types",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "resourceDefinitions": {
+    "workspaces": {
+      "description": "Microsoft.Easm/workspaces",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2022-04-01-preview"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "The geo-location where the resource lives",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the Workspace.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "Workspace properties.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/WorkspaceResourceProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "resources": {
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/definitions/workspaces_labels_childResource"
+              }
+            ]
+          },
+          "type": "array"
+        },
+        "tags": {
+          "description": "Resource tags.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.Easm/workspaces"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "workspaces_labels": {
+      "description": "Microsoft.Easm/workspaces/labels",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2022-04-01-preview"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the Label.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "Label properties",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/LabelResourceProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.Easm/workspaces/labels"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    }
+  },
+  "definitions": {
+    "LabelResourceProperties": {
+      "description": "Label properties.",
+      "properties": {
+        "color": {
+          "description": "Label color.",
+          "type": "string"
+        },
+        "displayName": {
+          "description": "Label display name.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "WorkspaceResourceProperties": {
+      "description": "Workspace properties.",
+      "properties": {},
+      "type": "object"
+    },
+    "workspaces_labels_childResource": {
+      "description": "Microsoft.Easm/workspaces/labels",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2022-04-01-preview"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the Label.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "Label properties",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/LabelResourceProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "labels"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    }
+  }
+}

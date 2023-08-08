@@ -1,0 +1,368 @@
+{
+  "id": "https://schema.management.azure.com/schemas/2021-02-01-preview/Microsoft.IoTSecurity.json#",
+  "title": "Microsoft.IoTSecurity",
+  "description": "Microsoft IoTSecurity Resource Types",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "subscription_resourceDefinitions": {
+    "defenderSettings": {
+      "description": "Microsoft.IoTSecurity/defenderSettings",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2021-02-01-preview"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "oneOf": [
+            {
+              "enum": [
+                "default"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "properties": {
+          "description": "IoT Defender settings properties",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/DefenderSettingsProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.IoTSecurity/defenderSettings"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "locations_deviceGroups": {
+      "description": "Microsoft.IoTSecurity/locations/deviceGroups",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2021-02-01-preview"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "Device group name",
+          "type": "string"
+        },
+        "properties": {
+          "description": "Device group properties",
+          "oneOf": [
+            {
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.IoTSecurity/locations/deviceGroups"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "onPremiseSensors": {
+      "description": "Microsoft.IoTSecurity/onPremiseSensors",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2021-02-01-preview"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of the on-premise IoT sensor",
+          "type": "string"
+        },
+        "type": {
+          "enum": [
+            "Microsoft.IoTSecurity/onPremiseSensors"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    }
+  },
+  "unknown_resourceDefinitions": {
+    "sensors": {
+      "description": "Microsoft.IoTSecurity/sensors",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2021-02-01-preview"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of the IoT sensor",
+          "type": "string"
+        },
+        "properties": {
+          "description": "IoT sensor properties",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/SensorProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.IoTSecurity/sensors"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "sites": {
+      "description": "Microsoft.IoTSecurity/sites",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2021-02-01-preview"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "oneOf": [
+            {
+              "enum": [
+                "default"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "properties": {
+          "description": "IoT site properties",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/SiteProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.IoTSecurity/sites"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    }
+  },
+  "definitions": {
+    "DefenderSettingsProperties": {
+      "description": "IoT Defender settings properties",
+      "properties": {
+        "deviceQuota": {
+          "description": "Size of the device quota. Value is required to be in multiples of 100.",
+          "oneOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "mdeIntegration": {
+          "description": "MDE integration configuration",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/DefenderSettingsPropertiesMdeIntegration"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "onboardingKind": {
+          "description": "The kind of onboarding for the subscription",
+          "oneOf": [
+            {
+              "enum": [
+                "Default",
+                "MigratedToAzure",
+                "Evaluation",
+                "Purchased"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "sentinelWorkspaceResourceIds": {
+          "description": "Sentinel Workspace Resource Ids",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "deviceQuota",
+        "sentinelWorkspaceResourceIds",
+        "onboardingKind",
+        "mdeIntegration"
+      ],
+      "type": "object"
+    },
+    "DefenderSettingsPropertiesMdeIntegration": {
+      "description": "MDE integration configuration",
+      "properties": {
+        "status": {
+          "description": "Integration status",
+          "oneOf": [
+            {
+              "enum": [
+                "Disabled",
+                "Enabled"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "status"
+      ],
+      "type": "object"
+    },
+    "SensorProperties": {
+      "description": "IoT sensor properties",
+      "properties": {
+        "sensorType": {
+          "description": "Type of sensor",
+          "oneOf": [
+            {
+              "enum": [
+                "Ot",
+                "Enterprise"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tiAutomaticUpdates": {
+          "description": "TI Automatic mode status of the IoT sensor",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "zone": {
+          "description": "Zone of the IoT sensor",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "SiteProperties": {
+      "description": "IoT site properties",
+      "properties": {
+        "displayName": {
+          "description": "Display name of the IoT site",
+          "type": "string"
+        },
+        "tags": {
+          "description": "Tags of the IoT site",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "displayName"
+      ],
+      "type": "object"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "id": "https://schema.management.azure.com/schemas/2016-05-01/Microsoft.InfrastructureInsights.Admin.json#",
+  "title": "Microsoft.InfrastructureInsights.Admin",
+  "description": "Microsoft InfrastructureInsights.Admin Resource Types",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {}
+}
