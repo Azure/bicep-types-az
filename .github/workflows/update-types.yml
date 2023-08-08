@@ -16,6 +16,8 @@ on:
 jobs:
   update-types:
     name: Update Types
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
 
     steps:
@@ -75,31 +77,15 @@ jobs:
       - id: get_swagger_gh_uri
         name: Get GitHub URI for azure-rest-api-specs
         run: |
-          git_sha=`git rev-parse HEAD`
+          git_sha=`git rev-parse --short HEAD`
           echo "::set-output name=gh_uri::https://github.com/Azure/azure-rest-api-specs/tree/$git_sha"
         working-directory: workflow-temp/azure-rest-api-specs
 
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v5
+      - name: Commit and push
+        uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          committer: GitHub <noreply@github.com>
-          author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
-          signoff: false
-          branch: autogenerate
-          branch-suffix: short-commit-hash
-          delete-branch: true
-          title: |
-            Update Generated Types ${{ github.event.inputs.single_path && format('(single path: {0})', github.event.inputs.single_path) || '' }}
-          body:  |
-            Update Generated Types ${{ github.event.inputs.single_path && format('(single path: {0})', github.event.inputs.single_path) || '' }}
-
-            Generate types for ${{ steps.get_swagger_gh_uri.outputs.gh_uri }}
-
-            Summary
-            ${{ steps.generate.outputs.summary }}
-          commit-message: |
-            Update Generated Types ${{ github.event.inputs.single_path && format('(single path: {0})', github.event.inputs.single_path) || '' }}
-
-            Generate types for ${{ steps.get_swagger_gh_uri.outputs.gh_uri }}
-          labels: autogenerate
-          draft: false
+          commit_message: |
+            Update types from ${{ steps.get_swagger_gh_uri.outputs.gh_uri }} ${{ github.event.inputs.single_path && format('(single path: {0})', github.event.inputs.single_path) || '' }}
+          branch: ${{ github.event.inputs.single_path && format('autogenerate-{0}', github.event.inputs.single_path) || 'autogenerate' }}
+          push_options: '--force'
+          create_branch: true
