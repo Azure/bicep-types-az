@@ -1,0 +1,1180 @@
+{
+  "id": "https://schema.management.azure.com/schemas/2021-01-01/Microsoft.DataProtection.json#",
+  "title": "Microsoft.DataProtection",
+  "description": "Microsoft DataProtection Resource Types",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "resourceDefinitions": {
+    "backupVaults": {
+      "description": "Microsoft.DataProtection/backupVaults",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2021-01-01"
+          ],
+          "type": "string"
+        },
+        "eTag": {
+          "description": "Optional ETag.",
+          "type": "string"
+        },
+        "identity": {
+          "description": "Input Managed Identity Details",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/DppIdentityDetails"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "location": {
+          "description": "Resource location.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the backup vault.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "BackupVaultResource properties",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/BackupVault"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "resources": {
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/definitions/backupVaults_backupPolicies_childResource"
+              },
+              {
+                "$ref": "#/definitions/backupVaults_backupInstances_childResource"
+              }
+            ]
+          },
+          "type": "array"
+        },
+        "tags": {
+          "description": "Resource tags.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.DataProtection/backupVaults"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "backupVaults_backupInstances": {
+      "description": "Microsoft.DataProtection/backupVaults/backupInstances",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2021-01-01"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the backup instance",
+          "type": "string"
+        },
+        "properties": {
+          "description": "BackupInstanceResource properties",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/BackupInstance"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.DataProtection/backupVaults/backupInstances"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "backupVaults_backupPolicies": {
+      "description": "Microsoft.DataProtection/backupVaults/backupPolicies",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2021-01-01"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of the policy",
+          "type": "string"
+        },
+        "properties": {
+          "description": "BaseBackupPolicyResource properties",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/BaseBackupPolicy"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.DataProtection/backupVaults/backupPolicies"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    }
+  },
+  "definitions": {
+    "AdhocBasedTaggingCriteria": {
+      "description": "Adhoc backup tagging criteria",
+      "properties": {
+        "tagInfo": {
+          "description": "Retention tag information",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/RetentionTag"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "BackupCriteria": {
+      "description": "BackupCriteria base class",
+      "oneOf": [
+        {
+          "description": "Schedule based backup criteria",
+          "properties": {
+            "absoluteCriteria": {
+              "description": "it contains absolute values like \"AllBackup\" / \"FirstOfDay\" / \"FirstOfWeek\" / \"FirstOfMonth\"\r\nand should be part of AbsoluteMarker enum",
+              "oneOf": [
+                {
+                  "items": {
+                    "enum": [
+                      "AllBackup",
+                      "FirstOfDay",
+                      "FirstOfMonth",
+                      "FirstOfWeek",
+                      "FirstOfYear"
+                    ],
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            },
+            "daysOfMonth": {
+              "description": "This is day of the month from 1 to 28 other wise last of month",
+              "oneOf": [
+                {
+                  "items": {
+                    "$ref": "#/definitions/Day"
+                  },
+                  "type": "array"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            },
+            "daysOfTheWeek": {
+              "description": "It should be Sunday/Monday/T..../Saturday",
+              "oneOf": [
+                {
+                  "items": {
+                    "enum": [
+                      "Friday",
+                      "Monday",
+                      "Saturday",
+                      "Sunday",
+                      "Thursday",
+                      "Tuesday",
+                      "Wednesday"
+                    ],
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            },
+            "monthsOfYear": {
+              "description": "It should be January/February/....../December",
+              "oneOf": [
+                {
+                  "items": {
+                    "enum": [
+                      "April",
+                      "August",
+                      "December",
+                      "February",
+                      "January",
+                      "July",
+                      "June",
+                      "March",
+                      "May",
+                      "November",
+                      "October",
+                      "September"
+                    ],
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            },
+            "scheduleTimes": {
+              "description": "List of schedule times for backup",
+              "oneOf": [
+                {
+                  "items": {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            },
+            "weeksOfTheMonth": {
+              "description": "It should be First/Second/Third/Fourth/Last",
+              "oneOf": [
+                {
+                  "items": {
+                    "enum": [
+                      "First",
+                      "Fourth",
+                      "Last",
+                      "Second",
+                      "Third"
+                    ],
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            }
+          },
+          "type": "object"
+        }
+      ],
+      "properties": {},
+      "type": "object"
+    },
+    "BackupInstance": {
+      "description": "Backup Instance",
+      "properties": {
+        "dataSourceInfo": {
+          "description": "Gets or sets the data source information.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/Datasource"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "dataSourceSetInfo": {
+          "description": "Gets or sets the data source set information.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/DatasourceSet"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "friendlyName": {
+          "description": "Gets or sets the Backup Instance friendly name.",
+          "type": "string"
+        },
+        "objectType": {
+          "description": "",
+          "type": "string"
+        },
+        "policyInfo": {
+          "description": "Gets or sets the policy information.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/PolicyInfo"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "dataSourceInfo",
+        "policyInfo",
+        "objectType"
+      ],
+      "type": "object"
+    },
+    "BackupParameters": {
+      "description": "BackupParameters base",
+      "oneOf": [
+        {
+          "description": "Azure backup parameters",
+          "properties": {
+            "backupType": {
+              "description": "BackupType ; Full/Incremental etc",
+              "type": "string"
+            }
+          },
+          "required": [
+            "backupType"
+          ],
+          "type": "object"
+        }
+      ],
+      "properties": {},
+      "type": "object"
+    },
+    "BackupSchedule": {
+      "description": "Schedule for backup",
+      "properties": {
+        "repeatingTimeIntervals": {
+          "description": "ISO 8601 repeating time interval format",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "repeatingTimeIntervals"
+      ],
+      "type": "object"
+    },
+    "BackupVault": {
+      "description": "Backup Vault",
+      "properties": {
+        "storageSettings": {
+          "description": "Storage Settings",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/StorageSetting"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "storageSettings"
+      ],
+      "type": "object"
+    },
+    "BaseBackupPolicy": {
+      "description": "BackupPolicy base",
+      "oneOf": [
+        {
+          "description": "Rule based backup policy",
+          "properties": {
+            "policyRules": {
+              "description": "Policy rule dictionary that contains rules for each backuptype i.e Full/Incremental/Logs etc",
+              "oneOf": [
+                {
+                  "items": {
+                    "$ref": "#/definitions/BasePolicyRule"
+                  },
+                  "type": "array"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            }
+          },
+          "required": [
+            "policyRules"
+          ],
+          "type": "object"
+        }
+      ],
+      "properties": {
+        "datasourceTypes": {
+          "description": "Type of datasource for the backup management",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "datasourceTypes"
+      ],
+      "type": "object"
+    },
+    "BasePolicyRule": {
+      "description": "BasePolicy Rule",
+      "oneOf": [
+        {
+          "description": "Azure backup rule",
+          "properties": {
+            "backupParameters": {
+              "description": "BackupParameters base",
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/BackupParameters"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            },
+            "dataStore": {
+              "description": "DataStoreInfo base",
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/DataStoreInfoBase"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            },
+            "trigger": {
+              "description": "Trigger context",
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/TriggerContext"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            }
+          },
+          "required": [
+            "dataStore",
+            "trigger"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Azure retention rule",
+          "properties": {
+            "isDefault": {
+              "description": "",
+              "oneOf": [
+                {
+                  "type": "boolean"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            },
+            "lifecycles": {
+              "description": "",
+              "oneOf": [
+                {
+                  "items": {
+                    "$ref": "#/definitions/SourceLifeCycle"
+                  },
+                  "type": "array"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            }
+          },
+          "required": [
+            "lifecycles"
+          ],
+          "type": "object"
+        }
+      ],
+      "properties": {
+        "name": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "CopyOption": {
+      "description": "Options to copy",
+      "oneOf": [
+        {
+          "description": "Copy on Expiry Option",
+          "properties": {},
+          "type": "object"
+        },
+        {
+          "description": "Duration based custom options to copy",
+          "properties": {
+            "duration": {
+              "description": "Data copied after given timespan",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        {
+          "description": "Immediate copy Option",
+          "properties": {},
+          "type": "object"
+        }
+      ],
+      "properties": {},
+      "type": "object"
+    },
+    "DataStoreInfoBase": {
+      "description": "DataStoreInfo base",
+      "properties": {
+        "dataStoreType": {
+          "description": "type of datastore; Operational/Vault/Archive",
+          "oneOf": [
+            {
+              "enum": [
+                "OperationalStore",
+                "VaultStore",
+                "ArchiveStore"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "objectType": {
+          "description": "Type of Datasource object, used to initialize the right inherited type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "dataStoreType",
+        "objectType"
+      ],
+      "type": "object"
+    },
+    "DataStoreParameters": {
+      "description": "Parameters for DataStore",
+      "oneOf": [
+        {
+          "description": "Parameters for Operational-Tier DataStore",
+          "properties": {
+            "resourceGroupId": {
+              "description": "Gets or sets the Snapshot Resource Group Uri.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      ],
+      "properties": {
+        "dataStoreType": {
+          "description": "type of datastore; Operational/Vault/Archive",
+          "oneOf": [
+            {
+              "enum": [
+                "OperationalStore",
+                "VaultStore",
+                "ArchiveStore"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "dataStoreType"
+      ],
+      "type": "object"
+    },
+    "Datasource": {
+      "description": "Datasource to be backed up",
+      "properties": {
+        "datasourceType": {
+          "description": "DatasourceType of the resource.",
+          "type": "string"
+        },
+        "objectType": {
+          "description": "Type of Datasource object, used to initialize the right inherited type",
+          "type": "string"
+        },
+        "resourceID": {
+          "description": "Full ARM ID of the resource. For azure resources, this is ARM ID. For non azure resources, this will be the ID created by backup service via Fabric/Vault.",
+          "type": "string"
+        },
+        "resourceLocation": {
+          "description": "Location of datasource.",
+          "type": "string"
+        },
+        "resourceName": {
+          "description": "Unique identifier of the resource in the context of parent.",
+          "type": "string"
+        },
+        "resourceType": {
+          "description": "Resource Type of Datasource.",
+          "type": "string"
+        },
+        "resourceUri": {
+          "description": "Uri of the resource.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "resourceID"
+      ],
+      "type": "object"
+    },
+    "DatasourceSet": {
+      "description": "DatasourceSet details of datasource to be backed up",
+      "properties": {
+        "datasourceType": {
+          "description": "DatasourceType of the resource.",
+          "type": "string"
+        },
+        "objectType": {
+          "description": "Type of Datasource object, used to initialize the right inherited type",
+          "type": "string"
+        },
+        "resourceID": {
+          "description": "Full ARM ID of the resource. For azure resources, this is ARM ID. For non azure resources, this will be the ID created by backup service via Fabric/Vault.",
+          "type": "string"
+        },
+        "resourceLocation": {
+          "description": "Location of datasource.",
+          "type": "string"
+        },
+        "resourceName": {
+          "description": "Unique identifier of the resource in the context of parent.",
+          "type": "string"
+        },
+        "resourceType": {
+          "description": "Resource Type of Datasource.",
+          "type": "string"
+        },
+        "resourceUri": {
+          "description": "Uri of the resource.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "resourceID"
+      ],
+      "type": "object"
+    },
+    "Day": {
+      "description": "Day of the week",
+      "properties": {
+        "date": {
+          "description": "Date of the month",
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "isLast": {
+          "description": "Whether Date is last date of month",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "DeleteOption": {
+      "description": "Delete Option",
+      "oneOf": [
+        {
+          "description": "Delete option with duration",
+          "properties": {},
+          "type": "object"
+        }
+      ],
+      "properties": {
+        "duration": {
+          "description": "Duration of deletion after given timespan",
+          "type": "string"
+        }
+      },
+      "required": [
+        "duration"
+      ],
+      "type": "object"
+    },
+    "DppIdentityDetails": {
+      "description": "Identity details",
+      "properties": {
+        "type": {
+          "description": "The identityType which can be either SystemAssigned or None",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "PolicyInfo": {
+      "description": "Policy Info in backupInstance",
+      "properties": {
+        "policyId": {
+          "description": "",
+          "type": "string"
+        },
+        "policyParameters": {
+          "description": "Policy parameters for the backup instance",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/PolicyParameters"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "policyId"
+      ],
+      "type": "object"
+    },
+    "PolicyParameters": {
+      "description": "Parameters in Policy",
+      "properties": {
+        "dataStoreParametersList": {
+          "description": "Gets or sets the DataStore Parameters",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/DataStoreParameters"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "RetentionTag": {
+      "description": "Retention tag",
+      "properties": {
+        "tagName": {
+          "description": "Retention Tag Name to relate it to retention rule.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "tagName"
+      ],
+      "type": "object"
+    },
+    "SourceLifeCycle": {
+      "description": "Source LifeCycle",
+      "properties": {
+        "deleteAfter": {
+          "description": "Delete Option",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/DeleteOption"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "sourceDataStore": {
+          "description": "DataStoreInfo base",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/DataStoreInfoBase"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "targetDataStoreCopySettings": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/TargetCopySetting"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "deleteAfter",
+        "sourceDataStore"
+      ],
+      "type": "object"
+    },
+    "StorageSetting": {
+      "description": "Storage setting",
+      "properties": {
+        "datastoreType": {
+          "description": "Gets or sets the type of the datastore.",
+          "oneOf": [
+            {
+              "enum": [
+                "ArchiveStore",
+                "SnapshotStore",
+                "VaultStore"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "description": "Gets or sets the type.",
+          "oneOf": [
+            {
+              "enum": [
+                "GeoRedundant",
+                "LocallyRedundant"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "TaggingCriteria": {
+      "description": "Tagging criteria",
+      "properties": {
+        "criteria": {
+          "description": "Criteria which decides whether the tag can be applied to a triggered backup.",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/BackupCriteria"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "isDefault": {
+          "description": "Specifies if tag is default.",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tagInfo": {
+          "description": "Retention tag information",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/RetentionTag"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "taggingPriority": {
+          "description": "Retention Tag priority.",
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "isDefault",
+        "taggingPriority",
+        "tagInfo"
+      ],
+      "type": "object"
+    },
+    "TargetCopySetting": {
+      "description": "Target copy settings",
+      "properties": {
+        "copyAfter": {
+          "description": "It can be CustomCopyOption or ImmediateCopyOption.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/CopyOption"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "dataStore": {
+          "description": "Info of target datastore",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/DataStoreInfoBase"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "copyAfter",
+        "dataStore"
+      ],
+      "type": "object"
+    },
+    "TriggerContext": {
+      "description": "Trigger context",
+      "oneOf": [
+        {
+          "description": "Adhoc trigger context",
+          "properties": {
+            "taggingCriteria": {
+              "description": "Tagging Criteria containing retention tag for adhoc backup.",
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/AdhocBasedTaggingCriteria"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            }
+          },
+          "required": [
+            "taggingCriteria"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Schedule based trigger context",
+          "properties": {
+            "schedule": {
+              "description": "Schedule for this backup",
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/BackupSchedule"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            },
+            "taggingCriteria": {
+              "description": "List of tags that can be applicable for given schedule.",
+              "oneOf": [
+                {
+                  "items": {
+                    "$ref": "#/definitions/TaggingCriteria"
+                  },
+                  "type": "array"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            }
+          },
+          "required": [
+            "schedule",
+            "taggingCriteria"
+          ],
+          "type": "object"
+        }
+      ],
+      "properties": {},
+      "type": "object"
+    },
+    "backupVaults_backupInstances_childResource": {
+      "description": "Microsoft.DataProtection/backupVaults/backupInstances",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2021-01-01"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the backup instance",
+          "type": "string"
+        },
+        "properties": {
+          "description": "BackupInstanceResource properties",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/BackupInstance"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "backupInstances"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "backupVaults_backupPolicies_childResource": {
+      "description": "Microsoft.DataProtection/backupVaults/backupPolicies",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2021-01-01"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of the policy",
+          "type": "string"
+        },
+        "properties": {
+          "description": "BaseBackupPolicyResource properties",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/BaseBackupPolicy"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "backupPolicies"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    }
+  }
+}

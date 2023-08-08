@@ -1,0 +1,4569 @@
+{
+  "id": "https://schema.management.azure.com/schemas/2021-06-01-preview/Microsoft.ProviderHub.json#",
+  "title": "Microsoft.ProviderHub",
+  "description": "Microsoft ProviderHub Resource Types",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "subscription_resourceDefinitions": {
+    "providerRegistrations": {
+      "description": "Microsoft.ProviderHub/providerRegistrations",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2021-06-01-preview"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the resource provider hosted within ProviderHub.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ProviderRegistrationProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "resources": {
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/definitions/providerRegistrations_operations_childResource"
+              },
+              {
+                "$ref": "#/definitions/providerRegistrations_customRollouts_childResource"
+              },
+              {
+                "$ref": "#/definitions/providerRegistrations_defaultRollouts_childResource"
+              },
+              {
+                "$ref": "#/definitions/providerRegistrations_notificationRegistrations_childResource"
+              },
+              {
+                "$ref": "#/definitions/providerRegistrations_resourcetypeRegistrations_childResource"
+              }
+            ]
+          },
+          "type": "array"
+        },
+        "type": {
+          "enum": [
+            "Microsoft.ProviderHub/providerRegistrations"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "providerRegistrations_customRollouts": {
+      "description": "Microsoft.ProviderHub/providerRegistrations/customRollouts",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2021-06-01-preview"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "The rollout name.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "Properties of the rollout.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/CustomRolloutProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.ProviderHub/providerRegistrations/customRollouts"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "providerRegistrations_defaultRollouts": {
+      "description": "Microsoft.ProviderHub/providerRegistrations/defaultRollouts",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2021-06-01-preview"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "The rollout name.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "Properties of the rollout.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/DefaultRolloutProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.ProviderHub/providerRegistrations/defaultRollouts"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "providerRegistrations_notificationRegistrations": {
+      "description": "Microsoft.ProviderHub/providerRegistrations/notificationRegistrations",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2021-06-01-preview"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "The notification registration.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/NotificationRegistrationProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.ProviderHub/providerRegistrations/notificationRegistrations"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "providerRegistrations_operations": {
+      "description": "Microsoft.ProviderHub/providerRegistrations/operations",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2021-06-01-preview"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "oneOf": [
+            {
+              "pattern": "^.*/default$",
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "properties": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/OperationsPutContentProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.ProviderHub/providerRegistrations/operations"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "providerRegistrations_resourcetypeRegistrations": {
+      "description": "Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2021-06-01-preview"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "The resource type.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ResourceTypeRegistrationProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "resources": {
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/definitions/providerRegistrations_resourcetypeRegistrations_skus_childResource"
+              }
+            ]
+          },
+          "type": "array"
+        },
+        "type": {
+          "enum": [
+            "Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "providerRegistrations_resourcetypeRegistrations_resourcetypeRegistrations_resourcetypeRegistrations_resourcetypeRegistrations_skus": {
+      "description": "Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/skus",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2021-06-01-preview"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "The SKU.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/SkuResourceProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/skus"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "providerRegistrations_resourcetypeRegistrations_resourcetypeRegistrations_resourcetypeRegistrations_skus": {
+      "description": "Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/skus",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2021-06-01-preview"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "The SKU.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/SkuResourceProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/skus"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "providerRegistrations_resourcetypeRegistrations_resourcetypeRegistrations_skus": {
+      "description": "Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/skus",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2021-06-01-preview"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "The SKU.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/SkuResourceProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/skus"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "providerRegistrations_resourcetypeRegistrations_skus": {
+      "description": "Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/skus",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2021-06-01-preview"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "The SKU.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/SkuResourceProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/skus"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    }
+  },
+  "definitions": {
+    "AuthorizationActionMapping": {
+      "properties": {
+        "desired": {
+          "description": "",
+          "type": "string"
+        },
+        "original": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "CustomRolloutProperties": {
+      "description": "Properties of the rollout.",
+      "properties": {
+        "provisioningState": {
+          "description": "The provisioned state of the resource.",
+          "oneOf": [
+            {
+              "enum": [
+                "NotSpecified",
+                "Accepted",
+                "Running",
+                "Creating",
+                "Created",
+                "Deleting",
+                "Deleted",
+                "Canceled",
+                "Failed",
+                "Succeeded",
+                "MovingResources",
+                "TransientFailure",
+                "RolloutInProgress"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "specification": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/CustomRolloutPropertiesSpecification"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "status": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/CustomRolloutPropertiesStatus"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "specification"
+      ],
+      "type": "object"
+    },
+    "CustomRolloutPropertiesSpecification": {
+      "properties": {
+        "canary": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/CustomRolloutSpecificationCanary"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "providerRegistration": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/CustomRolloutSpecificationProviderRegistration"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "resourceTypeRegistrations": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/ResourceTypeRegistration"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "canary"
+      ],
+      "type": "object"
+    },
+    "CustomRolloutPropertiesStatus": {
+      "properties": {
+        "completedRegions": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "failedOrSkippedRegions": {
+          "description": "Dictionary of <ExtendedErrorInfo>",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "$ref": "#/definitions/ExtendedErrorInfo"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "CustomRolloutSpecificationCanary": {
+      "properties": {
+        "regions": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "CustomRolloutSpecificationProviderRegistration": {
+      "properties": {
+        "properties": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ProviderRegistrationProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "DefaultRolloutProperties": {
+      "description": "Properties of the rollout.",
+      "properties": {
+        "provisioningState": {
+          "description": "The provisioned state of the resource.",
+          "oneOf": [
+            {
+              "enum": [
+                "NotSpecified",
+                "Accepted",
+                "Running",
+                "Creating",
+                "Created",
+                "Deleting",
+                "Deleted",
+                "Canceled",
+                "Failed",
+                "Succeeded",
+                "MovingResources",
+                "TransientFailure",
+                "RolloutInProgress"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "specification": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/DefaultRolloutPropertiesSpecification"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "status": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/DefaultRolloutPropertiesStatus"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "DefaultRolloutPropertiesSpecification": {
+      "properties": {
+        "canary": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/DefaultRolloutSpecificationCanary"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "expeditedRollout": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/DefaultRolloutSpecificationExpeditedRollout"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "highTraffic": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/DefaultRolloutSpecificationHighTraffic"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "lowTraffic": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/DefaultRolloutSpecificationLowTraffic"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "mediumTraffic": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/DefaultRolloutSpecificationMediumTraffic"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "providerRegistration": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/DefaultRolloutSpecificationProviderRegistration"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "resourceTypeRegistrations": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/ResourceTypeRegistration"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "restOfTheWorldGroupOne": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/DefaultRolloutSpecificationRestOfTheWorldGroupOne"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "restOfTheWorldGroupTwo": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/DefaultRolloutSpecificationRestOfTheWorldGroupTwo"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "DefaultRolloutPropertiesStatus": {
+      "properties": {
+        "completedRegions": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "failedOrSkippedRegions": {
+          "description": "Dictionary of <ExtendedErrorInfo>",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "$ref": "#/definitions/ExtendedErrorInfo"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "nextTrafficRegion": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "NotSpecified",
+                "Canary",
+                "LowTraffic",
+                "MediumTraffic",
+                "HighTraffic",
+                "None",
+                "RestOfTheWorldGroupOne",
+                "RestOfTheWorldGroupTwo"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "nextTrafficRegionScheduledTime": {
+          "description": "",
+          "format": "date-time",
+          "type": "string"
+        },
+        "subscriptionReregistrationResult": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "NotApplicable",
+                "ConditionalUpdate",
+                "ForcedUpdate",
+                "Failed"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "DefaultRolloutSpecificationCanary": {
+      "properties": {
+        "regions": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "skipRegions": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "DefaultRolloutSpecificationExpeditedRollout": {
+      "properties": {
+        "enabled": {
+          "description": "Indicates whether expedited rollout is enabled/disabled",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "DefaultRolloutSpecificationHighTraffic": {
+      "properties": {
+        "regions": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "waitDuration": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "DefaultRolloutSpecificationLowTraffic": {
+      "properties": {
+        "regions": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "waitDuration": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "DefaultRolloutSpecificationMediumTraffic": {
+      "properties": {
+        "regions": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "waitDuration": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "DefaultRolloutSpecificationProviderRegistration": {
+      "properties": {
+        "properties": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ProviderRegistrationProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "DefaultRolloutSpecificationRestOfTheWorldGroupOne": {
+      "properties": {
+        "regions": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "waitDuration": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "DefaultRolloutSpecificationRestOfTheWorldGroupTwo": {
+      "properties": {
+        "regions": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "waitDuration": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "ExtendedErrorInfo": {
+      "properties": {
+        "additionalInfo": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/TypedErrorInfo"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "code": {
+          "description": "",
+          "type": "string"
+        },
+        "details": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/ExtendedErrorInfo"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "message": {
+          "description": "",
+          "type": "string"
+        },
+        "target": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "ExtendedLocationOptions": {
+      "properties": {
+        "supportedPolicy": {
+          "description": "",
+          "type": "string"
+        },
+        "type": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "LightHouseAuthorization": {
+      "properties": {
+        "principalId": {
+          "description": "",
+          "type": "string"
+        },
+        "roleDefinitionId": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "principalId",
+        "roleDefinitionId"
+      ],
+      "type": "object"
+    },
+    "LinkedAccessCheck": {
+      "properties": {
+        "actionName": {
+          "description": "",
+          "type": "string"
+        },
+        "linkedAction": {
+          "description": "",
+          "type": "string"
+        },
+        "linkedActionVerb": {
+          "description": "",
+          "type": "string"
+        },
+        "linkedProperty": {
+          "description": "",
+          "type": "string"
+        },
+        "linkedType": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "LocalizedOperationDefinition": {
+      "properties": {
+        "actionType": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "NotSpecified",
+                "Internal"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "display": {
+          "description": "Display information of the operation.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/LocalizedOperationDefinitionDisplay"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "isDataAction": {
+          "description": "Indicates whether the operation applies to data-plane.",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "name": {
+          "description": "Name of the operation.",
+          "type": "string"
+        },
+        "origin": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "NotSpecified",
+                "User",
+                "System"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "properties": {
+          "description": "Anything"
+        }
+      },
+      "required": [
+        "name",
+        "display"
+      ],
+      "type": "object"
+    },
+    "LocalizedOperationDefinitionDisplay": {
+      "description": "Display information of the operation.",
+      "properties": {
+        "cs": {
+          "description": "Display information of the operation for cs locale.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/LocalizedOperationDisplayDefinitionCs"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "de": {
+          "description": "Display information of the operation for de locale.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/LocalizedOperationDisplayDefinitionDe"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "default": {
+          "description": "Display information of the operation.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/LocalizedOperationDisplayDefinitionDefault"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "en": {
+          "description": "Display information of the operation for en locale.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/LocalizedOperationDisplayDefinitionEn"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "es": {
+          "description": "Display information of the operation for es locale.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/LocalizedOperationDisplayDefinitionEs"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "fr": {
+          "description": "Display information of the operation for fr locale.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/LocalizedOperationDisplayDefinitionFr"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "hu": {
+          "description": "Display information of the operation for hu locale.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/LocalizedOperationDisplayDefinitionHu"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "it": {
+          "description": "Display information of the operation for it locale.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/LocalizedOperationDisplayDefinitionIt"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "ja": {
+          "description": "Display information of the operation for ja locale.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/LocalizedOperationDisplayDefinitionJa"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "ko": {
+          "description": "Display information of the operation for ko locale.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/LocalizedOperationDisplayDefinitionKo"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "nl": {
+          "description": "Display information of the operation for nl locale.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/LocalizedOperationDisplayDefinitionNl"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "pl": {
+          "description": "Display information of the operation for pl locale.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/LocalizedOperationDisplayDefinitionPl"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "ptBR": {
+          "description": "Display information of the operation for pt-BR locale.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/LocalizedOperationDisplayDefinitionPtBR"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "ptPT": {
+          "description": "Display information of the operation for pt-PT locale.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/LocalizedOperationDisplayDefinitionPt"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "ru": {
+          "description": "Display information of the operation for ru locale.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/LocalizedOperationDisplayDefinitionRu"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "sv": {
+          "description": "Display information of the operation for sv locale.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/LocalizedOperationDisplayDefinitionSv"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "zhHans": {
+          "description": "Display information of the operation for zh-Hans locale.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/LocalizedOperationDisplayDefinitionZhHans"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "zhHant": {
+          "description": "Display information of the operation for zh-Hant locale.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/LocalizedOperationDisplayDefinitionZhHant"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "default"
+      ],
+      "type": "object"
+    },
+    "LocalizedOperationDisplayDefinitionCs": {
+      "description": "Display information of the operation for cs locale.",
+      "properties": {
+        "description": {
+          "description": "",
+          "type": "string"
+        },
+        "operation": {
+          "description": "",
+          "type": "string"
+        },
+        "provider": {
+          "description": "",
+          "type": "string"
+        },
+        "resource": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "provider",
+        "resource",
+        "operation",
+        "description"
+      ],
+      "type": "object"
+    },
+    "LocalizedOperationDisplayDefinitionDe": {
+      "description": "Display information of the operation for de locale.",
+      "properties": {
+        "description": {
+          "description": "",
+          "type": "string"
+        },
+        "operation": {
+          "description": "",
+          "type": "string"
+        },
+        "provider": {
+          "description": "",
+          "type": "string"
+        },
+        "resource": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "provider",
+        "resource",
+        "operation",
+        "description"
+      ],
+      "type": "object"
+    },
+    "LocalizedOperationDisplayDefinitionDefault": {
+      "description": "Display information of the operation.",
+      "properties": {
+        "description": {
+          "description": "",
+          "type": "string"
+        },
+        "operation": {
+          "description": "",
+          "type": "string"
+        },
+        "provider": {
+          "description": "",
+          "type": "string"
+        },
+        "resource": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "provider",
+        "resource",
+        "operation",
+        "description"
+      ],
+      "type": "object"
+    },
+    "LocalizedOperationDisplayDefinitionEn": {
+      "description": "Display information of the operation for en locale.",
+      "properties": {
+        "description": {
+          "description": "",
+          "type": "string"
+        },
+        "operation": {
+          "description": "",
+          "type": "string"
+        },
+        "provider": {
+          "description": "",
+          "type": "string"
+        },
+        "resource": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "provider",
+        "resource",
+        "operation",
+        "description"
+      ],
+      "type": "object"
+    },
+    "LocalizedOperationDisplayDefinitionEs": {
+      "description": "Display information of the operation for es locale.",
+      "properties": {
+        "description": {
+          "description": "",
+          "type": "string"
+        },
+        "operation": {
+          "description": "",
+          "type": "string"
+        },
+        "provider": {
+          "description": "",
+          "type": "string"
+        },
+        "resource": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "provider",
+        "resource",
+        "operation",
+        "description"
+      ],
+      "type": "object"
+    },
+    "LocalizedOperationDisplayDefinitionFr": {
+      "description": "Display information of the operation for fr locale.",
+      "properties": {
+        "description": {
+          "description": "",
+          "type": "string"
+        },
+        "operation": {
+          "description": "",
+          "type": "string"
+        },
+        "provider": {
+          "description": "",
+          "type": "string"
+        },
+        "resource": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "provider",
+        "resource",
+        "operation",
+        "description"
+      ],
+      "type": "object"
+    },
+    "LocalizedOperationDisplayDefinitionHu": {
+      "description": "Display information of the operation for hu locale.",
+      "properties": {
+        "description": {
+          "description": "",
+          "type": "string"
+        },
+        "operation": {
+          "description": "",
+          "type": "string"
+        },
+        "provider": {
+          "description": "",
+          "type": "string"
+        },
+        "resource": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "provider",
+        "resource",
+        "operation",
+        "description"
+      ],
+      "type": "object"
+    },
+    "LocalizedOperationDisplayDefinitionIt": {
+      "description": "Display information of the operation for it locale.",
+      "properties": {
+        "description": {
+          "description": "",
+          "type": "string"
+        },
+        "operation": {
+          "description": "",
+          "type": "string"
+        },
+        "provider": {
+          "description": "",
+          "type": "string"
+        },
+        "resource": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "provider",
+        "resource",
+        "operation",
+        "description"
+      ],
+      "type": "object"
+    },
+    "LocalizedOperationDisplayDefinitionJa": {
+      "description": "Display information of the operation for ja locale.",
+      "properties": {
+        "description": {
+          "description": "",
+          "type": "string"
+        },
+        "operation": {
+          "description": "",
+          "type": "string"
+        },
+        "provider": {
+          "description": "",
+          "type": "string"
+        },
+        "resource": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "provider",
+        "resource",
+        "operation",
+        "description"
+      ],
+      "type": "object"
+    },
+    "LocalizedOperationDisplayDefinitionKo": {
+      "description": "Display information of the operation for ko locale.",
+      "properties": {
+        "description": {
+          "description": "",
+          "type": "string"
+        },
+        "operation": {
+          "description": "",
+          "type": "string"
+        },
+        "provider": {
+          "description": "",
+          "type": "string"
+        },
+        "resource": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "provider",
+        "resource",
+        "operation",
+        "description"
+      ],
+      "type": "object"
+    },
+    "LocalizedOperationDisplayDefinitionNl": {
+      "description": "Display information of the operation for nl locale.",
+      "properties": {
+        "description": {
+          "description": "",
+          "type": "string"
+        },
+        "operation": {
+          "description": "",
+          "type": "string"
+        },
+        "provider": {
+          "description": "",
+          "type": "string"
+        },
+        "resource": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "provider",
+        "resource",
+        "operation",
+        "description"
+      ],
+      "type": "object"
+    },
+    "LocalizedOperationDisplayDefinitionPl": {
+      "description": "Display information of the operation for pl locale.",
+      "properties": {
+        "description": {
+          "description": "",
+          "type": "string"
+        },
+        "operation": {
+          "description": "",
+          "type": "string"
+        },
+        "provider": {
+          "description": "",
+          "type": "string"
+        },
+        "resource": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "provider",
+        "resource",
+        "operation",
+        "description"
+      ],
+      "type": "object"
+    },
+    "LocalizedOperationDisplayDefinitionPt": {
+      "description": "Display information of the operation for pt-PT locale.",
+      "properties": {
+        "description": {
+          "description": "",
+          "type": "string"
+        },
+        "operation": {
+          "description": "",
+          "type": "string"
+        },
+        "provider": {
+          "description": "",
+          "type": "string"
+        },
+        "resource": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "provider",
+        "resource",
+        "operation",
+        "description"
+      ],
+      "type": "object"
+    },
+    "LocalizedOperationDisplayDefinitionPtBR": {
+      "description": "Display information of the operation for pt-BR locale.",
+      "properties": {
+        "description": {
+          "description": "",
+          "type": "string"
+        },
+        "operation": {
+          "description": "",
+          "type": "string"
+        },
+        "provider": {
+          "description": "",
+          "type": "string"
+        },
+        "resource": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "provider",
+        "resource",
+        "operation",
+        "description"
+      ],
+      "type": "object"
+    },
+    "LocalizedOperationDisplayDefinitionRu": {
+      "description": "Display information of the operation for ru locale.",
+      "properties": {
+        "description": {
+          "description": "",
+          "type": "string"
+        },
+        "operation": {
+          "description": "",
+          "type": "string"
+        },
+        "provider": {
+          "description": "",
+          "type": "string"
+        },
+        "resource": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "provider",
+        "resource",
+        "operation",
+        "description"
+      ],
+      "type": "object"
+    },
+    "LocalizedOperationDisplayDefinitionSv": {
+      "description": "Display information of the operation for sv locale.",
+      "properties": {
+        "description": {
+          "description": "",
+          "type": "string"
+        },
+        "operation": {
+          "description": "",
+          "type": "string"
+        },
+        "provider": {
+          "description": "",
+          "type": "string"
+        },
+        "resource": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "provider",
+        "resource",
+        "operation",
+        "description"
+      ],
+      "type": "object"
+    },
+    "LocalizedOperationDisplayDefinitionZhHans": {
+      "description": "Display information of the operation for zh-Hans locale.",
+      "properties": {
+        "description": {
+          "description": "",
+          "type": "string"
+        },
+        "operation": {
+          "description": "",
+          "type": "string"
+        },
+        "provider": {
+          "description": "",
+          "type": "string"
+        },
+        "resource": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "provider",
+        "resource",
+        "operation",
+        "description"
+      ],
+      "type": "object"
+    },
+    "LocalizedOperationDisplayDefinitionZhHant": {
+      "description": "Display information of the operation for zh-Hant locale.",
+      "properties": {
+        "description": {
+          "description": "",
+          "type": "string"
+        },
+        "operation": {
+          "description": "",
+          "type": "string"
+        },
+        "provider": {
+          "description": "",
+          "type": "string"
+        },
+        "resource": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "provider",
+        "resource",
+        "operation",
+        "description"
+      ],
+      "type": "object"
+    },
+    "LoggingRule": {
+      "properties": {
+        "action": {
+          "description": "",
+          "type": "string"
+        },
+        "detailLevel": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "None",
+                "Body"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "direction": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "None",
+                "Request",
+                "Response"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "hiddenPropertyPaths": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/LoggingRuleHiddenPropertyPaths"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "action",
+        "direction",
+        "detailLevel"
+      ],
+      "type": "object"
+    },
+    "LoggingRuleHiddenPropertyPaths": {
+      "properties": {
+        "hiddenPathsOnRequest": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "hiddenPathsOnResponse": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "NotificationEndpoint": {
+      "properties": {
+        "locations": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "notificationDestination": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "NotificationRegistrationProperties": {
+      "properties": {
+        "includedEvents": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "messageScope": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "NotSpecified",
+                "RegisteredSubscriptions"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "notificationEndpoints": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/NotificationEndpoint"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "notificationMode": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "NotSpecified",
+                "EventHub",
+                "WebHook"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "provisioningState": {
+          "description": "The provisioned state of the resource.",
+          "oneOf": [
+            {
+              "enum": [
+                "NotSpecified",
+                "Accepted",
+                "Running",
+                "Creating",
+                "Created",
+                "Deleting",
+                "Deleted",
+                "Canceled",
+                "Failed",
+                "Succeeded",
+                "MovingResources",
+                "TransientFailure",
+                "RolloutInProgress"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "OpenApiConfiguration": {
+      "properties": {
+        "validation": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/OpenApiValidation"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "OpenApiValidation": {
+      "properties": {
+        "allowNoncompliantCollectionResponse": {
+          "description": "Indicates whether a non compliance response is allowed for a LIST call",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "OperationsPutContentProperties": {
+      "properties": {
+        "contents": {
+          "description": "Operations content.",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/LocalizedOperationDefinition"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ProviderHubMetadataProviderAuthentication": {
+      "properties": {
+        "allowedAudiences": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "allowedAudiences"
+      ],
+      "type": "object"
+    },
+    "ProviderHubMetadataThirdPartyProviderAuthorization": {
+      "properties": {
+        "authorizations": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/LightHouseAuthorization"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "managedByTenantId": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "ProviderRegistrationProperties": {
+      "properties": {
+        "capabilities": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/ResourceProviderCapabilities"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "featuresRule": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ResourceProviderManifestPropertiesFeaturesRule"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "management": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ResourceProviderManifestPropertiesManagement"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "metadata": {
+          "description": "Anything"
+        },
+        "namespace": {
+          "description": "",
+          "type": "string"
+        },
+        "providerAuthentication": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ResourceProviderManifestPropertiesProviderAuthentication"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "providerAuthorizations": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/ResourceProviderAuthorization"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "providerHubMetadata": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ProviderRegistrationPropertiesProviderHubMetadata"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "providerType": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "NotSpecified",
+                "Internal",
+                "External",
+                "Hidden",
+                "RegistrationFree",
+                "LegacyRegistrationRequired",
+                "TenantOnly",
+                "AuthorizationFree"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "providerVersion": {
+          "description": "",
+          "type": "string"
+        },
+        "provisioningState": {
+          "description": "The provisioned state of the resource.",
+          "oneOf": [
+            {
+              "enum": [
+                "NotSpecified",
+                "Accepted",
+                "Running",
+                "Creating",
+                "Created",
+                "Deleting",
+                "Deleted",
+                "Canceled",
+                "Failed",
+                "Succeeded",
+                "MovingResources",
+                "TransientFailure",
+                "RolloutInProgress"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "requestHeaderOptions": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ResourceProviderManifestPropertiesRequestHeaderOptions"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "requiredFeatures": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "subscriptionLifecycleNotificationSpecifications": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ProviderRegistrationPropertiesSubscriptionLifecycleNotificationSpecifications"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "templateDeploymentOptions": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ResourceProviderManifestPropertiesTemplateDeploymentOptions"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ProviderRegistrationPropertiesProviderHubMetadata": {
+      "properties": {
+        "providerAuthentication": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ProviderHubMetadataProviderAuthentication"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "providerAuthorizations": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/ResourceProviderAuthorization"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "thirdPartyProviderAuthorization": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ProviderHubMetadataThirdPartyProviderAuthorization"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ProviderRegistrationPropertiesSubscriptionLifecycleNotificationSpecifications": {
+      "properties": {
+        "softDeleteTTL": {
+          "description": "",
+          "type": "string"
+        },
+        "subscriptionStateOverrideActions": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/SubscriptionStateOverrideAction"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ResourceConcurrencyControlOption": {
+      "properties": {
+        "policy": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "NotSpecified",
+                "SynchronizeBeginExtension"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ResourceProviderAuthorization": {
+      "properties": {
+        "applicationId": {
+          "description": "",
+          "type": "string"
+        },
+        "managedByRoleDefinitionId": {
+          "description": "",
+          "type": "string"
+        },
+        "roleDefinitionId": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "ResourceProviderCapabilities": {
+      "properties": {
+        "effect": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "NotSpecified",
+                "Allow",
+                "Disallow"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "quotaId": {
+          "description": "",
+          "type": "string"
+        },
+        "requiredFeatures": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "quotaId",
+        "effect"
+      ],
+      "type": "object"
+    },
+    "ResourceProviderManifestPropertiesFeaturesRule": {
+      "properties": {
+        "requiredFeaturesPolicy": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "Any",
+                "All"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "requiredFeaturesPolicy"
+      ],
+      "type": "object"
+    },
+    "ResourceProviderManifestPropertiesManagement": {
+      "properties": {
+        "incidentContactEmail": {
+          "description": "",
+          "type": "string"
+        },
+        "incidentRoutingService": {
+          "description": "",
+          "type": "string"
+        },
+        "incidentRoutingTeam": {
+          "description": "",
+          "type": "string"
+        },
+        "manifestOwners": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "resourceAccessPolicy": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "NotSpecified",
+                "AcisReadAllowed",
+                "AcisActionAllowed"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "resourceAccessRoles": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {},
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "schemaOwners": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "serviceTreeInfos": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/ServiceTreeInfo"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ResourceProviderManifestPropertiesProviderAuthentication": {
+      "properties": {
+        "allowedAudiences": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "allowedAudiences"
+      ],
+      "type": "object"
+    },
+    "ResourceProviderManifestPropertiesRequestHeaderOptions": {
+      "properties": {
+        "optInHeaders": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "NotSpecified",
+                "SignedUserToken",
+                "ClientGroupMembership",
+                "SignedAuxiliaryTokens",
+                "UnboundedClientGroupMembership"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ResourceProviderManifestPropertiesTemplateDeploymentOptions": {
+      "properties": {
+        "preflightOptions": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "enum": [
+                  "None",
+                  "ContinueDeploymentOnFailure",
+                  "DefaultValidationOnly"
+                ],
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "preflightSupported": {
+          "description": "",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ResourceTypeEndpoint": {
+      "properties": {
+        "apiVersions": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "enabled": {
+          "description": "",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "endpointType": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "NotSpecified",
+                "Canary",
+                "Production",
+                "TestInProduction"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "extensions": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/ResourceTypeExtension"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "featuresRule": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ResourceTypeEndpointFeaturesRule"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "locations": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "requiredFeatures": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "timeout": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "ResourceTypeEndpointFeaturesRule": {
+      "properties": {
+        "requiredFeaturesPolicy": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "Any",
+                "All"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "requiredFeaturesPolicy"
+      ],
+      "type": "object"
+    },
+    "ResourceTypeExtension": {
+      "properties": {
+        "endpointUri": {
+          "description": "",
+          "type": "string"
+        },
+        "extensionCategories": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "enum": [
+                  "NotSpecified",
+                  "ResourceCreationValidate",
+                  "ResourceCreationBegin",
+                  "ResourceCreationCompleted",
+                  "ResourceReadValidate",
+                  "ResourceReadBegin",
+                  "ResourcePatchValidate",
+                  "ResourcePatchCompleted",
+                  "ResourceDeletionValidate",
+                  "ResourceDeletionBegin",
+                  "ResourceDeletionCompleted",
+                  "ResourcePostAction",
+                  "SubscriptionLifecycleNotification",
+                  "ResourcePatchBegin",
+                  "ResourceMoveBegin",
+                  "ResourceMoveCompleted"
+                ],
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "timeout": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "ResourceTypeExtensionOptionsResourceCreationBegin": {
+      "properties": {
+        "request": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "enum": [
+                  "NotSpecified",
+                  "DoNotMergeExistingReadOnlyAndSecretProperties",
+                  "IncludeInternalMetadata"
+                ],
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "response": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "enum": [
+                  "NotSpecified",
+                  "DoNotMergeExistingReadOnlyAndSecretProperties",
+                  "IncludeInternalMetadata"
+                ],
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ResourceTypeRegistration": {
+      "properties": {
+        "properties": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ResourceTypeRegistrationProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ResourceTypeRegistrationProperties": {
+      "properties": {
+        "allowedUnauthorizedActions": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "authorizationActionMappings": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/AuthorizationActionMapping"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "checkNameAvailabilitySpecifications": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ResourceTypeRegistrationPropertiesCheckNameAvailabilitySpecifications"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "defaultApiVersion": {
+          "description": "",
+          "type": "string"
+        },
+        "disallowedActionVerbs": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "enableAsyncOperation": {
+          "description": "",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "enableThirdPartyS2S": {
+          "description": "",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "endpoints": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/ResourceTypeEndpoint"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "extendedLocations": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/ExtendedLocationOptions"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "extensionOptions": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ResourceTypeRegistrationPropertiesExtensionOptions"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "featuresRule": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ResourceTypeRegistrationPropertiesFeaturesRule"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "identityManagement": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ResourceTypeRegistrationPropertiesIdentityManagement"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "isPureProxy": {
+          "description": "",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "linkedAccessChecks": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/LinkedAccessCheck"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "loggingRules": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/LoggingRule"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "management": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ResourceTypeRegistrationPropertiesManagement"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "marketplaceType": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "NotSpecified",
+                "AddOn",
+                "Bypass",
+                "Store"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "openApiConfiguration": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/OpenApiConfiguration"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "provisioningState": {
+          "description": "The provisioned state of the resource.",
+          "oneOf": [
+            {
+              "enum": [
+                "NotSpecified",
+                "Accepted",
+                "Running",
+                "Creating",
+                "Created",
+                "Deleting",
+                "Deleted",
+                "Canceled",
+                "Failed",
+                "Succeeded",
+                "MovingResources",
+                "TransientFailure",
+                "RolloutInProgress"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "regionality": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "NotSpecified",
+                "Global",
+                "Regional"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "requestHeaderOptions": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ResourceTypeRegistrationPropertiesRequestHeaderOptions"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "requiredFeatures": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "resourceConcurrencyControlOptions": {
+          "description": "Dictionary of <ResourceConcurrencyControlOption>",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "$ref": "#/definitions/ResourceConcurrencyControlOption"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "resourceDeletionPolicy": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "NotSpecified",
+                "CascadeDeleteAll",
+                "CascadeDeleteProxyOnlyChildren"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "resourceGraphConfiguration": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ResourceTypeRegistrationPropertiesResourceGraphConfiguration"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "resourceMovePolicy": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ResourceTypeRegistrationPropertiesResourceMovePolicy"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "routingType": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "Default",
+                "ProxyOnly",
+                "HostBased",
+                "Extension",
+                "Tenant",
+                "Fanout",
+                "LocationBased",
+                "Failover",
+                "CascadeExtension"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "serviceTreeInfos": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/ServiceTreeInfo"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "subscriptionLifecycleNotificationSpecifications": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotificationSpecifications"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "subscriptionStateRules": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/SubscriptionStateRule"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "swaggerSpecifications": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/SwaggerSpecification"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "templateDeploymentOptions": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ResourceTypeRegistrationPropertiesTemplateDeploymentOptions"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "throttlingRules": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/ThrottlingRule"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ResourceTypeRegistrationPropertiesCheckNameAvailabilitySpecifications": {
+      "properties": {
+        "enableDefaultValidation": {
+          "description": "",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "resourceTypesWithCustomValidation": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ResourceTypeRegistrationPropertiesExtensionOptions": {
+      "properties": {
+        "resourceCreationBegin": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ResourceTypeExtensionOptionsResourceCreationBegin"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ResourceTypeRegistrationPropertiesFeaturesRule": {
+      "properties": {
+        "requiredFeaturesPolicy": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "Any",
+                "All"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "requiredFeaturesPolicy"
+      ],
+      "type": "object"
+    },
+    "ResourceTypeRegistrationPropertiesIdentityManagement": {
+      "properties": {
+        "applicationId": {
+          "description": "",
+          "type": "string"
+        },
+        "type": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "NotSpecified",
+                "SystemAssigned",
+                "UserAssigned",
+                "Actor",
+                "DelegatedResourceIdentity"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ResourceTypeRegistrationPropertiesManagement": {
+      "properties": {
+        "incidentContactEmail": {
+          "description": "",
+          "type": "string"
+        },
+        "incidentRoutingService": {
+          "description": "",
+          "type": "string"
+        },
+        "incidentRoutingTeam": {
+          "description": "",
+          "type": "string"
+        },
+        "manifestOwners": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "resourceAccessPolicy": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "NotSpecified",
+                "AcisReadAllowed",
+                "AcisActionAllowed"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "resourceAccessRoles": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {},
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "schemaOwners": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "serviceTreeInfos": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/ServiceTreeInfo"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ResourceTypeRegistrationPropertiesRequestHeaderOptions": {
+      "properties": {
+        "optInHeaders": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "NotSpecified",
+                "SignedUserToken",
+                "ClientGroupMembership",
+                "SignedAuxiliaryTokens",
+                "UnboundedClientGroupMembership"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ResourceTypeRegistrationPropertiesResourceGraphConfiguration": {
+      "properties": {
+        "apiVersion": {
+          "description": "",
+          "type": "string"
+        },
+        "enabled": {
+          "description": "",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ResourceTypeRegistrationPropertiesResourceMovePolicy": {
+      "properties": {
+        "crossResourceGroupMoveEnabled": {
+          "description": "",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "crossSubscriptionMoveEnabled": {
+          "description": "",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "validationRequired": {
+          "description": "",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotificationSpecifications": {
+      "properties": {
+        "softDeleteTTL": {
+          "description": "",
+          "type": "string"
+        },
+        "subscriptionStateOverrideActions": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/SubscriptionStateOverrideAction"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ResourceTypeRegistrationPropertiesTemplateDeploymentOptions": {
+      "properties": {
+        "preflightOptions": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "enum": [
+                  "None",
+                  "ContinueDeploymentOnFailure",
+                  "DefaultValidationOnly"
+                ],
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "preflightSupported": {
+          "description": "",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ServiceTreeInfo": {
+      "properties": {
+        "componentId": {
+          "description": "",
+          "type": "string"
+        },
+        "serviceId": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "SkuCapability": {
+      "properties": {
+        "name": {
+          "description": "",
+          "type": "string"
+        },
+        "value": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "value"
+      ],
+      "type": "object"
+    },
+    "SkuCost": {
+      "properties": {
+        "extendedUnit": {
+          "description": "",
+          "type": "string"
+        },
+        "meterId": {
+          "description": "",
+          "type": "string"
+        },
+        "quantity": {
+          "description": "",
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "meterId"
+      ],
+      "type": "object"
+    },
+    "SkuLocationInfo": {
+      "properties": {
+        "extendedLocations": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "location": {
+          "description": "",
+          "type": "string"
+        },
+        "type": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "NotSpecified",
+                "EdgeZone",
+                "ArcZone"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "zoneDetails": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/SkuZoneDetail"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "zones": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "location"
+      ],
+      "type": "object"
+    },
+    "SkuResourceProperties": {
+      "properties": {
+        "provisioningState": {
+          "description": "The provisioned state of the resource.",
+          "oneOf": [
+            {
+              "enum": [
+                "NotSpecified",
+                "Accepted",
+                "Running",
+                "Creating",
+                "Created",
+                "Deleting",
+                "Deleted",
+                "Canceled",
+                "Failed",
+                "Succeeded",
+                "MovingResources",
+                "TransientFailure",
+                "RolloutInProgress"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "skuSettings": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/SkuSetting"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "skuSettings"
+      ],
+      "type": "object"
+    },
+    "SkuSetting": {
+      "properties": {
+        "capabilities": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/SkuCapability"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "capacity": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/SkuSettingCapacity"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "costs": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/SkuCost"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "family": {
+          "description": "",
+          "type": "string"
+        },
+        "kind": {
+          "description": "",
+          "type": "string"
+        },
+        "locationInfo": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/SkuLocationInfo"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "locations": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "name": {
+          "description": "",
+          "type": "string"
+        },
+        "requiredFeatures": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "requiredQuotaIds": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "size": {
+          "description": "",
+          "type": "string"
+        },
+        "tier": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "SkuSettingCapacity": {
+      "properties": {
+        "default": {
+          "description": "",
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "maximum": {
+          "description": "",
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "minimum": {
+          "description": "",
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "scaleType": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "None",
+                "Manual",
+                "Automatic"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "minimum"
+      ],
+      "type": "object"
+    },
+    "SkuZoneDetail": {
+      "properties": {
+        "capabilities": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/SkuCapability"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "name": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "SubscriptionStateOverrideAction": {
+      "properties": {
+        "action": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "NotDefined",
+                "DeleteAllResources",
+                "SoftDeleteAllResources",
+                "NoOp",
+                "BillingCancellation",
+                "UndoSoftDelete"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "state": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "Registered",
+                "Unregistered",
+                "Warned",
+                "Suspended",
+                "Deleted",
+                "WarnedToRegistered",
+                "WarnedToSuspended",
+                "WarnedToDeleted",
+                "WarnedToUnregistered",
+                "SuspendedToRegistered",
+                "SuspendedToWarned",
+                "SuspendedToDeleted",
+                "SuspendedToUnregistered"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "state",
+        "action"
+      ],
+      "type": "object"
+    },
+    "SubscriptionStateRule": {
+      "properties": {
+        "allowedActions": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "state": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "NotDefined",
+                "Enabled",
+                "Warned",
+                "PastDue",
+                "Disabled",
+                "Deleted"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "SwaggerSpecification": {
+      "properties": {
+        "apiVersions": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "swaggerSpecFolderUri": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "ThrottlingMetric": {
+      "properties": {
+        "interval": {
+          "description": "",
+          "type": "string"
+        },
+        "limit": {
+          "description": "",
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "description": "",
+          "oneOf": [
+            {
+              "enum": [
+                "NotSpecified",
+                "NumberOfRequests",
+                "NumberOfResources"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "type",
+        "limit"
+      ],
+      "type": "object"
+    },
+    "ThrottlingRule": {
+      "properties": {
+        "action": {
+          "description": "",
+          "type": "string"
+        },
+        "metrics": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/ThrottlingMetric"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "requiredFeatures": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "action",
+        "metrics"
+      ],
+      "type": "object"
+    },
+    "TypedErrorInfo": {
+      "properties": {
+        "type": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "type": "object"
+    },
+    "providerRegistrations_customRollouts_childResource": {
+      "description": "Microsoft.ProviderHub/providerRegistrations/customRollouts",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2021-06-01-preview"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "The rollout name.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "Properties of the rollout.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/CustomRolloutProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "customRollouts"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "providerRegistrations_defaultRollouts_childResource": {
+      "description": "Microsoft.ProviderHub/providerRegistrations/defaultRollouts",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2021-06-01-preview"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "The rollout name.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "Properties of the rollout.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/DefaultRolloutProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "defaultRollouts"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "providerRegistrations_notificationRegistrations_childResource": {
+      "description": "Microsoft.ProviderHub/providerRegistrations/notificationRegistrations",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2021-06-01-preview"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "The notification registration.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/NotificationRegistrationProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "notificationRegistrations"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "providerRegistrations_operations_childResource": {
+      "description": "Microsoft.ProviderHub/providerRegistrations/operations",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2021-06-01-preview"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "oneOf": [
+            {
+              "enum": [
+                "default"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "properties": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/OperationsPutContentProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "operations"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "providerRegistrations_resourcetypeRegistrations_childResource": {
+      "description": "Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2021-06-01-preview"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "The resource type.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ResourceTypeRegistrationProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "resourcetypeRegistrations"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "providerRegistrations_resourcetypeRegistrations_skus_childResource": {
+      "description": "Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/skus",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2021-06-01-preview"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "The SKU.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/SkuResourceProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "skus"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    }
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "id": "https://schema.management.azure.com/schemas/2020-01-01-preview/microsoft.insights.json#",
+  "title": "microsoft.insights",
+  "description": "microsoft insights Resource Types",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "managementGroup_resourceDefinitions": {
+    "diagnosticSettings": {
+      "description": "microsoft.insights/diagnosticSettings",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2020-01-01-preview"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "Location of the resource",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the diagnostic setting.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "Properties of a Management Group Diagnostic Settings Resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ManagementGroupDiagnosticSettings"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "microsoft.insights/diagnosticSettings"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    }
+  },
+  "definitions": {
+    "ManagementGroupDiagnosticSettings": {
+      "description": "The management group diagnostic settings.",
+      "properties": {
+        "eventHubAuthorizationRuleId": {
+          "description": "The resource Id for the event hub authorization rule.",
+          "type": "string"
+        },
+        "eventHubName": {
+          "description": "The name of the event hub. If none is specified, the default event hub will be selected.",
+          "type": "string"
+        },
+        "logs": {
+          "description": "The list of logs settings.",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/ManagementGroupLogSettings"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "serviceBusRuleId": {
+          "description": "The service bus rule Id of the diagnostic setting. This is here to maintain backwards compatibility.",
+          "type": "string"
+        },
+        "storageAccountId": {
+          "description": "The resource ID of the storage account to which you would like to send Diagnostic Logs.",
+          "type": "string"
+        },
+        "workspaceId": {
+          "description": "The full ARM resource ID of the Log Analytics workspace to which you would like to send Diagnostic Logs. Example: /subscriptions/4b9e8510-67ab-4e9a-95a9-e2f1e570ea9c/resourceGroups/insights-integration/providers/Microsoft.OperationalInsights/workspaces/viruela2",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "ManagementGroupLogSettings": {
+      "description": "Part of Management Group diagnostic setting. Specifies the settings for a particular log.",
+      "properties": {
+        "category": {
+          "description": "Name of a Management Group Diagnostic Log category for a resource type this setting is applied to.",
+          "type": "string"
+        },
+        "enabled": {
+          "description": "a value indicating whether this log is enabled.",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "category",
+        "enabled"
+      ],
+      "type": "object"
+    }
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "id": "https://schema.management.azure.com/schemas/2023-06-30/Microsoft.DBforMySQL.json#",
+  "title": "Microsoft.DBforMySQL",
+  "description": "Microsoft DBforMySQL Resource Types",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "resourceDefinitions": {
+    "flexibleServers_privateEndpointConnections": {
+      "description": "Microsoft.DBforMySQL/flexibleServers/privateEndpointConnections",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2023-06-30"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "",
+          "type": "string"
+        },
+        "properties": {
+          "description": "Resource properties.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/PrivateEndpointConnectionProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.DBforMySQL/flexibleServers/privateEndpointConnections"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    }
+  },
+  "definitions": {
+    "PrivateEndpoint": {
+      "description": "The private endpoint resource.",
+      "properties": {},
+      "type": "object"
+    },
+    "PrivateEndpointConnectionProperties": {
+      "description": "Properties of the private endpoint connection.",
+      "properties": {
+        "privateEndpoint": {
+          "description": "The private endpoint resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/PrivateEndpoint"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "privateLinkServiceConnectionState": {
+          "description": "A collection of information about the state of the connection between service consumer and provider.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/PrivateLinkServiceConnectionState"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "privateLinkServiceConnectionState"
+      ],
+      "type": "object"
+    },
+    "PrivateLinkServiceConnectionState": {
+      "description": "A collection of information about the state of the connection between service consumer and provider.",
+      "properties": {
+        "actionsRequired": {
+          "description": "A message indicating if changes on the service provider require any updates on the consumer.",
+          "type": "string"
+        },
+        "description": {
+          "description": "The reason for approval/rejection of the connection.",
+          "type": "string"
+        },
+        "status": {
+          "description": "Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.",
+          "oneOf": [
+            {
+              "enum": [
+                "Pending",
+                "Approved",
+                "Rejected"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    }
+  }
+}

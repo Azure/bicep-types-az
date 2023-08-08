@@ -1,0 +1,245 @@
+{
+  "id": "https://schema.management.azure.com/schemas/2015-03-20/Microsoft.OperationalInsights.json#",
+  "title": "Microsoft.OperationalInsights",
+  "description": "Microsoft OperationalInsights Resource Types",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "resourceDefinitions": {
+    "workspaces_savedSearches": {
+      "description": "Microsoft.OperationalInsights/workspaces/savedSearches",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2015-03-20"
+          ],
+          "type": "string"
+        },
+        "eTag": {
+          "description": "The ETag of the saved search.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The id of the saved search.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The properties of the saved search.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/SavedSearchProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.OperationalInsights/workspaces/savedSearches"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "workspaces_storageInsightConfigs": {
+      "description": "Microsoft.OperationalInsights/workspaces/storageInsightConfigs",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2015-03-20"
+          ],
+          "type": "string"
+        },
+        "eTag": {
+          "description": "The ETag of the storage insight.",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of the storageInsightsConfigs resource",
+          "type": "string"
+        },
+        "properties": {
+          "description": "Storage insight properties.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/StorageInsightProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "Resource tags",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.OperationalInsights/workspaces/storageInsightConfigs"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    }
+  },
+  "definitions": {
+    "SavedSearchProperties": {
+      "description": "Value object for saved search results.",
+      "properties": {
+        "category": {
+          "description": "The category of the saved search. This helps the user to find a saved search faster. ",
+          "type": "string"
+        },
+        "displayName": {
+          "description": "Saved search display name.",
+          "type": "string"
+        },
+        "query": {
+          "description": "The query expression for the saved search. Please see https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-search-reference for reference.",
+          "type": "string"
+        },
+        "tags": {
+          "description": "The tags attached to the saved search.",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/Tag"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "version": {
+          "description": "The version number of the query language. The current version is 2 and is the default.",
+          "oneOf": [
+            {
+              "maximum": 2,
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "category",
+        "displayName",
+        "query"
+      ],
+      "type": "object"
+    },
+    "StorageAccount": {
+      "description": "Describes a storage account connection.",
+      "properties": {
+        "id": {
+          "description": "The Azure Resource Manager ID of the storage account resource.",
+          "type": "string"
+        },
+        "key": {
+          "description": "The storage account key.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "key"
+      ],
+      "type": "object"
+    },
+    "StorageInsightProperties": {
+      "description": "Storage insight properties.",
+      "properties": {
+        "containers": {
+          "description": "The names of the blob containers that the workspace should read",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "storageAccount": {
+          "description": "The storage account connection details",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/StorageAccount"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tables": {
+          "description": "The names of the Azure tables that the workspace should read",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "storageAccount"
+      ],
+      "type": "object"
+    },
+    "Tag": {
+      "description": "A tag of a saved search.",
+      "properties": {
+        "name": {
+          "description": "The tag name.",
+          "type": "string"
+        },
+        "value": {
+          "description": "The tag value.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "value"
+      ],
+      "type": "object"
+    }
+  }
+}

@@ -1,0 +1,308 @@
+{
+  "id": "https://schema.management.azure.com/schemas/2020-12-01-preview/Microsoft.Purview.json#",
+  "title": "Microsoft.Purview",
+  "description": "Microsoft Purview Resource Types",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "resourceDefinitions": {
+    "accounts": {
+      "description": "Microsoft.Purview/accounts",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2020-12-01-preview"
+          ],
+          "type": "string"
+        },
+        "identity": {
+          "description": "Identity Info on the tracked resource",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/Identity"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "location": {
+          "description": "Gets or sets the location.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the account.",
+          "oneOf": [
+            {
+              "maxLength": 63,
+              "minLength": 3,
+              "pattern": "^[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*$",
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "properties": {
+          "description": "Gets or sets the properties.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/AccountProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "resources": {
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/definitions/accounts_privateEndpointConnections_childResource"
+              }
+            ]
+          },
+          "type": "array"
+        },
+        "tags": {
+          "description": "Tags on the azure resource.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.Purview/accounts"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "accounts_privateEndpointConnections": {
+      "description": "Microsoft.Purview/accounts/privateEndpointConnections",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2020-12-01-preview"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of the private endpoint connection.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The connection identifier.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/PrivateEndpointConnectionProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.Purview/accounts/privateEndpointConnections"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    }
+  },
+  "definitions": {
+    "AccountProperties": {
+      "description": "The account properties",
+      "properties": {
+        "cloudConnectors": {
+          "description": "Cloud connectors.\r\nExternal cloud identifier used as part of scanning configuration.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/CloudConnectors"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "managedResourceGroupName": {
+          "description": "Gets or sets the managed resource group name",
+          "type": "string"
+        },
+        "publicNetworkAccess": {
+          "description": "Gets or sets the public network access.",
+          "oneOf": [
+            {
+              "enum": [
+                "NotSpecified",
+                "Enabled",
+                "Disabled"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "CloudConnectors": {
+      "properties": {},
+      "type": "object"
+    },
+    "Identity": {
+      "description": "The Managed Identity of the resource",
+      "properties": {
+        "type": {
+          "description": "Identity Type",
+          "oneOf": [
+            {
+              "enum": [
+                "SystemAssigned"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "PrivateEndpoint": {
+      "description": "A private endpoint class.",
+      "properties": {
+        "id": {
+          "description": "The private endpoint identifier.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "PrivateEndpointConnectionProperties": {
+      "description": "A private endpoint connection properties class.",
+      "properties": {
+        "privateEndpoint": {
+          "description": "The private endpoint information.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/PrivateEndpoint"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "privateLinkServiceConnectionState": {
+          "description": "The private link service connection state.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/PrivateLinkServiceConnectionState"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "PrivateLinkServiceConnectionState": {
+      "description": "The private link service connection state.",
+      "properties": {
+        "actionsRequired": {
+          "description": "The required actions.",
+          "type": "string"
+        },
+        "description": {
+          "description": "The description.",
+          "type": "string"
+        },
+        "status": {
+          "description": "The status.",
+          "oneOf": [
+            {
+              "enum": [
+                "Unknown",
+                "Pending",
+                "Approved",
+                "Rejected",
+                "Disconnected"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "accounts_privateEndpointConnections_childResource": {
+      "description": "Microsoft.Purview/accounts/privateEndpointConnections",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2020-12-01-preview"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of the private endpoint connection.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The connection identifier.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/PrivateEndpointConnectionProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "privateEndpointConnections"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    }
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "id": "https://schema.management.azure.com/schemas/2023-03-01-preview/Microsoft.Marketplace.json#",
+  "title": "Microsoft.Marketplace",
+  "description": "Microsoft Marketplace Resource Types",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "tenant_resourceDefinitions": {
+    "mysolutions": {
+      "description": "Microsoft.Marketplace/mysolutions",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2023-03-01-preview"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "The solution id",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The Solution data structure",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/SolutionProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.Marketplace/mysolutions"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    }
+  },
+  "definitions": {
+    "Product": {
+      "properties": {
+        "description": {
+          "description": "",
+          "type": "string"
+        },
+        "displayName": {
+          "description": "",
+          "type": "string"
+        },
+        "pricingTypes": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "productType": {
+          "description": "",
+          "type": "string"
+        },
+        "publisherDisplayName": {
+          "description": "",
+          "type": "string"
+        },
+        "ratingAverage": {
+          "description": "",
+          "oneOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "smallIconUri": {
+          "description": "",
+          "type": "string"
+        },
+        "storeFronts": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "summary": {
+          "description": "",
+          "type": "string"
+        },
+        "uniqueProductId": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "SolutionProperties": {
+      "description": "Describes the json payload for solution operations",
+      "properties": {
+        "displayName": {
+          "description": "",
+          "type": "string"
+        },
+        "products": {
+          "description": "",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/Product"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    }
+  }
+}

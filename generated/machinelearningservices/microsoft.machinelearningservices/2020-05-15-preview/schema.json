@@ -1,0 +1,2268 @@
+{
+  "id": "https://schema.management.azure.com/schemas/2020-05-15-preview/Microsoft.MachineLearningServices.json#",
+  "title": "Microsoft.MachineLearningServices",
+  "description": "Microsoft MachineLearningServices Resource Types",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "resourceDefinitions": {
+    "workspaces": {
+      "description": "Microsoft.MachineLearningServices/workspaces",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2020-05-15-preview"
+          ],
+          "type": "string"
+        },
+        "identity": {
+          "description": "The identity of the resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/Identity"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "location": {
+          "description": "Specifies the location of the resource.",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of Azure Machine Learning workspace.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The properties of the machine learning workspace.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/WorkspaceProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "resources": {
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/definitions/workspaces_computes_childResource"
+              },
+              {
+                "$ref": "#/definitions/workspaces_services_childResource"
+              },
+              {
+                "$ref": "#/definitions/workspaces_linkedWorkspaces_childResource"
+              },
+              {
+                "$ref": "#/definitions/workspaces_privateEndpointConnections_childResource"
+              }
+            ]
+          },
+          "type": "array"
+        },
+        "sku": {
+          "description": "The sku of the workspace.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/Sku"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "Contains resource tags defined as key/value pairs.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.MachineLearningServices/workspaces"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "workspaces_computes": {
+      "description": "Microsoft.MachineLearningServices/workspaces/computes",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2020-05-15-preview"
+          ],
+          "type": "string"
+        },
+        "identity": {
+          "description": "The identity of the resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/Identity"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "location": {
+          "description": "Specifies the location of the resource.",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of the Azure Machine Learning compute.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "Compute properties",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/Compute"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "sku": {
+          "description": "The sku of the workspace.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/Sku"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "Contains resource tags defined as key/value pairs.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.MachineLearningServices/workspaces/computes"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "workspaces_linkedWorkspaces": {
+      "description": "Microsoft.MachineLearningServices/workspaces/linkedWorkspaces",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2020-05-15-preview"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "Friendly name of the linked workspace",
+          "type": "string"
+        },
+        "properties": {
+          "description": "LinkedWorkspace specific properties.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/LinkedWorkspaceProps"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.MachineLearningServices/workspaces/linkedWorkspaces"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "workspaces_privateEndpointConnections": {
+      "description": "Microsoft.MachineLearningServices/workspaces/privateEndpointConnections",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2020-05-15-preview"
+          ],
+          "type": "string"
+        },
+        "identity": {
+          "description": "The identity of the resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/Identity"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "location": {
+          "description": "Specifies the location of the resource.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the private endpoint connection associated with the workspace",
+          "type": "string"
+        },
+        "properties": {
+          "description": "Resource properties.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/PrivateEndpointConnectionProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "sku": {
+          "description": "The sku of the workspace.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/Sku"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "Contains resource tags defined as key/value pairs.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.MachineLearningServices/workspaces/privateEndpointConnections"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "workspaces_services": {
+      "description": "Microsoft.MachineLearningServices/workspaces/services",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2020-05-15-preview"
+          ],
+          "type": "string"
+        },
+        "description": {
+          "description": "The description of the service.",
+          "type": "string"
+        },
+        "environmentImageRequest": {
+          "description": "The Environment, models and assets needed for inferencing.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/CreateServiceRequestEnvironmentImageRequest"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "keys": {
+          "description": "The authentication keys.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/CreateServiceRequestKeys"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "kvTags": {
+          "description": "The service tag dictionary. Tags are mutable.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "location": {
+          "description": "The name of the Azure location/region.",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of the Azure Machine Learning service.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The service properties dictionary. Properties are immutable.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.MachineLearningServices/workspaces/services"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    }
+  },
+  "definitions": {
+    "AKSProperties": {
+      "description": "AKS properties",
+      "properties": {
+        "agentCount": {
+          "description": "Number of agents",
+          "oneOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "agentVMSize": {
+          "description": "Agent virtual machine size",
+          "type": "string"
+        },
+        "aksNetworkingConfiguration": {
+          "description": "AKS networking configuration for vnet",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/AksNetworkingConfiguration"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "clusterFqdn": {
+          "description": "Cluster full qualified domain name",
+          "type": "string"
+        },
+        "sslConfiguration": {
+          "description": "SSL configuration",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/SslConfiguration"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "AksNetworkingConfiguration": {
+      "description": "Advance configuration for AKS networking",
+      "properties": {
+        "dnsServiceIP": {
+          "description": "An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.",
+          "oneOf": [
+            {
+              "pattern": "^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$",
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "dockerBridgeCidr": {
+          "description": "A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.",
+          "oneOf": [
+            {
+              "pattern": "^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$",
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "serviceCidr": {
+          "description": "A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.",
+          "oneOf": [
+            {
+              "pattern": "^([0-9]{1,3}\\.){3}[0-9]{1,3}(\\/([0-9]|[1-2][0-9]|3[0-2]))?$",
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "subnetId": {
+          "description": "Virtual network subnet resource ID the compute nodes belong to",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "AmlComputeProperties": {
+      "description": "AML Compute properties",
+      "properties": {
+        "enableNodePublicIp": {
+          "description": "Enable or disable node public IP address provisioning. Possible values are: Possible values are: true - Indicates that the compute nodes will have public IPs provisioned. false - Indicates that the compute nodes will have a private endpoint and no public IPs.",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "isolatedNetwork": {
+          "description": "Network is isolated or not",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "osType": {
+          "description": "Compute OS Type",
+          "oneOf": [
+            {
+              "enum": [
+                "Linux",
+                "Windows"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "remoteLoginPortPublicAccess": {
+          "description": "State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on all nodes of the cluster. Enabled - Indicates that the public ssh port is open on all nodes of the cluster. NotSpecified - Indicates that the public ssh port is closed on all nodes of the cluster if VNet is defined, else is open all public nodes. It can be default only during cluster creation time, after creation it will be either enabled or disabled.",
+          "oneOf": [
+            {
+              "enum": [
+                "Enabled",
+                "Disabled",
+                "NotSpecified"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "scaleSettings": {
+          "description": "Scale settings for AML Compute",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ScaleSettings"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "subnet": {
+          "description": "Virtual network subnet resource ID the compute nodes belong to.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ResourceId"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "userAccountCredentials": {
+          "description": "Credentials for an administrator user account that will be created on each compute node.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/UserAccountCredentials"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "virtualMachineImage": {
+          "description": "Virtual Machine image for AML Compute - windows only",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/VirtualMachineImage"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "vmPriority": {
+          "description": "Virtual Machine priority",
+          "oneOf": [
+            {
+              "enum": [
+                "Dedicated",
+                "LowPriority"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "vmSize": {
+          "description": "Virtual Machine Size",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "Compute": {
+      "description": "Machine Learning compute object.",
+      "oneOf": [
+        {
+          "description": "A Machine Learning compute based on AKS.",
+          "properties": {
+            "properties": {
+              "description": "AKS properties",
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/AKSProperties"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            }
+          },
+          "type": "object"
+        },
+        {
+          "description": "An Azure Machine Learning compute.",
+          "properties": {
+            "properties": {
+              "description": "AML Compute properties",
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/AmlComputeProperties"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            }
+          },
+          "type": "object"
+        },
+        {
+          "description": "A DataFactory compute.",
+          "properties": {},
+          "type": "object"
+        },
+        {
+          "description": "A DataLakeAnalytics compute.",
+          "properties": {
+            "properties": {
+              "description": "",
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/DataLakeAnalyticsProperties"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            }
+          },
+          "type": "object"
+        },
+        {
+          "description": "A DataFactory compute.",
+          "properties": {
+            "properties": {
+              "description": "",
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/DatabricksProperties"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            }
+          },
+          "type": "object"
+        },
+        {
+          "description": "A HDInsight compute.",
+          "properties": {
+            "properties": {
+              "description": "",
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/HDInsightProperties"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            }
+          },
+          "type": "object"
+        },
+        {
+          "description": "A Machine Learning compute based on Azure Virtual Machines.",
+          "properties": {
+            "properties": {
+              "description": "",
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/VirtualMachineProperties"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            }
+          },
+          "type": "object"
+        }
+      ],
+      "properties": {
+        "computeLocation": {
+          "description": "Location for the underlying compute",
+          "type": "string"
+        },
+        "description": {
+          "description": "The description of the Machine Learning compute.",
+          "type": "string"
+        },
+        "resourceId": {
+          "description": "ARM resource id of the underlying compute",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "ContainerResourceRequirements": {
+      "description": "The resource requirements for the container (cpu and memory).",
+      "properties": {
+        "cpu": {
+          "description": "The number of CPU cores on the container.",
+          "oneOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "fpga": {
+          "description": "The number of FPGA PCIE devices exposed to the container. Must be multiple of 2.",
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "gpu": {
+          "description": "The number of GPU cores in the container.",
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "memoryInGB": {
+          "description": "The amount of memory on the container in GB.",
+          "oneOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "CreateServiceRequestEnvironmentImageRequest": {
+      "description": "The Environment, models and assets needed for inferencing.",
+      "properties": {
+        "assets": {
+          "description": "The list of assets.",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/ImageAsset"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "driverProgram": {
+          "description": "The name of the driver file.",
+          "type": "string"
+        },
+        "environment": {
+          "description": "The details of the AZURE ML environment.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/EnvironmentImageRequestEnvironment"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "environmentReference": {
+          "description": "The unique identifying details of the AZURE ML environment.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/EnvironmentImageRequestEnvironmentReference"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "modelIds": {
+          "description": "The list of model Ids.",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "models": {
+          "description": "The list of models.",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/Model"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "CreateServiceRequestKeys": {
+      "description": "The authentication keys.",
+      "properties": {
+        "primaryKey": {
+          "description": "The primary key.",
+          "type": "string"
+        },
+        "secondaryKey": {
+          "description": "The secondary key.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "DataLakeAnalyticsProperties": {
+      "properties": {
+        "dataLakeStoreAccountName": {
+          "description": "DataLake Store Account Name",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "DatabricksProperties": {
+      "properties": {
+        "databricksAccessToken": {
+          "description": "Databricks access token",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "DatasetReference": {
+      "description": "The dataset reference object.",
+      "properties": {
+        "id": {
+          "description": "The id of the dataset reference.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the dataset reference.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "EncryptionProperty": {
+      "properties": {
+        "keyVaultProperties": {
+          "description": "Customer Key vault properties.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/KeyVaultProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "status": {
+          "description": "Indicates whether or not the encryption is enabled for the workspace.",
+          "oneOf": [
+            {
+              "enum": [
+                "Enabled",
+                "Disabled"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "status",
+        "keyVaultProperties"
+      ],
+      "type": "object"
+    },
+    "EnvironmentImageRequestEnvironment": {
+      "description": "The details of the AZURE ML environment.",
+      "properties": {
+        "docker": {
+          "description": "The definition of a Docker container.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ModelEnvironmentDefinitionDocker"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "environmentVariables": {
+          "description": "Definition of environment variables to be defined in the environment.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "inferencingStackVersion": {
+          "description": "The inferencing stack version added to the image. To avoid adding an inferencing stack, do not set this value. Valid values: \"latest\".",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the environment.",
+          "type": "string"
+        },
+        "python": {
+          "description": "Settings for a Python environment.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ModelEnvironmentDefinitionPython"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "r": {
+          "description": "Settings for a R environment.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ModelEnvironmentDefinitionR"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "spark": {
+          "description": "The configuration for a Spark environment.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ModelEnvironmentDefinitionSpark"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "version": {
+          "description": "The environment version.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "EnvironmentImageRequestEnvironmentReference": {
+      "description": "The unique identifying details of the AZURE ML environment.",
+      "properties": {
+        "name": {
+          "description": "Name of the environment.",
+          "type": "string"
+        },
+        "version": {
+          "description": "Version of the environment.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "HDInsightProperties": {
+      "properties": {
+        "address": {
+          "description": "Public IP address of the master node of the cluster.",
+          "type": "string"
+        },
+        "administratorAccount": {
+          "description": "Admin credentials for master node of the cluster",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/VirtualMachineSshCredentials"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "sshPort": {
+          "description": "Port open for ssh connections on the master node of the cluster.",
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "Identity": {
+      "description": "Identity for the resource.",
+      "properties": {
+        "type": {
+          "description": "The identity type.",
+          "oneOf": [
+            {
+              "enum": [
+                "SystemAssigned",
+                "SystemAssigned,UserAssigned",
+                "UserAssigned",
+                "None"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "userAssignedIdentities": {
+          "description": "The user assigned identities associated with the resource.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "$ref": "#/definitions/UserAssignedIdentity"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ImageAsset": {
+      "description": "An Image asset.",
+      "properties": {
+        "id": {
+          "description": "The Asset Id.",
+          "type": "string"
+        },
+        "mimeType": {
+          "description": "The mime type.",
+          "type": "string"
+        },
+        "unpack": {
+          "description": "Whether the Asset is unpacked.",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "url": {
+          "description": "The Url of the Asset.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "KeyVaultProperties": {
+      "properties": {
+        "identityClientId": {
+          "description": "For future use - The client id of the identity which will be used to access key vault.",
+          "type": "string"
+        },
+        "keyIdentifier": {
+          "description": "Key vault uri to access the encryption key.",
+          "type": "string"
+        },
+        "keyVaultArmId": {
+          "description": "The ArmId of the keyVault where the customer owned encryption key is present.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "keyVaultArmId",
+        "keyIdentifier"
+      ],
+      "type": "object"
+    },
+    "LinkedWorkspaceProps": {
+      "description": "LinkedWorkspace specific properties.",
+      "properties": {
+        "linkedWorkspaceResourceId": {
+          "description": "ResourceId of the link target of the linked workspace.",
+          "type": "string"
+        },
+        "userAssignedIdentityResourceId": {
+          "description": "ResourceId of the user assigned identity for the linked workspace.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "Model": {
+      "description": "An Azure Machine Learning Model.",
+      "properties": {
+        "createdTime": {
+          "description": "The Model creation time (UTC).",
+          "format": "date-time",
+          "type": "string"
+        },
+        "datasets": {
+          "description": "The list of datasets associated with the model.",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/DatasetReference"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "derivedModelIds": {
+          "description": "Models derived from this model",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "description": {
+          "description": "The Model description text.",
+          "type": "string"
+        },
+        "experimentName": {
+          "description": "The name of the experiment where this model was created.",
+          "type": "string"
+        },
+        "framework": {
+          "description": "The Model framework.",
+          "type": "string"
+        },
+        "frameworkVersion": {
+          "description": "The Model framework version.",
+          "type": "string"
+        },
+        "id": {
+          "description": "The Model Id.",
+          "type": "string"
+        },
+        "kvTags": {
+          "description": "The Model tag dictionary. Items are mutable.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "mimeType": {
+          "description": "The MIME type of Model content. For more details about MIME type, please open https://www.iana.org/assignments/media-types/media-types.xhtml",
+          "type": "string"
+        },
+        "modifiedTime": {
+          "description": "The Model last modified time (UTC).",
+          "format": "date-time",
+          "type": "string"
+        },
+        "name": {
+          "description": "The Model name.",
+          "type": "string"
+        },
+        "parentModelId": {
+          "description": "The Parent Model Id.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The Model property dictionary. Properties are immutable.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "resourceRequirements": {
+          "description": "Resource requirements for the model",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ContainerResourceRequirements"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "runId": {
+          "description": "The RunId that created this model.",
+          "type": "string"
+        },
+        "sampleInputData": {
+          "description": "Sample Input Data for the Model. A reference to a dataset in the workspace in the format aml://dataset/{datasetId}",
+          "type": "string"
+        },
+        "sampleOutputData": {
+          "description": "Sample Output Data for the Model. A reference to a dataset in the workspace in the format aml://dataset/{datasetId}",
+          "type": "string"
+        },
+        "unpack": {
+          "description": "Indicates whether we need to unpack the Model during docker Image creation.",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "url": {
+          "description": "The URL of the Model. Usually a SAS URL.",
+          "type": "string"
+        },
+        "version": {
+          "description": "The Model version assigned by Model Management Service.",
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "name",
+        "url",
+        "mimeType"
+      ],
+      "type": "object"
+    },
+    "ModelDockerSectionBaseImageRegistry": {
+      "description": "Image registry that contains the base image.",
+      "properties": {
+        "address": {
+          "description": "",
+          "type": "string"
+        },
+        "password": {
+          "description": "",
+          "type": "string"
+        },
+        "username": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "ModelEnvironmentDefinitionDocker": {
+      "description": "The definition of a Docker container.",
+      "properties": {
+        "baseDockerfile": {
+          "description": "Base Dockerfile used for Docker-based runs. Mutually exclusive with BaseImage.",
+          "type": "string"
+        },
+        "baseImage": {
+          "description": "Base image used for Docker-based runs. Mutually exclusive with BaseDockerfile.",
+          "type": "string"
+        },
+        "baseImageRegistry": {
+          "description": "Image registry that contains the base image.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ModelDockerSectionBaseImageRegistry"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ModelEnvironmentDefinitionPython": {
+      "description": "Settings for a Python environment.",
+      "properties": {
+        "baseCondaEnvironment": {
+          "description": "",
+          "type": "string"
+        },
+        "condaDependencies": {
+          "description": "A JObject containing Conda dependencies.",
+          "oneOf": [
+            {
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "interpreterPath": {
+          "description": "The python interpreter path to use if an environment build is not required. The path specified gets used to call the user script.",
+          "type": "string"
+        },
+        "userManagedDependencies": {
+          "description": "True means that AzureML reuses an existing python environment; False means that AzureML will create a python environment based on the Conda dependencies specification.",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ModelEnvironmentDefinitionR": {
+      "description": "Settings for a R environment.",
+      "properties": {
+        "bioConductorPackages": {
+          "description": "The packages from Bioconductor.",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "cranPackages": {
+          "description": "The CRAN packages to use.",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/RCranPackage"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "customUrlPackages": {
+          "description": "The packages from custom urls.",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "gitHubPackages": {
+          "description": "The packages directly from GitHub.",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/RGitHubPackage"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "rVersion": {
+          "description": "The version of R to be installed",
+          "type": "string"
+        },
+        "rscriptPath": {
+          "description": "The Rscript path to use if an environment build is not required.\r\nThe path specified gets used to call the user script.",
+          "type": "string"
+        },
+        "snapshotDate": {
+          "description": "Date of MRAN snapshot to use in YYYY-MM-DD format, e.g. \"2019-04-17\"",
+          "type": "string"
+        },
+        "userManaged": {
+          "description": "Indicates whether the environment is managed by user or by AzureML.",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ModelEnvironmentDefinitionSpark": {
+      "description": "The configuration for a Spark environment.",
+      "properties": {
+        "packages": {
+          "description": "The Spark packages to use.",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/SparkMavenPackage"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "precachePackages": {
+          "description": "Whether to precache the packages.",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "repositories": {
+          "description": "The list of spark repositories.",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "PrivateEndpoint": {
+      "description": "The Private Endpoint resource.",
+      "properties": {},
+      "type": "object"
+    },
+    "PrivateEndpointConnectionProperties": {
+      "description": "Properties of the PrivateEndpointConnectProperties.",
+      "properties": {
+        "privateEndpoint": {
+          "description": "The resource of private end point.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/PrivateEndpoint"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "privateLinkServiceConnectionState": {
+          "description": "A collection of information about the state of the connection between service consumer and provider.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/PrivateLinkServiceConnectionState"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "privateLinkServiceConnectionState"
+      ],
+      "type": "object"
+    },
+    "PrivateLinkServiceConnectionState": {
+      "description": "A collection of information about the state of the connection between service consumer and provider.",
+      "properties": {
+        "actionsRequired": {
+          "description": "A message indicating if changes on the service provider require any updates on the consumer.",
+          "type": "string"
+        },
+        "description": {
+          "description": "The reason for approval/rejection of the connection.",
+          "type": "string"
+        },
+        "status": {
+          "description": "Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.",
+          "oneOf": [
+            {
+              "enum": [
+                "Pending",
+                "Approved",
+                "Rejected",
+                "Disconnected",
+                "Timeout"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "RCranPackage": {
+      "properties": {
+        "name": {
+          "description": "The package name.",
+          "type": "string"
+        },
+        "repository": {
+          "description": "The repository name.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "RGitHubPackage": {
+      "properties": {
+        "authToken": {
+          "description": "Personal access token to install from a private repo",
+          "type": "string"
+        },
+        "repository": {
+          "description": "Repository address in the format username/repo[/subdir][@ref|#pull].",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "ResourceId": {
+      "description": "Represents a resource ID. For example, for a subnet, it is the resource URL for the subnet.",
+      "properties": {
+        "id": {
+          "description": "The ID of the resource",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "type": "object"
+    },
+    "ScaleSettings": {
+      "description": "scale settings for AML Compute",
+      "properties": {
+        "maxNodeCount": {
+          "description": "Max number of nodes to use",
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "minNodeCount": {
+          "description": "Min number of nodes to use",
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "nodeIdleTimeBeforeScaleDown": {
+          "description": "Node Idle Time before scaling down amlCompute. This string needs to be in the RFC Format.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "maxNodeCount"
+      ],
+      "type": "object"
+    },
+    "SharedPrivateLinkResource": {
+      "properties": {
+        "name": {
+          "description": "Unique name of the private link.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "Resource properties.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/SharedPrivateLinkResourceProperty"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "SharedPrivateLinkResourceProperty": {
+      "description": "Properties of a shared private link resource.",
+      "properties": {
+        "groupId": {
+          "description": "The private link resource group id.",
+          "type": "string"
+        },
+        "privateLinkResourceId": {
+          "description": "The resource id that private link links to.",
+          "type": "string"
+        },
+        "requestMessage": {
+          "description": "Request message.",
+          "type": "string"
+        },
+        "status": {
+          "description": "Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.",
+          "oneOf": [
+            {
+              "enum": [
+                "Pending",
+                "Approved",
+                "Rejected",
+                "Disconnected",
+                "Timeout"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "Sku": {
+      "description": "Sku of the resource",
+      "properties": {
+        "name": {
+          "description": "Name of the sku",
+          "type": "string"
+        },
+        "tier": {
+          "description": "Tier of the sku like Basic or Enterprise",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "SparkMavenPackage": {
+      "properties": {
+        "artifact": {
+          "description": "",
+          "type": "string"
+        },
+        "group": {
+          "description": "",
+          "type": "string"
+        },
+        "version": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "SslConfiguration": {
+      "description": "The ssl configuration for scoring",
+      "properties": {
+        "cert": {
+          "description": "Cert data",
+          "type": "string"
+        },
+        "cname": {
+          "description": "CNAME of the cert",
+          "type": "string"
+        },
+        "key": {
+          "description": "Key data",
+          "type": "string"
+        },
+        "status": {
+          "description": "Enable or disable ssl for scoring",
+          "oneOf": [
+            {
+              "enum": [
+                "Disabled",
+                "Enabled"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "UserAccountCredentials": {
+      "description": "Settings for user account that gets created on each on the nodes of a compute.",
+      "properties": {
+        "adminUserName": {
+          "description": "Name of the administrator user account which can be used to SSH to nodes.",
+          "type": "string"
+        },
+        "adminUserPassword": {
+          "description": "Password of the administrator user account.",
+          "type": "string"
+        },
+        "adminUserSshPublicKey": {
+          "description": "SSH public key of the administrator user account.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "adminUserName"
+      ],
+      "type": "object"
+    },
+    "UserAssignedIdentity": {
+      "description": "User Assigned Identity",
+      "properties": {},
+      "type": "object"
+    },
+    "VirtualMachineImage": {
+      "description": "Virtual Machine image for Windows AML Compute",
+      "properties": {
+        "id": {
+          "description": "Virtual Machine image path",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "type": "object"
+    },
+    "VirtualMachineProperties": {
+      "properties": {
+        "address": {
+          "description": "Public IP address of the virtual machine.",
+          "type": "string"
+        },
+        "administratorAccount": {
+          "description": "Admin credentials for virtual machine",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/VirtualMachineSshCredentials"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "sshPort": {
+          "description": "Port open for ssh connections.",
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "virtualMachineSize": {
+          "description": "Virtual Machine size",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "VirtualMachineSshCredentials": {
+      "description": "Admin credentials for virtual machine",
+      "properties": {
+        "password": {
+          "description": "Password of admin account",
+          "type": "string"
+        },
+        "privateKeyData": {
+          "description": "Private key data",
+          "type": "string"
+        },
+        "publicKeyData": {
+          "description": "Public key data",
+          "type": "string"
+        },
+        "username": {
+          "description": "Username of admin account",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "WorkspaceProperties": {
+      "description": "The properties of a machine learning workspace.",
+      "properties": {
+        "allowPublicAccessWhenBehindVnet": {
+          "description": "The flag to indicate whether to allow public access when behind VNet.",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "applicationInsights": {
+          "description": "ARM id of the application insights associated with this workspace. This cannot be changed once the workspace has been created",
+          "type": "string"
+        },
+        "containerRegistry": {
+          "description": "ARM id of the container registry associated with this workspace. This cannot be changed once the workspace has been created",
+          "type": "string"
+        },
+        "description": {
+          "description": "The description of this workspace.",
+          "type": "string"
+        },
+        "discoveryUrl": {
+          "description": "Url for the discovery service to identify regional endpoints for machine learning experimentation services",
+          "type": "string"
+        },
+        "encryption": {
+          "description": "The encryption settings of Azure ML workspace.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/EncryptionProperty"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "friendlyName": {
+          "description": "The friendly name for this workspace. This name in mutable",
+          "type": "string"
+        },
+        "hbiWorkspace": {
+          "description": "The flag to signal HBI data in the workspace and reduce diagnostic data collected by the service",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "imageBuildCompute": {
+          "description": "The compute name for image build",
+          "type": "string"
+        },
+        "keyVault": {
+          "description": "ARM id of the key vault associated with this workspace. This cannot be changed once the workspace has been created",
+          "type": "string"
+        },
+        "sharedPrivateLinkResources": {
+          "description": "The list of shared private link resources in this workspace.",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/SharedPrivateLinkResource"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "storageAccount": {
+          "description": "ARM id of the storage account associated with this workspace. This cannot be changed once the workspace has been created",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "workspaces_computes_childResource": {
+      "description": "Microsoft.MachineLearningServices/workspaces/computes",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2020-05-15-preview"
+          ],
+          "type": "string"
+        },
+        "identity": {
+          "description": "The identity of the resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/Identity"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "location": {
+          "description": "Specifies the location of the resource.",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of the Azure Machine Learning compute.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "Compute properties",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/Compute"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "sku": {
+          "description": "The sku of the workspace.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/Sku"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "Contains resource tags defined as key/value pairs.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "computes"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "workspaces_linkedWorkspaces_childResource": {
+      "description": "Microsoft.MachineLearningServices/workspaces/linkedWorkspaces",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2020-05-15-preview"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "Friendly name of the linked workspace",
+          "type": "string"
+        },
+        "properties": {
+          "description": "LinkedWorkspace specific properties.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/LinkedWorkspaceProps"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "linkedWorkspaces"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "workspaces_privateEndpointConnections_childResource": {
+      "description": "Microsoft.MachineLearningServices/workspaces/privateEndpointConnections",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2020-05-15-preview"
+          ],
+          "type": "string"
+        },
+        "identity": {
+          "description": "The identity of the resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/Identity"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "location": {
+          "description": "Specifies the location of the resource.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the private endpoint connection associated with the workspace",
+          "type": "string"
+        },
+        "properties": {
+          "description": "Resource properties.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/PrivateEndpointConnectionProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "sku": {
+          "description": "The sku of the workspace.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/Sku"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "Contains resource tags defined as key/value pairs.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "privateEndpointConnections"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "workspaces_services_childResource": {
+      "description": "Microsoft.MachineLearningServices/workspaces/services",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2020-05-15-preview"
+          ],
+          "type": "string"
+        },
+        "description": {
+          "description": "The description of the service.",
+          "type": "string"
+        },
+        "environmentImageRequest": {
+          "description": "The Environment, models and assets needed for inferencing.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/CreateServiceRequestEnvironmentImageRequest"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "keys": {
+          "description": "The authentication keys.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/CreateServiceRequestKeys"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "kvTags": {
+          "description": "The service tag dictionary. Tags are mutable.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "location": {
+          "description": "The name of the Azure location/region.",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of the Azure Machine Learning service.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The service properties dictionary. Properties are immutable.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "services"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    }
+  }
+}

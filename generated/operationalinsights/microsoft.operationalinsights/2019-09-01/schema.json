@@ -1,0 +1,272 @@
+{
+  "id": "https://schema.management.azure.com/schemas/2019-09-01/Microsoft.OperationalInsights.json#",
+  "title": "Microsoft.OperationalInsights",
+  "description": "Microsoft OperationalInsights Resource Types",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "resourceDefinitions": {
+    "queryPacks": {
+      "description": "Microsoft.OperationalInsights/queryPacks",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2019-09-01"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "description": "Resource location",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the Log Analytics QueryPack resource.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "Properties that define a Log Analytics QueryPack resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/LogAnalyticsQueryPackProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "resources": {
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/definitions/queryPacks_queries_childResource"
+              }
+            ]
+          },
+          "type": "array"
+        },
+        "tags": {
+          "description": "Resource tags",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.OperationalInsights/queryPacks"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "queryPacks_queries": {
+      "description": "Microsoft.OperationalInsights/queryPacks/queries",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2019-09-01"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "The id of a specific query defined in the Log Analytics QueryPack",
+          "type": "string"
+        },
+        "properties": {
+          "description": "Properties that define an Log Analytics QueryPack-Query resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/LogAnalyticsQueryPackQueryProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.OperationalInsights/queryPacks/queries"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    }
+  },
+  "definitions": {
+    "LogAnalyticsQueryPackProperties": {
+      "description": "Properties that define a Log Analytics QueryPack resource.",
+      "properties": {},
+      "type": "object"
+    },
+    "LogAnalyticsQueryPackQueryProperties": {
+      "description": "Properties that define an Log Analytics QueryPack-Query resource.",
+      "properties": {
+        "body": {
+          "description": "Body of the query.",
+          "type": "string"
+        },
+        "description": {
+          "description": "Description of the query.",
+          "type": "string"
+        },
+        "displayName": {
+          "description": "Unique display name for your query within the Query Pack.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "Additional properties that can be set for the query.",
+          "oneOf": [
+            {
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "related": {
+          "description": "The related metadata items for the function.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/LogAnalyticsQueryPackQueryPropertiesRelated"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "tags": {
+          "description": "Tags associated with the query.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "displayName",
+        "body"
+      ],
+      "type": "object"
+    },
+    "LogAnalyticsQueryPackQueryPropertiesRelated": {
+      "description": "The related metadata items for the function.",
+      "properties": {
+        "categories": {
+          "description": "The related categories for the function.",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "resourceTypes": {
+          "description": "The related resource types for the function.",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "solutions": {
+          "description": "The related Log Analytics solutions for the function.",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "queryPacks_queries_childResource": {
+      "description": "Microsoft.OperationalInsights/queryPacks/queries",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2019-09-01"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "description": "The id of a specific query defined in the Log Analytics QueryPack",
+          "type": "string"
+        },
+        "properties": {
+          "description": "Properties that define an Log Analytics QueryPack-Query resource.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/LogAnalyticsQueryPackQueryProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "queries"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    }
+  }
+}
