@@ -603,7 +603,7 @@ The default value is 2Gi, this should not exceed build service agent pool memory
 * **networkProfile**: [NetworkProfile](#networkprofile): Network profile of the Service
 * **powerState**: 'Running' | 'Stopped' | string (ReadOnly): Power state of the Service
 * **provisioningState**: 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MoveFailed' | 'Moved' | 'Moving' | 'Starting' | 'Stopping' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the Service
-* **serviceId**: string (ReadOnly): ServiceInstanceEntity GUID which uniquely identifies a created resource
+* **serviceId**: string (ReadOnly): ServiceInstanceEntity Id which uniquely identifies a created resource
 * **version**: int (ReadOnly): Version of the Service
 * **vnetAddons**: [ServiceVNetAddons](#servicevnetaddons): Additional Service settings in vnet injection instance
 * **zoneRedundant**: bool
@@ -762,6 +762,12 @@ The default value is 2Gi, this should not exceed build service agent pool memory
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## DevToolPortalComponent
+### Properties
+* **instances**: [DevToolPortalInstance](#devtoolportalinstance)[] (ReadOnly): Collection of instances belong to Dev Tool Portal.
+* **name**: string (ReadOnly)
+* **resourceRequests**: [DevToolPortalResourceRequests](#devtoolportalresourcerequests) (ReadOnly): The requested resource quantity for required CPU and Memory.
+
 ## DevToolPortalFeatureDetail
 ### Properties
 * **route**: string (ReadOnly): Route path to visit the plugin
@@ -779,11 +785,10 @@ The default value is 2Gi, this should not exceed build service agent pool memory
 
 ## DevToolPortalProperties
 ### Properties
+* **components**: [DevToolPortalComponent](#devtoolportalcomponent)[] (ReadOnly): Collection of components belong to Dev Tool Portal.
 * **features**: [DevToolPortalFeatureSettings](#devtoolportalfeaturesettings): Settings for Dev Tool Portal
-* **instances**: [DevToolPortalInstance](#devtoolportalinstance)[] (ReadOnly): Collection of instances belong to Dev Tool Portal.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): State of the Dev Tool Portal.
 * **public**: bool: Indicates whether the resource exposes public endpoint
-* **resourceRequests**: [DevToolPortalResourceRequests](#devtoolportalresourcerequests) (ReadOnly): The requested resource quantity for required CPU and Memory.
 * **ssoProperties**: [DevToolPortalSsoProperties](#devtoolportalssoproperties): Single sign-on related configuration
 * **url**: string (ReadOnly): URL of the resource, exposed when 'public' is true.
 

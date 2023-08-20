@@ -55,12 +55,12 @@
 * **infrastructureConfig**: [AppliancePropertiesInfrastructureConfig](#appliancepropertiesinfrastructureconfig): Contains infrastructure information about the Appliance
 * **provisioningState**: string (ReadOnly): The current deployment or provisioning state, which only appears in the response.
 * **publicKey**: string: Certificates pair used to download MSI certificate from HIS. Can only be set once.
-* **status**: 'Connected' | 'Connecting' | 'ImageDeprovisioning' | 'ImageDownloaded' | 'ImageDownloading' | 'ImagePending' | 'ImageProvisioned' | 'ImageProvisioning' | 'ImageUnknown' | 'None' | 'Offline' | 'PostUpgrade' | 'PreUpgrade' | 'PreparingForUpgrade' | 'Running' | 'UpdatingCAPI' | 'UpdatingCloudOperator' | 'UpdatingCluster' | 'UpgradeClusterExtensionFailedToDelete' | 'UpgradeComplete' | 'UpgradeFailed' | 'UpgradePrerequisitesCompleted' | 'UpgradingKVAIO' | 'Validating' | 'WaitingForCloudOperator' | 'WaitingForHeartbeat' | 'WaitingForKVAIO' | string (ReadOnly): Appliance’s health and state of connection to on-prem
+* **status**: 'Connected' | 'Connecting' | 'ETCDSnapshotFailed' | 'ImageDeprovisioning' | 'ImageDownloaded' | 'ImageDownloading' | 'ImagePending' | 'ImageProvisioned' | 'ImageProvisioning' | 'ImageUnknown' | 'None' | 'Offline' | 'PostUpgrade' | 'PreUpgrade' | 'PreparingForUpgrade' | 'Running' | 'UpdatingCAPI' | 'UpdatingCloudOperator' | 'UpdatingCluster' | 'UpgradeClusterExtensionFailedToDelete' | 'UpgradeComplete' | 'UpgradeFailed' | 'UpgradePrerequisitesCompleted' | 'UpgradingKVAIO' | 'Validating' | 'ValidatingETCDHealth' | 'ValidatingImageDownload' | 'ValidatingImageUpload' | 'ValidatingSFSConnectivity' | 'WaitingForCloudOperator' | 'WaitingForHeartbeat' | 'WaitingForKVAIO' | string (ReadOnly): Appliance’s health and state of connection to on-prem
 * **version**: string: Version of the Appliance
 
 ## AppliancePropertiesInfrastructureConfig
 ### Properties
-* **provider**: 'HCI' | 'KubeVirt' | 'OpenStack' | 'SCVMM' | 'VMWare' | string: Information about the connected appliance.
+* **provider**: 'HCI' | 'SCVMM' | 'VMWare' | string: Information about the connected appliance.
 
 ## ArtifactProfile
 ### Properties

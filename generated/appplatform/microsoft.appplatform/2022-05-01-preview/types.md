@@ -460,7 +460,7 @@ The default value is 2Gi, this should not exceed build service agent pool memory
 * **networkProfile**: [NetworkProfile](#networkprofile): Network profile of the Service
 * **powerState**: 'Running' | 'Stopped' | string (ReadOnly): Power state of the Service
 * **provisioningState**: 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MoveFailed' | 'Moved' | 'Moving' | 'Starting' | 'Stopping' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the Service
-* **serviceId**: string (ReadOnly): ServiceInstanceEntity GUID which uniquely identifies a created resource
+* **serviceId**: string (ReadOnly): ServiceInstanceEntity Id which uniquely identifies a created resource
 * **version**: int (ReadOnly): Version of the Service
 * **vnetAddons**: [ServiceVNetAddons](#servicevnetaddons): Additional Service settings in vnet injection instance
 * **zoneRedundant**: bool
