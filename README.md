@@ -13,6 +13,9 @@ See [/generated/index.md](./generated/index.md) for a searchable list of all the
 1. Merge the PR. Type differences can be reviewed by looking at the Markdown files in [/generated](./generated).
 
 ## Running generation locally
+
+**NOTE**: Local generation of types doesn't work on Windows, make sure you use a NIX OS
+
 ### Initial setup
 1. Clone this repo
 1. Check out submodules:
