@@ -521,7 +521,7 @@
 * **direction**: 'Inbound' | 'Outbound' | string: Direction that specifies whether the access rules is inbound/outbound.
 * **emailAddresses**: string[]: Outbound rules email address format.
 * **fullyQualifiedDomainNames**: string[]: Outbound rules fully qualified domain name format.
-* **networkSecurityPerimeters**: [PerimeterBasedAccessRule](#perimeterbasedaccessrule)[]: Inbound rule specified by the perimeter id.
+* **networkSecurityPerimeters**: [PerimeterBasedAccessRule](#perimeterbasedaccessrule)[] (ReadOnly): Rule specified by the perimeter id.
 * **phoneNumbers**: string[]: Outbound rules phone number format.
 * **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the scope assignment resource.
 * **subscriptions**: [SubscriptionId](#subscriptionid)[]: List of subscription ids
@@ -567,7 +567,7 @@
 
 ## PerimeterBasedAccessRule
 ### Properties
-* **id**: string: NSP id in the ARM id format.
+* **id**: string (ReadOnly): NSP id in the ARM id format.
 * **location**: string (ReadOnly): Location of the NSP supplied.
 * **perimeterGuid**: string (ReadOnly): Resource guid of the NSP supplied.
 

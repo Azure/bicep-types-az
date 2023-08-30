@@ -3272,7 +3272,7 @@
 
 ## ManagedRuleOverride
 ### Properties
-* **action**: 'Allow' | 'AnomalyScoring' | 'Block' | 'Log' | string: Describes the override action to be applied when rule matches.
+* **action**: 'Allow' | 'AnomalyScoring' | 'Block' | 'Log' | string: Describes the override action to be applied when rule matches. 'Allow' action is not available for CRS 3.2
 * **ruleId**: string (Required): Identifier for the managed rule.
 * **state**: 'Disabled' | 'Enabled' | string: The state of the managed rule. Defaults to Disabled if not specified.
 

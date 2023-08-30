@@ -1,0 +1,31 @@
+id: 
+name: GitOps.PullRequestIssueManagement
+description: GitOps.PullRequestIssueManagement primitive
+owner: 
+resource: repository
+disabled: false
+where: 
+configuration:
+  resourceManagementConfiguration:
+    scheduledSearches: []
+    eventResponderTasks:
+    - if:
+      - payloadType: Pull_Request
+      - isAction:
+          action: Opened
+      - isActivitySender:
+          user: github-actions[bot]
+          issueAuthor: False
+      - titleContains:
+          pattern: Update Generated Types
+          isRegex: False
+      then:
+      - closeIssue
+      - reopenIssue
+      - addLabel:
+          label: auto-merge
+      - approvePullRequest:
+          comment: Automatically approving type generation pull request sent by @github-actions[bot].
+      description: 
+onFailure: 
+onSuccess: 

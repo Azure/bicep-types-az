@@ -134,8 +134,8 @@
 
 ## AppLogsConfiguration
 ### Properties
-* **destination**: string: Logs destination
-* **logAnalyticsConfiguration**: [LogAnalyticsConfiguration](#loganalyticsconfiguration): Log Analytics configuration
+* **destination**: string: Logs destination, can be 'log-analytics', 'azure-monitor' or 'none'
+* **logAnalyticsConfiguration**: [LogAnalyticsConfiguration](#loganalyticsconfiguration): Log Analytics configuration, must only be provided when destination is configured as 'log-analytics'
 
 ## AppRegistration
 ### Properties
@@ -736,7 +736,7 @@ application used for sign-in.
 * **internal**: bool: Boolean indicating the environment only has an internal load balancer. These environments do not have a public static IP resource. They must provide runtimeSubnetId and infrastructureSubnetId if enabling this property
 * **platformReservedCidr**: string: IP range in CIDR notation that can be reserved for environment infrastructure IP addresses. Must not overlap with any other provided IP ranges.
 * **platformReservedDnsIP**: string: An IP address from the IP range defined by platformReservedCidr that will be reserved for the internal DNS server.
-* **runtimeSubnetId**: string: Resource ID of a subnet that Container App containers are injected into. This subnet must be in the same VNET as the subnet defined in infrastructureSubnetId. Must not overlap with any other provided IP ranges.
+* **runtimeSubnetId**: string: This field is deprecated and not used. If you wish to provide your own subnet that Container App containers are injected into, then you should leverage the infrastructureSubnetId.
 
 ## Volume
 ### Properties

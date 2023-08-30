@@ -81,6 +81,11 @@
 * **resourceName**: string: The dependency resource name.
 * **resourceType**: string: The dependency resource type.
 
+## DeploymentParameter
+### Properties
+* **reference**: [KeyVaultParameterReference](#keyvaultparameterreference): Azure Key Vault parameter reference.
+* **value**: any: Input value to the parameter .
+
 ## DeploymentPropertiesOrDeploymentPropertiesExtended
 ### Properties
 * **correlationId**: string (ReadOnly): The correlation ID of the deployment.
@@ -93,7 +98,7 @@
 * **onErrorDeployment**: [OnErrorDeploymentOrOnErrorDeploymentExtended](#onerrordeploymentoronerrordeploymentextended): The deployment on error behavior.
 * **outputResources**: [ResourceReference](#resourcereference)[] (ReadOnly): Array of provisioned resources.
 * **outputs**: any (ReadOnly): Key/value pairs that represent deployment output.
-* **parameters**: any: Name and value pairs that define the deployment parameters for the template. You use this element when you want to provide the parameter values directly in the request rather than link to an existing parameter file. Use either the parametersLink property or the parameters property, but not both. It can be a JObject or a well formed JSON string.
+* **parameters**: [DeploymentPropertiesParameters](#deploymentpropertiesparameters): Name and value pairs that define the deployment parameters for the template. You use this element when you want to provide the parameter values directly in the request rather than link to an existing parameter file. Use either the parametersLink property or the parameters property, but not both. It can be a JObject or a well formed JSON string.
 * **parametersLink**: [ParametersLink](#parameterslink): The URI of parameters file. You use this element to link to an existing parameters file. Use either the parametersLink property or the parameters property, but not both.
 * **providers**: [Provider](#provider)[] (ReadOnly): The list of resource providers needed for the deployment.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Ready' | 'Running' | 'Succeeded' | 'Updating' | string (ReadOnly): Denotes the state of provisioning.
@@ -102,6 +107,11 @@
 * **templateLink**: [TemplateLink](#templatelink): The URI of the template. Use either the templateLink property or the template property, but not both.
 * **timestamp**: string (ReadOnly): The timestamp of the template deployment.
 * **validatedResources**: [ResourceReference](#resourcereference)[] (ReadOnly): Array of validated resources.
+
+## DeploymentPropertiesParameters
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [DeploymentParameter](#deploymentparameter)
 
 ## DeploymentTags
 ### Properties
@@ -124,6 +134,16 @@
 ## ExpressionEvaluationOptions
 ### Properties
 * **scope**: 'Inner' | 'NotSpecified' | 'Outer' | string: The scope to be used for evaluation of parameters, variables and functions in a nested template.
+
+## KeyVaultParameterReference
+### Properties
+* **keyVault**: [KeyVaultReference](#keyvaultreference) (Required): Azure Key Vault reference.
+* **secretName**: string (Required): Azure Key Vault secret name.
+* **secretVersion**: string: Azure Key Vault secret version.
+
+## KeyVaultReference
+### Properties
+* **id**: string (Required): Azure Key Vault resource id.
 
 ## OnErrorDeploymentOrOnErrorDeploymentExtended
 ### Properties

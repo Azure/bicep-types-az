@@ -13,6 +13,16 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'PaloAltoNetworks.Cloudngfw/firewalls' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource PaloAltoNetworks.Cloudngfw/firewalls/statuses@2022-08-29-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2022-08-29-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'default' (Required, DeployTimeConstant): The resource name
+* **properties**: [FirewallStatusProperty](#firewallstatusproperty) (ReadOnly): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'PaloAltoNetworks.Cloudngfw/firewalls/statuses' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource PaloAltoNetworks.Cloudngfw/globalRulestacks@2022-08-29-preview
 * **Valid Scope(s)**: Tenant
 ### Properties
@@ -246,6 +256,14 @@
 * **planData**: [PlanData](#plandata) (Required): Billing plan information.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
 
+## FirewallStatusProperty
+### Properties
+* **healthReason**: string (ReadOnly): Detail description of current health of the Firewall
+* **healthStatus**: 'GREEN' | 'INITIALIZING' | 'RED' | 'YELLOW' | string (ReadOnly): Current status of the Firewall
+* **isPanoramaManaged**: 'FALSE' | 'TRUE' | string (ReadOnly): Panorama Managed: Default is False. Default will be CloudSec managed
+* **panoramaStatus**: [PanoramaStatus](#panoramastatus) (ReadOnly): Panorama Status
+* **provisioningState**: 'Deleted' | 'Failed' | 'Succeeded' | string (ReadOnly): Provisioning state of the resource.
+
 ## FqdnObject
 ### Properties
 * **auditComment**: string: comment for this object
@@ -317,6 +335,11 @@
 * **panoramaServer2**: string (ReadOnly): Secondary Panorama Server IP address value in dotted format for IPv4
 * **tplName**: string (ReadOnly): Panorama Template Stack to join - (Once configured we can not edit the value)
 * **vmAuthKey**: string (ReadOnly): VM auth key for panorama connectivity
+
+## PanoramaStatus
+### Properties
+* **panoramaServer2Status**: 'DOWN' | 'UP' | string (ReadOnly): Secondary Panorama connection status
+* **panoramaServerStatus**: 'DOWN' | 'UP' | string (ReadOnly): Primary Panorama connection status
 
 ## PlanData
 ### Properties

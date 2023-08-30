@@ -109,9 +109,11 @@
 ## CopyProgress
 ### Properties
 * **accountId**: string (ReadOnly): Id of the account where the data needs to be uploaded.
+* **actions**: 'MoveToCleanUpDevice' | 'None' | 'ReachOutToOperation' | 'Restart' | 'Resume'[] (ReadOnly): Available actions on the job.
 * **bytesProcessed**: int (ReadOnly): To indicate bytes transferred.
 * **dataAccountType**: 'ManagedDisk' | 'StorageAccount' (ReadOnly): Data Account Type.
 * **directoriesErroredOut**: int (ReadOnly): To indicate directories errored out in the job.
+* **error**: [CloudError](#clouderror) (ReadOnly): Error, if any, in the stage
 * **filesErroredOut**: int (ReadOnly): Number of files which could not be copied
 * **filesProcessed**: int (ReadOnly): Number of files processed
 * **invalidDirectoriesProcessed**: int (ReadOnly): To indicate directories renamed
@@ -146,10 +148,12 @@ Until this is true, the TotalBytesToProcess may not be valid.
 ## DataBoxCustomerDiskCopyProgress
 ### Properties
 * **accountId**: string (ReadOnly): Id of the account where the data needs to be uploaded.
+* **actions**: 'MoveToCleanUpDevice' | 'None' | 'ReachOutToOperation' | 'Restart' | 'Resume'[] (ReadOnly): Available actions on the job.
 * **bytesProcessed**: int (ReadOnly): To indicate bytes transferred.
 * **copyStatus**: 'Completed' | 'CompletedWithErrors' | 'DeviceFormatted' | 'DeviceMetadataModified' | 'DriveCorrupted' | 'DriveNotDetected' | 'DriveNotReceived' | 'Failed' | 'HardwareError' | 'InProgress' | 'MetadataFilesModifiedOrRemoved' | 'NotReturned' | 'NotStarted' | 'OtherServiceError' | 'OtherUserError' | 'StorageAccountNotAccessible' | 'UnsupportedData' | 'UnsupportedDrive' | string (ReadOnly): The Status of the copy
 * **dataAccountType**: 'ManagedDisk' | 'StorageAccount' (ReadOnly): Data Account Type.
 * **directoriesErroredOut**: int (ReadOnly): To indicate directories errored out in the job.
+* **error**: [CloudError](#clouderror) (ReadOnly): Error, if any, in the stage
 * **filesErroredOut**: int (ReadOnly): Number of files which could not be copied
 * **filesProcessed**: int (ReadOnly): Number of files processed
 * **invalidDirectoriesProcessed**: int (ReadOnly): To indicate directories renamed
@@ -299,6 +303,7 @@ Until this is true, the TotalBytesToProcess may not be valid.
 ## EncryptionPreferences
 ### Properties
 * **doubleEncryption**: 'Disabled' | 'Enabled': Defines secondary layer of software-based encryption enablement.
+* **hardwareEncryption**: 'Disabled' | 'Enabled': Defines Hardware level encryption (Only for disk)
 
 ## ExportDiskDetails
 ### Properties
@@ -524,10 +529,12 @@ Read only field
 * **companyName**: string: Name of the company.
 * **country**: string (Required): Name of the Country.
 * **postalCode**: string: Postal code.
+* **skipAddressValidation**: bool: Flag to indicate if customer has chosen to skip default address validation
 * **stateOrProvince**: string: Name of the State or Province.
 * **streetAddress1**: string (Required): Street Address line 1.
 * **streetAddress2**: string: Street Address line 2.
 * **streetAddress3**: string: Street Address line 3.
+* **taxIdentificationNumber**: string: Tax Identification Number
 * **zipExtendedCode**: string: Extended Zip Code.
 
 ## Sku

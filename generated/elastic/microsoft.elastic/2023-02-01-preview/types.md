@@ -4,7 +4,6 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **generateApiKey**: bool (ReadOnly): Flag to determine if User API Key has to be generated and shared.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [IdentityProperties](#identityproperties): Identity properties of the monitor resource.
 * **location**: string (Required): The location of the monitor resource
@@ -145,9 +144,9 @@
 
 ## MarketplaceSaaSInfo
 ### Properties
-* **marketplaceName**: string: Subscription Details: Marketplace SAAS Name
-* **marketplaceResourceId**: string: Subscription Details: Marketplace Resource URI
-* **marketplaceSubscription**: [MarketplaceSaaSInfoMarketplaceSubscription](#marketplacesaasinfomarketplacesubscription): Marketplace Subscription Id
+* **marketplaceName**: string: Marketplace Subscription Details: SAAS Name
+* **marketplaceResourceId**: string: Marketplace Subscription Details: Resource URI
+* **marketplaceSubscription**: [MarketplaceSaaSInfoMarketplaceSubscription](#marketplacesaasinfomarketplacesubscription): Marketplace Subscription
 
 ## MarketplaceSaaSInfoMarketplaceSubscription
 ### Properties
@@ -172,6 +171,7 @@
 ## MonitorProperties
 ### Properties
 * **elasticProperties**: [ElasticProperties](#elasticproperties): Elastic cloud properties.
+* **generateApiKey**: bool: Flag to determine if User API Key has to be generated and shared.
 * **liftrResourceCategory**: 'MonitorLogs' | 'Unknown' | string (ReadOnly)
 * **liftrResourcePreference**: int (ReadOnly): The priority of the resource.
 * **monitoringStatus**: 'Disabled' | 'Enabled' | string: Flag specifying if the resource monitoring is enabled or disabled.

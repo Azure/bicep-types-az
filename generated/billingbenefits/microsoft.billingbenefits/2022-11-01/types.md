@@ -163,6 +163,7 @@
 * **commitment**: [Commitment](#commitment): Commitment towards the benefit.
 * **displayName**: string: Display name
 * **provisioningState**: 'Cancelled' | 'ConfirmedBilling' | 'Created' | 'Creating' | 'Expired' | 'Failed' | 'PendingBilling' | 'Succeeded' | string (ReadOnly): Provisioning state
+* **renew**: bool: Setting this to true will automatically purchase a new benefit on the expiration date time.
 * **savingsPlanOrderId**: string (ReadOnly): Identifier of the savings plan created
 * **term**: 'P1Y' | 'P3Y' | 'P5Y' | string: Represent benefit term in ISO 8601 format.
 

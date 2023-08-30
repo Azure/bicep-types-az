@@ -103,7 +103,7 @@
 * **coordinatorVCores**: int: The vCores count of a server (max: 96). Required for creation. See https://learn.microsoft.com/azure/cosmos-db/postgresql/resources-compute for more information.
 * **earliestRestoreTime**: string (ReadOnly): The earliest restore point time (ISO8601 format) for the cluster.
 * **enableHa**: bool: If high availability (HA) is enabled or not for the cluster.
-* **enableShardsOnCoordinator**: bool: If shards on coordinator is enabled or not for the cluster.
+* **enableShardsOnCoordinator**: bool: If distributed tables are placed on coordinator or not. Should be set to 'true' on single node clusters. Requires shard rebalancing after value is changed.
 * **maintenanceWindow**: [MaintenanceWindow](#maintenancewindow): Maintenance window of a cluster.
 * **nodeCount**: int: Worker node count of the cluster. When node count is 0, it represents a single node configuration with the ability to create distributed tables on that node. 2 or more worker nodes represent multi-node configuration. Node count value cannot be 1. Required for creation.
 * **nodeEnablePublicIpAccess**: bool: If public access is enabled on worker nodes.

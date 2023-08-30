@@ -4,11 +4,16 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-09-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): Resource Etag.
+* **eTag**: string (ReadOnly): If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
+<<<<<<< HEAD
 * **name**: string {minLength: 1, maxLength: 63, pattern: "^[a-z0-9]([-a-z0-9]*[a-z0-9])?$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [FleetProperties](#fleetproperties): Properties of a Fleet.
+=======
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [FleetProperties](#fleetproperties): The resource-specific properties for this resource.
+>>>>>>> main
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.ContainerService/fleets' (ReadOnly, DeployTimeConstant): The resource type
@@ -17,8 +22,9 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-09-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): Resource Etag.
+* **eTag**: string (ReadOnly): If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
+<<<<<<< HEAD
 * **name**: string {minLength: 1, maxLength: 50, pattern: "^[a-z0-9]([-a-z0-9]*[a-z0-9])?$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [FleetMemberProperties](#fleetmemberproperties): Properties of a Fleet member.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
@@ -121,11 +127,19 @@
 * **ApiVersion**: 2022-09-02-preview
 * **Output**: [ManagedClusterAccessProfile](#managedclusteraccessprofile)
 
+=======
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [FleetMemberProperties](#fleetmemberproperties): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.ContainerService/fleets/members' (ReadOnly, DeployTimeConstant): The resource type
+
+>>>>>>> main
 ## Function listCredentials (Microsoft.ContainerService/fleets@2022-09-02-preview)
 * **Resource**: Microsoft.ContainerService/fleets
 * **ApiVersion**: 2022-09-02-preview
 * **Output**: [FleetCredentialResults](#fleetcredentialresults)
 
+<<<<<<< HEAD
 ## AccessProfile
 ### Properties
 * **kubeConfig**: any: Base64-encoded Kubernetes configuration file.
@@ -223,6 +237,8 @@
 * **name**: string: The name of the extended location.
 * **type**: 'EdgeZone' | string: The type of the extended location.
 
+=======
+>>>>>>> main
 ## FleetCredentialResult
 ### Properties
 * **name**: string (ReadOnly): The name of the credential.
@@ -230,7 +246,7 @@
 
 ## FleetCredentialResults
 ### Properties
-* **kubeconfigs**: [FleetCredentialResult](#fleetcredentialresult)[] (ReadOnly): Base64-encoded Kubernetes configuration file.
+* **kubeconfigs**: [FleetCredentialResult](#fleetcredentialresult)[] (ReadOnly): Array of base64-encoded Kubernetes configuration files.
 
 ## FleetHubProfile
 ### Properties
@@ -240,12 +256,13 @@
 
 ## FleetMemberProperties
 ### Properties
-* **clusterResourceId**: string: The ARM resource id of the cluster that joins the Fleet. Must be a valid Azure resource id. e.g.: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/managedClusters/{clusterName}'.
-* **provisioningState**: 'Canceled' | 'Failed' | 'Joining' | 'Leaving' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the last accepted operation.
+* **clusterResourceId**: string (Required): The ARM resource id of the cluster that joins the Fleet. Must be a valid Azure resource id. e.g.: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/managedClusters/{clusterName}'.
+* **provisioningState**: 'Canceled' | 'Failed' | 'Joining' | 'Leaving' | 'Succeeded' | 'Updating' | string (ReadOnly): The status of the last operation.
 
 ## FleetProperties
 ### Properties
 * **hubProfile**: [FleetHubProfile](#fleethubprofile): The FleetHubProfile configures the Fleet's hub.
+<<<<<<< HEAD
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the last accepted operation.
 
 ## GuardrailsProfile
@@ -845,6 +862,9 @@
 * **vmMaxMapCount**: int: Sysctl setting vm.max_map_count.
 * **vmSwappiness**: int: Sysctl setting vm.swappiness.
 * **vmVfsCachePressure**: int: Sysctl setting vm.vfs_cache_pressure.
+=======
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The status of the last operation.
+>>>>>>> main
 
 ## SystemData
 ### Properties
@@ -855,6 +875,7 @@
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
+<<<<<<< HEAD
 ## TimeInWeek
 ### Properties
 * **day**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string: The day of the week.
@@ -865,46 +886,10 @@
 * **end**: string: The end of a time span
 * **start**: string: The start of a time span
 
+=======
+>>>>>>> main
 ## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## TrustedAccessRoleBindingProperties
-### Properties
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state of trusted access role binding.
-* **roles**: string[] (Required): A list of roles to bind, each item is a resource type qualified role name. For example: 'Microsoft.MachineLearningServices/workspaces/reader'.
-* **sourceResourceId**: string (Required): The ARM resource ID of source resource that trusted access is configured for.
-
-## UserAssignedIdentity
-### Properties
-* **clientId**: string: The client ID of the user assigned identity.
-* **objectId**: string: The object ID of the user assigned identity.
-* **resourceId**: string: The resource ID of the user assigned identity.
-
-## WindowsGmsaProfile
-### Properties
-* **dnsServer**: string: Specifies the DNS server for Windows gMSA. <br><br> Set it to empty if you have configured the DNS server in the vnet which is used to create the managed cluster.
-* **enabled**: bool: Specifies whether to enable Windows gMSA in the managed cluster.
-* **rootDomainName**: string: Specifies the root domain name for Windows gMSA. <br><br> Set it to empty if you have configured the DNS server in the vnet which is used to create the managed cluster.
 

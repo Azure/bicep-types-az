@@ -13,6 +13,16 @@
 * **tags**: [ResourceTags](#resourcetags): The resource tags.
 * **type**: 'Microsoft.DataFactory/factories' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.DataFactory/factories/adfcdcs@2018-06-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): Etag identifies change in the resource.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ChangeDataCapture](#changedatacapture) (Required): Properties of the change data capture.
+* **type**: 'Microsoft.DataFactory/factories/adfcdcs' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.DataFactory/factories/credentials@2018-06-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -135,6 +145,8 @@
 * **dependsOn**: [ActivityDependency](#activitydependency)[]: Activity depends on condition.
 * **description**: string: Activity description.
 * **name**: string (Required): Activity name.
+* **onInactiveMarkAs**: 'Failed' | 'Skipped' | 'Succeeded' | string: Status result of the activity when the state is set to Inactive. This is an optional property and if not provided when the activity is inactive, the status will be Succeeded by default.
+* **state**: 'Active' | 'Inactive' | string: Activity state. This is an optional property and if not provided, the state will be Active by default.
 * **userProperties**: [UserProperty](#userproperty)[]: Activity user properties.
 
 ### AppendVariableActivity
@@ -332,6 +344,7 @@
 
 ### SetVariableActivity
 #### Properties
+* **policy**: [SecureInputOutputPolicy](#secureinputoutputpolicy): Activity policy.
 * **type**: 'SetVariable' (Required): Type of activity.
 * **typeProperties**: [SetVariableActivityTypeProperties](#setvariableactivitytypeproperties) (Required): Set Variable activity properties.
 
@@ -409,7 +422,7 @@
 ## AmazonMWSLinkedServiceTypeProperties
 ### Properties
 * **accessKeyId**: any (Required): The access key id used to access data.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **endpoint**: any (Required): The endpoint of the Amazon MWS server, (i.e. mws.amazonservices.com)
 * **marketplaceID**: any (Required): The Amazon Marketplace ID you want to retrieve data from. To retrieve data from multiple Marketplace IDs, separate them with a comma (,). (i.e. A2EUQ1WTGCTBG2)
 * **mwsAuthToken**: [SecretBase](#secretbase): The Amazon MWS authentication token.
@@ -422,7 +435,7 @@
 ## AmazonRdsForLinkedServiceTypeProperties
 ### Properties
 * **connectionString**: any (Required): The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **password**: [SecretBase](#secretbase): The Azure key vault secret reference of password in connection string.
 
 ## AmazonRdsForOraclePartitionSettings
@@ -441,7 +454,7 @@
 ### Properties
 * **alwaysEncryptedSettings**: [SqlAlwaysEncryptedProperties](#sqlalwaysencryptedproperties): Sql always encrypted properties.
 * **connectionString**: any (Required): The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **password**: [SecretBase](#secretbase): The on-premises Windows authentication password.
 * **userName**: any: The on-premises Windows authentication user name. Type: string (or Expression with resultType string).
 
@@ -453,7 +466,7 @@
 ## AmazonRedshiftLinkedServiceTypeProperties
 ### Properties
 * **database**: any (Required): The database name of the Amazon Redshift source. Type: string (or Expression with resultType string).
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **password**: [SecretBase](#secretbase): The password of the Amazon Redshift source.
 * **port**: any: The TCP port number that the Amazon Redshift server uses to listen for client connections. The default value is 5439. Type: integer (or Expression with resultType integer).
 * **server**: any (Required): The name of the Amazon Redshift server. Type: string (or Expression with resultType string).
@@ -468,7 +481,7 @@
 ## AmazonS3CompatibleLinkedServiceTypeProperties
 ### Properties
 * **accessKeyId**: any: The access key identifier of the Amazon S3 Compatible Identity and Access Management (IAM) user. Type: string (or Expression with resultType string).
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **forcePathStyle**: any: If true, use S3 path-style access instead of virtual hosted-style access. Default value is false. Type: boolean (or Expression with resultType boolean).
 * **secretAccessKey**: [SecretBase](#secretbase): The secret access key of the Amazon S3 Compatible Identity and Access Management (IAM) user.
 * **serviceUrl**: any: This value specifies the endpoint to access with the Amazon S3 Compatible Connector. This is an optional property; change it only if you want to try a different service endpoint or want to switch between https and http. Type: string (or Expression with resultType string).
@@ -488,26 +501,26 @@
 ### Properties
 * **accessKeyId**: any: The access key identifier of the Amazon S3 Identity and Access Management (IAM) user. Type: string (or Expression with resultType string).
 * **authenticationType**: any: The authentication type of S3. Allowed value: AccessKey (default) or TemporarySecurityCredentials. Type: string (or Expression with resultType string).
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **secretAccessKey**: [SecretBase](#secretbase): The secret access key of the Amazon S3 Identity and Access Management (IAM) user.
 * **serviceUrl**: any: This value specifies the endpoint to access with the S3 Connector. This is an optional property; change it only if you want to try a different service endpoint or want to switch between https and http. Type: string (or Expression with resultType string).
 * **sessionToken**: [SecretBase](#secretbase): The session token for the S3 temporary security credential.
 
 ## AppendVariableActivityTypeProperties
 ### Properties
-* **value**: any: Value to be appended. Could be a static value or Expression
+* **value**: any: Value to be appended. Type: could be a static value matching type of the variable item or Expression with resultType matching type of the variable item
 * **variableName**: string: Name of the variable whose value needs to be appended to.
 
 ## AppFiguresLinkedServiceTypeProperties
 ### Properties
 * **clientKey**: [SecretBase](#secretbase) (Required): The client key for the AppFigures source.
 * **password**: [SecretBase](#secretbase) (Required): The password of the AppFigures source.
-* **userName**: any (Required): The username of the Appfigures source.
+* **userName**: any (Required): The username of the Appfigures source. Type: string (or Expression with resultType string).
 
 ## AsanaLinkedServiceTypeProperties
 ### Properties
 * **apiToken**: [SecretBase](#secretbase) (Required): The api token for the Asana source.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 
 ## AvroDatasetTypeProperties
 ### Properties
@@ -535,7 +548,7 @@
 * **accountName**: any (Required): The Azure Batch account name. Type: string (or Expression with resultType string).
 * **batchUri**: any (Required): The Azure Batch URI. Type: string (or Expression with resultType string).
 * **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **linkedServiceName**: [LinkedServiceReference](#linkedservicereference) (Required): The Azure Storage linked service reference.
 * **poolName**: any (Required): The Azure Batch pool name. Type: string (or Expression with resultType string).
 
@@ -561,7 +574,7 @@
 * **accountKey**: any: Account key for the Azure Data Lake Storage Gen2 service. Type: string (or Expression with resultType string).
 * **azureCloudType**: any: Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
 * **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **sasToken**: [SecretBase](#secretbase): The Azure key vault secret reference of sasToken in sas uri.
 * **sasUri**: any: SAS URI of the Azure Data Lake Storage Gen2 service. Type: string, SecureString or AzureKeyVaultSecretReference.
 * **servicePrincipalCredential**: [SecretBase](#secretbase): The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.
@@ -574,16 +587,16 @@
 ## AzureBlobStorageLinkedServiceTypeProperties
 ### Properties
 * **accountKey**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of accountKey in connection string.
-* **accountKind**: string: Specify the kind of your storage account. Allowed values are: Storage (general purpose v1), StorageV2 (general purpose v2), BlobStorage, or BlockBlobStorage. Type: string (or Expression with resultType string).
+* **accountKind**: any: Specify the kind of your storage account. Allowed values are: Storage (general purpose v1), StorageV2 (general purpose v2), BlobStorage, or BlockBlobStorage. Type: string (or Expression with resultType string).
 * **authenticationType**: 'AccountKey' | 'Anonymous' | 'Msi' | 'SasUri' | 'ServicePrincipal' | string: The type used for authentication. Type: string.
 * **azureCloudType**: any: Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
 * **connectionString**: any: The connection string. It is mutually exclusive with sasUri, serviceEndpoint property. Type: string, SecureString or AzureKeyVaultSecretReference.
 * **containerUri**: any: Container uri of the Azure Blob Storage resource only support for anonymous access. Type: string (or Expression with resultType string).
 * **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
-* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **sasToken**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of sasToken in sas uri.
 * **sasUri**: any: SAS URI of the Azure Blob Storage resource. It is mutually exclusive with connectionString, serviceEndpoint property. Type: string, SecureString or AzureKeyVaultSecretReference.
-* **serviceEndpoint**: string: Blob service endpoint of the Azure Blob Storage resource. It is mutually exclusive with connectionString, sasUri property.
+* **serviceEndpoint**: any: Blob service endpoint of the Azure Blob Storage resource. It is mutually exclusive with connectionString, sasUri property.
 * **servicePrincipalId**: any: The ID of the service principal used to authenticate against Azure SQL Data Warehouse. Type: string (or Expression with resultType string).
 * **servicePrincipalKey**: [SecretBase](#secretbase): The key of the service principal used to authenticate against Azure SQL Data Warehouse.
 * **tenant**: any: The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
@@ -615,7 +628,7 @@
 * **clusterId**: any: The id of an existing interactive cluster that will be used for all runs of this job. Type: string (or Expression with resultType string).
 * **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
 * **domain**: any (Required): <REGION>.azuredatabricks.net, domain name of your Databricks deployment. Type: string (or Expression with resultType string).
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **workspaceResourceId**: any: Workspace resource id for databricks REST API. Type: string (or Expression with resultType string).
 
 ## AzureDatabricksLinkedServiceTypeProperties
@@ -624,7 +637,7 @@
 * **authentication**: any: Required to specify MSI, if using Workspace resource id for databricks REST API. Type: string (or Expression with resultType string).
 * **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
 * **domain**: any (Required): <REGION>.azuredatabricks.net, domain name of your Databricks deployment. Type: string (or Expression with resultType string).
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **existingClusterId**: any: The id of an existing interactive cluster that will be used for all runs of this activity. Type: string (or Expression with resultType string).
 * **instancePoolId**: any: The id of an existing instance pool that will be used for all runs of this activity. Type: string (or Expression with resultType string).
 * **newClusterCustomTags**: [AzureDatabricksLinkedServiceTypePropertiesNewClusterCustomTags](#azuredatabrickslinkedservicetypepropertiesnewclustercustomtags): Additional tags for cluster resources. This property is ignored in instance pool configurations.
@@ -677,7 +690,7 @@
 ### Properties
 * **accountName**: any (Required): The Azure Data Lake Analytics account name. Type: string (or Expression with resultType string).
 * **dataLakeAnalyticsUri**: any: Azure Data Lake Analytics URI Type: string (or Expression with resultType string).
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **resourceGroupName**: any: Data Lake Analytics account resource group name (if different from Data Factory account). Type: string (or Expression with resultType string).
 * **servicePrincipalId**: any: The ID of the application used to authenticate against the Azure Data Lake Analytics account. Type: string (or Expression with resultType string).
 * **servicePrincipalKey**: [SecretBase](#secretbase): The Key of the application used to authenticate against the Azure Data Lake Analytics account.
@@ -697,7 +710,7 @@
 * **azureCloudType**: any: Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
 * **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
 * **dataLakeStoreUri**: any (Required): Data Lake Store service URI. Type: string (or Expression with resultType string).
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **resourceGroupName**: any: Data Lake Store account resource group name (if different from Data Factory account). Type: string (or Expression with resultType string).
 * **servicePrincipalId**: any: The ID of the application used to authenticate against the Azure Data Lake Store account. Type: string (or Expression with resultType string).
 * **servicePrincipalKey**: [SecretBase](#secretbase): The Key of the application used to authenticate against the Azure Data Lake Store account.
@@ -708,7 +721,7 @@
 ### Properties
 * **accountKey**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of accountKey in connection string.
 * **connectionString**: any: The connection string. It is mutually exclusive with sasUri property. Type: string, SecureString or AzureKeyVaultSecretReference.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **fileShare**: any: The azure file share name. It is required when auth with accountKey/sasToken. Type: string (or Expression with resultType string).
 * **host**: any: Host name of the server. Type: string (or Expression with resultType string).
 * **password**: [SecretBase](#secretbase): Password to logon the server.
@@ -728,7 +741,7 @@
 ### Properties
 * **authentication**: any: Type of authentication (Required to specify MSI) used to connect to AzureFunction. Type: string (or Expression with resultType string).
 * **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **functionAppUrl**: any (Required): The endpoint of the Azure Function App. URL will be in the format https://<accountName>.azurewebsites.net.
 * **functionKey**: [SecretBase](#secretbase): Function or Host key for Azure Function App.
 * **resourceId**: any: Allowed token audiences for azure function.
@@ -748,7 +761,7 @@
 ## AzureMariaDBLinkedServiceTypeProperties
 ### Properties
 * **connectionString**: any: An ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **pwd**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of password in connection string.
 
 ## AzureMLBatchExecutionActivityTypeProperties
@@ -787,7 +800,7 @@
 ### Properties
 * **apiKey**: [SecretBase](#secretbase) (Required): The API key for accessing the Azure ML model endpoint.
 * **authentication**: any: Type of authentication (Required to specify MSI) used to connect to AzureML. Type: string (or Expression with resultType string).
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **mlEndpoint**: any (Required): The Batch Execution REST URL for an Azure ML Studio Web Service endpoint. Type: string (or Expression with resultType string).
 * **servicePrincipalId**: any: The ID of the service principal used to authenticate against the ARM-based updateResourceEndpoint of an Azure ML Studio web service. Type: string (or Expression with resultType string).
 * **servicePrincipalKey**: [SecretBase](#secretbase): The key of the service principal used to authenticate against the ARM-based updateResourceEndpoint of an Azure ML Studio web service.
@@ -796,7 +809,8 @@
 
 ## AzureMLServiceLinkedServiceTypeProperties
 ### Properties
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **authentication**: any: Type of authentication (Required to specify MSI) used to connect to AzureML. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **mlWorkspaceName**: any (Required): Azure ML Service workspace name. Type: string (or Expression with resultType string).
 * **resourceGroupName**: any (Required): Azure ML Service workspace resource group name. Type: string (or Expression with resultType string).
 * **servicePrincipalId**: any: The ID of the service principal used to authenticate against the endpoint of a published Azure ML Service pipeline. Type: string (or Expression with resultType string).
@@ -818,7 +832,7 @@
 ## AzureMySqlLinkedServiceTypeProperties
 ### Properties
 * **connectionString**: any (Required): The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **password**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of password in connection string.
 
 ## AzureMySqlTableDatasetTypeProperties
@@ -829,7 +843,7 @@
 ## AzurePostgreSqlLinkedServiceTypeProperties
 ### Properties
 * **connectionString**: any: An ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **password**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of password in connection string.
 
 ## AzurePostgreSqlTableDatasetTypeProperties
@@ -844,7 +858,7 @@
 
 ## AzureSearchLinkedServiceTypeProperties
 ### Properties
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **key**: [SecretBase](#secretbase): Admin Key for Azure Search service
 * **url**: any (Required): URL for Azure Search service. Type: string (or Expression with resultType string).
 
@@ -854,7 +868,7 @@
 * **azureCloudType**: any: Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
 * **connectionString**: any (Required): The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
 * **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **password**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of password in connection string.
 * **servicePrincipalId**: any: The ID of the service principal used to authenticate against Azure SQL Database. Type: string (or Expression with resultType string).
 * **servicePrincipalKey**: [SecretBase](#secretbase): The key of the service principal used to authenticate against Azure SQL Database.
@@ -865,7 +879,7 @@
 * **azureCloudType**: any: Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
 * **connectionString**: any (Required): The connection string. Type: string, SecureString or AzureKeyVaultSecretReference. Type: string, SecureString or AzureKeyVaultSecretReference.
 * **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **password**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of password in connection string.
 * **servicePrincipalId**: any: The ID of the service principal used to authenticate against Azure SQL Data Warehouse. Type: string (or Expression with resultType string).
 * **servicePrincipalKey**: [SecretBase](#secretbase): The key of the service principal used to authenticate against Azure SQL Data Warehouse.
@@ -883,7 +897,7 @@
 * **azureCloudType**: any: Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
 * **connectionString**: any (Required): The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
 * **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **password**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of password in connection string.
 * **servicePrincipalId**: any: The ID of the service principal used to authenticate against Azure SQL Managed Instance. Type: string (or Expression with resultType string).
 * **servicePrincipalKey**: [SecretBase](#secretbase): The key of the service principal used to authenticate against Azure SQL Managed Instance.
@@ -905,7 +919,7 @@
 ### Properties
 * **accountKey**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of accountKey in connection string.
 * **connectionString**: any: The connection string. It is mutually exclusive with sasUri property. Type: string, SecureString or AzureKeyVaultSecretReference.
-* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **sasToken**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of sasToken in sas uri.
 * **sasUri**: any: SAS URI of the Azure Storage resource. It is mutually exclusive with connectionString property. Type: string, SecureString or AzureKeyVaultSecretReference.
 
@@ -953,7 +967,7 @@
 ## CassandraLinkedServiceTypeProperties
 ### Properties
 * **authenticationType**: any: AuthenticationType to be used for connection. Type: string (or Expression with resultType string).
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **host**: any (Required): Host name for connection. Type: string (or Expression with resultType string).
 * **password**: [SecretBase](#secretbase): Password for authentication.
 * **port**: any: The port for the connection. Type: integer (or Expression with resultType integer).
@@ -968,6 +982,20 @@
 ### Properties
 * **dependsOn**: [PipelineReference](#pipelinereference)[] (Required): Upstream Pipelines.
 * **runDimension**: string (Required): Run Dimension property that needs to be emitted by upstream pipelines.
+
+## ChangeDataCapture
+### Properties
+* **allowVNetOverride**: bool: A boolean to determine if the vnet configuration needs to be overwritten.
+* **description**: string: The description of the change data capture.
+* **folder**: [ChangeDataCaptureFolder](#changedatacapturefolder): The folder that this CDC is in. If not specified, CDC will appear at the root level.
+* **policy**: [MapperPolicy](#mapperpolicy) (Required): CDC policy
+* **sourceConnectionsInfo**: [MapperSourceConnectionsInfo](#mappersourceconnectionsinfo)[] (Required): List of sources connections that can be used as sources in the CDC.
+* **status**: string: Status of the CDC as to if it is running or stopped.
+* **targetConnectionsInfo**: [MapperTargetConnectionsInfo](#mappertargetconnectionsinfo)[] (Required): List of target connections that can be used as sources in the CDC.
+
+## ChangeDataCaptureFolder
+### Properties
+* **name**: string: The name of the folder that this CDC is in.
 
 ## CmdkeySetupTypeProperties
 ### Properties
@@ -987,7 +1015,7 @@
 ### Properties
 * **authenticationType**: any (Required): The authentication type to connect to Common Data Service for Apps server. 'Office365' for online scenario, 'Ifd' for on-premises with Ifd scenario. 'AADServicePrincipal' for Server-To-Server authentication in online scenario. Type: string (or Expression with resultType string).
 * **deploymentType**: any (Required): The deployment type of the Common Data Service for Apps instance. 'Online' for Common Data Service for Apps Online and 'OnPremisesWithIfd' for Common Data Service for Apps on-premises with Ifd. Type: string (or Expression with resultType string).
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **hostName**: any: The host name of the on-premises Common Data Service for Apps server. The property is required for on-prem and not allowed for online. Type: string (or Expression with resultType string).
 * **organizationName**: any: The organization name of the Common Data Service for Apps instance. The property is required for on-prem and required for online when there are more than one Common Data Service for Apps instances associated with the user. Type: string (or Expression with resultType string).
 * **password**: [SecretBase](#secretbase): Password to access the Common Data Service for Apps instance.
@@ -1023,7 +1051,7 @@
 ### Properties
 * **clientId**: any (Required): Application client_id supplied by Concur App Management.
 * **connectionProperties**: any: Properties used to connect to Concur. It is mutually exclusive with any other properties in the linked service. Type: object.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **password**: [SecretBase](#secretbase): The password corresponding to the user name that you provided in the username field.
 * **useEncryptedEndpoints**: any: Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
 * **useHostVerification**: any: Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
@@ -1085,7 +1113,7 @@
 
 ### AzureBlobFSSink
 #### Properties
-* **copyBehavior**: any: The type of copy behavior for copy sink.
+* **copyBehavior**: any: The type of copy behavior for copy sink. Type: string (or Expression with resultType string).
 * **metadata**: [MetadataItem](#metadataitem)[]: Specify the custom metadata to be added to sink data. Type: array of objects (or Expression with resultType array of objects).
 * **type**: 'AzureBlobFSSink' (Required): Copy sink type.
 
@@ -1104,7 +1132,7 @@
 
 ### AzureDataLakeStoreSink
 #### Properties
-* **copyBehavior**: any: The type of copy behavior for copy sink.
+* **copyBehavior**: any: The type of copy behavior for copy sink. Type: string (or Expression with resultType string).
 * **enableAdlsSingleFileParallel**: any: Single File Parallel.
 * **type**: 'AzureDataLakeStoreSink' (Required): Copy sink type.
 
@@ -1374,6 +1402,7 @@
 ### AmazonRdsForSqlServerSource
 #### Properties
 * **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **isolationLevel**: any: Specifies the transaction locking behavior for the SQL source. Allowed values: ReadCommitted/ReadUncommitted/RepeatableRead/Serializable/Snapshot. The default value is ReadCommitted. Type: string (or Expression with resultType string).
 * **partitionOption**: any: The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
 * **partitionSettings**: [SqlPartitionSettings](#sqlpartitionsettings): The settings that will be leveraged for Sql source partitioning.
 * **produceAdditionalTypes**: any: Which additional types to produce.
@@ -1447,6 +1476,7 @@
 ### AzureSqlSource
 #### Properties
 * **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **isolationLevel**: any: Specifies the transaction locking behavior for the SQL source. Allowed values: ReadCommitted/ReadUncommitted/RepeatableRead/Serializable/Snapshot. The default value is ReadCommitted. Type: string (or Expression with resultType string).
 * **partitionOption**: any: The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
 * **partitionSettings**: [SqlPartitionSettings](#sqlpartitionsettings): The settings that will be leveraged for Sql source partitioning.
 * **produceAdditionalTypes**: any: Which additional types to produce.
@@ -1758,7 +1788,7 @@
 * **allowedGroups**: any: The groups containing all the users. Type: array of strings (or Expression with resultType array of strings).
 * **dateFilterColumn**: any: The Column to apply the <paramref name="StartTime"/> and <paramref name="EndTime"/>. Type: string (or Expression with resultType string).
 * **endTime**: any: End time of the requested range for this dataset. Type: string (or Expression with resultType string).
-* **outputColumns**: any: The columns to be read out from the Office 365 table. Type: array of objects (or Expression with resultType array of objects). Example: [ { "name": "Id" }, { "name": "CreatedDateTime" } ]
+* **outputColumns**: any: The columns to be read out from the Office 365 table. Type: array of objects (or Expression with resultType array of objects). itemType: OutputColumn. Example: [ { "name": "Id" }, { "name": "CreatedDateTime" } ]
 * **startTime**: any: Start time of the requested range for this dataset. Type: string (or Expression with resultType string).
 * **type**: 'Office365Source' (Required): Copy source type.
 * **userScopeFilterUri**: any: The user scope uri. Type: string (or Expression with resultType string).
@@ -1861,7 +1891,7 @@
 #### Properties
 * **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **query**: any: Database query. Type: string (or Expression with resultType string).
-* **readBehavior**: 'Query' | 'QueryAll' | string: The read behavior for the operation. Default is Query.
+* **readBehavior**: any: The read behavior for the operation. Default is Query. Allowed values: Query/QueryAll. Type: string (or Expression with resultType string).
 * **type**: 'SalesforceServiceCloudSource' (Required): Copy source type.
 
 ### SalesforceSource
@@ -1869,7 +1899,7 @@
 * **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **query**: any: Database query. Type: string (or Expression with resultType string).
 * **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-* **readBehavior**: 'Query' | 'QueryAll' | string: The read behavior for the operation. Default is Query.
+* **readBehavior**: any: The read behavior for the operation. Default is Query. Allowed values: Query/QueryAll. Type: string (or Expression with resultType string).
 * **type**: 'SalesforceSource' (Required): Copy source type.
 
 ### SapBwSource
@@ -1976,6 +2006,7 @@
 ### SqlDWSource
 #### Properties
 * **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **isolationLevel**: any: Specifies the transaction locking behavior for the SQL source. Allowed values: ReadCommitted/ReadUncommitted/RepeatableRead/Serializable/Snapshot. The default value is ReadCommitted. Type: string (or Expression with resultType string).
 * **partitionOption**: any: The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
 * **partitionSettings**: [SqlPartitionSettings](#sqlpartitionsettings): The settings that will be leveraged for Sql source partitioning.
 * **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
@@ -1987,6 +2018,7 @@
 ### SqlMISource
 #### Properties
 * **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **isolationLevel**: any: Specifies the transaction locking behavior for the SQL source. Allowed values: ReadCommitted/ReadUncommitted/RepeatableRead/Serializable/Snapshot. The default value is ReadCommitted. Type: string (or Expression with resultType string).
 * **partitionOption**: any: The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
 * **partitionSettings**: [SqlPartitionSettings](#sqlpartitionsettings): The settings that will be leveraged for Sql source partitioning.
 * **produceAdditionalTypes**: any: Which additional types to produce.
@@ -1999,6 +2031,7 @@
 ### SqlServerSource
 #### Properties
 * **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **isolationLevel**: any: Specifies the transaction locking behavior for the SQL source. Allowed values: ReadCommitted/ReadUncommitted/RepeatableRead/Serializable/Snapshot. The default value is ReadCommitted. Type: string (or Expression with resultType string).
 * **partitionOption**: any: The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
 * **partitionSettings**: [SqlPartitionSettings](#sqlpartitionsettings): The settings that will be leveraged for Sql source partitioning.
 * **produceAdditionalTypes**: any: Which additional types to produce.
@@ -2082,13 +2115,13 @@
 * **accountEndpoint**: any: The endpoint of the Azure CosmosDB account. Type: string (or Expression with resultType string)
 * **accountKey**: [SecretBase](#secretbase): The account key of the Azure CosmosDB account. Type: SecureString or AzureKeyVaultSecretReference.
 * **azureCloudType**: any: Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
-* **connectionMode**: 'Direct' | 'Gateway' | string: The connection mode used to access CosmosDB account. Type: string (or Expression with resultType string).
+* **connectionMode**: 'Direct' | 'Gateway' | string: The connection mode used to access CosmosDB account. Type: string.
 * **connectionString**: any: The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
 * **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
 * **database**: any: The name of the database. Type: string (or Expression with resultType string)
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **servicePrincipalCredential**: [SecretBase](#secretbase): The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.
-* **servicePrincipalCredentialType**: 'ServicePrincipalCert' | 'ServicePrincipalKey' | string: The service principal credential type to use in Server-To-Server authentication. 'ServicePrincipalKey' for key/secret, 'ServicePrincipalCert' for certificate. Type: string (or Expression with resultType string).
+* **servicePrincipalCredentialType**: any: The service principal credential type to use in Server-To-Server authentication. 'ServicePrincipalKey' for key/secret, 'ServicePrincipalCert' for certificate. Type: string.
 * **servicePrincipalId**: any: The client ID of the application in Azure Active Directory used for Server-To-Server authentication. Type: string (or Expression with resultType string).
 * **tenant**: any: The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
 
@@ -2110,7 +2143,7 @@
 ### Properties
 * **connectionString**: any: An ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
 * **credString**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of credString in connection string.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 
 ## CredentialReference
 ### Properties
@@ -2285,6 +2318,14 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
+
+## DataMapperMapping
+### Properties
+* **attributeMappingInfo**: [MapperAttributeMappings](#mapperattributemappings): This holds the user provided attribute mapping information.
+* **sourceConnectionReference**: [MapperConnectionReference](#mapperconnectionreference): The connection reference for the source connection.
+* **sourceDenormalizeInfo**: any: This holds the source denormalization information used while joining multiple sources.
+* **sourceEntityName**: string: Name of the source table
+* **targetEntityName**: string: Name of the target table
 
 ## Dataset
 * **Discriminator**: type
@@ -2911,7 +2952,7 @@
 ## DataworldLinkedServiceTypeProperties
 ### Properties
 * **apiToken**: [SecretBase](#secretbase) (Required): The api token for the Dataworld source.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 
 ## Db2LinkedServiceTypeProperties
 ### Properties
@@ -2919,7 +2960,7 @@
 * **certificateCommonName**: any: Certificate Common Name when TLS is enabled. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
 * **connectionString**: any: The connection string. It is mutually exclusive with server, database, authenticationType, userName, packageCollection and certificateCommonName property. Type: string, SecureString or AzureKeyVaultSecretReference.
 * **database**: any: Database name for connection. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. It is mutually exclusive with connectionString property. Type: string.
 * **packageCollection**: any: Under where packages are created when querying database. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
 * **password**: [SecretBase](#secretbase): Password for authentication.
 * **server**: any: Server name for connection. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
@@ -3009,7 +3050,7 @@
 ## DrillLinkedServiceTypeProperties
 ### Properties
 * **connectionString**: any: An ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **pwd**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of password in connection string.
 
 ## DWCopyCommandDefaultValue
@@ -3030,7 +3071,7 @@
 ## DynamicsAXLinkedServiceTypeProperties
 ### Properties
 * **aadResourceId**: any (Required): Specify the resource you are requesting authorization. Type: string (or Expression with resultType string).
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **servicePrincipalId**: any (Required): Specify the application's client ID. Type: string (or Expression with resultType string).
 * **servicePrincipalKey**: [SecretBase](#secretbase) (Required): Specify the application's key. Mark this field as a SecureString to store it securely in Data Factory, or reference a secret stored in Azure Key Vault. Type: string (or Expression with resultType string).
 * **tenant**: any (Required): Specify the tenant information (domain name or tenant ID) under which your application resides. Retrieve it by hovering the mouse in the top-right corner of the Azure portal. Type: string (or Expression with resultType string).
@@ -3048,7 +3089,7 @@
 ### Properties
 * **authenticationType**: any (Required): The authentication type to connect to Dynamics CRM server. 'Office365' for online scenario, 'Ifd' for on-premises with Ifd scenario, 'AADServicePrincipal' for Server-To-Server authentication in online scenario. Type: string (or Expression with resultType string).
 * **deploymentType**: any (Required): The deployment type of the Dynamics CRM instance. 'Online' for Dynamics CRM Online and 'OnPremisesWithIfd' for Dynamics CRM on-premises with Ifd. Type: string (or Expression with resultType string).
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **hostName**: any: The host name of the on-premises Dynamics CRM server. The property is required for on-prem and not allowed for online. Type: string (or Expression with resultType string).
 * **organizationName**: any: The organization name of the Dynamics CRM instance. The property is required for on-prem and required for online when there are more than one Dynamics CRM instances associated with the user. Type: string (or Expression with resultType string).
 * **password**: [SecretBase](#secretbase): Password to access the Dynamics CRM instance.
@@ -3068,7 +3109,7 @@
 * **authenticationType**: any (Required): The authentication type to connect to Dynamics server. 'Office365' for online scenario, 'Ifd' for on-premises with Ifd scenario, 'AADServicePrincipal' for Server-To-Server authentication in online scenario. Type: string (or Expression with resultType string).
 * **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
 * **deploymentType**: any (Required): The deployment type of the Dynamics instance. 'Online' for Dynamics Online and 'OnPremisesWithIfd' for Dynamics on-premises with Ifd. Type: string (or Expression with resultType string).
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **hostName**: any: The host name of the on-premises Dynamics server. The property is required for on-prem and not allowed for online. Type: string (or Expression with resultType string).
 * **organizationName**: any: The organization name of the Dynamics instance. The property is required for on-prem and required for online when there are more than one Dynamics instances associated with the user. Type: string (or Expression with resultType string).
 * **password**: [SecretBase](#secretbase): Password to access the Dynamics instance.
@@ -3081,7 +3122,7 @@
 
 ## EloquaLinkedServiceTypeProperties
 ### Properties
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **endpoint**: any (Required): The endpoint of the Eloqua server. (i.e. eloqua.example.com)
 * **password**: [SecretBase](#secretbase): The password corresponding to the user name.
 * **useEncryptedEndpoints**: any: Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
@@ -3257,7 +3298,7 @@
 
 ## FileServerLinkedServiceTypeProperties
 ### Properties
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **host**: any (Required): Host name of the server. Type: string (or Expression with resultType string).
 * **password**: [SecretBase](#secretbase): Password to logon the server.
 * **userId**: any: User ID to logon the server. Type: string (or Expression with resultType string).
@@ -3328,7 +3369,7 @@
 * **authenticationType**: 'Anonymous' | 'Basic' | string: The authentication type to be used to connect to the FTP server.
 * **enableServerCertificateValidation**: any: If true, validate the FTP server SSL certificate when connect over SSL/TLS channel. Default value is true. Type: boolean (or Expression with resultType boolean).
 * **enableSsl**: any: If true, connect to the FTP server over SSL/TLS channel. Default value is true. Type: boolean (or Expression with resultType boolean).
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **host**: any (Required): Host name of the FTP server. Type: string (or Expression with resultType string).
 * **password**: [SecretBase](#secretbase): Password to logon the FTP server.
 * **port**: any: The TCP port number that the FTP server uses to listen for client connections. Default value is 21. Type: integer (or Expression with resultType integer), minimum: 0.
@@ -3368,17 +3409,17 @@
 ## GoogleAdWordsLinkedServiceTypeProperties
 ### Properties
 * **authenticationType**: 'ServiceAuthentication' | 'UserAuthentication' | string: The OAuth 2.0 authentication mechanism used for authentication. ServiceAuthentication can only be used on self-hosted IR.
-* **clientCustomerID**: any: The Client customer ID of the AdWords account that you want to fetch report data for.
+* **clientCustomerID**: any: The Client customer ID of the AdWords account that you want to fetch report data for. Type: string (or Expression with resultType string).
 * **clientId**: any: The client id of the google application used to acquire the refresh token. Type: string (or Expression with resultType string).
 * **clientSecret**: [SecretBase](#secretbase): The client secret of the google application used to acquire the refresh token.
 * **connectionProperties**: any: Properties used to connect to GoogleAds. It is mutually exclusive with any other properties in the linked service. Type: object.
 * **developerToken**: [SecretBase](#secretbase): The developer token associated with the manager account that you use to grant access to the AdWords API.
-* **email**: any: The service account email ID that is used for ServiceAuthentication and can only be used on self-hosted IR.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-* **keyFilePath**: any: The full path to the .p12 key file that is used to authenticate the service account email address and can only be used on self-hosted IR.
+* **email**: any: The service account email ID that is used for ServiceAuthentication and can only be used on self-hosted IR. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
+* **keyFilePath**: any: The full path to the .p12 key file that is used to authenticate the service account email address and can only be used on self-hosted IR. Type: string (or Expression with resultType string).
 * **refreshToken**: [SecretBase](#secretbase): The refresh token obtained from Google for authorizing access to AdWords for UserAuthentication.
-* **trustedCertPath**: any: The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.
-* **useSystemTrustStore**: any: Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.
+* **trustedCertPath**: any: The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR. Type: string (or Expression with resultType string).
+* **useSystemTrustStore**: any: Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false. Type: boolean (or Expression with resultType boolean).
 
 ## GoogleBigQueryDatasetTypeProperties
 ### Properties
@@ -3388,30 +3429,30 @@
 
 ## GoogleBigQueryLinkedServiceTypeProperties
 ### Properties
-* **additionalProjects**: any: A comma-separated list of public BigQuery projects to access.
+* **additionalProjects**: any: A comma-separated list of public BigQuery projects to access. Type: string (or Expression with resultType string).
 * **authenticationType**: 'ServiceAuthentication' | 'UserAuthentication' | string (Required): The OAuth 2.0 authentication mechanism used for authentication. ServiceAuthentication can only be used on self-hosted IR.
 * **clientId**: any: The client id of the google application used to acquire the refresh token. Type: string (or Expression with resultType string).
 * **clientSecret**: [SecretBase](#secretbase): The client secret of the google application used to acquire the refresh token.
-* **email**: any: The service account email ID that is used for ServiceAuthentication and can only be used on self-hosted IR.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-* **keyFilePath**: any: The full path to the .p12 key file that is used to authenticate the service account email address and can only be used on self-hosted IR.
-* **project**: any (Required): The default BigQuery project to query against.
+* **email**: any: The service account email ID that is used for ServiceAuthentication and can only be used on self-hosted IR. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
+* **keyFilePath**: any: The full path to the .p12 key file that is used to authenticate the service account email address and can only be used on self-hosted IR. Type: string (or Expression with resultType string).
+* **project**: any (Required): The default BigQuery project to query against. Type: string (or Expression with resultType string).
 * **refreshToken**: [SecretBase](#secretbase): The refresh token obtained from Google for authorizing access to BigQuery for UserAuthentication.
-* **requestGoogleDriveScope**: any: Whether to request access to Google Drive. Allowing Google Drive access enables support for federated tables that combine BigQuery data with data from Google Drive. The default value is false.
-* **trustedCertPath**: any: The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.
-* **useSystemTrustStore**: any: Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.
+* **requestGoogleDriveScope**: any: Whether to request access to Google Drive. Allowing Google Drive access enables support for federated tables that combine BigQuery data with data from Google Drive. The default value is false. Type: string (or Expression with resultType string).
+* **trustedCertPath**: any: The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR. Type: string (or Expression with resultType string).
+* **useSystemTrustStore**: any: Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.Type: boolean (or Expression with resultType boolean).
 
 ## GoogleCloudStorageLinkedServiceTypeProperties
 ### Properties
 * **accessKeyId**: any: The access key identifier of the Google Cloud Storage Identity and Access Management (IAM) user. Type: string (or Expression with resultType string).
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **secretAccessKey**: [SecretBase](#secretbase): The secret access key of the Google Cloud Storage Identity and Access Management (IAM) user.
 * **serviceUrl**: any: This value specifies the endpoint to access with the Google Cloud Storage Connector. This is an optional property; change it only if you want to try a different service endpoint or want to switch between https and http. Type: string (or Expression with resultType string).
 
 ## GoogleSheetsLinkedServiceTypeProperties
 ### Properties
 * **apiToken**: [SecretBase](#secretbase) (Required): The api token for the GoogleSheets source.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 
 ## GreenplumDatasetTypeProperties
 ### Properties
@@ -3422,7 +3463,7 @@
 ## GreenplumLinkedServiceTypeProperties
 ### Properties
 * **connectionString**: any: An ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **pwd**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of password in connection string.
 
 ## HBaseLinkedServiceTypeProperties
@@ -3431,7 +3472,7 @@
 * **allowSelfSignedServerCert**: any: Specifies whether to allow self-signed certificates from the server. The default value is false.
 * **authenticationType**: 'Anonymous' | 'Basic' | string (Required): The authentication mechanism to use to connect to the HBase server.
 * **enableSsl**: any: Specifies whether the connections to the server are encrypted using SSL. The default value is false.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **host**: any (Required): The IP address or host name of the HBase server. (i.e. 192.168.222.160)
 * **httpPath**: any: The partial URL corresponding to the HBase server. (i.e. /gateway/sandbox/hbase/version)
 * **password**: [SecretBase](#secretbase): The password corresponding to the user name.
@@ -3442,7 +3483,7 @@
 ## HdfsLinkedServiceTypeProperties
 ### Properties
 * **authenticationType**: any: Type of authentication used to connect to the HDFS. Possible values are: Anonymous and Windows. Type: string (or Expression with resultType string).
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **password**: [SecretBase](#secretbase): Password for Windows authentication.
 * **url**: any (Required): The URL of the HDFS service endpoint, e.g. http://myhostname:50070/webhdfs/v1 . Type: string (or Expression with resultType string).
 * **userName**: any: User name for Windows authentication. Type: string (or Expression with resultType string).
@@ -3456,9 +3497,14 @@
 * **scriptLinkedService**: [LinkedServiceReference](#linkedservicereference): Script linked service reference.
 * **scriptPath**: any: Script path. Type: string (or Expression with resultType string).
 * **storageLinkedServices**: [LinkedServiceReference](#linkedservicereference)[]: Storage linked service references.
-* **variables**: any[]: User specified arguments under hivevar namespace.
+* **variables**: [HDInsightHiveActivityTypePropertiesVariables](#hdinsighthiveactivitytypepropertiesvariables): User specified arguments under hivevar namespace.
 
 ## HDInsightHiveActivityTypePropertiesDefines
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## HDInsightHiveActivityTypePropertiesVariables
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: any
@@ -3466,7 +3512,7 @@
 ## HDInsightLinkedServiceTypeProperties
 ### Properties
 * **clusterUri**: any (Required): HDInsight cluster URI. Type: string (or Expression with resultType string).
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **fileSystem**: any: Specify the FileSystem if the main storage for the HDInsight is ADLS Gen2. Type: string (or Expression with resultType string).
 * **hcatalogLinkedServiceName**: [LinkedServiceReference](#linkedservicereference): A reference to the Azure SQL linked service that points to the HCatalog database.
 * **isEspEnabled**: any: Specify if the HDInsight is created with ESP (Enterprise Security Package). Type: Boolean.
@@ -3504,7 +3550,7 @@
 * **coreConfiguration**: any: Specifies the core configuration parameters (as in core-site.xml) for the HDInsight cluster to be created.
 * **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
 * **dataNodeSize**: any: Specifies the size of the data node for the HDInsight cluster.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **hBaseConfiguration**: any: Specifies the HBase configuration parameters (hbase-site.xml) for the HDInsight cluster.
 * **hcatalogLinkedServiceName**: [LinkedServiceReference](#linkedservicereference): The name of Azure SQL linked service that point to the HCatalog database. The on-demand HDInsight cluster is created by using the Azure SQL database as the metastore.
 * **hdfsConfiguration**: any: Specifies the HDFS configuration parameters (hdfs-site.xml) for the HDInsight cluster.
@@ -3589,7 +3635,7 @@
 * **allowSelfSignedServerCert**: any: Specifies whether to allow self-signed certificates from the server. The default value is false.
 * **authenticationType**: 'Anonymous' | 'Username' | 'UsernameAndPassword' | 'WindowsAzureHDInsightService' | string (Required): The authentication method used to access the Hive server.
 * **enableSsl**: any: Specifies whether the connections to the server are encrypted using SSL. The default value is false.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **host**: any (Required): IP address or host name of the Hive server, separated by ';' for multiple hosts (only when serviceDiscoveryMode is enable).
 * **httpPath**: any: The partial URL corresponding to the Hive server.
 * **password**: [SecretBase](#secretbase): The password corresponding to the user name that you provided in the Username field
@@ -3621,7 +3667,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **certThumbprint**: any: Thumbprint of certificate for ClientCertificate authentication. Only valid for on-premises copy. For on-premises copy with ClientCertificate authentication, either CertThumbprint or EmbeddedCertData/Password should be specified. Type: string (or Expression with resultType string).
 * **embeddedCertData**: any: Base64 encoded certificate data for ClientCertificate authentication. For on-premises copy with ClientCertificate authentication, either CertThumbprint or EmbeddedCertData/Password should be specified. Type: string (or Expression with resultType string).
 * **enableServerCertificateValidation**: any: If true, validate the HTTPS server SSL certificate. Default value is true. Type: boolean (or Expression with resultType boolean).
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **password**: [SecretBase](#secretbase): Password for Basic, Digest, Windows, or ClientCertificate with EmbeddedCertData authentication.
 * **url**: any (Required): The base URL of the HTTP endpoint, e.g. https://www.microsoft.com. Type: string (or Expression with resultType string).
 * **userName**: any: User name for Basic, Digest, or Windows authentication. Type: string (or Expression with resultType string).
@@ -3631,7 +3677,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **accessToken**: [SecretBase](#secretbase): The access token obtained when initially authenticating your OAuth integration.
 * **clientId**: any (Required): The client ID associated with your Hubspot application.
 * **clientSecret**: [SecretBase](#secretbase): The client secret associated with your Hubspot application.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **refreshToken**: [SecretBase](#secretbase): The refresh token obtained when initially authenticating your OAuth integration.
 * **useEncryptedEndpoints**: any: Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
 * **useHostVerification**: any: Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
@@ -3655,7 +3701,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **allowSelfSignedServerCert**: any: Specifies whether to allow self-signed certificates from the server. The default value is false.
 * **authenticationType**: 'Anonymous' | 'SASLUsername' | 'UsernameAndPassword' | string (Required): The authentication type to use.
 * **enableSsl**: any: Specifies whether the connections to the server are encrypted using SSL. The default value is false.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **host**: any (Required): The IP address or host name of the Impala server. (i.e. 192.168.222.160)
 * **password**: [SecretBase](#secretbase): The password corresponding to the user name when using UsernameAndPassword.
 * **port**: any: The TCP port that the Impala server uses to listen for client connections. The default value is 21050.
@@ -3666,9 +3712,9 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## InformixLinkedServiceTypeProperties
 ### Properties
 * **authenticationType**: any: Type of authentication used to connect to the Informix as ODBC data store. Possible values are: Anonymous and Basic. Type: string (or Expression with resultType string).
-* **connectionString**: any (Required): The non-access credential portion of the connection string as well as an optional encrypted credential. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **connectionString**: any (Required): The non-access credential portion of the connection string as well as an optional encrypted credential. Type: string, or SecureString, or AzureKeyVaultSecretReference, or Expression with resultType string.
 * **credential**: [SecretBase](#secretbase): The access credential portion of the connection string specified in driver-specific property-value format.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **password**: [SecretBase](#secretbase): Password for Basic authentication.
 * **userName**: any: User name for Basic authentication. Type: string (or Expression with resultType string).
 
@@ -3783,7 +3829,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## JiraLinkedServiceTypeProperties
 ### Properties
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **host**: any (Required): The IP address or host name of the Jira service. (e.g. jira.example.com)
 * **password**: [SecretBase](#secretbase): The password corresponding to the user name that you provided in the username field.
 * **port**: any: The TCP port that the Jira server uses to listen for client connections. The default value is 443 if connecting through HTTPS, or 8080 if connecting through HTTP.
@@ -4444,7 +4490,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## MagentoLinkedServiceTypeProperties
 ### Properties
 * **accessToken**: [SecretBase](#secretbase): The access token from Magento.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **host**: any (Required): The URL of the Magento instance. (i.e. 192.168.222.110/magento3)
 * **useEncryptedEndpoints**: any: Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
 * **useHostVerification**: any: Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
@@ -4492,6 +4538,80 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **referenceName**: string (Required): Reference ManagedVirtualNetwork name.
 * **type**: 'ManagedVirtualNetworkReference' | string (Required): Managed Virtual Network reference type.
 
+## MapperAttributeMapping
+### Properties
+* **attributeReference**: [MapperAttributeReference](#mapperattributereference): Reference of the source column used in the mapping. It is used for 'Direct' mapping type only.
+* **attributeReferences**: [MapperAttributeReference](#mapperattributereference)[]: List of references for source columns. It is used for 'Derived' and 'Aggregate' type mappings only.
+* **expression**: string: Expression used for 'Aggregate' and 'Derived' type mapping.
+* **functionName**: string: Name of the function used for 'Aggregate' and 'Derived' (except 'Advanced') type mapping.
+* **name**: string: Name of the target column.
+* **type**: 'Aggregate' | 'Derived' | 'Direct' | string: Type of the CDC attribute mapping. Note: 'Advanced' mapping type is also saved as 'Derived'.
+
+## MapperAttributeMappings
+### Properties
+* **attributeMappings**: [MapperAttributeMapping](#mapperattributemapping)[]: List of attribute mappings.
+
+## MapperAttributeReference
+### Properties
+* **entity**: string: Name of the table.
+* **entityConnectionReference**: [MapperConnectionReference](#mapperconnectionreference): The connection reference for the connection.
+* **name**: string: Name of the column.
+
+## MapperConnection
+### Properties
+* **commonDslConnectorProperties**: [MapperDslConnectorProperties](#mapperdslconnectorproperties)[]: List of name/value pairs for connection properties.
+* **isInlineDataset**: bool: A boolean indicating whether linked service is of type inline dataset. Currently only inline datasets are supported.
+* **linkedService**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
+* **linkedServiceType**: string: Type of the linked service e.g.: AzureBlobFS.
+* **type**: 'linkedservicetype' | string (Required): Type of connection via linked service or dataset.
+
+## MapperConnectionReference
+### Properties
+* **connectionName**: string: Name of the connection
+* **type**: 'linkedservicetype' | string: Type of connection via linked service or dataset.
+
+## MapperDslConnectorProperties
+### Properties
+* **name**: string: Name of the property.
+* **value**: any: Value of the property.
+
+## MapperPolicy
+### Properties
+* **mode**: string: Mode of running the CDC: batch vs continuous.
+* **recurrence**: [MapperPolicyRecurrence](#mapperpolicyrecurrence): Defines the frequency and interval for running the CDC for batch mode.
+
+## MapperPolicyRecurrence
+### Properties
+* **frequency**: 'Hour' | 'Minute' | 'Second' | string: Frequency of period in terms of 'Hour', 'Minute' or 'Second'.
+* **interval**: int: Actual interval value as per chosen frequency.
+
+## MapperSourceConnectionsInfo
+### Properties
+* **connection**: [MapperConnection](#mapperconnection): Source connection details.
+* **sourceEntities**: [MapperTable](#mappertable)[]: List of source tables for a source connection.
+
+## MapperTable
+### Properties
+* **name**: string: Name of the table.
+* **properties**: [MapperTableProperties](#mappertableproperties): Table properties.
+
+## MapperTableProperties
+### Properties
+* **dslConnectorProperties**: [MapperDslConnectorProperties](#mapperdslconnectorproperties)[]: List of name/value pairs for connection properties.
+* **schema**: [MapperTableSchema](#mappertableschema)[]: List of columns for the source table.
+
+## MapperTableSchema
+### Properties
+* **dataType**: string: Data type of the column.
+* **name**: string: Name of the column.
+
+## MapperTargetConnectionsInfo
+### Properties
+* **connection**: [MapperConnection](#mapperconnection): Source connection details.
+* **dataMapperMappings**: [DataMapperMapping](#datamappermapping)[]: List of table mappings.
+* **relationships**: any[]: List of relationship info among the tables.
+* **targetEntities**: [MapperTable](#mappertable)[]: List of source tables for a target connection.
+
 ## MappingDataFlowTypeProperties
 ### Properties
 * **script**: string: DataFlow script.
@@ -4503,14 +4623,14 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## MariaDBLinkedServiceTypeProperties
 ### Properties
 * **connectionString**: any: An ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **pwd**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of password in connection string.
 
 ## MarketoLinkedServiceTypeProperties
 ### Properties
 * **clientId**: any (Required): The client Id of your Marketo service.
 * **clientSecret**: [SecretBase](#secretbase): The client secret of your Marketo service.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **endpoint**: any (Required): The endpoint of the Marketo server. (i.e. 123-ABC-321.mktorest.com)
 * **useEncryptedEndpoints**: any: Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
 * **useHostVerification**: any: Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
@@ -4524,9 +4644,9 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## MicrosoftAccessLinkedServiceTypeProperties
 ### Properties
 * **authenticationType**: any: Type of authentication used to connect to the Microsoft Access as ODBC data store. Possible values are: Anonymous and Basic. Type: string (or Expression with resultType string).
-* **connectionString**: any (Required): The non-access credential portion of the connection string as well as an optional encrypted credential. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **connectionString**: any (Required): The non-access credential portion of the connection string as well as an optional encrypted credential. Type: string, or SecureString, or AzureKeyVaultSecretReference, or Expression with resultType string.
 * **credential**: [SecretBase](#secretbase): The access credential portion of the connection string specified in driver-specific property-value format.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **password**: [SecretBase](#secretbase): Password for Basic authentication.
 * **userName**: any: User name for Basic authentication. Type: string (or Expression with resultType string).
 
@@ -4542,6 +4662,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### Properties
 * **connectionString**: any (Required): The MongoDB Atlas connection string. Type: string, SecureString or AzureKeyVaultSecretReference. Type: string, SecureString or AzureKeyVaultSecretReference.
 * **database**: any (Required): The name of the MongoDB Atlas database that you want to access. Type: string (or Expression with resultType string).
+* **driverVersion**: any: The driver version that you want to choose. Allowed value are v1 and v2. Type: string (or Expression with resultType string).
 
 ## MongoDbCollectionDatasetTypeProperties
 ### Properties
@@ -4563,7 +4684,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **authSource**: any: Database to verify the username and password. Type: string (or Expression with resultType string).
 * **databaseName**: any (Required): The name of the MongoDB database that you want to access. Type: string (or Expression with resultType string).
 * **enableSsl**: any: Specifies whether the connections to the server are encrypted using SSL. The default value is false. Type: boolean (or Expression with resultType boolean).
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **password**: [SecretBase](#secretbase): Password for authentication.
 * **port**: any: The TCP port number that the MongoDB server uses to listen for client connections. The default value is 27017. Type: integer (or Expression with resultType integer), minimum: 0.
 * **server**: any (Required): The IP address or server name of the MongoDB server. Type: string (or Expression with resultType string).
@@ -4580,8 +4701,8 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## MySqlLinkedServiceTypeProperties
 ### Properties
-* **connectionString**: any (Required): The connection string.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **connectionString**: any (Required): The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **password**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of password in connection string.
 
 ## MySqlTableDatasetTypeProperties
@@ -4591,7 +4712,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## NetezzaLinkedServiceTypeProperties
 ### Properties
 * **connectionString**: any: An ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **pwd**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of password in connection string.
 
 ## NetezzaPartitionSettings
@@ -4618,7 +4739,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **authenticationType**: 'AadServicePrincipal' | 'Anonymous' | 'Basic' | 'ManagedServiceIdentity' | 'Windows' | string: Type of authentication used to connect to the OData service.
 * **authHeaders**: any: The additional HTTP headers in the request to RESTful API used for authorization. Type: object (or Expression with resultType object).
 * **azureCloudType**: any: Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **password**: [SecretBase](#secretbase): Password of the OData service.
 * **servicePrincipalEmbeddedCert**: [SecretBase](#secretbase): Specify the base64 encoded certificate of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).
 * **servicePrincipalEmbeddedCertPassword**: [SecretBase](#secretbase): Specify the password of your certificate if your certificate has a password and you are using AadServicePrincipal authentication. Type: string (or Expression with resultType string).
@@ -4635,9 +4756,9 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## OdbcLinkedServiceTypeProperties
 ### Properties
 * **authenticationType**: any: Type of authentication used to connect to the ODBC data store. Possible values are: Anonymous and Basic. Type: string (or Expression with resultType string).
-* **connectionString**: any (Required): The non-access credential portion of the connection string as well as an optional encrypted credential. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **connectionString**: any (Required): The non-access credential portion of the connection string as well as an optional encrypted credential. Type: string, or SecureString, or AzureKeyVaultSecretReference, or Expression with resultType string.
 * **credential**: [SecretBase](#secretbase): The access credential portion of the connection string specified in driver-specific property-value format.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **password**: [SecretBase](#secretbase): Password for Basic authentication.
 * **userName**: any: User name for Basic authentication. Type: string (or Expression with resultType string).
 
@@ -4652,7 +4773,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## Office365LinkedServiceTypeProperties
 ### Properties
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **office365TenantId**: any (Required): Azure tenant ID to which the Office 365 account belongs. Type: string (or Expression with resultType string).
 * **servicePrincipalId**: any (Required): Specify the application's client ID. Type: string (or Expression with resultType string).
 * **servicePrincipalKey**: [SecretBase](#secretbase) (Required): Specify the application's key.
@@ -4661,14 +4782,14 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## OracleCloudStorageLinkedServiceTypeProperties
 ### Properties
 * **accessKeyId**: any: The access key identifier of the Oracle Cloud Storage Identity and Access Management (IAM) user. Type: string (or Expression with resultType string).
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **secretAccessKey**: [SecretBase](#secretbase): The secret access key of the Oracle Cloud Storage Identity and Access Management (IAM) user.
 * **serviceUrl**: any: This value specifies the endpoint to access with the Oracle Cloud Storage Connector. This is an optional property; change it only if you want to try a different service endpoint or want to switch between https and http. Type: string (or Expression with resultType string).
 
 ## OracleLinkedServiceTypeProperties
 ### Properties
 * **connectionString**: any (Required): The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **password**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of password in connection string.
 
 ## OraclePartitionSettings
@@ -4680,7 +4801,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## OracleServiceCloudLinkedServiceTypeProperties
 ### Properties
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **host**: any (Required): The URL of the Oracle Service Cloud instance.
 * **password**: [SecretBase](#secretbase) (Required): The password corresponding to the user name that you provided in the username key.
 * **useEncryptedEndpoints**: any: Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true. Type: boolean (or Expression with resultType boolean).
@@ -4779,8 +4900,8 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### Properties
 * **clientId**: any (Required): The client ID associated with your PayPal application.
 * **clientSecret**: [SecretBase](#secretbase): The client secret associated with your PayPal application.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-* **host**: any (Required): The URL of the PayPal instance. (i.e. api.sandbox.paypal.com)
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
+* **host**: any (Required): The URL of the PayPal instance. (i.e. api.sandbox.paypal.com)
 * **useEncryptedEndpoints**: any: Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
 * **useHostVerification**: any: Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
 * **usePeerVerification**: any: Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
@@ -4797,7 +4918,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **allowSelfSignedServerCert**: any: Specifies whether to allow self-signed certificates from the server. The default value is false.
 * **authenticationType**: 'Anonymous' | 'UsernameAndPassword' | 'WindowsAzureHDInsightService' | string (Required): The authentication mechanism used to connect to the Phoenix server.
 * **enableSsl**: any: Specifies whether the connections to the server are encrypted using SSL. The default value is false.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **host**: any (Required): The IP address or host name of the Phoenix server. (i.e. 192.168.222.160)
 * **httpPath**: any: The partial URL corresponding to the Phoenix server. (i.e. /gateway/sandbox/phoenix/version). The default value is hbasephoenix if using WindowsAzureHDInsightService.
 * **password**: [SecretBase](#secretbase): The password corresponding to the user name.
@@ -4858,8 +4979,8 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## PostgreSqlLinkedServiceTypeProperties
 ### Properties
-* **connectionString**: any (Required): The connection string.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **connectionString**: any (Required): The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **password**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of password in connection string.
 
 ## PostgreSqlTableDatasetTypeProperties
@@ -4913,7 +5034,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **authenticationType**: 'Anonymous' | 'LDAP' | string (Required): The authentication mechanism used to connect to the Presto server.
 * **catalog**: any (Required): The catalog context for all request against the server.
 * **enableSsl**: any: Specifies whether the connections to the server are encrypted using SSL. The default value is false.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **host**: any (Required): The IP address or host name of the Presto server. (i.e. 192.168.222.160)
 * **password**: [SecretBase](#secretbase): The password corresponding to the user name.
 * **port**: any: The TCP port that the Presto server uses to listen for client connections. The default value is 8080.
@@ -4945,7 +5066,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## QuickbaseLinkedServiceTypeProperties
 ### Properties
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **url**: any (Required): The url to connect Quickbase source. Type: string (or Expression with resultType string).
 * **userToken**: [SecretBase](#secretbase) (Required): The user token for the Quickbase source.
 
@@ -4957,7 +5078,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **connectionProperties**: any: Properties used to connect to QuickBooks. It is mutually exclusive with any other properties in the linked service. Type: object.
 * **consumerKey**: any: The consumer key for OAuth 1.0 authentication.
 * **consumerSecret**: [SecretBase](#secretbase): The consumer secret for OAuth 1.0 authentication.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **endpoint**: any: The endpoint of the QuickBooks server. (i.e. quickbooks.api.intuit.com)
 * **useEncryptedEndpoints**: any: Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
 
@@ -5010,7 +5131,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### Properties
 * **clientId**: any (Required): The client ID associated with the Responsys application. Type: string (or Expression with resultType string).
 * **clientSecret**: [SecretBase](#secretbase): The client secret associated with the Responsys application. Type: string (or Expression with resultType string).
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **endpoint**: any (Required): The endpoint of the Responsys server.
 * **useEncryptedEndpoints**: any: Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true. Type: boolean (or Expression with resultType boolean).
 * **useHostVerification**: any: Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true. Type: boolean (or Expression with resultType boolean).
@@ -5018,15 +5139,25 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## RestResourceDatasetTypeProperties
 ### Properties
-* **additionalHeaders**: any: The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).
-* **paginationRules**: any: The pagination rules to compose next page requests. Type: string (or Expression with resultType string).
+* **additionalHeaders**: [RestResourceDatasetTypePropertiesAdditionalHeaders](#restresourcedatasettypepropertiesadditionalheaders): The additional HTTP headers in the request to the RESTful API.
+* **paginationRules**: [RestResourceDatasetTypePropertiesPaginationRules](#restresourcedatasettypepropertiespaginationrules): The pagination rules to compose next page requests.
 * **relativeUrl**: any: The relative URL to the resource that the RESTful API provides. Type: string (or Expression with resultType string).
 * **requestBody**: any: The HTTP request body to the RESTful API if requestMethod is POST. Type: string (or Expression with resultType string).
 * **requestMethod**: any: The HTTP method used to call the RESTful API. The default is GET. Type: string (or Expression with resultType string).
 
+## RestResourceDatasetTypePropertiesAdditionalHeaders
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
+## RestResourceDatasetTypePropertiesPaginationRules
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
 ## RestServiceLinkedServiceTypeProperties
 ### Properties
-* **aadResourceId**: any: The resource you are requesting authorization to use.
+* **aadResourceId**: any: The resource you are requesting authorization to use. Type: string (or Expression with resultType string).
 * **authenticationType**: 'AadServicePrincipal' | 'Anonymous' | 'Basic' | 'ManagedServiceIdentity' | 'OAuth2ClientCredential' | string (Required): Type of authentication used to connect to the REST service.
 * **authHeaders**: any: The additional HTTP headers in the request to RESTful API used for authorization. Type: object (or Expression with resultType object).
 * **azureCloudType**: any: Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
@@ -5034,16 +5165,16 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **clientSecret**: [SecretBase](#secretbase): The client secret associated with your application.
 * **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
 * **enableServerCertificateValidation**: any: Whether to validate server side SSL certificate when connecting to the endpoint.The default value is true. Type: boolean (or Expression with resultType boolean).
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **password**: [SecretBase](#secretbase): The password used in Basic authentication type.
 * **resource**: any: The target service or resource to which the access will be requested. Type: string (or Expression with resultType string).
 * **scope**: any: The scope of the access required. It describes what kind of access will be requested. Type: string (or Expression with resultType string).
-* **servicePrincipalId**: any: The application's client ID used in AadServicePrincipal authentication type.
+* **servicePrincipalId**: any: The application's client ID used in AadServicePrincipal authentication type. Type: string (or Expression with resultType string).
 * **servicePrincipalKey**: [SecretBase](#secretbase): The application's key used in AadServicePrincipal authentication type.
-* **tenant**: any: The tenant information (domain name or tenant ID) used in AadServicePrincipal authentication type under which your application resides.
+* **tenant**: any: The tenant information (domain name or tenant ID) used in AadServicePrincipal authentication type under which your application resides. Type: string (or Expression with resultType string).
 * **tokenEndpoint**: any: The token endpoint of the authorization server to acquire access token. Type: string (or Expression with resultType string).
-* **url**: any (Required): The base URL of the REST service.
-* **userName**: any: The user name used in Basic authentication type.
+* **url**: any (Required): The base URL of the REST service. Type: string (or Expression with resultType string).
+* **userName**: any: The user name used in Basic authentication type. Type: string (or Expression with resultType string).
 
 ## RetryPolicy
 ### Properties
@@ -5053,7 +5184,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## SalesforceLinkedServiceTypeProperties
 ### Properties
 * **apiVersion**: any: The Salesforce API version used in ADF. Type: string (or Expression with resultType string).
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **environmentUrl**: any: The URL of Salesforce instance. Default is 'https://login.salesforce.com'. To copy data from sandbox, specify 'https://test.salesforce.com'. To copy data from custom domain, specify, for example, 'https://[domain].my.salesforce.com'. Type: string (or Expression with resultType string).
 * **password**: [SecretBase](#secretbase): The password for Basic authentication of the Salesforce instance.
 * **securityToken**: [SecretBase](#secretbase): The security token is optional to remotely access Salesforce instance.
@@ -5064,7 +5195,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **clientId**: any: The client ID associated with the Salesforce Marketing Cloud application. Type: string (or Expression with resultType string).
 * **clientSecret**: [SecretBase](#secretbase): The client secret associated with the Salesforce Marketing Cloud application. Type: string (or Expression with resultType string).
 * **connectionProperties**: any: Properties used to connect to Salesforce Marketing Cloud. It is mutually exclusive with any other properties in the linked service. Type: object.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **useEncryptedEndpoints**: any: Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true. Type: boolean (or Expression with resultType boolean).
 * **useHostVerification**: any: Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true. Type: boolean (or Expression with resultType boolean).
 * **usePeerVerification**: any: Specifies whether to verify the identity of the server when connecting over SSL. The default value is true. Type: boolean (or Expression with resultType boolean).
@@ -5076,7 +5207,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## SalesforceServiceCloudLinkedServiceTypeProperties
 ### Properties
 * **apiVersion**: any: The Salesforce API version used in ADF. Type: string (or Expression with resultType string).
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **environmentUrl**: any: The URL of Salesforce Service Cloud instance. Default is 'https://login.salesforce.com'. To copy data from sandbox, specify 'https://test.salesforce.com'. To copy data from custom domain, specify, for example, 'https://[domain].my.salesforce.com'. Type: string (or Expression with resultType string).
 * **extendedProperties**: any: Extended properties appended to the connection string. Type: string (or Expression with resultType string).
 * **password**: [SecretBase](#secretbase): The password for Basic authentication of the Salesforce instance.
@@ -5090,7 +5221,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## SapBWLinkedServiceTypeProperties
 ### Properties
 * **clientId**: any (Required): Client ID of the client on the BW system. (Usually a three-digit decimal number represented as a string) Type: string (or Expression with resultType string).
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **password**: [SecretBase](#secretbase): Password to access the SAP BW server.
 * **server**: any (Required): Host name of the SAP BW instance. Type: string (or Expression with resultType string).
 * **systemNumber**: any (Required): System number of the BW system. (Usually a two-digit decimal number represented as a string.) Type: string (or Expression with resultType string).
@@ -5098,7 +5229,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## SapCloudForCustomerLinkedServiceTypeProperties
 ### Properties
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Either encryptedCredential or username/password must be provided. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Either encryptedCredential or username/password must be provided. Type: string.
 * **password**: [SecretBase](#secretbase): The password for Basic authentication.
 * **url**: any (Required): The URL of SAP Cloud for Customer OData API. For example, '[https://[tenantname].crm.ondemand.com/sap/c4c/odata/v1]'. Type: string (or Expression with resultType string).
 * **username**: any: The username for Basic authentication. Type: string (or Expression with resultType string).
@@ -5109,10 +5240,10 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## SapEccLinkedServiceTypeProperties
 ### Properties
-* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Either encryptedCredential or username/password must be provided. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Either encryptedCredential or username/password must be provided. Type: string.
 * **password**: [SecretBase](#secretbase): The password for Basic authentication.
-* **url**: string (Required): The URL of SAP ECC OData API. For example, '[https://hostname:port/sap/opu/odata/sap/servicename/]'. Type: string (or Expression with resultType string).
-* **username**: string: The username for Basic authentication. Type: string (or Expression with resultType string).
+* **url**: any (Required): The URL of SAP ECC OData API. For example, '[https://hostname:port/sap/opu/odata/sap/servicename/]'. Type: string (or Expression with resultType string).
+* **username**: any: The username for Basic authentication. Type: string (or Expression with resultType string).
 
 ## SapEccResourceDatasetTypeProperties
 ### Properties
@@ -5122,7 +5253,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### Properties
 * **authenticationType**: 'Basic' | 'Windows' | string: The authentication type to be used to connect to the SAP HANA server.
 * **connectionString**: any: SAP HANA ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **password**: [SecretBase](#secretbase): Password to access the SAP HANA server.
 * **server**: any: Host name of the SAP HANA server. Type: string (or Expression with resultType string).
 * **userName**: any: Username to access the SAP HANA server. Type: string (or Expression with resultType string).
@@ -5139,7 +5270,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## SapOdpLinkedServiceTypeProperties
 ### Properties
 * **clientId**: any: Client ID of the client on the SAP system where the table is located. (Usually a three-digit decimal number represented as a string) Type: string (or Expression with resultType string).
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **language**: any: Language of the SAP system where the table is located. The default value is EN. Type: string (or Expression with resultType string).
 * **logonGroup**: any: The Logon Group for the SAP System. Type: string (or Expression with resultType string).
 * **messageServer**: any: The hostname of the SAP Message Server. Type: string (or Expression with resultType string).
@@ -5165,7 +5296,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## SapOpenHubLinkedServiceTypeProperties
 ### Properties
 * **clientId**: any: Client ID of the client on the BW system where the open hub destination is located. (Usually a three-digit decimal number represented as a string) Type: string (or Expression with resultType string).
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **language**: any: Language of the BW system where the open hub destination is located. The default value is EN. Type: string (or Expression with resultType string).
 * **logonGroup**: any: The Logon Group for the SAP System. Type: string (or Expression with resultType string).
 * **messageServer**: any: The hostname of the SAP Message Server. Type: string (or Expression with resultType string).
@@ -5185,7 +5316,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## SapTableLinkedServiceTypeProperties
 ### Properties
 * **clientId**: any: Client ID of the client on the SAP system where the table is located. (Usually a three-digit decimal number represented as a string) Type: string (or Expression with resultType string).
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **language**: any: Language of the SAP system where the table is located. The default value is EN. Type: string (or Expression with resultType string).
 * **logonGroup**: any: The Logon Group for the SAP System. Type: string (or Expression with resultType string).
 * **messageServer**: any: The hostname of the SAP Message Server. Type: string (or Expression with resultType string).
@@ -5240,7 +5371,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **name**: any: The name of the parameter. Type: string (or Expression with resultType string).
 * **size**: int: The size of the output direction parameter.
 * **type**: 'Boolean' | 'DateTime' | 'DateTimeOffset' | 'Decimal' | 'Double' | 'Guid' | 'Int16' | 'Int32' | 'Int64' | 'Single' | 'String' | 'Timespan' | string: The type of the parameter.
-* **value**: any: The value of the parameter.
+* **value**: any: The value of the parameter. Type: string (or Expression with resultType string).
 
 ## ScriptActivityScriptBlock
 ### Properties
@@ -5277,6 +5408,11 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **value**: string (Required): Value of secure string.
 
 
+## SecureInputOutputPolicy
+### Properties
+* **secureInput**: bool: When set to true, Input from activity is considered as secure and will not be logged to monitoring.
+* **secureOutput**: bool: When set to true, Output from activity is considered as secure and will not be logged to monitoring.
+
 ## SecureString
 ### Properties
 * **type**: string (Required): Type of the secret.
@@ -5291,7 +5427,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **authenticationType**: 'Basic' | 'OAuth2' | string (Required): The authentication type to use.
 * **clientId**: any: The client id for OAuth2 authentication.
 * **clientSecret**: [SecretBase](#secretbase): The client secret for OAuth2 authentication.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **endpoint**: any (Required): The endpoint of the ServiceNow server. (i.e. <instance>.service-now.com)
 * **password**: [SecretBase](#secretbase): The password corresponding to the user name for Basic and OAuth2 authentication.
 * **useEncryptedEndpoints**: any: Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
@@ -5301,13 +5437,14 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## SetVariableActivityTypeProperties
 ### Properties
-* **value**: any: Value to be set. Could be a static value or Expression
+* **setSystemVariable**: bool: If set to true, it sets the pipeline run return value.
+* **value**: any: Value to be set. Could be a static value or Expression.
 * **variableName**: string: Name of the variable whose value needs to be set.
 
 ## SftpServerLinkedServiceTypeProperties
 ### Properties
 * **authenticationType**: 'Basic' | 'MultiFactor' | 'SshPublicKey' | string: The authentication type to be used to connect to the FTP server.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **host**: any (Required): The SFTP server host name. Type: string (or Expression with resultType string).
 * **hostKeyFingerprint**: any: The host key finger-print of the SFTP server. When SkipHostKeyValidation is false, HostKeyFingerprint should be specified. Type: string (or Expression with resultType string).
 * **passPhrase**: [SecretBase](#secretbase): The password to decrypt the SSH private key if the SSH private key is encrypted.
@@ -5324,7 +5461,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## SharePointOnlineListLinkedServiceTypeProperties
 ### Properties
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **servicePrincipalId**: any (Required): The application (client) ID of your application registered in Azure Active Directory. Make sure to grant SharePoint site permission to this application. Type: string (or Expression with resultType string).
 * **servicePrincipalKey**: [SecretBase](#secretbase) (Required): The client secret of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).
 * **siteUrl**: any (Required): The URL of the SharePoint Online site. For example, https://contoso.sharepoint.com/sites/siteName. Type: string (or Expression with resultType string).
@@ -5333,7 +5470,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## ShopifyLinkedServiceTypeProperties
 ### Properties
 * **accessToken**: [SecretBase](#secretbase): The API access token that can be used to access Shopify’s data. The token won't expire if it is offline mode.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **host**: any (Required): The endpoint of the Shopify server. (i.e. mystore.myshopify.com)
 * **useEncryptedEndpoints**: any: Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
 * **useHostVerification**: any: Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
@@ -5347,7 +5484,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## SmartsheetLinkedServiceTypeProperties
 ### Properties
 * **apiToken**: [SecretBase](#secretbase) (Required): The api token for the Smartsheet source.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 
 ## SnowflakeDatasetTypeProperties
 ### Properties
@@ -5393,7 +5530,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## SnowflakeLinkedServiceTypeProperties
 ### Properties
 * **connectionString**: any (Required): The connection string of snowflake. Type: string, SecureString.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **password**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of password in connection string.
 
 ## SparkConfigurationParametrizationReference
@@ -5413,7 +5550,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **allowSelfSignedServerCert**: any: Specifies whether to allow self-signed certificates from the server. The default value is false.
 * **authenticationType**: 'Anonymous' | 'Username' | 'UsernameAndPassword' | 'WindowsAzureHDInsightService' | string (Required): The authentication method used to access the Spark server.
 * **enableSsl**: any: Specifies whether the connections to the server are encrypted using SSL. The default value is false.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **host**: any (Required): IP address or host name of the Spark server
 * **httpPath**: any: The partial URL corresponding to the Spark server.
 * **password**: [SecretBase](#secretbase): The password corresponding to the user name that you provided in the Username field
@@ -5426,7 +5563,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## SqlAlwaysEncryptedProperties
 ### Properties
-* **alwaysEncryptedAkvAuthType**: 'ManagedIdentity' | 'ServicePrincipal' | 'UserAssignedManagedIdentity' | string (Required): Sql always encrypted AKV authentication type. Type: string (or Expression with resultType string).
+* **alwaysEncryptedAkvAuthType**: 'ManagedIdentity' | 'ServicePrincipal' | 'UserAssignedManagedIdentity' | string (Required): Sql always encrypted AKV authentication type. Type: string.
 * **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
 * **servicePrincipalId**: any: The client ID of the application in Azure Active Directory used for Azure Key Vault authentication. Type: string (or Expression with resultType string).
 * **servicePrincipalKey**: [SecretBase](#secretbase): The key of the service principal used to authenticate against Azure Key Vault.
@@ -5446,7 +5583,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### Properties
 * **alwaysEncryptedSettings**: [SqlAlwaysEncryptedProperties](#sqlalwaysencryptedproperties): Sql always encrypted properties.
 * **connectionString**: any (Required): The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **password**: [SecretBase](#secretbase): The on-premises Windows authentication password.
 * **userName**: any: The on-premises Windows authentication user name. Type: string (or Expression with resultType string).
 
@@ -5472,8 +5609,8 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **clientId**: any: The client ID associated with your Square application.
 * **clientSecret**: [SecretBase](#secretbase): The client secret associated with your Square application.
 * **connectionProperties**: any: Properties used to connect to Square. It is mutually exclusive with any other properties in the linked service. Type: object.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-* **host**: any: The URL of the Square instance. (i.e. mystore.mysquare.com)
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
+* **host**: any: The URL of the Square instance. (i.e. mystore.mysquare.com)
 * **redirectUri**: any: The redirect URL assigned in the Square application dashboard. (i.e. http://localhost:2500)
 * **useEncryptedEndpoints**: any: Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
 * **useHostVerification**: any: Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
@@ -5481,9 +5618,9 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## SsisAccessCredential
 ### Properties
-* **domain**: any (Required): Domain for windows authentication.
+* **domain**: any (Required): Domain for windows authentication. Type: string (or Expression with resultType string).
 * **password**: [SecretBase](#secretbase) (Required): Password for windows authentication.
-* **userName**: any (Required): UseName for windows authentication.
+* **userName**: any (Required): UseName for windows authentication. Type: string (or Expression with resultType string).
 
 ## SsisChildPackage
 ### Properties
@@ -5504,9 +5641,9 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## SsisExecutionCredential
 ### Properties
-* **domain**: any (Required): Domain for windows authentication.
+* **domain**: any (Required): Domain for windows authentication. Type: string (or Expression with resultType string).
 * **password**: [SecureString](#securestring) (Required): Password for windows authentication.
-* **userName**: any (Required): UseName for windows authentication.
+* **userName**: any (Required): UseName for windows authentication. Type: string (or Expression with resultType string).
 
 ## SsisExecutionParameter
 ### Properties
@@ -5563,7 +5700,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### AmazonS3CompatibleReadSettings
 #### Properties
 * **deleteFilesAfterCompletion**: any: Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
-* **enablePartitionDiscovery**: bool: Indicates whether to enable partition discovery.
+* **enablePartitionDiscovery**: any: Indicates whether to enable partition discovery. Type: boolean (or Expression with resultType boolean).
 * **fileListPath**: any: Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
 * **modifiedDatetimeEnd**: any: The end of file's modified datetime. Type: string (or Expression with resultType string).
 * **modifiedDatetimeStart**: any: The start of file's modified datetime. Type: string (or Expression with resultType string).
@@ -5577,7 +5714,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### AmazonS3ReadSettings
 #### Properties
 * **deleteFilesAfterCompletion**: any: Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
-* **enablePartitionDiscovery**: bool: Indicates whether to enable partition discovery.
+* **enablePartitionDiscovery**: any: Indicates whether to enable partition discovery. Type: boolean (or Expression with resultType boolean).
 * **fileListPath**: any: Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
 * **modifiedDatetimeEnd**: any: The end of file's modified datetime. Type: string (or Expression with resultType string).
 * **modifiedDatetimeStart**: any: The start of file's modified datetime. Type: string (or Expression with resultType string).
@@ -5591,7 +5728,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### AzureBlobFSReadSettings
 #### Properties
 * **deleteFilesAfterCompletion**: any: Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
-* **enablePartitionDiscovery**: bool: Indicates whether to enable partition discovery.
+* **enablePartitionDiscovery**: any: Indicates whether to enable partition discovery. Type: boolean (or Expression with resultType boolean).
 * **fileListPath**: any: Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
 * **modifiedDatetimeEnd**: any: The end of file's modified datetime. Type: string (or Expression with resultType string).
 * **modifiedDatetimeStart**: any: The start of file's modified datetime. Type: string (or Expression with resultType string).
@@ -5604,7 +5741,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### AzureBlobStorageReadSettings
 #### Properties
 * **deleteFilesAfterCompletion**: any: Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
-* **enablePartitionDiscovery**: bool: Indicates whether to enable partition discovery.
+* **enablePartitionDiscovery**: any: Indicates whether to enable partition discovery. Type: boolean (or Expression with resultType boolean).
 * **fileListPath**: any: Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
 * **modifiedDatetimeEnd**: any: The end of file's modified datetime. Type: string (or Expression with resultType string).
 * **modifiedDatetimeStart**: any: The start of file's modified datetime. Type: string (or Expression with resultType string).
@@ -5618,7 +5755,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### AzureDataLakeStoreReadSettings
 #### Properties
 * **deleteFilesAfterCompletion**: any: Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
-* **enablePartitionDiscovery**: bool: Indicates whether to enable partition discovery.
+* **enablePartitionDiscovery**: any: Indicates whether to enable partition discovery. Type: boolean (or Expression with resultType boolean).
 * **fileListPath**: any: Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
 * **listAfter**: any: Lists files after the value (exclusive) based on file/folder names’ lexicographical order. Applies under the folderPath in data set, and filter files/sub-folders under the folderPath. Type: string (or Expression with resultType string).
 * **listBefore**: any: Lists files before the value (inclusive) based on file/folder names’ lexicographical order. Applies under the folderPath in data set, and filter files/sub-folders under the folderPath. Type: string (or Expression with resultType string).
@@ -5633,7 +5770,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### AzureFileStorageReadSettings
 #### Properties
 * **deleteFilesAfterCompletion**: any: Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
-* **enablePartitionDiscovery**: bool: Indicates whether to enable partition discovery.
+* **enablePartitionDiscovery**: any: Indicates whether to enable partition discovery. Type: boolean (or Expression with resultType boolean).
 * **fileListPath**: any: Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
 * **modifiedDatetimeEnd**: any: The end of file's modified datetime. Type: string (or Expression with resultType string).
 * **modifiedDatetimeStart**: any: The start of file's modified datetime. Type: string (or Expression with resultType string).
@@ -5647,7 +5784,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### FileServerReadSettings
 #### Properties
 * **deleteFilesAfterCompletion**: any: Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
-* **enablePartitionDiscovery**: bool: Indicates whether to enable partition discovery.
+* **enablePartitionDiscovery**: any: Indicates whether to enable partition discovery. Type: boolean (or Expression with resultType boolean).
 * **fileFilter**: any: Specify a filter to be used to select a subset of files in the folderPath rather than all files. Type: string (or Expression with resultType string).
 * **fileListPath**: any: Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
 * **modifiedDatetimeEnd**: any: The end of file's modified datetime. Type: string (or Expression with resultType string).
@@ -5662,19 +5799,19 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 #### Properties
 * **deleteFilesAfterCompletion**: any: Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
 * **disableChunking**: any: If true, disable parallel reading within each file. Default is false. Type: boolean (or Expression with resultType boolean).
-* **enablePartitionDiscovery**: bool: Indicates whether to enable partition discovery.
+* **enablePartitionDiscovery**: any: Indicates whether to enable partition discovery. Type: boolean (or Expression with resultType boolean).
 * **fileListPath**: any: Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
 * **partitionRootPath**: any: Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
 * **recursive**: any: If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
 * **type**: 'FtpReadSettings' (Required): The read setting type.
-* **useBinaryTransfer**: bool: Specify whether to use binary transfer mode for FTP stores.
+* **useBinaryTransfer**: any: Specify whether to use binary transfer mode for FTP stores. Type: boolean (or Expression with resultType boolean).
 * **wildcardFileName**: any: Ftp wildcardFileName. Type: string (or Expression with resultType string).
 * **wildcardFolderPath**: any: Ftp wildcardFolderPath. Type: string (or Expression with resultType string).
 
 ### GoogleCloudStorageReadSettings
 #### Properties
 * **deleteFilesAfterCompletion**: any: Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
-* **enablePartitionDiscovery**: bool: Indicates whether to enable partition discovery.
+* **enablePartitionDiscovery**: any: Indicates whether to enable partition discovery. Type: boolean (or Expression with resultType boolean).
 * **fileListPath**: any: Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
 * **modifiedDatetimeEnd**: any: The end of file's modified datetime. Type: string (or Expression with resultType string).
 * **modifiedDatetimeStart**: any: The start of file's modified datetime. Type: string (or Expression with resultType string).
@@ -5689,7 +5826,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 #### Properties
 * **deleteFilesAfterCompletion**: any: Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
 * **distcpSettings**: [DistcpSettings](#distcpsettings): Specifies Distcp-related settings.
-* **enablePartitionDiscovery**: bool: Indicates whether to enable partition discovery.
+* **enablePartitionDiscovery**: any: Indicates whether to enable partition discovery. Type: boolean (or Expression with resultType boolean).
 * **fileListPath**: any: Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
 * **modifiedDatetimeEnd**: any: The end of file's modified datetime. Type: string (or Expression with resultType string).
 * **modifiedDatetimeStart**: any: The start of file's modified datetime. Type: string (or Expression with resultType string).
@@ -5701,18 +5838,17 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ### HttpReadSettings
 #### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **additionalHeaders**: any: The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).
-* **enablePartitionDiscovery**: bool: Indicates whether to enable partition discovery.
-* **partitionRootPath**: any: Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
 * **requestBody**: any: The HTTP request body to the RESTful API if requestMethod is POST. Type: string (or Expression with resultType string).
 * **requestMethod**: any: The HTTP method used to call the RESTful API. The default is GET. Type: string (or Expression with resultType string).
-* **requestTimeout**: any: Specifies the timeout for a HTTP client to get HTTP response from HTTP server.
+* **requestTimeout**: any: Specifies the timeout for a HTTP client to get HTTP response from HTTP server. Type: string (or Expression with resultType string).
 * **type**: 'HttpReadSettings' (Required): The read setting type.
 
 ### OracleCloudStorageReadSettings
 #### Properties
 * **deleteFilesAfterCompletion**: any: Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
-* **enablePartitionDiscovery**: bool: Indicates whether to enable partition discovery.
+* **enablePartitionDiscovery**: any: Indicates whether to enable partition discovery. Type: boolean (or Expression with resultType boolean).
 * **fileListPath**: any: Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
 * **modifiedDatetimeEnd**: any: The end of file's modified datetime. Type: string (or Expression with resultType string).
 * **modifiedDatetimeStart**: any: The start of file's modified datetime. Type: string (or Expression with resultType string).
@@ -5727,7 +5863,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 #### Properties
 * **deleteFilesAfterCompletion**: any: Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
 * **disableChunking**: any: If true, disable parallel reading within each file. Default is false. Type: boolean (or Expression with resultType boolean).
-* **enablePartitionDiscovery**: bool: Indicates whether to enable partition discovery.
+* **enablePartitionDiscovery**: any: Indicates whether to enable partition discovery. Type: boolean (or Expression with resultType boolean).
 * **fileListPath**: any: Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
 * **modifiedDatetimeEnd**: any: The end of file's modified datetime. Type: string (or Expression with resultType string).
 * **modifiedDatetimeStart**: any: The start of file's modified datetime. Type: string (or Expression with resultType string).
@@ -5758,7 +5894,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ### AzureDataLakeStoreWriteSettings
 #### Properties
-* **expiryDateTime**: any: Specifies the expiry time of the written files. The time is applied to the UTC time zone in the format of "2018-12-01T05:00:00Z". Default value is NULL. Type: integer (or Expression with resultType integer).
+* **expiryDateTime**: any: Specifies the expiry time of the written files. The time is applied to the UTC time zone in the format of "2018-12-01T05:00:00Z". Default value is NULL. Type: string (or Expression with resultType string).
 * **type**: 'AzureDataLakeStoreWriteSettings' (Required): The write setting type.
 
 ### AzureFileStorageWriteSettings
@@ -5791,7 +5927,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### Properties
 * **authenticationType**: 'Basic' | 'Windows' | string: AuthenticationType to be used for connection.
 * **database**: any (Required): Database name for connection. Type: string (or Expression with resultType string).
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **password**: [SecretBase](#secretbase): Password for authentication.
 * **schema**: any: Schema name for connection. Type: string (or Expression with resultType string).
 * **server**: any (Required): Server name for connection. Type: string (or Expression with resultType string).
@@ -5804,17 +5940,25 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## SynapseNotebookActivityTypeProperties
 ### Properties
 * **conf**: any: Spark configuration properties, which will override the 'conf' of the notebook you provide.
+* **configurationType**: 'Artifact' | 'Customized' | 'Default' | string: The type of the spark config.
 * **driverSize**: any: Number of core and memory to be used for driver allocated in the specified Spark pool for the session, which will be used for overriding 'driverCores' and 'driverMemory' of the notebook you provide. Type: string (or Expression with resultType string).
 * **executorSize**: any: Number of core and memory to be used for executors allocated in the specified Spark pool for the session, which will be used for overriding 'executorCores' and 'executorMemory' of the notebook you provide. Type: string (or Expression with resultType string).
 * **notebook**: [SynapseNotebookReference](#synapsenotebookreference) (Required): Synapse notebook reference.
-* **numExecutors**: int: Number of executors to launch for this session, which will override the 'numExecutors' of the notebook you provide.
+* **numExecutors**: any: Number of executors to launch for this session, which will override the 'numExecutors' of the notebook you provide. Type: integer (or Expression with resultType integer).
 * **parameters**: [SynapseNotebookActivityTypePropertiesParameters](#synapsenotebookactivitytypepropertiesparameters): Notebook parameters.
+* **sparkConfig**: [SynapseNotebookActivityTypePropertiesSparkConfig](#synapsenotebookactivitytypepropertiessparkconfig): Spark configuration property.
 * **sparkPool**: [BigDataPoolParametrizationReference](#bigdatapoolparametrizationreference): The name of the big data pool which will be used to execute the notebook.
+* **targetSparkConfiguration**: [SparkConfigurationParametrizationReference](#sparkconfigurationparametrizationreference): The spark configuration of the spark job.
 
 ## SynapseNotebookActivityTypePropertiesParameters
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [NotebookParameter](#notebookparameter)
+
+## SynapseNotebookActivityTypePropertiesSparkConfig
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## SynapseNotebookReference
 ### Properties
@@ -5854,7 +5998,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### Properties
 * **apiToken**: [SecretBase](#secretbase): The api token for the TeamDesk source.
 * **authenticationType**: 'Basic' | 'Token' | string (Required): The authentication type to use.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **password**: [SecretBase](#secretbase): The password of the TeamDesk source.
 * **url**: any (Required): The url to connect TeamDesk source. Type: string (or Expression with resultType string).
 * **userName**: any: The username of the TeamDesk source. Type: string (or Expression with resultType string).
@@ -5863,7 +6007,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### Properties
 * **authenticationType**: 'Basic' | 'Windows' | string: AuthenticationType to be used for connection.
 * **connectionString**: any: Teradata ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **password**: [SecretBase](#secretbase): Password for authentication.
 * **server**: any: Server name for connection. Type: string (or Expression with resultType string).
 * **username**: any: Username for authentication. Type: string (or Expression with resultType string).
@@ -5961,13 +6105,13 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## TwilioLinkedServiceTypeProperties
 ### Properties
 * **password**: [SecretBase](#secretbase) (Required): The auth token of Twilio service.
-* **userName**: any (Required): The Account SID of Twilio service.
+* **userName**: any (Required): The Account SID of Twilio service. Type: string (or Expression with resultType string).
 
 ## UntilActivityTypeProperties
 ### Properties
 * **activities**: [Activity](#activity)[] (Required): List of activities to execute.
 * **expression**: [Expression](#expression) (Required): An expression that would evaluate to Boolean. The loop will continue until this expression evaluates to true
-* **timeout**: any: Specifies the timeout for the activity to run. If there is no value specified, it takes the value of TimeSpan.FromDays(7) which is 1 week as default. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])). Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+* **timeout**: any: Specifies the timeout for the activity to run. If there is no value specified, it takes the value of TimeSpan.FromDays(7) which is 1 week as default. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 
 ## UserAssignedIdentitiesDefinitionSpecification
 ### Properties
@@ -6006,12 +6150,12 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## VerticaLinkedServiceTypeProperties
 ### Properties
 * **connectionString**: any: An ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **pwd**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of password in connection string.
 
 ## WaitActivityTypeProperties
 ### Properties
-* **waitTimeInSeconds**: any (Required): Duration in seconds.
+* **waitTimeInSeconds**: any (Required): Duration in seconds. Type: integer (or Expression with resultType integer).
 
 ## WebActivityAuthentication
 ### Properties
@@ -6077,7 +6221,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### Properties
 * **connectionProperties**: any: Properties used to connect to Xero. It is mutually exclusive with any other properties in the linked service. Type: object.
 * **consumerKey**: [SecretBase](#secretbase): The consumer key associated with the Xero application.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **host**: any: The endpoint of the Xero server. (i.e. api.xero.com)
 * **privateKey**: [SecretBase](#secretbase): The private key from the .pem file that was generated for your Xero private application. You must include all the text from the .pem file, including the Unix line endings(
 ).
@@ -6107,7 +6251,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### Properties
 * **apiToken**: [SecretBase](#secretbase): The api token for the Zendesk source.
 * **authenticationType**: 'Basic' | 'Token' | string (Required): The authentication type to use.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **password**: [SecretBase](#secretbase): The password of the Zendesk source.
 * **url**: any (Required): The url to connect Zendesk source. Type: string (or Expression with resultType string).
 * **userName**: any: The username of the Zendesk source. Type: string (or Expression with resultType string).
@@ -6116,7 +6260,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### Properties
 * **accessToken**: [SecretBase](#secretbase): The access token for Zoho authentication.
 * **connectionProperties**: any: Properties used to connect to Zoho. It is mutually exclusive with any other properties in the linked service. Type: object.
-* **encryptedCredential**: any: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **endpoint**: any: The endpoint of the Zoho server. (i.e. crm.zoho.com/crm/private)
 * **useEncryptedEndpoints**: any: Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
 * **useHostVerification**: any: Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.

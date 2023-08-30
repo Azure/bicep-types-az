@@ -877,7 +877,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 * **status**: 'Disabled' | 'Enabled' | string: The status of the schedule (i.e. Enabled, Disabled)
 * **targetResourceId**: string: The resource ID to which the schedule belongs
 * **taskType**: string: The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart).
-* **timeZoneId**: string: The time zone ID (e.g. Pacific Standard time).
+* **timeZoneId**: string: The time zone ID (e.g. China Standard Time, Greenland Standard Time, Pacific Standard time, etc.). The possible values for this property can be found in `IReadOnlyCollection<string> TimeZoneConverter.TZConvert.KnownWindowsTimeZoneIds` (https://github.com/mattjohnsonpint/TimeZoneConverter/blob/main/README.md)
 * **weeklyRecurrence**: [WeekDetails](#weekdetails): If the schedule will occur only some days of the week, specify the weekly recurrence.
 
 ## ScheduleCreationParameterTags
@@ -900,7 +900,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 * **status**: 'Disabled' | 'Enabled' | string: The status of the schedule (i.e. Enabled, Disabled)
 * **targetResourceId**: string: The resource ID to which the schedule belongs
 * **taskType**: string: The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart).
-* **timeZoneId**: string: The time zone ID (e.g. Pacific Standard time).
+* **timeZoneId**: string: The time zone ID (e.g. China Standard Time, Greenland Standard Time, Pacific Standard time, etc.). The possible values for this property can be found in `IReadOnlyCollection<string> TimeZoneConverter.TZConvert.KnownWindowsTimeZoneIds` (https://github.com/mattjohnsonpint/TimeZoneConverter/blob/main/README.md)
 * **uniqueIdentifier**: string (ReadOnly): The unique immutable identifier of a resource (Guid).
 * **weeklyRecurrence**: [WeekDetails](#weekdetails): If the schedule will occur only some days of the week, specify the weekly recurrence.
 

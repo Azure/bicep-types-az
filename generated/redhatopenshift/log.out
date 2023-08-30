@@ -1,4 +1,4 @@
-AutoRest code generation utility [cli version: 3.6.3; node: v16.19.1]
+AutoRest code generation utility [cli version: 3.6.3; node: v16.20.1]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 warning | SkippedSemanticValidation | Semantic validation was skipped.
@@ -43,6 +43,14 @@ warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'MachinePool' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from MachinePool
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'OpenShiftCluster' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from OpenShiftCluster
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'OpenShiftVersion' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from OpenShiftVersion
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'Secret' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from Secret
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'SyncIdentityProvider' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from SyncIdentityProvider
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'SyncSet' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from SyncSet
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'MachinePool' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from MachinePool

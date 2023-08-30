@@ -51,4 +51,7 @@
       <EmbeddedResource Include="%(TypeFiles.CompressedFile)" LogicalName="%(LogicalName)" />
     </ItemGroup>
   </Target>
+
+  <!-- Need to sign the assembly with a strong name in Official Build. -->
+  <Import Project="$(EnlistmentRoot)\StrongName.props" />
 </Project>

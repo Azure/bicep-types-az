@@ -24,6 +24,7 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ContainerService/fleets/members' (ReadOnly, DeployTimeConstant): The resource type
 
+<<<<<<< HEAD
 ## Resource Microsoft.ContainerService/managedClusters@2022-06-02-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -121,11 +122,14 @@
 * **ApiVersion**: 2022-06-02-preview
 * **Output**: [ManagedClusterAccessProfile](#managedclusteraccessprofile)
 
+=======
+>>>>>>> main
 ## Function listCredentials (Microsoft.ContainerService/fleets@2022-06-02-preview)
 * **Resource**: Microsoft.ContainerService/fleets
 * **ApiVersion**: 2022-06-02-preview
 * **Output**: [FleetCredentialResults](#fleetcredentialresults)
 
+<<<<<<< HEAD
 ## AccessProfile
 ### Properties
 * **kubeConfig**: any: Base64-encoded Kubernetes configuration file.
@@ -198,6 +202,8 @@
 * **name**: string: The name of the extended location.
 * **type**: 'EdgeZone' | string: The type of the extended location.
 
+=======
+>>>>>>> main
 ## FleetCredentialResult
 ### Properties
 * **name**: string (ReadOnly): The name of the credential.
@@ -223,6 +229,7 @@
 * **hubProfile**: [FleetHubProfile](#fleethubprofile): The FleetHubProfile configures the Fleet's hub.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the last accepted operation.
 
+<<<<<<< HEAD
 ## KubeletConfig
 ### Properties
 * **allowedUnsafeSysctls**: string[]: Allowed list of unsafe sysctls or unsafe sysctl patterns (ending in `*`).
@@ -768,6 +775,8 @@
 * **vmSwappiness**: int: Sysctl setting vm.swappiness.
 * **vmVfsCachePressure**: int: Sysctl setting vm.vfs_cache_pressure.
 
+=======
+>>>>>>> main
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).
@@ -777,6 +786,7 @@
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
+<<<<<<< HEAD
 ## TimeInWeek
 ### Properties
 * **day**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string: The day of the week.
@@ -787,46 +797,10 @@
 * **end**: string: The end of a time span
 * **start**: string: The start of a time span
 
+=======
+>>>>>>> main
 ## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## TrackedResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## TrustedAccessRoleBindingProperties
-### Properties
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The current provisioning state of trusted access role binding.
-* **roles**: string[] (Required): A list of roles to bind, each item is a resource type qualified role name. For example: 'Microsoft.MachineLearningServices/workspaces/reader'.
-* **sourceResourceId**: string (Required): The ARM resource ID of source resource that trusted access is configured for.
-
-## UserAssignedIdentity
-### Properties
-* **clientId**: string: The client ID of the user assigned identity.
-* **objectId**: string: The object ID of the user assigned identity.
-* **resourceId**: string: The resource ID of the user assigned identity.
-
-## WindowsGmsaProfile
-### Properties
-* **dnsServer**: string: Specifies the DNS server for Windows gMSA. <br><br> Set it to empty if you have configured the DNS server in the vnet which is used to create the managed cluster.
-* **enabled**: bool: Specifies whether to enable Windows gMSA in the managed cluster.
-* **rootDomainName**: string: Specifies the root domain name for Windows gMSA. <br><br> Set it to empty if you have configured the DNS server in the vnet which is used to create the managed cluster.
 

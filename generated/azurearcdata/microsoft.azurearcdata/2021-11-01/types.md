@@ -75,12 +75,12 @@
 ## K8SResourceRequirementsLimits
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: string
+* **Additional Properties Type**: any
 
 ## K8SResourceRequirementsRequests
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: string
+* **Additional Properties Type**: any
 
 ## K8SScheduling
 ### Properties

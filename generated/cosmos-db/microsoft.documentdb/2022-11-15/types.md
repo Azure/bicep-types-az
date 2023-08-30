@@ -850,7 +850,7 @@
 * **privileges**: [Privilege](#privilege)[]: A set of privileges contained by the Role Definition. This will allow application of this Role Definition on the entire database account or any underlying Database / Collection. Scopes higher than Database are not enforceable as privilege.
 * **roleName**: string: A user-friendly name for the Role Definition. Must be unique for the database account.
 * **roles**: [Role](#role)[]: The set of roles inherited by this Role Definition.
-* **type**: 'BuiltInRole' | 'CustomRole': Indicates whether the Role Definition was built-in or user created.
+* **type**: int: Indicates whether the Role Definition was built-in or user created.
 
 ## MongoUserDefinitionResource
 ### Properties
