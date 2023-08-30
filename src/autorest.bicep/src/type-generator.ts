@@ -507,10 +507,9 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
       case SchemaType.Uri:
       case SchemaType.String:
       case SchemaType.Credential:
-        const refinableSchema = (schema as CredentialSchema | StringSchema | UriSchema);
-        minLength = refinableSchema.minLength;
-        maxLength = refinableSchema.maxLength;
-        pattern = refinableSchema.pattern;
+        minLength = (schema as CredentialSchema | StringSchema | UriSchema).minLength;
+        maxLength = (schema as CredentialSchema | StringSchema | UriSchema).maxLength;
+        pattern = (schema as CredentialSchema | StringSchema | UriSchema).pattern;
         break;
       case SchemaType.Uuid:
         // In JSON Schema, the following refinements are implicit in the string format of 'uuid'
