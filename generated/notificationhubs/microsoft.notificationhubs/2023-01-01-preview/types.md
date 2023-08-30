@@ -6,7 +6,7 @@
 * **apiVersion**: '2023-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 50, pattern: "^[a-zA-Z][a-zA-Z0-9-]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [NamespaceProperties](#namespaceproperties): Represents namespace properties.
 * **sku**: [Sku](#sku) (Required): The Sku description for a namespace
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
@@ -19,7 +19,7 @@
 * **apiVersion**: '2023-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Deprecated - only for compatibility.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 256, pattern: "^[a-zA-Z0-9!()*-._]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [SharedAccessAuthorizationRuleProperties](#sharedaccessauthorizationruleproperties): SharedAccessAuthorizationRule properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [SharedAccessAuthorizationRuleResourceTags](#sharedaccessauthorizationruleresourcetags): Deprecated - only for compatibility.
@@ -31,7 +31,7 @@
 * **apiVersion**: '2023-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 265, pattern: "^[a-zA-Z][a-zA-Z0-9-./_]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [NotificationHubProperties](#notificationhubproperties): NotificationHub properties.
 * **sku**: [Sku](#sku): The Sku description for a namespace
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
@@ -44,7 +44,7 @@
 * **apiVersion**: '2023-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Deprecated - only for compatibility.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 256, pattern: "^[a-zA-Z0-9!()*-._]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [SharedAccessAuthorizationRuleProperties](#sharedaccessauthorizationruleproperties): SharedAccessAuthorizationRule properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [SharedAccessAuthorizationRuleResourceTags](#sharedaccessauthorizationruleresourcetags): Deprecated - only for compatibility.
@@ -55,7 +55,7 @@
 ### Properties
 * **apiVersion**: '2023-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 87, pattern: "^[a-zA-Z][a-zA-Z0-9-]*\.[a-fA-F0-9\-]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Private Endpoint Connection properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.NotificationHubs/namespaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
@@ -65,7 +65,7 @@
 ### Properties
 * **apiVersion**: '2023-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^namespace$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateLinkResourceProperties](#privatelinkresourceproperties) (ReadOnly): Represents properties of Private Link Resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.NotificationHubs/namespaces/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
@@ -81,76 +81,82 @@
 * **Output**: [ResourceListKeys](#resourcelistkeys)
 
 ## AdmCredential
+*Sensitive*
 ### Properties
 * **properties**: [AdmCredentialProperties](#admcredentialproperties) (Required): Description of a NotificationHub AdmCredential.
 
 ## AdmCredentialProperties
 ### Properties
-* **authTokenUrl**: string (Required): Gets or sets the URL of the authorization token.
-* **clientId**: string (Required): Gets or sets the client identifier.
-* **clientSecret**: string (Required): Gets or sets the credential secret access key.
+* **authTokenUrl**: string {sensitive, minLength: 1} (Required): Gets or sets the URL of the authorization token.
+* **clientId**: string {sensitive, minLength: 1} (Required): Gets or sets the client identifier.
+* **clientSecret**: string {sensitive, minLength: 1} (Required): Gets or sets the credential secret access key.
 
 ## ApnsCredential
+*Sensitive*
 ### Properties
 * **properties**: [ApnsCredentialProperties](#apnscredentialproperties) (Required): Description of a NotificationHub ApnsCredential.
 
 ## ApnsCredentialProperties
 ### Properties
-* **apnsCertificate**: string: Gets or sets the APNS certificate.
-* **appId**: string: Gets or sets the issuer (iss) registered claim key, whose value is
+* **apnsCertificate**: string {sensitive}: Gets or sets the APNS certificate.
+* **appId**: string {sensitive}: Gets or sets the issuer (iss) registered claim key, whose value is
 your 10-character Team ID, obtained from your developer account
-* **appName**: string: Gets or sets the name of the application
-* **certificateKey**: string: Gets or sets the certificate key.
-* **endpoint**: string (Required): Gets or sets the endpoint of this credential.
-* **keyId**: string: Gets or sets a 10-character key identifier (kid) key, obtained from
+* **appName**: string {sensitive}: Gets or sets the name of the application
+* **certificateKey**: string {sensitive}: Gets or sets the certificate key.
+* **endpoint**: string {sensitive, minLength: 1} (Required): Gets or sets the endpoint of this credential.
+* **keyId**: string {sensitive}: Gets or sets a 10-character key identifier (kid) key, obtained from
 your developer account
-* **thumbprint**: string: Gets or sets the APNS certificate Thumbprint
-* **token**: string: Gets or sets provider Authentication Token, obtained through your
+* **thumbprint**: string {sensitive}: Gets or sets the APNS certificate Thumbprint
+* **token**: string {sensitive}: Gets or sets provider Authentication Token, obtained through your
 developer account
 
 ## BaiduCredential
+*Sensitive*
 ### Properties
 * **properties**: [BaiduCredentialProperties](#baiducredentialproperties) (Required): Description of a NotificationHub BaiduCredential.
 
 ## BaiduCredentialProperties
 ### Properties
-* **baiduApiKey**: string (Required): Gets or sets baidu Api Key.
-* **baiduEndPoint**: string (Required): Gets or sets baidu Endpoint.
-* **baiduSecretKey**: string (Required): Gets or sets baidu Secret Key
+* **baiduApiKey**: string {sensitive, minLength: 1} (Required): Gets or sets baidu Api Key.
+* **baiduEndPoint**: string {sensitive, minLength: 1} (Required): Gets or sets baidu Endpoint.
+* **baiduSecretKey**: string {sensitive, minLength: 1} (Required): Gets or sets baidu Secret Key
 
 ## BrowserCredential
+*Sensitive*
 ### Properties
 * **properties**: [BrowserCredentialProperties](#browsercredentialproperties) (Required): Description of a NotificationHub BrowserCredential.
 
 ## BrowserCredentialProperties
 ### Properties
-* **subject**: string (Required): Gets or sets web push subject.
-* **vapidPrivateKey**: string (Required): Gets or sets VAPID private key.
-* **vapidPublicKey**: string (Required): Gets or sets VAPID public key.
+* **subject**: string {sensitive, minLength: 1} (Required): Gets or sets web push subject.
+* **vapidPrivateKey**: string {sensitive, minLength: 1} (Required): Gets or sets VAPID private key.
+* **vapidPublicKey**: string {sensitive, minLength: 1} (Required): Gets or sets VAPID public key.
 
 ## GcmCredential
+*Sensitive*
 ### Properties
 * **properties**: [GcmCredentialProperties](#gcmcredentialproperties) (Required): Description of a NotificationHub GcmCredential.
 
 ## GcmCredentialProperties
 ### Properties
-* **gcmEndpoint**: string: Gets or sets the GCM endpoint.
-* **googleApiKey**: string (Required): Gets or sets the Google API key.
+* **gcmEndpoint**: string {sensitive}: Gets or sets the GCM endpoint.
+* **googleApiKey**: string {sensitive, minLength: 1} (Required): Gets or sets the Google API key.
 
 ## IpRule
 ### Properties
-* **ipMask**: string (Required): IP mask.
-* **rights**: 'Listen' | 'Manage' | 'Send' | string[] (Required): List of access rights.
+* **ipMask**: string {minLength: 1} (Required): IP mask.
+* **rights**: ('Listen' | 'Manage' | 'Send' | string)[] (Required): List of access rights.
 
 ## MpnsCredential
+*Sensitive*
 ### Properties
 * **properties**: [MpnsCredentialProperties](#mpnscredentialproperties) (Required): Description of a NotificationHub MpnsCredential.
 
 ## MpnsCredentialProperties
 ### Properties
-* **certificateKey**: string (Required): Gets or sets the certificate key for this credential.
-* **mpnsCertificate**: string (Required): Gets or sets the MPNS certificate.
-* **thumbprint**: string (Required): Gets or sets the MPNS certificate Thumbprint
+* **certificateKey**: string {sensitive, minLength: 1} (Required): Gets or sets the certificate key for this credential.
+* **mpnsCertificate**: string {sensitive, minLength: 1} (Required): Gets or sets the MPNS certificate.
+* **thumbprint**: string {sensitive, minLength: 1} (Required): Gets or sets the MPNS certificate Thumbprint
 
 ## NamespaceProperties
 ### Properties
@@ -199,6 +205,7 @@ operations.
 * **xiaomiCredential**: [XiaomiCredential](#xiaomicredential): Description of a NotificationHub XiaomiCredential.
 
 ## PnsCredentials
+*Sensitive*
 ### Properties
 * **admCredential**: [AdmCredential](#admcredential): Description of a NotificationHub AdmCredential.
 * **apnsCredential**: [ApnsCredential](#apnscredential): Description of a NotificationHub ApnsCredential.
@@ -232,7 +239,7 @@ operations.
 
 ## PublicInternetAuthorizationRule
 ### Properties
-* **rights**: 'Listen' | 'Manage' | 'Send' | string[] (Required): List of access rights.
+* **rights**: ('Listen' | 'Manage' | 'Send' | string)[] (Required): List of access rights.
 
 ## RemotePrivateEndpointConnection
 ### Properties
@@ -247,20 +254,20 @@ operations.
 ## ResourceListKeys
 ### Properties
 * **keyName**: string (ReadOnly): Gets or sets keyName of the created AuthorizationRule
-* **primaryConnectionString**: string (ReadOnly): Gets or sets primaryConnectionString of the AuthorizationRule.
-* **primaryKey**: string (ReadOnly): Gets or sets primaryKey of the created AuthorizationRule.
-* **secondaryConnectionString**: string (ReadOnly): Gets or sets secondaryConnectionString of the created
+* **primaryConnectionString**: string {sensitive} (ReadOnly): Gets or sets primaryConnectionString of the AuthorizationRule.
+* **primaryKey**: string {sensitive} (ReadOnly): Gets or sets primaryKey of the created AuthorizationRule.
+* **secondaryConnectionString**: string {sensitive} (ReadOnly): Gets or sets secondaryConnectionString of the created
 AuthorizationRule
-* **secondaryKey**: string (ReadOnly): Gets or sets secondaryKey of the created AuthorizationRule
+* **secondaryKey**: string {sensitive} (ReadOnly): Gets or sets secondaryKey of the created AuthorizationRule
 
 ## ResourceListKeys
 ### Properties
 * **keyName**: string (ReadOnly): Gets or sets keyName of the created AuthorizationRule
-* **primaryConnectionString**: string (ReadOnly): Gets or sets primaryConnectionString of the AuthorizationRule.
-* **primaryKey**: string (ReadOnly): Gets or sets primaryKey of the created AuthorizationRule.
-* **secondaryConnectionString**: string (ReadOnly): Gets or sets secondaryConnectionString of the created
+* **primaryConnectionString**: string {sensitive} (ReadOnly): Gets or sets primaryConnectionString of the AuthorizationRule.
+* **primaryKey**: string {sensitive} (ReadOnly): Gets or sets primaryKey of the created AuthorizationRule.
+* **secondaryConnectionString**: string {sensitive} (ReadOnly): Gets or sets secondaryConnectionString of the created
 AuthorizationRule
-* **secondaryKey**: string (ReadOnly): Gets or sets secondaryKey of the created AuthorizationRule
+* **secondaryKey**: string {sensitive} (ReadOnly): Gets or sets secondaryKey of the created AuthorizationRule
 
 ## SharedAccessAuthorizationRuleProperties
 ### Properties
@@ -269,11 +276,11 @@ AuthorizationRule
 * **createdTime**: string (ReadOnly): Gets the created time for this rule
 * **keyName**: string (ReadOnly): Gets a string that describes the authorization rule.
 * **modifiedTime**: string (ReadOnly): Gets the last modified time for this rule
-* **primaryKey**: string: Gets a base64-encoded 256-bit primary key for signing and
+* **primaryKey**: string {sensitive}: Gets a base64-encoded 256-bit primary key for signing and
 validating the SAS token.
 * **revision**: int (ReadOnly): Gets the revision number for the rule
-* **rights**: 'Listen' | 'Manage' | 'Send' | string[] (Required): Gets or sets the rights associated with the rule.
-* **secondaryKey**: string: Gets a base64-encoded 256-bit primary key for signing and
+* **rights**: ('Listen' | 'Manage' | 'Send' | string)[] (Required): Gets or sets the rights associated with the rule.
+* **secondaryKey**: string {sensitive}: Gets a base64-encoded 256-bit primary key for signing and
 validating the SAS token.
 
 ## SharedAccessAuthorizationRuleResourceTags
@@ -314,23 +321,25 @@ validating the SAS token.
 * **Additional Properties Type**: string
 
 ## WnsCredential
+*Sensitive*
 ### Properties
 * **properties**: [WnsCredentialProperties](#wnscredentialproperties) (Required): Description of a NotificationHub WnsCredential.
 
 ## WnsCredentialProperties
 ### Properties
-* **certificateKey**: string: Ges or sets the WNS Certificate Key.
-* **packageSid**: string: Gets or sets the package ID for this credential.
-* **secretKey**: string: Gets or sets the secret key.
-* **windowsLiveEndpoint**: string: Gets or sets the Windows Live endpoint.
-* **wnsCertificate**: string: Gets or sets the WNS Certificate.
+* **certificateKey**: string {sensitive}: Ges or sets the WNS Certificate Key.
+* **packageSid**: string {sensitive}: Gets or sets the package ID for this credential.
+* **secretKey**: string {sensitive}: Gets or sets the secret key.
+* **windowsLiveEndpoint**: string {sensitive}: Gets or sets the Windows Live endpoint.
+* **wnsCertificate**: string {sensitive}: Gets or sets the WNS Certificate.
 
 ## XiaomiCredential
+*Sensitive*
 ### Properties
 * **properties**: [XiaomiCredentialProperties](#xiaomicredentialproperties) (Required): Description of a NotificationHub XiaomiCredentialProperties.
 
 ## XiaomiCredentialProperties
 ### Properties
-* **appSecret**: string: Gets or sets app secret.
-* **endpoint**: string: Gets or sets xiaomi service endpoint.
+* **appSecret**: string {sensitive}: Gets or sets app secret.
+* **endpoint**: string {sensitive}: Gets or sets xiaomi service endpoint.
 

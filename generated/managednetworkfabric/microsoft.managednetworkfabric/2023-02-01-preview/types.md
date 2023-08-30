@@ -249,7 +249,7 @@
 
 ## BgpConfiguration
 ### Properties
-* **allowAS**: int: Allows for routes to be received and processed even if the router detects its own ASN in the AS-Path. 0 is disable, Possible values are 1-10, default is 2.
+* **allowAS**: int {minValue: 0, maxValue: 10}: Allows for routes to be received and processed even if the router detects its own ASN in the AS-Path. 0 is disable, Possible values are 1-10, default is 2.
 * **allowASOverride**: 'Disable' | 'Enable' | string: Enable Or Disable state.
 * **annotation**: string: Switch configuration description.
 * **bfdConfiguration**: [BfdConfiguration](#bfdconfiguration): BFD configuration properties
@@ -259,7 +259,7 @@
 * **ipv4NeighborAddress**: [NeighborAddress](#neighboraddress)[]: List with stringified ipv4NeighborAddresses.
 * **ipv6ListenRangePrefixes**: string[]: BGP Ipv6 ListenRange.
 * **ipv6NeighborAddress**: [NeighborAddress](#neighboraddress)[]: List with stringified IPv6 Neighbor Address.
-* **peerASN**: int (Required): Peer ASN. Example: 65047.
+* **peerASN**: int {minValue: 1, maxValue: 65535} (Required): Peer ASN. Example: 65047.
 
 ## ConnectedSubnet
 ### Properties
@@ -302,44 +302,19 @@
 ## ExternalNetworkPropertiesOptionAProperties
 ### Properties
 * **bfdConfiguration**: [BfdConfiguration](#bfdconfiguration): BFD configuration properties
-<<<<<<< HEAD
 * **fabricASN**: int {minValue: 1, maxValue: 65535} (ReadOnly): Fabric ASN number. Example 65001
 * **mtu**: int {minValue: 1500, maxValue: 9000}: MTU to use for option A peering.
 * **peerASN**: int {minValue: 1, maxValue: 65535}: Peer ASN number.Example : 28
-* **primaryIpv4Prefix**: string: IPv4 Address Prefix of CE-PE interconnect links. Default value is 172.23.1.0/31. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
-* **primaryIpv6Prefix**: string: IPv6 Address Prefix of CE-PE interconnect links. Default value is 3FFE:FFFF:0:CD30::a1/126. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
-* **secondaryIpv4Prefix**: string: Secondary IPv4 Address Prefix of CE-PE interconnect links. Default value is 172.23.1.2/31. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
-* **secondaryIpv6Prefix**: string: Secondary IPv6 Address Prefix of CE-PE interconnect links. Default value is 3FFE:FFFF:0:CD30::a1/126. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
-* **vlanId**: int {minValue: 501, maxValue: 4095}: Vlan identifier. Example : 501
-=======
-* **fabricASN**: int (ReadOnly): Fabric ASN number. Example 65001
-* **mtu**: int: MTU to use for option A peering.
-* **peerASN**: int: Peer ASN number.Example : 28
 * **primaryIpv4Prefix**: string: IPv4 Address Prefix of CE-PE interconnect links. Example: 172.31.0.0/31. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
 * **primaryIpv6Prefix**: string: IPv6 Address Prefix of CE-PE interconnect links. Example: 3FFE:FFFF:0:CD30::a0/126. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
 * **secondaryIpv4Prefix**: string: Secondary IPv4 Address Prefix of CE-PE interconnect links. Example: 172.31.0.20/31. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
 * **secondaryIpv6Prefix**: string: Secondary IPv6 Address Prefix of CE-PE interconnect links. Example: 3FFE:FFFF:0:CD30::a4/126. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
-* **vlanId**: int: Vlan identifier. Example : 501
->>>>>>> main
+* **vlanId**: int {minValue: 501, maxValue: 4095}: Vlan identifier. Example : 501
 
 ## FabricBfdConfiguration
 ### Properties
-<<<<<<< HEAD
-* **allowAS**: int {minValue: 0, maxValue: 10}: Allows for routes to be received and processed even if the router detects its own ASN in the AS-Path. 0 is disable, Possible values are 1-10, default is 2.
-* **allowASOverride**: 'Disable' | 'Enable' | string: Enable Or Disable state.
-* **annotation**: string: Switch configuration description.
-* **bfdConfiguration**: [BfdConfiguration](#bfdconfiguration): BFD configuration properties
-* **defaultRouteOriginate**: 'False' | 'True' | string: Originate a defaultRoute. Ex: "True" | "False".
-* **fabricASN**: int (ReadOnly): ASN of Network Fabric. Example: 65048.
-* **ipv4ListenRangePrefixes**: string[]: BGP Ipv4 ListenRange.
-* **ipv4NeighborAddress**: [InternalNetworkPatchablePropertiesBgpConfigurationIpv4NeighborAddressItem](#internalnetworkpatchablepropertiesbgpconfigurationipv4neighboraddressitem)[]: List with stringified ipv4NeighborAddresses.
-* **ipv6ListenRangePrefixes**: string[]: BGP Ipv6 ListenRange.
-* **ipv6NeighborAddress**: [InternalNetworkPatchablePropertiesBgpConfigurationIpv6NeighborAddressItem](#internalnetworkpatchablepropertiesbgpconfigurationipv6neighboraddressitem)[]: List with stringified ipv6NeighborAddress.
-* **peerASN**: int {minValue: 1, maxValue: 65535} (Required): Peer ASN. Example: 65047.
-=======
 * **interval**: int (ReadOnly): interval in seconds. Example: 300.
 * **multiplier**: int (ReadOnly): multiplier. Example: 3.
->>>>>>> main
 
 ## InfrastructureServices
 ### Properties
@@ -361,13 +336,8 @@
 * **importRoutePolicyId**: string: ARM resource ID of importRoutePolicy.
 * **mtu**: int {minValue: 1500, maxValue: 9000}: Maximum transmission unit. Default value is 1500.
 * **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Gets the provisioning state of the resource.
-<<<<<<< HEAD
-* **staticRouteConfiguration**: [InternalNetworkPatchablePropertiesStaticRouteConfiguration](#internalnetworkpatchablepropertiesstaticrouteconfiguration): staticRouteConfiguration model.
-* **vlanId**: int {minValue: 100, maxValue: 4095} (Required): Vlan identifier. Example: 1001.
-=======
 * **staticRouteConfiguration**: [StaticRouteConfiguration](#staticrouteconfiguration): Static Route Configuration properties.
-* **vlanId**: int (Required): Vlan identifier. Example: 1001.
->>>>>>> main
+* **vlanId**: int {minValue: 100, maxValue: 4095} (Required): Vlan identifier. Example: 1001.
 
 ## IpCommunityIdList
 ### Properties
@@ -379,7 +349,7 @@
 * **annotation**: string: Switch configuration description.
 * **communityMembers**: string[] (Required): List the communityMembers of IP Community .
 * **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Gets the provisioning state of the resource.
-* **wellKnownCommunities**: 'GShut' | 'Internet' | 'LocalAS' | 'NoAdvertise' | 'NoExport' | string[]: Supported well known Community List.
+* **wellKnownCommunities**: ('GShut' | 'Internet' | 'LocalAS' | 'NoAdvertise' | 'NoExport' | string)[]: Supported well known Community List.
 
 ## IpExtendedCommunityIdList
 ### Properties
@@ -403,8 +373,8 @@
 * **action**: 'Deny' | 'Permit' | string (Required): Action to be taken on the configuration. Example: Permit | Deny.
 * **condition**: 'EqualTo' | 'GreaterThanOrEqualTo' | 'LesserThanOrEqualTo' | string: Specify prefix-list bounds.
 * **networkPrefix**: string (Required): Network Prefix specifying IPv4/IPv6 packets to be permitted or denied. Example: 1.1.1.0/24 | 3FFE:FFFF:0:CD30::/126
-* **sequenceNumber**: int (Required): Sequence to insert to/delete from existing route. Prefix lists are evaluated starting with the lowest sequence number and continue down the list until a match is made. Once a match is made, the permit or deny statement is applied to that network and the rest of the list is ignored.
-* **subnetMaskLength**: int: SubnetMaskLength gives the minimum NetworkPrefix length to be matched.Possible values for IPv4 are 1 - 32. Possible values of IPv6 are 1 - 128.
+* **sequenceNumber**: int {minValue: 1, maxValue: 4294967295} (Required): Sequence to insert to/delete from existing route. Prefix lists are evaluated starting with the lowest sequence number and continue down the list until a match is made. Once a match is made, the permit or deny statement is applied to that network and the rest of the list is ignored.
+* **subnetMaskLength**: int {minValue: 1, maxValue: 128}: SubnetMaskLength gives the minimum NetworkPrefix length to be matched.Possible values for IPv4 are 1 - 32. Possible values of IPv6 are 1 - 128.
 
 ## L2IsolationDomainProperties
 ### Properties
@@ -438,7 +408,7 @@
 ## Layer2Configuration
 ### Properties
 * **interfaces**: string[] (ReadOnly): List of network device interfaces resource IDs.
-* **mtu**: int (Required): MTU of the packets between PE & CE.
+* **mtu**: int {minValue: 1500, maxValue: 9000} (Required): MTU of the packets between PE & CE.
 * **portCount**: int: Number of ports connected between PE/CE. Maximum value depends on FabricSKU.
 
 ## Layer3Configuration
@@ -446,21 +416,12 @@
 * **exportRoutePolicyId**: string: exportRoutePolicyId
 * **fabricASN**: int {minValue: 1, maxValue: 65535} (ReadOnly): ASN of CE devices for CE/PE connectivity.
 * **importRoutePolicyId**: string: importRoutePolicyId
-<<<<<<< HEAD
 * **peerASN**: int {minValue: 1, maxValue: 65535}: ASN of PE devices for CE/PE connectivity.Example : 28
-* **primaryIpv4Prefix**: string: IPv4 Address Prefix of CE-PE interconnect links. Default value is 172.31.0.0/31. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
-* **primaryIpv6Prefix**: string: IPv6 Address Prefix of CE-PE interconnect links. Default value is 3FFE:FFFF:0:CD30::a0/126. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
-* **secondaryIpv4Prefix**: string: Secondary IPv4 Address Prefix of CE-PE interconnect links. Default value is 172.31.0.20/31. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
-* **secondaryIpv6Prefix**: string: Secondary IPv6 Address Prefix of CE-PE interconnect links. Default value is 3FFE:FFFF:0:CD30::a4/126. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
-* **vlanId**: int {minValue: 501, maxValue: 4095}: VLAN for CE/PE Layer 3 connectivity.Example : 501
-=======
-* **peerASN**: int: ASN of PE devices for CE/PE connectivity.Example : 28
 * **primaryIpv4Prefix**: string: IPv4 Address Prefix of CE-PE interconnect links. Example: 172.31.0.0/31. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
 * **primaryIpv6Prefix**: string: IPv6 Address Prefix of CE-PE interconnect links. Example: 3FFE:FFFF:0:CD30::a0/126. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
 * **secondaryIpv4Prefix**: string: Secondary IPv4 Address Prefix of CE-PE interconnect links. Example: 172.31.0.20/31. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
 * **secondaryIpv6Prefix**: string: Secondary IPv6 Address Prefix of CE-PE interconnect links. Example: 3FFE:FFFF:0:CD30::a4/126. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
-* **vlanId**: int: VLAN for CE/PE Layer 3 connectivity.Example : 501
->>>>>>> main
+* **vlanId**: int {minValue: 501, maxValue: 4095}: VLAN for CE/PE Layer 3 connectivity.Example : 501
 
 ## ManagedResourceGroupConfiguration
 ### Properties
@@ -501,41 +462,8 @@
 * **manufacturer**: string: Manufacturer of the network device.
 * **model**: string (Required): Model of the network device.
 * **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Gets the provisioning state of the resource.
-<<<<<<< HEAD
 * **supportedRoleTypes**: ('CE' | 'Management' | 'NPB' | 'TS' | 'ToR' | string)[]: Available roles for the network device.
-* **supportedVersions**: [NetworkDeviceSkuPropertiesSupportedVersionsItem](#networkdeviceskupropertiessupportedversionsitem)[]: List of network device interfaces.
-
-## NetworkDeviceSkuPropertiesInterfacesItem
-### Properties
-* **identifier**: string: Interface identifier. Example: HundredGigE0/0.
-* **interfaceType**: string: Interface type.
-* **supportedConnectorTypes**: [NetworkDeviceSkuPropertiesInterfacesPropertiesItemsItem](#networkdeviceskupropertiesinterfacespropertiesitemsitem)[]: List of supported connector types.
-
-## NetworkDeviceSkuPropertiesInterfacesPropertiesItemsItem
-### Properties
-* **connectorType**: string: Connector type. Example: Optical.
-* **maxSpeedInMbps**: int: Maximum speed of the connector in Mbps.
-
-## NetworkDeviceSkuPropertiesLimits
-### Properties
-* **maxBidirectionalForwardingDetectionPeers**: int: Maximum number of Bidirectional Forwarding Detection (BFD) peers.
-* **maxBorderGatewayProtocolPeers**: int: Maximum number of Border Gateway Protocol (BGP) peers.
-* **maxSubInterfaces**: int: Maximum number of sub-interfaces.
-* **maxTunnelInterfaces**: int: Maximum number of tunnel interfaces.
-* **maxVirtualRouterFunctions**: int: Maximum number of virtual router functions.
-* **physicalInterfaceCount**: int: Maximum number of physical interfaces.
-
-## NetworkDeviceSkuPropertiesSupportedVersionsItem
-### Properties
-* **isCurrent**: 'false' | 'true' | string: If the current version is in use.
-* **isTest**: 'false' | 'true' | string: If the current version is a test version.
-* **vendorFirmwareVersion**: string: Firmware version.
-* **vendorOsVersion**: string: Operating system version.
-* **version**: string: Operating system and firmware combined versions.
-=======
-* **supportedRoleTypes**: 'CE' | 'Management' | 'NPB' | 'TS' | 'ToR' | string[]: Available roles for the network device.
 * **supportedVersions**: [SupportedVersionProperties](#supportedversionproperties)[]: List of network device interfaces.
->>>>>>> main
 
 ## NetworkFabricControllerProperties
 ### Properties
@@ -555,15 +483,9 @@
 ## NetworkFabricProperties
 ### Properties
 * **annotation**: string: Switch configuration description.
-<<<<<<< HEAD
 * **fabricASN**: int {minValue: 1, maxValue: 65535} (Required): ASN of CE devices for CE/PE connectivity.
-* **ipv4Prefix**: string: IPv4Prefix for Management Network. Default value : 10.1.0.0/19.
-* **ipv6Prefix**: string: IPv6Prefix for Management Network. Default value 3FFE:FFFF:0:CD40::/59.
-=======
-* **fabricASN**: int (Required): ASN of CE devices for CE/PE connectivity.
 * **ipv4Prefix**: string: IPv4Prefix for Management Network. Example: 10.1.0.0/19.
 * **ipv6Prefix**: string: IPv6Prefix for Management Network. Example: 3FFE:FFFF:0:CD40::/59.
->>>>>>> main
 * **l2IsolationDomains**: string[] (ReadOnly): List of L2IsolationDomain resource IDs under the Network Fabric.
 * **l3IsolationDomains**: string[] (ReadOnly): List of L3IsolationDomain resource IDs under the Network Fabric.
 * **managementNetworkConfiguration**: [ManagementNetworkConfiguration](#managementnetworkconfiguration) (Required): Configuration to be used to setup the management network.
@@ -574,45 +496,8 @@
 * **rackCount**: int {minValue: 2, maxValue: 8} (Required): Number of racks associated to Network Fabric.Possible values are from 2-8.
 * **racks**: string[] (ReadOnly): List of NetworkRack resource IDs under the Network Fabric. The number of racks allowed depends on the Network Fabric SKU.
 * **routerId**: string (ReadOnly): Router Id of CE to be used for MP-BGP between PE and CE
-<<<<<<< HEAD
 * **serverCountPerRack**: int {minValue: 1, maxValue: 16} (Required): Number of servers.Possible values are from 1-16.
-* **terminalServerConfiguration**: [NetworkFabricPropertiesTerminalServerConfiguration](#networkfabricpropertiesterminalserverconfiguration) (Required): Network and credentials configuration currently applied to terminal server.
-
-## NetworkFabricPropertiesManagementNetworkConfiguration
-### Properties
-* **infrastructureVpnConfiguration**: [NetworkFabricPropertiesManagementNetworkConfigurationInfrastructureVpnConfiguration](#networkfabricpropertiesmanagementnetworkconfigurationinfrastructurevpnconfiguration) (Required): Configuration for infrastructure vpn.
-* **workloadVpnConfiguration**: [NetworkFabricPropertiesManagementNetworkConfigurationWorkloadVpnConfiguration](#networkfabricpropertiesmanagementnetworkconfigurationworkloadvpnconfiguration) (Required): Configuration for workload vpn.
-
-## NetworkFabricPropertiesManagementNetworkConfigurationInfrastructureVpnConfiguration
-### Properties
-* **administrativeState**: 'Disabled' | 'Enabled' | string (ReadOnly): Indicates configuration state. Example: Enabled | Disabled.
-* **networkToNetworkInterconnectId**: string (ReadOnly): Gets the networkToNetworkInterconnectId of the resource.
-* **optionAProperties**: [OptionAPropertiesAutoGenerated](#optionapropertiesautogenerated): option A properties
-* **optionBProperties**: [OptionBPropertiesAutoGenerated](#optionbpropertiesautogenerated) (Required): option B properties
-* **peeringOption**: 'OptionA' | 'OptionB' | string: Peering option list.
-
-## NetworkFabricPropertiesManagementNetworkConfigurationWorkloadVpnConfiguration
-### Properties
-* **administrativeState**: 'Disabled' | 'Enabled' | string (ReadOnly): Indicates configuration state. Example: enabled | disabled.
-* **networkToNetworkInterconnectId**: string (ReadOnly): Gets the networkToNetworkInterconnectId of the resource.
-* **optionAProperties**: [OptionAPropertiesAutoGenerated](#optionapropertiesautogenerated): option A properties object
-* **optionBProperties**: [OptionBPropertiesAutoGenerated](#optionbpropertiesautogenerated) (Required): option B properties object
-* **peeringOption**: 'OptionA' | 'OptionB' | string: Peering option list.
-
-## NetworkFabricPropertiesTerminalServerConfiguration
-### Properties
-* **networkDeviceId**: string (ReadOnly): ARM Resource ID used for the NetworkDevice.
-* **password**: string {sensitive}: Password for the terminal server connection.
-* **primaryIpv4Prefix**: string: IPv4 Address Prefix of CE-PE interconnect links. Default value is 172.31.0.0/31. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
-* **primaryIpv6Prefix**: string: IPv6 Address Prefix of CE-PE interconnect links. Default value is 3FFE:FFFF:0:CD30::a0/126. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
-* **secondaryIpv4Prefix**: string: Secondary IPv4 Address Prefix of CE-PE interconnect links. Default value is 172.31.0.20/31. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
-* **secondaryIpv6Prefix**: string: Secondary IPv6 Address Prefix of CE-PE interconnect links. Default value is 3FFE:FFFF:0:CD30::a4/126. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
-* **serialNumber**: string: Serial Number of Terminal server.
-* **username**: string: Username for the terminal server connection.
-=======
-* **serverCountPerRack**: int (Required): Number of servers.Possible values are from 1-16.
 * **terminalServerConfiguration**: [TerminalServerConfiguration](#terminalserverconfiguration) (Required): Network and credentials configuration currently applied to terminal server.
->>>>>>> main
 
 ## NetworkFabricSkuProperties
 ### Properties
@@ -663,36 +548,14 @@
 
 ## OptionAProperties
 ### Properties
-<<<<<<< HEAD
-* **interfaces**: string[] (ReadOnly): List of network device interfaces resource IDs.
-* **mtu**: int {minValue: 1500, maxValue: 9000} (Required): MTU of the packets between PE & CE.
-* **portCount**: int: Number of ports connected between PE/CE. Maximum value depends on FabricSKU.
-
-## OptionAPropertiesAutoGenerated
-### Properties
-* **bfdConfiguration**: [OptionAPropertiesBfdConfiguration](#optionapropertiesbfdconfiguration): BFD Configuration properties.
+* **bfdConfiguration**: [FabricBfdConfiguration](#fabricbfdconfiguration): BFD Configuration properties.
 * **mtu**: int {minValue: 1500, maxValue: 9000}: MTU to use for option A peering.
 * **peerASN**: int {minValue: 1, maxValue: 65535}: Peer ASN number.Example : 28
-* **primaryIpv4Prefix**: string: IPv4 Address Prefix of CE-PE interconnect links. Default value is 172.31.0.0/31. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
-* **primaryIpv6Prefix**: string: IPv6 Address Prefix of CE-PE interconnect links. Default value is 3FFE:FFFF:0:CD30::a0/126. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
-* **secondaryIpv4Prefix**: string: Secondary IPv4 Address Prefix of CE-PE interconnect links. Default value is 172.31.0.20/31. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
-* **secondaryIpv6Prefix**: string: Secondary IPv6 Address Prefix of CE-PE interconnect links. Default value is 3FFE:FFFF:0:CD30::a4/126. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
-* **vlanId**: int {minValue: 501, maxValue: 4095}: Vlan Id.Example : 501
-
-## OptionAPropertiesBfdConfiguration
-### Properties
-* **interval**: int (ReadOnly): interval in seconds. Example: 300.
-* **multiplier**: int (ReadOnly): multiplier. Example: 3.
-=======
-* **bfdConfiguration**: [FabricBfdConfiguration](#fabricbfdconfiguration): BFD Configuration properties.
-* **mtu**: int: MTU to use for option A peering.
-* **peerASN**: int: Peer ASN number.Example : 28
 * **primaryIpv4Prefix**: string: IPv4 Address Prefix of CE-PE interconnect links. Example: 172.31.0.0/31. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
 * **primaryIpv6Prefix**: string: IPv6 Address Prefix of CE-PE interconnect links. Example: 3FFE:FFFF:0:CD30::a0/126. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
 * **secondaryIpv4Prefix**: string: Secondary IPv4 Address Prefix of CE-PE interconnect links. Example: 172.31.0.20/31. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
 * **secondaryIpv6Prefix**: string: Secondary IPv6 Address Prefix of CE-PE interconnect links. Example: 3FFE:FFFF:0:CD30::a4/126. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
-* **vlanId**: int: Vlan identifier. Example : 501
->>>>>>> main
+* **vlanId**: int {minValue: 501, maxValue: 4095}: Vlan identifier. Example : 501
 
 ## OptionBProperties
 ### Properties
@@ -715,14 +578,14 @@
 * **action**: [StatementActionProperties](#statementactionproperties) (Required): Route policy action properties.
 * **annotation**: string: Switch configuration description.
 * **condition**: [StatementConditionProperties](#statementconditionproperties) (Required): Route policy condition properties.
-* **sequenceNumber**: int (Required): Sequence to insert to/delete from existing route.
+* **sequenceNumber**: int {minValue: 1, maxValue: 4294967295} (Required): Sequence to insert to/delete from existing route.
 
 ## StatementActionProperties
 ### Properties
 * **actionType**: 'Deny' | 'Permit' | string (Required): action. Example: Permit | Deny.
 * **ipCommunityProperties**: [ActionIpCommunityProperties](#actionipcommunityproperties): IP Community Properties.
 * **ipExtendedCommunityProperties**: [ActionIpExtendedCommunityProperties](#actionipextendedcommunityproperties): IP Extended Community Properties.
-* **localPreference**: int: localPreference of the route policy.
+* **localPreference**: int {minValue: 0, maxValue: 4294967295}: localPreference of the route policy.
 
 ## StatementConditionProperties
 ### Properties
@@ -766,7 +629,7 @@
 ## TerminalServerConfiguration
 ### Properties
 * **networkDeviceId**: string (ReadOnly): ARM Resource ID used for the NetworkDevice.
-* **password**: string: Password for the terminal server connection.
+* **password**: string {sensitive}: Password for the terminal server connection.
 * **primaryIpv4Prefix**: string: IPv4 Address Prefix of CE-PE interconnect links. Example: 172.31.0.0/31. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
 * **primaryIpv6Prefix**: string: IPv6 Address Prefix of CE-PE interconnect links. Example: 3FFE:FFFF:0:CD30::a0/126. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.
 * **secondaryIpv4Prefix**: string: Secondary IPv4 Address Prefix of CE-PE interconnect links. Example: 172.31.0.20/31. The values can be specified at the time of creation or can be updated afterwards. Any update to the values post-provisioning may disrupt traffic. The 1st and 3rd IPs are to be configured on CE1 and CE2 for Option B interfaces. The 2nd and 4th IPs are to be configured on PE1 and PE2 for Option B interfaces.

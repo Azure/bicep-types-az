@@ -7,7 +7,7 @@
 * **eTag**: string (ReadOnly): If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 63, pattern: "^[a-z0-9]([-a-z0-9]*[a-z0-9])?$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [FleetProperties](#fleetproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -19,7 +19,7 @@
 * **apiVersion**: '2023-03-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 50, pattern: "^[a-z0-9]([-a-z0-9]*[a-z0-9])?$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [FleetMemberProperties](#fleetmemberproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ContainerService/fleets/members' (ReadOnly, DeployTimeConstant): The resource type
@@ -30,7 +30,7 @@
 * **apiVersion**: '2023-03-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 50, pattern: "^[a-z0-9]([-a-z0-9]*[a-z0-9])?$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [UpdateRunProperties](#updaterunproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ContainerService/fleets/updateRuns' (ReadOnly, DeployTimeConstant): The resource type
@@ -64,14 +64,14 @@
 
 ## FleetHubProfile
 ### Properties
-* **dnsPrefix**: string: DNS prefix used to create the FQDN for the Fleet hub.
+* **dnsPrefix**: string {minLength: 1, maxLength: 54, pattern: "^[a-zA-Z0-9]$|^[a-zA-Z0-9][a-zA-Z0-9-]{0,52}[a-zA-Z0-9]$"}: DNS prefix used to create the FQDN for the Fleet hub.
 * **fqdn**: string (ReadOnly): The FQDN of the Fleet hub.
 * **kubernetesVersion**: string (ReadOnly): The Kubernetes version of the Fleet hub.
 
 ## FleetMemberProperties
 ### Properties
 * **clusterResourceId**: string (Required): The ARM resource id of the cluster that joins the Fleet. Must be a valid Azure resource id. e.g.: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/managedClusters/{clusterName}'.
-* **group**: string: The group this member belongs to for multi-cluster update management.
+* **group**: string {minLength: 1, maxLength: 50, pattern: "^[a-z0-9]([-a-z0-9]*[a-z0-9])?$"}: The group this member belongs to for multi-cluster update management.
 * **provisioningState**: 'Canceled' | 'Failed' | 'Joining' | 'Leaving' | 'Succeeded' | 'Updating' | string (ReadOnly): The status of the last operation.
 
 ## FleetProperties
@@ -113,7 +113,7 @@ NodeImageOnly requires the KubernetesVersion property not to be set.
 
 ## UpdateGroup
 ### Properties
-* **name**: string (Required): The name of the Fleet member group to update. 
+* **name**: string {minLength: 1, maxLength: 50, pattern: "^[a-z0-9]([-a-z0-9]*[a-z0-9])?$"} (Required): The name of the Fleet member group to update. 
 It should match the name of an existing FleetMember group.
 A group can only appear once across all UpdateStages in the UpdateRun.
 
@@ -146,7 +146,7 @@ The strategy of the UpdateRun can be modified until the run is started.
 * **afterStageWaitInSeconds**: int: The time in seconds to wait at the end of this stage before starting the next one. Defaults to 0 seconds if unspecified.
 * **groups**: [UpdateGroup](#updategroup)[]: A list of group names that compose the stage.
 The groups will be updated in parallel. Each group name can only appear once in the UpdateRun.
-* **name**: string (Required): The name of the stage. Must be unique within the UpdateRun.
+* **name**: string {minLength: 1, maxLength: 50, pattern: "^[a-z0-9]([-a-z0-9]*[a-z0-9])?$"} (Required): The name of the stage. Must be unique within the UpdateRun.
 
 ## UpdateStageStatus
 ### Properties

@@ -252,13 +252,9 @@
 ## ConnectionSettingProperties
 ### Properties
 * **clientId**: string: Client Id associated with the Connection Setting.
-<<<<<<< HEAD
 * **clientSecret**: string {sensitive}: Client Secret associated with the Connection Setting
-=======
-* **clientSecret**: string: Client Secret associated with the Connection Setting
 * **id**: string: Id of the Connection Setting.
 * **name**: string: Name of the Connection Setting.
->>>>>>> main
 * **parameters**: [ConnectionSettingParameter](#connectionsettingparameter)[]: Service Provider Parameters associated with the Connection Setting
 * **provisioningState**: string: Provisioning state of the resource
 * **scopes**: string: Scopes associated with the Connection Setting

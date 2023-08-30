@@ -6,7 +6,7 @@
 * **apiVersion**: '2023-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The GEO location of the resource.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[a-z][a-z0-9-]*[a-z0-9]$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ClusterResourceProperties](#clusterresourceproperties): Properties of the Service resource
 * **sku**: [Sku](#sku): Sku of the Service resource
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
@@ -235,7 +235,7 @@
 ### Properties
 * **apiVersion**: '2023-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[a-z][a-z0-9-]*[a-z0-9]$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ContainerRegistryProperties](#containerregistryproperties): Properties of the container registry resource payload.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.AppPlatform/Spring/containerRegistries' (ReadOnly, DeployTimeConstant): The resource type
@@ -255,7 +255,7 @@
 ### Properties
 * **apiVersion**: '2023-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[a-z][a-z0-9]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [GatewayProperties](#gatewayproperties): Spring Cloud Gateway properties payload
 * **sku**: [Sku](#sku): Sku of the Spring Cloud Gateway resource
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
@@ -335,7 +335,7 @@
 #### Properties
 * **authType**: 'BasicAuth' (Required): The type of the auth setting.
 * **caCertResourceId**: string: Resource Id of CA certificate for https URL of Git repository.
-* **password**: string (WriteOnly): Password of git repository basic auth.
+* **password**: string {sensitive} (WriteOnly): Password of git repository basic auth.
 * **username**: string (Required): Username of git repository basic auth.
 
 ### AcceleratorPublicSetting
@@ -346,9 +346,9 @@
 ### AcceleratorSshSetting
 #### Properties
 * **authType**: 'SSH' (Required): The type of the auth setting.
-* **hostKey**: string (WriteOnly): Public SSH Key of git repository.
-* **hostKeyAlgorithm**: string (WriteOnly): SSH Key algorithm of git repository.
-* **privateKey**: string (WriteOnly): Private SSH Key algorithm of git repository.
+* **hostKey**: string {sensitive} (WriteOnly): Public SSH Key of git repository.
+* **hostKeyAlgorithm**: string {sensitive} (WriteOnly): SSH Key algorithm of git repository.
+* **privateKey**: string {sensitive} (WriteOnly): Private SSH Key algorithm of git repository.
 
 
 ## AcceleratorGitRepository
@@ -689,7 +689,7 @@ The default value is 2Gi, this should not exceed build service agent pool memory
 
 ### ContainerRegistryBasicCredentials
 #### Properties
-* **password**: string (Required, WriteOnly): The password of the Container Registry.
+* **password**: string {sensitive} (Required, WriteOnly): The password of the Container Registry.
 * **server**: string (Required): The login server of the Container Registry.
 * **type**: 'BasicAuth' (Required): The credential type of the container registry credentials.
 * **username**: string (Required): The username of the Container Registry.
@@ -835,7 +835,7 @@ eg: azure-servicebus, redis etc.
 ## DevToolPortalSsoProperties
 ### Properties
 * **clientId**: string: The public identifier for the application
-* **clientSecret**: string: The secret known only to the application and the authorization server
+* **clientSecret**: string {sensitive}: The secret known only to the application and the authorization server
 * **metadataUrl**: string: The URI of a JSON file with generic OIDC provider configuration.
 * **scopes**: string[]: It defines the specific actions applications can be allowed to do on a user's behalf
 
@@ -901,7 +901,7 @@ eg: azure-servicebus, redis etc.
 ## GatewayProperties
 ### Properties
 * **apiMetadataProperties**: [GatewayApiMetadataProperties](#gatewayapimetadataproperties): API metadata property for Spring Cloud Gateway
-* **apmTypes**: 'AppDynamics' | 'ApplicationInsights' | 'Dynatrace' | 'ElasticAPM' | 'NewRelic' | string[]: Collection of APM type used in Spring Cloud Gateway
+* **apmTypes**: ('AppDynamics' | 'ApplicationInsights' | 'Dynatrace' | 'ElasticAPM' | 'NewRelic' | string)[]: Collection of APM type used in Spring Cloud Gateway
 * **clientAuth**: [GatewayPropertiesClientAuth](#gatewaypropertiesclientauth): Client-Certification Authentication.
 * **corsProperties**: [GatewayCorsProperties](#gatewaycorsproperties): Cross-Origin Resource Sharing property
 * **environmentVariables**: [GatewayPropertiesEnvironmentVariables](#gatewaypropertiesenvironmentvariables): Environment variables of Spring Cloud Gateway
@@ -1022,7 +1022,7 @@ eg: azure-servicebus, redis etc.
 ### Properties
 * **appInsightsAgentVersions**: [ApplicationInsightsAgentVersions](#applicationinsightsagentversions): Indicates the versions of application insight agent
 * **appInsightsInstrumentationKey**: string: Target application insight instrumentation key, null or whitespace include empty will disable monitoringSettings
-* **appInsightsSamplingRate**: int: Indicates the sampling rate of application insight agent, should be in range [0.0, 100.0]
+* **appInsightsSamplingRate**: int {minValue: 0, maxValue: 100}: Indicates the sampling rate of application insight agent, should be in range [0.0, 100.0]
 * **error**: [Error](#error): Error when apply Monitoring Setting changes.
 * **provisioningState**: 'Failed' | 'NotAvailable' | 'Succeeded' | 'Updating' | string (ReadOnly): State of the Monitoring Setting.
 * **traceEnabled**: bool: Indicates whether enable the trace functionality, which will be deprecated since api version 2020-11-01-preview. Please leverage appInsightsInstrumentationKey to indicate if monitoringSettings enabled or not
@@ -1046,8 +1046,8 @@ eg: azure-servicebus, redis etc.
 ## PersistentDisk
 ### Properties
 * **mountPath**: string: Mount path of the persistent disk
-* **sizeInGB**: int: Size of the persistent disk in GB
-* **usedInGB**: int (ReadOnly): Size of the used persistent disk in GB
+* **sizeInGB**: int {minValue: 0, maxValue: 50}: Size of the persistent disk in GB
+* **usedInGB**: int {minValue: 0, maxValue: 50} (ReadOnly): Size of the used persistent disk in GB
 
 ## PredefinedAcceleratorProperties
 ### Properties
@@ -1134,7 +1134,7 @@ Possible enum values:
 ## Secret
 ### Properties
 * **name**: string: Secret Name.
-* **value**: string (WriteOnly): Secret Value.
+* **value**: string {sensitive} (WriteOnly): Secret Value.
 
 ## ServiceRegistryInstance
 ### Properties
@@ -1183,7 +1183,7 @@ Possible enum values:
 
 ### StorageAccount
 #### Properties
-* **accountKey**: string (Required, WriteOnly): The account key of the Azure Storage Account.
+* **accountKey**: string {sensitive} (Required, WriteOnly): The account key of the Azure Storage Account.
 * **accountName**: string (Required): The account name of the Azure Storage Account.
 * **storageType**: 'StorageAccount' (Required): The type of the storage.
 
@@ -1219,7 +1219,7 @@ Possible enum values:
 ## TemporaryDisk
 ### Properties
 * **mountPath**: string: Mount path of the temporary disk
-* **sizeInGB**: int: Size of the temporary disk in GB
+* **sizeInGB**: int {minValue: 0, maxValue: 5}: Size of the temporary disk in GB
 
 ## TestKeys
 ### Properties

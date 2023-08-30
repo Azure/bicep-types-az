@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [Identity](#identity): The cmk identity for the server.
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[a-z0-9][-a-z0-9]*(?<!-)$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ServerProperties](#serverproperties): Properties of the server.
 * **sku**: [Sku](#sku): The SKU (pricing tier) of the server.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.

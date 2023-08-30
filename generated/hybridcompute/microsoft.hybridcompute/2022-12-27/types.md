@@ -17,7 +17,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [Identity](#identity): Identity for the resource.
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 54, pattern: "[a-zA-Z0-9-_\.]"} (Required, DeployTimeConstant): The resource name
 * **properties**: [MachineProperties](#machineproperties): Hybrid Compute Machine properties
 * **resources**: [MachineExtension](#machineextension)[] (ReadOnly): The list of extensions affiliated to the machine
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
@@ -139,7 +139,7 @@
 * **city**: string: The city or locality where the resource is located.
 * **countryOrRegion**: string: The country or region where the resource is located
 * **district**: string: The district, state, or province where the resource is located.
-* **name**: string (Required): A canonical name for the geographic or physical location.
+* **name**: string {maxLength: 256} (Required): A canonical name for the geographic or physical location.
 
 ## MachineExtension
 ### Properties

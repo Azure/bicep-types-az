@@ -19,7 +19,7 @@
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Etag identifies change in the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 260, pattern: "^[A-Za-z0-9_][^<>*#.%&:\\+?/]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ChangeDataCapture](#changedatacapture) (Required): Properties of the change data capture.
 * **type**: 'Microsoft.DataFactory/factories/adfcdcs' (ReadOnly, DeployTimeConstant): The resource type
 

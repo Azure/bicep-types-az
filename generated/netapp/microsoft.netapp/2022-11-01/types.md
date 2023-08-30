@@ -18,7 +18,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): The identity used for the resource.
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9\-_]{0,63}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [AccountProperties](#accountproperties): NetApp Account properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -30,7 +30,7 @@
 * **apiVersion**: '2022-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): Resource location
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9\-_]{0,63}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [BackupProperties](#backupproperties) (ReadOnly): Backup Properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.NetApp/netAppAccounts/accountBackups' (ReadOnly, DeployTimeConstant): The resource type
@@ -55,7 +55,7 @@
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 64, pattern: "^[a-zA-Z0-9][a-zA-Z0-9\-_]{0,63}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [PoolProperties](#poolproperties) (Required): Capacity pool properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -68,12 +68,12 @@
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 64, pattern: "^[a-zA-Z][a-zA-Z0-9\-_]{0,63}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [VolumeProperties](#volumeproperties) (Required): Volume properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes' (ReadOnly, DeployTimeConstant): The resource type
-* **zones**: string[]: Availability Zone
+* **zones**: (string {minLength: 1, maxLength: 255})[]: Availability Zone
 
 ## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes/backups@2022-11-01
 * **Valid Scope(s)**: ResourceGroup
@@ -81,7 +81,7 @@
 * **apiVersion**: '2022-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Resource location
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9\-_]{0,63}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [BackupProperties](#backupproperties) (Required): Backup Properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/backups' (ReadOnly, DeployTimeConstant): The resource type
@@ -102,7 +102,7 @@
 ### Properties
 * **apiVersion**: '2022-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 64, pattern: "^[a-zA-Z][a-zA-Z0-9\-_]{0,63}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [SubvolumeProperties](#subvolumeproperties): Subvolume Properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/subvolumes' (ReadOnly, DeployTimeConstant): The resource type
@@ -138,7 +138,7 @@
 * **apiVersion**: '2022-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 64, pattern: "^[a-zA-Z0-9][a-zA-Z0-9\-_]{0,63}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [VolumeGroupProperties](#volumegroupproperties): Volume group properties
 * **type**: 'Microsoft.NetApp/netAppAccounts/volumeGroups' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -163,23 +163,23 @@
 ## ActiveDirectory
 ### Properties
 * **activeDirectoryId**: string: Id of the Active Directory
-* **administrators**: string[]: Users to be added to the Built-in Administrators active directory group. A list of unique usernames without domain specifier
-* **adName**: string: Name of the active directory machine. This optional parameter is used only while creating kerberos volume
+* **administrators**: (string {minLength: 1, maxLength: 255})[]: Users to be added to the Built-in Administrators active directory group. A list of unique usernames without domain specifier
+* **adName**: string {minLength: 1, maxLength: 64}: Name of the active directory machine. This optional parameter is used only while creating kerberos volume
 * **aesEncryption**: bool: If enabled, AES encryption will be enabled for SMB communication.
 * **allowLocalNfsUsersWithLdap**: bool: If enabled, NFS client local users can also (in addition to LDAP users) access the NFS volumes.
-* **backupOperators**: string[]: Users to be added to the Built-in Backup Operator active directory group. A list of unique usernames without domain specifier
-* **dns**: string: Comma separated list of DNS server IP addresses (IPv4 only) for the Active Directory domain
+* **backupOperators**: (string {minLength: 1, maxLength: 255})[]: Users to be added to the Built-in Backup Operator active directory group. A list of unique usernames without domain specifier
+* **dns**: string {pattern: "^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)((, ?)(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?))*$"}: Comma separated list of DNS server IP addresses (IPv4 only) for the Active Directory domain
 * **domain**: string: Name of the Active Directory domain
 * **encryptDCConnections**: bool: If enabled, Traffic between the SMB server to Domain Controller (DC) will be encrypted.
-* **kdcIP**: string: kdc server IP addresses for the active directory machine. This optional parameter is used only while creating kerberos volume.
+* **kdcIP**: string {pattern: "^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)((, ?)(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?))*$"}: kdc server IP addresses for the active directory machine. This optional parameter is used only while creating kerberos volume.
 * **ldapOverTLS**: bool: Specifies whether or not the LDAP traffic needs to be secured via TLS.
 * **ldapSearchScope**: [LdapSearchScopeOpt](#ldapsearchscopeopt): LDAP Search scope options
 * **ldapSigning**: bool: Specifies whether or not the LDAP traffic needs to be signed.
 * **organizationalUnit**: string: The Organizational Unit (OU) within the Windows Active Directory
-* **password**: string: Plain text password of Active Directory domain administrator, value is masked in the response
-* **preferredServersForLdapClient**: string: Comma separated list of IPv4 addresses of preferred servers for LDAP client. At most two comma separated IPv4 addresses can be passed.
-* **securityOperators**: string[]: Domain Users in the Active directory to be given SeSecurityPrivilege privilege (Needed for SMB Continuously available shares for SQL). A list of unique usernames without domain specifier
-* **serverRootCACertificate**: string: When LDAP over SSL/TLS is enabled, the LDAP client is required to have base64 encoded Active Directory Certificate Service's self-signed root CA certificate, this optional parameter is used only for dual protocol with LDAP user-mapping volumes.
+* **password**: string {sensitive}: Plain text password of Active Directory domain administrator, value is masked in the response
+* **preferredServersForLdapClient**: string {maxLength: 32, pattern: "^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)((, ?)(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?))?)?$"}: Comma separated list of IPv4 addresses of preferred servers for LDAP client. At most two comma separated IPv4 addresses can be passed.
+* **securityOperators**: (string {minLength: 1, maxLength: 255})[]: Domain Users in the Active directory to be given SeSecurityPrivilege privilege (Needed for SMB Continuously available shares for SQL). A list of unique usernames without domain specifier
+* **serverRootCACertificate**: string {sensitive, minLength: 1, maxLength: 10240}: When LDAP over SSL/TLS is enabled, the LDAP client is required to have base64 encoded Active Directory Certificate Service's self-signed root CA certificate, this optional parameter is used only for dual protocol with LDAP user-mapping volumes.
 * **site**: string: The Active Directory site the service will limit Domain Controller discovery to
 * **smbServerName**: string: NetBIOS name of the SMB server. This name will be registered as a computer account in the AD and used to mount volumes
 * **status**: 'Created' | 'Deleted' | 'Error' | 'InUse' | 'Updating' | string (ReadOnly): Status of the Active Directory
@@ -199,7 +199,7 @@
 
 ## BackupProperties
 ### Properties
-* **backupId**: string (ReadOnly): UUID v4 used to identify the Backup
+* **backupId**: string {minLength: 36, maxLength: 36, pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"} (ReadOnly): UUID v4 used to identify the Backup
 * **backupType**: 'Manual' | 'Scheduled' | string (ReadOnly): Type of backup Manual or Scheduled
 * **creationDate**: string (ReadOnly): The creation date of the backup
 * **failureReason**: string (ReadOnly): Failure reason
@@ -248,16 +248,16 @@
 ## KeyVaultProperties
 ### Properties
 * **keyName**: string (Required): The name of KeyVault key.
-* **keyVaultId**: string (ReadOnly): UUID v4 used to identify the Azure Key Vault configuration
+* **keyVaultId**: string {minLength: 36, maxLength: 36, pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"} (ReadOnly): UUID v4 used to identify the Azure Key Vault configuration
 * **keyVaultResourceId**: string (Required): The resource ID of KeyVault.
 * **keyVaultUri**: string (Required): The Uri of KeyVault.
 * **status**: 'Created' | 'Deleted' | 'Error' | 'InUse' | 'Updating' | string (ReadOnly): Status of the KeyVault connection.
 
 ## LdapSearchScopeOpt
 ### Properties
-* **groupDN**: string: This specifies the group DN, which overrides the base DN for group lookups.
-* **groupMembershipFilter**: string: This specifies the custom LDAP search filter to be used when looking up group membership from LDAP server.
-* **userDN**: string: This specifies the user DN, which overrides the base DN for user lookups.
+* **groupDN**: string {maxLength: 255}: This specifies the group DN, which overrides the base DN for group lookups.
+* **groupMembershipFilter**: string {maxLength: 255}: This specifies the custom LDAP search filter to be used when looking up group membership from LDAP server.
+* **userDN**: string {maxLength: 255}: This specifies the user DN, which overrides the base DN for user lookups.
 
 ## ListReplications
 ### Properties
@@ -265,8 +265,8 @@
 
 ## ManagedServiceIdentity
 ### Properties
-* **principalId**: string (ReadOnly): The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
-* **tenantId**: string (ReadOnly): The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
+* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
 * **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' | string (Required): Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed).
 * **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.
 
@@ -280,9 +280,9 @@
 
 ## MountTargetProperties
 ### Properties
-* **fileSystemId**: string (Required): UUID v4 used to identify the MountTarget
+* **fileSystemId**: string {minLength: 36, maxLength: 36, pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"} (Required): UUID v4 used to identify the MountTarget
 * **ipAddress**: string (ReadOnly): The mount target's IPv4 address
-* **mountTargetId**: string (ReadOnly): UUID v4 used to identify the MountTarget
+* **mountTargetId**: string {minLength: 36, maxLength: 36, pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"} (ReadOnly): UUID v4 used to identify the MountTarget
 * **smbServerFqdn**: string: The SMB server's Fully Qualified Domain Name, FQDN
 
 ## PlacementKeyValuePairs
@@ -294,7 +294,7 @@
 ### Properties
 * **coolAccess**: bool: If enabled (true) the pool can contain cool Access enabled volumes.
 * **encryptionType**: 'Double' | 'Single' | string: Encryption type of the capacity pool, set encryption type for data at rest for this pool and all volumes in it. This value can only be set when creating new pool.
-* **poolId**: string (ReadOnly): UUID v4 used to identify the Pool
+* **poolId**: string {minLength: 36, maxLength: 36, pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"} (ReadOnly): UUID v4 used to identify the Pool
 * **provisioningState**: string (ReadOnly): Azure lifecycle management
 * **qosType**: 'Auto' | 'Manual' | string: The qos type of the pool
 * **serviceLevel**: 'Premium' | 'Standard' | 'StandardZRS' | 'Ultra' | string (Required): The service level of the file system
@@ -335,7 +335,7 @@
 ### Properties
 * **created**: string (ReadOnly): The creation date of the snapshot
 * **provisioningState**: string (ReadOnly): Azure lifecycle management
-* **snapshotId**: string (ReadOnly): UUID v4 used to identify the Snapshot
+* **snapshotId**: string {minLength: 36, maxLength: 36, pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"} (ReadOnly): UUID v4 used to identify the Snapshot
 
 ## SubscriptionQuotaItemProperties
 ### Properties
@@ -395,8 +395,8 @@
 
 ## UserAssignedIdentity
 ### Properties
-* **clientId**: string (ReadOnly): The client ID of the assigned identity.
-* **principalId**: string (ReadOnly): The principal ID of the assigned identity.
+* **clientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The client ID of the assigned identity.
+* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The principal ID of the assigned identity.
 
 ## VolumeBackupProperties
 ### Properties
@@ -442,8 +442,8 @@
 * **capacityPoolResourceId**: string: Pool Resource Id used in case of creating a volume through volume group
 * **cloneProgress**: int (ReadOnly): When a volume is being restored from another volume's snapshot, will show the percentage completion of this cloning process. When this value is empty/null there is no cloning process currently happening on this volume. This value will update every 5 minutes during cloning.
 * **coolAccess**: bool: Specifies whether Cool Access(tiering) is enabled for the volume.
-* **coolnessPeriod**: int: Specifies the number of days after which data that is not accessed by clients will be tiered.
-* **creationToken**: string (Required): A unique file path for the volume. Used when creating mount targets
+* **coolnessPeriod**: int {minValue: 7, maxValue: 63}: Specifies the number of days after which data that is not accessed by clients will be tiered.
+* **creationToken**: string {minLength: 1, maxLength: 80, pattern: "^[a-zA-Z][a-zA-Z0-9\-]{0,79}$"} (Required): A unique file path for the volume. Used when creating mount targets
 * **dataProtection**: [VolumePropertiesDataProtection](#volumepropertiesdataprotection): DataProtection type volumes include an object containing details of the replication
 * **dataStoreResourceId**: string[] (ReadOnly): Data store resource unique identifier
 * **defaultGroupQuotaInKiBs**: int: Default group quota for volume in KiBs. If isDefaultQuotaEnabled is set, the minimum value of 4 KiBs applies.
@@ -454,7 +454,7 @@
 * **encryptionKeySource**: 'Microsoft.KeyVault' | 'Microsoft.NetApp' | string: Source of key used to encrypt data in volume. Applicable if NetApp account has encryption.keySource = 'Microsoft.KeyVault'. Possible values (case-insensitive) are: 'Microsoft.NetApp, Microsoft.KeyVault'
 * **exportPolicy**: [VolumePropertiesExportPolicy](#volumepropertiesexportpolicy): Set of export policy rules
 * **fileAccessLogs**: 'Disabled' | 'Enabled' | string (ReadOnly): Flag indicating whether file access logs are enabled for the volume, based on active diagnostic settings present on the volume.
-* **fileSystemId**: string (ReadOnly): Unique FileSystem Identifier.
+* **fileSystemId**: string {minLength: 36, maxLength: 36, pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"} (ReadOnly): Unique FileSystem Identifier.
 * **isDefaultQuotaEnabled**: bool: Specifies if default quota is enabled for the volume.
 * **isLargeVolume**: bool: Specifies whether volume is a Large Volume or Regular Volume.
 * **isRestoring**: bool: Restoring
@@ -464,7 +464,7 @@
 * **maximumNumberOfFiles**: int (ReadOnly): Maximum number of files allowed. Needs a service request in order to be changed. Only allowed to be changed if volume quota is more than 4TiB.
 * **mountTargets**: [MountTargetProperties](#mounttargetproperties)[] (ReadOnly): List of mount targets
 * **networkFeatures**: 'Basic' | 'Standard' | string: Basic network, or Standard features available to the volume.
-* **networkSiblingSetId**: string (ReadOnly): Network Sibling Set ID for the the group of volumes sharing networking resources.
+* **networkSiblingSetId**: string {minLength: 36, maxLength: 36, pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"} (ReadOnly): Network Sibling Set ID for the the group of volumes sharing networking resources.
 * **originatingResourceId**: string (ReadOnly): Id of the snapshot or backup that the volume is restored from.
 * **placementRules**: [PlacementKeyValuePairs](#placementkeyvaluepairs)[]: Application specific placement rules for the particular volume
 * **protocolTypes**: string[]: Set of protocol types, default NFSv3, CIFS for SMB protocol
@@ -483,8 +483,8 @@
 * **subnetId**: string (Required): The Azure Resource URI for a delegated subnet. Must have the delegation Microsoft.NetApp/volumes
 * **t2Network**: string (ReadOnly): T2 network information
 * **throughputMibps**: int: Maximum throughput in MiB/s that can be achieved by this volume and this will be accepted as input only for manual qosType volume
-* **unixPermissions**: string: UNIX permissions for NFS volume accepted in octal 4 digit format. First digit selects the set user ID(4), set group ID (2) and sticky (1) attributes. Second digit selects permission for the owner of the file: read (4), write (2) and execute (1). Third selects permissions for other users in the same group. the fourth for other users not in the group. 0755 - gives read/write/execute permissions to owner and read/execute to group and other users.
-* **usageThreshold**: int (Required): Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. Minimum size is 100 GiB. Upper limit is 100TiB, 500Tib for LargeVolume. Specified in bytes.
+* **unixPermissions**: string {minLength: 4, maxLength: 4}: UNIX permissions for NFS volume accepted in octal 4 digit format. First digit selects the set user ID(4), set group ID (2) and sticky (1) attributes. Second digit selects permission for the owner of the file: read (4), write (2) and execute (1). Third selects permissions for other users in the same group. the fourth for other users not in the group. 0755 - gives read/write/execute permissions to owner and read/execute to group and other users.
+* **usageThreshold**: int {minValue: 107374182400, maxValue: 549755813888000} (Required): Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. Minimum size is 100 GiB. Upper limit is 100TiB, 500Tib for LargeVolume. Specified in bytes.
 * **volumeGroupName**: string (ReadOnly): Volume Group Name
 * **volumeSpecName**: string: Volume spec name is the application specific designation or identifier for the particular volume in a volume group for e.g. data, log
 * **volumeType**: string: What type of volume is this. For destination volumes in Cross Region Replication, set type to DataProtection
