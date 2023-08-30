@@ -18,7 +18,7 @@
 * **apiVersion**: '2023-04-06' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: ".*"} (Required, DeployTimeConstant): The resource name
 * **properties**: [AzureBareMetalStorageInstanceProperties](#azurebaremetalstorageinstanceproperties): AzureBareMetalStorageInstance properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.

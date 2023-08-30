@@ -16,7 +16,7 @@
 * **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 63, pattern: "^[a-zA-Z0-9_-]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [BudgetProperties](#budgetproperties): The properties of the budget.
 * **type**: 'Microsoft.CostManagement/budgets' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -243,7 +243,7 @@ Supported for CategoryType(s): Cost, ReservationUtilization.
 * **container**: string (Required): The name of the container where exports will be uploaded. If the container does not exist it will be created.
 * **resourceId**: string: The resource id of the storage account where exports will be delivered. This is not required if a sasToken and storageAccount are specified.
 * **rootFolderPath**: string: The name of the directory where exports will be uploaded.
-* **sasToken**: string: A SAS token for the storage account. For a restricted set of Azure customers this together with storageAccount can be specified instead of resourceId. Note: the value returned by the API for this property will always be obfuscated. Returning this same obfuscated value will not result in the SAS token being updated. To update this value a new SAS token must be specified.
+* **sasToken**: string {sensitive}: A SAS token for the storage account. For a restricted set of Azure customers this together with storageAccount can be specified instead of resourceId. Note: the value returned by the API for this property will always be obfuscated. Returning this same obfuscated value will not result in the SAS token being updated. To update this value a new SAS token must be specified.
 * **storageAccount**: string: The storage account where exports will be uploaded. For a restricted set of Azure customers this together with sasToken can be specified instead of resourceId.
 
 ## ExportDeliveryInfo
@@ -302,7 +302,7 @@ Supported for CategoryType(s): Cost, ReservationUtilization.
 
 ## FileDestination
 ### Properties
-* **fileFormats**: 'Csv' | string[]: Destination of the view data. Currently only CSV format is supported.
+* **fileFormats**: ('Csv' | string)[]: Destination of the view data. Currently only CSV format is supported.
 
 ## ForecastSpend
 ### Properties
@@ -317,10 +317,10 @@ Supported for CategoryType(s): Cost, ReservationUtilization.
 
 ## Notification
 ### Properties
-* **contactEmails**: string[] (Required): Email addresses to send the notification to when the threshold is breached. Must have at least one contact email or contact group specified at the Subscription or Resource Group scopes. All other scopes must have at least one contact email specified.
+* **contactEmails**: string[] {maxLength: 50} (Required): Email addresses to send the notification to when the threshold is breached. Must have at least one contact email or contact group specified at the Subscription or Resource Group scopes. All other scopes must have at least one contact email specified.
 
  Supported for CategoryType(s): Cost, ReservationUtilization.
-* **contactGroups**: string[]: Subscription or Resource Group scopes only. Action groups to send the notification to when the threshold is exceeded. Must be provided as a fully qualified Azure resource id.
+* **contactGroups**: string[] {maxLength: 50}: Subscription or Resource Group scopes only. Action groups to send the notification to when the threshold is exceeded. Must be provided as a fully qualified Azure resource id.
 
  Supported for CategoryType(s): Cost.
 * **contactRoles**: string[]: Subscription or Resource Group scopes only. Contact roles to send the notification to when the threshold is breached.
@@ -362,7 +362,7 @@ Supported for CategoryType(s): Cost, ReservationUtilization.
 * **message**: string: Optional message to be added in the email. Length is limited to 250 characters.
 * **regionalFormat**: string: Regional format used for formatting date/time and currency values in the email.
 * **subject**: string (Required): Subject of the email. Length is limited to 70 characters.
-* **to**: string[] (Required): Array of email addresses.
+* **to**: (string {pattern: "^[A-Za-z0-9._%+-]+@(?:[A-Za-z0-9-]+\.)+[A-Za-z]{2,}$"})[] {minLength: 1, maxLength: 20} (Required): Array of email addresses.
 
 ## PivotProperties
 ### Properties
@@ -378,7 +378,7 @@ Supported for CategoryType(s): Cost, ReservationUtilization.
 ### Properties
 * **name**: string (Required): The name of the column to use in comparison.
 * **operator**: 'Contains' | 'In' | string (Required): The operator to use for comparison.
-* **values**: string[] (Required): Array of values to use for comparison
+* **values**: string[] {minLength: 1} (Required): Array of values to use for comparison
 
 ## ReportConfigDataset
 ### Properties
@@ -386,7 +386,7 @@ Supported for CategoryType(s): Cost, ReservationUtilization.
 * **configuration**: [ReportConfigDatasetConfiguration](#reportconfigdatasetconfiguration): Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.
 * **filter**: [ReportConfigFilter](#reportconfigfilter): Has filter expression to use in the report.
 * **granularity**: 'Daily' | 'Monthly' | string: The granularity of rows in the report.
-* **grouping**: [ReportConfigGrouping](#reportconfiggrouping)[]: Array of group by expression to use in the report. Report can have up to 2 group by clauses.
+* **grouping**: [ReportConfigGrouping](#reportconfiggrouping)[] {maxLength: 2}: Array of group by expression to use in the report. Report can have up to 2 group by clauses.
 * **sorting**: [ReportConfigSorting](#reportconfigsorting)[]: Array of order by expression to use in the report.
 
 ## ReportConfigDatasetAggregation
@@ -408,9 +408,9 @@ Supported for CategoryType(s): Cost, ReservationUtilization.
 
 ## ReportConfigFilter
 ### Properties
-* **and**: [ReportConfigFilter](#reportconfigfilter)[]: The logical "AND" expression. Must have at least 2 items.
+* **and**: [ReportConfigFilter](#reportconfigfilter)[] {minLength: 2}: The logical "AND" expression. Must have at least 2 items.
 * **dimensions**: [ReportConfigComparisonExpression](#reportconfigcomparisonexpression): Has comparison expression for a dimension
-* **or**: [ReportConfigFilter](#reportconfigfilter)[]: The logical "OR" expression. Must have at least 2 items.
+* **or**: [ReportConfigFilter](#reportconfigfilter)[] {minLength: 2}: The logical "OR" expression. Must have at least 2 items.
 * **tags**: [ReportConfigComparisonExpression](#reportconfigcomparisonexpression): Has comparison expression for a tag
 
 ## ReportConfigGrouping
@@ -442,17 +442,17 @@ Supported for CategoryType(s): Cost, ReservationUtilization.
 ## ScheduleProperties
 ### Properties
 * **dayOfMonth**: int: UTC day on which cost analysis data will be emailed. Must be between 1 and 31. This property is applicable when frequency is Monthly and overrides weeksOfMonth or daysOfWeek.
-* **daysOfWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string[]: Day names in english on which cost analysis data will be emailed. This property is applicable when frequency is Weekly or Monthly.
+* **daysOfWeek**: ('Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string)[]: Day names in english on which cost analysis data will be emailed. This property is applicable when frequency is Weekly or Monthly.
 * **endDate**: string (Required): The end date and time of the scheduled action (UTC).
 * **frequency**: 'Daily' | 'Monthly' | 'Weekly' | string (Required): Frequency of the schedule.
 * **hourOfDay**: int: UTC time at which cost analysis data will be emailed.
 * **startDate**: string (Required): The start date and time of the scheduled action (UTC).
-* **weeksOfMonth**: 'First' | 'Fourth' | 'Last' | 'Second' | 'Third' | string[]: Weeks in which cost analysis data will be emailed. This property is applicable when frequency is Monthly and used in combination with daysOfWeek.
+* **weeksOfMonth**: ('First' | 'Fourth' | 'Last' | 'Second' | 'Third' | string)[]: Weeks in which cost analysis data will be emailed. This property is applicable when frequency is Monthly and used in combination with daysOfWeek.
 
 ## SystemAssignedServiceIdentity
 ### Properties
-* **principalId**: string (ReadOnly): The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
-* **tenantId**: string (ReadOnly): The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
+* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
 * **type**: 'None' | 'SystemAssigned' | string (Required): Type of managed service identity (either system assigned, or none).
 
 ## SystemData

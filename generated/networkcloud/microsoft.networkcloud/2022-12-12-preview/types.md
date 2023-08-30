@@ -238,19 +238,11 @@
 ## BareMetalMachineConfigurationData
 ### Properties
 * **bmcConnectionString**: string (ReadOnly): The connection string for the baseboard management controller including IP address and protocol.
-<<<<<<< HEAD
-* **bmcCredentials**: [AdministrativeCredentials](#administrativecredentials) (Required): AdministrativeCredentials represents the admin credentials for the device requiring password-based authentication.
+* **bmcCredentials**: [AdministrativeCredentials](#administrativecredentials) (Required): The credentials of the baseboard management controller on this bare metal machine.
 * **bmcMacAddress**: string {pattern: "^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$"} (Required): The MAC address of the BMC for this machine.
 * **bootMacAddress**: string {pattern: "^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$"} (Required): The MAC address associated with the PXE NIC card.
 * **machineDetails**: string {maxLength: 256}: The free-form additional information about the machine, e.g. an asset tag.
 * **machineName**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9]{0,62}[a-zA-Z0-9])$"}: The user-provided name for the bare metal machine created from this specification.
-=======
-* **bmcCredentials**: [AdministrativeCredentials](#administrativecredentials) (Required): The credentials of the baseboard management controller on this bare metal machine.
-* **bmcMacAddress**: string (Required): The MAC address of the BMC for this machine.
-* **bootMacAddress**: string (Required): The MAC address associated with the PXE NIC card.
-* **machineDetails**: string: The free-form additional information about the machine, e.g. an asset tag.
-* **machineName**: string: The user-provided name for the bare metal machine created from this specification.
->>>>>>> main
 If not provided, the machine name will be generated programmatically.
 * **rackSlot**: int {minValue: 1, maxValue: 256} (Required): The slot the physical machine is in the rack based on the BOM configuration.
 * **serialNumber**: string {maxLength: 64} (Required): The serial number of the machine. Hardware suppliers may use an alternate value. For example, service tag.
@@ -272,15 +264,9 @@ If not provided, the machine name will be generated programmatically.
 ## BareMetalMachineProperties
 ### Properties
 * **bmcConnectionString**: string (Required): The connection string for the baseboard management controller including IP address and protocol.
-<<<<<<< HEAD
-* **bmcCredentials**: [AdministrativeCredentials](#administrativecredentials) (Required): AdministrativeCredentials represents the admin credentials for the device requiring password-based authentication.
+* **bmcCredentials**: [AdministrativeCredentials](#administrativecredentials) (Required): The credentials of the baseboard management controller on this bare metal machine.
 * **bmcMacAddress**: string {pattern: "^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$"} (Required): The MAC address of the BMC device.
 * **bootMacAddress**: string {pattern: "^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$"} (Required): The MAC address of a NIC connected to the PXE network.
-=======
-* **bmcCredentials**: [AdministrativeCredentials](#administrativecredentials) (Required): The credentials of the baseboard management controller on this bare metal machine.
-* **bmcMacAddress**: string (Required): The MAC address of the BMC device.
-* **bootMacAddress**: string (Required): The MAC address of a NIC connected to the PXE network.
->>>>>>> main
 * **clusterId**: string (ReadOnly): The resource ID of the cluster this bare metal machine is associated with.
 * **cordonStatus**: 'Cordoned' | 'Uncordoned' | string (ReadOnly): The cordon status of the bare metal machine.
 * **detailedStatus**: 'Available' | 'Deprovisioning' | 'Error' | 'Preparing' | 'Provisioned' | 'Provisioning' | string (ReadOnly): The more detailed status of the bare metal machine.
@@ -390,14 +376,8 @@ If not provided, the machine name will be generated programmatically.
 * **availableUpgradeVersions**: [ClusterAvailableUpgradeVersion](#clusteravailableupgradeversion)[] (ReadOnly): The list of cluster runtime version upgrades available for this cluster.
 * **clusterCapacity**: [ClusterCapacity](#clustercapacity) (ReadOnly): The capacity supported by this cluster.
 * **clusterConnectionStatus**: 'Connected' | 'Timeout' | 'Undefined' | string (ReadOnly): The latest heartbeat status between the cluster manager and the cluster.
-<<<<<<< HEAD
-* **clusterExtendedLocation**: [ExtendedLocation](#extendedlocation) (ReadOnly): The extended location (custom location) that represents the cluster's control plane location.
-This extended location is used to route the requests of child objects of the cluster that are handled by the platform operator.
-* **clusterLocation**: string {maxLength: 256}: The customer-provided location information to identify where the cluster resides.
-=======
 * **clusterExtendedLocation**: [ExtendedLocation](#extendedlocation) (ReadOnly): The extended location (custom location) that represents the cluster's control plane location. This extended location is used to route the requests of child objects of the cluster that are handled by the platform operator.
-* **clusterLocation**: string: The customer-provided location information to identify where the cluster resides.
->>>>>>> main
+* **clusterLocation**: string {maxLength: 256}: The customer-provided location information to identify where the cluster resides.
 * **clusterManagerConnectionStatus**: 'Connected' | 'Unreachable' | string (ReadOnly): The latest connectivity status between cluster manager and the cluster.
 * **clusterManagerId**: string (ReadOnly): The resource ID of the cluster manager that manages this cluster. This is set by the Cluster Manager when the cluster is created.
 * **clusterServicePrincipal**: [ServicePrincipalInformation](#serviceprincipalinformation): The service principal to be used by the cluster during Arc Appliance installation.
@@ -519,13 +499,8 @@ is IPV6 or DualStack.
 ## KeySetUser
 ### Properties
 * **azureUserName**: string (Required): The Azure Active Directory user name (email name).
-<<<<<<< HEAD
 * **description**: string {maxLength: 256}: The free-form description for this user.
-* **sshPublicKey**: [SshPublicKey](#sshpublickey) (Required): SshPublicKey represents the public key used to authenticate with the virtual machine through SSH.
-=======
-* **description**: string: The free-form description for this user.
 * **sshPublicKey**: [SshPublicKey](#sshpublickey) (Required): The SSH public key for this user.
->>>>>>> main
 
 ## KeySetUserStatus
 ### Properties
@@ -719,13 +694,8 @@ For a CloudServicesNetwork resource, this name will be ignored.
 
 ## StorageApplianceConfigurationData
 ### Properties
-<<<<<<< HEAD
-* **adminCredentials**: [AdministrativeCredentials](#administrativecredentials) (Required): AdministrativeCredentials represents the admin credentials for the device requiring password-based authentication.
-* **rackSlot**: int {minValue: 1, maxValue: 256} (Required): The slot that storage appliance is in the rack based on the BOM configuration.
-=======
 * **adminCredentials**: [AdministrativeCredentials](#administrativecredentials) (Required): The credentials of the administrative interface on this storage appliance.
-* **rackSlot**: int (Required): The slot that storage appliance is in the rack based on the BOM configuration.
->>>>>>> main
+* **rackSlot**: int {minValue: 1, maxValue: 256} (Required): The slot that storage appliance is in the rack based on the BOM configuration.
 * **serialNumber**: string (Required): The serial number of the appliance.
 * **storageApplianceName**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9-_]{0,28}[a-zA-Z0-9])$"}: The user-provided name for the storage appliance that will be created from this specification.
 

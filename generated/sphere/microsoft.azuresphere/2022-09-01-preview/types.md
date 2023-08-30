@@ -6,7 +6,7 @@
 * **apiVersion**: '2022-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[A-Za-z0-9_-]{1,50}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [CatalogProperties](#catalogproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -37,7 +37,7 @@
 ### Properties
 * **apiVersion**: '2022-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[\w][\w\s]{1,48}[\w]$|^\.default$|^\.unassigned$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ProductProperties](#productproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.AzureSphere/catalogs/products' (ReadOnly, DeployTimeConstant): The resource type
@@ -47,7 +47,7 @@
 ### Properties
 * **apiVersion**: '2022-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[A-Za-z0-9]{1,2}$|^[A-Za-z0-9][A-Za-z0-9\s]{1,48}[A-Za-z0-9]$|^\.default$|^\.unassigned$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DeviceGroupProperties](#devicegroupproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.AzureSphere/catalogs/products/deviceGroups' (ReadOnly, DeployTimeConstant): The resource type
@@ -67,7 +67,7 @@
 ### Properties
 * **apiVersion**: '2022-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[a-zA-Z0-9-]{128}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DeviceProperties](#deviceproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.AzureSphere/catalogs/products/deviceGroups/devices' (ReadOnly, DeployTimeConstant): The resource type

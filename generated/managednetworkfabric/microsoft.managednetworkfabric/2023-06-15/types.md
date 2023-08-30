@@ -266,47 +266,47 @@
 
 ## AccessControlListAction
 ### Properties
-* **counterName**: string: Name of the counter block to get match count information.
+* **counterName**: string {minLength: 1}: Name of the counter block to get match count information.
 * **type**: 'Count' | 'Drop' | 'Log' | string: Type of actions that can be performed.
 
 ## AccessControlListMatchCondition
 ### Properties
-* **dscpMarkings**: string[]: List of DSCP Markings that needs to be matched.
-* **etherTypes**: string[]: List of ether type values that needs to be matched.
-* **fragments**: string[]: List of IP fragment packets that needs to be matched.
+* **dscpMarkings**: (string {minLength: 1})[] {minLength: 1}: List of DSCP Markings that needs to be matched.
+* **etherTypes**: (string {minLength: 1})[] {minLength: 1}: List of ether type values that needs to be matched.
+* **fragments**: (string {minLength: 1})[] {minLength: 1}: List of IP fragment packets that needs to be matched.
 * **ipCondition**: [IpMatchCondition](#ipmatchcondition): IP condition that needs to be matched.
-* **ipLengths**: string[]: List of IP Lengths that needs to be matched.
+* **ipLengths**: (string {minLength: 1})[] {minLength: 1}: List of IP Lengths that needs to be matched.
 * **portCondition**: [AccessControlListPortCondition](#accesscontrollistportcondition): Defines the port condition that needs to be matched.
-* **protocolTypes**: string[]: List of the protocols that need to be matched.
-* **ttlValues**: string[]: List of TTL [Time To Live] values that needs to be matched.
+* **protocolTypes**: (string {minLength: 1})[] {minLength: 1}: List of the protocols that need to be matched.
+* **ttlValues**: (string {minLength: 1})[] {minLength: 1}: List of TTL [Time To Live] values that needs to be matched.
 * **vlanMatchCondition**: [VlanMatchCondition](#vlanmatchcondition): Vlan match condition that needs to be matched.
 
 ## AccessControlListMatchConfiguration
 ### Properties
-* **actions**: [AccessControlListAction](#accesscontrollistaction)[]: List of actions that need to be performed for the matched conditions.
+* **actions**: [AccessControlListAction](#accesscontrollistaction)[] {minLength: 1}: List of actions that need to be performed for the matched conditions.
 * **ipAddressType**: 'IPv4' | 'IPv6' | string: Type of IP Address. IPv4 or IPv6
-* **matchConditions**: [AccessControlListMatchCondition](#accesscontrollistmatchcondition)[]: List of the match conditions.
-* **matchConfigurationName**: string: The name of the match configuration.
-* **sequenceNumber**: int: Sequence Number of the match configuration.
+* **matchConditions**: [AccessControlListMatchCondition](#accesscontrollistmatchcondition)[] {minLength: 1}: List of the match conditions.
+* **matchConfigurationName**: string {minLength: 1}: The name of the match configuration.
+* **sequenceNumber**: int {minValue: 1, maxValue: 4294967295}: Sequence Number of the match configuration.
 
 ## AccessControlListPortCondition
 ### Properties
 * **flags**: string[]: List of protocol flags that needs to be matched.
 * **layer4Protocol**: 'TCP' | 'UDP' | string (Required): Layer4 protocol type that needs to be matched.
-* **portGroupNames**: string[]: List of the port Group Names that to be matched.
-* **ports**: string[]: List of the Ports that need to be matched.
+* **portGroupNames**: (string {minLength: 1})[] {minLength: 1}: List of the port Group Names that to be matched.
+* **ports**: (string {minLength: 1})[] {minLength: 1}: List of the Ports that need to be matched.
 * **portType**: 'DestinationPort' | 'SourcePort' | string: Port type that needs to be matched.
 
 ## AccessControlListProperties
 ### Properties
-* **aclsUrl**: string: Access Control List file URL.
+* **aclsUrl**: string {minLength: 1}: Access Control List file URL.
 * **administrativeState**: 'Disabled' | 'Enabled' | 'MAT' | 'RMA' | string (ReadOnly): Administrative state of the resource.
 * **annotation**: string: Switch configuration description.
 * **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'Provisioned' | 'Rejected' | 'Succeeded' | string (ReadOnly): Configuration state of the resource.
 * **configurationType**: 'File' | 'Inline' | string: Input method to configure Access Control List.
-* **dynamicMatchConfigurations**: [CommonDynamicMatchConfiguration](#commondynamicmatchconfiguration)[]: List of dynamic match configurations.
+* **dynamicMatchConfigurations**: [CommonDynamicMatchConfiguration](#commondynamicmatchconfiguration)[] {minLength: 1}: List of dynamic match configurations.
 * **lastSyncedTime**: string (ReadOnly): The last synced timestamp.
-* **matchConfigurations**: [AccessControlListMatchConfiguration](#accesscontrollistmatchconfiguration)[]: List of match configurations.
+* **matchConfigurations**: [AccessControlListMatchConfiguration](#accesscontrollistmatchconfiguration)[] {minLength: 1}: List of match configurations.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
 
 ## ActionIpCommunityProperties
@@ -323,12 +323,12 @@
 
 ## AggregateRoute
 ### Properties
-* **prefix**: string (Required): IPv4 Prefix of the aggregate Ipv4Route.
+* **prefix**: string {minLength: 1} (Required): IPv4 Prefix of the aggregate Ipv4Route.
 
 ## AggregateRouteConfiguration
 ### Properties
-* **ipv4Routes**: [AggregateRoute](#aggregateroute)[]: List of IPv4 Route prefixes.
-* **ipv6Routes**: [AggregateRoute](#aggregateroute)[]: List of Ipv6Routes prefixes.
+* **ipv4Routes**: [AggregateRoute](#aggregateroute)[] {minLength: 1}: List of IPv4 Route prefixes.
+* **ipv6Routes**: [AggregateRoute](#aggregateroute)[] {minLength: 1}: List of Ipv6Routes prefixes.
 
 ## BfdConfiguration
 ### Properties
@@ -338,14 +338,14 @@
 
 ## CommonDynamicMatchConfiguration
 ### Properties
-* **ipGroups**: [IpGroupProperties](#ipgroupproperties)[]: List of IP Groups.
-* **portGroups**: [PortGroupProperties](#portgroupproperties)[]: List of the port group.
-* **vlanGroups**: [VlanGroupProperties](#vlangroupproperties)[]: List of vlan groups.
+* **ipGroups**: [IpGroupProperties](#ipgroupproperties)[] {minLength: 1}: List of IP Groups.
+* **portGroups**: [PortGroupProperties](#portgroupproperties)[] {minLength: 1}: List of the port group.
+* **vlanGroups**: [VlanGroupProperties](#vlangroupproperties)[] {minLength: 1}: List of vlan groups.
 
 ## ConnectedSubnet
 ### Properties
 * **annotation**: string: Switch configuration description.
-* **prefix**: string (Required): Prefix of the Connected Subnet.
+* **prefix**: string {minLength: 1} (Required): Prefix of the Connected Subnet.
 
 ## ConnectedSubnetRoutePolicy
 ### Properties
@@ -375,7 +375,7 @@
 
 ## ExpressRouteConnectionInformation
 ### Properties
-* **expressRouteAuthorizationKey**: string (Required): Authorization key for the circuit, must be of type Microsoft.Network/expressRouteCircuits/authorizations. The Auth Key is a mandatory attribute.
+* **expressRouteAuthorizationKey**: string {sensitive} (Required): Authorization key for the circuit, must be of type Microsoft.Network/expressRouteCircuits/authorizations. The Auth Key is a mandatory attribute.
 * **expressRouteCircuitId**: string (Required): The express route circuit Azure resource ID, must be of type Microsoft.Network/expressRouteCircuits/circuitName. The ExpressRoute Circuit is a mandatory attribute.
 
 ## ExternalNetworkProperties
@@ -397,15 +397,15 @@
 ### Properties
 * **bfdConfiguration**: [BfdConfiguration](#bfdconfiguration): BFD configuration properties
 * **egressAclId**: string: Egress Acl. ARM resource ID of Access Control Lists.
-* **fabricASN**: int (ReadOnly): Fabric ASN number. Example 65001
+* **fabricASN**: int {minValue: 1, maxValue: 4294967295} (ReadOnly): Fabric ASN number. Example 65001
 * **ingressAclId**: string: Ingress Acl. ARM resource ID of Access Control Lists.
-* **mtu**: int: MTU to use for option A peering.
-* **peerASN**: int: Peer ASN number.Example : 28
+* **mtu**: int {minValue: 64, maxValue: 9200}: MTU to use for option A peering.
+* **peerASN**: int {minValue: 1, maxValue: 4294967295}: Peer ASN number.Example : 28
 * **primaryIpv4Prefix**: string: IPv4 Address Prefix.
 * **primaryIpv6Prefix**: string: IPv6 Address Prefix.
 * **secondaryIpv4Prefix**: string: Secondary IPv4 Address Prefix.
 * **secondaryIpv6Prefix**: string: Secondary IPv6 Address Prefix.
-* **vlanId**: int: Vlan identifier. Example : 501
+* **vlanId**: int {minValue: 501, maxValue: 4094}: Vlan identifier. Example : 501
 
 ## ImportRoutePolicy
 ### Properties
@@ -423,8 +423,8 @@
 * **annotation**: string: Switch configuration description.
 * **bgpConfiguration**: [InternalNetworkPropertiesBgpConfiguration](#internalnetworkpropertiesbgpconfiguration): BGP configuration properties.
 * **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'Provisioned' | 'Rejected' | 'Succeeded' | string (ReadOnly): Configuration state of the resource.
-* **connectedIPv4Subnets**: [ConnectedSubnet](#connectedsubnet)[]: List of Connected IPv4 Subnets.
-* **connectedIPv6Subnets**: [ConnectedSubnet](#connectedsubnet)[]: List of connected IPv6 Subnets.
+* **connectedIPv4Subnets**: [ConnectedSubnet](#connectedsubnet)[] {minLength: 1}: List of Connected IPv4 Subnets.
+* **connectedIPv6Subnets**: [ConnectedSubnet](#connectedsubnet)[] {minLength: 1}: List of connected IPv6 Subnets.
 * **egressAclId**: string: Egress Acl. ARM resource ID of Access Control Lists.
 * **exportRoutePolicy**: [ExportRoutePolicy](#exportroutepolicy): Export Route Policy either IPv4 or IPv6.
 * **exportRoutePolicyId**: string: ARM Resource ID of the RoutePolicy. This is used for the backward compatibility.
@@ -433,31 +433,31 @@
 * **importRoutePolicyId**: string: ARM Resource ID of the RoutePolicy. This is used for the backward compatibility.
 * **ingressAclId**: string: Ingress Acl. ARM resource ID of Access Control Lists.
 * **isMonitoringEnabled**: 'False' | 'True' | string: To check whether monitoring of internal network is enabled or not.
-* **mtu**: int: Maximum transmission unit. Default value is 1500.
+* **mtu**: int {minValue: 64, maxValue: 9200}: Maximum transmission unit. Default value is 1500.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
 * **staticRouteConfiguration**: [InternalNetworkPropertiesStaticRouteConfiguration](#internalnetworkpropertiesstaticrouteconfiguration): Static Route Configuration properties.
-* **vlanId**: int (Required): Vlan identifier. Example: 1001.
+* **vlanId**: int {minValue: 100, maxValue: 4094} (Required): Vlan identifier. Example: 1001.
 
 ## InternalNetworkPropertiesBgpConfiguration
 ### Properties
-* **allowAS**: int: Allows for routes to be received and processed even if the router detects its own ASN in the AS-Path. 0 is disable, Possible values are 1-10, default is 2.
+* **allowAS**: int {minValue: 0, maxValue: 10}: Allows for routes to be received and processed even if the router detects its own ASN in the AS-Path. 0 is disable, Possible values are 1-10, default is 2.
 * **allowASOverride**: 'Disable' | 'Enable' | string: Enable Or Disable state.
 * **annotation**: string: Switch configuration description.
 * **bfdConfiguration**: [BfdConfiguration](#bfdconfiguration): BFD configuration properties
 * **defaultRouteOriginate**: 'False' | 'True' | string: Originate a defaultRoute. Ex: "True" | "False".
 * **fabricASN**: int (ReadOnly): ASN of Network Fabric. Example: 65048.
-* **ipv4ListenRangePrefixes**: string[]: List of BGP IPv4 Listen Range prefixes.
-* **ipv4NeighborAddress**: [NeighborAddress](#neighboraddress)[]: List with stringified IPv4 Neighbor Addresses.
-* **ipv6ListenRangePrefixes**: string[]: List of BGP IPv6 Listen Ranges prefixes.
-* **ipv6NeighborAddress**: [NeighborAddress](#neighboraddress)[]: List with stringified IPv6 Neighbor Address.
-* **peerASN**: int: Peer ASN. Example: 65047.
+* **ipv4ListenRangePrefixes**: (string {minLength: 1})[] {minLength: 1}: List of BGP IPv4 Listen Range prefixes.
+* **ipv4NeighborAddress**: [NeighborAddress](#neighboraddress)[] {minLength: 1}: List with stringified IPv4 Neighbor Addresses.
+* **ipv6ListenRangePrefixes**: (string {minLength: 1})[] {minLength: 1}: List of BGP IPv6 Listen Ranges prefixes.
+* **ipv6NeighborAddress**: [NeighborAddress](#neighboraddress)[] {minLength: 1}: List with stringified IPv6 Neighbor Address.
+* **peerASN**: int {minValue: 1, maxValue: 4294967295}: Peer ASN. Example: 65047.
 
 ## InternalNetworkPropertiesStaticRouteConfiguration
 ### Properties
 * **bfdConfiguration**: [BfdConfiguration](#bfdconfiguration): BFD configuration properties
 * **extension**: 'NPB' | 'NoExtension' | string: Extension. Example: NoExtension | NPB.
-* **ipv4Routes**: [StaticRouteProperties](#staticrouteproperties)[]: List of IPv4 Routes.
-* **ipv6Routes**: [StaticRouteProperties](#staticrouteproperties)[]: List of IPv6 Routes.
+* **ipv4Routes**: [StaticRouteProperties](#staticrouteproperties)[] {minLength: 1}: List of IPv4 Routes.
+* **ipv6Routes**: [StaticRouteProperties](#staticrouteproperties)[] {minLength: 1}: List of IPv6 Routes.
 
 ## InternetGatewayProperties
 ### Properties
@@ -491,9 +491,9 @@
 ## IpCommunityRule
 ### Properties
 * **action**: 'Deny' | 'Permit' | string (Required): Action to be taken on the configuration. Example: Permit | Deny.
-* **communityMembers**: string[] (Required): List the community members of IP Community.
-* **sequenceNumber**: int (Required): Sequence to insert to/delete from existing route. Prefix lists are evaluated starting with the lowest sequence number and continue down the list until a match is made. Once a match is made, the permit or deny statement is applied to that network and the rest of the list is ignored.
-* **wellKnownCommunities**: 'GShut' | 'Internet' | 'LocalAS' | 'NoAdvertise' | 'NoExport' | string[]: Supported well known Community List.
+* **communityMembers**: (string {minLength: 1})[] {minLength: 1} (Required): List the community members of IP Community.
+* **sequenceNumber**: int {minValue: 1, maxValue: 4294967295} (Required): Sequence to insert to/delete from existing route. Prefix lists are evaluated starting with the lowest sequence number and continue down the list until a match is made. Once a match is made, the permit or deny statement is applied to that network and the rest of the list is ignored.
+* **wellKnownCommunities**: ('GShut' | 'Internet' | 'LocalAS' | 'NoAdvertise' | 'NoExport' | string)[]: Supported well known Community List.
 
 ## IpExtendedCommunityIdList
 ### Properties
@@ -510,19 +510,19 @@
 ## IpExtendedCommunityRule
 ### Properties
 * **action**: 'Deny' | 'Permit' | string (Required): Action to be taken on the configuration. Example: Permit | Deny.
-* **routeTargets**: string[] (Required): Route Target List.The expected formats are ASN(plain):NN >> example 4294967294:50, ASN.ASN:NN >> example 65533.65333:40, IP-address:NN >> example 10.10.10.10:65535. The possible values of ASN,NN are in range of 0-65535, ASN(plain) is in range of 0-4294967295.
-* **sequenceNumber**: int (Required): Sequence to insert to/delete from existing route. Prefix lists are evaluated starting with the lowest sequence number and continue down the list until a match is made. Once a match is made, the permit or deny statement is applied to that network and the rest of the list is ignored.
+* **routeTargets**: (string {minLength: 1})[] {minLength: 1} (Required): Route Target List.The expected formats are ASN(plain):NN >> example 4294967294:50, ASN.ASN:NN >> example 65533.65333:40, IP-address:NN >> example 10.10.10.10:65535. The possible values of ASN,NN are in range of 0-65535, ASN(plain) is in range of 0-4294967295.
+* **sequenceNumber**: int {minValue: 1, maxValue: 4294967295} (Required): Sequence to insert to/delete from existing route. Prefix lists are evaluated starting with the lowest sequence number and continue down the list until a match is made. Once a match is made, the permit or deny statement is applied to that network and the rest of the list is ignored.
 
 ## IpGroupProperties
 ### Properties
 * **ipAddressType**: 'IPv4' | 'IPv6' | string: IP Address type.
-* **ipPrefixes**: string[]: List of IP Prefixes.
-* **name**: string: IP Group name.
+* **ipPrefixes**: (string {minLength: 1})[] {minLength: 1}: List of IP Prefixes.
+* **name**: string {minLength: 1}: IP Group name.
 
 ## IpMatchCondition
 ### Properties
-* **ipGroupNames**: string[]: The List of IP Group Names that need to be matched.
-* **ipPrefixValues**: string[]: The list of IP Prefixes.
+* **ipGroupNames**: (string {minLength: 1})[] {minLength: 1}: The List of IP Group Names that need to be matched.
+* **ipPrefixValues**: (string {minLength: 1})[] {minLength: 1}: The list of IP Prefixes.
 * **prefixType**: 'LongestPrefix' | 'Prefix' | string: IP Prefix Type.
 * **type**: 'DestinationIP' | 'SourceIP' | string: IP Address type.
 
@@ -539,7 +539,7 @@
 * **action**: 'Deny' | 'Permit' | string (Required): Action to be taken on the configuration. Example: Permit | Deny.
 * **condition**: 'EqualTo' | 'GreaterThanOrEqualTo' | 'LesserThanOrEqualTo' | 'Range' | string: Specify prefix-list bounds.
 * **networkPrefix**: string (Required): Network Prefix specifying IPv4/IPv6 packets to be permitted or denied. Example: 1.1.1.0/24 | 3FFE:FFFF:0:CD30::/126
-* **sequenceNumber**: int (Required): Sequence to insert to/delete from existing route. Prefix lists are evaluated starting with the lowest sequence number and continue down the list until a match is made. Once a match is made, the permit or deny statement is applied to that network and the rest of the list is ignored.
+* **sequenceNumber**: int {minValue: 1, maxValue: 4294967295} (Required): Sequence to insert to/delete from existing route. Prefix lists are evaluated starting with the lowest sequence number and continue down the list until a match is made. Once a match is made, the permit or deny statement is applied to that network and the rest of the list is ignored.
 * **subnetMaskLength**: string: SubnetMaskLength gives the minimum NetworkPrefix length to be matched. Possible values for IPv4 are 1 - 32 . Possible values of IPv6 are 1 - 128.
 
 ## IsolationDomainProperties
@@ -552,10 +552,10 @@
 * **administrativeState**: 'Disabled' | 'Enabled' | 'MAT' | 'RMA' | string (ReadOnly): Administrative state of the resource.
 * **annotation**: string: Switch configuration description.
 * **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'Provisioned' | 'Rejected' | 'Succeeded' | string (ReadOnly): Configuration state of the resource.
-* **mtu**: int: Maximum transmission unit. Default value is 1500.
+* **mtu**: int {minValue: 64, maxValue: 9200}: Maximum transmission unit. Default value is 1500.
 * **networkFabricId**: string (Required): ARM Resource ID of the Network Fabric.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
-* **vlanId**: int (Required): Vlan Identifier of the Network Fabric. Example: 501.
+* **vlanId**: int {minValue: 100, maxValue: 4094} (Required): Vlan Identifier of the Network Fabric. Example: 501.
 
 ## L3ExportRoutePolicy
 ### Properties
@@ -582,8 +582,8 @@
 
 ## Layer2Configuration
 ### Properties
-* **interfaces**: string[]: List of network device interfaces resource IDs.
-* **mtu**: int: MTU of the packets between PE & CE.
+* **interfaces**: string[] {minLength: 1}: List of network device interfaces resource IDs.
+* **mtu**: int {minValue: 64, maxValue: 9200}: MTU of the packets between PE & CE.
 
 ## ManagedResourceGroupConfiguration
 ### Properties
@@ -597,13 +597,13 @@
 
 ## NeighborAddress
 ### Properties
-* **address**: string: IP Address.
+* **address**: string {minLength: 1}: IP Address.
 * **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'Provisioned' | 'Rejected' | 'Succeeded' | string (ReadOnly): Configuration state of the resource.
 
 ## NeighborGroupDestination
 ### Properties
-* **ipv4Addresses**: string[]: Array of IPv4 Addresses.
-* **ipv6Addresses**: string[]: Array of IPv6 Addresses.
+* **ipv4Addresses**: (string {minLength: 1})[] {maxLength: 16}: Array of IPv4 Addresses.
+* **ipv6Addresses**: (string {minLength: 1})[] {maxLength: 16}: Array of IPv6 Addresses.
 
 ## NeighborGroupProperties
 ### Properties
@@ -618,14 +618,14 @@
 * **administrativeState**: 'Disabled' | 'Enabled' | 'MAT' | 'RMA' | string (ReadOnly): Administrative state of the resource.
 * **annotation**: string: Switch configuration description.
 * **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'Provisioned' | 'Rejected' | 'Succeeded' | string (ReadOnly): Configuration state of the resource.
-* **hostName**: string: The host name of the device.
+* **hostName**: string {minLength: 1}: The host name of the device.
 * **managementIpv4Address**: string (ReadOnly): Management IPv4 Address.
 * **managementIpv6Address**: string (ReadOnly): Management IPv6 Address.
 * **networkDeviceRole**: 'CE' | 'Management' | 'NPB' | 'TS' | 'ToR' | string (ReadOnly): NetworkDeviceRole is the device role: Example: CE | ToR.
 * **networkDeviceSku**: string: Network Device SKU name.
 * **networkRackId**: string (ReadOnly): Reference to network rack resource id.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
-* **serialNumber**: string: Serial number of the device. Format of serial Number - Make;Model;HardwareRevisionId;SerialNumber.
+* **serialNumber**: string {minLength: 1}: Serial number of the device. Format of serial Number - Make;Model;HardwareRevisionId;SerialNumber.
 * **version**: string (ReadOnly): Current version of the device as defined in SKU.
 
 ## NetworkDeviceSkuProperties
@@ -634,7 +634,7 @@
 * **manufacturer**: string: Manufacturer of the network device.
 * **model**: string (Required): Model of the network device.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
-* **supportedRoleTypes**: 'CE' | 'Management' | 'NPB' | 'TS' | 'ToR' | string[]: Available roles for the network device.
+* **supportedRoleTypes**: ('CE' | 'Management' | 'NPB' | 'TS' | 'ToR' | string)[]: Available roles for the network device.
 * **supportedVersions**: [SupportedVersionProperties](#supportedversionproperties)[]: List of supported version details of network device.
 
 ## NetworkFabricControllerProperties
@@ -642,8 +642,8 @@
 * **annotation**: string: Switch configuration description.
 * **infrastructureExpressRouteConnections**: [ExpressRouteConnectionInformation](#expressrouteconnectioninformation)[]: As part of an update, the Infrastructure ExpressRoute CircuitID should be provided to create and Provision a NFC. This Express route is dedicated for Infrastructure services. (This is a Mandatory attribute)
 * **infrastructureServices**: [ControllerServices](#controllerservices) (ReadOnly): InfrastructureServices IP ranges.
-* **ipv4AddressSpace**: string: IPv4 Network Fabric Controller Address Space.
-* **ipv6AddressSpace**: string: IPv6 Network Fabric Controller Address Space.
+* **ipv4AddressSpace**: string {minLength: 1}: IPv4 Network Fabric Controller Address Space.
+* **ipv6AddressSpace**: string {minLength: 1}: IPv6 Network Fabric Controller Address Space.
 * **isWorkloadManagementNetworkEnabled**: 'False' | 'True' | string: A workload management network is required for all the tenant (workload) traffic. This traffic is only dedicated for Tenant workloads which are required to access internet or any other MSFT/Public endpoints.
 * **managedResourceGroupConfiguration**: [ManagedResourceGroupConfiguration](#managedresourcegroupconfiguration): Managed Resource Group configuration properties.
 * **networkFabricIds**: string[] (ReadOnly): The NF-ID will be an input parameter used by the NF to link and get associated with the parent NFC Service.
@@ -659,20 +659,20 @@
 * **administrativeState**: 'Disabled' | 'Enabled' | 'MAT' | 'RMA' | string (ReadOnly): Administrative state of the resource.
 * **annotation**: string: Switch configuration description.
 * **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'Provisioned' | 'Rejected' | 'Succeeded' | string (ReadOnly): Configuration state of the resource.
-* **fabricASN**: int (Required): ASN of CE devices for CE/PE connectivity.
+* **fabricASN**: int {minValue: 1, maxValue: 4294967295} (Required): ASN of CE devices for CE/PE connectivity.
 * **fabricVersion**: string (ReadOnly): The version of Network Fabric.
-* **ipv4Prefix**: string (Required): IPv4Prefix for Management Network. Example: 10.1.0.0/19.
-* **ipv6Prefix**: string: IPv6Prefix for Management Network. Example: 3FFE:FFFF:0:CD40::/59
+* **ipv4Prefix**: string {minLength: 1} (Required): IPv4Prefix for Management Network. Example: 10.1.0.0/19.
+* **ipv6Prefix**: string {minLength: 1}: IPv6Prefix for Management Network. Example: 3FFE:FFFF:0:CD40::/59
 * **l2IsolationDomains**: string[] (ReadOnly): List of L2 Isolation Domain resource IDs under the Network Fabric.
 * **l3IsolationDomains**: string[] (ReadOnly): List of L3 Isolation Domain resource IDs under the Network Fabric.
 * **managementNetworkConfiguration**: [ManagementNetworkConfigurationProperties](#managementnetworkconfigurationproperties) (Required): Configuration to be used to setup the management network.
 * **networkFabricControllerId**: string (Required): Azure resource ID for the NetworkFabricController the NetworkFabric belongs.
-* **networkFabricSku**: string (Required): Supported Network Fabric SKU.Example: Compute / Aggregate racks. Once the user chooses a particular SKU, only supported racks can be added to the Network Fabric. The SKU determines whether it is a single / multi rack Network Fabric.
+* **networkFabricSku**: string {minLength: 1} (Required): Supported Network Fabric SKU.Example: Compute / Aggregate racks. Once the user chooses a particular SKU, only supported racks can be added to the Network Fabric. The SKU determines whether it is a single / multi rack Network Fabric.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provides you the latest status of the NFC service, whether it is Accepted, updating, Succeeded or Failed. During this process, the states keep changing based on the status of NFC provisioning.
-* **rackCount**: int: Number of compute racks associated to Network Fabric.
+* **rackCount**: int {minValue: 1, maxValue: 8}: Number of compute racks associated to Network Fabric.
 * **racks**: string[] (ReadOnly): List of NetworkRack resource IDs under the Network Fabric. The number of racks allowed depends on the Network Fabric SKU.
 * **routerIds**: string[] (ReadOnly): Array of router IDs.
-* **serverCountPerRack**: int (Required): Number of servers.Possible values are from 1-16.
+* **serverCountPerRack**: int {minValue: 1, maxValue: 16} (Required): Number of servers.Possible values are from 1-16.
 * **terminalServerConfiguration**: [TerminalServerConfiguration](#terminalserverconfiguration) (Required): Network and credentials configuration currently applied to terminal server.
 
 ## NetworkFabricSkuProperties
@@ -717,7 +717,7 @@
 * **administrativeState**: 'Disabled' | 'Enabled' | 'MAT' | 'RMA' | string (ReadOnly): Administrative state of the resource. Example -Enabled/Disabled
 * **annotation**: string: Switch configuration description.
 * **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'Provisioned' | 'Rejected' | 'Succeeded' | string (ReadOnly): Gets the configurations state of the resource.
-* **destinations**: [NetworkTapPropertiesDestinationsItem](#networktappropertiesdestinationsitem)[] (Required): List of destinations to send the filter traffic.
+* **destinations**: [NetworkTapPropertiesDestinationsItem](#networktappropertiesdestinationsitem)[] {minLength: 1} (Required): List of destinations to send the filter traffic.
 * **networkPacketBrokerId**: string (Required): ARM resource ID of the Network Packet Broker.
 * **pollingType**: 'Pull' | 'Push' | string: Polling type.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provides you the latest status of the NFC service, whether it is Accepted, updating, Succeeded or Failed. During this process, the states keep changing based on the status of Network Tap provisioning.
@@ -729,14 +729,14 @@
 * **destinationTapRuleId**: string: ARM Resource ID of destination Tap Rule that contains match configurations.
 * **destinationType**: 'Direct' | 'IsolationDomain' | string: Type of destination. Input can be IsolationDomain or Direct.
 * **isolationDomainProperties**: [IsolationDomainProperties](#isolationdomainproperties): Isolation Domain Properties.
-* **name**: string: Destination name.
+* **name**: string {minLength: 1}: Destination name.
 
 ## NetworkTapRuleAction
 ### Properties
 * **destinationId**: string: Destination Id. The ARM resource Id may be either Network To Network Interconnect or NeighborGroup.
 * **isTimestampEnabled**: 'False' | 'True' | string: The parameter to enable or disable the timestamp.
-* **matchConfigurationName**: string: The name of the match configuration. This is used when Goto type is provided. If Goto type is selected and no match configuration name is provided. It goes to next configuration.
-* **truncate**: string: Truncate. 0 indicates do not truncate.
+* **matchConfigurationName**: string {minLength: 1}: The name of the match configuration. This is used when Goto type is provided. If Goto type is selected and no match configuration name is provided. It goes to next configuration.
+* **truncate**: string {minLength: 1}: Truncate. 0 indicates do not truncate.
 * **type**: 'Count' | 'Drop' | 'Goto' | 'Log' | 'Mirror' | 'Redirect' | 'Replicate' | string: Type of actions that can be performed.
 
 ## NetworkTapRuleMatchCondition
@@ -744,16 +744,16 @@
 * **encapsulationType**: 'GTPv1' | 'None' | string: Encapsulation Type.
 * **ipCondition**: [IpMatchCondition](#ipmatchcondition): IP condition that needs to be matched.
 * **portCondition**: [PortCondition](#portcondition): Defines the port condition that needs to be matched.
-* **protocolTypes**: string[]: List of the protocols that need to be matched.
+* **protocolTypes**: (string {minLength: 1})[] {minLength: 1}: List of the protocols that need to be matched.
 * **vlanMatchCondition**: [VlanMatchCondition](#vlanmatchcondition): Vlan match condition that needs to be matched.
 
 ## NetworkTapRuleMatchConfiguration
 ### Properties
-* **actions**: [NetworkTapRuleAction](#networktapruleaction)[]: List of actions that need to be performed for the matched conditions.
+* **actions**: [NetworkTapRuleAction](#networktapruleaction)[] {minLength: 1}: List of actions that need to be performed for the matched conditions.
 * **ipAddressType**: 'IPv4' | 'IPv6' | string: Type of IP Address. IPv4 or IPv6
-* **matchConditions**: [NetworkTapRuleMatchCondition](#networktaprulematchcondition)[]: List of the match conditions.
-* **matchConfigurationName**: string: The name of the match configuration.
-* **sequenceNumber**: int: Sequence Number of the match configuration..
+* **matchConditions**: [NetworkTapRuleMatchCondition](#networktaprulematchcondition)[] {minLength: 1}: List of the match conditions.
+* **matchConfigurationName**: string {minLength: 1}: The name of the match configuration.
+* **sequenceNumber**: int {minValue: 1, maxValue: 4294967295}: Sequence Number of the match configuration..
 
 ## NetworkTapRuleProperties
 ### Properties
@@ -761,13 +761,13 @@
 * **annotation**: string: Switch configuration description.
 * **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'Provisioned' | 'Rejected' | 'Succeeded' | string (ReadOnly): Configuration state of the resource.
 * **configurationType**: 'File' | 'Inline' | string: Input method to configure Network Tap Rule.
-* **dynamicMatchConfigurations**: [CommonDynamicMatchConfiguration](#commondynamicmatchconfiguration)[]: List of dynamic match configurations.
+* **dynamicMatchConfigurations**: [CommonDynamicMatchConfiguration](#commondynamicmatchconfiguration)[] {minLength: 1}: List of dynamic match configurations.
 * **lastSyncedTime**: string (ReadOnly): The last sync timestamp.
-* **matchConfigurations**: [NetworkTapRuleMatchConfiguration](#networktaprulematchconfiguration)[]: List of match configurations.
+* **matchConfigurations**: [NetworkTapRuleMatchConfiguration](#networktaprulematchconfiguration)[] {minLength: 1}: List of match configurations.
 * **networkTapId**: string (ReadOnly): The ARM resource Id of the NetworkTap.
 * **pollingIntervalInSeconds**: int: Polling interval in seconds.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
-* **tapRulesUrl**: string: Network Tap Rules file URL.
+* **tapRulesUrl**: string {minLength: 1}: Network Tap Rules file URL.
 
 ## NetworkToNetworkInterconnectProperties
 ### Properties
@@ -788,18 +788,18 @@
 ## NetworkToNetworkInterconnectPropertiesOptionBLayer3Configuration
 ### Properties
 * **fabricASN**: int (ReadOnly): ASN of CE devices for CE/PE connectivity.
-* **peerASN**: int: ASN of PE devices for CE/PE connectivity.Example : 28
+* **peerASN**: int {minValue: 1, maxValue: 4294967295}: ASN of PE devices for CE/PE connectivity.Example : 28
 * **primaryIpv4Prefix**: string: IPv4 Address Prefix.
 * **primaryIpv6Prefix**: string: IPv6 Address Prefix.
 * **secondaryIpv4Prefix**: string: Secondary IPv4 Address Prefix.
 * **secondaryIpv6Prefix**: string: Secondary IPv6 Address Prefix.
-* **vlanId**: int: VLAN for CE/PE Layer 3 connectivity.Example : 501
+* **vlanId**: int {minValue: 100, maxValue: 4094}: VLAN for CE/PE Layer 3 connectivity.Example : 501
 
 ## NpbStaticRouteConfiguration
 ### Properties
 * **bfdConfiguration**: [BfdConfiguration](#bfdconfiguration): BFD Configuration properties.
-* **ipv4Routes**: [StaticRouteProperties](#staticrouteproperties)[]: List of IPv4 Routes.
-* **ipv6Routes**: [StaticRouteProperties](#staticrouteproperties)[]: List of IPv6 Routes.
+* **ipv4Routes**: [StaticRouteProperties](#staticrouteproperties)[] {minLength: 1}: List of IPv4 Routes.
+* **ipv6Routes**: [StaticRouteProperties](#staticrouteproperties)[] {minLength: 1}: List of IPv6 Routes.
 
 ## OptionBProperties
 ### Properties
@@ -810,14 +810,14 @@
 ## PortCondition
 ### Properties
 * **layer4Protocol**: 'TCP' | 'UDP' | string (Required): Layer4 protocol type that needs to be matched.
-* **portGroupNames**: string[]: List of the port Group Names that to be matched.
-* **ports**: string[]: List of the Ports that need to be matched.
+* **portGroupNames**: (string {minLength: 1})[] {minLength: 1}: List of the port Group Names that to be matched.
+* **ports**: (string {minLength: 1})[] {minLength: 1}: List of the Ports that need to be matched.
 * **portType**: 'DestinationPort' | 'SourcePort' | string: Port type that needs to be matched.
 
 ## PortGroupProperties
 ### Properties
-* **name**: string: The name of the port group.
-* **ports**: string[]: List of the ports that needs to be matched.
+* **name**: string {minLength: 1}: The name of the port group.
+* **ports**: (string {minLength: 1})[] {minLength: 1}: List of the ports that needs to be matched.
 
 ## RoutePolicyProperties
 ### Properties
@@ -834,26 +834,26 @@
 * **action**: [StatementActionProperties](#statementactionproperties) (Required): Route policy action properties.
 * **annotation**: string: Switch configuration description.
 * **condition**: [StatementConditionProperties](#statementconditionproperties) (Required): Route policy condition properties.
-* **sequenceNumber**: int (Required): Sequence to insert to/delete from existing route.
+* **sequenceNumber**: int {minValue: 1, maxValue: 4294967295} (Required): Sequence to insert to/delete from existing route.
 
 ## RouteTargetInformation
 ### Properties
-* **exportIpv4RouteTargets**: string[]: Route Targets to be applied for outgoing routes into CE.
-* **exportIpv6RouteTargets**: string[]: Route Targets to be applied for outgoing routes from CE.
-* **importIpv4RouteTargets**: string[]: Route Targets to be applied for incoming routes into CE.
-* **importIpv6RouteTargets**: string[]: Route Targets to be applied for incoming routes from CE.
+* **exportIpv4RouteTargets**: (string {minLength: 1})[] {minLength: 1}: Route Targets to be applied for outgoing routes into CE.
+* **exportIpv6RouteTargets**: (string {minLength: 1})[] {minLength: 1}: Route Targets to be applied for outgoing routes from CE.
+* **importIpv4RouteTargets**: (string {minLength: 1})[] {minLength: 1}: Route Targets to be applied for incoming routes into CE.
+* **importIpv6RouteTargets**: (string {minLength: 1})[] {minLength: 1}: Route Targets to be applied for incoming routes from CE.
 
 ## RuleProperties
 ### Properties
 * **action**: 'Allow' | 'Deny' | string (Required): Specify action.
-* **addressList**: string[] (Required): List of Addresses to be allowed or denied.
+* **addressList**: (string {minLength: 1})[] {minLength: 1} (Required): List of Addresses to be allowed or denied.
 
 ## StatementActionProperties
 ### Properties
 * **actionType**: 'Continue' | 'Deny' | 'Permit' | string (Required): Action type. Example: Permit | Deny | Continue.
 * **ipCommunityProperties**: [ActionIpCommunityProperties](#actionipcommunityproperties): IP Community Properties.
 * **ipExtendedCommunityProperties**: [ActionIpExtendedCommunityProperties](#actionipextendedcommunityproperties): IP Extended Community Properties.
-* **localPreference**: int: Local Preference of the route policy.
+* **localPreference**: int {minValue: 0, maxValue: 4294967295}: Local Preference of the route policy.
 
 ## StatementConditionProperties
 ### Properties
@@ -864,8 +864,8 @@
 
 ## StaticRouteProperties
 ### Properties
-* **nextHop**: string[] (Required): List of next hop addresses.
-* **prefix**: string (Required): Prefix of the route.
+* **nextHop**: (string {minLength: 1})[] {minLength: 1} (Required): List of next hop addresses.
+* **prefix**: string {minLength: 1} (Required): Prefix of the route.
 
 ## SupportedConnectorProperties
 ### Properties
@@ -891,13 +891,13 @@
 ## TerminalServerConfiguration
 ### Properties
 * **networkDeviceId**: string (ReadOnly): ARM Resource ID used for the NetworkDevice.
-* **password**: string: Password for the terminal server connection.
+* **password**: string {sensitive, minLength: 1}: Password for the terminal server connection.
 * **primaryIpv4Prefix**: string: IPv4 Address Prefix.
 * **primaryIpv6Prefix**: string: IPv6 Address Prefix.
 * **secondaryIpv4Prefix**: string: Secondary IPv4 Address Prefix.
 * **secondaryIpv6Prefix**: string: Secondary IPv6 Address Prefix.
-* **serialNumber**: string: Serial Number of Terminal server.
-* **username**: string: Username for the terminal server connection.
+* **serialNumber**: string {minLength: 1}: Serial Number of Terminal server.
+* **username**: string {minLength: 1}: Username for the terminal server connection.
 
 ## TrackedResourceTags
 ### Properties
@@ -986,14 +986,14 @@
 
 ## VlanGroupProperties
 ### Properties
-* **name**: string: Vlan group name.
-* **vlans**: string[]: List of vlans.
+* **name**: string {minLength: 1}: Vlan group name.
+* **vlans**: (string {minLength: 1})[] {minLength: 1}: List of vlans.
 
 ## VlanMatchCondition
 ### Properties
-* **innerVlans**: string[]: List of inner vlans that needs to be matched.
-* **vlanGroupNames**: string[]: List of vlan group names that to be matched.
-* **vlans**: string[]: List of vlans that needs to be matched.
+* **innerVlans**: (string {minLength: 1})[] {minLength: 1}: List of inner vlans that needs to be matched.
+* **vlanGroupNames**: (string {minLength: 1})[] {minLength: 1}: List of vlan group names that to be matched.
+* **vlans**: (string {minLength: 1})[] {minLength: 1}: List of vlans that needs to be matched.
 
 ## VpnConfigurationProperties
 ### Properties
@@ -1006,11 +1006,11 @@
 ## VpnConfigurationPropertiesOptionAProperties
 ### Properties
 * **bfdConfiguration**: [BfdConfiguration](#bfdconfiguration): BFD Configuration properties.
-* **mtu**: int: MTU to use for option A peering.
-* **peerASN**: int: Peer ASN number.Example : 28
+* **mtu**: int {minValue: 64, maxValue: 9200}: MTU to use for option A peering.
+* **peerASN**: int {minValue: 1, maxValue: 4294967295}: Peer ASN number.Example : 28
 * **primaryIpv4Prefix**: string: IPv4 Address Prefix.
 * **primaryIpv6Prefix**: string: IPv6 Address Prefix.
 * **secondaryIpv4Prefix**: string: Secondary IPv4 Address Prefix.
 * **secondaryIpv6Prefix**: string: Secondary IPv6 Address Prefix.
-* **vlanId**: int: Vlan Id.Example : 501
+* **vlanId**: int {minValue: 501, maxValue: 4094}: Vlan Id.Example : 501
 

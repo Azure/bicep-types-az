@@ -6,7 +6,7 @@
 * **apiVersion**: '2022-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The location of the deployment stack. It cannot be changed after creation. It must be one of the supported Azure locations.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 90, pattern: "^[-\w\._\(\)]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DeploymentStackProperties](#deploymentstackproperties): Deployment stack properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [DeploymentStackTags](#deploymentstacktags): Deployment stack resource tags.
@@ -27,7 +27,7 @@
 * **denySettings**: [DenySettings](#denysettings) (Required): Defines how resources deployed by the stack are locked.
 * **deploymentId**: string (ReadOnly): The resourceId of the deployment resource created by the deployment stack.
 * **deploymentScope**: string: The scope at which the initial deployment should be created. If a scope is not specified, it will default to the scope of the deployment stack. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroupId}'), subscription (format: '/subscriptions/{subscriptionId}'), resource group (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}').
-* **description**: string: Deployment stack description.
+* **description**: string {maxLength: 4096}: Deployment stack description.
 * **detachedResources**: [ResourceReference](#resourcereference)[] (ReadOnly): An array of resources that were detached during the most recent update.
 * **duration**: string (ReadOnly): The duration of the deployment stack update.
 * **error**: [ErrorResponse](#errorresponse): Common error response for all Azure Resource Manager APIs to return error details for failed operations. (This also follows the OData error response format.).

@@ -109,7 +109,7 @@
 ## CopyProgress
 ### Properties
 * **accountId**: string (ReadOnly): Id of the account where the data needs to be uploaded.
-* **actions**: 'MoveToCleanUpDevice' | 'None' | 'ReachOutToOperation' | 'Restart' | 'Resume'[] (ReadOnly): Available actions on the job.
+* **actions**: ('MoveToCleanUpDevice' | 'None' | 'ReachOutToOperation' | 'Restart' | 'Resume')[] (ReadOnly): Available actions on the job.
 * **bytesProcessed**: int (ReadOnly): To indicate bytes transferred.
 * **dataAccountType**: 'ManagedDisk' | 'StorageAccount' (ReadOnly): Data Account Type.
 * **directoriesErroredOut**: int (ReadOnly): To indicate directories errored out in the job.
@@ -148,7 +148,7 @@ Until this is true, the TotalBytesToProcess may not be valid.
 ## DataBoxCustomerDiskCopyProgress
 ### Properties
 * **accountId**: string (ReadOnly): Id of the account where the data needs to be uploaded.
-* **actions**: 'MoveToCleanUpDevice' | 'None' | 'ReachOutToOperation' | 'Restart' | 'Resume'[] (ReadOnly): Available actions on the job.
+* **actions**: ('MoveToCleanUpDevice' | 'None' | 'ReachOutToOperation' | 'Restart' | 'Resume')[] (ReadOnly): Available actions on the job.
 * **bytesProcessed**: int (ReadOnly): To indicate bytes transferred.
 * **copyStatus**: 'Completed' | 'CompletedWithErrors' | 'DeviceFormatted' | 'DeviceMetadataModified' | 'DriveCorrupted' | 'DriveNotDetected' | 'DriveNotReceived' | 'Failed' | 'HardwareError' | 'InProgress' | 'MetadataFilesModifiedOrRemoved' | 'NotReturned' | 'NotStarted' | 'OtherServiceError' | 'OtherUserError' | 'StorageAccountNotAccessible' | 'UnsupportedData' | 'UnsupportedDrive' | string (ReadOnly): The Status of the copy
 * **dataAccountType**: 'ManagedDisk' | 'StorageAccount' (ReadOnly): Data Account Type.

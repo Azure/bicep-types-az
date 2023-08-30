@@ -122,8 +122,8 @@
 
 ## Notification
 ### Properties
-* **contactEmails**: string[] (Required): Email addresses to send the budget notification to when the threshold is exceeded. Must have at least one contact email or contact group specified at the Subscription or Resource Group scopes. All other scopes must have at least one contact email specified.
-* **contactGroups**: string[]: Action groups to send the budget notification to when the threshold is exceeded. Must be provided as a fully qualified Azure resource id. Only supported at Subscription or Resource Group scopes.
+* **contactEmails**: string[] {maxLength: 50} (Required): Email addresses to send the budget notification to when the threshold is exceeded. Must have at least one contact email or contact group specified at the Subscription or Resource Group scopes. All other scopes must have at least one contact email specified.
+* **contactGroups**: string[] {maxLength: 50}: Action groups to send the budget notification to when the threshold is exceeded. Must be provided as a fully qualified Azure resource id. Only supported at Subscription or Resource Group scopes.
 * **contactRoles**: string[]: Contact roles to send the budget notification to when the threshold is exceeded.
 * **enabled**: bool (Required): The notification is enabled or not.
 * **locale**: 'cs-cz' | 'da-dk' | 'de-de' | 'en-gb' | 'en-us' | 'es-es' | 'fr-fr' | 'hu-hu' | 'it-it' | 'ja-jp' | 'ko-kr' | 'nb-no' | 'nl-nl' | 'pl-pl' | 'pt-br' | 'pt-pt' | 'ru-ru' | 'sv-se' | 'tr-tr' | 'zh-cn' | 'zh-tw' | string: Language in which the recipient will receive the notification
@@ -143,7 +143,7 @@
 * **currencyCode**: string (ReadOnly): Currency Code
 * **includedQuantity**: int (ReadOnly): Included quality for an offer
 * **meterDetails**: [MeterDetails](#meterdetails) (ReadOnly): The details about the meter. By default this is not populated, unless it's specified in $expand.
-* **meterId**: string (ReadOnly): The meter id (GUID)
+* **meterId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The meter id (GUID)
 * **offerId**: string (ReadOnly): Offer Id
 * **partNumber**: string (ReadOnly): Part Number
 * **savingsPlan**: [SavingsPlan](#savingsplan) (ReadOnly): SavingsPlan Details

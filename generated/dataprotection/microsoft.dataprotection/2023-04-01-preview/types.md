@@ -71,7 +71,7 @@
 ### Properties
 * **apiVersion**: '2023-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[A-Za-z0-9]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ResourceGuardProxyBase](#resourceguardproxybase): ResourceGuardProxyBaseResource properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DataProtection/backupVaults/backupResourceGuardProxies' (ReadOnly, DeployTimeConstant): The resource type
@@ -192,14 +192,14 @@
 
 ### ScheduleBasedBackupCriteria
 #### Properties
-* **absoluteCriteria**: 'AllBackup' | 'FirstOfDay' | 'FirstOfMonth' | 'FirstOfWeek' | 'FirstOfYear' | string[]: it contains absolute values like "AllBackup" / "FirstOfDay" / "FirstOfWeek" / "FirstOfMonth"
+* **absoluteCriteria**: ('AllBackup' | 'FirstOfDay' | 'FirstOfMonth' | 'FirstOfWeek' | 'FirstOfYear' | string)[]: it contains absolute values like "AllBackup" / "FirstOfDay" / "FirstOfWeek" / "FirstOfMonth"
 and should be part of AbsoluteMarker enum
 * **daysOfMonth**: [Day](#day)[]: This is day of the month from 1 to 28 other wise last of month
-* **daysOfTheWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string[]: It should be Sunday/Monday/T..../Saturday
-* **monthsOfYear**: 'April' | 'August' | 'December' | 'February' | 'January' | 'July' | 'June' | 'March' | 'May' | 'November' | 'October' | 'September' | string[]: It should be January/February/....../December
+* **daysOfTheWeek**: ('Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string)[]: It should be Sunday/Monday/T..../Saturday
+* **monthsOfYear**: ('April' | 'August' | 'December' | 'February' | 'January' | 'July' | 'June' | 'March' | 'May' | 'November' | 'October' | 'September' | string)[]: It should be January/February/....../December
 * **objectType**: 'ScheduleBasedBackupCriteria' (Required): Type of the specific object - used for deserializing
 * **scheduleTimes**: string[]: List of schedule times for backup
-* **weeksOfTheMonth**: 'First' | 'Fourth' | 'Last' | 'Second' | 'Third' | string[]: It should be First/Second/Third/Fourth/Last
+* **weeksOfTheMonth**: ('First' | 'Fourth' | 'Last' | 'Second' | 'Third' | string)[]: It should be First/Second/Third/Fourth/Last
 
 
 ## BackupDatasourceParameters
