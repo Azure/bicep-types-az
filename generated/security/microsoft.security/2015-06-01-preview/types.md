@@ -132,7 +132,7 @@
 * **canBeInvestigated**: bool (ReadOnly): Whether this alert can be investigated with Azure Security Center
 * **compromisedEntity**: string (ReadOnly): The entity that the incident happened on
 * **confidenceReasons**: [AlertConfidenceReason](#alertconfidencereason)[]: reasons the alert got the confidenceScore value
-* **confidenceScore**: int (ReadOnly): level of confidence we have on the alert
+* **confidenceScore**: int {minValue: 0, maxValue: 1} (ReadOnly): level of confidence we have on the alert
 * **correlationKey**: string (ReadOnly): Alerts with the same CorrelationKey will be grouped together in Ibiza.
 * **description**: string (ReadOnly): Description of the incident and what it means
 * **detectedTimeUtc**: string (ReadOnly): The time the incident was detected by the vendor
@@ -211,7 +211,7 @@
 * **allowedSourceAddressPrefix**: string: Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".
 * **allowedSourceAddressPrefixes**: string[]: Mutually exclusive with the "allowedSourceAddressPrefix" parameter.
 * **maxRequestAccessDuration**: string (Required): Maximum duration requests can be made for. In ISO 8601 duration format. Minimum 5 minutes, maximum 1 day
-* **number**: int (Required)
+* **number**: int {minValue: 0, maxValue: 65535} (Required)
 * **protocol**: '*' | 'TCP' | 'UDP' | string (Required)
 
 ## JitNetworkAccessRequest
@@ -227,7 +227,7 @@
 * **allowedSourceAddressPrefixes**: string[]: Mutually exclusive with the "allowedSourceAddressPrefix" parameter.
 * **endTimeUtc**: string (Required): The date & time at which the request ends in UTC
 * **mappedPort**: int: The port which is mapped to this port's `number` in the Azure Firewall, if applicable
-* **number**: int (Required)
+* **number**: int {minValue: 0, maxValue: 65535} (Required)
 * **status**: 'Initiated' | 'Revoked' | string (Required): The status of the port
 * **statusReason**: 'Expired' | 'NewerRequestInitiated' | 'UserRequested' | string (Required): A description of why the `status` has its value
 
@@ -264,11 +264,11 @@
 
 ## Rule
 ### Properties
-* **destinationPort**: int: The rule's destination port
+* **destinationPort**: int {minValue: 0, maxValue: 65535}: The rule's destination port
 * **direction**: 'Inbound' | 'Outbound' | string: The rule's direction
 * **ipAddresses**: string[]: The remote IP addresses that should be able to communicate with the Azure resource on the rule's destination port and protocol
 * **name**: string: The name of the rule
-* **protocols**: 'TCP' | 'UDP' | string[]: The rule's transport protocols
+* **protocols**: ('TCP' | 'UDP' | string)[]: The rule's transport protocols
 
 ## SecurityTaskParameters
 ### Properties

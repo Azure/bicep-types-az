@@ -222,7 +222,7 @@
 * **enabled**: bool: Indicates whether the information type is enabled or not.
 * **keywords**: [InformationProtectionKeyword](#informationprotectionkeyword)[]: The information type keywords.
 * **order**: int: The order of the information type.
-* **recommendedLabelId**: string: The recommended label id to be associated with this information type.
+* **recommendedLabelId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The recommended label id to be associated with this information type.
 
 ## IoTSecurityAggregatedAlertProperties
 ### Properties
@@ -301,9 +301,9 @@
 ## IoTSecuritySolutionProperties
 ### Properties
 * **autoDiscoveredResources**: string[] (ReadOnly): List of resources that were automatically discovered as relevant to the security solution.
-* **disabledDataSources**: 'TwinData' | string[]: Disabled data sources. Disabling these data sources compromises the system.
+* **disabledDataSources**: ('TwinData' | string)[]: Disabled data sources. Disabling these data sources compromises the system.
 * **displayName**: string (Required): Resource display name.
-* **export**: 'RawEvents' | string[]: List of additional export to workspace data options
+* **export**: ('RawEvents' | string)[]: List of additional export to workspace data options
 * **iotHubs**: string[] (Required): IoT Hub resource IDs
 * **recommendationsConfiguration**: [RecommendationConfigurationProperties](#recommendationconfigurationproperties)[]: List of recommendation configuration
 * **status**: 'Disabled' | 'Enabled' | string: Security solution status
@@ -526,7 +526,7 @@
 ## UserDefinedResourcesProperties
 ### Properties
 * **query**: string (Required): Azure Resource Graph query which represents the security solution's user defined resources. Required to start with "where type != "Microsoft.Devices/IotHubs""
-* **querySubscriptions**: string[] (Required): List of Azure subscription ids on which the user defined resources query should be executed.
+* **querySubscriptions**: (string {pattern: "^[0-9A-Fa-f]{8}-([0-9A-Fa-f]{4}-){3}[0-9A-Fa-f]{12}$"})[] (Required): List of Azure subscription ids on which the user defined resources query should be executed.
 
 ## WorkspaceSettingProperties
 ### Properties

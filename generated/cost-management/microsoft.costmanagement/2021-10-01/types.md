@@ -110,7 +110,7 @@
 * **container**: string (Required): The name of the container where exports will be uploaded. If the container does not exist it will be created.
 * **resourceId**: string: The resource id of the storage account where exports will be delivered. This is not required if a sasToken and storageAccount are specified.
 * **rootFolderPath**: string: The name of the directory where exports will be uploaded.
-* **sasToken**: string: A SAS token for the storage account. For a restricted set of Azure customers this together with storageAccount can be specified instead of resourceId. Note: the value returned by the API for this property will always be obfuscated. Returning this same obfuscated value will not result in the SAS token being updated. To update this value a new SAS token must be specified.
+* **sasToken**: string {sensitive}: A SAS token for the storage account. For a restricted set of Azure customers this together with storageAccount can be specified instead of resourceId. Note: the value returned by the API for this property will always be obfuscated. Returning this same obfuscated value will not result in the SAS token being updated. To update this value a new SAS token must be specified.
 * **storageAccount**: string: The storage account where exports will be uploaded. For a restricted set of Azure customers this together with sasToken can be specified instead of resourceId.
 
 ## ExportDeliveryInfo
@@ -187,7 +187,7 @@
 ### Properties
 * **name**: string (Required): The name of the column to use in comparison.
 * **operator**: 'Contains' | 'In' | string (Required): The operator to use for comparison.
-* **values**: string[] (Required): Array of values to use for comparison
+* **values**: string[] {minLength: 1} (Required): Array of values to use for comparison
 
 ## ReportConfigDataset
 ### Properties
@@ -195,7 +195,7 @@
 * **configuration**: [ReportConfigDatasetConfiguration](#reportconfigdatasetconfiguration): Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.
 * **filter**: [ReportConfigFilter](#reportconfigfilter): Has filter expression to use in the report.
 * **granularity**: 'Daily' | 'Monthly' | string: The granularity of rows in the report.
-* **grouping**: [ReportConfigGrouping](#reportconfiggrouping)[]: Array of group by expression to use in the report. Report can have up to 2 group by clauses.
+* **grouping**: [ReportConfigGrouping](#reportconfiggrouping)[] {maxLength: 2}: Array of group by expression to use in the report. Report can have up to 2 group by clauses.
 * **sorting**: [ReportConfigSorting](#reportconfigsorting)[]: Array of order by expression to use in the report.
 
 ## ReportConfigDatasetAggregation
@@ -217,9 +217,9 @@
 
 ## ReportConfigFilter
 ### Properties
-* **and**: [ReportConfigFilter](#reportconfigfilter)[]: The logical "AND" expression. Must have at least 2 items.
+* **and**: [ReportConfigFilter](#reportconfigfilter)[] {minLength: 2}: The logical "AND" expression. Must have at least 2 items.
 * **dimensions**: [ReportConfigComparisonExpression](#reportconfigcomparisonexpression): Has comparison expression for a dimension
-* **or**: [ReportConfigFilter](#reportconfigfilter)[]: The logical "OR" expression. Must have at least 2 items.
+* **or**: [ReportConfigFilter](#reportconfigfilter)[] {minLength: 2}: The logical "OR" expression. Must have at least 2 items.
 * **tags**: [ReportConfigComparisonExpression](#reportconfigcomparisonexpression): Has comparison expression for a tag
 
 ## ReportConfigGrouping

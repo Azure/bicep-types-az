@@ -106,7 +106,7 @@
 
 ## AutoscaleSchedule
 ### Properties
-* **days**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string[]: Days of the week for a schedule-based autoscale rule
+* **days**: ('Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string)[]: Days of the week for a schedule-based autoscale rule
 * **timeAndCapacity**: [AutoscaleTimeAndCapacity](#autoscaletimeandcapacity): Time and capacity for a schedule-based autoscale rule
 
 ## AutoscaleTimeAndCapacity

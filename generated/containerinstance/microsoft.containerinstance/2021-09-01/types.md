@@ -139,7 +139,7 @@
 ## EnvironmentVariable
 ### Properties
 * **name**: string (Required): The name of the environment variable.
-* **secureValue**: string: The value of the secure environment variable.
+* **secureValue**: string {sensitive}: The value of the secure environment variable.
 * **value**: string: The value of the environment variable.
 
 ## Event
@@ -208,8 +208,8 @@
 * **logType**: 'ContainerInsights' | 'ContainerInstanceLogs' | string: The log type to be used.
 * **metadata**: [LogAnalyticsMetadata](#loganalyticsmetadata): Metadata for log analytics.
 * **workspaceId**: string (Required): The workspace id for log analytics
-* **workspaceKey**: string (Required): The workspace key for log analytics
-* **workspaceResourceId**: string: The workspace resource id for log analytics
+* **workspaceKey**: string {sensitive} (Required): The workspace key for log analytics
+* **workspaceResourceId**: string {sensitive}: The workspace resource id for log analytics
 
 ## LogAnalyticsMetadata
 ### Properties

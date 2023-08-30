@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [IdentityProperties](#identityproperties): The identity of the container registry.
 * **location**: string (Required): The location of the resource. This cannot be changed after the resource is created.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 5, maxLength: 50, pattern: "^[a-zA-Z0-9]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [RegistryProperties](#registryproperties): The properties of the container registry.
 * **sku**: [Sku](#sku) (Required): The SKU of the container registry.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
@@ -30,7 +30,7 @@
 * **apiVersion**: '2021-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The location of the resource. This cannot be changed after the resource is created.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 5, maxLength: 50, pattern: "^[a-zA-Z0-9]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ReplicationProperties](#replicationproperties): The properties of the replication.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
@@ -42,7 +42,7 @@
 * **apiVersion**: '2021-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The location of the webhook. This cannot be changed after the resource is created.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 5, maxLength: 50, pattern: "^[a-zA-Z0-9]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [WebhookPropertiesCreateParametersOrWebhookProperties](#webhookpropertiescreateparametersorwebhookproperties): The properties that the webhook will be created with.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [WebhookCreateParametersTags](#webhookcreateparameterstags): The tags for the webhook.
@@ -303,10 +303,10 @@ dictionary key references will be ARM resource ids in the form:
 
 ## WebhookPropertiesCreateParametersOrWebhookProperties
 ### Properties
-* **actions**: 'chart_delete' | 'chart_push' | 'delete' | 'push' | 'quarantine' | string[] (Required): The list of actions that trigger the webhook to post notifications.
+* **actions**: ('chart_delete' | 'chart_push' | 'delete' | 'push' | 'quarantine' | string)[] (Required): The list of actions that trigger the webhook to post notifications.
 * **customHeaders**: [WebhookPropertiesCreateParametersCustomHeaders](#webhookpropertiescreateparameterscustomheaders) (WriteOnly): Custom headers that will be added to the webhook notifications.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the webhook at the time the operation was called.
 * **scope**: string: The scope of repositories where the event can be triggered. For example, 'foo:*' means events for all tags under repository 'foo'. 'foo:bar' means events for 'foo:bar' only. 'foo' is equivalent to 'foo:latest'. Empty means all events.
-* **serviceUri**: string (Required, WriteOnly): The service URI for the webhook to post notifications.
+* **serviceUri**: string {sensitive} (Required, WriteOnly): The service URI for the webhook to post notifications.
 * **status**: 'disabled' | 'enabled' | string: The status of the webhook at the time the operation was called.
 

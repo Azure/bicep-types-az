@@ -49,9 +49,9 @@
 ### Properties
 * **allowedHeaders**: string[]: The request headers that the origin domain may specify on the CORS request.
 * **allowedMethods**: string[]: The methods (HTTP request verbs) that the origin domain may use for a CORS request.
-* **allowedOrigins**: string[] (Required): The origin domains that are permitted to make a request against the service via CORS.
+* **allowedOrigins**: string[] {minLength: 1} (Required): The origin domains that are permitted to make a request against the service via CORS.
 * **exposedHeaders**: string[]: The response headers to expose to CORS clients.
-* **maxAgeInSeconds**: int: The number of seconds that the client/browser should cache a preflight response.
+* **maxAgeInSeconds**: int {minValue: 0}: The number of seconds that the client/browser should cache a preflight response.
 
 ## EndpointAuthentication
 ### Properties
@@ -61,8 +61,8 @@
 
 ## ManagedServiceIdentity
 ### Properties
-* **principalId**: string (ReadOnly): The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
-* **tenantId**: string (ReadOnly): The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
+* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
 * **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' | string (Required): Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed).
 * **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.
 
@@ -81,7 +81,7 @@
 ## ServiceEndpointResourceProperties
 ### Properties
 * **pairedLocation**: string (ReadOnly): The paired location that will be used by this ServiceEndpoint.
-* **preAllocatedCapacity**: int: ServiceEndpoint pre-allocated capacity controls the maximum requests-per-second allowed for that endpoint. Only applicable when Account configuration is Capacity.
+* **preAllocatedCapacity**: int {minValue: 0}: ServiceEndpoint pre-allocated capacity controls the maximum requests-per-second allowed for that endpoint. Only applicable when Account configuration is Capacity.
 * **provisioningState**: string (ReadOnly): The resource provisioning state.
 * **url**: string (ReadOnly): The URL where the ServiceEndpoint API is accessible at.
 
@@ -116,6 +116,6 @@
 
 ## UserAssignedIdentity
 ### Properties
-* **clientId**: string (ReadOnly): The client ID of the assigned identity.
-* **principalId**: string (ReadOnly): The principal ID of the assigned identity.
+* **clientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The client ID of the assigned identity.
+* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The principal ID of the assigned identity.
 

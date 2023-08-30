@@ -6,7 +6,7 @@
 * **apiVersion**: '2017-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Location of the PowerBI Dedicated resource.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 63, pattern: "^[a-z][a-z0-9]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DedicatedCapacityProperties](#dedicatedcapacityproperties): Properties of the provision operation request.
 * **sku**: [ResourceSku](#resourcesku) (Required): The SKU of the PowerBI Dedicated resource.
 * **tags**: [ResourceTags](#resourcetags): Key-value pairs of additional resource provisioning properties.

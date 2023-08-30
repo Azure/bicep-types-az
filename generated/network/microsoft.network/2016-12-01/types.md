@@ -293,7 +293,7 @@
 
 ## ApplicationGatewayConnectionDraining
 ### Properties
-* **drainTimeoutInSec**: int (Required): The number of seconds connection draining is active. Acceptable values are from 1 second to 3600 seconds.
+* **drainTimeoutInSec**: int {minValue: 1, maxValue: 3600} (Required): The number of seconds connection draining is active. Acceptable values are from 1 second to 3600 seconds.
 * **enabled**: bool (Required): Whether connection draining is enabled or not.
 
 ## ApplicationGatewayFrontendIPConfiguration
@@ -441,7 +441,7 @@
 
 ## ApplicationGatewaySslPolicy
 ### Properties
-* **disabledSslProtocols**: 'TLSv1_0' | 'TLSv1_1' | 'TLSv1_2' | string[]: SSL protocols to be disabled on application gateway. Possible values are: 'TLSv1_0', 'TLSv1_1', and 'TLSv1_2'.
+* **disabledSslProtocols**: ('TLSv1_0' | 'TLSv1_1' | 'TLSv1_2' | string)[]: SSL protocols to be disabled on application gateway. Possible values are: 'TLSv1_0', 'TLSv1_1', and 'TLSv1_2'.
 
 ## ApplicationGatewayUrlPathMap
 ### Properties

@@ -186,7 +186,7 @@
 * **modifiedTime**: string (ReadOnly): The last modified time for this rule
 * **primaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
 * **revision**: int (ReadOnly): The revision number for the rule
-* **rights**: 'Listen' | 'Manage' | 'Send'[]: The rights associated with the rule.
+* **rights**: ('Listen' | 'Manage' | 'Send')[]: The rights associated with the rule.
 * **secondaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
 
 ## Sku

@@ -9,7 +9,7 @@
 * **identity**: [ServicesResourceIdentity](#servicesresourceidentity): Setting indicating whether the service has a managed identity associated with it.
 * **kind**: 'fhir' | 'fhir-R4' | 'fhir-Stu3' (Required): The kind of the service.
 * **location**: string (Required): The resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 24} (Required, DeployTimeConstant): The resource name
 * **properties**: [ServicesProperties](#servicesproperties): The common properties of a service.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [ServicesResourceTags](#servicesresourcetags): The resource tags.
@@ -66,7 +66,7 @@
 
 ## ServiceAccessPolicyEntry
 ### Properties
-* **objectId**: string (Required): An Azure AD object ID (User or Apps) that is allowed access to the FHIR service.
+* **objectId**: string {pattern: "^(([0-9A-Fa-f]{8}[-]?(?:[0-9A-Fa-f]{4}[-]?){3}[0-9A-Fa-f]{12}){1})+$"} (Required): An Azure AD object ID (User or Apps) that is allowed access to the FHIR service.
 
 ## ServiceAcrConfigurationInfo
 ### Properties
@@ -82,14 +82,14 @@
 ### Properties
 * **allowCredentials**: bool: If credentials are allowed via CORS.
 * **headers**: string[]: The headers to be allowed via CORS.
-* **maxAge**: int: The max age to be allowed via CORS.
+* **maxAge**: int {minValue: 0, maxValue: 99999}: The max age to be allowed via CORS.
 * **methods**: string[]: The methods to be allowed via CORS.
-* **origins**: string[]: The origins to be allowed via CORS.
+* **origins**: (string {pattern: "^(?:(?:(?:[hH][tT][tT][pP](?:[sS]|))\:\/\/(?:[a-zA-Z0-9-]+[.]?)+(?:\:[0-9]{1,5})?|[*]))$"})[]: The origins to be allowed via CORS.
 
 ## ServiceCosmosDbConfigurationInfo
 ### Properties
 * **keyVaultKeyUri**: string: The URI of the customer-managed key for the backing database.
-* **offerThroughput**: int: The provisioned throughput for the backing database.
+* **offerThroughput**: int {minValue: 400}: The provisioned throughput for the backing database.
 
 ## ServiceExportConfigurationInfo
 ### Properties

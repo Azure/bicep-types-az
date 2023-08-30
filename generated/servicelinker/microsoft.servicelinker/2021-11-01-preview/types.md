@@ -24,12 +24,12 @@
 #### Properties
 * **authType**: 'secret' (Required): The authentication type.
 * **name**: string: Username or account name for secret auth.
-* **secret**: string: Password or account key for secret auth.
+* **secret**: string {sensitive}: Password or account key for secret auth.
 
 ### ServicePrincipalCertificateAuthInfo
 #### Properties
 * **authType**: 'servicePrincipalCertificate' (Required): The authentication type.
-* **certificate**: string (Required): ServicePrincipal certificate for servicePrincipal auth.
+* **certificate**: string {sensitive} (Required): ServicePrincipal certificate for servicePrincipal auth.
 * **clientId**: string (Required): Application clientId for servicePrincipal auth.
 * **principalId**: string (Required): Principal Id for servicePrincipal auth.
 
@@ -38,7 +38,7 @@
 * **authType**: 'servicePrincipalSecret' (Required): The authentication type.
 * **clientId**: string (Required): ServicePrincipal application clientId for servicePrincipal auth.
 * **principalId**: string (Required): Principal Id for servicePrincipal auth.
-* **secret**: string (Required): Secret for servicePrincipal auth.
+* **secret**: string {sensitive} (Required): Secret for servicePrincipal auth.
 
 ### SystemAssignedIdentityAuthInfo
 #### Properties

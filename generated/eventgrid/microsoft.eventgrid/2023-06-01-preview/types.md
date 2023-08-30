@@ -80,7 +80,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [IdentityInfo](#identityinfo): Identity information for the Namespace resource.
 * **location**: string (Required): Location of the resource.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 50, pattern: "^[a-zA-Z0-9-]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [NamespaceProperties](#namespaceproperties): Properties of the Namespace resource.
 * **sku**: [NamespaceSku](#namespacesku): Represents available Sku pricing tiers.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to the namespace resource.
@@ -92,7 +92,7 @@
 ### Properties
 * **apiVersion**: '2023-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 50, pattern: "^[a-zA-Z0-9-]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [CaCertificateProperties](#cacertificateproperties): The properties of CA certificate.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to the CaCertificate resource.
 * **type**: 'Microsoft.EventGrid/namespaces/caCertificates' (ReadOnly, DeployTimeConstant): The resource type
@@ -102,7 +102,7 @@
 ### Properties
 * **apiVersion**: '2023-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 50, pattern: "^[a-zA-Z0-9-]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ClientGroupProperties](#clientgroupproperties): The properties of client group.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to the ClientGroup resource.
 * **type**: 'Microsoft.EventGrid/namespaces/clientGroups' (ReadOnly, DeployTimeConstant): The resource type
@@ -112,7 +112,7 @@
 ### Properties
 * **apiVersion**: '2023-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 128, pattern: "^[-a-zA-Z0-9:\._]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ClientProperties](#clientproperties): The properties of client.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to the Client resource.
 * **type**: 'Microsoft.EventGrid/namespaces/clients' (ReadOnly, DeployTimeConstant): The resource type
@@ -122,7 +122,7 @@
 ### Properties
 * **apiVersion**: '2023-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 50, pattern: "^[a-zA-Z0-9-]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [PermissionBindingProperties](#permissionbindingproperties): The properties of permission binding.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to the PermissionBinding resource.
 * **type**: 'Microsoft.EventGrid/namespaces/permissionBindings' (ReadOnly, DeployTimeConstant): The resource type
@@ -141,7 +141,7 @@
 ### Properties
 * **apiVersion**: '2023-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 50, pattern: "^[a-zA-Z0-9-]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [NamespaceTopicProperties](#namespacetopicproperties): Properties of the namespace topic.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to namespace topic resource.
 * **type**: 'Microsoft.EventGrid/namespaces/topics' (ReadOnly, DeployTimeConstant): The resource type
@@ -151,7 +151,7 @@
 ### Properties
 * **apiVersion**: '2023-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 50, pattern: "^[a-zA-Z0-9-]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [SubscriptionProperties](#subscriptionproperties): Properties of the event subscription.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to Event Subscription resource.
 * **type**: 'Microsoft.EventGrid/namespaces/topics/eventSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
@@ -161,7 +161,7 @@
 ### Properties
 * **apiVersion**: '2023-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 50, pattern: "^[a-zA-Z0-9-]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [TopicSpaceProperties](#topicspaceproperties): The properties of topic space.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to the TopicSpace resource.
 * **type**: 'Microsoft.EventGrid/namespaces/topicSpaces' (ReadOnly, DeployTimeConstant): The resource type
@@ -184,7 +184,7 @@
 * **apiVersion**: '2023-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Location of the resource.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 50, pattern: "^[a-zA-Z0-9-]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [PartnerDestinationProperties](#partnerdestinationproperties): Properties of the Partner Destination.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to Partner Destination resource.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Tags of the resource.
@@ -496,7 +496,7 @@ the channel and corresponding partner topic are deleted.
 
 ## ClientAuthenticationSettings
 ### Properties
-* **alternativeAuthenticationNameSources**: 'ClientCertificateDns' | 'ClientCertificateEmail' | 'ClientCertificateIp' | 'ClientCertificateSubject' | 'ClientCertificateUri' | string[]: Alternative authentication name sources related to client authentication settings for namespace resource.
+* **alternativeAuthenticationNameSources**: ('ClientCertificateDns' | 'ClientCertificateEmail' | 'ClientCertificateIp' | 'ClientCertificateSubject' | 'ClientCertificateUri' | string)[]: Alternative authentication name sources related to client authentication settings for namespace resource.
 
 ## ClientCertificateAuthentication
 ### Properties
@@ -505,10 +505,10 @@ the channel and corresponding partner topic are deleted.
 
 ## ClientCertificateSubjectDistinguishedName
 ### Properties
-* **commonName**: string: The common name field in the subject name. The allowed limit is 64 characters and it should be specified.
-* **countryCode**: string: The country code field in the subject name. If present, the country code should be represented by two-letter code defined in ISO 2166-1 (alpha-2). For example: 'US'.
-* **organization**: string: The organization field in the subject name. If present, the allowed limit is 64 characters.
-* **organizationUnit**: string: The organization unit field in the subject name. If present, the allowed limit is 32 characters.
+* **commonName**: string {maxLength: 64}: The common name field in the subject name. The allowed limit is 64 characters and it should be specified.
+* **countryCode**: string {minLength: 2, maxLength: 2}: The country code field in the subject name. If present, the country code should be represented by two-letter code defined in ISO 2166-1 (alpha-2). For example: 'US'.
+* **organization**: string {maxLength: 64}: The organization field in the subject name. If present, the allowed limit is 64 characters.
+* **organizationUnit**: string {maxLength: 32}: The organization unit field in the subject name. If present, the allowed limit is 32 characters.
 
 ## ClientCertificateThumbprint
 ### Properties
@@ -928,8 +928,8 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 
 ## NamespaceSharedAccessKeys
 ### Properties
-* **key1**: string: Shared access key1 for the namespace.
-* **key2**: string: Shared access key2 for the namespace.
+* **key1**: string {sensitive}: Shared access key1 for the namespace.
+* **key2**: string {sensitive}: Shared access key2 for the namespace.
 
 ## NamespaceSku
 ### Properties
@@ -952,7 +952,7 @@ Min event retention duration value is 1 day and max event retention duration val
 context will fail. If specified, the allowed values are between 1 to the value of defaultMaximumExpirationTimeInDays specified in PartnerConfiguration.
 If not specified, the default value will be the value of defaultMaximumExpirationTimeInDays specified in PartnerConfiguration or 7 if this value is not specified.
 * **partnerName**: string: The partner name.
-* **partnerRegistrationImmutableId**: string: The immutableId of the corresponding partner registration.
+* **partnerRegistrationImmutableId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The immutableId of the corresponding partner registration.
 
 ## PartnerAuthorization
 ### Properties
@@ -1007,7 +1007,7 @@ created under this resource group.
 * **expirationTimeIfNotActivatedUtc**: string: Expiration time of the partner destination. If this timer expires and the partner destination was never activated,
 the partner destination and corresponding channel are deleted.
 * **messageForActivation**: string: Context or helpful message that can be used during the approval process.
-* **partnerRegistrationImmutableId**: string: The immutable Id of the corresponding partner registration.
+* **partnerRegistrationImmutableId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The immutable Id of the corresponding partner registration.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'IdleDueToMirroredChannelResourceDeletion' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the partner destination.
 
 ## PartnerDetails
@@ -1043,7 +1043,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 
 ## PartnerRegistrationProperties
 ### Properties
-* **partnerRegistrationImmutableId**: string: The immutableId of the corresponding partner registration.
+* **partnerRegistrationImmutableId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The immutableId of the corresponding partner registration.
 Note: This property is marked for deprecation and is not supported in any future GA API version
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the partner registration.
 
@@ -1067,7 +1067,7 @@ created partner topic.
 * **expirationTimeIfNotActivatedUtc**: string: Expiration time of the partner topic. If this timer expires while the partner topic is still never activated,
 the partner topic and corresponding event channel are deleted.
 * **messageForActivation**: string: Context or helpful message that can be used during the approval process by the subscriber.
-* **partnerRegistrationImmutableId**: string: The immutableId of the corresponding partner registration.
+* **partnerRegistrationImmutableId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The immutableId of the corresponding partner registration.
 * **partnerTopicFriendlyDescription**: string: Friendly description about the topic. This can be set by the publisher/partner to show custom description for the customer partner topic.
 This will be helpful to remove any ambiguity of the origin of creation of the partner topic for the customer.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'IdleDueToMirroredChannelResourceDeletion' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the partner topic.
@@ -1271,7 +1271,7 @@ This topic should reside in the same region where namespace is located.
 * **resourceRegionType**: 'GlobalResource' | 'RegionalResource' | string: Region type of the resource.
 * **sourceResourceFormat**: string: Source resource format.
 * **supportedLocations**: string[]: List of locations supported by this topic type.
-* **supportedScopesForSource**: 'AzureSubscription' | 'ManagementGroup' | 'Resource' | 'ResourceGroup' | string[]: Supported source scopes.
+* **supportedScopesForSource**: ('AzureSubscription' | 'ManagementGroup' | 'Resource' | 'ResourceGroup' | string)[]: Supported source scopes.
 
 ## TrackedResourceTags
 ### Properties
@@ -1323,7 +1323,7 @@ This topic should reside in the same region where namespace is located.
 * **organizationName**: string: Official name of the Partner.
 * **partnerDestinationDetails**: [PartnerDetails](#partnerdetails): Details of the partner destination scenario.
 * **partnerDisplayName**: string: Display name of the verified partner.
-* **partnerRegistrationImmutableId**: string: ImmutableId of the corresponding partner registration.
+* **partnerRegistrationImmutableId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: ImmutableId of the corresponding partner registration.
 * **partnerTopicDetails**: [PartnerDetails](#partnerdetails): Details of the partner topic scenario.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: Provisioning state of the verified partner.
 
@@ -1333,7 +1333,7 @@ This topic should reside in the same region where namespace is located.
 * **azureActiveDirectoryTenantId**: string: The Azure Active Directory Tenant ID to get the access token that will be included as the bearer token in delivery requests.
 * **deliveryAttributeMappings**: [DeliveryAttributeMapping](#deliveryattributemapping)[]: Delivery attribute details.
 * **endpointBaseUrl**: string (ReadOnly): The base URL that represents the endpoint of the destination of an event subscription.
-* **endpointUrl**: string: The URL that represents the endpoint of the destination of an event subscription.
+* **endpointUrl**: string {sensitive}: The URL that represents the endpoint of the destination of an event subscription.
 * **maxEventsPerBatch**: int: Maximum number of events per batch.
 * **minimumTlsVersionAllowed**: '1.0' | '1.1' | '1.2' | string: Minimum TLS version that should be supported by webhook endpoint
 * **preferredBatchSizeInKilobytes**: int: Preferred batch size in Kilobytes.

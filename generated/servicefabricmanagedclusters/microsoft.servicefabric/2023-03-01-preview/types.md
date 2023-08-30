@@ -110,7 +110,7 @@ This name must be the full Arm Resource ID for the referenced application type v
 
 ## ApplicationTypeVersionsCleanupPolicy
 ### Properties
-* **maxUnusedVersionsToKeep**: int (Required): Number of unused versions per application type to keep.
+* **maxUnusedVersionsToKeep**: int {minValue: 0} (Required): Number of unused versions per application type to keep.
 
 ## ApplicationUpgradePolicy
 ### Properties
@@ -159,18 +159,18 @@ This name must be the full Arm Resource ID for the referenced application type v
 
 ## LoadBalancingRule
 ### Properties
-* **backendPort**: int (Required): The port used for internal connections on the endpoint. Acceptable values are between 1 and 65535.
-* **frontendPort**: int (Required): The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 1 and 65534.
+* **backendPort**: int {minValue: 1, maxValue: 65534} (Required): The port used for internal connections on the endpoint. Acceptable values are between 1 and 65535.
+* **frontendPort**: int {minValue: 1, maxValue: 65534} (Required): The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 1 and 65534.
 * **loadDistribution**: string: The load distribution policy for this rule.
-* **probePort**: int: The prob port used by the load balancing rule. Acceptable values are between 1 and 65535.
+* **probePort**: int {minValue: 1, maxValue: 65534}: The prob port used by the load balancing rule. Acceptable values are between 1 and 65535.
 * **probeProtocol**: 'http' | 'https' | 'tcp' | string (Required): the reference to the load balancer probe used by the load balancing rule.
 * **probeRequestPath**: string: The probe request path. Only supported for HTTP/HTTPS probes.
 * **protocol**: 'tcp' | 'udp' | string (Required): The reference to the transport protocol used by the load balancing rule.
 
 ## ManagedClusterProperties
 ### Properties
-* **addonFeatures**: 'BackupRestoreService' | 'DnsService' | 'ResourceMonitorService' | string[]: List of add-on features to enable on the cluster.
-* **adminPassword**: string: VM admin user password.
+* **addonFeatures**: ('BackupRestoreService' | 'DnsService' | 'ResourceMonitorService' | string)[]: List of add-on features to enable on the cluster.
+* **adminPassword**: string {sensitive}: VM admin user password.
 * **adminUserName**: string (Required): VM admin user name.
 * **allowRdpAccess**: bool: Setting this to true enables RDP access to the VM. The default NSG rule opens RDP port to Internet which can be overridden with custom Network Security Rules. The default value for this setting is false.
 * **applicationTypeVersionsCleanupPolicy**: [ApplicationTypeVersionsCleanupPolicy](#applicationtypeversionscleanuppolicy): The policy used to clean up unused versions.
@@ -227,7 +227,7 @@ This name must be the full Arm Resource ID for the referenced application type v
 * **destinationPortRanges**: string[]: The destination port ranges.
 * **direction**: 'inbound' | 'outbound' | string (Required): Network security rule direction.
 * **name**: string (Required): Network security rule name.
-* **priority**: int (Required): The priority of the rule. The value can be in the range 1000 to 3000. Values outside this range are reserved for Service Fabric ManagerCluster Resource Provider. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule.
+* **priority**: int {minValue: 1000, maxValue: 3000} (Required): The priority of the rule. The value can be in the range 1000 to 3000. Values outside this range are reserved for Service Fabric ManagerCluster Resource Provider. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule.
 * **protocol**: 'ah' | 'esp' | 'http' | 'https' | 'icmp' | 'tcp' | 'udp' | string (Required): Network protocol this rule applies to.
 * **sourceAddressPrefix**: string: The CIDR or source IP range. Asterisk '*' can also be used to match all source IPs. Default tags such as 'VirtualNetwork', 'AzureLoadBalancer' and 'Internet' can also be used. If this is an ingress rule, specifies where network traffic originates from.
 * **sourceAddressPrefixes**: string[]: The CIDR or source IP ranges.
@@ -239,7 +239,7 @@ This name must be the full Arm Resource ID for the referenced application type v
 * **additionalDataDisks**: [VmssDataDisk](#vmssdatadisk)[]: Additional managed data disks.
 * **applicationPorts**: [EndpointRangeDescription](#endpointrangedescription): The range of ports from which cluster assigned port to Service Fabric applications.
 * **capacities**: [NodeTypePropertiesCapacities](#nodetypepropertiescapacities): The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much resource a node has.
-* **dataDiskLetter**: string: Managed data disk letter. It can not use the reserved letter C or D and it can not change after created.
+* **dataDiskLetter**: string {pattern: "^[a-zA-Z]{1}$"}: Managed data disk letter. It can not use the reserved letter C or D and it can not change after created.
 * **dataDiskSizeGB**: int: Disk size for the managed disk attached to the vms on the node type in GBs.
 * **dataDiskType**: 'Premium_LRS' | 'StandardSSD_LRS' | 'Standard_LRS' | string: Managed data disk type. Specifies the storage account type for the managed disk
 * **enableAcceleratedNetworking**: bool: Specifies whether the network interface is accelerated networking-enabled.
@@ -272,10 +272,10 @@ This name must be the full Arm Resource ID for the referenced application type v
 * **vmImageResourceId**: string: Indicates the resource id of the vm image. This parameter is used for custom vm image.
 * **vmImageSku**: string: The SKU of the Azure Virtual Machines Marketplace image. For example, 14.04.0-LTS or 2012-R2-Datacenter.
 * **vmImageVersion**: string: The version of the Azure Virtual Machines Marketplace image. A value of 'latest' can be specified to select the latest version of an image. If omitted, the default is 'latest'.
-* **vmInstanceCount**: int (Required): The number of nodes in the node type. <br /><br />**Values:** <br />-1 - Use when auto scale rules are configured or sku.capacity is defined <br /> 0 - Not supported <br /> >0 - Use for manual scale.
+* **vmInstanceCount**: int {minValue: -1, maxValue: 2147483647} (Required): The number of nodes in the node type. <br /><br />**Values:** <br />-1 - Use when auto scale rules are configured or sku.capacity is defined <br /> 0 - Not supported <br /> >0 - Use for manual scale.
 * **vmManagedIdentity**: [VmManagedIdentity](#vmmanagedidentity): Identities to assign to the virtual machine scale set under the node type.
 * **vmSecrets**: [VaultSecretGroup](#vaultsecretgroup)[]: The secrets to install in the virtual machines.
-* **vmSetupActions**: 'EnableContainers' | 'EnableHyperV' | string[]: Specifies the actions to be performed on the vms before bootstrapping the service fabric runtime.
+* **vmSetupActions**: ('EnableContainers' | 'EnableHyperV' | string)[]: Specifies the actions to be performed on the vms before bootstrapping the service fabric runtime.
 * **vmSharedGalleryImageId**: string: Indicates the resource id of the vm shared galleries image. This parameter is used for custom vm image.
 * **vmSize**: string: The size of virtual machines in the pool. All virtual machines in a pool are the same size. For example, Standard_D3.
 * **zones**: string[]: Specifies the availability zones where the node type would span across. If the cluster is not spanning across availability zones, initiates az migration for the cluster.
@@ -292,7 +292,7 @@ This name must be the full Arm Resource ID for the referenced application type v
 
 ## NodeTypeSku
 ### Properties
-* **capacity**: int (Required): The number of nodes in the node type.<br /><br />If present in request it will override properties.vmInstanceCount.
+* **capacity**: int {minValue: 1, maxValue: 2147483647} (Required): The number of nodes in the node type.<br /><br />If present in request it will override properties.vmInstanceCount.
 * **name**: string: The sku name. <br /><br />Name is internally generated and is used in auto-scale scenarios.<br /> Property does not allow to be changed to other values than generated.<br /> To avoid deployment errors please omit the property.
 * **tier**: string: Specifies the tier of the node type. <br /><br /> Possible Values:<br /> **Standard**
 
@@ -471,17 +471,17 @@ When removing serviceDnsName, removed name may temporarily be resolvable. Do not
 ### StatefulServiceProperties
 #### Properties
 * **hasPersistedState**: bool: A flag indicating whether this is a persistent service which stores states on the local disk. If it is then the value of this property is true, if not it is false.
-* **minReplicaSetSize**: int: The minimum replica set size as a number.
+* **minReplicaSetSize**: int {minValue: 1}: The minimum replica set size as a number.
 * **quorumLossWaitDuration**: string: The maximum duration for which a partition is allowed to be in a state of quorum loss, represented in ISO 8601 format "hh:mm:ss".
 * **replicaRestartWaitDuration**: string: The duration between when a replica goes down and when a new replica is created, represented in ISO 8601 format "hh:mm:ss".
 * **serviceKind**: 'Stateful' (Required): The kind of service (Stateless or Stateful).
 * **servicePlacementTimeLimit**: string: The duration for which replicas can stay InBuild before reporting that build is stuck, represented in ISO 8601 format "hh:mm:ss".
 * **standByReplicaKeepDuration**: string: The definition on how long StandBy replicas should be maintained before being removed, represented in ISO 8601 format "hh:mm:ss".
-* **targetReplicaSetSize**: int: The target replica set size as a number.
+* **targetReplicaSetSize**: int {minValue: 1}: The target replica set size as a number.
 
 ### StatelessServiceProperties
 #### Properties
-* **instanceCount**: int (Required): The instance count.
+* **instanceCount**: int {minValue: -1} (Required): The instance count.
 * **minInstanceCount**: int: MinInstanceCount is the minimum number of instances that must be up to meet the EnsureAvailability safety check during operations like upgrade or deactivate node. The actual number that is used is max( MinInstanceCount, ceil( MinInstancePercentage/100.0 * InstanceCount) ). Note, if InstanceCount is set to -1, during MinInstanceCount computation -1 is first converted into the number of nodes on which the instances are allowed to be placed according to the placement constraints on the service.
 * **minInstancePercentage**: int: MinInstancePercentage is the minimum percentage of InstanceCount that must be up to meet the EnsureAvailability safety check during operations like upgrade or deactivate node. The actual number that is used is max( MinInstanceCount, ceil( MinInstancePercentage/100.0 * InstanceCount) ). Note, if InstanceCount is set to -1, during MinInstancePercentage computation, -1 is first converted into the number of nodes on which the instances are allowed to be placed according to the placement constraints on the service.
 * **serviceKind**: 'Stateless' (Required): The kind of service (Stateless or Stateful).
@@ -489,19 +489,19 @@ When removing serviceDnsName, removed name may temporarily be resolvable. Do not
 
 ## ServiceTypeHealthPolicy
 ### Properties
-* **maxPercentUnhealthyPartitionsPerService**: int (Required): The maximum allowed percentage of unhealthy partitions per service.
+* **maxPercentUnhealthyPartitionsPerService**: int {minValue: 0, maxValue: 100} (Required): The maximum allowed percentage of unhealthy partitions per service.
 
 The percentage represents the maximum tolerated percentage of partitions that can be unhealthy before the service is considered in error.
 If the percentage is respected but there is at least one unhealthy partition, the health is evaluated as Warning.
 The percentage is calculated by dividing the number of unhealthy partitions over the total number of partitions in the service.
 The computation rounds up to tolerate one failure on small numbers of partitions.
-* **maxPercentUnhealthyReplicasPerPartition**: int (Required): The maximum allowed percentage of unhealthy replicas per partition.
+* **maxPercentUnhealthyReplicasPerPartition**: int {minValue: 0, maxValue: 100} (Required): The maximum allowed percentage of unhealthy replicas per partition.
 
 The percentage represents the maximum tolerated percentage of replicas that can be unhealthy before the partition is considered in error.
 If the percentage is respected but there is at least one unhealthy replica, the health is evaluated as Warning.
 The percentage is calculated by dividing the number of unhealthy replicas over the total number of replicas in the partition.
 The computation rounds up to tolerate one failure on small numbers of replicas.
-* **maxPercentUnhealthyServices**: int (Required): The maximum allowed percentage of unhealthy services.
+* **maxPercentUnhealthyServices**: int {minValue: 0, maxValue: 100} (Required): The maximum allowed percentage of unhealthy services.
 
 The percentage represents the maximum tolerated percentage of services that can be unhealthy before the application is considered in error.
 If the percentage is respected but there is at least one unhealthy service, the health is evaluated as Warning.
@@ -581,10 +581,10 @@ The computation rounds up to tolerate one failure on small numbers of services.
 
 ## VmssDataDisk
 ### Properties
-* **diskLetter**: string (Required): Managed data disk letter. It can not use the reserved letter C or D and it can not change after created.
+* **diskLetter**: string {pattern: "^[a-zA-Z]{1}$"} (Required): Managed data disk letter. It can not use the reserved letter C or D and it can not change after created.
 * **diskSizeGB**: int (Required): Disk size for each vm in the node type in GBs.
 * **diskType**: 'Premium_LRS' | 'StandardSSD_LRS' | 'Standard_LRS' | string (Required): Managed data disk type. Specifies the storage account type for the managed disk
-* **lun**: int (Required): Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM. Lun 0 is reserved for the service fabric data disk.
+* **lun**: int {minValue: 1} (Required): Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM. Lun 0 is reserved for the service fabric data disk.
 
 ## VmssExtension
 ### Properties

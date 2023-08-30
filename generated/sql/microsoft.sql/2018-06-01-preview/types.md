@@ -77,7 +77,7 @@
 ### Properties
 * **apiVersion**: '2018-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedInstanceOperationProperties](#managedinstanceoperationproperties) (ReadOnly): Resource properties.
 * **type**: 'Microsoft.Sql/managedInstances/operations' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -139,8 +139,8 @@
 ### Properties
 * **administratorType**: 'ActiveDirectory' | string (Required): Type of the sever administrator.
 * **login**: string (Required): Login name of the server administrator.
-* **sid**: string (Required): SID (object ID) of the server administrator.
-* **tenantId**: string: Tenant ID of the administrator.
+* **sid**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required): SID (object ID) of the server administrator.
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Tenant ID of the administrator.
 
 ## BaseLongTermRetentionPolicyProperties
 ### Properties
@@ -286,8 +286,8 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 
 ## ResourceIdentity
 ### Properties
-* **principalId**: string (ReadOnly): The Azure Active Directory principal id.
-* **tenantId**: string (ReadOnly): The Azure Active Directory tenant id.
+* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The Azure Active Directory principal id.
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The Azure Active Directory tenant id.
 * **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' | string: The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.
 
 ## SecurityAlertPolicyProperties

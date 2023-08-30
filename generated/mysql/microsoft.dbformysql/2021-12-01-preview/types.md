@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [Identity](#identity): The cmk identity for the server.
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[a-z0-9][-a-z0-9]*(?<!-)$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ServerProperties](#serverproperties): Properties of the server.
 * **sku**: [Sku](#sku): The SKU (pricing tier) of the server.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
@@ -107,8 +107,8 @@
 
 ## FirewallRuleProperties
 ### Properties
-* **endIpAddress**: string (Required): The end IP address of the server firewall rule. Must be IPv4 format.
-* **startIpAddress**: string (Required): The start IP address of the server firewall rule. Must be IPv4 format.
+* **endIpAddress**: string {pattern: "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"} (Required): The end IP address of the server firewall rule. Must be IPv4 format.
+* **startIpAddress**: string {pattern: "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"} (Required): The start IP address of the server firewall rule. Must be IPv4 format.
 
 ## HighAvailability
 ### Properties
@@ -150,7 +150,7 @@
 ## ServerProperties
 ### Properties
 * **administratorLogin**: string: The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).
-* **administratorLoginPassword**: string (WriteOnly): The password of the administrator login (required for server creation).
+* **administratorLoginPassword**: string {sensitive} (WriteOnly): The password of the administrator login (required for server creation).
 * **availabilityZone**: string: availability Zone information of the server.
 * **backup**: [Backup](#backup): Backup related properties of a server.
 * **createMode**: 'Default' | 'GeoRestore' | 'PointInTimeRestore' | 'Replica' | string (WriteOnly): The mode to create a new MySQL server.
@@ -159,7 +159,7 @@
 * **highAvailability**: [HighAvailability](#highavailability): High availability related properties of a server.
 * **maintenanceWindow**: [MaintenanceWindow](#maintenancewindow): Maintenance window of a server.
 * **network**: [Network](#network): Network related properties of a server.
-* **replicaCapacity**: int (ReadOnly): The maximum number of replicas that a primary server can have.
+* **replicaCapacity**: int {minValue: 0} (ReadOnly): The maximum number of replicas that a primary server can have.
 * **replicationRole**: 'None' | 'Replica' | 'Source' | string: The replication role.
 * **restorePointInTime**: string (WriteOnly): Restore point creation time (ISO8601 format), specifying the time to restore from.
 * **sourceServerResourceId**: string: The source MySQL server id.

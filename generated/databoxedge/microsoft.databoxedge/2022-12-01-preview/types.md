@@ -92,7 +92,7 @@
 ### Properties
 * **apiVersion**: '2022-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "[ A-Za-z0-9_@./#&+-]*"} (Required, DeployTimeConstant): The resource name
 * **properties**: [MarketplaceImageVersionProperties](#marketplaceimageversionproperties) (ReadOnly)
 * **type**: 'Microsoft.DataBoxEdge/dataBoxEdgeDevices/publishers/offers/skus/versions' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -287,7 +287,7 @@
 ## AsymmetricEncryptedSecret
 ### Properties
 * **encryptionAlgorithm**: 'AES256' | 'None' | 'RSAES_PKCS1_v_1_5' | string (Required): The algorithm used to encrypt "Value".
-* **encryptionCertThumbprint**: string: Thumbprint certificate used to encrypt \"Value\". If the value is unencrypted, it will be null.
+* **encryptionCertThumbprint**: string {sensitive}: Thumbprint certificate used to encrypt \"Value\". If the value is unencrypted, it will be null.
 * **value**: string (Required): The value of the secret.
 
 ## Authentication
@@ -302,7 +302,7 @@
 
 ## BandwidthScheduleProperties
 ### Properties
-* **days**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string[] (Required): The days of the week when this schedule is applicable.
+* **days**: ('Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string)[] (Required): The days of the week when this schedule is applicable.
 * **rateInMbps**: int (Required): The bandwidth rate in Mbps.
 * **start**: string (Required): The start time of the schedule in UTC.
 * **stop**: string (Required): The stop time of the schedule in UTC.
@@ -387,7 +387,7 @@
 ## DataBoxEdgeDeviceProperties
 ### Properties
 * **computeVersionInformation**: [ComputeVersionInformation](#computeversioninformation) (ReadOnly): The details of compute version information
-* **configuredRoleTypes**: 'ASA' | 'CloudEdgeManagement' | 'Cognitive' | 'Functions' | 'IOT' | 'Kubernetes' | 'MEC' | string[] (ReadOnly): Type of compute roles configured.
+* **configuredRoleTypes**: ('ASA' | 'CloudEdgeManagement' | 'Cognitive' | 'Functions' | 'IOT' | 'Kubernetes' | 'MEC' | string)[] (ReadOnly): Type of compute roles configured.
 * **culture**: string (ReadOnly): The Data Box Edge/Gateway device culture.
 * **dataBoxEdgeDeviceStatus**: 'Disconnected' | 'Maintenance' | 'NeedsAttention' | 'Offline' | 'Online' | 'PartiallyDisconnected' | 'ReadyToSetup' | string (ReadOnly): The status of the Data Box Edge/Gateway device.
 * **dataResidency**: [DataResidency](#dataresidency): The details of data-residency related properties for this resource
@@ -465,7 +465,7 @@
 
 ## FileTriggerProperties
 ### Properties
-* **customContextTag**: string: A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module.
+* **customContextTag**: string {maxLength: 192}: A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module.
 * **sinkInfo**: [RoleSinkInfo](#rolesinkinfo) (Required): Role sink info.
 * **sourceInfo**: [FileSourceInfo](#filesourceinfo) (Required): File event source details.
 
@@ -705,7 +705,7 @@ by the already existing properties
 
 ## PeriodicTimerProperties
 ### Properties
-* **customContextTag**: string: A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module.
+* **customContextTag**: string {maxLength: 192}: A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module.
 * **sinkInfo**: [RoleSinkInfo](#rolesinkinfo) (Required): Role Sink information.
 * **sourceInfo**: [PeriodicTimerSourceInfo](#periodictimersourceinfo) (Required): Periodic timer details.
 

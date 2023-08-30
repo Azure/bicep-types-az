@@ -204,7 +204,7 @@
 * **stateReason**: string (ReadOnly): The reason for the cluster's current state.
 * **trustedExternalTenants**: [TrustedExternalTenant](#trustedexternaltenant)[]: The cluster's external tenants.
 * **uri**: string (ReadOnly): The cluster URI.
-* **virtualClusterGraduationProperties**: string (WriteOnly): Virtual Cluster graduation properties
+* **virtualClusterGraduationProperties**: string {sensitive} (WriteOnly): Virtual Cluster graduation properties
 * **virtualNetworkConfiguration**: [VirtualNetworkConfiguration](#virtualnetworkconfiguration): Virtual network definition.
 
 ## ComponentsSgqdofSchemasIdentityPropertiesUserassignedidentitiesAdditionalproperties
@@ -400,9 +400,9 @@
 * **continueOnErrors**: bool: Flag that indicates whether to continue if one of the command fails.
 * **forceUpdateTag**: string: A unique string. If changed the script will be applied again.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | string (ReadOnly): The provisioned state of the resource.
-* **scriptContent**: string (WriteOnly): The script content. This property should be used when the script is provide inline and not through file in a SA. Must not be used together with scriptUrl and scriptUrlSasToken properties.
+* **scriptContent**: string {sensitive} (WriteOnly): The script content. This property should be used when the script is provide inline and not through file in a SA. Must not be used together with scriptUrl and scriptUrlSasToken properties.
 * **scriptUrl**: string: The url to the KQL script blob file. Must not be used together with scriptContent property
-* **scriptUrlSasToken**: string (WriteOnly): The SaS token that provide read access to the file which contain the script. Must be provided when using scriptUrl property.
+* **scriptUrlSasToken**: string {sensitive} (WriteOnly): The SaS token that provide read access to the file which contain the script. Must be provided when using scriptUrl property.
 
 ## SystemData
 ### Properties

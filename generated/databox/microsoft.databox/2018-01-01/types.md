@@ -6,7 +6,7 @@
 * **apiVersion**: '2018-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The location of the resource. This will be one of the supported and registered Azure Regions (e.g. West US, East US, Southeast Asia, etc.). The region of a resource cannot be changed once it is created, but if an identical region is specified on update the request will succeed.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 24, pattern: "^[-\w\.]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [JobProperties](#jobproperties) (Required): Properties of a job.
 * **sku**: [Sku](#sku) (Required): The sku type.
 * **tags**: [ResourceTags](#resourcetags): The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups).
@@ -243,7 +243,7 @@
 * **password**: string (ReadOnly): Password for the share.
 * **shareName**: string (ReadOnly): Name of the share.
 * **shareType**: 'AzureFile' | 'BlockBlob' | 'HCS' | 'ManagedDisk' | 'PageBlob' | 'UnknownType' (ReadOnly): Type of the share.
-* **supportedAccessProtocols**: 'NFS' | 'SMB'[] (ReadOnly): Access protocols supported on the device.
+* **supportedAccessProtocols**: ('NFS' | 'SMB')[] (ReadOnly): Access protocols supported on the device.
 * **userName**: string (ReadOnly): User name for the share.
 
 ## ShippingAddress

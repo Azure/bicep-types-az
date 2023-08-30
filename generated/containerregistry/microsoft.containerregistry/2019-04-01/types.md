@@ -16,7 +16,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [IdentityProperties](#identityproperties): Identity for the resource.
 * **location**: string (Required): The location of the resource. This cannot be changed after the resource is created.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 5, maxLength: 50, pattern: "^[a-zA-Z0-9-_]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [TaskProperties](#taskproperties): The properties of a task.
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.ContainerRegistry/registries/tasks' (ReadOnly, DeployTimeConstant): The resource type
@@ -193,7 +193,7 @@ the source registry during the run.
 ### Properties
 * **name**: string (Required): The name of the trigger.
 * **sourceRepository**: [SourceProperties](#sourceproperties) (Required): The properties that describes the source(code) for the task.
-* **sourceTriggerEvents**: 'commit' | 'pullrequest' | string[] (Required): The source event corresponding to the trigger.
+* **sourceTriggerEvents**: ('commit' | 'pullrequest' | string)[] (Required): The source event corresponding to the trigger.
 * **status**: 'Disabled' | 'Enabled' | string: The current status of trigger.
 
 ## SourceTriggerDescriptor
@@ -230,7 +230,7 @@ the source registry during the run.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the task.
 * **status**: 'Disabled' | 'Enabled' | string: The current status of task.
 * **step**: [TaskStepProperties](#taskstepproperties) (Required): The properties of a task step.
-* **timeout**: int: Run timeout in seconds.
+* **timeout**: int {minValue: 300, maxValue: 28800}: Run timeout in seconds.
 * **trigger**: [TriggerProperties](#triggerproperties): The properties that describe all triggers for the task.
 
 ## TaskStepProperties

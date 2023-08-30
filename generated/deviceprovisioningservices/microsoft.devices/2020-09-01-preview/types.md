@@ -21,7 +21,7 @@
 * **certificate**: string (WriteOnly): Base-64 representation of the X509 leaf certificate .cer file or just .pem file content.
 * **etag**: string (ReadOnly): The entity tag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {maxLength: 256} (Required, DeployTimeConstant): The resource name
 * **properties**: [CertificateProperties](#certificateproperties) (ReadOnly): properties of a certificate
 * **type**: 'Microsoft.Devices/provisioningServices/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -127,7 +127,7 @@
 ## PrivateEndpointConnection
 ### Properties
 * **id**: string (ReadOnly): The resource identifier.
-* **name**: string (ReadOnly): The resource name.
+* **name**: string {pattern: "^(?![0-9]+$)(?!-)[a-zA-Z0-9-]{2,49}[a-zA-Z0-9]$"} (ReadOnly): The resource name.
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (Required): The properties of a private endpoint connection
 * **type**: string (ReadOnly): The resource type.
 

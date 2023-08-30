@@ -43,16 +43,16 @@
 
 ## LoadBalancingRule
 ### Properties
-* **backendPort**: int (Required): The port used for internal connections on the endpoint. Acceptable values are between 1 and 65535.
-* **frontendPort**: int (Required): The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 1 and 65534.
+* **backendPort**: int {minValue: 1, maxValue: 65534} (Required): The port used for internal connections on the endpoint. Acceptable values are between 1 and 65535.
+* **frontendPort**: int {minValue: 1, maxValue: 65534} (Required): The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 1 and 65534.
 * **probeProtocol**: 'http' | 'https' | 'tcp' | string (Required): the reference to the load balancer probe used by the load balancing rule.
 * **probeRequestPath**: string: The probe request path. Only supported for HTTP/HTTPS probes.
 * **protocol**: 'tcp' | 'udp' | string (Required): The reference to the transport protocol used by the load balancing rule.
 
 ## ManagedClusterProperties
 ### Properties
-* **addonFeatures**: 'BackupRestoreService' | 'DnsService' | 'ResourceMonitorService' | string[]: client certificates for the cluster.
-* **adminPassword**: string: vm admin user password.
+* **addonFeatures**: ('BackupRestoreService' | 'DnsService' | 'ResourceMonitorService' | string)[]: client certificates for the cluster.
+* **adminPassword**: string {sensitive}: vm admin user password.
 * **adminUserName**: string (Required): vm admin user name.
 * **azureActiveDirectory**: [AzureActiveDirectory](#azureactivedirectory): Azure active directory.
 * **clientConnectionPort**: int: The port used for client connections to the cluster.
@@ -87,7 +87,7 @@
 * **vmImagePublisher**: string: The publisher of the Azure Virtual Machines Marketplace image. For example, Canonical or MicrosoftWindowsServer.
 * **vmImageSku**: string: The SKU of the Azure Virtual Machines Marketplace image. For example, 14.04.0-LTS or 2012-R2-Datacenter.
 * **vmImageVersion**: string: The version of the Azure Virtual Machines Marketplace image. A value of 'latest' can be specified to select the latest version of an image. If omitted, the default is 'latest'.
-* **vmInstanceCount**: int (Required): The number of nodes in the node type.
+* **vmInstanceCount**: int {minValue: 1, maxValue: 2147483647} (Required): The number of nodes in the node type.
 * **vmSecrets**: [VaultSecretGroup](#vaultsecretgroup)[]: The secrets to install in the virtual machines.
 * **vmSize**: string: The size of virtual machines in the pool. All virtual machines in a pool are the same size. For example, Standard_D3.
 

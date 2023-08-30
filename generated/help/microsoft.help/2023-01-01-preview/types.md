@@ -5,7 +5,7 @@
 ### Properties
 * **apiVersion**: '2023-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 100, pattern: "^[A-Za-z0-9-+@()_]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DiagnosticResourceProperties](#diagnosticresourceproperties): Diagnostic Resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Help/diagnostics' (ReadOnly, DeployTimeConstant): The resource type

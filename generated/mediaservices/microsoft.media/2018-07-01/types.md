@@ -53,7 +53,7 @@
 * **apiVersion**: '2018-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The Azure Region of the resource.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 32, pattern: "^[a-zA-Z0-9]+(-*[a-zA-Z0-9])*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [LiveEventProperties](#liveeventproperties): The Live Event properties.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Media/mediaservices/liveEvents' (ReadOnly, DeployTimeConstant): The resource type
@@ -63,7 +63,7 @@
 ### Properties
 * **apiVersion**: '2018-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 256, pattern: "^([a-zA-Z0-9])+(-*[a-zA-Z0-9])*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [LiveOutputProperties](#liveoutputproperties): The Live Output properties.
 * **type**: 'Microsoft.Media/mediaservices/liveEvents/liveOutputs' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -73,7 +73,7 @@
 * **apiVersion**: '2018-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The Azure Region of the resource.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 24, pattern: "^[a-zA-Z0-9]+(-*[a-zA-Z0-9])*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [StreamingEndpointProperties](#streamingendpointproperties): The StreamingEndpoint properties.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Media/mediaservices/streamingEndpoints' (ReadOnly, DeployTimeConstant): The resource type
@@ -152,7 +152,7 @@
 ## AssetProperties
 ### Properties
 * **alternateId**: string: The alternate ID of the Asset.
-* **assetId**: string (ReadOnly): The Asset ID.
+* **assetId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The Asset ID.
 * **container**: string: The name of the asset blob container.
 * **created**: string (ReadOnly): The creation date of the Asset.
 * **description**: string: The Asset description.
@@ -168,7 +168,7 @@
 * **endTime**: string (ReadOnly): The end time of the Streaming Locator.
 * **name**: string (ReadOnly): Streaming Locator name.
 * **startTime**: string (ReadOnly): The start time of the Streaming Locator.
-* **streamingLocatorId**: string (ReadOnly): StreamingLocatorId of the Streaming Locator.
+* **streamingLocatorId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): StreamingLocatorId of the Streaming Locator.
 * **streamingPolicyName**: string (ReadOnly): Name of the Streaming Policy used by this Streaming Locator.
 
 ## CbcsDrmConfiguration
@@ -297,7 +297,7 @@
 ### Properties
 * **configuration**: [ContentKeyPolicyConfiguration](#contentkeypolicyconfiguration) (Required): The key delivery configuration.
 * **name**: string: The Policy Option description.
-* **policyOptionId**: string (ReadOnly): The legacy Policy Option ID.
+* **policyOptionId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The legacy Policy Option ID.
 * **restriction**: [ContentKeyPolicyRestriction](#contentkeypolicyrestriction) (Required): The requirements that must be met to deliver keys with this configuration
 
 ## ContentKeyPolicyPlayReadyContentKeyLocation
@@ -312,7 +312,7 @@
 ### ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifier
 #### Properties
 * **@odata.type**: '#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifier' (Required): The discriminator for derived types.
-* **keyId**: string (Required): The content key ID.
+* **keyId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required): The content key ID.
 
 
 ## ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestriction
@@ -355,7 +355,7 @@
 * **description**: string: A description for the Policy.
 * **lastModified**: string (ReadOnly): The last modified date of the Policy
 * **options**: [ContentKeyPolicyOption](#contentkeypolicyoption)[] (Required): The Key Policy options.
-* **policyId**: string (ReadOnly): The legacy Policy ID.
+* **policyId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The legacy Policy ID.
 
 ## ContentKeyPolicyRestriction
 * **Discriminator**: @odata.type
@@ -670,7 +670,7 @@
 * **preview**: [LiveEventPreview](#liveeventpreview): The Live Event preview.
 * **provisioningState**: string (ReadOnly): The provisioning state of the Live Event.
 * **resourceState**: 'Deleting' | 'Running' | 'Starting' | 'Stopped' | 'Stopping' | string (ReadOnly): The resource state of the Live Event.
-* **streamOptions**: 'Default' | 'LowLatency' | string[]: The options to use for the LiveEvent.  This value is specified at creation time and cannot be updated.
+* **streamOptions**: ('Default' | 'LowLatency' | string)[]: The options to use for the LiveEvent.  This value is specified at creation time and cannot be updated.
 * **transcriptions**: [LiveEventTranscription](#liveeventtranscription)[]: The Live Event transcription.
 * **vanityUrl**: bool: Specifies whether to use a vanity url with the Live Event.  This value is specified at creation time and cannot be updated.
 
@@ -701,7 +701,7 @@
 
 ## MediaServiceProperties
 ### Properties
-* **mediaServiceId**: string (ReadOnly): The Media Services account ID.
+* **mediaServiceId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The Media Services account ID.
 * **storageAccounts**: [StorageAccount](#storageaccount)[]: The storage accounts for this resource.
 
 ## NoEncryption
@@ -818,7 +818,7 @@
 
 ## StreamingLocatorContentKey
 ### Properties
-* **id**: string (Required): ID of Content Key
+* **id**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required): ID of Content Key
 * **labelReferenceInStreamingPolicy**: string: Label of Content Key as specified in the Streaming Policy
 * **policyName**: string (ReadOnly): ContentKeyPolicy used by Content Key
 * **tracks**: [TrackSelection](#trackselection)[] (ReadOnly): Tracks which use this Content Key
@@ -835,7 +835,7 @@
 * **endTime**: string: The end time of the Streaming Locator.
 * **filters**: string[]: A list of asset or account filters which apply to this streaming locator
 * **startTime**: string: The start time of the Streaming Locator.
-* **streamingLocatorId**: string: The StreamingLocatorId of the Streaming Locator.
+* **streamingLocatorId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The StreamingLocatorId of the Streaming Locator.
 * **streamingPolicyName**: string (Required): Name of the Streaming Policy used by this Streaming Locator. Either specify the name of Streaming Policy you created or use one of the predefined Streaming Policies. The predefined Streaming Policies available are: 'Predefined_DownloadOnly', 'Predefined_ClearStreamingOnly', 'Predefined_DownloadAndClearStreaming', 'Predefined_ClearKey', 'Predefined_MultiDrmCencStreaming' and 'Predefined_MultiDrmStreaming'
 
 ## StreamingPath

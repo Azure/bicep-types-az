@@ -195,7 +195,7 @@
 
 ### AzureIaaSVMJob
 #### Properties
-* **actionsInfo**: 'Cancellable' | 'Invalid' | 'Retriable'[]: Gets or sets the state, or actions, applicable on this job. Examples of the actions are: Cancel or Retry.
+* **actionsInfo**: ('Cancellable' | 'Invalid' | 'Retriable')[]: Gets or sets the state, or actions, applicable on this job. Examples of the actions are: Cancel or Retry.
 * **duration**: string: The time that elapsed during the execution of this job.
 * **errorDetails**: [AzureIaaSVMErrorInfo](#azureiaasvmerrorinfo)[]: Error details about this job.
 * **extendedInfo**: [AzureIaaSVMJobExtendedInfo](#azureiaasvmjobextendedinfo): Additional information for this job.
@@ -204,7 +204,7 @@
 
 ### DpmJob
 #### Properties
-* **actionsInfo**: 'Cancellable' | 'Invalid' | 'Retriable'[]: The state or actions applicable on this job, such as Cancel or Retry.
+* **actionsInfo**: ('Cancellable' | 'Invalid' | 'Retriable')[]: The state or actions applicable on this job, such as Cancel or Retry.
 * **containerName**: string: The name of the cluster or server protecting the current backup item, if any.
 * **containerType**: string: The type of container.
 * **dpmServerName**: string: DPM server name managing the backup item or backup job.
@@ -216,7 +216,7 @@
 
 ### MabJob
 #### Properties
-* **actionsInfo**: 'Cancellable' | 'Invalid' | 'Retriable'[]: The state or actions applicable on jobs such as Cancel or Retry.
+* **actionsInfo**: ('Cancellable' | 'Invalid' | 'Retriable')[]: The state or actions applicable on jobs such as Cancel or Retry.
 * **duration**: string: The time required for the job to run.
 * **errorDetails**: [MabErrorInfo](#maberrorinfo)[]: The errors.
 * **extendedInfo**: [MabJobExtendedInfo](#mabjobextendedinfo): Additional information on the job.
@@ -497,7 +497,7 @@
 ### SimpleSchedulePolicy
 #### Properties
 * **schedulePolicyType**: 'SimpleSchedulePolicy' (Required): This property is used as the discriminator for deciding the specific types in the polymorphic chain of types.
-* **scheduleRunDays**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: This list is the days of the week when the schedule runs.
+* **scheduleRunDays**: ('Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday')[]: This list is the days of the week when the schedule runs.
 * **scheduleRunFrequency**: 'Daily' | 'Invalid' | 'Weekly': Defines the frequency interval (daily or weekly) for the schedule policy.
 * **scheduleRunTimes**: string[]: List of times, during a day, when the schedule runs.
 * **scheduleWeeklyFrequency**: int: The number of times per week the schedule runs.
@@ -505,18 +505,18 @@
 
 ## WeeklyRetentionFormat
 ### Properties
-* **daysOfTheWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: List of days of the week.
-* **weeksOfTheMonth**: 'First' | 'Fourth' | 'Last' | 'Second' | 'Third'[]: List of weeks of the month.
+* **daysOfTheWeek**: ('Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday')[]: List of days of the week.
+* **weeksOfTheMonth**: ('First' | 'Fourth' | 'Last' | 'Second' | 'Third')[]: List of weeks of the month.
 
 ## WeeklyRetentionSchedule
 ### Properties
-* **daysOfTheWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: List of the days of the week for the weekly retention policy.
+* **daysOfTheWeek**: ('Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday')[]: List of the days of the week for the weekly retention policy.
 * **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration of retention policy.
 * **retentionTimes**: string[]: Retention times of the retention policy.
 
 ## YearlyRetentionSchedule
 ### Properties
-* **monthsOfYear**: 'April' | 'August' | 'December' | 'February' | 'Invalid' | 'January' | 'July' | 'June' | 'March' | 'May' | 'November' | 'October' | 'September'[]: List of the months of year for the yearly retention policy.
+* **monthsOfYear**: ('April' | 'August' | 'December' | 'February' | 'Invalid' | 'January' | 'July' | 'June' | 'March' | 'May' | 'November' | 'October' | 'September')[]: List of the months of year for the yearly retention policy.
 * **retentionDuration**: [RetentionDuration](#retentionduration): Retention duration for the retention policy.
 * **retentionScheduleDaily**: [DailyRetentionFormat](#dailyretentionformat): Daily retention format for the yearly retention policy.
 * **retentionScheduleFormatType**: 'Daily' | 'Invalid' | 'Weekly': Retention schedule format for the yearly retention policy.

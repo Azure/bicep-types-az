@@ -103,7 +103,7 @@
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): The extendedLocation of the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 80, pattern: "^[a-zA-Z0-9]$|^[a-zA-Z0-9][-._a-zA-Z0-9]{0,78}[a-zA-Z0-9]$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [GalleryImageProperties](#galleryimageproperties): Properties under the gallery image resource
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -116,7 +116,7 @@
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): The extendedLocation of the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 80, pattern: "^[a-zA-Z0-9]$|^[a-zA-Z0-9][-._a-zA-Z0-9]{0,78}[a-zA-Z0-9]$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [MarketplaceGalleryImageProperties](#marketplacegalleryimageproperties): Properties under the marketplace gallery image resource
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -129,7 +129,7 @@
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): The extendedLocation of the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 80, pattern: "^[a-zA-Z0-9]$|^[a-zA-Z0-9][-._a-zA-Z0-9]{0,78}[_a-zA-Z0-9]$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [NetworkInterfaceProperties](#networkinterfaceproperties): Properties under the network interface resource
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -142,7 +142,7 @@
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): The extendedLocation of the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 80, pattern: "^[a-zA-Z0-9]$|^[a-zA-Z0-9][-._a-zA-Z0-9]{0,78}[_a-zA-Z0-9]$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [StorageContainerProperties](#storagecontainerproperties): Properties under the storage container resource
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -155,7 +155,7 @@
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): The extendedLocation of the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 80, pattern: "^[-_a-zA-Z0-9]{1,80}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [VirtualHardDiskProperties](#virtualharddiskproperties): Properties under the virtual hard disk resource
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -169,7 +169,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [Identity](#identity): Identity for the resource.
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 64, pattern: "^[a-zA-Z0-9]$|^[a-zA-Z0-9][-._a-zA-Z0-9]{0,62}[a-zA-Z0-9]$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [VirtualMachineProperties](#virtualmachineproperties): Properties under the virtual machine resource
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -214,7 +214,7 @@
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): The extendedLocation of the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 2, maxLength: 64, pattern: "^[a-zA-Z0-9]$|^[a-zA-Z0-9][-._a-zA-Z0-9]{0,62}[_a-zA-Z0-9]$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [VirtualNetworkProperties](#virtualnetworkproperties): Properties under the virtual network resource
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -370,7 +370,7 @@
 * **containerName**: string: Container Name for storage container
 * **hyperVGeneration**: 'V1' | 'V2' | string: The hypervisor generation of the Virtual Machine [V1, V2]
 * **identifier**: [GalleryImageIdentifier](#galleryimageidentifier): This is the gallery image definition identifier.
-* **imagePath**: string: location of the image the gallery image should be created from
+* **imagePath**: string {sensitive}: location of the image the gallery image should be created from
 * **osType**: 'Linux' | 'Windows': Operating system type that the gallery image uses [Windows, Linux]
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): Provisioning state of the gallery image.
 * **status**: [GalleryImageStatus](#galleryimagestatus) (ReadOnly): The observed state of gallery images
@@ -428,7 +428,7 @@
 
 ## GuestCredential
 ### Properties
-* **password**: string (WriteOnly): The password to connect with the guest.
+* **password**: string {sensitive} (WriteOnly): The password to connect with the guest.
 * **username**: string: The username to connect with the guest.
 
 ## HttpProxyConfiguration
@@ -454,7 +454,7 @@
 
 ## IPConfiguration
 ### Properties
-* **name**: string: Name - The name of the resource that is unique within a resource group. This name can be used to access the resource.
+* **name**: string {pattern: "^[a-zA-Z0-9]$|^[a-zA-Z0-9][-._a-zA-Z0-9]{0,78}[_a-zA-Z0-9]$"}: Name - The name of the resource that is unique within a resource group. This name can be used to access the resource.
 * **properties**: [IPConfigurationProperties](#ipconfigurationproperties): InterfaceIPConfigurationPropertiesFormat properties of IP configuration.
 
 ## IPConfigurationProperties
@@ -515,8 +515,8 @@
 
 ## ManagedServiceIdentity
 ### Properties
-* **principalId**: string (ReadOnly): The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
-* **tenantId**: string (ReadOnly): The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
+* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
 * **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned' | string (Required): Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed).
 * **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.
 
@@ -804,8 +804,8 @@
 
 ## UserAssignedIdentity
 ### Properties
-* **clientId**: string (ReadOnly): The client ID of the assigned identity.
-* **principalId**: string (ReadOnly): The principal ID of the assigned identity.
+* **clientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The client ID of the assigned identity.
+* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The principal ID of the assigned identity.
 
 ## VirtualHardDiskProperties
 ### Properties
@@ -866,7 +866,7 @@
 
 ## VirtualMachinePropertiesOsProfile
 ### Properties
-* **adminPassword**: string (WriteOnly): AdminPassword - admin password
+* **adminPassword**: string {sensitive} (WriteOnly): AdminPassword - admin password
 * **adminUsername**: string: AdminUsername - admin username
 * **computerName**: string: ComputerName - name of the compute
 * **linuxConfiguration**: [VirtualMachinePropertiesOsProfileLinuxConfiguration](#virtualmachinepropertiesosprofilelinuxconfiguration): LinuxConfiguration - linux specific configuration values for the virtual machine
@@ -959,7 +959,7 @@
 
 ## VirtualNetworkPropertiesSubnetsItem
 ### Properties
-* **name**: string: Name - The name of the resource that is unique within a resource group. This name can be used to access the resource.
+* **name**: string {pattern: "^[a-zA-Z0-9]$|^[a-zA-Z0-9][-._a-zA-Z0-9]{0,78}[_a-zA-Z0-9]$"}: Name - The name of the resource that is unique within a resource group. This name can be used to access the resource.
 * **properties**: [VirtualNetworkPropertiesSubnetsItemAutoGenerated](#virtualnetworkpropertiessubnetsitemautogenerated): SubnetProperties - Properties of the subnet.
 
 ## VirtualNetworkPropertiesSubnetsItemAutoGenerated
@@ -979,7 +979,7 @@
 
 ## VirtualNetworkPropertiesSubnetsPropertiesItemsItem
 ### Properties
-* **name**: string: Name - name of the subnet
+* **name**: string {pattern: "^[a-zA-Z0-9]$|^[a-zA-Z0-9][-._a-zA-Z0-9]{0,78}[_a-zA-Z0-9]$"}: Name - name of the subnet
 * **properties**: [VirtualNetworkPropertiesSubnetsItemRouteTableRoutesItem](#virtualnetworkpropertiessubnetsitemroutetableroutesitem): RoutePropertiesFormat - Properties of the route.
 
 ## VirtualNetworkStatus

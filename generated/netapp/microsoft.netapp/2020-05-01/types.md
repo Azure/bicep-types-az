@@ -38,7 +38,7 @@
 * **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Resource location
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 64, pattern: "^[a-zA-Z0-9][a-zA-Z0-9\-_]{0,63}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [PoolProperties](#poolproperties) (Required): Capacity pool properties
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools' (ReadOnly, DeployTimeConstant): The resource type
@@ -49,7 +49,7 @@
 * **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Resource location
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 64, pattern: "^[a-zA-Z][a-zA-Z0-9\-_]{0,63}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [VolumeProperties](#volumeproperties) (Required): Volume properties
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes' (ReadOnly, DeployTimeConstant): The resource type
@@ -93,13 +93,13 @@
 ## ActiveDirectory
 ### Properties
 * **activeDirectoryId**: string: Id of the Active Directory
-* **adName**: string: Name of the active directory machine. This optional parameter is used only while creating kerberos volume
-* **backupOperators**: string[]: Users to be added to the Built-in Backup Operator active directory group. A list of unique usernames without domain specifier
-* **dns**: string: Comma separated list of DNS server IP addresses (IPv4 only) for the Active Directory domain
+* **adName**: string {minLength: 1, maxLength: 64}: Name of the active directory machine. This optional parameter is used only while creating kerberos volume
+* **backupOperators**: (string {minLength: 1, maxLength: 255})[]: Users to be added to the Built-in Backup Operator active directory group. A list of unique usernames without domain specifier
+* **dns**: string {pattern: "^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)((, ?)(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?))*$"}: Comma separated list of DNS server IP addresses (IPv4 only) for the Active Directory domain
 * **domain**: string: Name of the Active Directory domain
-* **kdcIP**: string: kdc server IP addresses for the active directory machine. This optional parameter is used only while creating kerberos volume.
+* **kdcIP**: string {pattern: "^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)((, ?)(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?))*$"}: kdc server IP addresses for the active directory machine. This optional parameter is used only while creating kerberos volume.
 * **organizationalUnit**: string: The Organizational Unit (OU) within the Windows Active Directory
-* **password**: string: Plain text password of Active Directory domain administrator, value is masked in the response
+* **password**: string {sensitive}: Plain text password of Active Directory domain administrator, value is masked in the response
 * **site**: string: The Active Directory site the service will limit Domain Controller discovery to
 * **smbServerName**: string: NetBIOS name of the SMB server. This name will be registered as a computer account in the AD and used to mount volumes
 * **status**: string: Status of the Active Directory
@@ -165,17 +165,17 @@
 
 ## MountTargetProperties
 ### Properties
-* **fileSystemId**: string (Required): UUID v4 used to identify the MountTarget
+* **fileSystemId**: string {minLength: 36, maxLength: 36, pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"} (Required): UUID v4 used to identify the MountTarget
 * **ipAddress**: string (ReadOnly): The mount target's IPv4 address
-* **mountTargetId**: string (ReadOnly): UUID v4 used to identify the MountTarget
+* **mountTargetId**: string {minLength: 36, maxLength: 36, pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"} (ReadOnly): UUID v4 used to identify the MountTarget
 * **smbServerFqdn**: string: The SMB server's Fully Qualified Domain Name, FQDN
 
 ## PoolProperties
 ### Properties
-* **poolId**: string (ReadOnly): UUID v4 used to identify the Pool
+* **poolId**: string {minLength: 36, maxLength: 36, pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"} (ReadOnly): UUID v4 used to identify the Pool
 * **provisioningState**: string (ReadOnly): Azure lifecycle management
 * **serviceLevel**: 'Premium' | 'Standard' | 'Ultra' | string (Required): The service level of the file system
-* **size**: int (Required): Provisioned size of the pool (in bytes). Allowed values are in 4TiB chunks (value must be multiply of 4398046511104).
+* **size**: int {minValue: 4398046511104, maxValue: 549755813888000} (Required): Provisioned size of the pool (in bytes). Allowed values are in 4TiB chunks (value must be multiply of 4398046511104).
 
 ## ReplicationObject
 ### Properties
@@ -224,7 +224,7 @@
 ### Properties
 * **created**: string (ReadOnly): The creation date of the snapshot
 * **provisioningState**: string (ReadOnly): Azure lifecycle management
-* **snapshotId**: string (ReadOnly): UUID v4 used to identify the Snapshot
+* **snapshotId**: string {minLength: 36, maxLength: 36, pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"} (ReadOnly): UUID v4 used to identify the Snapshot
 
 ## VolumeBackupProperties
 ### Properties
@@ -241,12 +241,12 @@
 
 ## VolumeProperties
 ### Properties
-* **backupId**: string: UUID v4 or resource identifier used to identify the Backup.
-* **baremetalTenantId**: string (ReadOnly): Unique Baremetal Tenant Identifier.
-* **creationToken**: string (Required): A unique file path for the volume. Used when creating mount targets
+* **backupId**: string {minLength: 36, maxLength: 36, pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|(\\?([^\/]*[\/])*)([^\/]+)$"}: UUID v4 or resource identifier used to identify the Backup.
+* **baremetalTenantId**: string {minLength: 36, maxLength: 36, pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"} (ReadOnly): Unique Baremetal Tenant Identifier.
+* **creationToken**: string {minLength: 1, maxLength: 80, pattern: "^[a-zA-Z][a-zA-Z0-9\-]{0,79}$"} (Required): A unique file path for the volume. Used when creating mount targets
 * **dataProtection**: [VolumePropertiesDataProtection](#volumepropertiesdataprotection): DataProtection type volumes include an object containing details of the replication
 * **exportPolicy**: [VolumePropertiesExportPolicy](#volumepropertiesexportpolicy): Set of export policy rules
-* **fileSystemId**: string (ReadOnly): Unique FileSystem Identifier.
+* **fileSystemId**: string {minLength: 36, maxLength: 36, pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"} (ReadOnly): Unique FileSystem Identifier.
 * **isRestoring**: bool: Restoring
 * **kerberosEnabled**: bool: Describe if a volume is KerberosEnabled. To be use with swagger version 2020-05-01 or later
 * **mountTargets**: [MountTargetProperties](#mounttargetproperties)[] (ReadOnly): List of mount targets
@@ -254,9 +254,9 @@
 * **provisioningState**: string (ReadOnly): Azure lifecycle management
 * **serviceLevel**: 'Premium' | 'Standard' | 'Ultra' | string: The service level of the file system
 * **snapshotDirectoryVisible**: bool: If enabled (true) the volume will contain a read-only .snapshot directory which provides access to each of the volume's snapshots (default to true).
-* **snapshotId**: string: UUID v4 or resource identifier used to identify the Snapshot.
+* **snapshotId**: string {minLength: 36, maxLength: 36, pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|(\\?([^\/]*[\/])*)([^\/]+)$"}: UUID v4 or resource identifier used to identify the Snapshot.
 * **subnetId**: string (Required): The Azure Resource URI for a delegated subnet. Must have the delegation Microsoft.NetApp/volumes
-* **usageThreshold**: int (Required): Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. Minimum size is 100 GiB. Upper limit is 100TiB. Specified in bytes.
+* **usageThreshold**: int {minValue: 107374182400, maxValue: 109951162777600} (Required): Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. Minimum size is 100 GiB. Upper limit is 100TiB. Specified in bytes.
 * **volumeType**: string: What type of volume is this
 
 ## VolumePropertiesDataProtection

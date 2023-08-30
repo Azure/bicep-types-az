@@ -140,7 +140,7 @@
 * **database**: string: This element is associated with the datasource element. This is the name of the database that output will be written to.
 * **deltaSnapshotQuery**: string: This element is associated with the datasource element. This query is used to fetch incremental changes from the SQL database. To use this option, we recommend using temporal tables in Azure SQL Database.
 * **fullSnapshotQuery**: string: This element is associated with the datasource element. This query is used to fetch data from the sql database.
-* **password**: string: This element is associated with the datasource element. This is the password that will be used to connect to the SQL Database instance.
+* **password**: string {sensitive}: This element is associated with the datasource element. This is the password that will be used to connect to the SQL Database instance.
 * **refreshRate**: string: This element is associated with the datasource element. This indicates how frequently the data will be fetched from the database. It is of DateTime format.
 * **refreshType**: 'RefreshPeriodicallyWithDelta' | 'RefreshPeriodicallyWithFull' | 'Static' | string: Indicates the type of data refresh option.
 * **server**: string: This element is associated with the datasource element. This is the name of the server that contains the database that will be written to.
@@ -150,14 +150,14 @@
 ### Properties
 * **authenticationMode**: 'ConnectionString' | 'Msi' | 'UserToken' | string: Authentication Mode.
 * **database**: string: The name of the Azure SQL database. Required on PUT (CreateOrReplace) requests.
-* **password**: string: The password that will be used to connect to the Azure SQL database. Required on PUT (CreateOrReplace) requests.
+* **password**: string {sensitive}: The password that will be used to connect to the Azure SQL database. Required on PUT (CreateOrReplace) requests.
 * **server**: string: The name of the SQL server containing the Azure SQL database. Required on PUT (CreateOrReplace) requests.
 * **table**: string: The name of the table in the Azure SQL database. Required on PUT (CreateOrReplace) requests.
 * **user**: string: The user name that will be used to connect to the Azure SQL database. Required on PUT (CreateOrReplace) requests.
 
 ## AzureTableOutputDataSourceProperties
 ### Properties
-* **accountKey**: string: The account key for the Azure Storage account. Required on PUT (CreateOrReplace) requests.
+* **accountKey**: string {sensitive}: The account key for the Azure Storage account. Required on PUT (CreateOrReplace) requests.
 * **accountName**: string: The name of the Azure Storage account. Required on PUT (CreateOrReplace) requests.
 * **batchSize**: int: The number of rows to write to the Azure Table at a time.
 * **columnsToRemove**: string[]: If specified, each item in the array is the name of a column to remove (if present) from output event entities.
@@ -243,7 +243,7 @@
 ## DocumentDbOutputDataSourceProperties
 ### Properties
 * **accountId**: string: The DocumentDB account name or ID. Required on PUT (CreateOrReplace) requests.
-* **accountKey**: string: The account key for the DocumentDB account. Required on PUT (CreateOrReplace) requests.
+* **accountKey**: string {sensitive}: The account key for the DocumentDB account. Required on PUT (CreateOrReplace) requests.
 * **authenticationMode**: 'ConnectionString' | 'Msi' | 'UserToken' | string: Authentication Mode.
 * **collectionNamePattern**: string: The collection name pattern for the collections to be used. The collection name format can be constructed using the optional {partition} token, where partitions start from 0. See the DocumentDB section of https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for more information. Required on PUT (CreateOrReplace) requests.
 * **database**: string: The name of the DocumentDB database. Required on PUT (CreateOrReplace) requests.
@@ -265,7 +265,7 @@
 * **partitionKey**: string: The key/column that is used to determine to which partition to send event data.
 * **propertyColumns**: string[]: The properties associated with this Event Hub output.
 * **serviceBusNamespace**: string: The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
-* **sharedAccessPolicyKey**: string: The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
+* **sharedAccessPolicyKey**: string {sensitive}: The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
 * **sharedAccessPolicyName**: string: The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
 
 ## EventHubStreamInputDataSourceProperties
@@ -276,7 +276,7 @@
 * **partitionCount**: int: The partition count of the event hub data source. Range 1 - 256.
 * **prefetchCount**: int: The number of messages that the message receiver can simultaneously request.
 * **serviceBusNamespace**: string: The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
-* **sharedAccessPolicyKey**: string: The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
+* **sharedAccessPolicyKey**: string {sensitive}: The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
 * **sharedAccessPolicyName**: string: The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
 
 ## EventHubV2StreamInputDataSource
@@ -417,7 +417,7 @@
 * **consumerGroupName**: string: The name of an IoT Hub Consumer Group that should be used to read events from the IoT Hub. If not specified, the input uses the Iot Hub’s default consumer group.
 * **endpoint**: string: The IoT Hub endpoint to connect to (ie. messages/events, messages/operationsMonitoringEvents, etc.).
 * **iotHubNamespace**: string: The name or the URI of the IoT Hub. Required on PUT (CreateOrReplace) requests.
-* **sharedAccessPolicyKey**: string: The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
+* **sharedAccessPolicyKey**: string {sensitive}: The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
 * **sharedAccessPolicyName**: string: The shared access policy name for the IoT Hub. This policy must contain at least the Service connect permission. Required on PUT (CreateOrReplace) requests.
 
 ## JavaScriptFunctionBindingProperties
@@ -426,7 +426,7 @@
 
 ## JobStorageAccount
 ### Properties
-* **accountKey**: string: The account key for the Azure Storage account. Required on PUT (CreateOrReplace) requests.
+* **accountKey**: string {sensitive}: The account key for the Azure Storage account. Required on PUT (CreateOrReplace) requests.
 * **accountName**: string: The name of the Azure Storage account. Required on PUT (CreateOrReplace) requests.
 * **authenticationMode**: 'ConnectionString' | 'Msi' | 'UserToken' | string: Authentication Mode.
 
@@ -554,7 +554,7 @@
 * **authenticationMode**: 'ConnectionString' | 'Msi' | 'UserToken' | string: Authentication Mode.
 * **database**: string: The name of the Azure SQL database. Required on PUT (CreateOrReplace) requests.
 * **maxWriterCount**: int: Max Writer count, currently only 1(single writer) and 0(based on query partition) are available. Optional on PUT requests.
-* **password**: string: The password that will be used to connect to the Azure SQL database. Required on PUT (CreateOrReplace) requests.
+* **password**: string {sensitive}: The password that will be used to connect to the Azure SQL database. Required on PUT (CreateOrReplace) requests.
 * **server**: string: The name of the SQL server containing the Azure SQL database. Required on PUT (CreateOrReplace) requests.
 * **table**: string: The name of the table in the Azure SQL database. Required on PUT (CreateOrReplace) requests.
 * **user**: string: The user name that will be used to connect to the Azure SQL database. Required on PUT (CreateOrReplace) requests.
@@ -655,7 +655,7 @@
 * **propertyColumns**: string[]: A string array of the names of output columns to be attached to Service Bus messages as custom properties.
 * **queueName**: string: The name of the Service Bus Queue. Required on PUT (CreateOrReplace) requests.
 * **serviceBusNamespace**: string: The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
-* **sharedAccessPolicyKey**: string: The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
+* **sharedAccessPolicyKey**: string {sensitive}: The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
 * **sharedAccessPolicyName**: string: The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
 * **systemPropertyColumns**: any: The system properties associated with the Service Bus Queue. The following system properties are supported: ReplyToSessionId, ContentType, To, Subject, CorrelationId, TimeToLive, PartitionKey, SessionId, ScheduledEnqueueTime, MessageId, ReplyTo, Label, ScheduledEnqueueTimeUtc.
 
@@ -664,7 +664,7 @@
 * **authenticationMode**: 'ConnectionString' | 'Msi' | 'UserToken' | string: Authentication Mode.
 * **propertyColumns**: string[]: A string array of the names of output columns to be attached to Service Bus messages as custom properties.
 * **serviceBusNamespace**: string: The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
-* **sharedAccessPolicyKey**: string: The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
+* **sharedAccessPolicyKey**: string {sensitive}: The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
 * **sharedAccessPolicyName**: string: The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
 * **systemPropertyColumns**: [ServiceBusTopicOutputDataSourcePropertiesSystemPropertyColumns](#servicebustopicoutputdatasourcepropertiessystempropertycolumns): The system properties associated with the Service Bus Topic Output. The following system properties are supported: ReplyToSessionId, ContentType, To, Subject, CorrelationId, TimeToLive, PartitionKey, SessionId, ScheduledEnqueueTime, MessageId, ReplyTo, Label, ScheduledEnqueueTimeUtc.
 * **topicName**: string: The name of the Service Bus Topic. Required on PUT (CreateOrReplace) requests.
@@ -681,7 +681,7 @@
 
 ## StorageAccount
 ### Properties
-* **accountKey**: string: The account key for the Azure Storage account. Required on PUT (CreateOrReplace) requests.
+* **accountKey**: string {sensitive}: The account key for the Azure Storage account. Required on PUT (CreateOrReplace) requests.
 * **accountName**: string: The name of the Azure Storage account. Required on PUT (CreateOrReplace) requests.
 * **authenticationMode**: 'ConnectionString' | 'Msi' | 'UserToken' | string: Authentication Mode.
 

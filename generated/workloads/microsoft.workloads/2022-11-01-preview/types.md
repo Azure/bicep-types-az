@@ -110,7 +110,7 @@
 ### Properties
 * **availabilitySetName**: string: The full name for availability set. In case name is not provided, it will be defaulted to {SID}-ASCS-AvSet.
 * **loadBalancer**: [LoadBalancerResourceNames](#loadbalancerresourcenames): The resource names object for load balancer and related resources.
-* **virtualMachines**: [VirtualMachineResourceNames](#virtualmachineresourcenames)[]: The list of names for all ASCS virtual machines to be deployed. The number of entries in this list should be equal to the number VMs to be created for ASCS layer. At maximum, there can be two virtual machines at this layer: ASCS and ERS.
+* **virtualMachines**: [VirtualMachineResourceNames](#virtualmachineresourcenames)[] {maxLength: 2}: The list of names for all ASCS virtual machines to be deployed. The number of entries in this list should be equal to the number VMs to be created for ASCS layer. At maximum, there can be two virtual machines at this layer: ASCS and ERS.
 
 ## CentralServerVmDetails
 ### Properties
@@ -130,7 +130,7 @@
 ### Properties
 * **availabilitySetName**: string: The full name for availability set. In case name is not provided, it will be defaulted to {SID}-DB-AvSet.
 * **loadBalancer**: [LoadBalancerResourceNames](#loadbalancerresourcenames): The resource names object for load balancer and related resources.
-* **virtualMachines**: [VirtualMachineResourceNames](#virtualmachineresourcenames)[]: The list of virtual machine naming details.
+* **virtualMachines**: [VirtualMachineResourceNames](#virtualmachineresourcenames)[] {maxLength: 2}: The list of virtual machine naming details.
 
 ## DatabaseVmDetails
 ### Properties
@@ -231,7 +231,7 @@
 ## HighAvailabilitySoftwareConfiguration
 ### Properties
 * **fencingClientId**: string (Required): The fencing client id.
-* **fencingClientPassword**: string (Required): The fencing client id secret/password. The secret should never expire. This will be used pacemaker to start/stop the cluster VMs.
+* **fencingClientPassword**: string {sensitive} (Required): The fencing client id secret/password. The secret should never expire. This will be used pacemaker to start/stop the cluster VMs.
 
 ## ImageReference
 ### Properties
@@ -276,9 +276,9 @@
 
 ## LoadBalancerResourceNames
 ### Properties
-* **backendPoolNames**: string[]: The list of backend pool names. Currently, ACSS deploys only one backend pool and hence, size of this list should be 1
-* **frontendIpConfigurationNames**: string[]: The list of frontend IP configuration names. If provided as input, size of this list should be 2 for cs layer and should be 1 for database layer.
-* **healthProbeNames**: string[]: The list of health probe names. If provided as input, size of this list should be 2 for cs layer and should be 1 for database layer.
+* **backendPoolNames**: string[] {maxLength: 1}: The list of backend pool names. Currently, ACSS deploys only one backend pool and hence, size of this list should be 1
+* **frontendIpConfigurationNames**: string[] {maxLength: 2}: The list of frontend IP configuration names. If provided as input, size of this list should be 2 for cs layer and should be 1 for database layer.
+* **healthProbeNames**: string[] {maxLength: 2}: The list of health probe names. If provided as input, size of this list should be 2 for cs layer and should be 1 for database layer.
 * **loadBalancerName**: string: The full resource name for load balancer. If this value is not provided, load balancer will be name as {ASCS/DB}-loadBalancer.
 
 ## ManagedRGConfiguration
@@ -343,7 +343,7 @@
 
 ## OSProfile
 ### Properties
-* **adminPassword**: string: Specifies the password of the administrator account. <br><br> **Minimum-length (Windows):** 8 characters <br><br> **Minimum-length (Linux):** 6 characters <br><br> **Max-length (Windows):** 123 characters <br><br> **Max-length (Linux):** 72 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!" <br><br> For resetting the password, see [How to reset the Remote Desktop service or its login password in a Windows VM](https://docs.microsoft.com/troubleshoot/azure/virtual-machines/reset-rdp) <br><br> For resetting root password, see [Manage users, SSH, and check or repair disks on Azure Linux VMs using the VMAccess Extension](https://docs.microsoft.com/troubleshoot/azure/virtual-machines/troubleshoot-ssh-connection)
+* **adminPassword**: string {sensitive}: Specifies the password of the administrator account. <br><br> **Minimum-length (Windows):** 8 characters <br><br> **Minimum-length (Linux):** 6 characters <br><br> **Max-length (Windows):** 123 characters <br><br> **Max-length (Linux):** 72 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!" <br><br> For resetting the password, see [How to reset the Remote Desktop service or its login password in a Windows VM](https://docs.microsoft.com/troubleshoot/azure/virtual-machines/reset-rdp) <br><br> For resetting root password, see [Manage users, SSH, and check or repair disks on Azure Linux VMs using the VMAccess Extension](https://docs.microsoft.com/troubleshoot/azure/virtual-machines/troubleshoot-ssh-connection)
 * **adminUsername**: string: Specifies the name of the administrator account. <br><br> This property cannot be updated after the VM is created. <br><br> **Windows-only restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length (Linux):** 1  character <br><br> **Max-length (Linux):** 64 characters <br><br> **Max-length (Windows):** 20 characters.
 * **osConfiguration**: [OSConfiguration](#osconfiguration): Specifies Windows operating system settings on the virtual machine.
 
@@ -374,7 +374,7 @@
 ### DB2ProviderInstanceProperties
 #### Properties
 * **dbName**: string: Gets or sets the db2 database name.
-* **dbPassword**: string: Gets or sets the db2 database password.
+* **dbPassword**: string {sensitive}: Gets or sets the db2 database password.
 * **dbPasswordUri**: string: Gets or sets the key vault URI to secret with the database password.
 * **dbPort**: string: Gets or sets the db2 database sql port.
 * **dbUsername**: string: Gets or sets the db2 database user name.
@@ -386,7 +386,7 @@
 
 ### MsSqlServerProviderInstanceProperties
 #### Properties
-* **dbPassword**: string: Gets or sets the database password.
+* **dbPassword**: string {sensitive}: Gets or sets the database password.
 * **dbPasswordUri**: string: Gets or sets the key vault URI to secret with the database password.
 * **dbPort**: string: Gets or sets the database sql port.
 * **dbUsername**: string: Gets or sets the database user name.
@@ -417,7 +417,7 @@
 ### HanaDbProviderInstanceProperties
 #### Properties
 * **dbName**: string: Gets or sets the hana database name.
-* **dbPassword**: string: Gets or sets the database password.
+* **dbPassword**: string {sensitive}: Gets or sets the database password.
 * **dbPasswordUri**: string: Gets or sets the key vault URI to secret with the database password.
 * **dbUsername**: string: Gets or sets the database user name.
 * **hostname**: string: Gets or sets the target virtual machine size.
@@ -436,7 +436,7 @@
 * **sapHostFileEntries**: string[]: Gets or sets the list of HostFile Entries
 * **sapHostname**: string: Gets or sets the target virtual machine IP Address/FQDN.
 * **sapInstanceNr**: string: Gets or sets the instance number of SAP NetWeaver.
-* **sapPassword**: string: Sets the SAP password.
+* **sapPassword**: string {sensitive}: Sets the SAP password.
 * **sapPasswordUri**: string: Gets or sets the key vault URI to secret with the SAP password.
 * **sapPortNumber**: string: Gets or sets the SAP HTTP port number.
 * **sapSid**: string: Gets or sets the SAP System Identifier
@@ -505,7 +505,7 @@
 * **appLocation**: string (ReadOnly): The geo-location where the SAP system exists.
 * **centralServerVmId**: string: The virtual machine ID of the Central Server.
 * **configurationType**: 'Discovery' (Required): The configuration Type.
-* **managedRgStorageAccountName**: string: The custom storage account name for the storage account created by the service in the managed resource group created as part of VIS deployment.<br><br>Refer to the storage account naming rules [here](https://learn.microsoft.com/azure/azure-resource-manager/management/resource-name-rules#microsoftstorage).<br><br>If not provided, the service will create the storage account with a random name.
+* **managedRgStorageAccountName**: string {minLength: 3, maxLength: 24}: The custom storage account name for the storage account created by the service in the managed resource group created as part of VIS deployment.<br><br>Refer to the storage account naming rules [here](https://learn.microsoft.com/azure/azure-resource-manager/management/resource-name-rules#microsoftstorage).<br><br>If not provided, the service will create the storage account with a random name.
 
 
 ## SAPDatabaseProperties
@@ -601,7 +601,7 @@
 * **sapFqdn**: string (Required): The FQDN to set for the SAP system during install.
 * **softwareInstallationType**: 'ServiceInitiated' (Required): The SAP software installation Type.
 * **softwareVersion**: string (Required): The software version to install.
-* **sshPrivateKey**: string (Required): The SSH private key.
+* **sshPrivateKey**: string {sensitive} (Required): The SSH private key.
 
 
 ## SshConfiguration
@@ -610,7 +610,7 @@
 
 ## SshKeyPair
 ### Properties
-* **privateKey**: string: SSH private key.
+* **privateKey**: string {sensitive}: SSH private key.
 * **publicKey**: string: SSH public key
 
 ## SshPublicKey
@@ -680,8 +680,8 @@
 
 ## UserAssignedIdentity
 ### Properties
-* **clientId**: string (ReadOnly): The client ID of the assigned identity.
-* **principalId**: string (ReadOnly): The principal ID of the assigned identity.
+* **clientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The client ID of the assigned identity.
+* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The principal ID of the assigned identity.
 
 ## UserAssignedServiceIdentity
 ### Properties
@@ -698,7 +698,7 @@
 ### Properties
 * **dataDiskNames**: [VirtualMachineResourceNamesDataDiskNames](#virtualmachineresourcenamesdatadisknames): The full resource names for virtual machine data disks. This is a dictionary containing list of names of data disks per volume. Currently supported volumes for database layer are ['hana/data', 'hana/log', hana/shared', 'usr/sap', 'os', 'backup']. For application and cs layers, only 'default' volume is supported
 * **hostName**: string: The full name for virtual-machine's host (computer name). Currently, ACSS only supports host names which are less than or equal to 13 characters long. If this value is not provided, vmName will be used as host name.
-* **networkInterfaces**: [NetworkInterfaceResourceNames](#networkinterfaceresourcenames)[]: The list of network interface name objects for the selected virtual machine. Currently, only one network interface is supported per virtual machine.
+* **networkInterfaces**: [NetworkInterfaceResourceNames](#networkinterfaceresourcenames)[] {maxLength: 1}: The list of network interface name objects for the selected virtual machine. Currently, only one network interface is supported per virtual machine.
 * **osDiskName**: string: The full name for OS disk attached to the VM. If this value is not provided, it will be named by ARM as per its default naming standards (prefixed with vm name). There is only one OS disk attached per Virtual Machine.
 * **vmName**: string: The full name for virtual machine. The length of this field can be upto 64 characters. If name is not provided, service uses a default name based on the deployment type. For SingleServer, default name is {SID}vm. In case of HA-AvZone systems, default name will be {SID}{app/ascs/db}z{a/b}vm with an incrementor at the end in case of more than 1 vm per layer. For distributed and HA-AvSet systems, default name will be {SID}{app/ascs/db}vm with an incrementor at the end in case of more than 1 vm per layer.
 

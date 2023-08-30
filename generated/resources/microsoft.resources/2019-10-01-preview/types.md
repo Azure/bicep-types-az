@@ -9,7 +9,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity) (Required): Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.
 * **location**: string (Required): The location of the ACI and the storage account for the deployment script.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 90} (Required, DeployTimeConstant): The resource name
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata related to this resource.
 * **tags**: [DeploymentScriptTags](#deploymentscripttags): Resource tags.
 * **type**: 'Microsoft.Resources/deploymentScripts' (ReadOnly, DeployTimeConstant): The resource type
@@ -46,7 +46,7 @@
 * **primaryScriptUri**: string: Uri for the script. This is the entry point for the external script.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Failed' | 'ProvisioningResources' | 'Running' | 'Succeeded' | string (ReadOnly): State of the script execution. This only appears in the response.
 * **retentionInterval**: string (Required): Interval for which the service retains the script resource after it reaches a terminal state. Resource will be deleted when this duration expires. Duration is based on ISO 8601 pattern (for example P1D means one day).
-* **scriptContent**: string: Script body.
+* **scriptContent**: string {maxLength: 32000}: Script body.
 * **status**: [ScriptStatus](#scriptstatus) (ReadOnly): Contains the results of script execution.
 * **storageAccountSettings**: [StorageAccountConfiguration](#storageaccountconfiguration): Storage Account settings.
 * **supportingScriptUris**: string[]: Supporting files for the external script.
@@ -64,7 +64,7 @@
 * **primaryScriptUri**: string: Uri for the script. This is the entry point for the external script.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Failed' | 'ProvisioningResources' | 'Running' | 'Succeeded' | string (ReadOnly): State of the script execution. This only appears in the response.
 * **retentionInterval**: string (Required): Interval for which the service retains the script resource after it reaches a terminal state. Resource will be deleted when this duration expires. Duration is based on ISO 8601 pattern (for example P1D means one day).
-* **scriptContent**: string: Script body.
+* **scriptContent**: string {maxLength: 32000}: Script body.
 * **status**: [ScriptStatus](#scriptstatus) (ReadOnly): Contains the results of script execution.
 * **storageAccountSettings**: [StorageAccountConfiguration](#storageaccountconfiguration): Storage Account settings.
 * **supportingScriptUris**: string[]: Supporting files for the external script.
@@ -72,7 +72,7 @@
 
 ## ContainerConfiguration
 ### Properties
-* **containerGroupName**: string: Container group name, if not specified then the name will get auto-generated. Not specifying a 'containerGroupName' indicates the system to generate a unique name which might end up flagging an Azure Policy as non-compliant. Use 'containerGroupName' when you have an Azure Policy that expects a specific naming convention or when you want to fully control the name. 'containerGroupName' property must be between 1 and 63 characters long, must contain only lowercase letters, numbers, and dashes and it cannot start or end with a dash and consecutive dashes are not allowed. To specify a 'containerGroupName', add the following object to properties: { "containerSettings": { "containerGroupName": "contoso-container" } }. If you do not want to specify a 'containerGroupName' then do not add 'containerSettings' property.
+* **containerGroupName**: string {minLength: 1, maxLength: 63}: Container group name, if not specified then the name will get auto-generated. Not specifying a 'containerGroupName' indicates the system to generate a unique name which might end up flagging an Azure Policy as non-compliant. Use 'containerGroupName' when you have an Azure Policy that expects a specific naming convention or when you want to fully control the name. 'containerGroupName' property must be between 1 and 63 characters long, must contain only lowercase letters, numbers, and dashes and it cannot start or end with a dash and consecutive dashes are not allowed. To specify a 'containerGroupName', add the following object to properties: { "containerSettings": { "containerGroupName": "contoso-container" } }. If you do not want to specify a 'containerGroupName' then do not add 'containerSettings' property.
 
 ## DeploymentScriptPropertiesBaseOutputs
 ### Properties
@@ -92,7 +92,7 @@
 ## EnvironmentVariable
 ### Properties
 * **name**: string (Required): The name of the environment variable.
-* **secureValue**: string: The value of the secure environment variable.
+* **secureValue**: string {sensitive}: The value of the secure environment variable.
 * **value**: string: The value of the environment variable.
 
 ## ErrorAdditionalInfo
@@ -134,7 +134,7 @@
 
 ## StorageAccountConfiguration
 ### Properties
-* **storageAccountKey**: string: The storage account access key.
+* **storageAccountKey**: string {sensitive}: The storage account access key.
 * **storageAccountName**: string: The storage account name.
 
 ## SystemData

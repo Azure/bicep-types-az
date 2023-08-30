@@ -29,7 +29,7 @@
 ### Properties
 * **apiVersion**: '2020-05-12-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[a-zA-Z]{3,50}[.][a-zA-Z]{3,100}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [FarmBeatsExtensionProperties](#farmbeatsextensionproperties) (ReadOnly): FarmBeatsExtension properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.AgFoodPlatform/farmBeatsExtensionDefinitions' (ReadOnly, DeployTimeConstant): The resource type
@@ -47,23 +47,23 @@
 * **extensionApiDocsLink**: string (ReadOnly): Extension api docs link.
 * **extensionAuthLink**: string (ReadOnly): Extension auth link.
 * **extensionCategory**: string (ReadOnly): Extension category. e.g. weather/sensor/satellite.
-* **extensionId**: string (ReadOnly): Extension Id.
-* **installedExtensionVersion**: string (ReadOnly): Installed extension version.
+* **extensionId**: string {pattern: "^[a-zA-Z]{3,50}[.][a-zA-Z]{3,100}$"} (ReadOnly): Extension Id.
+* **installedExtensionVersion**: string {pattern: "^([1-9]|10).\d$"} (ReadOnly): Installed extension version.
 
 ## FarmBeatsExtensionProperties
 ### Properties
-* **description**: string (ReadOnly): Textual description.
+* **description**: string {minLength: 2, maxLength: 500} (ReadOnly): Textual description.
 * **detailedInformation**: [DetailedInformation](#detailedinformation)[] (ReadOnly): Detailed information which shows summary of requested data.
 Used in descriptive get extension metadata call.
 Information for weather category per api included are apisSupported,
 customParameters, PlatformParameters and Units supported.
 * **extensionApiDocsLink**: string (ReadOnly): FarmBeatsExtension api docs link.
 * **extensionAuthLink**: string (ReadOnly): FarmBeatsExtension auth link.
-* **extensionCategory**: string (ReadOnly): Category of the extension. e.g. weather/sensor/satellite.
-* **farmBeatsExtensionId**: string (ReadOnly): FarmBeatsExtension ID.
-* **farmBeatsExtensionName**: string (ReadOnly): FarmBeatsExtension name.
-* **farmBeatsExtensionVersion**: string (ReadOnly): FarmBeatsExtension version.
-* **publisherId**: string (ReadOnly): Publisher ID.
+* **extensionCategory**: string {minLength: 2, maxLength: 100} (ReadOnly): Category of the extension. e.g. weather/sensor/satellite.
+* **farmBeatsExtensionId**: string {minLength: 2, maxLength: 100, pattern: "^[a-zA-Z]{3,50}[.][a-zA-Z]{3,100}$"} (ReadOnly): FarmBeatsExtension ID.
+* **farmBeatsExtensionName**: string {minLength: 2, maxLength: 100} (ReadOnly): FarmBeatsExtension name.
+* **farmBeatsExtensionVersion**: string {minLength: 2, maxLength: 100, pattern: "^([1-9]|10).\d$"} (ReadOnly): FarmBeatsExtension version.
+* **publisherId**: string {minLength: 2, maxLength: 100} (ReadOnly): Publisher ID.
 * **targetResourceType**: string (ReadOnly): Target ResourceType of the farmBeatsExtension.
 
 ## FarmBeatsProperties
@@ -95,6 +95,6 @@ customParameters, PlatformParameters and Units supported.
 
 ## UnitSystemsInfo
 ### Properties
-* **key**: string (Required): UnitSystem key sent as part of ProviderInput.
+* **key**: string {minLength: 2, maxLength: 100} (Required): UnitSystem key sent as part of ProviderInput.
 * **values**: string[] (Required): List of unit systems supported by this data provider.
 

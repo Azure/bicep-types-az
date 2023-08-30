@@ -6,7 +6,7 @@
 * **apiVersion**: '2016-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Resource location
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 6, maxLength: 50} (Required, DeployTimeConstant): The resource name
 * **properties**: [RelayNamespaceProperties](#relaynamespaceproperties): Description of Relay Namespace
 * **sku**: [Sku](#sku): Sku of the Namespace.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags
@@ -17,7 +17,7 @@
 ### Properties
 * **apiVersion**: '2016-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 50} (Required, DeployTimeConstant): The resource name
 * **properties**: [AuthorizationRuleProperties](#authorizationruleproperties) (Required): Authorization Rule properties
 * **type**: 'Microsoft.Relay/namespaces/AuthorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -26,7 +26,7 @@
 ### Properties
 * **apiVersion**: '2016-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 50} (Required, DeployTimeConstant): The resource name
 * **properties**: [HybridConnectionProperties](#hybridconnectionproperties): Properties of HybridConnection
 * **type**: 'Microsoft.Relay/namespaces/HybridConnections' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -35,7 +35,7 @@
 ### Properties
 * **apiVersion**: '2016-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 50} (Required, DeployTimeConstant): The resource name
 * **properties**: [AuthorizationRuleProperties](#authorizationruleproperties) (Required): Authorization Rule properties
 * **type**: 'Microsoft.Relay/namespaces/HybridConnections/authorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -44,7 +44,7 @@
 ### Properties
 * **apiVersion**: '2016-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 50} (Required, DeployTimeConstant): The resource name
 * **properties**: [WcfRelayProperties](#wcfrelayproperties): Properties of WcfRelay
 * **type**: 'Microsoft.Relay/namespaces/WcfRelays' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -53,7 +53,7 @@
 ### Properties
 * **apiVersion**: '2016-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 50} (Required, DeployTimeConstant): The resource name
 * **properties**: [AuthorizationRuleProperties](#authorizationruleproperties) (Required): Authorization Rule properties
 * **type**: 'Microsoft.Relay/namespaces/WcfRelays/authorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -98,12 +98,12 @@
 
 ## AuthorizationRuleProperties
 ### Properties
-* **rights**: 'Listen' | 'Manage' | 'Send' | string[] (Required): The rights associated with the rule.
+* **rights**: ('Listen' | 'Manage' | 'Send' | string)[] (Required): The rights associated with the rule.
 
 ## HybridConnectionProperties
 ### Properties
 * **createdAt**: string (ReadOnly): The time the HybridConnection was created.
-* **listenerCount**: int (ReadOnly): The number of listeners for this HybridConnection. min : 1 and max:25 supported
+* **listenerCount**: int {minValue: 1, maxValue: 25} (ReadOnly): The number of listeners for this HybridConnection. min : 1 and max:25 supported
 * **requiresClientAuthorization**: bool: true if client authorization is needed for this HybridConnection; otherwise, false.
 * **updatedAt**: string (ReadOnly): The time the namespace was updated.
 * **userMetadata**: string: usermetadata is a placeholder to store user-defined string data for the HybridConnection endpoint.e.g. it can be used to store  descriptive data, such as list of teams and their contact information also user-defined configuration settings can be stored.

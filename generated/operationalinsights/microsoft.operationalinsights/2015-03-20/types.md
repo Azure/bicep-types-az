@@ -37,7 +37,7 @@
 * **displayName**: string (Required): Saved search display name.
 * **query**: string (Required): The query expression for the saved search. Please see https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-search-reference for reference.
 * **tags**: [Tag](#tag)[]: The tags attached to the saved search.
-* **version**: int: The version number of the query language. The current version is 2 and is the default.
+* **version**: int {minValue: 1, maxValue: 2}: The version number of the query language. The current version is 2 and is the default.
 
 ## SharedKeys
 ### Properties

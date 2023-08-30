@@ -17,7 +17,7 @@
 ### Properties
 * **apiVersion**: '2022-09-04' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 63, pattern: "^[a-zA-Z0-9]$|^[a-zA-Z0-9][-_a-zA-Z0-9]*[a-zA-Z0-9]$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [MachinePoolProperties](#machinepoolproperties): The MachinePool Properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.RedHatOpenShift/openshiftclusters/machinePool' (ReadOnly, DeployTimeConstant): The resource type
@@ -27,7 +27,7 @@
 ### Properties
 * **apiVersion**: '2022-09-04' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 63, pattern: "^[a-zA-Z0-9]$|^[a-zA-Z0-9][-_a-zA-Z0-9]*[a-zA-Z0-9]$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [SecretProperties](#secretproperties): The Secret Properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.RedHatOpenShift/openshiftclusters/secret' (ReadOnly, DeployTimeConstant): The resource type
@@ -37,7 +37,7 @@
 ### Properties
 * **apiVersion**: '2022-09-04' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 63, pattern: "^[a-zA-Z0-9]$|^[a-zA-Z0-9][-_a-zA-Z0-9]*[a-zA-Z0-9]$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [SyncIdentityProviderProperties](#syncidentityproviderproperties): The SyncIdentityProvider Properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.RedHatOpenShift/openshiftclusters/syncIdentityProvider' (ReadOnly, DeployTimeConstant): The resource type
@@ -47,7 +47,7 @@
 ### Properties
 * **apiVersion**: '2022-09-04' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 63, pattern: "^[a-zA-Z0-9]$|^[a-zA-Z0-9][-_a-zA-Z0-9]*[a-zA-Z0-9]$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [SyncSetProperties](#syncsetproperties): The Syncsets properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.RedHatOpenShift/openshiftclusters/syncSet' (ReadOnly, DeployTimeConstant): The resource type
@@ -104,11 +104,11 @@
 
 ## OpenShiftClusterAdminKubeconfig
 ### Properties
-* **kubeconfig**: string: The base64-encoded kubeconfig file.
+* **kubeconfig**: string {sensitive}: The base64-encoded kubeconfig file.
 
 ## OpenShiftClusterCredentials
 ### Properties
-* **kubeadminPassword**: string: The password for the kubeadmin user.
+* **kubeadminPassword**: string {sensitive}: The password for the kubeadmin user.
 * **kubeadminUsername**: string: The username for the kubeadmin user.
 
 ## OpenShiftClusterProperties
@@ -125,7 +125,7 @@
 
 ## SecretProperties
 ### Properties
-* **secretResources**: string: The Secrets Resources.
+* **secretResources**: string {sensitive}: The Secrets Resources.
 
 ## ServicePrincipalProfile
 ### Properties

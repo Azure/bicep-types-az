@@ -177,10 +177,10 @@ If only Exclude action is specified, the rules will apply to the list of all ava
 
 ## PlanData
 ### Properties
-* **billingCycle**: string: different billing cycles like MONTHLY/WEEKLY. this could be enum
+* **billingCycle**: string {maxLength: 50}: different billing cycles like MONTHLY/WEEKLY. this could be enum
 * **effectiveDate**: string: date when plan was applied
-* **planDetails**: string: plan id as published by Dynatrace
-* **usageType**: string: different usage type like PAYG/COMMITTED. this could be enum
+* **planDetails**: string {maxLength: 50}: plan id as published by Dynatrace
+* **usageType**: string {maxLength: 50}: different usage type like PAYG/COMMITTED. this could be enum
 
 ## SystemData
 ### Properties
@@ -204,10 +204,10 @@ If only Exclude action is specified, the rules will apply to the list of all ava
 ## UserInfo
 ### Properties
 * **country**: string: Country of the user
-* **emailAddress**: string: Email of the user used by Dynatrace for contacting them if needed
-* **firstName**: string: First Name of the user
-* **lastName**: string: Last Name of the user
-* **phoneNumber**: string: Phone number of the user used by Dynatrace for contacting them if needed
+* **emailAddress**: string {pattern: "^[A-Za-z0-9._%+-]+@(?:[A-Za-z0-9-]+\.)+[A-Za-z]{2,}$"}: Email of the user used by Dynatrace for contacting them if needed
+* **firstName**: string {maxLength: 50}: First Name of the user
+* **lastName**: string {maxLength: 50}: Last Name of the user
+* **phoneNumber**: string {maxLength: 40}: Phone number of the user used by Dynatrace for contacting them if needed
 
 ## VMHostsListResponse
 ### Properties

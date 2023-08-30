@@ -96,7 +96,7 @@
 ### Properties
 * **apiVersion**: '2022-08-08' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [JobScheduleCreatePropertiesOrJobScheduleProperties](#jobschedulecreatepropertiesorjobscheduleproperties) (Required): Gets or sets the list of job schedule properties.
 * **type**: 'Microsoft.Automation/automationAccounts/jobSchedules' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -153,7 +153,7 @@
 * **etag**: string (ReadOnly): Gets or sets the etag of the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Gets or sets the location of the resource.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[a-zA-Z][a-zA-Z-_0-9]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [RunbookCreateOrUpdatePropertiesOrRunbookProperties](#runbookcreateorupdatepropertiesorrunbookproperties) (Required): Gets or sets runbook create or update properties.
 * **tags**: [RunbookCreateOrUpdateParametersTags](#runbookcreateorupdateparameterstags): Gets or sets the tags attached to the resource.
 * **type**: 'Microsoft.Automation/automationAccounts/runbooks' (ReadOnly, DeployTimeConstant): The resource type
@@ -213,7 +213,7 @@
 ### Properties
 * **apiVersion**: '2022-08-08' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [SourceControlSyncJobCreatePropertiesOrSourceControlSyncJobByIdProperties](#sourcecontrolsyncjobcreatepropertiesorsourcecontrolsyncjobbyidproperties) (Required): The properties of the source control sync job.
 * **type**: 'Microsoft.Automation/automationAccounts/sourceControls/sourceControlSyncJobs' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -430,7 +430,7 @@
 * **creationTime**: string (ReadOnly): Gets or sets the creation time of the job.
 * **endTime**: string (ReadOnly): Gets or sets the end time of the job.
 * **exception**: string (ReadOnly): Gets or sets the exception of the job.
-* **jobId**: string (ReadOnly): Gets or sets the id of the job.
+* **jobId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): Gets or sets the id of the job.
 * **lastModifiedTime**: string (ReadOnly): Gets or sets the last modified time of the job.
 * **lastStatusModifiedTime**: string (ReadOnly): Gets or sets the last status modified time of the job.
 * **parameters**: [JobCreatePropertiesParameters](#jobcreatepropertiesparameters): Gets or sets the parameters of the job.
@@ -634,20 +634,20 @@
 ## SourceControlCreateOrUpdatePropertiesOrSourceControlProperties
 ### Properties
 * **autoSync**: bool: The auto async of the source control. Default is false.
-* **branch**: string: The repo branch of the source control. Include branch as empty string for VsoTfvc.
+* **branch**: string {maxLength: 255}: The repo branch of the source control. Include branch as empty string for VsoTfvc.
 * **creationTime**: string (ReadOnly): The creation time.
-* **description**: string: The user description of the source control.
-* **folderPath**: string: The folder path of the source control. Path must be relative.
+* **description**: string {maxLength: 512}: The user description of the source control.
+* **folderPath**: string {maxLength: 255}: The folder path of the source control. Path must be relative.
 * **lastModifiedTime**: string (ReadOnly): The last modified time.
 * **publishRunbook**: bool: The auto publish of the source control. Default is true.
-* **repoUrl**: string: The repo url of the source control.
+* **repoUrl**: string {maxLength: 2000}: The repo url of the source control.
 * **securityToken**: [SourceControlSecurityTokenProperties](#sourcecontrolsecuritytokenproperties) (WriteOnly): The authorization token for the repo of the source control.
 * **sourceType**: 'GitHub' | 'VsoGit' | 'VsoTfvc' | string: The source type. Must be one of VsoGit, VsoTfvc, GitHub, case sensitive.
 
 ## SourceControlSecurityTokenProperties
 ### Properties
-* **accessToken**: string: The access token.
-* **refreshToken**: string: The refresh token.
+* **accessToken**: string {maxLength: 1024}: The access token.
+* **refreshToken**: string {maxLength: 1024}: The refresh token.
 * **tokenType**: 'Oauth' | 'PersonalAccessToken' | string: The token type. Must be either PersonalAccessToken or Oauth.
 
 ## SourceControlSyncJobCreatePropertiesOrSourceControlSyncJobByIdProperties

@@ -75,7 +75,7 @@
 
 ## CustomPriceDetails
 ### Properties
-* **benefits**: 'AHUB' | 'All' | 'None' | 'Reservations' | 'Sum' | string[]: Array of benefits.
+* **benefits**: ('AHUB' | 'All' | 'None' | 'Reservations' | 'Sum' | string)[]: Array of benefits.
 * **markups**: [Markup](#markup)[]: List of markups.
 * **pricesheet**: string
 

@@ -33,11 +33,11 @@
 
 ## AzureBlobDefinition
 ### Properties
-* **accountKey**: string: The account key (shared key) to access the storage account
+* **accountKey**: string {sensitive}: The account key (shared key) to access the storage account
 * **containerName**: string: The Azure Blob container name to sync from the url endpoint for the flux configuration.
 * **localAuthRef**: string: Name of a local secret on the Kubernetes cluster to use as the authentication secret rather than the managed or user-provided configuration secrets.
 * **managedIdentity**: [ManagedIdentityDefinition](#managedidentitydefinition): Parameters to authenticate using a Managed Identity.
-* **sasToken**: string: The Shared Access token to access the storage container
+* **sasToken**: string {sensitive}: The Shared Access token to access the storage container
 * **servicePrincipal**: [ServicePrincipalDefinition](#serviceprincipaldefinition): Parameters to authenticate using Service Principal.
 * **syncIntervalInSeconds**: int: The interval at which to re-reconcile the cluster Azure Blob source with the remote.
 * **timeoutInSeconds**: int: The maximum time to attempt to reconcile the cluster Azure Blob source with the remote.
@@ -244,11 +244,11 @@
 
 ## ServicePrincipalDefinition
 ### Properties
-* **clientCertificate**: string: Base64-encoded certificate used to authenticate a Service Principal
-* **clientCertificatePassword**: string: The password for the certificate used to authenticate a Service Principal
+* **clientCertificate**: string {sensitive}: Base64-encoded certificate used to authenticate a Service Principal
+* **clientCertificatePassword**: string {sensitive}: The password for the certificate used to authenticate a Service Principal
 * **clientCertificateSendChain**: bool: Specifies whether to include x5c header in client claims when acquiring a token to enable subject name / issuer based authentication for the Client Certificate
 * **clientId**: string: The client Id for authenticating a Service Principal.
-* **clientSecret**: string: The client secret for authenticating a Service Principal
+* **clientSecret**: string {sensitive}: The client secret for authenticating a Service Principal
 * **tenantId**: string: The tenant Id for authenticating a Service Principal
 
 ## SourceControlConfigurationProperties

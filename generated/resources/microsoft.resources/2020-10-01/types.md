@@ -6,7 +6,7 @@
 * **apiVersion**: '2020-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The location to store the deployment data.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 64} (Required, DeployTimeConstant): The resource name
 * **properties**: [DeploymentPropertiesOrDeploymentPropertiesExtended](#deploymentpropertiesordeploymentpropertiesextended) (Required): The deployment properties.
 * **tags**: [DeploymentTags](#deploymenttags): Deployment tags
 * **type**: 'Microsoft.Resources/deployments' (ReadOnly, DeployTimeConstant): The resource type
@@ -20,7 +20,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Optional property. Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.
 * **location**: string (Required): The location of the ACI and the storage account for the deployment script.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 90} (Required, DeployTimeConstant): The resource name
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata related to this resource.
 * **tags**: [DeploymentScriptTags](#deploymentscripttags): Resource tags.
 * **type**: 'Microsoft.Resources/deploymentScripts' (ReadOnly, DeployTimeConstant): The resource type
@@ -52,7 +52,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The location of the resource group. It cannot be changed after the resource group has been created. It must be one of the supported Azure locations.
 * **managedBy**: string: The ID of the resource that manages this resource group.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 90} (Required, DeployTimeConstant): The resource name
 * **properties**: [ResourceGroupProperties](#resourcegroupproperties): The resource group properties.
 * **tags**: [ResourceGroupTags](#resourcegrouptags): The tags attached to the resource group.
 * **type**: 'Microsoft.Resources/resourceGroups' (ReadOnly, DeployTimeConstant): The resource type
@@ -142,7 +142,7 @@
 
 ## ContainerConfiguration
 ### Properties
-* **containerGroupName**: string: Container group name, if not specified then the name will get auto-generated. Not specifying a 'containerGroupName' indicates the system to generate a unique name which might end up flagging an Azure Policy as non-compliant. Use 'containerGroupName' when you have an Azure Policy that expects a specific naming convention or when you want to fully control the name. 'containerGroupName' property must be between 1 and 63 characters long, must contain only lowercase letters, numbers, and dashes and it cannot start or end with a dash and consecutive dashes are not allowed. To specify a 'containerGroupName', add the following object to properties: { "containerSettings": { "containerGroupName": "contoso-container" } }. If you do not want to specify a 'containerGroupName' then do not add 'containerSettings' property.
+* **containerGroupName**: string {minLength: 1, maxLength: 63}: Container group name, if not specified then the name will get auto-generated. Not specifying a 'containerGroupName' indicates the system to generate a unique name which might end up flagging an Azure Policy as non-compliant. Use 'containerGroupName' when you have an Azure Policy that expects a specific naming convention or when you want to fully control the name. 'containerGroupName' property must be between 1 and 63 characters long, must contain only lowercase letters, numbers, and dashes and it cannot start or end with a dash and consecutive dashes are not allowed. To specify a 'containerGroupName', add the following object to properties: { "containerSettings": { "containerGroupName": "contoso-container" } }. If you do not want to specify a 'containerGroupName' then do not add 'containerSettings' property.
 
 ## DebugSetting
 ### Properties
@@ -200,7 +200,7 @@
 ## EnvironmentVariable
 ### Properties
 * **name**: string (Required): The name of the environment variable.
-* **secureValue**: string: The value of the secure environment variable.
+* **secureValue**: string {sensitive}: The value of the secure environment variable.
 * **value**: string: The value of the environment variable.
 
 ## ErrorAdditionalInfo
@@ -302,7 +302,7 @@
 
 ## StorageAccountConfiguration
 ### Properties
-* **storageAccountKey**: string: The storage account access key.
+* **storageAccountKey**: string {sensitive}: The storage account access key.
 * **storageAccountName**: string: The storage account name.
 
 ## SystemData

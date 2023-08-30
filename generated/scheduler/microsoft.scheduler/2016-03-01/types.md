@@ -125,7 +125,7 @@
 * **minutes**: int[]: Gets or sets the minutes of the hour that the job should execute at.
 * **monthDays**: int[]: Gets or sets the days of the month that the job should execute on. Must be between 1 and 31.
 * **monthlyOccurrences**: [JobRecurrenceScheduleMonthlyOccurrence](#jobrecurrenceschedulemonthlyoccurrence)[]: Gets or sets the occurrences of days within a month.
-* **weekDays**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: Gets or sets the days of the week that the job should execute on.
+* **weekDays**: ('Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday')[]: Gets or sets the days of the week that the job should execute on.
 
 ## JobRecurrenceScheduleMonthlyOccurrence
 ### Properties

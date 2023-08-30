@@ -21,7 +21,7 @@
 ## GovernanceAssignmentAdditionalData
 ### Properties
 * **ticketLink**: string: Ticket link associated with this governance assignment - for example: https://snow.com
-* **ticketNumber**: int: Ticket number associated with this governance assignment
+* **ticketNumber**: int {minValue: 0}: Ticket number associated with this governance assignment
 * **ticketStatus**: string: The ticket status associated with this governance assignment - for example: Active
 
 ## GovernanceAssignmentProperties
@@ -67,8 +67,8 @@
 * **isGracePeriod**: bool: Defines whether there is a grace period on the governance rule
 * **metadata**: [GovernanceRuleMetadata](#governancerulemetadata): The governance rule metadata
 * **ownerSource**: [GovernanceRuleOwnerSource](#governanceruleownersource) (Required): The owner source for the governance rule - e.g. Manually by user@contoso.com - see example
-* **remediationTimeframe**: string: Governance rule remediation timeframe - this is the time that will affect on the grace-period duration e.g. 7.00:00:00 - means 7 days
-* **rulePriority**: int (Required): The governance rule priority, priority to the lower number. Rules with the same priority on the same scope will not be allowed
+* **remediationTimeframe**: string {pattern: "^[0-9]+\.[0-9]{2}:[0-9]{2}:[0-9]{2}$"}: Governance rule remediation timeframe - this is the time that will affect on the grace-period duration e.g. 7.00:00:00 - means 7 days
+* **rulePriority**: int {minValue: 0, maxValue: 1000} (Required): The governance rule priority, priority to the lower number. Rules with the same priority on the same scope will not be allowed
 * **ruleType**: 'Integrated' | 'ServiceNow' | string (Required): The rule type of the governance rule, defines the source of the rule e.g. Integrated
 * **sourceResourceType**: 'Assessments' | string (Required): The governance rule source, what the rule affects, e.g. Assessments
 * **tenantId**: string (ReadOnly): The tenantId (GUID)

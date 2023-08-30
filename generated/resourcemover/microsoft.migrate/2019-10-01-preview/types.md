@@ -183,9 +183,9 @@ rule, specifies where network traffic originates from.
 
 ### AvailabilitySetResourceSettings
 #### Properties
-* **faultDomain**: int: Gets or sets the target fault domain.
+* **faultDomain**: int {minValue: 1}: Gets or sets the target fault domain.
 * **resourceType**: 'Microsoft.Compute/availabilitySets' (Required): The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-* **updateDomain**: int: Gets or sets the target update domain.
+* **updateDomain**: int {minValue: 1, maxValue: 20}: Gets or sets the target update domain.
 
 ### DiskEncryptionSetResourceSettings
 #### Properties

@@ -6,7 +6,7 @@
 * **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {maxLength: 50, pattern: "^[a-zA-Z0-9]+(-[a-zA-Z0-9]+)*"} (Required, DeployTimeConstant): The resource name
 * **properties**: [AccountProperties](#accountproperties): List of account properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -17,7 +17,7 @@
 ### Properties
 * **apiVersion**: '2021-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {maxLength: 50, pattern: "^[a-zA-Z0-9]+(-[a-zA-Z0-9]+)*"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DataPoolProperties](#datapoolproperties): List of data pool properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource
 * **type**: 'Microsoft.AutonomousDevelopmentPlatform/accounts/dataPools' (ReadOnly, DeployTimeConstant): The resource type
@@ -38,7 +38,7 @@
 ### Properties
 * **encryption**: [DataPoolEncryption](#datapoolencryption): Encryption properties of a Data Pool location
 * **name**: string (Required): The location name
-* **storageAccountCount**: int: The amount of storage accounts provisioned per Data Pool. Default: 5
+* **storageAccountCount**: int {minValue: 1}: The amount of storage accounts provisioned per Data Pool. Default: 5
 * **storageSku**: [StorageSku](#storagesku): The Storage SKU. Default: Standard_ZRS.
 
 ## DataPoolProperties

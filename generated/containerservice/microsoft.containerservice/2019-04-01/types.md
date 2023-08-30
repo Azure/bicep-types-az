@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedClusterIdentity](#managedclusteridentity): The identity of the managed cluster, if configured.
 * **location**: string (Required): Resource location
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 63, pattern: "^[a-zA-Z0-9]$|^[a-zA-Z0-9][-_a-zA-Z0-9]{0,61}[a-zA-Z0-9]$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedClusterProperties](#managedclusterproperties): Properties of a managed cluster.
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.ContainerService/managedClusters' (ReadOnly, DeployTimeConstant): The resource type
@@ -42,18 +42,18 @@
 
 ## ContainerServiceLinuxProfile
 ### Properties
-* **adminUsername**: string (Required): The administrator username to use for Linux VMs.
+* **adminUsername**: string {pattern: "^[A-Za-z][-A-Za-z0-9_]*$"} (Required): The administrator username to use for Linux VMs.
 * **ssh**: [ContainerServiceSshConfiguration](#containerservicesshconfiguration) (Required): SSH configuration for Linux-based VMs running on Azure.
 
 ## ContainerServiceNetworkProfile
 ### Properties
-* **dnsServiceIP**: string: An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.
-* **dockerBridgeCidr**: string: A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.
+* **dnsServiceIP**: string {pattern: "^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$"}: An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.
+* **dockerBridgeCidr**: string {pattern: "^([0-9]{1,3}\.){3}[0-9]{1,3}(\/([0-9]|[1-2][0-9]|3[0-2]))?$"}: A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.
 * **loadBalancerSku**: 'basic' | 'standard' | string: The load balancer sku for the managed cluster.
 * **networkPlugin**: 'azure' | 'kubenet' | string: Network plugin used for building Kubernetes network.
 * **networkPolicy**: 'azure' | 'calico' | string: Network policy used for building Kubernetes network.
-* **podCidr**: string: A CIDR notation IP range from which to assign pod IPs when kubenet is used.
-* **serviceCidr**: string: A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.
+* **podCidr**: string {pattern: "^([0-9]{1,3}\.){3}[0-9]{1,3}(\/([0-9]|[1-2][0-9]|3[0-2]))?$"}: A CIDR notation IP range from which to assign pod IPs when kubenet is used.
+* **serviceCidr**: string {pattern: "^([0-9]{1,3}\.){3}[0-9]{1,3}(\/([0-9]|[1-2][0-9]|3[0-2]))?$"}: A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.
 
 ## ContainerServiceSshConfiguration
 ### Properties
@@ -105,14 +105,14 @@
 ## ManagedClusterAgentPoolProfile
 ### Properties
 * **availabilityZones**: string[]: (PREVIEW) Availability zones for nodes. Must use VirtualMachineScaleSets AgentPoolType.
-* **count**: int (Required): Number of agents (VMs) to host docker containers. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1.
+* **count**: int {minValue: 1, maxValue: 100} (Required): Number of agents (VMs) to host docker containers. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1.
 * **enableAutoScaling**: bool: Whether to enable auto-scaler
 * **maxCount**: int: Maximum number of nodes for auto-scaling
 * **maxPods**: int: Maximum number of pods that can run on a node.
 * **minCount**: int: Minimum number of nodes for auto-scaling
-* **name**: string (Required): Unique name of the agent pool profile in the context of the subscription and resource group.
+* **name**: string {pattern: "^[a-z][a-z0-9]{0,11}$"} (Required): Unique name of the agent pool profile in the context of the subscription and resource group.
 * **orchestratorVersion**: string: Version of orchestrator specified when creating the managed cluster.
-* **osDiskSizeGB**: int: OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.
+* **osDiskSizeGB**: int {minValue: 0, maxValue: 1023}: OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.
 * **osType**: 'Linux' | 'Windows' | string: OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
 * **provisioningState**: string (ReadOnly): The current deployment or provisioning state, which only appears in the response.
 * **type**: 'AvailabilitySet' | 'VirtualMachineScaleSets' | string: AgentPoolType represents types of an agent pool
@@ -122,13 +122,13 @@
 ## ManagedClusterAgentPoolProfileProperties
 ### Properties
 * **availabilityZones**: string[]: (PREVIEW) Availability zones for nodes. Must use VirtualMachineScaleSets AgentPoolType.
-* **count**: int (Required): Number of agents (VMs) to host docker containers. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1.
+* **count**: int {minValue: 1, maxValue: 100} (Required): Number of agents (VMs) to host docker containers. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1.
 * **enableAutoScaling**: bool: Whether to enable auto-scaler
 * **maxCount**: int: Maximum number of nodes for auto-scaling
 * **maxPods**: int: Maximum number of pods that can run on a node.
 * **minCount**: int: Minimum number of nodes for auto-scaling
 * **orchestratorVersion**: string: Version of orchestrator specified when creating the managed cluster.
-* **osDiskSizeGB**: int: OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.
+* **osDiskSizeGB**: int {minValue: 0, maxValue: 1023}: OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.
 * **osType**: 'Linux' | 'Windows' | string: OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
 * **provisioningState**: string (ReadOnly): The current deployment or provisioning state, which only appears in the response.
 * **type**: 'AvailabilitySet' | 'VirtualMachineScaleSets' | string: AgentPoolType represents types of an agent pool

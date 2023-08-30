@@ -32,7 +32,7 @@
 
 ## AppServiceCertificateOrderProperties
 ### Properties
-* **appServiceCertificateNotRenewableReasons**: 'ExpirationNotInRenewalTimeRange' | 'RegistrationStatusNotSupportedForRenewal' | 'SubscriptionNotActive' | string[] (ReadOnly): Reasons why App Service Certificate is not renewable at the current moment.
+* **appServiceCertificateNotRenewableReasons**: ('ExpirationNotInRenewalTimeRange' | 'RegistrationStatusNotSupportedForRenewal' | 'SubscriptionNotActive' | string)[] (ReadOnly): Reasons why App Service Certificate is not renewable at the current moment.
 * **autoRenew**: bool: <code>true</code> if the certificate should be automatically renewed when it expires; otherwise, <code>false</code>.
 * **certificates**: [AppServiceCertificateOrderPropertiesCertificates](#appservicecertificateorderpropertiescertificates): State of the Key Vault secret.
 * **csr**: string: Last CSR that was created for this order.
@@ -50,7 +50,7 @@
 * **serialNumber**: string (ReadOnly): Current serial number of the certificate.
 * **signedCertificate**: [CertificateDetails](#certificatedetails) (ReadOnly): Signed certificate.
 * **status**: 'Canceled' | 'Denied' | 'Expired' | 'Issued' | 'NotSubmitted' | 'PendingRekey' | 'Pendingissuance' | 'Pendingrevocation' | 'Revoked' | 'Unused' (ReadOnly): Current order status.
-* **validityInYears**: int: Duration in years (must be between 1 and 3).
+* **validityInYears**: int {minValue: 1, maxValue: 3}: Duration in years (must be between 1 and 3).
 
 ## AppServiceCertificateOrderPropertiesCertificates
 ### Properties

@@ -30,7 +30,7 @@
 * **enabled**: bool: the enabled flag. Specifies whether automatic scaling is enabled for the resource. The default value is 'false'.
 * **name**: string: the name of the autoscale setting.
 * **notifications**: [AutoscaleNotification](#autoscalenotification)[]: the collection of notifications.
-* **profiles**: [AutoscaleProfile](#autoscaleprofile)[] (Required): the collection of automatic scaling profiles that specify different scaling parameters for different time periods. A maximum of 20 profiles can be specified.
+* **profiles**: [AutoscaleProfile](#autoscaleprofile)[] {maxLength: 20} (Required): the collection of automatic scaling profiles that specify different scaling parameters for different time periods. A maximum of 20 profiles can be specified.
 * **targetResourceLocation**: string: the location of the resource that the autoscale setting should be added to.
 * **targetResourceUri**: string: the resource identifier of the resource that the autoscale setting should be added to.
 

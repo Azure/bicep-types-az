@@ -623,7 +623,7 @@
 
 ## EnableMigrationInputPropertiesOrMigrationItemProperties
 ### Properties
-* **allowedOperations**: 'DisableMigration' | 'Migrate' | 'TestMigrate' | 'TestMigrateCleanup' | string[] (ReadOnly): The allowed operations on the migration item, based on the current migration state of the item.
+* **allowedOperations**: ('DisableMigration' | 'Migrate' | 'TestMigrate' | 'TestMigrateCleanup' | string)[] (ReadOnly): The allowed operations on the migration item, based on the current migration state of the item.
 * **currentJob**: [CurrentJobDetails](#currentjobdetails) (ReadOnly): The current job details.
 * **health**: string (ReadOnly): The consolidated health.
 * **healthErrors**: [HealthError](#healtherror)[] (ReadOnly): The list of health errors.
@@ -1434,7 +1434,7 @@
 * **lastHeartbeatUtc**: string (ReadOnly): The time of the last heartbeat received from the agent.
 * **latestUpgradableVersionWithoutReboot**: string (ReadOnly): The latest upgradeable version available without reboot.
 * **latestVersion**: string (ReadOnly): The latest agent version available.
-* **reasonsBlockingUpgrade**: 'AgentNoHeartbeat' | 'AlreadyOnLatestVersion' | 'DistroIsNotReported' | 'DistroNotSupportedForUpgrade' | 'IncompatibleApplianceVersion' | 'InvalidAgentVersion' | 'InvalidDriverVersion' | 'MissingUpgradePath' | 'NotProtected' | 'ProcessServerNoHeartbeat' | 'RcmProxyNoHeartbeat' | 'RebootRequired' | 'Unknown' | 'UnsupportedProtectionScenario' | string[] (ReadOnly): The whether update is possible or not.
+* **reasonsBlockingUpgrade**: ('AgentNoHeartbeat' | 'AlreadyOnLatestVersion' | 'DistroIsNotReported' | 'DistroNotSupportedForUpgrade' | 'IncompatibleApplianceVersion' | 'InvalidAgentVersion' | 'InvalidDriverVersion' | 'MissingUpgradePath' | 'NotProtected' | 'ProcessServerNoHeartbeat' | 'RcmProxyNoHeartbeat' | 'RebootRequired' | 'Unknown' | 'UnsupportedProtectionScenario' | string)[] (ReadOnly): The whether update is possible or not.
 * **version**: string (ReadOnly): The agent version.
 
 ## InMageRcmNicDetails
@@ -2047,8 +2047,8 @@
 ### Properties
 * **actionName**: string (Required): The action name.
 * **customDetails**: [RecoveryPlanActionDetails](#recoveryplanactiondetails) (Required): The custom details.
-* **failoverDirections**: 'PrimaryToRecovery' | 'RecoveryToPrimary' | string[] (Required): The list of failover directions.
-* **failoverTypes**: 'ChangePit' | 'Commit' | 'CompleteMigration' | 'DisableProtection' | 'Failback' | 'FinalizeFailback' | 'PlannedFailover' | 'RepairReplication' | 'ReverseReplicate' | 'SwitchProtection' | 'TestFailover' | 'TestFailoverCleanup' | 'UnplannedFailover' | string[] (Required): The list of failover types.
+* **failoverDirections**: ('PrimaryToRecovery' | 'RecoveryToPrimary' | string)[] (Required): The list of failover directions.
+* **failoverTypes**: ('ChangePit' | 'Commit' | 'CompleteMigration' | 'DisableProtection' | 'Failback' | 'FinalizeFailback' | 'PlannedFailover' | 'RepairReplication' | 'ReverseReplicate' | 'SwitchProtection' | 'TestFailover' | 'TestFailoverCleanup' | 'UnplannedFailover' | string)[] (Required): The list of failover types.
 
 ## RecoveryPlanActionDetails
 * **Discriminator**: instanceType

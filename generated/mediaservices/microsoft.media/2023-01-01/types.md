@@ -168,7 +168,7 @@
 ## AssetProperties
 ### Properties
 * **alternateId**: string: The alternate ID of the Asset.
-* **assetId**: string (ReadOnly): The Asset ID.
+* **assetId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The Asset ID.
 * **container**: string: The name of the asset blob container.
 * **created**: string (ReadOnly): The creation date of the Asset.
 * **description**: string: The Asset description.
@@ -185,7 +185,7 @@
 * **endTime**: string (ReadOnly): The end time of the Streaming Locator.
 * **name**: string (ReadOnly): Streaming Locator name.
 * **startTime**: string (ReadOnly): The start time of the Streaming Locator.
-* **streamingLocatorId**: string (ReadOnly): StreamingLocatorId of the Streaming Locator.
+* **streamingLocatorId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): StreamingLocatorId of the Streaming Locator.
 * **streamingPolicyName**: string (ReadOnly): Name of the Streaming Policy used by this Streaming Locator.
 
 ## AssetTrackProperties
@@ -268,7 +268,7 @@
 ### Properties
 * **configuration**: [ContentKeyPolicyConfiguration](#contentkeypolicyconfiguration) (Required): The key delivery configuration.
 * **name**: string: The Policy Option description.
-* **policyOptionId**: string (ReadOnly): The legacy Policy Option ID.
+* **policyOptionId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The legacy Policy Option ID.
 * **restriction**: [ContentKeyPolicyRestriction](#contentkeypolicyrestriction) (Required): The requirements that must be met to deliver keys with this configuration
 
 ## ContentKeyPolicyPlayReadyContentKeyLocation
@@ -283,7 +283,7 @@
 ### ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifier
 #### Properties
 * **@odata.type**: '#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifier' (Required): The discriminator for derived types.
-* **keyId**: string (Required): The content key ID.
+* **keyId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required): The content key ID.
 
 
 ## ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestriction
@@ -327,7 +327,7 @@
 * **description**: string: A description for the Policy.
 * **lastModified**: string (ReadOnly): The last modified date of the Policy
 * **options**: [ContentKeyPolicyOption](#contentkeypolicyoption)[] (Required): The Key Policy options.
-* **policyId**: string (ReadOnly): The legacy Policy ID.
+* **policyId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The legacy Policy ID.
 
 ## ContentKeyPolicyRestriction
 * **Discriminator**: @odata.type
@@ -480,8 +480,8 @@
 
 ## MediaServiceIdentity
 ### Properties
-* **principalId**: string (ReadOnly): The Principal ID of the identity.
-* **tenantId**: string (ReadOnly): The Tenant ID of the identity.
+* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The Principal ID of the identity.
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The Tenant ID of the identity.
 * **type**: string (Required): The identity type.
 * **userAssignedIdentities**: [UserAssignedManagedIdentities](#userassignedmanagedidentities): The user assigned managed identities.
 
@@ -489,7 +489,7 @@
 ### Properties
 * **encryption**: [AccountEncryption](#accountencryption): The account encryption properties.
 * **keyDelivery**: [KeyDelivery](#keydelivery): The Key Delivery properties for Media Services account.
-* **mediaServiceId**: string (ReadOnly): The Media Services account ID.
+* **mediaServiceId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The Media Services account ID.
 * **minimumTlsVersion**: 'Tls10' | 'Tls11' | 'Tls12' | 'Tls13' | string: The minimum TLS version allowed for this account's requests. This is an optional property. If unspecified, a secure default value will be used.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): The Private Endpoint Connections created for the Media Service account.
 * **provisioningState**: 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): Provisioning state of the Media Services account.
@@ -553,7 +553,7 @@
 
 ## StreamingLocatorContentKey
 ### Properties
-* **id**: string (Required): ID of Content Key
+* **id**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required): ID of Content Key
 * **labelReferenceInStreamingPolicy**: string: Label of Content Key as specified in the Streaming Policy
 * **policyName**: string (ReadOnly): ContentKeyPolicy used by Content Key
 * **tracks**: [TrackSelection](#trackselection)[] (ReadOnly): Tracks which use this Content Key
@@ -570,7 +570,7 @@
 * **endTime**: string: The end time of the Streaming Locator.
 * **filters**: string[]: A list of asset or account filters which apply to this streaming locator
 * **startTime**: string: The start time of the Streaming Locator.
-* **streamingLocatorId**: string: The StreamingLocatorId of the Streaming Locator.
+* **streamingLocatorId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The StreamingLocatorId of the Streaming Locator.
 * **streamingPolicyName**: string (Required): Name of the Streaming Policy used by this Streaming Locator. Either specify the name of Streaming Policy you created or use one of the predefined Streaming Policies. The predefined Streaming Policies available are: 'Predefined_DownloadOnly', 'Predefined_ClearStreamingOnly', 'Predefined_DownloadAndClearStreaming', 'Predefined_ClearKey', 'Predefined_MultiDrmCencStreaming' and 'Predefined_MultiDrmStreaming'
 
 ## StreamingPath
@@ -679,6 +679,6 @@
 
 ## UserAssignedManagedIdentity
 ### Properties
-* **clientId**: string (ReadOnly): The client ID.
-* **principalId**: string (ReadOnly): The principal ID.
+* **clientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The client ID.
+* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The principal ID.
 

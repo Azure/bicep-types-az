@@ -69,7 +69,7 @@
 * **remoteDnsIps**: string: Remote Dns ips
 * **trustDirection**: string: Trust Direction
 * **trustedDomainFqdn**: string: Trusted Domain FQDN
-* **trustPassword**: string: Trust Password
+* **trustPassword**: string {sensitive}: Trust Password
 
 ## HealthAlert
 ### Properties

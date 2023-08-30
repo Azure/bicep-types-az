@@ -6,7 +6,7 @@
 * **apiVersion**: '2023-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 64} (Required, DeployTimeConstant): The resource name
 * **properties**: [WorkspaceProperties](#workspaceproperties) (Required): The workspace properties.
 * **sku**: [Sku](#sku): The SKU of the resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource
@@ -46,8 +46,8 @@
 
 ## CreatedBy
 ### Properties
-* **applicationId**: string (ReadOnly): The application ID of the application that initiated the creation of the workspace. For example, Azure Portal.
-* **oid**: string (ReadOnly): The Object ID that created the workspace.
+* **applicationId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The application ID of the application that initiated the creation of the workspace. For example, Azure Portal.
+* **oid**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The Object ID that created the workspace.
 * **puid**: string (ReadOnly): The Personal Object ID corresponding to the object ID above
 
 ## Encryption
@@ -93,8 +93,8 @@
 
 ## ManagedIdentityConfiguration
 ### Properties
-* **principalId**: string (ReadOnly): The objectId of the Managed Identity that is linked to the Managed Storage account.
-* **tenantId**: string (ReadOnly): The tenant Id where the Managed Identity is created.
+* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The objectId of the Managed Identity that is linked to the Managed Storage account.
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The tenant Id where the Managed Identity is created.
 * **type**: string (ReadOnly): The type of Identity created. It can be either SystemAssigned or UserAssigned.
 
 ## PrivateEndpoint
@@ -226,6 +226,6 @@
 
 ## WorkspaceProviderAuthorization
 ### Properties
-* **principalId**: string (Required): The provider's principal identifier. This is the identity that the provider will use to call ARM to manage the workspace resources.
-* **roleDefinitionId**: string (Required): The provider's role definition identifier. This role will define all the permissions that the provider must have on the workspace's container resource group. This role definition cannot have permission to delete the resource group.
+* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required): The provider's principal identifier. This is the identity that the provider will use to call ARM to manage the workspace resources.
+* **roleDefinitionId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required): The provider's role definition identifier. This role will define all the permissions that the provider must have on the workspace's container resource group. This role definition cannot have permission to delete the resource group.
 

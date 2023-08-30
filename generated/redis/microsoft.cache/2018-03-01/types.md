@@ -83,8 +83,8 @@
 * **shardCount**: int: The number of shards to be created on a Premium Cluster Cache.
 * **sku**: [Sku](#sku) (Required): The SKU of the Redis cache to deploy.
 * **sslPort**: int (ReadOnly): Redis SSL port.
-* **staticIP**: string: Static IP address. Required when deploying a Redis cache inside an existing Azure Virtual Network.
-* **subnetId**: string: The full resource ID of a subnet in a virtual network to deploy the Redis cache in. Example format: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/Microsoft.{Network|ClassicNetwork}/VirtualNetworks/vnet1/subnets/subnet1
+* **staticIP**: string {pattern: "^\d+\.\d+\.\d+\.\d+$"}: Static IP address. Required when deploying a Redis cache inside an existing Azure Virtual Network.
+* **subnetId**: string {pattern: "^/subscriptions/[^/]*/resourceGroups/[^/]*/providers/Microsoft.(ClassicNetwork|Network)/virtualNetworks/[^/]*/subnets/[^/]*$"}: The full resource ID of a subnet in a virtual network to deploy the Redis cache in. Example format: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/Microsoft.{Network|ClassicNetwork}/VirtualNetworks/vnet1/subnets/subnet1
 * **tenantSettings**: [RedisCommonPropertiesTenantSettings](#rediscommonpropertiestenantsettings): A dictionary of tenant settings
 
 ## RedisFirewallRuleProperties

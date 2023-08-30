@@ -157,7 +157,7 @@
 * **modifiedTime**: string: The most recent time the rule was updated.
 * **primaryKey**: string: The primary key that was used.
 * **revision**: int: The revision number for the rule.
-* **rights**: 'Listen' | 'Manage' | 'Send'[]: The rights associated with the rule.
+* **rights**: ('Listen' | 'Manage' | 'Send')[]: The rights associated with the rule.
 * **secondaryKey**: string: The secondary key that was used.
 
 ## WnsCredential

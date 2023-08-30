@@ -6,7 +6,7 @@
 * **apiVersion**: '2022-08-31-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 24, pattern: "^[a-zA-Z0-9-]{3,24}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [CloudHsmClusterProperties](#cloudhsmclusterproperties): Properties of the Cloud HSM Cluster
 * **sku**: [CloudHsmClusterSku](#cloudhsmclustersku): SKU details
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
@@ -19,7 +19,7 @@
 * **apiVersion**: '2022-08-31-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Modified whenever there is a change in the state of private endpoint connection.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 24, pattern: "^[a-zA-Z0-9-]{3,24}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.HardwareSecurityModules/cloudHsmClusters/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type

@@ -21,9 +21,9 @@
 ### Properties
 * **approvalType**: 'ApprovalRequired' | 'AutoApproval' | 'NotSpecified' | string (ReadOnly): The feature approval type.
 * **authorizationProfile**: [AuthorizationProfile](#authorizationprofile): Authorization Profile
-* **description**: string: The feature description.
+* **description**: string {maxLength: 1000}: The feature description.
 * **displayName**: string (ReadOnly): The featureDisplayName.
-* **documentationLink**: string (ReadOnly): The feature documentation link.
+* **documentationLink**: string {maxLength: 1000} (ReadOnly): The feature documentation link.
 * **featureName**: string (ReadOnly): The featureName.
 * **metadata**: [SubscriptionFeatureRegistrationPropertiesMetadata](#subscriptionfeatureregistrationpropertiesmetadata): Key-value pairs for meta data.
 * **providerNamespace**: string (ReadOnly): The providerNamespace.
@@ -37,5 +37,5 @@
 ## SubscriptionFeatureRegistrationPropertiesMetadata
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: string
+* **Additional Properties Type**: string {maxLength: 1000}
 

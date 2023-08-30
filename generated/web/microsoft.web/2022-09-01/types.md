@@ -1483,7 +1483,7 @@
 * **apiVersion**: '2022-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[a-zA-Z0-9]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DatabaseConnectionProperties](#databaseconnectionproperties): DatabaseConnection resource specific properties
 * **type**: 'Microsoft.Web/staticSites/builds/databaseConnections' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -1548,7 +1548,7 @@
 * **apiVersion**: '2022-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[a-zA-Z0-9]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DatabaseConnectionProperties](#databaseconnectionproperties): DatabaseConnection resource specific properties
 * **type**: 'Microsoft.Web/staticSites/databaseConnections' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -1851,7 +1851,7 @@ If <code>false</code>, this App Service Plan will not perform availability zone 
 * **artifactStorageMountPath**: string
 * **artifactStorageNodeName**: string
 * **frontEndServiceConfiguration**: [FrontEndConfiguration](#frontendconfiguration)
-* **kubeConfig**: string (WriteOnly)
+* **kubeConfig**: string {sensitive} (WriteOnly)
 
 ## ArmIdWrapper
 ### Properties
@@ -1991,7 +1991,7 @@ Remove blobs older than X days.
 
 ## AzureStorageInfoValue
 ### Properties
-* **accessKey**: string: Access key for the storage account.
+* **accessKey**: string {sensitive}: Access key for the storage account.
 * **accountName**: string: Name of the storage account.
 * **mountPath**: string: Path to mount the storage within the site's runtime environment.
 * **shareName**: string: Name of the file share (container name, for Blob storage).
@@ -2135,7 +2135,7 @@ from source app. Otherwise, application settings from source app are retained.
 * **cloneCustomHostNames**: bool: <code>true</code> to clone custom hostnames from source app; otherwise, <code>false</code>.
 * **cloneSourceControl**: bool: <code>true</code> to clone source control from source app; otherwise, <code>false</code>.
 * **configureLoadBalancing**: bool: <code>true</code> to configure load balancing for source and destination app.
-* **correlationId**: string: Correlation ID of cloning operation. This ID ties multiple cloning operations
+* **correlationId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Correlation ID of cloning operation. This ID ties multiple cloning operations
 together to use the same snapshot.
 * **hostingEnvironment**: string: App Service Environment.
 * **overwrite**: bool: <code>true</code> to overwrite destination app; otherwise, <code>false</code>.
@@ -2402,7 +2402,7 @@ This is used during restore with overwrite connection strings options.
 ### Properties
 * **configurationFiles**: [StaticSiteDatabaseConnectionConfigurationFileOverview](#staticsitedatabaseconnectionconfigurationfileoverview)[] (ReadOnly): A list of configuration files associated with this database connection.
 * **connectionIdentity**: string: If present, the identity is used in conjunction with connection string to connect to the database. Use of the system-assigned managed identity is indicated with the string 'SystemAssigned', while use of a user-assigned managed identity is indicated with the resource id of the managed identity resource.
-* **connectionString**: string: The connection string to use to connect to the database.
+* **connectionString**: string {sensitive}: The connection string to use to connect to the database.
 * **region**: string (Required): The region of the database resource.
 * **resourceId**: string (Required): The resource id of the database.
 
@@ -2570,7 +2570,7 @@ This is used during restore with overwrite connection strings options.
 * **retentionInDays**: int: Retention in days.
 Remove files older than X days.
 0 or lower means no retention.
-* **retentionInMb**: int: Maximum size in megabytes that http log files can use.
+* **retentionInMb**: int {minValue: 25, maxValue: 100}: Maximum size in megabytes that http log files can use.
 When reached old log files will be removed to make space for new ones.
 Value can range between 25 and 100.
 
@@ -2672,7 +2672,7 @@ Value can range between 25 and 100.
 ## GitHubActionContainerConfiguration
 ### Properties
 * **imageName**: string: The image name for the build.
-* **password**: string: The password used to upload the image to the container registry.
+* **password**: string {sensitive}: The password used to upload the image to the container registry.
 * **serverUrl**: string: The server URL for the container registry where the build will be hosted.
 * **username**: string: The username used to upload the image to the container registry.
 
@@ -2929,7 +2929,7 @@ FrontEnd Service ArtifactsStorageType etc.
 ## LogAnalyticsConfiguration
 ### Properties
 * **customerId**: string
-* **sharedKey**: string (WriteOnly)
+* **sharedKey**: string {sensitive} (WriteOnly)
 
 ## Login
 ### Properties
@@ -3246,7 +3246,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 * **isDynamic**: bool: True if this is associated with a dynamically added rule
 * **level**: 'Critical' | 'Information' | 'NonUrgentSuggestion' | 'Warning': Level of impact indicating how critical this rule is.
 * **message**: string: Localized name of the rule (Good for UI).
-* **recommendationId**: string: Recommendation ID of an associated recommendation object tied to the rule, if exists.
+* **recommendationId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Recommendation ID of an associated recommendation object tied to the rule, if exists.
 If such an object doesn't exist, it is set to null.
 * **recommendationName**: string: Unique name of the rule.
 
@@ -3256,7 +3256,7 @@ If such an object doesn't exist, it is set to null.
 * **minutes**: int[]: The minutes.
 * **monthDays**: int[]: The month days.
 * **monthlyOccurrences**: [RecurrenceScheduleOccurrence](#recurrencescheduleoccurrence)[]: The monthly occurrences.
-* **weekDays**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: The days of the week.
+* **weekDays**: ('Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday')[]: The days of the week.
 
 ## RecurrenceScheduleOccurrence
 ### Properties
@@ -3482,7 +3482,7 @@ as they were at the creation time
 ## Secret
 ### Properties
 * **name**: string: Secret Name.
-* **value**: string (WriteOnly): Secret Value.
+* **value**: string {sensitive} (WriteOnly): Secret Value.
 
 ## SecretsCollection
 ### Properties
@@ -3607,11 +3607,11 @@ application used for sign-in.
 * **defaultDocuments**: string[]: Default documents.
 * **detailedErrorLoggingEnabled**: bool: <code>true</code> if detailed error logging is enabled; otherwise, <code>false</code>.
 * **documentRoot**: string: Document root.
-* **elasticWebAppScaleLimit**: int: Maximum number of workers that a site can scale out to.
+* **elasticWebAppScaleLimit**: int {minValue: 0}: Maximum number of workers that a site can scale out to.
 This setting only applies to apps in plans where ElasticScaleEnabled is <code>true</code>
 * **experiments**: [Experiments](#experiments): This is work around for polymorphic types.
 * **ftpsState**: 'AllAllowed' | 'Disabled' | 'FtpsOnly' | string: State of FTP / FTPS service
-* **functionAppScaleLimit**: int: Maximum number of workers that a site can scale out to.
+* **functionAppScaleLimit**: int {minValue: 0}: Maximum number of workers that a site can scale out to.
 This setting only applies to the Consumption and Elastic Premium Plans
 * **functionsRuntimeScaleMonitoringEnabled**: bool: Gets or sets a value indicating whether functions runtime scale monitoring is enabled. When enabled,
 the ScaleController will not monitor event sources directly, but will instead call to the
@@ -3635,7 +3635,7 @@ runtime to get scale status.
 * **managedPipelineMode**: 'Classic' | 'Integrated': Managed pipeline mode.
 * **managedServiceIdentityId**: int: Managed Service Identity Id
 * **metadata**: [NameValuePair](#namevaluepair)[] (WriteOnly): Application metadata. This property cannot be retrieved, since it may contain secrets.
-* **minimumElasticInstanceCount**: int: Number of minimum instance count for a site
+* **minimumElasticInstanceCount**: int {minValue: 0, maxValue: 20}: Number of minimum instance count for a site
 This setting only applies to the Elastic Plans
 * **minTlsVersion**: '1.0' | '1.1' | '1.2' | string: MinTlsVersion: configures the minimum version of TLS required for SSL requests
 * **netFrameworkVersion**: string: .NET Framework version.
@@ -3643,7 +3643,7 @@ This setting only applies to the Elastic Plans
 * **numberOfWorkers**: int: Number of workers.
 * **phpVersion**: string: Version of PHP.
 * **powerShellVersion**: string: Version of PowerShell.
-* **preWarmedInstanceCount**: int: Number of preWarmed instances.
+* **preWarmedInstanceCount**: int {minValue: 0, maxValue: 10}: Number of preWarmed instances.
 This setting only applies to the Consumption and Elastic Plans
 * **publicNetworkAccess**: string: Property to allow or block all public traffic.
 * **publishingUsername**: string: Publishing user name.
@@ -3743,7 +3743,7 @@ the app is not served on those hostnames.
 * **httpsOnly**: bool: HttpsOnly: configures a web site to accept only https requests. Issues redirect for
 http requests
 * **hyperV**: bool: Hyper-V sandbox.
-* **inProgressOperationId**: string (ReadOnly): Specifies an operation id if this site has a pending operation.
+* **inProgressOperationId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): Specifies an operation id if this site has a pending operation.
 * **isDefaultContainer**: bool (ReadOnly): <code>true</code> if the app is a default container; otherwise, <code>false</code>.
 * **isXenon**: bool: Obsolete: Hyper-V sandbox.
 * **keyVaultReferenceIdentity**: string: Identity to use for Key Vault Reference authentication.
@@ -3854,7 +3854,7 @@ This must be of the form /subscriptions/{subscriptionName}/resourceGroups/{resou
 ### Properties
 * **applicableEnvironmentsMode**: string (Required): State indicating if basic auth is enabled and for what environments it is active.
 * **environments**: string[]: The list of enabled environments for Basic Auth if ApplicableEnvironmentsMode is set to SpecifiedEnvironments.
-* **password**: string: The password for basic auth.
+* **password**: string {sensitive}: The password for basic auth.
 * **secretState**: string (ReadOnly): State indicating if basic auth has a secret and what type it is.
 * **secretUrl**: string: Url to the secret in Key Vault.
 

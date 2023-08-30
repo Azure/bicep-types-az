@@ -22,7 +22,7 @@
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Managed service identity (system assigned and/or user assigned identities)
 * **kind**: string: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type.
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9\-_]{0,254}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [BatchEndpointDetails](#batchendpointdetails) (Required): [Required] Additional attributes of the entity.
 * **sku**: [Sku](#sku): Sku details required for ARM contract for Autoscaling.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
@@ -37,7 +37,7 @@
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Managed service identity (system assigned and/or user assigned identities)
 * **kind**: string: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type.
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9\-_]{0,254}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [BatchDeploymentDetails](#batchdeploymentdetails) (Required): [Required] Additional attributes of the entity.
 * **sku**: [Sku](#sku): Sku details required for ARM contract for Autoscaling.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
@@ -49,7 +49,7 @@
 ### Properties
 * **apiVersion**: '2022-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9\-_]{0,254}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [CodeContainerDetails](#codecontainerdetails) (Required): [Required] Additional attributes of the entity.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/codes' (ReadOnly, DeployTimeConstant): The resource type
@@ -69,7 +69,7 @@
 ### Properties
 * **apiVersion**: '2022-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9\-_]{0,254}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ComponentContainerDetails](#componentcontainerdetails) (Required): [Required] Additional attributes of the entity.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/components' (ReadOnly, DeployTimeConstant): The resource type
@@ -113,7 +113,7 @@
 ### Properties
 * **apiVersion**: '2022-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9\-_]{0,254}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DataContainerDetails](#datacontainerdetails) (Required): [Required] Additional attributes of the entity.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/data' (ReadOnly, DeployTimeConstant): The resource type
@@ -133,7 +133,7 @@
 ### Properties
 * **apiVersion**: '2022-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9\-_]{0,254}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DatastoreDetails](#datastoredetails) (Required): [Required] Additional attributes of the entity.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/datastores' (ReadOnly, DeployTimeConstant): The resource type
@@ -143,7 +143,7 @@
 ### Properties
 * **apiVersion**: '2022-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9\-_]{0,254}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [EnvironmentContainerDetails](#environmentcontainerdetails) (Required): [Required] Additional attributes of the entity.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/environments' (ReadOnly, DeployTimeConstant): The resource type
@@ -163,7 +163,7 @@
 ### Properties
 * **apiVersion**: '2022-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9\-_]{0,254}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [JobBaseDetails](#jobbasedetails) (Required): [Required] Additional attributes of the entity.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/jobs' (ReadOnly, DeployTimeConstant): The resource type
@@ -173,7 +173,7 @@
 ### Properties
 * **apiVersion**: '2022-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9\-_]{0,254}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ModelContainerDetails](#modelcontainerdetails) (Required): [Required] Additional attributes of the entity.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/models' (ReadOnly, DeployTimeConstant): The resource type
@@ -196,7 +196,7 @@
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Managed service identity (system assigned and/or user assigned identities)
 * **kind**: string: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type.
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9\-_]{0,254}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [OnlineEndpointDetails](#onlineendpointdetails) (Required): [Required] Additional attributes of the entity.
 * **sku**: [Sku](#sku): Sku details required for ARM contract for Autoscaling.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
@@ -211,7 +211,7 @@
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Managed service identity (system assigned and/or user assigned identities)
 * **kind**: string: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type.
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9\-_]{0,254}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [OnlineDeploymentDetails](#onlinedeploymentdetails) (Required): [Required] Additional attributes of the entity.
 * **sku**: [Sku](#sku): Sku details required for ARM contract for Autoscaling.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
@@ -284,14 +284,14 @@
 
 ## AksNetworkingConfiguration
 ### Properties
-* **dnsServiceIP**: string: An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.
-* **dockerBridgeCidr**: string: A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.
-* **serviceCidr**: string: A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.
+* **dnsServiceIP**: string {pattern: "^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$"}: An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.
+* **dockerBridgeCidr**: string {pattern: "^([0-9]{1,3}\.){3}[0-9]{1,3}(\/([0-9]|[1-2][0-9]|3[0-2]))?$"}: A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.
+* **serviceCidr**: string {pattern: "^([0-9]{1,3}\.){3}[0-9]{1,3}(\/([0-9]|[1-2][0-9]|3[0-2]))?$"}: A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.
 * **subnetId**: string: Virtual network subnet resource ID the compute nodes belong to
 
 ## AKSSchemaProperties
 ### Properties
-* **agentCount**: int: Number of agents
+* **agentCount**: int {minValue: 0}: Number of agents
 * **agentVmSize**: string: Agent virtual machine size
 * **aksNetworkingConfiguration**: [AksNetworkingConfiguration](#aksnetworkingconfiguration): AKS networking configuration for vnet
 * **clusterFqdn**: string: Cluster full qualified domain name
@@ -353,7 +353,7 @@
 
 ### IdAssetReference
 #### Properties
-* **assetId**: string (Required): [Required] ARM resource ID of the asset.
+* **assetId**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] ARM resource ID of the asset.
 * **referenceType**: 'Id' (Required): [Required] Specifies the type of asset reference.
 
 ### OutputPathAssetReference
@@ -386,8 +386,8 @@
 
 ### Classification
 #### Properties
-* **allowedModels**: 'BernoulliNaiveBayes' | 'DecisionTree' | 'ExtremeRandomTrees' | 'GradientBoosting' | 'KNN' | 'LightGBM' | 'LinearSVM' | 'LogisticRegression' | 'MultinomialNaiveBayes' | 'RandomForest' | 'SGD' | 'SVM' | 'XGBoostClassifier' | string[]: Allowed models for classification task.
-* **blockedModels**: 'BernoulliNaiveBayes' | 'DecisionTree' | 'ExtremeRandomTrees' | 'GradientBoosting' | 'KNN' | 'LightGBM' | 'LinearSVM' | 'LogisticRegression' | 'MultinomialNaiveBayes' | 'RandomForest' | 'SGD' | 'SVM' | 'XGBoostClassifier' | string[]: Blocked models for classification task.
+* **allowedModels**: ('BernoulliNaiveBayes' | 'DecisionTree' | 'ExtremeRandomTrees' | 'GradientBoosting' | 'KNN' | 'LightGBM' | 'LinearSVM' | 'LogisticRegression' | 'MultinomialNaiveBayes' | 'RandomForest' | 'SGD' | 'SVM' | 'XGBoostClassifier' | string)[]: Allowed models for classification task.
+* **blockedModels**: ('BernoulliNaiveBayes' | 'DecisionTree' | 'ExtremeRandomTrees' | 'GradientBoosting' | 'KNN' | 'LightGBM' | 'LinearSVM' | 'LogisticRegression' | 'MultinomialNaiveBayes' | 'RandomForest' | 'SGD' | 'SVM' | 'XGBoostClassifier' | string)[]: Blocked models for classification task.
 * **dataSettings**: [TableVerticalDataSettings](#tableverticaldatasettings): Data inputs for AutoMLJob.
 * **featurizationSettings**: [TableVerticalFeaturizationSettings](#tableverticalfeaturizationsettings): Featurization inputs needed for AutoML job.
 * **limitSettings**: [TableVerticalLimitSettings](#tableverticallimitsettings): Execution constraints for AutoMLJob.
@@ -397,8 +397,8 @@
 
 ### Forecasting
 #### Properties
-* **allowedModels**: 'Arimax' | 'AutoArima' | 'Average' | 'DecisionTree' | 'ElasticNet' | 'ExponentialSmoothing' | 'ExtremeRandomTrees' | 'GradientBoosting' | 'KNN' | 'LassoLars' | 'LightGBM' | 'Naive' | 'Prophet' | 'RandomForest' | 'SGD' | 'SeasonalAverage' | 'SeasonalNaive' | 'TCNForecaster' | 'XGBoostRegressor' | string[]: Allowed models for forecasting task.
-* **blockedModels**: 'Arimax' | 'AutoArima' | 'Average' | 'DecisionTree' | 'ElasticNet' | 'ExponentialSmoothing' | 'ExtremeRandomTrees' | 'GradientBoosting' | 'KNN' | 'LassoLars' | 'LightGBM' | 'Naive' | 'Prophet' | 'RandomForest' | 'SGD' | 'SeasonalAverage' | 'SeasonalNaive' | 'TCNForecaster' | 'XGBoostRegressor' | string[]: Blocked models for forecasting task.
+* **allowedModels**: ('Arimax' | 'AutoArima' | 'Average' | 'DecisionTree' | 'ElasticNet' | 'ExponentialSmoothing' | 'ExtremeRandomTrees' | 'GradientBoosting' | 'KNN' | 'LassoLars' | 'LightGBM' | 'Naive' | 'Prophet' | 'RandomForest' | 'SGD' | 'SeasonalAverage' | 'SeasonalNaive' | 'TCNForecaster' | 'XGBoostRegressor' | string)[]: Allowed models for forecasting task.
+* **blockedModels**: ('Arimax' | 'AutoArima' | 'Average' | 'DecisionTree' | 'ElasticNet' | 'ExponentialSmoothing' | 'ExtremeRandomTrees' | 'GradientBoosting' | 'KNN' | 'LassoLars' | 'LightGBM' | 'Naive' | 'Prophet' | 'RandomForest' | 'SGD' | 'SeasonalAverage' | 'SeasonalNaive' | 'TCNForecaster' | 'XGBoostRegressor' | string)[]: Blocked models for forecasting task.
 * **dataSettings**: [TableVerticalDataSettings](#tableverticaldatasettings): Data inputs for AutoMLJob.
 * **featurizationSettings**: [TableVerticalFeaturizationSettings](#tableverticalfeaturizationsettings): Featurization inputs needed for AutoML job.
 * **forecastingSettings**: [ForecastingSettings](#forecastingsettings): Forecasting task specific inputs.
@@ -449,8 +449,8 @@
 
 ### Regression
 #### Properties
-* **allowedModels**: 'DecisionTree' | 'ElasticNet' | 'ExtremeRandomTrees' | 'GradientBoosting' | 'KNN' | 'LassoLars' | 'LightGBM' | 'RandomForest' | 'SGD' | 'XGBoostRegressor' | string[]: Allowed models for regression task.
-* **blockedModels**: 'DecisionTree' | 'ElasticNet' | 'ExtremeRandomTrees' | 'GradientBoosting' | 'KNN' | 'LassoLars' | 'LightGBM' | 'RandomForest' | 'SGD' | 'XGBoostRegressor' | string[]: Blocked models for regression task.
+* **allowedModels**: ('DecisionTree' | 'ElasticNet' | 'ExtremeRandomTrees' | 'GradientBoosting' | 'KNN' | 'LassoLars' | 'LightGBM' | 'RandomForest' | 'SGD' | 'XGBoostRegressor' | string)[]: Allowed models for regression task.
+* **blockedModels**: ('DecisionTree' | 'ElasticNet' | 'ExtremeRandomTrees' | 'GradientBoosting' | 'KNN' | 'LassoLars' | 'LightGBM' | 'RandomForest' | 'SGD' | 'XGBoostRegressor' | string)[]: Blocked models for regression task.
 * **dataSettings**: [TableVerticalDataSettings](#tableverticaldatasettings): Data inputs for AutoMLJob.
 * **featurizationSettings**: [TableVerticalFeaturizationSettings](#tableverticalfeaturizationsettings): Featurization inputs needed for AutoML job.
 * **limitSettings**: [TableVerticalLimitSettings](#tableverticallimitsettings): Execution constraints for AutoMLJob.
@@ -547,7 +547,7 @@ This property will always be returned as null. AuthKey values must be retrieved 
 
 ## BuildContext
 ### Properties
-* **contextUri**: string (Required): [Required] URI of the Docker build context used to build the image. Supports blob URIs on environment creation and may return blob or Git URIs.
+* **contextUri**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] URI of the Docker build context used to build the image. Supports blob URIs on environment creation and may return blob or Git URIs.
 <seealso href="https://docs.docker.com/engine/reference/commandline/build/#extended-description" />
 * **dockerfilePath**: string: Path to the Dockerfile in the build context.
 <seealso href="https://docs.docker.com/engine/reference/builder/" />
@@ -560,7 +560,7 @@ This property will always be returned as null. AuthKey values must be retrieved 
 ## CodeConfiguration
 ### Properties
 * **codeId**: string: ARM resource ID of the code asset.
-* **scoringScript**: string (Required): [Required] The script to execute on startup. eg. "score.py"
+* **scoringScript**: string {minLength: 1, pattern: "[a-zA-Z0-9_]"} (Required): [Required] The script to execute on startup. eg. "score.py"
 
 ## CodeContainerDetails
 ### Properties
@@ -867,27 +867,27 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 ### CertificateDatastoreCredentials
 #### Properties
 * **authorityUrl**: string: Authority URL used for authentication.
-* **clientId**: string (Required): [Required] Service principal client ID.
+* **clientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required): [Required] Service principal client ID.
 * **credentialsType**: 'Certificate' (Required): [Required] Credential type used to authentication with storage.
 * **resourceUrl**: string: Resource the service principal has access to.
 * **secrets**: [CertificateDatastoreSecrets](#certificatedatastoresecrets) (Required, WriteOnly): [Required] Service principal secrets.
-* **tenantId**: string (Required): [Required] ID of the tenant to which the service principal belongs.
-* **thumbprint**: string (Required): [Required] Thumbprint of the certificate used for authentication.
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required): [Required] ID of the tenant to which the service principal belongs.
+* **thumbprint**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] Thumbprint of the certificate used for authentication.
 
 ### KerberosKeytabCredentials
 #### Properties
 * **credentialsType**: 'KerberosKeytab' (Required): [Required] Credential type used to authentication with storage.
-* **kerberosKdcAddress**: string (Required): [Required] IP Address or DNS HostName.
-* **kerberosPrincipal**: string (Required): [Required] Kerberos Username
-* **kerberosRealm**: string (Required): [Required] Domain over which a Kerberos authentication server has the authority to authenticate a user, host or service.
+* **kerberosKdcAddress**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] IP Address or DNS HostName.
+* **kerberosPrincipal**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] Kerberos Username
+* **kerberosRealm**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] Domain over which a Kerberos authentication server has the authority to authenticate a user, host or service.
 * **secrets**: [KerberosKeytabSecrets](#kerberoskeytabsecrets) (Required, WriteOnly): [Required] Keytab secrets.
 
 ### KerberosPasswordCredentials
 #### Properties
 * **credentialsType**: 'KerberosPassword' (Required): [Required] Credential type used to authentication with storage.
-* **kerberosKdcAddress**: string (Required): [Required] IP Address or DNS HostName.
-* **kerberosPrincipal**: string (Required): [Required] Kerberos Username
-* **kerberosRealm**: string (Required): [Required] Domain over which a Kerberos authentication server has the authority to authenticate a user, host or service.
+* **kerberosKdcAddress**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] IP Address or DNS HostName.
+* **kerberosPrincipal**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] Kerberos Username
+* **kerberosRealm**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] Domain over which a Kerberos authentication server has the authority to authenticate a user, host or service.
 * **secrets**: [KerberosPasswordSecrets](#kerberospasswordsecrets) (Required, WriteOnly): [Required] Kerberos password secrets.
 
 ### NoneDatastoreCredentials
@@ -902,11 +902,11 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 ### ServicePrincipalDatastoreCredentials
 #### Properties
 * **authorityUrl**: string: Authority URL used for authentication.
-* **clientId**: string (Required): [Required] Service principal client ID.
+* **clientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required): [Required] Service principal client ID.
 * **credentialsType**: 'ServicePrincipal' (Required): [Required] Credential type used to authentication with storage.
 * **resourceUrl**: string: Resource the service principal has access to.
 * **secrets**: [ServicePrincipalDatastoreSecrets](#serviceprincipaldatastoresecrets) (Required, WriteOnly): [Required] Service principal secrets.
-* **tenantId**: string (Required): [Required] ID of the tenant to which the service principal belongs.
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required): [Required] ID of the tenant to which the service principal belongs.
 
 
 ## DatastoreDetails
@@ -932,23 +932,23 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 #### Properties
 * **datastoreType**: 'AzureDataLakeGen1' (Required): [Required] Storage type backing the datastore.
 * **serviceDataAccessAuthIdentity**: 'None' | 'WorkspaceSystemAssignedIdentity' | 'WorkspaceUserAssignedIdentity' | string: Indicates which identity to use to authenticate service data access to customer's storage.
-* **storeName**: string (Required): [Required] Azure Data Lake store name.
+* **storeName**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] Azure Data Lake store name.
 
 ### AzureDataLakeGen2Datastore
 #### Properties
-* **accountName**: string (Required): [Required] Storage account name.
+* **accountName**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] Storage account name.
 * **datastoreType**: 'AzureDataLakeGen2' (Required): [Required] Storage type backing the datastore.
 * **endpoint**: string: Azure cloud endpoint for the storage account.
-* **filesystem**: string (Required): [Required] The name of the Data Lake Gen2 filesystem.
+* **filesystem**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] The name of the Data Lake Gen2 filesystem.
 * **protocol**: string: Protocol used to communicate with the storage account.
 * **serviceDataAccessAuthIdentity**: 'None' | 'WorkspaceSystemAssignedIdentity' | 'WorkspaceUserAssignedIdentity' | string: Indicates which identity to use to authenticate service data access to customer's storage.
 
 ### AzureFileDatastore
 #### Properties
-* **accountName**: string (Required): [Required] Storage account name.
+* **accountName**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] Storage account name.
 * **datastoreType**: 'AzureFile' (Required): [Required] Storage type backing the datastore.
 * **endpoint**: string: Azure cloud endpoint for the storage account.
-* **fileShareName**: string (Required): [Required] The name of the Azure file share that the datastore points to.
+* **fileShareName**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] The name of the Azure file share that the datastore points to.
 * **protocol**: string: Protocol used to communicate with the storage account.
 * **serviceDataAccessAuthIdentity**: 'None' | 'WorkspaceSystemAssignedIdentity' | 'WorkspaceUserAssignedIdentity' | string: Indicates which identity to use to authenticate service data access to customer's storage.
 
@@ -956,7 +956,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 #### Properties
 * **datastoreType**: 'Hdfs' (Required): [Required] Storage type backing the datastore.
 * **hdfsServerCertificate**: string: The TLS cert of the HDFS server. Needs to be a base64 encoded string. Required if "Https" protocol is selected.
-* **nameNodeAddress**: string (Required): [Required] IP Address or DNS HostName.
+* **nameNodeAddress**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] IP Address or DNS HostName.
 * **protocol**: string: Protocol used to communicate with the storage account (Https/Http).
 
 
@@ -1000,7 +1000,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 * **Discriminator**: dataType
 
 ### Base Properties
-* **dataUri**: string (Required): [Required] Uri of the data. Usage/meaning depends on Microsoft.MachineLearning.ManagementFrontEnd.Contracts.V20220201Preview.Assets.DataVersionBase.DataType
+* **dataUri**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] Uri of the data. Usage/meaning depends on Microsoft.MachineLearning.ManagementFrontEnd.Contracts.V20220201Preview.Assets.DataVersionBase.DataType
 * **description**: string: The asset description text.
 * **isAnonymous**: bool: If the name version are system generated (anonymous registration).
 * **isArchived**: bool: Is the asset archived?
@@ -1229,9 +1229,9 @@ If grain is not defined, the data set is assumed to be one time-series. This par
 
 ### ManagedIdentity
 #### Properties
-* **clientId**: string: Specifies a user-assigned identity by client ID. For system-assigned, do not set this field.
+* **clientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Specifies a user-assigned identity by client ID. For system-assigned, do not set this field.
 * **identityType**: 'Managed' (Required): [Required] Specifies the type of identity framework.
-* **objectId**: string: Specifies a user-assigned identity by object ID. For system-assigned, do not set this field.
+* **objectId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Specifies a user-assigned identity by object ID. For system-assigned, do not set this field.
 * **resourceId**: string: Specifies a user-assigned identity by ARM resource ID. For system-assigned, do not set this field.
 
 ### UserIdentity
@@ -1515,7 +1515,7 @@ Note: This settings is not supported for the 'yolov5' algorithm.
 
 ## ImageVerticalDataSettings
 ### Properties
-* **targetColumnName**: string (Required): [Required] Target column name: This is prediction values column.
+* **targetColumnName**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] Target column name: This is prediction values column.
 Also known as label column name in context of classification tasks.
 * **testData**: [TestDataSettings](#testdatasettings): Test data input.
 * **trainingData**: [TrainingDataSettings](#trainingdatasettings) (Required): [Required] Training data input.
@@ -1591,9 +1591,9 @@ This is optional value to provide, if not provided, AutoML will default this to 
 ### CommandJob
 #### Properties
 * **codeId**: string: ARM resource ID of the code asset.
-* **command**: string (Required): [Required] The command to execute on startup of the job. eg. "python train.py"
+* **command**: string {minLength: 1, pattern: "[a-zA-Z0-9_]"} (Required): [Required] The command to execute on startup of the job. eg. "python train.py"
 * **distribution**: [DistributionConfiguration](#distributionconfiguration): Distribution configuration of the job. If set, this should be one of Mpi, Tensorflow, PyTorch, or null.
-* **environmentId**: string (Required): [Required] The ARM resource ID of the Environment specification for the job.
+* **environmentId**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] The ARM resource ID of the Environment specification for the job.
 * **environmentVariables**: [CommandJobEnvironmentVariables](#commandjobenvironmentvariables): Environment variables included in the job.
 * **inputs**: [CommandJobInputs](#commandjobinputs): Mapping of input data bindings used in the job.
 * **jobType**: 'Command' (Required): [Required] Specifies the type of job.
@@ -1638,42 +1638,42 @@ This is optional value to provide, if not provided, AutoML will default this to 
 #### Properties
 * **jobInputType**: 'CustomModel' (Required): [Required] Specifies the type of job.
 * **mode**: 'Direct' | 'Download' | 'EvalDownload' | 'EvalMount' | 'ReadOnlyMount' | 'ReadWriteMount' | string: Input Asset Delivery Mode.
-* **uri**: string (Required): [Required] Input Asset URI.
+* **uri**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] Input Asset URI.
 
 ### LiteralJobInput
 #### Properties
 * **jobInputType**: 'Literal' (Required): [Required] Specifies the type of job.
-* **value**: string (Required): [Required] Literal value for the input.
+* **value**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] Literal value for the input.
 
 ### MLFlowModelJobInput
 #### Properties
 * **jobInputType**: 'MLFlowModel' (Required): [Required] Specifies the type of job.
 * **mode**: 'Direct' | 'Download' | 'EvalDownload' | 'EvalMount' | 'ReadOnlyMount' | 'ReadWriteMount' | string: Input Asset Delivery Mode.
-* **uri**: string (Required): [Required] Input Asset URI.
+* **uri**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] Input Asset URI.
 
 ### MLTableJobInput
 #### Properties
 * **jobInputType**: 'MLTable' (Required): [Required] Specifies the type of job.
 * **mode**: 'Direct' | 'Download' | 'EvalDownload' | 'EvalMount' | 'ReadOnlyMount' | 'ReadWriteMount' | string: Input Asset Delivery Mode.
-* **uri**: string (Required): [Required] Input Asset URI.
+* **uri**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] Input Asset URI.
 
 ### TritonModelJobInput
 #### Properties
 * **jobInputType**: 'TritonModel' (Required): [Required] Specifies the type of job.
 * **mode**: 'Direct' | 'Download' | 'EvalDownload' | 'EvalMount' | 'ReadOnlyMount' | 'ReadWriteMount' | string: Input Asset Delivery Mode.
-* **uri**: string (Required): [Required] Input Asset URI.
+* **uri**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] Input Asset URI.
 
 ### UriFileJobInput
 #### Properties
 * **jobInputType**: 'UriFile' (Required): [Required] Specifies the type of job.
 * **mode**: 'Direct' | 'Download' | 'EvalDownload' | 'EvalMount' | 'ReadOnlyMount' | 'ReadWriteMount' | string: Input Asset Delivery Mode.
-* **uri**: string (Required): [Required] Input Asset URI.
+* **uri**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] Input Asset URI.
 
 ### UriFolderJobInput
 #### Properties
 * **jobInputType**: 'UriFolder' (Required): [Required] Specifies the type of job.
 * **mode**: 'Direct' | 'Download' | 'EvalDownload' | 'EvalMount' | 'ReadOnlyMount' | 'ReadWriteMount' | string: Input Asset Delivery Mode.
-* **uri**: string (Required): [Required] Input Asset URI.
+* **uri**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] Input Asset URI.
 
 
 ## JobOutput
@@ -1750,8 +1750,8 @@ This is optional value to provide, if not provided, AutoML will default this to 
 * **extensionPrincipalId**: string: Extension principal-id.
 * **instanceTypes**: [KubernetesPropertiesInstanceTypes](#kubernetespropertiesinstancetypes): Instance Type Schema
 * **namespace**: string: Compute namespace
-* **relayConnectionString**: string: Relay connection string.
-* **serviceBusConnectionString**: string: ServiceBus connection string.
+* **relayConnectionString**: string {sensitive}: Relay connection string.
+* **serviceBusConnectionString**: string {sensitive}: ServiceBus connection string.
 * **vcName**: string: VC name.
 
 ## KubernetesPropertiesInstanceTypes
@@ -1761,30 +1761,30 @@ This is optional value to provide, if not provided, AutoML will default this to 
 
 ## ListNotebookKeysResult
 ### Properties
-* **primaryAccessKey**: string (ReadOnly)
-* **secondaryAccessKey**: string (ReadOnly)
+* **primaryAccessKey**: string {sensitive} (ReadOnly)
+* **secondaryAccessKey**: string {sensitive} (ReadOnly)
 
 ## ListNotebookKeysResult
 ### Properties
-* **primaryAccessKey**: string (ReadOnly)
-* **secondaryAccessKey**: string (ReadOnly)
+* **primaryAccessKey**: string {sensitive} (ReadOnly)
+* **secondaryAccessKey**: string {sensitive} (ReadOnly)
 
 ## ListStorageAccountKeysResult
 ### Properties
-* **userStorageKey**: string (ReadOnly)
+* **userStorageKey**: string {sensitive} (ReadOnly)
 
 ## ListWorkspaceKeysResult
 ### Properties
-* **appInsightsInstrumentationKey**: string (ReadOnly)
+* **appInsightsInstrumentationKey**: string {sensitive} (ReadOnly)
 * **containerRegistryCredentials**: [RegistryListCredentialsResult](#registrylistcredentialsresult) (ReadOnly)
 * **notebookAccessKeys**: [ListNotebookKeysResult](#listnotebookkeysresult) (ReadOnly)
-* **userStorageKey**: string (ReadOnly)
+* **userStorageKey**: string {sensitive} (ReadOnly)
 * **userStorageResourceId**: string (ReadOnly)
 
 ## ManagedServiceIdentity
 ### Properties
-* **principalId**: string (ReadOnly): The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
-* **tenantId**: string (ReadOnly): The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
+* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
 * **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' | string (Required): Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed).
 * **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.
 
@@ -1793,7 +1793,7 @@ This is optional value to provide, if not provided, AutoML will default this to 
 * **description**: string: Description for the input.
 * **jobInputType**: 'CustomModel' | 'Literal' | 'MLFlowModel' | 'MLTable' | 'TritonModel' | 'UriFile' | 'UriFolder' | string (Required): [Required] Specifies the type of job.
 * **mode**: 'Direct' | 'Download' | 'EvalDownload' | 'EvalMount' | 'ReadOnlyMount' | 'ReadWriteMount' | string: Input Asset Delivery Mode.
-* **uri**: string (Required): [Required] Input Asset URI.
+* **uri**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] Input Asset URI.
 
 ## ModelContainerDetails
 ### Properties
@@ -1838,7 +1838,7 @@ This is optional value to provide, if not provided, AutoML will default this to 
 
 ## NlpVerticalDataSettings
 ### Properties
-* **targetColumnName**: string (Required): [Required] Target column name: This is prediction values column.
+* **targetColumnName**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] Target column name: This is prediction values column.
 Also known as label column name in context of classification tasks.
 * **testData**: [TestDataSettings](#testdatasettings): Test data input.
 * **trainingData**: [TrainingDataSettings](#trainingdatasettings) (Required): [Required] Training data input.
@@ -1872,12 +1872,12 @@ Applied when validation dataset is not provided.
 
 ## NotebookAccessTokenResult
 ### Properties
-* **accessToken**: string (ReadOnly)
+* **accessToken**: string {sensitive} (ReadOnly)
 * **expiresIn**: int (ReadOnly)
 * **hostName**: string (ReadOnly)
 * **notebookResourceId**: string (ReadOnly)
 * **publicDns**: string (ReadOnly)
-* **refreshToken**: string (ReadOnly)
+* **refreshToken**: string {sensitive} (ReadOnly)
 * **scope**: string (ReadOnly)
 * **tokenType**: string (ReadOnly)
 
@@ -1895,7 +1895,7 @@ Applied when validation dataset is not provided.
 ## Objective
 ### Properties
 * **goal**: 'Maximize' | 'Minimize' | string (Required): [Required] Defines supported metric goals for hyperparameter tuning
-* **primaryMetric**: string (Required): [Required] Name of the metric to optimize.
+* **primaryMetric**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] Name of the metric to optimize.
 
 ## OnlineDeploymentDetails
 * **Discriminator**: endpointComputeType
@@ -2059,7 +2059,7 @@ Defaults to 5000ms.
 ### Properties
 * **hours**: int[] (Required): [Required] List of hours for recurrence schedule pattern
 * **minutes**: int[] (Required): [Required] List of minutes for recurrence schedule pattern
-* **weekdays**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string[]: List of weekdays for recurrence schedule pattern
+* **weekdays**: ('Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string)[]: List of weekdays for recurrence schedule pattern
 
 ## RegistryListCredentialsResult
 ### Properties
@@ -2204,7 +2204,7 @@ Defaults to 5000ms.
 
 ## Route
 ### Properties
-* **path**: string (Required): [Required] The path for the route.
+* **path**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] The path for the route.
 * **port**: int (Required): [Required] The port for the route.
 
 ## SamplingAlgorithm
@@ -2251,7 +2251,7 @@ TimeZone should follow Windows time zone format.
 
 ### CronSchedule
 #### Properties
-* **expression**: string (Required): [Required] Specifies cron expression of schedule.
+* **expression**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] Specifies cron expression of schedule.
 The expression should follow NCronTab format.
 * **scheduleType**: 'Cron' (Required): [Required] Specifies the schedule type
 
@@ -2386,7 +2386,7 @@ The expression should follow NCronTab format.
 
 ## TableVerticalDataSettings
 ### Properties
-* **targetColumnName**: string (Required): [Required] Target column name: This is prediction values column.
+* **targetColumnName**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] Target column name: This is prediction values column.
 Also known as label column name in context of classification tasks.
 * **testData**: [TestDataSettings](#testdatasettings): Test data input.
 * **trainingData**: [TrainingDataSettings](#trainingdatasettings) (Required): [Required] Training data input.
@@ -2510,9 +2510,9 @@ Configure this parameter with a higher value than 300 secs, if more time is need
 ## TrialComponent
 ### Properties
 * **codeId**: string: ARM resource ID of the code asset.
-* **command**: string (Required): [Required] The command to execute on startup of the job. eg. "python train.py"
+* **command**: string {minLength: 1, pattern: "[a-zA-Z0-9_]"} (Required): [Required] The command to execute on startup of the job. eg. "python train.py"
 * **distribution**: [DistributionConfiguration](#distributionconfiguration): Distribution configuration of the job. If set, this should be one of Mpi, Tensorflow, PyTorch, or null.
-* **environmentId**: string (Required): [Required] The ARM resource ID of the Environment specification for the job.
+* **environmentId**: string {pattern: "[a-zA-Z0-9_]"} (Required): [Required] The ARM resource ID of the Environment specification for the job.
 * **environmentVariables**: [TrialComponentEnvironmentVariables](#trialcomponentenvironmentvariables): Environment variables included in the job.
 * **resources**: [ResourceConfiguration](#resourceconfiguration): Compute Resource configuration for the job.
 
@@ -2534,8 +2534,8 @@ Configure this parameter with a higher value than 300 secs, if more time is need
 
 ## UserAssignedIdentity
 ### Properties
-* **clientId**: string (ReadOnly): The client ID of the assigned identity.
-* **principalId**: string (ReadOnly): The principal ID of the assigned identity.
+* **clientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The client ID of the assigned identity.
+* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The principal ID of the assigned identity.
 
 ## VirtualMachineImage
 ### Properties

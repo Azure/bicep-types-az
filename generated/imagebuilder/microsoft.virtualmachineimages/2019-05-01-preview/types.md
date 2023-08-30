@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ImageTemplateIdentity](#imagetemplateidentity): The identity of the image template, if configured.
 * **location**: string (Required): Resource location
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[A-Za-z0-9-_.]{1,64}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ImageTemplateProperties](#imagetemplateproperties): The properties of the image template
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.VirtualMachineImages/imageTemplates' (ReadOnly, DeployTimeConstant): The resource type
@@ -59,7 +59,7 @@
 
 ### Base Properties
 * **artifactTags**: [ImageTemplateDistributorArtifactTags](#imagetemplatedistributorartifacttags): Tags that will be applied to the artifact once it has been created/updated by the distributor.
-* **runOutputName**: string (Required): The name to be used for the associated RunOutput.
+* **runOutputName**: string {pattern: "^[A-Za-z0-9-_.]{1,64}$"} (Required): The name to be used for the associated RunOutput.
 
 ### ImageTemplateManagedImageDistributor
 #### Properties
@@ -103,7 +103,7 @@
 
 ## ImageTemplateProperties
 ### Properties
-* **buildTimeoutInMinutes**: int: Maximum duration to wait while building the image template. Omit or specify 0 to use the default (4 hours).
+* **buildTimeoutInMinutes**: int {minValue: 0, maxValue: 960}: Maximum duration to wait while building the image template. Omit or specify 0 to use the default (4 hours).
 * **customize**: [ImageTemplateCustomizer](#imagetemplatecustomizer)[]: Specifies the properties used to describe the customization steps of the image, like Image source etc
 * **distribute**: [ImageTemplateDistributor](#imagetemplatedistributor)[] (Required): The distribution targets where the image output needs to go to.
 * **lastRunStatus**: [ImageTemplateLastRunStatus](#imagetemplatelastrunstatus) (ReadOnly): State of 'run' that is currently executing or was last executed.

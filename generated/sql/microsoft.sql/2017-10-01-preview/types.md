@@ -155,7 +155,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 * **creationDate**: string (ReadOnly): The creation date of the database (ISO8601 format).
 * **currentServiceObjectiveName**: string (ReadOnly): The current service level objective name of the database.
 * **currentSku**: [Sku](#sku) (ReadOnly): The name and tier of the SKU.
-* **databaseId**: string (ReadOnly): The ID of the database.
+* **databaseId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The ID of the database.
 * **defaultSecondaryLocation**: string (ReadOnly): The default secondary region for this database.
 * **earliestRestoreDate**: string (ReadOnly): This records the earliest start date and time that restore is available for this database (ISO8601 format).
 * **elasticPoolId**: string: The resource identifier of the elastic pool containing this database.

@@ -6,7 +6,7 @@
 * **apiVersion**: '2022-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 24, pattern: "^[A-Za-z0-9]+((-|_)[a-z0-9A-Z]+)*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ElasticSanProperties](#elasticsanproperties) (Required): Properties of ElasticSan.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -27,7 +27,7 @@
 ### Properties
 * **apiVersion**: '2022-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 63, pattern: "^[A-Za-z0-9]+((-|_)[a-z0-9A-Z]+)*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [VolumeGroupProperties](#volumegroupproperties): Properties of VolumeGroup.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ElasticSan/elasticSans/volumegroups' (ReadOnly, DeployTimeConstant): The resource type
@@ -37,7 +37,7 @@
 ### Properties
 * **apiVersion**: '2022-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 63, pattern: "^[a-z0-9]+(-[a-z0-9A-Z]+)*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [VolumeProperties](#volumeproperties) (Required): Properties of Volume.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ElasticSan/elasticSans/volumegroups/volumes' (ReadOnly, DeployTimeConstant): The resource type

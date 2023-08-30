@@ -349,7 +349,7 @@
 * **spendingLimit**: 'Off' | 'On' | string (ReadOnly): The billing profile spending limit.
 * **status**: 'Active' | 'Disabled' | 'Warned' | string (ReadOnly): The status of the billing profile.
 * **statusReasonCode**: 'PastDue' | 'SpendingLimitExpired' | 'SpendingLimitReached' | string (ReadOnly): Reason for the specified billing profile status.
-* **targetClouds**: 'USGov' | 'USNat' | 'USSec' | string[] (ReadOnly): Identifies the cloud environments that are associated with a billing profile. This is a system managed optional field and gets updated as the billing profile gets associated with accounts in various clouds.
+* **targetClouds**: ('USGov' | 'USNat' | 'USSec' | string)[] (ReadOnly): Identifies the cloud environments that are associated with a billing profile. This is a system managed optional field and gets updated as the billing profile gets associated with accounts in various clouds.
 
 ## BillingPropertyProperties
 ### Properties
@@ -404,7 +404,7 @@
 * **skuDescription**: string (ReadOnly): The sku description of the Azure plan for the subscription.
 * **skuId**: string: The sku ID of the Azure plan for the subscription.
 * **subscriptionBillingStatus**: 'Abandoned' | 'Active' | 'Deleted' | 'Inactive' | 'Warning' | string: The current billing status of the subscription.
-* **subscriptionId**: string (ReadOnly): The ID of the subscription.
+* **subscriptionId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The ID of the subscription.
 
 ## CustomerPolicyProperties
 ### Properties

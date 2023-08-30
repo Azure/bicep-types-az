@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [AmlFilesystemIdentity](#amlfilesystemidentity): The managed identity used by the AML file system, if configured.
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 2, maxLength: 80, pattern: "^[0-9a-zA-Z][-0-9a-zA-Z_]{0,78}[0-9a-zA-Z]$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [AmlFilesystemProperties](#amlfilesystemproperties): Properties of the AML file system.
 * **sku**: [SkuName](#skuname): SKU for the resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
@@ -22,7 +22,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [CacheIdentity](#cacheidentity): The identity of the cache, if configured.
 * **location**: string: Region name string.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[-0-9a-zA-Z_]{1,80}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [CacheProperties](#cacheproperties): Properties of the cache.
 * **sku**: [CacheSku](#cachesku): SKU for the cache.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
@@ -35,7 +35,7 @@
 * **apiVersion**: '2023-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): Region name string.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[-0-9a-zA-Z_]{1,80}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [StorageTargetProperties](#storagetargetproperties): StorageTarget properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **type**: 'Microsoft.StorageCache/caches/storageTargets' (ReadOnly, DeployTimeConstant): The resource type
@@ -110,7 +110,7 @@
 ## AmlFilesystemPropertiesMaintenanceWindow
 ### Properties
 * **dayOfWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday': Day of the week on which the maintenance window will occur.
-* **timeOfDayUTC**: string: The time of day (in UTC) to start the maintenance window.
+* **timeOfDayUTC**: string {pattern: "^([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$"}: The time of day (in UTC) to start the maintenance window.
 
 ## BlobNfsTarget
 ### Properties
@@ -121,7 +121,7 @@
 
 ## CacheActiveDirectorySettings
 ### Properties
-* **cacheNetBiosName**: string (Required): The NetBIOS name to assign to the HPC Cache when it joins the Active Directory domain as a server. Length must 1-15 characters from the class [-0-9a-zA-Z].
+* **cacheNetBiosName**: string {pattern: "^[-0-9a-zA-Z]{1,15}$"} (Required): The NetBIOS name to assign to the HPC Cache when it joins the Active Directory domain as a server. Length must 1-15 characters from the class [-0-9a-zA-Z].
 * **credentials**: [CacheActiveDirectorySettingsCredentials](#cacheactivedirectorysettingscredentials): Active Directory admin credentials used to join the HPC Cache to a domain.
 * **domainJoined**: 'Error' | 'No' | 'Yes' | string (ReadOnly): True if the HPC Cache is joined to the Active Directory domain.
 * **domainName**: string (Required): The fully qualified domain name of the Active Directory domain controller.
@@ -131,7 +131,7 @@
 
 ## CacheActiveDirectorySettingsCredentials
 ### Properties
-* **password**: string: Plain text password of the Active Directory domain administrator. This value is stored encrypted and not returned on response.
+* **password**: string {sensitive}: Plain text password of the Active Directory domain administrator. This value is stored encrypted and not returned on response.
 * **username**: string (Required): Username of the Active Directory domain administrator. This value is stored encrypted and not returned on response.
 
 ## CacheDirectorySettings
@@ -166,7 +166,7 @@
 ### Properties
 * **dnsSearchDomain**: string: DNS search domain
 * **dnsServers**: string[]: DNS servers for the cache to use.  It will be set from the network configuration if no value is provided.
-* **mtu**: int: The IPv4 maximum transmission unit configured for the subnet.
+* **mtu**: int {minValue: 576, maxValue: 1500}: The IPv4 maximum transmission unit configured for the subnet.
 * **ntpServer**: string: NTP server IP Address or FQDN for the cache to use. The default is time.windows.com.
 * **utilityAddresses**: string[] (ReadOnly): Array of additional IP addresses used by this cache.
 
@@ -231,7 +231,7 @@
 ## CacheUsernameDownloadSettingsCredentials
 ### Properties
 * **bindDn**: string: The Bind Distinguished Name identity to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.
-* **bindPassword**: string: The Bind password to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.
+* **bindPassword**: string {sensitive}: The Bind password to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.
 
 ## ClfsTarget
 ### Properties
@@ -260,7 +260,7 @@
 
 ## Nfs3Target
 ### Properties
-* **target**: string: IP address or host name of an NFSv3 host (e.g., 10.0.44.44).
+* **target**: string {pattern: "^[-.,0-9a-zA-Z]+$"}: IP address or host name of an NFSv3 host (e.g., 10.0.44.44).
 * **usageModel**: string: Identifies the StorageCache usage model to be used for this storage target.
 * **verificationTimer**: int: Amount of time (in seconds) the cache waits before it checks the back-end storage for file updates.
 * **writeBackTimer**: int: Amount of time (in seconds) the cache waits after the last file change before it copies the changed file to back-end storage.
@@ -284,12 +284,12 @@
 ## PrimingJob
 ### Properties
 * **primingJobDetails**: string (ReadOnly): The job details or error information if any.
-* **primingJobId**: string (ReadOnly): The unique identifier of the priming job.
-* **primingJobName**: string (Required): The priming job name.
-* **primingJobPercentComplete**: int (ReadOnly): The current progress of the priming job, as a percentage.
+* **primingJobId**: string {pattern: "^[-0-9a-zA-Z_]{1,80}$"} (ReadOnly): The unique identifier of the priming job.
+* **primingJobName**: string {pattern: "^[-0-9a-zA-Z_]{1,80}$"} (Required): The priming job name.
+* **primingJobPercentComplete**: int {minValue: 0, maxValue: 100} (ReadOnly): The current progress of the priming job, as a percentage.
 * **primingJobState**: 'Complete' | 'Paused' | 'Queued' | 'Running' | string (ReadOnly): The state of the priming operation.
 * **primingJobStatus**: string (ReadOnly): The status code of the priming job.
-* **primingManifestUrl**: string (Required, WriteOnly): The URL for the priming manifest file to download. This file must be readable from the HPC Cache. When the file is in Azure blob storage the URL should include a Shared Access Signature (SAS) granting read permissions on the blob.
+* **primingManifestUrl**: string {sensitive} (Required, WriteOnly): The URL for the priming manifest file to download. This file must be readable from the HPC Cache. When the file is in Azure blob storage the URL should include a Shared Access Signature (SAS) granting read permissions on the blob.
 
 ## SkuName
 ### Properties
@@ -297,7 +297,7 @@
 
 ## StorageTargetProperties
 ### Properties
-* **allocationPercentage**: int (ReadOnly): The percentage of cache space allocated for this storage target
+* **allocationPercentage**: int {minValue: 1, maxValue: 100} (ReadOnly): The percentage of cache space allocated for this storage target
 * **blobNfs**: [BlobNfsTarget](#blobnfstarget): Properties when targetType is blobNfs.
 * **clfs**: [ClfsTarget](#clfstarget): Properties when targetType is clfs.
 * **junctions**: [NamespaceJunction](#namespacejunction)[]: List of cache namespace junctions to target for namespace associations.
@@ -309,8 +309,8 @@
 
 ## StorageTargetSpaceAllocation
 ### Properties
-* **allocationPercentage**: int: The percentage of cache space allocated for this storage target
-* **name**: string: Name of the storage target.
+* **allocationPercentage**: int {minValue: 1, maxValue: 100}: The percentage of cache space allocated for this storage target
+* **name**: string {pattern: "^[-0-9a-zA-Z_]{1,80}$"}: Name of the storage target.
 
 ## SystemData
 ### Properties

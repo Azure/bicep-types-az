@@ -71,7 +71,7 @@
 
 ## DefenderSettingsProperties
 ### Properties
-* **deviceQuota**: int (Required): Size of the device quota. Value is required to be in multiples of 100.
+* **deviceQuota**: int {minValue: 0} (Required): Size of the device quota. Value is required to be in multiples of 100.
 * **evaluationEndTime**: string (ReadOnly): End time of the evaluation period, if such exist
 * **mdeIntegration**: [DefenderSettingsPropertiesMdeIntegration](#defendersettingspropertiesmdeintegration) (Required): MDE integration configuration
 * **onboardingKind**: 'Default' | 'Evaluation' | 'MigratedToAzure' | 'Purchased' | string (Required): The kind of onboarding for the subscription
@@ -89,15 +89,15 @@
 * **cpes**: string[] (ReadOnly): List of Common Platform Enumeration (CPE)
 * **criticality**: 'High' | 'Low' | 'Normal' | string: Device criticality.
 * **deviceCategoryDisplayName**: string (ReadOnly): Device category display name
-* **deviceCategoryId**: int: Device category id
+* **deviceCategoryId**: int {minValue: 0}: Device category id
 * **deviceDataSource**: 'CorpSensor' | 'Mde' | 'MicroAgent' | 'OtSensor' | 'Other' | string (ReadOnly): Device data source.
 * **deviceName**: string: Device name
 * **deviceStatus**: 'Active' | 'Deleted' | 'Inactive' | 'Removed' | string (ReadOnly): Device status.
 * **deviceSubTypeDisplayName**: string (ReadOnly): Device sub type display name
-* **deviceSubTypeId**: int: Device sub type id
+* **deviceSubTypeId**: int {minValue: 0}: Device sub type id
 * **deviceTags**: string[]: Device tags
 * **deviceTypeDisplayName**: string (ReadOnly): Device type display name
-* **deviceTypeId**: int: Device type id
+* **deviceTypeId**: int {minValue: 0}: Device type id
 * **firmwares**: [Firmware](#firmware)[]: List of device firmwares.
 * **firstSeen**: string (ReadOnly): First time the device was seen.
 * **hardware**: [Hardware](#hardware): Device hardware data

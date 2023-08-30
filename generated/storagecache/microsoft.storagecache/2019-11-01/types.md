@@ -6,7 +6,7 @@
 * **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Region name string.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[-0-9a-zA-Z_]{1,80}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [CacheProperties](#cacheproperties): Properties of the Cache.
 * **sku**: [CacheSku](#cachesku): SKU for the Cache.
 * **tags**: any: ARM tags as name/value pairs.
@@ -17,7 +17,7 @@
 ### Properties
 * **apiVersion**: '2019-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[-0-9a-zA-Z_]{1,31}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [StorageTargetProperties](#storagetargetproperties): Properties of the Storage Target.
 * **type**: 'Microsoft.StorageCache/caches/storageTargets' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -59,7 +59,7 @@
 
 ## Nfs3Target
 ### Properties
-* **target**: string: IP address or host name of an NFSv3 host (e.g., 10.0.44.44).
+* **target**: string {pattern: "^[-.0-9a-zA-Z]+$"}: IP address or host name of an NFSv3 host (e.g., 10.0.44.44).
 * **usageModel**: string: Identifies the primary usage model to be used for this Storage Target. Get choices from .../usageModels
 
 ## StorageTargetProperties

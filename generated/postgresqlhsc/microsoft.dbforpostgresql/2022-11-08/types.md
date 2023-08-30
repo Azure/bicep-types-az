@@ -6,7 +6,7 @@
 * **apiVersion**: '2022-11-08' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 40, pattern: "^(?![0-9]+$)(?!-)[a-z0-9-]{3,40}(?<!-)$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ClusterProperties](#clusterproperties): Properties of the cluster.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -17,7 +17,7 @@
 ### Properties
 * **apiVersion**: '2022-11-08' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 90, pattern: "^[-\w\._]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ConfigurationProperties](#configurationproperties) (ReadOnly): The properties of configuration.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DBforPostgreSQL/serverGroupsv2/configurations' (ReadOnly, DeployTimeConstant): The resource type
@@ -27,7 +27,7 @@
 ### Properties
 * **apiVersion**: '2022-11-08' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 90, pattern: "^[-\w\._]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ServerConfigurationProperties](#serverconfigurationproperties): The properties of a configuration.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DBforPostgreSQL/serverGroupsv2/coordinatorConfigurations' (ReadOnly, DeployTimeConstant): The resource type
@@ -37,7 +37,7 @@
 ### Properties
 * **apiVersion**: '2022-11-08' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[-\w\._]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [FirewallRuleProperties](#firewallruleproperties) (Required): The properties of a firewall rule.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DBforPostgreSQL/serverGroupsv2/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
@@ -47,7 +47,7 @@
 ### Properties
 * **apiVersion**: '2022-11-08' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 90, pattern: "^[-\w\._]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ServerConfigurationProperties](#serverconfigurationproperties): The properties of a configuration.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DBforPostgreSQL/serverGroupsv2/nodeConfigurations' (ReadOnly, DeployTimeConstant): The resource type
@@ -57,7 +57,7 @@
 ### Properties
 * **apiVersion**: '2022-11-08' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[-\w\._]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DBforPostgreSQL/serverGroupsv2/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
@@ -67,7 +67,7 @@
 ### Properties
 * **apiVersion**: '2022-11-08' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[-\w\._]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateLinkResourceProperties](#privatelinkresourceproperties) (ReadOnly): Resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DBforPostgreSQL/serverGroupsv2/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
@@ -77,7 +77,7 @@
 ### Properties
 * **apiVersion**: '2022-11-08' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[-\w\._]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [RoleProperties](#roleproperties) (Required): The properties of a role.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DBforPostgreSQL/serverGroupsv2/roles' (ReadOnly, DeployTimeConstant): The resource type
@@ -87,7 +87,7 @@
 ### Properties
 * **apiVersion**: '2022-11-08' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 90, pattern: "^[-\w\._]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ClusterServerProperties](#clusterserverproperties) (ReadOnly): The properties of a server in a cluster.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DBforPostgreSQL/serverGroupsv2/servers' (ReadOnly, DeployTimeConstant): The resource type
@@ -95,7 +95,7 @@
 ## ClusterProperties
 ### Properties
 * **administratorLogin**: string (ReadOnly): The administrator's login name of the servers in the cluster.
-* **administratorLoginPassword**: string (WriteOnly): The password of the administrator login. Required for creation.
+* **administratorLoginPassword**: string {sensitive} (WriteOnly): The password of the administrator login. Required for creation.
 * **citusVersion**: string: The Citus extension version on all cluster servers.
 * **coordinatorEnablePublicIpAccess**: bool: If public access is enabled on coordinator.
 * **coordinatorServerEdition**: string: The edition of a coordinator server (default: GeneralPurpose). Required for creation.
@@ -149,9 +149,9 @@
 
 ## FirewallRuleProperties
 ### Properties
-* **endIpAddress**: string (Required): The end IP address of the cluster firewall rule. Must be IPv4 format.
+* **endIpAddress**: string {pattern: "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"} (Required): The end IP address of the cluster firewall rule. Must be IPv4 format.
 * **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): Provisioning state of the firewall rule.
-* **startIpAddress**: string (Required): The start IP address of the cluster firewall rule. Must be IPv4 format.
+* **startIpAddress**: string {pattern: "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"} (Required): The start IP address of the cluster firewall rule. Must be IPv4 format.
 
 ## MaintenanceWindow
 ### Properties
@@ -195,7 +195,7 @@
 
 ## RoleProperties
 ### Properties
-* **password**: string (Required, WriteOnly): The password of the cluster role.
+* **password**: string {sensitive} (Required, WriteOnly): The password of the cluster role.
 * **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): Provisioning state of the role
 
 ## ServerConfigurationProperties

@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ResourceIdentity](#resourceidentity)
 * **location**: string: Gets or sets the location of the modernizeProject.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[a-z][a-z0-9]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ModernizeProjectModelProperties](#modernizeprojectmodelproperties): ModernizeProject properties.
 * **systemData**: [ModernizeProjectModelSystemData](#modernizeprojectmodelsystemdata) (ReadOnly)
 * **tags**: [ModernizeProjectModelTags](#modernizeprojectmodeltags): Gets or sets the resource tags.
@@ -18,7 +18,7 @@
 ### Properties
 * **apiVersion**: '2022-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[a-z][a-z0-9]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DeployedResourceModelProperties](#deployedresourcemodelproperties) (ReadOnly): DeployedResource properties.
 * **systemData**: [DeployedResourceModelSystemData](#deployedresourcemodelsystemdata) (ReadOnly)
 * **tags**: [DeployedResourceModelTags](#deployedresourcemodeltags) (ReadOnly): Gets or sets the resource tags.
@@ -29,7 +29,7 @@
 ### Properties
 * **apiVersion**: '2022-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[a-z][a-z0-9]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [WorkflowModelProperties](#workflowmodelproperties) (ReadOnly): Workflow model properties.
 * **systemData**: [WorkflowModelSystemData](#workflowmodelsystemdata) (ReadOnly)
 * **tags**: [WorkflowModelTags](#workflowmodeltags) (ReadOnly): Gets or sets the resource tags.
@@ -40,7 +40,7 @@
 ### Properties
 * **apiVersion**: '2022-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[a-z][a-z0-9]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [MigrateAgentModelProperties](#migrateagentmodelproperties): MigrateAgent model properties.
 * **systemData**: [MigrateAgentModelSystemData](#migrateagentmodelsystemdata) (ReadOnly)
 * **tags**: [MigrateAgentModelTags](#migrateagentmodeltags): Gets or sets the resource tags.
@@ -51,7 +51,7 @@
 ### Properties
 * **apiVersion**: '2022-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[a-z][a-z0-9]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [WorkloadDeploymentModelProperties](#workloaddeploymentmodelproperties): Workload deployment model properties.
 * **systemData**: [WorkloadDeploymentModelSystemData](#workloaddeploymentmodelsystemdata) (ReadOnly)
 * **tags**: [WorkloadDeploymentModelTags](#workloaddeploymentmodeltags): Gets or sets the resource tags.
@@ -62,7 +62,7 @@
 ### Properties
 * **apiVersion**: '2022-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[a-z][a-z0-9]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [WorkloadInstanceModelProperties](#workloadinstancemodelproperties): Workload instance model properties.
 * **systemData**: [WorkloadInstanceModelSystemData](#workloadinstancemodelsystemdata) (ReadOnly)
 * **tags**: [WorkloadInstanceModelTags](#workloadinstancemodeltags): Gets or sets the resource tags.
@@ -709,7 +709,7 @@ managedIdentity.
 
 ## WorkloadDeploymentModelProperties
 ### Properties
-* **allowedOperations**: 'BuildContainerImage' | 'CompleteMigration' | 'DisableReplication' | 'EnableReplication' | 'Migrate' | 'TestMigrate' | 'TestMigrateCleanup' | 'UpdateProperties' | string[] (ReadOnly): Gets or sets the allowed scenarios on the workload deployment.
+* **allowedOperations**: ('BuildContainerImage' | 'CompleteMigration' | 'DisableReplication' | 'EnableReplication' | 'Migrate' | 'TestMigrate' | 'TestMigrateCleanup' | 'UpdateProperties' | string)[] (ReadOnly): Gets or sets the allowed scenarios on the workload deployment.
 * **correlationId**: string (ReadOnly): Gets or sets the workload deployment correlation Id.
 * **currentJob**: [WorkloadDeploymentModelPropertiesCurrentJob](#workloaddeploymentmodelpropertiescurrentjob) (ReadOnly)
 * **customProperties**: [WorkloadDeploymentModelCustomProperties](#workloaddeploymentmodelcustomproperties): Workload deployment model custom properties.

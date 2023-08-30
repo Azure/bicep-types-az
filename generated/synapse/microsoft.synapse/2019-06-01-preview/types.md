@@ -592,7 +592,7 @@ Prerequisites for using managed identity authentication:
 1. Assign SQL Server a system-assigned managed identity in Azure Active Directory (AAD).
 2. Grant SQL Server identity access to the storage account by adding 'Storage Blob Data Contributor' RBAC role to the server identity.
 For more information, see [Auditing to storage using Managed Identity authentication](https://go.microsoft.com/fwlink/?linkid=2114355)
-* **storageAccountSubscriptionId**: string: Specifies the blob storage subscription Id.
+* **storageAccountSubscriptionId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Specifies the blob storage subscription Id.
 * **storageEndpoint**: string: Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled is required.
 
 ## ExtendedSqlPoolBlobAuditingPolicyProperties
@@ -677,7 +677,7 @@ Prerequisites for using managed identity authentication:
 1. Assign SQL Server a system-assigned managed identity in Azure Active Directory (AAD).
 2. Grant SQL Server identity access to the storage account by adding 'Storage Blob Data Contributor' RBAC role to the server identity.
 For more information, see [Auditing to storage using Managed Identity authentication](https://go.microsoft.com/fwlink/?linkid=2114355)
-* **storageAccountSubscriptionId**: string: Specifies the blob storage subscription Id.
+* **storageAccountSubscriptionId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Specifies the blob storage subscription Id.
 * **storageEndpoint**: string: Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled is required.
 
 ## GeoBackupPolicyProperties
@@ -718,9 +718,9 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ### Properties
 * **dataFlowProperties**: [IntegrationRuntimeDataFlowProperties](#integrationruntimedataflowproperties): Data flow properties for managed integration runtime.
 * **location**: string: The location for managed integration runtime. The supported regions could be found on https://docs.microsoft.com/en-us/azure/data-factory/data-factory-data-movement-activities
-* **maxParallelExecutionsPerNode**: int: Maximum parallel executions count per node for managed integration runtime.
+* **maxParallelExecutionsPerNode**: int {minValue: 1}: Maximum parallel executions count per node for managed integration runtime.
 * **nodeSize**: string: The node size requirement to managed integration runtime.
-* **numberOfNodes**: int: The required number of nodes for managed integration runtime.
+* **numberOfNodes**: int {minValue: 1}: The required number of nodes for managed integration runtime.
 * **vNetProperties**: [IntegrationRuntimeVNetProperties](#integrationruntimevnetproperties): VNet properties for managed integration runtime.
 ### Additional Properties
 * **Additional Properties Type**: any
@@ -735,7 +735,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **cleanup**: bool: Cluster will not be recycled and it will be used in next data flow activity run until TTL (time to live) is reached if this is set as false. Default is true.
 * **computeType**: 'ComputeOptimized' | 'General' | 'MemoryOptimized' | string: Compute type of the cluster which will execute data flow job.
 * **coreCount**: int: Core count of the cluster which will execute data flow job. Supported values are: 8, 16, 32, 48, 80, 144 and 272.
-* **timeToLive**: int: Time to live (in minutes) setting of the cluster which will execute data flow job.
+* **timeToLive**: int {minValue: 0}: Time to live (in minutes) setting of the cluster which will execute data flow job.
 ### Additional Properties
 * **Additional Properties Type**: any
 
@@ -748,7 +748,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ## IntegrationRuntimeSsisCatalogInfo
 ### Properties
 * **catalogAdminPassword**: [SecureString](#securestring): The password of the administrator user account of the catalog database.
-* **catalogAdminUserName**: string: The administrator user name of catalog database.
+* **catalogAdminUserName**: string {minLength: 1, maxLength: 128}: The administrator user name of catalog database.
 * **catalogPricingTier**: 'Basic' | 'Premium' | 'PremiumRS' | 'Standard' | string: The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/
 * **catalogServerEndpoint**: string: The catalog database server URL.
 ### Additional Properties
@@ -824,7 +824,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ## ManagedIdentity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of the workspace managed identity
-* **tenantId**: string (ReadOnly): The tenant ID of the workspace managed identity
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The tenant ID of the workspace managed identity
 * **type**: 'None' | 'SystemAssigned': The type of managed identity for the workspace
 
 ## ManagedIdentitySqlControlSettingsModelProperties
@@ -1062,7 +1062,7 @@ Prerequisites for using managed identity authentication:
 1. Assign SQL Server a system-assigned managed identity in Azure Active Directory (AAD).
 2. Grant SQL Server identity access to the storage account by adding 'Storage Blob Data Contributor' RBAC role to the server identity.
 For more information, see [Auditing to storage using Managed Identity authentication](https://go.microsoft.com/fwlink/?linkid=2114355)
-* **storageAccountSubscriptionId**: string: Specifies the blob storage subscription Id.
+* **storageAccountSubscriptionId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Specifies the blob storage subscription Id.
 * **storageEndpoint**: string: Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled is required.
 
 ## ServerSecurityAlertPolicyProperties
@@ -1163,7 +1163,7 @@ or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033
 * **retentionDays**: int: Specifies the number of days to keep in the audit logs in the storage account.
 * **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the policy. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
 * **storageAccountAccessKey**: string (WriteOnly): Specifies the identifier key of the auditing storage account. If state is Enabled and storageEndpoint is specified, storageAccountAccessKey is required.
-* **storageAccountSubscriptionId**: string: Specifies the blob storage subscription Id.
+* **storageAccountSubscriptionId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Specifies the blob storage subscription Id.
 * **storageEndpoint**: string: Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). If state is Enabled, storageEndpoint is required.
 
 ## SqlPoolColumnProperties
@@ -1306,7 +1306,7 @@ Restore: Creates a sql pool by restoring a backup of a deleted sql  pool. Source
 * **sqlAdministratorLoginPassword**: string: SQL administrator login password
 * **virtualNetworkProfile**: [VirtualNetworkProfile](#virtualnetworkprofile): Virtual Network profile
 * **workspaceRepositoryConfiguration**: [WorkspaceRepositoryConfiguration](#workspacerepositoryconfiguration): Git integration settings
-* **workspaceUID**: string (ReadOnly): The workspace unique identifier
+* **workspaceUID**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The workspace unique identifier
 
 ## WorkspacePropertiesConnectivityEndpoints
 ### Properties
@@ -1329,6 +1329,6 @@ Restore: Creates a sql pool by restoring a backup of a deleted sql  pool. Source
 * **projectName**: string: VSTS project name
 * **repositoryName**: string: Repository name
 * **rootFolder**: string: Root folder to use in the repository
-* **tenantId**: string: The VSTS tenant ID
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The VSTS tenant ID
 * **type**: string: Type of workspace repositoryID configuration. Example WorkspaceVSTSConfiguration, WorkspaceGitHubConfiguration
 

@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **location**: string (Required): Resource Location.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {pattern: "[a-zA-Z0-9][a-zA-Z0-9\.-]+"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DomainProperties](#domainproperties): Domain resource specific properties
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.DomainRegistration/domains' (ReadOnly, DeployTimeConstant): The resource type
@@ -75,7 +75,7 @@
 * **createdTime**: string (ReadOnly): Domain creation timestamp.
 * **dnsType**: 'AzureDns' | 'DefaultDomainRegistrarDns': Current DNS type
 * **dnsZoneId**: string: Azure DNS Zone to use
-* **domainNotRenewableReasons**: 'ExpirationNotInRenewalTimeRange' | 'RegistrationStatusNotSupportedForRenewal' | 'SubscriptionNotActive' | string[] (ReadOnly): Reasons why domain is not renewable.
+* **domainNotRenewableReasons**: ('ExpirationNotInRenewalTimeRange' | 'RegistrationStatusNotSupportedForRenewal' | 'SubscriptionNotActive' | string)[] (ReadOnly): Reasons why domain is not renewable.
 * **expirationTime**: string (ReadOnly): Domain expiration timestamp.
 * **lastRenewedTime**: string (ReadOnly): Timestamp when the domain was renewed last time.
 * **managedHostNames**: [HostName](#hostname)[] (ReadOnly): All hostnames derived from the domain and assigned to Azure resources.

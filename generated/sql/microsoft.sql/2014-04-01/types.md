@@ -335,8 +335,8 @@ RestoreLongTermRetentionBackup: Creates a database by restoring from a long term
 
 Copy, NonReadableSecondary, OnlineSecondary and RestoreLongTermRetentionBackup are not supported for DataWarehouse edition.
 * **creationDate**: string (ReadOnly): The creation date of the database (ISO8601 format).
-* **currentServiceObjectiveId**: string (ReadOnly): The current service level objective ID of the database. This is the ID of the service level objective that is currently active.
-* **databaseId**: string (ReadOnly): The ID of the database.
+* **currentServiceObjectiveId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The current service level objective ID of the database. This is the ID of the service level objective that is currently active.
+* **databaseId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The ID of the database.
 * **defaultSecondaryLocation**: string (ReadOnly): The default secondary region for this database.
 * **earliestRestoreDate**: string (ReadOnly): This records the earliest start date and time that restore is available for this database (ISO8601 format).
 * **edition**: 'Basic' | 'Business' | 'BusinessCritical' | 'DataWarehouse' | 'Free' | 'GeneralPurpose' | 'Hyperscale' | 'Premium' | 'PremiumRS' | 'Standard' | 'Stretch' | 'System' | 'System2' | 'Web' | string: The edition of the database. The DatabaseEditions enumeration contains all the valid editions. If createMode is NonReadableSecondary or OnlineSecondary, this value is ignored.
@@ -356,7 +356,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **readScale**: 'Disabled' | 'Enabled': Conditional. If the database is a geo-secondary, readScale indicates whether read-only connections are allowed to this database or not. Not supported for DataWarehouse edition.
 * **recommendedIndex**: [RecommendedIndex](#recommendedindex)[] (ReadOnly): The recommended indices for this database.
 * **recoveryServicesRecoveryPointResourceId**: string (WriteOnly): Conditional. If createMode is RestoreLongTermRetentionBackup, then this value is required. Specifies the resource ID of the recovery point to restore from.
-* **requestedServiceObjectiveId**: string: The configured service level objective ID of the database. This is the service level objective that is in the process of being applied to the database. Once successfully updated, it will match the value of currentServiceObjectiveId property. If requestedServiceObjectiveId and requestedServiceObjectiveName are both updated, the value of requestedServiceObjectiveId overrides the value of requestedServiceObjectiveName.
+* **requestedServiceObjectiveId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The configured service level objective ID of the database. This is the service level objective that is in the process of being applied to the database. Once successfully updated, it will match the value of currentServiceObjectiveId property. If requestedServiceObjectiveId and requestedServiceObjectiveName are both updated, the value of requestedServiceObjectiveId overrides the value of requestedServiceObjectiveName.
 
 The list of SKUs may vary by region and support offer. To determine the service objective ids that are available to your subscription in an Azure region, use the `Capabilities_ListByLocation` REST API.
 * **requestedServiceObjectiveName**: 'Basic' | 'DS100' | 'DS1000' | 'DS1200' | 'DS1500' | 'DS200' | 'DS2000' | 'DS300' | 'DS400' | 'DS500' | 'DS600' | 'DW100' | 'DW1000' | 'DW10000c' | 'DW1000c' | 'DW1200' | 'DW1500' | 'DW15000c' | 'DW1500c' | 'DW200' | 'DW2000' | 'DW2000c' | 'DW2500c' | 'DW300' | 'DW3000' | 'DW30000c' | 'DW3000c' | 'DW400' | 'DW500' | 'DW5000c' | 'DW600' | 'DW6000' | 'DW6000c' | 'DW7500c' | 'ElasticPool' | 'Free' | 'P1' | 'P11' | 'P15' | 'P2' | 'P3' | 'P4' | 'P6' | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' | 'S0' | 'S1' | 'S12' | 'S2' | 'S3' | 'S4' | 'S6' | 'S7' | 'S9' | 'System' | 'System0' | 'System1' | 'System2' | 'System2L' | 'System3' | 'System3L' | 'System4' | 'System4L' | string: The name of the configured service level objective of the database. This is the service level objective that is in the process of being applied to the database. Once successfully updated, it will match the value of serviceLevelObjective property. 
@@ -402,7 +402,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **storageAccountName**: string: The table storage account name
 * **storageAccountResourceGroupName**: string: The table storage account resource group name
 * **storageAccountSecondaryKey**: string: The secondary key of the auditing storage account.
-* **storageAccountSubscriptionId**: string: The table storage subscription Id.
+* **storageAccountSubscriptionId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The table storage subscription Id.
 * **storageTableEndpoint**: string: The storage table endpoint.
 * **useServerDefault**: string: Whether server default is enabled or disabled.
 
@@ -553,8 +553,8 @@ Get-AzSqlServerServiceObjective -Location <location>
 ### Properties
 * **administratorType**: 'ActiveDirectory' (Required): The type of administrator.
 * **login**: string (Required): The server administrator login value.
-* **sid**: string (Required): The server administrator Sid (Secure ID).
-* **tenantId**: string (Required): The server Active Directory Administrator tenant id.
+* **sid**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required): The server administrator Sid (Secure ID).
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required): The server Active Directory Administrator tenant id.
 
 ## ServerCommunicationLinkProperties
 ### Properties
@@ -570,7 +570,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **administratorLogin**: string: Administrator username for the server. Can only be specified when the server is being created (and is required for creation).
 * **administratorLoginPassword**: string (WriteOnly): The administrator login password (required for server creation).
 * **externalAdministratorLogin**: string (ReadOnly): The display name of the Azure Active Directory object with admin permissions on this server. Legacy parameter, always null. To check for Active Directory admin, query .../servers/{serverName}/administrators
-* **externalAdministratorSid**: string (ReadOnly): The ID of the Active Azure Directory object with admin permissions on this server. Legacy parameter, always null. To check for Active Directory admin, query .../servers/{serverName}/administrators.
+* **externalAdministratorSid**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The ID of the Active Azure Directory object with admin permissions on this server. Legacy parameter, always null. To check for Active Directory admin, query .../servers/{serverName}/administrators.
 * **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of the server.
 * **state**: 'Disabled' | 'Ready' (ReadOnly): The state of the server.
 * **version**: '12.0' | '2.0' | string: The version of the server.
@@ -586,7 +586,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **storageAccountName**: string: The table storage account name
 * **storageAccountResourceGroupName**: string: The table storage account resource group name
 * **storageAccountSecondaryKey**: string: The secondary key of the auditing storage account.
-* **storageAccountSubscriptionId**: string: The table storage subscription Id.
+* **storageAccountSubscriptionId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The table storage subscription Id.
 * **storageTableEndpoint**: string: The storage table endpoint.
 
 ## ServiceObjectiveProperties
@@ -610,27 +610,27 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **avgDtu**: int (ReadOnly): Gets or sets avgDtu for service tier advisor.
 * **confidence**: int (ReadOnly): Gets or sets confidence for service tier advisor.
 * **currentServiceLevelObjective**: string (ReadOnly): Gets or sets currentServiceLevelObjective for service tier advisor.
-* **currentServiceLevelObjectiveId**: string (ReadOnly): Gets or sets currentServiceLevelObjectiveId for service tier advisor.
+* **currentServiceLevelObjectiveId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): Gets or sets currentServiceLevelObjectiveId for service tier advisor.
 * **databaseSizeBasedRecommendationServiceLevelObjective**: string (ReadOnly): Gets or sets databaseSizeBasedRecommendationServiceLevelObjective for service tier advisor.
-* **databaseSizeBasedRecommendationServiceLevelObjectiveId**: string (ReadOnly): Gets or sets databaseSizeBasedRecommendationServiceLevelObjectiveId for service tier advisor.
+* **databaseSizeBasedRecommendationServiceLevelObjectiveId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): Gets or sets databaseSizeBasedRecommendationServiceLevelObjectiveId for service tier advisor.
 * **disasterPlanBasedRecommendationServiceLevelObjective**: string (ReadOnly): Gets or sets disasterPlanBasedRecommendationServiceLevelObjective for service tier advisor.
-* **disasterPlanBasedRecommendationServiceLevelObjectiveId**: string (ReadOnly): Gets or sets disasterPlanBasedRecommendationServiceLevelObjectiveId for service tier advisor.
+* **disasterPlanBasedRecommendationServiceLevelObjectiveId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): Gets or sets disasterPlanBasedRecommendationServiceLevelObjectiveId for service tier advisor.
 * **maxDtu**: int (ReadOnly): Gets or sets maxDtu for service tier advisor.
 * **maxSizeInGB**: int (ReadOnly): Gets or sets maxSizeInGB for service tier advisor.
 * **minDtu**: int (ReadOnly): Gets or sets minDtu for service tier advisor.
 * **observationPeriodEnd**: string (ReadOnly): The observation period start (ISO8601 format).
 * **observationPeriodStart**: string (ReadOnly): The observation period start (ISO8601 format).
 * **overallRecommendationServiceLevelObjective**: string (ReadOnly): Gets or sets overallRecommendationServiceLevelObjective for service tier advisor.
-* **overallRecommendationServiceLevelObjectiveId**: string (ReadOnly): Gets or sets overallRecommendationServiceLevelObjectiveId for service tier advisor.
+* **overallRecommendationServiceLevelObjectiveId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): Gets or sets overallRecommendationServiceLevelObjectiveId for service tier advisor.
 * **serviceLevelObjectiveUsageMetrics**: [SloUsageMetric](#slousagemetric)[] (ReadOnly): Gets or sets serviceLevelObjectiveUsageMetrics for the service tier advisor.
 * **usageBasedRecommendationServiceLevelObjective**: string (ReadOnly): Gets or sets usageBasedRecommendationServiceLevelObjective for service tier advisor.
-* **usageBasedRecommendationServiceLevelObjectiveId**: string (ReadOnly): Gets or sets usageBasedRecommendationServiceLevelObjectiveId for service tier advisor.
+* **usageBasedRecommendationServiceLevelObjectiveId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): Gets or sets usageBasedRecommendationServiceLevelObjectiveId for service tier advisor.
 
 ## SloUsageMetric
 ### Properties
 * **inRangeTimeRatio**: int (ReadOnly): Gets or sets inRangeTimeRatio for SLO usage metric.
 * **serviceLevelObjective**: 'Basic' | 'DS100' | 'DS1000' | 'DS1200' | 'DS1500' | 'DS200' | 'DS2000' | 'DS300' | 'DS400' | 'DS500' | 'DS600' | 'DW100' | 'DW1000' | 'DW10000c' | 'DW1000c' | 'DW1200' | 'DW1500' | 'DW15000c' | 'DW1500c' | 'DW200' | 'DW2000' | 'DW2000c' | 'DW2500c' | 'DW300' | 'DW3000' | 'DW30000c' | 'DW3000c' | 'DW400' | 'DW500' | 'DW5000c' | 'DW600' | 'DW6000' | 'DW6000c' | 'DW7500c' | 'ElasticPool' | 'Free' | 'P1' | 'P11' | 'P15' | 'P2' | 'P3' | 'P4' | 'P6' | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' | 'S0' | 'S1' | 'S12' | 'S2' | 'S3' | 'S4' | 'S6' | 'S7' | 'S9' | 'System' | 'System0' | 'System1' | 'System2' | 'System2L' | 'System3' | 'System3L' | 'System4' | 'System4L' | string (ReadOnly): The serviceLevelObjective for SLO usage metric.
-* **serviceLevelObjectiveId**: string (ReadOnly): The serviceLevelObjectiveId for SLO usage metric.
+* **serviceLevelObjectiveId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The serviceLevelObjectiveId for SLO usage metric.
 
 ## TrackedResourceTags
 ### Properties

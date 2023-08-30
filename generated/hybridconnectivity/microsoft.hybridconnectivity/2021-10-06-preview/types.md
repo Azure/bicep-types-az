@@ -30,8 +30,8 @@
 * **accessKey**: string (ReadOnly): Access key for hybrid connection.
 * **expiresOn**: int: The expiration of access key in unix time.
 * **hybridConnectionName**: string (Required): Azure Relay hybrid connection name for the resource.
-* **namespaceName**: string (Required): The namespace name.
-* **namespaceNameSuffix**: string (Required): The suffix domain name of relay namespace.
+* **namespaceName**: string {minLength: 1, maxLength: 200} (Required): The namespace name.
+* **namespaceNameSuffix**: string {minLength: 1, maxLength: 100} (Required): The suffix domain name of relay namespace.
 
 ## SystemData
 ### Properties

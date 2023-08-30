@@ -7,7 +7,7 @@
 * **etag**: string: Gets a unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {maxLength: 128} (Required, DeployTimeConstant): The resource name
 * **properties**: [CdnWebApplicationFirewallPolicyProperties](#cdnwebapplicationfirewallpolicyproperties): Properties of the web application firewall policy.
 * **sku**: [Sku](#sku) (Required): The pricing tier (defines a CDN provider, feature list and rate) of the CdnWebApplicationFirewallPolicy.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Read only system data
@@ -202,7 +202,7 @@
 * **profileName**: string (ReadOnly): The name of the profile which holds the origin group.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning status
 * **sessionAffinityState**: 'Disabled' | 'Enabled' | string: Whether to allow session affinity on this host. Valid options are 'Enabled' or 'Disabled'
-* **trafficRestorationTimeToHealedOrNewEndpointsInMinutes**: int: Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
+* **trafficRestorationTimeToHealedOrNewEndpointsInMinutes**: int {minValue: 0, maxValue: 50}: Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
 
 ## AFDOriginProperties
 ### Properties
@@ -211,14 +211,14 @@
 * **enabledState**: 'Disabled' | 'Enabled' | string: Whether to enable health probes to be made against backends defined under backendPools. Health probes can only be disabled if there is a single enabled backend in single enabled backend pool.
 * **enforceCertificateNameCheck**: bool: Whether to enable certificate name check at origin level
 * **hostName**: string: The address of the origin. Domain names, IPv4 addresses, and IPv6 addresses are supported.This should be unique across all origins in an endpoint.
-* **httpPort**: int: The value of the HTTP port. Must be between 1 and 65535.
-* **httpsPort**: int: The value of the HTTPS port. Must be between 1 and 65535.
+* **httpPort**: int {minValue: 1, maxValue: 65535}: The value of the HTTP port. Must be between 1 and 65535.
+* **httpsPort**: int {minValue: 1, maxValue: 65535}: The value of the HTTPS port. Must be between 1 and 65535.
 * **originGroupName**: string (ReadOnly): The name of the origin group which contains this origin.
 * **originHostHeader**: string: The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default. This overrides the host header defined at Endpoint
-* **priority**: int: Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5
+* **priority**: int {minValue: 1, maxValue: 5}: Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning status
 * **sharedPrivateLinkResource**: [SharedPrivateLinkResourceProperties](#sharedprivatelinkresourceproperties): The properties of the private link resource for private origin.
-* **weight**: int: Weight of the origin in given origin group for load balancing. Must be between 1 and 1000
+* **weight**: int {minValue: 1, maxValue: 1000}: Weight of the origin in given origin group for load balancing. Must be between 1 and 1000
 
 ## AfdRouteCacheConfiguration
 ### Properties
@@ -271,7 +271,7 @@
 * **matchValues**: string[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' | string (Required): Describes operator to be matched
-* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms
+* **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
 * **typeName**: 'DeliveryRuleClientPortConditionParameters' | string (Required)
 
 ## CompressionSettings
@@ -285,7 +285,7 @@
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' | string (Required): Describes operator to be matched
 * **selector**: string: Name of Cookies to be matched
-* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms
+* **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
 * **typeName**: 'DeliveryRuleCookiesConditionParameters' | string (Required)
 
 ## CustomDomainHttpsParameters
@@ -322,7 +322,7 @@
 * **enabledState**: 'Disabled' | 'Enabled' | string: Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.
 * **matchConditions**: [MatchCondition](#matchcondition)[] (Required): List of match conditions.
 * **name**: string (Required): Defines the name of the custom rule
-* **priority**: int (Required): Defines in what order this rule be evaluated in the overall list of custom rules
+* **priority**: int {minValue: 0, maxValue: 1000} (Required): Defines in what order this rule be evaluated in the overall list of custom rules
 
 ## CustomRuleList
 ### Properties
@@ -353,22 +353,22 @@
 * **healthProbeSettings**: [HealthProbeParameters](#healthprobeparameters): Health probe settings to the origin that is used to determine the health of the origin.
 * **origins**: [ResourceReference](#resourcereference)[] (Required): The source of the content being delivered via CDN within given origin group.
 * **responseBasedOriginErrorDetectionSettings**: [ResponseBasedOriginErrorDetectionParameters](#responsebasedoriginerrordetectionparameters): The JSON object that contains the properties to determine origin health using real requests/responses.This property is currently not supported.
-* **trafficRestorationTimeToHealedOrNewEndpointsInMinutes**: int: Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
+* **trafficRestorationTimeToHealedOrNewEndpointsInMinutes**: int {minValue: 0, maxValue: 50}: Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
 
 ## DeepCreatedOriginProperties
 ### Properties
 * **enabled**: bool: Origin is enabled for load balancing or not. By default, origin is always enabled.
 * **hostName**: string (Required): The address of the origin. It can be a domain name, IPv4 address, or IPv6 address. This should be unique across all origins in an endpoint.
-* **httpPort**: int: The value of the HTTP port. Must be between 1 and 65535.
-* **httpsPort**: int: The value of the HTTPS port. Must be between 1 and 65535.
+* **httpPort**: int {minValue: 1, maxValue: 65535}: The value of the HTTP port. Must be between 1 and 65535.
+* **httpsPort**: int {minValue: 1, maxValue: 65535}: The value of the HTTPS port. Must be between 1 and 65535.
 * **originHostHeader**: string: The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default.
-* **priority**: int: Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5.
+* **priority**: int {minValue: 1, maxValue: 5}: Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5.
 * **privateEndpointStatus**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout' | string (ReadOnly): The approval status for the connection to the Private Link
 * **privateLinkAlias**: string: The Alias of the Private Link resource. Populating this optional field indicates that this origin is 'Private'
 * **privateLinkApprovalMessage**: string: A custom message to be included in the approval request to connect to the Private Link.
 * **privateLinkLocation**: string: The location of the Private Link resource. Required only if 'privateLinkResourceId' is populated
 * **privateLinkResourceId**: string: The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is 'Private'
-* **weight**: int: Weight of the origin in given origin group for load balancing. Must be between 1 and 1000
+* **weight**: int {minValue: 1, maxValue: 1000}: Weight of the origin in given origin group for load balancing. Must be between 1 and 1000
 
 ## DeliveryRule
 ### Properties
@@ -581,7 +581,7 @@
 
 ## HealthProbeParameters
 ### Properties
-* **probeIntervalInSeconds**: int: The number of seconds between health probes.Default is 240sec.
+* **probeIntervalInSeconds**: int {minValue: 1, maxValue: 255}: The number of seconds between health probes.Default is 240sec.
 * **probePath**: string: The path relative to the origin that is used to determine the health of the origin.
 * **probeProtocol**: 'Http' | 'Https' | 'NotSet': Protocol to use for health probe.
 * **probeRequestType**: 'GET' | 'HEAD' | 'NotSet': The type of health probe request that is made.
@@ -591,28 +591,28 @@
 * **matchValues**: string[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' | string (Required): Describes operator to be matched
-* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms
+* **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
 * **typeName**: 'DeliveryRuleHostNameConditionParameters' | string (Required)
 
 ## HttpErrorRangeParameters
 ### Properties
-* **begin**: int: The inclusive start of the http status code range.
-* **end**: int: The inclusive end of the http status code range.
+* **begin**: int {minValue: 100, maxValue: 999}: The inclusive start of the http status code range.
+* **end**: int {minValue: 100, maxValue: 999}: The inclusive end of the http status code range.
 
 ## HttpVersionMatchConditionParameters
 ### Properties
 * **matchValues**: string[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Equal' | string (Required): Describes operator to be matched
-* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms
+* **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
 * **typeName**: 'DeliveryRuleHttpVersionConditionParameters' | string (Required)
 
 ## IsDeviceMatchConditionParameters
 ### Properties
-* **matchValues**: 'Desktop' | 'Mobile' | string[]: The match value for the condition of the delivery rule
+* **matchValues**: ('Desktop' | 'Mobile' | string)[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Equal' | string (Required): Describes operator to be matched
-* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms
+* **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
 * **typeName**: 'DeliveryRuleIsDeviceConditionParameters' | string (Required)
 
 ## KeyVaultCertificateSourceParameters
@@ -654,7 +654,7 @@
 
 ## ManagedRuleSet
 ### Properties
-* **anomalyScore**: int: Verizon only : If the rule set supports anomaly detection mode, this describes the threshold for blocking requests.
+* **anomalyScore**: int {minValue: 0, maxValue: 20}: Verizon only : If the rule set supports anomaly detection mode, this describes the threshold for blocking requests.
 * **ruleGroupOverrides**: [ManagedRuleGroupOverride](#managedrulegroupoverride)[]: Defines the rule overrides to apply to the rule set.
 * **ruleSetType**: string (Required): Defines the rule set type to use.
 * **ruleSetVersion**: string (Required): Defines the version of the rule set to use.
@@ -670,7 +670,7 @@
 * **negateCondition**: bool: Describes if the result of this condition should be negated.
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GeoMatch' | 'GreaterThan' | 'GreaterThanOrEqual' | 'IPMatch' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' | string (Required): Describes operator to be matched
 * **selector**: string: Selector can used to match a specific key for QueryString, Cookies, RequestHeader or PostArgs.
-* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms.
+* **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms.
 
 ## OriginGroupOverride
 ### Properties
@@ -689,16 +689,16 @@
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning status of the origin group.
 * **resourceState**: 'Active' | 'Creating' | 'Deleting' | string (ReadOnly): Resource status of the origin group.
 * **responseBasedOriginErrorDetectionSettings**: [ResponseBasedOriginErrorDetectionParameters](#responsebasedoriginerrordetectionparameters): The JSON object that contains the properties to determine origin health using real requests/responses. This property is currently not supported.
-* **trafficRestorationTimeToHealedOrNewEndpointsInMinutes**: int: Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
+* **trafficRestorationTimeToHealedOrNewEndpointsInMinutes**: int {minValue: 0, maxValue: 50}: Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
 
 ## OriginProperties
 ### Properties
 * **enabled**: bool: Origin is enabled for load balancing or not
 * **hostName**: string: The address of the origin. Domain names, IPv4 addresses, and IPv6 addresses are supported.This should be unique across all origins in an endpoint.
-* **httpPort**: int: The value of the HTTP port. Must be between 1 and 65535.
-* **httpsPort**: int: The value of the HTTPS port. Must be between 1 and 65535.
+* **httpPort**: int {minValue: 1, maxValue: 65535}: The value of the HTTP port. Must be between 1 and 65535.
+* **httpsPort**: int {minValue: 1, maxValue: 65535}: The value of the HTTPS port. Must be between 1 and 65535.
 * **originHostHeader**: string: The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default. This overrides the host header defined at Endpoint
-* **priority**: int: Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5
+* **priority**: int {minValue: 1, maxValue: 5}: Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5
 * **privateEndpointStatus**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout' | string (ReadOnly): The approval status for the connection to the Private Link
 * **privateLinkAlias**: string: The Alias of the Private Link resource. Populating this optional field indicates that this origin is 'Private'
 * **privateLinkApprovalMessage**: string: A custom message to be included in the approval request to connect to the Private Link.
@@ -706,11 +706,11 @@
 * **privateLinkResourceId**: string: The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is 'Private'
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning status of the origin.
 * **resourceState**: 'Active' | 'Creating' | 'Deleting' | string (ReadOnly): Resource status of the origin.
-* **weight**: int: Weight of the origin in given origin group for load balancing. Must be between 1 and 1000
+* **weight**: int {minValue: 1, maxValue: 1000}: Weight of the origin in given origin group for load balancing. Must be between 1 and 1000
 
 ## PolicySettings
 ### Properties
-* **defaultCustomBlockResponseBody**: string: If the action type is block, customer can override the response body. The body must be specified in base64 encoding.
+* **defaultCustomBlockResponseBody**: string {pattern: "^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=|[A-Za-z0-9+/]{4})$"}: If the action type is block, customer can override the response body. The body must be specified in base64 encoding.
 * **defaultCustomBlockResponseStatusCode**: int: If the action type is block, this field defines the default customer overridable http response status code.
 * **defaultRedirectUrl**: string: If action type is redirect, this field represents the default redirect URL for the client.
 * **enabledState**: 'Disabled' | 'Enabled' | string: describes if the policy is in enabled state or disabled state
@@ -722,13 +722,13 @@
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' | string (Required): Describes operator to be matched
 * **selector**: string: Name of PostArg to be matched
-* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms
+* **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
 * **typeName**: 'DeliveryRulePostArgsConditionParameters' | string (Required)
 
 ## ProfileProperties
 ### Properties
 * **frontDoorId**: string (ReadOnly): The Id of the frontdoor.
-* **originResponseTimeoutSeconds**: int: Send and receive timeout on forwarding request to the origin. When timeout is reached, the request fails and returns.
+* **originResponseTimeoutSeconds**: int {minValue: 16}: Send and receive timeout on forwarding request to the origin. When timeout is reached, the request fails and returns.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning status of the profile.
 * **resourceState**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | string (ReadOnly): Resource status of the profile.
 
@@ -737,7 +737,7 @@
 * **matchValues**: string[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' | string (Required): Describes operator to be matched
-* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms
+* **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
 * **typeName**: 'DeliveryRuleQueryStringConditionParameters' | string (Required)
 
 ## RateLimitRule
@@ -746,9 +746,9 @@
 * **enabledState**: 'Disabled' | 'Enabled' | string: Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.
 * **matchConditions**: [MatchCondition](#matchcondition)[] (Required): List of match conditions.
 * **name**: string (Required): Defines the name of the custom rule
-* **priority**: int (Required): Defines in what order this rule be evaluated in the overall list of custom rules
-* **rateLimitDurationInMinutes**: int (Required): Defines rate limit duration. Default is 1 minute.
-* **rateLimitThreshold**: int (Required): Defines rate limit threshold.
+* **priority**: int {minValue: 0, maxValue: 1000} (Required): Defines in what order this rule be evaluated in the overall list of custom rules
+* **rateLimitDurationInMinutes**: int {minValue: 0, maxValue: 60} (Required): Defines rate limit duration. Default is 1 minute.
+* **rateLimitThreshold**: int {minValue: 0} (Required): Defines rate limit threshold.
 
 ## RateLimitRuleList
 ### Properties
@@ -759,7 +759,7 @@
 * **matchValues**: string[]: Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'GeoMatch' | 'IPMatch' | string (Required): Describes operator to be matched
-* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms
+* **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
 * **typeName**: 'DeliveryRuleRemoteAddressConditionParameters' | string (Required)
 
 ## RequestBodyMatchConditionParameters
@@ -767,7 +767,7 @@
 * **matchValues**: string[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' | string (Required): Describes operator to be matched
-* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms
+* **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
 * **typeName**: 'DeliveryRuleRequestBodyConditionParameters' | string (Required)
 
 ## RequestHeaderMatchConditionParameters
@@ -776,23 +776,23 @@
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' | string (Required): Describes operator to be matched
 * **selector**: string: Name of Header to be matched
-* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms
+* **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
 * **typeName**: 'DeliveryRuleRequestHeaderConditionParameters' | string (Required)
 
 ## RequestMethodMatchConditionParameters
 ### Properties
-* **matchValues**: 'DELETE' | 'GET' | 'HEAD' | 'OPTIONS' | 'POST' | 'PUT' | 'TRACE' | string[]: The match value for the condition of the delivery rule
+* **matchValues**: ('DELETE' | 'GET' | 'HEAD' | 'OPTIONS' | 'POST' | 'PUT' | 'TRACE' | string)[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Equal' | string (Required): Describes operator to be matched
-* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms
+* **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
 * **typeName**: 'DeliveryRuleRequestMethodConditionParameters' | string (Required)
 
 ## RequestSchemeMatchConditionParameters
 ### Properties
-* **matchValues**: 'HTTP' | 'HTTPS' | string[]: The match value for the condition of the delivery rule
+* **matchValues**: ('HTTP' | 'HTTPS' | string)[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Equal' | string (Required): Describes operator to be matched
-* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms
+* **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
 * **typeName**: 'DeliveryRuleRequestSchemeConditionParameters' | string (Required)
 
 ## RequestUriMatchConditionParameters
@@ -800,7 +800,7 @@
 * **matchValues**: string[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' | string (Required): Describes operator to be matched
-* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms
+* **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
 * **typeName**: 'DeliveryRuleRequestUriConditionParameters' | string (Required)
 
 ## ResourceReference
@@ -811,7 +811,7 @@
 ### Properties
 * **httpErrorRanges**: [HttpErrorRangeParameters](#httperrorrangeparameters)[]: The list of Http status code ranges that are considered as server errors for origin and it is marked as unhealthy.
 * **responseBasedDetectedErrorTypes**: 'None' | 'TcpAndHttpErrors' | 'TcpErrorsOnly': Type of response errors for real user requests for which origin will be deemed unhealthy
-* **responseBasedFailoverThresholdPercentage**: int: The percentage of failed requests in the sample where failover should trigger.
+* **responseBasedFailoverThresholdPercentage**: int {minValue: 0, maxValue: 100}: The percentage of failed requests in the sample where failover should trigger.
 
 ## RouteConfigurationOverrideActionParameters
 ### Properties
@@ -834,7 +834,7 @@
 * **patternsToMatch**: string[]: The route patterns of the rule.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning status
 * **ruleSets**: [ResourceReference](#resourcereference)[]: rule sets referenced by this endpoint.
-* **supportedProtocols**: 'Http' | 'Https' | string[]: List of supported protocols for this route.
+* **supportedProtocols**: ('Http' | 'Https' | string)[]: List of supported protocols for this route.
 
 ## RuleProperties
 ### Properties
@@ -923,7 +923,7 @@
 * **matchValues**: string[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' | string (Required): Describes operator to be matched
-* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms
+* **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
 * **typeName**: 'DeliveryRuleServerPortConditionParameters' | string (Required)
 
 ## SharedPrivateLinkResourceProperties
@@ -943,15 +943,15 @@
 * **matchValues**: string[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'IPMatch' | string (Required): Describes operator to be matched
-* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms
+* **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
 * **typeName**: 'DeliveryRuleSocketAddrConditionParameters' | string (Required)
 
 ## SslProtocolMatchConditionParameters
 ### Properties
-* **matchValues**: 'TLSv1' | 'TLSv1.1' | 'TLSv1.2' | string[]: The match value for the condition of the delivery rule
+* **matchValues**: ('TLSv1' | 'TLSv1.1' | 'TLSv1.2' | string)[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Equal' | string (Required): Describes operator to be matched
-* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms
+* **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
 * **typeName**: 'DeliveryRuleSslProtocolConditionParameters' | string (Required)
 
 ## SystemData
@@ -988,7 +988,7 @@
 * **matchValues**: string[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' | string (Required): Describes operator to be matched
-* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms
+* **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
 * **typeName**: 'DeliveryRuleUrlFileExtensionMatchConditionParameters' | string (Required)
 
 ## UrlFileNameMatchConditionParameters
@@ -996,7 +996,7 @@
 * **matchValues**: string[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' | string (Required): Describes operator to be matched
-* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms
+* **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
 * **typeName**: 'DeliveryRuleUrlFilenameConditionParameters' | string (Required)
 
 ## UrlPathMatchConditionParameters
@@ -1004,7 +1004,7 @@
 * **matchValues**: string[]: The match value for the condition of the delivery rule
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' | 'Wildcard' | string (Required): Describes operator to be matched
-* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms
+* **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
 * **typeName**: 'DeliveryRuleUrlPathMatchConditionParameters' | string (Required)
 
 ## UrlRedirectActionParameters

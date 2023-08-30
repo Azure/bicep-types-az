@@ -29,7 +29,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ResourceIdentity](#resourceidentity): Azure Active Directory identity of the server.
 * **location**: string (Required): Resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 64, pattern: "^((?!_)[^\\/\"'\[\]:|<>+=;,?*@&]{1,64}(?<![.-]))$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [SqlVirtualMachineProperties](#sqlvirtualmachineproperties): Resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -65,7 +65,7 @@
 ### Properties
 * **backupScheduleType**: 'Automated' | 'Manual' | string: Backup schedule type.
 * **backupSystemDbs**: bool: Include or exclude system databases from auto backup.
-* **daysOfWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string[]: Days of the week for the backups when FullBackupFrequency is set to Weekly.
+* **daysOfWeek**: ('Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string)[]: Days of the week for the backups when FullBackupFrequency is set to Weekly.
 * **enable**: bool: Enable or disable autobackup on SQL virtual machine.
 * **enableEncryption**: bool: Enable or disable encryption for backup on SQL virtual machine.
 * **fullBackupFrequency**: 'Daily' | 'Weekly' | string: Frequency of full backups. In both cases, full backups begin during the next scheduled time window.
@@ -123,8 +123,8 @@
 
 ## ResourceIdentity
 ### Properties
-* **principalId**: string (ReadOnly): The Azure Active Directory principal id.
-* **tenantId**: string (ReadOnly): The Azure Active Directory tenant id.
+* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The Azure Active Directory principal id.
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The Azure Active Directory tenant id.
 * **type**: 'None' | 'SystemAssigned' | string: The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.
 
 ## Schedule

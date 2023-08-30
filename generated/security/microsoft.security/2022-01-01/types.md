@@ -77,6 +77,6 @@
 * **type**: 'LogAnalytics' (Required): There can be multiple identifiers of different type per alert, this field specify the identifier type.
 * **workspaceId**: string (ReadOnly): The LogAnalytics workspace id that stores this alert.
 * **workspaceResourceGroup**: string (ReadOnly): The azure resource group for the LogAnalytics workspace storing this alert
-* **workspaceSubscriptionId**: string (ReadOnly): The azure subscription id for the LogAnalytics workspace storing this alert.
+* **workspaceSubscriptionId**: string {pattern: "^[0-9A-Fa-f]{8}-([0-9A-Fa-f]{4}-){3}[0-9A-Fa-f]{12}$"} (ReadOnly): The azure subscription id for the LogAnalytics workspace storing this alert.
 
 

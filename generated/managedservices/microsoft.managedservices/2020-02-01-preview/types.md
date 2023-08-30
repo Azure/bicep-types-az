@@ -31,7 +31,7 @@
 
 ## Authorization
 ### Properties
-* **delegatedRoleDefinitionIds**: string[]: The delegatedRoleDefinitionIds field is required when the roleDefinitionId refers to the User Access Administrator Role. It is the list of role definition ids which define all the permissions that the user in the authorization can assign to other principals.
+* **delegatedRoleDefinitionIds**: (string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"})[]: The delegatedRoleDefinitionIds field is required when the roleDefinitionId refers to the User Access Administrator Role. It is the list of role definition ids which define all the permissions that the user in the authorization can assign to other principals.
 * **principalId**: string (Required): The identifier of the Azure Active Directory principal.
 * **principalIdDisplayName**: string: The display name of the Azure Active Directory principal.
 * **roleDefinitionId**: string (Required): The identifier of the Azure built-in role that defines the permissions that the Azure Active Directory principal will have on the projected scope.

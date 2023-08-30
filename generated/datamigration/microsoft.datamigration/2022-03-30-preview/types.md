@@ -95,8 +95,8 @@
 
 ## AuthenticationKeys
 ### Properties
-* **authKey1**: string: The first authentication key.
-* **authKey2**: string: The second authentication key.
+* **authKey1**: string {sensitive}: The first authentication key.
+* **authKey2**: string {sensitive}: The second authentication key.
 
 ## AzureActiveDirectoryApp
 ### Properties
@@ -2230,7 +2230,7 @@
 * **authentication**: string: Authentication type.
 * **dataSource**: string: Data source.
 * **encryptConnection**: bool: Whether to encrypt connection or not.
-* **password**: string: Password to connect to source SQL.
+* **password**: string {sensitive}: Password to connect to source SQL.
 * **trustServerCertificate**: bool: Whether to trust server certificate or not.
 * **userName**: string: User name to connect to source SQL.
 

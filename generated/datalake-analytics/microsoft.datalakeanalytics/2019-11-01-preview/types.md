@@ -98,7 +98,7 @@
 
 ## CreateDataLakeAnalyticsAccountPropertiesOrDataLakeAnalyticsAccountProperties
 ### Properties
-* **accountId**: string (ReadOnly): The unique identifier associated with this Data Lake Analytics account.
+* **accountId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The unique identifier associated with this Data Lake Analytics account.
 * **computePolicies**: [CreateComputePolicyWithAccountParametersOrComputePolicy](#createcomputepolicywithaccountparametersorcomputepolicy)[]: The list of compute policies associated with this account.
 * **creationTime**: string (ReadOnly): The account creation time.
 * **currentTier**: 'Commitment_100000AUHours' | 'Commitment_10000AUHours' | 'Commitment_1000AUHours' | 'Commitment_100AUHours' | 'Commitment_500000AUHours' | 'Commitment_50000AUHours' | 'Commitment_5000AUHours' | 'Commitment_500AUHours' | 'Consumption' (ReadOnly): The commitment tier in use for the current month.
@@ -113,16 +113,16 @@
 * **hiveMetastores**: [HiveMetastore](#hivemetastore)[] (ReadOnly): The list of hiveMetastores associated with this account.
 * **lastModifiedTime**: string (ReadOnly): The account last modified time.
 * **maxActiveJobCountPerUser**: int (ReadOnly): The maximum supported active jobs under the account at the same time.
-* **maxDegreeOfParallelism**: int: The maximum supported degree of parallelism for this account.
-* **maxDegreeOfParallelismPerJob**: int: The maximum supported degree of parallelism per job for this account.
-* **maxJobCount**: int: The maximum supported jobs running under the account at the same time.
+* **maxDegreeOfParallelism**: int {minValue: 1}: The maximum supported degree of parallelism for this account.
+* **maxDegreeOfParallelismPerJob**: int {minValue: 1}: The maximum supported degree of parallelism per job for this account.
+* **maxJobCount**: int {minValue: 1}: The maximum supported jobs running under the account at the same time.
 * **maxJobRunningTimeInMin**: int (ReadOnly): The maximum supported active jobs under the account at the same time.
 * **maxQueuedJobCountPerUser**: int (ReadOnly): The maximum supported jobs queued under the account at the same time.
-* **minPriorityPerJob**: int: The minimum supported priority per job for this account.
+* **minPriorityPerJob**: int {minValue: 1}: The minimum supported priority per job for this account.
 * **newTier**: 'Commitment_100000AUHours' | 'Commitment_10000AUHours' | 'Commitment_1000AUHours' | 'Commitment_100AUHours' | 'Commitment_500000AUHours' | 'Commitment_50000AUHours' | 'Commitment_5000AUHours' | 'Commitment_500AUHours' | 'Consumption': The commitment tier for the next month.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Patching' | 'Resuming' | 'Running' | 'Succeeded' | 'Suspending' | 'Undeleting' (ReadOnly): The provisioning status of the Data Lake Analytics account.
 * **publicDataLakeStoreAccounts**: [DataLakeStoreAccountInformation](#datalakestoreaccountinformation)[] (ReadOnly): The list of Data Lake Store accounts associated with this account.
-* **queryStoreRetention**: int: The number of days that job metadata is retained.
+* **queryStoreRetention**: int {minValue: 1, maxValue: 180}: The number of days that job metadata is retained.
 * **state**: 'Active' | 'Suspended' (ReadOnly): The state of the Data Lake Analytics account.
 * **storageAccounts**: [AddStorageAccountWithAccountParametersOrStorageAccountInformation](#addstorageaccountwithaccountparametersorstorageaccountinformation)[]: The list of Azure Blob Storage accounts associated with this account.
 * **systemMaxDegreeOfParallelism**: int (ReadOnly): The system defined maximum supported degree of parallelism for this account, which restricts the maximum value of parallelism the user can set for the account.
@@ -138,9 +138,9 @@
 
 ## CreateOrUpdateComputePolicyPropertiesOrComputePolicyProperties
 ### Properties
-* **maxDegreeOfParallelismPerJob**: int: The maximum degree of parallelism per job this user can use to submit jobs. This property, the min priority per job property, or both must be passed.
-* **minPriorityPerJob**: int: The minimum priority per job this user can use to submit jobs. This property, the max degree of parallelism per job property, or both must be passed.
-* **objectId**: string (Required): The AAD object identifier for the entity to create a policy for.
+* **maxDegreeOfParallelismPerJob**: int {minValue: 1}: The maximum degree of parallelism per job this user can use to submit jobs. This property, the min priority per job property, or both must be passed.
+* **minPriorityPerJob**: int {minValue: 1}: The minimum priority per job this user can use to submit jobs. This property, the max degree of parallelism per job property, or both must be passed.
+* **objectId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required): The AAD object identifier for the entity to create a policy for.
 * **objectType**: 'Group' | 'ServicePrincipal' | 'User' | string (Required): The type of AAD object the object identifier refers to.
 
 ## CreateOrUpdateFirewallRulePropertiesOrFirewallRuleProperties

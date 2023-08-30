@@ -332,7 +332,7 @@
 
 ## ResourceProviderManifestPropertiesTemplateDeploymentOptions
 ### Properties
-* **preflightOptions**: 'ContinueDeploymentOnFailure' | 'DefaultValidationOnly' | 'None' | string[]
+* **preflightOptions**: ('ContinueDeploymentOnFailure' | 'DefaultValidationOnly' | 'None' | string)[]
 * **preflightSupported**: bool
 
 ## ResourceTypeEndpoint
@@ -352,13 +352,13 @@
 ## ResourceTypeExtension
 ### Properties
 * **endpointUri**: string
-* **extensionCategories**: 'NotSpecified' | 'ResourceCreationBegin' | 'ResourceCreationCompleted' | 'ResourceCreationValidate' | 'ResourceDeletionBegin' | 'ResourceDeletionCompleted' | 'ResourceDeletionValidate' | 'ResourceMoveBegin' | 'ResourceMoveCompleted' | 'ResourcePatchBegin' | 'ResourcePatchCompleted' | 'ResourcePatchValidate' | 'ResourcePostAction' | 'ResourceReadBegin' | 'ResourceReadValidate' | 'SubscriptionLifecycleNotification' | string[]
+* **extensionCategories**: ('NotSpecified' | 'ResourceCreationBegin' | 'ResourceCreationCompleted' | 'ResourceCreationValidate' | 'ResourceDeletionBegin' | 'ResourceDeletionCompleted' | 'ResourceDeletionValidate' | 'ResourceMoveBegin' | 'ResourceMoveCompleted' | 'ResourcePatchBegin' | 'ResourcePatchCompleted' | 'ResourcePatchValidate' | 'ResourcePostAction' | 'ResourceReadBegin' | 'ResourceReadValidate' | 'SubscriptionLifecycleNotification' | string)[]
 * **timeout**: string
 
 ## ResourceTypeExtensionOptionsResourceCreationBegin
 ### Properties
-* **request**: 'DoNotMergeExistingReadOnlyAndSecretProperties' | 'IncludeInternalMetadata' | 'NotSpecified' | string[]
-* **response**: 'DoNotMergeExistingReadOnlyAndSecretProperties' | 'IncludeInternalMetadata' | 'NotSpecified' | string[]
+* **request**: ('DoNotMergeExistingReadOnlyAndSecretProperties' | 'IncludeInternalMetadata' | 'NotSpecified' | string)[]
+* **response**: ('DoNotMergeExistingReadOnlyAndSecretProperties' | 'IncludeInternalMetadata' | 'NotSpecified' | string)[]
 
 ## ResourceTypeRegistration
 ### Properties
@@ -434,7 +434,7 @@
 
 ## ResourceTypeRegistrationPropertiesTemplateDeploymentOptions
 ### Properties
-* **preflightOptions**: 'ContinueDeploymentOnFailure' | 'DefaultValidationOnly' | 'None' | string[]
+* **preflightOptions**: ('ContinueDeploymentOnFailure' | 'DefaultValidationOnly' | 'None' | string)[]
 * **preflightSupported**: bool
 
 ## RolloutStatusBaseFailedOrSkippedRegions

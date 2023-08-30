@@ -6,7 +6,7 @@
 * **apiVersion**: '2022-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The Azure Region where the reservation benefits are applied to.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[a-zA-Z0-9_\-\.]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ReservationOrderAliasRequestPropertiesOrReservationOrderAliasResponseProperties](#reservationorderaliasrequestpropertiesorreservationorderaliasresponseproperties): Reservation order alias request properties
 * **sku**: [Sku](#sku) (Required): Reservation order SKU
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
@@ -18,7 +18,7 @@
 * **apiVersion**: '2022-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Resource provider kind
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[a-zA-Z0-9_\-\.]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [SavingsPlanOrderAliasProperties](#savingsplanorderaliasproperties): Savings plan order alias properties
 * **sku**: [Sku](#sku) (Required): Savings plan SKU
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
@@ -116,7 +116,7 @@
 * **billingScopeId**: string: Subscription that will be charged for purchasing the benefit
 * **displayName**: string: Display name
 * **provisioningState**: 'Cancelled' | 'ConfirmedBilling' | 'Created' | 'Creating' | 'Expired' | 'Failed' | 'PendingBilling' | 'Succeeded' | string (ReadOnly): Provisioning state
-* **quantity**: int: Total Quantity of the SKUs purchased in the Reservation.
+* **quantity**: int {minValue: 1}: Total Quantity of the SKUs purchased in the Reservation.
 * **renew**: bool: Setting this to true will automatically purchase a new benefit on the expiration date time.
 * **reservationOrderId**: string (ReadOnly): Identifier of the reservation order created
 * **reservedResourceProperties**: [ReservationOrderAliasRequestPropertiesReservedResourcePropertiesOrReservationOrderAliasResponsePropertiesReservedResourceProperties](#reservationorderaliasrequestpropertiesreservedresourcepropertiesorreservationorderaliasresponsepropertiesreservedresourceproperties): Properties specific to each reserved resource type. Not required if not applicable.

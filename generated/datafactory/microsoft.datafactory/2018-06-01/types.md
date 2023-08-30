@@ -8,7 +8,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [FactoryIdentity](#factoryidentity): Managed service identity of the factory.
 * **location**: string: The resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 63, pattern: "^[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [FactoryProperties](#factoryproperties): Properties of the factory.
 * **tags**: [ResourceTags](#resourcetags): The resource tags.
 * **type**: 'Microsoft.DataFactory/factories' (ReadOnly, DeployTimeConstant): The resource type
@@ -19,7 +19,7 @@
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Etag identifies change in the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 260, pattern: "^[A-Za-z0-9_][^<>*#.%&:\\+?/]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ChangeDataCapture](#changedatacapture) (Required): Properties of the change data capture.
 * **type**: 'Microsoft.DataFactory/factories/adfcdcs' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -29,7 +29,7 @@
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Etag identifies change in the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 127, pattern: "^([_A-Za-z0-9]|([_A-Za-z0-9][-_A-Za-z0-9]{0,125}[_A-Za-z0-9]))$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedIdentityCredential](#managedidentitycredential) (Required): Managed Identity Credential properties.
 * **type**: 'Microsoft.DataFactory/factories/credentials' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -39,7 +39,7 @@
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Etag identifies change in the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 260, pattern: "^[A-Za-z0-9_][^<>*#.%&:\\+?/]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DataFlow](#dataflow) (Required): Data flow properties.
 * **type**: 'Microsoft.DataFactory/factories/dataflows' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -49,7 +49,7 @@
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Etag identifies change in the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 260, pattern: "^[A-Za-z0-9_][^<>*#.%&:\\+?/]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [Dataset](#dataset) (Required): Dataset properties.
 * **type**: 'Microsoft.DataFactory/factories/datasets' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -59,7 +59,7 @@
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Etag identifies change in the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 260, pattern: "^[A-Za-z0-9_][^<>*#.%&:\\+?/]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [GlobalParameter](#globalparameter) (Required): Properties of the global parameter.
 * **type**: 'Microsoft.DataFactory/factories/globalParameters' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -69,7 +69,7 @@
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Etag identifies change in the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 63, pattern: "^[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [IntegrationRuntime](#integrationruntime) (Required): Integration runtime properties.
 * **type**: 'Microsoft.DataFactory/factories/integrationRuntimes' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -79,7 +79,7 @@
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Etag identifies change in the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 260, pattern: "^[A-Za-z0-9_][^<>*#.%&:\\+?/]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [LinkedService](#linkedservice) (Required): Properties of linked service.
 * **type**: 'Microsoft.DataFactory/factories/linkedservices' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -89,7 +89,7 @@
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Etag identifies change in the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 127, pattern: "^([_A-Za-z0-9]|([_A-Za-z0-9][-_A-Za-z0-9]{0,125}[_A-Za-z0-9]))$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedVirtualNetwork](#managedvirtualnetwork) (Required): Managed Virtual Network properties.
 * **type**: 'Microsoft.DataFactory/factories/managedVirtualNetworks' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -99,7 +99,7 @@
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Etag identifies change in the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 127, pattern: "^([_A-Za-z0-9]|([_A-Za-z0-9][-_A-Za-z0-9]{0,125}[_A-Za-z0-9]))$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedPrivateEndpoint](#managedprivateendpoint) (Required): Managed private endpoint properties.
 * **type**: 'Microsoft.DataFactory/factories/managedVirtualNetworks/managedPrivateEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -109,7 +109,7 @@
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Etag identifies change in the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 260, pattern: "^[A-Za-z0-9_][^<>*#.%&:\\+?/]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [Pipeline](#pipeline) (Required): Properties of the pipeline.
 * **type**: 'Microsoft.DataFactory/factories/pipelines' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -129,7 +129,7 @@
 * **apiVersion**: '2018-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Etag identifies change in the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 260, pattern: "^[A-Za-z0-9_][^<>*#.%&:\\+?/]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [Trigger](#trigger) (Required): Properties of the trigger.
 * **type**: 'Microsoft.DataFactory/factories/triggers' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -405,14 +405,14 @@
 ## ActivityDependency
 ### Properties
 * **activity**: string (Required): Activity name.
-* **dependencyConditions**: 'Completed' | 'Failed' | 'Skipped' | 'Succeeded' | string[] (Required): Match-Condition for the dependency.
+* **dependencyConditions**: ('Completed' | 'Failed' | 'Skipped' | 'Succeeded' | string)[] (Required): Match-Condition for the dependency.
 ### Additional Properties
 * **Additional Properties Type**: any
 
 ## ActivityPolicy
 ### Properties
 * **retry**: any: Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.
-* **retryIntervalInSeconds**: int: Interval between each retry attempt (in seconds). The default is 30 sec.
+* **retryIntervalInSeconds**: int {minValue: 30, maxValue: 86400}: Interval between each retry attempt (in seconds). The default is 30 sec.
 * **secureInput**: bool: When set to true, Input from activity is considered as secure and will not be logged to monitoring.
 * **secureOutput**: bool: When set to true, Output from activity is considered as secure and will not be logged to monitoring.
 * **timeout**: any: Specifies the timeout for the activity to run. The default timeout is 7 days. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
@@ -525,7 +525,7 @@
 ## AvroDatasetTypeProperties
 ### Properties
 * **avroCompressionCodec**: any: The data avroCompressionCodec. Type: string (or Expression with resultType string).
-* **avroCompressionLevel**: int
+* **avroCompressionLevel**: int {minValue: 1, maxValue: 9}
 * **location**: [DatasetLocation](#datasetlocation) (Required): The location of the avro storage.
 
 ## AvroWriteSettings
@@ -954,7 +954,7 @@
 ### Properties
 * **blobPathBeginsWith**: string: The blob path must begin with the pattern provided for trigger to fire. For example, '/records/blobs/december/' will only fire the trigger for blobs in the december folder under the records container. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.
 * **blobPathEndsWith**: string: The blob path must end with the pattern provided for trigger to fire. For example, 'december/boxes.csv' will only fire the trigger for blobs named boxes in a december folder. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.
-* **events**: 'Microsoft.Storage.BlobCreated' | 'Microsoft.Storage.BlobDeleted' | string[] (Required): The type of events that cause this trigger to fire.
+* **events**: ('Microsoft.Storage.BlobCreated' | 'Microsoft.Storage.BlobDeleted' | string)[] (Required): The type of events that cause this trigger to fire.
 * **ignoreEmptyBlobs**: bool: If set to true, blobs with zero bytes will be ignored.
 * **scope**: string (Required): The ARM resource ID of the Storage Account.
 
@@ -1089,8 +1089,8 @@
 
 ## CopyComputeScaleProperties
 ### Properties
-* **dataIntegrationUnit**: int: DIU number setting reserved for copy activity execution. Supported values are multiples of 4 in range 4-256.
-* **timeToLive**: int: Time to live (in minutes) setting of integration runtime which will execute copy activity.
+* **dataIntegrationUnit**: int {minValue: 4}: DIU number setting reserved for copy activity execution. Supported values are multiples of 4 in range 4-256.
+* **timeToLive**: int {minValue: 5}: Time to live (in minutes) setting of integration runtime which will execute copy activity.
 ### Additional Properties
 * **Additional Properties Type**: any
 
@@ -2977,7 +2977,7 @@
 * **dataset**: [DatasetReference](#datasetreference) (Required): Delete activity dataset reference.
 * **enableLogging**: any: Whether to record detailed logs of delete-activity execution. Default value is false. Type: boolean (or Expression with resultType boolean).
 * **logStorageSettings**: [LogStorageSettings](#logstoragesettings): Log storage settings customer need to provide when enableLogging is true.
-* **maxConcurrentConnections**: int: The max concurrent connections to connect data source at the same time.
+* **maxConcurrentConnections**: int {minValue: 1}: The max concurrent connections to connect data source at the same time.
 * **recursive**: any: If true, files or sub-folders under current folder path will be deleted recursively. Default is false. Type: boolean (or Expression with resultType boolean).
 * **storeSettings**: [StoreReadSettings](#storereadsettings): Delete activity store settings.
 
@@ -3019,15 +3019,15 @@
 
 ### SelfDependencyTumblingWindowTriggerReference
 #### Properties
-* **offset**: string (Required): Timespan applied to the start time of a tumbling window when evaluating dependency.
-* **size**: string: The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.
+* **offset**: string {minLength: 8, maxLength: 15, pattern: "-((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9]))"} (Required): Timespan applied to the start time of a tumbling window when evaluating dependency.
+* **size**: string {minLength: 8, maxLength: 15, pattern: "((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9]))"}: The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.
 * **type**: 'SelfDependencyTumblingWindowTriggerReference' (Required): The type of dependency reference.
 
 ### TumblingWindowTriggerDependencyReference
 #### Properties
-* **offset**: string: Timespan applied to the start time of a tumbling window when evaluating dependency.
+* **offset**: string {minLength: 8, maxLength: 15, pattern: "-?((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9]))"}: Timespan applied to the start time of a tumbling window when evaluating dependency.
 * **referenceTrigger**: [TriggerReference](#triggerreference) (Required): Referenced trigger.
-* **size**: string: The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.
+* **size**: string {minLength: 8, maxLength: 15, pattern: "((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9]))"}: The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.
 * **type**: 'TumblingWindowTriggerDependencyReference' (Required): The type of dependency reference.
 
 
@@ -3250,8 +3250,8 @@
 
 ## FactoryIdentity
 ### Properties
-* **principalId**: string (ReadOnly): The principal id of the identity.
-* **tenantId**: string (ReadOnly): The client tenant id of the identity.
+* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The principal id of the identity.
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The client tenant id of the identity.
 * **type**: 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' | string (Required): The identity type.
 * **userAssignedIdentities**: [UserAssignedIdentitiesDefinitionSpecification](#userassignedidentitiesdefinitionspecification): List of user assigned identities for the factory.
 
@@ -3329,7 +3329,7 @@
 ## ForEachActivityTypeProperties
 ### Properties
 * **activities**: [Activity](#activity)[] (Required): List of activities to execute .
-* **batchCount**: int: Batch count to be used for controlling the number of parallel execution (when isSequential is set to false).
+* **batchCount**: int {maxValue: 50}: Batch count to be used for controlling the number of parallel execution (when isSequential is set to false).
 * **isSequential**: bool: Should the loop be executed in sequence or in parallel (max 50)
 * **items**: [Expression](#expression) (Required): Collection to iterate.
 
@@ -3751,9 +3751,9 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **copyComputeScaleProperties**: [CopyComputeScaleProperties](#copycomputescaleproperties): CopyComputeScale properties for managed integration runtime.
 * **dataFlowProperties**: [IntegrationRuntimeDataFlowProperties](#integrationruntimedataflowproperties): Data flow properties for managed integration runtime.
 * **location**: string: The location for managed integration runtime. The supported regions could be found on https://docs.microsoft.com/en-us/azure/data-factory/data-factory-data-movement-activities
-* **maxParallelExecutionsPerNode**: int: Maximum parallel executions count per node for managed integration runtime.
+* **maxParallelExecutionsPerNode**: int {minValue: 1}: Maximum parallel executions count per node for managed integration runtime.
 * **nodeSize**: string: The node size requirement to managed integration runtime.
-* **numberOfNodes**: int: The required number of nodes for managed integration runtime.
+* **numberOfNodes**: int {minValue: 1}: The required number of nodes for managed integration runtime.
 * **pipelineExternalComputeScaleProperties**: [PipelineExternalComputeScaleProperties](#pipelineexternalcomputescaleproperties): PipelineExternalComputeScale properties for managed integration runtime.
 * **vNetProperties**: [IntegrationRuntimeVNetProperties](#integrationruntimevnetproperties): VNet properties for managed integration runtime.
 ### Additional Properties
@@ -3774,7 +3774,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **computeType**: 'ComputeOptimized' | 'General' | 'MemoryOptimized' | string: Compute type of the cluster which will execute data flow job.
 * **coreCount**: int: Core count of the cluster which will execute data flow job. Supported values are: 8, 16, 32, 48, 80, 144 and 272.
 * **customProperties**: [IntegrationRuntimeDataFlowPropertiesCustomPropertiesItem](#integrationruntimedataflowpropertiescustompropertiesitem)[]: Custom properties are used to tune the data flow runtime performance.
-* **timeToLive**: int: Time to live (in minutes) setting of the cluster which will execute data flow job.
+* **timeToLive**: int {minValue: 0}: Time to live (in minutes) setting of the cluster which will execute data flow job.
 ### Additional Properties
 * **Additional Properties Type**: any
 
@@ -3798,7 +3798,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## IntegrationRuntimeSsisCatalogInfo
 ### Properties
 * **catalogAdminPassword**: [SecureString](#securestring): The password of the administrator user account of the catalog database.
-* **catalogAdminUserName**: string: The administrator user name of catalog database.
+* **catalogAdminUserName**: string {minLength: 1, maxLength: 128}: The administrator user name of catalog database.
 * **catalogPricingTier**: 'Basic' | 'Premium' | 'PremiumRS' | 'Standard' | string: The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/
 * **catalogServerEndpoint**: string: The catalog database server URL.
 * **dualStandbyPairName**: string: The dual standby pair name of Azure-SSIS Integration Runtimes to support SSISDB failover.
@@ -4931,7 +4931,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### Properties
 * **activities**: [Activity](#activity)[]: List of activities in pipeline.
 * **annotations**: any[]: List of tags that can be used for describing the Pipeline.
-* **concurrency**: int: The max number of concurrent runs for the pipeline.
+* **concurrency**: int {minValue: 1}: The max number of concurrent runs for the pipeline.
 * **description**: string: The description of the pipeline.
 * **folder**: [PipelineFolder](#pipelinefolder): The folder that this Pipeline is in. If not specified, Pipeline will appear at the root level.
 * **parameters**: [ParameterDefinitionSpecification](#parameterdefinitionspecification): List of parameters for pipeline.
@@ -4945,7 +4945,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## PipelineExternalComputeScaleProperties
 ### Properties
-* **timeToLive**: int: Time to live (in minutes) setting of integration runtime which will execute pipeline and external activity.
+* **timeToLive**: int {minValue: 5}: Time to live (in minutes) setting of integration runtime which will execute pipeline and external activity.
 ### Additional Properties
 * **Additional Properties Type**: any
 
@@ -5088,7 +5088,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **minutes**: int[]: The minutes.
 * **monthDays**: int[]: The month days.
 * **monthlyOccurrences**: [RecurrenceScheduleOccurrence](#recurrencescheduleoccurrence)[]: The monthly occurrences.
-* **weekDays**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: The days of the week.
+* **weekDays**: ('Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday')[]: The days of the week.
 ### Additional Properties
 * **Additional Properties Type**: any
 
@@ -5120,7 +5120,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **parentTrigger**: any (Required): The parent trigger reference.
 * **requestedEndTime**: string (Required): The end time for the time period for which restatement is initiated. Only UTC time is currently supported.
 * **requestedStartTime**: string (Required): The start time for the time period for which restatement is initiated. Only UTC time is currently supported.
-* **rerunConcurrency**: int (Required): The max number of parallel time windows (ready for execution) for which a rerun is triggered.
+* **rerunConcurrency**: int {minValue: 1, maxValue: 50} (Required): The max number of parallel time windows (ready for execution) for which a rerun is triggered.
 
 ## ResourceTags
 ### Properties
@@ -5179,7 +5179,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## RetryPolicy
 ### Properties
 * **count**: any: Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.
-* **intervalInSeconds**: int: Interval between retries in seconds. Default is 30.
+* **intervalInSeconds**: int {minValue: 30, maxValue: 86400}: Interval between retries in seconds. Default is 30.
 
 ## SalesforceLinkedServiceTypeProperties
 ### Properties
@@ -6098,7 +6098,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **endTime**: string: The end time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.
 * **frequency**: 'Hour' | 'Minute' | 'Month' | string (Required): The frequency of the time windows.
 * **interval**: int (Required): The interval of the time windows. The minimum interval allowed is 15 Minutes.
-* **maxConcurrency**: int (Required): The max number of parallel time windows (ready for execution) for which a new run is triggered.
+* **maxConcurrency**: int {minValue: 1, maxValue: 50} (Required): The max number of parallel time windows (ready for execution) for which a new run is triggered.
 * **retryPolicy**: [RetryPolicy](#retrypolicy): Retry policy that will be applied for failed pipeline runs.
 * **startTime**: string (Required): The start time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.
 

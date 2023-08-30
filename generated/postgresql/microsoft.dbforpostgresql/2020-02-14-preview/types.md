@@ -42,8 +42,8 @@
 
 ## FirewallRuleProperties
 ### Properties
-* **endIpAddress**: string (Required): The end IP address of the server firewall rule. Must be IPv4 format.
-* **startIpAddress**: string (Required): The start IP address of the server firewall rule. Must be IPv4 format.
+* **endIpAddress**: string {pattern: "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"} (Required): The end IP address of the server firewall rule. Must be IPv4 format.
+* **startIpAddress**: string {pattern: "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"} (Required): The start IP address of the server firewall rule. Must be IPv4 format.
 
 ## Identity
 ### Properties
@@ -61,7 +61,7 @@
 ## ServerProperties
 ### Properties
 * **administratorLogin**: string: The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).
-* **administratorLoginPassword**: string (WriteOnly): The administrator login password (required for server creation).
+* **administratorLoginPassword**: string {sensitive} (WriteOnly): The administrator login password (required for server creation).
 * **availabilityZone**: string: availability Zone information of the server.
 * **byokEnforcement**: string (ReadOnly): Status showing whether the data encryption is enabled with customer-managed keys.
 * **createMode**: 'Default' | 'PointInTimeRestore' | string (WriteOnly): The mode to create a new PostgreSQL server.

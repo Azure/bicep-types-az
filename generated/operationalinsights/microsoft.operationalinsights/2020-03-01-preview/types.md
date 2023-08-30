@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [Identity](#identity): The identity of the resource.
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {minLength: 4, maxLength: 63, pattern: "^[A-Za-z0-9][A-Za-z0-9-]+[A-Za-z0-9]$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ClusterProperties](#clusterproperties): Log Analytics cluster properties.
 * **sku**: [ClusterSku](#clustersku): The sku properties.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -20,7 +20,7 @@
 * **eTag**: string: The ETag of the workspace.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 4, maxLength: 63, pattern: "^[A-Za-z0-9][A-Za-z0-9-]+[A-Za-z0-9]$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [WorkspaceProperties](#workspaceproperties): Workspace properties.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.OperationalInsights/workspaces' (ReadOnly, DeployTimeConstant): The resource type
@@ -30,7 +30,7 @@
 ### Properties
 * **apiVersion**: '2020-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 4, maxLength: 63, pattern: "^[A-Za-z0-9]+[A-Za-z0-9]_CL$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DataCollectorLogProperties](#datacollectorlogproperties) (ReadOnly): Data collector log properties.
 * **type**: 'Microsoft.OperationalInsights/workspaces/dataCollectorLogs' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -39,7 +39,7 @@
 ### Properties
 * **apiVersion**: '2020-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {minLength: 4, maxLength: 63, pattern: "^[A-Za-z][A-Za-z0-9-]+[A-Za-z0-9]$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DataExportProperties](#dataexportproperties): data export properties.
 * **type**: 'Microsoft.OperationalInsights/workspaces/dataExports' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -211,7 +211,7 @@
 
 ## TableProperties
 ### Properties
-* **retentionInDays**: int: The data table data retention in days, between 30 and 730. Setting this property to null will default to the workspace retention.
+* **retentionInDays**: int {minValue: 30, maxValue: 730}: The data table data retention in days, between 30 and 730. Setting this property to null will default to the workspace retention.
 
 ## Tag
 ### Properties
@@ -241,7 +241,7 @@
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' | 'Updating' | string: The provisioning state of the workspace.
 * **publicNetworkAccessForIngestion**: 'Disabled' | 'Enabled' | string: The network access type for accessing Log Analytics ingestion.
 * **publicNetworkAccessForQuery**: 'Disabled' | 'Enabled' | string: The network access type for accessing Log Analytics query.
-* **retentionInDays**: int: The workspace data retention in days. -1 means Unlimited retention for the Unlimited Sku. 730 days is the maximum allowed for all other Skus.
+* **retentionInDays**: int {minValue: -1, maxValue: 730}: The workspace data retention in days. -1 means Unlimited retention for the Unlimited Sku. 730 days is the maximum allowed for all other Skus.
 * **sku**: [WorkspaceSku](#workspacesku): The SKU of the workspace.
 * **workspaceCapping**: [WorkspaceCapping](#workspacecapping): The daily volume cap for ingestion.
 

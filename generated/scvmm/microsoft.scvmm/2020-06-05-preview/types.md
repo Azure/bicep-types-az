@@ -96,7 +96,7 @@
 
 ## AvailabilitySetProperties
 ### Properties
-* **availabilitySetName**: string: Name of the availability set.
+* **availabilitySetName**: string {minLength: 1}: Name of the availability set.
 * **provisioningState**: string (ReadOnly): Gets or sets the provisioning state.
 * **vmmServerId**: string: ARM Id of the vmmServer resource in which this resource resides.
 
@@ -125,7 +125,7 @@
 * **inventoryItemId**: string: Gets or sets the inventory Item ID for the resource.
 * **provisioningState**: string (ReadOnly): Gets or sets the provisioning state.
 * **storageQoSPolicies**: [StorageQoSPolicy](#storageqospolicy)[] (ReadOnly): List of QoS policies available for the cloud.
-* **uuid**: string: Unique ID of the cloud.
+* **uuid**: string {minLength: 1}: Unique ID of the cloud.
 * **vmmServerId**: string: ARM Id of the vmmServer resource in which this resource resides.
 
 ## CloudTags
@@ -208,7 +208,7 @@
 
 ## OsProfile
 ### Properties
-* **adminPassword**: string (WriteOnly): Admin password of the virtual machine.
+* **adminPassword**: string {sensitive} (WriteOnly): Admin password of the virtual machine.
 * **computerName**: string: Gets or sets computer name.
 * **osName**: string (ReadOnly): Gets or sets os name.
 * **osType**: 'Linux' | 'Other' | 'Windows' | string (ReadOnly): Gets or sets the type of the os.
@@ -274,7 +274,7 @@
 * **templateId**: string: ARM Id of the template resource to use for deploying the vm.
 * **uuid**: string: Unique ID of the virtual machine.
 * **vmmServerId**: string: ARM Id of the vmmServer resource in which this resource resides.
-* **vmName**: string: VMName is the name of VM on the SCVMM server.
+* **vmName**: string {minLength: 1}: VMName is the name of VM on the SCVMM server.
 
 ## VirtualMachineTags
 ### Properties
@@ -299,7 +299,7 @@
 * **osName**: string (ReadOnly): Gets or sets os name.
 * **osType**: 'Linux' | 'Other' | 'Windows' | string (ReadOnly): Gets or sets the type of the os.
 * **provisioningState**: string (ReadOnly): Gets or sets the provisioning state.
-* **uuid**: string: Unique ID of the virtual machine template.
+* **uuid**: string {minLength: 1}: Unique ID of the virtual machine template.
 * **vmmServerId**: string: ARM Id of the vmmServer resource in which this resource resides.
 
 ## VirtualMachineTemplateTags
@@ -312,7 +312,7 @@
 * **inventoryItemId**: string: Gets or sets the inventory Item ID for the resource.
 * **networkName**: string (ReadOnly): Name of the virtual network in vmmServer.
 * **provisioningState**: string (ReadOnly): Gets or sets the provisioning state.
-* **uuid**: string: Unique ID of the virtual network.
+* **uuid**: string {minLength: 1}: Unique ID of the virtual network.
 * **vmmServerId**: string: ARM Id of the vmmServer resource in which this resource resides.
 
 ## VirtualNetworkTags
@@ -325,15 +325,15 @@
 * **connectionStatus**: string (ReadOnly): Gets or sets the connection status to the vmmServer.
 * **credentials**: [VMMServerPropertiesCredentials](#vmmserverpropertiescredentials): Credentials to connect to VMMServer.
 * **errorMessage**: string (ReadOnly): Gets or sets any error message if connection to vmmServer is having any issue.
-* **fqdn**: string (Required): Fqdn is the hostname/ip of the vmmServer.
-* **port**: int: Port is the port on which the vmmServer is listening.
+* **fqdn**: string {minLength: 1} (Required): Fqdn is the hostname/ip of the vmmServer.
+* **port**: int {minValue: 1, maxValue: 65535}: Port is the port on which the vmmServer is listening.
 * **provisioningState**: string (ReadOnly): Gets or sets the provisioning state.
 * **uuid**: string (ReadOnly): Unique ID of vmmServer.
 * **version**: string (ReadOnly): Version is the version of the vmmSever.
 
 ## VMMServerPropertiesCredentials
 ### Properties
-* **password**: string (WriteOnly): Credentials to use to connect to VMMServer.
+* **password**: string {sensitive} (WriteOnly): Credentials to use to connect to VMMServer.
 * **username**: string: Username to use to connect to VMMServer.
 
 ## VMMServerTags

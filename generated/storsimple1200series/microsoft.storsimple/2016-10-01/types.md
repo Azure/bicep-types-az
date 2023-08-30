@@ -7,7 +7,7 @@
 * **etag**: string: ETag of the Manager
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The Geo location of the Manager
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 2, maxLength: 50} (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagerProperties](#managerproperties): List of properties of the Manager
 * **tags**: [ResourceTags](#resourcetags): Tags attached to the Manager
 * **type**: 'Microsoft.StorSimple/managers' (ReadOnly, DeployTimeConstant): The resource type
@@ -234,6 +234,6 @@
 
 ## Time
 ### Properties
-* **hour**: int (Required): The hour.
-* **minute**: int (Required): The minute.
+* **hour**: int {minValue: 0, maxValue: 23} (Required): The hour.
+* **minute**: int {minValue: 0, maxValue: 59} (Required): The minute.
 

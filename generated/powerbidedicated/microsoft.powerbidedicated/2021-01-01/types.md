@@ -6,7 +6,7 @@
 * **apiVersion**: '2021-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Location of the PowerBI Dedicated resource.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 63, pattern: "^[-a-zA-Z0-9_]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [AutoScaleVCoreProperties](#autoscalevcoreproperties): Properties of an auto scale v-core resource.
 * **sku**: [AutoScaleVCoreSku](#autoscalevcoresku) (Required): The SKU of the auto scale v-core resource.
 * **systemData**: [SystemData](#systemdata): Metadata pertaining to creation and last modification of the resource.
@@ -19,7 +19,7 @@
 * **apiVersion**: '2021-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Location of the PowerBI Dedicated resource.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 63, pattern: "^[a-z][a-z0-9]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DedicatedCapacityProperties](#dedicatedcapacityproperties): Properties of the provision operation request.
 * **sku**: [CapacitySku](#capacitysku) (Required): The SKU of the PowerBI Dedicated capacity resource.
 * **systemData**: [SystemData](#systemdata): Metadata pertaining to creation and last modification of the resource.

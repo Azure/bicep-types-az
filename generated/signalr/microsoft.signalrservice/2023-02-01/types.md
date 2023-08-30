@@ -112,8 +112,8 @@ It also appears in the aud (audience) claim of the issued token.
 
 ## NetworkACL
 ### Properties
-* **allow**: 'ClientConnection' | 'RESTAPI' | 'ServerConnection' | 'Trace' | string[]: Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
-* **deny**: 'ClientConnection' | 'RESTAPI' | 'ServerConnection' | 'Trace' | string[]: Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
+* **allow**: ('ClientConnection' | 'RESTAPI' | 'ServerConnection' | 'Trace' | string)[]: Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
+* **deny**: ('ClientConnection' | 'RESTAPI' | 'ServerConnection' | 'Trace' | string)[]: Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
 
 ## PrivateEndpoint
 ### Properties
@@ -121,8 +121,8 @@ It also appears in the aud (audience) claim of the issued token.
 
 ## PrivateEndpointACL
 ### Properties
-* **allow**: 'ClientConnection' | 'RESTAPI' | 'ServerConnection' | 'Trace' | string[]: Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
-* **deny**: 'ClientConnection' | 'RESTAPI' | 'ServerConnection' | 'Trace' | string[]: Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
+* **allow**: ('ClientConnection' | 'RESTAPI' | 'ServerConnection' | 'Trace' | string)[]: Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
+* **deny**: ('ClientConnection' | 'RESTAPI' | 'ServerConnection' | 'Trace' | string)[]: Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
 * **name**: string (Required): Name of the private endpoint connection
 
 ## PrivateEndpointConnection
@@ -182,7 +182,7 @@ Allowed values: Standard_S1, Free_F1, Premium_P1
 
 ## ServerlessSettings
 ### Properties
-* **connectionTimeoutInSeconds**: int: Gets or sets Client Connection Timeout. Optional to be set.
+* **connectionTimeoutInSeconds**: int {minValue: 1, maxValue: 120}: Gets or sets Client Connection Timeout. Optional to be set.
 Value in seconds.
 Default value is 30 seconds.
 Customer should set the timeout to a shorter period if messages are expected to be sent in shorter intervals,
@@ -223,7 +223,7 @@ The service considers the client disconnected if it hasn't received a message (i
 - EnableMessagingLogs: "true"/"false", to enable/disable the connectivity log category respectively.
 - EnableLiveTrace: Live Trace allows you to know what's happening inside Azure SignalR service, it will give you live traces in real time, it will be helpful when you developing your own Azure SignalR based web application or self-troubleshooting some issues. Please note that live traces are counted as outbound messages that will be charged. Values allowed: "true"/"false", to enable/disable live trace feature.
 * **properties**: [SignalRFeatureProperties](#signalrfeatureproperties): Optional properties related to this feature.
-* **value**: string (Required): Value of the feature flag. See Azure SignalR service document https://docs.microsoft.com/azure/azure-signalr/ for allowed values.
+* **value**: string {minLength: 1, maxLength: 128} (Required): Value of the feature flag. See Azure SignalR service document https://docs.microsoft.com/azure/azure-signalr/ for allowed values.
 
 ## SignalRFeatureProperties
 ### Properties
@@ -232,10 +232,10 @@ The service considers the client disconnected if it hasn't received a message (i
 
 ## SignalRKeys
 ### Properties
-* **primaryConnectionString**: string: Connection string constructed via the primaryKey
-* **primaryKey**: string: The primary access key.
-* **secondaryConnectionString**: string: Connection string constructed via the secondaryKey
-* **secondaryKey**: string: The secondary access key.
+* **primaryConnectionString**: string {sensitive}: Connection string constructed via the primaryKey
+* **primaryKey**: string {sensitive}: The primary access key.
+* **secondaryConnectionString**: string {sensitive}: Connection string constructed via the secondaryKey
+* **secondaryKey**: string {sensitive}: The secondary access key.
 
 ## SignalRNetworkACLs
 ### Properties

@@ -152,9 +152,9 @@
 
 ## AdminCredentials
 ### Properties
-* **nsxtPassword**: string (ReadOnly): NSX-T Manager password
+* **nsxtPassword**: string {sensitive} (ReadOnly): NSX-T Manager password
 * **nsxtUsername**: string (ReadOnly): NSX-T Manager username
-* **vcenterPassword**: string (ReadOnly): vCenter admin password
+* **vcenterPassword**: string {sensitive} (ReadOnly): vCenter admin password
 * **vcenterUsername**: string (ReadOnly): vCenter admin username
 
 ## Circuit
@@ -214,7 +214,7 @@
 * **baseUserDN**: string: The base distinguished name for users
 * **domain**: string: The domain's dns name
 * **name**: string: The name of the identity source
-* **password**: string: The password of the Active Directory user with a minimum of read-only access to Base DN for users and groups.
+* **password**: string {sensitive}: The password of the Active Directory user with a minimum of read-only access to Base DN for users and groups.
 * **primaryServer**: string: Primary server URL
 * **secondaryServer**: string: Secondary server URL
 * **ssl**: 'Disabled' | 'Enabled' | string: Protect LDAP communication using SSL certificate (LDAPS)
@@ -242,11 +242,11 @@
 * **managementNetwork**: string (ReadOnly): Network used to access vCenter Server and NSX-T Manager
 * **networkBlock**: string (Required): The block of addresses should be unique across VNet in your subscription as well as on-premise. Make sure the CIDR format is conformed to (A.B.C.D/X) where A,B,C,D are between 0 and 255, and X is between 0 and 22
 * **nsxtCertificateThumbprint**: string (ReadOnly): Thumbprint of the NSX-T Manager SSL certificate
-* **nsxtPassword**: string: Optionally, set the NSX-T Manager password when the private cloud is created
+* **nsxtPassword**: string {sensitive}: Optionally, set the NSX-T Manager password when the private cloud is created
 * **provisioningNetwork**: string (ReadOnly): Used for virtual machine cold migration, cloning, and snapshot migration
 * **provisioningState**: 'Building' | 'Cancelled' | 'Deleting' | 'Failed' | 'Pending' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state
 * **vcenterCertificateThumbprint**: string (ReadOnly): Thumbprint of the vCenter Server SSL certificate
-* **vcenterPassword**: string: Optionally, set the vCenter admin password when the private cloud is created
+* **vcenterPassword**: string {sensitive}: Optionally, set the vCenter admin password when the private cloud is created
 * **vmotionNetwork**: string (ReadOnly): Used for live migration of virtual machines
 
 ## ResourceTags
@@ -270,7 +270,7 @@
 ### WorkloadNetworkDhcpRelay
 #### Properties
 * **dhcpType**: 'RELAY' (Required): Type of DHCP: SERVER or RELAY.
-* **serverAddresses**: string[]: DHCP Relay Addresses. Max 3.
+* **serverAddresses**: string[] {minLength: 1, maxLength: 3}: DHCP Relay Addresses. Max 3.
 
 ### WorkloadNetworkDhcpServer
 #### Properties

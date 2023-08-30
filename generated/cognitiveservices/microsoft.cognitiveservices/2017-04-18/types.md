@@ -9,7 +9,7 @@
 * **identity**: [Identity](#identity): The identity of Cognitive Services account.
 * **kind**: string: The Kind of the resource.
 * **location**: string: The location of the resource
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 2, maxLength: 64, pattern: "^[a-zA-Z0-9][a-zA-Z0-9_.-]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [CognitiveServicesAccountProperties](#cognitiveservicesaccountproperties): Properties of Cognitive Services account.
 * **sku**: [Sku](#sku): The SKU of Cognitive Services account.
 * **tags**: [CognitiveServicesAccountTags](#cognitiveservicesaccounttags): Gets or sets a list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters.
@@ -33,16 +33,16 @@
 
 ## CognitiveServicesAccountApiProperties
 ### Properties
-* **aadClientId**: string: (Metrics Advisor Only) The Azure AD Client Id (Application Id).
-* **aadTenantId**: string: (Metrics Advisor Only) The Azure AD Tenant Id.
-* **eventHubConnectionString**: string: (Personalization Only) The flag to enable statistics of Bing Search.
+* **aadClientId**: string {maxLength: 500}: (Metrics Advisor Only) The Azure AD Client Id (Application Id).
+* **aadTenantId**: string {maxLength: 500}: (Metrics Advisor Only) The Azure AD Tenant Id.
+* **eventHubConnectionString**: string {maxLength: 1000, pattern: "^( *)Endpoint=sb://(.*);( *)SharedAccessKeyName=(.*);( *)SharedAccessKey=(.*)$"}: (Personalization Only) The flag to enable statistics of Bing Search.
 * **qnaAzureSearchEndpointId**: string: (QnAMaker Only) The Azure Search endpoint id of QnAMaker.
 * **qnaAzureSearchEndpointKey**: string: (QnAMaker Only) The Azure Search endpoint key of QnAMaker.
 * **qnaRuntimeEndpoint**: string: (QnAMaker Only) The runtime endpoint of QnAMaker.
 * **statisticsEnabled**: bool: (Bing Search Only) The flag to enable statistics of Bing Search.
-* **storageAccountConnectionString**: string: (Personalization Only) The storage account connection string.
-* **superUser**: string: (Metrics Advisor Only) The super user of Metrics Advisor.
-* **websiteName**: string: (Metrics Advisor Only) The website name of Metrics Advisor.
+* **storageAccountConnectionString**: string {maxLength: 1000, pattern: "^(( *)DefaultEndpointsProtocol=(http|https)( *);( *))?AccountName=(.*)AccountKey=(.*)EndpointSuffix=(.*)$"}: (Personalization Only) The storage account connection string.
+* **superUser**: string {maxLength: 500}: (Metrics Advisor Only) The super user of Metrics Advisor.
+* **websiteName**: string {maxLength: 500}: (Metrics Advisor Only) The website name of Metrics Advisor.
 
 ## CognitiveServicesAccountKeys
 ### Properties

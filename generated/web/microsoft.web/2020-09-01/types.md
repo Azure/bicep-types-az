@@ -1814,7 +1814,7 @@ from source app. Otherwise, application settings from source app are retained.
 * **cloneCustomHostNames**: bool: <code>true</code> to clone custom hostnames from source app; otherwise, <code>false</code>.
 * **cloneSourceControl**: bool: <code>true</code> to clone source control from source app; otherwise, <code>false</code>.
 * **configureLoadBalancing**: bool: <code>true</code> to configure load balancing for source and destination app.
-* **correlationId**: string: Correlation ID of cloning operation. This ID ties multiple cloning operations
+* **correlationId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Correlation ID of cloning operation. This ID ties multiple cloning operations
 together to use the same snapshot.
 * **hostingEnvironment**: string: App Service Environment.
 * **overwrite**: bool: <code>true</code> to overwrite destination app; otherwise, <code>false</code>.
@@ -2069,7 +2069,7 @@ This is used during restore with overwrite connection strings options.
 * **retentionInDays**: int: Retention in days.
 Remove files older than X days.
 0 or lower means no retention.
-* **retentionInMb**: int: Maximum size in megabytes that http log files can use.
+* **retentionInMb**: int {minValue: 25, maxValue: 100}: Maximum size in megabytes that http log files can use.
 When reached old log files will be removed to make space for new ones.
 Value can range between 25 and 100.
 
@@ -2754,7 +2754,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 * **isDynamic**: bool: True if this is associated with a dynamically added rule
 * **level**: 'Critical' | 'Information' | 'NonUrgentSuggestion' | 'Warning': Level of impact indicating how critical this rule is.
 * **message**: string: Localized name of the rule (Good for UI).
-* **recommendationId**: string: Recommendation ID of an associated recommendation object tied to the rule, if exists.
+* **recommendationId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Recommendation ID of an associated recommendation object tied to the rule, if exists.
 If such an object doesn't exist, it is set to null.
 * **recommendationName**: string: Unique name of the rule.
 
@@ -2973,7 +2973,7 @@ application used for sign-in.
 * **numberOfWorkers**: int: Number of workers.
 * **phpVersion**: string: Version of PHP.
 * **powerShellVersion**: string: Version of PowerShell.
-* **preWarmedInstanceCount**: int: Number of preWarmed instances.
+* **preWarmedInstanceCount**: int {minValue: 0, maxValue: 10}: Number of preWarmed instances.
 This setting only applies to the Consumption and Elastic Plans
 * **publishingUsername**: string: Publishing user name.
 * **push**: [PushSettings](#pushsettings): Push endpoint settings.
@@ -3065,7 +3065,7 @@ the app is not served on those hostnames.
 * **httpsOnly**: bool: HttpsOnly: configures a web site to accept only https requests. Issues redirect for
 http requests
 * **hyperV**: bool: Hyper-V sandbox.
-* **inProgressOperationId**: string (ReadOnly): Specifies an operation id if this site has a pending operation.
+* **inProgressOperationId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): Specifies an operation id if this site has a pending operation.
 * **isDefaultContainer**: bool (ReadOnly): <code>true</code> if the app is a default container; otherwise, <code>false</code>.
 * **isXenon**: bool: Obsolete: Hyper-V sandbox.
 * **lastModifiedTimeUtc**: string (ReadOnly): Last time the app was modified, in UTC. Read-only.

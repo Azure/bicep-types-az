@@ -74,19 +74,19 @@
 
 ## CloudEndpointChangeEnumerationActivity
 ### Properties
-* **deletesProgressPercent**: int (ReadOnly): Progress percentage for processing deletes. This is done separately from the rest of the enumeration run
+* **deletesProgressPercent**: int {minValue: 0, maxValue: 100} (ReadOnly): Progress percentage for processing deletes. This is done separately from the rest of the enumeration run
 * **lastUpdatedTimestamp**: string (ReadOnly): Last updated timestamp
-* **minutesRemaining**: int (ReadOnly): Estimate of time remaining for the enumeration run
+* **minutesRemaining**: int {minValue: 0} (ReadOnly): Estimate of time remaining for the enumeration run
 * **operationState**: 'EnumerationInProgress' | 'InitialEnumerationInProgress' | string (ReadOnly): Change enumeration operation state
-* **processedDirectoriesCount**: int (ReadOnly): Count of directories processed
-* **processedFilesCount**: int (ReadOnly): Count of files processed
-* **progressPercent**: int (ReadOnly): Progress percentage for change enumeration run, excluding processing of deletes
+* **processedDirectoriesCount**: int {minValue: 0} (ReadOnly): Count of directories processed
+* **processedFilesCount**: int {minValue: 0} (ReadOnly): Count of files processed
+* **progressPercent**: int {minValue: 0, maxValue: 100} (ReadOnly): Progress percentage for change enumeration run, excluding processing of deletes
 * **startedTimestamp**: string (ReadOnly): Timestamp when change enumeration started
 * **statusCode**: int (ReadOnly): When non-zero, indicates an issue that is delaying change enumeration
 * **totalCountsState**: 'Calculating' | 'Final' | string (ReadOnly): Change enumeration total counts state
-* **totalDirectoriesCount**: int (ReadOnly): Total count of directories enumerated
-* **totalFilesCount**: int (ReadOnly): Total count of files enumerated
-* **totalSizeBytes**: int (ReadOnly): Total enumerated size in bytes
+* **totalDirectoriesCount**: int {minValue: 0} (ReadOnly): Total count of directories enumerated
+* **totalFilesCount**: int {minValue: 0} (ReadOnly): Total count of files enumerated
+* **totalSizeBytes**: int {minValue: 0} (ReadOnly): Total enumerated size in bytes
 
 ## CloudEndpointChangeEnumerationStatus
 ### Properties
@@ -110,17 +110,17 @@
 ## CloudEndpointLastChangeEnumerationStatus
 ### Properties
 * **completedTimestamp**: string (ReadOnly): Timestamp when change enumeration completed
-* **namespaceDirectoriesCount**: int (ReadOnly): Count of directories in the namespace
-* **namespaceFilesCount**: int (ReadOnly): Count of files in the namespace
-* **namespaceSizeBytes**: int (ReadOnly): Namespace size in bytes
+* **namespaceDirectoriesCount**: int {minValue: 0} (ReadOnly): Count of directories in the namespace
+* **namespaceFilesCount**: int {minValue: 0} (ReadOnly): Count of files in the namespace
+* **namespaceSizeBytes**: int {minValue: 0} (ReadOnly): Namespace size in bytes
 * **nextRunTimestamp**: string (ReadOnly): Timestamp of when change enumeration is expected to run again
 * **startedTimestamp**: string (ReadOnly): Timestamp when change enumeration started
 
 ## CloudTieringCachePerformance
 ### Properties
-* **cacheHitBytes**: int (ReadOnly): Count of bytes that were served from the local server
-* **cacheHitBytesPercent**: int (ReadOnly): Percentage of total bytes (hit + miss) that were served from the local server
-* **cacheMissBytes**: int (ReadOnly): Count of bytes that were served from the cloud
+* **cacheHitBytes**: int {minValue: 0} (ReadOnly): Count of bytes that were served from the local server
+* **cacheHitBytesPercent**: int {minValue: 0, maxValue: 100} (ReadOnly): Percentage of total bytes (hit + miss) that were served from the local server
+* **cacheMissBytes**: int {minValue: 0} (ReadOnly): Count of bytes that were served from the cloud
 * **lastUpdatedTimestamp**: string (ReadOnly): Last updated timestamp
 
 ## CloudTieringDatePolicyStatus
@@ -132,27 +132,27 @@
 ### Properties
 * **errors**: [FilesNotTieringError](#filesnottieringerror)[] (ReadOnly): Array of tiering errors
 * **lastUpdatedTimestamp**: string (ReadOnly): Last updated timestamp
-* **totalFileCount**: int (ReadOnly): Last cloud tiering result (HResult)
+* **totalFileCount**: int {minValue: 0} (ReadOnly): Last cloud tiering result (HResult)
 
 ## CloudTieringSpaceSavings
 ### Properties
-* **cachedSizeBytes**: int (ReadOnly): Cached content size on the server
+* **cachedSizeBytes**: int {minValue: 0} (ReadOnly): Cached content size on the server
 * **lastUpdatedTimestamp**: string (ReadOnly): Last updated timestamp
-* **spaceSavingsBytes**: int (ReadOnly): Count of bytes saved on the server
-* **spaceSavingsPercent**: int (ReadOnly): Percentage of cached size over total size
-* **totalSizeCloudBytes**: int (ReadOnly): Total size of content in the azure file share
-* **volumeSizeBytes**: int (ReadOnly): Volume size
+* **spaceSavingsBytes**: int {minValue: 0} (ReadOnly): Count of bytes saved on the server
+* **spaceSavingsPercent**: int {minValue: 0, maxValue: 100} (ReadOnly): Percentage of cached size over total size
+* **totalSizeCloudBytes**: int {minValue: 0} (ReadOnly): Total size of content in the azure file share
+* **volumeSizeBytes**: int {minValue: 0} (ReadOnly): Volume size
 
 ## CloudTieringVolumeFreeSpacePolicyStatus
 ### Properties
-* **currentVolumeFreeSpacePercent**: int (ReadOnly): Current volume free space percentage.
-* **effectiveVolumeFreeSpacePolicy**: int (ReadOnly): In the case where multiple server endpoints are present in a volume, an effective free space policy is applied.
+* **currentVolumeFreeSpacePercent**: int {minValue: 0, maxValue: 100} (ReadOnly): Current volume free space percentage.
+* **effectiveVolumeFreeSpacePolicy**: int {minValue: 0, maxValue: 100} (ReadOnly): In the case where multiple server endpoints are present in a volume, an effective free space policy is applied.
 * **lastUpdatedTimestamp**: string (ReadOnly): Last updated timestamp
 
 ## FilesNotTieringError
 ### Properties
 * **errorCode**: int (ReadOnly): Error code (HResult)
-* **fileCount**: int (ReadOnly): Count of files with this error
+* **fileCount**: int {minValue: 0} (ReadOnly): Count of files with this error
 
 ## PrivateEndpoint
 ### Properties
@@ -206,8 +206,8 @@
 
 ## ServerEndpointBackgroundDataDownloadActivity
 ### Properties
-* **downloadedBytes**: int (ReadOnly): Running count of bytes downloaded
-* **percentProgress**: int (ReadOnly): Progress percentage
+* **downloadedBytes**: int {minValue: 0} (ReadOnly): Running count of bytes downloaded
+* **percentProgress**: int {minValue: 0, maxValue: 100} (ReadOnly): Progress percentage
 * **startedTimestamp**: string (ReadOnly): Timestamp when the operation started
 * **timestamp**: string (ReadOnly): Timestamp when properties were updated
 
@@ -244,47 +244,47 @@
 * **serverName**: string (ReadOnly): Server name
 * **serverResourceId**: string: Server Resource Id.
 * **syncStatus**: [ServerEndpointSyncStatus](#serverendpointsyncstatus) (ReadOnly): Server Endpoint sync status
-* **tierFilesOlderThanDays**: int: Tier files older than days.
-* **volumeFreeSpacePercent**: int: Level of free space to be maintained by Cloud Tiering if it is enabled.
+* **tierFilesOlderThanDays**: int {minValue: 0, maxValue: 2147483647}: Tier files older than days.
+* **volumeFreeSpacePercent**: int {minValue: 0, maxValue: 100}: Level of free space to be maintained by Cloud Tiering if it is enabled.
 
 ## ServerEndpointFilesNotSyncingError
 ### Properties
 * **errorCode**: int (ReadOnly): Error code (HResult)
-* **persistentCount**: int (ReadOnly): Count of persistent files not syncing with the specified error code
-* **transientCount**: int (ReadOnly): Count of transient files not syncing with the specified error code
+* **persistentCount**: int {minValue: 0} (ReadOnly): Count of persistent files not syncing with the specified error code
+* **transientCount**: int {minValue: 0} (ReadOnly): Count of transient files not syncing with the specified error code
 
 ## ServerEndpointRecallError
 ### Properties
-* **count**: int (ReadOnly): Count of occurences of the error
+* **count**: int {minValue: 0} (ReadOnly): Count of occurences of the error
 * **errorCode**: int (ReadOnly): Error code (HResult)
 
 ## ServerEndpointRecallStatus
 ### Properties
 * **lastUpdatedTimestamp**: string (ReadOnly): Last updated timestamp
 * **recallErrors**: [ServerEndpointRecallError](#serverendpointrecallerror)[] (ReadOnly): Array of recall errors
-* **totalRecallErrorsCount**: int (ReadOnly): Total count of recall errors.
+* **totalRecallErrorsCount**: int {minValue: 0} (ReadOnly): Total count of recall errors.
 
 ## ServerEndpointSyncActivityStatus
 ### Properties
-* **appliedBytes**: int (ReadOnly): Applied bytes
-* **appliedItemCount**: int (ReadOnly): Applied item count.
-* **perItemErrorCount**: int (ReadOnly): Per item error count
-* **sessionMinutesRemaining**: int (ReadOnly): Session minutes remaining (if available)
+* **appliedBytes**: int {minValue: 0} (ReadOnly): Applied bytes
+* **appliedItemCount**: int {minValue: 0} (ReadOnly): Applied item count.
+* **perItemErrorCount**: int {minValue: 0} (ReadOnly): Per item error count
+* **sessionMinutesRemaining**: int {minValue: 0} (ReadOnly): Session minutes remaining (if available)
 * **syncMode**: 'InitialFullDownload' | 'InitialUpload' | 'NamespaceDownload' | 'Regular' | 'SnapshotUpload' | string (ReadOnly): Sync mode
 * **timestamp**: string (ReadOnly): Timestamp when properties were updated
-* **totalBytes**: int (ReadOnly): Total bytes (if available)
-* **totalItemCount**: int (ReadOnly): Total item count (if available)
+* **totalBytes**: int {minValue: 0} (ReadOnly): Total bytes (if available)
+* **totalItemCount**: int {minValue: 0} (ReadOnly): Total item count (if available)
 
 ## ServerEndpointSyncSessionStatus
 ### Properties
 * **filesNotSyncingErrors**: [ServerEndpointFilesNotSyncingError](#serverendpointfilesnotsyncingerror)[] (ReadOnly): Array of per-item errors coming from the last sync session.
 * **lastSyncMode**: 'InitialFullDownload' | 'InitialUpload' | 'NamespaceDownload' | 'Regular' | 'SnapshotUpload' | string (ReadOnly): Sync mode
-* **lastSyncPerItemErrorCount**: int (ReadOnly): Last sync per item error count.
+* **lastSyncPerItemErrorCount**: int {minValue: 0} (ReadOnly): Last sync per item error count.
 * **lastSyncResult**: int (ReadOnly): Last sync result (HResult)
 * **lastSyncSuccessTimestamp**: string (ReadOnly): Last sync success timestamp
 * **lastSyncTimestamp**: string (ReadOnly): Last sync timestamp
-* **persistentFilesNotSyncingCount**: int (ReadOnly): Count of persistent files not syncing.
-* **transientFilesNotSyncingCount**: int (ReadOnly): Count of transient files not syncing.
+* **persistentFilesNotSyncingCount**: int {minValue: 0} (ReadOnly): Count of persistent files not syncing.
+* **transientFilesNotSyncingCount**: int {minValue: 0} (ReadOnly): Count of transient files not syncing.
 
 ## ServerEndpointSyncStatus
 ### Properties
@@ -296,7 +296,7 @@
 * **lastUpdatedTimestamp**: string (ReadOnly): Last Updated Timestamp
 * **offlineDataTransferStatus**: 'Complete' | 'InProgress' | 'NotRunning' | 'Stopping' | string (ReadOnly): Offline Data Transfer State
 * **syncActivity**: 'Download' | 'Upload' | 'UploadAndDownload' | string (ReadOnly): Sync activity
-* **totalPersistentFilesNotSyncingCount**: int (ReadOnly): Total count of persistent files not syncing (combined upload + download).
+* **totalPersistentFilesNotSyncingCount**: int {minValue: 0} (ReadOnly): Total count of persistent files not syncing (combined upload + download).
 * **uploadActivity**: [ServerEndpointSyncActivityStatus](#serverendpointsyncactivitystatus) (ReadOnly): Upload sync activity
 * **uploadHealth**: 'Error' | 'Healthy' | 'Unavailable' | string (ReadOnly): Upload Health Status.
 * **uploadStatus**: [ServerEndpointSyncSessionStatus](#serverendpointsyncsessionstatus) (ReadOnly): Upload Status

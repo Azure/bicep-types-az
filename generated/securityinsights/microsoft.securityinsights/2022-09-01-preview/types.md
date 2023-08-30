@@ -607,7 +607,7 @@
 * **hostEntityId**: string (ReadOnly): The Host entity id that contains the account in case it is a local account (not domain joined)
 * **isDomainJoined**: bool (ReadOnly): Determines whether this is a domain account.
 * **ntDomain**: string (ReadOnly): The NetBIOS domain name as it appears in the alert format domain/username. Examples: NT AUTHORITY.
-* **objectGuid**: string (ReadOnly): The objectGUID attribute is a single-value attribute that is the unique identifier for the object, assigned by active directory.
+* **objectGuid**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The objectGUID attribute is a single-value attribute that is the unique identifier for the object, assigned by active directory.
 * **puid**: string (ReadOnly): The Azure Active Directory Passport User ID.
 * **sid**: string (ReadOnly): The account security identifier, e.g. S-1-5-18.
 * **upnSuffix**: string (ReadOnly): The user principal name suffix for the account, in some cases it is also the domain name. Examples: contoso.com.
@@ -615,7 +615,7 @@
 ## ActionRequestPropertiesOrActionResponseProperties
 ### Properties
 * **logicAppResourceId**: string (Required): Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.
-* **triggerUri**: string (Required, WriteOnly): Logic App Callback URL for this specific workflow.
+* **triggerUri**: string {sensitive} (Required, WriteOnly): Logic App Callback URL for this specific workflow.
 * **workflowId**: string (ReadOnly): The name of the logic app's workflow.
 
 ## ActivityEntityQueriesProperties
@@ -694,9 +694,9 @@
 * **isDefaultSettings**: bool (Required): Determines whether this anomaly security ml analytics settings is a default settings
 * **lastModifiedUtc**: string (ReadOnly): The last time that this SecurityMLAnalyticsSettings has been modified.
 * **requiredDataConnectors**: [SecurityMLAnalyticsSettingsDataSource](#securitymlanalyticssettingsdatasource)[]: The required data sources for this SecurityMLAnalyticsSettings
-* **settingsDefinitionId**: string: The anomaly settings definition Id
+* **settingsDefinitionId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The anomaly settings definition Id
 * **settingsStatus**: 'Flighting' | 'Production' | string (Required): The anomaly SecurityMLAnalyticsSettings status
-* **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'ImpairProcessControl' | 'InhibitResponseFunction' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | 'Reconnaissance' | 'ResourceDevelopment' | string[]: The tactics of the SecurityMLAnalyticsSettings
+* **tactics**: ('Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'ImpairProcessControl' | 'InhibitResponseFunction' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | 'Reconnaissance' | 'ResourceDevelopment' | string)[]: The tactics of the SecurityMLAnalyticsSettings
 * **techniques**: string[]: The techniques of the SecurityMLAnalyticsSettings
 
 ## ApiPollingParameters
@@ -728,7 +728,7 @@
 
 ## AutomationRuleBooleanCondition
 ### Properties
-* **innerConditions**: [AutomationRuleCondition](#automationrulecondition)[]
+* **innerConditions**: [AutomationRuleCondition](#automationrulecondition)[] {minLength: 2, maxLength: 10}
 * **operator**: 'And' | 'Or' | string
 
 ## AutomationRuleCondition
@@ -764,13 +764,13 @@
 
 ## AutomationRuleProperties
 ### Properties
-* **actions**: [AutomationRuleAction](#automationruleaction)[] (Required): The actions to execute when the automation rule is triggered.
+* **actions**: [AutomationRuleAction](#automationruleaction)[] {maxLength: 20} (Required): The actions to execute when the automation rule is triggered.
 * **createdBy**: [ClientInfo](#clientinfo) (ReadOnly): Information on the client (user or application) that made some action
 * **createdTimeUtc**: string (ReadOnly): The time the automation rule was created.
-* **displayName**: string (Required): The display name of the automation rule.
+* **displayName**: string {maxLength: 500} (Required): The display name of the automation rule.
 * **lastModifiedBy**: [ClientInfo](#clientinfo) (ReadOnly): Information on the client (user or application) that made some action
 * **lastModifiedTimeUtc**: string (ReadOnly): The last time the automation rule was updated.
-* **order**: int (Required): The order of execution of the automation rule.
+* **order**: int {minValue: 1, maxValue: 1000} (Required): The order of execution of the automation rule.
 * **triggeringLogic**: [AutomationRuleTriggeringLogic](#automationruletriggeringlogic) (Required): Describes automation rule triggering logic.
 
 ## AutomationRulePropertyArrayChangedValuesCondition
@@ -782,7 +782,7 @@
 ### Properties
 * **arrayConditionType**: 'AnyItem' | string
 * **arrayType**: 'CustomDetailValues' | 'CustomDetails' | string
-* **itemConditions**: [AutomationRuleCondition](#automationrulecondition)[]
+* **itemConditions**: [AutomationRuleCondition](#automationrulecondition)[] {maxLength: 10}
 
 ## AutomationRulePropertyValuesChangedCondition
 ### Properties
@@ -799,7 +799,7 @@
 
 ## AutomationRuleTriggeringLogic
 ### Properties
-* **conditions**: [AutomationRuleCondition](#automationrulecondition)[]: The conditions to evaluate to determine if the automation rule should be triggered on a given object.
+* **conditions**: [AutomationRuleCondition](#automationrulecondition)[] {maxLength: 50}: The conditions to evaluate to determine if the automation rule should be triggered on a given object.
 * **expirationTimeUtc**: string: Determines when the automation rule should automatically expire and be disabled.
 * **isEnabled**: bool (Required): Determines whether the automation rule is enabled or disabled.
 * **triggersOn**: 'Alerts' | 'Incidents' | string (Required)
@@ -869,7 +869,7 @@
 * **queryEndTime**: string: The end time for the query
 * **queryResult**: string: The query result of the bookmark.
 * **queryStartTime**: string: The start time for the query
-* **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'ImpairProcessControl' | 'InhibitResponseFunction' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | 'Reconnaissance' | 'ResourceDevelopment' | string[]: A list of relevant mitre attacks
+* **tactics**: ('Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'ImpairProcessControl' | 'InhibitResponseFunction' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | 'Reconnaissance' | 'ResourceDevelopment' | string)[]: A list of relevant mitre attacks
 * **techniques**: string[]: A list of relevant mitre techniques
 * **updated**: string: The last time the bookmark was updated
 * **updatedBy**: [UserInfo](#userinfo): Describes a user that updated the bookmark
@@ -878,7 +878,7 @@
 ### Properties
 * **email**: string: The email of the client.
 * **name**: string: The name of the client.
-* **objectId**: string: The object id of the client.
+* **objectId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The object id of the client.
 * **userPrincipalName**: string: The user principal name of the client.
 
 ## CloudApplicationEntityProperties
@@ -1044,7 +1044,7 @@
 
 ## EntityAnalyticsProperties
 ### Properties
-* **entityProviders**: 'ActiveDirectory' | 'AzureActiveDirectory' | string[]: The relevant entity providers that are synced
+* **entityProviders**: ('ActiveDirectory' | 'AzureActiveDirectory' | string)[]: The relevant entity providers that are synced
 
 ## EntityCommonPropertiesAdditionalData
 ### Properties
@@ -1181,7 +1181,7 @@
 * **displayName**: string: The query display name
 * **inputEntityType**: 'Account' | 'AzureResource' | 'CloudApplication' | 'DNS' | 'File' | 'FileHash' | 'Host' | 'HuntingBookmark' | 'IP' | 'IoTDevice' | 'MailCluster' | 'MailMessage' | 'Mailbox' | 'Malware' | 'Nic' | 'Process' | 'RegistryKey' | 'RegistryValue' | 'SecurityAlert' | 'SecurityGroup' | 'SubmissionMail' | 'URL' | string: The type of the query's source entity
 * **inputFields**: string[]: List of the fields of the source entity that are required to run the query
-* **outputEntityTypes**: 'Account' | 'AzureResource' | 'CloudApplication' | 'DNS' | 'File' | 'FileHash' | 'Host' | 'HuntingBookmark' | 'IP' | 'IoTDevice' | 'MailCluster' | 'MailMessage' | 'Mailbox' | 'Malware' | 'Nic' | 'Process' | 'RegistryKey' | 'RegistryValue' | 'SecurityAlert' | 'SecurityGroup' | 'SubmissionMail' | 'URL' | string[]: List of the desired output types to be constructed from the result
+* **outputEntityTypes**: ('Account' | 'AzureResource' | 'CloudApplication' | 'DNS' | 'File' | 'FileHash' | 'Host' | 'HuntingBookmark' | 'IP' | 'IoTDevice' | 'MailCluster' | 'MailMessage' | 'Mailbox' | 'Malware' | 'Nic' | 'Process' | 'RegistryKey' | 'RegistryValue' | 'SecurityAlert' | 'SecurityGroup' | 'SubmissionMail' | 'URL' | string)[]: List of the desired output types to be constructed from the result
 * **queryTemplate**: string: The template query string to be parsed and formatted
 
 ## EyesOnSettingsProperties
@@ -1243,7 +1243,7 @@
 * **scenarioExclusionPatterns**: [FusionScenarioExclusionPattern](#fusionscenarioexclusionpattern)[]: Configuration to exclude scenarios in fusion detection.
 * **severity**: 'High' | 'Informational' | 'Low' | 'Medium' | string (ReadOnly): The severity for alerts created by this alert rule.
 * **sourceSettings**: [FusionSourceSettings](#fusionsourcesettings)[]: Configuration for all supported source signals in fusion detection.
-* **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'ImpairProcessControl' | 'InhibitResponseFunction' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | 'Reconnaissance' | 'ResourceDevelopment' | string[] (ReadOnly): The tactics of the alert rule
+* **tactics**: ('Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'ImpairProcessControl' | 'InhibitResponseFunction' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | 'Reconnaissance' | 'ResourceDevelopment' | string)[] (ReadOnly): The tactics of the alert rule
 * **techniques**: string[] (ReadOnly): The techniques of the alert rule
 
 ## FusionAlertRuleTemplateProperties
@@ -1257,7 +1257,7 @@
 * **severity**: 'High' | 'Informational' | 'Low' | 'Medium' | string: The severity for alerts created by this alert rule.
 * **sourceSettings**: [FusionTemplateSourceSetting](#fusiontemplatesourcesetting)[]: All supported source signal configurations consumed in fusion detection.
 * **status**: 'Available' | 'Installed' | 'NotAvailable' | string: The alert rule template status.
-* **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'ImpairProcessControl' | 'InhibitResponseFunction' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | 'Reconnaissance' | 'ResourceDevelopment' | string[]: The tactics of the alert rule template
+* **tactics**: ('Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'ImpairProcessControl' | 'InhibitResponseFunction' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | 'Reconnaissance' | 'ResourceDevelopment' | string)[]: The tactics of the alert rule template
 * **techniques**: string[]: The techniques of the alert rule
 
 ## FusionScenarioExclusionPattern
@@ -1302,7 +1302,7 @@
 ## FusionTemplateSubTypeSeverityFilter
 ### Properties
 * **isSupported**: bool (Required): Determines whether severity configuration is supported for this source subtype consumed in Fusion detection.
-* **severityFilters**: 'High' | 'Informational' | 'Low' | 'Medium' | string[]: List of all supported severities for this source subtype consumed in Fusion detection.
+* **severityFilters**: ('High' | 'Informational' | 'Low' | 'Medium' | string)[]: List of all supported severities for this source subtype consumed in Fusion detection.
 
 ## GeoLocation
 ### Properties
@@ -1321,9 +1321,9 @@
 ## GroupingConfiguration
 ### Properties
 * **enabled**: bool (Required): Grouping enabled
-* **groupByAlertDetails**: 'DisplayName' | 'Severity' | string[]: A list of alert details to group by (when matchingMethod is Selected)
+* **groupByAlertDetails**: ('DisplayName' | 'Severity' | string)[]: A list of alert details to group by (when matchingMethod is Selected)
 * **groupByCustomDetails**: string[]: A list of custom details keys to group by (when matchingMethod is Selected). Only keys defined in the current alert rule may be used.
-* **groupByEntities**: 'Account' | 'AzureResource' | 'CloudApplication' | 'DNS' | 'File' | 'FileHash' | 'Host' | 'IP' | 'MailCluster' | 'MailMessage' | 'Mailbox' | 'Malware' | 'Process' | 'RegistryKey' | 'RegistryValue' | 'SecurityGroup' | 'SubmissionMail' | 'URL' | string[]: A list of entity types to group by (when matchingMethod is Selected). Only entities defined in the current alert rule may be used.
+* **groupByEntities**: ('Account' | 'AzureResource' | 'CloudApplication' | 'DNS' | 'File' | 'FileHash' | 'Host' | 'IP' | 'MailCluster' | 'MailMessage' | 'Mailbox' | 'Malware' | 'Process' | 'RegistryKey' | 'RegistryValue' | 'SecurityGroup' | 'SubmissionMail' | 'URL' | string)[]: A list of entity types to group by (when matchingMethod is Selected). Only entities defined in the current alert rule may be used.
 * **lookbackDuration**: string (Required): Limit the group to alerts created within the lookback duration (in ISO 8601 duration format)
 * **matchingMethod**: 'AllEntities' | 'AnyAlert' | 'Selected' | string (Required): Grouping matching method. When method is Selected at least one of groupByEntities, groupByAlertDetails, groupByCustomDetails must be provided and not empty.
 * **reopenClosedIncident**: bool (Required): Re-open closed matching incidents
@@ -1365,7 +1365,7 @@
 * **bookmarksCount**: int (ReadOnly): The number of bookmarks in the incident
 * **commentsCount**: int (ReadOnly): The number of comments in the incident
 * **providerIncidentUrl**: string (ReadOnly): The provider incident url to the incident in Microsoft 365 Defender portal
-* **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'ImpairProcessControl' | 'InhibitResponseFunction' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | 'Reconnaissance' | 'ResourceDevelopment' | string[] (ReadOnly): The tactics associated with incident
+* **tactics**: ('Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'ImpairProcessControl' | 'InhibitResponseFunction' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | 'Reconnaissance' | 'ResourceDevelopment' | string)[] (ReadOnly): The tactics associated with incident
 * **techniques**: string[] (ReadOnly): The techniques associated with incident's tactics'
 
 ## IncidentCommentProperties
@@ -1396,7 +1396,7 @@
 ### Properties
 * **assignedTo**: string: The name of the user the incident is assigned to.
 * **email**: string: The email of the user the incident is assigned to.
-* **objectId**: string: The object id of the user the incident is assigned to.
+* **objectId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The object id of the user the incident is assigned to.
 * **ownerType**: 'Group' | 'Unknown' | 'User' | string: The type of the owner the incident is assigned to.
 * **userPrincipalName**: string: The user principal name of the user the incident is assigned to.
 
@@ -1456,7 +1456,7 @@
 * **hostEntityId**: string (ReadOnly): The Host entity id of this device
 * **importance**: 'High' | 'Low' | 'Normal' | 'Unknown' | string: Device importance, determines if the device classified as 'crown jewel'
 * **iotHubEntityId**: string (ReadOnly): The AzureResource entity id of the IoT Hub
-* **iotSecurityAgentId**: string (ReadOnly): The ID of the security agent running on the device
+* **iotSecurityAgentId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The ID of the security agent running on the device
 * **ipAddressEntityId**: string (ReadOnly): The IP entity if of this device
 * **isAuthorized**: bool (ReadOnly): Determines whether the device classified as authorized device
 * **isProgramming**: bool (ReadOnly): Determines whether the device classified as programming device
@@ -1488,7 +1488,7 @@
 ### Properties
 * **additionalData**: [EntityCommonPropertiesAdditionalData](#entitycommonpropertiesadditionaldata) (ReadOnly): A bag of custom fields that should be part of the entity and will be presented to the user.
 * **displayName**: string (ReadOnly): The mailbox's display name
-* **externalDirectoryObjectId**: string (ReadOnly): The AzureAD identifier of mailbox. Similar to AadUserId in account entity but this property is specific to mailbox object on office side
+* **externalDirectoryObjectId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The AzureAD identifier of mailbox. Similar to AadUserId in account entity but this property is specific to mailbox object on office side
 * **friendlyName**: string (ReadOnly): The graph item display name which is a short humanly readable description of the graph item instance. This property is optional and might be system generated.
 * **mailboxPrimaryAddress**: string (ReadOnly): The mailbox's primary address
 * **upn**: string (ReadOnly): The mailbox's UPN
@@ -1528,7 +1528,7 @@
 * **friendlyName**: string (ReadOnly): The graph item display name which is a short humanly readable description of the graph item instance. This property is optional and might be system generated.
 * **internetMessageId**: string (ReadOnly): The internet message id of this mail message
 * **language**: string (ReadOnly): The language of this mail message
-* **networkMessageId**: string (ReadOnly): The network message id of this mail message
+* **networkMessageId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The network message id of this mail message
 * **p1Sender**: string (ReadOnly): The p1 sender's email address
 * **p1SenderDisplayName**: string (ReadOnly): The p1 sender's display name
 * **p1SenderDomain**: string (ReadOnly): The p1 sender's domain
@@ -1632,7 +1632,7 @@
 * **enabled**: bool (Required): Determines whether this alert rule is enabled or disabled.
 * **lastModifiedUtc**: string (ReadOnly): The last time that this alert has been modified.
 * **productFilter**: 'Azure Active Directory Identity Protection' | 'Azure Advanced Threat Protection' | 'Azure Security Center for IoT' | 'Azure Security Center' | 'Microsoft Cloud App Security' | 'Microsoft Defender Advanced Threat Protection' | 'Office 365 Advanced Threat Protection' | string (Required): The alerts' productName on which the cases will be generated
-* **severitiesFilter**: 'High' | 'Informational' | 'Low' | 'Medium' | string[]: the alerts' severities on which the cases will be generated
+* **severitiesFilter**: ('High' | 'Informational' | 'Low' | 'Medium' | string)[]: the alerts' severities on which the cases will be generated
 
 ## MicrosoftSecurityIncidentCreationAlertRuleTemplateProperties
 ### Properties
@@ -1645,7 +1645,7 @@
 * **lastUpdatedDateUTC**: string (ReadOnly): The last time that this alert rule template has been updated.
 * **productFilter**: 'Azure Active Directory Identity Protection' | 'Azure Advanced Threat Protection' | 'Azure Security Center for IoT' | 'Azure Security Center' | 'Microsoft Cloud App Security' | 'Microsoft Defender Advanced Threat Protection' | 'Office 365 Advanced Threat Protection' | string: The alerts' productName on which the cases will be generated
 * **requiredDataConnectors**: [AlertRuleTemplateDataSource](#alertruletemplatedatasource)[]: The required data sources for this template
-* **severitiesFilter**: 'High' | 'Informational' | 'Low' | 'Medium' | string[]: the alerts' severities on which the cases will be generated
+* **severitiesFilter**: ('High' | 'Informational' | 'Low' | 'Medium' | string)[]: the alerts' severities on which the cases will be generated
 * **status**: 'Available' | 'Installed' | 'NotAvailable' | string: The alert rule template status.
 
 ## MLBehaviorAnalyticsAlertRuleProperties
@@ -1656,7 +1656,7 @@
 * **enabled**: bool (Required): Determines whether this alert rule is enabled or disabled.
 * **lastModifiedUtc**: string (ReadOnly): The last time that this alert rule has been modified.
 * **severity**: 'High' | 'Informational' | 'Low' | 'Medium' | string (ReadOnly): The severity for alerts created by this alert rule.
-* **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'ImpairProcessControl' | 'InhibitResponseFunction' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | 'Reconnaissance' | 'ResourceDevelopment' | string[] (ReadOnly): The tactics of the alert rule
+* **tactics**: ('Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'ImpairProcessControl' | 'InhibitResponseFunction' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | 'Reconnaissance' | 'ResourceDevelopment' | string)[] (ReadOnly): The tactics of the alert rule
 * **techniques**: string[] (ReadOnly): The techniques of the alert rule
 
 ## MLBehaviorAnalyticsAlertRuleTemplateProperties
@@ -1669,7 +1669,7 @@
 * **requiredDataConnectors**: [AlertRuleTemplateDataSource](#alertruletemplatedatasource)[]: The required data sources for this template
 * **severity**: 'High' | 'Informational' | 'Low' | 'Medium' | string (Required): The severity for alerts created by this alert rule.
 * **status**: 'Available' | 'Installed' | 'NotAvailable' | string: The alert rule template status.
-* **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'ImpairProcessControl' | 'InhibitResponseFunction' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | 'Reconnaissance' | 'ResourceDevelopment' | string[]: The tactics of the alert rule
+* **tactics**: ('Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'ImpairProcessControl' | 'InhibitResponseFunction' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | 'Reconnaissance' | 'ResourceDevelopment' | string)[]: The tactics of the alert rule
 * **techniques**: string[]: The techniques of the alert rule
 
 ## MstiDataConnectorDataTypes
@@ -1729,7 +1729,7 @@
 * **severity**: 'High' | 'Informational' | 'Low' | 'Medium' | string (Required): The severity for alerts created by this alert rule.
 * **suppressionDuration**: string (Required): The suppression (in ISO 8601 duration format) to wait since last time this alert rule been triggered.
 * **suppressionEnabled**: bool (Required): Determines whether the suppression for this alert rule is enabled or disabled.
-* **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'ImpairProcessControl' | 'InhibitResponseFunction' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | 'Reconnaissance' | 'ResourceDevelopment' | string[]: The tactics of the alert rule
+* **tactics**: ('Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'ImpairProcessControl' | 'InhibitResponseFunction' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | 'Reconnaissance' | 'ResourceDevelopment' | string)[]: The tactics of the alert rule
 * **techniques**: string[]: The techniques of the alert rule
 * **templateVersion**: string: The version of the alert rule template used to create this rule - in format <a.b.c>, where all are numbers, for example 0 <1.0.2>
 
@@ -1753,7 +1753,7 @@
 * **requiredDataConnectors**: [AlertRuleTemplateDataSource](#alertruletemplatedatasource)[]: The required data sources for this template
 * **severity**: 'High' | 'Informational' | 'Low' | 'Medium' | string: The severity for alerts created by this alert rule.
 * **status**: 'Available' | 'Installed' | 'NotAvailable' | string: The alert rule template status.
-* **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'ImpairProcessControl' | 'InhibitResponseFunction' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | 'Reconnaissance' | 'ResourceDevelopment' | string[]: The tactics of the alert rule
+* **tactics**: ('Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'ImpairProcessControl' | 'InhibitResponseFunction' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | 'Reconnaissance' | 'ResourceDevelopment' | string)[]: The tactics of the alert rule
 * **techniques**: string[]: The techniques of the alert rule
 * **version**: string: The version of this template - in format <a.b.c>, where all are numbers. For example <1.0.2>.
 
@@ -1842,7 +1842,7 @@
 ## PlaybookActionProperties
 ### Properties
 * **logicAppResourceId**: string: The resource id of the playbook resource.
-* **tenantId**: string: The tenant id of the playbook resource.
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The tenant id of the playbook resource.
 
 ## ProcessEntityProperties
 ### Properties
@@ -1930,7 +1930,7 @@
 * **severity**: 'High' | 'Informational' | 'Low' | 'Medium' | string: The severity for alerts created by this alert rule.
 * **suppressionDuration**: string (Required): The suppression (in ISO 8601 duration format) to wait since last time this alert rule been triggered.
 * **suppressionEnabled**: bool (Required): Determines whether the suppression for this alert rule is enabled or disabled.
-* **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'ImpairProcessControl' | 'InhibitResponseFunction' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | 'Reconnaissance' | 'ResourceDevelopment' | string[]: The tactics of the alert rule
+* **tactics**: ('Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'ImpairProcessControl' | 'InhibitResponseFunction' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | 'Reconnaissance' | 'ResourceDevelopment' | string)[]: The tactics of the alert rule
 * **techniques**: string[]: The techniques of the alert rule
 * **templateVersion**: string: The version of the alert rule template used to create this rule - in format <a.b.c>, where all are numbers, for example 0 <1.0.2>
 * **triggerOperator**: 'Equal' | 'GreaterThan' | 'LessThan' | 'NotEqual': The operation against the threshold that triggers alert rule.
@@ -1953,7 +1953,7 @@
 * **requiredDataConnectors**: [AlertRuleTemplateDataSource](#alertruletemplatedatasource)[]: The required data connectors for this template
 * **severity**: 'High' | 'Informational' | 'Low' | 'Medium' | string: The severity for alerts created by this alert rule.
 * **status**: 'Available' | 'Installed' | 'NotAvailable' | string: The alert rule template status.
-* **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'ImpairProcessControl' | 'InhibitResponseFunction' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | 'Reconnaissance' | 'ResourceDevelopment' | string[]: The tactics of the alert rule template
+* **tactics**: ('Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'ImpairProcessControl' | 'InhibitResponseFunction' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | 'Reconnaissance' | 'ResourceDevelopment' | string)[]: The tactics of the alert rule template
 * **techniques**: string[]: The techniques of the alert rule
 * **triggerOperator**: 'Equal' | 'GreaterThan' | 'LessThan' | 'NotEqual': The operation against the threshold that triggers alert rule.
 * **triggerThreshold**: int: The threshold triggers this alert rule.
@@ -1990,7 +1990,7 @@
 * **startTimeUtc**: string (ReadOnly): The impact start time of the alert (the time of the first event contributing to the alert).
 * **status**: 'Dismissed' | 'InProgress' | 'New' | 'Resolved' | 'Unknown' | string (ReadOnly): The lifecycle status of the alert.
 * **systemAlertId**: string (ReadOnly): Holds the product identifier of the alert for the product.
-* **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'ImpairProcessControl' | 'InhibitResponseFunction' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | 'Reconnaissance' | 'ResourceDevelopment' | string[] (ReadOnly): The tactics of the alert
+* **tactics**: ('Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'ImpairProcessControl' | 'InhibitResponseFunction' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | 'Reconnaissance' | 'ResourceDevelopment' | string)[] (ReadOnly): The tactics of the alert
 * **timeGenerated**: string (ReadOnly): The time the alert was generated.
 * **vendorName**: string (ReadOnly): The name of the vendor that raise the alert.
 
@@ -2004,7 +2004,7 @@
 * **additionalData**: [EntityCommonPropertiesAdditionalData](#entitycommonpropertiesadditionaldata) (ReadOnly): A bag of custom fields that should be part of the entity and will be presented to the user.
 * **distinguishedName**: string (ReadOnly): The group distinguished name
 * **friendlyName**: string (ReadOnly): The graph item display name which is a short humanly readable description of the graph item instance. This property is optional and might be system generated.
-* **objectGuid**: string (ReadOnly): A single-value attribute that is the unique identifier for the object, assigned by active directory.
+* **objectGuid**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): A single-value attribute that is the unique identifier for the object, assigned by active directory.
 * **sid**: string (ReadOnly): The SID attribute is a single-value attribute that specifies the security identifier (SID) of the group
 
 ## SecurityMLAnalyticsSettingsDataSource
@@ -2018,7 +2018,7 @@
 
 ## SourceControlProperties
 ### Properties
-* **contentTypes**: 'AnalyticRule' | 'Workbook' | string[] (Required): Array of source control content types.
+* **contentTypes**: ('AnalyticRule' | 'Workbook' | string)[] (Required): Array of source control content types.
 * **description**: string: A description of the source control
 * **displayName**: string (Required): The display name of the source control
 * **id**: string: The id (a Guid) of the source control
@@ -2032,14 +2032,14 @@
 ### Properties
 * **additionalData**: [EntityCommonPropertiesAdditionalData](#entitycommonpropertiesadditionaldata) (ReadOnly): A bag of custom fields that should be part of the entity and will be presented to the user.
 * **friendlyName**: string (ReadOnly): The graph item display name which is a short humanly readable description of the graph item instance. This property is optional and might be system generated.
-* **networkMessageId**: string (ReadOnly): The network message id of email to which submission belongs
+* **networkMessageId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The network message id of email to which submission belongs
 * **recipient**: string (ReadOnly): The recipient of the mail
 * **reportType**: string (ReadOnly): The submission type for the given instance. This maps to Junk, Phish, Malware or NotJunk.
 * **sender**: string (ReadOnly): The sender of the mail
 * **senderIp**: string (ReadOnly): The sender's IP
 * **subject**: string (ReadOnly): The subject of submission mail
 * **submissionDate**: string (ReadOnly): The submission date
-* **submissionId**: string (ReadOnly): The submission id
+* **submissionId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The submission id
 * **submitter**: string (ReadOnly): The submitter
 * **timestamp**: string (ReadOnly): The Time stamp when the message is received (Mail)
 
@@ -2077,7 +2077,7 @@
 * **enabled**: bool (Required): Determines whether this alert rule is enabled or disabled.
 * **lastModifiedUtc**: string (ReadOnly): The last time that this alert has been modified.
 * **severity**: 'High' | 'Informational' | 'Low' | 'Medium' | string (ReadOnly): The severity for alerts created by this alert rule.
-* **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'ImpairProcessControl' | 'InhibitResponseFunction' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | 'Reconnaissance' | 'ResourceDevelopment' | string[] (ReadOnly): The tactics of the alert rule
+* **tactics**: ('Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'ImpairProcessControl' | 'InhibitResponseFunction' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | 'Reconnaissance' | 'ResourceDevelopment' | string)[] (ReadOnly): The tactics of the alert rule
 * **techniques**: string[] (ReadOnly): The techniques of the alert rule
 
 ## ThreatIntelligenceAlertRuleTemplateProperties
@@ -2090,7 +2090,7 @@
 * **requiredDataConnectors**: [AlertRuleTemplateDataSource](#alertruletemplatedatasource)[]: The required data sources for this template
 * **severity**: 'High' | 'Informational' | 'Low' | 'Medium' | string (Required): The severity for alerts created by this alert rule.
 * **status**: 'Available' | 'Installed' | 'NotAvailable' | string: The alert rule template status.
-* **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'ImpairProcessControl' | 'InhibitResponseFunction' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | 'Reconnaissance' | 'ResourceDevelopment' | string[]: The tactics of the alert rule
+* **tactics**: ('Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'ImpairProcessControl' | 'InhibitResponseFunction' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | 'Reconnaissance' | 'ResourceDevelopment' | string)[]: The tactics of the alert rule
 * **techniques**: string[]: The techniques of the alert rule
 
 ## ThreatIntelligenceExternalReference
@@ -2202,7 +2202,7 @@
 
 ## UebaProperties
 ### Properties
-* **dataSources**: 'AuditLogs' | 'AzureActivity' | 'SecurityEvent' | 'SigninLogs' | string[]: The relevant data sources that enriched by ueba
+* **dataSources**: ('AuditLogs' | 'AzureActivity' | 'SecurityEvent' | 'SigninLogs' | string)[]: The relevant data sources that enriched by ueba
 
 ## UrlEntityProperties
 ### Properties
@@ -2214,7 +2214,7 @@
 ### Properties
 * **email**: string (ReadOnly): The email of the user.
 * **name**: string (ReadOnly): The name of the user.
-* **objectId**: string: The object id of the user.
+* **objectId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The object id of the user.
 
 ## ValidationError
 ### Properties

@@ -8,7 +8,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [Identity](#identity): The identity of the cluster, if configured.
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^.*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ClusterProperties](#clusterproperties): The cluster properties.
 * **sku**: [AzureSku](#azuresku) (Required): The SKU of the cluster.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
@@ -22,7 +22,7 @@
 * **apiVersion**: '2023-05-02' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^.*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [AttachedDatabaseConfigurationProperties](#attacheddatabaseconfigurationproperties): The properties of the attached database configuration.
 * **type**: 'Microsoft.Kusto/clusters/attachedDatabaseConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -34,7 +34,7 @@
 * **apiVersion**: '2023-05-02' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^.*$"} (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.Kusto/clusters/databases' (ReadOnly, DeployTimeConstant): The resource type
 
 ### ReadOnlyFollowingDatabase
@@ -56,7 +56,7 @@
 * **apiVersion**: '2023-05-02' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^.*$"} (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.Kusto/clusters/databases/dataConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ### CosmosDbDataConnection
@@ -85,7 +85,7 @@
 ### Properties
 * **apiVersion**: '2023-05-02' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^.*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DatabasePrincipalProperties](#databaseprincipalproperties): The database principal.
 * **type**: 'Microsoft.Kusto/clusters/databases/principalAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -94,7 +94,7 @@
 ### Properties
 * **apiVersion**: '2023-05-02' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^.*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ScriptProperties](#scriptproperties): The database script.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Kusto/clusters/databases/scripts' (ReadOnly, DeployTimeConstant): The resource type
@@ -104,7 +104,7 @@
 ### Properties
 * **apiVersion**: '2023-05-02' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^.*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedPrivateEndpointProperties](#managedprivateendpointproperties): A managed private endpoint.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Kusto/clusters/managedPrivateEndpoints' (ReadOnly, DeployTimeConstant): The resource type
@@ -114,7 +114,7 @@
 ### Properties
 * **apiVersion**: '2023-05-02' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^.*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ClusterPrincipalProperties](#clusterprincipalproperties): The cluster principal.
 * **type**: 'Microsoft.Kusto/clusters/principalAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -123,7 +123,7 @@
 ### Properties
 * **apiVersion**: '2023-05-02' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^.*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Kusto/clusters/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
@@ -133,7 +133,7 @@
 ### Properties
 * **apiVersion**: '2023-05-02' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^.*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateLinkResourceProperties](#privatelinkresourceproperties) (ReadOnly): Resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Kusto/clusters/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
@@ -210,7 +210,7 @@
 * **stateReason**: string (ReadOnly): The reason for the cluster's current state.
 * **trustedExternalTenants**: [TrustedExternalTenant](#trustedexternaltenant)[]: The cluster's external tenants.
 * **uri**: string (ReadOnly): The cluster URI.
-* **virtualClusterGraduationProperties**: string (WriteOnly): Virtual Cluster graduation properties
+* **virtualClusterGraduationProperties**: string {sensitive} (WriteOnly): Virtual Cluster graduation properties
 * **virtualNetworkConfiguration**: [VirtualNetworkConfiguration](#virtualnetworkconfiguration): Virtual network definition.
 
 ## ComponentsSgqdofSchemasIdentityPropertiesUserassignedidentitiesAdditionalproperties
@@ -429,9 +429,9 @@
 * **continueOnErrors**: bool: Flag that indicates whether to continue if one of the command fails.
 * **forceUpdateTag**: string: A unique string. If changed the script will be applied again.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Running' | 'Succeeded' | string (ReadOnly): The provisioned state of the resource.
-* **scriptContent**: string (WriteOnly): The script content. This property should be used when the script is provide inline and not through file in a SA. Must not be used together with scriptUrl and scriptUrlSasToken properties.
+* **scriptContent**: string {sensitive} (WriteOnly): The script content. This property should be used when the script is provide inline and not through file in a SA. Must not be used together with scriptUrl and scriptUrlSasToken properties.
 * **scriptUrl**: string: The url to the KQL script blob file. Must not be used together with scriptContent property
-* **scriptUrlSasToken**: string (WriteOnly): The SaS token that provide read access to the file which contain the script. Must be provided when using scriptUrl property.
+* **scriptUrlSasToken**: string {sensitive} (WriteOnly): The SaS token that provide read access to the file which contain the script. Must be provided when using scriptUrl property.
 
 ## SuspensionDetails
 ### Properties

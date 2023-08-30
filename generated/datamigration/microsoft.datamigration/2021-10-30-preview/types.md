@@ -95,8 +95,8 @@
 
 ## AuthenticationKeys
 ### Properties
-* **authKey1**: string: The first authentication key.
-* **authKey2**: string: The second authentication key.
+* **authKey1**: string {sensitive}: The first authentication key.
+* **authKey2**: string {sensitive}: The second authentication key.
 
 ## AzureActiveDirectoryApp
 ### Properties
@@ -106,7 +106,7 @@
 
 ## AzureBlob
 ### Properties
-* **accountKey**: string: Storage Account Key.
+* **accountKey**: string {sensitive}: Storage Account Key.
 * **blobContainerName**: string: Blob container name where backups are stored.
 * **storageAccountResourceId**: string: Resource Id of the storage account where backups are stored.
 
@@ -2193,7 +2193,7 @@
 ## SqlBackupSetInfo
 ### Properties
 * **backupFinishDate**: string (ReadOnly): Backup end time.
-* **backupSetId**: string (ReadOnly): Backup set id.
+* **backupSetId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): Backup set id.
 * **backupStartDate**: string (ReadOnly): Backup start date.
 * **backupType**: string (ReadOnly): Backup type.
 * **familyCount**: int (ReadOnly): Media family count
@@ -2224,13 +2224,13 @@
 * **authentication**: string: Authentication type.
 * **dataSource**: string: Data source.
 * **encryptConnection**: bool: Whether to encrypt connection or not.
-* **password**: string: Password to connect to source SQL.
+* **password**: string {sensitive}: Password to connect to source SQL.
 * **trustServerCertificate**: bool: Whether to trust server certificate or not.
 * **userName**: string: User name to connect to source SQL.
 
 ## SqlFileShare
 ### Properties
-* **password**: string (WriteOnly): Password for username to access file share location.
+* **password**: string {sensitive} (WriteOnly): Password for username to access file share location.
 * **path**: string: Location as SMB share or local drive where backups are placed.
 * **username**: string: Username to access the file share location for backups.
 

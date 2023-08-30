@@ -6,7 +6,7 @@
 * **apiVersion**: '2021-05-13-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The Azure location where the Confidential Ledger is running.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[a-zA-Z0-9]"} (Required, DeployTimeConstant): The resource name
 * **properties**: [LedgerProperties](#ledgerproperties): Properties of Confidential Ledger Resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource
 * **tags**: [Tags](#tags): Additional tags for Confidential Ledger

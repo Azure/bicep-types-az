@@ -274,7 +274,7 @@
 * **provisioningState**: 'Cancelled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the resource.
 * **targetOSList**: [TargetOSInfo](#targetosinfo)[] (Required): Specifies the target OSs of specific OS Update types.
 * **tests**: [Test](#test)[] (Required): The detailed test information.
-* **testTypes**: 'FunctionalTest' | 'OutOfBoxTest' | string[] (ReadOnly): OOB, functional or both. Mapped to the data in 'tests' property.
+* **testTypes**: ('FunctionalTest' | 'OutOfBoxTest' | string)[] (ReadOnly): OOB, functional or both. Mapped to the data in 'tests' property.
 * **validationResults**: [PackageValidationResult](#packagevalidationresult)[] (ReadOnly): The validation results. There's validation on package when it's created or updated.
 * **version**: string (Required): Application version
 

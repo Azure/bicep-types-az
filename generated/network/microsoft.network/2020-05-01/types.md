@@ -51,7 +51,7 @@
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {maxLength: 128} (Required, DeployTimeConstant): The resource name
 * **properties**: [WebApplicationFirewallPolicyPropertiesFormat](#webapplicationfirewallpolicypropertiesformat): Properties of the web application firewall policy.
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies' (ReadOnly, DeployTimeConstant): The resource type
@@ -75,7 +75,7 @@
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {minLength: 1, maxLength: 56} (Required, DeployTimeConstant): The resource name
 * **properties**: [AzureFirewallPropertiesFormat](#azurefirewallpropertiesformat): Properties of the azure firewall.
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/azureFirewalls' (ReadOnly, DeployTimeConstant): The resource type
@@ -386,7 +386,7 @@
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1} (Required, DeployTimeConstant): The resource name
 * **properties**: [LocalNetworkGatewayPropertiesFormat](#localnetworkgatewaypropertiesformat) (Required): Properties of the local network gateway.
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/localNetworkGateways' (ReadOnly, DeployTimeConstant): The resource type
@@ -980,13 +980,13 @@
 
 ## ApplicationGatewayAutoscaleConfiguration
 ### Properties
-* **maxCapacity**: int: Upper bound on number of Application Gateway capacity.
-* **minCapacity**: int (Required): Lower bound on number of Application Gateway capacity.
+* **maxCapacity**: int {minValue: 2}: Upper bound on number of Application Gateway capacity.
+* **minCapacity**: int {minValue: 0} (Required): Lower bound on number of Application Gateway capacity.
 
 ## ApplicationGatewayAvailableSslOptionsPropertiesFormat
 ### Properties
-* **availableCipherSuites**: 'TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA' | 'TLS_DHE_DSS_WITH_AES_128_CBC_SHA' | 'TLS_DHE_DSS_WITH_AES_128_CBC_SHA256' | 'TLS_DHE_DSS_WITH_AES_256_CBC_SHA' | 'TLS_DHE_DSS_WITH_AES_256_CBC_SHA256' | 'TLS_DHE_RSA_WITH_AES_128_CBC_SHA' | 'TLS_DHE_RSA_WITH_AES_128_GCM_SHA256' | 'TLS_DHE_RSA_WITH_AES_256_CBC_SHA' | 'TLS_DHE_RSA_WITH_AES_256_GCM_SHA384' | 'TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA' | 'TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256' | 'TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256' | 'TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA' | 'TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384' | 'TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384' | 'TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA' | 'TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256' | 'TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256' | 'TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA' | 'TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384' | 'TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384' | 'TLS_RSA_WITH_3DES_EDE_CBC_SHA' | 'TLS_RSA_WITH_AES_128_CBC_SHA' | 'TLS_RSA_WITH_AES_128_CBC_SHA256' | 'TLS_RSA_WITH_AES_128_GCM_SHA256' | 'TLS_RSA_WITH_AES_256_CBC_SHA' | 'TLS_RSA_WITH_AES_256_CBC_SHA256' | 'TLS_RSA_WITH_AES_256_GCM_SHA384' | string[]: List of available Ssl cipher suites.
-* **availableProtocols**: 'TLSv1_0' | 'TLSv1_1' | 'TLSv1_2' | string[]: List of available Ssl protocols.
+* **availableCipherSuites**: ('TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA' | 'TLS_DHE_DSS_WITH_AES_128_CBC_SHA' | 'TLS_DHE_DSS_WITH_AES_128_CBC_SHA256' | 'TLS_DHE_DSS_WITH_AES_256_CBC_SHA' | 'TLS_DHE_DSS_WITH_AES_256_CBC_SHA256' | 'TLS_DHE_RSA_WITH_AES_128_CBC_SHA' | 'TLS_DHE_RSA_WITH_AES_128_GCM_SHA256' | 'TLS_DHE_RSA_WITH_AES_256_CBC_SHA' | 'TLS_DHE_RSA_WITH_AES_256_GCM_SHA384' | 'TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA' | 'TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256' | 'TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256' | 'TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA' | 'TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384' | 'TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384' | 'TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA' | 'TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256' | 'TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256' | 'TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA' | 'TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384' | 'TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384' | 'TLS_RSA_WITH_3DES_EDE_CBC_SHA' | 'TLS_RSA_WITH_AES_128_CBC_SHA' | 'TLS_RSA_WITH_AES_128_CBC_SHA256' | 'TLS_RSA_WITH_AES_128_GCM_SHA256' | 'TLS_RSA_WITH_AES_256_CBC_SHA' | 'TLS_RSA_WITH_AES_256_CBC_SHA256' | 'TLS_RSA_WITH_AES_256_GCM_SHA384' | string)[]: List of available Ssl cipher suites.
+* **availableProtocols**: ('TLSv1_0' | 'TLSv1_1' | 'TLSv1_2' | string)[]: List of available Ssl protocols.
 * **defaultPolicy**: 'AppGwSslPolicy20150501' | 'AppGwSslPolicy20170401' | 'AppGwSslPolicy20170401S' | string: Name of the Ssl predefined policy applied by default to application gateway.
 * **predefinedPolicies**: [SubResource](#subresource)[]: List of available Ssl predefined policy.
 
@@ -1036,7 +1036,7 @@
 
 ## ApplicationGatewayConnectionDraining
 ### Properties
-* **drainTimeoutInSec**: int (Required): The number of seconds connection draining is active. Acceptable values are from 1 second to 3600 seconds.
+* **drainTimeoutInSec**: int {minValue: 1, maxValue: 3600} (Required): The number of seconds connection draining is active. Acceptable values are from 1 second to 3600 seconds.
 * **enabled**: bool (Required): Whether connection draining is enabled or not.
 
 ## ApplicationGatewayCustomError
@@ -1207,7 +1207,7 @@
 * **minServers**: int: Minimum number of servers that are always marked healthy. Default value is 0.
 * **path**: string: Relative path of probe. Valid path starts from '/'. Probe is sent to <Protocol>://<host>:<port><path>.
 * **pickHostNameFromBackendHttpSettings**: bool: Whether the host header should be picked from the backend http settings. Default value is false.
-* **port**: int: Custom port which will be used for probing the backend servers. The valid value ranges from 1 to 65535. In case not set, port from http settings will be used. This property is valid for Standard_v2 and WAF_v2 only.
+* **port**: int {minValue: 1, maxValue: 65535}: Custom port which will be used for probing the backend servers. The valid value ranges from 1 to 65535. In case not set, port from http settings will be used. This property is valid for Standard_v2 and WAF_v2 only.
 * **protocol**: 'Http' | 'Https' | string: The protocol used for the probe.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the probe resource.
 * **timeout**: int: The probe timeout in seconds. Probe marked as failed if valid response is not received with this timeout period. Acceptable values are from 1 second to 86400 seconds.
@@ -1276,7 +1276,7 @@
 * **backendAddressPool**: [SubResource](#subresource): Backend address pool resource of the application gateway.
 * **backendHttpSettings**: [SubResource](#subresource): Backend http settings resource of the application gateway.
 * **httpListener**: [SubResource](#subresource): Http listener resource of the application gateway.
-* **priority**: int: Priority of the request routing rule.
+* **priority**: int {minValue: 1, maxValue: 20000}: Priority of the request routing rule.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the request routing rule resource.
 * **redirectConfiguration**: [SubResource](#subresource): Redirect configuration resource of the application gateway.
 * **rewriteRuleSet**: [SubResource](#subresource): Rewrite Rule Set resource in Basic rule of the application gateway.
@@ -1339,15 +1339,15 @@
 
 ## ApplicationGatewaySslPolicy
 ### Properties
-* **cipherSuites**: 'TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA' | 'TLS_DHE_DSS_WITH_AES_128_CBC_SHA' | 'TLS_DHE_DSS_WITH_AES_128_CBC_SHA256' | 'TLS_DHE_DSS_WITH_AES_256_CBC_SHA' | 'TLS_DHE_DSS_WITH_AES_256_CBC_SHA256' | 'TLS_DHE_RSA_WITH_AES_128_CBC_SHA' | 'TLS_DHE_RSA_WITH_AES_128_GCM_SHA256' | 'TLS_DHE_RSA_WITH_AES_256_CBC_SHA' | 'TLS_DHE_RSA_WITH_AES_256_GCM_SHA384' | 'TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA' | 'TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256' | 'TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256' | 'TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA' | 'TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384' | 'TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384' | 'TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA' | 'TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256' | 'TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256' | 'TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA' | 'TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384' | 'TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384' | 'TLS_RSA_WITH_3DES_EDE_CBC_SHA' | 'TLS_RSA_WITH_AES_128_CBC_SHA' | 'TLS_RSA_WITH_AES_128_CBC_SHA256' | 'TLS_RSA_WITH_AES_128_GCM_SHA256' | 'TLS_RSA_WITH_AES_256_CBC_SHA' | 'TLS_RSA_WITH_AES_256_CBC_SHA256' | 'TLS_RSA_WITH_AES_256_GCM_SHA384' | string[]: Ssl cipher suites to be enabled in the specified order to application gateway.
-* **disabledSslProtocols**: 'TLSv1_0' | 'TLSv1_1' | 'TLSv1_2' | string[]: Ssl protocols to be disabled on application gateway.
+* **cipherSuites**: ('TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA' | 'TLS_DHE_DSS_WITH_AES_128_CBC_SHA' | 'TLS_DHE_DSS_WITH_AES_128_CBC_SHA256' | 'TLS_DHE_DSS_WITH_AES_256_CBC_SHA' | 'TLS_DHE_DSS_WITH_AES_256_CBC_SHA256' | 'TLS_DHE_RSA_WITH_AES_128_CBC_SHA' | 'TLS_DHE_RSA_WITH_AES_128_GCM_SHA256' | 'TLS_DHE_RSA_WITH_AES_256_CBC_SHA' | 'TLS_DHE_RSA_WITH_AES_256_GCM_SHA384' | 'TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA' | 'TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256' | 'TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256' | 'TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA' | 'TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384' | 'TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384' | 'TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA' | 'TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256' | 'TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256' | 'TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA' | 'TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384' | 'TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384' | 'TLS_RSA_WITH_3DES_EDE_CBC_SHA' | 'TLS_RSA_WITH_AES_128_CBC_SHA' | 'TLS_RSA_WITH_AES_128_CBC_SHA256' | 'TLS_RSA_WITH_AES_128_GCM_SHA256' | 'TLS_RSA_WITH_AES_256_CBC_SHA' | 'TLS_RSA_WITH_AES_256_CBC_SHA256' | 'TLS_RSA_WITH_AES_256_GCM_SHA384' | string)[]: Ssl cipher suites to be enabled in the specified order to application gateway.
+* **disabledSslProtocols**: ('TLSv1_0' | 'TLSv1_1' | 'TLSv1_2' | string)[]: Ssl protocols to be disabled on application gateway.
 * **minProtocolVersion**: 'TLSv1_0' | 'TLSv1_1' | 'TLSv1_2' | string: Minimum version of Ssl protocol to be supported on application gateway.
 * **policyName**: 'AppGwSslPolicy20150501' | 'AppGwSslPolicy20170401' | 'AppGwSslPolicy20170401S' | string: Name of Ssl predefined policy.
 * **policyType**: 'Custom' | 'Predefined' | string: Type of Ssl Policy.
 
 ## ApplicationGatewaySslPredefinedPolicyPropertiesFormat
 ### Properties
-* **cipherSuites**: 'TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA' | 'TLS_DHE_DSS_WITH_AES_128_CBC_SHA' | 'TLS_DHE_DSS_WITH_AES_128_CBC_SHA256' | 'TLS_DHE_DSS_WITH_AES_256_CBC_SHA' | 'TLS_DHE_DSS_WITH_AES_256_CBC_SHA256' | 'TLS_DHE_RSA_WITH_AES_128_CBC_SHA' | 'TLS_DHE_RSA_WITH_AES_128_GCM_SHA256' | 'TLS_DHE_RSA_WITH_AES_256_CBC_SHA' | 'TLS_DHE_RSA_WITH_AES_256_GCM_SHA384' | 'TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA' | 'TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256' | 'TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256' | 'TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA' | 'TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384' | 'TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384' | 'TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA' | 'TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256' | 'TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256' | 'TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA' | 'TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384' | 'TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384' | 'TLS_RSA_WITH_3DES_EDE_CBC_SHA' | 'TLS_RSA_WITH_AES_128_CBC_SHA' | 'TLS_RSA_WITH_AES_128_CBC_SHA256' | 'TLS_RSA_WITH_AES_128_GCM_SHA256' | 'TLS_RSA_WITH_AES_256_CBC_SHA' | 'TLS_RSA_WITH_AES_256_CBC_SHA256' | 'TLS_RSA_WITH_AES_256_GCM_SHA384' | string[]: Ssl cipher suites to be enabled in the specified order for application gateway.
+* **cipherSuites**: ('TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA' | 'TLS_DHE_DSS_WITH_AES_128_CBC_SHA' | 'TLS_DHE_DSS_WITH_AES_128_CBC_SHA256' | 'TLS_DHE_DSS_WITH_AES_256_CBC_SHA' | 'TLS_DHE_DSS_WITH_AES_256_CBC_SHA256' | 'TLS_DHE_RSA_WITH_AES_128_CBC_SHA' | 'TLS_DHE_RSA_WITH_AES_128_GCM_SHA256' | 'TLS_DHE_RSA_WITH_AES_256_CBC_SHA' | 'TLS_DHE_RSA_WITH_AES_256_GCM_SHA384' | 'TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA' | 'TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256' | 'TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256' | 'TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA' | 'TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384' | 'TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384' | 'TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA' | 'TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256' | 'TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256' | 'TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA' | 'TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384' | 'TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384' | 'TLS_RSA_WITH_3DES_EDE_CBC_SHA' | 'TLS_RSA_WITH_AES_128_CBC_SHA' | 'TLS_RSA_WITH_AES_128_CBC_SHA256' | 'TLS_RSA_WITH_AES_128_GCM_SHA256' | 'TLS_RSA_WITH_AES_256_CBC_SHA' | 'TLS_RSA_WITH_AES_256_CBC_SHA256' | 'TLS_RSA_WITH_AES_256_GCM_SHA384' | string)[]: Ssl cipher suites to be enabled in the specified order for application gateway.
 * **minProtocolVersion**: 'TLSv1_0' | 'TLSv1_1' | 'TLSv1_2' | string: Minimum version of Ssl protocol to be supported on application gateway.
 
 ## ApplicationGatewayTrustedRootCertificate
@@ -1392,10 +1392,10 @@
 * **disabledRuleGroups**: [ApplicationGatewayFirewallDisabledRuleGroup](#applicationgatewayfirewalldisabledrulegroup)[]: The disabled rule groups.
 * **enabled**: bool (Required): Whether the web application firewall is enabled or not.
 * **exclusions**: [ApplicationGatewayFirewallExclusion](#applicationgatewayfirewallexclusion)[]: The exclusion list.
-* **fileUploadLimitInMb**: int: Maximum file upload size in Mb for WAF.
+* **fileUploadLimitInMb**: int {minValue: 0}: Maximum file upload size in Mb for WAF.
 * **firewallMode**: 'Detection' | 'Prevention' | string (Required): Web application firewall mode.
-* **maxRequestBodySize**: int: Maximum request body size for WAF.
-* **maxRequestBodySizeInKb**: int: Maximum request body size in Kb for WAF.
+* **maxRequestBodySize**: int {minValue: 8, maxValue: 128}: Maximum request body size for WAF.
+* **maxRequestBodySizeInKb**: int {minValue: 8, maxValue: 128}: Maximum request body size in Kb for WAF.
 * **requestBodyCheck**: bool: Whether allow WAF to check request Body.
 * **ruleSetType**: string (Required): The type of the web application firewall rule set. Possible values are: 'OWASP'.
 * **ruleSetVersion**: string (Required): The version of the rule set type.
@@ -1446,13 +1446,13 @@
 ## AzureFirewallApplicationRuleCollectionPropertiesFormat
 ### Properties
 * **action**: [AzureFirewallRCAction](#azurefirewallrcaction): The action type of a rule collection.
-* **priority**: int: Priority of the application rule collection resource.
+* **priority**: int {minValue: 100, maxValue: 65000}: Priority of the application rule collection resource.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the application rule collection resource.
 * **rules**: [AzureFirewallApplicationRule](#azurefirewallapplicationrule)[]: Collection of rules used by a application rule collection.
 
 ## AzureFirewallApplicationRuleProtocol
 ### Properties
-* **port**: int: Port number for the protocol, cannot be greater than 64000. This field is optional.
+* **port**: int {minValue: 0, maxValue: 64000}: Port number for the protocol, cannot be greater than 64000. This field is optional.
 * **protocolType**: 'Http' | 'Https' | 'Mssql' | string: Protocol type.
 
 ## AzureFirewallIPConfiguration
@@ -1485,7 +1485,7 @@
 * **destinationAddresses**: string[]: List of destination IP addresses for this rule. Supports IP ranges, prefixes, and service tags.
 * **destinationPorts**: string[]: List of destination ports.
 * **name**: string: Name of the NAT rule.
-* **protocols**: 'Any' | 'ICMP' | 'TCP' | 'UDP' | string[]: Array of AzureFirewallNetworkRuleProtocols applicable to this NAT rule.
+* **protocols**: ('Any' | 'ICMP' | 'TCP' | 'UDP' | string)[]: Array of AzureFirewallNetworkRuleProtocols applicable to this NAT rule.
 * **sourceAddresses**: string[]: List of source IP addresses for this rule.
 * **sourceIpGroups**: string[]: List of source IpGroups for this rule.
 * **translatedAddress**: string: The translated address for this NAT rule.
@@ -1502,7 +1502,7 @@
 ## AzureFirewallNatRuleCollectionProperties
 ### Properties
 * **action**: [AzureFirewallNatRCAction](#azurefirewallnatrcaction): The action type of a NAT rule collection.
-* **priority**: int: Priority of the NAT rule collection resource.
+* **priority**: int {minValue: 100, maxValue: 65000}: Priority of the NAT rule collection resource.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the NAT rule collection resource.
 * **rules**: [AzureFirewallNatRule](#azurefirewallnatrule)[]: Collection of rules used by a NAT rule collection.
 
@@ -1514,7 +1514,7 @@
 * **destinationIpGroups**: string[]: List of destination IpGroups for this rule.
 * **destinationPorts**: string[]: List of destination ports.
 * **name**: string: Name of the network rule.
-* **protocols**: 'Any' | 'ICMP' | 'TCP' | 'UDP' | string[]: Array of AzureFirewallNetworkRuleProtocols.
+* **protocols**: ('Any' | 'ICMP' | 'TCP' | 'UDP' | string)[]: Array of AzureFirewallNetworkRuleProtocols.
 * **sourceAddresses**: string[]: List of source IP addresses for this rule.
 * **sourceIpGroups**: string[]: List of source IpGroups for this rule.
 
@@ -1528,7 +1528,7 @@
 ## AzureFirewallNetworkRuleCollectionPropertiesFormat
 ### Properties
 * **action**: [AzureFirewallRCAction](#azurefirewallrcaction): The action type of a rule collection.
-* **priority**: int: Priority of the network rule collection resource.
+* **priority**: int {minValue: 100, maxValue: 65000}: Priority of the network rule collection resource.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the network rule collection resource.
 * **rules**: [AzureFirewallNetworkRule](#azurefirewallnetworkrule)[]: Collection of rules used by a network rule collection.
 
@@ -1602,13 +1602,13 @@
 ## BgpConnectionProperties
 ### Properties
 * **connectionState**: 'Connected' | 'Connecting' | 'NotConnected' | 'Unknown' | string (ReadOnly): The current state of the VirtualHub to Peer.
-* **peerAsn**: int: Peer ASN.
+* **peerAsn**: int {minValue: 0, maxValue: 4294967295}: Peer ASN.
 * **peerIp**: string: Peer IP.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the resource.
 
 ## BgpSettings
 ### Properties
-* **asn**: int: The BGP speaker's ASN.
+* **asn**: int {minValue: 0, maxValue: 4294967295}: The BGP speaker's ASN.
 * **bgpPeeringAddress**: string: The BGP peering address and BGP identifier of this BGP speaker.
 * **bgpPeeringAddresses**: [IPConfigurationBgpPeeringAddress](#ipconfigurationbgppeeringaddress)[]: BGP peering address with IP configuration ID for virtual network gateway.
 * **peerWeight**: int: The weight added to routes learned from this BGP speaker.
@@ -1876,7 +1876,7 @@
 * **ipv6PeeringConfig**: [Ipv6ExpressRouteCircuitPeeringConfig](#ipv6expressroutecircuitpeeringconfig): The IPv6 peering configuration.
 * **lastModifiedBy**: string (ReadOnly): Who was the last to modify the peering.
 * **microsoftPeeringConfig**: [ExpressRouteCircuitPeeringConfig](#expressroutecircuitpeeringconfig): The Microsoft peering configuration.
-* **peerASN**: int: The peer ASN.
+* **peerASN**: int {minValue: 1, maxValue: 4294967295}: The peer ASN.
 * **peeredConnections**: [PeerExpressRouteCircuitConnection](#peerexpressroutecircuitconnection)[] (ReadOnly): The list of peered circuit connections associated with Azure Private Peering for this circuit.
 * **peeringType**: 'AzurePrivatePeering' | 'AzurePublicPeering' | 'MicrosoftPeering' | string: The peering type.
 * **primaryAzurePort**: string: The primary port.
@@ -1963,7 +1963,7 @@
 * **ipv6PeeringConfig**: [Ipv6ExpressRouteCircuitPeeringConfig](#ipv6expressroutecircuitpeeringconfig): The IPv6 peering configuration.
 * **lastModifiedBy**: string (ReadOnly): Who was the last to modify the peering.
 * **microsoftPeeringConfig**: [ExpressRouteCircuitPeeringConfig](#expressroutecircuitpeeringconfig): The Microsoft peering configuration.
-* **peerASN**: int: The peer ASN.
+* **peerASN**: int {minValue: 1, maxValue: 4294967295}: The peer ASN.
 * **peeringType**: 'AzurePrivatePeering' | 'AzurePublicPeering' | 'MicrosoftPeering' | string: The peering type.
 * **primaryAzurePort**: string (ReadOnly): The primary port.
 * **primaryPeerAddressPrefix**: string: The primary address prefix.
@@ -2093,7 +2093,7 @@
 #### Properties
 * **destinationAddresses**: string[]: List of destination IP addresses or Service Tags.
 * **destinationPorts**: string[]: List of destination ports.
-* **ipProtocols**: 'Any' | 'ICMP' | 'TCP' | 'UDP' | string[]: Array of FirewallPolicyRuleNetworkProtocols.
+* **ipProtocols**: ('Any' | 'ICMP' | 'TCP' | 'UDP' | string)[]: Array of FirewallPolicyRuleNetworkProtocols.
 * **ruleType**: 'NatRule' (Required): Rule Type.
 * **sourceAddresses**: string[]: List of source IP addresses for this rule.
 * **sourceIpGroups**: string[]: List of source IpGroups for this rule.
@@ -2106,7 +2106,7 @@
 * **destinationFqdns**: string[]: List of destination FQDNs.
 * **destinationIpGroups**: string[]: List of destination IpGroups for this rule.
 * **destinationPorts**: string[]: List of destination ports.
-* **ipProtocols**: 'Any' | 'ICMP' | 'TCP' | 'UDP' | string[]: Array of FirewallPolicyRuleNetworkProtocols.
+* **ipProtocols**: ('Any' | 'ICMP' | 'TCP' | 'UDP' | string)[]: Array of FirewallPolicyRuleNetworkProtocols.
 * **ruleType**: 'NetworkRule' (Required): Rule Type.
 * **sourceAddresses**: string[]: List of source IP addresses for this rule.
 * **sourceIpGroups**: string[]: List of source IpGroups for this rule.
@@ -2114,7 +2114,7 @@
 
 ## FirewallPolicyRuleApplicationProtocol
 ### Properties
-* **port**: int: Port number for the protocol, cannot be greater than 64000.
+* **port**: int {minValue: 0, maxValue: 64000}: Port number for the protocol, cannot be greater than 64000.
 * **protocolType**: 'Http' | 'Https' | string: Protocol type.
 
 ## FirewallPolicyRuleCollection
@@ -2122,7 +2122,7 @@
 
 ### Base Properties
 * **name**: string: The name of the rule collection.
-* **priority**: int: Priority of the Firewall Policy Rule Collection resource.
+* **priority**: int {minValue: 100, maxValue: 65000}: Priority of the Firewall Policy Rule Collection resource.
 
 ### FirewallPolicyFilterRuleCollection
 #### Properties
@@ -2139,7 +2139,7 @@
 
 ## FirewallPolicyRuleCollectionGroupProperties
 ### Properties
-* **priority**: int: Priority of the Firewall Policy Rule Collection Group resource.
+* **priority**: int {minValue: 100, maxValue: 65000}: Priority of the Firewall Policy Rule Collection Group resource.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the firewall policy rule collection group resource.
 * **ruleCollections**: [FirewallPolicyRuleCollection](#firewallpolicyrulecollection)[]: Group of Firewall Policy rule collections.
 
@@ -2479,7 +2479,7 @@
 * **matchVariables**: [MatchVariable](#matchvariable)[] (Required): List of match variables.
 * **negationConditon**: bool: Whether this is negate condition or not.
 * **operator**: 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GeoMatch' | 'GreaterThan' | 'GreaterThanOrEqual' | 'IPMatch' | 'LessThan' | 'LessThanOrEqual' | 'Regex' | string (Required): The operator to be matched.
-* **transforms**: 'HtmlEntityDecode' | 'Lowercase' | 'RemoveNulls' | 'Trim' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms.
+* **transforms**: ('HtmlEntityDecode' | 'Lowercase' | 'RemoveNulls' | 'Trim' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms.
 
 ## MatchVariable
 ### Properties
@@ -2609,7 +2609,7 @@
 * **cloudInitConfigurationBlobs**: string[]: CloudInitConfigurationBlob storage URLs.
 * **nvaSku**: [VirtualApplianceSkuProperties](#virtualapplianceskuproperties): Network Virtual Appliance SKU.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the resource.
-* **virtualApplianceAsn**: int: VirtualAppliance ASN.
+* **virtualApplianceAsn**: int {minValue: 0, maxValue: 4294967295}: VirtualAppliance ASN.
 * **virtualApplianceNics**: [VirtualApplianceNicProperties](#virtualappliancenicproperties)[] (ReadOnly): List of Virtual Appliance Network Interfaces.
 * **virtualApplianceSites**: [SubResource](#subresource)[] (ReadOnly): List of references to VirtualApplianceSite.
 * **virtualHub**: [SubResource](#subresource): The Virtual Hub where Network Virtual Appliance is being deployed.
@@ -2734,8 +2734,8 @@
 
 ## PolicySettings
 ### Properties
-* **fileUploadLimitInMb**: int: Maximum file upload size in Mb for WAF.
-* **maxRequestBodySizeInKb**: int: Maximum request body size in Kb for WAF.
+* **fileUploadLimitInMb**: int {minValue: 0}: Maximum file upload size in Mb for WAF.
+* **maxRequestBodySizeInKb**: int {minValue: 8, maxValue: 128}: Maximum request body size in Kb for WAF.
 * **mode**: 'Detection' | 'Prevention' | string: The mode of the policy.
 * **requestBodyCheck**: bool: Whether to allow WAF to check request Body.
 * **state**: 'Disabled' | 'Enabled' | string: The state of the policy.
@@ -3504,7 +3504,7 @@
 * **securityProviderName**: string: The Security Provider name.
 * **sku**: string: The sku of this VirtualHub.
 * **virtualHubRouteTableV2s**: [VirtualHubRouteTableV2](#virtualhubroutetablev2)[]: List of all virtual hub route table v2s associated with this VirtualHub.
-* **virtualRouterAsn**: int: VirtualRouter ASN.
+* **virtualRouterAsn**: int {minValue: 0, maxValue: 4294967295}: VirtualRouter ASN.
 * **virtualRouterIps**: string[]: VirtualRouter IPs.
 * **virtualWan**: [SubResource](#subresource): The VirtualWAN to which the VirtualHub belongs.
 * **vpnGateway**: [SubResource](#subresource): The VpnGateway associated with this VirtualHub.
@@ -3671,7 +3671,7 @@
 
 ## VirtualRouterPeeringProperties
 ### Properties
-* **peerAsn**: int: Peer ASN.
+* **peerAsn**: int {minValue: 0, maxValue: 4294967295}: Peer ASN.
 * **peerIp**: string: Peer IP.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the resource.
 
@@ -3681,7 +3681,7 @@
 * **hostedSubnet**: [SubResource](#subresource): The Subnet on which VirtualRouter is hosted.
 * **peerings**: [SubResource](#subresource)[] (ReadOnly): List of references to VirtualRouterPeerings.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the resource.
-* **virtualRouterAsn**: int: VirtualRouter ASN.
+* **virtualRouterAsn**: int {minValue: 0, maxValue: 4294967295}: VirtualRouter ASN.
 * **virtualRouterIps**: string[]: VirtualRouter IPs.
 
 ## VirtualWanProperties
@@ -3709,7 +3709,7 @@
 * **radiusServerSecret**: string: The radius secret property of the VirtualNetworkGateway resource for vpn client connection.
 * **vpnClientAddressPool**: [AddressSpace](#addressspace): The reference to the address space resource which represents Address space for P2S VpnClient.
 * **vpnClientIpsecPolicies**: [IpsecPolicy](#ipsecpolicy)[]: VpnClientIpsecPolicies for virtual network gateway P2S client.
-* **vpnClientProtocols**: 'IkeV2' | 'OpenVPN' | 'SSTP' | string[]: VpnClientProtocols for Virtual network gateway.
+* **vpnClientProtocols**: ('IkeV2' | 'OpenVPN' | 'SSTP' | string)[]: VpnClientProtocols for Virtual network gateway.
 * **vpnClientRevokedCertificates**: [VpnClientRevokedCertificate](#vpnclientrevokedcertificate)[]: VpnClientRevokedCertificate for Virtual network gateway.
 * **vpnClientRootCertificates**: [VpnClientRootCertificate](#vpnclientrootcertificate)[]: VpnClientRootCertificate for virtual network gateway.
 
@@ -3812,11 +3812,11 @@
 * **radiusServerRootCertificates**: [VpnServerConfigRadiusServerRootCertificate](#vpnserverconfigradiusserverrootcertificate)[]: Radius Server root certificate of VpnServerConfiguration.
 * **radiusServers**: [RadiusServer](#radiusserver)[]: Multiple Radius Server configuration for VpnServerConfiguration.
 * **radiusServerSecret**: string: The radius secret property of the VpnServerConfiguration resource for point to site client connection.
-* **vpnAuthenticationTypes**: 'AAD' | 'Certificate' | 'Radius' | string[]: VPN authentication types for the VpnServerConfiguration.
+* **vpnAuthenticationTypes**: ('AAD' | 'Certificate' | 'Radius' | string)[]: VPN authentication types for the VpnServerConfiguration.
 * **vpnClientIpsecPolicies**: [IpsecPolicy](#ipsecpolicy)[]: VpnClientIpsecPolicies for VpnServerConfiguration.
 * **vpnClientRevokedCertificates**: [VpnServerConfigVpnClientRevokedCertificate](#vpnserverconfigvpnclientrevokedcertificate)[]: VPN client revoked certificate of VpnServerConfiguration.
 * **vpnClientRootCertificates**: [VpnServerConfigVpnClientRootCertificate](#vpnserverconfigvpnclientrootcertificate)[]: VPN client root certificate of VpnServerConfiguration.
-* **vpnProtocols**: 'IkeV2' | 'OpenVPN' | string[]: VPN protocols for the VpnServerConfiguration.
+* **vpnProtocols**: ('IkeV2' | 'OpenVPN' | string)[]: VPN protocols for the VpnServerConfiguration.
 
 ## VpnServerConfigVpnClientRevokedCertificate
 ### Properties
@@ -3886,7 +3886,7 @@
 * **action**: 'Allow' | 'Block' | 'Log' | string (Required): Type of Actions.
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **matchConditions**: [MatchCondition](#matchcondition)[] (Required): List of match conditions.
-* **name**: string: The name of the resource that is unique within a policy. This name can be used to access the resource.
+* **name**: string {maxLength: 128}: The name of the resource that is unique within a policy. This name can be used to access the resource.
 * **priority**: int (Required): Priority of the rule. Rules with a lower value will be evaluated before rules with a higher value.
 * **ruleType**: 'Invalid' | 'MatchRule' | string (Required): The rule type.
 

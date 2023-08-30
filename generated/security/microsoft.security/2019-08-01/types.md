@@ -88,7 +88,7 @@
 
 ## AdditionalWorkspacesProperties
 ### Properties
-* **dataTypes**: 'Alerts' | 'RawEvents' | string[]: List of data types sent to workspace
+* **dataTypes**: ('Alerts' | 'RawEvents' | string)[]: List of data types sent to workspace
 * **type**: 'Sentinel' | string: Workspace type.
 * **workspace**: string: Workspace resource id
 
@@ -246,9 +246,9 @@
 ### Properties
 * **additionalWorkspaces**: [AdditionalWorkspacesProperties](#additionalworkspacesproperties)[]: List of additional workspaces
 * **autoDiscoveredResources**: string[] (ReadOnly): List of resources that were automatically discovered as relevant to the security solution.
-* **disabledDataSources**: 'TwinData' | string[]: Disabled data sources. Disabling these data sources compromises the system.
+* **disabledDataSources**: ('TwinData' | string)[]: Disabled data sources. Disabling these data sources compromises the system.
 * **displayName**: string (Required): Resource display name.
-* **export**: 'RawEvents' | string[]: List of additional options for exporting to workspace data.
+* **export**: ('RawEvents' | string)[]: List of additional options for exporting to workspace data.
 * **iotHubs**: string[] (Required): IoT Hub resource IDs
 * **recommendationsConfiguration**: [RecommendationConfigurationProperties](#recommendationconfigurationproperties)[]: List of the configuration status for each recommendation type.
 * **status**: 'Disabled' | 'Enabled' | string: Status of the IoT Security solution.
@@ -462,5 +462,5 @@
 ## UserDefinedResourcesProperties
 ### Properties
 * **query**: string (Required): Azure Resource Graph query which represents the security solution's user defined resources. Required to start with "where type != "Microsoft.Devices/IotHubs""
-* **querySubscriptions**: string[] (Required): List of Azure subscription ids on which the user defined resources query should be executed.
+* **querySubscriptions**: (string {pattern: "^[0-9A-Fa-f]{8}-([0-9A-Fa-f]{4}-){3}[0-9A-Fa-f]{12}$"})[] (Required): List of Azure subscription ids on which the user defined resources query should be executed.
 

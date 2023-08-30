@@ -302,7 +302,7 @@
 * **destinationPortRanges**: string[]: The destination port ranges.
 * **destinations**: [AddressPrefixItem](#addressprefixitem)[]: The destination address prefixes. CIDR or destination IP ranges.
 * **direction**: 'Inbound' | 'Outbound' | string (Required): Indicates if the traffic matched against the rule in inbound or outbound.
-* **priority**: int (Required): The priority of the rule. The value can be between 1 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule.
+* **priority**: int {minValue: 1, maxValue: 4096} (Required): The priority of the rule. The value can be between 1 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule.
 * **protocol**: 'Ah' | 'Any' | 'Esp' | 'Icmp' | 'Tcp' | 'Udp' | string (Required): Network protocol this rule applies to.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the resource.
 * **sourcePortRanges**: string[]: The source port ranges.
@@ -449,7 +449,7 @@
 
 ## NetworkManagerDeploymentStatusParameter
 ### Properties
-* **deploymentTypes**: 'Connectivity' | 'SecurityAdmin' | 'SecurityUser' | string[]: List of deployment types.
+* **deploymentTypes**: ('Connectivity' | 'SecurityAdmin' | 'SecurityUser' | string)[]: List of deployment types.
 * **regions**: string[]: List of locations.
 * **skipToken**: string: Continuation token for pagination, capturing the next page size and offset, as well as the context of the query.
 
@@ -466,7 +466,7 @@
 ## NetworkManagerProperties
 ### Properties
 * **description**: string: A description of the network manager.
-* **networkManagerScopeAccesses**: 'Connectivity' | 'SecurityAdmin' | 'SecurityUser' | string[] (Required): Scope Access.
+* **networkManagerScopeAccesses**: ('Connectivity' | 'SecurityAdmin' | 'SecurityUser' | string)[] (Required): Scope Access.
 * **networkManagerScopes**: [NetworkManagerPropertiesNetworkManagerScopes](#networkmanagerpropertiesnetworkmanagerscopes) (Required): Scope of Network Manager.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the scope assignment resource.
 
@@ -506,7 +506,7 @@
 
 ## SecurityAdminConfigurationPropertiesFormat
 ### Properties
-* **applyOnNetworkIntentPolicyBasedServices**: 'All' | 'None' | string[]: Enum list of network intent policy based services.
+* **applyOnNetworkIntentPolicyBasedServices**: ('All' | 'None' | string)[]: Enum list of network intent policy based services.
 * **description**: string: A description of the security configuration.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the resource.
 

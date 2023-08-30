@@ -39,7 +39,7 @@
 ## CreatorProperties
 ### Properties
 * **provisioningState**: string (ReadOnly): The state of the resource provisioning, terminal states: Succeeded, Failed, Canceled
-* **storageUnits**: int (Required): The storage units to be allocated. Integer values from 1 to 100, inclusive.
+* **storageUnits**: int {minValue: 1, maxValue: 100} (Required): The storage units to be allocated. Integer values from 1 to 100, inclusive.
 
 ## LinkedResource
 ### Properties
@@ -68,7 +68,7 @@
 ## MapsAccountProperties
 ### Properties
 * **disableLocalAuth**: bool: Allows toggle functionality on Azure Policy to disable Azure Maps local authentication support. This will disable Shared Keys authentication from any usage.
-* **linkedResources**: [LinkedResource](#linkedresource)[]: Sets the resources to be used for Managed Identities based operations for the Map account resource.
+* **linkedResources**: [LinkedResource](#linkedresource)[] {maxLength: 10}: Sets the resources to be used for Managed Identities based operations for the Map account resource.
 * **provisioningState**: string (ReadOnly): The provisioning state of the Map account resource.
 * **uniqueId**: string (ReadOnly): A unique identifier for the maps account
 

@@ -7,7 +7,7 @@
 * **eTag**: string: The ETag of the workspace.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {minLength: 4, maxLength: 63, pattern: "^[A-Za-z0-9][A-Za-z0-9-]+[A-Za-z0-9]$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [WorkspaceProperties](#workspaceproperties): Workspace properties.
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.OperationalInsights/workspaces' (ReadOnly, DeployTimeConstant): The resource type
@@ -56,7 +56,7 @@
 * **customerId**: string (ReadOnly): This is a read-only property. Represents the ID associated with the workspace.
 * **portalUrl**: string (ReadOnly): This is a legacy property and is not used anymore. Kept here for backward compatibility.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' | string: The provisioning state of the workspace.
-* **retentionInDays**: int: The workspace data retention in days. -1 means Unlimited retention for the Unlimited Sku. 730 days is the maximum allowed for all other Skus.
+* **retentionInDays**: int {minValue: -1, maxValue: 730}: The workspace data retention in days. -1 means Unlimited retention for the Unlimited Sku. 730 days is the maximum allowed for all other Skus.
 * **sku**: [Sku](#sku): The SKU of the workspace.
 * **source**: string (ReadOnly): This is a read-only legacy property. It is always set to 'Azure' by the service. Kept here for backward compatibility.
 

@@ -122,7 +122,7 @@
 * **container**: string (Required): The name of the container where exports will be uploaded. If the container does not exist it will be created.
 * **resourceId**: string: The resource id of the storage account where exports will be delivered. This is not required if a sasToken and storageAccount are specified.
 * **rootFolderPath**: string: The name of the directory where exports will be uploaded.
-* **sasToken**: string: A SAS token for the storage account. For a restricted set of Azure customers this together with storageAccount can be specified instead of resourceId. Note: the value returned by the API for this property will always be obfuscated. Returning this same obfuscated value will not result in the SAS token being updated. To update this value a new SAS token must be specified.
+* **sasToken**: string {sensitive}: A SAS token for the storage account. For a restricted set of Azure customers this together with storageAccount can be specified instead of resourceId. Note: the value returned by the API for this property will always be obfuscated. Returning this same obfuscated value will not result in the SAS token being updated. To update this value a new SAS token must be specified.
 * **storageAccount**: string: The storage account where exports will be uploaded. For a restricted set of Azure customers this together with sasToken can be specified instead of resourceId.
 
 ## ExportDeliveryInfo
@@ -181,7 +181,7 @@
 
 ## FileDestination
 ### Properties
-* **fileFormats**: 'Csv' | string[]: Destination of the view data. Currently only CSV format is supported.
+* **fileFormats**: ('Csv' | string)[]: Destination of the view data. Currently only CSV format is supported.
 
 ## KpiProperties
 ### Properties
@@ -195,7 +195,7 @@
 * **message**: string: Optional message to be added in the email. Length is limited to 250 characters.
 * **regionalFormat**: string: Regional format used for formatting date/time and currency values in the email.
 * **subject**: string (Required): Subject of the email. Length is limited to 70 characters.
-* **to**: string[] (Required): Array of email addresses.
+* **to**: (string {pattern: "^[A-Za-z0-9._%+-]+@(?:[A-Za-z0-9-]+\.)+[A-Za-z]{2,}$"})[] {minLength: 1, maxLength: 20} (Required): Array of email addresses.
 
 ## PivotProperties
 ### Properties
@@ -211,7 +211,7 @@
 ### Properties
 * **name**: string (Required): The name of the column to use in comparison.
 * **operator**: 'Contains' | 'In' | string (Required): The operator to use for comparison.
-* **values**: string[] (Required): Array of values to use for comparison
+* **values**: string[] {minLength: 1} (Required): Array of values to use for comparison
 
 ## ReportConfigDataset
 ### Properties
@@ -219,7 +219,7 @@
 * **configuration**: [ReportConfigDatasetConfiguration](#reportconfigdatasetconfiguration): Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.
 * **filter**: [ReportConfigFilter](#reportconfigfilter): Has filter expression to use in the report.
 * **granularity**: 'Daily' | 'Monthly' | string: The granularity of rows in the report.
-* **grouping**: [ReportConfigGrouping](#reportconfiggrouping)[]: Array of group by expression to use in the report. Report can have up to 2 group by clauses.
+* **grouping**: [ReportConfigGrouping](#reportconfiggrouping)[] {maxLength: 2}: Array of group by expression to use in the report. Report can have up to 2 group by clauses.
 * **sorting**: [ReportConfigSorting](#reportconfigsorting)[]: Array of order by expression to use in the report.
 
 ## ReportConfigDatasetAggregation
@@ -241,9 +241,9 @@
 
 ## ReportConfigFilter
 ### Properties
-* **and**: [ReportConfigFilter](#reportconfigfilter)[]: The logical "AND" expression. Must have at least 2 items.
+* **and**: [ReportConfigFilter](#reportconfigfilter)[] {minLength: 2}: The logical "AND" expression. Must have at least 2 items.
 * **dimensions**: [ReportConfigComparisonExpression](#reportconfigcomparisonexpression): Has comparison expression for a dimension
-* **or**: [ReportConfigFilter](#reportconfigfilter)[]: The logical "OR" expression. Must have at least 2 items.
+* **or**: [ReportConfigFilter](#reportconfigfilter)[] {minLength: 2}: The logical "OR" expression. Must have at least 2 items.
 * **tags**: [ReportConfigComparisonExpression](#reportconfigcomparisonexpression): Has comparison expression for a tag
 
 ## ReportConfigGrouping
@@ -275,12 +275,12 @@
 ## ScheduleProperties
 ### Properties
 * **dayOfMonth**: int: UTC day on which cost analysis data will be emailed. Must be between 1 and 31. This property is applicable when frequency is Monthly and overrides weeksOfMonth or daysOfWeek.
-* **daysOfWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string[]: Day names in english on which cost analysis data will be emailed. This property is applicable when frequency is Weekly or Monthly.
+* **daysOfWeek**: ('Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string)[]: Day names in english on which cost analysis data will be emailed. This property is applicable when frequency is Weekly or Monthly.
 * **endDate**: string (Required): The end date and time of the scheduled action (UTC).
 * **frequency**: 'Daily' | 'Monthly' | 'Weekly' | string (Required): Frequency of the schedule.
 * **hourOfDay**: int: UTC time at which cost analysis data will be emailed.
 * **startDate**: string (Required): The start date and time of the scheduled action (UTC).
-* **weeksOfMonth**: 'First' | 'Fourth' | 'Last' | 'Second' | 'Third' | string[]: Weeks in which cost analysis data will be emailed. This property is applicable when frequency is Monthly and used in combination with daysOfWeek.
+* **weeksOfMonth**: ('First' | 'Fourth' | 'Last' | 'Second' | 'Third' | string)[]: Weeks in which cost analysis data will be emailed. This property is applicable when frequency is Monthly and used in combination with daysOfWeek.
 
 ## SystemData
 ### Properties

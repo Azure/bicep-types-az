@@ -16,7 +16,7 @@
 * **apiVersion**: '2023-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (WriteOnly): Resource location. Only value allowed for ProfessionalService is 'global'
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[a-zA-Z0-9-_.()]{0,63}[a-zA-Z0-9-_()]$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ProfessionalServiceCreationPropertiesOrProfessionalServiceResourceProperties](#professionalservicecreationpropertiesorprofessionalserviceresourceproperties): Properties of the ProfessionalService resource that are relevant for creation.
 * **tags**: [Tags](#tags): the resource tags.
 * **type**: 'Microsoft.ProfessionalService/resources' (ReadOnly, DeployTimeConstant): The resource type

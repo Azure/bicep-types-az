@@ -6,7 +6,7 @@
 * **apiVersion**: '2022-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 6, maxLength: 50} (Required, DeployTimeConstant): The resource name
 * **properties**: [ClusterProperties](#clusterproperties): Event Hubs Cluster properties supplied in responses in List or Get operations.
 * **sku**: [ClusterSku](#clustersku): Properties of the cluster SKU.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
@@ -20,7 +20,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [Identity](#identity): Properties of BYOK Identity description
 * **location**: string: Resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 6, maxLength: 50} (Required, DeployTimeConstant): The resource name
 * **properties**: [EHNamespaceProperties](#ehnamespaceproperties): Namespace properties supplied for create namespace operation.
 * **sku**: [Sku](#sku): Properties of sku resource
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
@@ -33,7 +33,7 @@
 * **apiVersion**: '2022-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 256} (Required, DeployTimeConstant): The resource name
 * **properties**: [ApplicationGroupProperties](#applicationgroupproperties)
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **type**: 'Microsoft.EventHub/namespaces/applicationGroups' (ReadOnly, DeployTimeConstant): The resource type
@@ -44,7 +44,7 @@
 * **apiVersion**: '2022-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1} (Required, DeployTimeConstant): The resource name
 * **properties**: [AuthorizationRuleProperties](#authorizationruleproperties): Properties supplied to create or update AuthorizationRule
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **type**: 'Microsoft.EventHub/namespaces/authorizationRules' (ReadOnly, DeployTimeConstant): The resource type
@@ -55,7 +55,7 @@
 * **apiVersion**: '2022-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 50} (Required, DeployTimeConstant): The resource name
 * **properties**: [ArmDisasterRecoveryProperties](#armdisasterrecoveryproperties): Properties required to the Create Or Update Alias(Disaster Recovery configurations)
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **type**: 'Microsoft.EventHub/namespaces/disasterRecoveryConfigs' (ReadOnly, DeployTimeConstant): The resource type
@@ -66,7 +66,7 @@
 * **apiVersion**: '2022-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1} (Required, DeployTimeConstant): The resource name
 * **properties**: [AuthorizationRuleProperties](#authorizationruleproperties) (ReadOnly): Properties supplied to create or update AuthorizationRule
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **type**: 'Microsoft.EventHub/namespaces/disasterRecoveryConfigs/authorizationRules' (ReadOnly, DeployTimeConstant): The resource type
@@ -77,7 +77,7 @@
 * **apiVersion**: '2022-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 256} (Required, DeployTimeConstant): The resource name
 * **properties**: [EventhubProperties](#eventhubproperties): Properties supplied to the Create Or Update Event Hub operation.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **type**: 'Microsoft.EventHub/namespaces/eventhubs' (ReadOnly, DeployTimeConstant): The resource type
@@ -88,7 +88,7 @@
 * **apiVersion**: '2022-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1} (Required, DeployTimeConstant): The resource name
 * **properties**: [AuthorizationRuleProperties](#authorizationruleproperties): Properties supplied to create or update AuthorizationRule
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **type**: 'Microsoft.EventHub/namespaces/eventhubs/authorizationRules' (ReadOnly, DeployTimeConstant): The resource type
@@ -99,7 +99,7 @@
 * **apiVersion**: '2022-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 50} (Required, DeployTimeConstant): The resource name
 * **properties**: [ConsumerGroupProperties](#consumergroupproperties): Single item in List or Get Consumer group operation
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **type**: 'Microsoft.EventHub/namespaces/eventhubs/consumergroups' (ReadOnly, DeployTimeConstant): The resource type
@@ -132,7 +132,7 @@
 * **apiVersion**: '2022-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 256} (Required, DeployTimeConstant): The resource name
 * **properties**: [SchemaGroupProperties](#schemagroupproperties)
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **type**: 'Microsoft.EventHub/namespaces/schemagroups' (ReadOnly, DeployTimeConstant): The resource type
@@ -211,7 +211,7 @@
 
 ## AuthorizationRuleProperties
 ### Properties
-* **rights**: 'Listen' | 'Manage' | 'Send' | string[] (Required): The rights associated with the rule.
+* **rights**: ('Listen' | 'Manage' | 'Send' | string)[] (Required): The rights associated with the rule.
 
 ## CaptureDescription
 ### Properties
@@ -232,7 +232,7 @@
 
 ## ClusterSku
 ### Properties
-* **capacity**: int: The quantity of Event Hubs Cluster Capacity Units contained in this cluster.
+* **capacity**: int {minValue: 1}: The quantity of Event Hubs Cluster Capacity Units contained in this cluster.
 * **name**: 'Dedicated' | string (Required): Name of this SKU.
 
 ## ConnectionState
@@ -257,7 +257,7 @@
 * **blobContainer**: string: Blob container Name
 * **dataLakeAccountName**: string: The Azure Data Lake Store name for the captured events
 * **dataLakeFolderPath**: string: The destination folder path for the captured events
-* **dataLakeSubscriptionId**: string: Subscription Id of Azure Data Lake Store
+* **dataLakeSubscriptionId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Subscription Id of Azure Data Lake Store
 * **storageAccountResourceId**: string: Resource id of the storage account to be used to create the blobs
 
 ## EHNamespaceProperties
@@ -290,8 +290,8 @@
 ### Properties
 * **captureDescription**: [CaptureDescription](#capturedescription): Properties of capture description
 * **createdAt**: string (ReadOnly): Exact time the Event Hub was created.
-* **messageRetentionInDays**: int: Number of days to retain the events for this Event Hub, value should be 1 to 7 days
-* **partitionCount**: int: Number of partitions created for the Event Hub, allowed values are from 1 to 32 partitions.
+* **messageRetentionInDays**: int {minValue: 1}: Number of days to retain the events for this Event Hub, value should be 1 to 7 days
+* **partitionCount**: int {minValue: 1}: Number of partitions created for the Event Hub, allowed values are from 1 to 32 partitions.
 * **partitionIds**: string[] (ReadOnly): Current number of shards on the Event Hub.
 * **retentionDescription**: [RetentionDescription](#retentiondescription): Event Hub retention settings
 * **status**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | 'ReceiveDisabled' | 'Renaming' | 'Restoring' | 'SendDisabled' | 'Unknown': Enumerates the possible values for the status of the Event Hub.
@@ -362,7 +362,7 @@
 ## SchemaGroupProperties
 ### Properties
 * **createdAtUtc**: string (ReadOnly): Exact time the Schema Group was created.
-* **eTag**: string (ReadOnly): The ETag value.
+* **eTag**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The ETag value.
 * **groupProperties**: [SchemaGroupProperties](#schemagroupproperties): dictionary object for SchemaGroup group properties
 * **schemaCompatibility**: 'Backward' | 'Forward' | 'None' | string
 * **schemaType**: 'Avro' | 'Unknown' | string
@@ -375,7 +375,7 @@
 
 ## Sku
 ### Properties
-* **capacity**: int: The Event Hubs throughput units for Basic or Standard tiers, where value should be 0 to 20 throughput units. The Event Hubs premium units for Premium tier, where value should be 0 to 10 premium units.
+* **capacity**: int {minValue: 0}: The Event Hubs throughput units for Basic or Standard tiers, where value should be 0 to 20 throughput units. The Event Hubs premium units for Premium tier, where value should be 0 to 10 premium units.
 * **name**: 'Basic' | 'Premium' | 'Standard' | string (Required): Name of this SKU.
 * **tier**: 'Basic' | 'Premium' | 'Standard' | string: The billing tier of this particular SKU.
 

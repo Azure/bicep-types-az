@@ -7,7 +7,7 @@
 * **etag**: string: The etag of the manager.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo location of the resource.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 2, maxLength: 50} (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagerProperties](#managerproperties): The properties of the StorSimple Manager.
 * **tags**: [ResourceTags](#resourcetags): The tags attached to the resource.
 * **type**: 'Microsoft.StorSimple/managers' (ReadOnly, DeployTimeConstant): The resource type
@@ -178,7 +178,7 @@
 
 ## BandwidthSchedule
 ### Properties
-* **days**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[] (Required): The days of the week when this schedule is applicable.
+* **days**: ('Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday')[] (Required): The days of the week when this schedule is applicable.
 * **rateInMbps**: int (Required): The rate in Mbps.
 * **start**: [Time](#time) (Required): The start time of the schedule.
 * **stop**: [Time](#time) (Required): The stop time of the schedule.
@@ -255,7 +255,7 @@
 ### Properties
 * **recurrenceType**: 'Daily' | 'Hourly' | 'Minutes' | 'Weekly' (Required): The recurrence type.
 * **recurrenceValue**: int (Required): The recurrence value.
-* **weeklyDaysList**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: The week days list. Applicable only for schedules of recurrence type 'weekly'.
+* **weeklyDaysList**: ('Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday')[]: The week days list. Applicable only for schedules of recurrence type 'weekly'.
 
 ## StorageAccountCredentialProperties
 ### Properties
@@ -283,9 +283,9 @@
 
 ## Time
 ### Properties
-* **hours**: int (Required): The hour.
-* **minutes**: int (Required): The minute.
-* **seconds**: int (Required): The second.
+* **hours**: int {minValue: 0, maxValue: 23} (Required): The hour.
+* **minutes**: int {minValue: 0, maxValue: 59} (Required): The minute.
+* **seconds**: int {minValue: 0, maxValue: 59} (Required): The second.
 
 ## TimeSettingsProperties
 ### Properties

@@ -7,7 +7,7 @@
 * **etag**: string (ReadOnly): Resource ETAG.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: 'clientGroup' | 'machine' | 'machineGroup' | 'port' | 'process' | string (ReadOnly): Additional resource type qualifier.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 256} (Required, DeployTimeConstant): The resource name
 * **properties**: [ClientGroupProperties](#clientgroupproperties) (ReadOnly): Resource properties.
 * **type**: 'Microsoft.OperationalInsights/workspaces/features/clientGroups' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -18,7 +18,7 @@
 * **etag**: string: Resource ETAG.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: 'clientGroup' | 'machine' | 'machineGroup' | 'port' | 'process' | string (Required): Additional resource type qualifier.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 36, maxLength: 36} (Required, DeployTimeConstant): The resource name
 * **properties**: [MachineGroupProperties](#machinegroupproperties): Resource properties.
 * **type**: 'Microsoft.OperationalInsights/workspaces/features/machineGroups' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -29,7 +29,7 @@
 * **etag**: string (ReadOnly): Resource ETAG.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: 'clientGroup' | 'machine' | 'machineGroup' | 'port' | 'process' | string (ReadOnly): Additional resource type qualifier.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 64} (Required, DeployTimeConstant): The resource name
 * **properties**: [MachineProperties](#machineproperties) (ReadOnly): Resource properties.
 * **type**: 'Microsoft.OperationalInsights/workspaces/features/machines' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -40,7 +40,7 @@
 * **etag**: string (ReadOnly): Resource ETAG.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: 'clientGroup' | 'machine' | 'machineGroup' | 'port' | 'process' | string (ReadOnly): Additional resource type qualifier.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 64} (Required, DeployTimeConstant): The resource name
 * **properties**: [PortProperties](#portproperties) (ReadOnly): Resource properties.
 * **type**: 'Microsoft.OperationalInsights/workspaces/features/machines/ports' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -51,7 +51,7 @@
 * **etag**: string (ReadOnly): Resource ETAG.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: 'clientGroup' | 'machine' | 'machineGroup' | 'port' | 'process' | string (ReadOnly): Additional resource type qualifier.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 128} (Required, DeployTimeConstant): The resource name
 * **properties**: [ProcessProperties](#processproperties) (ReadOnly): Resource properties.
 * **type**: 'Microsoft.OperationalInsights/workspaces/features/machines/processes' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -150,7 +150,7 @@
 ## MachineGroupProperties
 ### Properties
 * **count**: int: Count of machines in this group. The value of count may be bigger than the number of machines in case of the group has been truncated due to exceeding the max number of machines a group can handle.
-* **displayName**: string (Required): User defined name for the group
+* **displayName**: string {minLength: 1, maxLength: 256} (Required): User defined name for the group
 * **groupType**: 'azure-cs' | 'azure-sf' | 'azure-vmss' | 'unknown' | 'user-static' | string: Type of the machine group
 * **machines**: [MachineReferenceWithHints](#machinereferencewithhints)[]: References of the machines in this group. The hints within each reference do not represent the current value of the corresponding fields. They are a snapshot created during the last time the machine group was updated.
 

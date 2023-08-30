@@ -73,10 +73,10 @@
 ## MountTargetProperties
 ### Properties
 * **endIp**: string: The end of IPv4 address range to use when creating a new mount target
-* **fileSystemId**: string (Required): UUID v4 used to identify the MountTarget
+* **fileSystemId**: string {minLength: 36, maxLength: 36, pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"} (Required): UUID v4 used to identify the MountTarget
 * **gateway**: string: The gateway of the IPv4 address range to use when creating a new mount target
 * **ipAddress**: string (ReadOnly): The mount target's IPv4 address
-* **mountTargetId**: string (ReadOnly): UUID v4 used to identify the MountTarget
+* **mountTargetId**: string {minLength: 36, maxLength: 36, pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"} (ReadOnly): UUID v4 used to identify the MountTarget
 * **netmask**: string: The netmask of the IPv4 address range to use when creating a new mount target
 * **provisioningState**: string (ReadOnly): Azure lifecycle management
 * **smbServerFqdn**: string: The SMB server's Fully Qualified Domain Name, FQDN
@@ -85,31 +85,31 @@
 
 ## PoolProperties
 ### Properties
-* **poolId**: string (ReadOnly): UUID v4 used to identify the Pool
+* **poolId**: string {minLength: 36, maxLength: 36, pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"} (ReadOnly): UUID v4 used to identify the Pool
 * **provisioningState**: string (ReadOnly): Azure lifecycle management
 * **serviceLevel**: 'Premium' | 'Standard' | 'Ultra' | string (Required): The service level of the file system
-* **size**: int (Required): Provisioned size of the pool (in bytes). Allowed values are in 4TiB chunks (value must be multiply of 4398046511104).
+* **size**: int {minValue: 4398046511104, maxValue: 549755813888000} (Required): Provisioned size of the pool (in bytes). Allowed values are in 4TiB chunks (value must be multiply of 4398046511104).
 
 ## SnapshotProperties
 ### Properties
 * **created**: string (ReadOnly): The creation date of the snapshot
-* **fileSystemId**: string: UUID v4 used to identify the FileSystem
+* **fileSystemId**: string {minLength: 36, maxLength: 36, pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"}: UUID v4 used to identify the FileSystem
 * **provisioningState**: string (ReadOnly): Azure lifecycle management
-* **snapshotId**: string (ReadOnly): UUID v4 used to identify the Snapshot
+* **snapshotId**: string {minLength: 36, maxLength: 36, pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"} (ReadOnly): UUID v4 used to identify the Snapshot
 
 ## VolumeProperties
 ### Properties
-* **baremetalTenantId**: string (ReadOnly): Unique Baremetal Tenant Identifier.
+* **baremetalTenantId**: string {minLength: 36, maxLength: 36, pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"} (ReadOnly): Unique Baremetal Tenant Identifier.
 * **creationToken**: string (Required): A unique file path for the volume. Used when creating mount targets
 * **exportPolicy**: [VolumePropertiesExportPolicy](#volumepropertiesexportpolicy): Set of export policy rules
-* **fileSystemId**: string (ReadOnly): Unique FileSystem Identifier.
+* **fileSystemId**: string {minLength: 36, maxLength: 36, pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"} (ReadOnly): Unique FileSystem Identifier.
 * **mountTargets**: [MountTargetProperties](#mounttargetproperties)[] (ReadOnly): List of mount targets
 * **protocolTypes**: string[]: Set of protocol types, default NFSv3, CIFS fro SMB protocol
 * **provisioningState**: string (ReadOnly): Azure lifecycle management
 * **serviceLevel**: 'Premium' | 'Standard' | 'Ultra' | string: The service level of the file system
-* **snapshotId**: string: UUID v4 or resource identifier used to identify the Snapshot.
+* **snapshotId**: string {minLength: 36, maxLength: 36, pattern: "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|(\\?([^\/]*[\/])*)([^\/]+)$"}: UUID v4 or resource identifier used to identify the Snapshot.
 * **subnetId**: string (Required): The Azure Resource URI for a delegated subnet. Must have the delegation Microsoft.NetApp/volumes
-* **usageThreshold**: int (Required): Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. Minimum size is 100 GiB. Upper limit is 100TiB. Specified in bytes.
+* **usageThreshold**: int {minValue: 107374182400, maxValue: 109951162777600} (Required): Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. Minimum size is 100 GiB. Upper limit is 100TiB. Specified in bytes.
 
 ## VolumePropertiesExportPolicy
 ### Properties

@@ -6,7 +6,7 @@
 * **apiVersion**: '2017-11-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The location of the resource.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {minLength: 1, maxLength: 90, pattern: "^[-\w\._\(\)]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [EnvironmentCreationPropertiesOrEnvironmentResourceProperties](#environmentcreationpropertiesorenvironmentresourceproperties) (Required): Properties used to create an environment.
 * **sku**: [Sku](#sku) (Required): The sku determines the capacity of the environment, the SLA (in queries-per-minute and total capacity), and the billing rate.
 * **tags**: [CreateOrUpdateTrackedResourcePropertiesTags](#createorupdatetrackedresourcepropertiestags): Key-value pairs of additional properties for the resource.
@@ -17,7 +17,7 @@
 ### Properties
 * **apiVersion**: '2017-11-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {minLength: 1, maxLength: 90, pattern: "^[-\w\._\(\)]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [AccessPolicyResourceProperties](#accesspolicyresourceproperties) (Required)
 * **type**: 'Microsoft.TimeSeriesInsights/environments/accessPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -29,7 +29,7 @@
 * **apiVersion**: '2017-11-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The location of the resource.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {minLength: 1, maxLength: 90, pattern: "^[-\w\._\(\)]+$"} (Required, DeployTimeConstant): The resource name
 * **tags**: [CreateOrUpdateTrackedResourcePropertiesTags](#createorupdatetrackedresourcepropertiestags): Key-value pairs of additional properties for the resource.
 * **type**: 'Microsoft.TimeSeriesInsights/environments/eventSources' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -55,7 +55,7 @@
 * **apiVersion**: '2017-11-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The location of the resource.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string | string {minLength: 3, maxLength: 63, pattern: "^[A-Za-z0-9]"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ReferenceDataSetCreationPropertiesOrReferenceDataSetResourceProperties](#referencedatasetcreationpropertiesorreferencedatasetresourceproperties) (Required): Properties used to create a reference data set.
 * **tags**: [CreateOrUpdateTrackedResourcePropertiesTags](#createorupdatetrackedresourcepropertiestags): Key-value pairs of additional properties for the resource.
 * **type**: 'Microsoft.TimeSeriesInsights/environments/referenceDataSets' (ReadOnly, DeployTimeConstant): The resource type
@@ -64,7 +64,7 @@
 ### Properties
 * **description**: string: An description of the access policy.
 * **principalObjectId**: string: The objectId of the principal in Azure Active Directory.
-* **roles**: 'Contributor' | 'Reader'[]: The list of roles the principal is assigned on the environment.
+* **roles**: ('Contributor' | 'Reader')[]: The list of roles the principal is assigned on the environment.
 
 ## CreateOrUpdateTrackedResourcePropertiesTags
 ### Properties
@@ -85,7 +85,7 @@
 ### Properties
 * **creationTime**: string (ReadOnly): The time the resource was created.
 * **dataAccessFqdn**: string (ReadOnly): The fully qualified domain name used to access the environment data, e.g. to query the environment's events or upload reference data for the environment.
-* **dataAccessId**: string (ReadOnly): An id used to access the environment data, e.g. to query the environment's events or upload reference data for the environment.
+* **dataAccessId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): An id used to access the environment data, e.g. to query the environment's events or upload reference data for the environment.
 * **dataRetentionTime**: string (Required): ISO8601 timespan specifying the minimum number of days the environment's events will be available for query.
 * **partitionKeyProperties**: [PartitionKeyProperty](#partitionkeyproperty)[]: The list of partition keys according to which the data in the environment will be ordered.
 * **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' (ReadOnly): Provisioning state of the resource.
@@ -158,6 +158,6 @@
 
 ## Sku
 ### Properties
-* **capacity**: int (Required): The capacity of the sku. This value can be changed to support scale out of environments after they have been created.
+* **capacity**: int {minValue: 1, maxValue: 10} (Required): The capacity of the sku. This value can be changed to support scale out of environments after they have been created.
 * **name**: 'S1' | 'S2' (Required): The name of this SKU.
 

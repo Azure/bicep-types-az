@@ -6,7 +6,7 @@
 * **apiVersion**: '2020-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 5, maxLength: 64, pattern: "^[a-zA-Z0-9]+([-a-zA-Z0-9]?[a-zA-Z0-9])*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [FrontDoorProperties](#frontdoorproperties): Properties of the Front Door Load Balancer
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/frontDoors' (ReadOnly, DeployTimeConstant): The resource type
@@ -16,7 +16,7 @@
 ### Properties
 * **apiVersion**: '2020-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 255, pattern: "^[a-zA-Z0-9]+(-*[a-zA-Z0-9])*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [FrontendEndpointProperties](#frontendendpointproperties) (ReadOnly): Properties of the Frontend endpoint
 * **type**: 'Microsoft.Network/frontDoors/frontendEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -25,7 +25,7 @@
 ### Properties
 * **apiVersion**: '2020-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 90, pattern: "^[a-zA-Z0-9]+(-*[a-zA-Z0-9])*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [RulesEngineProperties](#rulesengineproperties): Properties of the Rules Engine Configuration.
 * **type**: 'Microsoft.Network/frontDoors/rulesEngines' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -36,7 +36,7 @@
 * **etag**: string: Gets a unique read-only string that changes whenever the resource is updated.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Resource location.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {maxLength: 128} (Required, DeployTimeConstant): The resource name
 * **properties**: [WebApplicationFirewallPolicyProperties](#webapplicationfirewallpolicyproperties): Properties of the web application firewall policy.
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Network/FrontDoorWebApplicationFirewallPolicies' (ReadOnly, DeployTimeConstant): The resource type
@@ -46,13 +46,13 @@
 * **address**: string: Location of the backend (IP address or FQDN)
 * **backendHostHeader**: string: The value to use as the host header sent to the backend. If blank or unspecified, this defaults to the incoming host.
 * **enabledState**: 'Disabled' | 'Enabled' | string: Whether to enable use of this backend. Permitted values are 'Enabled' or 'Disabled'
-* **httpPort**: int: The HTTP TCP port number. Must be between 1 and 65535.
-* **httpsPort**: int: The HTTPS TCP port number. Must be between 1 and 65535.
-* **priority**: int: Priority to use for load balancing. Higher priorities will not be used for load balancing if any lower priority backend is healthy.
+* **httpPort**: int {minValue: 1, maxValue: 65535}: The HTTP TCP port number. Must be between 1 and 65535.
+* **httpsPort**: int {minValue: 1, maxValue: 65535}: The HTTPS TCP port number. Must be between 1 and 65535.
+* **priority**: int {minValue: 1, maxValue: 5}: Priority to use for load balancing. Higher priorities will not be used for load balancing if any lower priority backend is healthy.
 * **privateEndpointStatus**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | 'Timeout' | string (ReadOnly): The Approval status for the connection to the Private Link
 * **privateLinkAlias**: string: The Alias of the Private Link resource. Populating this optional field indicates that this backend is 'Private'
 * **privateLinkApprovalMessage**: string: A custom message to be included in the approval request to connect to the Private Link
-* **weight**: int: Weight of this endpoint for load balancing purposes.
+* **weight**: int {minValue: 1, maxValue: 1000}: Weight of this endpoint for load balancing purposes.
 
 ## BackendPool
 ### Properties
@@ -71,7 +71,7 @@
 ## BackendPoolsSettings
 ### Properties
 * **enforceCertificateNameCheck**: 'Disabled' | 'Enabled' | string: Whether to enforce certificate name check on HTTPS requests to all backend pools. No effect on non-HTTPS requests.
-* **sendRecvTimeoutSeconds**: int: Send and receive timeout on forwarding request to the backend. When timeout is reached, the request fails and returns.
+* **sendRecvTimeoutSeconds**: int {minValue: 16}: Send and receive timeout on forwarding request to the backend. When timeout is reached, the request fails and returns.
 
 ## CacheConfiguration
 ### Properties
@@ -93,10 +93,10 @@
 * **action**: 'Allow' | 'Block' | 'Log' | 'Redirect' | string (Required): Describes what action to be applied when rule matches.
 * **enabledState**: 'Disabled' | 'Enabled' | string: Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.
 * **matchConditions**: [MatchCondition](#matchcondition)[] (Required): List of match conditions.
-* **name**: string: Describes the name of the rule.
+* **name**: string {maxLength: 128}: Describes the name of the rule.
 * **priority**: int (Required): Describes priority of the rule. Rules with a lower value will be evaluated before rules with a higher value.
-* **rateLimitDurationInMinutes**: int: Time window for resetting the rate limit count. Default is 1 minute.
-* **rateLimitThreshold**: int: Number of allowed requests per client within the time window.
+* **rateLimitDurationInMinutes**: int {minValue: 0, maxValue: 5}: Time window for resetting the rate limit count. Default is 1 minute.
+* **rateLimitThreshold**: int {minValue: 0}: Number of allowed requests per client within the time window.
 * **ruleType**: 'MatchRule' | 'RateLimitRule' | string (Required): Describes type of rule.
 
 ## CustomRuleList
@@ -232,11 +232,11 @@
 * **negateCondition**: bool: Describes if the result of this condition should be negated.
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GeoMatch' | 'GreaterThan' | 'GreaterThanOrEqual' | 'IPMatch' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' | string (Required): Comparison type to use for matching with the variable value.
 * **selector**: string: Match against a specific key from the QueryString, PostArgs, RequestHeader or Cookies variables. Default is null.
-* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms.
+* **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms.
 
 ## PolicySettings
 ### Properties
-* **customBlockResponseBody**: string: If the action type is block, customer can override the response body. The body must be specified in base64 encoding.
+* **customBlockResponseBody**: string {pattern: "^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=|[A-Za-z0-9+/]{4})$"}: If the action type is block, customer can override the response body. The body must be specified in base64 encoding.
 * **customBlockResponseStatusCode**: int: If the action type is block, customer can override the response status code.
 * **enabledState**: 'Disabled' | 'Enabled' | string: Describes if the policy is in enabled or disabled state. Defaults to Enabled if not specified.
 * **mode**: 'Detection' | 'Prevention' | string: Describes if it is in detection mode or prevention mode at policy level.
@@ -289,7 +289,7 @@
 
 ## RoutingRuleProperties
 ### Properties
-* **acceptedProtocols**: 'Http' | 'Https' | string[]: Protocol schemes to match for this rule
+* **acceptedProtocols**: ('Http' | 'Https' | string)[]: Protocol schemes to match for this rule
 * **enabledState**: 'Disabled' | 'Enabled' | string: Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'
 * **frontendEndpoints**: [SubResource](#subresource)[]: Frontend endpoints associated with this rule
 * **patternsToMatch**: string[]: The route patterns of the rule.
@@ -322,7 +322,7 @@
 * **rulesEngineMatchVariable**: 'IsMobile' | 'PostArgs' | 'QueryString' | 'RemoteAddr' | 'RequestBody' | 'RequestFilename' | 'RequestFilenameExtension' | 'RequestHeader' | 'RequestMethod' | 'RequestPath' | 'RequestScheme' | 'RequestUri' | string (Required): Match Variable
 * **rulesEngineOperator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GeoMatch' | 'GreaterThan' | 'GreaterThanOrEqual' | 'IPMatch' | 'LessThan' | 'LessThanOrEqual' | string (Required): Describes operator to apply to the match condition.
 * **selector**: string: Name of selector in RequestHeader or RequestBody to be matched
-* **transforms**: 'Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string[]: List of transforms
+* **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
 
 ## RulesEngineProperties
 ### Properties

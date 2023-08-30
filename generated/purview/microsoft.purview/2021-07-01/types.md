@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [Identity](#identity): Identity Info on the tracked resource
 * **location**: string: Gets or sets the location.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 63, pattern: "^[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [AccountProperties](#accountproperties): Gets or sets the properties.
 * **sku**: [AccountSku](#accountsku) (ReadOnly): Gets or sets the Sku.
 * **systemData**: [TrackedResourceSystemData](#trackedresourcesystemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
@@ -30,8 +30,8 @@
 
 ## AccessKeys
 ### Properties
-* **atlasKafkaPrimaryEndpoint**: string: Gets or sets the primary connection string.
-* **atlasKafkaSecondaryEndpoint**: string: Gets or sets the secondary connection string.
+* **atlasKafkaPrimaryEndpoint**: string {sensitive}: Gets or sets the primary connection string.
+* **atlasKafkaSecondaryEndpoint**: string {sensitive}: Gets or sets the secondary connection string.
 
 ## AccountProperties
 ### Properties

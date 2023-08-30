@@ -65,14 +65,14 @@
 
 ### WeeklyRecurrence
 #### Properties
-* **daysOfWeek**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string[] (Required): Specifies the values for weekly recurrence pattern.
+* **daysOfWeek**: ('Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string)[] (Required): Specifies the values for weekly recurrence pattern.
 * **recurrenceType**: 'Weekly' (Required): Specifies when the recurrence should be applied.
 
 
 ## Schedule
 ### Properties
-* **effectiveFrom**: string: Scheduling effective from time. Date-Time in ISO-8601 format without timezone suffix.
-* **effectiveUntil**: string: Scheduling effective until time. Date-Time in ISO-8601 format without timezone suffix.
+* **effectiveFrom**: string {pattern: "^(?:(\d{4}-\d{2}-\d{2})T(\d{2}:\d{2}:\d{2}(?:\.\d+)?))$"}: Scheduling effective from time. Date-Time in ISO-8601 format without timezone suffix.
+* **effectiveUntil**: string {pattern: "^(?:(\d{4}-\d{2}-\d{2})T(\d{2}:\d{2}:\d{2}(?:\.\d+)?))$"}: Scheduling effective until time. Date-Time in ISO-8601 format without timezone suffix.
 * **recurrences**: [Recurrence](#recurrence)[]: List of recurrences.
 * **timeZone**: string: Scheduling time zone.
 

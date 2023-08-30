@@ -14,8 +14,8 @@
 
 ## AccountResourceProperties
 ### Properties
-* **appId**: string (Required): Customer owned application ID
-* **billingPlanId**: string (ReadOnly): Billing Plan Id
+* **appId**: string {pattern: "(^[A-Za-z0-9]{8}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{12}?)$"} (Required): Customer owned application ID
+* **billingPlanId**: string {pattern: "(^[A-Za-z0-9]{8}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{12}?)$"} (ReadOnly): Billing Plan Id
 * **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): Provisioning state.
 
 ## AccountResourceSystemData

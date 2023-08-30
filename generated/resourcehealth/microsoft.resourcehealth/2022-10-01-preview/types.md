@@ -25,7 +25,7 @@
 ### Properties
 * **apiVersion**: '2022-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[^*#&+:<>%?]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [EventImpactedResourceProperties](#eventimpactedresourceproperties) (ReadOnly): Properties of impacted resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ResourceHealth/events/impactedResources' (ReadOnly, DeployTimeConstant): The resource type
@@ -171,7 +171,7 @@
 
 ## MetadataEntityProperties
 ### Properties
-* **applicableScenarios**: 'Alerts' | string[]: The list of scenarios applicable to this metadata entity.
+* **applicableScenarios**: ('Alerts' | string)[]: The list of scenarios applicable to this metadata entity.
 * **dependsOn**: string[]: The list of keys on which this entity depends on.
 * **displayName**: string: The display name.
 * **supportedValues**: [MetadataSupportedValueDetail](#metadatasupportedvaluedetail)[]: The list of supported values.

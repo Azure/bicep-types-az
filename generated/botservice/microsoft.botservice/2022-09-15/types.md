@@ -8,7 +8,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: 'azurebot' | 'bot' | 'designer' | 'function' | 'sdk' | string: Required. Gets or sets the Kind of the resource.
 * **location**: string: Specifies the location of the resource.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 2, maxLength: 64, pattern: "^[a-zA-Z0-9][a-zA-Z0-9_.-]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [BotProperties](#botproperties): The set of properties specific to bot resource
 * **sku**: [Sku](#sku): Gets or sets the SKU of the resource.
 * **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
@@ -23,7 +23,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: 'azurebot' | 'bot' | 'designer' | 'function' | 'sdk' | string: Required. Gets or sets the Kind of the resource.
 * **location**: string: Specifies the location of the resource.
-* **name**: 'AcsChatChannel' | 'AlexaChannel' | 'DirectLineChannel' | 'DirectLineSpeechChannel' | 'EmailChannel' | 'FacebookChannel' | 'KikChannel' | 'LineChannel' | 'M365Extensions' | 'MsTeamsChannel' | 'Omnichannel' | 'OutlookChannel' | 'SearchAssistant' | 'SkypeChannel' | 'SlackChannel' | 'SmsChannel' | 'TelegramChannel' | 'TelephonyChannel' | 'WebChatChannel' | string (Required, DeployTimeConstant): The resource name
+* **name**: 'AcsChatChannel' | 'AlexaChannel' | 'DirectLineChannel' | 'DirectLineSpeechChannel' | 'EmailChannel' | 'FacebookChannel' | 'KikChannel' | 'LineChannel' | 'M365Extensions' | 'MsTeamsChannel' | 'Omnichannel' | 'OutlookChannel' | 'SearchAssistant' | 'SkypeChannel' | 'SlackChannel' | 'SmsChannel' | 'TelegramChannel' | 'TelephonyChannel' | 'WebChatChannel' | string {minLength: 2, maxLength: 64, pattern: "^[a-zA-Z0-9][a-zA-Z0-9_.-]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [Channel](#channel): The set of properties specific to bot channel resource
 * **sku**: [Sku](#sku): Gets or sets the SKU of the resource.
 * **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
@@ -38,7 +38,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: 'azurebot' | 'bot' | 'designer' | 'function' | 'sdk' | string: Required. Gets or sets the Kind of the resource.
 * **location**: string: Specifies the location of the resource.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 2, maxLength: 64, pattern: "^[a-zA-Z0-9][\sa-zA-Z0-9_.-]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ConnectionSettingProperties](#connectionsettingproperties): The set of properties specific to bot channel resource
 * **sku**: [Sku](#sku): Gets or sets the SKU of the resource.
 * **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
@@ -252,7 +252,7 @@
 ## ConnectionSettingProperties
 ### Properties
 * **clientId**: string: Client Id associated with the Connection Setting.
-* **clientSecret**: string: Client Secret associated with the Connection Setting
+* **clientSecret**: string {sensitive}: Client Secret associated with the Connection Setting
 * **id**: string: Id of the Connection Setting.
 * **name**: string: Name of the Connection Setting.
 * **parameters**: [ConnectionSettingParameter](#connectionsettingparameter)[]: Service Provider Parameters associated with the Connection Setting
@@ -295,7 +295,7 @@
 ### Properties
 * **cognitiveServiceRegion**: string: The cognitive service region with this channel registration.
 * **cognitiveServiceResourceId**: string: The cognitive service id with this channel registration.
-* **cognitiveServiceSubscriptionKey**: string: The cognitive service subscription key to use with this channel registration.
+* **cognitiveServiceSubscriptionKey**: string {sensitive}: The cognitive service subscription key to use with this channel registration.
 * **customSpeechModelId**: string: Custom voice deployment id (optional).
 * **customVoiceDeploymentId**: string: Custom speech model id (optional).
 * **isDefaultBotForCogSvcAccount**: bool: Make this a default bot for chosen cognitive service account.
@@ -312,15 +312,15 @@
 ## FacebookChannelProperties
 ### Properties
 * **appId**: string (Required): Facebook application id
-* **appSecret**: string: Facebook application secret. Value only returned through POST to the action Channel List API, otherwise empty.
+* **appSecret**: string {sensitive}: Facebook application secret. Value only returned through POST to the action Channel List API, otherwise empty.
 * **callbackUrl**: string (ReadOnly): Callback Url
 * **isEnabled**: bool (Required): Whether this channel is enabled for the bot
 * **pages**: [FacebookPage](#facebookpage)[]: The list of Facebook pages
-* **verifyToken**: string (ReadOnly): Verify token. Value only returned through POST to the action Channel List API, otherwise empty.
+* **verifyToken**: string {sensitive} (ReadOnly): Verify token. Value only returned through POST to the action Channel List API, otherwise empty.
 
 ## FacebookPage
 ### Properties
-* **accessToken**: string: Facebook application access token. Value only returned through POST to the action Channel List API, otherwise empty.
+* **accessToken**: string {sensitive}: Facebook application access token. Value only returned through POST to the action Channel List API, otherwise empty.
 * **id**: string (Required): Page id
 
 ## KikChannelProperties
@@ -338,8 +338,8 @@
 
 ## LineRegistration
 ### Properties
-* **channelAccessToken**: string: Access token for the line channel registration
-* **channelSecret**: string: Secret for the line channel registration
+* **channelAccessToken**: string {sensitive}: Access token for the line channel registration
+* **channelSecret**: string {sensitive}: Secret for the line channel registration
 * **generatedId**: string (ReadOnly): Id generated for the line channel registration
 
 ## ListChannelWithKeysResponse
@@ -461,7 +461,7 @@
 ## SlackChannelProperties
 ### Properties
 * **clientId**: string: The Slack client id
-* **clientSecret**: string: The Slack client secret. Value only returned through POST to the action Channel List API, otherwise empty.
+* **clientSecret**: string {sensitive}: The Slack client secret. Value only returned through POST to the action Channel List API, otherwise empty.
 * **isEnabled**: bool (Required): Whether this channel is enabled for the bot
 * **IsValidated**: bool (ReadOnly): Whether this channel is validated for the bot
 * **landingPageUrl**: string: The Slack landing page Url
@@ -469,20 +469,20 @@
 * **redirectAction**: string (ReadOnly): The Slack redirect action
 * **registerBeforeOAuthFlow**: bool: Whether to register the settings before OAuth validation is performed. Recommended to True.
 * **scopes**: string: The Slack permission scopes.
-* **signingSecret**: string: The Slack signing secret.
-* **verificationToken**: string: The Slack verification token. Value only returned through POST to the action Channel List API, otherwise empty.
+* **signingSecret**: string {sensitive}: The Slack signing secret.
+* **verificationToken**: string {sensitive}: The Slack verification token. Value only returned through POST to the action Channel List API, otherwise empty.
 
 ## SmsChannelProperties
 ### Properties
 * **accountSID**: string (Required): The Sms account SID. Value only returned through POST to the action Channel List API, otherwise empty.
-* **authToken**: string: The Sms auth token. Value only returned through POST to the action Channel List API, otherwise empty.
+* **authToken**: string {sensitive}: The Sms auth token. Value only returned through POST to the action Channel List API, otherwise empty.
 * **isEnabled**: bool (Required): Whether this channel is enabled for the bot
 * **isValidated**: bool: Whether this channel is validated for the bot
 * **phone**: string (Required): The Sms phone
 
 ## TelegramChannelProperties
 ### Properties
-* **accessToken**: string: The Telegram access token. Value only returned through POST to the action Channel List API, otherwise empty.
+* **accessToken**: string {sensitive}: The Telegram access token. Value only returned through POST to the action Channel List API, otherwise empty.
 * **isEnabled**: bool (Required): Whether this channel is enabled for the bot
 * **isValidated**: bool: Whether this channel is validated for the bot
 

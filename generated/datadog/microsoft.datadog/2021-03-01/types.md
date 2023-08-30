@@ -122,12 +122,12 @@
 
 ## DatadogOrganizationProperties
 ### Properties
-* **apiKey**: string (WriteOnly): Api key associated to the Datadog organization.
-* **applicationKey**: string (WriteOnly): Application key associated to the Datadog organization.
+* **apiKey**: string {sensitive} (WriteOnly): Api key associated to the Datadog organization.
+* **applicationKey**: string {sensitive} (WriteOnly): Application key associated to the Datadog organization.
 * **enterpriseAppId**: string (WriteOnly): The Id of the Enterprise App used for Single sign on.
 * **id**: string (ReadOnly): Id of the Datadog organization.
-* **linkingAuthCode**: string (WriteOnly): The auth code used to linking to an existing datadog organization.
-* **linkingClientId**: string (WriteOnly): The client_id from an existing in exchange for an auth token to link organization.
+* **linkingAuthCode**: string {sensitive} (WriteOnly): The auth code used to linking to an existing datadog organization.
+* **linkingClientId**: string {sensitive} (WriteOnly): The client_id from an existing in exchange for an auth token to link organization.
 * **name**: string (ReadOnly): Name of the Datadog organization.
 * **redirectUri**: string (WriteOnly): The redirect uri for linking.
 
@@ -213,8 +213,9 @@
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## UserInfo
+*Sensitive*
 ### Properties
-* **emailAddress**: string: Email of the user used by Datadog for contacting them if needed
-* **name**: string: Name of the user
-* **phoneNumber**: string: Phone number of the user used by Datadog for contacting them if needed
+* **emailAddress**: string {pattern: "^[A-Za-z0-9._%+-]+@(?:[A-Za-z0-9-]+\.)+[A-Za-z]{2,}$"}: Email of the user used by Datadog for contacting them if needed
+* **name**: string {maxLength: 50}: Name of the user
+* **phoneNumber**: string {maxLength: 40}: Phone number of the user used by Datadog for contacting them if needed
 

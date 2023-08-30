@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [CacheIdentity](#cacheidentity): The identity of the cache, if configured.
 * **location**: string: Region name string.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[-0-9a-zA-Z_]{1,80}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [CacheProperties](#cacheproperties): Properties of the Cache.
 * **sku**: [CacheSku](#cachesku): SKU for the Cache.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
@@ -20,7 +20,7 @@
 * **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): Region name string.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[-0-9a-zA-Z_]{1,80}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [StorageTargetProperties](#storagetargetproperties): StorageTarget properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **type**: 'Microsoft.StorageCache/caches/storageTargets' (ReadOnly, DeployTimeConstant): The resource type
@@ -42,7 +42,7 @@
 
 ## CacheNetworkSettings
 ### Properties
-* **mtu**: int: The IPv4 maximum transmission unit configured for the subnet.
+* **mtu**: int {minValue: 576, maxValue: 1500}: The IPv4 maximum transmission unit configured for the subnet.
 * **utilityAddresses**: string[] (ReadOnly): Array of additional IP addresses used by this Cache.
 
 ## CacheProperties
@@ -94,7 +94,7 @@
 
 ## Nfs3Target
 ### Properties
-* **target**: string: IP address or host name of an NFSv3 host (e.g., 10.0.44.44).
+* **target**: string {pattern: "^[-.0-9a-zA-Z]+$"}: IP address or host name of an NFSv3 host (e.g., 10.0.44.44).
 * **usageModel**: string: Identifies the primary usage model to be used for this Storage Target. Get choices from .../usageModels
 
 ## StorageTargetProperties

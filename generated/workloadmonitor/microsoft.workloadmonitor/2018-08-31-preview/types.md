@@ -6,7 +6,7 @@
 * **apiVersion**: '2018-08-31-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): For optimistic concurrency control.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ComponentProperties](#componentproperties) (ReadOnly): Properties of the component.
 * **type**: 'Microsoft.WorkloadMonitor/components' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -16,7 +16,7 @@
 * **apiVersion**: '2018-08-31-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): For optimistic concurrency control.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [MonitorInstanceProperties](#monitorinstanceproperties) (ReadOnly): Properties of the monitor instance.
 * **type**: 'Microsoft.WorkloadMonitor/monitorInstances' (ReadOnly, DeployTimeConstant): The resource type
 

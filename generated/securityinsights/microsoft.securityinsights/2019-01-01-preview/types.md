@@ -332,7 +332,7 @@
 * **severity**: 'Critical' | 'High' | 'Informational' | 'Low' | 'Medium' | string (Required): The severity of the case
 * **startTimeUtc**: string: The start time of the case
 * **status**: 'Closed' | 'Draft' | 'InProgress' | 'New' | string (Required): The status of the case
-* **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | string[] (ReadOnly): The tactics associated with case
+* **tactics**: ('Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | string)[] (ReadOnly): The tactics associated with case
 * **title**: string (Required): The title of the case
 * **totalComments**: int (ReadOnly): the number of total comments in the case
 
@@ -345,7 +345,7 @@
 ### Properties
 * **email**: string: The email of the client.
 * **name**: string: The name of the client.
-* **objectId**: string: The object id of the client.
+* **objectId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The object id of the client.
 * **userPrincipalName**: string: The user principal name of the client.
 
 ## EntityCommonPropertiesAdditionalData
@@ -359,7 +359,7 @@
 * **alertsCount**: int (ReadOnly): The number of alerts in the incident
 * **bookmarksCount**: int (ReadOnly): The number of bookmarks in the incident
 * **commentsCount**: int (ReadOnly): The number of comments in the incident
-* **tactics**: 'Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | string[] (ReadOnly): The tactics associated with incident
+* **tactics**: ('Collection' | 'CommandAndControl' | 'CredentialAccess' | 'DefenseEvasion' | 'Discovery' | 'Execution' | 'Exfiltration' | 'Impact' | 'InitialAccess' | 'LateralMovement' | 'Persistence' | 'PreAttack' | 'PrivilegeEscalation' | string)[] (ReadOnly): The tactics associated with incident
 
 ## IncidentCommentProperties
 ### Properties
@@ -384,7 +384,7 @@
 ### Properties
 * **assignedTo**: string: The name of the user the incident is assigned to.
 * **email**: string: The email of the user the incident is assigned to.
-* **objectId**: string: The object id of the user the incident is assigned to.
+* **objectId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The object id of the user the incident is assigned to.
 * **userPrincipalName**: string: The user principal name of the user the incident is assigned to.
 
 ## IncidentProperties
@@ -527,7 +527,7 @@
 ### Properties
 * **email**: string (ReadOnly): The email of the user.
 * **name**: string (ReadOnly): The name of the user.
-* **objectId**: string: The object id of the user.
+* **objectId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The object id of the user.
 
 ## WatchlistItemProperties
 ### Properties

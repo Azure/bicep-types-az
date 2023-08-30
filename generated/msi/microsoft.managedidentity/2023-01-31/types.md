@@ -29,7 +29,7 @@
 ### Properties
 * **apiVersion**: '2023-01-31' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[a-zA-Z0-9]{1}[a-zA-Z0-9-_]{2,119}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [FederatedIdentityCredentialProperties](#federatedidentitycredentialproperties): The properties associated with the federated identity credential.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ManagedIdentity/userAssignedIdentities/federatedIdentityCredentials' (ReadOnly, DeployTimeConstant): The resource type
@@ -42,10 +42,10 @@
 
 ## SystemAssignedIdentityProperties
 ### Properties
-* **clientId**: string (ReadOnly): The id of the app associated with the identity. This is a random generated UUID by MSI.
+* **clientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The id of the app associated with the identity. This is a random generated UUID by MSI.
 * **clientSecretUrl**: string (ReadOnly): The ManagedServiceIdentity DataPlane URL that can be queried to obtain the identity credentials.
-* **principalId**: string (ReadOnly): The id of the service principal object associated with the created identity.
-* **tenantId**: string (ReadOnly): The id of the tenant which the identity belongs to.
+* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The id of the service principal object associated with the created identity.
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The id of the tenant which the identity belongs to.
 
 ## SystemAssignedIdentityTags
 ### Properties
@@ -68,7 +68,7 @@
 
 ## UserAssignedIdentityProperties
 ### Properties
-* **clientId**: string (ReadOnly): The id of the app associated with the identity. This is a random generated UUID by MSI.
-* **principalId**: string (ReadOnly): The id of the service principal object associated with the created identity.
-* **tenantId**: string (ReadOnly): The id of the tenant which the identity belongs to.
+* **clientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The id of the app associated with the identity. This is a random generated UUID by MSI.
+* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The id of the service principal object associated with the created identity.
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The id of the tenant which the identity belongs to.
 

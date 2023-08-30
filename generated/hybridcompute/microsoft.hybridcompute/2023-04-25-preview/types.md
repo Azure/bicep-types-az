@@ -18,7 +18,7 @@
 * **identity**: [Identity](#identity): Identity for the resource.
 * **kind**: 'AVS' | 'HCI' | 'SCVMM' | 'VMware' | string: Indicates which kind of VM fabric the instance is an instance of, such as HCI or SCVMM etc.
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 54, pattern: "[a-zA-Z0-9-_\.]"} (Required, DeployTimeConstant): The resource name
 * **properties**: [MachineProperties](#machineproperties): Hybrid Compute Machine properties
 * **resources**: [MachineExtension](#machineextension)[] (ReadOnly): The list of extensions affiliated to the machine
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
@@ -42,7 +42,7 @@
 ### Properties
 * **apiVersion**: '2023-04-25-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "[a-zA-Z0-9-_\.]"} (Required, DeployTimeConstant): The resource name
 * **properties**: [HybridIdentityMetadataProperties](#hybrididentitymetadataproperties) (ReadOnly): Resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.HybridCompute/machines/hybridIdentityMetadata' (ReadOnly, DeployTimeConstant): The resource type
@@ -53,7 +53,7 @@
 * **apiVersion**: '2023-04-25-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "[a-zA-Z0-9-_\.]"} (Required, DeployTimeConstant): The resource name
 * **properties**: [MachineRunCommandProperties](#machineruncommandproperties): Describes Run Command Properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -175,7 +175,7 @@
 * **city**: string: The city or locality where the resource is located.
 * **countryOrRegion**: string: The country or region where the resource is located
 * **district**: string: The district, state, or province where the resource is located.
-* **name**: string (Required): A canonical name for the geographic or physical location.
+* **name**: string {maxLength: 256} (Required): A canonical name for the geographic or physical location.
 
 ## MachineExtension
 ### Properties
@@ -281,7 +281,7 @@
 * **parameters**: [RunCommandInputParameter](#runcommandinputparameter)[]: The parameters used by the script.
 * **protectedParameters**: [RunCommandInputParameter](#runcommandinputparameter)[]: The parameters used by the script.
 * **provisioningState**: string (ReadOnly): The provisioning state, which only appears in the response.
-* **runAsPassword**: string: Specifies the user account password on the machine when executing the run command.
+* **runAsPassword**: string {sensitive}: Specifies the user account password on the machine when executing the run command.
 * **runAsUser**: string: Specifies the user account on the machine when executing the run command.
 * **source**: [MachineRunCommandScriptSource](#machineruncommandscriptsource): The source of the run command script.
 * **timeoutInSeconds**: int: The timeout in seconds to execute the run command.

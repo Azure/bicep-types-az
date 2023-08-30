@@ -6,7 +6,7 @@
 * **apiVersion**: '2015-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The geographic location of the resource. This must be one of the supported and registered Azure Geo Regions (for example, West US, East US, Southeast Asia, and so forth).
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 24, pattern: "^[a-z0-9]{3,24}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [MediaServiceProperties](#mediaserviceproperties): The additional properties of a Media Service resource.
 * **tags**: [ResourceTags](#resourcetags): Tags to help categorize the resource in the Azure portal.
 * **type**: 'Microsoft.Media/mediaservices' (ReadOnly, DeployTimeConstant): The resource type

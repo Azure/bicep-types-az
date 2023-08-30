@@ -6,7 +6,7 @@
 * **apiVersion**: '2021-11-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 100} (Required, DeployTimeConstant): The resource name
 * **properties**: [LabPlanProperties](#labplanproperties) (Required): Lab plan resource properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the lab plan.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -17,7 +17,7 @@
 ### Properties
 * **apiVersion**: '2021-11-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 100, pattern: "^[-\w\\._\\(\\)]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ImageProperties](#imageproperties) (Required): Image resource properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the image.
 * **type**: 'Microsoft.LabServices/labPlans/images' (ReadOnly, DeployTimeConstant): The resource type
@@ -28,7 +28,7 @@
 * **apiVersion**: '2021-11-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 100} (Required, DeployTimeConstant): The resource name
 * **properties**: [LabProperties](#labproperties) (Required): Lab resource properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the lab.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -39,7 +39,7 @@
 ### Properties
 * **apiVersion**: '2021-11-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 100, pattern: "^[-\w\\._\\(\\)]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ScheduleProperties](#scheduleproperties) (Required): Schedule resource properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the schedule.
 * **type**: 'Microsoft.LabServices/labs/schedules' (ReadOnly, DeployTimeConstant): The resource type
@@ -49,7 +49,7 @@
 ### Properties
 * **apiVersion**: '2021-11-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 100, pattern: "^[-\w\\._\\(\\)]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [UserProperties](#userproperties) (Required): User resource properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the user resource.
 * **type**: 'Microsoft.LabServices/labs/users' (ReadOnly, DeployTimeConstant): The resource type
@@ -59,7 +59,7 @@
 ### Properties
 * **apiVersion**: '2021-11-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 100, pattern: "^[-\w\\._\\(\\)]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [VirtualMachineProperties](#virtualmachineproperties) (ReadOnly): Virtual machine resource properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): System data of the Lab virtual machine.
 * **type**: 'Microsoft.LabServices/labs/virtualMachines' (ReadOnly, DeployTimeConstant): The resource type
@@ -82,7 +82,7 @@
 
 ## Credentials
 ### Properties
-* **password**: string (WriteOnly): The password for the user. This is required for the TemplateVM createOption.
+* **password**: string {sensitive} (WriteOnly): The password for the user. This is required for the TemplateVM createOption.
 * **username**: string (Required): The username to use when signing in to lab VMs.
 
 ## ImageProperties
@@ -99,7 +99,7 @@
 * **plan**: string (ReadOnly): The ID of marketplace plan associated with the image (optional).
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Locked' | 'Succeeded' | 'Updating' (ReadOnly): Current provisioning state of the image.
 * **publisher**: string (ReadOnly): The ID of the publisher of the image.
-* **sharedGalleryId**: string (ReadOnly): The ID for the image in the shared gallery.
+* **sharedGalleryId**: string {minLength: 3, maxLength: 2000} (ReadOnly): The ID for the image in the shared gallery.
 * **sku**: string (ReadOnly): The image SKU.
 * **termsStatus**: 'Disabled' | 'Enabled' (ReadOnly): The status of image terms of use (enabled = accepted, disabled = not accepted).
 * **version**: string (ReadOnly): The image version.
@@ -107,7 +107,7 @@
 ## ImageReference
 ### Properties
 * **exactVersion**: string (ReadOnly): The actual version of the image after use.
-* **id**: string: Image resource ID
+* **id**: string {minLength: 3, maxLength: 2000}: Image resource ID
 * **offer**: string: The image offer if applicable.
 * **publisher**: string: The image publisher
 * **sku**: string: The image SKU
@@ -115,13 +115,13 @@
 
 ## LabNetworkProfile
 ### Properties
-* **loadBalancerId**: string: The external load balancer resource id
-* **publicIpId**: string: The external public IP resource id
-* **subnetId**: string: The external subnet resource id
+* **loadBalancerId**: string {minLength: 3, maxLength: 2000}: The external load balancer resource id
+* **publicIpId**: string {minLength: 3, maxLength: 2000}: The external public IP resource id
+* **subnetId**: string {minLength: 3, maxLength: 2000}: The external subnet resource id
 
 ## LabPlanNetworkProfile
 ### Properties
-* **subnetId**: string: The external subnet resource id
+* **subnetId**: string {minLength: 3, maxLength: 2000}: The external subnet resource id
 
 ## LabPlanProperties
 ### Properties
@@ -129,9 +129,9 @@
 * **defaultAutoShutdownProfile**: [AutoShutdownProfile](#autoshutdownprofile): The default lab shutdown profile. This can be changed on a lab resource and only provides a default profile.
 * **defaultConnectionProfile**: [ConnectionProfile](#connectionprofile): The default lab connection profile. This can be changed on a lab resource and only provides a default profile.
 * **defaultNetworkProfile**: [LabPlanNetworkProfile](#labplannetworkprofile): The lab plan network profile. To enforce lab network policies they must be defined here and cannot be changed when there are existing labs associated with this lab plan.
-* **linkedLmsInstance**: string: Base Url of the lms instance this lab plan can link lab rosters against.
+* **linkedLmsInstance**: string {minLength: 3, maxLength: 2000}: Base Url of the lms instance this lab plan can link lab rosters against.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Locked' | 'Succeeded' | 'Updating' (ReadOnly): Current provisioning state of the lab plan.
-* **sharedGalleryId**: string: Resource ID of the Shared Image Gallery attached to this lab plan. When saving a lab template virtual machine image it will be persisted in this gallery. Shared images from the gallery can be made available to use when creating new labs.
+* **sharedGalleryId**: string {minLength: 3, maxLength: 2000}: Resource ID of the Shared Image Gallery attached to this lab plan. When saving a lab template virtual machine image it will be persisted in this gallery. Shared images from the gallery can be made available to use when creating new labs.
 * **supportInfo**: [SupportInfo](#supportinfo): Support contact information and instructions for users of the lab plan. This information is displayed to lab owners and virtual machine users for all labs in the lab plan.
 
 ## LabProperties
@@ -139,21 +139,21 @@
 * **autoShutdownProfile**: [AutoShutdownProfile](#autoshutdownprofile): The resource auto shutdown configuration for the lab. This controls whether actions are taken on resources that are sitting idle.
 * **connectionProfile**: [ConnectionProfile](#connectionprofile): The connection profile for the lab. This controls settings such as web access to lab resources or whether RDP or SSH ports are open.
 * **description**: string: The description of the lab.
-* **labPlanId**: string: The ID of the lab plan. Used during resource creation to provide defaults and acts as a permission container when creating a lab via labs.azure.com. Setting a labPlanId on an existing lab provides organization..
+* **labPlanId**: string {minLength: 3, maxLength: 2000}: The ID of the lab plan. Used during resource creation to provide defaults and acts as a permission container when creating a lab via labs.azure.com. Setting a labPlanId on an existing lab provides organization..
 * **networkProfile**: [LabNetworkProfile](#labnetworkprofile): The network profile for the lab, typically applied via a lab plan. This profile cannot be modified once a lab has been created.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Locked' | 'Succeeded' | 'Updating' (ReadOnly): Current provisioning state of the lab.
 * **rosterProfile**: [RosterProfile](#rosterprofile): The lab user list management profile.
 * **securityProfile**: [SecurityProfile](#securityprofile): The lab security profile.
 * **state**: 'Draft' | 'Published' | 'Publishing' | 'Scaling' | 'Syncing' (ReadOnly): The lab state.
-* **title**: string: The title of the lab.
+* **title**: string {minLength: 1, maxLength: 120}: The title of the lab.
 * **virtualMachineProfile**: [VirtualMachineProfile](#virtualmachineprofile): The profile used for creating lab virtual machines.
 
 ## RecurrencePattern
 ### Properties
 * **expirationDate**: string (Required): When the recurrence will expire. This date is inclusive.
 * **frequency**: 'Daily' | 'Weekly' (Required): The frequency of the recurrence.
-* **interval**: int: The interval to invoke the schedule on. For example, interval = 2 and RecurrenceFrequency.Daily will run every 2 days. When no interval is supplied, an interval of 1 is used.
-* **weekDays**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday'[]: The week days the schedule runs. Used for when the Frequency is set to Weekly.
+* **interval**: int {minValue: 1, maxValue: 365}: The interval to invoke the schedule on. For example, interval = 2 and RecurrenceFrequency.Daily will run every 2 days. When no interval is supplied, an interval of 1 is used.
+* **weekDays**: ('Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday')[]: The week days the schedule runs. Used for when the Frequency is set to Weekly.
 
 ## RosterProfile
 ### Properties
@@ -165,12 +165,12 @@
 
 ## ScheduleProperties
 ### Properties
-* **notes**: string: Notes for this schedule.
+* **notes**: string {maxLength: 1000}: Notes for this schedule.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Locked' | 'Succeeded' | 'Updating' (ReadOnly): Current provisioning state of the schedule.
 * **recurrencePattern**: [RecurrencePattern](#recurrencepattern): The recurrence pattern of the scheduled actions.
 * **startAt**: string: When lab user virtual machines will be started. Timestamp offsets will be ignored and timeZoneId is used instead.
 * **stopAt**: string: When lab user virtual machines will be stopped. Timestamp offsets will be ignored and timeZoneId is used instead.
-* **timeZoneId**: string: The IANA timezone id for the schedule.
+* **timeZoneId**: string {maxLength: 50}: The IANA timezone id for the schedule.
 
 ## SecurityProfile
 ### Properties
@@ -187,10 +187,10 @@
 
 ## SupportInfo
 ### Properties
-* **email**: string: Support contact email address.
+* **email**: string {minLength: 6, maxLength: 254}: Support contact email address.
 * **instructions**: string: Support instructions.
-* **phone**: string: Support contact phone number.
-* **url**: string: Support web address.
+* **phone**: string {minLength: 1, maxLength: 31}: Support contact phone number.
+* **url**: string {minLength: 3, maxLength: 2000}: Support web address.
 
 ## SystemData
 ### Properties
@@ -215,7 +215,7 @@
 ### Properties
 * **additionalUsageQuota**: string: The amount of usage quota time the user gets in addition to the lab usage quota.
 * **displayName**: string (ReadOnly): Display name of the user, for example user's full name.
-* **email**: string (Required): Email address of the user.
+* **email**: string {minLength: 6, maxLength: 254} (Required): Email address of the user.
 * **invitationSent**: string (ReadOnly): Date and time when the invitation message was sent to the user.
 * **invitationState**: 'Failed' | 'NotSent' | 'Sending' | 'Sent' (ReadOnly): State of the invitation message for the user.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Locked' | 'Succeeded' | 'Updating' (ReadOnly): Current provisioning state of the user resource.
@@ -232,9 +232,9 @@
 * **nonAdminUsername**: string (ReadOnly): The username used to log on to the virtual machine as non-admin, if one exists.
 * **privateIpAddress**: string (ReadOnly): The private IP address of the virtual machine.
 * **rdpAuthority**: string (ReadOnly): Port and host name separated by semicolon for connecting via RDP protocol to the virtual machine.
-* **rdpInBrowserUrl**: string (ReadOnly): URL for connecting via RDP protocol to the virtual machine in browser.
+* **rdpInBrowserUrl**: string {minLength: 3, maxLength: 2000} (ReadOnly): URL for connecting via RDP protocol to the virtual machine in browser.
 * **sshAuthority**: string (ReadOnly): Port and host name separated by semicolon for connecting via SSH protocol to the virtual machine.
-* **sshInBrowserUrl**: string (ReadOnly): URL for connecting via SSH protocol to the virtual machine in browser.
+* **sshInBrowserUrl**: string {minLength: 3, maxLength: 2000} (ReadOnly): URL for connecting via SSH protocol to the virtual machine in browser.
 
 ## VirtualMachineProfile
 ### Properties

@@ -82,7 +82,7 @@
 
 ## EdgeModuleProperties
 ### Properties
-* **edgeModuleId**: string (ReadOnly): Internal ID generated for the instance of the Video Analyzer edge module.
+* **edgeModuleId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): Internal ID generated for the instance of the Video Analyzer edge module.
 
 ## EdgeModuleProvisioningToken
 ### Properties

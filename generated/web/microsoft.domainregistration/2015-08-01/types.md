@@ -72,7 +72,7 @@
 * **contactRegistrant**: [Contact](#contact): Registrant contact information
 * **contactTech**: [Contact](#contact): Technical contact information
 * **createdTime**: string: Domain creation timestamp
-* **domainNotRenewableReasons**: 'ExpirationNotInRenewalTimeRange' | 'RegistrationStatusNotSupportedForRenewal' | 'SubscriptionNotActive' | string[]: Reasons why domain is not renewable
+* **domainNotRenewableReasons**: ('ExpirationNotInRenewalTimeRange' | 'RegistrationStatusNotSupportedForRenewal' | 'SubscriptionNotActive' | string)[]: Reasons why domain is not renewable
 * **expirationTime**: string: Domain expiration timestamp
 * **lastRenewedTime**: string: Timestamp when the domain was renewed last time
 * **managedHostNames**: [HostName](#hostname)[]: All hostnames derived from the domain and assigned to Azure resources

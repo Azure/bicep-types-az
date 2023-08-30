@@ -1,7 +1,25 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import { AnySchema, ArraySchema, ByteArraySchema, ChoiceSchema, ComplexSchema, ConstantSchema, DictionarySchema, ObjectSchema, PrimitiveSchema, Property, Schema, SchemaType, SealedChoiceSchema, StringSchema } from "@autorest/codemodel";
+import {
+  AnySchema,
+  ArraySchema,
+  ByteArraySchema,
+  ChoiceSchema,
+  ComplexSchema,
+  ConstantSchema,
+  CredentialSchema,
+  DictionarySchema,
+  NumberSchema,
+  ObjectSchema,
+  PrimitiveSchema,
+  Property,
+  Schema,
+  SchemaType,
+  SealedChoiceSchema,
+  StringSchema,
+  UriSchema,
+} from "@autorest/codemodel";
 import { Channel, AutorestExtensionHost } from "@autorest/extension-base";
 import { BuiltInTypeKind, DiscriminatedObjectType, ObjectTypeProperty, ObjectTypePropertyFlags, ResourceFlags, TypeBaseKind, TypeFactory, TypeReference } from "bicep-types";
 import { uniq, keys, Dictionary, chain } from 'lodash';
@@ -52,7 +70,7 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
 
       if (ns.type === 'parameterized') {
         const {schema} = ns;
-        if (schema instanceof ConstantSchema && toBuiltInTypeKind(schema.valueType) === BuiltInTypeKind.String) {
+        if (schema instanceof ConstantSchema && isStringSchema(schema.valueType)) {
           nameLiterals.add(schema.value.value);
         } else if (schema instanceof ChoiceSchema || schema instanceof SealedChoiceSchema) {
           const enumValues = getValuesForEnum(schema);
@@ -60,11 +78,11 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
             const {values, closed} = enumValues.value;
             values.forEach(v => nameLiterals.add(v));
             if (!closed) {
-              nameTypes.add(BuiltInTypeKind.String);
+              nameTypes.add(factory.addStringType());
             }
           }
         } else {
-          nameTypes.add(toBuiltInTypeKind(schema));
+          nameTypes.add(toBuiltInType(schema));
         }
       } else {
         nameLiterals.add(ns.value);
@@ -72,7 +90,7 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     }
 
     const enumTypes = [...nameLiterals].map(l => factory.addStringLiteralType(l))
-      .concat([...nameTypes].map(t => factory.lookupBuiltInType(t)));
+      .concat([...nameTypes]);
 
     if (enumTypes.length === 1) {
       return success(enumTypes[0]);
@@ -237,7 +255,7 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     const type = factory.addStringLiteralType(getFullyQualifiedType(descriptor));
 
     return {
-      id: createObjectTypeProperty(factory.lookupBuiltInType(BuiltInTypeKind.String), ObjectTypePropertyFlags.ReadOnly | ObjectTypePropertyFlags.DeployTimeConstant, 'The resource id'),
+      id: createObjectTypeProperty(factory.addStringType(), ObjectTypePropertyFlags.ReadOnly | ObjectTypePropertyFlags.DeployTimeConstant, 'The resource id'),
       name: createObjectTypeProperty(resourceName, ObjectTypePropertyFlags.Required | ObjectTypePropertyFlags.DeployTimeConstant, 'The resource name'),
       type: createObjectTypeProperty(type, ObjectTypePropertyFlags.ReadOnly | ObjectTypePropertyFlags.DeployTimeConstant, 'The resource type'),
       apiVersion: createObjectTypeProperty(factory.addStringLiteralType(descriptor.apiVersion), ObjectTypePropertyFlags.ReadOnly | ObjectTypePropertyFlags.DeployTimeConstant, 'The resource api version'),
@@ -253,7 +271,7 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
         {});
     }
 
-    return factory.addObjectType(definitionName, properties, additionalProperties);
+    return factory.addObjectType(definitionName, properties, additionalProperties, schema.extensions?.['x-ms-secret']);
   }
 
   function combineAndThrowIfNull<TSchema extends Schema>(putSchema: TSchema | undefined, getSchema: TSchema | undefined) {
@@ -385,11 +403,11 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
 
     // The 'any' type
     if (combinedSchema instanceof AnySchema) {
-      return factory.lookupBuiltInType(BuiltInTypeKind.Any);
+      return factory.addAnyType();
     }
 
     logWarning(`Unrecognized property type: ${combinedSchema.type}. Returning 'any'.`);
-    return factory.lookupBuiltInType(BuiltInTypeKind.Any);
+    return factory.addAnyType();
   }
 
   function getMutabilityFlags(property: Property | undefined) {
@@ -434,20 +452,21 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     return flags;
   }
 
-  function toBuiltInTypeKind(schema: PrimitiveSchema) {
+  function toBuiltInType(schema: PrimitiveSchema): number {
     switch (schema.type) {
       case SchemaType.Boolean:
-        return BuiltInTypeKind.Bool;
+        return factory.addBooleanType();
       case SchemaType.Integer:
       case SchemaType.Number:
+        return convertNumberSchema(schema as NumberSchema);
       case SchemaType.UnixTime:
-        return BuiltInTypeKind.Int;
+        return factory.addIntegerType();
       case SchemaType.Object:
-        return BuiltInTypeKind.Any;
+        return factory.addAnyType();
       case SchemaType.ByteArray:
         return (schema as ByteArraySchema).format === 'base64url'
-          ? BuiltInTypeKind.String
-          : BuiltInTypeKind.Array;
+          ? factory.addStringType()
+          : factory.addArrayType(factory.addAnyType());
       case SchemaType.Uri:
       case SchemaType.Date:
       case SchemaType.DateTime:
@@ -457,16 +476,74 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
       case SchemaType.Duration:
       case SchemaType.Credential:
       case SchemaType.ArmId:
-        return BuiltInTypeKind.String;
+        return convertStringSchema(schema);
       default:
         logWarning(`Unrecognized known property type: "${schema.type}"`);
-        return BuiltInTypeKind.Any;
+        return factory.addAnyType();
     }
+  }
+
+  function convertNumberSchema(schema: NumberSchema): number {
+    let minimum: number|undefined = schema.minimum;
+    if (minimum !== undefined && schema.exclusiveMinimum) {
+      minimum += 1;
+    }
+
+    let maximum: number|undefined = schema.maximum;
+    if (maximum !== undefined && schema.exclusiveMaximum) {
+      maximum -= 1;
+    }
+
+    return factory.addIntegerType(minimum, maximum);
+  }
+
+  function convertStringSchema(schema: PrimitiveSchema): number {
+    const secret: true|undefined = schema.extensions?.['x-ms-secret'] === true ? true : undefined;
+    let minLength: number|undefined;
+    let maxLength: number|undefined;
+    let pattern: string|undefined;
+
+    switch (schema.type) {
+      case SchemaType.Uri:
+      case SchemaType.String:
+      case SchemaType.Credential:
+        minLength = (schema as CredentialSchema | StringSchema | UriSchema).minLength;
+        maxLength = (schema as CredentialSchema | StringSchema | UriSchema).maxLength;
+        pattern = (schema as CredentialSchema | StringSchema | UriSchema).pattern;
+        break;
+      case SchemaType.Uuid:
+        // In JSON Schema, the following refinements are implicit in the string format of 'uuid'
+        minLength = 36;
+        maxLength = 36;
+        pattern = "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$";
+        break;
+    }
+
+    return factory.addStringType(secret, minLength, maxLength, pattern);
+  }
+
+  function isStringSchema(schema: PrimitiveSchema): boolean
+  {
+    switch (schema.type)
+    {
+      case SchemaType.Uri:
+      case SchemaType.Date:
+      case SchemaType.DateTime:
+      case SchemaType.Time:
+      case SchemaType.String:
+      case SchemaType.Uuid:
+      case SchemaType.Duration:
+      case SchemaType.Credential:
+      case SchemaType.ArmId:
+        return true;
+    }
+
+    return false;
   }
 
   function parsePrimaryType(putSchema: PrimitiveSchema | undefined, getSchema: PrimitiveSchema | undefined) {
     const combinedSchema = combineAndThrowIfNull(putSchema, getSchema);
-    return factory.lookupBuiltInType(toBuiltInTypeKind(combinedSchema));
+    return toBuiltInType(combinedSchema);
   }
 
   function handlePolymorphicType(discriminatedObjectType: DiscriminatedObjectType, putSchema?: ObjectSchema, getSchema?: ObjectSchema) {
@@ -611,7 +688,7 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     const enumTypes = values.map(s => factory.addStringLiteralType(s));
 
     if (!closed) {
-      enumTypes.push(factory.lookupBuiltInType(BuiltInTypeKind.String));
+      enumTypes.push(factory.addStringType());
     }
 
     if (enumTypes.length === 1) {
@@ -636,12 +713,13 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
   }
 
   function parseArrayType(putSchema: ArraySchema | undefined, getSchema: ArraySchema | undefined) {
+    const combinedSchema = combineAndThrowIfNull(putSchema, getSchema);
     const itemType = parseType(putSchema?.elementType, getSchema?.elementType);
     if (itemType === undefined) {
-      return factory.lookupBuiltInType(BuiltInTypeKind.Array);
+      return factory.addArrayType(factory.addAnyType(), combinedSchema.minItems, combinedSchema.maxItems);
     }
 
-    return factory.addArrayType(itemType);
+    return factory.addArrayType(itemType, combinedSchema.minItems, combinedSchema.maxItems);
   }
 
   function createObjectTypeProperty(type: TypeReference, flags: ObjectTypePropertyFlags, description?: string): ObjectTypeProperty {

@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedClusterIdentity](#managedclusteridentity): The identity of the managed cluster, if configured.
 * **location**: string (Required): Resource location
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 63, pattern: "^[a-zA-Z0-9]$|^[a-zA-Z0-9][-_a-zA-Z0-9]{0,61}[a-zA-Z0-9]$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedClusterProperties](#managedclusterproperties): Properties of a managed cluster.
 * **sku**: [ManagedClusterSKU](#managedclustersku): The managed cluster SKU.
 * **tags**: [ResourceTags](#resourcetags): Resource tags
@@ -61,21 +61,21 @@
 
 ## ContainerServiceLinuxProfile
 ### Properties
-* **adminUsername**: string (Required): The administrator username to use for Linux VMs.
+* **adminUsername**: string {pattern: "^[A-Za-z][-A-Za-z0-9_]*$"} (Required): The administrator username to use for Linux VMs.
 * **ssh**: [ContainerServiceSshConfiguration](#containerservicesshconfiguration) (Required): SSH configuration for Linux-based VMs running on Azure.
 
 ## ContainerServiceNetworkProfile
 ### Properties
-* **dnsServiceIP**: string: An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.
-* **dockerBridgeCidr**: string: A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.
+* **dnsServiceIP**: string {pattern: "^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$"}: An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.
+* **dockerBridgeCidr**: string {pattern: "^([0-9]{1,3}\.){3}[0-9]{1,3}(\/([0-9]|[1-2][0-9]|3[0-2]))?$"}: A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.
 * **loadBalancerProfile**: [ManagedClusterLoadBalancerProfile](#managedclusterloadbalancerprofile): Profile of the cluster load balancer.
 * **loadBalancerSku**: 'basic' | 'standard' | string: The load balancer sku for the managed cluster.
 * **networkMode**: 'bridge' | 'transparent' | string: Network mode used for building Kubernetes network.
 * **networkPlugin**: 'azure' | 'kubenet' | string: Network plugin used for building Kubernetes network.
 * **networkPolicy**: 'azure' | 'calico' | string: Network policy used for building Kubernetes network.
 * **outboundType**: 'loadBalancer' | 'userDefinedRouting' | string: The outbound (egress) routing method.
-* **podCidr**: string: A CIDR notation IP range from which to assign pod IPs when kubenet is used.
-* **serviceCidr**: string: A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.
+* **podCidr**: string {pattern: "^([0-9]{1,3}\.){3}[0-9]{1,3}(\/([0-9]|[1-2][0-9]|3[0-2]))?$"}: A CIDR notation IP range from which to assign pod IPs when kubenet is used.
+* **serviceCidr**: string {pattern: "^([0-9]{1,3}\.){3}[0-9]{1,3}(\/([0-9]|[1-2][0-9]|3[0-2]))?$"}: A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.
 
 ## ContainerServiceSshConfiguration
 ### Properties
@@ -148,12 +148,12 @@
 * **maxPods**: int: Maximum number of pods that can run on a node.
 * **minCount**: int: Minimum number of nodes for auto-scaling
 * **mode**: 'System' | 'User' | string: AgentPoolMode represents mode of an agent pool
-* **name**: string (Required): Unique name of the agent pool profile in the context of the subscription and resource group.
+* **name**: string {pattern: "^[a-z][a-z0-9]{0,11}$"} (Required): Unique name of the agent pool profile in the context of the subscription and resource group.
 * **nodeImageVersion**: string (ReadOnly): Version of node image
 * **nodeLabels**: [ManagedClusterAgentPoolProfilePropertiesNodeLabels](#managedclusteragentpoolprofilepropertiesnodelabels): Agent pool node labels to be persisted across all nodes in agent pool.
 * **nodeTaints**: string[]: Taints added to new nodes during node pool create and scale. For example, key=value:NoSchedule.
 * **orchestratorVersion**: string: Version of orchestrator specified when creating the managed cluster.
-* **osDiskSizeGB**: int: OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.
+* **osDiskSizeGB**: int {minValue: 0, maxValue: 1023}: OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.
 * **osType**: 'Linux' | 'Windows' | string: OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
 * **provisioningState**: string (ReadOnly): The current deployment or provisioning state, which only appears in the response.
 * **proximityPlacementGroupID**: string: The ID for Proximity Placement Group.
@@ -180,7 +180,7 @@
 * **nodeLabels**: [ManagedClusterAgentPoolProfilePropertiesNodeLabels](#managedclusteragentpoolprofilepropertiesnodelabels): Agent pool node labels to be persisted across all nodes in agent pool.
 * **nodeTaints**: string[]: Taints added to new nodes during node pool create and scale. For example, key=value:NoSchedule.
 * **orchestratorVersion**: string: Version of orchestrator specified when creating the managed cluster.
-* **osDiskSizeGB**: int: OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.
+* **osDiskSizeGB**: int {minValue: 0, maxValue: 1023}: OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.
 * **osType**: 'Linux' | 'Windows' | string: OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
 * **provisioningState**: string (ReadOnly): The current deployment or provisioning state, which only appears in the response.
 * **proximityPlacementGroupID**: string: The ID for Proximity Placement Group.
@@ -237,16 +237,16 @@
 
 ## ManagedClusterLoadBalancerProfile
 ### Properties
-* **allocatedOutboundPorts**: int: Desired number of allocated SNAT ports per VM. Allowed values must be in the range of 0 to 64000 (inclusive). The default value is 0 which results in Azure dynamically allocating ports.
+* **allocatedOutboundPorts**: int {minValue: 0, maxValue: 64000}: Desired number of allocated SNAT ports per VM. Allowed values must be in the range of 0 to 64000 (inclusive). The default value is 0 which results in Azure dynamically allocating ports.
 * **effectiveOutboundIPs**: [ResourceReference](#resourcereference)[]: The effective outbound IP resources of the cluster load balancer.
-* **idleTimeoutInMinutes**: int: Desired outbound flow idle timeout in minutes. Allowed values must be in the range of 4 to 120 (inclusive). The default value is 30 minutes.
+* **idleTimeoutInMinutes**: int {minValue: 4, maxValue: 120}: Desired outbound flow idle timeout in minutes. Allowed values must be in the range of 4 to 120 (inclusive). The default value is 30 minutes.
 * **managedOutboundIPs**: [ManagedClusterLoadBalancerProfileManagedOutboundIPs](#managedclusterloadbalancerprofilemanagedoutboundips): Desired managed outbound IPs for the cluster load balancer.
 * **outboundIPPrefixes**: [ManagedClusterLoadBalancerProfileOutboundIPPrefixes](#managedclusterloadbalancerprofileoutboundipprefixes): Desired outbound IP Prefix resources for the cluster load balancer.
 * **outboundIPs**: [ManagedClusterLoadBalancerProfileOutboundIPs](#managedclusterloadbalancerprofileoutboundips): Desired outbound IP resources for the cluster load balancer.
 
 ## ManagedClusterLoadBalancerProfileManagedOutboundIPs
 ### Properties
-* **count**: int: Desired number of outbound IP created/managed by Azure for the cluster load balancer. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1.
+* **count**: int {minValue: 1, maxValue: 100}: Desired number of outbound IP created/managed by Azure for the cluster load balancer. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1.
 
 ## ManagedClusterLoadBalancerProfileOutboundIPPrefixes
 ### Properties

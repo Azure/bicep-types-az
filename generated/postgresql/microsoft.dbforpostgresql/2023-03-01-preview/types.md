@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [UserAssignedIdentity](#userassignedidentity): Describes the identity of the application.
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 63, pattern: "^[a-zA-Z0-9]+(-[a-zA-Z0-9]+)*"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ServerProperties](#serverproperties): Properties of the server.
 * **sku**: [Sku](#sku): The SKU (pricing tier) of the server.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
@@ -29,7 +29,7 @@
 ### Properties
 * **apiVersion**: '2023-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, pattern: "^[-\w\._]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ServerBackupProperties](#serverbackupproperties) (ReadOnly): The properties of a server backup.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DBforPostgreSQL/flexibleServers/backups' (ReadOnly, DeployTimeConstant): The resource type
@@ -39,7 +39,7 @@
 ### Properties
 * **apiVersion**: '2023-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, pattern: "^[-\w\._]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ConfigurationProperties](#configurationproperties): The properties of a configuration.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DBforPostgreSQL/flexibleServers/configurations' (ReadOnly, DeployTimeConstant): The resource type
@@ -49,7 +49,7 @@
 ### Properties
 * **apiVersion**: '2023-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, pattern: "^[-\w\._]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DatabaseProperties](#databaseproperties): The properties of a database.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DBforPostgreSQL/flexibleServers/databases' (ReadOnly, DeployTimeConstant): The resource type
@@ -59,7 +59,7 @@
 ### Properties
 * **apiVersion**: '2023-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, pattern: "^[-\w\._]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [FirewallRuleProperties](#firewallruleproperties) (Required): The properties of a firewall rule.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DBforPostgreSQL/flexibleServers/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
@@ -69,7 +69,7 @@
 ### Properties
 * **apiVersion**: '2023-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[a-zA-Z0-9]+(-[a-zA-Z0-9]+)*"} (Required, DeployTimeConstant): The resource name
 * **properties**: [LtrBackupOperationResponseProperties](#ltrbackupoperationresponseproperties) (ReadOnly): Long Term Retention Backup Operation Resource Properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DBforPostgreSQL/flexibleServers/ltrBackupOperations' (ReadOnly, DeployTimeConstant): The resource type
@@ -80,7 +80,7 @@
 * **apiVersion**: '2023-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[a-z][a-z0-9]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [MigrationResourceProperties](#migrationresourceproperties): Migration resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -88,8 +88,8 @@
 
 ## AdminCredentials
 ### Properties
-* **sourceServerPassword**: string (Required, WriteOnly): Password for source server.
-* **targetServerPassword**: string (Required, WriteOnly): Password for target server.
+* **sourceServerPassword**: string {sensitive} (Required, WriteOnly): Password for source server.
+* **targetServerPassword**: string {sensitive} (Required, WriteOnly): Password for target server.
 
 ## AdministratorPropertiesForAddOrAdministratorProperties
 ### Properties
@@ -126,8 +126,8 @@
 
 ## DatabaseProperties
 ### Properties
-* **charset**: string: The charset of the database.
-* **collation**: string: The collation of the database.
+* **charset**: string {pattern: "^[a-zA-Z]+\w*$"}: The charset of the database.
+* **collation**: string {pattern: "^[a-zA-Z\-]+([. ]|\w)*$"}: The collation of the database.
 
 ## DataEncryption
 ### Properties
@@ -148,8 +148,8 @@
 
 ## FirewallRuleProperties
 ### Properties
-* **endIpAddress**: string (Required): The end IP address of the server firewall rule. Must be IPv4 format.
-* **startIpAddress**: string (Required): The start IP address of the server firewall rule. Must be IPv4 format.
+* **endIpAddress**: string {pattern: "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"} (Required): The end IP address of the server firewall rule. Must be IPv4 format.
+* **startIpAddress**: string {pattern: "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"} (Required): The start IP address of the server firewall rule. Must be IPv4 format.
 
 ## HighAvailability
 ### Properties
@@ -166,7 +166,7 @@
 * **endTime**: string: End time of the operation.
 * **errorCode**: string (ReadOnly): The error code.
 * **errorMessage**: string (ReadOnly): The error message.
-* **percentComplete**: int: PercentageCompleted
+* **percentComplete**: int {minValue: 0, maxValue: 100}: PercentageCompleted
 * **startTime**: string (Required): Start time of the operation.
 * **status**: 'Cancelled' | 'Failed' | 'Running' | 'Succeeded' | string (Required): Service-set extensible enum indicating the status of operation
 
@@ -182,7 +182,7 @@
 * **cancel**: 'False' | 'True' | string: To trigger cancel for entire migration we need to send this flag as True
 * **currentStatus**: [MigrationStatus](#migrationstatus) (ReadOnly): Current status of migration
 * **dbsToCancelMigrationOn**: string[]: When you want to trigger cancel for specific databases send cancel flag as True and database names in this array
-* **dbsToMigrate**: string[]: Number of databases to migrate
+* **dbsToMigrate**: string[] {maxLength: 50}: Number of databases to migrate
 * **dbsToTriggerCutoverOn**: string[]: When you want to trigger cutover for specific databases send triggerCutover flag as True and database names in this array
 * **migrationId**: string (ReadOnly): ID for migration, a GUID.
 * **migrationMode**: 'Offline' | 'Online' | string: There are two types of migration modes Online and Offline
@@ -231,7 +231,7 @@
 ## ServerProperties
 ### Properties
 * **administratorLogin**: string: The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).
-* **administratorLoginPassword**: string (WriteOnly): The administrator login password (required for server creation).
+* **administratorLoginPassword**: string {sensitive} (WriteOnly): The administrator login password (required for server creation).
 * **authConfig**: [AuthConfig](#authconfig): AuthConfig properties of a server.
 * **availabilityZone**: string: availability zone information of the server.
 * **backup**: [Backup](#backup): Backup properties of a server.

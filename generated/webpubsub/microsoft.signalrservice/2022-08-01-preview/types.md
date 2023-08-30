@@ -166,8 +166,8 @@ It also appears in the aud (audience) claim of the issued token.
 
 ## NetworkACL
 ### Properties
-* **allow**: 'ClientConnection' | 'RESTAPI' | 'ServerConnection' | 'Trace' | string[]: Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
-* **deny**: 'ClientConnection' | 'RESTAPI' | 'ServerConnection' | 'Trace' | string[]: Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
+* **allow**: ('ClientConnection' | 'RESTAPI' | 'ServerConnection' | 'Trace' | string)[]: Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
+* **deny**: ('ClientConnection' | 'RESTAPI' | 'ServerConnection' | 'Trace' | string)[]: Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
 
 ## PrivateEndpoint
 ### Properties
@@ -175,8 +175,8 @@ It also appears in the aud (audience) claim of the issued token.
 
 ## PrivateEndpointACL
 ### Properties
-* **allow**: 'ClientConnection' | 'RESTAPI' | 'ServerConnection' | 'Trace' | string[]: Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
-* **deny**: 'ClientConnection' | 'RESTAPI' | 'ServerConnection' | 'Trace' | string[]: Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
+* **allow**: ('ClientConnection' | 'RESTAPI' | 'ServerConnection' | 'Trace' | string)[]: Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
+* **deny**: ('ClientConnection' | 'RESTAPI' | 'ServerConnection' | 'Trace' | string)[]: Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
 * **name**: string (Required): Name of the private endpoint connection
 
 ## PrivateEndpointConnection
@@ -285,10 +285,10 @@ Maximum count of event listeners among all hubs is 10.
 
 ## WebPubSubKeys
 ### Properties
-* **primaryConnectionString**: string: Connection string constructed via the primaryKey
-* **primaryKey**: string: The primary access key.
-* **secondaryConnectionString**: string: Connection string constructed via the secondaryKey
-* **secondaryKey**: string: The secondary access key.
+* **primaryConnectionString**: string {sensitive}: Connection string constructed via the primaryKey
+* **primaryKey**: string {sensitive}: The primary access key.
+* **secondaryConnectionString**: string {sensitive}: Connection string constructed via the secondaryKey
+* **secondaryKey**: string {sensitive}: The secondary access key.
 
 ## WebPubSubNetworkACLs
 ### Properties

@@ -6,7 +6,7 @@
 * **apiVersion**: '2017-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Specifies the location of the resource.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 90, pattern: "^[a-zA-Z][-\w\._\(\)]+[a-zA-Z0-9]$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [OperationalizationClusterProperties](#operationalizationclusterproperties): Properties of an operationalization cluster.
 * **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.MachineLearningCompute/operationalizationClusters' (ReadOnly, DeployTimeConstant): The resource type
@@ -18,12 +18,12 @@
 
 ## AcsClusterProperties
 ### Properties
-* **agentCount**: int: The number of agent nodes in the Container Service. This can be changed to scale the cluster.
+* **agentCount**: int {minValue: 1, maxValue: 100}: The number of agent nodes in the Container Service. This can be changed to scale the cluster.
 * **agentVmSize**: 'Standard_A0' | 'Standard_A1' | 'Standard_A10' | 'Standard_A11' | 'Standard_A2' | 'Standard_A3' | 'Standard_A4' | 'Standard_A5' | 'Standard_A6' | 'Standard_A7' | 'Standard_A8' | 'Standard_A9' | 'Standard_D1' | 'Standard_D11' | 'Standard_D11_v2' | 'Standard_D12' | 'Standard_D12_v2' | 'Standard_D13' | 'Standard_D13_v2' | 'Standard_D14' | 'Standard_D14_v2' | 'Standard_D1_v2' | 'Standard_D2' | 'Standard_D2_v2' | 'Standard_D3' | 'Standard_D3_v2' | 'Standard_D4' | 'Standard_D4_v2' | 'Standard_D5_v2' | 'Standard_DS1' | 'Standard_DS11' | 'Standard_DS12' | 'Standard_DS13' | 'Standard_DS14' | 'Standard_DS2' | 'Standard_DS3' | 'Standard_DS4' | 'Standard_G1' | 'Standard_G2' | 'Standard_G3' | 'Standard_G4' | 'Standard_G5' | 'Standard_GS1' | 'Standard_GS2' | 'Standard_GS3' | 'Standard_GS4' | 'Standard_GS5' | string: The Azure VM size of the agent VM nodes. This cannot be changed once the cluster is created.
 * **clusterFqdn**: string (ReadOnly): The FQDN of the cluster.
 * **orchestratorProperties**: [KubernetesClusterProperties](#kubernetesclusterproperties) (Required): Orchestrator specific properties
 * **orchestratorType**: 'Kubernetes' | string (Required): Type of orchestrator. It cannot be changed once the cluster is created.
-* **systemServices**: 'Batch' | 'Scoring' | string[]: The system services deployed to the cluster
+* **systemServices**: ('Batch' | 'Scoring' | string)[]: The system services deployed to the cluster
 
 ## AppInsightsCredentials
 ### Properties
@@ -32,8 +32,8 @@
 
 ## AutoScaleConfiguration
 ### Properties
-* **maxReplicas**: int: The maximum number of replicas for each service.
-* **minReplicas**: int: The minimum number of replicas for each service.
+* **maxReplicas**: int {minValue: 1}: The maximum number of replicas for each service.
+* **minReplicas**: int {minValue: 1}: The minimum number of replicas for each service.
 * **refreshPeriodInSeconds**: int: Refresh period in seconds.
 * **status**: 'Disabled' | 'Enabled' | string: If auto-scale is enabled for all services. Each service can turn it off individually.
 * **targetUtilization**: int: The target utilization.

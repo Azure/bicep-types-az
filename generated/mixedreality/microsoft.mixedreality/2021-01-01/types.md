@@ -8,7 +8,7 @@
 * **identity**: [Identity](#identity): The identity associated with this account
 * **kind**: [Sku](#sku): The kind of account, if supported
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 90, pattern: "^[-\w\._\(\)]+$"} (Required, DeployTimeConstant): The resource name
 * **plan**: [Identity](#identity): The plan associated with this account
 * **properties**: [MixedRealityAccountProperties](#mixedrealityaccountproperties): Property bag.
 * **sku**: [Sku](#sku): The sku associated with this account
@@ -24,7 +24,7 @@
 * **identity**: [Identity](#identity): The identity associated with this account
 * **kind**: [Sku](#sku): The kind of account, if supported
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 90, pattern: "^[-\w\._\(\)]+$"} (Required, DeployTimeConstant): The resource name
 * **plan**: [Identity](#identity): The plan associated with this account
 * **properties**: [MixedRealityAccountProperties](#mixedrealityaccountproperties): Property bag.
 * **sku**: [Sku](#sku): The sku associated with this account
@@ -44,13 +44,13 @@
 
 ## AccountKeys
 ### Properties
-* **primaryKey**: string (ReadOnly): value of primary key.
-* **secondaryKey**: string (ReadOnly): value of secondary key.
+* **primaryKey**: string {sensitive} (ReadOnly): value of primary key.
+* **secondaryKey**: string {sensitive} (ReadOnly): value of secondary key.
 
 ## AccountKeys
 ### Properties
-* **primaryKey**: string (ReadOnly): value of primary key.
-* **secondaryKey**: string (ReadOnly): value of secondary key.
+* **primaryKey**: string {sensitive} (ReadOnly): value of primary key.
+* **secondaryKey**: string {sensitive} (ReadOnly): value of secondary key.
 
 ## Identity
 ### Properties

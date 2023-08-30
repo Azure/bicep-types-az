@@ -135,8 +135,8 @@
 ## AssignmentProperties
 ### Properties
 * **blueprintId**: string: ID of the published version of a blueprint definition.
-* **description**: string: Multi-line explain this resource.
-* **displayName**: string: One-liner string explain this resource.
+* **description**: string {maxLength: 500}: Multi-line explain this resource.
+* **displayName**: string {maxLength: 256}: One-liner string explain this resource.
 * **locks**: [AssignmentLockSettings](#assignmentlocksettings): Defines how resources deployed by a blueprint assignment are locked.
 * **parameters**: [AssignmentPropertiesParameters](#assignmentpropertiesparameters) (Required): Blueprint assignment parameter values.
 * **provisioningState**: 'canceled' | 'cancelling' | 'creating' | 'deleting' | 'deploying' | 'failed' | 'locking' | 'succeeded' | 'validating' | 'waiting' | string (ReadOnly): State of the blueprint assignment.
@@ -167,8 +167,8 @@
 
 ## BlueprintProperties
 ### Properties
-* **description**: string: Multi-line explain this resource.
-* **displayName**: string: One-liner string explain this resource.
+* **description**: string {maxLength: 500}: Multi-line explain this resource.
+* **displayName**: string {maxLength: 256}: One-liner string explain this resource.
 * **layout**: any (ReadOnly): Layout view of the blueprint definition for UI reference.
 * **parameters**: [SharedBlueprintPropertiesParameters](#sharedblueprintpropertiesparameters): Parameters required by this blueprint definition.
 * **resourceGroups**: [SharedBlueprintPropertiesResourceGroups](#sharedblueprintpropertiesresourcegroups): Resource group placeholders defined by this blueprint definition.
@@ -206,9 +206,9 @@
 
 ## ParameterDefinitionMetadata
 ### Properties
-* **description**: string: Description of this parameter/resourceGroup.
-* **displayName**: string: DisplayName of this parameter/resourceGroup.
-* **strongType**: string: StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.
+* **description**: string {maxLength: 500}: Description of this parameter/resourceGroup.
+* **displayName**: string {maxLength: 256}: DisplayName of this parameter/resourceGroup.
+* **strongType**: string {maxLength: 64}: StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.
 
 ## ParameterValue
 ### Properties
@@ -218,8 +218,8 @@
 ## PolicyAssignmentArtifactProperties
 ### Properties
 * **dependsOn**: string[]: Artifacts which need to be deployed before the specified artifact.
-* **description**: string: Multi-line explain this resource.
-* **displayName**: string: One-liner string explain this resource.
+* **description**: string {maxLength: 500}: Multi-line explain this resource.
+* **displayName**: string {maxLength: 256}: One-liner string explain this resource.
 * **parameters**: [PolicyAssignmentArtifactPropertiesParameters](#policyassignmentartifactpropertiesparameters) (Required): Parameter values for the policy definition.
 * **policyDefinitionId**: string (Required): Azure resource ID of the policy definition.
 * **resourceGroup**: string: Name of the resource group placeholder to which the policy will be assigned.
@@ -232,9 +232,9 @@
 ## PublishedBlueprintProperties
 ### Properties
 * **blueprintName**: string: Name of the published blueprint definition.
-* **changeNotes**: string: Version-specific change notes.
-* **description**: string: Multi-line explain this resource.
-* **displayName**: string: One-liner string explain this resource.
+* **changeNotes**: string {maxLength: 500}: Version-specific change notes.
+* **description**: string {maxLength: 500}: Multi-line explain this resource.
+* **displayName**: string {maxLength: 256}: One-liner string explain this resource.
 * **parameters**: [SharedBlueprintPropertiesParameters](#sharedblueprintpropertiesparameters): Parameters required by this blueprint definition.
 * **resourceGroups**: [SharedBlueprintPropertiesResourceGroups](#sharedblueprintpropertiesresourcegroups): Resource group placeholders defined by this blueprint definition.
 * **status**: [BlueprintStatus](#blueprintstatus) (ReadOnly): Status of the blueprint. This field is readonly.
@@ -256,13 +256,13 @@
 ## ResourceGroupValue
 ### Properties
 * **location**: string: Location of the resource group.
-* **name**: string: Name of the resource group.
+* **name**: string {minLength: 1, maxLength: 90}: Name of the resource group.
 
 ## RoleAssignmentArtifactProperties
 ### Properties
 * **dependsOn**: string[]: Artifacts which need to be deployed before the specified artifact.
-* **description**: string: Multi-line explain this resource.
-* **displayName**: string: One-liner string explain this resource.
+* **description**: string {maxLength: 500}: Multi-line explain this resource.
+* **displayName**: string {maxLength: 256}: One-liner string explain this resource.
 * **principalIds**: any (Required): Array of user or group identities in Azure Active Directory. The roleDefinition will apply to each identity.
 * **resourceGroup**: string: RoleAssignment will be scope to this resourceGroup. If empty, it scopes to the subscription.
 * **roleDefinitionId**: string (Required): Azure resource ID of the RoleDefinition.
@@ -296,8 +296,8 @@
 ## TemplateArtifactProperties
 ### Properties
 * **dependsOn**: string[]: Artifacts which need to be deployed before the specified artifact.
-* **description**: string: Multi-line explain this resource.
-* **displayName**: string: One-liner string explain this resource.
+* **description**: string {maxLength: 500}: Multi-line explain this resource.
+* **displayName**: string {maxLength: 256}: One-liner string explain this resource.
 * **parameters**: [TemplateArtifactPropertiesParameters](#templateartifactpropertiesparameters) (Required): Resource Manager template blueprint artifact parameter values.
 * **resourceGroup**: string: If applicable, the name of the resource group placeholder to which the Resource Manager template blueprint artifact will be deployed.
 * **template**: any (Required): The Resource Manager template blueprint artifact body.

@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedCassandraManagedServiceIdentity](#managedcassandramanagedserviceidentity): Identity for the resource.
 * **location**: string: The location of the resource group to which the resource belongs.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 100, pattern: "^[a-zA-Z0-9]+(-[a-zA-Z0-9]+)*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ClusterResourceProperties](#clusterresourceproperties): Properties of a managed Cassandra cluster.
 * **tags**: [Tags](#tags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
 * **type**: 'Microsoft.DocumentDB/cassandraClusters' (ReadOnly, DeployTimeConstant): The resource type
@@ -17,7 +17,7 @@
 ### Properties
 * **apiVersion**: '2023-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 15, pattern: "^[0-9]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [BackupResourceProperties](#backupresourceproperties) (ReadOnly)
 * **type**: 'Microsoft.DocumentDB/cassandraClusters/backups' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -26,7 +26,7 @@
 ### Properties
 * **apiVersion**: '2023-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 100, pattern: "^[a-zA-Z0-9]+(-[a-zA-Z0-9]+)*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DataCenterResourceProperties](#datacenterresourceproperties): Properties of a managed Cassandra data center.
 * **type**: 'Microsoft.DocumentDB/cassandraClusters/dataCenters' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -38,7 +38,7 @@
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Identity for the resource.
 * **kind**: 'GlobalDocumentDB' | 'MongoDB' | 'Parse' | string: Indicates the type of database account. This can only be set at database account creation.
 * **location**: string: The location of the resource group to which the resource belongs.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 50, pattern: "^[a-z0-9]+(-[a-z0-9]+)*"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties](#databaseaccountcreateupdatepropertiesordatabaseaccountgetproperties) (Required): Properties to create and update Azure Cosmos DB database accounts.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **tags**: [Tags](#tags): Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
@@ -283,7 +283,7 @@
 ### Properties
 * **apiVersion**: '2023-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 50} (Required, DeployTimeConstant): The resource name
 * **properties**: [ServiceResourceCreateUpdatePropertiesOrServiceResourceProperties](#serviceresourcecreateupdatepropertiesorserviceresourceproperties): Properties in ServiceResourceCreateUpdateParameters.
 * **type**: 'Microsoft.DocumentDB/databaseAccounts/services' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -437,7 +437,7 @@
 * **apiVersion**: '2023-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 40, pattern: "^[a-z0-9]+(-[a-z0-9]+)*"} (Required, DeployTimeConstant): The resource name
 * **properties**: [MongoClusterProperties](#mongoclusterproperties): Properties of the mongo cluster.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -448,7 +448,7 @@
 ### Properties
 * **apiVersion**: '2023-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 80, pattern: "^[a-zA-Z0-9][-_.a-zA-Z0-9]*"} (Required, DeployTimeConstant): The resource name
 * **properties**: [FirewallRuleProperties](#firewallruleproperties) (Required): The properties of a firewall rule.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DocumentDB/mongoClusters/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
@@ -542,7 +542,7 @@
 
 ## Capacity
 ### Properties
-* **totalThroughputLimit**: int: The total throughput limit imposed on the account. A totalThroughputLimit of 2000 imposes a strict limit of max throughput that can be provisioned on that account to be 2000. A totalThroughputLimit of -1 indicates no limits on provisioning of throughput.
+* **totalThroughputLimit**: int {minValue: -1}: The total throughput limit imposed on the account. A totalThroughputLimit of 2000 imposes a strict limit of max throughput that can be provisioned on that account to be 2000. A totalThroughputLimit of -1 indicates no limits on provisioning of throughput.
 
 ## CassandraKeyspaceCreateUpdatePropertiesOrCassandraKeyspaceGetProperties
 ### Properties
@@ -622,7 +622,7 @@
 ## ClientEncryptionPolicy
 ### Properties
 * **includedPaths**: [ClientEncryptionIncludedPath](#clientencryptionincludedpath)[] (Required): Paths of the item that need encryption along with path-specific settings.
-* **policyFormatVersion**: int (Required): Version of the client encryption policy definition. Supported versions are 1 and 2. Version 2 supports id and partition key path encryption.
+* **policyFormatVersion**: int {minValue: 1, maxValue: 2} (Required): Version of the client encryption policy definition. Supported versions are 1 and 2. Version 2 supports id and partition key path encryption.
 
 ## ClusterKey
 ### Properties
@@ -642,7 +642,7 @@
 * **externalSeedNodes**: [SeedNode](#seednode)[]: List of IP addresses of seed nodes in unmanaged data centers. These will be added to the seed node lists of all managed nodes.
 * **gossipCertificates**: [Certificate](#certificate)[] (ReadOnly): List of TLS certificates that unmanaged nodes must trust for gossip with managed nodes. All managed nodes will present TLS client certificates that are verifiable using one of the certificates provided in this property.
 * **hoursBetweenBackups**: int: Number of hours to wait between taking a backup of the cluster. To disable backups, set this property to 0.
-* **initialCassandraAdminPassword**: string (WriteOnly): Initial password for clients connecting as admin to the cluster. Should be changed after cluster creation. Returns null on GET. This field only applies when the authenticationMethod field is 'Cassandra'.
+* **initialCassandraAdminPassword**: string {sensitive} (WriteOnly): Initial password for clients connecting as admin to the cluster. Should be changed after cluster creation. Returns null on GET. This field only applies when the authenticationMethod field is 'Cassandra'.
 * **prometheusEndpoint**: [SeedNode](#seednode): Hostname or IP address where the Prometheus endpoint containing data about the managed Cassandra nodes can be reached.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: The status of the resource at the time the operation was called.
 * **repairEnabled**: bool: Should automatic repairs run on this cluster? If omitted, this is true, and should stay true unless you are running a hybrid cluster where you are already doing your own repairs.
@@ -678,15 +678,15 @@
 ## ConsistencyPolicy
 ### Properties
 * **defaultConsistencyLevel**: 'BoundedStaleness' | 'ConsistentPrefix' | 'Eventual' | 'Session' | 'Strong' (Required): The default consistency level and configuration settings of the Cosmos DB account.
-* **maxIntervalInSeconds**: int: When used with the Bounded Staleness consistency level, this value represents the time amount of staleness (in seconds) tolerated. Accepted range for this value is 5 - 86400. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'.
-* **maxStalenessPrefix**: int: When used with the Bounded Staleness consistency level, this value represents the number of stale requests tolerated. Accepted range for this value is 1 – 2,147,483,647. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'.
+* **maxIntervalInSeconds**: int {minValue: 5, maxValue: 86400}: When used with the Bounded Staleness consistency level, this value represents the time amount of staleness (in seconds) tolerated. Accepted range for this value is 5 - 86400. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'.
+* **maxStalenessPrefix**: int {minValue: 1, maxValue: 2147483647}: When used with the Bounded Staleness consistency level, this value represents the number of stale requests tolerated. Accepted range for this value is 1 – 2,147,483,647. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'.
 
 ## ContainerPartitionKey
 ### Properties
 * **kind**: 'Hash' | 'MultiHash' | 'Range' | string: Indicates the kind of algorithm used for partitioning. For MultiHash, multiple partition keys (upto three maximum) are supported for container create
 * **paths**: string[]: List of paths using which data within the container can be partitioned
 * **systemKey**: bool (ReadOnly): Indicates if the container is using a system generated partition key
-* **version**: int: Indicates the version of the partition key definition
+* **version**: int {minValue: 1, maxValue: 2}: Indicates the version of the partition key definition
 
 ## ContinuousModeProperties
 ### Properties
@@ -698,7 +698,7 @@
 * **allowedMethods**: string: The methods (HTTP request verbs) that the origin domain may use for a CORS request.
 * **allowedOrigins**: string (Required): The origin domains that are permitted to make a request against the service via CORS.
 * **exposedHeaders**: string: The response headers that may be sent in the response to the CORS request and exposed by the browser to the request issuer.
-* **maxAgeInSeconds**: int: The maximum amount time that a browser should cache the preflight OPTIONS request.
+* **maxAgeInSeconds**: int {minValue: 1, maxValue: 2147483647}: The maximum amount time that a browser should cache the preflight OPTIONS request.
 
 ## CreateUpdateOptions
 ### Properties
@@ -887,7 +887,7 @@
 * **source**: [DataTransferDataSourceSink](#datatransferdatasourcesink) (Required): Source DataStore details
 * **status**: string (ReadOnly): Job Status
 * **totalCount**: int (ReadOnly): Total Count.
-* **workerCount**: int: Worker count
+* **workerCount**: int {minValue: 0}: Worker count
 
 ## DiagnosticLogSettings
 ### Properties
@@ -904,15 +904,15 @@
 
 ## FailoverPolicy
 ### Properties
-* **failoverPriority**: int: The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.
+* **failoverPriority**: int {minValue: 0}: The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.
 * **id**: string (ReadOnly): The unique identifier of the region in which the database account replicates to. Example: &lt;accountName&gt;-&lt;locationName&gt;.
 * **locationName**: string: The name of the region in which the database account exists.
 
 ## FirewallRuleProperties
 ### Properties
-* **endIpAddress**: string (Required): The end IP address of the mongo cluster firewall rule. Must be IPv4 format.
+* **endIpAddress**: string {pattern: "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"} (Required): The end IP address of the mongo cluster firewall rule. Must be IPv4 format.
 * **provisioningState**: 'Canceled' | 'Dropping' | 'Failed' | 'InProgress' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the firewall rule.
-* **startIpAddress**: string (Required): The start IP address of the mongo cluster firewall rule. Must be IPv4 format.
+* **startIpAddress**: string {pattern: "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"} (Required): The start IP address of the mongo cluster firewall rule. Must be IPv4 format.
 
 ## GraphResourceCreateUpdatePropertiesOrGraphResourceGetProperties
 ### Properties
@@ -1000,7 +1000,7 @@
 ## Location
 ### Properties
 * **documentEndpoint**: string (ReadOnly): The connection endpoint for the specific region. Example: https://&lt;accountName&gt;-&lt;locationName&gt;.documents.azure.com:443/
-* **failoverPriority**: int: The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.
+* **failoverPriority**: int {minValue: 0}: The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.
 * **id**: string (ReadOnly): The unique identifier of the region within the database account. Example: &lt;accountName&gt;-&lt;locationName&gt;.
 * **isZoneRedundant**: bool: Flag to indicate whether or not this region is an AvailabilityZone region
 * **locationName**: string: The name of the region.
@@ -1008,7 +1008,7 @@
 
 ## LocationProperties
 ### Properties
-* **backupStorageRedundancies**: 'Geo' | 'Local' | 'Zone' | string[] (ReadOnly): The properties of available backup storage redundancies.
+* **backupStorageRedundancies**: ('Geo' | 'Local' | 'Zone' | string)[] (ReadOnly): The properties of available backup storage redundancies.
 * **isResidencyRestricted**: bool (ReadOnly): Flag indicating whether the location is residency sensitive.
 * **status**: string (ReadOnly): The current status of location in Azure.
 * **supportsAvailabilityZone**: bool (ReadOnly): Flag indicating whether the location supports availability zones or not.
@@ -1034,12 +1034,12 @@
 ## MongoClusterProperties
 ### Properties
 * **administratorLogin**: string: The administrator's login for the mongo cluster.
-* **administratorLoginPassword**: string (WriteOnly): The password of the administrator login.
+* **administratorLoginPassword**: string {sensitive} (WriteOnly): The password of the administrator login.
 * **clusterStatus**: 'Dropping' | 'Provisioning' | 'Ready' | 'Starting' | 'Stopped' | 'Stopping' | 'Updating' | string (ReadOnly): A status of the mongo cluster.
 * **connectionString**: string (ReadOnly): The default mongo connection string for the cluster.
 * **createMode**: 'Default' | 'PointInTimeRestore' | 'Restore' | string (WriteOnly): The mode to create a mongo cluster.
 * **earliestRestoreTime**: string (ReadOnly): Earliest restore timestamp in UTC ISO8601 format.
-* **nodeGroupSpecs**: [NodeGroupSpec](#nodegroupspec)[]: The list of node group specs in the cluster.
+* **nodeGroupSpecs**: [NodeGroupSpec](#nodegroupspec)[] {minLength: 1}: The list of node group specs in the cluster.
 * **provisioningState**: 'Canceled' | 'Dropping' | 'Failed' | 'InProgress' | 'Succeeded' | 'Updating' | string (ReadOnly): A provisioning state of the mongo cluster.
 * **restoreParameters**: [MongoClusterRestoreParameters](#mongoclusterrestoreparameters) (WriteOnly): Parameters used for restore operations
 * **serverVersion**: string: The Mongo DB server version. Defaults to the latest available version if not specified.
@@ -1131,8 +1131,8 @@
 
 ## PeriodicModeProperties
 ### Properties
-* **backupIntervalInMinutes**: int: An integer representing the interval in minutes between two backups
-* **backupRetentionIntervalInHours**: int: An integer representing the time (in hours) that each backup is retained
+* **backupIntervalInMinutes**: int {minValue: 0}: An integer representing the interval in minutes between two backups
+* **backupRetentionIntervalInHours**: int {minValue: 0}: An integer representing the time (in hours) that each backup is retained
 * **backupStorageRedundancy**: 'Geo' | 'Local' | 'Zone' | string: Enum to indicate type of backup residency
 
 ## Permission
@@ -1207,7 +1207,7 @@
 ## ServiceResourceCreateUpdatePropertiesOrServiceResourceProperties
 ### Properties
 * **creationTime**: string (ReadOnly): Time of the last state change (ISO-8601 format).
-* **instanceCount**: int: Instance count for the service.
+* **instanceCount**: int {minValue: 0}: Instance count for the service.
 * **instanceSize**: 'Cosmos.D16s' | 'Cosmos.D4s' | 'Cosmos.D8s' | string: Instance type for the service.
 * **status**: 'Creating' | 'Deleting' | 'Error' | 'Running' | 'Stopped' | 'Updating' | string (ReadOnly): Describes the status of a service.
 ### Additional Properties
@@ -1221,7 +1221,7 @@
 ## SpatialSpec
 ### Properties
 * **path**: string: The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
-* **types**: 'LineString' | 'MultiPolygon' | 'Point' | 'Polygon' | string[]: List of path's spatial type
+* **types**: ('LineString' | 'MultiPolygon' | 'Point' | 'Polygon' | string)[]: List of path's spatial type
 
 ## SqlContainerCreateUpdatePropertiesOrSqlContainerGetProperties
 ### Properties

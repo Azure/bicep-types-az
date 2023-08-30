@@ -247,7 +247,7 @@
 * **skuDescription**: string (ReadOnly): The sku description.
 * **skuId**: string: The sku id.
 * **subscriptionBillingStatus**: 'Abandoned' | 'Active' | 'Deleted' | 'Inactive' | 'Warning' | string: Subscription billing status.
-* **subscriptionId**: string (ReadOnly): Subscription Id.
+* **subscriptionId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): Subscription Id.
 
 ## CustomerProperties
 ### Properties

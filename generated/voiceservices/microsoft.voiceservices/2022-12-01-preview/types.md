@@ -6,7 +6,7 @@
 * **apiVersion**: '2022-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[a-zA-Z0-9-]{3,24}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [CommunicationsGatewayProperties](#communicationsgatewayproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -18,7 +18,7 @@
 * **apiVersion**: '2022-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[a-zA-Z0-9-]{3,24}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ContactProperties](#contactproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -30,7 +30,7 @@
 * **apiVersion**: '2022-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[a-zA-Z0-9-]{3,24}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [TestLineProperties](#testlineproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -39,10 +39,10 @@
 ## CommunicationsGatewayProperties
 ### Properties
 * **apiBridge**: any: Details of API bridge functionality, if required
-* **codecs**: 'G722' | 'G722_2' | 'PCMA' | 'PCMU' | 'SILK_16' | 'SILK_8' | string[] (Required): Voice codecs to support
+* **codecs**: ('G722' | 'G722_2' | 'PCMA' | 'PCMU' | 'SILK_16' | 'SILK_8' | string)[] (Required): Voice codecs to support
 * **connectivity**: 'PublicAddress' | string (Required): How to connect back to the operator network, e.g. MAPS
 * **e911Type**: 'DirectToEsrp' | 'Standard' | string (Required): How to handle 911 calls
-* **platforms**: 'OperatorConnect' | 'TeamsPhoneMobile' | string[] (Required): What platforms to support
+* **platforms**: ('OperatorConnect' | 'TeamsPhoneMobile' | string)[] (Required): What platforms to support
 * **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): Resource provisioning state.
 * **serviceLocations**: [ServiceRegionProperties](#serviceregionproperties)[] (Required): The regions in which to deploy the resources needed for Teams Calling
 * **status**: 'ChangePending' | 'Complete' (ReadOnly): The current status of the deployment.

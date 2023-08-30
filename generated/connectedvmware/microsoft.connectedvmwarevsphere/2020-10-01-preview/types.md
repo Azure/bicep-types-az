@@ -223,7 +223,7 @@
 
 ## GuestCredential
 ### Properties
-* **password**: string (WriteOnly): Gets or sets the password to connect with the guest.
+* **password**: string {sensitive} (WriteOnly): Gets or sets the password to connect with the guest.
 * **username**: string: Gets or sets username to connect with the guest.
 
 ## HardwareProfile
@@ -404,7 +404,7 @@ that the nic is connected to.
 
 ## OsProfile
 ### Properties
-* **adminPassword**: string (WriteOnly): Gets or sets administrator password.
+* **adminPassword**: string {sensitive} (WriteOnly): Gets or sets administrator password.
 * **adminUsername**: string: Gets or sets administrator username.
 * **computerName**: string: Gets or sets computer name.
 * **osName**: string (ReadOnly): Gets or sets os name.
@@ -478,7 +478,7 @@ This property is used in relative allocation between resource consumers.
 * **customResourceName**: string (ReadOnly): Gets the name of the corresponding resource in Kubernetes.
 * **fqdn**: string (Required): Gets or sets the FQDN/IPAddress of the vCenter.
 * **instanceUuid**: string (ReadOnly): Gets or sets the instance UUID of the vCenter.
-* **port**: int: Gets or sets the port of the vCenter.
+* **port**: int {minValue: 1, maxValue: 65535}: Gets or sets the port of the vCenter.
 * **provisioningState**: string (ReadOnly): Gets or sets the provisioning state.
 * **statuses**: [ResourceStatus](#resourcestatus)[] (ReadOnly): The resource status information.
 * **uuid**: string (ReadOnly): Gets or sets a unique identifier for this resource.
@@ -491,7 +491,7 @@ This property is used in relative allocation between resource consumers.
 
 ## VICredential
 ### Properties
-* **password**: string (WriteOnly): Gets or sets the password to connect with the vCenter.
+* **password**: string {sensitive} (WriteOnly): Gets or sets the password to connect with the vCenter.
 * **username**: string: Gets or sets username to connect with the vCenter.
 
 ## VirtualDisk

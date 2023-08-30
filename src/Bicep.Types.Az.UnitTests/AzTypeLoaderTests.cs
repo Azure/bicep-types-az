@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Azure.Bicep.Types.Az;
 using FluentAssertions;
 using System.Linq;
 

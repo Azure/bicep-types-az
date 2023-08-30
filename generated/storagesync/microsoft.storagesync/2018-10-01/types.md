@@ -104,8 +104,8 @@
 * **serverLocalPath**: string: Server Local path.
 * **serverResourceId**: string: Server Resource Id.
 * **syncStatus**: [ServerEndpointHealth](#serverendpointhealth) (ReadOnly): Server Endpoint properties.
-* **tierFilesOlderThanDays**: int: Tier files older than days.
-* **volumeFreeSpacePercent**: int: Level of free space to be maintained by Cloud Tiering if it is enabled.
+* **tierFilesOlderThanDays**: int {minValue: 0, maxValue: 2147483647}: Tier files older than days.
+* **volumeFreeSpacePercent**: int {minValue: 0, maxValue: 100}: Level of free space to be maintained by Cloud Tiering if it is enabled.
 
 ## ServerEndpointHealth
 ### Properties
@@ -125,17 +125,17 @@
 
 ## SyncProgressStatus
 ### Properties
-* **appliedBytes**: int: Applied bytes
-* **appliedItemCount**: int: Applied item count.
-* **perItemErrorCount**: int: Per item error count
+* **appliedBytes**: int {minValue: 0, maxValue: 2147483647}: Applied bytes
+* **appliedItemCount**: int {minValue: 0, maxValue: 2147483647}: Applied item count.
+* **perItemErrorCount**: int {minValue: 0, maxValue: 2147483647}: Per item error count
 * **progressTimestamp**: string: Progress timestamp
 * **syncDirection**: 'download' | 'initialize' | 'none' | 'recall' | 'upload' | string: Sync direction.
-* **totalBytes**: int: Total bytes
-* **totalItemCount**: int: Total item count
+* **totalBytes**: int {minValue: 0, maxValue: 2147483647}: Total bytes
+* **totalItemCount**: int {minValue: 0, maxValue: 2147483647}: Total item count
 
 ## SyncSessionStatus
 ### Properties
-* **lastSyncPerItemErrorCount**: int: Last sync per item error count.
+* **lastSyncPerItemErrorCount**: int {minValue: 0, maxValue: 2147483647}: Last sync per item error count.
 * **lastSyncResult**: int: Last sync status
 * **lastSyncSuccessTimestamp**: string: Last sync success timestamp
 * **lastSyncTimestamp**: string: Last sync timestamp

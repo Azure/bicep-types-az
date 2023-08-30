@@ -55,7 +55,7 @@
 ## DigestConfig
 ### Properties
 * **actionGroupResourceId**: string: Action group resource id used by digest.
-* **categories**: 'Cost' | 'HighAvailability' | 'OperationalExcellence' | 'Performance' | 'Security' | string[]: Categories to send digest for. If categories are not provided, then digest will be sent for all categories.
+* **categories**: ('Cost' | 'HighAvailability' | 'OperationalExcellence' | 'Performance' | 'Security' | string)[]: Categories to send digest for. If categories are not provided, then digest will be sent for all categories.
 * **frequency**: int: Frequency that digest will be triggered, in days. Value must be between 7 and 30 days inclusive.
 * **language**: string: Language for digest content body. Value must be ISO 639-1 code for one of Azure portal supported languages. Otherwise, it will be converted into one. Default value is English (en).
 * **name**: string: Name of digest configuration. Value is case-insensitive and must be unique within a subscription.
@@ -81,7 +81,7 @@
 * **resourceMetadata**: [ResourceMetadata](#resourcemetadata): Metadata of resource that was assessed
 * **risk**: 'Error' | 'None' | 'Warning' | string: The potential risk of not implementing the recommendation.
 * **shortDescription**: [ShortDescription](#shortdescription): A summary of the recommendation.
-* **suppressionIds**: string[]: The list of snoozed and dismissed rules for the recommendation.
+* **suppressionIds**: (string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"})[]: The list of snoozed and dismissed rules for the recommendation.
 
 ## RecommendationPropertiesActionsItem
 ### Properties

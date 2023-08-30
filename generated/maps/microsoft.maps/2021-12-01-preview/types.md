@@ -41,7 +41,7 @@
 ## AccountSasParameters
 ### Properties
 * **expiry**: string (Required): The date time offset of when the token validity expires. For example "2017-05-24T10:42:03.1567373Z"
-* **maxRatePerSecond**: int (Required): Required parameter which represents the desired maximum request per second to allowed for the given SAS token. This does not guarantee perfect accuracy in measurements but provides application safe guards of abuse with eventual enforcement.
+* **maxRatePerSecond**: int {minValue: 1, maxValue: 500} (Required): Required parameter which represents the desired maximum request per second to allowed for the given SAS token. This does not guarantee perfect accuracy in measurements but provides application safe guards of abuse with eventual enforcement.
 * **principalId**: string (Required): The principal Id also known as the object Id of a User Assigned Managed Identity currently assigned to the Map Account. To assign a Managed Identity of the account, use operation Create or Update an assign a User Assigned Identity resource Id.
 * **regions**: string[]: Optional, allows control of which region locations are permitted access to Azure Maps REST APIs with the SAS token. Example: "eastus", "westus2". Omitting this parameter will allow all region locations to be accessible.
 * **signingKey**: 'primaryKey' | 'secondaryKey' | string (Required): The Map account key to use for signing.
@@ -58,12 +58,12 @@
 
 ## CorsRules
 ### Properties
-* **corsRules**: [CorsRule](#corsrule)[]: The list of CORS rules. You can include up to five CorsRule elements in the request.
+* **corsRules**: [CorsRule](#corsrule)[] {maxLength: 5}: The list of CORS rules. You can include up to five CorsRule elements in the request.
 
 ## CreatorProperties
 ### Properties
 * **provisioningState**: string (ReadOnly): The state of the resource provisioning, terminal states: Succeeded, Failed, Canceled
-* **storageUnits**: int (Required): The storage units to be allocated. Integer values from 1 to 100, inclusive.
+* **storageUnits**: int {minValue: 1, maxValue: 100} (Required): The storage units to be allocated. Integer values from 1 to 100, inclusive.
 
 ## LinkedResource
 ### Properties
@@ -93,7 +93,7 @@
 ### Properties
 * **cors**: [CorsRules](#corsrules): Specifies CORS rules for the Blob service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the Blob service.
 * **disableLocalAuth**: bool: Allows toggle functionality on Azure Policy to disable Azure Maps local authentication support. This will disable Shared Keys authentication from any usage.
-* **linkedResources**: [LinkedResource](#linkedresource)[]: Sets the resources to be used for Managed Identities based operations for the Map account resource.
+* **linkedResources**: [LinkedResource](#linkedresource)[] {maxLength: 10}: Sets the resources to be used for Managed Identities based operations for the Map account resource.
 * **provisioningState**: string (ReadOnly): The provisioning state of the Map account resource.
 * **uniqueId**: string (ReadOnly): A unique identifier for the maps account
 

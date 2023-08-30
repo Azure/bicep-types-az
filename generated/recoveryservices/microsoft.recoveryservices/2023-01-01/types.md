@@ -93,7 +93,7 @@
 
 ## PrivateEndpointConnection
 ### Properties
-* **groupIds**: 'AzureBackup' | 'AzureBackup_secondary' | 'AzureSiteRecovery' | string[]: Group Ids for the Private Endpoint
+* **groupIds**: ('AzureBackup' | 'AzureBackup_secondary' | 'AzureSiteRecovery' | string)[]: Group Ids for the Private Endpoint
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint) (ReadOnly): The Private Endpoint network resource that is linked to the Private Endpoint connection.
 * **privateLinkServiceConnectionState**: [PrivateLinkServiceConnectionState](#privatelinkserviceconnectionstate) (ReadOnly): Gets or sets private link service connection state.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Pending' | 'Succeeded' | string (ReadOnly): Gets or sets provisioning state of the private endpoint connection.

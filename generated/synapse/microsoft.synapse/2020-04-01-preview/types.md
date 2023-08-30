@@ -39,7 +39,7 @@
 ## SqlDatabaseProperties
 ### Properties
 * **collation**: string: The collation of the database.
-* **databaseGuid**: string (ReadOnly): The Guid of the database.
+* **databaseGuid**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The Guid of the database.
 * **dataRetention**: [SqlDatabaseDataRetention](#sqldatabasedataretention): Sql database data retention.
 * **status**: 'AutoClosed' | 'Copying' | 'Creating' | 'Disabled' | 'EmergencyMode' | 'Inaccessible' | 'Offline' | 'OfflineChangingDwPerformanceTiers' | 'OfflineSecondary' | 'Online' | 'OnlineChangingDwPerformanceTiers' | 'Paused' | 'Pausing' | 'Recovering' | 'RecoveryPending' | 'Restoring' | 'Resuming' | 'Scaling' | 'Shutdown' | 'Standby' | 'Suspect' | string (ReadOnly): The status of the database.
 * **storageRedundancy**: 'Geo' | 'GeoZone' | 'Local' | 'Zone' | string: The storage redundancy of the database.
@@ -51,7 +51,7 @@
 * **currentServiceObjectiveName**: string (ReadOnly): The current service level objective name of the sql pool.
 * **maxServiceObjectiveName**: string: The max service level objective name of the sql pool.
 * **requestedServiceObjectiveName**: string (ReadOnly): The requested service level objective name of the sql pool.
-* **sqlPoolGuid**: string (ReadOnly): The Guid of the sql pool.
+* **sqlPoolGuid**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The Guid of the sql pool.
 * **status**: 'Creating' | 'Dropping' | 'Error' | 'Inaccessible' | 'Invisible' | 'Offline' | 'Online' | 'Paused' | 'Pausing' | 'Resuming' | 'Scaling' | 'Unknown' | string (ReadOnly): The status of the sql pool.
 
 ## SystemData

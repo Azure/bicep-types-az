@@ -5,7 +5,7 @@
 ### Properties
 * **apiVersion**: '2021-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 24} (Required, DeployTimeConstant): The resource name
 * **properties**: [DeletedAccountProperties](#deletedaccountproperties) (ReadOnly): Properties of the deleted account.
 * **type**: 'Microsoft.Storage/locations/deletedAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -18,7 +18,7 @@
 * **identity**: [Identity](#identity): The identity of the resource.
 * **kind**: 'BlobStorage' | 'BlockBlobStorage' | 'FileStorage' | 'Storage' | 'StorageV2' | string (Required): Required. Indicates the type of storage account.
 * **location**: string (Required): Required. Gets or sets the location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 24} (Required, DeployTimeConstant): The resource name
 * **properties**: [StorageAccountPropertiesCreateParametersOrStorageAccountProperties](#storageaccountpropertiescreateparametersorstorageaccountproperties): The parameters used to create the storage account.
 * **sku**: [Sku](#sku) (Required): Required. Gets or sets the SKU name.
 * **tags**: [StorageAccountCreateParametersTags](#storageaccountcreateparameterstags): Gets or sets a list of key value pairs that describe the resource. These tags can be used for viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key with a length no greater than 128 characters and a value with a length no greater than 256 characters.
@@ -40,7 +40,7 @@
 * **apiVersion**: '2021-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource Etag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 63} (Required, DeployTimeConstant): The resource name
 * **properties**: [ContainerProperties](#containerproperties): Properties of the blob container.
 * **type**: 'Microsoft.Storage/storageAccounts/blobServices/containers' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -59,7 +59,7 @@
 ### Properties
 * **apiVersion**: '2021-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 63} (Required, DeployTimeConstant): The resource name
 * **properties**: [EncryptionScopeProperties](#encryptionscopeproperties): Properties of the encryption scope.
 * **type**: 'Microsoft.Storage/storageAccounts/encryptionScopes' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -79,7 +79,7 @@
 * **apiVersion**: '2021-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource Etag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 63} (Required, DeployTimeConstant): The resource name
 * **properties**: [FileShareProperties](#fileshareproperties): Properties of the file share.
 * **type**: 'Microsoft.Storage/storageAccounts/fileServices/shares' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -98,7 +98,7 @@
 ### Properties
 * **apiVersion**: '2021-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 64} (Required, DeployTimeConstant): The resource name
 * **properties**: [LocalUserProperties](#localuserproperties): Storage account local user properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Storage/storageAccounts/localUsers' (ReadOnly, DeployTimeConstant): The resource type
@@ -117,7 +117,7 @@
 ### Properties
 * **apiVersion**: '2021-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1} (Required, DeployTimeConstant): The resource name
 * **properties**: [ObjectReplicationPolicyProperties](#objectreplicationpolicyproperties): Returns the Storage Account Object Replication Policy.
 * **type**: 'Microsoft.Storage/storageAccounts/objectReplicationPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -144,7 +144,7 @@
 ### Properties
 * **apiVersion**: '2021-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 63, pattern: "^[a-z0-9]([a-z0-9]|(-(?!-))){1,61}[a-z0-9]$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [QueueProperties](#queueproperties): Queue resource properties.
 * **type**: 'Microsoft.Storage/storageAccounts/queueServices/queues' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -162,7 +162,7 @@
 ### Properties
 * **apiVersion**: '2021-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 63, pattern: "^[A-Za-z][A-Za-z0-9]{2,62}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [TableProperties](#tableproperties): Table resource properties.
 * **type**: 'Microsoft.Storage/storageAccounts/tableServices/tables' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -197,7 +197,7 @@
 ## AccountImmutabilityPolicyProperties
 ### Properties
 * **allowProtectedAppendWrites**: bool: This property can only be changed for disabled and unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted.
-* **immutabilityPeriodSinceCreationInDays**: int: The immutability period for the blobs in the container since the policy creation, in days.
+* **immutabilityPeriodSinceCreationInDays**: int {minValue: 1, maxValue: 146000}: The immutability period for the blobs in the container since the policy creation, in days.
 * **state**: 'Disabled' | 'Locked' | 'Unlocked' | string: The ImmutabilityPolicy state defines the mode of the policy. Disabled state disables the policy, Unlocked state allows increase and decrease of immutability retention time and also allows toggling allowProtectedAppendWrites property, Locked state only allows the increase of the immutability retention time. A policy can only be created in a Disabled or Unlocked state and can be toggled between the two states. Only a policy in an Unlocked state can transition to a Locked state which cannot be reverted.
 
 ## AccountSasParameters
@@ -296,7 +296,7 @@
 ## ChangeFeed
 ### Properties
 * **enabled**: bool: Indicates whether change feed event logging is enabled for the Blob service.
-* **retentionInDays**: int: Indicates the duration of changeFeed retention in days. Minimum value is 1 day and maximum value is 146000 days (400 years). A null value indicates an infinite retention of the change feed.
+* **retentionInDays**: int {minValue: 1, maxValue: 146000}: Indicates the duration of changeFeed retention in days. Minimum value is 1 day and maximum value is 146000 days (400 years). A null value indicates an infinite retention of the change feed.
 
 ## ContainerProperties
 ### Properties
@@ -328,7 +328,7 @@
 ## CorsRule
 ### Properties
 * **allowedHeaders**: string[] (Required): Required if CorsRule element is present. A list of headers allowed to be part of the cross-origin request.
-* **allowedMethods**: 'DELETE' | 'GET' | 'HEAD' | 'MERGE' | 'OPTIONS' | 'PATCH' | 'POST' | 'PUT' | string[] (Required): Required if CorsRule element is present. A list of HTTP methods that are allowed to be executed by the origin.
+* **allowedMethods**: ('DELETE' | 'GET' | 'HEAD' | 'MERGE' | 'OPTIONS' | 'PATCH' | 'POST' | 'PUT' | string)[] (Required): Required if CorsRule element is present. A list of HTTP methods that are allowed to be executed by the origin.
 * **allowedOrigins**: string[] (Required): Required if CorsRule element is present. A list of origin domains that will be allowed via CORS, or "*" to allow all domains
 * **exposedHeaders**: string[] (Required): Required if CorsRule element is present. A list of response headers to expose to CORS clients.
 * **maxAgeInSeconds**: int (Required): Required if CorsRule element is present. The number of seconds that the client/browser should cache a preflight response.
@@ -344,15 +344,15 @@
 
 ## DateAfterCreation
 ### Properties
-* **daysAfterCreationGreaterThan**: int (Required): Value indicating the age in days after creation
-* **daysAfterLastTierChangeGreaterThan**: int: Value indicating the age in days after last blob tier change time. This property is only applicable for tierToArchive actions and requires daysAfterCreationGreaterThan to be set for snapshots and blob version based actions. The blob will be archived if both the conditions are satisfied.
+* **daysAfterCreationGreaterThan**: int {minValue: 0} (Required): Value indicating the age in days after creation
+* **daysAfterLastTierChangeGreaterThan**: int {minValue: 0}: Value indicating the age in days after last blob tier change time. This property is only applicable for tierToArchive actions and requires daysAfterCreationGreaterThan to be set for snapshots and blob version based actions. The blob will be archived if both the conditions are satisfied.
 
 ## DateAfterModification
 ### Properties
-* **daysAfterCreationGreaterThan**: int: Value indicating the age in days after blob creation.
-* **daysAfterLastAccessTimeGreaterThan**: int: Value indicating the age in days after last blob access. This property can only be used in conjunction with last access time tracking policy
-* **daysAfterLastTierChangeGreaterThan**: int: Value indicating the age in days after last blob tier change time. This property is only applicable for tierToArchive actions and requires daysAfterModificationGreaterThan to be set for baseBlobs based actions. The blob will be archived if both the conditions are satisfied.
-* **daysAfterModificationGreaterThan**: int: Value indicating the age in days after last modification
+* **daysAfterCreationGreaterThan**: int {minValue: 0}: Value indicating the age in days after blob creation.
+* **daysAfterLastAccessTimeGreaterThan**: int {minValue: 0}: Value indicating the age in days after last blob access. This property can only be used in conjunction with last access time tracking policy
+* **daysAfterLastTierChangeGreaterThan**: int {minValue: 0}: Value indicating the age in days after last blob tier change time. This property is only applicable for tierToArchive actions and requires daysAfterModificationGreaterThan to be set for baseBlobs based actions. The blob will be archived if both the conditions are satisfied.
+* **daysAfterModificationGreaterThan**: int {minValue: 0}: Value indicating the age in days after last modification
 
 ## DeletedAccountProperties
 ### Properties
@@ -365,7 +365,7 @@
 ## DeleteRetentionPolicy
 ### Properties
 * **allowPermanentDelete**: bool: This property when set to true allows deletion of the soft deleted blob versions and snapshots. This property cannot be used blob restore policy. This property only applies to blob service and does not apply to containers or file share.
-* **days**: int: Indicates the number of days that the deleted item should be retained. The minimum specified value can be 1 and the maximum value can be 365.
+* **days**: int {minValue: 1, maxValue: 365}: Indicates the number of days that the deleted item should be retained. The minimum specified value can be 1 and the maximum value can be 365.
 * **enabled**: bool: Indicates whether DeleteRetentionPolicy is enabled.
 
 ## Encryption
@@ -446,7 +446,7 @@
 * **metadata**: [FileSharePropertiesMetadata](#filesharepropertiesmetadata): A name-value pair to associate with the share as metadata.
 * **remainingRetentionDays**: int (ReadOnly): Remaining retention days for share that was soft deleted.
 * **rootSquash**: 'AllSquash' | 'NoRootSquash' | 'RootSquash' | string: The property is for NFS share only. The default is NoRootSquash.
-* **shareQuota**: int: The maximum size of the share, in gigabytes. Must be greater than 0, and less than or equal to 5TB (5120). For Large File Shares, the maximum size is 102400.
+* **shareQuota**: int {minValue: 1, maxValue: 102400}: The maximum size of the share, in gigabytes. Must be greater than 0, and less than or equal to 5TB (5120). For Large File Shares, the maximum size is 102400.
 * **shareUsageBytes**: int (ReadOnly): The approximate size of the data stored on the share. Note that this value may not include all recently created or recently resized files.
 * **signedIdentifiers**: [SignedIdentifier](#signedidentifier)[]: List of stored access policies specified on the share.
 * **snapshotTime**: string (ReadOnly): Creation time of share snapshot returned in the response of list shares with expand param "snapshots".
@@ -701,7 +701,7 @@
 
 ## RestorePolicyProperties
 ### Properties
-* **days**: int: how long this blob can be restored. It should be great than zero and less than DeleteRetentionPolicy.days.
+* **days**: int {minValue: 1, maxValue: 365}: how long this blob can be restored. It should be great than zero and less than DeleteRetentionPolicy.days.
 * **enabled**: bool (Required): Blob restore is enabled if set to true.
 * **lastEnabledTime**: string (ReadOnly): Deprecated in favor of minRestoreTime property.
 * **minRestoreTime**: string (ReadOnly): Returns the minimum date and time that the restore can be started.
@@ -729,7 +729,7 @@
 * **rscl**: string: The response header override for content language.
 * **rsct**: string: The response header override for content type.
 * **signedExpiry**: string: The time at which the shared access signature becomes invalid.
-* **signedIdentifier**: string: A unique value up to 64 characters in length that correlates to an access policy specified for the container, queue, or table.
+* **signedIdentifier**: string {maxLength: 64}: A unique value up to 64 characters in length that correlates to an access policy specified for the container, queue, or table.
 * **signedIp**: string: An IP address or a range of IP addresses from which to accept requests.
 * **signedPermission**: 'a' | 'c' | 'd' | 'l' | 'p' | 'r' | 'u' | 'w' | string: The signed permissions for the service SAS. Possible values include: Read (r), Write (w), Delete (d), List (l), Add (a), Create (c), Update (u) and Process (p).
 * **signedProtocol**: 'https' | 'https,http': The protocol permitted for a request made with the account SAS.
@@ -872,9 +872,9 @@
 
 ## TagFilter
 ### Properties
-* **name**: string (Required): This is the filter tag name, it can have 1 - 128 characters
+* **name**: string {minLength: 1, maxLength: 128} (Required): This is the filter tag name, it can have 1 - 128 characters
 * **op**: string (Required): This is the comparison operator which is used for object comparison and filtering. Only == (equality operator) is currently supported
-* **value**: string (Required): This is the filter tag value field used for tag based filtering, it can have 0 - 256 characters
+* **value**: string {maxLength: 256} (Required): This is the filter tag value field used for tag based filtering, it can have 0 - 256 characters
 
 ## TagProperty
 ### Properties

@@ -8,7 +8,7 @@
 * **identity**: [Identity](#identity): The identity of the resource.
 * **location**: string: Resource location
 * **managedBy**: string: ID of the resource that manages this resource.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 64} (Required, DeployTimeConstant): The resource name
 * **properties**: [ApplicationDefinitionProperties](#applicationdefinitionproperties) (Required): The managed application definition properties.
 * **sku**: [Sku](#sku): The SKU of the resource.
 * **tags**: [ResourceTags](#resourcetags): Resource tags
@@ -20,10 +20,10 @@
 * **apiVersion**: '2017-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [Identity](#identity): The identity of the resource.
-* **kind**: string (Required): The kind of the managed application. Allowed values are MarketPlace and ServiceCatalog.
+* **kind**: string {pattern: "^[-\w\._,\(\)]+$"} (Required): The kind of the managed application. Allowed values are MarketPlace and ServiceCatalog.
 * **location**: string: Resource location
 * **managedBy**: string: ID of the resource that manages this resource.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 64} (Required, DeployTimeConstant): The resource name
 * **plan**: [Plan](#plan): The plan information.
 * **properties**: [ApplicationProperties](#applicationproperties) (Required): The managed application properties.
 * **sku**: [Sku](#sku): The SKU of the resource.
