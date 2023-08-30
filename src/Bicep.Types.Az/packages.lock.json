@@ -4,11 +4,11 @@
     ".NETStandard,Version=v2.0": {
       "Azure.Bicep.Types": {
         "type": "Direct",
-        "requested": "[0.3.99, )",
-        "resolved": "0.3.99",
-        "contentHash": "N7unUj6hb3b/O3GPb8rxsUijOmkc/XfBAqyDAxx+ESQyaEA/Og/b5ZvJ29M0o1qhm+FpXe/XoCd9yPd5xXEM/A==",
+        "requested": "[0.4.1, )",
+        "resolved": "0.4.1",
+        "contentHash": "IKmxyCwXkuIPcJhpjKkz2P9PNxlTvdtjGLlGEMduGaQTiYgE/glIirPeknwj3DAc9VhysZ9i/nGgpe0O2Vl1eg==",
         "dependencies": {
-          "System.Text.Json": "7.0.1"
+          "System.Text.Json": "7.0.3"
         }
       },
       "Microsoft.SourceLink.GitHub": {
@@ -96,8 +96,8 @@
       },
       "System.Text.Json": {
         "type": "Transitive",
-        "resolved": "7.0.1",
-        "contentHash": "OtDEmCCiNl8JAduFKZ/r0Sw6XZNHwIicUYy/mXgMDGeOsZLshH37qi3oPRzFYiryVktiMoQLByMGPtRCEMYbeQ==",
+        "resolved": "7.0.3",
+        "contentHash": "AyjhwXN1zTFeIibHimfJn6eAsZ7rTBib79JQpzg8WAuR/HKDu9JGNHTuu3nbbXQ/bgI+U4z6HtZmCHNXB1QXrQ==",
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "7.0.0",
           "System.Buffers": "4.5.1",
