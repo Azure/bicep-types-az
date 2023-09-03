@@ -133,7 +133,7 @@
 ### Properties
 * **networkProfile**: [NetworkProfile](#networkprofile): Network profile of the Service
 * **provisioningState**: 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'MoveFailed' | 'Moved' | 'Moving' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the Service
-* **serviceId**: string (ReadOnly): ServiceInstanceEntity GUID which uniquely identifies a created resource
+* **serviceId**: string (ReadOnly): ServiceInstanceEntity Id which uniquely identifies a created resource
 * **version**: int (ReadOnly): Version of the Service
 
 ## ConfigServerGitProperty

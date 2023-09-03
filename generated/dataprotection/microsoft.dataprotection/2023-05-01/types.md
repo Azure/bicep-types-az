@@ -307,6 +307,10 @@ If it is null, default will be considered as System Assigned.
 
 ### Base Properties
 
+### DefaultResourceProperties
+#### Properties
+* **objectType**: 'DefaultResourceProperties' (Required): Type of the specific object - used for deserializing
+
 
 ## CopyOption
 * **Discriminator**: objectType

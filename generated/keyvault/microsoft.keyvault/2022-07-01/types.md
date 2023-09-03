@@ -103,7 +103,7 @@
 
 ## Action
 ### Properties
-* **type**: 'notify' | 'rotate': The type of action.
+* **type**: 'Notify' | 'Rotate' | 'rotate': The type of the action.
 
 ## IPRule
 ### Properties

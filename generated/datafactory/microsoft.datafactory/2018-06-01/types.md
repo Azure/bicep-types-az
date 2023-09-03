@@ -4945,6 +4945,8 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## PipelineExternalComputeScaleProperties
 ### Properties
+* **numberOfExternalNodes**: int {minValue: 1, maxValue: 10}: Number of the the external nodes, which should be greater than 0 and less than 11.
+* **numberOfPipelineNodes**: int {minValue: 1, maxValue: 10}: Number of the pipeline nodes, which should be greater than 0 and less than 11.
 * **timeToLive**: int {minValue: 5}: Time to live (in minutes) setting of integration runtime which will execute pipeline and external activity.
 ### Additional Properties
 * **Additional Properties Type**: any
@@ -5421,6 +5423,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## SelfHostedIntegrationRuntimeTypeProperties
 ### Properties
 * **linkedInfo**: [LinkedIntegrationRuntimeType](#linkedintegrationruntimetype): The base definition of a linked integration runtime.
+* **selfContainedInteractiveAuthoringEnabled**: bool: An alternative option to ensure interactive authoring function when your self-hosted integration runtime is unable to establish a connection with Azure Relay.
 
 ## ServiceNowLinkedServiceTypeProperties
 ### Properties
