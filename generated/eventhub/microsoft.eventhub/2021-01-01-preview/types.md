@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [Identity](#identity): Properties of BYOK Identity description
 * **location**: string: Resource location.
-* **name**: string {minLength: 6, maxLength: 50} (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 6, maxLength: 50, pattern: "^[a-zA-Z][a-zA-Z0-9-]{6,50}[a-zA-Z0-9]$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [EHNamespaceProperties](#ehnamespaceproperties): Namespace properties supplied for create namespace operation.
 * **sku**: [Sku](#sku): Properties of sku resource
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.

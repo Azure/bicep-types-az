@@ -6,7 +6,7 @@
 * **apiVersion**: '2023-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [Identity](#identity) (ReadOnly): Identity for the resource.
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 3, maxLength: 63, pattern: "^[a-zA-Z][a-zA-Z0-9_]+$"} (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.Security/pricings/securityOperators' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Identity

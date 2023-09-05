@@ -5,7 +5,7 @@
 ### Properties
 * **apiVersion**: '2023-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "[{]?[0-9a-fA-F]{8}-(?:[0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}[}]?$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [HealthReportProperties](#healthreportproperties) (ReadOnly): Properties of a health report
 * **type**: 'Microsoft.Security/healthReports' (ReadOnly, DeployTimeConstant): The resource type
 

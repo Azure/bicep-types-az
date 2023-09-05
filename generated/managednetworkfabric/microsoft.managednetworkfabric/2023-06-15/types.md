@@ -271,14 +271,14 @@
 
 ## AccessControlListMatchCondition
 ### Properties
-* **dscpMarkings**: (string {minLength: 1})[] {minLength: 1}: List of DSCP Markings that needs to be matched.
-* **etherTypes**: (string {minLength: 1})[] {minLength: 1}: List of ether type values that needs to be matched.
-* **fragments**: (string {minLength: 1})[] {minLength: 1}: List of IP fragment packets that needs to be matched.
+* **dscpMarkings**: (string {minLength: 1})[] {minLength: 1}: List of DSCP Markings that need to be matched.
+* **etherTypes**: (string {minLength: 1})[] {minLength: 1}: List of ether type values that need to be matched.
+* **fragments**: (string {minLength: 1})[] {minLength: 1}: List of IP fragment packets that need to be matched.
 * **ipCondition**: [IpMatchCondition](#ipmatchcondition): IP condition that needs to be matched.
-* **ipLengths**: (string {minLength: 1})[] {minLength: 1}: List of IP Lengths that needs to be matched.
+* **ipLengths**: (string {minLength: 1})[] {minLength: 1}: List of IP Lengths that need to be matched.
 * **portCondition**: [AccessControlListPortCondition](#accesscontrollistportcondition): Defines the port condition that needs to be matched.
 * **protocolTypes**: (string {minLength: 1})[] {minLength: 1}: List of the protocols that need to be matched.
-* **ttlValues**: (string {minLength: 1})[] {minLength: 1}: List of TTL [Time To Live] values that needs to be matched.
+* **ttlValues**: (string {minLength: 1})[] {minLength: 1}: List of TTL [Time To Live] values that need to be matched.
 * **vlanMatchCondition**: [VlanMatchCondition](#vlanmatchcondition): Vlan match condition that needs to be matched.
 
 ## AccessControlListMatchConfiguration
@@ -291,9 +291,9 @@
 
 ## AccessControlListPortCondition
 ### Properties
-* **flags**: string[]: List of protocol flags that needs to be matched.
+* **flags**: string[]: List of protocol flags that need to be matched.
 * **layer4Protocol**: 'TCP' | 'UDP' | string (Required): Layer4 protocol type that needs to be matched.
-* **portGroupNames**: (string {minLength: 1})[] {minLength: 1}: List of the port Group Names that to be matched.
+* **portGroupNames**: (string {minLength: 1})[] {minLength: 1}: List of the port Group Names that need to be matched.
 * **ports**: (string {minLength: 1})[] {minLength: 1}: List of the Ports that need to be matched.
 * **portType**: 'DestinationPort' | 'SourcePort' | string: Port type that needs to be matched.
 
@@ -304,6 +304,7 @@
 * **annotation**: string: Switch configuration description.
 * **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'Provisioned' | 'Rejected' | 'Succeeded' | string (ReadOnly): Configuration state of the resource.
 * **configurationType**: 'File' | 'Inline' | string: Input method to configure Access Control List.
+* **defaultAction**: 'Deny' | 'Permit' | string: Default action that needs to be applied when no condition is matched. Example: Permit | Deny.
 * **dynamicMatchConfigurations**: [CommonDynamicMatchConfiguration](#commondynamicmatchconfiguration)[] {minLength: 1}: List of dynamic match configurations.
 * **lastSyncedTime**: string (ReadOnly): The last synced timestamp.
 * **matchConfigurations**: [AccessControlListMatchConfiguration](#accesscontrollistmatchconfiguration)[] {minLength: 1}: List of match configurations.
@@ -339,7 +340,7 @@
 ## CommonDynamicMatchConfiguration
 ### Properties
 * **ipGroups**: [IpGroupProperties](#ipgroupproperties)[] {minLength: 1}: List of IP Groups.
-* **portGroups**: [PortGroupProperties](#portgroupproperties)[] {minLength: 1}: List of the port group.
+* **portGroups**: [PortGroupProperties](#portgroupproperties)[] {minLength: 1}: List of the port groups.
 * **vlanGroups**: [VlanGroupProperties](#vlangroupproperties)[] {minLength: 1}: List of vlan groups.
 
 ## ConnectedSubnet
@@ -522,9 +523,9 @@
 ## IpMatchCondition
 ### Properties
 * **ipGroupNames**: (string {minLength: 1})[] {minLength: 1}: The List of IP Group Names that need to be matched.
-* **ipPrefixValues**: (string {minLength: 1})[] {minLength: 1}: The list of IP Prefixes.
-* **prefixType**: 'LongestPrefix' | 'Prefix' | string: IP Prefix Type.
-* **type**: 'DestinationIP' | 'SourceIP' | string: IP Address type.
+* **ipPrefixValues**: (string {minLength: 1})[] {minLength: 1}: The list of IP Prefixes that need to be matched.
+* **prefixType**: 'LongestPrefix' | 'Prefix' | string: IP Prefix Type that needs to be matched.
+* **type**: 'DestinationIP' | 'SourceIP' | string: IP Address type that needs to be matched.
 
 ## IpPrefixProperties
 ### Properties
@@ -741,7 +742,7 @@
 
 ## NetworkTapRuleMatchCondition
 ### Properties
-* **encapsulationType**: 'GTPv1' | 'None' | string: Encapsulation Type.
+* **encapsulationType**: 'GTPv1' | 'None' | string: Encapsulation Type that needs to be matched.
 * **ipCondition**: [IpMatchCondition](#ipmatchcondition): IP condition that needs to be matched.
 * **portCondition**: [PortCondition](#portcondition): Defines the port condition that needs to be matched.
 * **protocolTypes**: (string {minLength: 1})[] {minLength: 1}: List of the protocols that need to be matched.
@@ -810,14 +811,14 @@
 ## PortCondition
 ### Properties
 * **layer4Protocol**: 'TCP' | 'UDP' | string (Required): Layer4 protocol type that needs to be matched.
-* **portGroupNames**: (string {minLength: 1})[] {minLength: 1}: List of the port Group Names that to be matched.
+* **portGroupNames**: (string {minLength: 1})[] {minLength: 1}: List of the port Group Names that need to be matched.
 * **ports**: (string {minLength: 1})[] {minLength: 1}: List of the Ports that need to be matched.
 * **portType**: 'DestinationPort' | 'SourcePort' | string: Port type that needs to be matched.
 
 ## PortGroupProperties
 ### Properties
 * **name**: string {minLength: 1}: The name of the port group.
-* **ports**: (string {minLength: 1})[] {minLength: 1}: List of the ports that needs to be matched.
+* **ports**: (string {minLength: 1})[] {minLength: 1}: List of the ports that need to be matched.
 
 ## RoutePolicyProperties
 ### Properties
@@ -825,6 +826,7 @@
 * **administrativeState**: 'Disabled' | 'Enabled' | 'MAT' | 'RMA' | string (ReadOnly): Administrative state of the resource.
 * **annotation**: string: Switch configuration description.
 * **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'Provisioned' | 'Rejected' | 'Succeeded' | string (ReadOnly): Configuration state of the resource.
+* **defaultAction**: 'Deny' | 'Permit' | string: Default action that needs to be applied when no condition is matched. Example: Permit | Deny.
 * **networkFabricId**: string (Required): Arm Resource ID of Network Fabric.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
 * **statements**: [RoutePolicyStatementProperties](#routepolicystatementproperties)[]: Route Policy statements.
@@ -991,9 +993,9 @@
 
 ## VlanMatchCondition
 ### Properties
-* **innerVlans**: (string {minLength: 1})[] {minLength: 1}: List of inner vlans that needs to be matched.
-* **vlanGroupNames**: (string {minLength: 1})[] {minLength: 1}: List of vlan group names that to be matched.
-* **vlans**: (string {minLength: 1})[] {minLength: 1}: List of vlans that needs to be matched.
+* **innerVlans**: (string {minLength: 1})[] {minLength: 1}: List of inner vlans that need to be matched.
+* **vlanGroupNames**: (string {minLength: 1})[] {minLength: 1}: List of vlan group names that need to be matched.
+* **vlans**: (string {minLength: 1})[] {minLength: 1}: List of vlans that need to be matched.
 
 ## VpnConfigurationProperties
 ### Properties

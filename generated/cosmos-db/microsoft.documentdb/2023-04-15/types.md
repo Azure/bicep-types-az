@@ -671,7 +671,7 @@
 * **keysMetadata**: [DatabaseAccountKeysMetadata](#databaseaccountkeysmetadata) (ReadOnly): This property is ignored during the update/create operation, as the metadata is read-only. The object represents the metadata for the Account Keys of the Cosmos DB account.
 * **keyVaultKeyUri**: string: The URI of the key vault
 * **locations**: [Location](#location)[] (Required): An array that contains the georeplication locations enabled for the Cosmos DB account.
-* **minimalTlsVersion**: 'Tls' | 'Tls11' | 'Tls12' | string: Indicates the minimum allowed Tls version. The default is Tls 1.0, except for Cassandra and Mongo API's, which only work with Tls 1.2.
+* **minimalTlsVersion**: 'Tls' | 'Tls11' | 'Tls12' | string: Indicates the minimum allowed Tls version. The default value is Tls 1.2. Cassandra and Mongo APIs only work with Tls 1.2.
 * **networkAclBypass**: 'AzureServices' | 'None': Indicates what services are allowed to bypass firewall checks.
 * **networkAclBypassResourceIds**: string[]: An array that contains the Resource Ids for Network Acl Bypass for the Cosmos DB account.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): List of Private Endpoint Connections configured for the Cosmos DB account.
