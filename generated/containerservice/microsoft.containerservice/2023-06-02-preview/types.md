@@ -272,7 +272,18 @@
 
 ## IstioComponents
 ### Properties
+* **egressGateways**: [IstioEgressGateway](#istioegressgateway)[]: Istio egress gateways.
 * **ingressGateways**: [IstioIngressGateway](#istioingressgateway)[]: Istio ingress gateways.
+
+## IstioEgressGateway
+### Properties
+* **enabled**: bool (Required): Whether to enable the egress gateway.
+* **nodeSelector**: [IstioEgressGatewayNodeSelector](#istioegressgatewaynodeselector): NodeSelector for scheduling the egress gateway.
+
+## IstioEgressGatewayNodeSelector
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## IstioIngressGateway
 ### Properties

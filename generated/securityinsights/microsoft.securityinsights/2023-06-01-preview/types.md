@@ -2753,6 +2753,6 @@
 
 ## WorkspaceManagerMemberProperties
 ### Properties
-* **targetWorkspaceId**: string (Required): Fully qualified resource ID of the target Sentinel workspace joining the given Sentinel workspace manager
+* **targetWorkspaceResourceId**: string (Required): Fully qualified resource ID of the target Sentinel workspace joining the given Sentinel workspace manager
 * **targetWorkspaceTenantId**: string (Required): Tenant id of the target Sentinel workspace joining the given Sentinel workspace manager
 

@@ -123,7 +123,7 @@
 
 ## Action
 ### Properties
-* **type**: 'Notify' | 'Rotate' | 'rotate': The type of the action.
+* **type**: 'Notify' | 'Rotate': The type of the action. The value should be compared case-insensitively.
 
 ## IPRule
 ### Properties
@@ -174,7 +174,7 @@
 
 ## ManagedHsmAction
 ### Properties
-* **type**: 'Notify' | 'Rotate' | 'rotate': The type of the action.
+* **type**: 'Notify' | 'Rotate': The type of the action. The value should be compared case-insensitively.
 
 ## ManagedHsmKeyAttributes
 ### Properties

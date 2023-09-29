@@ -291,7 +291,7 @@
 
 ## AccessControlListPortCondition
 ### Properties
-* **flags**: string[]: List of protocol flags that need to be matched.
+* **flags**: string[]: List of protocol flags that need to be matched. Example: established | initial | <List-of-TCP-flags>. List of eligible TCP Flags are ack, fin, not-ack, not-fin, not-psh, not-rst, not-syn, not-urg, psh, rst, syn, urg
 * **layer4Protocol**: 'TCP' | 'UDP' | string (Required): Layer4 protocol type that needs to be matched.
 * **portGroupNames**: (string {minLength: 1})[] {minLength: 1}: List of the port Group Names that need to be matched.
 * **ports**: (string {minLength: 1})[] {minLength: 1}: List of the Ports that need to be matched.
@@ -302,7 +302,7 @@
 * **aclsUrl**: string {minLength: 1}: Access Control List file URL.
 * **administrativeState**: 'Disabled' | 'Enabled' | 'MAT' | 'RMA' | string (ReadOnly): Administrative state of the resource.
 * **annotation**: string: Switch configuration description.
-* **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'Provisioned' | 'Rejected' | 'Succeeded' | string (ReadOnly): Configuration state of the resource.
+* **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'PendingCommit' | 'Provisioned' | 'Provisioning' | 'Rejected' | 'Succeeded' | string (ReadOnly): Configuration state of the resource.
 * **configurationType**: 'File' | 'Inline' | string: Input method to configure Access Control List.
 * **defaultAction**: 'Deny' | 'Permit' | string: Default action that needs to be applied when no condition is matched. Example: Permit | Deny.
 * **dynamicMatchConfigurations**: [CommonDynamicMatchConfiguration](#commondynamicmatchconfiguration)[] {minLength: 1}: List of dynamic match configurations.
@@ -383,7 +383,7 @@
 ### Properties
 * **administrativeState**: 'Disabled' | 'Enabled' | 'MAT' | 'RMA' | string (ReadOnly): Administrative state of the resource.
 * **annotation**: string: Switch configuration description.
-* **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'Provisioned' | 'Rejected' | 'Succeeded' | string (ReadOnly): Configuration state of the resource.
+* **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'PendingCommit' | 'Provisioned' | 'Provisioning' | 'Rejected' | 'Succeeded' | string (ReadOnly): Configuration state of the resource.
 * **exportRoutePolicy**: [ExportRoutePolicy](#exportroutepolicy): Export Route Policy either IPv4 or IPv6.
 * **exportRoutePolicyId**: string: ARM Resource ID of the RoutePolicy. This is used for the backward compatibility.
 * **importRoutePolicy**: [ImportRoutePolicy](#importroutepolicy): Import Route Policy either IPv4 or IPv6.
@@ -423,7 +423,7 @@
 * **administrativeState**: 'Disabled' | 'Enabled' | 'MAT' | 'RMA' | string (ReadOnly): Administrative state of the resource.
 * **annotation**: string: Switch configuration description.
 * **bgpConfiguration**: [InternalNetworkPropertiesBgpConfiguration](#internalnetworkpropertiesbgpconfiguration): BGP configuration properties.
-* **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'Provisioned' | 'Rejected' | 'Succeeded' | string (ReadOnly): Configuration state of the resource.
+* **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'PendingCommit' | 'Provisioned' | 'Provisioning' | 'Rejected' | 'Succeeded' | string (ReadOnly): Configuration state of the resource.
 * **connectedIPv4Subnets**: [ConnectedSubnet](#connectedsubnet)[] {minLength: 1}: List of Connected IPv4 Subnets.
 * **connectedIPv6Subnets**: [ConnectedSubnet](#connectedsubnet)[] {minLength: 1}: List of connected IPv6 Subnets.
 * **egressAclId**: string: Egress Acl. ARM resource ID of Access Control Lists.
@@ -485,7 +485,7 @@
 ### Properties
 * **administrativeState**: 'Disabled' | 'Enabled' | 'MAT' | 'RMA' | string (ReadOnly): Administrative state of the resource.
 * **annotation**: string: Switch configuration description.
-* **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'Provisioned' | 'Rejected' | 'Succeeded' | string (ReadOnly): Configuration state of the resource.
+* **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'PendingCommit' | 'Provisioned' | 'Provisioning' | 'Rejected' | 'Succeeded' | string (ReadOnly): Configuration state of the resource.
 * **ipCommunityRules**: [IpCommunityRule](#ipcommunityrule)[]: List of IP Community Rules.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
 
@@ -504,7 +504,7 @@
 ### Properties
 * **administrativeState**: 'Disabled' | 'Enabled' | 'MAT' | 'RMA' | string (ReadOnly): Administrative state of the resource.
 * **annotation**: string: Switch configuration description.
-* **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'Provisioned' | 'Rejected' | 'Succeeded' | string (ReadOnly): Configuration state of the resource.
+* **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'PendingCommit' | 'Provisioned' | 'Provisioning' | 'Rejected' | 'Succeeded' | string (ReadOnly): Configuration state of the resource.
 * **ipExtendedCommunityRules**: [IpExtendedCommunityRule](#ipextendedcommunityrule)[] (Required): List of IP Extended Community Rules.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
 
@@ -531,7 +531,7 @@
 ### Properties
 * **administrativeState**: 'Disabled' | 'Enabled' | 'MAT' | 'RMA' | string (ReadOnly): Administrative state of the resource.
 * **annotation**: string: Switch configuration description.
-* **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'Provisioned' | 'Rejected' | 'Succeeded' | string (ReadOnly): Configuration state of the resource.
+* **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'PendingCommit' | 'Provisioned' | 'Provisioning' | 'Rejected' | 'Succeeded' | string (ReadOnly): Configuration state of the resource.
 * **ipPrefixRules**: [IpPrefixRule](#ipprefixrule)[]: The list of IP Prefix Rules.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
 
@@ -552,7 +552,7 @@
 ### Properties
 * **administrativeState**: 'Disabled' | 'Enabled' | 'MAT' | 'RMA' | string (ReadOnly): Administrative state of the resource.
 * **annotation**: string: Switch configuration description.
-* **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'Provisioned' | 'Rejected' | 'Succeeded' | string (ReadOnly): Configuration state of the resource.
+* **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'PendingCommit' | 'Provisioned' | 'Provisioning' | 'Rejected' | 'Succeeded' | string (ReadOnly): Configuration state of the resource.
 * **mtu**: int {minValue: 64, maxValue: 9200}: Maximum transmission unit. Default value is 1500.
 * **networkFabricId**: string (Required): ARM Resource ID of the Network Fabric.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
@@ -568,7 +568,7 @@
 * **administrativeState**: 'Disabled' | 'Enabled' | 'MAT' | 'RMA' | string (ReadOnly): Administrative state of the resource.
 * **aggregateRouteConfiguration**: [AggregateRouteConfiguration](#aggregaterouteconfiguration): Aggregate route configurations.
 * **annotation**: string: Switch configuration description.
-* **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'Provisioned' | 'Rejected' | 'Succeeded' | string (ReadOnly): Configuration state of the resource.
+* **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'PendingCommit' | 'Provisioned' | 'Provisioning' | 'Rejected' | 'Succeeded' | string (ReadOnly): Configuration state of the resource.
 * **connectedSubnetRoutePolicy**: [ConnectedSubnetRoutePolicy](#connectedsubnetroutepolicy): Connected Subnet RoutePolicy
 * **networkFabricId**: string (Required): ARM Resource ID of the Network Fabric.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
@@ -599,7 +599,7 @@
 ## NeighborAddress
 ### Properties
 * **address**: string {minLength: 1}: IP Address.
-* **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'Provisioned' | 'Rejected' | 'Succeeded' | string (ReadOnly): Configuration state of the resource.
+* **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'PendingCommit' | 'Provisioned' | 'Provisioning' | 'Rejected' | 'Succeeded' | string (ReadOnly): Configuration state of the resource.
 
 ## NeighborGroupDestination
 ### Properties
@@ -618,7 +618,7 @@
 ### Properties
 * **administrativeState**: 'Disabled' | 'Enabled' | 'MAT' | 'RMA' | string (ReadOnly): Administrative state of the resource.
 * **annotation**: string: Switch configuration description.
-* **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'Provisioned' | 'Rejected' | 'Succeeded' | string (ReadOnly): Configuration state of the resource.
+* **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'PendingCommit' | 'Provisioned' | 'Provisioning' | 'Rejected' | 'Succeeded' | string (ReadOnly): Configuration state of the resource.
 * **hostName**: string {minLength: 1}: The host name of the device.
 * **managementIpv4Address**: string (ReadOnly): Management IPv4 Address.
 * **managementIpv6Address**: string (ReadOnly): Management IPv6 Address.
@@ -659,7 +659,7 @@
 ### Properties
 * **administrativeState**: 'Disabled' | 'Enabled' | 'MAT' | 'RMA' | string (ReadOnly): Administrative state of the resource.
 * **annotation**: string: Switch configuration description.
-* **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'Provisioned' | 'Rejected' | 'Succeeded' | string (ReadOnly): Configuration state of the resource.
+* **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'PendingCommit' | 'Provisioned' | 'Provisioning' | 'Rejected' | 'Succeeded' | string (ReadOnly): Configuration state of the resource.
 * **fabricASN**: int {minValue: 1, maxValue: 4294967295} (Required): ASN of CE devices for CE/PE connectivity.
 * **fabricVersion**: string (ReadOnly): The version of Network Fabric.
 * **ipv4Prefix**: string {minLength: 1} (Required): IPv4Prefix for Management Network. Example: 10.1.0.0/19.
@@ -717,7 +717,7 @@
 ### Properties
 * **administrativeState**: 'Disabled' | 'Enabled' | 'MAT' | 'RMA' | string (ReadOnly): Administrative state of the resource. Example -Enabled/Disabled
 * **annotation**: string: Switch configuration description.
-* **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'Provisioned' | 'Rejected' | 'Succeeded' | string (ReadOnly): Gets the configurations state of the resource.
+* **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'PendingCommit' | 'Provisioned' | 'Provisioning' | 'Rejected' | 'Succeeded' | string (ReadOnly): Gets the configurations state of the resource.
 * **destinations**: [NetworkTapPropertiesDestinationsItem](#networktappropertiesdestinationsitem)[] {minLength: 1} (Required): List of destinations to send the filter traffic.
 * **networkPacketBrokerId**: string (Required): ARM resource ID of the Network Packet Broker.
 * **pollingType**: 'Pull' | 'Push' | string: Polling type.
@@ -760,7 +760,7 @@
 ### Properties
 * **administrativeState**: 'Disabled' | 'Enabled' | 'MAT' | 'RMA' | string (ReadOnly): Administrative state of the resource.
 * **annotation**: string: Switch configuration description.
-* **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'Provisioned' | 'Rejected' | 'Succeeded' | string (ReadOnly): Configuration state of the resource.
+* **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'PendingCommit' | 'Provisioned' | 'Provisioning' | 'Rejected' | 'Succeeded' | string (ReadOnly): Configuration state of the resource.
 * **configurationType**: 'File' | 'Inline' | string: Input method to configure Network Tap Rule.
 * **dynamicMatchConfigurations**: [CommonDynamicMatchConfiguration](#commondynamicmatchconfiguration)[] {minLength: 1}: List of dynamic match configurations.
 * **lastSyncedTime**: string (ReadOnly): The last sync timestamp.
@@ -773,7 +773,7 @@
 ## NetworkToNetworkInterconnectProperties
 ### Properties
 * **administrativeState**: 'Disabled' | 'Enabled' | 'MAT' | 'RMA' | string (ReadOnly): Administrative state of the resource.
-* **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'Provisioned' | 'Rejected' | 'Succeeded' | string (ReadOnly): Configuration state of the resource.
+* **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'PendingCommit' | 'Provisioned' | 'Provisioning' | 'Rejected' | 'Succeeded' | string (ReadOnly): Configuration state of the resource.
 * **egressAclId**: string: Egress Acl. ARM resource ID of Access Control Lists.
 * **exportRoutePolicy**: [ExportRoutePolicyInformation](#exportroutepolicyinformation): Export Route Policy configuration.
 * **importRoutePolicy**: [ImportRoutePolicyInformation](#importroutepolicyinformation): Import Route Policy configuration.
@@ -825,7 +825,7 @@
 * **addressFamilyType**: 'IPv4' | 'IPv6' | string: AddressFamilyType. This parameter decides whether the given ipv4 or ipv6 route policy.
 * **administrativeState**: 'Disabled' | 'Enabled' | 'MAT' | 'RMA' | string (ReadOnly): Administrative state of the resource.
 * **annotation**: string: Switch configuration description.
-* **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'Provisioned' | 'Rejected' | 'Succeeded' | string (ReadOnly): Configuration state of the resource.
+* **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'PendingCommit' | 'Provisioned' | 'Provisioning' | 'Rejected' | 'Succeeded' | string (ReadOnly): Configuration state of the resource.
 * **defaultAction**: 'Deny' | 'Permit' | string: Default action that needs to be applied when no condition is matched. Example: Permit | Deny.
 * **networkFabricId**: string (Required): Arm Resource ID of Network Fabric.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the resource.

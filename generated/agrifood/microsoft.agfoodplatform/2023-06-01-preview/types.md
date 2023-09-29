@@ -264,6 +264,7 @@ Example: For gdd they might need weatherScope and satelliteScope.
 * **offerId**: string {minLength: 1} (Required): SaaS application Offer Id.
 * **partnerId**: string (ReadOnly): Partner Id of the Solution.
 * **planId**: string {minLength: 1} (Required): SaaS application Plan Id.
+* **roleAssignmentId**: string: Role Assignment Id.
 * **saasSubscriptionId**: string {minLength: 1} (Required): SaaS subscriptionId of the installed SaaS application.
 * **saasSubscriptionName**: string {minLength: 1} (Required): SaaS subscription name of the installed SaaS application.
 * **termId**: string {minLength: 1} (Required): SaaS application Term Id.
