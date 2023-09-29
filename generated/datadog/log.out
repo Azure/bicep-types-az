@@ -3,6 +3,12 @@ AutoRest code generation utility [cli version: 3.6.3; node: v16.20.2]
 https://aka.ms/autorest
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Skipping CreationSupported_List due to required query parameter "datadogOrganizationId"
+warning | Skipping CreationSupported_Get due to required query parameter "datadogOrganizationId"
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | SkippedSemanticValidation | Semantic validation was skipped.

@@ -147,9 +147,8 @@ NodeImageOnly requires the KubernetesVersion property not to be set.
 
 ## UpdateGroup
 ### Properties
-* **name**: string {minLength: 1, maxLength: 50, pattern: "^[a-z0-9]([-a-z0-9]*[a-z0-9])?$"} (Required): The name of the Fleet member group to update. 
-It should match the name of an existing FleetMember group.
-A group can only appear once across all UpdateStages in the UpdateRun.
+* **name**: string {minLength: 1, maxLength: 50, pattern: "^[a-z0-9]([-a-z0-9]*[a-z0-9])?$"} (Required): Name of the group.
+It must match a group name of an existing fleet member.
 
 ## UpdateGroupStatus
 ### Properties
@@ -174,13 +173,12 @@ The strategy of the UpdateRun can be modified until the run is started.
 
 ## UpdateRunStrategy
 ### Properties
-* **stages**: [UpdateStage](#updatestage)[] (Required): The list of stages that compose this update run.
+* **stages**: [UpdateStage](#updatestage)[] (Required): The list of stages that compose this update run. Min size: 1.
 
 ## UpdateStage
 ### Properties
 * **afterStageWaitInSeconds**: int: The time in seconds to wait at the end of this stage before starting the next one. Defaults to 0 seconds if unspecified.
-* **groups**: [UpdateGroup](#updategroup)[]: A list of group names that compose the stage.
-The groups will be updated in parallel. Each group name can only appear once in the UpdateRun.
+* **groups**: [UpdateGroup](#updategroup)[]: Defines the groups to be executed in parallel in this stage. Duplicate groups are not allowed. Min size: 1.
 * **name**: string {minLength: 1, maxLength: 50, pattern: "^[a-z0-9]([-a-z0-9]*[a-z0-9])?$"} (Required): The name of the stage. Must be unique within the UpdateRun.
 
 ## UpdateStageStatus

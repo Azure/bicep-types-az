@@ -491,7 +491,7 @@
 ## AcrDetails
 ### Properties
 * **systemCreatedAcrAccount**: [SystemCreatedAcrAccount](#systemcreatedacraccount): Details of system created ACR account to be used for the Registry
-* **userCreatedAcrAccount**: [UserCreatedAcrAccount](#usercreatedacraccount): Details of user created ACR account to be used for the Registry
+* **userCreatedAcrAccount**: [UserCreatedAcrAccount](#usercreatedacraccount): Details of user created ACR account to be used for the Registry. Not supported in most cases and will throw 400 error if provided.
 
 ## AksNetworkingConfiguration
 ### Properties
@@ -3849,7 +3849,7 @@ Sample Uri : https://myvault.vault.azure.net/secrets/mysecretname/secretversion
 ## StorageAccountDetails
 ### Properties
 * **systemCreatedStorageAccount**: [SystemCreatedStorageAccount](#systemcreatedstorageaccount): Details of system created storage account to be used for the registry
-* **userCreatedStorageAccount**: [UserCreatedStorageAccount](#usercreatedstorageaccount): Details of user created storage account to be used for the registry
+* **userCreatedStorageAccount**: [UserCreatedStorageAccount](#usercreatedstorageaccount): Details of user created storage account to be used for the registry.  Not supported in most cases and will throw 400 error if provided.
 
 ## SweepJobInputs
 ### Properties

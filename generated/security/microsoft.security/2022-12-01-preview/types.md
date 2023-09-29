@@ -20,6 +20,7 @@
 ### Properties
 * **onUpload**: [OnUploadProperties](#onuploadproperties): Properties of On Upload malware scanning.
 * **operationStatus**: [OperationStatus](#operationstatus) (ReadOnly): Upon failure or partial success. Additional data describing Malware Scanning enable/disable operation.
+* **scanResultsEventGridTopicResourceId**: string: Optional. Resource id of an Event Grid Topic to send scan results to.
 
 ## OnUploadProperties
 ### Properties
