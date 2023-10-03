@@ -127,6 +127,7 @@ jobs:
       name: test
     permissions:
       id-token: write
+      contents: read
     name: "Test Github Scripts"
     runs-on: ubuntu-latest
 
