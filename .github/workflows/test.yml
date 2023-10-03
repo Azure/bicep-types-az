@@ -7,7 +7,8 @@ on:
 jobs:
 
   test-oidc-connect:
-    environment: test
+    environment:
+      name: test
     permissions:
       id-token: write
       contents: read
