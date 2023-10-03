@@ -11,14 +11,14 @@ export async function isCommandFoundInPath(command: string): Promise<boolean> {
   const child = spawn(command);
 
   return new Promise((resolve) => {
-      child.on('exit', (code) => {
-          resolve(code === 0);
-      });
+    child.on('exit', (code) => {
+      resolve(code === 0);
+    });
   });
 }
 
 class StdoutAssertionBuilder {
-  constructor(private readonly stdout: string) {}
+  constructor(private readonly stdout: string) { }
 
   withStdout(expectedStdout: string | RegExp): void {
     if (typeof expectedStdout === "string") {
@@ -38,7 +38,7 @@ class StdoutAssertionBuilder {
 }
 
 class StderrAssertionBuilder {
-  constructor(private readonly stderr: string) {}
+  constructor(private readonly stderr: string) { }
 
   withStderr(expectedStderr: string | RegExp): void {
     if (typeof expectedStderr === "string") {
@@ -56,7 +56,7 @@ class StderrAssertionBuilder {
 class BicepCommandTestRunner {
   private environmentOverrides: EnvironmentOverrides = {};
 
-  constructor(private readonly args: string[]) {}
+  constructor(private readonly args: string[]) { }
 
   withEnvironmentOverrides(
     environmentOverrides: EnvironmentOverrides
@@ -69,7 +69,7 @@ class BicepCommandTestRunner {
     const result = this.runCommand();
 
     if (result.stderr.length > 0) {
-      console.error(result.stderr);
+      result.status === 0 ? console.info(result.stderr) : console.error(result.stderr);
     }
 
     expect(result.status).toBe(0);

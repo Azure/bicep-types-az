@@ -10,7 +10,7 @@ import * as core from '@actions/core';
 import { defaultLogger, executeCmd } from './utils/common';
 import { invokingBicepCommand } from "./utils/command";
 import { BicepRegistryReferenceBuilder } from "./utils/br";
-import { publishTypeProviderPackage } from '../publish-az-types.js';
+import publishTypeProviderPackage from '../publish-az-types.js';
 
 
 function mockErrorHandler(error: string | Error) {
@@ -46,7 +46,7 @@ describe('e2e tests', () => {
 
   const timeoutInMilliseconds = 10 * 1000; // 10 seconds
   describe('A package published using publishTypeProviderPackage', () => {
-    const registryUri = "biceptestdf.azurecr.io"; // Define once, in the needed scope
+    const registryUri = "biceptestdf.azurecr.io";
     const builder = new BicepRegistryReferenceBuilder(
       registryUri,
       "types_package_e2e_test"
@@ -54,8 +54,8 @@ describe('e2e tests', () => {
     const tag = builder.getTag("0.0.0-test");
     const ociReference = `${registryUri}/bicep/providers/az:${tag}`;
 
-    beforeAll(() => {
-      publishTypeProviderPackage({
+    beforeAll(async () => {
+      await publishTypeProviderPackage({
         require: require,
         registryFqdn: registryUri,
         tags: tag,
@@ -106,7 +106,6 @@ describe('e2e tests', () => {
       invokingBicepCommand("build", bicepFilePath)
         .withEnvironmentOverrides({
           "__EXPERIMENTAL_BICEP_REGISTRY_FQDN": registryUri,
-          "BICEP_TRACING_ENABLED": "true",
         })
         .shouldSucceed()
     });

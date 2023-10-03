@@ -10,9 +10,9 @@
 *
 * @param {Params} params - The arguments for publishing the package.
 *
-* @returns {void}
+* @returns {Promise<void>}
 */
-function publishTypeProviderPackage({ require, registryFqdn, tags, core }) {
+async function publishTypeProviderPackage({ require, registryFqdn, tags, core }) {
     const fs = require('fs');
     const tar = require('tar');
     const { spawnSync } = require('child_process');
@@ -70,7 +70,7 @@ function publishTypeProviderPackage({ require, registryFqdn, tags, core }) {
 /**
  * @module publish-az-types
  */
-module.exports = { publishTypeProviderPackage };
+module.exports = publishTypeProviderPackage;
 
 
 

@@ -123,26 +123,26 @@ jobs:
         working-directory: ./src/autorest.bicep
 
   test-github-scripts:
+    name: "Test Github Scripts"
     environment:
       name: test
     permissions:
       id-token: write
       contents: read
-    name: "Test Github Scripts"
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0 
-  
+
       # Log in to Azure (tests dependency)
       - name: Log in to Azure
         uses: azure/login@v1
         with:
-          client-id: ${{ vars.PUBLISH_CLIENT_ID }}
-          tenant-id: ${{ vars.PUBLISH_TENANT_ID }}
-          subscription-id: ${{ vars.PUBLISH_SUBSCRIPTION_ID }}
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
       # Install ORAS (tests dependency)
       - name: Login to OCI Registry using ORAS
@@ -153,8 +153,17 @@ jobs:
       # Log in to OCI Registry (tests dependency)
       - name: Login to OCI Registry using ORAS
         run: |
-          az acr login -t -n ${{ secrets.PUBLISH_TEST_REGISTRY_SERVER }} -o tsv --query accessToken | oras login --password-stdin ${{ secrets.PUBLISH_TEST_REGISTRY_SERVER }}
+          az acr login -t -n ${{ secrets.PUBLISH_REGISTRY_SERVER }} -o tsv --query accessToken | oras login --password-stdin ${{ secrets.PUBLISH_REGISTRY_SERVER }}
 
+      - name: Install the Bicep CLI
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          bash <(curl -Ls https://aka.ms/bicep/nightly-cli.sh) --branch asilverman/fix-type-loading-logic
+      
+      - name: Fetch test dependencies
+        run: npm ci
+      
       - name: Test
         run: npm test
         working-directory: ./scripts/github-actions

@@ -5,5 +5,6 @@ module.exports = async () => {
   return {
     preset: 'ts-jest',
     verbose: true,
+    testMatch: ["<rootDir>/scripts/github-actions/**/*.test.ts"],
   };
 };
