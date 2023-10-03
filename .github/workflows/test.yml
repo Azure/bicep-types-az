@@ -39,6 +39,24 @@ jobs:
         run: |
           az acr login -t -n ${{ secrets.PUBLISH_REGISTRY_SERVER }} -o tsv --query accessToken | oras login --password-stdin ${{ secrets.PUBLISH_REGISTRY_SERVER }}
 
-      - name: Run ORAS version to see if its working
+      - name: Run ORAS list of the repositories in the ACR server to verify its working
         run: |
           oras repo ls ${{ secrets.PUBLISH_REGISTRY_SERVER }}
+
+      - name: Generate tag
+        id: generate_tag
+        run: echo "::set-output name=tag::0.0.0-alpha+$(git rev-parse --short HEAD)"
+  
+      - name: Publish My Package
+        id: publish-types
+        uses: actions/github-script@v6
+        with:
+          result-encoding: string
+          script: |
+            const script = require("./scripts/github-actions/publish-az-types.js")
+            return await script({
+              require,
+              registryFqdn: "${{ secrets.PUBLISH_REGISTRY_SERVER }}",
+              tags: ${{ steps.generate_tag.outputs.tag }}",
+              core,
+            })
