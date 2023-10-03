@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"name": "✨ root",
+			"path": "."
+		},
+		{
+			"name": "autorest.bicep",
+			"path": "./src/autorest.bicep"
+		},
+		
+	],
+	"settings": {}
+}

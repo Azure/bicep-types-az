@@ -1,0 +1,32 @@
+{
+    "compilerOptions": {
+        "target": "es2019",
+        "module": "commonjs",
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "noEmitOnError": true,
+        "noImplicitReturns": true,
+        "sourceMap": true,
+        "declarationMap": true,
+        "strict": true,
+        "declaration": true,
+        "noEmitHelpers": false,
+        "types": [ "node", "jest" ],
+        "lib": [ "es2020" ],
+        "newLine": "LF",
+        "allowJs": true,
+        "rootDir": "scripts/github-actions",
+        "outDir": "scripts/github-actions/dist",
+    },
+    "include": [ 
+        "scripts/github-actions/**/*.ts", 
+    ],
+    "exclude": [
+        "scripts/github-actions/dist/**/*",
+        "src/autorest.bicep/**/*.ts",
+        "src/bicep-types/**/*.ts",
+        "src/generator",
+        "node_modules",
+        "**/*.d.ts"
+    ]
+}
