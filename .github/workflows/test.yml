@@ -56,7 +56,7 @@ jobs:
             const script = require("./scripts/github-actions/publish-az-types.js")
             return await script({
               require,
-              registryFqdn: "${{ secrets.PUBLISH_REGISTRY_SERVER }}",
-              tags: ${{ steps.generate_tag.outputs.tag }}",
+              ${{ secrets.PUBLISH_REGISTRY_SERVER }},
+              ${{ steps.generate_tag.outputs.tag }},
               core,
             })
