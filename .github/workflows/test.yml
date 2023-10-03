@@ -1,0 +1,28 @@
+name: Ari Test Script
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+
+  test-oidc-connect:
+    environment: test
+    permissions:
+      id-token: write
+      contents: read
+    name: "Test OIDC Connect"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "Az CLI login"
+        uses: azure/login@v1
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+      - name: "Run az commands"
+        run: |
+          az account show
+          az group list
