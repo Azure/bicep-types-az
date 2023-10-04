@@ -158,8 +158,8 @@ jobs:
       - name: Install the Bicep CLI
         env:
           GH_TOKEN: ${{ github.token }}
-        run: |
-          bash <(curl -Ls https://aka.ms/bicep/nightly-cli.sh) --branch asilverman/fix-type-loading-logic
+        # Uses the Bicep bits from the main branch
+        run: bash <(curl -Ls https://aka.ms/bicep/nightly-cli.sh)
       
       - name: Fetch test dependencies
         run: npm ci
