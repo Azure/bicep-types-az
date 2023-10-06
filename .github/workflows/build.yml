@@ -123,7 +123,7 @@ jobs:
         working-directory: ./src/autorest.bicep
 
   test-github-scripts:
-    name: "Test Github Scripts"
+    name: "Test GitHub Action Scripts"
     environment:
       name: test
     permissions:

@@ -8,7 +8,7 @@ on:
 jobs:
   publish-oci-types-package:
     environment:
-      name: prod
+      name: test
     permissions:
       id-token: write
       contents: read
