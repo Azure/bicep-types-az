@@ -24,7 +24,7 @@ branch from the `azure/azure-rest-api-specs` repo, runs the generation script on
 `azure/bicep-types-az/tree/autogenerate-<git-commit-ish>`  branches depending on the trigger (a '`<git-commit-ish>`' is
 a truncated commit sha256 digest)
 
-When a new version of the Bicep is close to being released, the person cutting a release performs the following steps:
+When a new version of Bicep is close to being released, the person cutting a release performs the following steps:
 
 1. Chose to either manually merge the autogenerate branch into `main` or manually trigger the **update-types.yml**
 workflow to update the `/generated` folder. This is typically reviewed, but not in great detail.
