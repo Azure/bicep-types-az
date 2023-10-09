@@ -59,7 +59,7 @@ Is any manual intervention needed? How do we catch regressions? Is there a revie
 Are any changes to the existing process of bundling types into Bicep needed to be compatible with this?
 Do we foresee any other issues? -->
 
-* We want to automatically publish a new  `az-types-provider-package`  OCI artifact each time theres a new commit to the
+* We want to automatically publish a new  `az-types-provider-package`  OCI artifact each time there's a new commit to the
   [azure/bicep-types-az/tree/main/generated](https://github.com/Azure/bicep-types-az/tree/main/generated) folder.
 * We will tag the `Azure/bicep-types-az` and the OCI registry artifact with a version `0.0.X-alpha` where `X` is corresponding to
   the topological distance, measured as count of commits made on the folder from the commit that implements the new
