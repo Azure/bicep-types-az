@@ -98,7 +98,7 @@ A resource types provider artifact **MUST** conform to the following requirement
   "config": {
     // v1 is used to represent the current serialization version, this gives us flexibility
     // to bump the version in the future if we want some configuration in the future.
-    // the contents are an empty JSON string (`{}`)
+    // the contents are an empty JSON object (`{}`)
     "mediaType": "application/vnd.ms.bicep.provider.config.v1+json", 
     "digest": "sha256:44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
     "size": 2 
