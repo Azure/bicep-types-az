@@ -50,6 +50,7 @@ jobs:
 
       # Installing publish-az-types.js NPM package dependencies
       - name: Fetch publish script dependencies
+        working-directory: ./scripts/github-actions
         run: |
           npm ci
 
