@@ -4,22 +4,23 @@
 /**
 * @typedef Params
 * @property {typeof require} require the 'require' function from github actions
+* @property {typeof import("@actions/core")} core 
+* @property {string} typesDir the directory containing the generated types
 * @property {string} registryFqdn the fully qualified domain name of the registry to publish to
 * @property {string} tags the tags to apply to the published package
-* @property {typeof import("@actions/core")} core 
 *
 * @param {Params} params - The arguments for publishing the package.
 *
 * @returns {Promise<void>}
 */
-async function publishTypeProviderPackage({ require, registryFqdn, tags, core }) {
+async function publishTypeProviderPackage({ require, core, typesDir, registryFqdn, tags}) {
     const fs = require('fs');
     const tar = require('tar');
     const { spawnSync } = require('child_process');
     const path = require('path');
 
     const azAcrRepoPath = 'bicep/providers/az';
-    const typeSourcesPath = path.join(process.cwd(), "generated");
+    
 
     const outDir = 'bin';
     // Check and create the output directory if it doesn't exist
@@ -29,11 +30,11 @@ async function publishTypeProviderPackage({ require, registryFqdn, tags, core })
         fs.mkdirSync(outDir, { recursive: true });
     }
 
-    core.info(`Creating tar+gz file from json files in folder: ${typeSourcesPath}`);
+    core.info(`Creating tar+gz file from json files in folder: ${typesDir}`);
     const tarFilePath = path.join(outDir, "types.tgz");
-    const files = fs.readdirSync(typeSourcesPath, { recursive: true }).filter(file => file.endsWith('.json'));
+    const files = fs.readdirSync(typesDir, { recursive: true }).filter(file => file.endsWith('.json'));
     tar.create({
-        cwd: typeSourcesPath,
+        cwd: typesDir,
         gzip: true,
         portable: true,
         file: tarFilePath,

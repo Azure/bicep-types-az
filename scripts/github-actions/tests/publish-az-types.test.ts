@@ -57,9 +57,10 @@ describe('e2e tests', () => {
     beforeAll(async () => {
       await publishTypeProviderPackage({
         require: require,
+        core: mockedCore,
+        typesDir: path.join(__dirname, "./../../../generated"),
         registryFqdn: registryUri,
         tags: tag,
-        core: mockedCore,
       });
     }, timeoutInMilliseconds);
 
