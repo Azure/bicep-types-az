@@ -70,9 +70,11 @@ jobs:
           result-encoding: string
           script: |
             const path = require("path");
-            typesDir = path.join(__dirname, "generated");
-            process.chdir(path.join(__dirname, "scripts/github-actions"));
-            const script = require("./scripts/github-actions/publish-az-types.js");
+            const cwd = process.cwd();
+            typesDir = path.join(cwd, "generated");
+            process.chdir(path.join(cwd, "scripts/github-actions"));
+            console.log("currentDir: " + process.cwd());
+            const script = require("./publish-az-types.js");
             return await script({
               require: require,
               core: core,
