@@ -1,0 +1,31 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "github-actions",
+			"path": "scripts/github-actions"
+		},
+		{
+			"name": "autorest.bicep",
+			"path": "src/autorest.bicep"
+		},
+		{
+			"name": "generator",
+			"path": "src/generator"
+		},
+		{
+			"name": "bicep-types",
+			"path": "bicep-types/src/bicep-types"
+		}
+	],
+	"settings": {
+		"jest.disabledWorkspaceFolders": [
+			"bicep-types-az",
+			"generator",
+			"bicep-types",
+			"autorest.bicep",
+		]
+	}
+}

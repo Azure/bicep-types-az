@@ -1,0 +1,84 @@
+name: Publish OCI Types Package
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  publish-oci-types-package:
+    environment:
+      name: test
+    permissions:
+      id-token: write
+      contents: read
+    name: Publish Types Package to OCI Registry
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 
+
+      # Logging into Azure (publish-az-types.js dependency)
+      - name: Log in to Azure
+        uses: azure/login@v1
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+      # Installing ORAS (publish-az-types.js dependency)
+      - name: Login to OCI Registry using ORAS
+        uses: oras-project/setup-oras@v1
+        with:
+          version: 1.1.0
+
+      # Logging into OCI Registry (publish-az-types.js dependency)
+      - name: Login to OCI Registry using ORAS
+        run: |
+          az acr login -t -n ${{ secrets.PUBLISH_REGISTRY_SERVER }} -o tsv --query accessToken | oras login --password-stdin ${{ secrets.PUBLISH_REGISTRY_SERVER }}
+      
+      # Installing ORAS (publish-az-types.js dependency)
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x    
+
+      # Installing publish-az-types.js NPM package dependencies
+      - name: Fetch publish script dependencies
+        working-directory: ./scripts/github-actions
+        run: |
+          npm ci
+
+      - name: Generate tag for the package based on event type
+        id: generate_tag
+        run: |
+          if [ "${{ github.event_name }}" == "push" ]; then
+            echo "tag=0.0.0-alpha-$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
+          else
+            echo "tag=0.0.0-alpha-pr${{ github.event.number }}" >> $GITHUB_OUTPUT
+          fi
+  
+      - name: Publish Package
+        id: publish-types
+        uses: actions/github-script@v6
+        with:
+          result-encoding: string
+          script: |
+            const path = require("path");
+            const cwd = process.cwd();
+            typesDir = path.join(cwd, "generated");
+            process.chdir(path.join(cwd, "scripts/github-actions"));
+            console.log("currentDir: " + process.cwd());
+            const script = require("./publish-az-types.js");
+            return await script({
+              require: require,
+              core: core,
+              typesDir: typesDir,
+              registryFqdn: "${{ secrets.PUBLISH_REGISTRY_SERVER }}",
+              tags: "${{ steps.generate_tag.outputs.tag }}",
+            });
