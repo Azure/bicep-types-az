@@ -167,6 +167,7 @@ jobs:
       
       - name: Fetch test dependencies
         run: npm ci
+        working-directory: ./scripts/github-actions
       
       - name: Test
         run: npm test
