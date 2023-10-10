@@ -69,13 +69,14 @@ jobs:
         with:
           result-encoding: string
           script: |
-            typesDir = path.join(__dirname, "generated")
-            process.chdir(path.join(__dirname, "scripts/github-actions"))
-            const script = require("./scripts/github-actions/publish-az-types.js")
+            const path = require("path");
+            typesDir = path.join(__dirname, "generated");
+            process.chdir(path.join(__dirname, "scripts/github-actions"));
+            const script = require("./scripts/github-actions/publish-az-types.js");
             return await script({
               require: require,
               core: core,
               typesDir: typesDir,
               registryFqdn: "${{ secrets.PUBLISH_REGISTRY_SERVER }}",
               tags: "${{ steps.generate_tag.outputs.tag }}",
-            })
+            });
