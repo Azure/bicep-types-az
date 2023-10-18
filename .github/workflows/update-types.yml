@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0 # avoid shallow clone so nbgv can do its work.
           submodules: recursive
@@ -32,7 +32,7 @@ jobs:
           node-version: 16.x
 
       - name: Clone azure-rest-api-specs
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: Azure/azure-rest-api-specs
           path: workflow-temp/azure-rest-api-specs
