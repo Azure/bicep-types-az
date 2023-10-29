@@ -39,7 +39,7 @@
 ### Properties
 * **accountId**: string: Account id
 * **ingestionKey**: string {sensitive}: ingestion key of account
-* **region**: string: NewRelic account region
+* **region**: string: Region where New Relic account is present
 
 ## AppServiceInfo
 ### Properties

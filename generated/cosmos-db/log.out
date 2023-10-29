@@ -454,7 +454,7 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProvisioningState' 
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (3 differences):
   - properties.id.$ref: "#/components/schemas/schemas:1195" => "#/components/schemas/schemas:1466"
   - properties.id.description: "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}" => "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
-  - properties.systemData: <none> => {"readOnly":true,"type":"object","description":"Azure Resource Manager metadata containing createdBy and modifiedBy information.","$ref":"#/components/schemas/schemas:1260"}
+  - properties.systemData: <none> => {"readOnly":true,"description":"Azure Resource Manager metadata containing createdBy and modifiedBy information.","$ref":"#/components/schemas/schemas:1260"}
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProxyResource' (1 differences):
   - allOf.0.$ref: "#/components/schemas/schemas:1194" => "#/components/schemas/schemas:1465"
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'DatabaseAccountGetResults' has a property 'identity' that is already declared the parent schema 'ARMResourceProperties' but isn't significantly different. The property has been removed from DatabaseAccountGetResults
@@ -683,7 +683,7 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProvisioningState' 
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (3 differences):
   - properties.id.$ref: "#/components/schemas/schemas:1177" => "#/components/schemas/schemas:1448"
   - properties.id.description: "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}" => "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
-  - properties.systemData: <none> => {"readOnly":true,"type":"object","description":"Azure Resource Manager metadata containing createdBy and modifiedBy information.","$ref":"#/components/schemas/schemas:1242"}
+  - properties.systemData: <none> => {"readOnly":true,"description":"Azure Resource Manager metadata containing createdBy and modifiedBy information.","$ref":"#/components/schemas/schemas:1242"}
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProxyResource' (1 differences):
   - allOf.0.$ref: "#/components/schemas/schemas:1176" => "#/components/schemas/schemas:1447"
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'DatabaseAccountGetResults' has a property 'identity' that is already declared the parent schema 'ARMResourceProperties' but isn't significantly different. The property has been removed from DatabaseAccountGetResults
@@ -1312,7 +1312,7 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProvisioningState' 
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (3 differences):
   - properties.id.$ref: "#/components/schemas/schemas:1159" => "#/components/schemas/schemas:1430"
   - properties.id.description: "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}" => "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
-  - properties.systemData: <none> => {"readOnly":true,"type":"object","description":"Azure Resource Manager metadata containing createdBy and modifiedBy information.","$ref":"#/components/schemas/schemas:1224"}
+  - properties.systemData: <none> => {"readOnly":true,"description":"Azure Resource Manager metadata containing createdBy and modifiedBy information.","$ref":"#/components/schemas/schemas:1224"}
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProxyResource' (1 differences):
   - allOf.0.$ref: "#/components/schemas/schemas:1158" => "#/components/schemas/schemas:1429"
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'DatabaseAccountGetResults' has a property 'identity' that is already declared the parent schema 'ARMResourceProperties' but isn't significantly different. The property has been removed from DatabaseAccountGetResults
