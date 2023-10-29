@@ -27,7 +27,7 @@
     "@autorest/core": "3.9.7",
     "@autorest/modelerfour": "^4.26.2",
     "@ts-common/commonmark-to-markdown": "^2.0.2",
-    "@types/async": "^3.2.21",
+    "@types/async": "^3.2.22",
     "@types/js-yaml": "^4.0.7",
     "@types/node": "^20.8.7",
     "@types/yargs": "^17.0.29",
