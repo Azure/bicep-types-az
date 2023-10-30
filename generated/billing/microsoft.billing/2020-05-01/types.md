@@ -204,7 +204,7 @@
 
 ## AgreementProperties
 ### Properties
-* **acceptanceMode**: 'ClickToAccept' | 'ESignEmbedded' | 'ESignOffline' | string (ReadOnly): The mode of acceptance for an agreement.
+* **acceptanceMode**: 'ClickToAccept' | 'ESignEmbedded' | 'ESignOffline' | 'Implicit' | 'Offline' | 'Other' | 'PhysicalSign' | string (ReadOnly): The mode of acceptance for an agreement.
 * **agreementLink**: string (ReadOnly): The URL to download the agreement.
 * **billingProfileInfo**: [BillingProfileInfo](#billingprofileinfo) (ReadOnly): The list of billing profiles associated with agreement and present only for specific agreements.
 * **category**: 'AffiliatePurchaseTerms' | 'MicrosoftCustomerAgreement' | 'Other' | string (ReadOnly): The category of the agreement signed by a customer.

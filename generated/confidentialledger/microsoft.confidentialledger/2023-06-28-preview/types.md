@@ -47,6 +47,7 @@
 * **identityServiceUri**: string (ReadOnly): Endpoint for accessing network identity.
 * **ledgerInternalNamespace**: string (ReadOnly): Internal namespace for the Ledger
 * **ledgerName**: string (ReadOnly): Unique name for the Confidential Ledger.
+* **ledgerSku**: 'Basic' | 'Standard' | 'Unknown' | string: SKU associated with the ledger
 * **ledgerType**: 'Private' | 'Public' | 'Unknown' | string: Type of Confidential Ledger
 * **ledgerUri**: string (ReadOnly): Endpoint for calling Ledger Service.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): Provisioning state of Ledger Resource

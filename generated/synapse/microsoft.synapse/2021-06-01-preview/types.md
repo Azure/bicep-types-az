@@ -1747,7 +1747,7 @@ Restore: Creates a sql pool by restoring a backup of a deleted sql  pool. Source
 ### Properties
 * **accountName**: string: Account name
 * **collaborationBranch**: string: Collaboration branch
-* **hostName**: string: GitHub Enterprise host name. For example: https://github.mydomain.com
+* **hostName**: string: GitHub Enterprise host name. For example: `https://github.mydomain.com`
 * **lastCommitId**: string: The last commit ID
 * **projectName**: string: VSTS project name
 * **repositoryName**: string: Repository name

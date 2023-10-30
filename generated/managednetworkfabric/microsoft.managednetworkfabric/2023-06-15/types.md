@@ -661,7 +661,7 @@
 * **annotation**: string: Switch configuration description.
 * **configurationState**: 'Accepted' | 'DeferredControl' | 'Deprovisioned' | 'Deprovisioning' | 'ErrorDeprovisioning' | 'ErrorProvisioning' | 'Failed' | 'PendingCommit' | 'Provisioned' | 'Provisioning' | 'Rejected' | 'Succeeded' | string (ReadOnly): Configuration state of the resource.
 * **fabricASN**: int {minValue: 1, maxValue: 4294967295} (Required): ASN of CE devices for CE/PE connectivity.
-* **fabricVersion**: string (ReadOnly): The version of Network Fabric.
+* **fabricVersion**: string {minLength: 1}: The version of Network Fabric.
 * **ipv4Prefix**: string {minLength: 1} (Required): IPv4Prefix for Management Network. Example: 10.1.0.0/19.
 * **ipv6Prefix**: string {minLength: 1}: IPv6Prefix for Management Network. Example: 3FFE:FFFF:0:CD40::/59
 * **l2IsolationDomains**: string[] (ReadOnly): List of L2 Isolation Domain resource IDs under the Network Fabric.

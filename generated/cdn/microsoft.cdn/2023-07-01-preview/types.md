@@ -194,6 +194,7 @@
 * **preValidatedCustomDomainResourceId**: [ResourceReference](#resourcereference): Resource reference to the Azure resource where custom domain ownership was prevalidated
 * **profileName**: string (ReadOnly): The name of the profile which holds the domain.
 * **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning status
+* **referencedRoutePaths**: [AFDDomainReferencedRoutePath](#afddomainreferencedroutepath)[] (ReadOnly): The JSON object list that contains the overall picture of how routes are used for the shared custom domain across different profiles.
 * **tlsSettings**: [AFDDomainHttpsParameters](#afddomainhttpsparameters): The configuration specifying how to enable HTTPS for the domain - using AzureFrontDoor managed certificate or user's own certificate. If not specified, enabling ssl uses AzureFrontDoor managed certificate by default.
 * **validationProperties**: [DomainValidationProperties](#domainvalidationproperties) (ReadOnly): Values the customer needs to validate domain ownership
 
@@ -201,6 +202,11 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## AFDDomainReferencedRoutePath
+### Properties
+* **paths**: string[]: List of paths of the route.
+* **routeId**: [ResourceReference](#resourcereference): Resource reference to the route.
 
 ## AFDEndpointProperties
 ### Properties
