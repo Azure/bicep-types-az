@@ -10,7 +10,7 @@
     "lint:fix": "eslint src --ext ts --fix"
   },
   "dependencies": {
-    "@autorest/codemodel": "^4.19.3",
+    "@autorest/codemodel": "^4.20.0",
     "@autorest/extension-base": "^3.5.2",
     "@types/lodash": "^4.14.201",
     "autorest": "^3.7.0",
