@@ -121,6 +121,7 @@
 * **apiVersion**: '2023-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): The identity of the resource.
+* **kind**: string
 * **location**: string: Specifies the location of the resource.
 * **name**: string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9_-]{2,32}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [WorkspaceProperties](#workspaceproperties): The properties of the machine learning workspace.

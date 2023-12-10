@@ -797,6 +797,7 @@ InProgress | Failed | Succeeded
 * **resourceGuardOperationRequests**: string[]: ResourceGuardOperationRequests on which LAC check will be performed
 * **softDeleteRetentionPeriodInDays**: int: Soft delete retention period in days
 * **sourceResourceId**: string: ARM ID of the resource to be backed up.
+* **vaultId**: string (ReadOnly): ID of the vault which protects this item
 * **workloadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDBInstance' | 'SAPHanaDatabase' | 'SQLDB' | 'SQLDataBase' | 'Sharepoint' | 'SystemState' | 'VM' | 'VMwareVM' | string (ReadOnly): Type of workload this item represents.
 
 ### AzureFileshareProtectedItem

@@ -750,6 +750,7 @@ on 64 bit.
 * **frameworks**: [WebApplicationFramework](#webapplicationframework)[] (ReadOnly): Gets the Error details.
 * **hasErrors**: bool (ReadOnly): Gets a value indicating whether the WebApp has errors or not.
 * **isDeleted**: bool (ReadOnly): Gets a value indicating whether application is deleted.
+* **machineArmIds**: string[] (ReadOnly): Gets the list of machine ARM Ids on which the SQL server is deployed.
 * **machineDisplayName**: string (ReadOnly): Machine display name
 * **physicalPath**: string (ReadOnly): Gets the physical path of the application.
 * **provisioningState**: 'Canceled' | 'Completed' | 'Created' | 'Failed' | 'Running' | 'Succeeded' | 'Updated' | string (ReadOnly): provisioning state enum
@@ -1349,6 +1350,7 @@ It is discovered by the agent from the list of credentials.
 * **hasErrors**: bool (ReadOnly): Gets a value indicating whether the WebApp has errors or not.
 * **isDeleted**: bool (ReadOnly): Gets a value indicating whether application is deleted.
 * **isExternalLoggingConfigured**: bool (ReadOnly): Boolean value having true if the application has file dependency.
+* **machineArmIds**: string[] (ReadOnly): Gets the list of machine ARM Ids on which the web application is deployed.
 * **machineDisplayName**: string (ReadOnly): Machine display name
 * **physicalPath**: string (ReadOnly): Gets the physical path of the application.
 * **provisioningState**: 'Canceled' | 'Completed' | 'Created' | 'Failed' | 'Running' | 'Succeeded' | 'Updated' | string (ReadOnly): provisioning state enum

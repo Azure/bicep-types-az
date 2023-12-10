@@ -115,7 +115,7 @@
 ### Properties
 * **alertType**: string (Required): Type of the alert to automatically suppress. For all alert types, use '*'
 * **comment**: string: Any comment regarding the rule
-* **expirationDateUtc**: string: Expiration date of the rule, if value is not provided or provided as null this field will default to the maximum allowed expiration date.
+* **expirationDateUtc**: string: Expiration date of the rule, if value is not provided or provided as null there will no expiration at all
 * **lastModifiedUtc**: string (ReadOnly): The last time this rule was modified
 * **reason**: string (Required): The reason for dismissing the alert
 * **state**: 'Disabled' | 'Enabled' | 'Expired' (Required): Possible states of the rule

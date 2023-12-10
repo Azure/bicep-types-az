@@ -1,0 +1,9 @@
+AutoRest code generation utility [cli version: 3.7.1; node: v16.20.2]
+(C) 2018 Microsoft Corporation.
+https://aka.ms/autorest
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Modeler/MissingType | The schema 'components·er18tm·schemas·pipelineinput·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/iotoperationsdataprocessor/resource-manager/Microsoft.IoTOperationsDataProcessor/preview/2023-10-04-preview/openapi.json#/components/schemas/components·er18tm·schemas·pipelineinput·additionalproperties
+warning | Modeler/MissingType | The schema 'components·1or7hue·schemas·pipelinestage·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/iotoperationsdataprocessor/resource-manager/Microsoft.IoTOperationsDataProcessor/preview/2023-10-04-preview/openapi.json#/components/schemas/components·1or7hue·schemas·pipelinestage·additionalproperties

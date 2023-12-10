@@ -245,6 +245,25 @@
 ## AssessedDisk
 ### Properties
 * **displayName**: string: Gets the machine display name.
+* **gigabytesForRecommendedDiskSize**: int: Gets the recommended disk size.
+* **gigabytesProvisioned**: int: Gets the gigabytes provisioned.
+* **megabytesPerSecondOfRead**: int: Gets the megabytes per second of read.
+* **megabytesPerSecondOfWrite**: int: Gets the megabytes per second of write.
+* **monthlyStorageCost**: int: Gets the monthly storage cost.
+* **name**: string: Gets the name.
+* **numberOfReadOperationsPerSecond**: int: Gets the number of read operations per second.
+* **numberOfWriteOperationsPerSecond**: int: Gets the number of write operations per second.
+* **recommendDiskThroughputInMbps**: int: Gets the recommended disk throughput.
+* **recommendedDiskIops**: int: Gets the recommended disk iops.
+* **recommendedDiskSize**: 'PremiumV2' | 'Premium_P1' | 'Premium_P10' | 'Premium_P15' | 'Premium_P2' | 'Premium_P20' | 'Premium_P3' | 'Premium_P30' | 'Premium_P4' | 'Premium_P40' | 'Premium_P50' | 'Premium_P6' | 'Premium_P60' | 'Premium_P70' | 'Premium_P80' | 'StandardSSD_E1' | 'StandardSSD_E10' | 'StandardSSD_E15' | 'StandardSSD_E2' | 'StandardSSD_E20' | 'StandardSSD_E3' | 'StandardSSD_E30' | 'StandardSSD_E4' | 'StandardSSD_E40' | 'StandardSSD_E50' | 'StandardSSD_E6' | 'StandardSSD_E60' | 'StandardSSD_E70' | 'StandardSSD_E80' | 'Standard_S10' | 'Standard_S15' | 'Standard_S20' | 'Standard_S30' | 'Standard_S4' | 'Standard_S40' | 'Standard_S50' | 'Standard_S6' | 'Standard_S60' | 'Standard_S70' | 'Standard_S80' | 'Ultra' | 'Unknown' | string: Gets the recommended disk size.
+* **recommendedDiskType**: 'Premium' | 'PremiumV2' | 'Standard' | 'StandardOrPremium' | 'StandardSSD' | 'Ultra' | 'Unknown' | string: Gets the recommended disk type.
+* **suitability**: 'ConditionallySuitable' | 'NotSuitable' | 'ReadinessUnknown' | 'Suitable' | 'Unknown' | string: Gets the suitability.
+* **suitabilityDetail**: 'DiskGigabytesConsumedMissing' | 'DiskGigabytesConsumedOutOfRange' | 'DiskGigabytesProvisionedMissing' | 'DiskGigabytesProvisionedOutOfRange' | 'MegabytesPerSecondOfReadMissing' | 'MegabytesPerSecondOfReadOutOfRange' | 'MegabytesPerSecondOfWriteMissing' | 'MegabytesPerSecondOfWriteOutOfRange' | 'None' | 'NumberOfReadOperationsPerSecondMissing' | 'NumberOfReadOperationsPerSecondOutOfRange' | 'NumberOfWriteOperationsPerSecondMissing' | 'NumberOfWriteOperationsPerSecondOutOfRange' | string: Gets the suitability detail.
+* **suitabilityExplanation**: 'DiskSizeGreaterThanSupported' | 'InternalErrorOccurredForDiskEvaluation' | 'NoDiskSizeFoundForSelectedRedundancy' | 'NoDiskSizeFoundInSelectedLocation' | 'NoEaPriceFoundForDiskSize' | 'NoSuitableDiskSizeForIops' | 'NoSuitableDiskSizeForThroughput' | 'NotApplicable' | 'Unknown' | string: Gets the suitability explanation.
+
+## AssessedDiskData
+### Properties
+* **displayName**: string: Gets the machine display name.
 * **gigabytesProvisioned**: int: Gets the gigabytes provisioned.
 * **megabytesPerSecondOfRead**: int: Gets the megabytes per second of read.
 * **megabytesPerSecondOfWrite**: int: Gets the megabytes per second of write.
@@ -479,7 +498,7 @@ evaluation.
 ## AssessedSqlMachinePropertiesDisks
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [AssessedDisk](#assesseddisk)
+* **Additional Properties Type**: [AssessedDiskData](#assesseddiskdata)
 
 ## AssessedSqlMachinePropertiesNetworkAdapters
 ### Properties
@@ -1152,6 +1171,7 @@ assessment.
 * **numberOfSqlAvailabilityGroups**: int (ReadOnly): Number of sql availability groups part of the assessment.
 * **numberOfSqlDatabases**: int (ReadOnly): Number of sql databases part of the assessment.
 * **numberOfSqlInstances**: int (ReadOnly): Number of sql instances part of the assessment.
+* **numberOfSuccessfullyDiscoveredSqlInstances**: int (ReadOnly): Number of successfully discovered sql instances part of the assessment.
 
 ## SqlAssessmentV2SummaryPropertiesAssessmentSummary
 ### Properties

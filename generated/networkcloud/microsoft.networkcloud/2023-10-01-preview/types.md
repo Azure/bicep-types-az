@@ -1,9 +1,9 @@
-# Microsoft.NetworkCloud @ 2022-12-12-preview
+# Microsoft.NetworkCloud @ 2023-10-01-preview
 
-## Resource Microsoft.NetworkCloud/bareMetalMachines@2022-12-12-preview
+## Resource Microsoft.NetworkCloud/bareMetalMachines@2023-10-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2022-12-12-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
@@ -13,10 +13,10 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.NetworkCloud/bareMetalMachines' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.NetworkCloud/cloudServicesNetworks@2022-12-12-preview
+## Resource Microsoft.NetworkCloud/cloudServicesNetworks@2023-10-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2022-12-12-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
@@ -26,10 +26,10 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.NetworkCloud/cloudServicesNetworks' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.NetworkCloud/clusterManagers@2022-12-12-preview
+## Resource Microsoft.NetworkCloud/clusterManagers@2023-10-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2022-12-12-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9-_]{0,28}[a-zA-Z0-9])$"} (Required, DeployTimeConstant): The resource name
@@ -38,10 +38,10 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.NetworkCloud/clusterManagers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.NetworkCloud/clusters@2022-12-12-preview
+## Resource Microsoft.NetworkCloud/clusters@2023-10-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2022-12-12-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster manager associated with the cluster.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
@@ -51,10 +51,10 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.NetworkCloud/clusters' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.NetworkCloud/clusters/bareMetalMachineKeySets@2022-12-12-preview
+## Resource Microsoft.NetworkCloud/clusters/bareMetalMachineKeySets@2023-10-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2022-12-12-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
@@ -64,10 +64,10 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.NetworkCloud/clusters/bareMetalMachineKeySets' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.NetworkCloud/clusters/bmcKeySets@2022-12-12-preview
+## Resource Microsoft.NetworkCloud/clusters/bmcKeySets@2023-10-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2022-12-12-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
@@ -77,10 +77,10 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.NetworkCloud/clusters/bmcKeySets' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.NetworkCloud/clusters/metricsConfigurations@2022-12-12-preview
+## Resource Microsoft.NetworkCloud/clusters/metricsConfigurations@2023-10-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2022-12-12-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
@@ -90,36 +90,36 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.NetworkCloud/clusters/metricsConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.NetworkCloud/defaultCniNetworks@2022-12-12-preview
+## Resource Microsoft.NetworkCloud/kubernetesClusters@2023-10-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2022-12-12-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9-_]{0,28}[a-zA-Z0-9])$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [DefaultCniNetworkProperties](#defaultcninetworkproperties) (Required): The list of the resource properties.
+* **properties**: [KubernetesClusterProperties](#kubernetesclusterproperties) (Required): The list of the resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
-* **type**: 'Microsoft.NetworkCloud/defaultCniNetworks' (ReadOnly, DeployTimeConstant): The resource type
+* **type**: 'Microsoft.NetworkCloud/kubernetesClusters' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.NetworkCloud/hybridAksClusters@2022-12-12-preview
+## Resource Microsoft.NetworkCloud/kubernetesClusters/agentPools@2023-10-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2022-12-12-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
+* **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **extendedLocation**: [ExtendedLocation](#extendedlocation): The extended location of the cluster associated with the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9-_]{0,61}[a-zA-Z0-9])$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [HybridAksClusterProperties](#hybridaksclusterproperties) (Required): The list of the resource properties.
+* **name**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9-_]{0,28}[a-zA-Z0-9])$"} (Required, DeployTimeConstant): The resource name
+* **properties**: [AgentPoolProperties](#agentpoolproperties) (Required): The list of the resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
-* **type**: 'Microsoft.NetworkCloud/hybridAksClusters' (ReadOnly, DeployTimeConstant): The resource type
+* **type**: 'Microsoft.NetworkCloud/kubernetesClusters/agentPools' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.NetworkCloud/l2Networks@2022-12-12-preview
+## Resource Microsoft.NetworkCloud/l2Networks@2023-10-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2022-12-12-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
@@ -129,10 +129,10 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.NetworkCloud/l2Networks' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.NetworkCloud/l3Networks@2022-12-12-preview
+## Resource Microsoft.NetworkCloud/l3Networks@2023-10-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2022-12-12-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
@@ -142,10 +142,10 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.NetworkCloud/l3Networks' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.NetworkCloud/racks@2022-12-12-preview
+## Resource Microsoft.NetworkCloud/racks@2023-10-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2022-12-12-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
@@ -155,20 +155,20 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.NetworkCloud/racks' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.NetworkCloud/rackSkus@2022-12-12-preview (ReadOnly)
+## Resource Microsoft.NetworkCloud/rackSkus@2023-10-01-preview (ReadOnly)
 * **Valid Scope(s)**: Subscription
 ### Properties
-* **apiVersion**: '2022-12-12-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [RackSkuProperties](#rackskuproperties) (ReadOnly): The list of the resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.NetworkCloud/rackSkus' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.NetworkCloud/storageAppliances@2022-12-12-preview
+## Resource Microsoft.NetworkCloud/storageAppliances@2023-10-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2022-12-12-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
@@ -178,10 +178,10 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.NetworkCloud/storageAppliances' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.NetworkCloud/trunkedNetworks@2022-12-12-preview
+## Resource Microsoft.NetworkCloud/trunkedNetworks@2023-10-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2022-12-12-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
@@ -191,10 +191,10 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.NetworkCloud/trunkedNetworks' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.NetworkCloud/virtualMachines@2022-12-12-preview
+## Resource Microsoft.NetworkCloud/virtualMachines@2023-10-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2022-12-12-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
@@ -204,10 +204,10 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.NetworkCloud/virtualMachines' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.NetworkCloud/virtualMachines/consoles@2022-12-12-preview
+## Resource Microsoft.NetworkCloud/virtualMachines/consoles@2023-10-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2022-12-12-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster manager associated with the cluster this virtual machine is created on.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
@@ -217,23 +217,69 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.NetworkCloud/virtualMachines/consoles' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.NetworkCloud/volumes@2022-12-12-preview
+## Resource Microsoft.NetworkCloud/volumes@2023-10-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2022-12-12-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location of the cluster associated with the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9]{0,28}[a-zA-Z0-9])$"} (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9-_]{0,62}[a-zA-Z0-9])$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [VolumeProperties](#volumeproperties) (Required): The list of the resource properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.NetworkCloud/volumes' (ReadOnly, DeployTimeConstant): The resource type
 
+## AadConfiguration
+### Properties
+* **adminGroupObjectIds**: string[] {minLength: 1} (Required): The list of Azure Active Directory group object IDs that will have an administrative role on the Kubernetes cluster.
+
 ## AdministrativeCredentials
 ### Properties
 * **password**: string {sensitive, minLength: 1} (Required): The password of the administrator of the device used during initialization.
 * **username**: string {minLength: 1} (Required): The username of the administrator of the device used during initialization.
+
+## AdministratorConfiguration
+### Properties
+* **adminUsername**: string: The user name for the administrator that will be applied to the operating systems that run Kubernetes nodes. If not supplied, a user name will be chosen by the service.
+* **sshPublicKeys**: [SshPublicKey](#sshpublickey)[]: The SSH configuration for the operating systems that run the nodes in the Kubernetes cluster. In some cases, specification of public keys may be required to produce a working environment.
+
+## AgentOptions
+### Properties
+* **hugepagesCount**: int (Required): The number of hugepages to allocate.
+* **hugepagesSize**: '1G' | '2M' | string: The size of the hugepages to allocate.
+
+## AgentPoolProperties
+### Properties
+* **administratorConfiguration**: [AdministratorConfiguration](#administratorconfiguration): The administrator credentials to be used for the nodes in this agent pool.
+* **agentOptions**: [AgentOptions](#agentoptions): The configurations that will be applied to each agent in this agent pool.
+* **attachedNetworkConfiguration**: [AttachedNetworkConfiguration](#attachednetworkconfiguration): The configuration of networks being attached to the agent pool for use by the workloads that run on this Kubernetes cluster.
+* **availabilityZones**: string[]: The list of availability zones of the Network Cloud cluster used for the provisioning of nodes in this agent pool. If not specified, all availability zones will be used.
+* **count**: int (Required): The number of virtual machines that use this configuration.
+* **detailedStatus**: 'Available' | 'Error' | 'Provisioning' | string (ReadOnly): The current status of the agent pool.
+* **detailedStatusMessage**: string (ReadOnly): The descriptive message about the current detailed status.
+* **kubernetesVersion**: string (ReadOnly): The Kubernetes version running in this agent pool.
+* **labels**: [KubernetesLabel](#kuberneteslabel)[]: The labels applied to the nodes in this agent pool.
+* **mode**: 'NotApplicable' | 'System' | 'User' | string (Required): The selection of how this agent pool is utilized, either as a system pool or a user pool. System pools run the features and critical services for the Kubernetes Cluster, while user pools are dedicated to user workloads. Every Kubernetes cluster must contain at least one system node pool with at least one node.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the agent pool.
+* **taints**: [KubernetesLabel](#kuberneteslabel)[]: The taints applied to the nodes in this agent pool.
+* **upgradeSettings**: [AgentPoolUpgradeSettings](#agentpoolupgradesettings): The configuration of the agent pool.
+* **vmSkuName**: string (Required): The name of the VM SKU that determines the size of resources allocated for node VMs.
+
+## AgentPoolUpgradeSettings
+### Properties
+* **maxSurge**: string: The maximum number or percentage of nodes that are surged during upgrade. This can either be set to an integer (e.g. '5') or a percentage (e.g. '50%'). If a percentage is specified, it is the percentage of the total agent pool size at the time of the upgrade. For percentages, fractional nodes are rounded up. If not specified, the default is 1.
+
+## AttachedNetworkConfiguration
+### Properties
+* **l2Networks**: [L2NetworkAttachmentConfiguration](#l2networkattachmentconfiguration)[]: The list of Layer 2 Networks and related configuration for attachment.
+* **l3Networks**: [L3NetworkAttachmentConfiguration](#l3networkattachmentconfiguration)[]: The list of Layer 3 Networks and related configuration for attachment.
+* **trunkedNetworks**: [TrunkedNetworkAttachmentConfiguration](#trunkednetworkattachmentconfiguration)[]: The list of Trunked Networks and related configuration for attachment.
+
+## AvailableUpgrade
+### Properties
+* **availabilityLifecycle**: 'GenerallyAvailable' | 'Preview' | string (ReadOnly): The version lifecycle indicator.
+* **version**: string (ReadOnly): The version available for upgrading.
 
 ## BareMetalMachineConfigurationData
 ### Properties
@@ -263,6 +309,7 @@ If not provided, the machine name will be generated programmatically.
 
 ## BareMetalMachineProperties
 ### Properties
+* **associatedResourceIds**: string[] (ReadOnly): The list of resource IDs for the other Microsoft.NetworkCloud resources that have attached this network.
 * **bmcConnectionString**: string (Required): The connection string for the baseboard management controller including IP address and protocol.
 * **bmcCredentials**: [AdministrativeCredentials](#administrativecredentials) (Required): The credentials of the baseboard management controller on this bare metal machine.
 * **bmcMacAddress**: string {pattern: "^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$"} (Required): The MAC address of the BMC device.
@@ -273,11 +320,12 @@ If not provided, the machine name will be generated programmatically.
 * **detailedStatusMessage**: string (ReadOnly): The descriptive message about the current detailed status.
 * **hardwareInventory**: [HardwareInventory](#hardwareinventory) (ReadOnly): The hardware inventory, including information acquired from the model/sku information and from the ironic inspector.
 * **hardwareValidationStatus**: [HardwareValidationStatus](#hardwarevalidationstatus) (ReadOnly): The details of the latest hardware validation performed for this bare metal machine.
-* **hybridAksClustersAssociatedIds**: string[] (ReadOnly): The list of the resource IDs for the HybridAksClusters that have nodes hosted on this bare metal machine.
+* **hybridAksClustersAssociatedIds**: string[] (ReadOnly): Field Deprecated. These fields will be empty/omitted. The list of the resource IDs for the HybridAksClusters that have nodes hosted on this bare metal machine.
 * **kubernetesNodeName**: string (ReadOnly): The name of this machine represented by the host object in the Cluster's Kubernetes control plane.
 * **kubernetesVersion**: string (ReadOnly): The version of Kubernetes running on this machine.
 * **machineDetails**: string {maxLength: 256} (Required): The custom details provided by the customer.
 * **machineName**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9]{0,62}[a-zA-Z0-9])$"} (Required): The OS-level hostname assigned to this machine.
+* **machineRoles**: string[] (ReadOnly): The list of roles that are assigned to the cluster node running on this machine.
 * **machineSkuId**: string (Required): The unique internal identifier of the bare metal machine SKU.
 * **oamIpv4Address**: string (ReadOnly): The IPv4 address that is assigned to the bare metal machine during the cluster deployment.
 * **oamIpv6Address**: string (ReadOnly): The IPv6 address that is assigned to the bare metal machine during the cluster deployment.
@@ -287,15 +335,24 @@ If not provided, the machine name will be generated programmatically.
 * **rackId**: string (Required): The resource ID of the rack where this bare metal machine resides.
 * **rackSlot**: int {minValue: 1, maxValue: 256} (Required): The rack slot in which this bare metal machine is located, ordered from the bottom up i.e. the lowest slot is 1.
 * **readyState**: 'False' | 'True' | string (ReadOnly): The indicator of whether the bare metal machine is ready to receive workloads.
+* **runtimeProtectionStatus**: [RuntimeProtectionStatus](#runtimeprotectionstatus) (ReadOnly): The runtime protection status of the bare metal machine.
 * **serialNumber**: string {minLength: 1, maxLength: 64} (Required): The serial number of the bare metal machine.
 * **serviceTag**: string (ReadOnly): The discovered value of the machine's service tag.
-* **virtualMachinesAssociatedIds**: string[] (ReadOnly): The list of the resource IDs for the VirtualMachines that are hosted on this bare metal machine.
+* **virtualMachinesAssociatedIds**: string[] (ReadOnly): Field Deprecated. These fields will be empty/omitted. The list of the resource IDs for the VirtualMachines that are hosted on this bare metal machine.
 
-## BgpPeer
+## BgpAdvertisement
 ### Properties
-* **asNumber**: int {minValue: 0, maxValue: 4294967295} (Required): The ASN (Autonomous System Number) of the BGP peer.
-* **password**: string {sensitive, maxLength: 80, pattern: "^[a-zA-Z0-9]{0,80}$"} (WriteOnly): The password for this peering neighbor. It defaults to no password if not specified.
-* **peerIp**: string (Required): The IPv4 or IPv6 address to peer with the associated CNI Network. The IP version type will drive a peering with the same version type from the Default CNI Network. For example, IPv4 to IPv4 or IPv6 to IPv6.
+* **advertiseToFabric**: 'False' | 'True' | string: The indicator of if this advertisement is also made to the network fabric associated with the Network Cloud Cluster. This field is ignored if fabricPeeringEnabled is set to False.
+* **communities**: string[]: The names of the BGP communities to be associated with the announcement, utilizing a BGP community string in 1234:1234 format.
+* **ipAddressPools**: string[] (Required): The names of the IP address pools associated with this announcement.
+* **peers**: string[]: The names of the BGP peers to limit this advertisement to. If no values are specified, all BGP peers will receive this advertisement.
+
+## BgpServiceLoadBalancerConfiguration
+### Properties
+* **bgpAdvertisements**: [BgpAdvertisement](#bgpadvertisement)[]: The association of IP address pools to the communities and peers, allowing for announcement of IPs.
+* **bgpPeers**: [ServiceLoadBalancerBgpPeer](#serviceloadbalancerbgppeer)[]: The list of additional BgpPeer entities that the Kubernetes cluster will peer with. All peering must be explicitly defined.
+* **fabricPeeringEnabled**: 'False' | 'True' | string: The indicator to specify if the load balancer peers with the network fabric.
+* **ipAddressPools**: [IpAddressPool](#ipaddresspool)[]: The list of pools of IP addresses that can be allocated to Load Balancer services.
 
 ## BmcKeySetProperties
 ### Properties
@@ -312,15 +369,16 @@ If not provided, the machine name will be generated programmatically.
 ## CloudServicesNetworkProperties
 ### Properties
 * **additionalEgressEndpoints**: [EgressEndpoint](#egressendpoint)[]: The list of egress endpoints. This allows for connection from a Hybrid AKS cluster to the specified endpoint.
+* **associatedResourceIds**: string[] (ReadOnly): The list of resource IDs for the other Microsoft.NetworkCloud resources that have attached this network.
 * **clusterId**: string (ReadOnly): The resource ID of the Network Cloud cluster this cloud services network is associated with.
 * **detailedStatus**: 'Available' | 'Error' | 'Provisioning' | string (ReadOnly): The more detailed status of the cloud services network.
 * **detailedStatusMessage**: string (ReadOnly): The descriptive message about the current detailed status.
 * **enableDefaultEgressEndpoints**: 'False' | 'True' | string: The indicator of whether the platform default endpoints are allowed for the egress traffic.
 * **enabledEgressEndpoints**: [EgressEndpoint](#egressendpoint)[] (ReadOnly): The full list of additional and default egress endpoints that are currently enabled.
-* **hybridAksClustersAssociatedIds**: string[] (ReadOnly): The list of Hybrid AKS cluster resource IDs that are associated with this cloud services network.
+* **hybridAksClustersAssociatedIds**: string[] (ReadOnly): Field Deprecated. These fields will be empty/omitted. The list of Hybrid AKS cluster resource IDs that are associated with this cloud services network.
 * **interfaceName**: string (ReadOnly): The name of the interface that will be present in the virtual machine to represent this network.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): The provisioning state of the cloud services network.
-* **virtualMachinesAssociatedIds**: string[] (ReadOnly): The list of virtual machine resource IDs, excluding any Hybrid AKS virtual machines, that are currently using this cloud services network.
+* **virtualMachinesAssociatedIds**: string[] (ReadOnly): Field Deprecated. These fields will be empty/omitted. The list of virtual machine resource IDs, excluding any Hybrid AKS virtual machines, that are currently using this cloud services network.
 
 ## ClusterAvailableUpgradeVersion
 ### Properties
@@ -372,10 +430,10 @@ If not provided, the machine name will be generated programmatically.
 ## ClusterProperties
 ### Properties
 * **aggregatorOrSingleRackDefinition**: [RackDefinition](#rackdefinition) (Required): The rack definition that is intended to reflect only a single rack in a single rack cluster, or an aggregator rack in a multi-rack cluster.
-* **analyticsWorkspaceId**: string (Required): The resource ID of the Log Analytics Workspace that will be used for storing relevant logs.
+* **analyticsWorkspaceId**: string: The resource ID of the Log Analytics Workspace that will be used for storing relevant logs.
 * **availableUpgradeVersions**: [ClusterAvailableUpgradeVersion](#clusteravailableupgradeversion)[] (ReadOnly): The list of cluster runtime version upgrades available for this cluster.
 * **clusterCapacity**: [ClusterCapacity](#clustercapacity) (ReadOnly): The capacity supported by this cluster.
-* **clusterConnectionStatus**: 'Connected' | 'Timeout' | 'Undefined' | string (ReadOnly): The latest heartbeat status between the cluster manager and the cluster.
+* **clusterConnectionStatus**: 'Connected' | 'Disconnected' | 'Timeout' | 'Undefined' | string (ReadOnly): The latest heartbeat status between the cluster manager and the cluster.
 * **clusterExtendedLocation**: [ExtendedLocation](#extendedlocation) (ReadOnly): The extended location (custom location) that represents the cluster's control plane location. This extended location is used to route the requests of child objects of the cluster that are handled by the platform operator.
 * **clusterLocation**: string {maxLength: 256}: The customer-provided location information to identify where the cluster resides.
 * **clusterManagerConnectionStatus**: 'Connected' | 'Unreachable' | string (ReadOnly): The latest connectivity status between cluster manager and the cluster.
@@ -388,28 +446,30 @@ If not provided, the machine name will be generated programmatically.
 cluster, or an empty list in a single-rack cluster.
 * **detailedStatus**: 'Degraded' | 'Deleting' | 'Deploying' | 'Disconnected' | 'Failed' | 'PendingDeployment' | 'Running' | 'Updating' | string (ReadOnly): The current detailed status of the cluster.
 * **detailedStatusMessage**: string (ReadOnly): The descriptive message about the detailed status.
-* **hybridAksExtendedLocation**: [ExtendedLocation](#extendedlocation) (ReadOnly): The extended location (custom location) that represents the Hybrid AKS control plane location. This extended location is used when creating provisioned clusters (Hybrid AKS clusters).
+* **hybridAksExtendedLocation**: [ExtendedLocation](#extendedlocation) (ReadOnly): Field Deprecated. This field will not be populated in an upcoming version. The extended location (custom location) that represents the Hybrid AKS control plane location. This extended location is used when creating provisioned clusters (Hybrid AKS clusters).
 * **managedResourceGroupConfiguration**: [ManagedResourceGroupConfiguration](#managedresourcegroupconfiguration): The configuration of the managed resource group associated with the resource.
 * **manualActionCount**: int (ReadOnly): The count of Manual Action Taken (MAT) events that have not been validated.
 * **networkFabricId**: string (Required): The resource ID of the Network Fabric associated with the cluster.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'Succeeded' | 'Updating' | 'Validating' | string (ReadOnly): The provisioning state of the cluster.
+* **runtimeProtectionConfiguration**: [RuntimeProtectionConfiguration](#runtimeprotectionconfiguration): The settings for cluster runtime protection.
+* **secretArchive**: [ClusterSecretArchive](#clustersecretarchive): The configuration for use of a key vault to store secrets for later retrieval by the operator.
 * **supportExpiryDate**: string (ReadOnly): The support end date of the runtime version of the cluster.
+* **updateStrategy**: [ClusterUpdateStrategy](#clusterupdatestrategy): The strategy for updating the cluster.
 * **workloadResourceIds**: string[] (ReadOnly): The list of workload resource IDs that are hosted within this cluster.
 
-## CniBgpConfiguration
+## ClusterSecretArchive
 ### Properties
-* **bgpPeers**: [BgpPeer](#bgppeer)[]: The list of BgpPeer entities that the Hybrid AKS cluster will peer with in addition to peering that occurs automatically with the switch fabric.
-* **communityAdvertisements**: [CommunityAdvertisement](#communityadvertisement)[]: The list of prefix community advertisement properties. Each prefix community specifies a prefix, and the
-communities that should be associated with that prefix when it is announced.
-* **nodeMeshPassword**: string {sensitive, maxLength: 80, pattern: "^[a-zA-Z0-9]{0,80}$"} (WriteOnly): The password of the Calico node mesh. It defaults to a randomly-generated string when not provided.
-* **serviceExternalPrefixes**: string[]: The subnet blocks in CIDR format for Kubernetes service external IPs to be advertised over BGP.
-* **serviceLoadBalancerPrefixes**: string[]: The subnet blocks in CIDR format for Kubernetes load balancers. Load balancer IPs will only be advertised if they
-are within one of these blocks.
+* **keyVaultId**: string (Required): The resource ID of the key vault to archive the secrets of the cluster.
+* **useKeyVault**: 'False' | 'True' | string: The indicator if the specified key vault should be used to archive the secrets of the cluster.
 
-## CommunityAdvertisement
+## ClusterUpdateStrategy
 ### Properties
-* **communities**: string[] (Required): The list of community strings to announce with this prefix.
-* **subnetPrefix**: string (Required): The subnet in CIDR format for which properties should be advertised.
+* **maxUnavailable**: int {minValue: 1}: The maximum number of worker nodes that can be offline within the increment of update, e.g., rack-by-rack.
+Limited by the maximum number of machines in the increment. Defaults to the whole increment size.
+* **strategyType**: 'Rack' | string (Required): The mode of operation for runtime protection.
+* **thresholdType**: 'CountSuccess' | 'PercentSuccess' | string (Required): Selection of how the threshold should be evaluated.
+* **thresholdValue**: int {minValue: 0} (Required): The numeric threshold value.
+* **waitTimeMinutes**: int {minValue: 0, maxValue: 60}: The time to wait between the increments of update defined by the strategy.
 
 ## ConsoleProperties
 ### Properties
@@ -422,24 +482,12 @@ are within one of these blocks.
 * **sshPublicKey**: [SshPublicKey](#sshpublickey) (Required): The SSH public key that will be provisioned for user access. The user is expected to have the corresponding SSH private key for logging in.
 * **virtualMachineAccessId**: string (ReadOnly): The unique identifier for the virtual machine that is used to access the console.
 
-## DefaultCniNetworkProperties
+## ControlPlaneNodeConfiguration
 ### Properties
-* **clusterId**: string (ReadOnly): The resource ID of the Network Cloud cluster this default CNI network is associated with.
-* **cniAsNumber**: int (ReadOnly): The autonomous system number that the fabric expects to peer with, derived from the associated L3 isolation domain.
-* **cniBgpConfiguration**: [CniBgpConfiguration](#cnibgpconfiguration): The Calico BGP configuration.
-* **detailedStatus**: 'Available' | 'Error' | 'Provisioning' | string (ReadOnly): The more detailed status of the default CNI network.
-* **detailedStatusMessage**: string (ReadOnly): The descriptive message about the current detailed status.
-* **fabricBgpPeers**: [BgpPeer](#bgppeer)[] (ReadOnly): The L3 isolation fabric BGP peering connectivity information necessary for BGP peering the Hybrid AKS Cluster with the switch fabric.
-* **hybridAksClustersAssociatedIds**: string[] (ReadOnly): The list of Hybrid AKS cluster resource ID(s) that are associated with this default CNI network.
-* **interfaceName**: string (ReadOnly): The name of the interface that will be present in the virtual machine to represent this network.
-* **ipAllocationType**: 'DualStack' | 'IPV4' | 'IPV6' | string: The type of the IP address allocation.
-* **ipv4ConnectedPrefix**: string: The IPV4 prefix (CIDR) assigned to this default CNI network. It is required when the IP allocation type
-is IPV4 or DualStack.
-* **ipv6ConnectedPrefix**: string: The IPV6 prefix (CIDR) assigned to this default CNI network. It is required when the IP allocation type
-is IPV6 or DualStack.
-* **l3IsolationDomainId**: string (Required): The resource ID of the Network Fabric l3IsolationDomain.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): The provisioning state of the default CNI network.
-* **vlan**: int {minValue: 1, maxValue: 4094} (Required): The VLAN from the l3IsolationDomain that is used for this network.
+* **administratorConfiguration**: [AdministratorConfiguration](#administratorconfiguration): The administrator credentials to be used for the nodes in the control plane.
+* **availabilityZones**: string[]: The list of availability zones of the Network Cloud cluster to be used for the provisioning of nodes in the control plane. If not specified, all availability zones will be used.
+* **count**: int {minValue: 1} (Required): The number of virtual machines that use this configuration.
+* **vmSkuName**: string (Required): The name of the VM SKU supplied during creation.
 
 ## EgressEndpoint
 ### Properties
@@ -455,6 +503,13 @@ is IPV6 or DualStack.
 ### Properties
 * **name**: string (Required): The resource ID of the extended location on which the resource will be created.
 * **type**: string (Required): The extended location type, for example, CustomLocation.
+
+## FeatureStatus
+### Properties
+* **detailedStatus**: 'Failed' | 'Running' | 'Unknown' | string (ReadOnly): The status representing the state of this feature.
+* **detailedStatusMessage**: string (ReadOnly): The descriptive message about the current detailed status.
+* **name**: string (ReadOnly): The name of the feature.
+* **version**: string (ReadOnly): The version of the feature.
 
 ## HardwareInventory
 ### Properties
@@ -474,60 +529,125 @@ is IPV6 or DualStack.
 * **lastValidationTime**: string (ReadOnly): The timestamp of the hardware validation execution.
 * **result**: 'Fail' | 'Pass' | string (ReadOnly): The outcome of the hardware validation.
 
-## HybridAksClusterProperties
-### Properties
-* **associatedNetworkIds**: string[] (Required): The list of resource IDs for the workload networks associated with the Hybrid AKS cluster. It can be any of l2Networks, l3Networks, or trunkedNetworks resources. This field will also contain one cloudServicesNetwork and one defaultCniNetwork.
-* **cloudServicesNetworkId**: string (ReadOnly): The resource ID of the associated cloud services network.
-* **clusterId**: string (ReadOnly): The resource ID of the Network Cloud cluster hosting the Hybrid AKS cluster.
-* **controlPlaneCount**: int {minValue: 1} (Required): The number of control plane node VMs.
-* **controlPlaneNodes**: [NodeConfiguration](#nodeconfiguration)[] (ReadOnly): The list of node configurations detailing associated VMs that are part of the control plane nodes of this Hybrid AKS cluster.
-* **defaultCniNetworkId**: string (ReadOnly): The resource ID of the associated default CNI network.
-* **detailedStatus**: 'Available' | 'Error' | 'Provisioning' | string (ReadOnly): The more detailed status of this Hybrid AKS cluster.
-* **detailedStatusMessage**: string (ReadOnly): The descriptive message about the current detailed status.
-* **hybridAksProvisionedClusterId**: string (Required): The resource ID of the Hybrid AKS cluster that this additional information is for.
-* **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): The provisioning state of the Hybrid AKS cluster resource.
-* **volumes**: string[] (ReadOnly): The resource IDs of volumes that are attached to the Hybrid AKS cluster.
-* **workerCount**: int (Required): The number of worker node VMs.
-* **workerNodes**: [NodeConfiguration](#nodeconfiguration)[] (ReadOnly): The list of node configurations detailing associated VMs that are part of the worker nodes of this Hybrid AKS cluster.
-
 ## ImageRepositoryCredentials
 ### Properties
 * **password**: string {sensitive, minLength: 1} (Required): The password or token used to access an image in the target repository.
 * **registryUrl**: string (Required): The URL of the authentication server used to validate the repository credentials.
 * **username**: string {minLength: 1} (Required): The username used to access an image in the target repository.
 
+## InitialAgentPoolConfiguration
+### Properties
+* **administratorConfiguration**: [AdministratorConfiguration](#administratorconfiguration): The administrator credentials to be used for the nodes in this agent pool.
+* **agentOptions**: [AgentOptions](#agentoptions): The configurations that will be applied to each agent in this agent pool.
+* **attachedNetworkConfiguration**: [AttachedNetworkConfiguration](#attachednetworkconfiguration): The configuration of networks being attached to the agent pool for use by the workloads that run on this Kubernetes cluster.
+* **availabilityZones**: string[]: The list of availability zones of the Network Cloud cluster used for the provisioning of nodes in this agent pool. If not specified, all availability zones will be used.
+* **count**: int (Required): The number of virtual machines that use this configuration.
+* **labels**: [KubernetesLabel](#kuberneteslabel)[]: The labels applied to the nodes in this agent pool.
+* **mode**: 'NotApplicable' | 'System' | 'User' | string (Required): The selection of how this agent pool is utilized, either as a system pool or a user pool. System pools run the features and critical services for the Kubernetes Cluster, while user pools are dedicated to user workloads. Every Kubernetes cluster must contain at least one system node pool with at least one node.
+* **name**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9-_]{0,28}[a-zA-Z0-9])$"} (Required): The name that will be used for the agent pool resource representing this agent pool.
+* **taints**: [KubernetesLabel](#kuberneteslabel)[]: The taints applied to the nodes in this agent pool.
+* **upgradeSettings**: [AgentPoolUpgradeSettings](#agentpoolupgradesettings): The configuration of the agent pool.
+* **vmSkuName**: string (Required): The name of the VM SKU that determines the size of resources allocated for node VMs.
+
+## IpAddressPool
+### Properties
+* **addresses**: string[] (Required): The list of IP address ranges. Each range can be a either a subnet in CIDR format or an explicit start-end range of IP addresses.
+* **autoAssign**: 'False' | 'True' | string: The indicator to determine if automatic allocation from the pool should occur.
+* **name**: string {pattern: "^[a-z0-9]([a-z0-9.-]{0,61}[a-z0-9]){0,1}$"} (Required): The name used to identify this IP address pool for association with a BGP advertisement.
+* **onlyUseHostIps**: 'False' | 'True' | string: The indicator to prevent the use of IP addresses ending with .0 and .255 for this pool. Enabling this option will only use IP addresses between .1 and .254 inclusive.
+
 ## KeySetUser
 ### Properties
-* **azureUserName**: string (Required): The Azure Active Directory user name (email name).
+* **azureUserName**: string (Required): The user name that will be used for access.
 * **description**: string {maxLength: 256}: The free-form description for this user.
-* **sshPublicKey**: [SshPublicKey](#sshpublickey) (Required): The SSH public key for this user.
+* **sshPublicKey**: [SshPublicKey](#sshpublickey) (Required): The SSH public key that will be provisioned for user access. The user is expected to have the corresponding SSH private key for logging in.
+* **userPrincipalName**: string: The user principal name (email format) used to validate this user's group membership.
 
 ## KeySetUserStatus
 ### Properties
-* **azureUserName**: string (ReadOnly): The Azure Active Directory user name (email name).
+* **azureUserName**: string (ReadOnly): The user name that will be used for access.
 * **status**: 'Active' | 'Invalid' | string (ReadOnly): The indicator of whether the user is currently deployed for access.
 * **statusMessage**: string {maxLength: 256} (ReadOnly): The additional information describing the current status of this user, if any available.
 
+## KubernetesClusterNode
+### Properties
+* **agentPoolId**: string (ReadOnly): The resource ID of the agent pool that this node belongs to. This value is not represented on control plane nodes.
+* **availabilityZone**: string (ReadOnly): The availability zone this node is running within.
+* **bareMetalMachineId**: string (ReadOnly): The resource ID of the bare metal machine that hosts this node.
+* **cpuCores**: int (ReadOnly): The number of CPU cores configured for this node, derived from the VM SKU specified.
+* **detailedStatus**: 'Available' | 'Error' | 'Provisioning' | 'Running' | 'Scheduling' | 'Stopped' | 'Terminating' | 'Unknown' | string (ReadOnly): The detailed state of this node.
+* **detailedStatusMessage**: string (ReadOnly): The descriptive message about the current detailed status.
+* **diskSizeGB**: int (ReadOnly): The size of the disk configured for this node.
+* **image**: string (ReadOnly): The machine image used to deploy this node.
+* **kubernetesVersion**: string (ReadOnly): The currently running version of Kubernetes and bundled features running on this node.
+* **labels**: [KubernetesLabel](#kuberneteslabel)[] (ReadOnly): The list of labels on this node that have been assigned to the agent pool containing this node.
+* **memorySizeGB**: int (ReadOnly): The amount of memory configured for this node, derived from the vm SKU specified.
+* **mode**: 'NotApplicable' | 'System' | 'User' | string (ReadOnly): The mode of the agent pool containing this node. Not applicable for control plane nodes.
+* **name**: string (ReadOnly): The name of this node, as realized in the Kubernetes cluster.
+* **networkAttachments**: [NetworkAttachment](#networkattachment)[] (ReadOnly): The NetworkAttachments made to this node.
+* **powerState**: 'Off' | 'On' | 'Unknown' | string (ReadOnly): The power state of this node.
+* **role**: 'ControlPlane' | 'Worker' | string (ReadOnly): The role of this node in the cluster.
+* **taints**: [KubernetesLabel](#kuberneteslabel)[] (ReadOnly): The list of taints that have been assigned to the agent pool containing this node.
+* **vmSkuName**: string (ReadOnly): The VM SKU name that was used to create this cluster node.
+
+## KubernetesClusterProperties
+### Properties
+* **aadConfiguration**: [AadConfiguration](#aadconfiguration): The Azure Active Directory Integration properties.
+* **administratorConfiguration**: [AdministratorConfiguration](#administratorconfiguration): The administrative credentials that will be applied to the control plane and agent pool nodes that do not specify their own values.
+* **attachedNetworkIds**: string[] (ReadOnly): The full list of network resource IDs that are attached to this cluster, including those attached only to specific agent pools.
+* **availableUpgrades**: [AvailableUpgrade](#availableupgrade)[] (ReadOnly): The list of versions that this Kubernetes cluster can be upgraded to.
+* **clusterId**: string (ReadOnly): The resource ID of the Network Cloud cluster.
+* **connectedClusterId**: string (ReadOnly): The resource ID of the connected cluster set up when this Kubernetes cluster is created.
+* **controlPlaneKubernetesVersion**: string (ReadOnly): The current running version of Kubernetes on the control plane.
+* **controlPlaneNodeConfiguration**: [ControlPlaneNodeConfiguration](#controlplanenodeconfiguration) (Required): The defining characteristics of the control plane for this Kubernetes Cluster.
+* **detailedStatus**: 'Available' | 'Error' | 'Provisioning' | string (ReadOnly): The current status of the Kubernetes cluster.
+* **detailedStatusMessage**: string (ReadOnly): The descriptive message about the current detailed status.
+* **featureStatuses**: [FeatureStatus](#featurestatus)[] (ReadOnly): The current feature settings.
+* **initialAgentPoolConfigurations**: [InitialAgentPoolConfiguration](#initialagentpoolconfiguration)[] {minLength: 1} (Required): The agent pools that are created with this Kubernetes cluster for running critical system services and workloads. This data in this field is only used during creation, and the field will be empty following the creation of the Kubernetes Cluster. After creation, the management of agent pools is done using the agentPools sub-resource.
+* **kubernetesVersion**: string (Required): The Kubernetes version for this cluster. Accepts n.n, n.n.n, and n.n.n-n format. The interpreted version used will be resolved into this field after creation or update.
+* **managedResourceGroupConfiguration**: [ManagedResourceGroupConfiguration](#managedresourcegroupconfiguration): The configuration of the managed resource group associated with the resource.
+* **networkConfiguration**: [NetworkConfiguration](#networkconfiguration) (Required): The configuration of the Kubernetes cluster networking, including the attachment of networks that span the cluster.
+* **nodes**: [KubernetesClusterNode](#kubernetesclusternode)[] (ReadOnly): The details of the nodes in this cluster.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the Kubernetes cluster resource.
+
+## KubernetesLabel
+### Properties
+* **key**: string (Required): The name of the label or taint.
+* **value**: string (Required): The value of the label or taint.
+
+## L2NetworkAttachmentConfiguration
+### Properties
+* **networkId**: string (Required): The resource ID of the network that is being configured for attachment.
+* **pluginType**: 'DPDK' | 'IPVLAN' | 'MACVLAN' | 'OSDevice' | 'SRIOV' | string: The indicator of how this network will be utilized by the Kubernetes cluster.
+
 ## L2NetworkProperties
 ### Properties
+* **associatedResourceIds**: string[] (ReadOnly): The list of resource IDs for the other Microsoft.NetworkCloud resources that have attached this network.
 * **clusterId**: string (ReadOnly): The resource ID of the Network Cloud cluster this L2 network is associated with.
 * **detailedStatus**: 'Available' | 'Error' | 'Provisioning' | string (ReadOnly): The more detailed status of the L2 network.
 * **detailedStatusMessage**: string (ReadOnly): The descriptive message about the current detailed status.
-* **hybridAksClustersAssociatedIds**: string[] (ReadOnly): The list of Hybrid AKS cluster resource ID(s) that are associated with this L2 network.
-* **hybridAksPluginType**: 'DPDK' | 'OSDevice' | 'SRIOV' | string: The network plugin type for Hybrid AKS.
+* **hybridAksClustersAssociatedIds**: string[] (ReadOnly): Field Deprecated. These fields will be empty/omitted. The list of Hybrid AKS cluster resource ID(s) that are associated with this L2 network.
+* **hybridAksPluginType**: 'DPDK' | 'OSDevice' | 'SRIOV' | string: Field Deprecated. The field was previously optional, now it will have no defined behavior and will be ignored. The network plugin type for Hybrid AKS.
 * **interfaceName**: string {maxLength: 12, pattern: "^[a-zA-Z0-9@._-]*$"}: The default interface name for this L2 network in the virtual machine. This name can be overridden by the name supplied in the network attachment configuration of that virtual machine.
 * **l2IsolationDomainId**: string (Required): The resource ID of the Network Fabric l2IsolationDomain.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): The provisioning state of the L2 network.
-* **virtualMachinesAssociatedIds**: string[] (ReadOnly): The list of virtual machine resource ID(s), excluding any Hybrid AKS virtual machines, that are currently using this L2 network.
+* **virtualMachinesAssociatedIds**: string[] (ReadOnly): Field Deprecated. These fields will be empty/omitted. The list of virtual machine resource ID(s), excluding any Hybrid AKS virtual machines, that are currently using this L2 network.
+
+## L3NetworkAttachmentConfiguration
+### Properties
+* **ipamEnabled**: 'False' | 'True' | string: The indication of whether this network will or will not perform IP address management and allocate IP addresses when attached.
+* **networkId**: string (Required): The resource ID of the network that is being configured for attachment.
+* **pluginType**: 'DPDK' | 'IPVLAN' | 'MACVLAN' | 'OSDevice' | 'SRIOV' | string: The indicator of how this network will be utilized by the Kubernetes cluster.
 
 ## L3NetworkProperties
 ### Properties
+* **associatedResourceIds**: string[] (ReadOnly): The list of resource IDs for the other Microsoft.NetworkCloud resources that have attached this network.
 * **clusterId**: string (ReadOnly): The resource ID of the Network Cloud cluster this L3 network is associated with.
 * **detailedStatus**: 'Available' | 'Error' | 'Provisioning' | string (ReadOnly): The more detailed status of the L3 network.
 * **detailedStatusMessage**: string (ReadOnly): The descriptive message about the current detailed status.
-* **hybridAksClustersAssociatedIds**: string[] (ReadOnly): The list of Hybrid AKS cluster resource IDs that are associated with this L3 network.
-* **hybridAksIpamEnabled**: 'False' | 'True' | string: The indicator of whether or not to disable IPAM allocation on the network attachment definition injected into the Hybrid AKS Cluster.
-* **hybridAksPluginType**: 'DPDK' | 'OSDevice' | 'SRIOV' | string: The network plugin type for Hybrid AKS.
+* **hybridAksClustersAssociatedIds**: string[] (ReadOnly): Field Deprecated. These fields will be empty/omitted. The list of Hybrid AKS cluster resource IDs that are associated with this L3 network.
+* **hybridAksIpamEnabled**: 'False' | 'True' | string: Field Deprecated. The field was previously optional, now it will have no defined behavior and will be ignored. The indicator of whether or not to disable IPAM allocation on the network attachment definition injected into the Hybrid AKS Cluster.
+* **hybridAksPluginType**: 'DPDK' | 'OSDevice' | 'SRIOV' | string: Field Deprecated. The field was previously optional, now it will have no defined behavior and will be ignored. The network plugin type for Hybrid AKS.
 * **interfaceName**: string {maxLength: 12, pattern: "^[a-zA-Z0-9@._-]*$"}: The default interface name for this L3 network in the virtual machine. This name can be overridden by the name supplied in the network attachment configuration of that virtual machine.
 * **ipAllocationType**: 'DualStack' | 'IPV4' | 'IPV6' | string: The type of the IP address allocation, defaulted to "DualStack".
 * **ipv4ConnectedPrefix**: string: The IPV4 prefix (CIDR) assigned to this L3 network. Required when the IP allocation type
@@ -536,7 +656,7 @@ is IPV4 or DualStack.
 is IPV6 or DualStack.
 * **l3IsolationDomainId**: string (Required): The resource ID of the Network Fabric l3IsolationDomain.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): The provisioning state of the L3 network.
-* **virtualMachinesAssociatedIds**: string[] (ReadOnly): The list of virtual machine resource IDs, excluding any Hybrid AKS virtual machines, that are currently using this L3 network.
+* **virtualMachinesAssociatedIds**: string[] (ReadOnly): Field Deprecated. These fields will be empty/omitted. The list of virtual machine resource IDs, excluding any Hybrid AKS virtual machines, that are currently using this L3 network.
 * **vlan**: int (Required): The VLAN from the l3IsolationDomain that is used for this network.
 
 ## LldpNeighbor
@@ -607,6 +727,16 @@ If specified, the network attachment name has a maximum length of 15 characters 
 If the user doesn’t specify this value, the default interface name of the network resource will be used.
 For a CloudServicesNetwork resource, this name will be ignored.
 
+## NetworkConfiguration
+### Properties
+* **attachedNetworkConfiguration**: [AttachedNetworkConfiguration](#attachednetworkconfiguration): The configuration of networks being attached to the cluster for use by the workloads that run on this Kubernetes cluster.
+* **bgpServiceLoadBalancerConfiguration**: [BgpServiceLoadBalancerConfiguration](#bgpserviceloadbalancerconfiguration): The configuration of the BGP service load balancer for this Kubernetes cluster.
+* **cloudServicesNetworkId**: string (Required): The resource ID of the associated Cloud Services network.
+* **cniNetworkId**: string (Required): The resource ID of the Layer 3 network that is used for creation of the Container Networking Interface network.
+* **dnsServiceIp**: string: The IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in service CIDR.
+* **podCidrs**: string[]: The CIDR notation IP ranges from which to assign pod IPs. One IPv4 CIDR is expected for single-stack networking. Two CIDRs, one for each IP family (IPv4/IPv6), is expected for dual-stack networking.
+* **serviceCidrs**: string[]: The CIDR notation IP ranges from which to assign service IPs. One IPv4 CIDR is expected for single-stack networking. Two CIDRs, one for each IP family (IPv4/IPv6), is expected for dual-stack networking.
+
 ## NetworkInterface
 ### Properties
 * **address**: string (ReadOnly): The partial address of Peripheral Component Interconnect (PCI).
@@ -623,26 +753,6 @@ For a CloudServicesNetwork resource, this name will be ignored.
 * **macAddress**: string (ReadOnly): The MAC address associated with this NIC.
 * **name**: string (ReadOnly): The name of the NIC/interface.
 
-## Node
-### Properties
-* **bareMetalMachineId**: string (ReadOnly): The resource ID of the bare metal machine that hosts this node.
-* **imageId**: string (ReadOnly): The machine image last used to deploy this node.
-* **networkAttachments**: [NetworkAttachment](#networkattachment)[] (ReadOnly): The list of network attachments to the virtual machine.
-* **nodeName**: string (ReadOnly): The name of this node, as realized in the Hybrid AKS cluster.
-* **powerState**: 'Off' | 'On' | string (ReadOnly): The power state (On | Off) of the node.
-
-## NodeConfiguration
-### Properties
-* **agentPoolId**: string (ReadOnly): The resource ID of the agent pool that contains the nodes in this configuration.
-* **agentPoolName**: string (ReadOnly): The name of the agent pool that contains the nodes in this configuration.
-* **cpuCores**: int (ReadOnly): The number of CPU cores in the virtual machine.
-* **diskSizeGB**: int (ReadOnly): The root disk size of the virtual machine in GB.
-* **memorySizeGB**: int (ReadOnly): The memory size of the virtual machine in GB.
-* **nodePoolName**: string (ReadOnly): Field deprecated, use agentPoolName instead. This field will be removed in a future version but will reflect the name of the agent pool that contains the nodes in this configuration.
-* **nodes**: [Node](#node)[] (ReadOnly): The list of nodes that utilize this configuration.
-* **vmCount**: int (ReadOnly): The number of virtual machines that use this configuration.
-* **vmSize**: string (ReadOnly): The name of the VM size supplied during the creation of the cluster.
-
 ## OsDisk
 ### Properties
 * **createOption**: 'Ephemeral' | string: The strategy for creating the OS disk.
@@ -651,7 +761,7 @@ For a CloudServicesNetwork resource, this name will be ignored.
 
 ## RackDefinition
 ### Properties
-* **availabilityZone**: string {pattern: "^[a-zA-Z0-9]{1,10}$"}: The zone name used for this rack when created.
+* **availabilityZone**: string {pattern: "^[a-zA-Z0-9]{1,10}$"}: The zone name used for this rack when created. Availability zones are used for workload placement.
 * **bareMetalMachineConfigurationData**: [BareMetalMachineConfigurationData](#baremetalmachineconfigurationdata)[]: The unordered list of bare metal machine configuration.
 * **networkRackId**: string (Required): The resource ID of the network rack that matches this rack definition.
 * **rackLocation**: string {maxLength: 256}: The free-form description of the rack's location.
@@ -681,6 +791,31 @@ For a CloudServicesNetwork resource, this name will be ignored.
 * **storageAppliances**: [StorageApplianceSkuSlot](#storageapplianceskuslot)[] (ReadOnly): The list of appliance SKUs and associated rack slot for the storage appliance(s) in this rack model.
 * **supportedRackSkuIds**: string[] (ReadOnly): The list of supported SKUs if the rack is an aggregator.
 
+## RuntimeProtectionConfiguration
+### Properties
+* **enforcementLevel**: 'Audit' | 'Disabled' | 'OnDemand' | 'Passive' | 'RealTime' | string: The mode of operation for runtime protection.
+
+## RuntimeProtectionStatus
+### Properties
+* **definitionsLastUpdated**: string (ReadOnly): The timestamp when the malware definitions were last updated.
+* **definitionsVersion**: string (ReadOnly): The version of the malware definitions.
+* **scanCompletedTime**: string (ReadOnly): The timestamp of the most recently completed scan, or empty if there has never been a scan.
+* **scanScheduledTime**: string (ReadOnly): The timestamp of the most recently scheduled scan, or empty if no scan has been scheduled.
+* **scanStartedTime**: string (ReadOnly): The timestamp of the most recently started scan, or empty if there has never been a scan.
+
+## ServiceLoadBalancerBgpPeer
+### Properties
+* **bfdEnabled**: 'False' | 'True' | string: The indicator of BFD enablement for this BgpPeer.
+* **bgpMultiHop**: 'False' | 'True' | string: The indicator to enable multi-hop peering support.
+* **holdTime**: string: The requested BGP hold time value. This field uses ISO 8601 duration format, for example P1H.
+* **keepAliveTime**: string: The requested BGP keepalive time value. This field uses ISO 8601 duration format, for example P1H.
+* **myAsn**: int {minValue: 0, maxValue: 4294967295}: The autonomous system number used for the local end of the BGP session.
+* **name**: string {pattern: "^[a-z0-9]([a-z0-9.-]{0,61}[a-z0-9]){0,1}$"} (Required): The name used to identify this BGP peer for association with a BGP advertisement.
+* **password**: string {sensitive, maxLength: 80, pattern: "^[a-zA-Z0-9]{0,80}$"} (WriteOnly): The authentication password for routers enforcing TCP MD5 authenticated sessions.
+* **peerAddress**: string (Required): The IPv4 or IPv6 address used to connect this BGP session.
+* **peerAsn**: int {minValue: 0, maxValue: 4294967295} (Required): The autonomous system number expected from the remote end of the BGP session.
+* **peerPort**: int: The port used to connect this BGP session.
+
 ## ServicePrincipalInformation
 ### Properties
 * **applicationId**: string (Required): The application ID, also known as client ID, of the service principal.
@@ -690,7 +825,7 @@ For a CloudServicesNetwork resource, this name will be ignored.
 
 ## SshPublicKey
 ### Properties
-* **keyData**: string {minLength: 1} (Required): The public ssh key of the user.
+* **keyData**: string {minLength: 1} (Required): The SSH public key data.
 
 ## StorageApplianceConfigurationData
 ### Properties
@@ -825,17 +960,23 @@ For a CloudServicesNetwork resource, this name will be ignored.
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## TrunkedNetworkAttachmentConfiguration
+### Properties
+* **networkId**: string (Required): The resource ID of the network that is being configured for attachment.
+* **pluginType**: 'DPDK' | 'IPVLAN' | 'MACVLAN' | 'OSDevice' | 'SRIOV' | string: The indicator of how this network will be utilized by the Kubernetes cluster.
+
 ## TrunkedNetworkProperties
 ### Properties
+* **associatedResourceIds**: string[] (ReadOnly): The list of resource IDs for the other Microsoft.NetworkCloud resources that have attached this network.
 * **clusterId**: string (ReadOnly): The resource ID of the Network Cloud cluster this trunked network is associated with.
 * **detailedStatus**: 'Available' | 'Error' | 'Provisioning' | string (ReadOnly): The more detailed status of the trunked network.
 * **detailedStatusMessage**: string (ReadOnly): The descriptive message about the current detailed status.
-* **hybridAksClustersAssociatedIds**: string[] (ReadOnly): The list of Hybrid AKS cluster resource IDs that are associated with this trunked network.
-* **hybridAksPluginType**: 'DPDK' | 'OSDevice' | 'SRIOV' | string: The network plugin type for Hybrid AKS.
+* **hybridAksClustersAssociatedIds**: string[] (ReadOnly): Field Deprecated. These fields will be empty/omitted. The list of Hybrid AKS cluster resource IDs that are associated with this trunked network.
+* **hybridAksPluginType**: 'DPDK' | 'OSDevice' | 'SRIOV' | string: Field Deprecated. The field was previously optional, now it will have no defined behavior and will be ignored. The network plugin type for Hybrid AKS.
 * **interfaceName**: string {maxLength: 12, pattern: "^[a-zA-Z0-9@._-]*$"}: The default interface name for this trunked network in the virtual machine. This name can be overridden by the name supplied in the network attachment configuration of that virtual machine.
 * **isolationDomainIds**: string[] {minLength: 1} (Required): The list of resource IDs representing the Network Fabric isolation domains. It can be any combination of l2IsolationDomain and l3IsolationDomain resources.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): The provisioning state of the trunked network.
-* **virtualMachinesAssociatedIds**: string[] (ReadOnly): The list of virtual machine resource IDs, excluding any Hybrid AKS virtual machines, that are currently using this trunked network.
+* **virtualMachinesAssociatedIds**: string[] (ReadOnly): Field Deprecated. These fields will be empty/omitted. The list of virtual machine resource IDs, excluding any Hybrid AKS virtual machines, that are currently using this trunked network.
 * **vlans**: int[] {minLength: 1} (Required): The list of vlans that are selected from the isolation domains for trunking.
 
 ## ValidationThreshold
@@ -847,26 +988,27 @@ For a CloudServicesNetwork resource, this name will be ignored.
 ## VirtualMachinePlacementHint
 ### Properties
 * **hintType**: 'Affinity' | 'AntiAffinity' | string (Required): The specification of whether this hint supports affinity or anti-affinity with the referenced resources.
-* **resourceId**: string {minLength: 1} (Required): The resource ID of the target object that the placement hints will be checked against, e.g., the bare metal node to host the virtual machine.
+* **resourceId**: string (Required): The resource ID of the target object that the placement hints will be checked against, e.g., the bare metal node to host the virtual machine.
 * **schedulingExecution**: 'Hard' | 'Soft' | string (Required): The indicator of whether the hint is a hard or soft requirement during scheduling.
 * **scope**: 'Machine' | 'Rack' | string (Required): The scope for the virtual machine affinity or anti-affinity placement hint. It should always be "Machine" in the case of node affinity.
 
 ## VirtualMachineProperties
 ### Properties
 * **adminUsername**: string {minLength: 1, maxLength: 32, pattern: "^[a-z_][a-z0-9_]{0,31}$"} (Required): The name of the administrator to which the ssh public keys will be added into the authorized keys.
-* **bareMetalMachineId**: string (ReadOnly): The resource ID of the bare metal machine the virtual machine has landed to.
+* **availabilityZone**: string (ReadOnly): The cluster availability zone containing this virtual machine.
+* **bareMetalMachineId**: string (ReadOnly): The resource ID of the bare metal machine that hosts the virtual machine.
 * **bootMethod**: 'BIOS' | 'UEFI' | string: Selects the boot method for the virtual machine.
 * **cloudServicesNetworkAttachment**: [NetworkAttachment](#networkattachment) (Required): The cloud service network that provides platform-level services for the virtual machine.
 * **clusterId**: string (ReadOnly): The resource ID of the cluster the virtual machine is created for.
 * **cpuCores**: int {minValue: 2} (Required): The number of CPU cores in the virtual machine.
-* **detailedStatus**: 'Available' | 'Error' | 'Provisioning' | string (ReadOnly): The more detailed status of the virtual machine.
+* **detailedStatus**: 'Available' | 'Error' | 'Provisioning' | 'Running' | 'Scheduling' | 'Stopped' | 'Terminating' | 'Unknown' | string (ReadOnly): The more detailed status of the virtual machine.
 * **detailedStatusMessage**: string (ReadOnly): The descriptive message about the current detailed status.
 * **isolateEmulatorThread**: 'False' | 'True' | string: Field Deprecated, the value will be ignored if provided. The indicator of whether one of the specified CPU cores is isolated to run the emulator thread for this virtual machine.
 * **memorySizeGB**: int {minValue: 1} (Required): The memory size of the virtual machine in GB.
 * **networkAttachments**: [NetworkAttachment](#networkattachment)[]: The list of network attachments to the virtual machine.
 * **networkData**: string: The Base64 encoded cloud-init network data.
 * **placementHints**: [VirtualMachinePlacementHint](#virtualmachineplacementhint)[]: The scheduling hints for the virtual machine.
-* **powerState**: 'Off' | 'On' | string (ReadOnly): The power state of the virtual machine.
+* **powerState**: 'Off' | 'On' | 'Unknown' | string (ReadOnly): The power state of the virtual machine.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): The provisioning state of the virtual machine.
 * **sshPublicKeys**: [SshPublicKey](#sshpublickey)[]: The list of ssh public keys. Each key will be added to the virtual machine using the cloud-init ssh_authorized_keys mechanism for the adminUsername.
 * **storageProfile**: [StorageProfile](#storageprofile) (Required): The storage profile that specifies size and other parameters about the disks related to the virtual machine.

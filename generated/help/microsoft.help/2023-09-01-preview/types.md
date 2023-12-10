@@ -17,6 +17,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {minLength: 1, maxLength: 100, pattern: "^[A-Za-z0-9-+@()_]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [SolutionResourceProperties](#solutionresourceproperties): Solution result
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Help/solutions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Help/troubleshooters@2023-09-01-preview
@@ -55,9 +56,9 @@
 ### Properties
 * **acceptedAt**: string (ReadOnly): Diagnostic Request Accepted time.
 * **diagnostics**: [Diagnostic](#diagnostic)[] (ReadOnly): Array of Diagnostics.
-* **globalParameters**: [DiagnosticResourcePropertiesGlobalParameters](#diagnosticresourcepropertiesglobalparameters): Global parameters that can be passed to all solutionIds.
+* **globalParameters**: [DiagnosticResourcePropertiesGlobalParameters](#diagnosticresourcepropertiesglobalparameters): Global parameters is an optional map which can be used to add key and  value to request body to improve the diagnostics results
 * **insights**: [DiagnosticInvocation](#diagnosticinvocation)[]: SolutionIds that are needed to be invoked.
-* **provisioningState**: 'Canceled' | 'Failed' | 'PartialComplete' | 'Succeeded' | string (ReadOnly): Status of diagnostic provisioning.
+* **provisioningState**: 'Canceled' | 'Failed' | 'PartialComplete' | 'Running' | 'Succeeded' | string (ReadOnly): Status of diagnostic provisioning.
 
 ## DiagnosticResourcePropertiesGlobalParameters
 ### Properties
@@ -150,13 +151,13 @@
 
 ## SolutionResourceProperties
 ### Properties
-* **content**: string: The HTML content that needs to be rendered and shown to customer.
+* **content**: string (ReadOnly): The HTML content that needs to be rendered and shown to customer.
 * **parameters**: [SolutionResourcePropertiesParameters](#solutionresourcepropertiesparameters): Client input parameters to run Solution
-* **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string: Status of solution provisioning.
-* **replacementMaps**: [ReplacementMaps](#replacementmaps): Solution replacement maps.
-* **sections**: [Section](#section)[]: List of section object.
-* **solutionId**: string: Solution Id to identify single solution.
-* **title**: string: The title.
+* **provisioningState**: 'Canceled' | 'Failed' | 'PartialComplete' | 'Running' | 'Succeeded' | string (ReadOnly): Status of solution provisioning.
+* **replacementMaps**: [ReplacementMaps](#replacementmaps) (ReadOnly): Solution replacement maps.
+* **sections**: [Section](#section)[] (ReadOnly): List of section object.
+* **solutionId**: string (ReadOnly): Solution Id to identify single solution.
+* **title**: string (ReadOnly): The title.
 * **triggerCriteria**: [TriggerCriterion](#triggercriterion)[]: Solution request trigger criteria
 
 ## SolutionResourcePropertiesParameters
@@ -199,7 +200,7 @@
 * **questionContent**: string: User question content.
 * **questionContentType**: 'Html' | 'Markdown' | 'Text' | string: Default is Text.
 * **questionId**: string: Use Index as QuestionId.
-* **questionType**: string: Text Input. Will be a single line input.
+* **questionType**: 'Dropdown' | 'MultiLineInfoBox' | 'RadioButton' | 'TextInput' | string: Type of Question
 * **recommendedOption**: string: Result of Automate step.
 * **responseHint**: string: Place holder text for response hints.
 * **responseOptions**: [ResponseOption](#responseoption)[]

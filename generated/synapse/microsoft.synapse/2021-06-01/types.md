@@ -469,7 +469,7 @@
 ### Properties
 * **autoPause**: [AutoPauseProperties](#autopauseproperties): Auto-pausing properties
 * **autoScale**: [AutoScaleProperties](#autoscaleproperties): Auto-scaling properties
-* **cacheSize**: int (ReadOnly): The cache size
+* **cacheSize**: int: The cache size
 * **creationDate**: string (ReadOnly): The time when the Big Data pool was created.
 * **customLibraries**: [LibraryInfo](#libraryinfo)[]: List of custom libraries/packages associated with the spark pool.
 * **defaultSparkLogFolder**: string: The default folder where Spark logs will be written.
