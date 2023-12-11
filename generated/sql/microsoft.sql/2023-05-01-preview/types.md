@@ -604,7 +604,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 * **apiVersion**: '2023-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' | string (Required, DeployTimeConstant): The resource name
-* **properties**: [BaseLongTermRetentionPolicyProperties](#baselongtermretentionpolicyproperties): Resource properties.
+* **properties**: [LongTermRetentionPolicyProperties](#longtermretentionpolicyproperties): Resource properties.
 * **type**: 'Microsoft.Sql/servers/databases/backupLongTermRetentionPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Sql/servers/databases/backupShortTermRetentionPolicies@2023-05-01-preview
@@ -1255,13 +1255,6 @@ az sql elastic-pool list-editions -l <location> -o table
 * **resultsNotInBaseline**: string[][] (ReadOnly): SQL Vulnerability Assessment results that are not in baseline
 * **resultsOnlyInBaseline**: string[][] (ReadOnly): SQL Vulnerability Assessment results that are in baseline.
 * **status**: 'Finding' | 'InternalError' | 'NonFinding' | string (ReadOnly): SQL Vulnerability Assessment baseline status
-
-## BaseLongTermRetentionPolicyProperties
-### Properties
-* **monthlyRetention**: string: The monthly retention policy for an LTR backup in an ISO 8601 format.
-* **weeklyRetention**: string: The weekly retention policy for an LTR backup in an ISO 8601 format.
-* **weekOfYear**: int: The week of year to take the yearly backup in an ISO 8601 format.
-* **yearlyRetention**: string: The yearly retention policy for an LTR backup in an ISO 8601 format.
 
 ## BenchmarkReference
 ### Properties
@@ -2040,6 +2033,15 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **requestedBackupStorageRedundancy**: 'Geo' | 'GeoZone' | 'Local' | 'Zone' | string (WriteOnly): The storage redundancy type of the backup
 * **serverCreateTime**: string (ReadOnly): The create time of the server.
 * **serverName**: string (ReadOnly): The server name that the backup database belong to.
+
+## LongTermRetentionPolicyProperties
+### Properties
+* **backupStorageAccessTier**: 'Archive' | 'Hot' | string: The BackupStorageAccessTier for the LTR backups
+* **makeBackupsImmutable**: bool: The setting whether to make LTR backups immutable
+* **monthlyRetention**: string: The monthly retention policy for an LTR backup in an ISO 8601 format.
+* **weeklyRetention**: string: The weekly retention policy for an LTR backup in an ISO 8601 format.
+* **weekOfYear**: int: The week of year to take the yearly backup in an ISO 8601 format.
+* **yearlyRetention**: string: The yearly retention policy for an LTR backup in an ISO 8601 format.
 
 ## ManagedBackupShortTermRetentionPolicyProperties
 ### Properties
