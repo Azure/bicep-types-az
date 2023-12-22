@@ -31,13 +31,17 @@ jobs:
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
       
+      - name: Install nbgv
+        id: nbgv
+        uses: dotnet/nbgv@master
+
       - name: Generate tag for the package based on event type
         id: generate_tag
         run: |
           if [ "${{ github.event_name }}" == "push" ]; then
-            echo "tag=0.0.0-alpha-$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
+            echo "tag=${{ steps.nbgv.outputs.SimpleVersion }}" >> $GITHUB_OUTPUT
           else
-            echo "tag=0.0.0-alpha-pr${{ github.event.number }}" >> $GITHUB_OUTPUT
+            echo "tag=${{ steps.nbgv.outputs.SimpleVersion }}-pr${{ github.event.number }}" >> $GITHUB_OUTPUT
           fi
   
       - name: Intall Bicep CLI
