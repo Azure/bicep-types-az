@@ -49,9 +49,6 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         # use the nightly build of the Bicep CLI to publish the resource types provider
         run: bash <(curl -Ls https://aka.ms/bicep/nightly-cli.sh)
-      
-      - name: test install
-        run: ~/.azure/bin/bicep --version
         
       - name: Publish Azure Resource Types
         id: publish-types
