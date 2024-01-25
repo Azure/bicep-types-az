@@ -687,15 +687,6 @@
 * **properties**: [InboundSecurityRuleProperties](#inboundsecurityruleproperties): The properties of the Inbound Security Rules.
 * **type**: 'Microsoft.Network/networkVirtualAppliances/inboundSecurityRules' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/networkVirtualAppliances/networkVirtualApplianceConnections@2023-04-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2023-04-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string | string {pattern: "^[A-Za-z0-9_]+"} (Required, DeployTimeConstant): The resource name
-* **properties**: [NetworkVirtualApplianceConnectionProperties](#networkvirtualapplianceconnectionproperties): Properties of the express route connection.
-* **type**: 'Microsoft.Network/networkVirtualAppliances/networkVirtualApplianceConnections' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.Network/networkVirtualAppliances/virtualApplianceSites@2023-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -3549,16 +3540,6 @@
 * **securityRules**: [SecurityRule](#securityrule)[]: A collection of security rules of the network security group.
 * **subnets**: [Subnet](#subnet)[] (ReadOnly): A collection of references to subnets.
 
-## NetworkVirtualApplianceConnectionProperties
-### Properties
-* **asn**: int {minValue: 0, maxValue: 4294967295}: Network Virtual Appliance ASN.
-* **bgpPeerAddress**: string[]: List of bgpPeerAddresses for the NVA instances
-* **enableInternetSecurity**: bool: Enable internet security.
-* **name**: string: The name of the resource.
-* **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the NetworkVirtualApplianceConnection resource.
-* **routingConfiguration**: [RoutingConfigurationNfv](#routingconfigurationnfv): The Routing Configuration indicating the associated and propagated route tables on this connection.
-* **tunnelIdentifier**: int {minValue: 0, maxValue: 4294967295}: Unique identifier for the connection.
-
 ## NetworkVirtualAppliancePropertiesFormat
 ### Properties
 * **additionalNics**: [VirtualApplianceAdditionalNicProperties](#virtualapplianceadditionalnicproperties)[]: Details required for Additional Network Interface.
@@ -3574,7 +3555,6 @@
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the resource.
 * **sshPublicKey**: string: Public key for SSH login.
 * **virtualApplianceAsn**: int {minValue: 0, maxValue: 4294967295}: VirtualAppliance ASN. Microsoft private, public and IANA reserved ASN are not supported.
-* **virtualApplianceConnections**: [SubResource](#subresource)[] (ReadOnly): List of references to VirtualApplianceConnections.
 * **virtualApplianceNics**: [VirtualApplianceNicProperties](#virtualappliancenicproperties)[] (ReadOnly): List of Virtual Appliance Network Interfaces.
 * **virtualApplianceSites**: [SubResource](#subresource)[] (ReadOnly): List of references to VirtualApplianceSite.
 * **virtualHub**: [SubResource](#subresource): The Virtual Hub where Network Virtual Appliance is being deployed.
@@ -3915,11 +3895,6 @@
 ## PropagatedRouteTable
 ### Properties
 * **ids**: [SubResource](#subresource)[]: The list of resource ids of all the RouteTables.
-* **labels**: string[]: The list of labels.
-
-## PropagatedRouteTableNfv
-### Properties
-* **ids**: [RoutingConfigurationNfvSubResource](#routingconfigurationnfvsubresource)[]: The list of resource ids of all the RouteTables.
 * **labels**: string[]: The list of labels.
 
 ## PublicIPAddress
@@ -4446,17 +4421,6 @@
 * **outboundRouteMap**: [SubResource](#subresource): The resource id of theRouteMap associated with this RoutingConfiguration for outbound advertised routes.
 * **propagatedRouteTables**: [PropagatedRouteTable](#propagatedroutetable): The list of RouteTables to advertise the routes to.
 * **vnetRoutes**: [VnetRoute](#vnetroute): List of routes that control routing from VirtualHub into a virtual network connection.
-
-## RoutingConfigurationNfv
-### Properties
-* **associatedRouteTable**: [RoutingConfigurationNfvSubResource](#routingconfigurationnfvsubresource): The resource id RouteTable associated with this RoutingConfiguration.
-* **inboundRouteMap**: [RoutingConfigurationNfvSubResource](#routingconfigurationnfvsubresource): The resource id of the RouteMap associated with this RoutingConfiguration for inbound learned routes.
-* **outboundRouteMap**: [RoutingConfigurationNfvSubResource](#routingconfigurationnfvsubresource): The resource id of the RouteMap associated with this RoutingConfiguration for outbound advertised routes.
-* **propagatedRouteTables**: [PropagatedRouteTableNfv](#propagatedroutetablenfv): The list of RouteTables to advertise the routes to.
-
-## RoutingConfigurationNfvSubResource
-### Properties
-* **resourceUri**: string: Resource ID.
 
 ## RoutingIntentProperties
 ### Properties

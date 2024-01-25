@@ -30,55 +30,26 @@ jobs:
           client-id: ${{ secrets.AZURE_CLIENT_ID }}
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-
-      # Installing ORAS (publish-az-types.js dependency)
-      - name: Login to OCI Registry using ORAS
-        uses: oras-project/setup-oras@v1
-        with:
-          version: 1.1.0
-
-      # Logging into OCI Registry (publish-az-types.js dependency)
-      - name: Login to OCI Registry using ORAS
-        run: |
-          az acr login -t -n ${{ secrets.PUBLISH_REGISTRY_SERVER }} -o tsv --query accessToken | oras login --password-stdin ${{ secrets.PUBLISH_REGISTRY_SERVER }}
       
-      # Installing ORAS (publish-az-types.js dependency)
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 16.x    
-
-      # Installing publish-az-types.js NPM package dependencies
-      - name: Fetch publish script dependencies
-        working-directory: ./scripts/github-actions
-        run: |
-          npm ci
+      - name: Install nbgv
+        id: nbgv
+        uses: dotnet/nbgv@master
 
       - name: Generate tag for the package based on event type
         id: generate_tag
         run: |
           if [ "${{ github.event_name }}" == "push" ]; then
-            echo "tag=0.0.0-alpha-$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
+            echo "tag=${{ steps.nbgv.outputs.SimpleVersion }}" >> $GITHUB_OUTPUT
           else
-            echo "tag=0.0.0-alpha-pr${{ github.event.number }}" >> $GITHUB_OUTPUT
+            echo "tag=${{ steps.nbgv.outputs.SimpleVersion }}-pr${{ github.event.number }}" >> $GITHUB_OUTPUT
           fi
   
-      - name: Publish Package
+      - name: Intall Bicep CLI
+        env:
+          GH_TOKEN: ${{ github.token }}
+        # use the nightly build of the Bicep CLI to publish the resource types provider
+        run: bash <(curl -Ls https://aka.ms/bicep/nightly-cli.sh)
+        
+      - name: Publish Azure Resource Types
         id: publish-types
-        uses: actions/github-script@v6
-        with:
-          result-encoding: string
-          script: |
-            const path = require("path");
-            const cwd = process.cwd();
-            typesDir = path.join(cwd, "generated");
-            process.chdir(path.join(cwd, "scripts/github-actions"));
-            console.log("currentDir: " + process.cwd());
-            const script = require("./publish-az-types.js");
-            return await script({
-              require: require,
-              core: core,
-              typesDir: typesDir,
-              registryFqdn: "${{ secrets.PUBLISH_REGISTRY_SERVER }}",
-              tags: "${{ steps.generate_tag.outputs.tag }}",
-            });
+        run: ~/.azure/bin/bicep publish-provider ./generated/index.json --target "br:${{ secrets.PUBLISH_REGISTRY_SERVER }}/bicep/providers/az:${{ steps.generate_tag.outputs.tag }}" --force

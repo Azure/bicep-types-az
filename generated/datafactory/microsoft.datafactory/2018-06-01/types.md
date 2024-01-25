@@ -735,7 +735,7 @@
 ### Properties
 * **body**: any: Represents the payload that will be sent to the endpoint. Required for POST/PUT method, not allowed for GET method Type: string (or Expression with resultType string).
 * **functionName**: any (Required): Name of the Function that the Azure Function Activity will call. Type: string (or Expression with resultType string)
-* **headers**: any: Represents the headers that will be sent to the request. For example, to set the language and type on a request: "headers" : { "Accept-Language": "en-us", "Content-Type": "application/json" }. Type: string (or Expression with resultType string).
+* **headers**: any: Represents the headers that will be sent to the request. For example, to set the language and type on a request: "headers" : { "Accept-Language": "en-us", "Content-Type": "application/json" }. Type: dictionary (or Expression with resultType dictionary).
 * **method**: 'DELETE' | 'GET' | 'HEAD' | 'OPTIONS' | 'POST' | 'PUT' | 'TRACE' | string (Required): Rest API method for target endpoint.
 
 ## AzureFunctionLinkedServiceTypeProperties
@@ -743,9 +743,9 @@
 * **authentication**: any: Type of authentication (Required to specify MSI) used to connect to AzureFunction. Type: string (or Expression with resultType string).
 * **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
-* **functionAppUrl**: any (Required): The endpoint of the Azure Function App. URL will be in the format https://<accountName>.azurewebsites.net.
+* **functionAppUrl**: any (Required): The endpoint of the Azure Function App. URL will be in the format https://<accountName>.azurewebsites.net. Type: string (or Expression with resultType string).
 * **functionKey**: [SecretBase](#secretbase): Function or Host key for Azure Function App.
-* **resourceId**: any: Allowed token audiences for azure function.
+* **resourceId**: any: Allowed token audiences for azure function. Type: string (or Expression with resultType string).
 
 ## AzureKeyVaultLinkedServiceTypeProperties
 ### Properties
@@ -789,7 +789,7 @@
 ## AzureMLExecutePipelineActivityTypeProperties
 ### Properties
 * **continueOnStepFailure**: any: Whether to continue execution of other steps in the PipelineRun if a step fails. This information will be passed in the continueOnStepFailure property of the published pipeline execution request. Type: boolean (or Expression with resultType boolean).
-* **dataPathAssignments**: any: Dictionary used for changing data path assignments without retraining. Values will be passed in the dataPathAssignments property of the published pipeline execution request. Type: object with key value pairs (or Expression with resultType object).
+* **dataPathAssignments**: any: Dictionary used for changing data path assignments without retraining. Values will be passed in the dataPathAssignments property of the published pipeline execution request. Type: object (or Expression with resultType object).
 * **experimentName**: any: Run history experiment name of the pipeline run. This information will be passed in the ExperimentName property of the published pipeline execution request. Type: string (or Expression with resultType string).
 * **mlParentRunId**: any: The parent Azure ML Service pipeline run id. This information will be passed in the ParentRunId property of the published pipeline execution request. Type: string (or Expression with resultType string).
 * **mlPipelineEndpointId**: any: ID of the published Azure ML pipeline endpoint. Type: string (or Expression with resultType string).
@@ -1001,8 +1001,8 @@
 ## CmdkeySetupTypeProperties
 ### Properties
 * **password**: [SecretBase](#secretbase) (Required): The password of data source access.
-* **targetName**: any (Required): The server name of data source access.
-* **userName**: any (Required): The user name of data source access.
+* **targetName**: any (Required): The server name of data source access. Type: string.
+* **userName**: any (Required): The user name of data source access. Type: string.
 
 ## CMKIdentityDefinition
 ### Properties
@@ -1250,6 +1250,13 @@
 * **storeSettings**: [StoreWriteSettings](#storewritesettings): Json store settings.
 * **type**: 'JsonSink' (Required): Copy sink type.
 
+### LakeHouseTableSink
+#### Properties
+* **partitionNameList**: any: Specify the partition column names from sink columns. Type: array of objects (or Expression with resultType array of objects).
+* **partitionOption**: any: Create partitions in folder structure based on one or multiple columns. Each distinct column value (pair) will be a new partition. Possible values include: "None", "PartitionByKey".
+* **tableActionOption**: any: The type of table action for LakeHouse Table sink. Possible values include: "None", "Append", "Overwrite".
+* **type**: 'LakeHouseTableSink' (Required): Copy sink type.
+
 ### MicrosoftAccessSink
 #### Properties
 * **preCopyScript**: any: A query to execute before starting the copy. Type: string (or Expression with resultType string).
@@ -1289,8 +1296,8 @@
 
 ### RestSink
 #### Properties
-* **additionalHeaders**: any: The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).
-* **httpCompressionType**: any: Http Compression Type to Send data in compressed format with Optimal Compression Level, Default is None. And The Only Supported option is Gzip.
+* **additionalHeaders**: any: The additional HTTP headers in the request to the RESTful API. Type: key value pairs (value should be string type).
+* **httpCompressionType**: any: Http Compression Type to Send data in compressed format with Optimal Compression Level, Default is None. And The Only Supported option is Gzip. Type: string (or Expression with resultType string).
 * **httpRequestTimeout**: any: The timeout (TimeSpan) to get an HTTP response. It is the timeout to get a response, not the timeout to read response data. Default value: 00:01:40. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **requestInterval**: any: The time to await before sending next request, in milliseconds
 * **requestMethod**: any: The HTTP method used to call the RESTful API. The default is POST. Type: string (or Expression with resultType string).
@@ -1346,7 +1353,7 @@
 * **tableOption**: any: The option to handle sink table, such as autoCreate. For now only 'autoCreate' value is supported. Type: string (or Expression with resultType string).
 * **type**: 'SqlMISink' (Required): Copy sink type.
 * **upsertSettings**: [SqlUpsertSettings](#sqlupsertsettings): SQL upsert settings.
-* **writeBehavior**: any: White behavior when copying data into azure SQL MI. Type: SqlWriteBehaviorEnum (or Expression with resultType SqlWriteBehaviorEnum)
+* **writeBehavior**: any: White behavior when copying data into azure SQL MI. Type: string (or Expression with resultType string)
 
 ### SqlServerSink
 #### Properties
@@ -1359,7 +1366,7 @@
 * **tableOption**: any: The option to handle sink table, such as autoCreate. For now only 'autoCreate' value is supported. Type: string (or Expression with resultType string).
 * **type**: 'SqlServerSink' (Required): Copy sink type.
 * **upsertSettings**: [SqlUpsertSettings](#sqlupsertsettings): SQL upsert settings.
-* **writeBehavior**: any: Write behavior when copying data into sql server. Type: SqlWriteBehaviorEnum (or Expression with resultType SqlWriteBehaviorEnum)
+* **writeBehavior**: any: Write behavior when copying data into sql server. Type: string (or Expression with resultType string).
 
 ### SqlSink
 #### Properties
@@ -1372,7 +1379,7 @@
 * **tableOption**: any: The option to handle sink table, such as autoCreate. For now only 'autoCreate' value is supported. Type: string (or Expression with resultType string).
 * **type**: 'SqlSink' (Required): Copy sink type.
 * **upsertSettings**: [SqlUpsertSettings](#sqlupsertsettings): SQL upsert settings.
-* **writeBehavior**: any: Write behavior when copying data into sql. Type: SqlWriteBehaviorEnum (or Expression with resultType SqlWriteBehaviorEnum)
+* **writeBehavior**: any: Write behavior when copying data into sql. Type: string (or Expression with resultType string).
 
 
 ## CopySource
@@ -1478,7 +1485,7 @@
 #### Properties
 * **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **isolationLevel**: any: Specifies the transaction locking behavior for the SQL source. Allowed values: ReadCommitted/ReadUncommitted/RepeatableRead/Serializable/Snapshot. The default value is ReadCommitted. Type: string (or Expression with resultType string).
-* **partitionOption**: any: The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
+* **partitionOption**: any: The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange". Type: string (or Expression with resultType string).
 * **partitionSettings**: [SqlPartitionSettings](#sqlpartitionsettings): The settings that will be leveraged for Sql source partitioning.
 * **produceAdditionalTypes**: any: Which additional types to produce.
 * **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
@@ -1703,6 +1710,13 @@
 * **storeSettings**: [StoreReadSettings](#storereadsettings): Json store settings.
 * **type**: 'JsonSource' (Required): Copy source type.
 
+### LakeHouseTableSource
+#### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **timestampAsOf**: any: Query an older snapshot by timestamp. Type: string (or Expression with resultType string).
+* **type**: 'LakeHouseTableSource' (Required): Copy source type.
+* **versionAsOf**: any: Query an older snapshot by version. Type: integer (or Expression with resultType integer).
+
 ### MagentoSource
 #### Properties
 * **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
@@ -1819,6 +1833,7 @@
 ### ParquetSource
 #### Properties
 * **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **formatSettings**: [ParquetReadSettings](#parquetreadsettings): Parquet format settings.
 * **storeSettings**: [StoreReadSettings](#storereadsettings): Parquet store settings.
 * **type**: 'ParquetSource' (Required): Copy source type.
 
@@ -1872,7 +1887,7 @@
 
 ### RestSource
 #### Properties
-* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: key value pairs (value should be string type).
 * **additionalHeaders**: any: The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).
 * **httpRequestTimeout**: any: The timeout (TimeSpan) to get an HTTP response. It is the timeout to get a response, not the timeout to read response data. Default value: 00:01:40. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **paginationRules**: any: The pagination rules to compose next page requests. Type: string (or Expression with resultType string).
@@ -2008,7 +2023,7 @@
 #### Properties
 * **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **isolationLevel**: any: Specifies the transaction locking behavior for the SQL source. Allowed values: ReadCommitted/ReadUncommitted/RepeatableRead/Serializable/Snapshot. The default value is ReadCommitted. Type: string (or Expression with resultType string).
-* **partitionOption**: any: The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
+* **partitionOption**: any: The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange". Type: string (or Expression with resultType string).
 * **partitionSettings**: [SqlPartitionSettings](#sqlpartitionsettings): The settings that will be leveraged for Sql source partitioning.
 * **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **sqlReaderQuery**: any: SQL Data Warehouse reader query. Type: string (or Expression with resultType string).
@@ -2020,7 +2035,7 @@
 #### Properties
 * **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **isolationLevel**: any: Specifies the transaction locking behavior for the SQL source. Allowed values: ReadCommitted/ReadUncommitted/RepeatableRead/Serializable/Snapshot. The default value is ReadCommitted. Type: string (or Expression with resultType string).
-* **partitionOption**: any: The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
+* **partitionOption**: any: The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange". Type: string (or Expression with resultType string).
 * **partitionSettings**: [SqlPartitionSettings](#sqlpartitionsettings): The settings that will be leveraged for Sql source partitioning.
 * **produceAdditionalTypes**: any: Which additional types to produce.
 * **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
@@ -2033,7 +2048,7 @@
 #### Properties
 * **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **isolationLevel**: any: Specifies the transaction locking behavior for the SQL source. Allowed values: ReadCommitted/ReadUncommitted/RepeatableRead/Serializable/Snapshot. The default value is ReadCommitted. Type: string (or Expression with resultType string).
-* **partitionOption**: any: The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
+* **partitionOption**: any: The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange". Type: string (or Expression with resultType string).
 * **partitionSettings**: [SqlPartitionSettings](#sqlpartitionsettings): The settings that will be leveraged for Sql source partitioning.
 * **produceAdditionalTypes**: any: Which additional types to produce.
 * **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
@@ -2046,7 +2061,7 @@
 #### Properties
 * **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **isolationLevel**: any: Specifies the transaction locking behavior for the SQL source. Allowed values: ReadCommitted/ReadUncommitted/RepeatableRead/Serializable/Snapshot. The default value is ReadCommitted. Type: string (or Expression with resultType string).
-* **partitionOption**: any: The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
+* **partitionOption**: any: The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange". Type: string (or Expression with resultType string).
 * **partitionSettings**: [SqlPartitionSettings](#sqlpartitionsettings): The settings that will be leveraged for Sql source partitioning.
 * **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **sqlReaderQuery**: any: SQL reader query. Type: string (or Expression with resultType string).
@@ -2580,6 +2595,11 @@
 * **type**: 'Json' (Required): Type of dataset.
 * **typeProperties**: [JsonDatasetTypeProperties](#jsondatasettypeproperties): Json dataset properties.
 
+### LakeHouseTableDataset
+#### Properties
+* **type**: 'LakeHouseTable' (Required): Type of dataset.
+* **typeProperties**: [LakeHouseTableDatasetTypeProperties](#lakehousetabledatasettypeproperties): Microsoft Fabric LakeHouse Table dataset properties.
+
 ### MagentoObjectDataset
 #### Properties
 * **type**: 'MagentoObject' (Required): Type of dataset.
@@ -2890,6 +2910,10 @@
 #### Properties
 * **relativeUrl**: any: Specify the relativeUrl of http server. Type: string (or Expression with resultType string)
 * **type**: 'HttpServerLocation' (Required): Type of dataset storage location.
+
+### LakeHouseLocation
+#### Properties
+* **type**: 'LakeHouseLocation' (Required): Type of dataset storage location.
 
 ### OracleCloudStorageLocation
 #### Properties
@@ -3355,6 +3379,11 @@
 * **compressionProperties**: [CompressionReadSettings](#compressionreadsettings): Compression settings.
 * **type**: 'JsonReadSettings' (Required): The read setting type.
 
+### ParquetReadSettings
+#### Properties
+* **compressionProperties**: [CompressionReadSettings](#compressionreadsettings): Compression settings.
+* **type**: 'ParquetReadSettings' (Required): The read setting type.
+
 ### XmlReadSettings
 #### Properties
 * **compressionProperties**: [CompressionReadSettings](#compressionreadsettings): Compression settings.
@@ -3413,14 +3442,18 @@
 * **clientCustomerID**: any: The Client customer ID of the AdWords account that you want to fetch report data for. Type: string (or Expression with resultType string).
 * **clientId**: any: The client id of the google application used to acquire the refresh token. Type: string (or Expression with resultType string).
 * **clientSecret**: [SecretBase](#secretbase): The client secret of the google application used to acquire the refresh token.
+* **connectionProperties**: any: (Deprecated) Properties used to connect to GoogleAds. It is mutually exclusive with any other properties in the linked service. Type: object.
 * **developerToken**: [SecretBase](#secretbase): The developer token associated with the manager account that you use to grant access to the AdWords API.
 * **email**: any: The service account email ID that is used for ServiceAuthentication and can only be used on self-hosted IR. Type: string (or Expression with resultType string).
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
-* **googleAdsApiVersion**: any: The Google Ads API major version such as v14. The supported major versions could be found on https://developers.google.com/google-ads/api/docs/sunset-dates#timetable. Type: string (or Expression with resultType string).
+* **googleAdsApiVersion**: any: The Google Ads API major version such as v14. The supported major versions could be found on https://developers.google.com/google-ads/api/docs/release-notes. Type: string (or Expression with resultType string).
+* **keyFilePath**: any: (Deprecated) The full path to the .p12 key file that is used to authenticate the service account email address and can only be used on self-hosted IR. Type: string (or Expression with resultType string).
 * **loginCustomerID**: any: The customer ID of the Google Ads Manager account through which you want to fetch report data of specific Customer. Type: string (or Expression with resultType string).
 * **privateKey**: [SecretBase](#secretbase): The private key that is used to authenticate the service account email address and can only be used on self-hosted IR.
 * **refreshToken**: [SecretBase](#secretbase): The refresh token obtained from Google for authorizing access to AdWords for UserAuthentication.
 * **supportLegacyDataTypes**: any: Specifies whether to use the legacy data type mappings, which maps float, int32 and int64 from Google to string. Do not set this to true unless you want to keep backward compatibility with legacy driver's data type mappings. Type: boolean (or Expression with resultType boolean).
+* **trustedCertPath**: any: (Deprecated) The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR. Type: string (or Expression with resultType string).
+* **useSystemTrustStore**: any: (Deprecated) Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false. Type: boolean (or Expression with resultType boolean).
 
 ## GoogleBigQueryDatasetTypeProperties
 ### Properties
@@ -3543,7 +3576,7 @@
 * **clusterNamePrefix**: any: The prefix of cluster name, postfix will be distinct with timestamp. Type: string (or Expression with resultType string).
 * **clusterPassword**: [SecretBase](#secretbase): The password to access the cluster.
 * **clusterResourceGroup**: any (Required): The resource group where the cluster belongs. Type: string (or Expression with resultType string).
-* **clusterSize**: any (Required): Number of worker/data nodes in the cluster. Suggestion value: 4. Type: string (or Expression with resultType string).
+* **clusterSize**: any (Required): Number of worker/data nodes in the cluster. Suggestion value: 4. Type: int (or Expression with resultType int).
 * **clusterSshPassword**: [SecretBase](#secretbase): The password to SSH remotely connect cluster’s node (for Linux).
 * **clusterSshUserName**: any: The username to SSH remotely connect to cluster’s node (for Linux). Type: string (or Expression with resultType string).
 * **clusterType**: any: The cluster type. Type: string (or Expression with resultType string).
@@ -3664,7 +3697,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## HttpLinkedServiceTypeProperties
 ### Properties
 * **authenticationType**: 'Anonymous' | 'Basic' | 'ClientCertificate' | 'Digest' | 'Windows' | string: The authentication type to be used to connect to the HTTP server.
-* **authHeaders**: any: The additional HTTP headers in the request to RESTful API used for authorization. Type: object (or Expression with resultType object).
+* **authHeaders**: any: The additional HTTP headers in the request to RESTful API used for authorization. Type: key value pairs (value should be string type).
 * **certThumbprint**: any: Thumbprint of certificate for ClientCertificate authentication. Only valid for on-premises copy. For on-premises copy with ClientCertificate authentication, either CertThumbprint or EmbeddedCertData/Password should be specified. Type: string (or Expression with resultType string).
 * **embeddedCertData**: any: Base64 encoded certificate data for ClientCertificate authentication. For on-premises copy with ClientCertificate authentication, either CertThumbprint or EmbeddedCertData/Password should be specified. Type: string (or Expression with resultType string).
 * **enableServerCertificateValidation**: any: If true, validate the HTTPS server SSL certificate. Default value is true. Type: boolean (or Expression with resultType boolean).
@@ -3858,6 +3891,21 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **type**: string (Required): The write setting type.
 ### Additional Properties
 * **Additional Properties Type**: any
+
+## LakeHouseLinkedServiceTypeProperties
+### Properties
+* **artifactId**: any: The ID of Microsoft Fabric LakeHouse artifact. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
+* **servicePrincipalCredential**: [SecretBase](#secretbase): The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.
+* **servicePrincipalCredentialType**: any: The service principal credential type to use in Server-To-Server authentication. 'ServicePrincipalKey' for key/secret, 'ServicePrincipalCert' for certificate. Type: string (or Expression with resultType string).
+* **servicePrincipalId**: any: The ID of the application used to authenticate against Microsoft Fabric LakeHouse. Type: string (or Expression with resultType string).
+* **servicePrincipalKey**: [SecretBase](#secretbase): The Key of the application used to authenticate against Microsoft Fabric LakeHouse.
+* **tenant**: any: The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
+* **workspaceId**: any: The ID of Microsoft Fabric workspace. Type: string (or Expression with resultType string).
+
+## LakeHouseTableDatasetTypeProperties
+### Properties
+* **table**: any: The name of Microsoft Fabric LakeHouse Table. Type: string (or Expression with resultType string).
 
 ## LicensedComponentSetupTypeProperties
 ### Properties
@@ -4199,6 +4247,11 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 #### Properties
 * **type**: 'Jira' (Required): Type of linked service.
 * **typeProperties**: [JiraLinkedServiceTypeProperties](#jiralinkedservicetypeproperties) (Required): Jira Service linked service properties.
+
+### LakeHouseLinkedService
+#### Properties
+* **type**: 'LakeHouse' (Required): Type of linked service.
+* **typeProperties**: [LakeHouseLinkedServiceTypeProperties](#lakehouselinkedservicetypeproperties) (Required): Microsoft Fabric LakeHouse linked service properties.
 
 ### MagentoLinkedService
 #### Properties
@@ -4738,7 +4791,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **aadResourceId**: any: Specify the resource you are requesting authorization to use Directory. Type: string (or Expression with resultType string).
 * **aadServicePrincipalCredentialType**: 'ServicePrincipalCert' | 'ServicePrincipalKey' | string: Specify the credential type (key or cert) is used for service principal.
 * **authenticationType**: 'AadServicePrincipal' | 'Anonymous' | 'Basic' | 'ManagedServiceIdentity' | 'Windows' | string: Type of authentication used to connect to the OData service.
-* **authHeaders**: any: The additional HTTP headers in the request to RESTful API used for authorization. Type: object (or Expression with resultType object).
+* **authHeaders**: any: The additional HTTP headers in the request to RESTful API used for authorization. Type: key value pairs (value should be string type).
 * **azureCloudType**: any: Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **password**: [SecretBase](#secretbase): Password of the OData service.
@@ -4888,6 +4941,13 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### Properties
 * **compressionCodec**: any: The data compressionCodec. Type: string (or Expression with resultType string).
 * **location**: [DatasetLocation](#datasetlocation) (Required): The location of the parquet storage.
+
+## ParquetReadSettings
+### Properties
+* **compressionProperties**: [CompressionReadSettings](#compressionreadsettings): Compression settings.
+* **type**: string (Required): The read setting type.
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## ParquetWriteSettings
 ### Properties
@@ -5849,6 +5909,19 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **requestTimeout**: any: Specifies the timeout for a HTTP client to get HTTP response from HTTP server. Type: string (or Expression with resultType string).
 * **type**: 'HttpReadSettings' (Required): The read setting type.
 
+### LakeHouseReadSettings
+#### Properties
+* **deleteFilesAfterCompletion**: any: Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
+* **enablePartitionDiscovery**: any: Indicates whether to enable partition discovery. Type: boolean (or Expression with resultType boolean).
+* **fileListPath**: any: Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
+* **modifiedDatetimeEnd**: any: The end of file's modified datetime. Type: string (or Expression with resultType string).
+* **modifiedDatetimeStart**: any: The start of file's modified datetime. Type: string (or Expression with resultType string).
+* **partitionRootPath**: any: Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
+* **recursive**: any: If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
+* **type**: 'LakeHouseReadSettings' (Required): The read setting type.
+* **wildcardFileName**: any: Microsoft Fabric LakeHouse Files wildcardFileName. Type: string (or Expression with resultType string).
+* **wildcardFolderPath**: any: Microsoft Fabric LakeHouse Files wildcardFolderPath. Type: string (or Expression with resultType string).
+
 ### OracleCloudStorageReadSettings
 #### Properties
 * **deleteFilesAfterCompletion**: any: Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
@@ -5908,6 +5981,10 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### FileServerWriteSettings
 #### Properties
 * **type**: 'FileServerWriteSettings' (Required): The write setting type.
+
+### LakeHouseWriteSettings
+#### Properties
+* **type**: 'LakeHouseWriteSettings' (Required): The write setting type.
 
 ### SftpWriteSettings
 #### Properties
@@ -6178,16 +6255,18 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **connectVia**: [IntegrationRuntimeReference](#integrationruntimereference): The integration runtime reference.
 * **datasets**: [DatasetReference](#datasetreference)[]: List of datasets passed to web endpoint.
 * **disableCertValidation**: bool: When set to true, Certificate validation will be disabled.
-* **headers**: any: Represents the headers that will be sent to the request. For example, to set the language and type on a request: "headers" : { "Accept-Language": "en-us", "Content-Type": "application/json" }. Type: string (or Expression with resultType string).
+* **headers**: any: Represents the headers that will be sent to the request. For example, to set the language and type on a request: "headers" : { "Accept-Language": "en-us", "Content-Type": "application/json" }. Type: dictionary (or Expression with resultType dictionary).
+* **httpRequestTimeout**: any: Timeout for the HTTP request to get a response. Format is in TimeSpan (hh:mm:ss). This value is the timeout to get a response, not the activity timeout. The default value is 00:01:00 (1 minute). The range is from 1 to 10 minutes
 * **linkedServices**: [LinkedServiceReference](#linkedservicereference)[]: List of linked services passed to web endpoint.
 * **method**: 'DELETE' | 'GET' | 'POST' | 'PUT' | string (Required): Rest API method for target endpoint.
+* **turnOffAsync**: bool: Option to disable invoking HTTP GET on location given in response header of a HTTP 202 Response. If set true, it stops invoking HTTP GET on http location given in response header. If set false then continues to invoke HTTP GET call on location given in http response headers.
 * **url**: any (Required): Web activity target endpoint and path. Type: string (or Expression with resultType string).
 
 ## WebHookActivityTypeProperties
 ### Properties
 * **authentication**: [WebActivityAuthentication](#webactivityauthentication): Authentication method used for calling the endpoint.
 * **body**: any: Represents the payload that will be sent to the endpoint. Required for POST/PUT method, not allowed for GET method Type: string (or Expression with resultType string).
-* **headers**: any: Represents the headers that will be sent to the request. For example, to set the language and type on a request: "headers" : { "Accept-Language": "en-us", "Content-Type": "application/json" }. Type: string (or Expression with resultType string).
+* **headers**: any: Represents the headers that will be sent to the request. For example, to set the language and type on a request: "headers" : { "Accept-Language": "en-us", "Content-Type": "application/json" }. Type: dictionary (or Expression with resultType dictionary).
 * **method**: 'POST' | string (Required): Rest API method for target endpoint.
 * **reportStatusOnCallBack**: any: When set to true, statusCode, output and error in callback request body will be consumed by activity. The activity can be marked as failed by setting statusCode >= 400 in callback request. Default is false. Type: boolean (or Expression with resultType boolean).
 * **timeout**: string: The timeout within which the webhook should be called back. If there is no value specified, it defaults to 10 minutes. Type: string. Pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
