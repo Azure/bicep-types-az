@@ -122,7 +122,7 @@ interface ConstantName {
   value: string;
 }
 
-type NameSchema = ParameterizedName|ConstantName;
+export type NameSchema = ParameterizedName|ConstantName;
 
 export function getNameSchema(request: HttpRequest, parameters: Parameter[]): Result<NameSchema, string> {
   const path = getNormalizedMethodPath(request.path);

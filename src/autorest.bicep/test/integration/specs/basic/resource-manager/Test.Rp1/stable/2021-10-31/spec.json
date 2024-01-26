@@ -370,6 +370,9 @@
             "in": "path",
             "required": true,
             "type": "string",
+            "pattern": "^[a-z][a-z0-9]*$",
+            "minLength": 1,
+            "maxLength": 12,
             "description": "The testType1 resource name."
           },
           {

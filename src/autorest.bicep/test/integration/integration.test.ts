@@ -20,7 +20,7 @@ async function generateSchema(logger: ILogger, readme: string, outputBaseDir: st
     '--title=none',
     // This is necessary to avoid failures such as "ERROR: Semantic violation: Discriminator must be a required property." blocking type generation.
     // In an ideal world, we'd raise issues in https://github.com/Azure/azure-rest-api-specs and force RP teams to fix them, but this isn't very practical
-    // as new validations are added continuously, and there's often quite a lag before teams will fix them - we don't want to be blocked by this in generating types. 
+    // as new validations are added continuously, and there's often quite a lag before teams will fix them - we don't want to be blocked by this in generating types.
     `--skip-semantics-validation`,
     readme,
   ];
@@ -64,9 +64,9 @@ describe('integration tests', () => {
       } else {
         const stagingOutputDir = `${__dirname}/temp/${spec}`;
         await rm(stagingOutputDir, { recursive: true, force: true, });
-  
+
         await generateSchema(defaultLogger, readmePath, stagingOutputDir, false, false);
-  
+
         const compareResult = await compare(stagingOutputDir, outputDir, { compareContent: true });
 
         // Assert that the generated files match the baseline files which have been checked in.
