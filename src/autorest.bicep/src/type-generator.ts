@@ -23,7 +23,7 @@ import {
 import { Channel, AutorestExtensionHost } from "@autorest/extension-base";
 import { BuiltInTypeKind, DiscriminatedObjectType, ObjectTypeProperty, ObjectTypePropertyFlags, ResourceFlags, TypeBaseKind, TypeFactory, TypeReference } from "bicep-types";
 import { uniq, keys, Dictionary, chain } from 'lodash';
-import { getFullyQualifiedType, getNameSchema, getSerializedName, ProviderDefinition, ResourceDefinition, ResourceDescriptor, ResourceOperationDefintion } from "./resources";
+import { getFullyQualifiedType, getNameSchema, getSerializedName, NameSchema, ProviderDefinition, ResourceDefinition, ResourceDescriptor, ResourceOperationDefintion } from "./resources";
 import { failure, success } from "./utils";
 
 export function generateTypes(host: AutorestExtensionHost, definition: ProviderDefinition) {
@@ -40,6 +40,10 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
 
   function getResourcePath(definition: ResourceDefinition) {
     return (definition.putOperation ?? definition.getOperation)?.request.path;
+  }
+
+  function nameIsString(nameSchema?: NameSchema) {
+    return nameSchema?.type == "parameterized" && nameSchema.schema instanceof PrimitiveSchema && isStringSchema(nameSchema.schema);
   }
 
   function getNameType(fullyQualifiedType: string, definition: ResourceDefinition) {
@@ -63,7 +67,17 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     const {putOperation, getOperation} = definition;
     const nameLiterals = new Set<string>();
     const nameTypes = new Set<BuiltInTypeKind>();
-    for (const ns of [putOperation ? getSchema(putOperation) : undefined, getOperation ? getSchema(getOperation) : undefined]) {
+    const nameSchemata = {
+      put: putOperation ? getSchema(putOperation) : undefined,
+      get: getOperation ? getSchema(getOperation) : undefined,
+    };
+
+    // if both the PUT and the GET define the name schema as a string, just use the name from the PUT
+    const nameSchemataToCombine = nameIsString(nameSchemata.put) && nameIsString(nameSchemata.get)
+      ? [nameSchemata.put]
+      : [nameSchemata.put, nameSchemata.get];
+
+    for (const ns of nameSchemataToCombine) {
       if (!ns) {
         continue;
       }
