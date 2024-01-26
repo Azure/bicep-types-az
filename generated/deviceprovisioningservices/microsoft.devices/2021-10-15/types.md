@@ -22,7 +22,7 @@
 * **etag**: string (ReadOnly): The entity tag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **isVerified**: bool (WriteOnly): True indicates that the certificate will be created in verified state and proof of possession will not be required.
-* **name**: string | string {maxLength: 256} (Required, DeployTimeConstant): The resource name
+* **name**: string {maxLength: 256} (Required, DeployTimeConstant): The resource name
 * **properties**: [CertificateProperties](#certificateproperties) (ReadOnly): properties of a certificate
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Devices/provisioningServices/certificates' (ReadOnly, DeployTimeConstant): The resource type

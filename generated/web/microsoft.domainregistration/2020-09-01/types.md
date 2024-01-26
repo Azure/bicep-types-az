@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **location**: string (Required): Resource Location.
-* **name**: string | string {pattern: "[a-zA-Z0-9][a-zA-Z0-9\.-]+"} (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "[a-zA-Z0-9][a-zA-Z0-9\.-]+"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DomainProperties](#domainproperties): Domain resource specific properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata relating to this resource.
 * **tags**: [ResourceTags](#resourcetags): Resource tags.

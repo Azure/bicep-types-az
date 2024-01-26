@@ -6,7 +6,7 @@
 * **apiVersion**: '2017-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The Geo-location where the resource lives
-* **name**: string | string {minLength: 6, maxLength: 50} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SBNamespaceProperties](#sbnamespaceproperties): Properties of the namespace.
 * **sku**: [SBSku](#sbsku): Properties of Sku
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags

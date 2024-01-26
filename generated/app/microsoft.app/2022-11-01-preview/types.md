@@ -142,7 +142,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): Managed identities needed by a container app job to interact with other Azure services to not maintain any secrets or credentials in code.
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string | string {pattern: "^[-\w\._\(\)]+$"} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [JobProperties](#jobproperties): Container Apps Job resource specific properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
