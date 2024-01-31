@@ -388,7 +388,7 @@
 * **exportRoutePolicyId**: string: ARM Resource ID of the RoutePolicy. This is used for the backward compatibility.
 * **importRoutePolicy**: [ImportRoutePolicy](#importroutepolicy): Import Route Policy either IPv4 or IPv6.
 * **importRoutePolicyId**: string: ARM Resource ID of the RoutePolicy. This is used for the backward compatibility.
-* **networkToNetworkInterconnectId**: string (ReadOnly): Gets the networkToNetworkInterconnectId of the resource.
+* **networkToNetworkInterconnectId**: string: ARM Resource ID of the networkToNetworkInterconnectId of the ExternalNetwork resource.
 * **optionAProperties**: [ExternalNetworkPropertiesOptionAProperties](#externalnetworkpropertiesoptionaproperties): option A properties object
 * **optionBProperties**: [L3OptionBProperties](#l3optionbproperties): option B properties object
 * **peeringOption**: 'OptionA' | 'OptionB' | string (Required): Peering option list.

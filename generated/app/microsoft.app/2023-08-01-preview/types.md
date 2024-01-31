@@ -465,7 +465,7 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
 ## BuildConfiguration
 ### Properties
 * **baseOs**: string: Base OS used to build and run the app.
-* **environmentVariables**: [EnvironmentVariable](#environmentvariable)[]: List of environment variables to be passed to the build and application runtime.
+* **environmentVariables**: [EnvironmentVariable](#environmentvariable)[]: List of environment variables to be passed to the build.
 * **platform**: string: Platform to be used to build and run the app.
 * **platformVersion**: string: Platform version to be used to build and run the app.
 * **preBuildSteps**: [PreBuildStep](#prebuildstep)[]: List of steps to perform before the build.

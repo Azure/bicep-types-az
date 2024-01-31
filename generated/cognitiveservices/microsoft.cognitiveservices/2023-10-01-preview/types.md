@@ -437,7 +437,7 @@
 * **allowedContentLevel**: 'High' | 'Low' | 'Medium' | string: Level at which content is filtered.
 * **blocking**: bool: If blocking would occur.
 * **enabled**: bool: If the ContentFilter is enabled.
-* **policyName**: string: Name of ContentFilter.
+* **name**: string: Name of ContentFilter.
 * **source**: 'Completion' | 'Prompt' | string: Content source to apply the Content Filters.
 
 ## RaiPolicyProperties

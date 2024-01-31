@@ -84,7 +84,7 @@
 * **data**: string (Required, WriteOnly): Base 64 encoded certificate using the application/x-pkcs12 representation.
 * **expirationDate**: string (ReadOnly): Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string | string {minLength: 1, maxLength: 256, pattern: "^[^*#&+:<>?]+$"} (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 256, pattern: "^[^*#&+:<>?]+$"} (Required, DeployTimeConstant): The resource name
 * **password**: string (Required, WriteOnly): Password for the Certificate
 * **subject**: string (ReadOnly): Subject attribute of the certificate.
 * **thumbprint**: string (ReadOnly): Thumbprint of the certificate.
@@ -128,7 +128,7 @@
 * **description**: string: Logger description.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **isBuffered**: bool: Whether records are buffered in the logger before publishing. Default is assumed to be true.
-* **name**: string | string {maxLength: 256, pattern: "^[^*#&+:<>?]+$"} (Required, DeployTimeConstant): The resource name
+* **name**: string {maxLength: 256, pattern: "^[^*#&+:<>?]+$"} (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.ApiManagement/service/loggers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/openidConnectProviders@2016-07-07
@@ -140,7 +140,7 @@
 * **description**: string: User-friendly description of OpenID Connect Provider.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **metadataEndpoint**: string (Required): Metadata endpoint URI.
-* **name**: string | string {maxLength: 256, pattern: "^[^*#&+:<>?]+$"} (Required, DeployTimeConstant): The resource name
+* **name**: string {maxLength: 256, pattern: "^[^*#&+:<>?]+$"} (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.ApiManagement/service/openidConnectProviders' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/products@2016-07-07
@@ -178,7 +178,7 @@
 ### Properties
 * **apiVersion**: '2016-07-07' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string | string {maxLength: 256, pattern: "^[^*#&+:<>?]+$"} (Required, DeployTimeConstant): The resource name
+* **name**: string {maxLength: 256, pattern: "^[^*#&+:<>?]+$"} (Required, DeployTimeConstant): The resource name
 * **secret**: bool: Determines whether the value is a secret and should be encrypted or not. Default value is false.
 * **tags**: string[] {maxLength: 32}: Optional tags that when provided can be used to filter the property list.
 * **type**: 'Microsoft.ApiManagement/service/properties' (ReadOnly, DeployTimeConstant): The resource type
@@ -192,7 +192,7 @@
 * **endDate**: string (ReadOnly): Date when subscription was cancelled or expired. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
 * **expirationDate**: string (ReadOnly): Subscription expiration date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string | string {minLength: 1, maxLength: 256, pattern: "^[^*#&+:<>?]+$"} (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 256, pattern: "^[^*#&+:<>?]+$"} (Required, DeployTimeConstant): The resource name
 * **notificationDate**: string (ReadOnly): Upcoming subscription expiration notification date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
 * **primaryKey**: string {minLength: 1, maxLength: 256}: Primary subscription key. If not specified during request key will be generated automatically.
 * **productId**: string (Required): Product (product id path) for which subscription is being created in form /products/{productId}

@@ -6,7 +6,7 @@
 * **apiVersion**: '2018-10-31-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The supported Azure location where the dedicated HSM should be created.
-* **name**: string | string {pattern: "^[a-zA-Z0-9-]{3,24}$"} (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[a-zA-Z0-9-]{3,24}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DedicatedHsmProperties](#dedicatedhsmproperties) (Required): Properties of the dedicated HSM
 * **sku**: [Sku](#sku): SKU details
 * **tags**: [ResourceTags](#resourcetags): Resource tags

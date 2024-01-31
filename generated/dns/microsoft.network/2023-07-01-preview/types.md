@@ -234,6 +234,7 @@
 * **SRVRecords**: [SrvRecord](#srvrecord)[]: The list of SRV records in the record set.
 * **targetResource**: [SubResource](#subresource): A reference to an azure resource from where the dns resource value is taken.
 * **TLSARecords**: [TlsaRecord](#tlsarecord)[]: The list of TLSA records in the record set.
+* **trafficManagementProfile**: [SubResource](#subresource): A reference to an azure traffic manager profile resource from where the dns resource value is taken.
 * **TTL**: int: The TTL (time-to-live) of the records in the record set.
 * **TXTRecords**: [TxtRecord](#txtrecord)[]: The list of TXT records in the record set.
 
