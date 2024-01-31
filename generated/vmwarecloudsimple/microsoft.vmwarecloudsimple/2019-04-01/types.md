@@ -18,7 +18,7 @@
 * **apiVersion**: '2019-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): Azure region
-* **name**: string | string {pattern: "^[a-zA-Z0-9]([-_.a-zA-Z0-9]*[a-zA-Z0-9])?$"} (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[a-zA-Z0-9]([-_.a-zA-Z0-9]*[a-zA-Z0-9])?$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DedicatedCloudServiceProperties](#dedicatedcloudserviceproperties): The properties of Dedicated Node Service
 * **tags**: [Tags](#tags): The list of tags
 * **type**: 'Microsoft.VMwareCloudSimple/dedicatedCloudServices' (ReadOnly, DeployTimeConstant): The resource type

@@ -5,7 +5,7 @@
 ### Properties
 * **apiVersion**: '2022-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string | string {pattern: "^[0-9a-zA-Z_\-. ]+$"} (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[0-9a-zA-Z_\-. ]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [FileWorkspaceDetailsProperties](#fileworkspacedetailsproperties) (ReadOnly): Properties of the resource
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Support/fileWorkspaces' (ReadOnly, DeployTimeConstant): The resource type

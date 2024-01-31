@@ -166,7 +166,7 @@ A stream indicates what schema will be used for this data and usually what table
 
 ## SyslogDataSource
 ### Properties
-* **facilityNames**: ('*' | 'auth' | 'authpriv' | 'cron' | 'daemon' | 'kern' | 'local0' | 'local1' | 'local2' | 'local3' | 'local4' | 'local5' | 'local6' | 'local7' | 'lpr' | 'mail' | 'mark' | 'news' | 'syslog' | 'user' | 'uucp' | string)[]: The list of facility names.
+* **facilityNames**: ('*' | 'alert' | 'audit' | 'auth' | 'authpriv' | 'clock' | 'cron' | 'daemon' | 'ftp' | 'kern' | 'local0' | 'local1' | 'local2' | 'local3' | 'local4' | 'local5' | 'local6' | 'local7' | 'lpr' | 'mail' | 'mark' | 'news' | 'nopri' | 'ntp' | 'syslog' | 'user' | 'uucp' | string)[]: The list of facility names.
 * **logLevels**: ('*' | 'Alert' | 'Critical' | 'Debug' | 'Emergency' | 'Error' | 'Info' | 'Notice' | 'Warning' | string)[]: The log levels to collect.
 * **name**: string: A friendly name for the data source. 
 This name should be unique across all data sources (regardless of type) within the data collection rule.

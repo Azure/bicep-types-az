@@ -23,7 +23,7 @@
 * **apiVersion**: '2023-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The entity tag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string | string {maxLength: 256} (Required, DeployTimeConstant): The resource name
+* **name**: string {maxLength: 256} (Required, DeployTimeConstant): The resource name
 * **properties**: [CertificateProperties](#certificateproperties): properties of a certificate
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Devices/provisioningServices/certificates' (ReadOnly, DeployTimeConstant): The resource type

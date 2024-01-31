@@ -552,7 +552,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Kind of resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateLinkConnectionApprovalRequestOrRemotePrivateEndpointConnection](#privatelinkconnectionapprovalrequestorremoteprivateendpointconnection): Core resource properties
+* **properties**: [RemotePrivateEndpointConnection](#remoteprivateendpointconnection): Core resource properties
 * **type**: 'Microsoft.Web/sites/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/sites/processes@2019-08-01 (ReadOnly)
@@ -2045,12 +2045,6 @@ Setting is <code>false</code> by default.
 * **resourceId**: string: The ARM uri of the Virtual Network
 * **subnets**: [PrivateAccessSubnet](#privateaccesssubnet)[]: A List of subnets that access is allowed to on this Virtual Network. An empty array (but not null) is interpreted to mean that all subnets are allowed within this Virtual Network.
 
-## PrivateLinkConnectionApprovalRequestOrRemotePrivateEndpointConnection
-### Properties
-* **privateEndpoint**: [ArmIdWrapper](#armidwrapper) (ReadOnly): PrivateEndpoint of a remote private endpoint connection
-* **privateLinkServiceConnectionState**: [PrivateLinkConnectionState](#privatelinkconnectionstate): The state of a private link connection
-* **provisioningState**: string (ReadOnly)
-
 ## PrivateLinkConnectionState
 ### Properties
 * **actionsRequired**: string: ActionsRequired for a private link connection
@@ -2218,6 +2212,12 @@ If such an object doesn't exist, it is set to null.
 * **port**: int
 * **resourceConnectionString**: string
 * **resourceType**: string
+
+## RemotePrivateEndpointConnection
+### Properties
+* **privateEndpoint**: [ArmIdWrapper](#armidwrapper): PrivateEndpoint of a remote private endpoint connection
+* **privateLinkServiceConnectionState**: [PrivateLinkConnectionState](#privatelinkconnectionstate): The state of a private link connection
+* **provisioningState**: string (ReadOnly)
 
 ## Rendering
 ### Properties

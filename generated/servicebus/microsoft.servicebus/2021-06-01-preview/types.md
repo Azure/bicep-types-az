@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [Identity](#identity): Properties of BYOK Identity description
 * **location**: string (Required): The Geo-location where the resource lives
-* **name**: string | string {minLength: 6, maxLength: 50} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SBNamespaceProperties](#sbnamespaceproperties): Properties of the namespace.
 * **sku**: [SBSku](#sbsku): Properties of SKU
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.

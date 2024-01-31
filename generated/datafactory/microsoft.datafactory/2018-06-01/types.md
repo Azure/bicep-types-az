@@ -735,8 +735,13 @@
 ### Properties
 * **body**: any: Represents the payload that will be sent to the endpoint. Required for POST/PUT method, not allowed for GET method Type: string (or Expression with resultType string).
 * **functionName**: any (Required): Name of the Function that the Azure Function Activity will call. Type: string (or Expression with resultType string)
-* **headers**: any: Represents the headers that will be sent to the request. For example, to set the language and type on a request: "headers" : { "Accept-Language": "en-us", "Content-Type": "application/json" }. Type: dictionary (or Expression with resultType dictionary).
+* **headers**: [AzureFunctionActivityTypePropertiesHeaders](#azurefunctionactivitytypepropertiesheaders): Represents the headers that will be sent to the request. For example, to set the language and type on a request: "headers" : { "Accept-Language": "en-us", "Content-Type": "application/json" }. Type: string (or Expression with resultType string).
 * **method**: 'DELETE' | 'GET' | 'HEAD' | 'OPTIONS' | 'POST' | 'PUT' | 'TRACE' | string (Required): Rest API method for target endpoint.
+
+## AzureFunctionActivityTypePropertiesHeaders
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## AzureFunctionLinkedServiceTypeProperties
 ### Properties
@@ -1310,11 +1315,25 @@
 * **type**: 'SalesforceServiceCloudSink' (Required): Copy sink type.
 * **writeBehavior**: 'Insert' | 'Upsert' | string: The write behavior for the operation. Default is Insert.
 
+### SalesforceServiceCloudV2Sink
+#### Properties
+* **externalIdFieldName**: any: The name of the external ID field for upsert operation. Default value is 'Id' column. Type: string (or Expression with resultType string).
+* **ignoreNullValues**: any: The flag indicating whether or not to ignore null values from input dataset (except key fields) during write operation. Default value is false. If set it to true, it means ADF will leave the data in the destination object unchanged when doing upsert/update operation and insert defined default value when doing insert operation, versus ADF will update the data in the destination object to NULL when doing upsert/update operation and insert NULL value when doing insert operation. Type: boolean (or Expression with resultType boolean).
+* **type**: 'SalesforceServiceCloudV2Sink' (Required): Copy sink type.
+* **writeBehavior**: 'Insert' | 'Upsert' | string: The write behavior for the operation. Default is Insert.
+
 ### SalesforceSink
 #### Properties
 * **externalIdFieldName**: any: The name of the external ID field for upsert operation. Default value is 'Id' column. Type: string (or Expression with resultType string).
 * **ignoreNullValues**: any: The flag indicating whether or not to ignore null values from input dataset (except key fields) during write operation. Default value is false. If set it to true, it means ADF will leave the data in the destination object unchanged when doing upsert/update operation and insert defined default value when doing insert operation, versus ADF will update the data in the destination object to NULL when doing upsert/update operation and insert NULL value when doing insert operation. Type: boolean (or Expression with resultType boolean).
 * **type**: 'SalesforceSink' (Required): Copy sink type.
+* **writeBehavior**: 'Insert' | 'Upsert' | string: The write behavior for the operation. Default is Insert.
+
+### SalesforceV2Sink
+#### Properties
+* **externalIdFieldName**: any: The name of the external ID field for upsert operation. Default value is 'Id' column. Type: string (or Expression with resultType string).
+* **ignoreNullValues**: any: The flag indicating whether or not to ignore null values from input dataset (except key fields) during write operation. Default value is false. If set it to true, it means ADF will leave the data in the destination object unchanged when doing upsert/update operation and insert defined default value when doing insert operation, versus ADF will update the data in the destination object to NULL when doing upsert/update operation and insert NULL value when doing insert operation. Type: boolean (or Expression with resultType boolean).
+* **type**: 'SalesforceV2Sink' (Required): Copy sink type.
 * **writeBehavior**: 'Insert' | 'Upsert' | string: The write behavior for the operation. Default is Insert.
 
 ### SapCloudForCustomerSink
@@ -1328,6 +1347,12 @@
 * **importSettings**: [SnowflakeImportCopyCommand](#snowflakeimportcopycommand): Snowflake import settings.
 * **preCopyScript**: any: SQL pre-copy script. Type: string (or Expression with resultType string).
 * **type**: 'SnowflakeSink' (Required): Copy sink type.
+
+### SnowflakeV2Sink
+#### Properties
+* **importSettings**: [SnowflakeImportCopyCommand](#snowflakeimportcopycommand): Snowflake import settings.
+* **preCopyScript**: any: SQL pre-copy script. Type: string (or Expression with resultType string).
+* **type**: 'SnowflakeV2Sink' (Required): Copy sink type.
 
 ### SqlDWSink
 #### Properties
@@ -1380,6 +1405,15 @@
 * **type**: 'SqlSink' (Required): Copy sink type.
 * **upsertSettings**: [SqlUpsertSettings](#sqlupsertsettings): SQL upsert settings.
 * **writeBehavior**: any: Write behavior when copying data into sql. Type: string (or Expression with resultType string).
+
+### WarehouseSink
+#### Properties
+* **allowCopyCommand**: any: Indicates to use Copy Command to copy data into SQL Data Warehouse. Type: boolean (or Expression with resultType boolean).
+* **copyCommandSettings**: [DWCopyCommandSettings](#dwcopycommandsettings): Specifies Copy Command related settings when allowCopyCommand is true.
+* **preCopyScript**: any: SQL pre-copy script. Type: string (or Expression with resultType string).
+* **tableOption**: any: The option to handle sink table, such as autoCreate. For now only 'autoCreate' value is supported. Type: string (or Expression with resultType string).
+* **type**: 'WarehouseSink' (Required): Copy sink type.
+* **writeBehavior**: any: Write behavior when copying data into azure Microsoft Fabric Data Warehouse. Type: DWWriteBehaviorEnum (or Expression with resultType DWWriteBehaviorEnum)
 
 
 ## CopySource
@@ -1910,6 +1944,13 @@
 * **readBehavior**: any: The read behavior for the operation. Default is Query. Allowed values: Query/QueryAll. Type: string (or Expression with resultType string).
 * **type**: 'SalesforceServiceCloudSource' (Required): Copy source type.
 
+### SalesforceServiceCloudV2Source
+#### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **includeDeletedObjects**: any: This property control whether query result contains Deleted objects. Default is false. Type: boolean (or Expression with resultType boolean).
+* **SOQLQuery**: any: Database query. Type: string (or Expression with resultType string).
+* **type**: 'SalesforceServiceCloudV2Source' (Required): Copy source type.
+
 ### SalesforceSource
 #### Properties
 * **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
@@ -1917,6 +1958,14 @@
 * **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **readBehavior**: any: The read behavior for the operation. Default is Query. Allowed values: Query/QueryAll. Type: string (or Expression with resultType string).
 * **type**: 'SalesforceSource' (Required): Copy source type.
+
+### SalesforceV2Source
+#### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **includeDeletedObjects**: any: This property control whether query result contains Deleted objects. Default is false. Type: boolean (or Expression with resultType boolean).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+* **SOQLQuery**: any: Database query. Type: string (or Expression with resultType string).
+* **type**: 'SalesforceV2Source' (Required): Copy source type.
 
 ### SapBwSource
 #### Properties
@@ -2012,6 +2061,12 @@
 * **query**: any: Snowflake Sql query. Type: string (or Expression with resultType string).
 * **type**: 'SnowflakeSource' (Required): Copy source type.
 
+### SnowflakeV2Source
+#### Properties
+* **exportSettings**: [SnowflakeExportCopyCommand](#snowflakeexportcopycommand) (Required): Snowflake export settings.
+* **query**: any: Snowflake Sql query. Type: string (or Expression with resultType string).
+* **type**: 'SnowflakeV2Source' (Required): Copy source type.
+
 ### SparkSource
 #### Properties
 * **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
@@ -2098,6 +2153,18 @@
 * **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
 * **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'VerticaSource' (Required): Copy source type.
+
+### WarehouseSource
+#### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **isolationLevel**: any: Specifies the transaction locking behavior for the Microsoft Fabric Warehouse source. Allowed values: ReadCommitted/ReadUncommitted/RepeatableRead/Serializable/Snapshot. The default value is ReadCommitted. Type: string (or Expression with resultType string).
+* **partitionOption**: any: The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
+* **partitionSettings**: [SqlPartitionSettings](#sqlpartitionsettings): The settings that will be leveraged for Sql source partitioning.
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+* **sqlReaderQuery**: any: Microsoft Fabric Warehouse reader query. Type: string (or Expression with resultType string).
+* **sqlReaderStoredProcedureName**: any: Name of the stored procedure for a Microsoft Fabric Warehouse source. This cannot be used at the same time as SqlReaderQuery. Type: string (or Expression with resultType string).
+* **storedProcedureParameters**: any: Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}". Type: object (or Expression with resultType object), itemType: StoredProcedureParameter.
+* **type**: 'WarehouseSource' (Required): Copy source type.
 
 ### WebSource
 #### Properties
@@ -2735,6 +2802,16 @@
 * **type**: 'SalesforceServiceCloudObject' (Required): Type of dataset.
 * **typeProperties**: [SalesforceServiceCloudObjectDatasetTypeProperties](#salesforceservicecloudobjectdatasettypeproperties): Salesforce Service Cloud object dataset properties.
 
+### SalesforceServiceCloudV2ObjectDataset
+#### Properties
+* **type**: 'SalesforceServiceCloudV2Object' (Required): Type of dataset.
+* **typeProperties**: [SalesforceServiceCloudV2ObjectDatasetTypeProperties](#salesforceservicecloudv2objectdatasettypeproperties): Salesforce Service Cloud V2 object dataset properties.
+
+### SalesforceV2ObjectDataset
+#### Properties
+* **type**: 'SalesforceV2Object' (Required): Type of dataset.
+* **typeProperties**: [SalesforceV2ObjectDatasetTypeProperties](#salesforcev2objectdatasettypeproperties): Salesforce V2 object dataset properties.
+
 ### SapBwCubeDataset
 #### Properties
 * **type**: 'SapBwCube' (Required): Type of dataset.
@@ -2789,6 +2866,11 @@
 * **type**: 'SnowflakeTable' (Required): Type of dataset.
 * **typeProperties**: [SnowflakeDatasetTypeProperties](#snowflakedatasettypeproperties) (Required): Snowflake dataset properties.
 
+### SnowflakeV2Dataset
+#### Properties
+* **type**: 'SnowflakeV2Table' (Required): Type of dataset.
+* **typeProperties**: [SnowflakeDatasetTypeProperties](#snowflakedatasettypeproperties) (Required): Snowflake dataset properties.
+
 ### SparkObjectDataset
 #### Properties
 * **type**: 'SparkObject' (Required): Type of dataset.
@@ -2818,6 +2900,11 @@
 #### Properties
 * **type**: 'VerticaTable' (Required): Type of dataset.
 * **typeProperties**: [VerticaDatasetTypeProperties](#verticadatasettypeproperties): Properties specific to this dataset type.
+
+### WarehouseTableDataset
+#### Properties
+* **type**: 'WarehouseTable' (Required): Type of dataset.
+* **typeProperties**: [WarehouseTableDatasetTypeProperties](#warehousetabledatasettypeproperties): Microsoft Fabric Warehouse dataset properties.
 
 ### WebTableDataset
 #### Properties
@@ -4383,6 +4470,16 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **type**: 'SalesforceServiceCloud' (Required): Type of linked service.
 * **typeProperties**: [SalesforceServiceCloudLinkedServiceTypeProperties](#salesforceservicecloudlinkedservicetypeproperties) (Required): Salesforce Service Cloud linked service properties.
 
+### SalesforceServiceCloudV2LinkedService
+#### Properties
+* **type**: 'SalesforceServiceCloudV2' (Required): Type of linked service.
+* **typeProperties**: [SalesforceServiceCloudV2LinkedServiceTypeProperties](#salesforceservicecloudv2linkedservicetypeproperties) (Required): Salesforce Service Cloud V2 linked service properties.
+
+### SalesforceV2LinkedService
+#### Properties
+* **type**: 'SalesforceV2' (Required): Type of linked service.
+* **typeProperties**: [SalesforceV2LinkedServiceTypeProperties](#salesforcev2linkedservicetypeproperties) (Required): Salesforce V2 linked service properties.
+
 ### SapBWLinkedService
 #### Properties
 * **type**: 'SapBW' (Required): Type of linked service.
@@ -4448,6 +4545,11 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **type**: 'Snowflake' (Required): Type of linked service.
 * **typeProperties**: [SnowflakeLinkedServiceTypeProperties](#snowflakelinkedservicetypeproperties) (Required): Snowflake linked service properties.
 
+### SnowflakeV2LinkedService
+#### Properties
+* **type**: 'SnowflakeV2' (Required): Type of linked service.
+* **typeProperties**: [SnowflakeLinkedV2ServiceTypeProperties](#snowflakelinkedv2servicetypeproperties) (Required): Snowflake linked service properties.
+
 ### SparkLinkedService
 #### Properties
 * **type**: 'Spark' (Required): Type of linked service.
@@ -4487,6 +4589,11 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 #### Properties
 * **type**: 'Vertica' (Required): Type of linked service.
 * **typeProperties**: [VerticaLinkedServiceTypeProperties](#verticalinkedservicetypeproperties) (Required): Vertica linked service properties.
+
+### WarehouseLinkedService
+#### Properties
+* **type**: 'Warehouse' (Required): Type of linked service.
+* **typeProperties**: [WarehouseLinkedServiceTypeProperties](#warehouselinkedservicetypeproperties) (Required): Microsoft Fabric Warehouse linked service properties.
 
 ### WebLinkedService
 #### Properties
@@ -4677,8 +4784,13 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## MariaDBLinkedServiceTypeProperties
 ### Properties
 * **connectionString**: any: An ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **database**: any: Database name for connection. Type: string.
+* **driverVersion**: any: The version of the MariaDB driver. Type: string. V1 or empty for legacy driver, V2 for new driver. V1 can support connection string and property bag, V2 can only support connection string.
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
-* **pwd**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of password in connection string.
+* **password**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of password in connection string.
+* **port**: any: The port for the connection. Type: integer.
+* **server**: any: Server name for connection. Type: string.
+* **username**: any: Username for authentication. Type: string.
 
 ## MarketoLinkedServiceTypeProperties
 ### Properties
@@ -4755,9 +4867,16 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## MySqlLinkedServiceTypeProperties
 ### Properties
-* **connectionString**: any (Required): The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **connectionString**: any: The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **database**: any: Database name for connection. Type: string.
+* **driverVersion**: any: The version of the MySQL driver. Type: string. V1 or empty for legacy driver, V2 for new driver. V1 can support connection string and property bag, V2 can only support connection string.
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **password**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of password in connection string.
+* **port**: any: The port for the connection. Type: integer.
+* **server**: any: Server name for connection. Type: string.
+* **sslMode**: any: SSL mode for connection. Type: integer. 0: disable, 1: prefer, 2: require, 3: verify-ca, 4: verify-full.
+* **username**: any: Username for authentication. Type: string.
+* **useSystemTrustStore**: any: Use system trust store for connection. Type: integer. 0: enable, 1: disable.
 
 ## MySqlTableDatasetTypeProperties
 ### Properties
@@ -5281,6 +5400,34 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### Properties
 * **objectApiName**: any: The Salesforce Service Cloud object API name. Type: string (or Expression with resultType string).
 
+## SalesforceServiceCloudV2LinkedServiceTypeProperties
+### Properties
+* **apiVersion**: any: The Salesforce API version used in ADF. The version must be larger than or equal to 47.0 which is required by Salesforce BULK API 2.0. Type: string (or Expression with resultType string).
+* **authenticationType**: any: The authentication type to be used to connect to the Salesforce. Currently, we only support OAuth2ClientCredentials, it is also the default value
+* **clientId**: any: The client Id for OAuth 2.0 Client Credentials Flow authentication of the Salesforce instance. Type: string (or Expression with resultType string).
+* **clientSecret**: [SecretBase](#secretbase): The client secret for OAuth 2.0 Client Credentials Flow authentication of the Salesforce instance.
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
+* **environmentUrl**: any: The URL of Salesforce Service Cloud instance. For example, 'https://[domain].my.salesforce.com'. Type: string (or Expression with resultType string).
+
+## SalesforceServiceCloudV2ObjectDatasetTypeProperties
+### Properties
+* **objectApiName**: any: The Salesforce Service Cloud V2 object API name. Type: string (or Expression with resultType string).
+* **reportId**: any: The Salesforce Service Cloud V2 reportId. Type: string (or Expression with resultType string).
+
+## SalesforceV2LinkedServiceTypeProperties
+### Properties
+* **apiVersion**: any: The Salesforce API version used in ADF. The version must be larger than or equal to 47.0 which is required by Salesforce BULK API 2.0. Type: string (or Expression with resultType string).
+* **authenticationType**: any: The authentication type to be used to connect to the Salesforce. Currently, we only support OAuth2ClientCredentials, it is also the default value
+* **clientId**: any: The client Id for OAuth 2.0 Client Credentials Flow authentication of the Salesforce instance. Type: string (or Expression with resultType string).
+* **clientSecret**: [SecretBase](#secretbase): The client secret for OAuth 2.0 Client Credentials Flow authentication of the Salesforce instance.
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
+* **environmentUrl**: any: The URL of Salesforce instance. For example, 'https://[domain].my.salesforce.com'. Type: string (or Expression with resultType string).
+
+## SalesforceV2ObjectDatasetTypeProperties
+### Properties
+* **objectApiName**: any: The Salesforce V2 object API name. Type: string (or Expression with resultType string).
+* **reportId**: any: The Salesforce V2 report Id. Type: string (or Expression with resultType string).
+
 ## SapBWLinkedServiceTypeProperties
 ### Properties
 * **clientId**: any (Required): Client ID of the client on the BW system. (Usually a three-digit decimal number represented as a string) Type: string (or Expression with resultType string).
@@ -5596,6 +5743,22 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **connectionString**: any (Required): The connection string of snowflake. Type: string, SecureString.
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **password**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of password in connection string.
+
+## SnowflakeLinkedV2ServiceTypeProperties
+### Properties
+* **accountIdentifier**: any (Required): The account identifier of your Snowflake account, e.g. xy12345.east-us-2.azure
+* **authenticationType**: 'AADServicePrincipal' | 'Basic' | 'KeyPair' | string: The type used for authentication. Type: string.
+* **clientId**: any: The client ID of the application registered in Azure Active Directory for AADServicePrincipal authentication.
+* **clientSecret**: [SecretBase](#secretbase): The Azure key vault secret reference of client secret for AADServicePrincipal authentication.
+* **database**: any (Required): The name of the Snowflake database.
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
+* **password**: [SecretBase](#secretbase): The Azure key vault secret reference of password in connection string.
+* **privateKey**: [SecretBase](#secretbase): The Azure key vault secret reference of privateKey for KeyPair auth.
+* **privateKeyPassphrase**: [SecretBase](#secretbase): The Azure key vault secret reference of private key password for KeyPair auth with encrypted private key.
+* **scope**: any: The scope of the application registered in Azure Active Directory for AADServicePrincipal authentication.
+* **tenantId**: any: The tenant ID of the application registered in Azure Active Directory for AADServicePrincipal authentication.
+* **user**: any: The name of the Snowflake user.
+* **warehouse**: any (Required): The name of the Snowflake warehouse.
 
 ## SparkConfigurationParametrizationReference
 ### Properties
@@ -5958,6 +6121,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **copyBehavior**: any: The type of copy behavior for copy sink.
 * **disableMetricsCollection**: any: If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
 * **maxConcurrentConnections**: any: The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+* **metadata**: [MetadataItem](#metadataitem)[]: Specify the custom metadata to be added to sink data. Type: array of objects (or Expression with resultType array of objects).
 
 ### AzureBlobFSWriteSettings
 #### Properties
@@ -6238,6 +6402,23 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### Properties
 * **waitTimeInSeconds**: any (Required): Duration in seconds. Type: integer (or Expression with resultType integer).
 
+## WarehouseLinkedServiceTypeProperties
+### Properties
+* **artifactId**: any (Required): The ID of Microsoft Fabric Warehouse artifact. Type: string (or Expression with resultType string).
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
+* **endpoint**: any (Required): The endpoint of Microsoft Fabric Warehouse server. Type: string (or Expression with resultType string).
+* **servicePrincipalCredential**: [SecretBase](#secretbase): The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.
+* **servicePrincipalCredentialType**: any: The service principal credential type to use in Server-To-Server authentication. 'ServicePrincipalKey' for key/secret, 'ServicePrincipalCert' for certificate. Type: string (or Expression with resultType string).
+* **servicePrincipalId**: any: The ID of the application used to authenticate against Microsoft Fabric Warehouse. Type: string (or Expression with resultType string).
+* **servicePrincipalKey**: [SecretBase](#secretbase): The Key of the application used to authenticate against Microsoft Fabric Warehouse.
+* **tenant**: any: The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
+* **workspaceId**: any: The ID of Microsoft Fabric workspace. Type: string (or Expression with resultType string).
+
+## WarehouseTableDatasetTypeProperties
+### Properties
+* **schema**: any: The schema name of the Microsoft Fabric Warehouse. Type: string (or Expression with resultType string).
+* **table**: any: The table name of the Microsoft Fabric Warehouse. Type: string (or Expression with resultType string).
+
 ## WebActivityAuthentication
 ### Properties
 * **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
@@ -6255,22 +6436,32 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **connectVia**: [IntegrationRuntimeReference](#integrationruntimereference): The integration runtime reference.
 * **datasets**: [DatasetReference](#datasetreference)[]: List of datasets passed to web endpoint.
 * **disableCertValidation**: bool: When set to true, Certificate validation will be disabled.
-* **headers**: any: Represents the headers that will be sent to the request. For example, to set the language and type on a request: "headers" : { "Accept-Language": "en-us", "Content-Type": "application/json" }. Type: dictionary (or Expression with resultType dictionary).
+* **headers**: [WebActivityTypePropertiesHeaders](#webactivitytypepropertiesheaders): Represents the headers that will be sent to the request. For example, to set the language and type on a request: "headers" : { "Accept-Language": "en-us", "Content-Type": "application/json" }. Type: string (or Expression with resultType string).
 * **httpRequestTimeout**: any: Timeout for the HTTP request to get a response. Format is in TimeSpan (hh:mm:ss). This value is the timeout to get a response, not the activity timeout. The default value is 00:01:00 (1 minute). The range is from 1 to 10 minutes
 * **linkedServices**: [LinkedServiceReference](#linkedservicereference)[]: List of linked services passed to web endpoint.
 * **method**: 'DELETE' | 'GET' | 'POST' | 'PUT' | string (Required): Rest API method for target endpoint.
 * **turnOffAsync**: bool: Option to disable invoking HTTP GET on location given in response header of a HTTP 202 Response. If set true, it stops invoking HTTP GET on http location given in response header. If set false then continues to invoke HTTP GET call on location given in http response headers.
 * **url**: any (Required): Web activity target endpoint and path. Type: string (or Expression with resultType string).
 
+## WebActivityTypePropertiesHeaders
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## WebHookActivityTypeProperties
 ### Properties
 * **authentication**: [WebActivityAuthentication](#webactivityauthentication): Authentication method used for calling the endpoint.
 * **body**: any: Represents the payload that will be sent to the endpoint. Required for POST/PUT method, not allowed for GET method Type: string (or Expression with resultType string).
-* **headers**: any: Represents the headers that will be sent to the request. For example, to set the language and type on a request: "headers" : { "Accept-Language": "en-us", "Content-Type": "application/json" }. Type: dictionary (or Expression with resultType dictionary).
+* **headers**: [WebHookActivityTypePropertiesHeaders](#webhookactivitytypepropertiesheaders): Represents the headers that will be sent to the request. For example, to set the language and type on a request: "headers" : { "Accept-Language": "en-us", "Content-Type": "application/json" }. Type: string (or Expression with resultType string).
 * **method**: 'POST' | string (Required): Rest API method for target endpoint.
 * **reportStatusOnCallBack**: any: When set to true, statusCode, output and error in callback request body will be consumed by activity. The activity can be marked as failed by setting statusCode >= 400 in callback request. Default is false. Type: boolean (or Expression with resultType boolean).
 * **timeout**: string: The timeout within which the webhook should be called back. If there is no value specified, it defaults to 10 minutes. Type: string. Pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **url**: any (Required): WebHook activity target endpoint and path. Type: string (or Expression with resultType string).
+
+## WebHookActivityTypePropertiesHeaders
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## WebLinkedServiceTypeProperties
 * **Discriminator**: authenticationType

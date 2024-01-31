@@ -2826,7 +2826,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of the server.
 * **isIPv6Enabled**: 'Disabled' | 'Enabled' | string: Whether or not to enable IPv6 support for this server.  Value is optional but if passed in, must be 'Enabled' or 'Disabled'
 * **keyId**: string: A CMK URI of the key to use for encryption.
-* **minimalTlsVersion**: string: Minimal TLS version. Allowed values: 'None', '1.0', '1.1', '1.2'
+* **minimalTlsVersion**: '1.0' | '1.1' | '1.2' | '1.3' | 'None' | string: Minimal TLS version. Allowed values: 'None', 1.0', '1.1', '1.2', '1.3'
 * **primaryUserAssignedIdentityId**: string: The resource id of a user assigned identity to be used by default.
 * **privateEndpointConnections**: [ServerPrivateEndpointConnection](#serverprivateendpointconnection)[] (ReadOnly): List of private endpoint connections on a server
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' | 'SecuredByPerimeter' | string: Whether or not public endpoint access is allowed for this server.  Value is optional but if passed in, must be 'Enabled' or 'Disabled' or 'SecuredByPerimeter'

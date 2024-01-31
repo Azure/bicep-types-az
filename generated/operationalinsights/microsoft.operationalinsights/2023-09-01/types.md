@@ -1,0 +1,91 @@
+# Microsoft.OperationalInsights @ 2023-09-01
+
+## Resource Microsoft.OperationalInsights/workspaces@2023-09-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2023-09-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string: The etag of the workspace.
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **identity**: [Identity](#identity): The identity of the resource.
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string {minLength: 4, maxLength: 63, pattern: "^[A-Za-z0-9][A-Za-z0-9-]+[A-Za-z0-9]$"} (Required, DeployTimeConstant): The resource name
+* **properties**: [WorkspaceProperties](#workspaceproperties): Workspace properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: 'Microsoft.OperationalInsights/workspaces' (ReadOnly, DeployTimeConstant): The resource type
+
+## Identity
+### Properties
+* **principalId**: string (ReadOnly): The principal ID of resource identity.
+* **tenantId**: string (ReadOnly): The tenant ID of resource.
+* **type**: 'None' | 'SystemAssigned' | 'UserAssigned' (Required): Type of managed service identity.
+* **userAssignedIdentities**: [IdentityUserAssignedIdentities](#identityuserassignedidentities): The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+
+## IdentityUserAssignedIdentities
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [UserIdentityProperties](#useridentityproperties)
+
+## PrivateLinkScopedResource
+### Properties
+* **resourceId**: string: The full resource Id of the private link scope resource.
+* **scopeId**: string: The private link scope unique Identifier.
+
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## UserIdentityProperties
+### Properties
+* **clientId**: string (ReadOnly): The client id of user assigned identity.
+* **principalId**: string (ReadOnly): The principal id of user assigned identity.
+
+## WorkspaceCapping
+### Properties
+* **dailyQuotaGb**: int: The workspace daily quota for ingestion.
+* **dataIngestionStatus**: 'ApproachingQuota' | 'ForceOff' | 'ForceOn' | 'OverQuota' | 'RespectQuota' | 'SubscriptionSuspended' | string (ReadOnly): The status of data ingestion for this workspace.
+* **quotaNextResetTime**: string (ReadOnly): The time when the quota will be rest.
+
+## WorkspaceFeatures
+### Properties
+* **clusterResourceId**: string: Dedicated LA cluster resourceId that is linked to the workspaces.
+* **disableLocalAuth**: bool: Disable Non-AAD based Auth.
+* **enableDataExport**: bool: Flag that indicate if data should be exported.
+* **enableLogAccessUsingOnlyResourcePermissions**: bool: Flag that indicate which permission to use - resource or workspace or both.
+* **immediatePurgeDataOn30Days**: bool: Flag that describes if we want to remove the data after 30 days.
+* **unifiedSentinelBillingOnly**: bool (ReadOnly): An indication if the specify workspace is limited to sentinel's unified billing model only.
+### Additional Properties
+* **Additional Properties Type**: any
+
+## WorkspaceProperties
+### Properties
+* **createdDate**: string (ReadOnly): Workspace creation date.
+* **customerId**: string (ReadOnly): This is a read-only property. Represents the ID associated with the workspace.
+* **defaultDataCollectionRuleResourceId**: string: The resource ID of the default Data Collection Rule to use for this workspace. Expected format is - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/dataCollectionRules/{dcrName}.
+* **features**: [WorkspaceFeatures](#workspacefeatures): Workspace features.
+* **forceCmkForQuery**: bool: Indicates whether customer managed storage is mandatory for query management.
+* **modifiedDate**: string (ReadOnly): Workspace modification date.
+* **privateLinkScopedResources**: [PrivateLinkScopedResource](#privatelinkscopedresource)[] (ReadOnly): List of linked private link scope resources.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the workspace.
+* **publicNetworkAccessForIngestion**: 'Disabled' | 'Enabled' | string: The network access type for accessing Log Analytics ingestion.
+* **publicNetworkAccessForQuery**: 'Disabled' | 'Enabled' | string: The network access type for accessing Log Analytics query.
+* **retentionInDays**: int: The workspace data retention in days. Allowed values are per pricing plan. See pricing tiers documentation for details.
+* **sku**: [WorkspaceSku](#workspacesku): The SKU of the workspace.
+* **workspaceCapping**: [WorkspaceCapping](#workspacecapping): The daily volume cap for ingestion.
+
+## WorkspaceSku
+### Properties
+* **capacityReservationLevel**: int: The capacity reservation level in GB for this workspace, when CapacityReservation sku is selected.
+* **lastSkuUpdate**: string (ReadOnly): The last time when the sku was updated.
+* **name**: 'CapacityReservation' | 'Free' | 'LACluster' | 'PerGB2018' | 'PerNode' | 'Premium' | 'Standalone' | 'Standard' | string (Required): The name of the SKU.
+

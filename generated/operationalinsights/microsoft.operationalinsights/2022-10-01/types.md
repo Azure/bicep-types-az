@@ -1,5 +1,18 @@
 # Microsoft.OperationalInsights @ 2022-10-01
 
+## Resource Microsoft.OperationalInsights/clusters@2022-10-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2022-10-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Resource's identity.
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string {minLength: 4, maxLength: 63, pattern: "^[A-Za-z0-9][A-Za-z0-9-]+[A-Za-z0-9]$"} (Required, DeployTimeConstant): The resource name
+* **properties**: [ClusterProperties](#clusterproperties): Log Analytics cluster properties.
+* **sku**: [ClusterSku](#clustersku): The sku properties.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: 'Microsoft.OperationalInsights/clusters' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.OperationalInsights/workspaces@2022-10-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -24,6 +37,36 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.OperationalInsights/workspaces/tables' (ReadOnly, DeployTimeConstant): The resource type
 
+## AssociatedWorkspace
+### Properties
+* **associateDate**: string (ReadOnly): The time of workspace association.
+* **resourceId**: string (ReadOnly): Associated workspace arm resource id, in the form of: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}.
+* **workspaceId**: string (ReadOnly): Associated workspace immutable id.
+* **workspaceName**: string (ReadOnly): Associated workspace resource name.
+
+## CapacityReservationProperties
+### Properties
+* **lastSkuUpdate**: string (ReadOnly): The last time Sku was updated.
+* **minCapacity**: int (ReadOnly): Minimum CapacityReservation value in Gigabytes.
+
+## ClusterProperties
+### Properties
+* **associatedWorkspaces**: [AssociatedWorkspace](#associatedworkspace)[]: The list of Log Analytics workspaces associated with the cluster
+* **billingType**: 'Cluster' | 'Workspaces' | string: The cluster's billing type.
+* **capacityReservationProperties**: [CapacityReservationProperties](#capacityreservationproperties): Additional properties for capacity reservation
+* **clusterId**: string (ReadOnly): The ID associated with the cluster.
+* **createdDate**: string (ReadOnly): The cluster creation time
+* **isAvailabilityZonesEnabled**: bool: Sets whether the cluster will support availability zones. This can be set as true only in regions where Azure Data Explorer support Availability Zones. This Property can not be modified after cluster creation. Default value is 'true' if region supports Availability Zones.
+* **isDoubleEncryptionEnabled**: bool: Configures whether cluster will use double encryption. This Property can not be modified after cluster creation. Default value is 'true'
+* **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties): The associated key properties.
+* **lastModifiedDate**: string (ReadOnly): The last time the cluster was updated.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the cluster.
+
+## ClusterSku
+### Properties
+* **capacity**: int: The capacity reservation level in Gigabytes for this cluster.
+* **name**: 'CapacityReservation' | string: The SKU (tier) of a cluster.
+
 ## Column
 ### Properties
 * **dataTypeHint**: 'armPath' | 'guid' | 'ip' | 'uri' | string: Column data type logical hint.
@@ -45,6 +88,20 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [UserIdentityProperties](#useridentityproperties)
+
+## KeyVaultProperties
+### Properties
+* **keyName**: string: The name of the key associated with the Log Analytics cluster.
+* **keyRsaSize**: int: Selected key minimum required size.
+* **keyVaultUri**: string: The Key Vault uri which holds they key associated with the Log Analytics cluster.
+* **keyVersion**: string: The version of the key associated with the Log Analytics cluster.
+
+## ManagedServiceIdentity
+### Properties
+* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' | string (Required): Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed).
+* **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.
 
 ## PrivateLinkScopedResource
 ### Properties
@@ -109,13 +166,28 @@
 * **retentionInDaysAsDefault**: bool (ReadOnly): True - Value originates from workspace retention in days, False - Customer specific.
 * **schema**: [Schema](#schema): Table schema.
 * **searchResults**: [SearchResults](#searchresults): Parameters of the search job that initiated this table.
-* **totalRetentionInDays**: int {minValue: 4, maxValue: 2556}: The table total retention in days, between 4 and 2556. Setting this property to -1 will default to table retention.
+* **totalRetentionInDays**: int {minValue: 4, maxValue: 4383}: The table total retention in days, between 4 and 4383. Setting this property to -1 will default to table retention.
 * **totalRetentionInDaysAsDefault**: bool (ReadOnly): True - Value originates from retention in days, False - Customer specific.
 
 ## TrackedResourceTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## UserAssignedIdentities
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
+
+## UserAssignedIdentity
+### Properties
+* **clientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The client ID of the assigned identity.
+* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The principal ID of the assigned identity.
 
 ## UserIdentityProperties
 ### Properties

@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: string {pattern: ".*"} (Required, DeployTimeConstant): The resource name
-* **properties**: [AzureLargeInstanceProperties](#azurelargeinstanceproperties) (ReadOnly): Azure Large Instance properties
+* **properties**: [AzureLargeInstanceProperties](#azurelargeinstanceproperties) (ReadOnly): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.AzureLargeInstance/azureLargeInstances' (ReadOnly, DeployTimeConstant): The resource type
@@ -19,7 +19,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (ReadOnly): The geo-location where the resource lives
 * **name**: string {pattern: ".*"} (Required, DeployTimeConstant): The resource name
-* **properties**: [AzureLargeStorageInstanceProperties](#azurelargestorageinstanceproperties) (ReadOnly): AzureLargeStorageInstance properties
+* **properties**: [AzureLargeStorageInstanceProperties](#azurelargestorageinstanceproperties) (ReadOnly): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.AzureLargeInstance/azureLargeStorageInstances' (ReadOnly, DeployTimeConstant): The resource type
@@ -30,8 +30,9 @@
 * **hardwareProfile**: [HardwareProfile](#hardwareprofile): Specifies the hardware settings for the Azure Large Instance.
 * **hwRevision**: string (ReadOnly): Hardware revision of an Azure Large Instance
 * **networkProfile**: [NetworkProfile](#networkprofile): Specifies the network settings for the Azure Large Instance.
-* **osProfile**: [OSProfile](#osprofile): Specifies the operating system settings for the Azure Large Instance.
-* **partnerNodeId**: string: ARM ID of another AzureLargeInstance that will share a network with this AzureLargeInstance
+* **osProfile**: [OsProfile](#osprofile): Specifies the operating system settings for the Azure Large Instance.
+* **partnerNodeId**: string: ARM ID of another AzureLargeInstance that will share a network with this
+AzureLargeInstance
 * **powerState**: 'restarting' | 'started' | 'starting' | 'stopped' | 'stopping' | 'unknown' | string (ReadOnly): Resource power state
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Migrating' | 'Succeeded' | 'Updating' | string (ReadOnly): State of provisioning of the AzureLargeInstance
 * **proximityPlacementGroup**: string (ReadOnly): Resource proximity placement group
@@ -45,7 +46,9 @@
 ## Disk
 ### Properties
 * **diskSizeGB**: int: Specifies the size of an empty data disk in gigabytes.
-* **lun**: int (ReadOnly): Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
+* **lun**: int (ReadOnly): Specifies the logical unit number of the data disk. This value is used to
+identify data disks within the VM and therefore must be unique for each data
+disk attached to a VM.
 * **name**: string: The disk name.
 
 ## HardwareProfile
@@ -62,7 +65,7 @@
 * **circuitId**: string (ReadOnly): Specifies the circuit id for connecting to express route.
 * **networkInterfaces**: [IpAddress](#ipaddress)[]: Specifies the network interfaces for the Azure Large Instance.
 
-## OSProfile
+## OsProfile
 ### Properties
 * **computerName**: string: Specifies the host OS name of the Azure Large Instance.
 * **osType**: string (ReadOnly): This property allows you to specify the type of the OS.
@@ -77,14 +80,15 @@
 ## StorageProfile
 ### Properties
 * **nfsIpAddress**: string (ReadOnly): IP Address to connect to storage.
-* **osDisks**: [Disk](#disk)[]: Specifies information about the operating system disk used by Azure Large Instance.
+* **osDisks**: [Disk](#disk)[]: Specifies information about the operating system disk used by Azure Large
+Instance.
 
 ## StorageProperties
 ### Properties
 * **generation**: string: the kind of storage instance
-* **hardwareType**: string: the hardware type of the storage instance
+* **hardwareType**: 'Cisco_UCS' | 'HPE' | 'SDFLEX' | string: the hardware type of the storage instance
 * **offeringType**: string: the offering type for which the resource is getting provisioned
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Migrating' | 'Succeeded' | 'Updating' | string: State of provisioning of the AzureLargeStorageInstance
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Migrating' | 'Succeeded' | 'Updating' | string (ReadOnly): State of provisioning of the AzureLargeStorageInstance
 * **storageBillingProperties**: [StorageBillingProperties](#storagebillingproperties): the billing related information for the resource
 * **storageType**: string: the storage protocol for which the resource is getting provisioned
 * **workloadType**: string: the workload for which the resource is getting provisioned
