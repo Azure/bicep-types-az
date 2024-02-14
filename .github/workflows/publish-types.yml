@@ -8,16 +8,17 @@ on:
     branches:
       - main
 
+permissions:
+    id-token: write
+    contents: read
+
 jobs:
   publish-oci-types-package:
+    name: Publish Types Package to OCI Registry
+    runs-on: ubuntu-latest
     environment:
       # sets the environment to 'prod' for push to main, and to 'test' for pull_requests  
       name: ${{ github.event_name == 'push' && 'prod' || 'test' }}
-    permissions:
-      id-token: write
-      contents: read
-    name: Publish Types Package to OCI Registry
-    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
