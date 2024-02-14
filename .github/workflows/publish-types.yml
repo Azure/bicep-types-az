@@ -11,7 +11,8 @@ on:
 jobs:
   publish-oci-types-package:
     environment:
-      name: test
+      # sets the environment to 'prod' for push to main, and to 'test' for pull_requests  
+      name: ${{ github.event_name == 'push' && 'prod' || 'test' }}
     permissions:
       id-token: write
       contents: read
