@@ -1,1 +1,1446 @@
-[{"13":{"Pattern":"[a-zA-Z0-9_.()-]{0,79}$"}},{"6":{"Value":"Microsoft.IntegrationSpaces/spaces"}},{"13":{}},{"6":{"Value":"2023-11-14-preview"}},{"2":{"Name":"Microsoft.IntegrationSpaces/spaces","Properties":{"id":{"Type":2,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":1,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":3,"Flags":10,"Description":"The resource api version"},"properties":{"Type":5,"Flags":0,"Description":"The resource-specific properties for this resource."},"tags":{"Type":14,"Flags":0,"Description":"Resource tags."},"location":{"Type":2,"Flags":1,"Description":"The geo-location where the resource lives"},"systemData":{"Type":15,"Flags":2,"Description":"Azure Resource Manager metadata containing createdBy and modifiedBy information."}}}},{"2":{"Name":"SpaceResourceProperties","Properties":{"provisioningState":{"Type":13,"Flags":2,"Description":"The status of the last operation."},"description":{"Type":2,"Flags":0,"Description":"The description of the resource."}}}},{"6":{"Value":"Succeeded"}},{"6":{"Value":"Failed"}},{"6":{"Value":"Canceled"}},{"6":{"Value":"Provisioning"}},{"6":{"Value":"Updating"}},{"6":{"Value":"Deleting"}},{"6":{"Value":"Accepted"}},{"5":{"Elements":[6,7,8,9,10,11,12,2]}},{"2":{"Name":"TrackedResourceTags","Properties":{},"AdditionalProperties":2}},{"2":{"Name":"SystemData","Properties":{"createdBy":{"Type":2,"Flags":0,"Description":"The identity that created the resource."},"createdByType":{"Type":20,"Flags":0,"Description":"The type of identity that created the resource."},"createdAt":{"Type":2,"Flags":0,"Description":"The timestamp of resource creation (UTC)."},"lastModifiedBy":{"Type":2,"Flags":0,"Description":"The identity that last modified the resource."},"lastModifiedByType":{"Type":25,"Flags":0,"Description":"The type of identity that last modified the resource."},"lastModifiedAt":{"Type":2,"Flags":0,"Description":"The timestamp of resource last modification (UTC)"}}}},{"6":{"Value":"User"}},{"6":{"Value":"Application"}},{"6":{"Value":"ManagedIdentity"}},{"6":{"Value":"Key"}},{"5":{"Elements":[16,17,18,19,2]}},{"6":{"Value":"User"}},{"6":{"Value":"Application"}},{"6":{"Value":"ManagedIdentity"}},{"6":{"Value":"Key"}},{"5":{"Elements":[21,22,23,24,2]}},{"4":{"Name":"Microsoft.IntegrationSpaces/spaces@2023-11-14-preview","ScopeType":8,"Body":4,"Flags":0}},{"6":{"Value":"Microsoft.IntegrationSpaces/spaces/applications"}},{"6":{"Value":"2023-11-14-preview"}},{"2":{"Name":"Microsoft.IntegrationSpaces/spaces/applications","Properties":{"id":{"Type":2,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":27,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":28,"Flags":10,"Description":"The resource api version"},"properties":{"Type":30,"Flags":0,"Description":"The resource-specific properties for this resource."},"tags":{"Type":41,"Flags":0,"Description":"Resource tags."},"location":{"Type":2,"Flags":1,"Description":"The geo-location where the resource lives"},"systemData":{"Type":15,"Flags":2,"Description":"Azure Resource Manager metadata containing createdBy and modifiedBy information."}}}},{"2":{"Name":"ApplicationProperties","Properties":{"provisioningState":{"Type":38,"Flags":2,"Description":"The status of the last operation."},"description":{"Type":2,"Flags":0,"Description":"The description of the resource."},"trackingDataStores":{"Type":40,"Flags":1,"Description":"The tracking data stores."}}}},{"6":{"Value":"Succeeded"}},{"6":{"Value":"Failed"}},{"6":{"Value":"Canceled"}},{"6":{"Value":"Provisioning"}},{"6":{"Value":"Updating"}},{"6":{"Value":"Deleting"}},{"6":{"Value":"Accepted"}},{"5":{"Elements":[31,32,33,34,35,36,37,2]}},{"2":{"Name":"TrackingDataStore","Properties":{"databaseName":{"Type":2,"Flags":1,"Description":"The database name."},"dataStoreResourceId":{"Type":2,"Flags":1,"Description":"The data store resource id."},"dataStoreUri":{"Type":2,"Flags":1,"Description":"The data store URI."},"dataStoreIngestionUri":{"Type":2,"Flags":1,"Description":"The data store ingestion URI."}}}},{"2":{"Name":"ApplicationPropertiesTrackingDataStores","Properties":{},"AdditionalProperties":39}},{"2":{"Name":"TrackedResourceTags","Properties":{},"AdditionalProperties":2}},{"4":{"Name":"Microsoft.IntegrationSpaces/spaces/applications@2023-11-14-preview","ScopeType":8,"Body":29,"Flags":0}},{"6":{"Value":"Microsoft.IntegrationSpaces/spaces/applications/businessProcesses"}},{"6":{"Value":"2023-11-14-preview"}},{"2":{"Name":"Microsoft.IntegrationSpaces/spaces/applications/businessProcesses","Properties":{"id":{"Type":2,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":43,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":44,"Flags":10,"Description":"The resource api version"},"properties":{"Type":46,"Flags":0,"Description":"The resource-specific properties for this resource."},"systemData":{"Type":15,"Flags":2,"Description":"Azure Resource Manager metadata containing createdBy and modifiedBy information."}}}},{"2":{"Name":"BusinessProcessProperties","Properties":{"provisioningState":{"Type":54,"Flags":2,"Description":"The status of the last operation."},"version":{"Type":2,"Flags":2,"Description":"The version of the business process."},"description":{"Type":2,"Flags":0,"Description":"The description of the business process."},"tableName":{"Type":2,"Flags":0,"Description":"The table name of the business process."},"trackingDataStoreReferenceName":{"Type":2,"Flags":0,"Description":"The tracking data store reference name."},"identifier":{"Type":55,"Flags":0,"Description":"The business process identifier."},"businessProcessStages":{"Type":59,"Flags":0,"Description":"The business process stages."},"businessProcessMapping":{"Type":61,"Flags":0,"Description":"The business process mapping."}}}},{"6":{"Value":"Succeeded"}},{"6":{"Value":"Failed"}},{"6":{"Value":"Canceled"}},{"6":{"Value":"Provisioning"}},{"6":{"Value":"Updating"}},{"6":{"Value":"Deleting"}},{"6":{"Value":"Accepted"}},{"5":{"Elements":[47,48,49,50,51,52,53,2]}},{"2":{"Name":"BusinessProcessIdentifier","Properties":{"propertyName":{"Type":2,"Flags":0,"Description":"The property name of the business process identifier."},"propertyType":{"Type":2,"Flags":0,"Description":"The property type of the business process identifier."}}}},{"2":{"Name":"BusinessProcessStage","Properties":{"description":{"Type":2,"Flags":0,"Description":"The description of the business stage."},"properties":{"Type":57,"Flags":0,"Description":"The properties within the properties of the business process stage."},"stagesBefore":{"Type":58,"Flags":0,"Description":"The property to keep track of stages before current in the business process stage."}}}},{"2":{"Name":"BusinessProcessStageProperties","Properties":{},"AdditionalProperties":2}},{"3":{"ItemType":2}},{"2":{"Name":"BusinessProcessPropertiesBusinessProcessStages","Properties":{},"AdditionalProperties":56}},{"2":{"Name":"BusinessProcessMappingItem","Properties":{"logicAppResourceId":{"Type":2,"Flags":0,"Description":"The logic app resource id."},"workflowName":{"Type":2,"Flags":0,"Description":"The workflow name within the logic app."},"operationName":{"Type":2,"Flags":0,"Description":"The operation name."},"operationType":{"Type":2,"Flags":0,"Description":"The mapping item operation type of the business process."}}}},{"2":{"Name":"BusinessProcessPropertiesBusinessProcessMapping","Properties":{},"AdditionalProperties":60}},{"4":{"Name":"Microsoft.IntegrationSpaces/spaces/applications/businessProcesses@2023-11-14-preview","ScopeType":8,"Body":45,"Flags":0}},{"6":{"Value":"Microsoft.IntegrationSpaces/spaces/applications/resources"}},{"6":{"Value":"2023-11-14-preview"}},{"2":{"Name":"Microsoft.IntegrationSpaces/spaces/applications/resources","Properties":{"id":{"Type":2,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":63,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":64,"Flags":10,"Description":"The resource api version"},"properties":{"Type":66,"Flags":0,"Description":"The resource-specific properties for this resource."},"systemData":{"Type":15,"Flags":2,"Description":"Azure Resource Manager metadata containing createdBy and modifiedBy information."}}}},{"2":{"Name":"ApplicationResourceProperties","Properties":{"provisioningState":{"Type":74,"Flags":2,"Description":"The status of the last operation."},"resourceType":{"Type":2,"Flags":1,"Description":"The type of the application resource."},"resourceId":{"Type":2,"Flags":1,"Description":"The Arm id of the application resource."},"resourceKind":{"Type":2,"Flags":0,"Description":"The kind of the application resource."}}}},{"6":{"Value":"Succeeded"}},{"6":{"Value":"Failed"}},{"6":{"Value":"Canceled"}},{"6":{"Value":"Provisioning"}},{"6":{"Value":"Updating"}},{"6":{"Value":"Deleting"}},{"6":{"Value":"Accepted"}},{"5":{"Elements":[67,68,69,70,71,72,73,2]}},{"4":{"Name":"Microsoft.IntegrationSpaces/spaces/applications/resources@2023-11-14-preview","ScopeType":8,"Body":65,"Flags":0}},{"6":{"Value":"Microsoft.IntegrationSpaces/spaces/infrastructureResources"}},{"6":{"Value":"2023-11-14-preview"}},{"2":{"Name":"Microsoft.IntegrationSpaces/spaces/infrastructureResources","Properties":{"id":{"Type":2,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":76,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":77,"Flags":10,"Description":"The resource api version"},"properties":{"Type":79,"Flags":0,"Description":"The resource-specific properties for this resource."},"systemData":{"Type":15,"Flags":2,"Description":"Azure Resource Manager metadata containing createdBy and modifiedBy information."}}}},{"2":{"Name":"InfrastructureResourceProperties","Properties":{"provisioningState":{"Type":87,"Flags":2,"Description":"The status of the last operation."},"resourceType":{"Type":2,"Flags":1,"Description":"The type of the infrastructure resource."},"resourceId":{"Type":2,"Flags":1,"Description":"The id of the infrastructure resource."}}}},{"6":{"Value":"Succeeded"}},{"6":{"Value":"Failed"}},{"6":{"Value":"Canceled"}},{"6":{"Value":"Provisioning"}},{"6":{"Value":"Updating"}},{"6":{"Value":"Deleting"}},{"6":{"Value":"Accepted"}},{"5":{"Elements":[80,81,82,83,84,85,86,2]}},{"4":{"Name":"Microsoft.IntegrationSpaces/spaces/infrastructureResources@2023-11-14-preview","ScopeType":8,"Body":78,"Flags":0}},{"6":{"Value":"Microsoft.IntegrationSpaces/spaces/applications/businessProcesses/versions"}},{"6":{"Value":"2023-11-14-preview"}},{"2":{"Name":"Microsoft.IntegrationSpaces/spaces/applications/businessProcesses/versions","Properties":{"id":{"Type":2,"Flags":10,"Description":"The resource id"},"name":{"Type":2,"Flags":9,"Description":"The resource name"},"type":{"Type":89,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":90,"Flags":10,"Description":"The resource api version"},"properties":{"Type":46,"Flags":2,"Description":"The resource-specific properties for this resource."},"systemData":{"Type":15,"Flags":2,"Description":"Azure Resource Manager metadata containing createdBy and modifiedBy information."}}}},{"4":{"Name":"Microsoft.IntegrationSpaces/spaces/applications/businessProcesses/versions@2023-11-14-preview","ScopeType":8,"Body":91,"Flags":1}},{"2":{"Name":"ListBusinessProcessDevelopmentArtifactsResponse","Properties":{"value":{"Type":108,"Flags":1,"Description":"The list of the business process development artifact."}}}},{"2":{"Name":"SaveOrGetBusinessProcessDevelopmentArtifactResponse","Properties":{"name":{"Type":2,"Flags":1,"Description":"The name of the business process development artifact."},"systemData":{"Type":15,"Flags":2,"Description":"The system data of the business process development artifact."},"properties":{"Type":95,"Flags":0,"Description":"The properties of the business process development artifact."}}}},{"2":{"Name":"BusinessProcessDevelopmentArtifactProperties","Properties":{"description":{"Type":2,"Flags":0,"Description":"The description of the business process."},"identifier":{"Type":55,"Flags":0,"Description":"The business process identifier."},"businessProcessStages":{"Type":96,"Flags":0,"Description":"The business process stages."},"businessProcessMapping":{"Type":97,"Flags":0,"Description":"The business process mapping."},"trackingProfiles":{"Type":107,"Flags":0,"Description":"The tracking profile for the business process."}}}},{"2":{"Name":"BusinessProcessDevelopmentArtifactPropertiesBusinessProcessStages","Properties":{},"AdditionalProperties":56}},{"2":{"Name":"BusinessProcessDevelopmentArtifactPropertiesBusinessProcessMapping","Properties":{},"AdditionalProperties":60}},{"2":{"Name":"TrackingProfileDefinition","Properties":{"$schema":{"Type":2,"Flags":0,"Description":"The tracking definition schema uri."},"businessProcess":{"Type":99,"Flags":0,"Description":"The business process reference."},"trackingDefinitions":{"Type":106,"Flags":0,"Description":"The tracking definitions."}}}},{"2":{"Name":"BusinessProcessReference","Properties":{"name":{"Type":2,"Flags":0,"Description":"The business process name."},"version":{"Type":2,"Flags":0,"Description":"The business process version."}}}},{"2":{"Name":"FlowTrackingDefinition","Properties":{"correlationContext":{"Type":101,"Flags":0,"Description":"The tracking correlation context."},"events":{"Type":105,"Flags":0,"Description":"The tracking events."}}}},{"2":{"Name":"TrackingCorrelationContext","Properties":{"operationType":{"Type":2,"Flags":0,"Description":"The operation type for correlation context."},"operationName":{"Type":2,"Flags":0,"Description":"The operation name for correlation context."},"propertyName":{"Type":2,"Flags":0,"Description":"The name of the correlation property."},"value":{"Type":2,"Flags":0,"Description":"The template expression for correlation context property value."}}}},{"2":{"Name":"TrackingEventDefinition","Properties":{"operationType":{"Type":2,"Flags":0,"Description":"The operation type."},"operationName":{"Type":2,"Flags":0,"Description":"The operation name."},"properties":{"Type":104,"Flags":0,"Description":"The properties to be collected for event."}}}},{"9":{}},{"2":{"Name":"TrackingEventDefinitionProperties","Properties":{},"AdditionalProperties":103}},{"2":{"Name":"FlowTrackingDefinitionEvents","Properties":{},"AdditionalProperties":102}},{"2":{"Name":"TrackingProfileDefinitionTrackingDefinitions","Properties":{},"AdditionalProperties":100}},{"2":{"Name":"BusinessProcessDevelopmentArtifactPropertiesTrackingProfiles","Properties":{},"AdditionalProperties":98}},{"3":{"ItemType":94}},{"8":{"Name":"listBusinessProcessDevelopmentArtifacts","ResourceType":"Microsoft.IntegrationSpaces/spaces/applications","ApiVersion":"2023-11-14-preview","Output":93}}]
+[
+  {
+    "$type": "StringType",
+    "pattern": "[a-zA-Z0-9_.()-]{0,79}$"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.IntegrationSpaces/spaces"
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-11-14-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.IntegrationSpaces/spaces",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SpaceResourceProperties",
+    "properties": {
+      "provisioningState": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 2,
+        "description": "The status of the last operation."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The description of the resource."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SystemData",
+    "properties": {
+      "createdBy": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The identity that created the resource."
+      },
+      "createdByType": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0,
+        "description": "The type of identity that created the resource."
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource creation (UTC)."
+      },
+      "lastModifiedBy": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The identity that last modified the resource."
+      },
+      "lastModifiedByType": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 0,
+        "description": "The type of identity that last modified the resource."
+      },
+      "lastModifiedAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource last modification (UTC)"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/18"
+      },
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/21"
+      },
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/24"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.IntegrationSpaces/spaces@2023-11-14-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/4"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.IntegrationSpaces/spaces/applications"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-11-14-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.IntegrationSpaces/spaces/applications",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApplicationProperties",
+    "properties": {
+      "provisioningState": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 2,
+        "description": "The status of the last operation."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The description of the resource."
+      },
+      "trackingDataStores": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 1,
+        "description": "The tracking data stores."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/31"
+      },
+      {
+        "$ref": "#/32"
+      },
+      {
+        "$ref": "#/33"
+      },
+      {
+        "$ref": "#/34"
+      },
+      {
+        "$ref": "#/35"
+      },
+      {
+        "$ref": "#/36"
+      },
+      {
+        "$ref": "#/37"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackingDataStore",
+    "properties": {
+      "databaseName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The database name."
+      },
+      "dataStoreResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The data store resource id."
+      },
+      "dataStoreUri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The data store URI."
+      },
+      "dataStoreIngestionUri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The data store ingestion URI."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApplicationPropertiesTrackingDataStores",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/39"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.IntegrationSpaces/spaces/applications@2023-11-14-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/29"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.IntegrationSpaces/spaces/applications/businessProcesses"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-11-14-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.IntegrationSpaces/spaces/applications/businessProcesses",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BusinessProcessProperties",
+    "properties": {
+      "provisioningState": {
+        "type": {
+          "$ref": "#/54"
+        },
+        "flags": 2,
+        "description": "The status of the last operation."
+      },
+      "version": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The version of the business process."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The description of the business process."
+      },
+      "tableName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The table name of the business process."
+      },
+      "trackingDataStoreReferenceName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The tracking data store reference name."
+      },
+      "identifier": {
+        "type": {
+          "$ref": "#/55"
+        },
+        "flags": 0,
+        "description": "The business process identifier."
+      },
+      "businessProcessStages": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 0,
+        "description": "The business process stages."
+      },
+      "businessProcessMapping": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 0,
+        "description": "The business process mapping."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/47"
+      },
+      {
+        "$ref": "#/48"
+      },
+      {
+        "$ref": "#/49"
+      },
+      {
+        "$ref": "#/50"
+      },
+      {
+        "$ref": "#/51"
+      },
+      {
+        "$ref": "#/52"
+      },
+      {
+        "$ref": "#/53"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BusinessProcessIdentifier",
+    "properties": {
+      "propertyName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The property name of the business process identifier."
+      },
+      "propertyType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The property type of the business process identifier."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BusinessProcessStage",
+    "properties": {
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The description of the business stage."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0,
+        "description": "The properties within the properties of the business process stage."
+      },
+      "stagesBefore": {
+        "type": {
+          "$ref": "#/58"
+        },
+        "flags": 0,
+        "description": "The property to keep track of stages before current in the business process stage."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BusinessProcessStageProperties",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BusinessProcessPropertiesBusinessProcessStages",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/56"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BusinessProcessMappingItem",
+    "properties": {
+      "logicAppResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The logic app resource id."
+      },
+      "workflowName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The workflow name within the logic app."
+      },
+      "operationName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The operation name."
+      },
+      "operationType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The mapping item operation type of the business process."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BusinessProcessPropertiesBusinessProcessMapping",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/60"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.IntegrationSpaces/spaces/applications/businessProcesses@2023-11-14-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/45"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.IntegrationSpaces/spaces/applications/resources"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-11-14-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.IntegrationSpaces/spaces/applications/resources",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/63"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/64"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/66"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApplicationResourceProperties",
+    "properties": {
+      "provisioningState": {
+        "type": {
+          "$ref": "#/74"
+        },
+        "flags": 2,
+        "description": "The status of the last operation."
+      },
+      "resourceType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The type of the application resource."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The Arm id of the application resource."
+      },
+      "resourceKind": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The kind of the application resource."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/67"
+      },
+      {
+        "$ref": "#/68"
+      },
+      {
+        "$ref": "#/69"
+      },
+      {
+        "$ref": "#/70"
+      },
+      {
+        "$ref": "#/71"
+      },
+      {
+        "$ref": "#/72"
+      },
+      {
+        "$ref": "#/73"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.IntegrationSpaces/spaces/applications/resources@2023-11-14-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/65"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.IntegrationSpaces/spaces/infrastructureResources"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-11-14-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.IntegrationSpaces/spaces/infrastructureResources",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/76"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/77"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/79"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InfrastructureResourceProperties",
+    "properties": {
+      "provisioningState": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 2,
+        "description": "The status of the last operation."
+      },
+      "resourceType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The type of the infrastructure resource."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The id of the infrastructure resource."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/80"
+      },
+      {
+        "$ref": "#/81"
+      },
+      {
+        "$ref": "#/82"
+      },
+      {
+        "$ref": "#/83"
+      },
+      {
+        "$ref": "#/84"
+      },
+      {
+        "$ref": "#/85"
+      },
+      {
+        "$ref": "#/86"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.IntegrationSpaces/spaces/infrastructureResources@2023-11-14-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/78"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.IntegrationSpaces/spaces/applications/businessProcesses/versions"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-11-14-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.IntegrationSpaces/spaces/applications/businessProcesses/versions",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/89"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/90"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 2,
+        "description": "The resource-specific properties for this resource."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.IntegrationSpaces/spaces/applications/businessProcesses/versions@2023-11-14-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/91"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ListBusinessProcessDevelopmentArtifactsResponse",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/108"
+        },
+        "flags": 1,
+        "description": "The list of the business process development artifact."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SaveOrGetBusinessProcessDevelopmentArtifactResponse",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The name of the business process development artifact."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "The system data of the business process development artifact."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/95"
+        },
+        "flags": 0,
+        "description": "The properties of the business process development artifact."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BusinessProcessDevelopmentArtifactProperties",
+    "properties": {
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The description of the business process."
+      },
+      "identifier": {
+        "type": {
+          "$ref": "#/55"
+        },
+        "flags": 0,
+        "description": "The business process identifier."
+      },
+      "businessProcessStages": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 0,
+        "description": "The business process stages."
+      },
+      "businessProcessMapping": {
+        "type": {
+          "$ref": "#/97"
+        },
+        "flags": 0,
+        "description": "The business process mapping."
+      },
+      "trackingProfiles": {
+        "type": {
+          "$ref": "#/107"
+        },
+        "flags": 0,
+        "description": "The tracking profile for the business process."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BusinessProcessDevelopmentArtifactPropertiesBusinessProcessStages",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/56"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BusinessProcessDevelopmentArtifactPropertiesBusinessProcessMapping",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/60"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackingProfileDefinition",
+    "properties": {
+      "$schema": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The tracking definition schema uri."
+      },
+      "businessProcess": {
+        "type": {
+          "$ref": "#/99"
+        },
+        "flags": 0,
+        "description": "The business process reference."
+      },
+      "trackingDefinitions": {
+        "type": {
+          "$ref": "#/106"
+        },
+        "flags": 0,
+        "description": "The tracking definitions."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BusinessProcessReference",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The business process name."
+      },
+      "version": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The business process version."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FlowTrackingDefinition",
+    "properties": {
+      "correlationContext": {
+        "type": {
+          "$ref": "#/101"
+        },
+        "flags": 0,
+        "description": "The tracking correlation context."
+      },
+      "events": {
+        "type": {
+          "$ref": "#/105"
+        },
+        "flags": 0,
+        "description": "The tracking events."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackingCorrelationContext",
+    "properties": {
+      "operationType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The operation type for correlation context."
+      },
+      "operationName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The operation name for correlation context."
+      },
+      "propertyName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the correlation property."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The template expression for correlation context property value."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackingEventDefinition",
+    "properties": {
+      "operationType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The operation type."
+      },
+      "operationName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The operation name."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/104"
+        },
+        "flags": 0,
+        "description": "The properties to be collected for event."
+      }
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackingEventDefinitionProperties",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/103"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FlowTrackingDefinitionEvents",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/102"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackingProfileDefinitionTrackingDefinitions",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/100"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BusinessProcessDevelopmentArtifactPropertiesTrackingProfiles",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/98"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/94"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listBusinessProcessDevelopmentArtifacts",
+    "resourceType": "Microsoft.IntegrationSpaces/spaces/applications",
+    "apiVersion": "2023-11-14-preview",
+    "output": {
+      "$ref": "#/93"
+    }
+  }
+]

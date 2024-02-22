@@ -1,1 +1,159 @@
-[{"6":{"Value":"balanceSummary"}},{"6":{"Value":"Microsoft.Consumption/credits"}},{"13":{}},{"6":{"Value":"2018-11-01-preview"}},{"2":{"Name":"Microsoft.Consumption/credits","Properties":{"id":{"Type":2,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":1,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":3,"Flags":10,"Description":"The resource api version"},"properties":{"Type":5,"Flags":2,"Description":"The properties of the credit summary."},"tags":{"Type":9,"Flags":2,"Description":"Resource tags."}}}},{"2":{"Name":"CreditSummaryProperties","Properties":{"balanceSummary":{"Type":6,"Flags":0,"Description":"Summary of balances associated with this credit summary."},"pendingCreditAdjustments":{"Type":7,"Flags":2,"Description":"Pending Credit Adjustments."},"expiredCredit":{"Type":7,"Flags":2,"Description":"Expired Credit."},"pendingEligibleCharges":{"Type":7,"Flags":2,"Description":"Pending Eligible Charges."}}}},{"2":{"Name":"CreditBalanceSummary","Properties":{"estimatedBalance":{"Type":7,"Flags":2,"Description":"Estimated balance."},"currentBalance":{"Type":7,"Flags":2,"Description":"Current balance."}}}},{"2":{"Name":"Amount","Properties":{"currency":{"Type":2,"Flags":2,"Description":"The currency for the amount value."},"value":{"Type":8,"Flags":2,"Description":"Amount value."}}}},{"12":{}},{"2":{"Name":"ResourceTags","Properties":{},"AdditionalProperties":2}},{"4":{"Name":"Microsoft.Consumption/credits@2018-11-01-preview","ScopeType":16,"Body":4,"Flags":1}}]
+[
+  {
+    "$type": "StringLiteralType",
+    "value": "balanceSummary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Consumption/credits"
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-11-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Consumption/credits",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "The properties of the credit summary."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 2,
+        "description": "Resource tags."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CreditSummaryProperties",
+    "properties": {
+      "balanceSummary": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Summary of balances associated with this credit summary."
+      },
+      "pendingCreditAdjustments": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 2,
+        "description": "Pending Credit Adjustments."
+      },
+      "expiredCredit": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 2,
+        "description": "Expired Credit."
+      },
+      "pendingEligibleCharges": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 2,
+        "description": "Pending Eligible Charges."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CreditBalanceSummary",
+    "properties": {
+      "estimatedBalance": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 2,
+        "description": "Estimated balance."
+      },
+      "currentBalance": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 2,
+        "description": "Current balance."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Amount",
+    "properties": {
+      "currency": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The currency for the amount value."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 2,
+        "description": "Amount value."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Consumption/credits@2018-11-01-preview",
+    "scopeType": 16,
+    "body": {
+      "$ref": "#/4"
+    },
+    "flags": 1
+  }
+]

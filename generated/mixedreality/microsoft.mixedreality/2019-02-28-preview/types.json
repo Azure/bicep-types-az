@@ -1,1 +1,149 @@
-[{"13":{"MinLength":1,"MaxLength":90,"Pattern":"^[-\\w\\._\\(\\)]+$"}},{"6":{"Value":"Microsoft.MixedReality/spatialAnchorsAccounts"}},{"13":{}},{"6":{"Value":"2019-02-28-preview"}},{"2":{"Name":"Microsoft.MixedReality/spatialAnchorsAccounts","Properties":{"id":{"Type":2,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":1,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":3,"Flags":10,"Description":"The resource api version"},"properties":{"Type":5,"Flags":0,"Description":"Property bag."},"identity":{"Type":6,"Flags":0,"Description":"The identity associated with this account"},"tags":{"Type":8,"Flags":0,"Description":"Resource tags."},"location":{"Type":2,"Flags":1,"Description":"The geo-location where the resource lives"}}}},{"2":{"Name":"SpatialAnchorsAccountProperties","Properties":{"accountId":{"Type":2,"Flags":2,"Description":"unique id of certain Spatial Anchors Account data contract."},"accountDomain":{"Type":2,"Flags":2,"Description":"Correspond domain name of certain Spatial Anchors Account"}}}},{"2":{"Name":"Identity","Properties":{"principalId":{"Type":2,"Flags":2,"Description":"The principal ID of resource identity."},"tenantId":{"Type":2,"Flags":2,"Description":"The tenant ID of resource."},"type":{"Type":7,"Flags":0,"Description":"The identity type."}}}},{"6":{"Value":"SystemAssigned"}},{"2":{"Name":"TrackedResourceTags","Properties":{},"AdditionalProperties":2}},{"4":{"Name":"Microsoft.MixedReality/spatialAnchorsAccounts@2019-02-28-preview","ScopeType":8,"Body":4,"Flags":0}}]
+[
+  {
+    "$type": "StringType",
+    "minLength": 1,
+    "maxLength": 90,
+    "pattern": "^[-\\w\\._\\(\\)]+$"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.MixedReality/spatialAnchorsAccounts"
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-02-28-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.MixedReality/spatialAnchorsAccounts",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Property bag."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "The identity associated with this account"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SpatialAnchorsAccountProperties",
+    "properties": {
+      "accountId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "unique id of certain Spatial Anchors Account data contract."
+      },
+      "accountDomain": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Correspond domain name of certain Spatial Anchors Account"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Identity",
+    "properties": {
+      "principalId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The principal ID of resource identity."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The tenant ID of resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "The identity type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SystemAssigned"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.MixedReality/spatialAnchorsAccounts@2019-02-28-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/4"
+    },
+    "flags": 0
+  }
+]

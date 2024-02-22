@@ -1,1 +1,1719 @@
-[{"13":{}},{"6":{"Value":"Microsoft.Intune/locations/iosPolicies"}},{"6":{"Value":"2015-01-14-preview"}},{"2":{"Name":"Microsoft.Intune/locations/iosPolicies","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":1,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":2,"Flags":10,"Description":"The resource api version"},"properties":{"Type":4,"Flags":0,"Description":"Intune MAM iOS Policy Properties."},"tags":{"Type":48,"Flags":0,"Description":"Resource Tags"},"location":{"Type":0,"Flags":0,"Description":"Resource Location"}}}},{"2":{"Name":"IOsmamPolicyProperties","Properties":{"fileEncryptionLevel":{"Type":9,"Flags":0},"touchId":{"Type":12,"Flags":0},"friendlyName":{"Type":0,"Flags":1},"description":{"Type":0,"Flags":0},"appSharingFromLevel":{"Type":16,"Flags":0},"appSharingToLevel":{"Type":20,"Flags":0},"authentication":{"Type":23,"Flags":0},"clipboardSharingLevel":{"Type":28,"Flags":0},"dataBackup":{"Type":31,"Flags":0},"fileSharingSaveAs":{"Type":34,"Flags":0},"pin":{"Type":37,"Flags":0},"pinNumRetry":{"Type":38,"Flags":0},"deviceCompliance":{"Type":41,"Flags":0},"managedBrowser":{"Type":44,"Flags":0},"accessRecheckOfflineTimeout":{"Type":0,"Flags":0},"accessRecheckOnlineTimeout":{"Type":0,"Flags":0},"offlineWipeTimeout":{"Type":0,"Flags":0},"numOfApps":{"Type":38,"Flags":2},"groupStatus":{"Type":47,"Flags":2},"lastModifiedTime":{"Type":0,"Flags":2}}}},{"6":{"Value":"deviceLocked"}},{"6":{"Value":"deviceLockedExceptFilesOpen"}},{"6":{"Value":"afterDeviceRestart"}},{"6":{"Value":"useDeviceSettings"}},{"5":{"Elements":[5,6,7,8,0]}},{"6":{"Value":"enable"}},{"6":{"Value":"disable"}},{"5":{"Elements":[10,11,0]}},{"6":{"Value":"none"}},{"6":{"Value":"policyManagedApps"}},{"6":{"Value":"allApps"}},{"5":{"Elements":[13,14,15,0]}},{"6":{"Value":"none"}},{"6":{"Value":"policyManagedApps"}},{"6":{"Value":"allApps"}},{"5":{"Elements":[17,18,19,0]}},{"6":{"Value":"required"}},{"6":{"Value":"notRequired"}},{"5":{"Elements":[21,22,0]}},{"6":{"Value":"blocked"}},{"6":{"Value":"policyManagedApps"}},{"6":{"Value":"policyManagedAppsWithPasteIn"}},{"6":{"Value":"allApps"}},{"5":{"Elements":[24,25,26,27,0]}},{"6":{"Value":"allow"}},{"6":{"Value":"block"}},{"5":{"Elements":[29,30,0]}},{"6":{"Value":"allow"}},{"6":{"Value":"block"}},{"5":{"Elements":[32,33,0]}},{"6":{"Value":"required"}},{"6":{"Value":"notRequired"}},{"5":{"Elements":[35,36,0]}},{"12":{}},{"6":{"Value":"enable"}},{"6":{"Value":"disable"}},{"5":{"Elements":[39,40,0]}},{"6":{"Value":"required"}},{"6":{"Value":"notRequired"}},{"5":{"Elements":[42,43,0]}},{"6":{"Value":"notTargeted"}},{"6":{"Value":"targeted"}},{"5":{"Elements":[45,46,0]}},{"2":{"Name":"ResourceTags","Properties":{},"AdditionalProperties":0}},{"4":{"Name":"Microsoft.Intune/locations/iosPolicies@2015-01-14-preview","ScopeType":1,"Body":3,"Flags":0}},{"6":{"Value":"Microsoft.Intune/locations/iosPolicies/apps"}},{"6":{"Value":"2015-01-14-preview"}},{"2":{"Name":"Microsoft.Intune/locations/iosPolicies/apps","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":50,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":51,"Flags":10,"Description":"The resource api version"},"properties":{"Type":53,"Flags":0,"Description":"Android Policy request body for Intune MAM."}}}},{"2":{"Name":"MAMPolicyAppOrGroupIdProperties","Properties":{"url":{"Type":0,"Flags":1}}}},{"4":{"Name":"Microsoft.Intune/locations/iosPolicies/apps@2015-01-14-preview","ScopeType":1,"Body":52,"Flags":0}},{"6":{"Value":"Microsoft.Intune/locations/iosPolicies/groups"}},{"6":{"Value":"2015-01-14-preview"}},{"2":{"Name":"Microsoft.Intune/locations/iosPolicies/groups","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":55,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":56,"Flags":10,"Description":"The resource api version"},"properties":{"Type":53,"Flags":0,"Description":"Android Policy request body for Intune MAM."}}}},{"4":{"Name":"Microsoft.Intune/locations/iosPolicies/groups@2015-01-14-preview","ScopeType":1,"Body":57,"Flags":0}},{"6":{"Value":"Microsoft.Intune/locations/androidPolicies"}},{"6":{"Value":"2015-01-14-preview"}},{"2":{"Name":"Microsoft.Intune/locations/androidPolicies","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":59,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":60,"Flags":10,"Description":"The resource api version"},"properties":{"Type":62,"Flags":0,"Description":"Intune MAM iOS Policy Properties."},"tags":{"Type":103,"Flags":0,"Description":"Resource Tags"},"location":{"Type":0,"Flags":0,"Description":"Resource Location"}}}},{"2":{"Name":"AndroidMAMPolicyProperties","Properties":{"screenCapture":{"Type":65,"Flags":0},"fileEncryption":{"Type":68,"Flags":0},"friendlyName":{"Type":0,"Flags":1},"description":{"Type":0,"Flags":0},"appSharingFromLevel":{"Type":72,"Flags":0},"appSharingToLevel":{"Type":76,"Flags":0},"authentication":{"Type":79,"Flags":0},"clipboardSharingLevel":{"Type":84,"Flags":0},"dataBackup":{"Type":87,"Flags":0},"fileSharingSaveAs":{"Type":90,"Flags":0},"pin":{"Type":93,"Flags":0},"pinNumRetry":{"Type":38,"Flags":0},"deviceCompliance":{"Type":96,"Flags":0},"managedBrowser":{"Type":99,"Flags":0},"accessRecheckOfflineTimeout":{"Type":0,"Flags":0},"accessRecheckOnlineTimeout":{"Type":0,"Flags":0},"offlineWipeTimeout":{"Type":0,"Flags":0},"numOfApps":{"Type":38,"Flags":2},"groupStatus":{"Type":102,"Flags":2},"lastModifiedTime":{"Type":0,"Flags":2}}}},{"6":{"Value":"allow"}},{"6":{"Value":"block"}},{"5":{"Elements":[63,64,0]}},{"6":{"Value":"required"}},{"6":{"Value":"notRequired"}},{"5":{"Elements":[66,67,0]}},{"6":{"Value":"none"}},{"6":{"Value":"policyManagedApps"}},{"6":{"Value":"allApps"}},{"5":{"Elements":[69,70,71,0]}},{"6":{"Value":"none"}},{"6":{"Value":"policyManagedApps"}},{"6":{"Value":"allApps"}},{"5":{"Elements":[73,74,75,0]}},{"6":{"Value":"required"}},{"6":{"Value":"notRequired"}},{"5":{"Elements":[77,78,0]}},{"6":{"Value":"blocked"}},{"6":{"Value":"policyManagedApps"}},{"6":{"Value":"policyManagedAppsWithPasteIn"}},{"6":{"Value":"allApps"}},{"5":{"Elements":[80,81,82,83,0]}},{"6":{"Value":"allow"}},{"6":{"Value":"block"}},{"5":{"Elements":[85,86,0]}},{"6":{"Value":"allow"}},{"6":{"Value":"block"}},{"5":{"Elements":[88,89,0]}},{"6":{"Value":"required"}},{"6":{"Value":"notRequired"}},{"5":{"Elements":[91,92,0]}},{"6":{"Value":"enable"}},{"6":{"Value":"disable"}},{"5":{"Elements":[94,95,0]}},{"6":{"Value":"required"}},{"6":{"Value":"notRequired"}},{"5":{"Elements":[97,98,0]}},{"6":{"Value":"notTargeted"}},{"6":{"Value":"targeted"}},{"5":{"Elements":[100,101,0]}},{"2":{"Name":"ResourceTags","Properties":{},"AdditionalProperties":0}},{"4":{"Name":"Microsoft.Intune/locations/androidPolicies@2015-01-14-preview","ScopeType":1,"Body":61,"Flags":0}},{"6":{"Value":"Microsoft.Intune/locations/androidPolicies/apps"}},{"6":{"Value":"2015-01-14-preview"}},{"2":{"Name":"Microsoft.Intune/locations/androidPolicies/apps","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":105,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":106,"Flags":10,"Description":"The resource api version"},"properties":{"Type":53,"Flags":0,"Description":"Android Policy request body for Intune MAM."}}}},{"4":{"Name":"Microsoft.Intune/locations/androidPolicies/apps@2015-01-14-preview","ScopeType":1,"Body":107,"Flags":0}},{"6":{"Value":"Microsoft.Intune/locations/androidPolicies/groups"}},{"6":{"Value":"2015-01-14-preview"}},{"2":{"Name":"Microsoft.Intune/locations/androidPolicies/groups","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":109,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":110,"Flags":10,"Description":"The resource api version"},"properties":{"Type":53,"Flags":0,"Description":"Android Policy request body for Intune MAM."}}}},{"4":{"Name":"Microsoft.Intune/locations/androidPolicies/groups@2015-01-14-preview","ScopeType":1,"Body":111,"Flags":0}},{"6":{"Value":"hostName"}},{"6":{"Value":"Microsoft.Intune/locations"}},{"6":{"Value":"2015-01-14-preview"}},{"2":{"Name":"Microsoft.Intune/locations","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":113,"Flags":9,"Description":"The resource name"},"type":{"Type":114,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":115,"Flags":10,"Description":"The resource api version"},"properties":{"Type":117,"Flags":2},"tags":{"Type":118,"Flags":2,"Description":"Resource Tags"},"location":{"Type":0,"Flags":2,"Description":"Resource Location"}}}},{"2":{"Name":"LocationProperties","Properties":{"hostName":{"Type":0,"Flags":1}}}},{"2":{"Name":"ResourceTags","Properties":{},"AdditionalProperties":0}},{"4":{"Name":"Microsoft.Intune/locations@2015-01-14-preview","ScopeType":1,"Body":116,"Flags":1}},{"6":{"Value":"Microsoft.Intune/locations/users/devices"}},{"6":{"Value":"2015-01-14-preview"}},{"2":{"Name":"Microsoft.Intune/locations/users/devices","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":120,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":121,"Flags":10,"Description":"The resource api version"},"properties":{"Type":123,"Flags":2},"tags":{"Type":124,"Flags":2,"Description":"Resource Tags"},"location":{"Type":0,"Flags":2,"Description":"Resource Location"}}}},{"2":{"Name":"DeviceProperties","Properties":{"userId":{"Type":0,"Flags":1},"friendlyName":{"Type":0,"Flags":1},"platform":{"Type":0,"Flags":1},"platformVersion":{"Type":0,"Flags":1},"deviceType":{"Type":0,"Flags":1}}}},{"2":{"Name":"ResourceTags","Properties":{},"AdditionalProperties":0}},{"4":{"Name":"Microsoft.Intune/locations/users/devices@2015-01-14-preview","ScopeType":1,"Body":122,"Flags":1}},{"6":{"Value":"default"}},{"6":{"Value":"Microsoft.Intune/locations/statuses"}},{"6":{"Value":"2015-01-14-preview"}},{"2":{"Name":"Microsoft.Intune/locations/statuses","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":126,"Flags":9,"Description":"The resource name"},"type":{"Type":127,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":128,"Flags":10,"Description":"The resource api version"},"properties":{"Type":130,"Flags":2},"nextlink":{"Type":0,"Flags":2,"Description":"Gets the URL to get the next set of results."},"tags":{"Type":131,"Flags":2,"Description":"Resource Tags"},"location":{"Type":0,"Flags":2,"Description":"Resource Location"}}}},{"2":{"Name":"StatusesProperties","Properties":{"deployedPolicies":{"Type":38,"Flags":2},"enrolledUsers":{"Type":38,"Flags":2},"flaggedUsers":{"Type":38,"Flags":2},"lastModifiedTime":{"Type":0,"Flags":2},"policyAppliedUsers":{"Type":38,"Flags":2},"status":{"Type":0,"Flags":2},"wipeFailedApps":{"Type":38,"Flags":2},"wipePendingApps":{"Type":38,"Flags":2},"wipeSucceededApps":{"Type":38,"Flags":2}}}},{"2":{"Name":"ResourceTags","Properties":{},"AdditionalProperties":0}},{"4":{"Name":"Microsoft.Intune/locations/statuses@2015-01-14-preview","ScopeType":1,"Body":129,"Flags":1}},{"6":{"Value":"Microsoft.Intune/locations/flaggedUsers"}},{"6":{"Value":"2015-01-14-preview"}},{"2":{"Name":"Microsoft.Intune/locations/flaggedUsers","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":133,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":134,"Flags":10,"Description":"The resource api version"},"properties":{"Type":136,"Flags":2},"tags":{"Type":137,"Flags":2,"Description":"Resource Tags"},"location":{"Type":0,"Flags":2,"Description":"Resource Location"}}}},{"2":{"Name":"FlaggedUserProperties","Properties":{"errorCount":{"Type":38,"Flags":2},"friendlyName":{"Type":0,"Flags":2}}}},{"2":{"Name":"ResourceTags","Properties":{},"AdditionalProperties":0}},{"4":{"Name":"Microsoft.Intune/locations/flaggedUsers@2015-01-14-preview","ScopeType":1,"Body":135,"Flags":1}}]
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Intune/locations/iosPolicies"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2015-01-14-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Intune/locations/iosPolicies",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "Intune MAM iOS Policy Properties."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 0,
+        "description": "Resource Tags"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource Location"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IOsmamPolicyProperties",
+    "properties": {
+      "fileEncryptionLevel": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0
+      },
+      "touchId": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0
+      },
+      "friendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "appSharingFromLevel": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 0
+      },
+      "appSharingToLevel": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0
+      },
+      "authentication": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0
+      },
+      "clipboardSharingLevel": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 0
+      },
+      "dataBackup": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0
+      },
+      "fileSharingSaveAs": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 0
+      },
+      "pin": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 0
+      },
+      "pinNumRetry": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 0
+      },
+      "deviceCompliance": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 0
+      },
+      "managedBrowser": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0
+      },
+      "accessRecheckOfflineTimeout": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "accessRecheckOnlineTimeout": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "offlineWipeTimeout": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "numOfApps": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 2
+      },
+      "groupStatus": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 2
+      },
+      "lastModifiedTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "deviceLocked"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "deviceLockedExceptFilesOpen"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "afterDeviceRestart"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "useDeviceSettings"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/5"
+      },
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "enable"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "disable"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "none"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "policyManagedApps"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "allApps"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/14"
+      },
+      {
+        "$ref": "#/15"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "none"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "policyManagedApps"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "allApps"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/18"
+      },
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "required"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "notRequired"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/21"
+      },
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "blocked"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "policyManagedApps"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "policyManagedAppsWithPasteIn"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "allApps"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/24"
+      },
+      {
+        "$ref": "#/25"
+      },
+      {
+        "$ref": "#/26"
+      },
+      {
+        "$ref": "#/27"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "allow"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "block"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/29"
+      },
+      {
+        "$ref": "#/30"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "allow"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "block"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/32"
+      },
+      {
+        "$ref": "#/33"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "required"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "notRequired"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/35"
+      },
+      {
+        "$ref": "#/36"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "enable"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "disable"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/39"
+      },
+      {
+        "$ref": "#/40"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "required"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "notRequired"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/42"
+      },
+      {
+        "$ref": "#/43"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "notTargeted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "targeted"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/45"
+      },
+      {
+        "$ref": "#/46"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Intune/locations/iosPolicies@2015-01-14-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Intune/locations/iosPolicies/apps"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2015-01-14-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Intune/locations/iosPolicies/apps",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 0,
+        "description": "Android Policy request body for Intune MAM."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MAMPolicyAppOrGroupIdProperties",
+    "properties": {
+      "url": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Intune/locations/iosPolicies/apps@2015-01-14-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/52"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Intune/locations/iosPolicies/groups"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2015-01-14-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Intune/locations/iosPolicies/groups",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/55"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/56"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 0,
+        "description": "Android Policy request body for Intune MAM."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Intune/locations/iosPolicies/groups@2015-01-14-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/57"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Intune/locations/androidPolicies"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2015-01-14-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Intune/locations/androidPolicies",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/60"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 0,
+        "description": "Intune MAM iOS Policy Properties."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/103"
+        },
+        "flags": 0,
+        "description": "Resource Tags"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource Location"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AndroidMAMPolicyProperties",
+    "properties": {
+      "screenCapture": {
+        "type": {
+          "$ref": "#/65"
+        },
+        "flags": 0
+      },
+      "fileEncryption": {
+        "type": {
+          "$ref": "#/68"
+        },
+        "flags": 0
+      },
+      "friendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "appSharingFromLevel": {
+        "type": {
+          "$ref": "#/72"
+        },
+        "flags": 0
+      },
+      "appSharingToLevel": {
+        "type": {
+          "$ref": "#/76"
+        },
+        "flags": 0
+      },
+      "authentication": {
+        "type": {
+          "$ref": "#/79"
+        },
+        "flags": 0
+      },
+      "clipboardSharingLevel": {
+        "type": {
+          "$ref": "#/84"
+        },
+        "flags": 0
+      },
+      "dataBackup": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 0
+      },
+      "fileSharingSaveAs": {
+        "type": {
+          "$ref": "#/90"
+        },
+        "flags": 0
+      },
+      "pin": {
+        "type": {
+          "$ref": "#/93"
+        },
+        "flags": 0
+      },
+      "pinNumRetry": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 0
+      },
+      "deviceCompliance": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 0
+      },
+      "managedBrowser": {
+        "type": {
+          "$ref": "#/99"
+        },
+        "flags": 0
+      },
+      "accessRecheckOfflineTimeout": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "accessRecheckOnlineTimeout": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "offlineWipeTimeout": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "numOfApps": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 2
+      },
+      "groupStatus": {
+        "type": {
+          "$ref": "#/102"
+        },
+        "flags": 2
+      },
+      "lastModifiedTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "allow"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "block"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/63"
+      },
+      {
+        "$ref": "#/64"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "required"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "notRequired"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/66"
+      },
+      {
+        "$ref": "#/67"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "none"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "policyManagedApps"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "allApps"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/69"
+      },
+      {
+        "$ref": "#/70"
+      },
+      {
+        "$ref": "#/71"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "none"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "policyManagedApps"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "allApps"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/73"
+      },
+      {
+        "$ref": "#/74"
+      },
+      {
+        "$ref": "#/75"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "required"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "notRequired"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/77"
+      },
+      {
+        "$ref": "#/78"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "blocked"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "policyManagedApps"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "policyManagedAppsWithPasteIn"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "allApps"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/80"
+      },
+      {
+        "$ref": "#/81"
+      },
+      {
+        "$ref": "#/82"
+      },
+      {
+        "$ref": "#/83"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "allow"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "block"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/85"
+      },
+      {
+        "$ref": "#/86"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "allow"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "block"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/88"
+      },
+      {
+        "$ref": "#/89"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "required"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "notRequired"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/91"
+      },
+      {
+        "$ref": "#/92"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "enable"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "disable"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/94"
+      },
+      {
+        "$ref": "#/95"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "required"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "notRequired"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/97"
+      },
+      {
+        "$ref": "#/98"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "notTargeted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "targeted"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/100"
+      },
+      {
+        "$ref": "#/101"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Intune/locations/androidPolicies@2015-01-14-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/61"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Intune/locations/androidPolicies/apps"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2015-01-14-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Intune/locations/androidPolicies/apps",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/105"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/106"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 0,
+        "description": "Android Policy request body for Intune MAM."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Intune/locations/androidPolicies/apps@2015-01-14-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/107"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Intune/locations/androidPolicies/groups"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2015-01-14-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Intune/locations/androidPolicies/groups",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/109"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/110"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 0,
+        "description": "Android Policy request body for Intune MAM."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Intune/locations/androidPolicies/groups@2015-01-14-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/111"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "hostName"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Intune/locations"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2015-01-14-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Intune/locations",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/113"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/114"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/115"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/117"
+        },
+        "flags": 2
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/118"
+        },
+        "flags": 2,
+        "description": "Resource Tags"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Location"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LocationProperties",
+    "properties": {
+      "hostName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Intune/locations@2015-01-14-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/116"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Intune/locations/users/devices"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2015-01-14-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Intune/locations/users/devices",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/120"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/121"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/123"
+        },
+        "flags": 2
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/124"
+        },
+        "flags": 2,
+        "description": "Resource Tags"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Location"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeviceProperties",
+    "properties": {
+      "userId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "friendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "platform": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "platformVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "deviceType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Intune/locations/users/devices@2015-01-14-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/122"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "default"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Intune/locations/statuses"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2015-01-14-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Intune/locations/statuses",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/126"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/127"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/128"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/130"
+        },
+        "flags": 2
+      },
+      "nextlink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Gets the URL to get the next set of results."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/131"
+        },
+        "flags": 2,
+        "description": "Resource Tags"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Location"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StatusesProperties",
+    "properties": {
+      "deployedPolicies": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 2
+      },
+      "enrolledUsers": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 2
+      },
+      "flaggedUsers": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 2
+      },
+      "lastModifiedTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2
+      },
+      "policyAppliedUsers": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 2
+      },
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2
+      },
+      "wipeFailedApps": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 2
+      },
+      "wipePendingApps": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 2
+      },
+      "wipeSucceededApps": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 2
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Intune/locations/statuses@2015-01-14-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/129"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Intune/locations/flaggedUsers"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2015-01-14-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Intune/locations/flaggedUsers",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/133"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/134"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/136"
+        },
+        "flags": 2
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/137"
+        },
+        "flags": 2,
+        "description": "Resource Tags"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Location"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FlaggedUserProperties",
+    "properties": {
+      "errorCount": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 2
+      },
+      "friendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Intune/locations/flaggedUsers@2015-01-14-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/135"
+    },
+    "flags": 1
+  }
+]

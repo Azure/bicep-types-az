@@ -1,1 +1,544 @@
-[{"13":{}},{"6":{"Value":"Microsoft.Marketplace/privateStores/requestApprovals"}},{"6":{"Value":"2020-12-01"}},{"2":{"Name":"Microsoft.Marketplace/privateStores/requestApprovals","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":1,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":2,"Flags":10,"Description":"The resource api version"},"properties":{"Type":4,"Flags":0,"Description":"The privateStore approval request data structure."},"systemData":{"Type":15,"Flags":2,"Description":"Metadata pertaining to creation and last modification of the resource"}}}},{"2":{"Name":"RequestApprovalProperties","Properties":{"offerId":{"Type":0,"Flags":0,"Description":"Gets or sets unique offer id."},"offerDisplayName":{"Type":0,"Flags":2,"Description":"Gets offer display name"},"publisherId":{"Type":0,"Flags":0,"Description":"The offer's publisher id"},"plansDetails":{"Type":12,"Flags":0,"Description":"Gets or sets the plans details"},"isClosed":{"Type":13,"Flags":2,"Description":"Gets a value indicating whether the request is closed"},"messageCode":{"Type":14,"Flags":0,"Description":"Gets or sets the request approval message code"}}}},{"2":{"Name":"PlanDetails","Properties":{"planId":{"Type":0,"Flags":0,"Description":"Gets or sets Plan Id"},"status":{"Type":10,"Flags":2,"Description":"Gets the plan status"},"requestDate":{"Type":11,"Flags":2,"Description":"Gets request date"},"justification":{"Type":0,"Flags":0,"Description":"Gets or sets user's justification for the plan's request"}}}},{"6":{"Value":"Pending"}},{"6":{"Value":"Rejected"}},{"6":{"Value":"Approved"}},{"6":{"Value":"None"}},{"5":{"Elements":[6,7,8,9,0]}},{"9":{}},{"3":{"ItemType":5}},{"11":{}},{"12":{}},{"2":{"Name":"SystemData","Properties":{"createdBy":{"Type":0,"Flags":0,"Description":"The identity that created the resource."},"createdByType":{"Type":20,"Flags":0,"Description":"The type of identity that created the resource"},"createdAt":{"Type":0,"Flags":0,"Description":"The timestamp of resource creation (UTC)"},"lastModifiedBy":{"Type":0,"Flags":0,"Description":"The identity that last modified the resource."},"lastModifiedByType":{"Type":25,"Flags":0,"Description":"The type of identity that last modified the resource"},"lastModifiedAt":{"Type":0,"Flags":0,"Description":"The timestamp of resource last modification (UTC)"}}}},{"6":{"Value":"User"}},{"6":{"Value":"Application"}},{"6":{"Value":"ManagedIdentity"}},{"6":{"Value":"Key"}},{"5":{"Elements":[16,17,18,19,0]}},{"6":{"Value":"User"}},{"6":{"Value":"Application"}},{"6":{"Value":"ManagedIdentity"}},{"6":{"Value":"Key"}},{"5":{"Elements":[21,22,23,24,0]}},{"4":{"Name":"Microsoft.Marketplace/privateStores/requestApprovals@2020-12-01","ScopeType":1,"Body":3,"Flags":0}},{"6":{"Value":"Microsoft.Marketplace/privateStores/adminRequestApprovals"}},{"6":{"Value":"2020-12-01"}},{"2":{"Name":"Microsoft.Marketplace/privateStores/adminRequestApprovals","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":27,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":28,"Flags":10,"Description":"The resource api version"},"properties":{"Type":30,"Flags":0,"Description":"The privateStore admin Approval request data structure."},"systemData":{"Type":15,"Flags":2,"Description":"Metadata pertaining to creation and last modification of the resource"}}}},{"2":{"Name":"AdminRequestApprovalProperties","Properties":{"offerId":{"Type":0,"Flags":0,"Description":"Gets or sets offer Id"},"displayName":{"Type":0,"Flags":2,"Description":"Gets display name"},"publisherId":{"Type":0,"Flags":0,"Description":"Gets or sets publisher Id"},"adminAction":{"Type":33,"Flags":0,"Description":"Gets or sets admin action"},"approvedPlans":{"Type":34,"Flags":0,"Description":"Gets or sets Approved plans ids, empty in case of rejected"},"comment":{"Type":0,"Flags":0,"Description":"Gets or sets admin comment"},"administrator":{"Type":0,"Flags":0,"Description":"Gets or sets admin details"},"plans":{"Type":38,"Flags":2,"Description":"Gets list of plans with requesters details"}}}},{"6":{"Value":"Approved"}},{"6":{"Value":"Rejected"}},{"5":{"Elements":[31,32,0]}},{"3":{"ItemType":0}},{"2":{"Name":"PlanRequesterDetails","Properties":{"planId":{"Type":0,"Flags":2,"Description":"Gets the plan id"},"planDisplayName":{"Type":0,"Flags":2,"Description":"Gets the plan display name"},"requesters":{"Type":37,"Flags":2,"Description":"Gets requesters details list"}}}},{"2":{"Name":"UserRequestDetails","Properties":{"user":{"Type":0,"Flags":2,"Description":"Gets user id"},"date":{"Type":0,"Flags":2,"Description":"Gets request date"},"justification":{"Type":0,"Flags":2,"Description":"Gets justification"}}}},{"3":{"ItemType":36}},{"3":{"ItemType":35}},{"4":{"Name":"Microsoft.Marketplace/privateStores/adminRequestApprovals@2020-12-01","ScopeType":1,"Body":29,"Flags":0}}]
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Marketplace/privateStores/requestApprovals"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-12-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Marketplace/privateStores/requestApprovals",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "The privateStore approval request data structure."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the resource"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RequestApprovalProperties",
+    "properties": {
+      "offerId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets unique offer id."
+      },
+      "offerDisplayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Gets offer display name"
+      },
+      "publisherId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The offer's publisher id"
+      },
+      "plansDetails": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "Gets or sets the plans details"
+      },
+      "isClosed": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 2,
+        "description": "Gets a value indicating whether the request is closed"
+      },
+      "messageCode": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 0,
+        "description": "Gets or sets the request approval message code"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PlanDetails",
+    "properties": {
+      "planId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets Plan Id"
+      },
+      "status": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 2,
+        "description": "Gets the plan status"
+      },
+      "requestDate": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 2,
+        "description": "Gets request date"
+      },
+      "justification": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets user's justification for the plan's request"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Pending"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Rejected"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Approved"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/5"
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SystemData",
+    "properties": {
+      "createdBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that created the resource."
+      },
+      "createdByType": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0,
+        "description": "The type of identity that created the resource"
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource creation (UTC)"
+      },
+      "lastModifiedBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that last modified the resource."
+      },
+      "lastModifiedByType": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 0,
+        "description": "The type of identity that last modified the resource"
+      },
+      "lastModifiedAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource last modification (UTC)"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/18"
+      },
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/21"
+      },
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/24"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Marketplace/privateStores/requestApprovals@2020-12-01",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Marketplace/privateStores/adminRequestApprovals"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-12-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Marketplace/privateStores/adminRequestApprovals",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "The privateStore admin Approval request data structure."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the resource"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AdminRequestApprovalProperties",
+    "properties": {
+      "offerId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets offer Id"
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Gets display name"
+      },
+      "publisherId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets publisher Id"
+      },
+      "adminAction": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0,
+        "description": "Gets or sets admin action"
+      },
+      "approvedPlans": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 0,
+        "description": "Gets or sets Approved plans ids, empty in case of rejected"
+      },
+      "comment": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets admin comment"
+      },
+      "administrator": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets admin details"
+      },
+      "plans": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 2,
+        "description": "Gets list of plans with requesters details"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Approved"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Rejected"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/31"
+      },
+      {
+        "$ref": "#/32"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PlanRequesterDetails",
+    "properties": {
+      "planId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Gets the plan id"
+      },
+      "planDisplayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Gets the plan display name"
+      },
+      "requesters": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 2,
+        "description": "Gets requesters details list"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UserRequestDetails",
+    "properties": {
+      "user": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Gets user id"
+      },
+      "date": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Gets request date"
+      },
+      "justification": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Gets justification"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/36"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/35"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Marketplace/privateStores/adminRequestApprovals@2020-12-01",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/29"
+    },
+    "flags": 0
+  }
+]

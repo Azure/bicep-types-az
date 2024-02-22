@@ -1,1 +1,3360 @@
-[{"13":{}},{"6":{"Value":"Microsoft.DataProtection/backupVaults"}},{"6":{"Value":"2022-01-01"}},{"2":{"Name":"Microsoft.DataProtection/backupVaults","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":1,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":2,"Flags":10,"Description":"The resource api version"},"properties":{"Type":4,"Flags":1,"Description":"BackupVaultResource properties"},"eTag":{"Type":0,"Flags":0,"Description":"Optional ETag."},"identity":{"Type":32,"Flags":0,"Description":"Input Managed Identity Details"},"location":{"Type":0,"Flags":0,"Description":"Resource location."},"tags":{"Type":33,"Flags":0,"Description":"Resource tags."},"systemData":{"Type":34,"Flags":2,"Description":"Metadata pertaining to creation and last modification of the resource."}}}},{"2":{"Name":"BackupVault","Properties":{"provisioningState":{"Type":10,"Flags":2,"Description":"Provisioning state of the BackupVault resource"},"resourceMoveState":{"Type":21,"Flags":2,"Description":"Resource move state for backup vault"},"resourceMoveDetails":{"Type":22,"Flags":2,"Description":"Resource move details for backup vault"},"storageSettings":{"Type":31,"Flags":1,"Description":"Storage Settings"}}}},{"6":{"Value":"Failed"}},{"6":{"Value":"Provisioning"}},{"6":{"Value":"Succeeded"}},{"6":{"Value":"Unknown"}},{"6":{"Value":"Updating"}},{"5":{"Elements":[5,6,7,8,9,0]}},{"6":{"Value":"Unknown"}},{"6":{"Value":"InProgress"}},{"6":{"Value":"PrepareFailed"}},{"6":{"Value":"CommitFailed"}},{"6":{"Value":"Failed"}},{"6":{"Value":"PrepareTimedout"}},{"6":{"Value":"CommitTimedout"}},{"6":{"Value":"CriticalFailure"}},{"6":{"Value":"PartialSuccess"}},{"6":{"Value":"MoveSucceeded"}},{"5":{"Elements":[11,12,13,14,15,16,17,18,19,20,0]}},{"2":{"Name":"ResourceMoveDetails","Properties":{"operationId":{"Type":0,"Flags":0,"Description":"CorrelationId of latest ResourceMove operation attempted"},"startTimeUtc":{"Type":0,"Flags":0,"Description":"Start time in UTC of latest ResourceMove operation attempted. ISO 8601 format."},"completionTimeUtc":{"Type":0,"Flags":0,"Description":"Completion time in UTC of latest ResourceMove operation attempted. ISO 8601 format."},"sourceResourcePath":{"Type":0,"Flags":0,"Description":"ARM resource path of source resource"},"targetResourcePath":{"Type":0,"Flags":0,"Description":"ARM resource path of target resource used in latest ResourceMove operation"}}}},{"2":{"Name":"StorageSetting","Properties":{"datastoreType":{"Type":27,"Flags":0,"Description":"Gets or sets the type of the datastore."},"type":{"Type":30,"Flags":0,"Description":"Gets or sets the type."}}}},{"6":{"Value":"ArchiveStore"}},{"6":{"Value":"SnapshotStore"}},{"6":{"Value":"VaultStore"}},{"5":{"Elements":[24,25,26,0]}},{"6":{"Value":"GeoRedundant"}},{"6":{"Value":"LocallyRedundant"}},{"5":{"Elements":[28,29,0]}},{"3":{"ItemType":23}},{"2":{"Name":"DppIdentityDetails","Properties":{"principalId":{"Type":0,"Flags":2,"Description":"The object ID of the service principal object for the managed identity that is used to grant role-based access to an Azure resource."},"tenantId":{"Type":0,"Flags":2,"Description":"A Globally Unique Identifier (GUID) that represents the Azure AD tenant where the resource is now a member."},"type":{"Type":0,"Flags":0,"Description":"The identityType which can be either SystemAssigned or None"}}}},{"2":{"Name":"DppTrackedResourceTags","Properties":{},"AdditionalProperties":0}},{"2":{"Name":"SystemData","Properties":{"createdBy":{"Type":0,"Flags":0,"Description":"The identity that created the resource."},"createdByType":{"Type":39,"Flags":0,"Description":"The type of identity that created the resource."},"createdAt":{"Type":0,"Flags":0,"Description":"The timestamp of resource creation (UTC)."},"lastModifiedBy":{"Type":0,"Flags":0,"Description":"The identity that last modified the resource."},"lastModifiedByType":{"Type":44,"Flags":0,"Description":"The type of identity that last modified the resource."},"lastModifiedAt":{"Type":0,"Flags":0,"Description":"The type of identity that last modified the resource."}}}},{"6":{"Value":"User"}},{"6":{"Value":"Application"}},{"6":{"Value":"ManagedIdentity"}},{"6":{"Value":"Key"}},{"5":{"Elements":[35,36,37,38,0]}},{"6":{"Value":"User"}},{"6":{"Value":"Application"}},{"6":{"Value":"ManagedIdentity"}},{"6":{"Value":"Key"}},{"5":{"Elements":[40,41,42,43,0]}},{"4":{"Name":"Microsoft.DataProtection/backupVaults@2022-01-01","ScopeType":8,"Body":3,"Flags":0}},{"6":{"Value":"Microsoft.DataProtection/backupVaults/backupPolicies"}},{"6":{"Value":"2022-01-01"}},{"2":{"Name":"Microsoft.DataProtection/backupVaults/backupPolicies","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":46,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":47,"Flags":10,"Description":"The resource api version"},"properties":{"Type":49,"Flags":0,"Description":"BaseBackupPolicyResource properties"},"systemData":{"Type":34,"Flags":2,"Description":"Metadata pertaining to creation and last modification of the resource."}}}},{"7":{"Name":"BaseBackupPolicy","Discriminator":"objectType","BaseProperties":{"datasourceTypes":{"Type":50,"Flags":1,"Description":"Type of datasource for the backup management"}},"Elements":{"BackupPolicy":51}}},{"3":{"ItemType":0}},{"2":{"Name":"BackupPolicy","Properties":{"policyRules":{"Type":136,"Flags":1,"Description":"Policy rule dictionary that contains rules for each backuptype i.e Full/Incremental/Logs etc"},"objectType":{"Type":137,"Flags":1}}}},{"7":{"Name":"BasePolicyRule","Discriminator":"objectType","BaseProperties":{"name":{"Type":0,"Flags":1}},"Elements":{"AzureBackupRule":53,"AzureRetentionRule":120}}},{"2":{"Name":"AzureBackupRule","Properties":{"backupParameters":{"Type":54,"Flags":0,"Description":"BackupParameters base"},"dataStore":{"Type":57,"Flags":1,"Description":"DataStoreInfo base"},"trigger":{"Type":62,"Flags":1,"Description":"Trigger context"},"objectType":{"Type":119,"Flags":1}}}},{"7":{"Name":"BackupParameters","Discriminator":"objectType","BaseProperties":{},"Elements":{"AzureBackupParams":55}}},{"2":{"Name":"AzureBackupParams","Properties":{"backupType":{"Type":0,"Flags":1,"Description":"BackupType ; Full/Incremental etc"},"objectType":{"Type":56,"Flags":1,"Description":"Type of the specific object - used for deserializing"}}}},{"6":{"Value":"AzureBackupParams"}},{"2":{"Name":"DataStoreInfoBase","Properties":{"dataStoreType":{"Type":61,"Flags":1,"Description":"type of datastore; Operational/Vault/Archive"},"objectType":{"Type":0,"Flags":1,"Description":"Type of Datasource object, used to initialize the right inherited type"}}}},{"6":{"Value":"OperationalStore"}},{"6":{"Value":"VaultStore"}},{"6":{"Value":"ArchiveStore"}},{"5":{"Elements":[58,59,60,0]}},{"7":{"Name":"TriggerContext","Discriminator":"objectType","BaseProperties":{},"Elements":{"AdhocBasedTriggerContext":63,"ScheduleBasedTriggerContext":67}}},{"2":{"Name":"AdhocBasedTriggerContext","Properties":{"taggingCriteria":{"Type":64,"Flags":1,"Description":"Tagging Criteria containing retention tag for adhoc backup."},"objectType":{"Type":66,"Flags":1,"Description":"Type of the specific object - used for deserializing"}}}},{"2":{"Name":"AdhocBasedTaggingCriteria","Properties":{"tagInfo":{"Type":65,"Flags":0,"Description":"Retention tag information"}}}},{"2":{"Name":"RetentionTag","Properties":{"eTag":{"Type":0,"Flags":2,"Description":"Retention Tag version."},"id":{"Type":0,"Flags":2,"Description":"Retention Tag version."},"tagName":{"Type":0,"Flags":1,"Description":"Retention Tag Name to relate it to retention rule."}}}},{"6":{"Value":"AdhocBasedTriggerContext"}},{"2":{"Name":"ScheduleBasedTriggerContext","Properties":{"schedule":{"Type":68,"Flags":1,"Description":"Schedule for this backup"},"taggingCriteria":{"Type":117,"Flags":1,"Description":"List of tags that can be applicable for given schedule."},"objectType":{"Type":118,"Flags":1,"Description":"Type of the specific object - used for deserializing"}}}},{"2":{"Name":"BackupSchedule","Properties":{"repeatingTimeIntervals":{"Type":69,"Flags":1,"Description":"ISO 8601 repeating time interval format"},"timeZone":{"Type":0,"Flags":0,"Description":"Time zone for a schedule. Example: Pacific Standard Time"}}}},{"3":{"ItemType":0}},{"2":{"Name":"TaggingCriteria","Properties":{"criteria":{"Type":116,"Flags":0,"Description":"Criteria which decides whether the tag can be applied to a triggered backup."},"isDefault":{"Type":82,"Flags":1,"Description":"Specifies if tag is default."},"taggingPriority":{"Type":81,"Flags":1,"Description":"Retention Tag priority."},"tagInfo":{"Type":65,"Flags":1,"Description":"Retention tag information"}}}},{"7":{"Name":"BackupCriteria","Discriminator":"objectType","BaseProperties":{},"Elements":{"ScheduleBasedBackupCriteria":72}}},{"2":{"Name":"ScheduleBasedBackupCriteria","Properties":{"absoluteCriteria":{"Type":79,"Flags":0,"Description":"it contains absolute values like \"AllBackup\" / \"FirstOfDay\" / \"FirstOfWeek\" / \"FirstOfMonth\"\r\nand should be part of AbsoluteMarker enum"},"daysOfMonth":{"Type":83,"Flags":0,"Description":"This is day of the month from 1 to 28 other wise last of month"},"daysOfTheWeek":{"Type":92,"Flags":0,"Description":"It should be Sunday/Monday/T..../Saturday"},"monthsOfYear":{"Type":106,"Flags":0,"Description":"It should be January/February/....../December"},"scheduleTimes":{"Type":107,"Flags":0,"Description":"List of schedule times for backup"},"weeksOfTheMonth":{"Type":114,"Flags":0,"Description":"It should be First/Second/Third/Fourth/Last"},"objectType":{"Type":115,"Flags":1,"Description":"Type of the specific object - used for deserializing"}}}},{"6":{"Value":"AllBackup"}},{"6":{"Value":"FirstOfDay"}},{"6":{"Value":"FirstOfMonth"}},{"6":{"Value":"FirstOfWeek"}},{"6":{"Value":"FirstOfYear"}},{"5":{"Elements":[73,74,75,76,77,0]}},{"3":{"ItemType":78}},{"2":{"Name":"Day","Properties":{"date":{"Type":81,"Flags":0,"Description":"Date of the month"},"isLast":{"Type":82,"Flags":0,"Description":"Whether Date is last date of month"}}}},{"12":{}},{"11":{}},{"3":{"ItemType":80}},{"6":{"Value":"Friday"}},{"6":{"Value":"Monday"}},{"6":{"Value":"Saturday"}},{"6":{"Value":"Sunday"}},{"6":{"Value":"Thursday"}},{"6":{"Value":"Tuesday"}},{"6":{"Value":"Wednesday"}},{"5":{"Elements":[84,85,86,87,88,89,90,0]}},{"3":{"ItemType":91}},{"6":{"Value":"April"}},{"6":{"Value":"August"}},{"6":{"Value":"December"}},{"6":{"Value":"February"}},{"6":{"Value":"January"}},{"6":{"Value":"July"}},{"6":{"Value":"June"}},{"6":{"Value":"March"}},{"6":{"Value":"May"}},{"6":{"Value":"November"}},{"6":{"Value":"October"}},{"6":{"Value":"September"}},{"5":{"Elements":[93,94,95,96,97,98,99,100,101,102,103,104,0]}},{"3":{"ItemType":105}},{"3":{"ItemType":0}},{"6":{"Value":"First"}},{"6":{"Value":"Fourth"}},{"6":{"Value":"Last"}},{"6":{"Value":"Second"}},{"6":{"Value":"Third"}},{"5":{"Elements":[108,109,110,111,112,0]}},{"3":{"ItemType":113}},{"6":{"Value":"ScheduleBasedBackupCriteria"}},{"3":{"ItemType":71}},{"3":{"ItemType":70}},{"6":{"Value":"ScheduleBasedTriggerContext"}},{"6":{"Value":"AzureBackupRule"}},{"2":{"Name":"AzureRetentionRule","Properties":{"isDefault":{"Type":82,"Flags":0},"lifecycles":{"Type":134,"Flags":1},"objectType":{"Type":135,"Flags":1}}}},{"2":{"Name":"SourceLifeCycle","Properties":{"deleteAfter":{"Type":122,"Flags":1,"Description":"Delete Option"},"sourceDataStore":{"Type":57,"Flags":1,"Description":"DataStoreInfo base"},"targetDataStoreCopySettings":{"Type":133,"Flags":0}}}},{"7":{"Name":"DeleteOption","Discriminator":"objectType","BaseProperties":{"duration":{"Type":0,"Flags":1,"Description":"Duration of deletion after given timespan"}},"Elements":{"AbsoluteDeleteOption":123}}},{"2":{"Name":"AbsoluteDeleteOption","Properties":{"objectType":{"Type":124,"Flags":1,"Description":"Type of the specific object - used for deserializing"}}}},{"6":{"Value":"AbsoluteDeleteOption"}},{"2":{"Name":"TargetCopySetting","Properties":{"copyAfter":{"Type":126,"Flags":1,"Description":"It can be CustomCopyOption or ImmediateCopyOption."},"dataStore":{"Type":57,"Flags":1,"Description":"Info of target datastore"}}}},{"7":{"Name":"CopyOption","Discriminator":"objectType","BaseProperties":{},"Elements":{"CopyOnExpiryOption":127,"CustomCopyOption":129,"ImmediateCopyOption":131}}},{"2":{"Name":"CopyOnExpiryOption","Properties":{"objectType":{"Type":128,"Flags":1,"Description":"Type of the specific object - used for deserializing"}}}},{"6":{"Value":"CopyOnExpiryOption"}},{"2":{"Name":"CustomCopyOption","Properties":{"duration":{"Type":0,"Flags":0,"Description":"Data copied after given timespan"},"objectType":{"Type":130,"Flags":1,"Description":"Type of the specific object - used for deserializing"}}}},{"6":{"Value":"CustomCopyOption"}},{"2":{"Name":"ImmediateCopyOption","Properties":{"objectType":{"Type":132,"Flags":1,"Description":"Type of the specific object - used for deserializing"}}}},{"6":{"Value":"ImmediateCopyOption"}},{"3":{"ItemType":125}},{"3":{"ItemType":121}},{"6":{"Value":"AzureRetentionRule"}},{"3":{"ItemType":52}},{"6":{"Value":"BackupPolicy"}},{"4":{"Name":"Microsoft.DataProtection/backupVaults/backupPolicies@2022-01-01","ScopeType":8,"Body":48,"Flags":0}},{"6":{"Value":"Microsoft.DataProtection/backupVaults/backupInstances"}},{"6":{"Value":"2022-01-01"}},{"2":{"Name":"Microsoft.DataProtection/backupVaults/backupInstances","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":139,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":140,"Flags":10,"Description":"The resource api version"},"properties":{"Type":142,"Flags":0,"Description":"BackupInstanceResource properties"},"systemData":{"Type":34,"Flags":2,"Description":"Metadata pertaining to creation and last modification of the resource."}}}},{"2":{"Name":"BackupInstance","Properties":{"friendlyName":{"Type":0,"Flags":0,"Description":"Gets or sets the Backup Instance friendly name."},"dataSourceInfo":{"Type":143,"Flags":1,"Description":"Gets or sets the data source information."},"dataSourceSetInfo":{"Type":144,"Flags":0,"Description":"Gets or sets the data source set information."},"policyInfo":{"Type":145,"Flags":1,"Description":"Gets or sets the policy information."},"protectionStatus":{"Type":155,"Flags":2,"Description":"Specifies the protection status of the resource"},"currentProtectionState":{"Type":181,"Flags":2,"Description":"Specifies the current protection state of the resource"},"protectionErrorDetails":{"Type":156,"Flags":2,"Description":"Specifies the protection error of the resource"},"provisioningState":{"Type":0,"Flags":2,"Description":"Specifies the provisioning state of the resource i.e. provisioning/updating/Succeeded/Failed"},"datasourceAuthCredentials":{"Type":182,"Flags":0,"Description":"Credentials to use to authenticate with data source provider."},"validationType":{"Type":191,"Flags":0,"Description":"Specifies the type of validation. In case of DeepValidation, all validations from /validateForBackup API will run again."},"objectType":{"Type":0,"Flags":1}}}},{"2":{"Name":"Datasource","Properties":{"datasourceType":{"Type":0,"Flags":0,"Description":"DatasourceType of the resource."},"objectType":{"Type":0,"Flags":0,"Description":"Type of Datasource object, used to initialize the right inherited type"},"resourceID":{"Type":0,"Flags":1,"Description":"Full ARM ID of the resource. For azure resources, this is ARM ID. For non azure resources, this will be the ID created by backup service via Fabric/Vault."},"resourceLocation":{"Type":0,"Flags":0,"Description":"Location of datasource."},"resourceName":{"Type":0,"Flags":0,"Description":"Unique identifier of the resource in the context of parent."},"resourceType":{"Type":0,"Flags":0,"Description":"Resource Type of Datasource."},"resourceUri":{"Type":0,"Flags":0,"Description":"Uri of the resource."}}}},{"2":{"Name":"DatasourceSet","Properties":{"datasourceType":{"Type":0,"Flags":0,"Description":"DatasourceType of the resource."},"objectType":{"Type":0,"Flags":0,"Description":"Type of Datasource object, used to initialize the right inherited type"},"resourceID":{"Type":0,"Flags":1,"Description":"Full ARM ID of the resource. For azure resources, this is ARM ID. For non azure resources, this will be the ID created by backup service via Fabric/Vault."},"resourceLocation":{"Type":0,"Flags":0,"Description":"Location of datasource."},"resourceName":{"Type":0,"Flags":0,"Description":"Unique identifier of the resource in the context of parent."},"resourceType":{"Type":0,"Flags":0,"Description":"Resource Type of Datasource."},"resourceUri":{"Type":0,"Flags":0,"Description":"Uri of the resource."}}}},{"2":{"Name":"PolicyInfo","Properties":{"policyId":{"Type":0,"Flags":1},"policyVersion":{"Type":0,"Flags":2},"policyParameters":{"Type":146,"Flags":0,"Description":"Policy parameters for the backup instance"}}}},{"2":{"Name":"PolicyParameters","Properties":{"dataStoreParametersList":{"Type":154,"Flags":0,"Description":"Gets or sets the DataStore Parameters"}}}},{"7":{"Name":"DataStoreParameters","Discriminator":"objectType","BaseProperties":{"dataStoreType":{"Type":151,"Flags":1,"Description":"type of datastore; Operational/Vault/Archive"}},"Elements":{"AzureOperationalStoreParameters":152}}},{"6":{"Value":"OperationalStore"}},{"6":{"Value":"VaultStore"}},{"6":{"Value":"ArchiveStore"}},{"5":{"Elements":[148,149,150,0]}},{"2":{"Name":"AzureOperationalStoreParameters","Properties":{"resourceGroupId":{"Type":0,"Flags":0,"Description":"Gets or sets the Snapshot Resource Group Uri."},"objectType":{"Type":153,"Flags":1,"Description":"Type of the specific object - used for deserializing"}}}},{"6":{"Value":"AzureOperationalStoreParameters"}},{"3":{"ItemType":147}},{"2":{"Name":"ProtectionStatusDetails","Properties":{"errorDetails":{"Type":156,"Flags":0,"Description":"Specifies the protection status error of the resource"},"status":{"Type":168,"Flags":0,"Description":"Specifies the protection status of the resource"}}}},{"2":{"Name":"UserFacingError","Properties":{"code":{"Type":0,"Flags":0,"Description":"Unique code for this error"},"details":{"Type":157,"Flags":0,"Description":"Additional related Errors"},"innerError":{"Type":158,"Flags":0,"Description":"Inner Error"},"isRetryable":{"Type":82,"Flags":0,"Description":"Whether the operation will be retryable or not"},"isUserError":{"Type":82,"Flags":0,"Description":"Whether the operation is due to a user error or service error"},"properties":{"Type":160,"Flags":0,"Description":"Any key value pairs that can be injected inside error object"},"message":{"Type":0,"Flags":0},"recommendedAction":{"Type":161,"Flags":0,"Description":"RecommendedAction � localized."},"target":{"Type":0,"Flags":0,"Description":"Target of the error."}}}},{"3":{"ItemType":156}},{"2":{"Name":"InnerError","Properties":{"additionalInfo":{"Type":159,"Flags":0,"Description":"Any Key value pairs that can be provided to the client for additional  verbose information."},"code":{"Type":0,"Flags":0,"Description":"Unique code for this error"},"embeddedInnerError":{"Type":158,"Flags":0,"Description":"Child Inner Error, to allow Nesting."}}}},{"2":{"Name":"InnerErrorAdditionalInfo","Properties":{},"AdditionalProperties":0}},{"2":{"Name":"UserFacingErrorProperties","Properties":{},"AdditionalProperties":0}},{"3":{"ItemType":0}},{"6":{"Value":"ConfiguringProtection"}},{"6":{"Value":"ConfiguringProtectionFailed"}},{"6":{"Value":"ProtectionConfigured"}},{"6":{"Value":"ProtectionStopped"}},{"6":{"Value":"SoftDeleted"}},{"6":{"Value":"SoftDeleting"}},{"5":{"Elements":[162,163,164,165,166,167,0]}},{"6":{"Value":"Invalid"}},{"6":{"Value":"NotProtected"}},{"6":{"Value":"ConfiguringProtection"}},{"6":{"Value":"ProtectionConfigured"}},{"6":{"Value":"BackupSchedulesSuspended"}},{"6":{"Value":"RetentionSchedulesSuspended"}},{"6":{"Value":"ProtectionStopped"}},{"6":{"Value":"ProtectionError"}},{"6":{"Value":"ConfiguringProtectionFailed"}},{"6":{"Value":"SoftDeleting"}},{"6":{"Value":"SoftDeleted"}},{"6":{"Value":"UpdatingProtection"}},{"5":{"Elements":[169,170,171,172,173,174,175,176,177,178,179,180,0]}},{"7":{"Name":"AuthCredentials","Discriminator":"objectType","BaseProperties":{},"Elements":{"SecretStoreBasedAuthCredentials":183}}},{"2":{"Name":"SecretStoreBasedAuthCredentials","Properties":{"secretStoreResource":{"Type":184,"Flags":0,"Description":"Secret store resource"},"objectType":{"Type":188,"Flags":1,"Description":"Type of the specific object - used for deserializing"}}}},{"2":{"Name":"SecretStoreResource","Properties":{"uri":{"Type":0,"Flags":0,"Description":"Uri to get to the resource"},"secretStoreType":{"Type":187,"Flags":1,"Description":"Gets or sets the type of secret store"},"value":{"Type":0,"Flags":0,"Description":"Gets or sets value stored in secret store resource"}}}},{"6":{"Value":"Invalid"}},{"6":{"Value":"AzureKeyVault"}},{"5":{"Elements":[185,186,0]}},{"6":{"Value":"SecretStoreBasedAuthCredentials"}},{"6":{"Value":"ShallowValidation"}},{"6":{"Value":"DeepValidation"}},{"5":{"Elements":[189,190,0]}},{"4":{"Name":"Microsoft.DataProtection/backupVaults/backupInstances@2022-01-01","ScopeType":8,"Body":141,"Flags":0}},{"6":{"Value":"Microsoft.DataProtection/resourceGuards"}},{"6":{"Value":"2022-01-01"}},{"2":{"Name":"Microsoft.DataProtection/resourceGuards","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":193,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":194,"Flags":10,"Description":"The resource api version"},"properties":{"Type":196,"Flags":0,"Description":"ResourceGuardResource properties"},"eTag":{"Type":0,"Flags":0,"Description":"Optional ETag."},"identity":{"Type":32,"Flags":0,"Description":"Input Managed Identity Details"},"location":{"Type":0,"Flags":0,"Description":"Resource location."},"tags":{"Type":206,"Flags":0,"Description":"Resource tags."},"systemData":{"Type":34,"Flags":2,"Description":"Metadata pertaining to creation and last modification of the resource."}}}},{"2":{"Name":"ResourceGuard","Properties":{"provisioningState":{"Type":202,"Flags":2,"Description":"Provisioning state of the BackupVault resource"},"allowAutoApprovals":{"Type":82,"Flags":2,"Description":"This flag indicates whether auto approval is allowed or not."},"resourceGuardOperations":{"Type":204,"Flags":2,"Description":"{readonly} List of operation details those are protected by the ResourceGuard resource"},"vaultCriticalOperationExclusionList":{"Type":205,"Flags":2,"Description":"List of critical operations which are not protected by this resourceGuard"},"description":{"Type":0,"Flags":2,"Description":"Description about the pre-req steps to perform all the critical operations."}}}},{"6":{"Value":"Failed"}},{"6":{"Value":"Provisioning"}},{"6":{"Value":"Succeeded"}},{"6":{"Value":"Unknown"}},{"6":{"Value":"Updating"}},{"5":{"Elements":[197,198,199,200,201,0]}},{"2":{"Name":"ResourceGuardOperation","Properties":{"vaultCriticalOperation":{"Type":0,"Flags":2,"Description":"Name of the critical operation."},"requestResourceType":{"Type":0,"Flags":2,"Description":"Type of resource request."}}}},{"3":{"ItemType":203}},{"3":{"ItemType":0}},{"2":{"Name":"DppTrackedResourceTags","Properties":{},"AdditionalProperties":0}},{"4":{"Name":"Microsoft.DataProtection/resourceGuards@2022-01-01","ScopeType":8,"Body":195,"Flags":0}},{"6":{"Value":"Microsoft.DataProtection/backupVaults/operationResults"}},{"6":{"Value":"2022-01-01"}},{"2":{"Name":"Microsoft.DataProtection/backupVaults/operationResults","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":208,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":209,"Flags":10,"Description":"The resource api version"},"properties":{"Type":4,"Flags":2,"Description":"BackupVaultResource properties"},"eTag":{"Type":0,"Flags":2,"Description":"Optional ETag."},"identity":{"Type":32,"Flags":2,"Description":"Input Managed Identity Details"},"location":{"Type":0,"Flags":2,"Description":"Resource location."},"tags":{"Type":211,"Flags":2,"Description":"Resource tags."},"systemData":{"Type":34,"Flags":2,"Description":"Metadata pertaining to creation and last modification of the resource."}}}},{"2":{"Name":"DppTrackedResourceTags","Properties":{},"AdditionalProperties":0}},{"4":{"Name":"Microsoft.DataProtection/backupVaults/operationResults@2022-01-01","ScopeType":8,"Body":210,"Flags":1}},{"6":{"Value":"Microsoft.DataProtection/backupVaults/backupInstances/operationResults"}},{"6":{"Value":"2022-01-01"}},{"2":{"Name":"Microsoft.DataProtection/backupVaults/backupInstances/operationResults","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":213,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":214,"Flags":10,"Description":"The resource api version"},"properties":{"Type":142,"Flags":2,"Description":"BackupInstanceResource properties"},"systemData":{"Type":34,"Flags":2,"Description":"Metadata pertaining to creation and last modification of the resource."}}}},{"4":{"Name":"Microsoft.DataProtection/backupVaults/backupInstances/operationResults@2022-01-01","ScopeType":8,"Body":215,"Flags":1}},{"6":{"Value":"Microsoft.DataProtection/backupVaults/backupInstances/recoveryPoints"}},{"6":{"Value":"2022-01-01"}},{"2":{"Name":"Microsoft.DataProtection/backupVaults/backupInstances/recoveryPoints","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":217,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":218,"Flags":10,"Description":"The resource api version"},"properties":{"Type":220,"Flags":2,"Description":"AzureBackupRecoveryPointResource properties"},"systemData":{"Type":34,"Flags":2,"Description":"Metadata pertaining to creation and last modification of the resource."}}}},{"7":{"Name":"AzureBackupRecoveryPoint","Discriminator":"objectType","BaseProperties":{},"Elements":{"AzureBackupDiscreteRecoveryPoint":221}}},{"2":{"Name":"AzureBackupDiscreteRecoveryPoint","Properties":{"friendlyName":{"Type":0,"Flags":0},"recoveryPointDataStoresDetails":{"Type":229,"Flags":0},"recoveryPointTime":{"Type":0,"Flags":1},"policyName":{"Type":0,"Flags":0},"policyVersion":{"Type":0,"Flags":0},"recoveryPointId":{"Type":0,"Flags":0},"recoveryPointType":{"Type":0,"Flags":0},"retentionTagName":{"Type":0,"Flags":0},"retentionTagVersion":{"Type":0,"Flags":0},"objectType":{"Type":230,"Flags":1}}}},{"2":{"Name":"RecoveryPointDataStoreDetails","Properties":{"creationTime":{"Type":0,"Flags":0},"expiryTime":{"Type":0,"Flags":0},"id":{"Type":0,"Flags":0},"metaData":{"Type":0,"Flags":0},"state":{"Type":0,"Flags":0},"type":{"Type":0,"Flags":0},"visible":{"Type":82,"Flags":0},"rehydrationExpiryTime":{"Type":0,"Flags":2},"rehydrationStatus":{"Type":228,"Flags":2}}}},{"6":{"Value":"CREATE_IN_PROGRESS"}},{"6":{"Value":"COMPLETED"}},{"6":{"Value":"DELETE_IN_PROGRESS"}},{"6":{"Value":"DELETED"}},{"6":{"Value":"FAILED"}},{"5":{"Elements":[223,224,225,226,227,0]}},{"3":{"ItemType":222}},{"6":{"Value":"AzureBackupDiscreteRecoveryPoint"}},{"4":{"Name":"Microsoft.DataProtection/backupVaults/backupInstances/recoveryPoints@2022-01-01","ScopeType":8,"Body":219,"Flags":1}},{"6":{"Value":"Microsoft.DataProtection/backupVaults/backupJobs"}},{"6":{"Value":"2022-01-01"}},{"2":{"Name":"Microsoft.DataProtection/backupVaults/backupJobs","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":232,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":233,"Flags":10,"Description":"The resource api version"},"properties":{"Type":235,"Flags":2,"Description":"AzureBackupJobResource properties"},"systemData":{"Type":34,"Flags":2,"Description":"Metadata pertaining to creation and last modification of the resource."}}}},{"2":{"Name":"AzureBackupJob","Properties":{"activityID":{"Type":0,"Flags":1,"Description":"Job Activity Id"},"backupInstanceFriendlyName":{"Type":0,"Flags":1,"Description":"Name of the Backup Instance"},"backupInstanceId":{"Type":0,"Flags":2,"Description":"ARM ID of the Backup Instance"},"dataSourceId":{"Type":0,"Flags":1,"Description":"ARM ID of the DataSource"},"dataSourceLocation":{"Type":0,"Flags":1,"Description":"Location of the DataSource"},"dataSourceName":{"Type":0,"Flags":1,"Description":"User Friendly Name of the DataSource"},"dataSourceSetName":{"Type":0,"Flags":0,"Description":"Data Source Set Name of the DataSource"},"dataSourceType":{"Type":0,"Flags":1,"Description":"Type of DataSource"},"duration":{"Type":0,"Flags":0,"Description":"Total run time of the job. ISO 8601 format."},"endTime":{"Type":0,"Flags":2,"Description":"EndTime of the job(in UTC)"},"errorDetails":{"Type":236,"Flags":2,"Description":"A List, detailing the errors related to the job"},"extendedInfo":{"Type":237,"Flags":2,"Description":"Extended Information about the job"},"isUserTriggered":{"Type":82,"Flags":1,"Description":"Indicated that whether the job is adhoc(true) or scheduled(false)"},"operation":{"Type":0,"Flags":1,"Description":"It indicates the type of Job i.e. Backup:full/log/diff ;Restore:ALR/OLR; Tiering:Backup/Archive ; Management:ConfigureProtection/UnConfigure"},"operationCategory":{"Type":0,"Flags":1,"Description":"It indicates the type of Job i.e. Backup/Restore/Tiering/Management"},"policyId":{"Type":0,"Flags":2,"Description":"ARM ID of the policy"},"policyName":{"Type":0,"Flags":2,"Description":"Name of the policy"},"progressEnabled":{"Type":82,"Flags":1,"Description":"Indicated whether progress is enabled for the job"},"progressUrl":{"Type":0,"Flags":2,"Description":"Url which contains job's progress"},"restoreType":{"Type":0,"Flags":2,"Description":"It indicates the sub type of operation i.e. in case of Restore it can be ALR/OLR"},"sourceResourceGroup":{"Type":0,"Flags":1,"Description":"Resource Group Name of the Datasource"},"sourceSubscriptionID":{"Type":0,"Flags":1,"Description":"SubscriptionId corresponding to the DataSource"},"startTime":{"Type":0,"Flags":1,"Description":"StartTime of the job(in UTC)"},"status":{"Type":0,"Flags":1,"Description":"Status of the job like InProgress/Success/Failed/Cancelled/SuccessWithWarning"},"subscriptionId":{"Type":0,"Flags":1,"Description":"Subscription Id of the corresponding backup vault"},"supportedActions":{"Type":243,"Flags":1,"Description":"List of supported actions"},"vaultName":{"Type":0,"Flags":1,"Description":"Name of the vault"},"etag":{"Type":0,"Flags":0},"sourceDataStoreName":{"Type":0,"Flags":0},"destinationDataStoreName":{"Type":0,"Flags":0}}}},{"3":{"ItemType":156}},{"2":{"Name":"JobExtendedInfo","Properties":{"additionalDetails":{"Type":238,"Flags":0,"Description":"Job's Additional Details"},"backupInstanceState":{"Type":0,"Flags":2,"Description":"State of the Backup Instance"},"dataTransferredInBytes":{"Type":81,"Flags":2,"Description":"Number of bytes transferred"},"recoveryDestination":{"Type":0,"Flags":2,"Description":"Destination where restore is done"},"sourceRecoverPoint":{"Type":239,"Flags":2,"Description":"Details of the Source Recovery Point"},"subTasks":{"Type":242,"Flags":2,"Description":"List of Sub Tasks of the job"},"targetRecoverPoint":{"Type":239,"Flags":2,"Description":"Details of the Target Recovery Point"}}}},{"2":{"Name":"JobExtendedInfoAdditionalDetails","Properties":{},"AdditionalProperties":0}},{"2":{"Name":"RestoreJobRecoveryPointDetails","Properties":{"recoveryPointID":{"Type":0,"Flags":0},"recoveryPointTime":{"Type":0,"Flags":0}}}},{"2":{"Name":"JobSubTask","Properties":{"additionalDetails":{"Type":241,"Flags":0,"Description":"Additional details of Sub Tasks"},"taskId":{"Type":81,"Flags":1,"Description":"Task Id of the Sub Task"},"taskName":{"Type":0,"Flags":1,"Description":"Name of the Sub Task"},"taskProgress":{"Type":0,"Flags":2,"Description":"Progress of the Sub Task"},"taskStatus":{"Type":0,"Flags":1,"Description":"Status of the Sub Task"}}}},{"2":{"Name":"JobSubTaskAdditionalDetails","Properties":{},"AdditionalProperties":0}},{"3":{"ItemType":240}},{"3":{"ItemType":0}},{"4":{"Name":"Microsoft.DataProtection/backupVaults/backupJobs@2022-01-01","ScopeType":8,"Body":234,"Flags":1}}]
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DataProtection/backupVaults"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2022-01-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DataProtection/backupVaults",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 1,
+        "description": "BackupVaultResource properties"
+      },
+      "eTag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Optional ETag."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 0,
+        "description": "Input Managed Identity Details"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BackupVault",
+    "properties": {
+      "provisioningState": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 2,
+        "description": "Provisioning state of the BackupVault resource"
+      },
+      "resourceMoveState": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 2,
+        "description": "Resource move state for backup vault"
+      },
+      "resourceMoveDetails": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 2,
+        "description": "Resource move details for backup vault"
+      },
+      "storageSettings": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 1,
+        "description": "Storage Settings"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/5"
+      },
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PrepareFailed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CommitFailed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PrepareTimedout"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CommitTimedout"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CriticalFailure"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PartialSuccess"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MoveSucceeded"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/14"
+      },
+      {
+        "$ref": "#/15"
+      },
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/18"
+      },
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/20"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceMoveDetails",
+    "properties": {
+      "operationId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "CorrelationId of latest ResourceMove operation attempted"
+      },
+      "startTimeUtc": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Start time in UTC of latest ResourceMove operation attempted. ISO 8601 format."
+      },
+      "completionTimeUtc": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Completion time in UTC of latest ResourceMove operation attempted. ISO 8601 format."
+      },
+      "sourceResourcePath": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "ARM resource path of source resource"
+      },
+      "targetResourcePath": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "ARM resource path of target resource used in latest ResourceMove operation"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StorageSetting",
+    "properties": {
+      "datastoreType": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 0,
+        "description": "Gets or sets the type of the datastore."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "Gets or sets the type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ArchiveStore"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SnapshotStore"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VaultStore"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/24"
+      },
+      {
+        "$ref": "#/25"
+      },
+      {
+        "$ref": "#/26"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GeoRedundant"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LocallyRedundant"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/28"
+      },
+      {
+        "$ref": "#/29"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/23"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DppIdentityDetails",
+    "properties": {
+      "principalId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The object ID of the service principal object for the managed identity that is used to grant role-based access to an Azure resource."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "A Globally Unique Identifier (GUID) that represents the Azure AD tenant where the resource is now a member."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identityType which can be either SystemAssigned or None"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DppTrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SystemData",
+    "properties": {
+      "createdBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that created the resource."
+      },
+      "createdByType": {
+        "type": {
+          "$ref": "#/39"
+        },
+        "flags": 0,
+        "description": "The type of identity that created the resource."
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource creation (UTC)."
+      },
+      "lastModifiedBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that last modified the resource."
+      },
+      "lastModifiedByType": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "The type of identity that last modified the resource."
+      },
+      "lastModifiedAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The type of identity that last modified the resource."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/35"
+      },
+      {
+        "$ref": "#/36"
+      },
+      {
+        "$ref": "#/37"
+      },
+      {
+        "$ref": "#/38"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/40"
+      },
+      {
+        "$ref": "#/41"
+      },
+      {
+        "$ref": "#/42"
+      },
+      {
+        "$ref": "#/43"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DataProtection/backupVaults@2022-01-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DataProtection/backupVaults/backupPolicies"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2022-01-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DataProtection/backupVaults/backupPolicies",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 0,
+        "description": "BaseBackupPolicyResource properties"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the resource."
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "BaseBackupPolicy",
+    "discriminator": "objectType",
+    "baseProperties": {
+      "datasourceTypes": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 1,
+        "description": "Type of datasource for the backup management"
+      }
+    },
+    "elements": {
+      "BackupPolicy": {
+        "$ref": "#/51"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BackupPolicy",
+    "properties": {
+      "policyRules": {
+        "type": {
+          "$ref": "#/136"
+        },
+        "flags": 1,
+        "description": "Policy rule dictionary that contains rules for each backuptype i.e Full/Incremental/Logs etc"
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/137"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "BasePolicyRule",
+    "discriminator": "objectType",
+    "baseProperties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      }
+    },
+    "elements": {
+      "AzureBackupRule": {
+        "$ref": "#/53"
+      },
+      "AzureRetentionRule": {
+        "$ref": "#/120"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureBackupRule",
+    "properties": {
+      "backupParameters": {
+        "type": {
+          "$ref": "#/54"
+        },
+        "flags": 0,
+        "description": "BackupParameters base"
+      },
+      "dataStore": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 1,
+        "description": "DataStoreInfo base"
+      },
+      "trigger": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 1,
+        "description": "Trigger context"
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/119"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "BackupParameters",
+    "discriminator": "objectType",
+    "baseProperties": {},
+    "elements": {
+      "AzureBackupParams": {
+        "$ref": "#/55"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureBackupParams",
+    "properties": {
+      "backupType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "BackupType ; Full/Incremental etc"
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/56"
+        },
+        "flags": 1,
+        "description": "Type of the specific object - used for deserializing"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureBackupParams"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataStoreInfoBase",
+    "properties": {
+      "dataStoreType": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 1,
+        "description": "type of datastore; Operational/Vault/Archive"
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Type of Datasource object, used to initialize the right inherited type"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OperationalStore"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VaultStore"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ArchiveStore"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/58"
+      },
+      {
+        "$ref": "#/59"
+      },
+      {
+        "$ref": "#/60"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "TriggerContext",
+    "discriminator": "objectType",
+    "baseProperties": {},
+    "elements": {
+      "AdhocBasedTriggerContext": {
+        "$ref": "#/63"
+      },
+      "ScheduleBasedTriggerContext": {
+        "$ref": "#/67"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AdhocBasedTriggerContext",
+    "properties": {
+      "taggingCriteria": {
+        "type": {
+          "$ref": "#/64"
+        },
+        "flags": 1,
+        "description": "Tagging Criteria containing retention tag for adhoc backup."
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/66"
+        },
+        "flags": 1,
+        "description": "Type of the specific object - used for deserializing"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AdhocBasedTaggingCriteria",
+    "properties": {
+      "tagInfo": {
+        "type": {
+          "$ref": "#/65"
+        },
+        "flags": 0,
+        "description": "Retention tag information"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RetentionTag",
+    "properties": {
+      "eTag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Retention Tag version."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Retention Tag version."
+      },
+      "tagName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Retention Tag Name to relate it to retention rule."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AdhocBasedTriggerContext"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ScheduleBasedTriggerContext",
+    "properties": {
+      "schedule": {
+        "type": {
+          "$ref": "#/68"
+        },
+        "flags": 1,
+        "description": "Schedule for this backup"
+      },
+      "taggingCriteria": {
+        "type": {
+          "$ref": "#/117"
+        },
+        "flags": 1,
+        "description": "List of tags that can be applicable for given schedule."
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/118"
+        },
+        "flags": 1,
+        "description": "Type of the specific object - used for deserializing"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BackupSchedule",
+    "properties": {
+      "repeatingTimeIntervals": {
+        "type": {
+          "$ref": "#/69"
+        },
+        "flags": 1,
+        "description": "ISO 8601 repeating time interval format"
+      },
+      "timeZone": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Time zone for a schedule. Example: Pacific Standard Time"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TaggingCriteria",
+    "properties": {
+      "criteria": {
+        "type": {
+          "$ref": "#/116"
+        },
+        "flags": 0,
+        "description": "Criteria which decides whether the tag can be applied to a triggered backup."
+      },
+      "isDefault": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 1,
+        "description": "Specifies if tag is default."
+      },
+      "taggingPriority": {
+        "type": {
+          "$ref": "#/81"
+        },
+        "flags": 1,
+        "description": "Retention Tag priority."
+      },
+      "tagInfo": {
+        "type": {
+          "$ref": "#/65"
+        },
+        "flags": 1,
+        "description": "Retention tag information"
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "BackupCriteria",
+    "discriminator": "objectType",
+    "baseProperties": {},
+    "elements": {
+      "ScheduleBasedBackupCriteria": {
+        "$ref": "#/72"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ScheduleBasedBackupCriteria",
+    "properties": {
+      "absoluteCriteria": {
+        "type": {
+          "$ref": "#/79"
+        },
+        "flags": 0,
+        "description": "it contains absolute values like \"AllBackup\" / \"FirstOfDay\" / \"FirstOfWeek\" / \"FirstOfMonth\"\r\nand should be part of AbsoluteMarker enum"
+      },
+      "daysOfMonth": {
+        "type": {
+          "$ref": "#/83"
+        },
+        "flags": 0,
+        "description": "This is day of the month from 1 to 28 other wise last of month"
+      },
+      "daysOfTheWeek": {
+        "type": {
+          "$ref": "#/92"
+        },
+        "flags": 0,
+        "description": "It should be Sunday/Monday/T..../Saturday"
+      },
+      "monthsOfYear": {
+        "type": {
+          "$ref": "#/106"
+        },
+        "flags": 0,
+        "description": "It should be January/February/....../December"
+      },
+      "scheduleTimes": {
+        "type": {
+          "$ref": "#/107"
+        },
+        "flags": 0,
+        "description": "List of schedule times for backup"
+      },
+      "weeksOfTheMonth": {
+        "type": {
+          "$ref": "#/114"
+        },
+        "flags": 0,
+        "description": "It should be First/Second/Third/Fourth/Last"
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/115"
+        },
+        "flags": 1,
+        "description": "Type of the specific object - used for deserializing"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AllBackup"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FirstOfDay"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FirstOfMonth"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FirstOfWeek"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FirstOfYear"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/73"
+      },
+      {
+        "$ref": "#/74"
+      },
+      {
+        "$ref": "#/75"
+      },
+      {
+        "$ref": "#/76"
+      },
+      {
+        "$ref": "#/77"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/78"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Day",
+    "properties": {
+      "date": {
+        "type": {
+          "$ref": "#/81"
+        },
+        "flags": 0,
+        "description": "Date of the month"
+      },
+      "isLast": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 0,
+        "description": "Whether Date is last date of month"
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/80"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Friday"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Monday"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Saturday"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Sunday"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Thursday"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Tuesday"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Wednesday"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/84"
+      },
+      {
+        "$ref": "#/85"
+      },
+      {
+        "$ref": "#/86"
+      },
+      {
+        "$ref": "#/87"
+      },
+      {
+        "$ref": "#/88"
+      },
+      {
+        "$ref": "#/89"
+      },
+      {
+        "$ref": "#/90"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/91"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "April"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "August"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "December"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "February"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "January"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "July"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "June"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "March"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "May"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "November"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "October"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "September"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/93"
+      },
+      {
+        "$ref": "#/94"
+      },
+      {
+        "$ref": "#/95"
+      },
+      {
+        "$ref": "#/96"
+      },
+      {
+        "$ref": "#/97"
+      },
+      {
+        "$ref": "#/98"
+      },
+      {
+        "$ref": "#/99"
+      },
+      {
+        "$ref": "#/100"
+      },
+      {
+        "$ref": "#/101"
+      },
+      {
+        "$ref": "#/102"
+      },
+      {
+        "$ref": "#/103"
+      },
+      {
+        "$ref": "#/104"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/105"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "First"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Fourth"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Last"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Second"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Third"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/108"
+      },
+      {
+        "$ref": "#/109"
+      },
+      {
+        "$ref": "#/110"
+      },
+      {
+        "$ref": "#/111"
+      },
+      {
+        "$ref": "#/112"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/113"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ScheduleBasedBackupCriteria"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/71"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/70"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ScheduleBasedTriggerContext"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureBackupRule"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureRetentionRule",
+    "properties": {
+      "isDefault": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 0
+      },
+      "lifecycles": {
+        "type": {
+          "$ref": "#/134"
+        },
+        "flags": 1
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/135"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SourceLifeCycle",
+    "properties": {
+      "deleteAfter": {
+        "type": {
+          "$ref": "#/122"
+        },
+        "flags": 1,
+        "description": "Delete Option"
+      },
+      "sourceDataStore": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 1,
+        "description": "DataStoreInfo base"
+      },
+      "targetDataStoreCopySettings": {
+        "type": {
+          "$ref": "#/133"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "DeleteOption",
+    "discriminator": "objectType",
+    "baseProperties": {
+      "duration": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Duration of deletion after given timespan"
+      }
+    },
+    "elements": {
+      "AbsoluteDeleteOption": {
+        "$ref": "#/123"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AbsoluteDeleteOption",
+    "properties": {
+      "objectType": {
+        "type": {
+          "$ref": "#/124"
+        },
+        "flags": 1,
+        "description": "Type of the specific object - used for deserializing"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AbsoluteDeleteOption"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TargetCopySetting",
+    "properties": {
+      "copyAfter": {
+        "type": {
+          "$ref": "#/126"
+        },
+        "flags": 1,
+        "description": "It can be CustomCopyOption or ImmediateCopyOption."
+      },
+      "dataStore": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 1,
+        "description": "Info of target datastore"
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "CopyOption",
+    "discriminator": "objectType",
+    "baseProperties": {},
+    "elements": {
+      "CopyOnExpiryOption": {
+        "$ref": "#/127"
+      },
+      "CustomCopyOption": {
+        "$ref": "#/129"
+      },
+      "ImmediateCopyOption": {
+        "$ref": "#/131"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CopyOnExpiryOption",
+    "properties": {
+      "objectType": {
+        "type": {
+          "$ref": "#/128"
+        },
+        "flags": 1,
+        "description": "Type of the specific object - used for deserializing"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CopyOnExpiryOption"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CustomCopyOption",
+    "properties": {
+      "duration": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Data copied after given timespan"
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/130"
+        },
+        "flags": 1,
+        "description": "Type of the specific object - used for deserializing"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CustomCopyOption"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImmediateCopyOption",
+    "properties": {
+      "objectType": {
+        "type": {
+          "$ref": "#/132"
+        },
+        "flags": 1,
+        "description": "Type of the specific object - used for deserializing"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ImmediateCopyOption"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/125"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/121"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureRetentionRule"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/52"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BackupPolicy"
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DataProtection/backupVaults/backupPolicies@2022-01-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/48"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DataProtection/backupVaults/backupInstances"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2022-01-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DataProtection/backupVaults/backupInstances",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/139"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/140"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/142"
+        },
+        "flags": 0,
+        "description": "BackupInstanceResource properties"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BackupInstance",
+    "properties": {
+      "friendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the Backup Instance friendly name."
+      },
+      "dataSourceInfo": {
+        "type": {
+          "$ref": "#/143"
+        },
+        "flags": 1,
+        "description": "Gets or sets the data source information."
+      },
+      "dataSourceSetInfo": {
+        "type": {
+          "$ref": "#/144"
+        },
+        "flags": 0,
+        "description": "Gets or sets the data source set information."
+      },
+      "policyInfo": {
+        "type": {
+          "$ref": "#/145"
+        },
+        "flags": 1,
+        "description": "Gets or sets the policy information."
+      },
+      "protectionStatus": {
+        "type": {
+          "$ref": "#/155"
+        },
+        "flags": 2,
+        "description": "Specifies the protection status of the resource"
+      },
+      "currentProtectionState": {
+        "type": {
+          "$ref": "#/181"
+        },
+        "flags": 2,
+        "description": "Specifies the current protection state of the resource"
+      },
+      "protectionErrorDetails": {
+        "type": {
+          "$ref": "#/156"
+        },
+        "flags": 2,
+        "description": "Specifies the protection error of the resource"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Specifies the provisioning state of the resource i.e. provisioning/updating/Succeeded/Failed"
+      },
+      "datasourceAuthCredentials": {
+        "type": {
+          "$ref": "#/182"
+        },
+        "flags": 0,
+        "description": "Credentials to use to authenticate with data source provider."
+      },
+      "validationType": {
+        "type": {
+          "$ref": "#/191"
+        },
+        "flags": 0,
+        "description": "Specifies the type of validation. In case of DeepValidation, all validations from /validateForBackup API will run again."
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Datasource",
+    "properties": {
+      "datasourceType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "DatasourceType of the resource."
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Type of Datasource object, used to initialize the right inherited type"
+      },
+      "resourceID": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Full ARM ID of the resource. For azure resources, this is ARM ID. For non azure resources, this will be the ID created by backup service via Fabric/Vault."
+      },
+      "resourceLocation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Location of datasource."
+      },
+      "resourceName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Unique identifier of the resource in the context of parent."
+      },
+      "resourceType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource Type of Datasource."
+      },
+      "resourceUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Uri of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DatasourceSet",
+    "properties": {
+      "datasourceType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "DatasourceType of the resource."
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Type of Datasource object, used to initialize the right inherited type"
+      },
+      "resourceID": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Full ARM ID of the resource. For azure resources, this is ARM ID. For non azure resources, this will be the ID created by backup service via Fabric/Vault."
+      },
+      "resourceLocation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Location of datasource."
+      },
+      "resourceName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Unique identifier of the resource in the context of parent."
+      },
+      "resourceType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource Type of Datasource."
+      },
+      "resourceUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Uri of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PolicyInfo",
+    "properties": {
+      "policyId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "policyVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2
+      },
+      "policyParameters": {
+        "type": {
+          "$ref": "#/146"
+        },
+        "flags": 0,
+        "description": "Policy parameters for the backup instance"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PolicyParameters",
+    "properties": {
+      "dataStoreParametersList": {
+        "type": {
+          "$ref": "#/154"
+        },
+        "flags": 0,
+        "description": "Gets or sets the DataStore Parameters"
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "DataStoreParameters",
+    "discriminator": "objectType",
+    "baseProperties": {
+      "dataStoreType": {
+        "type": {
+          "$ref": "#/151"
+        },
+        "flags": 1,
+        "description": "type of datastore; Operational/Vault/Archive"
+      }
+    },
+    "elements": {
+      "AzureOperationalStoreParameters": {
+        "$ref": "#/152"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OperationalStore"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VaultStore"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ArchiveStore"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/148"
+      },
+      {
+        "$ref": "#/149"
+      },
+      {
+        "$ref": "#/150"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureOperationalStoreParameters",
+    "properties": {
+      "resourceGroupId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the Snapshot Resource Group Uri."
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/153"
+        },
+        "flags": 1,
+        "description": "Type of the specific object - used for deserializing"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureOperationalStoreParameters"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/147"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProtectionStatusDetails",
+    "properties": {
+      "errorDetails": {
+        "type": {
+          "$ref": "#/156"
+        },
+        "flags": 0,
+        "description": "Specifies the protection status error of the resource"
+      },
+      "status": {
+        "type": {
+          "$ref": "#/168"
+        },
+        "flags": 0,
+        "description": "Specifies the protection status of the resource"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UserFacingError",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Unique code for this error"
+      },
+      "details": {
+        "type": {
+          "$ref": "#/157"
+        },
+        "flags": 0,
+        "description": "Additional related Errors"
+      },
+      "innerError": {
+        "type": {
+          "$ref": "#/158"
+        },
+        "flags": 0,
+        "description": "Inner Error"
+      },
+      "isRetryable": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 0,
+        "description": "Whether the operation will be retryable or not"
+      },
+      "isUserError": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 0,
+        "description": "Whether the operation is due to a user error or service error"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/160"
+        },
+        "flags": 0,
+        "description": "Any key value pairs that can be injected inside error object"
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "recommendedAction": {
+        "type": {
+          "$ref": "#/161"
+        },
+        "flags": 0,
+        "description": "RecommendedAction � localized."
+      },
+      "target": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Target of the error."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/156"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InnerError",
+    "properties": {
+      "additionalInfo": {
+        "type": {
+          "$ref": "#/159"
+        },
+        "flags": 0,
+        "description": "Any Key value pairs that can be provided to the client for additional  verbose information."
+      },
+      "code": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Unique code for this error"
+      },
+      "embeddedInnerError": {
+        "type": {
+          "$ref": "#/158"
+        },
+        "flags": 0,
+        "description": "Child Inner Error, to allow Nesting."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InnerErrorAdditionalInfo",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UserFacingErrorProperties",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ConfiguringProtection"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ConfiguringProtectionFailed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ProtectionConfigured"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ProtectionStopped"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SoftDeleted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SoftDeleting"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/162"
+      },
+      {
+        "$ref": "#/163"
+      },
+      {
+        "$ref": "#/164"
+      },
+      {
+        "$ref": "#/165"
+      },
+      {
+        "$ref": "#/166"
+      },
+      {
+        "$ref": "#/167"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotProtected"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ConfiguringProtection"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ProtectionConfigured"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BackupSchedulesSuspended"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RetentionSchedulesSuspended"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ProtectionStopped"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ProtectionError"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ConfiguringProtectionFailed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SoftDeleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SoftDeleted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UpdatingProtection"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/169"
+      },
+      {
+        "$ref": "#/170"
+      },
+      {
+        "$ref": "#/171"
+      },
+      {
+        "$ref": "#/172"
+      },
+      {
+        "$ref": "#/173"
+      },
+      {
+        "$ref": "#/174"
+      },
+      {
+        "$ref": "#/175"
+      },
+      {
+        "$ref": "#/176"
+      },
+      {
+        "$ref": "#/177"
+      },
+      {
+        "$ref": "#/178"
+      },
+      {
+        "$ref": "#/179"
+      },
+      {
+        "$ref": "#/180"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "AuthCredentials",
+    "discriminator": "objectType",
+    "baseProperties": {},
+    "elements": {
+      "SecretStoreBasedAuthCredentials": {
+        "$ref": "#/183"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SecretStoreBasedAuthCredentials",
+    "properties": {
+      "secretStoreResource": {
+        "type": {
+          "$ref": "#/184"
+        },
+        "flags": 0,
+        "description": "Secret store resource"
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/188"
+        },
+        "flags": 1,
+        "description": "Type of the specific object - used for deserializing"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SecretStoreResource",
+    "properties": {
+      "uri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Uri to get to the resource"
+      },
+      "secretStoreType": {
+        "type": {
+          "$ref": "#/187"
+        },
+        "flags": 1,
+        "description": "Gets or sets the type of secret store"
+      },
+      "value": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets value stored in secret store resource"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureKeyVault"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/185"
+      },
+      {
+        "$ref": "#/186"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecretStoreBasedAuthCredentials"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ShallowValidation"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DeepValidation"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/189"
+      },
+      {
+        "$ref": "#/190"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DataProtection/backupVaults/backupInstances@2022-01-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/141"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DataProtection/resourceGuards"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2022-01-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DataProtection/resourceGuards",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/193"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/194"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/196"
+        },
+        "flags": 0,
+        "description": "ResourceGuardResource properties"
+      },
+      "eTag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Optional ETag."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 0,
+        "description": "Input Managed Identity Details"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/206"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceGuard",
+    "properties": {
+      "provisioningState": {
+        "type": {
+          "$ref": "#/202"
+        },
+        "flags": 2,
+        "description": "Provisioning state of the BackupVault resource"
+      },
+      "allowAutoApprovals": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 2,
+        "description": "This flag indicates whether auto approval is allowed or not."
+      },
+      "resourceGuardOperations": {
+        "type": {
+          "$ref": "#/204"
+        },
+        "flags": 2,
+        "description": "{readonly} List of operation details those are protected by the ResourceGuard resource"
+      },
+      "vaultCriticalOperationExclusionList": {
+        "type": {
+          "$ref": "#/205"
+        },
+        "flags": 2,
+        "description": "List of critical operations which are not protected by this resourceGuard"
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Description about the pre-req steps to perform all the critical operations."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Provisioning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/197"
+      },
+      {
+        "$ref": "#/198"
+      },
+      {
+        "$ref": "#/199"
+      },
+      {
+        "$ref": "#/200"
+      },
+      {
+        "$ref": "#/201"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceGuardOperation",
+    "properties": {
+      "vaultCriticalOperation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Name of the critical operation."
+      },
+      "requestResourceType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Type of resource request."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/203"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DppTrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DataProtection/resourceGuards@2022-01-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/195"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DataProtection/backupVaults/operationResults"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2022-01-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DataProtection/backupVaults/operationResults",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/208"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/209"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 2,
+        "description": "BackupVaultResource properties"
+      },
+      "eTag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Optional ETag."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 2,
+        "description": "Input Managed Identity Details"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/211"
+        },
+        "flags": 2,
+        "description": "Resource tags."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DppTrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DataProtection/backupVaults/operationResults@2022-01-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/210"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DataProtection/backupVaults/backupInstances/operationResults"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2022-01-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DataProtection/backupVaults/backupInstances/operationResults",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/213"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/214"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/142"
+        },
+        "flags": 2,
+        "description": "BackupInstanceResource properties"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DataProtection/backupVaults/backupInstances/operationResults@2022-01-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/215"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DataProtection/backupVaults/backupInstances/recoveryPoints"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2022-01-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DataProtection/backupVaults/backupInstances/recoveryPoints",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/217"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/218"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/220"
+        },
+        "flags": 2,
+        "description": "AzureBackupRecoveryPointResource properties"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the resource."
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "AzureBackupRecoveryPoint",
+    "discriminator": "objectType",
+    "baseProperties": {},
+    "elements": {
+      "AzureBackupDiscreteRecoveryPoint": {
+        "$ref": "#/221"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureBackupDiscreteRecoveryPoint",
+    "properties": {
+      "friendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "recoveryPointDataStoresDetails": {
+        "type": {
+          "$ref": "#/229"
+        },
+        "flags": 0
+      },
+      "recoveryPointTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "policyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "policyVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "recoveryPointId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "recoveryPointType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "retentionTagName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "retentionTagVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/230"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RecoveryPointDataStoreDetails",
+    "properties": {
+      "creationTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "expiryTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "metaData": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "state": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "visible": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 0
+      },
+      "rehydrationExpiryTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2
+      },
+      "rehydrationStatus": {
+        "type": {
+          "$ref": "#/228"
+        },
+        "flags": 2
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CREATE_IN_PROGRESS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "COMPLETED"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DELETE_IN_PROGRESS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DELETED"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FAILED"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/223"
+      },
+      {
+        "$ref": "#/224"
+      },
+      {
+        "$ref": "#/225"
+      },
+      {
+        "$ref": "#/226"
+      },
+      {
+        "$ref": "#/227"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/222"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureBackupDiscreteRecoveryPoint"
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DataProtection/backupVaults/backupInstances/recoveryPoints@2022-01-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/219"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DataProtection/backupVaults/backupJobs"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2022-01-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DataProtection/backupVaults/backupJobs",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/232"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/233"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/235"
+        },
+        "flags": 2,
+        "description": "AzureBackupJobResource properties"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureBackupJob",
+    "properties": {
+      "activityID": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Job Activity Id"
+      },
+      "backupInstanceFriendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Name of the Backup Instance"
+      },
+      "backupInstanceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "ARM ID of the Backup Instance"
+      },
+      "dataSourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "ARM ID of the DataSource"
+      },
+      "dataSourceLocation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Location of the DataSource"
+      },
+      "dataSourceName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "User Friendly Name of the DataSource"
+      },
+      "dataSourceSetName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Data Source Set Name of the DataSource"
+      },
+      "dataSourceType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Type of DataSource"
+      },
+      "duration": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Total run time of the job. ISO 8601 format."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "EndTime of the job(in UTC)"
+      },
+      "errorDetails": {
+        "type": {
+          "$ref": "#/236"
+        },
+        "flags": 2,
+        "description": "A List, detailing the errors related to the job"
+      },
+      "extendedInfo": {
+        "type": {
+          "$ref": "#/237"
+        },
+        "flags": 2,
+        "description": "Extended Information about the job"
+      },
+      "isUserTriggered": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 1,
+        "description": "Indicated that whether the job is adhoc(true) or scheduled(false)"
+      },
+      "operation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "It indicates the type of Job i.e. Backup:full/log/diff ;Restore:ALR/OLR; Tiering:Backup/Archive ; Management:ConfigureProtection/UnConfigure"
+      },
+      "operationCategory": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "It indicates the type of Job i.e. Backup/Restore/Tiering/Management"
+      },
+      "policyId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "ARM ID of the policy"
+      },
+      "policyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Name of the policy"
+      },
+      "progressEnabled": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 1,
+        "description": "Indicated whether progress is enabled for the job"
+      },
+      "progressUrl": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Url which contains job's progress"
+      },
+      "restoreType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "It indicates the sub type of operation i.e. in case of Restore it can be ALR/OLR"
+      },
+      "sourceResourceGroup": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource Group Name of the Datasource"
+      },
+      "sourceSubscriptionID": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "SubscriptionId corresponding to the DataSource"
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "StartTime of the job(in UTC)"
+      },
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Status of the job like InProgress/Success/Failed/Cancelled/SuccessWithWarning"
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Subscription Id of the corresponding backup vault"
+      },
+      "supportedActions": {
+        "type": {
+          "$ref": "#/243"
+        },
+        "flags": 1,
+        "description": "List of supported actions"
+      },
+      "vaultName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Name of the vault"
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "sourceDataStoreName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "destinationDataStoreName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/156"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "JobExtendedInfo",
+    "properties": {
+      "additionalDetails": {
+        "type": {
+          "$ref": "#/238"
+        },
+        "flags": 0,
+        "description": "Job's Additional Details"
+      },
+      "backupInstanceState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "State of the Backup Instance"
+      },
+      "dataTransferredInBytes": {
+        "type": {
+          "$ref": "#/81"
+        },
+        "flags": 2,
+        "description": "Number of bytes transferred"
+      },
+      "recoveryDestination": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Destination where restore is done"
+      },
+      "sourceRecoverPoint": {
+        "type": {
+          "$ref": "#/239"
+        },
+        "flags": 2,
+        "description": "Details of the Source Recovery Point"
+      },
+      "subTasks": {
+        "type": {
+          "$ref": "#/242"
+        },
+        "flags": 2,
+        "description": "List of Sub Tasks of the job"
+      },
+      "targetRecoverPoint": {
+        "type": {
+          "$ref": "#/239"
+        },
+        "flags": 2,
+        "description": "Details of the Target Recovery Point"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "JobExtendedInfoAdditionalDetails",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RestoreJobRecoveryPointDetails",
+    "properties": {
+      "recoveryPointID": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "recoveryPointTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "JobSubTask",
+    "properties": {
+      "additionalDetails": {
+        "type": {
+          "$ref": "#/241"
+        },
+        "flags": 0,
+        "description": "Additional details of Sub Tasks"
+      },
+      "taskId": {
+        "type": {
+          "$ref": "#/81"
+        },
+        "flags": 1,
+        "description": "Task Id of the Sub Task"
+      },
+      "taskName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Name of the Sub Task"
+      },
+      "taskProgress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Progress of the Sub Task"
+      },
+      "taskStatus": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Status of the Sub Task"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "JobSubTaskAdditionalDetails",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/240"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DataProtection/backupVaults/backupJobs@2022-01-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/234"
+    },
+    "flags": 1
+  }
+]

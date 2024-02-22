@@ -1,1 +1,983 @@
-[{"13":{"MinLength":3,"MaxLength":63,"Pattern":"^[a-z][a-z0-9]*$"}},{"6":{"Value":"Microsoft.Quota/groupQuotas"}},{"13":{}},{"6":{"Value":"2023-06-01-preview"}},{"2":{"Name":"Microsoft.Quota/groupQuotas","Properties":{"id":{"Type":2,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":1,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":3,"Flags":10,"Description":"The resource api version"},"properties":{"Type":5,"Flags":0,"Description":"Properties and filters for ShareQuota. The request parameter is optional, if there are no filters specified."},"systemData":{"Type":22,"Flags":2,"Description":"Azure Resource Manager metadata containing createdBy and modifiedBy information."}}}},{"2":{"Name":"GroupQuotasEntityBase","Properties":{"displayName":{"Type":2,"Flags":0,"Description":"Display name of the GroupQuota entity."},"additionalAttributes":{"Type":6,"Flags":0,"Description":"Additional attributes to allow subscription, which can be added to the subscriptionIds."},"provisioningState":{"Type":21,"Flags":2,"Description":"Provisioning state of the operation."}}}},{"2":{"Name":"AdditionalAttributes","Properties":{"groupId":{"Type":7,"Flags":1,"Description":"The grouping Id for the group quota. It can be management Group Id or ServiceTreeId if applicable."},"environment":{"Type":13,"Flags":0,"Description":"Environment name."}}}},{"2":{"Name":"GroupingId","Properties":{"groupingIdType":{"Type":10,"Flags":0,"Description":"GroupingId type. It is a required property. More types of groupIds can be supported in future. MGID is already in the URI, so it's not needed.'"},"value":{"Type":2,"Flags":0,"Description":"GroupId value based on the groupingType selected - management Group Id or ServiceTreeId."}}}},{"6":{"Value":"ServiceTreeId"}},{"6":{"Value":"BillingId"}},{"5":{"Elements":[8,9,2]}},{"6":{"Value":"NonProduction"}},{"6":{"Value":"Production"}},{"5":{"Elements":[11,12,2]}},{"6":{"Value":"Accepted"}},{"6":{"Value":"Created"}},{"6":{"Value":"Invalid"}},{"6":{"Value":"Succeeded"}},{"6":{"Value":"Failed"}},{"6":{"Value":"InProgress"}},{"6":{"Value":"Canceled"}},{"5":{"Elements":[14,15,16,17,18,19,20,2]}},{"2":{"Name":"SystemData","Properties":{"createdBy":{"Type":2,"Flags":0,"Description":"The identity that created the resource."},"createdByType":{"Type":27,"Flags":0,"Description":"The type of identity that created the resource."},"createdAt":{"Type":2,"Flags":0,"Description":"The timestamp of resource creation (UTC)."},"lastModifiedBy":{"Type":2,"Flags":0,"Description":"The identity that last modified the resource."},"lastModifiedByType":{"Type":32,"Flags":0,"Description":"The type of identity that last modified the resource."},"lastModifiedAt":{"Type":2,"Flags":0,"Description":"The timestamp of resource last modification (UTC)"}}}},{"6":{"Value":"User"}},{"6":{"Value":"Application"}},{"6":{"Value":"ManagedIdentity"}},{"6":{"Value":"Key"}},{"5":{"Elements":[23,24,25,26,2]}},{"6":{"Value":"User"}},{"6":{"Value":"Application"}},{"6":{"Value":"ManagedIdentity"}},{"6":{"Value":"Key"}},{"5":{"Elements":[28,29,30,31,2]}},{"4":{"Name":"Microsoft.Quota/groupQuotas@2023-06-01-preview","ScopeType":2,"Body":4,"Flags":0}},{"13":{"MinLength":36,"MaxLength":36,"Pattern":"^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}},{"6":{"Value":"Microsoft.Quota/groupQuotas/subscriptions"}},{"6":{"Value":"2023-06-01-preview"}},{"2":{"Name":"Microsoft.Quota/groupQuotas/subscriptions","Properties":{"id":{"Type":2,"Flags":10,"Description":"The resource id"},"name":{"Type":34,"Flags":9,"Description":"The resource name"},"type":{"Type":35,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":36,"Flags":10,"Description":"The resource api version"},"properties":{"Type":38,"Flags":2},"systemData":{"Type":22,"Flags":2,"Description":"Azure Resource Manager metadata containing createdBy and modifiedBy information."}}}},{"2":{"Name":"GroupQuotaSubscriptionIdProperties","Properties":{"subscriptionId":{"Type":2,"Flags":2,"Description":"An Azure subscriptionId."},"provisioningState":{"Type":46,"Flags":2,"Description":"Status of this subscriptionId being associated with the GroupQuotasEntity."}}}},{"6":{"Value":"Accepted"}},{"6":{"Value":"Created"}},{"6":{"Value":"Invalid"}},{"6":{"Value":"Succeeded"}},{"6":{"Value":"Failed"}},{"6":{"Value":"InProgress"}},{"6":{"Value":"Canceled"}},{"5":{"Elements":[39,40,41,42,43,44,45,2]}},{"4":{"Name":"Microsoft.Quota/groupQuotas/subscriptions@2023-06-01-preview","ScopeType":2,"Body":37,"Flags":0}},{"6":{"Value":"Microsoft.Quota/groupQuotas/groupQuotaLimits"}},{"6":{"Value":"2023-06-01-preview"}},{"2":{"Name":"Microsoft.Quota/groupQuotas/groupQuotaLimits","Properties":{"id":{"Type":2,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":48,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":49,"Flags":10,"Description":"The resource api version"},"properties":{"Type":51,"Flags":0,"Description":"Group Quota properties for the specified resource."},"systemData":{"Type":22,"Flags":2,"Description":"Azure Resource Manager metadata containing createdBy and modifiedBy information."}}}},{"2":{"Name":"GroupQuotaDetails","Properties":{"limit":{"Type":52,"Flags":0,"Description":"The current Group Quota Limit at the parentId level."},"comment":{"Type":2,"Flags":0,"Description":"Any comment related to quota request."},"name":{"Type":53,"Flags":0,"Description":"Name of the resource provided by the resource Provider. This property is already included in the request URI, so it is a readonly property returned in the response."},"unit":{"Type":2,"Flags":2,"Description":"The usages units, such as Count and Bytes. When requesting quota, use the **unit** value returned in the GET response in the request body of your PUT operation."},"availableLimit":{"Type":52,"Flags":2,"Description":"The available Group Quota Limit at the MG level. This Group quota can be assigned to subscription(s)."},"assignedToSubscriptions":{"Type":55,"Flags":2,"Description":"Assigned Group Quota to subscriptions."},"provisioningState":{"Type":63,"Flags":2,"Description":"Request status."}}}},{"12":{}},{"2":{"Name":"GroupQuotaDetailsName","Properties":{"value":{"Type":2,"Flags":2,"Description":"Resource name."},"localizedValue":{"Type":2,"Flags":2,"Description":"Resource display name."}}}},{"2":{"Name":"AssignedToSubscription","Properties":{"subscriptionId":{"Type":2,"Flags":0,"Description":"An Azure subscriptionId."},"quotaAllocated":{"Type":52,"Flags":0,"Description":"The amount of quota allocated to this subscriptionId from the GroupQuotasEntity."}}}},{"3":{"ItemType":54}},{"6":{"Value":"Accepted"}},{"6":{"Value":"Created"}},{"6":{"Value":"Invalid"}},{"6":{"Value":"Succeeded"}},{"6":{"Value":"Failed"}},{"6":{"Value":"InProgress"}},{"6":{"Value":"Canceled"}},{"5":{"Elements":[56,57,58,59,60,61,62,2]}},{"4":{"Name":"Microsoft.Quota/groupQuotas/groupQuotaLimits@2023-06-01-preview","ScopeType":16,"Body":50,"Flags":0}},{"6":{"Value":"Microsoft.Quota/groupQuotas/quotaAllocations"}},{"6":{"Value":"2023-06-01-preview"}},{"2":{"Name":"Microsoft.Quota/groupQuotas/quotaAllocations","Properties":{"id":{"Type":2,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":65,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":66,"Flags":10,"Description":"The resource api version"},"properties":{"Type":68,"Flags":0,"Description":"Quota properties for the specified resource."},"systemData":{"Type":22,"Flags":2,"Description":"Azure Resource Manager metadata containing createdBy and modifiedBy information."}}}},{"2":{"Name":"SubscriptionQuotaDetails","Properties":{"limit":{"Type":52,"Flags":2,"Description":"The total quota limit for the subscription."},"nonShareableQuota":{"Type":52,"Flags":2,"Description":"The non shareable quota for the subscription."},"provisioningState":{"Type":76,"Flags":2,"Description":"Request status."},"quotaSources":{"Type":78,"Flags":0,"Description":"Assigned Group Quota to subscriptions."}}}},{"6":{"Value":"Accepted"}},{"6":{"Value":"Created"}},{"6":{"Value":"Invalid"}},{"6":{"Value":"Succeeded"}},{"6":{"Value":"Failed"}},{"6":{"Value":"InProgress"}},{"6":{"Value":"Canceled"}},{"5":{"Elements":[69,70,71,72,73,74,75,2]}},{"2":{"Name":"SubscriptionGroupQuotaAssignment","Properties":{"managementGroupId":{"Type":2,"Flags":0,"Description":"The management group id of the quota source."},"quotaAllocated":{"Type":52,"Flags":0,"Description":"The amount of quota allocated to this subscriptionId from the quota source."}}}},{"3":{"ItemType":77}},{"4":{"Name":"Microsoft.Quota/groupQuotas/quotaAllocations@2023-06-01-preview","ScopeType":16,"Body":67,"Flags":0}},{"6":{"Value":"Microsoft.Quota/groupQuotas/subscriptionRequests"}},{"6":{"Value":"2023-06-01-preview"}},{"2":{"Name":"Microsoft.Quota/groupQuotas/subscriptionRequests","Properties":{"id":{"Type":2,"Flags":10,"Description":"The resource id"},"name":{"Type":2,"Flags":9,"Description":"The resource name"},"type":{"Type":80,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":81,"Flags":10,"Description":"The resource api version"},"properties":{"Type":38,"Flags":2},"systemData":{"Type":22,"Flags":2,"Description":"Azure Resource Manager metadata containing createdBy and modifiedBy information."}}}},{"4":{"Name":"Microsoft.Quota/groupQuotas/subscriptionRequests@2023-06-01-preview","ScopeType":2,"Body":82,"Flags":1}}]
+[
+  {
+    "$type": "StringType",
+    "minLength": 3,
+    "maxLength": 63,
+    "pattern": "^[a-z][a-z0-9]*$"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Quota/groupQuotas"
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-06-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Quota/groupQuotas",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Properties and filters for ShareQuota. The request parameter is optional, if there are no filters specified."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GroupQuotasEntityBase",
+    "properties": {
+      "displayName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Display name of the GroupQuota entity."
+      },
+      "additionalAttributes": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Additional attributes to allow subscription, which can be added to the subscriptionIds."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 2,
+        "description": "Provisioning state of the operation."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AdditionalAttributes",
+    "properties": {
+      "groupId": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 1,
+        "description": "The grouping Id for the group quota. It can be management Group Id or ServiceTreeId if applicable."
+      },
+      "environment": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "Environment name."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GroupingId",
+    "properties": {
+      "groupingIdType": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "GroupingId type. It is a required property. More types of groupIds can be supported in future. MGID is already in the URI, so it's not needed.'"
+      },
+      "value": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "GroupId value based on the groupingType selected - management Group Id or ServiceTreeId."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ServiceTreeId"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BillingId"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NonProduction"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Production"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Created"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/14"
+      },
+      {
+        "$ref": "#/15"
+      },
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/18"
+      },
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/20"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SystemData",
+    "properties": {
+      "createdBy": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The identity that created the resource."
+      },
+      "createdByType": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 0,
+        "description": "The type of identity that created the resource."
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource creation (UTC)."
+      },
+      "lastModifiedBy": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The identity that last modified the resource."
+      },
+      "lastModifiedByType": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 0,
+        "description": "The type of identity that last modified the resource."
+      },
+      "lastModifiedAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource last modification (UTC)"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/24"
+      },
+      {
+        "$ref": "#/25"
+      },
+      {
+        "$ref": "#/26"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/28"
+      },
+      {
+        "$ref": "#/29"
+      },
+      {
+        "$ref": "#/30"
+      },
+      {
+        "$ref": "#/31"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Quota/groupQuotas@2023-06-01-preview",
+    "scopeType": 2,
+    "body": {
+      "$ref": "#/4"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringType",
+    "minLength": 36,
+    "maxLength": 36,
+    "pattern": "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Quota/groupQuotas/subscriptions"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-06-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Quota/groupQuotas/subscriptions",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 2
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GroupQuotaSubscriptionIdProperties",
+    "properties": {
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "An Azure subscriptionId."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 2,
+        "description": "Status of this subscriptionId being associated with the GroupQuotasEntity."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Created"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/39"
+      },
+      {
+        "$ref": "#/40"
+      },
+      {
+        "$ref": "#/41"
+      },
+      {
+        "$ref": "#/42"
+      },
+      {
+        "$ref": "#/43"
+      },
+      {
+        "$ref": "#/44"
+      },
+      {
+        "$ref": "#/45"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Quota/groupQuotas/subscriptions@2023-06-01-preview",
+    "scopeType": 2,
+    "body": {
+      "$ref": "#/37"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Quota/groupQuotas/groupQuotaLimits"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-06-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Quota/groupQuotas/groupQuotaLimits",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 0,
+        "description": "Group Quota properties for the specified resource."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GroupQuotaDetails",
+    "properties": {
+      "limit": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 0,
+        "description": "The current Group Quota Limit at the parentId level."
+      },
+      "comment": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Any comment related to quota request."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 0,
+        "description": "Name of the resource provided by the resource Provider. This property is already included in the request URI, so it is a readonly property returned in the response."
+      },
+      "unit": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The usages units, such as Count and Bytes. When requesting quota, use the **unit** value returned in the GET response in the request body of your PUT operation."
+      },
+      "availableLimit": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 2,
+        "description": "The available Group Quota Limit at the MG level. This Group quota can be assigned to subscription(s)."
+      },
+      "assignedToSubscriptions": {
+        "type": {
+          "$ref": "#/55"
+        },
+        "flags": 2,
+        "description": "Assigned Group Quota to subscriptions."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/63"
+        },
+        "flags": 2,
+        "description": "Request status."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GroupQuotaDetailsName",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource name."
+      },
+      "localizedValue": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource display name."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AssignedToSubscription",
+    "properties": {
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "An Azure subscriptionId."
+      },
+      "quotaAllocated": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 0,
+        "description": "The amount of quota allocated to this subscriptionId from the GroupQuotasEntity."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/54"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Created"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/56"
+      },
+      {
+        "$ref": "#/57"
+      },
+      {
+        "$ref": "#/58"
+      },
+      {
+        "$ref": "#/59"
+      },
+      {
+        "$ref": "#/60"
+      },
+      {
+        "$ref": "#/61"
+      },
+      {
+        "$ref": "#/62"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Quota/groupQuotas/groupQuotaLimits@2023-06-01-preview",
+    "scopeType": 16,
+    "body": {
+      "$ref": "#/50"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Quota/groupQuotas/quotaAllocations"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-06-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Quota/groupQuotas/quotaAllocations",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/65"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/66"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/68"
+        },
+        "flags": 0,
+        "description": "Quota properties for the specified resource."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SubscriptionQuotaDetails",
+    "properties": {
+      "limit": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 2,
+        "description": "The total quota limit for the subscription."
+      },
+      "nonShareableQuota": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 2,
+        "description": "The non shareable quota for the subscription."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/76"
+        },
+        "flags": 2,
+        "description": "Request status."
+      },
+      "quotaSources": {
+        "type": {
+          "$ref": "#/78"
+        },
+        "flags": 0,
+        "description": "Assigned Group Quota to subscriptions."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Created"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/69"
+      },
+      {
+        "$ref": "#/70"
+      },
+      {
+        "$ref": "#/71"
+      },
+      {
+        "$ref": "#/72"
+      },
+      {
+        "$ref": "#/73"
+      },
+      {
+        "$ref": "#/74"
+      },
+      {
+        "$ref": "#/75"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SubscriptionGroupQuotaAssignment",
+    "properties": {
+      "managementGroupId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The management group id of the quota source."
+      },
+      "quotaAllocated": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 0,
+        "description": "The amount of quota allocated to this subscriptionId from the quota source."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/77"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Quota/groupQuotas/quotaAllocations@2023-06-01-preview",
+    "scopeType": 16,
+    "body": {
+      "$ref": "#/67"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Quota/groupQuotas/subscriptionRequests"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-06-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Quota/groupQuotas/subscriptionRequests",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/80"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/81"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 2
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Quota/groupQuotas/subscriptionRequests@2023-06-01-preview",
+    "scopeType": 2,
+    "body": {
+      "$ref": "#/82"
+    },
+    "flags": 1
+  }
+]
