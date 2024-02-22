@@ -5,7 +5,7 @@ import path from 'path';
 import { existsSync } from 'fs';
 import { mkdir, rm, writeFile, readFile } from 'fs/promises';
 import yargs from 'yargs';
-import { TypeFile, buildIndex, writeIndexJson, writeIndexMarkdown, readJson } from "bicep-types";
+import { TypeFile, buildIndex, writeIndexJson, writeIndexMarkdown, readTypesJson } from "bicep-types";
 import { GeneratorConfig, getConfig } from '../config';
 import * as markdown from '@ts-common/commonmark-to-markdown'
 import * as yaml from 'js-yaml'
@@ -250,7 +250,7 @@ async function buildTypeIndex(logger: ILogger, baseDir: string) {
     const content = await readFile(typePath, { encoding: 'utf8' });
     typeFiles.push({
       relativePath: path.relative(baseDir, typePath),
-      types: readJson(content),
+      types: readTypesJson(content),
     });
   }
   const indexContent = await buildIndex(typeFiles,  (log) => logOut(logger, log));

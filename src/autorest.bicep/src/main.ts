@@ -4,7 +4,7 @@
 import { AutoRestExtension, AutorestExtensionHost, startSession } from "@autorest/extension-base";
 import { generateTypes } from "./type-generator";
 import { CodeModel, codeModelSchema } from "@autorest/codemodel";
-import { writeJson, writeMarkdown } from "bicep-types";
+import { writeTypesJson, writeMarkdown } from "bicep-types";
 import { getProviderDefinitions } from "./resources";
 
 export async function processRequest(host: AutorestExtensionHost) {
@@ -23,7 +23,7 @@ export async function processRequest(host: AutorestExtensionHost) {
       const outFolder = `${namespace}/${apiVersion}`.toLowerCase();
 
       // write types.json
-      host.writeFile({ filename: `${outFolder}/types.json`, content: writeJson(types) });
+      host.writeFile({ filename: `${outFolder}/types.json`, content: writeTypesJson(types) });
 
       // writer types.md
       host.writeFile({ filename: `${outFolder}/types.md`, content: writeMarkdown(types, `${namespace} @ ${apiVersion}`) });
