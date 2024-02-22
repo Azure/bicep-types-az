@@ -1,1 +1,611 @@
-[{"13":{"MinLength":3,"MaxLength":18,"Pattern":"^[a-z0-9]{3,18}$"}},{"6":{"Value":"Microsoft.StorageActions/storageTasks"}},{"13":{}},{"6":{"Value":"2023-01-01"}},{"2":{"Name":"Microsoft.StorageActions/storageTasks","Properties":{"id":{"Type":2,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":1,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":3,"Flags":10,"Description":"The resource api version"},"identity":{"Type":5,"Flags":0,"Description":"The managed service identity of the resource."},"properties":{"Type":14,"Flags":0,"Description":"Properties of the storage task."},"tags":{"Type":42,"Flags":0,"Description":"Resource tags."},"location":{"Type":2,"Flags":1,"Description":"The geo-location where the resource lives"},"systemData":{"Type":43,"Flags":2,"Description":"Azure Resource Manager metadata containing createdBy and modifiedBy information."}}}},{"2":{"Name":"ManagedServiceIdentity","Properties":{"principalId":{"Type":6,"Flags":2,"Description":"The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity."},"tenantId":{"Type":6,"Flags":2,"Description":"The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity."},"type":{"Type":11,"Flags":1,"Description":"Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed)."},"userAssignedIdentities":{"Type":13,"Flags":0,"Description":"The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests."}}}},{"13":{"MinLength":36,"MaxLength":36,"Pattern":"^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}},{"6":{"Value":"None"}},{"6":{"Value":"SystemAssigned"}},{"6":{"Value":"UserAssigned"}},{"6":{"Value":"SystemAssigned,UserAssigned"}},{"5":{"Elements":[7,8,9,10,2]}},{"2":{"Name":"UserAssignedIdentity","Properties":{"principalId":{"Type":6,"Flags":2,"Description":"The principal ID of the assigned identity."},"clientId":{"Type":6,"Flags":2,"Description":"The client ID of the assigned identity."}}}},{"2":{"Name":"UserAssignedIdentities","Properties":{},"AdditionalProperties":12}},{"2":{"Name":"StorageTaskProperties","Properties":{"taskVersion":{"Type":15,"Flags":2,"Description":"Storage task version."},"enabled":{"Type":16,"Flags":1,"Description":"Storage Task is enabled when set to true and disabled when set to false"},"description":{"Type":2,"Flags":1,"Description":"Text that describes the purpose of the storage task"},"action":{"Type":17,"Flags":1,"Description":"The storage task action that is executed"},"provisioningState":{"Type":41,"Flags":2,"Description":"Represents the provisioning state of the storage task."},"creationTimeInUtc":{"Type":2,"Flags":2,"Description":"The creation date and time of the storage task in UTC."}}}},{"12":{"MinValue":1,"MaxValue":1}},{"11":{}},{"2":{"Name":"StorageTaskAction","Properties":{"if":{"Type":18,"Flags":1,"Description":"The if block of storage task operation"},"else":{"Type":32,"Flags":0,"Description":"The else block of storage task operation"}}}},{"2":{"Name":"IfCondition","Properties":{"condition":{"Type":2,"Flags":1,"Description":"The condition predicate which is composed of object properties, eg: blob and container properties."},"operations":{"Type":31,"Flags":1,"Description":"List of operations to execute when the condition predicate satisfies."}}}},{"2":{"Name":"StorageTaskOperation","Properties":{"name":{"Type":27,"Flags":1,"Description":"The operation to be performed on the object."},"parameters":{"Type":28,"Flags":0,"Description":"Key-value parameters for the operation."},"onSuccess":{"Type":29,"Flags":0,"Description":"Action to be taken when the operation is successful for a object."},"onFailure":{"Type":30,"Flags":0,"Description":"Action to be taken when the operation fails for a object."}}}},{"6":{"Value":"SetBlobTier"}},{"6":{"Value":"SetBlobTags"}},{"6":{"Value":"SetBlobImmutabilityPolicy"}},{"6":{"Value":"SetBlobLegalHold"}},{"6":{"Value":"SetBlobExpiry"}},{"6":{"Value":"DeleteBlob"}},{"6":{"Value":"UndeleteBlob"}},{"5":{"Elements":[20,21,22,23,24,25,26,2]}},{"2":{"Name":"StorageTaskOperationParameters","Properties":{},"AdditionalProperties":2}},{"6":{"Value":"continue"}},{"6":{"Value":"break"}},{"3":{"ItemType":19}},{"2":{"Name":"ElseCondition","Properties":{"operations":{"Type":33,"Flags":1,"Description":"List of operations to execute in the else block"}}}},{"3":{"ItemType":19}},{"6":{"Value":"ValidateSubscriptionQuotaBegin"}},{"6":{"Value":"ValidateSubscriptionQuotaEnd"}},{"6":{"Value":"Creating"}},{"6":{"Value":"Succeeded"}},{"6":{"Value":"Deleting"}},{"6":{"Value":"Canceled"}},{"6":{"Value":"Failed"}},{"5":{"Elements":[34,35,36,37,38,39,40]}},{"2":{"Name":"TrackedResourceTags","Properties":{},"AdditionalProperties":2}},{"2":{"Name":"SystemData","Properties":{"createdBy":{"Type":2,"Flags":0,"Description":"The identity that created the resource."},"createdByType":{"Type":48,"Flags":0,"Description":"The type of identity that created the resource."},"createdAt":{"Type":2,"Flags":0,"Description":"The timestamp of resource creation (UTC)."},"lastModifiedBy":{"Type":2,"Flags":0,"Description":"The identity that last modified the resource."},"lastModifiedByType":{"Type":53,"Flags":0,"Description":"The type of identity that last modified the resource."},"lastModifiedAt":{"Type":2,"Flags":0,"Description":"The timestamp of resource last modification (UTC)"}}}},{"6":{"Value":"User"}},{"6":{"Value":"Application"}},{"6":{"Value":"ManagedIdentity"}},{"6":{"Value":"Key"}},{"5":{"Elements":[44,45,46,47,2]}},{"6":{"Value":"User"}},{"6":{"Value":"Application"}},{"6":{"Value":"ManagedIdentity"}},{"6":{"Value":"Key"}},{"5":{"Elements":[49,50,51,52,2]}},{"4":{"Name":"Microsoft.StorageActions/storageTasks@2023-01-01","ScopeType":8,"Body":4,"Flags":0}}]
+[
+  {
+    "$type": "StringType",
+    "minLength": 3,
+    "maxLength": 18,
+    "pattern": "^[a-z0-9]{3,18}$"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.StorageActions/storageTasks"
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-01-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.StorageActions/storageTasks",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "The managed service identity of the resource."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 0,
+        "description": "Properties of the storage task."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagedServiceIdentity",
+    "properties": {
+      "principalId": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 2,
+        "description": "The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 2,
+        "description": "The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 1,
+        "description": "Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed)."
+      },
+      "userAssignedIdentities": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "minLength": 36,
+    "maxLength": 36,
+    "pattern": "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SystemAssigned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UserAssigned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SystemAssigned,UserAssigned"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UserAssignedIdentity",
+    "properties": {
+      "principalId": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 2,
+        "description": "The principal ID of the assigned identity."
+      },
+      "clientId": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 2,
+        "description": "The client ID of the assigned identity."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UserAssignedIdentities",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/12"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StorageTaskProperties",
+    "properties": {
+      "taskVersion": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "Storage task version."
+      },
+      "enabled": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 1,
+        "description": "Storage Task is enabled when set to true and disabled when set to false"
+      },
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Text that describes the purpose of the storage task"
+      },
+      "action": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 1,
+        "description": "The storage task action that is executed"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 2,
+        "description": "Represents the provisioning state of the storage task."
+      },
+      "creationTimeInUtc": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The creation date and time of the storage task in UTC."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 1,
+    "maxValue": 1
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StorageTaskAction",
+    "properties": {
+      "if": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 1,
+        "description": "The if block of storage task operation"
+      },
+      "else": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 0,
+        "description": "The else block of storage task operation"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IfCondition",
+    "properties": {
+      "condition": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The condition predicate which is composed of object properties, eg: blob and container properties."
+      },
+      "operations": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 1,
+        "description": "List of operations to execute when the condition predicate satisfies."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StorageTaskOperation",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 1,
+        "description": "The operation to be performed on the object."
+      },
+      "parameters": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 0,
+        "description": "Key-value parameters for the operation."
+      },
+      "onSuccess": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "Action to be taken when the operation is successful for a object."
+      },
+      "onFailure": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "Action to be taken when the operation fails for a object."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SetBlobTier"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SetBlobTags"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SetBlobImmutabilityPolicy"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SetBlobLegalHold"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SetBlobExpiry"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DeleteBlob"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UndeleteBlob"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/20"
+      },
+      {
+        "$ref": "#/21"
+      },
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/24"
+      },
+      {
+        "$ref": "#/25"
+      },
+      {
+        "$ref": "#/26"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StorageTaskOperationParameters",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "continue"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "break"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/19"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ElseCondition",
+    "properties": {
+      "operations": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 1,
+        "description": "List of operations to execute in the else block"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/19"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ValidateSubscriptionQuotaBegin"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ValidateSubscriptionQuotaEnd"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/34"
+      },
+      {
+        "$ref": "#/35"
+      },
+      {
+        "$ref": "#/36"
+      },
+      {
+        "$ref": "#/37"
+      },
+      {
+        "$ref": "#/38"
+      },
+      {
+        "$ref": "#/39"
+      },
+      {
+        "$ref": "#/40"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SystemData",
+    "properties": {
+      "createdBy": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The identity that created the resource."
+      },
+      "createdByType": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 0,
+        "description": "The type of identity that created the resource."
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource creation (UTC)."
+      },
+      "lastModifiedBy": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The identity that last modified the resource."
+      },
+      "lastModifiedByType": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 0,
+        "description": "The type of identity that last modified the resource."
+      },
+      "lastModifiedAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource last modification (UTC)"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/44"
+      },
+      {
+        "$ref": "#/45"
+      },
+      {
+        "$ref": "#/46"
+      },
+      {
+        "$ref": "#/47"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/49"
+      },
+      {
+        "$ref": "#/50"
+      },
+      {
+        "$ref": "#/51"
+      },
+      {
+        "$ref": "#/52"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.StorageActions/storageTasks@2023-01-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/4"
+    },
+    "flags": 0
+  }
+]

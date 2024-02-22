@@ -5,10 +5,10 @@
 ### Properties
 * **apiVersion**: '2024-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Managed service identity (system assigned and/or user assigned identities)
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The managed service identities assigned to this resource.
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string {minLength: 1, maxLength: 90} (Required, DeployTimeConstant): The resource name
-* **properties**: [ServiceProperties](#serviceproperties): The properties of the service.
+* **name**: string {minLength: 1, maxLength: 90, pattern: "^[a-zA-Z0-9-]{3,90}$"} (Required, DeployTimeConstant): The resource name
+* **properties**: [ServiceProperties](#serviceproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.ApiCenter/services' (ReadOnly, DeployTimeConstant): The resource type
@@ -18,8 +18,8 @@
 ### Properties
 * **apiVersion**: '2024-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {minLength: 1, maxLength: 90} (Required, DeployTimeConstant): The resource name
-* **properties**: [MetadataSchemaProperties](#metadataschemaproperties): Metadata schema properties.
+* **name**: string {minLength: 1, maxLength: 90, pattern: "^[a-zA-Z0-9-]{3,90}$"} (Required, DeployTimeConstant): The resource name
+* **properties**: [MetadataSchemaProperties](#metadataschemaproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ApiCenter/services/metadataSchemas' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -28,8 +28,8 @@
 ### Properties
 * **apiVersion**: '2024-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {minLength: 1, maxLength: 90} (Required, DeployTimeConstant): The resource name
-* **properties**: [WorkspaceProperties](#workspaceproperties): Workspace properties.
+* **name**: string {minLength: 1, maxLength: 90, pattern: "^[a-zA-Z0-9-]{3,90}$"} (Required, DeployTimeConstant): The resource name
+* **properties**: [WorkspaceProperties](#workspaceproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ApiCenter/services/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -38,8 +38,8 @@
 ### Properties
 * **apiVersion**: '2024-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {minLength: 1, maxLength: 90} (Required, DeployTimeConstant): The resource name
-* **properties**: [ApiProperties](#apiproperties): API properties.
+* **name**: string {minLength: 1, maxLength: 90, pattern: "^[a-zA-Z0-9-]{3,90}$"} (Required, DeployTimeConstant): The resource name
+* **properties**: [ApiProperties](#apiproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ApiCenter/services/workspaces/apis' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -48,8 +48,8 @@
 ### Properties
 * **apiVersion**: '2024-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {minLength: 1, maxLength: 90} (Required, DeployTimeConstant): The resource name
-* **properties**: [DeploymentProperties](#deploymentproperties): API deployment entity properties.
+* **name**: string {minLength: 1, maxLength: 90, pattern: "^[a-zA-Z0-9-]{3,90}$"} (Required, DeployTimeConstant): The resource name
+* **properties**: [DeploymentProperties](#deploymentproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ApiCenter/services/workspaces/apis/deployments' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -58,8 +58,8 @@
 ### Properties
 * **apiVersion**: '2024-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {minLength: 1, maxLength: 90} (Required, DeployTimeConstant): The resource name
-* **properties**: [ApiVersionProperties](#apiversionproperties): API version properties entity.
+* **name**: string {minLength: 1, maxLength: 90, pattern: "^[a-zA-Z0-9-]{3,90}$"} (Required, DeployTimeConstant): The resource name
+* **properties**: [ApiVersionProperties](#apiversionproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ApiCenter/services/workspaces/apis/versions' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -68,8 +68,8 @@
 ### Properties
 * **apiVersion**: '2024-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {minLength: 1, maxLength: 90} (Required, DeployTimeConstant): The resource name
-* **properties**: [ApiDefinitionProperties](#apidefinitionproperties): API definition properties entity.
+* **name**: string {minLength: 1, maxLength: 90, pattern: "^[a-zA-Z0-9-]{3,90}$"} (Required, DeployTimeConstant): The resource name
+* **properties**: [ApiDefinitionProperties](#apidefinitionproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ApiCenter/services/workspaces/apis/versions/definitions' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -78,8 +78,8 @@
 ### Properties
 * **apiVersion**: '2024-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {minLength: 1, maxLength: 90} (Required, DeployTimeConstant): The resource name
-* **properties**: [EnvironmentProperties](#environmentproperties): Environment properties entity.
+* **name**: string {minLength: 1, maxLength: 90, pattern: "^[a-zA-Z0-9-]{3,90}$"} (Required, DeployTimeConstant): The resource name
+* **properties**: [EnvironmentProperties](#environmentproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ApiCenter/services/workspaces/environments' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -96,10 +96,10 @@
 
 ## ApiProperties
 ### Properties
-* **contacts**: [Contact](#contact)[]
+* **contacts**: [Contact](#contact)[]: The set of contacts
 * **customProperties**: any: The custom metadata defined for API catalog entities.
 * **description**: string {maxLength: 1000}: Description of the API.
-* **externalDocumentation**: [ExternalDocumentation](#externaldocumentation)[] {maxLength: 20}
+* **externalDocumentation**: [ExternalDocumentation](#externaldocumentation)[] {maxLength: 20}: The set of external documentation
 * **kind**: 'graphql' | 'grpc' | 'rest' | 'soap' | 'webhook' | 'websocket' | string (Required): Kind of API. For example, REST or GraphQL.
 * **license**: [License](#license): The license information for the API.
 * **lifecycleStage**: 'deprecated' | 'design' | 'development' | 'preview' | 'production' | 'retired' | 'testing' | string (ReadOnly): Current lifecycle stage of the API.
@@ -124,7 +124,7 @@
 * **definitionId**: string: API center-scoped definition resource ID.
 * **description**: string {maxLength: 500}: Description of the deployment.
 * **environmentId**: string: API center-scoped environment resource ID.
-* **server**: [DeploymentServer](#deploymentserver): Server
+* **server**: [DeploymentServer](#deploymentserver): The deployment server
 * **state**: 'active' | 'inactive' | string: State of API deployment.
 * **title**: string {minLength: 1, maxLength: 50}: API deployment title
 
@@ -135,15 +135,15 @@
 ## EnvironmentProperties
 ### Properties
 * **customProperties**: any: The custom metadata defined for API catalog entities.
-* **description**: string: Description.
+* **description**: string: The environment description.
 * **kind**: 'development' | 'production' | 'staging' | 'testing' | string (Required): Environment kind.
-* **onboarding**: [Onboarding](#onboarding)
+* **onboarding**: [Onboarding](#onboarding): Environment onboarding information
 * **server**: [EnvironmentServer](#environmentserver): Server information of the environment.
 * **title**: string {minLength: 1, maxLength: 50} (Required): Environment title.
 
 ## EnvironmentServer
 ### Properties
-* **managementPortalUri**: string[] {maxLength: 1}
+* **managementPortalUri**: string[] {maxLength: 1}: The location of the management portal
 * **type**: 'AWS API Gateway' | 'Apigee API Management' | 'Azure API Management' | 'Azure compute service' | 'Kong API Gateway' | 'Kubernetes' | 'MuleSoft API Management' | string: Type of the server that represents the environment.
 
 ## ExternalDocumentation
@@ -154,9 +154,11 @@
 
 ## License
 ### Properties
-* **identifier**: string {maxLength: 50}: SPDX license information for the API. The identifier field is mutually exclusive of the URL field.
+* **identifier**: string {maxLength: 50}: SPDX license information for the API. The identifier field is mutually
+exclusive of the URL field.
 * **name**: string {maxLength: 100}: Name of the license.
-* **url**: string {maxLength: 200}: URL pointing to the license details. The URL field is mutually exclusive of the identifier field.
+* **url**: string {maxLength: 200}: URL pointing to the license details. The URL field is mutually exclusive of the
+identifier field.
 
 ## ManagedServiceIdentity
 ### Properties
@@ -167,18 +169,18 @@
 
 ## MetadataAssignment
 ### Properties
-* **deprecated**: bool
+* **deprecated**: bool: Deprecated assignment
 * **entity**: 'api' | 'deployment' | 'environment' | string: The entities this metadata schema component gets applied to.
-* **required**: bool
+* **required**: bool: Required assignment
 
 ## MetadataSchemaProperties
 ### Properties
-* **assignedTo**: [MetadataAssignment](#metadataassignment)[]
+* **assignedTo**: [MetadataAssignment](#metadataassignment)[]: The assignees
 * **schema**: string (Required): The schema defining the type.
 
 ## Onboarding
 ### Properties
-* **developerPortalUri**: string[] {maxLength: 1}
+* **developerPortalUri**: string[] {maxLength: 1}: The location of the development portal
 * **instructions**: string: Onboarding guide.
 
 ## ServiceProperties

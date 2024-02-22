@@ -1,1 +1,193 @@
-[{"13":{}},{"6":{"Value":"Microsoft.Network.Admin/locations/quotas"}},{"6":{"Value":"2015-06-15"}},{"2":{"Name":"Microsoft.Network.Admin/locations/quotas","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":1,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":2,"Flags":10,"Description":"The resource api version"},"properties":{"Type":4,"Flags":0,"Description":"Network quota properties."},"location":{"Type":0,"Flags":2,"Description":"Region location of resource."},"tags":{"Type":11,"Flags":0,"Description":"List of key value pairs."}}}},{"2":{"Name":"QuotaProperties","Properties":{"maxPublicIpsPerSubscription":{"Type":5,"Flags":0,"Description":"Maximum number of public IP addresses a tenant subscription can provision."},"maxVnetsPerSubscription":{"Type":5,"Flags":0,"Description":"Maximum number of virtual networks a tenant subscription can provision."},"maxVirtualNetworkGatewaysPerSubscription":{"Type":5,"Flags":0,"Description":"Maximum number of virtual network gateways a tenant subscription can provision."},"maxVirtualNetworkGatewayConnectionsPerSubscription":{"Type":5,"Flags":0,"Description":"Maximum number of virtual network gateway Connections a tenant subscription can provision."},"maxLoadBalancersPerSubscription":{"Type":5,"Flags":0,"Description":"Maximum number of load balancers a tenant subscription can provision."},"maxNicsPerSubscription":{"Type":5,"Flags":0,"Description":"Maximum number of NICs a tenant subscription can provision."},"maxSecurityGroupsPerSubscription":{"Type":5,"Flags":0,"Description":"Maximum number of security groups a tenant subscription can provision."},"migrationPhase":{"Type":10,"Flags":2,"Description":"State of migration such as None, Prepare, Commit, and Abort."},"provisioningState":{"Type":0,"Flags":2,"Description":"The provisioning state."}}}},{"12":{}},{"6":{"Value":"None"}},{"6":{"Value":"Prepare"}},{"6":{"Value":"Commit"}},{"6":{"Value":"Abort"}},{"5":{"Elements":[6,7,8,9,0]}},{"2":{"Name":"ResourceTags","Properties":{},"AdditionalProperties":0}},{"4":{"Name":"Microsoft.Network.Admin/locations/quotas@2015-06-15","ScopeType":4,"Body":3,"Flags":0}}]
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Network.Admin/locations/quotas"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2015-06-15"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Network.Admin/locations/quotas",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "Network quota properties."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Region location of resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 0,
+        "description": "List of key value pairs."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "QuotaProperties",
+    "properties": {
+      "maxPublicIpsPerSubscription": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Maximum number of public IP addresses a tenant subscription can provision."
+      },
+      "maxVnetsPerSubscription": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Maximum number of virtual networks a tenant subscription can provision."
+      },
+      "maxVirtualNetworkGatewaysPerSubscription": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Maximum number of virtual network gateways a tenant subscription can provision."
+      },
+      "maxVirtualNetworkGatewayConnectionsPerSubscription": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Maximum number of virtual network gateway Connections a tenant subscription can provision."
+      },
+      "maxLoadBalancersPerSubscription": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Maximum number of load balancers a tenant subscription can provision."
+      },
+      "maxNicsPerSubscription": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Maximum number of NICs a tenant subscription can provision."
+      },
+      "maxSecurityGroupsPerSubscription": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Maximum number of security groups a tenant subscription can provision."
+      },
+      "migrationPhase": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 2,
+        "description": "State of migration such as None, Prepare, Commit, and Abort."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The provisioning state."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Prepare"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Commit"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Abort"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Network.Admin/locations/quotas@2015-06-15",
+    "scopeType": 4,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  }
+]

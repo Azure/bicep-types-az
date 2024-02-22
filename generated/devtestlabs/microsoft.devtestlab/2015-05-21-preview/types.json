@@ -1,1 +1,2432 @@
-[{"13":{}},{"6":{"Value":"Microsoft.DevTestLab/labs"}},{"6":{"Value":"2015-05-21-preview"}},{"2":{"Name":"Microsoft.DevTestLab/labs","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":1,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":2,"Flags":10,"Description":"The resource api version"},"properties":{"Type":4,"Flags":0,"Description":"The properties of the resource."},"location":{"Type":0,"Flags":0,"Description":"The location of the resource."},"tags":{"Type":9,"Flags":0,"Description":"The tags of the resource."}}}},{"2":{"Name":"LabProperties","Properties":{"defaultStorageAccount":{"Type":0,"Flags":0,"Description":"The lab's default storage account."},"artifactsStorageAccount":{"Type":0,"Flags":0,"Description":"The artifact storage account of the lab."},"storageAccounts":{"Type":5,"Flags":0,"Description":"The storage accounts of the lab."},"vaultName":{"Type":0,"Flags":0,"Description":"The name of the key vault of the lab."},"labStorageType":{"Type":8,"Flags":0,"Description":"The type of the lab storage."},"defaultVirtualNetworkId":{"Type":0,"Flags":0,"Description":"The default virtual network identifier of the lab."},"createdDate":{"Type":0,"Flags":0,"Description":"The creation date of the lab."},"provisioningState":{"Type":0,"Flags":0,"Description":"The provisioning status of the resource."}}}},{"3":{"ItemType":0}},{"6":{"Value":"Standard"}},{"6":{"Value":"Premium"}},{"5":{"Elements":[6,7,0]}},{"2":{"Name":"LabTags","Properties":{},"AdditionalProperties":0}},{"4":{"Name":"Microsoft.DevTestLab/labs@2015-05-21-preview","ScopeType":8,"Body":3,"Flags":0}},{"6":{"Value":"Microsoft.DevTestLab/labs/artifactsources"}},{"6":{"Value":"2015-05-21-preview"}},{"2":{"Name":"Microsoft.DevTestLab/labs/artifactsources","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":11,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":12,"Flags":10,"Description":"The resource api version"},"properties":{"Type":14,"Flags":0,"Description":"The properties of the resource."},"location":{"Type":0,"Flags":0,"Description":"The location of the resource."},"tags":{"Type":21,"Flags":0,"Description":"The tags of the resource."}}}},{"2":{"Name":"ArtifactSourceProperties","Properties":{"displayName":{"Type":0,"Flags":0,"Description":"The display name of the artifact source."},"uri":{"Type":0,"Flags":0,"Description":"The URI of the artifact source."},"sourceType":{"Type":17,"Flags":0,"Description":"The type of the artifact source."},"folderPath":{"Type":0,"Flags":0,"Description":"The folder path of the artifact source."},"branchRef":{"Type":0,"Flags":0,"Description":"The branch reference of the artifact source."},"securityToken":{"Type":0,"Flags":0,"Description":"The security token of the artifact source."},"status":{"Type":20,"Flags":0,"Description":"The status of the artifact source."},"provisioningState":{"Type":0,"Flags":0,"Description":"The provisioning status of the resource."}}}},{"6":{"Value":"VsoGit"}},{"6":{"Value":"GitHub"}},{"5":{"Elements":[15,16,0]}},{"6":{"Value":"Enabled"}},{"6":{"Value":"Disabled"}},{"5":{"Elements":[18,19,0]}},{"2":{"Name":"ArtifactSourceTags","Properties":{},"AdditionalProperties":0}},{"4":{"Name":"Microsoft.DevTestLab/labs/artifactsources@2015-05-21-preview","ScopeType":8,"Body":13,"Flags":0}},{"6":{"Value":"Microsoft.DevTestLab/labs/customimages"}},{"6":{"Value":"2015-05-21-preview"}},{"2":{"Name":"Microsoft.DevTestLab/labs/customimages","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":23,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":24,"Flags":10,"Description":"The resource api version"},"properties":{"Type":26,"Flags":0,"Description":"The properties of the resource."},"location":{"Type":0,"Flags":0,"Description":"The location of the resource."},"tags":{"Type":44,"Flags":0,"Description":"The tags of the resource."}}}},{"2":{"Name":"CustomImageProperties","Properties":{"vm":{"Type":27,"Flags":0,"Description":"Properties for creating a custom image from a virtual machine."},"vhd":{"Type":39,"Flags":0,"Description":"The VHD from which the image is to be created."},"description":{"Type":0,"Flags":0,"Description":"The description of the custom image."},"osType":{"Type":43,"Flags":0,"Description":"The OS type of the custom image."},"author":{"Type":0,"Flags":0,"Description":"The author of the custom image."},"creationDate":{"Type":0,"Flags":0,"Description":"The creation date of the custom image."},"provisioningState":{"Type":0,"Flags":0,"Description":"The provisioning status of the resource."}}}},{"2":{"Name":"CustomImagePropertiesFromVm","Properties":{"sourceVmId":{"Type":0,"Flags":0,"Description":"The source vm identifier."},"sysPrep":{"Type":28,"Flags":0,"Description":"Indicates whether sysprep has been run on the VHD."},"windowsOsInfo":{"Type":29,"Flags":0,"Description":"The Windows OS information of the VM."},"linuxOsInfo":{"Type":34,"Flags":0,"Description":"The Linux OS information of the VM."}}}},{"11":{}},{"2":{"Name":"WindowsOsInfo","Properties":{"windowsOsState":{"Type":33,"Flags":0,"Description":"The state of the Windows OS."}}}},{"6":{"Value":"NonSysprepped"}},{"6":{"Value":"SysprepRequested"}},{"6":{"Value":"SysprepApplied"}},{"5":{"Elements":[30,31,32,0]}},{"2":{"Name":"LinuxOsInfo","Properties":{"linuxOsState":{"Type":38,"Flags":0,"Description":"The state of the Linux OS."}}}},{"6":{"Value":"NonDeprovisioned"}},{"6":{"Value":"DeprovisionRequested"}},{"6":{"Value":"DeprovisionApplied"}},{"5":{"Elements":[35,36,37,0]}},{"2":{"Name":"CustomImagePropertiesCustom","Properties":{"imageName":{"Type":0,"Flags":0,"Description":"The image name."},"sysPrep":{"Type":28,"Flags":0,"Description":"Indicates whether sysprep has been run on the VHD."}}}},{"6":{"Value":"Windows"}},{"6":{"Value":"Linux"}},{"6":{"Value":"None"}},{"5":{"Elements":[40,41,42,0]}},{"2":{"Name":"CustomImageTags","Properties":{},"AdditionalProperties":0}},{"4":{"Name":"Microsoft.DevTestLab/labs/customimages@2015-05-21-preview","ScopeType":8,"Body":25,"Flags":0}},{"6":{"Value":"Microsoft.DevTestLab/labs/formulas"}},{"6":{"Value":"2015-05-21-preview"}},{"2":{"Name":"Microsoft.DevTestLab/labs/formulas","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":46,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":47,"Flags":10,"Description":"The resource api version"},"properties":{"Type":49,"Flags":0,"Description":"The properties of the resource."},"location":{"Type":0,"Flags":0,"Description":"The location of the resource."},"tags":{"Type":61,"Flags":0,"Description":"The tags of the resource."}}}},{"2":{"Name":"FormulaProperties","Properties":{"description":{"Type":0,"Flags":0,"Description":"The description of the formula."},"author":{"Type":0,"Flags":0,"Description":"The author of the formula."},"osType":{"Type":0,"Flags":0,"Description":"The OS type of the formula."},"creationDate":{"Type":0,"Flags":0,"Description":"The creation date of the formula."},"formulaContent":{"Type":50,"Flags":0,"Description":"The content of the formula."},"vm":{"Type":60,"Flags":0,"Description":"Information about a VM from which a formula is to be created."},"provisioningState":{"Type":0,"Flags":0,"Description":"The provisioning status of the resource."}}}},{"2":{"Name":"LabVirtualMachine","Properties":{"properties":{"Type":51,"Flags":0,"Description":"The properties of the resource."},"id":{"Type":0,"Flags":0,"Description":"The identifier of the resource."},"name":{"Type":0,"Flags":0,"Description":"The name of the resource."},"type":{"Type":0,"Flags":0,"Description":"The type of the resource."},"location":{"Type":0,"Flags":0,"Description":"The location of the resource."},"tags":{"Type":59,"Flags":0,"Description":"The tags of the resource."}}}},{"2":{"Name":"LabVirtualMachineProperties","Properties":{"notes":{"Type":0,"Flags":0,"Description":"The notes of the virtual machine."},"ownerObjectId":{"Type":0,"Flags":0,"Description":"The object identifier of the owner of the virtual machine."},"createdByUserId":{"Type":0,"Flags":0,"Description":"The object identifier of the creator of the virtual machine."},"createdByUser":{"Type":0,"Flags":0,"Description":"The email address of creator of the virtual machine."},"computeId":{"Type":0,"Flags":0,"Description":"The resource identifier (Microsoft.Compute) of the virtual machine."},"customImageId":{"Type":0,"Flags":0,"Description":"The custom image identifier of the virtual machine."},"osType":{"Type":0,"Flags":0,"Description":"The OS type of the virtual machine."},"size":{"Type":0,"Flags":0,"Description":"The size of the virtual machine."},"userName":{"Type":0,"Flags":0,"Description":"The user name of the virtual machine."},"password":{"Type":0,"Flags":0,"Description":"The password of the virtual machine administrator."},"sshKey":{"Type":0,"Flags":0,"Description":"The SSH key of the virtual machine administrator."},"isAuthenticationWithSshKey":{"Type":28,"Flags":0,"Description":"A value indicating whether this virtual machine uses an SSH key for authentication."},"fqdn":{"Type":0,"Flags":0,"Description":"The fully-qualified domain name of the virtual machine."},"labSubnetName":{"Type":0,"Flags":0,"Description":"The lab subnet name of the virtual machine."},"labVirtualNetworkId":{"Type":0,"Flags":0,"Description":"The lab virtual network identifier of the virtual machine."},"disallowPublicIpAddress":{"Type":28,"Flags":0,"Description":"Indicates whether the virtual machine is to be created without a public IP address."},"artifacts":{"Type":55,"Flags":0,"Description":"The artifacts to be installed on the virtual machine."},"artifactDeploymentStatus":{"Type":56,"Flags":0,"Description":"The artifact deployment status for the virtual machine."},"galleryImageReference":{"Type":58,"Flags":0,"Description":"The Microsoft Azure Marketplace image reference of the virtual machine."},"provisioningState":{"Type":0,"Flags":0,"Description":"The provisioning status of the resource."}}}},{"2":{"Name":"ArtifactInstallProperties","Properties":{"artifactId":{"Type":0,"Flags":0,"Description":"The artifact's identifier."},"parameters":{"Type":54,"Flags":0,"Description":"The parameters of the artifact."}}}},{"2":{"Name":"ArtifactParameterProperties","Properties":{"name":{"Type":0,"Flags":0,"Description":"The name of the artifact parameter."},"value":{"Type":0,"Flags":0,"Description":"The value of the artifact parameter."}}}},{"3":{"ItemType":53}},{"3":{"ItemType":52}},{"2":{"Name":"ArtifactDeploymentStatusProperties","Properties":{"deploymentStatus":{"Type":0,"Flags":0,"Description":"The deployment status of the artifact."},"artifactsApplied":{"Type":57,"Flags":0,"Description":"The total count of the artifacts that were successfully applied."},"totalArtifacts":{"Type":57,"Flags":0,"Description":"The total count of the artifacts that were tentatively applied."}}}},{"12":{}},{"2":{"Name":"GalleryImageReference","Properties":{"offer":{"Type":0,"Flags":0,"Description":"The offer of the gallery image."},"publisher":{"Type":0,"Flags":0,"Description":"The publisher of the gallery image."},"sku":{"Type":0,"Flags":0,"Description":"The SKU of the gallery image."},"osType":{"Type":0,"Flags":0,"Description":"The OS type of the gallery image."},"version":{"Type":0,"Flags":0,"Description":"The version of the gallery image."}}}},{"2":{"Name":"LabVirtualMachineTags","Properties":{},"AdditionalProperties":0}},{"2":{"Name":"FormulaPropertiesFromVm","Properties":{"labVmId":{"Type":0,"Flags":0,"Description":"The identifier of the VM from which a formula is to be created."}}}},{"2":{"Name":"FormulaTags","Properties":{},"AdditionalProperties":0}},{"4":{"Name":"Microsoft.DevTestLab/labs/formulas@2015-05-21-preview","ScopeType":8,"Body":48,"Flags":0}},{"6":{"Value":"Microsoft.DevTestLab/labs/policysets/policies"}},{"6":{"Value":"2015-05-21-preview"}},{"2":{"Name":"Microsoft.DevTestLab/labs/policysets/policies","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":63,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":64,"Flags":10,"Description":"The resource api version"},"properties":{"Type":66,"Flags":0,"Description":"The properties of the resource."},"location":{"Type":0,"Flags":0,"Description":"The location of the resource."},"tags":{"Type":79,"Flags":0,"Description":"The tags of the resource."}}}},{"2":{"Name":"PolicyProperties","Properties":{"description":{"Type":0,"Flags":0,"Description":"The description of the policy."},"status":{"Type":69,"Flags":0,"Description":"The status of the policy."},"factName":{"Type":75,"Flags":0,"Description":"The fact name of the policy."},"factData":{"Type":0,"Flags":0,"Description":"The fact data of the policy."},"threshold":{"Type":0,"Flags":0,"Description":"The threshold of the policy."},"evaluatorType":{"Type":78,"Flags":0,"Description":"The evaluator type of the policy."},"provisioningState":{"Type":0,"Flags":0,"Description":"The provisioning status of the resource."}}}},{"6":{"Value":"Enabled"}},{"6":{"Value":"Disabled"}},{"5":{"Elements":[67,68,0]}},{"6":{"Value":"UserOwnedLabVmCount"}},{"6":{"Value":"LabVmCount"}},{"6":{"Value":"LabVmSize"}},{"6":{"Value":"GalleryImage"}},{"6":{"Value":"UserOwnedLabVmCountInSubnet"}},{"5":{"Elements":[70,71,72,73,74,0]}},{"6":{"Value":"AllowedValuesPolicy"}},{"6":{"Value":"MaxValuePolicy"}},{"5":{"Elements":[76,77,0]}},{"2":{"Name":"PolicyTags","Properties":{},"AdditionalProperties":0}},{"4":{"Name":"Microsoft.DevTestLab/labs/policysets/policies@2015-05-21-preview","ScopeType":8,"Body":65,"Flags":0}},{"6":{"Value":"Microsoft.DevTestLab/labs/schedules"}},{"6":{"Value":"2015-05-21-preview"}},{"2":{"Name":"Microsoft.DevTestLab/labs/schedules","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":81,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":82,"Flags":10,"Description":"The resource api version"},"properties":{"Type":84,"Flags":0,"Description":"The properties of the resource."},"location":{"Type":0,"Flags":0,"Description":"The location of the resource."},"tags":{"Type":96,"Flags":0,"Description":"The tags of the resource."}}}},{"2":{"Name":"ScheduleProperties","Properties":{"status":{"Type":87,"Flags":0,"Description":"The status of the schedule."},"taskType":{"Type":91,"Flags":0,"Description":"The task type of the schedule."},"weeklyRecurrence":{"Type":92,"Flags":0,"Description":"The weekly recurrence of the schedule."},"dailyRecurrence":{"Type":94,"Flags":0,"Description":"The daily recurrence of the schedule."},"hourlyRecurrence":{"Type":95,"Flags":0,"Description":"The hourly recurrence of the schedule."},"timeZoneId":{"Type":0,"Flags":0,"Description":"The time zone id."},"provisioningState":{"Type":0,"Flags":0,"Description":"The provisioning status of the resource."}}}},{"6":{"Value":"Enabled"}},{"6":{"Value":"Disabled"}},{"5":{"Elements":[85,86,0]}},{"6":{"Value":"LabVmsShutdownTask"}},{"6":{"Value":"LabVmsStartupTask"}},{"6":{"Value":"LabBillingTask"}},{"5":{"Elements":[88,89,90,0]}},{"2":{"Name":"WeekDetails","Properties":{"weekdays":{"Type":93,"Flags":0,"Description":"The days of the week."},"time":{"Type":0,"Flags":0,"Description":"The time of the day."}}}},{"3":{"ItemType":0}},{"2":{"Name":"DayDetails","Properties":{"time":{"Type":0,"Flags":0}}}},{"2":{"Name":"HourDetails","Properties":{"minute":{"Type":57,"Flags":0,"Description":"Minutes of the hour the schedule will run."}}}},{"2":{"Name":"ScheduleTags","Properties":{},"AdditionalProperties":0}},{"4":{"Name":"Microsoft.DevTestLab/labs/schedules@2015-05-21-preview","ScopeType":8,"Body":83,"Flags":0}},{"6":{"Value":"Microsoft.DevTestLab/labs/virtualmachines"}},{"6":{"Value":"2015-05-21-preview"}},{"2":{"Name":"Microsoft.DevTestLab/labs/virtualmachines","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":98,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":99,"Flags":10,"Description":"The resource api version"},"properties":{"Type":51,"Flags":0,"Description":"The properties of the resource."},"location":{"Type":0,"Flags":0,"Description":"The location of the resource."},"tags":{"Type":101,"Flags":0,"Description":"The tags of the resource."}}}},{"2":{"Name":"LabVirtualMachineTags","Properties":{},"AdditionalProperties":0}},{"4":{"Name":"Microsoft.DevTestLab/labs/virtualmachines@2015-05-21-preview","ScopeType":8,"Body":100,"Flags":0}},{"6":{"Value":"Microsoft.DevTestLab/labs/virtualnetworks"}},{"6":{"Value":"2015-05-21-preview"}},{"2":{"Name":"Microsoft.DevTestLab/labs/virtualnetworks","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":103,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":104,"Flags":10,"Description":"The resource api version"},"properties":{"Type":106,"Flags":0,"Description":"The properties of the resource."},"location":{"Type":0,"Flags":0,"Description":"The location of the resource."},"tags":{"Type":123,"Flags":0,"Description":"The tags of the resource."}}}},{"2":{"Name":"VirtualNetworkProperties","Properties":{"allowedSubnets":{"Type":112,"Flags":0,"Description":"The allowed subnets of the virtual network."},"description":{"Type":0,"Flags":0,"Description":"The description of the virtual network."},"externalProviderResourceId":{"Type":0,"Flags":0,"Description":"The Microsoft.Network resource identifier of the virtual network."},"subnetOverrides":{"Type":122,"Flags":0,"Description":"The subnet overrides of the virtual network."},"provisioningState":{"Type":0,"Flags":0,"Description":"The provisioning status of the resource."}}}},{"2":{"Name":"Subnet","Properties":{"resourceId":{"Type":0,"Flags":0},"labSubnetName":{"Type":0,"Flags":0},"allowPublicIp":{"Type":111,"Flags":0}}}},{"6":{"Value":"Default"}},{"6":{"Value":"Deny"}},{"6":{"Value":"Allow"}},{"5":{"Elements":[108,109,110,0]}},{"3":{"ItemType":107}},{"2":{"Name":"SubnetOverride","Properties":{"resourceId":{"Type":0,"Flags":0,"Description":"The resource identifier of the subnet."},"labSubnetName":{"Type":0,"Flags":0,"Description":"The name given to the subnet within the lab."},"useInVmCreationPermission":{"Type":117,"Flags":0,"Description":"Indicates whether this subnet can be used during virtual machine creation."},"usePublicIpAddressPermission":{"Type":121,"Flags":0,"Description":"Indicates whether public IP addresses can be assigned to virtual machines on this subnet."}}}},{"6":{"Value":"Default"}},{"6":{"Value":"Deny"}},{"6":{"Value":"Allow"}},{"5":{"Elements":[114,115,116,0]}},{"6":{"Value":"Default"}},{"6":{"Value":"Deny"}},{"6":{"Value":"Allow"}},{"5":{"Elements":[118,119,120,0]}},{"3":{"ItemType":113}},{"2":{"Name":"VirtualNetworkTags","Properties":{},"AdditionalProperties":0}},{"4":{"Name":"Microsoft.DevTestLab/labs/virtualnetworks@2015-05-21-preview","ScopeType":8,"Body":105,"Flags":0}},{"6":{"Value":"Microsoft.DevTestLab/labs/artifactsources/artifacts"}},{"6":{"Value":"2015-05-21-preview"}},{"2":{"Name":"Microsoft.DevTestLab/labs/artifactsources/artifacts","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":125,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":126,"Flags":10,"Description":"The resource api version"},"properties":{"Type":128,"Flags":2,"Description":"The properties of the resource."},"location":{"Type":0,"Flags":2,"Description":"The location of the resource."},"tags":{"Type":130,"Flags":2,"Description":"The tags of the resource."}}}},{"2":{"Name":"ArtifactProperties","Properties":{"title":{"Type":0,"Flags":0,"Description":"The title of the artifact."},"description":{"Type":0,"Flags":0,"Description":"The description of the artifact."},"filePath":{"Type":0,"Flags":0,"Description":"The file path of the artifact."},"icon":{"Type":0,"Flags":0,"Description":"The icon of the artifact."},"targetOsType":{"Type":0,"Flags":0,"Description":"Gets or sets the type of the target os."},"parameters":{"Type":129,"Flags":0,"Description":"The parameters of the artifact."}}}},{"9":{}},{"2":{"Name":"ArtifactTags","Properties":{},"AdditionalProperties":0}},{"4":{"Name":"Microsoft.DevTestLab/labs/artifactsources/artifacts@2015-05-21-preview","ScopeType":8,"Body":127,"Flags":1}},{"6":{"Value":"Microsoft.DevTestLab/labs/costinsights"}},{"6":{"Value":"2015-05-21-preview"}},{"2":{"Name":"Microsoft.DevTestLab/labs/costinsights","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":132,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":133,"Flags":10,"Description":"The resource api version"},"properties":{"Type":135,"Flags":2,"Description":"The properties of the resource."},"location":{"Type":0,"Flags":2,"Description":"The location of the resource."},"tags":{"Type":138,"Flags":2,"Description":"The tags of the resource."}}}},{"2":{"Name":"CostInsightProperties","Properties":{"currencyCode":{"Type":0,"Flags":0},"vmCosts":{"Type":137,"Flags":0},"provisioningState":{"Type":0,"Flags":0,"Description":"The provisioning status of the resource."}}}},{"2":{"Name":"VMCostProperties","Properties":{"name":{"Type":0,"Flags":0},"resourceGroupName":{"Type":0,"Flags":0},"cost":{"Type":57,"Flags":0}}}},{"3":{"ItemType":136}},{"2":{"Name":"CostInsightTags","Properties":{},"AdditionalProperties":0}},{"4":{"Name":"Microsoft.DevTestLab/labs/costinsights@2015-05-21-preview","ScopeType":8,"Body":134,"Flags":1}},{"6":{"Value":"Microsoft.DevTestLab/labs/costs"}},{"6":{"Value":"2015-05-21-preview"}},{"2":{"Name":"Microsoft.DevTestLab/labs/costs","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":140,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":141,"Flags":10,"Description":"The resource api version"},"properties":{"Type":143,"Flags":2,"Description":"The properties of the resource."},"location":{"Type":0,"Flags":2,"Description":"The location of the resource."},"tags":{"Type":150,"Flags":2,"Description":"The tags of the resource."}}}},{"2":{"Name":"CostProperties","Properties":{"currencyCode":{"Type":0,"Flags":0,"Description":"The currency code of the cost."},"costs":{"Type":149,"Flags":0,"Description":"The per-day costs items of the cost."}}}},{"2":{"Name":"CostPerDayProperties","Properties":{"date":{"Type":0,"Flags":0,"Description":"The date of the cost item."},"cost":{"Type":57,"Flags":0,"Description":"The cost of the cost item."},"costType":{"Type":148,"Flags":0,"Description":"The type of the cost."}}}},{"6":{"Value":"Unavailable"}},{"6":{"Value":"Reported"}},{"6":{"Value":"Projected"}},{"5":{"Elements":[145,146,147,0]}},{"3":{"ItemType":144}},{"2":{"Name":"CostTags","Properties":{},"AdditionalProperties":0}},{"4":{"Name":"Microsoft.DevTestLab/labs/costs@2015-05-21-preview","ScopeType":8,"Body":142,"Flags":1}},{"2":{"Name":"ResponseWithContinuationLabVhd","Properties":{"value":{"Type":154,"Flags":0,"Description":"Results of the list operation."},"nextLink":{"Type":0,"Flags":0,"Description":"Link for next set of results."}}}},{"2":{"Name":"LabVhd","Properties":{"id":{"Type":0,"Flags":0,"Description":"The absolute URI of the VHD."}}}},{"3":{"ItemType":153}},{"8":{"Name":"listVhds","ResourceType":"Microsoft.DevTestLab/labs","ApiVersion":"2015-05-21-preview","Output":152}}]
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DevTestLab/labs"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2015-05-21-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DevTestLab/labs",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "The properties of the resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The location of the resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "The tags of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LabProperties",
+    "properties": {
+      "defaultStorageAccount": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The lab's default storage account."
+      },
+      "artifactsStorageAccount": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The artifact storage account of the lab."
+      },
+      "storageAccounts": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "The storage accounts of the lab."
+      },
+      "vaultName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the key vault of the lab."
+      },
+      "labStorageType": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 0,
+        "description": "The type of the lab storage."
+      },
+      "defaultVirtualNetworkId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The default virtual network identifier of the lab."
+      },
+      "createdDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The creation date of the lab."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The provisioning status of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Premium"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LabTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DevTestLab/labs@2015-05-21-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DevTestLab/labs/artifactsources"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2015-05-21-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DevTestLab/labs/artifactsources",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 0,
+        "description": "The properties of the resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The location of the resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "The tags of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ArtifactSourceProperties",
+    "properties": {
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The display name of the artifact source."
+      },
+      "uri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The URI of the artifact source."
+      },
+      "sourceType": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "The type of the artifact source."
+      },
+      "folderPath": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The folder path of the artifact source."
+      },
+      "branchRef": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The branch reference of the artifact source."
+      },
+      "securityToken": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The security token of the artifact source."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0,
+        "description": "The status of the artifact source."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The provisioning status of the resource."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VsoGit"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GitHub"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/15"
+      },
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/18"
+      },
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ArtifactSourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DevTestLab/labs/artifactsources@2015-05-21-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/13"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DevTestLab/labs/customimages"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2015-05-21-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DevTestLab/labs/customimages",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "The properties of the resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The location of the resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "The tags of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CustomImageProperties",
+    "properties": {
+      "vm": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 0,
+        "description": "Properties for creating a custom image from a virtual machine."
+      },
+      "vhd": {
+        "type": {
+          "$ref": "#/39"
+        },
+        "flags": 0,
+        "description": "The VHD from which the image is to be created."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The description of the custom image."
+      },
+      "osType": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 0,
+        "description": "The OS type of the custom image."
+      },
+      "author": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The author of the custom image."
+      },
+      "creationDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The creation date of the custom image."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The provisioning status of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CustomImagePropertiesFromVm",
+    "properties": {
+      "sourceVmId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The source vm identifier."
+      },
+      "sysPrep": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 0,
+        "description": "Indicates whether sysprep has been run on the VHD."
+      },
+      "windowsOsInfo": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "The Windows OS information of the VM."
+      },
+      "linuxOsInfo": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 0,
+        "description": "The Linux OS information of the VM."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WindowsOsInfo",
+    "properties": {
+      "windowsOsState": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0,
+        "description": "The state of the Windows OS."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NonSysprepped"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SysprepRequested"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SysprepApplied"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/30"
+      },
+      {
+        "$ref": "#/31"
+      },
+      {
+        "$ref": "#/32"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LinuxOsInfo",
+    "properties": {
+      "linuxOsState": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 0,
+        "description": "The state of the Linux OS."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NonDeprovisioned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DeprovisionRequested"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DeprovisionApplied"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/35"
+      },
+      {
+        "$ref": "#/36"
+      },
+      {
+        "$ref": "#/37"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CustomImagePropertiesCustom",
+    "properties": {
+      "imageName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The image name."
+      },
+      "sysPrep": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 0,
+        "description": "Indicates whether sysprep has been run on the VHD."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Windows"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Linux"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/40"
+      },
+      {
+        "$ref": "#/41"
+      },
+      {
+        "$ref": "#/42"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CustomImageTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DevTestLab/labs/customimages@2015-05-21-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/25"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DevTestLab/labs/formulas"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2015-05-21-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DevTestLab/labs/formulas",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 0,
+        "description": "The properties of the resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The location of the resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 0,
+        "description": "The tags of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FormulaProperties",
+    "properties": {
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The description of the formula."
+      },
+      "author": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The author of the formula."
+      },
+      "osType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The OS type of the formula."
+      },
+      "creationDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The creation date of the formula."
+      },
+      "formulaContent": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 0,
+        "description": "The content of the formula."
+      },
+      "vm": {
+        "type": {
+          "$ref": "#/60"
+        },
+        "flags": 0,
+        "description": "Information about a VM from which a formula is to be created."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The provisioning status of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LabVirtualMachine",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 0,
+        "description": "The properties of the resource."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identifier of the resource."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The type of the resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The location of the resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 0,
+        "description": "The tags of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LabVirtualMachineProperties",
+    "properties": {
+      "notes": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The notes of the virtual machine."
+      },
+      "ownerObjectId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The object identifier of the owner of the virtual machine."
+      },
+      "createdByUserId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The object identifier of the creator of the virtual machine."
+      },
+      "createdByUser": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The email address of creator of the virtual machine."
+      },
+      "computeId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The resource identifier (Microsoft.Compute) of the virtual machine."
+      },
+      "customImageId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The custom image identifier of the virtual machine."
+      },
+      "osType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The OS type of the virtual machine."
+      },
+      "size": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The size of the virtual machine."
+      },
+      "userName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The user name of the virtual machine."
+      },
+      "password": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The password of the virtual machine administrator."
+      },
+      "sshKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The SSH key of the virtual machine administrator."
+      },
+      "isAuthenticationWithSshKey": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 0,
+        "description": "A value indicating whether this virtual machine uses an SSH key for authentication."
+      },
+      "fqdn": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The fully-qualified domain name of the virtual machine."
+      },
+      "labSubnetName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The lab subnet name of the virtual machine."
+      },
+      "labVirtualNetworkId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The lab virtual network identifier of the virtual machine."
+      },
+      "disallowPublicIpAddress": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 0,
+        "description": "Indicates whether the virtual machine is to be created without a public IP address."
+      },
+      "artifacts": {
+        "type": {
+          "$ref": "#/55"
+        },
+        "flags": 0,
+        "description": "The artifacts to be installed on the virtual machine."
+      },
+      "artifactDeploymentStatus": {
+        "type": {
+          "$ref": "#/56"
+        },
+        "flags": 0,
+        "description": "The artifact deployment status for the virtual machine."
+      },
+      "galleryImageReference": {
+        "type": {
+          "$ref": "#/58"
+        },
+        "flags": 0,
+        "description": "The Microsoft Azure Marketplace image reference of the virtual machine."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The provisioning status of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ArtifactInstallProperties",
+    "properties": {
+      "artifactId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The artifact's identifier."
+      },
+      "parameters": {
+        "type": {
+          "$ref": "#/54"
+        },
+        "flags": 0,
+        "description": "The parameters of the artifact."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ArtifactParameterProperties",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the artifact parameter."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The value of the artifact parameter."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/53"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/52"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ArtifactDeploymentStatusProperties",
+    "properties": {
+      "deploymentStatus": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The deployment status of the artifact."
+      },
+      "artifactsApplied": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0,
+        "description": "The total count of the artifacts that were successfully applied."
+      },
+      "totalArtifacts": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0,
+        "description": "The total count of the artifacts that were tentatively applied."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GalleryImageReference",
+    "properties": {
+      "offer": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The offer of the gallery image."
+      },
+      "publisher": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The publisher of the gallery image."
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The SKU of the gallery image."
+      },
+      "osType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The OS type of the gallery image."
+      },
+      "version": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The version of the gallery image."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LabVirtualMachineTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FormulaPropertiesFromVm",
+    "properties": {
+      "labVmId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identifier of the VM from which a formula is to be created."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FormulaTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DevTestLab/labs/formulas@2015-05-21-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/48"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DevTestLab/labs/policysets/policies"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2015-05-21-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DevTestLab/labs/policysets/policies",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/63"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/64"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/66"
+        },
+        "flags": 0,
+        "description": "The properties of the resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The location of the resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/79"
+        },
+        "flags": 0,
+        "description": "The tags of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PolicyProperties",
+    "properties": {
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The description of the policy."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/69"
+        },
+        "flags": 0,
+        "description": "The status of the policy."
+      },
+      "factName": {
+        "type": {
+          "$ref": "#/75"
+        },
+        "flags": 0,
+        "description": "The fact name of the policy."
+      },
+      "factData": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The fact data of the policy."
+      },
+      "threshold": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The threshold of the policy."
+      },
+      "evaluatorType": {
+        "type": {
+          "$ref": "#/78"
+        },
+        "flags": 0,
+        "description": "The evaluator type of the policy."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The provisioning status of the resource."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/67"
+      },
+      {
+        "$ref": "#/68"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UserOwnedLabVmCount"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LabVmCount"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LabVmSize"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GalleryImage"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UserOwnedLabVmCountInSubnet"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/70"
+      },
+      {
+        "$ref": "#/71"
+      },
+      {
+        "$ref": "#/72"
+      },
+      {
+        "$ref": "#/73"
+      },
+      {
+        "$ref": "#/74"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AllowedValuesPolicy"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MaxValuePolicy"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/76"
+      },
+      {
+        "$ref": "#/77"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PolicyTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DevTestLab/labs/policysets/policies@2015-05-21-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/65"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DevTestLab/labs/schedules"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2015-05-21-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DevTestLab/labs/schedules",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/81"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/84"
+        },
+        "flags": 0,
+        "description": "The properties of the resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The location of the resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 0,
+        "description": "The tags of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ScheduleProperties",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 0,
+        "description": "The status of the schedule."
+      },
+      "taskType": {
+        "type": {
+          "$ref": "#/91"
+        },
+        "flags": 0,
+        "description": "The task type of the schedule."
+      },
+      "weeklyRecurrence": {
+        "type": {
+          "$ref": "#/92"
+        },
+        "flags": 0,
+        "description": "The weekly recurrence of the schedule."
+      },
+      "dailyRecurrence": {
+        "type": {
+          "$ref": "#/94"
+        },
+        "flags": 0,
+        "description": "The daily recurrence of the schedule."
+      },
+      "hourlyRecurrence": {
+        "type": {
+          "$ref": "#/95"
+        },
+        "flags": 0,
+        "description": "The hourly recurrence of the schedule."
+      },
+      "timeZoneId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The time zone id."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The provisioning status of the resource."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/85"
+      },
+      {
+        "$ref": "#/86"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LabVmsShutdownTask"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LabVmsStartupTask"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LabBillingTask"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/88"
+      },
+      {
+        "$ref": "#/89"
+      },
+      {
+        "$ref": "#/90"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WeekDetails",
+    "properties": {
+      "weekdays": {
+        "type": {
+          "$ref": "#/93"
+        },
+        "flags": 0,
+        "description": "The days of the week."
+      },
+      "time": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The time of the day."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DayDetails",
+    "properties": {
+      "time": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HourDetails",
+    "properties": {
+      "minute": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0,
+        "description": "Minutes of the hour the schedule will run."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ScheduleTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DevTestLab/labs/schedules@2015-05-21-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/83"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DevTestLab/labs/virtualmachines"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2015-05-21-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DevTestLab/labs/virtualmachines",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/98"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/99"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 0,
+        "description": "The properties of the resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The location of the resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/101"
+        },
+        "flags": 0,
+        "description": "The tags of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LabVirtualMachineTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DevTestLab/labs/virtualmachines@2015-05-21-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/100"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DevTestLab/labs/virtualnetworks"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2015-05-21-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DevTestLab/labs/virtualnetworks",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/103"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/104"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/106"
+        },
+        "flags": 0,
+        "description": "The properties of the resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The location of the resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/123"
+        },
+        "flags": 0,
+        "description": "The tags of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualNetworkProperties",
+    "properties": {
+      "allowedSubnets": {
+        "type": {
+          "$ref": "#/112"
+        },
+        "flags": 0,
+        "description": "The allowed subnets of the virtual network."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The description of the virtual network."
+      },
+      "externalProviderResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The Microsoft.Network resource identifier of the virtual network."
+      },
+      "subnetOverrides": {
+        "type": {
+          "$ref": "#/122"
+        },
+        "flags": 0,
+        "description": "The subnet overrides of the virtual network."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The provisioning status of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Subnet",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "labSubnetName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "allowPublicIp": {
+        "type": {
+          "$ref": "#/111"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Default"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deny"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Allow"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/108"
+      },
+      {
+        "$ref": "#/109"
+      },
+      {
+        "$ref": "#/110"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/107"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SubnetOverride",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The resource identifier of the subnet."
+      },
+      "labSubnetName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name given to the subnet within the lab."
+      },
+      "useInVmCreationPermission": {
+        "type": {
+          "$ref": "#/117"
+        },
+        "flags": 0,
+        "description": "Indicates whether this subnet can be used during virtual machine creation."
+      },
+      "usePublicIpAddressPermission": {
+        "type": {
+          "$ref": "#/121"
+        },
+        "flags": 0,
+        "description": "Indicates whether public IP addresses can be assigned to virtual machines on this subnet."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Default"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deny"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Allow"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/114"
+      },
+      {
+        "$ref": "#/115"
+      },
+      {
+        "$ref": "#/116"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Default"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deny"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Allow"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/118"
+      },
+      {
+        "$ref": "#/119"
+      },
+      {
+        "$ref": "#/120"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/113"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualNetworkTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DevTestLab/labs/virtualnetworks@2015-05-21-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/105"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DevTestLab/labs/artifactsources/artifacts"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2015-05-21-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DevTestLab/labs/artifactsources/artifacts",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/125"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/126"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/128"
+        },
+        "flags": 2,
+        "description": "The properties of the resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The location of the resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/130"
+        },
+        "flags": 2,
+        "description": "The tags of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ArtifactProperties",
+    "properties": {
+      "title": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The title of the artifact."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The description of the artifact."
+      },
+      "filePath": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The file path of the artifact."
+      },
+      "icon": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The icon of the artifact."
+      },
+      "targetOsType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the type of the target os."
+      },
+      "parameters": {
+        "type": {
+          "$ref": "#/129"
+        },
+        "flags": 0,
+        "description": "The parameters of the artifact."
+      }
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ArtifactTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DevTestLab/labs/artifactsources/artifacts@2015-05-21-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/127"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DevTestLab/labs/costinsights"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2015-05-21-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DevTestLab/labs/costinsights",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/132"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/133"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/135"
+        },
+        "flags": 2,
+        "description": "The properties of the resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The location of the resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/138"
+        },
+        "flags": 2,
+        "description": "The tags of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CostInsightProperties",
+    "properties": {
+      "currencyCode": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "vmCosts": {
+        "type": {
+          "$ref": "#/137"
+        },
+        "flags": 0
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The provisioning status of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VMCostProperties",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "resourceGroupName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "cost": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/136"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CostInsightTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DevTestLab/labs/costinsights@2015-05-21-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/134"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DevTestLab/labs/costs"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2015-05-21-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DevTestLab/labs/costs",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/140"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/141"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/143"
+        },
+        "flags": 2,
+        "description": "The properties of the resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The location of the resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/150"
+        },
+        "flags": 2,
+        "description": "The tags of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CostProperties",
+    "properties": {
+      "currencyCode": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The currency code of the cost."
+      },
+      "costs": {
+        "type": {
+          "$ref": "#/149"
+        },
+        "flags": 0,
+        "description": "The per-day costs items of the cost."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CostPerDayProperties",
+    "properties": {
+      "date": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The date of the cost item."
+      },
+      "cost": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0,
+        "description": "The cost of the cost item."
+      },
+      "costType": {
+        "type": {
+          "$ref": "#/148"
+        },
+        "flags": 0,
+        "description": "The type of the cost."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unavailable"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Reported"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Projected"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/145"
+      },
+      {
+        "$ref": "#/146"
+      },
+      {
+        "$ref": "#/147"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/144"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CostTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DevTestLab/labs/costs@2015-05-21-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/142"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResponseWithContinuationLabVhd",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/154"
+        },
+        "flags": 0,
+        "description": "Results of the list operation."
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Link for next set of results."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LabVhd",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The absolute URI of the VHD."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/153"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listVhds",
+    "resourceType": "Microsoft.DevTestLab/labs",
+    "apiVersion": "2015-05-21-preview",
+    "output": {
+      "$ref": "#/152"
+    }
+  }
+]

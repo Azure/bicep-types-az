@@ -1,1 +1,475 @@
-[{"13":{}},{"6":{"Value":"Microsoft.Maps/accounts"}},{"6":{"Value":"2021-02-01"}},{"2":{"Name":"Microsoft.Maps/accounts","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":1,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":2,"Flags":10,"Description":"The resource api version"},"sku":{"Type":4,"Flags":1,"Description":"The SKU of this account."},"kind":{"Type":11,"Flags":0,"Description":"Get or Set Kind property."},"systemData":{"Type":12,"Flags":2,"Description":"The system meta data relating to this resource."},"properties":{"Type":23,"Flags":0,"Description":"The map account properties."},"tags":{"Type":25,"Flags":0,"Description":"Resource tags."},"location":{"Type":0,"Flags":1,"Description":"The geo-location where the resource lives"}}}},{"2":{"Name":"Sku","Properties":{"name":{"Type":8,"Flags":1,"Description":"The name of the SKU, in standard format (such as S0)."},"tier":{"Type":0,"Flags":2,"Description":"Gets the sku tier. This is based on the SKU name."}}}},{"6":{"Value":"S0"}},{"6":{"Value":"S1"}},{"6":{"Value":"G2"}},{"5":{"Elements":[5,6,7,0]}},{"6":{"Value":"Gen1"}},{"6":{"Value":"Gen2"}},{"5":{"Elements":[9,10,0]}},{"2":{"Name":"SystemData","Properties":{"createdBy":{"Type":0,"Flags":0,"Description":"The identity that created the resource."},"createdByType":{"Type":17,"Flags":0,"Description":"The type of identity that created the resource."},"createdAt":{"Type":0,"Flags":0,"Description":"The timestamp of resource creation (UTC)."},"lastModifiedBy":{"Type":0,"Flags":0,"Description":"The identity that last modified the resource."},"lastModifiedByType":{"Type":22,"Flags":0,"Description":"The type of identity that last modified the resource."},"lastModifiedAt":{"Type":0,"Flags":0,"Description":"The timestamp of resource last modification (UTC)"}}}},{"6":{"Value":"User"}},{"6":{"Value":"Application"}},{"6":{"Value":"ManagedIdentity"}},{"6":{"Value":"Key"}},{"5":{"Elements":[13,14,15,16,0]}},{"6":{"Value":"User"}},{"6":{"Value":"Application"}},{"6":{"Value":"ManagedIdentity"}},{"6":{"Value":"Key"}},{"5":{"Elements":[18,19,20,21,0]}},{"2":{"Name":"MapsAccountProperties","Properties":{"uniqueId":{"Type":0,"Flags":2,"Description":"A unique identifier for the maps account"},"disableLocalAuth":{"Type":24,"Flags":0,"Description":"Allows toggle functionality on Azure Policy to disable Azure Maps local authentication support. This will disable Shared Keys authentication from any usage."},"provisioningState":{"Type":0,"Flags":2,"Description":"the state of the provisioning."}}}},{"11":{}},{"2":{"Name":"TrackedResourceTags","Properties":{},"AdditionalProperties":0}},{"4":{"Name":"Microsoft.Maps/accounts@2021-02-01","ScopeType":8,"Body":3,"Flags":0}},{"6":{"Value":"Microsoft.Maps/accounts/creators"}},{"6":{"Value":"2021-02-01"}},{"2":{"Name":"Microsoft.Maps/accounts/creators","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":27,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":28,"Flags":10,"Description":"The resource api version"},"properties":{"Type":30,"Flags":1,"Description":"The Creator resource properties."},"tags":{"Type":32,"Flags":0,"Description":"Resource tags."},"location":{"Type":0,"Flags":1,"Description":"The geo-location where the resource lives"}}}},{"2":{"Name":"CreatorProperties","Properties":{"provisioningState":{"Type":0,"Flags":2,"Description":"The state of the resource provisioning, terminal states: Succeeded, Failed, Canceled"},"storageUnits":{"Type":31,"Flags":1,"Description":"The storage units to be allocated. Integer values from 1 to 100, inclusive."}}}},{"12":{"MinValue":1,"MaxValue":100}},{"2":{"Name":"TrackedResourceTags","Properties":{},"AdditionalProperties":0}},{"4":{"Name":"Microsoft.Maps/accounts/creators@2021-02-01","ScopeType":8,"Body":29,"Flags":0}},{"2":{"Name":"MapsAccountKeys","Properties":{"primaryKeyLastUpdated":{"Type":0,"Flags":2,"Description":"The last updated date and time of the primary key."},"primaryKey":{"Type":0,"Flags":2,"Description":"The primary key for accessing the Maps REST APIs."},"secondaryKey":{"Type":0,"Flags":2,"Description":"The secondary key for accessing the Maps REST APIs."},"secondaryKeyLastUpdated":{"Type":0,"Flags":2,"Description":"The last updated date and time of the secondary key."}}}},{"8":{"Name":"listKeys","ResourceType":"Microsoft.Maps/accounts","ApiVersion":"2021-02-01","Output":34}}]
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Maps/accounts"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-02-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Maps/accounts",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 1,
+        "description": "The SKU of this account."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 0,
+        "description": "Get or Set Kind property."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 2,
+        "description": "The system meta data relating to this resource."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0,
+        "description": "The map account properties."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Sku",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 1,
+        "description": "The name of the SKU, in standard format (such as S0)."
+      },
+      "tier": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Gets the sku tier. This is based on the SKU name."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S0"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "S1"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "G2"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/5"
+      },
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Gen1"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Gen2"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SystemData",
+    "properties": {
+      "createdBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that created the resource."
+      },
+      "createdByType": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "The type of identity that created the resource."
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource creation (UTC)."
+      },
+      "lastModifiedBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that last modified the resource."
+      },
+      "lastModifiedByType": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 0,
+        "description": "The type of identity that last modified the resource."
+      },
+      "lastModifiedAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource last modification (UTC)"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/14"
+      },
+      {
+        "$ref": "#/15"
+      },
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/18"
+      },
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/20"
+      },
+      {
+        "$ref": "#/21"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MapsAccountProperties",
+    "properties": {
+      "uniqueId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "A unique identifier for the maps account"
+      },
+      "disableLocalAuth": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "Allows toggle functionality on Azure Policy to disable Azure Maps local authentication support. This will disable Shared Keys authentication from any usage."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "the state of the provisioning."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Maps/accounts@2021-02-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Maps/accounts/creators"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-02-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Maps/accounts/creators",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 1,
+        "description": "The Creator resource properties."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CreatorProperties",
+    "properties": {
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The state of the resource provisioning, terminal states: Succeeded, Failed, Canceled"
+      },
+      "storageUnits": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 1,
+        "description": "The storage units to be allocated. Integer values from 1 to 100, inclusive."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 1,
+    "maxValue": 100
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Maps/accounts/creators@2021-02-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/29"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MapsAccountKeys",
+    "properties": {
+      "primaryKeyLastUpdated": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The last updated date and time of the primary key."
+      },
+      "primaryKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The primary key for accessing the Maps REST APIs."
+      },
+      "secondaryKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The secondary key for accessing the Maps REST APIs."
+      },
+      "secondaryKeyLastUpdated": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The last updated date and time of the secondary key."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listKeys",
+    "resourceType": "Microsoft.Maps/accounts",
+    "apiVersion": "2021-02-01",
+    "output": {
+      "$ref": "#/34"
+    }
+  }
+]

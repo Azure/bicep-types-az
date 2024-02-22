@@ -1,9 +1,9 @@
-# Microsoft.AzurePlaywrightService @ 2024-02-01
+# Microsoft.AzurePlaywrightService @ 2024-02-01-preview
 
-## Resource Microsoft.AzurePlaywrightService/accounts@2024-02-01
+## Resource Microsoft.AzurePlaywrightService/accounts@2024-02-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2024-02-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2024-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {minLength: 3, maxLength: 64, pattern: "^[a-zA-Z]{1}[a-zA-Z0-9]{2,63}$"} (Required, DeployTimeConstant): The resource name
@@ -12,20 +12,20 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.AzurePlaywrightService/accounts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AzurePlaywrightService/accounts/quotas@2024-02-01 (ReadOnly)
+## Resource Microsoft.AzurePlaywrightService/accounts/quotas@2024-02-01-preview (ReadOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
-* **apiVersion**: '2024-02-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2024-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'ScalableExecution' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [AccountQuotaProperties](#accountquotaproperties) (ReadOnly): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.AzurePlaywrightService/accounts/quotas' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AzurePlaywrightService/locations/quotas@2024-02-01 (ReadOnly)
+## Resource Microsoft.AzurePlaywrightService/locations/quotas@2024-02-01-preview (ReadOnly)
 * **Valid Scope(s)**: Subscription
 ### Properties
-* **apiVersion**: '2024-02-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **apiVersion**: '2024-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'ScalableExecution' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [QuotaProperties](#quotaproperties) (ReadOnly): The resource-specific properties for this resource.

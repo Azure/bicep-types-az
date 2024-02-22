@@ -1,1 +1,1462 @@
-[{"13":{}},{"6":{"Value":"Microsoft.Elastic/monitors"}},{"6":{"Value":"2023-07-01-preview"}},{"2":{"Name":"Microsoft.Elastic/monitors","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":1,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":2,"Flags":10,"Description":"The resource api version"},"sku":{"Type":4,"Flags":0,"Description":"SKU of the monitor resource."},"properties":{"Type":5,"Flags":0,"Description":"Properties of the monitor resource."},"identity":{"Type":34,"Flags":0,"Description":"Identity properties of the monitor resource."},"tags":{"Type":37,"Flags":0,"Description":"The tags of the monitor resource."},"location":{"Type":0,"Flags":1,"Description":"The location of the monitor resource"},"systemData":{"Type":38,"Flags":2,"Description":"The system metadata relating to this resource"}}}},{"2":{"Name":"ResourceSku","Properties":{"name":{"Type":0,"Flags":1,"Description":"Name of the SKU."}}}},{"2":{"Name":"MonitorProperties","Properties":{"provisioningState":{"Type":15,"Flags":0,"Description":"Provisioning state of the monitor resource."},"monitoringStatus":{"Type":18,"Flags":0,"Description":"Flag specifying if the resource monitoring is enabled or disabled."},"elasticProperties":{"Type":19,"Flags":0,"Description":"Elastic cloud properties."},"userInfo":{"Type":22,"Flags":4,"Description":"User information."},"version":{"Type":0,"Flags":0,"Description":"Version of elastic of the monitor resource"},"liftrResourceCategory":{"Type":31,"Flags":2},"liftrResourcePreference":{"Type":32,"Flags":2,"Description":"The priority of the resource."},"generateApiKey":{"Type":33,"Flags":0,"Description":"Flag to determine if User API Key has to be generated and shared."}}}},{"6":{"Value":"Accepted"}},{"6":{"Value":"Creating"}},{"6":{"Value":"Updating"}},{"6":{"Value":"Deleting"}},{"6":{"Value":"Succeeded"}},{"6":{"Value":"Failed"}},{"6":{"Value":"Canceled"}},{"6":{"Value":"Deleted"}},{"6":{"Value":"NotSpecified"}},{"5":{"Elements":[6,7,8,9,10,11,12,13,14,0]}},{"6":{"Value":"Enabled"}},{"6":{"Value":"Disabled"}},{"5":{"Elements":[16,17,0]}},{"2":{"Name":"ElasticProperties","Properties":{"elasticCloudUser":{"Type":20,"Flags":0,"Description":"Details of the user's elastic account."},"elasticCloudDeployment":{"Type":21,"Flags":0,"Description":"Details of the elastic cloud deployment."}}}},{"2":{"Name":"ElasticCloudUser","Properties":{"emailAddress":{"Type":0,"Flags":2,"Description":"Email of the Elastic User Account."},"id":{"Type":0,"Flags":2,"Description":"User Id of the elastic account of the User."},"elasticCloudSsoDefaultUrl":{"Type":0,"Flags":2,"Description":"Elastic cloud default dashboard sso URL of the Elastic user account."}}}},{"2":{"Name":"ElasticCloudDeployment","Properties":{"name":{"Type":0,"Flags":2,"Description":"Elastic deployment name"},"deploymentId":{"Type":0,"Flags":2,"Description":"Elastic deployment Id"},"azureSubscriptionId":{"Type":0,"Flags":2,"Description":"Associated Azure subscription Id for the elastic deployment."},"elasticsearchRegion":{"Type":0,"Flags":2,"Description":"Region where Deployment at Elastic side took place."},"elasticsearchServiceUrl":{"Type":0,"Flags":2,"Description":"Elasticsearch ingestion endpoint of the Elastic deployment."},"kibanaServiceUrl":{"Type":0,"Flags":2,"Description":"Kibana endpoint of the Elastic deployment."},"kibanaSsoUrl":{"Type":0,"Flags":2,"Description":"Kibana dashboard sso URL of the Elastic deployment."}}}},{"2":{"Name":"UserInfo","Properties":{"firstName":{"Type":23,"Flags":0,"Description":"First name of the user"},"lastName":{"Type":23,"Flags":0,"Description":"Last name of the user"},"companyName":{"Type":24,"Flags":0,"Description":"Company name of the user"},"emailAddress":{"Type":25,"Flags":0,"Description":"Email of the user used by Elastic for contacting them if needed"},"companyInfo":{"Type":26,"Flags":0,"Description":"Company information of the user to be passed to partners."}}}},{"13":{"MaxLength":50}},{"13":{"MaxLength":64}},{"13":{"Pattern":"^([^<>()\\[\\]\\.,;:\\s@\"]+(\\.[^<>()\\[\\]\\.,;:\\s@\"]+)*)@(([a-zA-Z-_0-9]+\\.)+[a-zA-Z]{2,})$"}},{"2":{"Name":"CompanyInfo","Properties":{"domain":{"Type":27,"Flags":0,"Description":"Domain of the company"},"business":{"Type":24,"Flags":0,"Description":"Business of the company"},"employeesNumber":{"Type":28,"Flags":0,"Description":"Number of employees in the company"},"state":{"Type":24,"Flags":0,"Description":"State of the company location."},"country":{"Type":24,"Flags":0,"Description":"Country of the company location."}}}},{"13":{"MaxLength":250}},{"13":{"MaxLength":20}},{"6":{"Value":"Unknown"}},{"6":{"Value":"MonitorLogs"}},{"5":{"Elements":[29,30,0]}},{"12":{}},{"11":{}},{"2":{"Name":"IdentityProperties","Properties":{"principalId":{"Type":0,"Flags":2,"Description":"The identity ID."},"tenantId":{"Type":0,"Flags":2,"Description":"The tenant ID of resource."},"type":{"Type":36,"Flags":0,"Description":"Managed identity type."}}}},{"6":{"Value":"SystemAssigned"}},{"5":{"Elements":[35,0]}},{"2":{"Name":"ElasticMonitorResourceTags","Properties":{},"AdditionalProperties":0}},{"2":{"Name":"SystemData","Properties":{"createdBy":{"Type":0,"Flags":0,"Description":"The identity that created the resource."},"createdByType":{"Type":43,"Flags":0,"Description":"The type of identity that created the resource."},"createdAt":{"Type":0,"Flags":0,"Description":"The timestamp of resource creation (UTC)."},"lastModifiedBy":{"Type":0,"Flags":0,"Description":"The identity that last modified the resource."},"lastModifiedByType":{"Type":48,"Flags":0,"Description":"The type of identity that last modified the resource."},"lastModifiedAt":{"Type":0,"Flags":0,"Description":"The timestamp of resource last modification (UTC)"}}}},{"6":{"Value":"User"}},{"6":{"Value":"Application"}},{"6":{"Value":"ManagedIdentity"}},{"6":{"Value":"Key"}},{"5":{"Elements":[39,40,41,42,0]}},{"6":{"Value":"User"}},{"6":{"Value":"Application"}},{"6":{"Value":"ManagedIdentity"}},{"6":{"Value":"Key"}},{"5":{"Elements":[44,45,46,47,0]}},{"4":{"Name":"Microsoft.Elastic/monitors@2023-07-01-preview","ScopeType":8,"Body":3,"Flags":0}},{"6":{"Value":"Microsoft.Elastic/monitors/tagRules"}},{"6":{"Value":"2023-07-01-preview"}},{"2":{"Name":"Microsoft.Elastic/monitors/tagRules","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":50,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":51,"Flags":10,"Description":"The resource api version"},"properties":{"Type":53,"Flags":0,"Description":"Properties of the monitoring tag rules."},"systemData":{"Type":38,"Flags":2,"Description":"The system metadata relating to this resource"}}}},{"2":{"Name":"MonitoringTagRulesProperties","Properties":{"provisioningState":{"Type":63,"Flags":0,"Description":"Provisioning state of the monitoring tag rules."},"logRules":{"Type":64,"Flags":0,"Description":"Rules for sending logs."}}}},{"6":{"Value":"Accepted"}},{"6":{"Value":"Creating"}},{"6":{"Value":"Updating"}},{"6":{"Value":"Deleting"}},{"6":{"Value":"Succeeded"}},{"6":{"Value":"Failed"}},{"6":{"Value":"Canceled"}},{"6":{"Value":"Deleted"}},{"6":{"Value":"NotSpecified"}},{"5":{"Elements":[54,55,56,57,58,59,60,61,62,0]}},{"2":{"Name":"LogRules","Properties":{"sendAadLogs":{"Type":33,"Flags":0,"Description":"Flag specifying if AAD logs should be sent for the Monitor resource."},"sendSubscriptionLogs":{"Type":33,"Flags":0,"Description":"Flag specifying if subscription logs should be sent for the Monitor resource."},"sendActivityLogs":{"Type":33,"Flags":0,"Description":"Flag specifying if activity logs from Azure resources should be sent for the Monitor resource."},"filteringTags":{"Type":69,"Flags":0,"Description":"List of filtering tags to be used for capturing logs. This only takes effect if SendActivityLogs flag is enabled. If empty, all resources will be captured. If only Exclude action is specified, the rules will apply to the list of all available resources. If Include actions are specified, the rules will only include resources with the associated tags."}}}},{"2":{"Name":"FilteringTag","Properties":{"name":{"Type":0,"Flags":0,"Description":"The name (also known as the key) of the tag."},"value":{"Type":0,"Flags":0,"Description":"The value of the tag."},"action":{"Type":68,"Flags":0,"Description":"Valid actions for a filtering tag."}}}},{"6":{"Value":"Include"}},{"6":{"Value":"Exclude"}},{"5":{"Elements":[66,67,0]}},{"3":{"ItemType":65}},{"4":{"Name":"Microsoft.Elastic/monitors/tagRules@2023-07-01-preview","ScopeType":8,"Body":52,"Flags":0}},{"2":{"Name":"MonitoredResourceListResponse","Properties":{"value":{"Type":76,"Flags":0,"Description":"Results of a list operation."},"nextLink":{"Type":0,"Flags":0,"Description":"Link to the next set of results, if any."}}}},{"2":{"Name":"MonitoredResource","Properties":{"id":{"Type":0,"Flags":0,"Description":"The ARM id of the resource."},"sendingLogs":{"Type":75,"Flags":0,"Description":"Flag indicating the status of the resource for sending logs operation to Elastic."},"reasonForLogsStatus":{"Type":0,"Flags":0,"Description":"Reason for why the resource is sending logs (or why it is not sending)."}}}},{"6":{"Value":"True"}},{"6":{"Value":"False"}},{"5":{"Elements":[73,74,0]}},{"3":{"ItemType":72}},{"8":{"Name":"listMonitoredResources","ResourceType":"Microsoft.Elastic/monitors","ApiVersion":"2023-07-01-preview","Output":71}},{"2":{"Name":"DeploymentInfoResponse","Properties":{"status":{"Type":81,"Flags":2,"Description":"The Elastic deployment status."},"version":{"Type":0,"Flags":2,"Description":"Version of the elasticsearch in Elastic cloud deployment."},"memoryCapacity":{"Type":0,"Flags":2,"Description":"RAM capacity of the elasticsearch in Elastic cloud deployment."},"diskCapacity":{"Type":0,"Flags":2,"Description":"Disk capacity of the elasticsearch in Elastic cloud deployment."},"deploymentUrl":{"Type":0,"Flags":2,"Description":"Deployment URL of the elasticsearch in Elastic cloud deployment."},"marketplaceSaasInfo":{"Type":82,"Flags":2,"Description":"Marketplace SaaS Info of the resource."}}}},{"6":{"Value":"Healthy"}},{"6":{"Value":"Unhealthy"}},{"5":{"Elements":[79,80,0]}},{"2":{"Name":"MarketplaceSaaSInfo","Properties":{"marketplaceSubscription":{"Type":83,"Flags":0,"Description":"Marketplace Subscription"},"marketplaceName":{"Type":0,"Flags":0,"Description":"Marketplace Subscription Details: SAAS Name"},"marketplaceResourceId":{"Type":0,"Flags":0,"Description":"Marketplace Subscription Details: Resource URI"},"marketplaceStatus":{"Type":0,"Flags":0,"Description":"Marketplace Subscription Details: SaaS Subscription Status"},"billedAzureSubscriptionId":{"Type":0,"Flags":0,"Description":"The Azure Subscription ID to which the Marketplace Subscription belongs and gets billed into."},"subscribed":{"Type":33,"Flags":0,"Description":"Flag specifying if the Marketplace status is subscribed or not."}}}},{"2":{"Name":"MarketplaceSaaSInfoMarketplaceSubscription","Properties":{"id":{"Type":0,"Flags":0,"Description":"Marketplace Subscription Id. This is a GUID-formatted string."}}}},{"8":{"Name":"listDeploymentInfo","ResourceType":"Microsoft.Elastic/monitors","ApiVersion":"2023-07-01-preview","Output":78}},{"2":{"Name":"ConnectedPartnerResourcesListResponse","Properties":{"value":{"Type":88,"Flags":0,"Description":"Results of a list operation."},"nextLink":{"Type":0,"Flags":0,"Description":"Link to the next set of results, if any."}}}},{"2":{"Name":"ConnectedPartnerResourcesListFormat","Properties":{"properties":{"Type":87,"Flags":0,"Description":"Connected Partner Resource Properties"}}}},{"2":{"Name":"ConnectedPartnerResourceProperties","Properties":{"partnerDeploymentName":{"Type":0,"Flags":0,"Description":"Elastic deployment name"},"partnerDeploymentUri":{"Type":0,"Flags":0,"Description":"Deployment URL of the elasticsearch in Elastic cloud deployment."},"azureResourceId":{"Type":0,"Flags":0,"Description":"The azure resource Id of the deployment."},"location":{"Type":0,"Flags":0,"Description":"The location of the deployment."}}}},{"3":{"ItemType":86}},{"8":{"Name":"listConnectedPartnerResources","ResourceType":"Microsoft.Elastic/monitors","ApiVersion":"2023-07-01-preview","Output":85}},{"2":{"Name":"VMHostListResponse","Properties":{"value":{"Type":92,"Flags":0,"Description":"Results of a list operation."},"nextLink":{"Type":0,"Flags":0,"Description":"Link to the next Vm resource Id, if any."}}}},{"2":{"Name":"VMResources","Properties":{"vmResourceId":{"Type":0,"Flags":0,"Description":"The ARM id of the VM resource."}}}},{"3":{"ItemType":91}},{"8":{"Name":"listVMHost","ResourceType":"Microsoft.Elastic/monitors","ApiVersion":"2023-07-01-preview","Output":90}},{"2":{"Name":"UpgradableVersionsList","Properties":{"currentVersion":{"Type":0,"Flags":0,"Description":"Current version of the elastic monitor"},"upgradableVersions":{"Type":95,"Flags":0,"Description":"Stack Versions that this version can upgrade to"}}}},{"3":{"ItemType":0}},{"8":{"Name":"listUpgradableVersions","ResourceType":"Microsoft.Elastic/monitors","ApiVersion":"2023-07-01-preview","Output":94}},{"2":{"Name":"ElasticTrafficFilterResponse","Properties":{"rulesets":{"Type":104,"Flags":0,"Description":"List of elastic traffic filters in the account"}}}},{"2":{"Name":"ElasticTrafficFilter","Properties":{"id":{"Type":0,"Flags":0,"Description":"Id of the elastic filter"},"name":{"Type":0,"Flags":0,"Description":"Name of the elastic filter"},"description":{"Type":0,"Flags":0,"Description":"Description of the elastic filter"},"region":{"Type":0,"Flags":0,"Description":"Region of the elastic filter"},"type":{"Type":101,"Flags":0,"Description":"Type of the elastic filter"},"includeByDefault":{"Type":33,"Flags":0,"Description":"IncludeByDefault for the elastic filter"},"rules":{"Type":103,"Flags":0,"Description":"Rules in the elastic filter"}}}},{"6":{"Value":"ip"}},{"6":{"Value":"azure_private_endpoint"}},{"5":{"Elements":[99,100,0]}},{"2":{"Name":"ElasticTrafficFilterRule","Properties":{"source":{"Type":0,"Flags":0,"Description":"IP of the elastic filter rule"},"description":{"Type":0,"Flags":0,"Description":"Description of the elastic filter rule"},"azureEndpointGuid":{"Type":0,"Flags":0,"Description":"Guid of Private Endpoint in the elastic filter rule"},"azureEndpointName":{"Type":0,"Flags":0,"Description":"Name of the Private Endpoint in the elastic filter rule"},"id":{"Type":0,"Flags":0,"Description":"Id of the elastic filter rule"}}}},{"3":{"ItemType":102}},{"3":{"ItemType":98}},{"8":{"Name":"listAllTrafficFilters","ResourceType":"Microsoft.Elastic/monitors","ApiVersion":"2023-07-01-preview","Output":97}},{"8":{"Name":"listAssociatedTrafficFilters","ResourceType":"Microsoft.Elastic/monitors","ApiVersion":"2023-07-01-preview","Output":97}}]
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Elastic/monitors"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-07-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Elastic/monitors",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "SKU of the monitor resource."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Properties of the monitor resource."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 0,
+        "description": "Identity properties of the monitor resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 0,
+        "description": "The tags of the monitor resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The location of the monitor resource"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 2,
+        "description": "The system metadata relating to this resource"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceSku",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Name of the SKU."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MonitorProperties",
+    "properties": {
+      "provisioningState": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Provisioning state of the monitor resource."
+      },
+      "monitoringStatus": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "Flag specifying if the resource monitoring is enabled or disabled."
+      },
+      "elasticProperties": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "Elastic cloud properties."
+      },
+      "userInfo": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 4,
+        "description": "User information."
+      },
+      "version": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Version of elastic of the monitor resource"
+      },
+      "liftrResourceCategory": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 2
+      },
+      "liftrResourcePreference": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 2,
+        "description": "The priority of the resource."
+      },
+      "generateApiKey": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0,
+        "description": "Flag to determine if User API Key has to be generated and shared."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/14"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ElasticProperties",
+    "properties": {
+      "elasticCloudUser": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0,
+        "description": "Details of the user's elastic account."
+      },
+      "elasticCloudDeployment": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "Details of the elastic cloud deployment."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ElasticCloudUser",
+    "properties": {
+      "emailAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Email of the Elastic User Account."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "User Id of the elastic account of the User."
+      },
+      "elasticCloudSsoDefaultUrl": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Elastic cloud default dashboard sso URL of the Elastic user account."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ElasticCloudDeployment",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Elastic deployment name"
+      },
+      "deploymentId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Elastic deployment Id"
+      },
+      "azureSubscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Associated Azure subscription Id for the elastic deployment."
+      },
+      "elasticsearchRegion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Region where Deployment at Elastic side took place."
+      },
+      "elasticsearchServiceUrl": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Elasticsearch ingestion endpoint of the Elastic deployment."
+      },
+      "kibanaServiceUrl": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Kibana endpoint of the Elastic deployment."
+      },
+      "kibanaSsoUrl": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Kibana dashboard sso URL of the Elastic deployment."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UserInfo",
+    "properties": {
+      "firstName": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0,
+        "description": "First name of the user"
+      },
+      "lastName": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0,
+        "description": "Last name of the user"
+      },
+      "companyName": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "Company name of the user"
+      },
+      "emailAddress": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 0,
+        "description": "Email of the user used by Elastic for contacting them if needed"
+      },
+      "companyInfo": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "Company information of the user to be passed to partners."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "maxLength": 50
+  },
+  {
+    "$type": "StringType",
+    "maxLength": 64
+  },
+  {
+    "$type": "StringType",
+    "pattern": "^([^<>()\\[\\]\\.,;:\\s@\"]+(\\.[^<>()\\[\\]\\.,;:\\s@\"]+)*)@(([a-zA-Z-_0-9]+\\.)+[a-zA-Z]{2,})$"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CompanyInfo",
+    "properties": {
+      "domain": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 0,
+        "description": "Domain of the company"
+      },
+      "business": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "Business of the company"
+      },
+      "employeesNumber": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 0,
+        "description": "Number of employees in the company"
+      },
+      "state": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "State of the company location."
+      },
+      "country": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "Country of the company location."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "maxLength": 250
+  },
+  {
+    "$type": "StringType",
+    "maxLength": 20
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MonitorLogs"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/29"
+      },
+      {
+        "$ref": "#/30"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IdentityProperties",
+    "properties": {
+      "principalId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The identity ID."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The tenant ID of resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 0,
+        "description": "Managed identity type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SystemAssigned"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/35"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ElasticMonitorResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SystemData",
+    "properties": {
+      "createdBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that created the resource."
+      },
+      "createdByType": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 0,
+        "description": "The type of identity that created the resource."
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource creation (UTC)."
+      },
+      "lastModifiedBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that last modified the resource."
+      },
+      "lastModifiedByType": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 0,
+        "description": "The type of identity that last modified the resource."
+      },
+      "lastModifiedAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource last modification (UTC)"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/39"
+      },
+      {
+        "$ref": "#/40"
+      },
+      {
+        "$ref": "#/41"
+      },
+      {
+        "$ref": "#/42"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/44"
+      },
+      {
+        "$ref": "#/45"
+      },
+      {
+        "$ref": "#/46"
+      },
+      {
+        "$ref": "#/47"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Elastic/monitors@2023-07-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Elastic/monitors/tagRules"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-07-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Elastic/monitors/tagRules",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 0,
+        "description": "Properties of the monitoring tag rules."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 2,
+        "description": "The system metadata relating to this resource"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MonitoringTagRulesProperties",
+    "properties": {
+      "provisioningState": {
+        "type": {
+          "$ref": "#/63"
+        },
+        "flags": 0,
+        "description": "Provisioning state of the monitoring tag rules."
+      },
+      "logRules": {
+        "type": {
+          "$ref": "#/64"
+        },
+        "flags": 0,
+        "description": "Rules for sending logs."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/54"
+      },
+      {
+        "$ref": "#/55"
+      },
+      {
+        "$ref": "#/56"
+      },
+      {
+        "$ref": "#/57"
+      },
+      {
+        "$ref": "#/58"
+      },
+      {
+        "$ref": "#/59"
+      },
+      {
+        "$ref": "#/60"
+      },
+      {
+        "$ref": "#/61"
+      },
+      {
+        "$ref": "#/62"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LogRules",
+    "properties": {
+      "sendAadLogs": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0,
+        "description": "Flag specifying if AAD logs should be sent for the Monitor resource."
+      },
+      "sendSubscriptionLogs": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0,
+        "description": "Flag specifying if subscription logs should be sent for the Monitor resource."
+      },
+      "sendActivityLogs": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0,
+        "description": "Flag specifying if activity logs from Azure resources should be sent for the Monitor resource."
+      },
+      "filteringTags": {
+        "type": {
+          "$ref": "#/69"
+        },
+        "flags": 0,
+        "description": "List of filtering tags to be used for capturing logs. This only takes effect if SendActivityLogs flag is enabled. If empty, all resources will be captured. If only Exclude action is specified, the rules will apply to the list of all available resources. If Include actions are specified, the rules will only include resources with the associated tags."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FilteringTag",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name (also known as the key) of the tag."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The value of the tag."
+      },
+      "action": {
+        "type": {
+          "$ref": "#/68"
+        },
+        "flags": 0,
+        "description": "Valid actions for a filtering tag."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Include"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Exclude"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/66"
+      },
+      {
+        "$ref": "#/67"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/65"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Elastic/monitors/tagRules@2023-07-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/52"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MonitoredResourceListResponse",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/76"
+        },
+        "flags": 0,
+        "description": "Results of a list operation."
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Link to the next set of results, if any."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MonitoredResource",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The ARM id of the resource."
+      },
+      "sendingLogs": {
+        "type": {
+          "$ref": "#/75"
+        },
+        "flags": 0,
+        "description": "Flag indicating the status of the resource for sending logs operation to Elastic."
+      },
+      "reasonForLogsStatus": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Reason for why the resource is sending logs (or why it is not sending)."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "True"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "False"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/73"
+      },
+      {
+        "$ref": "#/74"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/72"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listMonitoredResources",
+    "resourceType": "Microsoft.Elastic/monitors",
+    "apiVersion": "2023-07-01-preview",
+    "output": {
+      "$ref": "#/71"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeploymentInfoResponse",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/81"
+        },
+        "flags": 2,
+        "description": "The Elastic deployment status."
+      },
+      "version": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Version of the elasticsearch in Elastic cloud deployment."
+      },
+      "memoryCapacity": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "RAM capacity of the elasticsearch in Elastic cloud deployment."
+      },
+      "diskCapacity": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Disk capacity of the elasticsearch in Elastic cloud deployment."
+      },
+      "deploymentUrl": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Deployment URL of the elasticsearch in Elastic cloud deployment."
+      },
+      "marketplaceSaasInfo": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 2,
+        "description": "Marketplace SaaS Info of the resource."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Healthy"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unhealthy"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/79"
+      },
+      {
+        "$ref": "#/80"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MarketplaceSaaSInfo",
+    "properties": {
+      "marketplaceSubscription": {
+        "type": {
+          "$ref": "#/83"
+        },
+        "flags": 0,
+        "description": "Marketplace Subscription"
+      },
+      "marketplaceName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Marketplace Subscription Details: SAAS Name"
+      },
+      "marketplaceResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Marketplace Subscription Details: Resource URI"
+      },
+      "marketplaceStatus": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Marketplace Subscription Details: SaaS Subscription Status"
+      },
+      "billedAzureSubscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The Azure Subscription ID to which the Marketplace Subscription belongs and gets billed into."
+      },
+      "subscribed": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0,
+        "description": "Flag specifying if the Marketplace status is subscribed or not."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MarketplaceSaaSInfoMarketplaceSubscription",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Marketplace Subscription Id. This is a GUID-formatted string."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listDeploymentInfo",
+    "resourceType": "Microsoft.Elastic/monitors",
+    "apiVersion": "2023-07-01-preview",
+    "output": {
+      "$ref": "#/78"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConnectedPartnerResourcesListResponse",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/88"
+        },
+        "flags": 0,
+        "description": "Results of a list operation."
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Link to the next set of results, if any."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConnectedPartnerResourcesListFormat",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 0,
+        "description": "Connected Partner Resource Properties"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConnectedPartnerResourceProperties",
+    "properties": {
+      "partnerDeploymentName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Elastic deployment name"
+      },
+      "partnerDeploymentUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Deployment URL of the elasticsearch in Elastic cloud deployment."
+      },
+      "azureResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The azure resource Id of the deployment."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The location of the deployment."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/86"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listConnectedPartnerResources",
+    "resourceType": "Microsoft.Elastic/monitors",
+    "apiVersion": "2023-07-01-preview",
+    "output": {
+      "$ref": "#/85"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VMHostListResponse",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/92"
+        },
+        "flags": 0,
+        "description": "Results of a list operation."
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Link to the next Vm resource Id, if any."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VMResources",
+    "properties": {
+      "vmResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The ARM id of the VM resource."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/91"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listVMHost",
+    "resourceType": "Microsoft.Elastic/monitors",
+    "apiVersion": "2023-07-01-preview",
+    "output": {
+      "$ref": "#/90"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UpgradableVersionsList",
+    "properties": {
+      "currentVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Current version of the elastic monitor"
+      },
+      "upgradableVersions": {
+        "type": {
+          "$ref": "#/95"
+        },
+        "flags": 0,
+        "description": "Stack Versions that this version can upgrade to"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listUpgradableVersions",
+    "resourceType": "Microsoft.Elastic/monitors",
+    "apiVersion": "2023-07-01-preview",
+    "output": {
+      "$ref": "#/94"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ElasticTrafficFilterResponse",
+    "properties": {
+      "rulesets": {
+        "type": {
+          "$ref": "#/104"
+        },
+        "flags": 0,
+        "description": "List of elastic traffic filters in the account"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ElasticTrafficFilter",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Id of the elastic filter"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the elastic filter"
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Description of the elastic filter"
+      },
+      "region": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Region of the elastic filter"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/101"
+        },
+        "flags": 0,
+        "description": "Type of the elastic filter"
+      },
+      "includeByDefault": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0,
+        "description": "IncludeByDefault for the elastic filter"
+      },
+      "rules": {
+        "type": {
+          "$ref": "#/103"
+        },
+        "flags": 0,
+        "description": "Rules in the elastic filter"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ip"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "azure_private_endpoint"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/99"
+      },
+      {
+        "$ref": "#/100"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ElasticTrafficFilterRule",
+    "properties": {
+      "source": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "IP of the elastic filter rule"
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Description of the elastic filter rule"
+      },
+      "azureEndpointGuid": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Guid of Private Endpoint in the elastic filter rule"
+      },
+      "azureEndpointName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the Private Endpoint in the elastic filter rule"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Id of the elastic filter rule"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/102"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/98"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listAllTrafficFilters",
+    "resourceType": "Microsoft.Elastic/monitors",
+    "apiVersion": "2023-07-01-preview",
+    "output": {
+      "$ref": "#/97"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listAssociatedTrafficFilters",
+    "resourceType": "Microsoft.Elastic/monitors",
+    "apiVersion": "2023-07-01-preview",
+    "output": {
+      "$ref": "#/97"
+    }
+  }
+]

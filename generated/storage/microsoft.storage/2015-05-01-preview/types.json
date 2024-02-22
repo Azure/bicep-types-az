@@ -1,1 +1,350 @@
-[{"13":{}},{"6":{"Value":"Microsoft.Storage/storageAccounts"}},{"6":{"Value":"2015-05-01-preview"}},{"2":{"Name":"Microsoft.Storage/storageAccounts","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":1,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":2,"Flags":10,"Description":"The resource api version"},"properties":{"Type":4,"Flags":0},"location":{"Type":0,"Flags":1,"Description":"Resource location"},"tags":{"Type":24,"Flags":0,"Description":"Resource tags"}}}},{"2":{"Name":"StorageAccountPropertiesCreateParametersOrStorageAccountProperties","Properties":{"accountType":{"Type":10,"Flags":0,"Description":"Gets or sets the account type."},"provisioningState":{"Type":14,"Flags":2,"Description":"Gets the status of the storage account at the time the operation was called."},"primaryEndpoints":{"Type":15,"Flags":2,"Description":"Gets the URLs that are used to perform a retrieval of a public blob, queue or table object.Note that StandardZRS and PremiumLRS accounts only return the blob endpoint."},"primaryLocation":{"Type":0,"Flags":2,"Description":"Gets the location of the primary for the storage account."},"statusOfPrimary":{"Type":18,"Flags":2,"Description":"Gets the status indicating whether the primary location of the storage account is available or unavailable."},"lastGeoFailoverTime":{"Type":0,"Flags":2,"Description":"Gets the timestamp of the most recent instance of a failover to the secondary location. Only the most recent timestamp is retained. This element is not returned if there has never been a failover instance. Only available if the accountType is StandardGRS or StandardRAGRS."},"secondaryLocation":{"Type":0,"Flags":2,"Description":"Gets the location of the geo replicated secondary for the storage account. Only available if the accountType is StandardGRS or StandardRAGRS."},"statusOfSecondary":{"Type":21,"Flags":2,"Description":"Gets the status indicating whether the secondary location of the storage account is available or unavailable. Only available if the accountType is StandardGRS or StandardRAGRS."},"creationTime":{"Type":0,"Flags":2,"Description":"Gets the creation date and time of the storage account in UTC."},"customDomain":{"Type":22,"Flags":2,"Description":"Gets the user assigned custom domain assigned to this storage account."},"secondaryEndpoints":{"Type":15,"Flags":2,"Description":"Gets the URLs that are used to perform a retrieval of a public blob, queue or table object from the secondary location of the storage account. Only available if the accountType is StandardRAGRS."}}}},{"6":{"Value":"Standard_LRS"}},{"6":{"Value":"Standard_ZRS"}},{"6":{"Value":"Standard_GRS"}},{"6":{"Value":"Standard_RAGRS"}},{"6":{"Value":"Premium_LRS"}},{"5":{"Elements":[5,6,7,8,9]}},{"6":{"Value":"Creating"}},{"6":{"Value":"ResolvingDNS"}},{"6":{"Value":"Succeeded"}},{"5":{"Elements":[11,12,13]}},{"2":{"Name":"Endpoints","Properties":{"blob":{"Type":0,"Flags":0,"Description":"Gets the blob endpoint."},"queue":{"Type":0,"Flags":0,"Description":"Gets the queue endpoint."},"table":{"Type":0,"Flags":0,"Description":"Gets the table endpoint."}}}},{"6":{"Value":"Available"}},{"6":{"Value":"Unavailable"}},{"5":{"Elements":[16,17]}},{"6":{"Value":"Available"}},{"6":{"Value":"Unavailable"}},{"5":{"Elements":[19,20]}},{"2":{"Name":"CustomDomain","Properties":{"name":{"Type":0,"Flags":0,"Description":"Gets or sets the custom domain name. Name is the CNAME source."},"useSubDomainName":{"Type":23,"Flags":0,"Description":"Indicates whether indirect CName validation is enabled. Default value is false. This should only be set on updates"}}}},{"11":{}},{"2":{"Name":"ResourceTags","Properties":{},"AdditionalProperties":0}},{"4":{"Name":"Microsoft.Storage/storageAccounts@2015-05-01-preview","ScopeType":8,"Body":3,"Flags":0}},{"2":{"Name":"StorageAccountKeys","Properties":{"key1":{"Type":0,"Flags":0,"Description":"Gets the value of key 1."},"key2":{"Type":0,"Flags":0,"Description":"Gets the value of key 2."}}}},{"8":{"Name":"listKeys","ResourceType":"Microsoft.Storage/storageAccounts","ApiVersion":"2015-05-01-preview","Output":26}}]
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Storage/storageAccounts"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2015-05-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Storage/storageAccounts",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource location"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "Resource tags"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StorageAccountPropertiesCreateParametersOrStorageAccountProperties",
+    "properties": {
+      "accountType": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "Gets or sets the account type."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 2,
+        "description": "Gets the status of the storage account at the time the operation was called."
+      },
+      "primaryEndpoints": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "Gets the URLs that are used to perform a retrieval of a public blob, queue or table object.Note that StandardZRS and PremiumLRS accounts only return the blob endpoint."
+      },
+      "primaryLocation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Gets the location of the primary for the storage account."
+      },
+      "statusOfPrimary": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 2,
+        "description": "Gets the status indicating whether the primary location of the storage account is available or unavailable."
+      },
+      "lastGeoFailoverTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Gets the timestamp of the most recent instance of a failover to the secondary location. Only the most recent timestamp is retained. This element is not returned if there has never been a failover instance. Only available if the accountType is StandardGRS or StandardRAGRS."
+      },
+      "secondaryLocation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Gets the location of the geo replicated secondary for the storage account. Only available if the accountType is StandardGRS or StandardRAGRS."
+      },
+      "statusOfSecondary": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 2,
+        "description": "Gets the status indicating whether the secondary location of the storage account is available or unavailable. Only available if the accountType is StandardGRS or StandardRAGRS."
+      },
+      "creationTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Gets the creation date and time of the storage account in UTC."
+      },
+      "customDomain": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 2,
+        "description": "Gets the user assigned custom domain assigned to this storage account."
+      },
+      "secondaryEndpoints": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "Gets the URLs that are used to perform a retrieval of a public blob, queue or table object from the secondary location of the storage account. Only available if the accountType is StandardRAGRS."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard_LRS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard_ZRS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard_GRS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard_RAGRS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Premium_LRS"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/5"
+      },
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResolvingDNS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Endpoints",
+    "properties": {
+      "blob": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets the blob endpoint."
+      },
+      "queue": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets the queue endpoint."
+      },
+      "table": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets the table endpoint."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Available"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unavailable"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/17"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Available"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unavailable"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/20"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CustomDomain",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the custom domain name. Name is the CNAME source."
+      },
+      "useSubDomainName": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0,
+        "description": "Indicates whether indirect CName validation is enabled. Default value is false. This should only be set on updates"
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Storage/storageAccounts@2015-05-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StorageAccountKeys",
+    "properties": {
+      "key1": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets the value of key 1."
+      },
+      "key2": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets the value of key 2."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listKeys",
+    "resourceType": "Microsoft.Storage/storageAccounts",
+    "apiVersion": "2015-05-01-preview",
+    "output": {
+      "$ref": "#/26"
+    }
+  }
+]

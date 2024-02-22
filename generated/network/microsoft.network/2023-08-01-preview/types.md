@@ -93,10 +93,10 @@
 ### Properties
 * **autoApprovedRemotePerimeterResourceId**: string: Perimeter ARM Id for the remote NSP with which the link gets created in Auto-approval mode. It should be used when the NSP admin have Microsoft.Network/networkSecurityPerimeters/linkPerimeter/action permission on the remote NSP resource.
 * **description**: string: A message passed to the owner of the remote NSP link resource with this connection request. In case of Auto-approved flow, it is default to 'Auto Approved'. Restricted to 140 chars.
-* **localInboundProfiles**: string[]: Local Inbound profile names to which Inbound is allowed. Use ['*'] to allow inbound to all profiles. It's default value is ['*'].
+* **localInboundProfiles**: string[]: Local Inbound profile names to which Inbound is allowed. Use ['*'] to allow inbound to all profiles.
 * **localOutboundProfiles**: string[] (ReadOnly): Local Outbound profile names from which Outbound is allowed. In current version, it is readonly property and it's value is set to ['*'] to allow outbound from all profiles. In later version, user will be able to modify it.
 * **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | 'WaitForRemoteCompletion' | string (ReadOnly): The provisioning state of the NSP Link resource.
-* **remoteInboundProfiles**: string[]: Remote Inbound profile names to which Inbound is allowed. Use ['*'] to allow inbound to all profiles. This property can only be updated in auto-approval mode. It's default value is ['*'].
+* **remoteInboundProfiles**: string[]: Remote Inbound profile names to which Inbound is allowed. Use ['*'] to allow inbound to all profiles. This property can only be updated in auto-approval mode.
 * **remoteOutboundProfiles**: string[] (ReadOnly): Remote Outbound profile names from which Outbound is allowed. In current version, it is readonly property and it's value is set to ['*'] to allow outbound from all profiles. In later version, user will be able to modify it.
 * **remotePerimeterGuid**: string (ReadOnly): Remote NSP Guid with which the link gets created.
 * **remotePerimeterLocation**: string (ReadOnly): Remote NSP location with which the link gets created.
@@ -105,11 +105,11 @@
 ## NspLinkReferenceProperties
 ### Properties
 * **description**: string (ReadOnly): A message sent by the remote NSP link admin for connection request. In case of Auto-approved flow, it is default to 'Auto Approved'.
-* **localInboundProfiles**: string[]: Local Inbound profile names to which Inbound is allowed. Use ['*'] to allow inbound to all profiles. It's default value is ['*'].
-* **localOutboundProfiles**: string[] (ReadOnly): Local Outbound profile names from which Outbound is allowed. Use ['*'] to allow outbound from all profiles. It's default value is ['*'].
+* **localInboundProfiles**: string[]: Local Inbound profile names to which Inbound is allowed. Use ['*'] to allow inbound to all profiles.
+* **localOutboundProfiles**: string[] (ReadOnly): Local Outbound profile names from which Outbound is allowed. In current version, it is readonly property and it's value is set to ['*'] to allow outbound from all profiles. In later version, user will be able to modify it.
 * **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | 'WaitForRemoteCompletion' | string (ReadOnly): The provisioning state of the NSP LinkReference resource.
-* **remoteInboundProfiles**: string[] (ReadOnly): Remote Inbound profile names to which Inbound is allowed. ['*'] value implies inbound is allowed to all profiles at remote perimeter. This property can only be updated from remote perimeter.
-* **remoteOutboundProfiles**: string[] (ReadOnly): Remote Outbound profile names from which Outbound is allowed. ['*'] value implies outbound is allowed from all profiles at remote perimeter. This property can only be updated from remote perimeter.
+* **remoteInboundProfiles**: string[] (ReadOnly): Remote Inbound profile names to which Inbound is allowed. ['*'] value implies inbound is allowed to all profiles at remote perimeter. This property can only be updated from corresponding link resource present in remote perimeter.
+* **remoteOutboundProfiles**: string[] (ReadOnly): Remote Outbound profile names from which Outbound is allowed. ['*'] value implies outbound is allowed from all profiles at remote perimeter. This property can only be updated from corresponding link resource present in remote perimeter.
 * **remotePerimeterGuid**: string (ReadOnly): Remote NSP Guid with which the link is created.
 * **remotePerimeterLocation**: string (ReadOnly): Remote NSP location with which the link gets created.
 * **remotePerimeterResourceId**: string (ReadOnly): Perimeter ARM Id for the remote NSP with which the link is created.

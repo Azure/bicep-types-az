@@ -1,1 +1,341 @@
-[{"13":{}},{"6":{"Value":"Microsoft.AzureData/sqlServerRegistrations"}},{"6":{"Value":"2019-07-24-preview"}},{"2":{"Name":"Microsoft.AzureData/sqlServerRegistrations","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":1,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":2,"Flags":10,"Description":"The resource api version"},"properties":{"Type":4,"Flags":0,"Description":"Resource properties."},"tags":{"Type":5,"Flags":0,"Description":"Resource tags."},"location":{"Type":0,"Flags":1,"Description":"The geo-location where the resource lives"},"systemData":{"Type":6,"Flags":2,"Description":"Read only system data"}}}},{"2":{"Name":"SqlServerRegistrationProperties","Properties":{"subscriptionId":{"Type":0,"Flags":0,"Description":"Subscription Id"},"resourceGroup":{"Type":0,"Flags":0,"Description":"Resource Group Name"},"propertyBag":{"Type":0,"Flags":0,"Description":"Optional Properties as JSON string"}}}},{"2":{"Name":"TrackedResourceTags","Properties":{},"AdditionalProperties":0}},{"2":{"Name":"SystemData","Properties":{"createdBy":{"Type":0,"Flags":0,"Description":"An identifier for the identity that created the resource"},"createdByType":{"Type":11,"Flags":0,"Description":"The type of identity that created the resource"},"createdAt":{"Type":0,"Flags":0,"Description":"The timestamp of resource creation (UTC)"},"lastModifiedBy":{"Type":0,"Flags":0,"Description":"An identifier for the identity that last modified the resource"},"lastModifiedByType":{"Type":16,"Flags":0,"Description":"The type of identity that last modified the resource"},"lastModifiedAt":{"Type":0,"Flags":0,"Description":"The timestamp of resource last modification (UTC)"}}}},{"6":{"Value":"user"}},{"6":{"Value":"application"}},{"6":{"Value":"managedIdentity"}},{"6":{"Value":"key"}},{"5":{"Elements":[7,8,9,10,0]}},{"6":{"Value":"user"}},{"6":{"Value":"application"}},{"6":{"Value":"managedIdentity"}},{"6":{"Value":"key"}},{"5":{"Elements":[12,13,14,15,0]}},{"4":{"Name":"Microsoft.AzureData/sqlServerRegistrations@2019-07-24-preview","ScopeType":8,"Body":3,"Flags":0}},{"6":{"Value":"Microsoft.AzureData/sqlServerRegistrations/sqlServers"}},{"6":{"Value":"2019-07-24-preview"}},{"2":{"Name":"Microsoft.AzureData/sqlServerRegistrations/sqlServers","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":18,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":19,"Flags":10,"Description":"The resource api version"},"properties":{"Type":21,"Flags":0,"Description":"Resource properties."}}}},{"2":{"Name":"SqlServerProperties","Properties":{"cores":{"Type":22,"Flags":0,"Description":"Cores of the Sql Server."},"version":{"Type":0,"Flags":0,"Description":"Version of the Sql Server."},"edition":{"Type":0,"Flags":0,"Description":"Sql Server Edition."},"registrationID":{"Type":0,"Flags":0,"Description":"ID for Parent Sql Server Registration."},"propertyBag":{"Type":0,"Flags":0,"Description":"Sql Server Json Property Bag."}}}},{"12":{}},{"4":{"Name":"Microsoft.AzureData/sqlServerRegistrations/sqlServers@2019-07-24-preview","ScopeType":8,"Body":20,"Flags":0}}]
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.AzureData/sqlServerRegistrations"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-07-24-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.AzureData/sqlServerRegistrations",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "Resource properties."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 2,
+        "description": "Read only system data"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SqlServerRegistrationProperties",
+    "properties": {
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Subscription Id"
+      },
+      "resourceGroup": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource Group Name"
+      },
+      "propertyBag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Optional Properties as JSON string"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SystemData",
+    "properties": {
+      "createdBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "An identifier for the identity that created the resource"
+      },
+      "createdByType": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 0,
+        "description": "The type of identity that created the resource"
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource creation (UTC)"
+      },
+      "lastModifiedBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "An identifier for the identity that last modified the resource"
+      },
+      "lastModifiedByType": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 0,
+        "description": "The type of identity that last modified the resource"
+      },
+      "lastModifiedAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource last modification (UTC)"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "user"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "managedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "user"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "managedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/14"
+      },
+      {
+        "$ref": "#/15"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.AzureData/sqlServerRegistrations@2019-07-24-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.AzureData/sqlServerRegistrations/sqlServers"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-07-24-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.AzureData/sqlServerRegistrations/sqlServers",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "Resource properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SqlServerProperties",
+    "properties": {
+      "cores": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 0,
+        "description": "Cores of the Sql Server."
+      },
+      "version": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Version of the Sql Server."
+      },
+      "edition": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Sql Server Edition."
+      },
+      "registrationID": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "ID for Parent Sql Server Registration."
+      },
+      "propertyBag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Sql Server Json Property Bag."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.AzureData/sqlServerRegistrations/sqlServers@2019-07-24-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/20"
+    },
+    "flags": 0
+  }
+]

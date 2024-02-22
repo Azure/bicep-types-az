@@ -1,1 +1,755 @@
-[{"13":{}},{"6":{"Value":"Microsoft.RecommendationsService/accounts"}},{"6":{"Value":"2022-02-01"}},{"2":{"Name":"Microsoft.RecommendationsService/accounts","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":1,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":2,"Flags":10,"Description":"The resource api version"},"properties":{"Type":4,"Flags":0,"Description":"Account resource properties."},"systemData":{"Type":20,"Flags":2,"Description":"Metadata pertaining to creation and last modification of the resource."},"tags":{"Type":31,"Flags":0,"Description":"Resource tags."},"location":{"Type":0,"Flags":1,"Description":"The geo-location where the resource lives"}}}},{"2":{"Name":"AccountResourceProperties","Properties":{"configuration":{"Type":7,"Flags":0,"Description":"Account configuration. This can only be set at RecommendationsService Account creation."},"endpointAuthentications":{"Type":12,"Flags":0,"Description":"The list of service endpoints authentication details."},"cors":{"Type":19,"Flags":0,"Description":"The list of CORS details."},"reportsConnectionString":{"Type":0,"Flags":0,"Description":"Connection string to write Accounts reports to."},"provisioningState":{"Type":0,"Flags":2,"Description":"The resource provisioning state."}}}},{"6":{"Value":"Free"}},{"6":{"Value":"Capacity"}},{"5":{"Elements":[5,6,0]}},{"2":{"Name":"EndpointAuthentication","Properties":{"aadTenantID":{"Type":0,"Flags":0,"Description":"AAD tenant ID."},"principalID":{"Type":0,"Flags":0,"Description":"AAD principal ID."},"principalType":{"Type":11,"Flags":0,"Description":"AAD principal type."}}}},{"6":{"Value":"Application"}},{"6":{"Value":"User"}},{"5":{"Elements":[9,10,0]}},{"3":{"ItemType":8}},{"2":{"Name":"CorsRule","Properties":{"allowedOrigins":{"Type":14,"Flags":1,"Description":"The origin domains that are permitted to make a request against the service via CORS."},"allowedMethods":{"Type":15,"Flags":0,"Description":"The methods (HTTP request verbs) that the origin domain may use for a CORS request."},"allowedHeaders":{"Type":16,"Flags":0,"Description":"The request headers that the origin domain may specify on the CORS request."},"exposedHeaders":{"Type":17,"Flags":0,"Description":"The response headers to expose to CORS clients."},"maxAgeInSeconds":{"Type":18,"Flags":0,"Description":"The number of seconds that the client/browser should cache a preflight response."}}}},{"3":{"ItemType":0,"MinLength":1}},{"3":{"ItemType":0}},{"3":{"ItemType":0}},{"3":{"ItemType":0}},{"12":{"MinValue":0}},{"3":{"ItemType":13}},{"2":{"Name":"SystemData","Properties":{"createdBy":{"Type":0,"Flags":0,"Description":"The identity that created the resource."},"createdByType":{"Type":25,"Flags":0,"Description":"The type of identity that created the resource."},"createdAt":{"Type":0,"Flags":0,"Description":"The timestamp of resource creation (UTC)."},"lastModifiedBy":{"Type":0,"Flags":0,"Description":"The identity that last modified the resource."},"lastModifiedByType":{"Type":30,"Flags":0,"Description":"The type of identity that last modified the resource."},"lastModifiedAt":{"Type":0,"Flags":0,"Description":"The timestamp of resource last modification (UTC)"}}}},{"6":{"Value":"User"}},{"6":{"Value":"Application"}},{"6":{"Value":"ManagedIdentity"}},{"6":{"Value":"Key"}},{"5":{"Elements":[21,22,23,24,0]}},{"6":{"Value":"User"}},{"6":{"Value":"Application"}},{"6":{"Value":"ManagedIdentity"}},{"6":{"Value":"Key"}},{"5":{"Elements":[26,27,28,29,0]}},{"2":{"Name":"TrackedResourceTags","Properties":{},"AdditionalProperties":0}},{"4":{"Name":"Microsoft.RecommendationsService/accounts@2022-02-01","ScopeType":8,"Body":3,"Flags":0}},{"6":{"Value":"Microsoft.RecommendationsService/accounts/modeling"}},{"6":{"Value":"2022-02-01"}},{"2":{"Name":"Microsoft.RecommendationsService/accounts/modeling","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":33,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":34,"Flags":10,"Description":"The resource api version"},"properties":{"Type":36,"Flags":0,"Description":"Modeling resource properties."},"systemData":{"Type":20,"Flags":2,"Description":"Metadata pertaining to creation and last modification of the resource."},"tags":{"Type":50,"Flags":0,"Description":"Resource tags."},"location":{"Type":0,"Flags":1,"Description":"The geo-location where the resource lives"}}}},{"2":{"Name":"ModelingResourceProperties","Properties":{"features":{"Type":40,"Flags":0,"Description":"Modeling features controls the set of supported scenarios\\models being computed. This can only be set at Modeling creation."},"frequency":{"Type":44,"Flags":0,"Description":"Modeling frequency controls the modeling compute frequency."},"size":{"Type":48,"Flags":0,"Description":"Modeling size controls the maximum supported input data size."},"inputData":{"Type":49,"Flags":0,"Description":"The configuration to raw CDM data to be used as Modeling resource input."},"provisioningState":{"Type":0,"Flags":2,"Description":"The resource provisioning state."}}}},{"6":{"Value":"Basic"}},{"6":{"Value":"Standard"}},{"6":{"Value":"Premium"}},{"5":{"Elements":[37,38,39,0]}},{"6":{"Value":"Low"}},{"6":{"Value":"Medium"}},{"6":{"Value":"High"}},{"5":{"Elements":[41,42,43,0]}},{"6":{"Value":"Small"}},{"6":{"Value":"Medium"}},{"6":{"Value":"Large"}},{"5":{"Elements":[45,46,47,0]}},{"2":{"Name":"ModelingInputData","Properties":{"connectionString":{"Type":0,"Flags":0,"Description":"Connection string to raw input data."}}}},{"2":{"Name":"TrackedResourceTags","Properties":{},"AdditionalProperties":0}},{"4":{"Name":"Microsoft.RecommendationsService/accounts/modeling@2022-02-01","ScopeType":8,"Body":35,"Flags":0}},{"6":{"Value":"Microsoft.RecommendationsService/accounts/serviceEndpoints"}},{"6":{"Value":"2022-02-01"}},{"2":{"Name":"Microsoft.RecommendationsService/accounts/serviceEndpoints","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":52,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":53,"Flags":10,"Description":"The resource api version"},"properties":{"Type":55,"Flags":0,"Description":"ServiceEndpoint resource properties."},"systemData":{"Type":20,"Flags":2,"Description":"Metadata pertaining to creation and last modification of the resource."},"tags":{"Type":56,"Flags":0,"Description":"Resource tags."},"location":{"Type":0,"Flags":1,"Description":"The geo-location where the resource lives"}}}},{"2":{"Name":"ServiceEndpointResourceProperties","Properties":{"preAllocatedCapacity":{"Type":18,"Flags":0,"Description":"ServiceEndpoint pre-allocated capacity controls the maximum requests-per-second allowed for that endpoint. Only applicable when Account configuration is Capacity."},"pairedLocation":{"Type":0,"Flags":2,"Description":"The paired location that will be used by this ServiceEndpoint."},"url":{"Type":0,"Flags":2,"Description":"The URL where the ServiceEndpoint API is accessible at."},"provisioningState":{"Type":0,"Flags":2,"Description":"The resource provisioning state."}}}},{"2":{"Name":"TrackedResourceTags","Properties":{},"AdditionalProperties":0}},{"4":{"Name":"Microsoft.RecommendationsService/accounts/serviceEndpoints@2022-02-01","ScopeType":8,"Body":54,"Flags":0}}]
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.RecommendationsService/accounts"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2022-02-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.RecommendationsService/accounts",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "Account resource properties."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AccountResourceProperties",
+    "properties": {
+      "configuration": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "Account configuration. This can only be set at RecommendationsService Account creation."
+      },
+      "endpointAuthentications": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "The list of service endpoints authentication details."
+      },
+      "cors": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "The list of CORS details."
+      },
+      "reportsConnectionString": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Connection string to write Accounts reports to."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The resource provisioning state."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Free"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Capacity"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/5"
+      },
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EndpointAuthentication",
+    "properties": {
+      "aadTenantID": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "AAD tenant ID."
+      },
+      "principalID": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "AAD principal ID."
+      },
+      "principalType": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 0,
+        "description": "AAD principal type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/8"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CorsRule",
+    "properties": {
+      "allowedOrigins": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 1,
+        "description": "The origin domains that are permitted to make a request against the service via CORS."
+      },
+      "allowedMethods": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "The methods (HTTP request verbs) that the origin domain may use for a CORS request."
+      },
+      "allowedHeaders": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 0,
+        "description": "The request headers that the origin domain may specify on the CORS request."
+      },
+      "exposedHeaders": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "The response headers to expose to CORS clients."
+      },
+      "maxAgeInSeconds": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "The number of seconds that the client/browser should cache a preflight response."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    },
+    "minLength": 1
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 0
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/13"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SystemData",
+    "properties": {
+      "createdBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that created the resource."
+      },
+      "createdByType": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 0,
+        "description": "The type of identity that created the resource."
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource creation (UTC)."
+      },
+      "lastModifiedBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that last modified the resource."
+      },
+      "lastModifiedByType": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "The type of identity that last modified the resource."
+      },
+      "lastModifiedAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource last modification (UTC)"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/21"
+      },
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/24"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/26"
+      },
+      {
+        "$ref": "#/27"
+      },
+      {
+        "$ref": "#/28"
+      },
+      {
+        "$ref": "#/29"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.RecommendationsService/accounts@2022-02-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.RecommendationsService/accounts/modeling"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2022-02-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.RecommendationsService/accounts/modeling",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 0,
+        "description": "Modeling resource properties."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ModelingResourceProperties",
+    "properties": {
+      "features": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0,
+        "description": "Modeling features controls the set of supported scenarios\\models being computed. This can only be set at Modeling creation."
+      },
+      "frequency": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "Modeling frequency controls the modeling compute frequency."
+      },
+      "size": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 0,
+        "description": "Modeling size controls the maximum supported input data size."
+      },
+      "inputData": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 0,
+        "description": "The configuration to raw CDM data to be used as Modeling resource input."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The resource provisioning state."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Basic"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Premium"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/37"
+      },
+      {
+        "$ref": "#/38"
+      },
+      {
+        "$ref": "#/39"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Low"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Medium"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "High"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/41"
+      },
+      {
+        "$ref": "#/42"
+      },
+      {
+        "$ref": "#/43"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Small"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Medium"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Large"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/45"
+      },
+      {
+        "$ref": "#/46"
+      },
+      {
+        "$ref": "#/47"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ModelingInputData",
+    "properties": {
+      "connectionString": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Connection string to raw input data."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.RecommendationsService/accounts/modeling@2022-02-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/35"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.RecommendationsService/accounts/serviceEndpoints"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2022-02-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.RecommendationsService/accounts/serviceEndpoints",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/55"
+        },
+        "flags": 0,
+        "description": "ServiceEndpoint resource properties."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/56"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServiceEndpointResourceProperties",
+    "properties": {
+      "preAllocatedCapacity": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "ServiceEndpoint pre-allocated capacity controls the maximum requests-per-second allowed for that endpoint. Only applicable when Account configuration is Capacity."
+      },
+      "pairedLocation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The paired location that will be used by this ServiceEndpoint."
+      },
+      "url": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The URL where the ServiceEndpoint API is accessible at."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The resource provisioning state."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.RecommendationsService/accounts/serviceEndpoints@2022-02-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/54"
+    },
+    "flags": 0
+  }
+]

@@ -1,1 +1,5914 @@
-[{"13":{}},{"6":{"Value":"Microsoft.ProviderHub/providerRegistrations/customRollouts"}},{"6":{"Value":"2021-09-01-preview"}},{"2":{"Name":"Microsoft.ProviderHub/providerRegistrations/customRollouts","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":1,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":2,"Flags":10,"Description":"The resource api version"},"properties":{"Type":4,"Flags":1,"Description":"Properties of the rollout."},"systemData":{"Type":129,"Flags":2,"Description":"Metadata pertaining to creation and last modification of the resource."}}}},{"2":{"Name":"CustomRolloutProperties","Properties":{"provisioningState":{"Type":18,"Flags":0,"Description":"The provisioned state of the resource."},"specification":{"Type":19,"Flags":1},"status":{"Type":317,"Flags":0}}}},{"6":{"Value":"NotSpecified"}},{"6":{"Value":"Accepted"}},{"6":{"Value":"Running"}},{"6":{"Value":"Creating"}},{"6":{"Value":"Created"}},{"6":{"Value":"Deleting"}},{"6":{"Value":"Deleted"}},{"6":{"Value":"Canceled"}},{"6":{"Value":"Failed"}},{"6":{"Value":"Succeeded"}},{"6":{"Value":"MovingResources"}},{"6":{"Value":"TransientFailure"}},{"6":{"Value":"RolloutInProgress"}},{"5":{"Elements":[5,6,7,8,9,10,11,12,13,14,15,16,17,0]}},{"2":{"Name":"CustomRolloutPropertiesSpecification","Properties":{"canary":{"Type":20,"Flags":1},"providerRegistration":{"Type":22,"Flags":0},"resourceTypeRegistrations":{"Type":316,"Flags":0}}}},{"2":{"Name":"CustomRolloutSpecificationCanary","Properties":{"regions":{"Type":21,"Flags":0}}}},{"3":{"ItemType":0}},{"2":{"Name":"CustomRolloutSpecificationProviderRegistration","Properties":{"properties":{"Type":23,"Flags":0},"systemData":{"Type":129,"Flags":2,"Description":"Metadata pertaining to creation and last modification of the resource."},"id":{"Type":0,"Flags":2,"Description":"Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"},"name":{"Type":0,"Flags":2,"Description":"The name of the resource"},"type":{"Type":0,"Flags":2,"Description":"The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""}}}},{"2":{"Name":"ProviderRegistrationProperties","Properties":{"providerHubMetadata":{"Type":24,"Flags":0},"provisioningState":{"Type":45,"Flags":0,"Description":"The provisioned state of the resource."},"subscriptionLifecycleNotificationSpecifications":{"Type":46,"Flags":0},"providerAuthentication":{"Type":70,"Flags":0},"providerAuthorizations":{"Type":72,"Flags":0},"namespace":{"Type":0,"Flags":0},"providerVersion":{"Type":0,"Flags":0},"providerType":{"Type":81,"Flags":0},"requiredFeatures":{"Type":82,"Flags":0},"featuresRule":{"Type":83,"Flags":0},"requestHeaderOptions":{"Type":87,"Flags":0},"management":{"Type":94,"Flags":0},"capabilities":{"Type":121,"Flags":0},"metadata":{"Type":113,"Flags":0,"Description":"Anything"},"templateDeploymentOptions":{"Type":122,"Flags":0}}}},{"2":{"Name":"ProviderRegistrationPropertiesProviderHubMetadata","Properties":{"providerAuthorizations":{"Type":26,"Flags":0},"providerAuthentication":{"Type":27,"Flags":0},"thirdPartyProviderAuthorization":{"Type":29,"Flags":0}}}},{"2":{"Name":"ResourceProviderAuthorization","Properties":{"applicationId":{"Type":0,"Flags":0},"roleDefinitionId":{"Type":0,"Flags":0},"managedByRoleDefinitionId":{"Type":0,"Flags":0}}}},{"3":{"ItemType":25}},{"2":{"Name":"ProviderHubMetadataProviderAuthentication","Properties":{"allowedAudiences":{"Type":28,"Flags":1}}}},{"3":{"ItemType":0}},{"2":{"Name":"ProviderHubMetadataThirdPartyProviderAuthorization","Properties":{"authorizations":{"Type":31,"Flags":0},"managedByTenantId":{"Type":0,"Flags":0}}}},{"2":{"Name":"LightHouseAuthorization","Properties":{"principalId":{"Type":0,"Flags":1},"roleDefinitionId":{"Type":0,"Flags":1}}}},{"3":{"ItemType":30}},{"6":{"Value":"NotSpecified"}},{"6":{"Value":"Accepted"}},{"6":{"Value":"Running"}},{"6":{"Value":"Creating"}},{"6":{"Value":"Created"}},{"6":{"Value":"Deleting"}},{"6":{"Value":"Deleted"}},{"6":{"Value":"Canceled"}},{"6":{"Value":"Failed"}},{"6":{"Value":"Succeeded"}},{"6":{"Value":"MovingResources"}},{"6":{"Value":"TransientFailure"}},{"6":{"Value":"RolloutInProgress"}},{"5":{"Elements":[32,33,34,35,36,37,38,39,40,41,42,43,44,0]}},{"2":{"Name":"ProviderRegistrationPropertiesSubscriptionLifecycleNotificationSpecifications","Properties":{"subscriptionStateOverrideActions":{"Type":69,"Flags":0},"softDeleteTTL":{"Type":0,"Flags":0}}}},{"2":{"Name":"SubscriptionStateOverrideAction","Properties":{"state":{"Type":61,"Flags":1},"action":{"Type":68,"Flags":1}}}},{"6":{"Value":"Registered"}},{"6":{"Value":"Unregistered"}},{"6":{"Value":"Warned"}},{"6":{"Value":"Suspended"}},{"6":{"Value":"Deleted"}},{"6":{"Value":"WarnedToRegistered"}},{"6":{"Value":"WarnedToSuspended"}},{"6":{"Value":"WarnedToDeleted"}},{"6":{"Value":"WarnedToUnregistered"}},{"6":{"Value":"SuspendedToRegistered"}},{"6":{"Value":"SuspendedToWarned"}},{"6":{"Value":"SuspendedToDeleted"}},{"6":{"Value":"SuspendedToUnregistered"}},{"5":{"Elements":[48,49,50,51,52,53,54,55,56,57,58,59,60,0]}},{"6":{"Value":"NotDefined"}},{"6":{"Value":"DeleteAllResources"}},{"6":{"Value":"SoftDeleteAllResources"}},{"6":{"Value":"NoOp"}},{"6":{"Value":"BillingCancellation"}},{"6":{"Value":"UndoSoftDelete"}},{"5":{"Elements":[62,63,64,65,66,67,0]}},{"3":{"ItemType":47}},{"2":{"Name":"ResourceProviderManifestPropertiesProviderAuthentication","Properties":{"allowedAudiences":{"Type":71,"Flags":1}}}},{"3":{"ItemType":0}},{"3":{"ItemType":25}},{"6":{"Value":"NotSpecified"}},{"6":{"Value":"Internal"}},{"6":{"Value":"External"}},{"6":{"Value":"Hidden"}},{"6":{"Value":"RegistrationFree"}},{"6":{"Value":"LegacyRegistrationRequired"}},{"6":{"Value":"TenantOnly"}},{"6":{"Value":"AuthorizationFree"}},{"5":{"Elements":[73,74,75,76,77,78,79,80,0]}},{"3":{"ItemType":0}},{"2":{"Name":"ResourceProviderManifestPropertiesFeaturesRule","Properties":{"requiredFeaturesPolicy":{"Type":86,"Flags":1}}}},{"6":{"Value":"Any"}},{"6":{"Value":"All"}},{"5":{"Elements":[84,85,0]}},{"2":{"Name":"ResourceProviderManifestPropertiesRequestHeaderOptions","Properties":{"optInHeaders":{"Type":93,"Flags":0}}}},{"6":{"Value":"NotSpecified"}},{"6":{"Value":"SignedUserToken"}},{"6":{"Value":"ClientGroupMembership"}},{"6":{"Value":"SignedAuxiliaryTokens"}},{"6":{"Value":"UnboundedClientGroupMembership"}},{"5":{"Elements":[88,89,90,91,92,0]}},{"2":{"Name":"ResourceProviderManifestPropertiesManagement","Properties":{"schemaOwners":{"Type":95,"Flags":0},"manifestOwners":{"Type":96,"Flags":0},"incidentRoutingService":{"Type":0,"Flags":0},"incidentRoutingTeam":{"Type":0,"Flags":0},"incidentContactEmail":{"Type":0,"Flags":0},"serviceTreeInfos":{"Type":108,"Flags":0},"resourceAccessPolicy":{"Type":112,"Flags":0},"resourceAccessRoles":{"Type":114,"Flags":0}}}},{"3":{"ItemType":0}},{"3":{"ItemType":0}},{"2":{"Name":"ServiceTreeInfo","Properties":{"serviceId":{"Type":0,"Flags":0},"componentId":{"Type":0,"Flags":0},"readiness":{"Type":107,"Flags":0}}}},{"6":{"Value":"ClosingDown"}},{"6":{"Value":"Deprecated"}},{"6":{"Value":"GA"}},{"6":{"Value":"InDevelopment"}},{"6":{"Value":"InternalOnly"}},{"6":{"Value":"PrivatePreview"}},{"6":{"Value":"PublicPreview"}},{"6":{"Value":"RemovedFromARM"}},{"6":{"Value":"Retired"}},{"5":{"Elements":[98,99,100,101,102,103,104,105,106,0]}},{"3":{"ItemType":97}},{"6":{"Value":"NotSpecified"}},{"6":{"Value":"AcisReadAllowed"}},{"6":{"Value":"AcisActionAllowed"}},{"5":{"Elements":[109,110,111,0]}},{"9":{}},{"3":{"ItemType":113}},{"2":{"Name":"ResourceProviderCapabilities","Properties":{"quotaId":{"Type":0,"Flags":1},"effect":{"Type":119,"Flags":1},"requiredFeatures":{"Type":120,"Flags":0}}}},{"6":{"Value":"NotSpecified"}},{"6":{"Value":"Allow"}},{"6":{"Value":"Disallow"}},{"5":{"Elements":[116,117,118,0]}},{"3":{"ItemType":0}},{"3":{"ItemType":115}},{"2":{"Name":"ResourceProviderManifestPropertiesTemplateDeploymentOptions","Properties":{"preflightSupported":{"Type":123,"Flags":0},"preflightOptions":{"Type":128,"Flags":0}}}},{"11":{}},{"6":{"Value":"None"}},{"6":{"Value":"ContinueDeploymentOnFailure"}},{"6":{"Value":"DefaultValidationOnly"}},{"5":{"Elements":[124,125,126,0]}},{"3":{"ItemType":127}},{"2":{"Name":"SystemData","Properties":{"createdBy":{"Type":0,"Flags":0,"Description":"The identity that created the resource."},"createdByType":{"Type":134,"Flags":0,"Description":"The type of identity that created the resource."},"createdAt":{"Type":0,"Flags":0,"Description":"The timestamp of resource creation (UTC)."},"lastModifiedBy":{"Type":0,"Flags":0,"Description":"The identity that last modified the resource."},"lastModifiedByType":{"Type":139,"Flags":0,"Description":"The type of identity that last modified the resource."},"lastModifiedAt":{"Type":0,"Flags":0,"Description":"The timestamp of resource last modification (UTC)"}}}},{"6":{"Value":"User"}},{"6":{"Value":"Application"}},{"6":{"Value":"ManagedIdentity"}},{"6":{"Value":"Key"}},{"5":{"Elements":[130,131,132,133,0]}},{"6":{"Value":"User"}},{"6":{"Value":"Application"}},{"6":{"Value":"ManagedIdentity"}},{"6":{"Value":"Key"}},{"5":{"Elements":[135,136,137,138,0]}},{"2":{"Name":"ResourceTypeRegistration","Properties":{"properties":{"Type":141,"Flags":0},"systemData":{"Type":129,"Flags":2,"Description":"Metadata pertaining to creation and last modification of the resource."},"id":{"Type":0,"Flags":2,"Description":"Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"},"name":{"Type":0,"Flags":2,"Description":"The name of the resource"},"type":{"Type":0,"Flags":2,"Description":"The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""}}}},{"2":{"Name":"ResourceTypeRegistrationProperties","Properties":{"routingType":{"Type":151,"Flags":0},"regionality":{"Type":155,"Flags":0},"endpoints":{"Type":189,"Flags":0},"extensionOptions":{"Type":190,"Flags":0},"marketplaceType":{"Type":206,"Flags":0},"swaggerSpecifications":{"Type":209,"Flags":0},"allowedUnauthorizedActions":{"Type":210,"Flags":0},"authorizationActionMappings":{"Type":212,"Flags":0},"linkedAccessChecks":{"Type":214,"Flags":0},"defaultApiVersion":{"Type":0,"Flags":0},"loggingRules":{"Type":226,"Flags":0},"throttlingRules":{"Type":236,"Flags":0},"requiredFeatures":{"Type":237,"Flags":0},"featuresRule":{"Type":238,"Flags":0},"enableAsyncOperation":{"Type":123,"Flags":0},"provisioningState":{"Type":255,"Flags":0,"Description":"The provisioned state of the resource."},"enableThirdPartyS2S":{"Type":123,"Flags":0},"subscriptionLifecycleNotificationSpecifications":{"Type":256,"Flags":0},"isPureProxy":{"Type":123,"Flags":0},"identityManagement":{"Type":258,"Flags":0},"checkNameAvailabilitySpecifications":{"Type":265,"Flags":0},"disallowedActionVerbs":{"Type":267,"Flags":0},"serviceTreeInfos":{"Type":268,"Flags":0},"requestHeaderOptions":{"Type":269,"Flags":0},"subscriptionStateRules":{"Type":285,"Flags":0},"templateDeploymentOptions":{"Type":286,"Flags":0},"extendedLocations":{"Type":293,"Flags":0},"resourceMovePolicy":{"Type":294,"Flags":0},"resourceDeletionPolicy":{"Type":298,"Flags":0},"resourceConcurrencyControlOptions":{"Type":303,"Flags":0,"Description":"Dictionary of <ResourceConcurrencyControlOption>"},"resourceGraphConfiguration":{"Type":304,"Flags":0},"management":{"Type":305,"Flags":0},"openApiConfiguration":{"Type":314,"Flags":0}}}},{"6":{"Value":"Default"}},{"6":{"Value":"ProxyOnly"}},{"6":{"Value":"HostBased"}},{"6":{"Value":"Extension"}},{"6":{"Value":"Tenant"}},{"6":{"Value":"Fanout"}},{"6":{"Value":"LocationBased"}},{"6":{"Value":"Failover"}},{"6":{"Value":"CascadeExtension"}},{"5":{"Elements":[142,143,144,145,146,147,148,149,150,0]}},{"6":{"Value":"NotSpecified"}},{"6":{"Value":"Global"}},{"6":{"Value":"Regional"}},{"5":{"Elements":[152,153,154,0]}},{"2":{"Name":"ResourceTypeEndpoint","Properties":{"enabled":{"Type":123,"Flags":0},"apiVersions":{"Type":157,"Flags":0},"locations":{"Type":158,"Flags":0},"requiredFeatures":{"Type":159,"Flags":0},"featuresRule":{"Type":160,"Flags":0},"extensions":{"Type":183,"Flags":0},"timeout":{"Type":0,"Flags":0},"endpointType":{"Type":188,"Flags":0}}}},{"3":{"ItemType":0}},{"3":{"ItemType":0}},{"3":{"ItemType":0}},{"2":{"Name":"ResourceTypeEndpointFeaturesRule","Properties":{"requiredFeaturesPolicy":{"Type":163,"Flags":1}}}},{"6":{"Value":"Any"}},{"6":{"Value":"All"}},{"5":{"Elements":[161,162,0]}},{"2":{"Name":"ResourceTypeExtension","Properties":{"endpointUri":{"Type":0,"Flags":0},"extensionCategories":{"Type":182,"Flags":0},"timeout":{"Type":0,"Flags":0}}}},{"6":{"Value":"NotSpecified"}},{"6":{"Value":"ResourceCreationValidate"}},{"6":{"Value":"ResourceCreationBegin"}},{"6":{"Value":"ResourceCreationCompleted"}},{"6":{"Value":"ResourceReadValidate"}},{"6":{"Value":"ResourceReadBegin"}},{"6":{"Value":"ResourcePatchValidate"}},{"6":{"Value":"ResourcePatchCompleted"}},{"6":{"Value":"ResourceDeletionValidate"}},{"6":{"Value":"ResourceDeletionBegin"}},{"6":{"Value":"ResourceDeletionCompleted"}},{"6":{"Value":"ResourcePostAction"}},{"6":{"Value":"SubscriptionLifecycleNotification"}},{"6":{"Value":"ResourcePatchBegin"}},{"6":{"Value":"ResourceMoveBegin"}},{"6":{"Value":"ResourceMoveCompleted"}},{"5":{"Elements":[165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,0]}},{"3":{"ItemType":181}},{"3":{"ItemType":164}},{"6":{"Value":"NotSpecified"}},{"6":{"Value":"Canary"}},{"6":{"Value":"Production"}},{"6":{"Value":"TestInProduction"}},{"5":{"Elements":[184,185,186,187,0]}},{"3":{"ItemType":156}},{"2":{"Name":"ResourceTypeRegistrationPropertiesExtensionOptions","Properties":{"resourceCreationBegin":{"Type":191,"Flags":0}}}},{"2":{"Name":"ResourceTypeExtensionOptionsResourceCreationBegin","Properties":{"request":{"Type":196,"Flags":0},"response":{"Type":201,"Flags":0}}}},{"6":{"Value":"NotSpecified"}},{"6":{"Value":"DoNotMergeExistingReadOnlyAndSecretProperties"}},{"6":{"Value":"IncludeInternalMetadata"}},{"5":{"Elements":[192,193,194,0]}},{"3":{"ItemType":195}},{"6":{"Value":"NotSpecified"}},{"6":{"Value":"DoNotMergeExistingReadOnlyAndSecretProperties"}},{"6":{"Value":"IncludeInternalMetadata"}},{"5":{"Elements":[197,198,199,0]}},{"3":{"ItemType":200}},{"6":{"Value":"NotSpecified"}},{"6":{"Value":"AddOn"}},{"6":{"Value":"Bypass"}},{"6":{"Value":"Store"}},{"5":{"Elements":[202,203,204,205,0]}},{"2":{"Name":"SwaggerSpecification","Properties":{"apiVersions":{"Type":208,"Flags":0},"swaggerSpecFolderUri":{"Type":0,"Flags":0}}}},{"3":{"ItemType":0}},{"3":{"ItemType":207}},{"3":{"ItemType":0}},{"2":{"Name":"AuthorizationActionMapping","Properties":{"original":{"Type":0,"Flags":0},"desired":{"Type":0,"Flags":0}}}},{"3":{"ItemType":211}},{"2":{"Name":"LinkedAccessCheck","Properties":{"actionName":{"Type":0,"Flags":0},"linkedProperty":{"Type":0,"Flags":0},"linkedAction":{"Type":0,"Flags":0},"linkedActionVerb":{"Type":0,"Flags":0},"linkedType":{"Type":0,"Flags":0}}}},{"3":{"ItemType":213}},{"2":{"Name":"LoggingRule","Properties":{"action":{"Type":0,"Flags":1},"direction":{"Type":219,"Flags":1},"detailLevel":{"Type":222,"Flags":1},"hiddenPropertyPaths":{"Type":223,"Flags":0}}}},{"6":{"Value":"None"}},{"6":{"Value":"Request"}},{"6":{"Value":"Response"}},{"5":{"Elements":[216,217,218,0]}},{"6":{"Value":"None"}},{"6":{"Value":"Body"}},{"5":{"Elements":[220,221,0]}},{"2":{"Name":"LoggingRuleHiddenPropertyPaths","Properties":{"hiddenPathsOnRequest":{"Type":224,"Flags":0},"hiddenPathsOnResponse":{"Type":225,"Flags":0}}}},{"3":{"ItemType":0}},{"3":{"ItemType":0}},{"3":{"ItemType":215}},{"2":{"Name":"ThrottlingRule","Properties":{"action":{"Type":0,"Flags":1},"metrics":{"Type":234,"Flags":1},"requiredFeatures":{"Type":235,"Flags":0}}}},{"2":{"Name":"ThrottlingMetric","Properties":{"type":{"Type":232,"Flags":1},"limit":{"Type":233,"Flags":1},"interval":{"Type":0,"Flags":0}}}},{"6":{"Value":"NotSpecified"}},{"6":{"Value":"NumberOfRequests"}},{"6":{"Value":"NumberOfResources"}},{"5":{"Elements":[229,230,231,0]}},{"12":{}},{"3":{"ItemType":228}},{"3":{"ItemType":0}},{"3":{"ItemType":227}},{"3":{"ItemType":0}},{"2":{"Name":"ResourceTypeRegistrationPropertiesFeaturesRule","Properties":{"requiredFeaturesPolicy":{"Type":241,"Flags":1}}}},{"6":{"Value":"Any"}},{"6":{"Value":"All"}},{"5":{"Elements":[239,240,0]}},{"6":{"Value":"NotSpecified"}},{"6":{"Value":"Accepted"}},{"6":{"Value":"Running"}},{"6":{"Value":"Creating"}},{"6":{"Value":"Created"}},{"6":{"Value":"Deleting"}},{"6":{"Value":"Deleted"}},{"6":{"Value":"Canceled"}},{"6":{"Value":"Failed"}},{"6":{"Value":"Succeeded"}},{"6":{"Value":"MovingResources"}},{"6":{"Value":"TransientFailure"}},{"6":{"Value":"RolloutInProgress"}},{"5":{"Elements":[242,243,244,245,246,247,248,249,250,251,252,253,254,0]}},{"2":{"Name":"ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotificationSpecifications","Properties":{"subscriptionStateOverrideActions":{"Type":257,"Flags":0},"softDeleteTTL":{"Type":0,"Flags":0}}}},{"3":{"ItemType":47}},{"2":{"Name":"ResourceTypeRegistrationPropertiesIdentityManagement","Properties":{"type":{"Type":264,"Flags":0},"applicationId":{"Type":0,"Flags":0}}}},{"6":{"Value":"NotSpecified"}},{"6":{"Value":"SystemAssigned"}},{"6":{"Value":"UserAssigned"}},{"6":{"Value":"Actor"}},{"6":{"Value":"DelegatedResourceIdentity"}},{"5":{"Elements":[259,260,261,262,263,0]}},{"2":{"Name":"ResourceTypeRegistrationPropertiesCheckNameAvailabilitySpecifications","Properties":{"enableDefaultValidation":{"Type":123,"Flags":0},"resourceTypesWithCustomValidation":{"Type":266,"Flags":0}}}},{"3":{"ItemType":0}},{"3":{"ItemType":0}},{"3":{"ItemType":97}},{"2":{"Name":"ResourceTypeRegistrationPropertiesRequestHeaderOptions","Properties":{"optInHeaders":{"Type":275,"Flags":0}}}},{"6":{"Value":"NotSpecified"}},{"6":{"Value":"SignedUserToken"}},{"6":{"Value":"ClientGroupMembership"}},{"6":{"Value":"SignedAuxiliaryTokens"}},{"6":{"Value":"UnboundedClientGroupMembership"}},{"5":{"Elements":[270,271,272,273,274,0]}},{"2":{"Name":"SubscriptionStateRule","Properties":{"state":{"Type":283,"Flags":0},"allowedActions":{"Type":284,"Flags":0}}}},{"6":{"Value":"NotDefined"}},{"6":{"Value":"Enabled"}},{"6":{"Value":"Warned"}},{"6":{"Value":"PastDue"}},{"6":{"Value":"Disabled"}},{"6":{"Value":"Deleted"}},{"5":{"Elements":[277,278,279,280,281,282,0]}},{"3":{"ItemType":0}},{"3":{"ItemType":276}},{"2":{"Name":"ResourceTypeRegistrationPropertiesTemplateDeploymentOptions","Properties":{"preflightSupported":{"Type":123,"Flags":0},"preflightOptions":{"Type":291,"Flags":0}}}},{"6":{"Value":"None"}},{"6":{"Value":"ContinueDeploymentOnFailure"}},{"6":{"Value":"DefaultValidationOnly"}},{"5":{"Elements":[287,288,289,0]}},{"3":{"ItemType":290}},{"2":{"Name":"ExtendedLocationOptions","Properties":{"type":{"Type":0,"Flags":0},"supportedPolicy":{"Type":0,"Flags":0}}}},{"3":{"ItemType":292}},{"2":{"Name":"ResourceTypeRegistrationPropertiesResourceMovePolicy","Properties":{"validationRequired":{"Type":123,"Flags":0},"crossResourceGroupMoveEnabled":{"Type":123,"Flags":0},"crossSubscriptionMoveEnabled":{"Type":123,"Flags":0}}}},{"6":{"Value":"NotSpecified"}},{"6":{"Value":"CascadeDeleteAll"}},{"6":{"Value":"CascadeDeleteProxyOnlyChildren"}},{"5":{"Elements":[295,296,297,0]}},{"2":{"Name":"ResourceConcurrencyControlOption","Properties":{"policy":{"Type":302,"Flags":0}}}},{"6":{"Value":"NotSpecified"}},{"6":{"Value":"SynchronizeBeginExtension"}},{"5":{"Elements":[300,301,0]}},{"2":{"Name":"ResourceTypeRegistrationPropertiesResourceConcurrencyControlOptions","Properties":{},"AdditionalProperties":299}},{"2":{"Name":"ResourceTypeRegistrationPropertiesResourceGraphConfiguration","Properties":{"enabled":{"Type":123,"Flags":0},"apiVersion":{"Type":0,"Flags":0}}}},{"2":{"Name":"ResourceTypeRegistrationPropertiesManagement","Properties":{"schemaOwners":{"Type":306,"Flags":0},"manifestOwners":{"Type":307,"Flags":0},"incidentRoutingService":{"Type":0,"Flags":0},"incidentRoutingTeam":{"Type":0,"Flags":0},"incidentContactEmail":{"Type":0,"Flags":0},"serviceTreeInfos":{"Type":308,"Flags":0},"resourceAccessPolicy":{"Type":312,"Flags":0},"resourceAccessRoles":{"Type":313,"Flags":0}}}},{"3":{"ItemType":0}},{"3":{"ItemType":0}},{"3":{"ItemType":97}},{"6":{"Value":"NotSpecified"}},{"6":{"Value":"AcisReadAllowed"}},{"6":{"Value":"AcisActionAllowed"}},{"5":{"Elements":[309,310,311,0]}},{"3":{"ItemType":113}},{"2":{"Name":"OpenApiConfiguration","Properties":{"validation":{"Type":315,"Flags":0}}}},{"2":{"Name":"OpenApiValidation","Properties":{"allowNoncompliantCollectionResponse":{"Type":123,"Flags":0,"Description":"Indicates whether a non compliance response is allowed for a LIST call"}}}},{"3":{"ItemType":140}},{"2":{"Name":"CustomRolloutPropertiesStatus","Properties":{"completedRegions":{"Type":318,"Flags":0},"failedOrSkippedRegions":{"Type":323,"Flags":0,"Description":"Dictionary of <ExtendedErrorInfo>"}}}},{"3":{"ItemType":0}},{"2":{"Name":"ExtendedErrorInfo","Properties":{"code":{"Type":0,"Flags":0},"target":{"Type":0,"Flags":0},"message":{"Type":0,"Flags":0},"details":{"Type":320,"Flags":0},"additionalInfo":{"Type":322,"Flags":0}}}},{"3":{"ItemType":319}},{"2":{"Name":"TypedErrorInfo","Properties":{"type":{"Type":0,"Flags":1},"info":{"Type":113,"Flags":2,"Description":"Any object"}}}},{"3":{"ItemType":321}},{"2":{"Name":"CustomRolloutStatusFailedOrSkippedRegions","Properties":{},"AdditionalProperties":319}},{"4":{"Name":"Microsoft.ProviderHub/providerRegistrations/customRollouts@2021-09-01-preview","ScopeType":4,"Body":3,"Flags":0}},{"6":{"Value":"Microsoft.ProviderHub/providerRegistrations/defaultRollouts"}},{"6":{"Value":"2021-09-01-preview"}},{"2":{"Name":"Microsoft.ProviderHub/providerRegistrations/defaultRollouts","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":325,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":326,"Flags":10,"Description":"The resource api version"},"properties":{"Type":328,"Flags":0,"Description":"Properties of the rollout."},"systemData":{"Type":129,"Flags":2,"Description":"Metadata pertaining to creation and last modification of the resource."}}}},{"2":{"Name":"DefaultRolloutProperties","Properties":{"provisioningState":{"Type":342,"Flags":0,"Description":"The provisioned state of the resource."},"specification":{"Type":343,"Flags":0},"status":{"Type":360,"Flags":0}}}},{"6":{"Value":"NotSpecified"}},{"6":{"Value":"Accepted"}},{"6":{"Value":"Running"}},{"6":{"Value":"Creating"}},{"6":{"Value":"Created"}},{"6":{"Value":"Deleting"}},{"6":{"Value":"Deleted"}},{"6":{"Value":"Canceled"}},{"6":{"Value":"Failed"}},{"6":{"Value":"Succeeded"}},{"6":{"Value":"MovingResources"}},{"6":{"Value":"TransientFailure"}},{"6":{"Value":"RolloutInProgress"}},{"5":{"Elements":[329,330,331,332,333,334,335,336,337,338,339,340,341,0]}},{"2":{"Name":"DefaultRolloutPropertiesSpecification","Properties":{"expeditedRollout":{"Type":344,"Flags":0},"canary":{"Type":345,"Flags":0},"lowTraffic":{"Type":348,"Flags":0},"mediumTraffic":{"Type":350,"Flags":0},"highTraffic":{"Type":352,"Flags":0},"restOfTheWorldGroupOne":{"Type":354,"Flags":0},"restOfTheWorldGroupTwo":{"Type":356,"Flags":0},"providerRegistration":{"Type":358,"Flags":0},"resourceTypeRegistrations":{"Type":359,"Flags":0}}}},{"2":{"Name":"DefaultRolloutSpecificationExpeditedRollout","Properties":{"enabled":{"Type":123,"Flags":0,"Description":"Indicates whether expedited rollout is enabled/disabled"}}}},{"2":{"Name":"DefaultRolloutSpecificationCanary","Properties":{"skipRegions":{"Type":346,"Flags":0},"regions":{"Type":347,"Flags":0}}}},{"3":{"ItemType":0}},{"3":{"ItemType":0}},{"2":{"Name":"DefaultRolloutSpecificationLowTraffic","Properties":{"waitDuration":{"Type":0,"Flags":0},"regions":{"Type":349,"Flags":0}}}},{"3":{"ItemType":0}},{"2":{"Name":"DefaultRolloutSpecificationMediumTraffic","Properties":{"waitDuration":{"Type":0,"Flags":0},"regions":{"Type":351,"Flags":0}}}},{"3":{"ItemType":0}},{"2":{"Name":"DefaultRolloutSpecificationHighTraffic","Properties":{"waitDuration":{"Type":0,"Flags":0},"regions":{"Type":353,"Flags":0}}}},{"3":{"ItemType":0}},{"2":{"Name":"DefaultRolloutSpecificationRestOfTheWorldGroupOne","Properties":{"waitDuration":{"Type":0,"Flags":0},"regions":{"Type":355,"Flags":0}}}},{"3":{"ItemType":0}},{"2":{"Name":"DefaultRolloutSpecificationRestOfTheWorldGroupTwo","Properties":{"waitDuration":{"Type":0,"Flags":0},"regions":{"Type":357,"Flags":0}}}},{"3":{"ItemType":0}},{"2":{"Name":"DefaultRolloutSpecificationProviderRegistration","Properties":{"properties":{"Type":23,"Flags":0},"systemData":{"Type":129,"Flags":2,"Description":"Metadata pertaining to creation and last modification of the resource."},"id":{"Type":0,"Flags":2,"Description":"Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"},"name":{"Type":0,"Flags":2,"Description":"The name of the resource"},"type":{"Type":0,"Flags":2,"Description":"The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""}}}},{"3":{"ItemType":140}},{"2":{"Name":"DefaultRolloutPropertiesStatus","Properties":{"nextTrafficRegion":{"Type":369,"Flags":0},"nextTrafficRegionScheduledTime":{"Type":0,"Flags":0},"subscriptionReregistrationResult":{"Type":374,"Flags":0},"completedRegions":{"Type":375,"Flags":0},"failedOrSkippedRegions":{"Type":376,"Flags":0,"Description":"Dictionary of <ExtendedErrorInfo>"}}}},{"6":{"Value":"NotSpecified"}},{"6":{"Value":"Canary"}},{"6":{"Value":"LowTraffic"}},{"6":{"Value":"MediumTraffic"}},{"6":{"Value":"HighTraffic"}},{"6":{"Value":"None"}},{"6":{"Value":"RestOfTheWorldGroupOne"}},{"6":{"Value":"RestOfTheWorldGroupTwo"}},{"5":{"Elements":[361,362,363,364,365,366,367,368,0]}},{"6":{"Value":"NotApplicable"}},{"6":{"Value":"ConditionalUpdate"}},{"6":{"Value":"ForcedUpdate"}},{"6":{"Value":"Failed"}},{"5":{"Elements":[370,371,372,373,0]}},{"3":{"ItemType":0}},{"2":{"Name":"RolloutStatusBaseFailedOrSkippedRegions","Properties":{},"AdditionalProperties":319}},{"4":{"Name":"Microsoft.ProviderHub/providerRegistrations/defaultRollouts@2021-09-01-preview","ScopeType":4,"Body":327,"Flags":0}},{"6":{"Value":"Microsoft.ProviderHub/providerRegistrations/notificationRegistrations"}},{"6":{"Value":"2021-09-01-preview"}},{"2":{"Name":"Microsoft.ProviderHub/providerRegistrations/notificationRegistrations","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":378,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":379,"Flags":10,"Description":"The resource api version"},"properties":{"Type":381,"Flags":0},"systemData":{"Type":129,"Flags":2,"Description":"Metadata pertaining to creation and last modification of the resource."}}}},{"2":{"Name":"NotificationRegistrationProperties","Properties":{"notificationMode":{"Type":385,"Flags":0},"messageScope":{"Type":388,"Flags":0},"includedEvents":{"Type":389,"Flags":0},"notificationEndpoints":{"Type":392,"Flags":0},"provisioningState":{"Type":406,"Flags":0,"Description":"The provisioned state of the resource."}}}},{"6":{"Value":"NotSpecified"}},{"6":{"Value":"EventHub"}},{"6":{"Value":"WebHook"}},{"5":{"Elements":[382,383,384,0]}},{"6":{"Value":"NotSpecified"}},{"6":{"Value":"RegisteredSubscriptions"}},{"5":{"Elements":[386,387,0]}},{"3":{"ItemType":0}},{"2":{"Name":"NotificationEndpoint","Properties":{"notificationDestination":{"Type":0,"Flags":0},"locations":{"Type":391,"Flags":0}}}},{"3":{"ItemType":0}},{"3":{"ItemType":390}},{"6":{"Value":"NotSpecified"}},{"6":{"Value":"Accepted"}},{"6":{"Value":"Running"}},{"6":{"Value":"Creating"}},{"6":{"Value":"Created"}},{"6":{"Value":"Deleting"}},{"6":{"Value":"Deleted"}},{"6":{"Value":"Canceled"}},{"6":{"Value":"Failed"}},{"6":{"Value":"Succeeded"}},{"6":{"Value":"MovingResources"}},{"6":{"Value":"TransientFailure"}},{"6":{"Value":"RolloutInProgress"}},{"5":{"Elements":[393,394,395,396,397,398,399,400,401,402,403,404,405,0]}},{"4":{"Name":"Microsoft.ProviderHub/providerRegistrations/notificationRegistrations@2021-09-01-preview","ScopeType":4,"Body":380,"Flags":0}},{"6":{"Value":"default"}},{"6":{"Value":"Microsoft.ProviderHub/providerRegistrations/operations"}},{"6":{"Value":"2021-09-01-preview"}},{"2":{"Name":"Microsoft.ProviderHub/providerRegistrations/operations","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":408,"Flags":9,"Description":"The resource name"},"type":{"Type":409,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":410,"Flags":10,"Description":"The resource api version"},"properties":{"Type":412,"Flags":4}}}},{"2":{"Name":"OperationsPutContentProperties","Properties":{"contents":{"Type":440,"Flags":0,"Description":"Operations content."}}}},{"2":{"Name":"LocalizedOperationDefinition","Properties":{"name":{"Type":0,"Flags":1,"Description":"Name of the operation."},"isDataAction":{"Type":123,"Flags":0,"Description":"Indicates whether the operation applies to data-plane."},"origin":{"Type":417,"Flags":0},"display":{"Type":418,"Flags":1,"Description":"Display information of the operation."},"actionType":{"Type":439,"Flags":0},"properties":{"Type":113,"Flags":0,"Description":"Anything"}}}},{"6":{"Value":"NotSpecified"}},{"6":{"Value":"User"}},{"6":{"Value":"System"}},{"5":{"Elements":[414,415,416,0]}},{"2":{"Name":"LocalizedOperationDefinitionDisplay","Properties":{"default":{"Type":419,"Flags":1,"Description":"Display information of the operation."},"en":{"Type":420,"Flags":0,"Description":"Display information of the operation for en locale."},"cs":{"Type":421,"Flags":0,"Description":"Display information of the operation for cs locale."},"de":{"Type":422,"Flags":0,"Description":"Display information of the operation for de locale."},"es":{"Type":423,"Flags":0,"Description":"Display information of the operation for es locale."},"fr":{"Type":424,"Flags":0,"Description":"Display information of the operation for fr locale."},"hu":{"Type":425,"Flags":0,"Description":"Display information of the operation for hu locale."},"it":{"Type":426,"Flags":0,"Description":"Display information of the operation for it locale."},"ja":{"Type":427,"Flags":0,"Description":"Display information of the operation for ja locale."},"ko":{"Type":428,"Flags":0,"Description":"Display information of the operation for ko locale."},"nl":{"Type":429,"Flags":0,"Description":"Display information of the operation for nl locale."},"pl":{"Type":430,"Flags":0,"Description":"Display information of the operation for pl locale."},"ptBR":{"Type":431,"Flags":0,"Description":"Display information of the operation for pt-BR locale."},"ptPT":{"Type":432,"Flags":0,"Description":"Display information of the operation for pt-PT locale."},"ru":{"Type":433,"Flags":0,"Description":"Display information of the operation for ru locale."},"sv":{"Type":434,"Flags":0,"Description":"Display information of the operation for sv locale."},"zhHans":{"Type":435,"Flags":0,"Description":"Display information of the operation for zh-Hans locale."},"zhHant":{"Type":436,"Flags":0,"Description":"Display information of the operation for zh-Hant locale."}}}},{"2":{"Name":"LocalizedOperationDisplayDefinitionDefault","Properties":{"provider":{"Type":0,"Flags":1},"resource":{"Type":0,"Flags":1},"operation":{"Type":0,"Flags":1},"description":{"Type":0,"Flags":1}}}},{"2":{"Name":"LocalizedOperationDisplayDefinitionEn","Properties":{"provider":{"Type":0,"Flags":1},"resource":{"Type":0,"Flags":1},"operation":{"Type":0,"Flags":1},"description":{"Type":0,"Flags":1}}}},{"2":{"Name":"LocalizedOperationDisplayDefinitionCs","Properties":{"provider":{"Type":0,"Flags":1},"resource":{"Type":0,"Flags":1},"operation":{"Type":0,"Flags":1},"description":{"Type":0,"Flags":1}}}},{"2":{"Name":"LocalizedOperationDisplayDefinitionDe","Properties":{"provider":{"Type":0,"Flags":1},"resource":{"Type":0,"Flags":1},"operation":{"Type":0,"Flags":1},"description":{"Type":0,"Flags":1}}}},{"2":{"Name":"LocalizedOperationDisplayDefinitionEs","Properties":{"provider":{"Type":0,"Flags":1},"resource":{"Type":0,"Flags":1},"operation":{"Type":0,"Flags":1},"description":{"Type":0,"Flags":1}}}},{"2":{"Name":"LocalizedOperationDisplayDefinitionFr","Properties":{"provider":{"Type":0,"Flags":1},"resource":{"Type":0,"Flags":1},"operation":{"Type":0,"Flags":1},"description":{"Type":0,"Flags":1}}}},{"2":{"Name":"LocalizedOperationDisplayDefinitionHu","Properties":{"provider":{"Type":0,"Flags":1},"resource":{"Type":0,"Flags":1},"operation":{"Type":0,"Flags":1},"description":{"Type":0,"Flags":1}}}},{"2":{"Name":"LocalizedOperationDisplayDefinitionIt","Properties":{"provider":{"Type":0,"Flags":1},"resource":{"Type":0,"Flags":1},"operation":{"Type":0,"Flags":1},"description":{"Type":0,"Flags":1}}}},{"2":{"Name":"LocalizedOperationDisplayDefinitionJa","Properties":{"provider":{"Type":0,"Flags":1},"resource":{"Type":0,"Flags":1},"operation":{"Type":0,"Flags":1},"description":{"Type":0,"Flags":1}}}},{"2":{"Name":"LocalizedOperationDisplayDefinitionKo","Properties":{"provider":{"Type":0,"Flags":1},"resource":{"Type":0,"Flags":1},"operation":{"Type":0,"Flags":1},"description":{"Type":0,"Flags":1}}}},{"2":{"Name":"LocalizedOperationDisplayDefinitionNl","Properties":{"provider":{"Type":0,"Flags":1},"resource":{"Type":0,"Flags":1},"operation":{"Type":0,"Flags":1},"description":{"Type":0,"Flags":1}}}},{"2":{"Name":"LocalizedOperationDisplayDefinitionPl","Properties":{"provider":{"Type":0,"Flags":1},"resource":{"Type":0,"Flags":1},"operation":{"Type":0,"Flags":1},"description":{"Type":0,"Flags":1}}}},{"2":{"Name":"LocalizedOperationDisplayDefinitionPtBR","Properties":{"provider":{"Type":0,"Flags":1},"resource":{"Type":0,"Flags":1},"operation":{"Type":0,"Flags":1},"description":{"Type":0,"Flags":1}}}},{"2":{"Name":"LocalizedOperationDisplayDefinitionPt","Properties":{"provider":{"Type":0,"Flags":1},"resource":{"Type":0,"Flags":1},"operation":{"Type":0,"Flags":1},"description":{"Type":0,"Flags":1}}}},{"2":{"Name":"LocalizedOperationDisplayDefinitionRu","Properties":{"provider":{"Type":0,"Flags":1},"resource":{"Type":0,"Flags":1},"operation":{"Type":0,"Flags":1},"description":{"Type":0,"Flags":1}}}},{"2":{"Name":"LocalizedOperationDisplayDefinitionSv","Properties":{"provider":{"Type":0,"Flags":1},"resource":{"Type":0,"Flags":1},"operation":{"Type":0,"Flags":1},"description":{"Type":0,"Flags":1}}}},{"2":{"Name":"LocalizedOperationDisplayDefinitionZhHans","Properties":{"provider":{"Type":0,"Flags":1},"resource":{"Type":0,"Flags":1},"operation":{"Type":0,"Flags":1},"description":{"Type":0,"Flags":1}}}},{"2":{"Name":"LocalizedOperationDisplayDefinitionZhHant","Properties":{"provider":{"Type":0,"Flags":1},"resource":{"Type":0,"Flags":1},"operation":{"Type":0,"Flags":1},"description":{"Type":0,"Flags":1}}}},{"6":{"Value":"NotSpecified"}},{"6":{"Value":"Internal"}},{"5":{"Elements":[437,438,0]}},{"3":{"ItemType":413}},{"4":{"Name":"Microsoft.ProviderHub/providerRegistrations/operations@2021-09-01-preview","ScopeType":4,"Body":411,"Flags":0}},{"6":{"Value":"Microsoft.ProviderHub/providerRegistrations"}},{"6":{"Value":"2021-09-01-preview"}},{"2":{"Name":"Microsoft.ProviderHub/providerRegistrations","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":442,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":443,"Flags":10,"Description":"The resource api version"},"properties":{"Type":23,"Flags":0},"systemData":{"Type":129,"Flags":2,"Description":"Metadata pertaining to creation and last modification of the resource."}}}},{"4":{"Name":"Microsoft.ProviderHub/providerRegistrations@2021-09-01-preview","ScopeType":4,"Body":444,"Flags":0}},{"6":{"Value":"Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations"}},{"6":{"Value":"2021-09-01-preview"}},{"2":{"Name":"Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":446,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":447,"Flags":10,"Description":"The resource api version"},"properties":{"Type":141,"Flags":0},"systemData":{"Type":129,"Flags":2,"Description":"Metadata pertaining to creation and last modification of the resource."}}}},{"4":{"Name":"Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations@2021-09-01-preview","ScopeType":4,"Body":448,"Flags":0}},{"6":{"Value":"Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/skus"}},{"6":{"Value":"2021-09-01-preview"}},{"2":{"Name":"Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/skus","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":450,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":451,"Flags":10,"Description":"The resource api version"},"properties":{"Type":453,"Flags":0},"systemData":{"Type":129,"Flags":2,"Description":"Metadata pertaining to creation and last modification of the resource."}}}},{"2":{"Name":"SkuResourceProperties","Properties":{"skuSettings":{"Type":479,"Flags":1},"provisioningState":{"Type":493,"Flags":0,"Description":"The provisioned state of the resource."}}}},{"2":{"Name":"SkuSetting","Properties":{"name":{"Type":0,"Flags":1},"tier":{"Type":0,"Flags":0},"size":{"Type":0,"Flags":0},"family":{"Type":0,"Flags":0},"kind":{"Type":0,"Flags":0},"locations":{"Type":455,"Flags":0},"locationInfo":{"Type":468,"Flags":0},"requiredQuotaIds":{"Type":469,"Flags":0},"requiredFeatures":{"Type":470,"Flags":0},"capacity":{"Type":471,"Flags":0},"costs":{"Type":477,"Flags":0},"capabilities":{"Type":478,"Flags":0}}}},{"3":{"ItemType":0}},{"2":{"Name":"SkuLocationInfo","Properties":{"location":{"Type":0,"Flags":1},"zones":{"Type":457,"Flags":0},"zoneDetails":{"Type":462,"Flags":0},"extendedLocations":{"Type":463,"Flags":0},"type":{"Type":467,"Flags":0}}}},{"3":{"ItemType":0}},{"2":{"Name":"SkuZoneDetail","Properties":{"name":{"Type":459,"Flags":0},"capabilities":{"Type":461,"Flags":0}}}},{"3":{"ItemType":0}},{"2":{"Name":"SkuCapability","Properties":{"name":{"Type":0,"Flags":1},"value":{"Type":0,"Flags":1}}}},{"3":{"ItemType":460}},{"3":{"ItemType":458}},{"3":{"ItemType":0}},{"6":{"Value":"NotSpecified"}},{"6":{"Value":"EdgeZone"}},{"6":{"Value":"ArcZone"}},{"5":{"Elements":[464,465,466,0]}},{"3":{"ItemType":456}},{"3":{"ItemType":0}},{"3":{"ItemType":0}},{"2":{"Name":"SkuSettingCapacity","Properties":{"minimum":{"Type":233,"Flags":1},"maximum":{"Type":233,"Flags":0},"default":{"Type":233,"Flags":0},"scaleType":{"Type":475,"Flags":0}}}},{"6":{"Value":"None"}},{"6":{"Value":"Manual"}},{"6":{"Value":"Automatic"}},{"5":{"Elements":[472,473,474,0]}},{"2":{"Name":"SkuCost","Properties":{"meterId":{"Type":0,"Flags":1},"quantity":{"Type":233,"Flags":0},"extendedUnit":{"Type":0,"Flags":0}}}},{"3":{"ItemType":476}},{"3":{"ItemType":460}},{"3":{"ItemType":454}},{"6":{"Value":"NotSpecified"}},{"6":{"Value":"Accepted"}},{"6":{"Value":"Running"}},{"6":{"Value":"Creating"}},{"6":{"Value":"Created"}},{"6":{"Value":"Deleting"}},{"6":{"Value":"Deleted"}},{"6":{"Value":"Canceled"}},{"6":{"Value":"Failed"}},{"6":{"Value":"Succeeded"}},{"6":{"Value":"MovingResources"}},{"6":{"Value":"TransientFailure"}},{"6":{"Value":"RolloutInProgress"}},{"5":{"Elements":[480,481,482,483,484,485,486,487,488,489,490,491,492,0]}},{"4":{"Name":"Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/skus@2021-09-01-preview","ScopeType":4,"Body":452,"Flags":0}},{"6":{"Value":"Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/skus"}},{"6":{"Value":"2021-09-01-preview"}},{"2":{"Name":"Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/skus","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":495,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":496,"Flags":10,"Description":"The resource api version"},"properties":{"Type":453,"Flags":0},"systemData":{"Type":129,"Flags":2,"Description":"Metadata pertaining to creation and last modification of the resource."}}}},{"4":{"Name":"Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/skus@2021-09-01-preview","ScopeType":4,"Body":497,"Flags":0}},{"6":{"Value":"Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/skus"}},{"6":{"Value":"2021-09-01-preview"}},{"2":{"Name":"Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/skus","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":499,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":500,"Flags":10,"Description":"The resource api version"},"properties":{"Type":453,"Flags":0},"systemData":{"Type":129,"Flags":2,"Description":"Metadata pertaining to creation and last modification of the resource."}}}},{"4":{"Name":"Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/skus@2021-09-01-preview","ScopeType":4,"Body":501,"Flags":0}},{"6":{"Value":"Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/skus"}},{"6":{"Value":"2021-09-01-preview"}},{"2":{"Name":"Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/skus","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":503,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":504,"Flags":10,"Description":"The resource api version"},"properties":{"Type":453,"Flags":0},"systemData":{"Type":129,"Flags":2,"Description":"Metadata pertaining to creation and last modification of the resource."}}}},{"4":{"Name":"Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/skus@2021-09-01-preview","ScopeType":4,"Body":505,"Flags":0}}]
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.ProviderHub/providerRegistrations/customRollouts"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-09-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.ProviderHub/providerRegistrations/customRollouts",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 1,
+        "description": "Properties of the rollout."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/129"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CustomRolloutProperties",
+    "properties": {
+      "provisioningState": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "The provisioned state of the resource."
+      },
+      "specification": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 1
+      },
+      "status": {
+        "type": {
+          "$ref": "#/317"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Running"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Created"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MovingResources"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TransientFailure"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RolloutInProgress"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/5"
+      },
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/14"
+      },
+      {
+        "$ref": "#/15"
+      },
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CustomRolloutPropertiesSpecification",
+    "properties": {
+      "canary": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 1
+      },
+      "providerRegistration": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 0
+      },
+      "resourceTypeRegistrations": {
+        "type": {
+          "$ref": "#/316"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CustomRolloutSpecificationCanary",
+    "properties": {
+      "regions": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CustomRolloutSpecificationProviderRegistration",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/129"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the resource."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProviderRegistrationProperties",
+    "properties": {
+      "providerHubMetadata": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 0,
+        "description": "The provisioned state of the resource."
+      },
+      "subscriptionLifecycleNotificationSpecifications": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 0
+      },
+      "providerAuthentication": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 0
+      },
+      "providerAuthorizations": {
+        "type": {
+          "$ref": "#/72"
+        },
+        "flags": 0
+      },
+      "namespace": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "providerVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "providerType": {
+        "type": {
+          "$ref": "#/81"
+        },
+        "flags": 0
+      },
+      "requiredFeatures": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 0
+      },
+      "featuresRule": {
+        "type": {
+          "$ref": "#/83"
+        },
+        "flags": 0
+      },
+      "requestHeaderOptions": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 0
+      },
+      "management": {
+        "type": {
+          "$ref": "#/94"
+        },
+        "flags": 0
+      },
+      "capabilities": {
+        "type": {
+          "$ref": "#/121"
+        },
+        "flags": 0
+      },
+      "metadata": {
+        "type": {
+          "$ref": "#/113"
+        },
+        "flags": 0,
+        "description": "Anything"
+      },
+      "templateDeploymentOptions": {
+        "type": {
+          "$ref": "#/122"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProviderRegistrationPropertiesProviderHubMetadata",
+    "properties": {
+      "providerAuthorizations": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0
+      },
+      "providerAuthentication": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 0
+      },
+      "thirdPartyProviderAuthorization": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceProviderAuthorization",
+    "properties": {
+      "applicationId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "roleDefinitionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "managedByRoleDefinitionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/25"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProviderHubMetadataProviderAuthentication",
+    "properties": {
+      "allowedAudiences": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProviderHubMetadataThirdPartyProviderAuthorization",
+    "properties": {
+      "authorizations": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0
+      },
+      "managedByTenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LightHouseAuthorization",
+    "properties": {
+      "principalId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "roleDefinitionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/30"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Running"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Created"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MovingResources"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TransientFailure"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RolloutInProgress"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/32"
+      },
+      {
+        "$ref": "#/33"
+      },
+      {
+        "$ref": "#/34"
+      },
+      {
+        "$ref": "#/35"
+      },
+      {
+        "$ref": "#/36"
+      },
+      {
+        "$ref": "#/37"
+      },
+      {
+        "$ref": "#/38"
+      },
+      {
+        "$ref": "#/39"
+      },
+      {
+        "$ref": "#/40"
+      },
+      {
+        "$ref": "#/41"
+      },
+      {
+        "$ref": "#/42"
+      },
+      {
+        "$ref": "#/43"
+      },
+      {
+        "$ref": "#/44"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ProviderRegistrationPropertiesSubscriptionLifecycleNotificationSpecifications",
+    "properties": {
+      "subscriptionStateOverrideActions": {
+        "type": {
+          "$ref": "#/69"
+        },
+        "flags": 0
+      },
+      "softDeleteTTL": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SubscriptionStateOverrideAction",
+    "properties": {
+      "state": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 1
+      },
+      "action": {
+        "type": {
+          "$ref": "#/68"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Registered"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unregistered"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Warned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Suspended"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "WarnedToRegistered"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "WarnedToSuspended"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "WarnedToDeleted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "WarnedToUnregistered"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SuspendedToRegistered"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SuspendedToWarned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SuspendedToDeleted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SuspendedToUnregistered"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/48"
+      },
+      {
+        "$ref": "#/49"
+      },
+      {
+        "$ref": "#/50"
+      },
+      {
+        "$ref": "#/51"
+      },
+      {
+        "$ref": "#/52"
+      },
+      {
+        "$ref": "#/53"
+      },
+      {
+        "$ref": "#/54"
+      },
+      {
+        "$ref": "#/55"
+      },
+      {
+        "$ref": "#/56"
+      },
+      {
+        "$ref": "#/57"
+      },
+      {
+        "$ref": "#/58"
+      },
+      {
+        "$ref": "#/59"
+      },
+      {
+        "$ref": "#/60"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotDefined"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DeleteAllResources"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SoftDeleteAllResources"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NoOp"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BillingCancellation"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UndoSoftDelete"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/62"
+      },
+      {
+        "$ref": "#/63"
+      },
+      {
+        "$ref": "#/64"
+      },
+      {
+        "$ref": "#/65"
+      },
+      {
+        "$ref": "#/66"
+      },
+      {
+        "$ref": "#/67"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/47"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceProviderManifestPropertiesProviderAuthentication",
+    "properties": {
+      "allowedAudiences": {
+        "type": {
+          "$ref": "#/71"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/25"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Internal"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "External"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Hidden"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RegistrationFree"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LegacyRegistrationRequired"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TenantOnly"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AuthorizationFree"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/73"
+      },
+      {
+        "$ref": "#/74"
+      },
+      {
+        "$ref": "#/75"
+      },
+      {
+        "$ref": "#/76"
+      },
+      {
+        "$ref": "#/77"
+      },
+      {
+        "$ref": "#/78"
+      },
+      {
+        "$ref": "#/79"
+      },
+      {
+        "$ref": "#/80"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceProviderManifestPropertiesFeaturesRule",
+    "properties": {
+      "requiredFeaturesPolicy": {
+        "type": {
+          "$ref": "#/86"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Any"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "All"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/84"
+      },
+      {
+        "$ref": "#/85"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceProviderManifestPropertiesRequestHeaderOptions",
+    "properties": {
+      "optInHeaders": {
+        "type": {
+          "$ref": "#/93"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SignedUserToken"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ClientGroupMembership"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SignedAuxiliaryTokens"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UnboundedClientGroupMembership"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/88"
+      },
+      {
+        "$ref": "#/89"
+      },
+      {
+        "$ref": "#/90"
+      },
+      {
+        "$ref": "#/91"
+      },
+      {
+        "$ref": "#/92"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceProviderManifestPropertiesManagement",
+    "properties": {
+      "schemaOwners": {
+        "type": {
+          "$ref": "#/95"
+        },
+        "flags": 0
+      },
+      "manifestOwners": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 0
+      },
+      "incidentRoutingService": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "incidentRoutingTeam": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "incidentContactEmail": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "serviceTreeInfos": {
+        "type": {
+          "$ref": "#/108"
+        },
+        "flags": 0
+      },
+      "resourceAccessPolicy": {
+        "type": {
+          "$ref": "#/112"
+        },
+        "flags": 0
+      },
+      "resourceAccessRoles": {
+        "type": {
+          "$ref": "#/114"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServiceTreeInfo",
+    "properties": {
+      "serviceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "componentId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "readiness": {
+        "type": {
+          "$ref": "#/107"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ClosingDown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deprecated"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GA"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InDevelopment"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InternalOnly"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PrivatePreview"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PublicPreview"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RemovedFromARM"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Retired"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/98"
+      },
+      {
+        "$ref": "#/99"
+      },
+      {
+        "$ref": "#/100"
+      },
+      {
+        "$ref": "#/101"
+      },
+      {
+        "$ref": "#/102"
+      },
+      {
+        "$ref": "#/103"
+      },
+      {
+        "$ref": "#/104"
+      },
+      {
+        "$ref": "#/105"
+      },
+      {
+        "$ref": "#/106"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/97"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AcisReadAllowed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AcisActionAllowed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/109"
+      },
+      {
+        "$ref": "#/110"
+      },
+      {
+        "$ref": "#/111"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/113"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceProviderCapabilities",
+    "properties": {
+      "quotaId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "effect": {
+        "type": {
+          "$ref": "#/119"
+        },
+        "flags": 1
+      },
+      "requiredFeatures": {
+        "type": {
+          "$ref": "#/120"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Allow"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disallow"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/116"
+      },
+      {
+        "$ref": "#/117"
+      },
+      {
+        "$ref": "#/118"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/115"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceProviderManifestPropertiesTemplateDeploymentOptions",
+    "properties": {
+      "preflightSupported": {
+        "type": {
+          "$ref": "#/123"
+        },
+        "flags": 0
+      },
+      "preflightOptions": {
+        "type": {
+          "$ref": "#/128"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ContinueDeploymentOnFailure"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DefaultValidationOnly"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/124"
+      },
+      {
+        "$ref": "#/125"
+      },
+      {
+        "$ref": "#/126"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/127"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SystemData",
+    "properties": {
+      "createdBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that created the resource."
+      },
+      "createdByType": {
+        "type": {
+          "$ref": "#/134"
+        },
+        "flags": 0,
+        "description": "The type of identity that created the resource."
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource creation (UTC)."
+      },
+      "lastModifiedBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that last modified the resource."
+      },
+      "lastModifiedByType": {
+        "type": {
+          "$ref": "#/139"
+        },
+        "flags": 0,
+        "description": "The type of identity that last modified the resource."
+      },
+      "lastModifiedAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource last modification (UTC)"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/130"
+      },
+      {
+        "$ref": "#/131"
+      },
+      {
+        "$ref": "#/132"
+      },
+      {
+        "$ref": "#/133"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/135"
+      },
+      {
+        "$ref": "#/136"
+      },
+      {
+        "$ref": "#/137"
+      },
+      {
+        "$ref": "#/138"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTypeRegistration",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/141"
+        },
+        "flags": 0
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/129"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the resource."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTypeRegistrationProperties",
+    "properties": {
+      "routingType": {
+        "type": {
+          "$ref": "#/151"
+        },
+        "flags": 0
+      },
+      "regionality": {
+        "type": {
+          "$ref": "#/155"
+        },
+        "flags": 0
+      },
+      "endpoints": {
+        "type": {
+          "$ref": "#/189"
+        },
+        "flags": 0
+      },
+      "extensionOptions": {
+        "type": {
+          "$ref": "#/190"
+        },
+        "flags": 0
+      },
+      "marketplaceType": {
+        "type": {
+          "$ref": "#/206"
+        },
+        "flags": 0
+      },
+      "swaggerSpecifications": {
+        "type": {
+          "$ref": "#/209"
+        },
+        "flags": 0
+      },
+      "allowedUnauthorizedActions": {
+        "type": {
+          "$ref": "#/210"
+        },
+        "flags": 0
+      },
+      "authorizationActionMappings": {
+        "type": {
+          "$ref": "#/212"
+        },
+        "flags": 0
+      },
+      "linkedAccessChecks": {
+        "type": {
+          "$ref": "#/214"
+        },
+        "flags": 0
+      },
+      "defaultApiVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "loggingRules": {
+        "type": {
+          "$ref": "#/226"
+        },
+        "flags": 0
+      },
+      "throttlingRules": {
+        "type": {
+          "$ref": "#/236"
+        },
+        "flags": 0
+      },
+      "requiredFeatures": {
+        "type": {
+          "$ref": "#/237"
+        },
+        "flags": 0
+      },
+      "featuresRule": {
+        "type": {
+          "$ref": "#/238"
+        },
+        "flags": 0
+      },
+      "enableAsyncOperation": {
+        "type": {
+          "$ref": "#/123"
+        },
+        "flags": 0
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/255"
+        },
+        "flags": 0,
+        "description": "The provisioned state of the resource."
+      },
+      "enableThirdPartyS2S": {
+        "type": {
+          "$ref": "#/123"
+        },
+        "flags": 0
+      },
+      "subscriptionLifecycleNotificationSpecifications": {
+        "type": {
+          "$ref": "#/256"
+        },
+        "flags": 0
+      },
+      "isPureProxy": {
+        "type": {
+          "$ref": "#/123"
+        },
+        "flags": 0
+      },
+      "identityManagement": {
+        "type": {
+          "$ref": "#/258"
+        },
+        "flags": 0
+      },
+      "checkNameAvailabilitySpecifications": {
+        "type": {
+          "$ref": "#/265"
+        },
+        "flags": 0
+      },
+      "disallowedActionVerbs": {
+        "type": {
+          "$ref": "#/267"
+        },
+        "flags": 0
+      },
+      "serviceTreeInfos": {
+        "type": {
+          "$ref": "#/268"
+        },
+        "flags": 0
+      },
+      "requestHeaderOptions": {
+        "type": {
+          "$ref": "#/269"
+        },
+        "flags": 0
+      },
+      "subscriptionStateRules": {
+        "type": {
+          "$ref": "#/285"
+        },
+        "flags": 0
+      },
+      "templateDeploymentOptions": {
+        "type": {
+          "$ref": "#/286"
+        },
+        "flags": 0
+      },
+      "extendedLocations": {
+        "type": {
+          "$ref": "#/293"
+        },
+        "flags": 0
+      },
+      "resourceMovePolicy": {
+        "type": {
+          "$ref": "#/294"
+        },
+        "flags": 0
+      },
+      "resourceDeletionPolicy": {
+        "type": {
+          "$ref": "#/298"
+        },
+        "flags": 0
+      },
+      "resourceConcurrencyControlOptions": {
+        "type": {
+          "$ref": "#/303"
+        },
+        "flags": 0,
+        "description": "Dictionary of <ResourceConcurrencyControlOption>"
+      },
+      "resourceGraphConfiguration": {
+        "type": {
+          "$ref": "#/304"
+        },
+        "flags": 0
+      },
+      "management": {
+        "type": {
+          "$ref": "#/305"
+        },
+        "flags": 0
+      },
+      "openApiConfiguration": {
+        "type": {
+          "$ref": "#/314"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Default"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ProxyOnly"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HostBased"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Extension"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Tenant"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Fanout"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LocationBased"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failover"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CascadeExtension"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/142"
+      },
+      {
+        "$ref": "#/143"
+      },
+      {
+        "$ref": "#/144"
+      },
+      {
+        "$ref": "#/145"
+      },
+      {
+        "$ref": "#/146"
+      },
+      {
+        "$ref": "#/147"
+      },
+      {
+        "$ref": "#/148"
+      },
+      {
+        "$ref": "#/149"
+      },
+      {
+        "$ref": "#/150"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Global"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Regional"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/152"
+      },
+      {
+        "$ref": "#/153"
+      },
+      {
+        "$ref": "#/154"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTypeEndpoint",
+    "properties": {
+      "enabled": {
+        "type": {
+          "$ref": "#/123"
+        },
+        "flags": 0
+      },
+      "apiVersions": {
+        "type": {
+          "$ref": "#/157"
+        },
+        "flags": 0
+      },
+      "locations": {
+        "type": {
+          "$ref": "#/158"
+        },
+        "flags": 0
+      },
+      "requiredFeatures": {
+        "type": {
+          "$ref": "#/159"
+        },
+        "flags": 0
+      },
+      "featuresRule": {
+        "type": {
+          "$ref": "#/160"
+        },
+        "flags": 0
+      },
+      "extensions": {
+        "type": {
+          "$ref": "#/183"
+        },
+        "flags": 0
+      },
+      "timeout": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "endpointType": {
+        "type": {
+          "$ref": "#/188"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTypeEndpointFeaturesRule",
+    "properties": {
+      "requiredFeaturesPolicy": {
+        "type": {
+          "$ref": "#/163"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Any"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "All"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/161"
+      },
+      {
+        "$ref": "#/162"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTypeExtension",
+    "properties": {
+      "endpointUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "extensionCategories": {
+        "type": {
+          "$ref": "#/182"
+        },
+        "flags": 0
+      },
+      "timeout": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceCreationValidate"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceCreationBegin"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceCreationCompleted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceReadValidate"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceReadBegin"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourcePatchValidate"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourcePatchCompleted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceDeletionValidate"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceDeletionBegin"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceDeletionCompleted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourcePostAction"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SubscriptionLifecycleNotification"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourcePatchBegin"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceMoveBegin"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResourceMoveCompleted"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/165"
+      },
+      {
+        "$ref": "#/166"
+      },
+      {
+        "$ref": "#/167"
+      },
+      {
+        "$ref": "#/168"
+      },
+      {
+        "$ref": "#/169"
+      },
+      {
+        "$ref": "#/170"
+      },
+      {
+        "$ref": "#/171"
+      },
+      {
+        "$ref": "#/172"
+      },
+      {
+        "$ref": "#/173"
+      },
+      {
+        "$ref": "#/174"
+      },
+      {
+        "$ref": "#/175"
+      },
+      {
+        "$ref": "#/176"
+      },
+      {
+        "$ref": "#/177"
+      },
+      {
+        "$ref": "#/178"
+      },
+      {
+        "$ref": "#/179"
+      },
+      {
+        "$ref": "#/180"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/181"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/164"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Production"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TestInProduction"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/184"
+      },
+      {
+        "$ref": "#/185"
+      },
+      {
+        "$ref": "#/186"
+      },
+      {
+        "$ref": "#/187"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/156"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTypeRegistrationPropertiesExtensionOptions",
+    "properties": {
+      "resourceCreationBegin": {
+        "type": {
+          "$ref": "#/191"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTypeExtensionOptionsResourceCreationBegin",
+    "properties": {
+      "request": {
+        "type": {
+          "$ref": "#/196"
+        },
+        "flags": 0
+      },
+      "response": {
+        "type": {
+          "$ref": "#/201"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DoNotMergeExistingReadOnlyAndSecretProperties"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "IncludeInternalMetadata"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/192"
+      },
+      {
+        "$ref": "#/193"
+      },
+      {
+        "$ref": "#/194"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/195"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DoNotMergeExistingReadOnlyAndSecretProperties"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "IncludeInternalMetadata"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/197"
+      },
+      {
+        "$ref": "#/198"
+      },
+      {
+        "$ref": "#/199"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/200"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AddOn"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Bypass"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Store"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/202"
+      },
+      {
+        "$ref": "#/203"
+      },
+      {
+        "$ref": "#/204"
+      },
+      {
+        "$ref": "#/205"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SwaggerSpecification",
+    "properties": {
+      "apiVersions": {
+        "type": {
+          "$ref": "#/208"
+        },
+        "flags": 0
+      },
+      "swaggerSpecFolderUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/207"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AuthorizationActionMapping",
+    "properties": {
+      "original": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "desired": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/211"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LinkedAccessCheck",
+    "properties": {
+      "actionName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "linkedProperty": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "linkedAction": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "linkedActionVerb": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "linkedType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/213"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LoggingRule",
+    "properties": {
+      "action": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "direction": {
+        "type": {
+          "$ref": "#/219"
+        },
+        "flags": 1
+      },
+      "detailLevel": {
+        "type": {
+          "$ref": "#/222"
+        },
+        "flags": 1
+      },
+      "hiddenPropertyPaths": {
+        "type": {
+          "$ref": "#/223"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Request"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Response"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/216"
+      },
+      {
+        "$ref": "#/217"
+      },
+      {
+        "$ref": "#/218"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Body"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/220"
+      },
+      {
+        "$ref": "#/221"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LoggingRuleHiddenPropertyPaths",
+    "properties": {
+      "hiddenPathsOnRequest": {
+        "type": {
+          "$ref": "#/224"
+        },
+        "flags": 0
+      },
+      "hiddenPathsOnResponse": {
+        "type": {
+          "$ref": "#/225"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/215"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ThrottlingRule",
+    "properties": {
+      "action": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "metrics": {
+        "type": {
+          "$ref": "#/234"
+        },
+        "flags": 1
+      },
+      "requiredFeatures": {
+        "type": {
+          "$ref": "#/235"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ThrottlingMetric",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/232"
+        },
+        "flags": 1
+      },
+      "limit": {
+        "type": {
+          "$ref": "#/233"
+        },
+        "flags": 1
+      },
+      "interval": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NumberOfRequests"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NumberOfResources"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/229"
+      },
+      {
+        "$ref": "#/230"
+      },
+      {
+        "$ref": "#/231"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/228"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/227"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTypeRegistrationPropertiesFeaturesRule",
+    "properties": {
+      "requiredFeaturesPolicy": {
+        "type": {
+          "$ref": "#/241"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Any"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "All"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/239"
+      },
+      {
+        "$ref": "#/240"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Running"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Created"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MovingResources"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TransientFailure"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RolloutInProgress"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/242"
+      },
+      {
+        "$ref": "#/243"
+      },
+      {
+        "$ref": "#/244"
+      },
+      {
+        "$ref": "#/245"
+      },
+      {
+        "$ref": "#/246"
+      },
+      {
+        "$ref": "#/247"
+      },
+      {
+        "$ref": "#/248"
+      },
+      {
+        "$ref": "#/249"
+      },
+      {
+        "$ref": "#/250"
+      },
+      {
+        "$ref": "#/251"
+      },
+      {
+        "$ref": "#/252"
+      },
+      {
+        "$ref": "#/253"
+      },
+      {
+        "$ref": "#/254"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotificationSpecifications",
+    "properties": {
+      "subscriptionStateOverrideActions": {
+        "type": {
+          "$ref": "#/257"
+        },
+        "flags": 0
+      },
+      "softDeleteTTL": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/47"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTypeRegistrationPropertiesIdentityManagement",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/264"
+        },
+        "flags": 0
+      },
+      "applicationId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SystemAssigned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UserAssigned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Actor"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DelegatedResourceIdentity"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/259"
+      },
+      {
+        "$ref": "#/260"
+      },
+      {
+        "$ref": "#/261"
+      },
+      {
+        "$ref": "#/262"
+      },
+      {
+        "$ref": "#/263"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTypeRegistrationPropertiesCheckNameAvailabilitySpecifications",
+    "properties": {
+      "enableDefaultValidation": {
+        "type": {
+          "$ref": "#/123"
+        },
+        "flags": 0
+      },
+      "resourceTypesWithCustomValidation": {
+        "type": {
+          "$ref": "#/266"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/97"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTypeRegistrationPropertiesRequestHeaderOptions",
+    "properties": {
+      "optInHeaders": {
+        "type": {
+          "$ref": "#/275"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SignedUserToken"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ClientGroupMembership"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SignedAuxiliaryTokens"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UnboundedClientGroupMembership"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/270"
+      },
+      {
+        "$ref": "#/271"
+      },
+      {
+        "$ref": "#/272"
+      },
+      {
+        "$ref": "#/273"
+      },
+      {
+        "$ref": "#/274"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SubscriptionStateRule",
+    "properties": {
+      "state": {
+        "type": {
+          "$ref": "#/283"
+        },
+        "flags": 0
+      },
+      "allowedActions": {
+        "type": {
+          "$ref": "#/284"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotDefined"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Warned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PastDue"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/277"
+      },
+      {
+        "$ref": "#/278"
+      },
+      {
+        "$ref": "#/279"
+      },
+      {
+        "$ref": "#/280"
+      },
+      {
+        "$ref": "#/281"
+      },
+      {
+        "$ref": "#/282"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/276"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTypeRegistrationPropertiesTemplateDeploymentOptions",
+    "properties": {
+      "preflightSupported": {
+        "type": {
+          "$ref": "#/123"
+        },
+        "flags": 0
+      },
+      "preflightOptions": {
+        "type": {
+          "$ref": "#/291"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ContinueDeploymentOnFailure"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DefaultValidationOnly"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/287"
+      },
+      {
+        "$ref": "#/288"
+      },
+      {
+        "$ref": "#/289"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/290"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExtendedLocationOptions",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "supportedPolicy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/292"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTypeRegistrationPropertiesResourceMovePolicy",
+    "properties": {
+      "validationRequired": {
+        "type": {
+          "$ref": "#/123"
+        },
+        "flags": 0
+      },
+      "crossResourceGroupMoveEnabled": {
+        "type": {
+          "$ref": "#/123"
+        },
+        "flags": 0
+      },
+      "crossSubscriptionMoveEnabled": {
+        "type": {
+          "$ref": "#/123"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CascadeDeleteAll"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CascadeDeleteProxyOnlyChildren"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/295"
+      },
+      {
+        "$ref": "#/296"
+      },
+      {
+        "$ref": "#/297"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceConcurrencyControlOption",
+    "properties": {
+      "policy": {
+        "type": {
+          "$ref": "#/302"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SynchronizeBeginExtension"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/300"
+      },
+      {
+        "$ref": "#/301"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTypeRegistrationPropertiesResourceConcurrencyControlOptions",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/299"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTypeRegistrationPropertiesResourceGraphConfiguration",
+    "properties": {
+      "enabled": {
+        "type": {
+          "$ref": "#/123"
+        },
+        "flags": 0
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTypeRegistrationPropertiesManagement",
+    "properties": {
+      "schemaOwners": {
+        "type": {
+          "$ref": "#/306"
+        },
+        "flags": 0
+      },
+      "manifestOwners": {
+        "type": {
+          "$ref": "#/307"
+        },
+        "flags": 0
+      },
+      "incidentRoutingService": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "incidentRoutingTeam": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "incidentContactEmail": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "serviceTreeInfos": {
+        "type": {
+          "$ref": "#/308"
+        },
+        "flags": 0
+      },
+      "resourceAccessPolicy": {
+        "type": {
+          "$ref": "#/312"
+        },
+        "flags": 0
+      },
+      "resourceAccessRoles": {
+        "type": {
+          "$ref": "#/313"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/97"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AcisReadAllowed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AcisActionAllowed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/309"
+      },
+      {
+        "$ref": "#/310"
+      },
+      {
+        "$ref": "#/311"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/113"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OpenApiConfiguration",
+    "properties": {
+      "validation": {
+        "type": {
+          "$ref": "#/315"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OpenApiValidation",
+    "properties": {
+      "allowNoncompliantCollectionResponse": {
+        "type": {
+          "$ref": "#/123"
+        },
+        "flags": 0,
+        "description": "Indicates whether a non compliance response is allowed for a LIST call"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/140"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CustomRolloutPropertiesStatus",
+    "properties": {
+      "completedRegions": {
+        "type": {
+          "$ref": "#/318"
+        },
+        "flags": 0
+      },
+      "failedOrSkippedRegions": {
+        "type": {
+          "$ref": "#/323"
+        },
+        "flags": 0,
+        "description": "Dictionary of <ExtendedErrorInfo>"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExtendedErrorInfo",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "target": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "details": {
+        "type": {
+          "$ref": "#/320"
+        },
+        "flags": 0
+      },
+      "additionalInfo": {
+        "type": {
+          "$ref": "#/322"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/319"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TypedErrorInfo",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "info": {
+        "type": {
+          "$ref": "#/113"
+        },
+        "flags": 2,
+        "description": "Any object"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/321"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CustomRolloutStatusFailedOrSkippedRegions",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/319"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.ProviderHub/providerRegistrations/customRollouts@2021-09-01-preview",
+    "scopeType": 4,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.ProviderHub/providerRegistrations/defaultRollouts"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-09-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.ProviderHub/providerRegistrations/defaultRollouts",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/325"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/326"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/328"
+        },
+        "flags": 0,
+        "description": "Properties of the rollout."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/129"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DefaultRolloutProperties",
+    "properties": {
+      "provisioningState": {
+        "type": {
+          "$ref": "#/342"
+        },
+        "flags": 0,
+        "description": "The provisioned state of the resource."
+      },
+      "specification": {
+        "type": {
+          "$ref": "#/343"
+        },
+        "flags": 0
+      },
+      "status": {
+        "type": {
+          "$ref": "#/360"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Running"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Created"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MovingResources"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TransientFailure"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RolloutInProgress"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/329"
+      },
+      {
+        "$ref": "#/330"
+      },
+      {
+        "$ref": "#/331"
+      },
+      {
+        "$ref": "#/332"
+      },
+      {
+        "$ref": "#/333"
+      },
+      {
+        "$ref": "#/334"
+      },
+      {
+        "$ref": "#/335"
+      },
+      {
+        "$ref": "#/336"
+      },
+      {
+        "$ref": "#/337"
+      },
+      {
+        "$ref": "#/338"
+      },
+      {
+        "$ref": "#/339"
+      },
+      {
+        "$ref": "#/340"
+      },
+      {
+        "$ref": "#/341"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DefaultRolloutPropertiesSpecification",
+    "properties": {
+      "expeditedRollout": {
+        "type": {
+          "$ref": "#/344"
+        },
+        "flags": 0
+      },
+      "canary": {
+        "type": {
+          "$ref": "#/345"
+        },
+        "flags": 0
+      },
+      "lowTraffic": {
+        "type": {
+          "$ref": "#/348"
+        },
+        "flags": 0
+      },
+      "mediumTraffic": {
+        "type": {
+          "$ref": "#/350"
+        },
+        "flags": 0
+      },
+      "highTraffic": {
+        "type": {
+          "$ref": "#/352"
+        },
+        "flags": 0
+      },
+      "restOfTheWorldGroupOne": {
+        "type": {
+          "$ref": "#/354"
+        },
+        "flags": 0
+      },
+      "restOfTheWorldGroupTwo": {
+        "type": {
+          "$ref": "#/356"
+        },
+        "flags": 0
+      },
+      "providerRegistration": {
+        "type": {
+          "$ref": "#/358"
+        },
+        "flags": 0
+      },
+      "resourceTypeRegistrations": {
+        "type": {
+          "$ref": "#/359"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DefaultRolloutSpecificationExpeditedRollout",
+    "properties": {
+      "enabled": {
+        "type": {
+          "$ref": "#/123"
+        },
+        "flags": 0,
+        "description": "Indicates whether expedited rollout is enabled/disabled"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DefaultRolloutSpecificationCanary",
+    "properties": {
+      "skipRegions": {
+        "type": {
+          "$ref": "#/346"
+        },
+        "flags": 0
+      },
+      "regions": {
+        "type": {
+          "$ref": "#/347"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DefaultRolloutSpecificationLowTraffic",
+    "properties": {
+      "waitDuration": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "regions": {
+        "type": {
+          "$ref": "#/349"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DefaultRolloutSpecificationMediumTraffic",
+    "properties": {
+      "waitDuration": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "regions": {
+        "type": {
+          "$ref": "#/351"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DefaultRolloutSpecificationHighTraffic",
+    "properties": {
+      "waitDuration": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "regions": {
+        "type": {
+          "$ref": "#/353"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DefaultRolloutSpecificationRestOfTheWorldGroupOne",
+    "properties": {
+      "waitDuration": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "regions": {
+        "type": {
+          "$ref": "#/355"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DefaultRolloutSpecificationRestOfTheWorldGroupTwo",
+    "properties": {
+      "waitDuration": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "regions": {
+        "type": {
+          "$ref": "#/357"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DefaultRolloutSpecificationProviderRegistration",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/129"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the resource."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/140"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DefaultRolloutPropertiesStatus",
+    "properties": {
+      "nextTrafficRegion": {
+        "type": {
+          "$ref": "#/369"
+        },
+        "flags": 0
+      },
+      "nextTrafficRegionScheduledTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "subscriptionReregistrationResult": {
+        "type": {
+          "$ref": "#/374"
+        },
+        "flags": 0
+      },
+      "completedRegions": {
+        "type": {
+          "$ref": "#/375"
+        },
+        "flags": 0
+      },
+      "failedOrSkippedRegions": {
+        "type": {
+          "$ref": "#/376"
+        },
+        "flags": 0,
+        "description": "Dictionary of <ExtendedErrorInfo>"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LowTraffic"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MediumTraffic"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HighTraffic"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RestOfTheWorldGroupOne"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RestOfTheWorldGroupTwo"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/361"
+      },
+      {
+        "$ref": "#/362"
+      },
+      {
+        "$ref": "#/363"
+      },
+      {
+        "$ref": "#/364"
+      },
+      {
+        "$ref": "#/365"
+      },
+      {
+        "$ref": "#/366"
+      },
+      {
+        "$ref": "#/367"
+      },
+      {
+        "$ref": "#/368"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotApplicable"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ConditionalUpdate"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ForcedUpdate"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/370"
+      },
+      {
+        "$ref": "#/371"
+      },
+      {
+        "$ref": "#/372"
+      },
+      {
+        "$ref": "#/373"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RolloutStatusBaseFailedOrSkippedRegions",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/319"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.ProviderHub/providerRegistrations/defaultRollouts@2021-09-01-preview",
+    "scopeType": 4,
+    "body": {
+      "$ref": "#/327"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.ProviderHub/providerRegistrations/notificationRegistrations"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-09-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.ProviderHub/providerRegistrations/notificationRegistrations",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/378"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/379"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/381"
+        },
+        "flags": 0
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/129"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NotificationRegistrationProperties",
+    "properties": {
+      "notificationMode": {
+        "type": {
+          "$ref": "#/385"
+        },
+        "flags": 0
+      },
+      "messageScope": {
+        "type": {
+          "$ref": "#/388"
+        },
+        "flags": 0
+      },
+      "includedEvents": {
+        "type": {
+          "$ref": "#/389"
+        },
+        "flags": 0
+      },
+      "notificationEndpoints": {
+        "type": {
+          "$ref": "#/392"
+        },
+        "flags": 0
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/406"
+        },
+        "flags": 0,
+        "description": "The provisioned state of the resource."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "EventHub"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "WebHook"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/382"
+      },
+      {
+        "$ref": "#/383"
+      },
+      {
+        "$ref": "#/384"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RegisteredSubscriptions"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/386"
+      },
+      {
+        "$ref": "#/387"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NotificationEndpoint",
+    "properties": {
+      "notificationDestination": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "locations": {
+        "type": {
+          "$ref": "#/391"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/390"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Running"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Created"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MovingResources"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TransientFailure"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RolloutInProgress"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/393"
+      },
+      {
+        "$ref": "#/394"
+      },
+      {
+        "$ref": "#/395"
+      },
+      {
+        "$ref": "#/396"
+      },
+      {
+        "$ref": "#/397"
+      },
+      {
+        "$ref": "#/398"
+      },
+      {
+        "$ref": "#/399"
+      },
+      {
+        "$ref": "#/400"
+      },
+      {
+        "$ref": "#/401"
+      },
+      {
+        "$ref": "#/402"
+      },
+      {
+        "$ref": "#/403"
+      },
+      {
+        "$ref": "#/404"
+      },
+      {
+        "$ref": "#/405"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.ProviderHub/providerRegistrations/notificationRegistrations@2021-09-01-preview",
+    "scopeType": 4,
+    "body": {
+      "$ref": "#/380"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "default"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.ProviderHub/providerRegistrations/operations"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-09-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.ProviderHub/providerRegistrations/operations",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/408"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/409"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/410"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/412"
+        },
+        "flags": 4
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OperationsPutContentProperties",
+    "properties": {
+      "contents": {
+        "type": {
+          "$ref": "#/440"
+        },
+        "flags": 0,
+        "description": "Operations content."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LocalizedOperationDefinition",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Name of the operation."
+      },
+      "isDataAction": {
+        "type": {
+          "$ref": "#/123"
+        },
+        "flags": 0,
+        "description": "Indicates whether the operation applies to data-plane."
+      },
+      "origin": {
+        "type": {
+          "$ref": "#/417"
+        },
+        "flags": 0
+      },
+      "display": {
+        "type": {
+          "$ref": "#/418"
+        },
+        "flags": 1,
+        "description": "Display information of the operation."
+      },
+      "actionType": {
+        "type": {
+          "$ref": "#/439"
+        },
+        "flags": 0
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/113"
+        },
+        "flags": 0,
+        "description": "Anything"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "System"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/414"
+      },
+      {
+        "$ref": "#/415"
+      },
+      {
+        "$ref": "#/416"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LocalizedOperationDefinitionDisplay",
+    "properties": {
+      "default": {
+        "type": {
+          "$ref": "#/419"
+        },
+        "flags": 1,
+        "description": "Display information of the operation."
+      },
+      "en": {
+        "type": {
+          "$ref": "#/420"
+        },
+        "flags": 0,
+        "description": "Display information of the operation for en locale."
+      },
+      "cs": {
+        "type": {
+          "$ref": "#/421"
+        },
+        "flags": 0,
+        "description": "Display information of the operation for cs locale."
+      },
+      "de": {
+        "type": {
+          "$ref": "#/422"
+        },
+        "flags": 0,
+        "description": "Display information of the operation for de locale."
+      },
+      "es": {
+        "type": {
+          "$ref": "#/423"
+        },
+        "flags": 0,
+        "description": "Display information of the operation for es locale."
+      },
+      "fr": {
+        "type": {
+          "$ref": "#/424"
+        },
+        "flags": 0,
+        "description": "Display information of the operation for fr locale."
+      },
+      "hu": {
+        "type": {
+          "$ref": "#/425"
+        },
+        "flags": 0,
+        "description": "Display information of the operation for hu locale."
+      },
+      "it": {
+        "type": {
+          "$ref": "#/426"
+        },
+        "flags": 0,
+        "description": "Display information of the operation for it locale."
+      },
+      "ja": {
+        "type": {
+          "$ref": "#/427"
+        },
+        "flags": 0,
+        "description": "Display information of the operation for ja locale."
+      },
+      "ko": {
+        "type": {
+          "$ref": "#/428"
+        },
+        "flags": 0,
+        "description": "Display information of the operation for ko locale."
+      },
+      "nl": {
+        "type": {
+          "$ref": "#/429"
+        },
+        "flags": 0,
+        "description": "Display information of the operation for nl locale."
+      },
+      "pl": {
+        "type": {
+          "$ref": "#/430"
+        },
+        "flags": 0,
+        "description": "Display information of the operation for pl locale."
+      },
+      "ptBR": {
+        "type": {
+          "$ref": "#/431"
+        },
+        "flags": 0,
+        "description": "Display information of the operation for pt-BR locale."
+      },
+      "ptPT": {
+        "type": {
+          "$ref": "#/432"
+        },
+        "flags": 0,
+        "description": "Display information of the operation for pt-PT locale."
+      },
+      "ru": {
+        "type": {
+          "$ref": "#/433"
+        },
+        "flags": 0,
+        "description": "Display information of the operation for ru locale."
+      },
+      "sv": {
+        "type": {
+          "$ref": "#/434"
+        },
+        "flags": 0,
+        "description": "Display information of the operation for sv locale."
+      },
+      "zhHans": {
+        "type": {
+          "$ref": "#/435"
+        },
+        "flags": 0,
+        "description": "Display information of the operation for zh-Hans locale."
+      },
+      "zhHant": {
+        "type": {
+          "$ref": "#/436"
+        },
+        "flags": 0,
+        "description": "Display information of the operation for zh-Hant locale."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LocalizedOperationDisplayDefinitionDefault",
+    "properties": {
+      "provider": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "resource": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "operation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LocalizedOperationDisplayDefinitionEn",
+    "properties": {
+      "provider": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "resource": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "operation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LocalizedOperationDisplayDefinitionCs",
+    "properties": {
+      "provider": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "resource": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "operation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LocalizedOperationDisplayDefinitionDe",
+    "properties": {
+      "provider": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "resource": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "operation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LocalizedOperationDisplayDefinitionEs",
+    "properties": {
+      "provider": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "resource": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "operation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LocalizedOperationDisplayDefinitionFr",
+    "properties": {
+      "provider": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "resource": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "operation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LocalizedOperationDisplayDefinitionHu",
+    "properties": {
+      "provider": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "resource": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "operation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LocalizedOperationDisplayDefinitionIt",
+    "properties": {
+      "provider": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "resource": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "operation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LocalizedOperationDisplayDefinitionJa",
+    "properties": {
+      "provider": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "resource": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "operation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LocalizedOperationDisplayDefinitionKo",
+    "properties": {
+      "provider": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "resource": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "operation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LocalizedOperationDisplayDefinitionNl",
+    "properties": {
+      "provider": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "resource": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "operation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LocalizedOperationDisplayDefinitionPl",
+    "properties": {
+      "provider": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "resource": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "operation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LocalizedOperationDisplayDefinitionPtBR",
+    "properties": {
+      "provider": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "resource": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "operation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LocalizedOperationDisplayDefinitionPt",
+    "properties": {
+      "provider": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "resource": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "operation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LocalizedOperationDisplayDefinitionRu",
+    "properties": {
+      "provider": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "resource": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "operation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LocalizedOperationDisplayDefinitionSv",
+    "properties": {
+      "provider": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "resource": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "operation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LocalizedOperationDisplayDefinitionZhHans",
+    "properties": {
+      "provider": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "resource": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "operation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LocalizedOperationDisplayDefinitionZhHant",
+    "properties": {
+      "provider": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "resource": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "operation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Internal"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/437"
+      },
+      {
+        "$ref": "#/438"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/413"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.ProviderHub/providerRegistrations/operations@2021-09-01-preview",
+    "scopeType": 4,
+    "body": {
+      "$ref": "#/411"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.ProviderHub/providerRegistrations"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-09-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.ProviderHub/providerRegistrations",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/442"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/443"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/129"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.ProviderHub/providerRegistrations@2021-09-01-preview",
+    "scopeType": 4,
+    "body": {
+      "$ref": "#/444"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-09-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/446"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/447"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/141"
+        },
+        "flags": 0
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/129"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations@2021-09-01-preview",
+    "scopeType": 4,
+    "body": {
+      "$ref": "#/448"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/skus"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-09-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/skus",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/450"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/451"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/453"
+        },
+        "flags": 0
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/129"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SkuResourceProperties",
+    "properties": {
+      "skuSettings": {
+        "type": {
+          "$ref": "#/479"
+        },
+        "flags": 1
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/493"
+        },
+        "flags": 0,
+        "description": "The provisioned state of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SkuSetting",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "tier": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "size": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "family": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "locations": {
+        "type": {
+          "$ref": "#/455"
+        },
+        "flags": 0
+      },
+      "locationInfo": {
+        "type": {
+          "$ref": "#/468"
+        },
+        "flags": 0
+      },
+      "requiredQuotaIds": {
+        "type": {
+          "$ref": "#/469"
+        },
+        "flags": 0
+      },
+      "requiredFeatures": {
+        "type": {
+          "$ref": "#/470"
+        },
+        "flags": 0
+      },
+      "capacity": {
+        "type": {
+          "$ref": "#/471"
+        },
+        "flags": 0
+      },
+      "costs": {
+        "type": {
+          "$ref": "#/477"
+        },
+        "flags": 0
+      },
+      "capabilities": {
+        "type": {
+          "$ref": "#/478"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SkuLocationInfo",
+    "properties": {
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "zones": {
+        "type": {
+          "$ref": "#/457"
+        },
+        "flags": 0
+      },
+      "zoneDetails": {
+        "type": {
+          "$ref": "#/462"
+        },
+        "flags": 0
+      },
+      "extendedLocations": {
+        "type": {
+          "$ref": "#/463"
+        },
+        "flags": 0
+      },
+      "type": {
+        "type": {
+          "$ref": "#/467"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SkuZoneDetail",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/459"
+        },
+        "flags": 0
+      },
+      "capabilities": {
+        "type": {
+          "$ref": "#/461"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SkuCapability",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "value": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/460"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/458"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "EdgeZone"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ArcZone"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/464"
+      },
+      {
+        "$ref": "#/465"
+      },
+      {
+        "$ref": "#/466"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/456"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SkuSettingCapacity",
+    "properties": {
+      "minimum": {
+        "type": {
+          "$ref": "#/233"
+        },
+        "flags": 1
+      },
+      "maximum": {
+        "type": {
+          "$ref": "#/233"
+        },
+        "flags": 0
+      },
+      "default": {
+        "type": {
+          "$ref": "#/233"
+        },
+        "flags": 0
+      },
+      "scaleType": {
+        "type": {
+          "$ref": "#/475"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Manual"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Automatic"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/472"
+      },
+      {
+        "$ref": "#/473"
+      },
+      {
+        "$ref": "#/474"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SkuCost",
+    "properties": {
+      "meterId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "quantity": {
+        "type": {
+          "$ref": "#/233"
+        },
+        "flags": 0
+      },
+      "extendedUnit": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/476"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/460"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/454"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Running"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Created"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MovingResources"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TransientFailure"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RolloutInProgress"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/480"
+      },
+      {
+        "$ref": "#/481"
+      },
+      {
+        "$ref": "#/482"
+      },
+      {
+        "$ref": "#/483"
+      },
+      {
+        "$ref": "#/484"
+      },
+      {
+        "$ref": "#/485"
+      },
+      {
+        "$ref": "#/486"
+      },
+      {
+        "$ref": "#/487"
+      },
+      {
+        "$ref": "#/488"
+      },
+      {
+        "$ref": "#/489"
+      },
+      {
+        "$ref": "#/490"
+      },
+      {
+        "$ref": "#/491"
+      },
+      {
+        "$ref": "#/492"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/skus@2021-09-01-preview",
+    "scopeType": 4,
+    "body": {
+      "$ref": "#/452"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/skus"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-09-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/skus",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/495"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/496"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/453"
+        },
+        "flags": 0
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/129"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/skus@2021-09-01-preview",
+    "scopeType": 4,
+    "body": {
+      "$ref": "#/497"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/skus"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-09-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/skus",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/499"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/500"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/453"
+        },
+        "flags": 0
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/129"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/skus@2021-09-01-preview",
+    "scopeType": 4,
+    "body": {
+      "$ref": "#/501"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/skus"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-09-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/skus",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/503"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/504"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/453"
+        },
+        "flags": 0
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/129"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/skus@2021-09-01-preview",
+    "scopeType": 4,
+    "body": {
+      "$ref": "#/505"
+    },
+    "flags": 0
+  }
+]

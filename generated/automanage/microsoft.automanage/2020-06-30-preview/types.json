@@ -1,1 +1,584 @@
-[{"13":{}},{"6":{"Value":"Microsoft.Automanage/accounts"}},{"6":{"Value":"2020-06-30-preview"}},{"2":{"Name":"Microsoft.Automanage/accounts","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":1,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":2,"Flags":10,"Description":"The resource api version"},"identity":{"Type":4,"Flags":0,"Description":"The identity of the Automanage account."},"tags":{"Type":8,"Flags":0,"Description":"Resource tags."},"location":{"Type":0,"Flags":1,"Description":"The geo-location where the resource lives"}}}},{"2":{"Name":"AccountIdentity","Properties":{"principalId":{"Type":0,"Flags":2,"Description":"The principal id of Automanage account identity."},"tenantId":{"Type":0,"Flags":2,"Description":"The tenant id associated with the Automanage account."},"type":{"Type":7,"Flags":0,"Description":"The type of identity used for the Automanage account. Currently, the only supported type is 'SystemAssigned', which implicitly creates an identity."}}}},{"6":{"Value":"SystemAssigned"}},{"6":{"Value":"None"}},{"5":{"Elements":[5,6]}},{"2":{"Name":"TrackedResourceTags","Properties":{},"AdditionalProperties":0}},{"4":{"Name":"Microsoft.Automanage/accounts@2020-06-30-preview","ScopeType":8,"Body":3,"Flags":0}},{"6":{"Value":"Microsoft.Automanage/configurationProfileAssignments"}},{"6":{"Value":"2020-06-30-preview"}},{"2":{"Name":"Microsoft.Automanage/configurationProfileAssignments","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":10,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":11,"Flags":10,"Description":"The resource api version"},"properties":{"Type":13,"Flags":0,"Description":"Properties of the configuration profile assignment."}}}},{"2":{"Name":"ConfigurationProfileAssignmentProperties","Properties":{"configurationProfile":{"Type":16,"Flags":0,"Description":"A value indicating configuration profile."},"targetId":{"Type":0,"Flags":0,"Description":"The target VM resource URI"},"accountId":{"Type":0,"Flags":0,"Description":"The Automanage account ARM Resource URI"},"configurationProfilePreferenceId":{"Type":0,"Flags":0,"Description":"The configuration profile custom preferences ARM resource URI"},"provisioningState":{"Type":20,"Flags":2,"Description":"The state of onboarding, which only appears in the response."},"compliance":{"Type":21,"Flags":0,"Description":"The configuration setting for the configuration profile."}}}},{"6":{"Value":"Azure virtual machine best practices – Dev/Test"}},{"6":{"Value":"Azure virtual machine best practices – Production"}},{"5":{"Elements":[14,15,0]}},{"6":{"Value":"Succeeded"}},{"6":{"Value":"Failed"}},{"6":{"Value":"Created"}},{"5":{"Elements":[17,18,19,0]}},{"2":{"Name":"ConfigurationProfileAssignmentCompliance","Properties":{"updateStatus":{"Type":25,"Flags":2,"Description":"The state of compliance, which only appears in the response."}}}},{"6":{"Value":"Succeeded"}},{"6":{"Value":"Failed"}},{"6":{"Value":"Created"}},{"5":{"Elements":[22,23,24,0]}},{"4":{"Name":"Microsoft.Automanage/configurationProfileAssignments@2020-06-30-preview","ScopeType":16,"Body":12,"Flags":0}},{"6":{"Value":"Microsoft.Automanage/configurationProfilePreferences"}},{"6":{"Value":"2020-06-30-preview"}},{"2":{"Name":"Microsoft.Automanage/configurationProfilePreferences","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":27,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":28,"Flags":10,"Description":"The resource api version"},"properties":{"Type":30,"Flags":0,"Description":"Properties of the configuration profile preference."},"tags":{"Type":44,"Flags":0,"Description":"Resource tags."},"location":{"Type":0,"Flags":1,"Description":"The geo-location where the resource lives"}}}},{"2":{"Name":"ConfigurationProfilePreferenceProperties","Properties":{"vmBackup":{"Type":31,"Flags":0,"Description":"The custom preferences for Azure VM Backup."},"antiMalware":{"Type":33,"Flags":0,"Description":"The custom preferences for Azure Antimalware."}}}},{"2":{"Name":"ConfigurationProfilePreferenceVmBackup","Properties":{"timeZone":{"Type":0,"Flags":0,"Description":"TimeZone optional input as string. For example: Pacific Standard Time"},"instantRpRetentionRangeInDays":{"Type":32,"Flags":0,"Description":"Instant RP retention policy range in days"},"retentionPolicy":{"Type":0,"Flags":0,"Description":"Retention policy with the details on backup copy retention ranges."},"schedulePolicy":{"Type":0,"Flags":0,"Description":"Backup schedule specified as part of backup policy."}}}},{"12":{}},{"2":{"Name":"ConfigurationProfilePreferenceAntiMalware","Properties":{"enableRealTimeProtection":{"Type":36,"Flags":0,"Description":"Enables or disables Real Time Protection"},"exclusions":{"Type":37,"Flags":0,"Description":"Extensions, Paths and Processes that must be excluded from scan"},"runScheduledScan":{"Type":40,"Flags":0,"Description":"Enables or disables a periodic scan for antimalware"},"scanType":{"Type":43,"Flags":0,"Description":"Type of scheduled scan"},"scanDay":{"Type":0,"Flags":0,"Description":"Schedule scan settings day"},"scanTimeInMinutes":{"Type":0,"Flags":0,"Description":"Schedule scan settings time"}}}},{"6":{"Value":"True"}},{"6":{"Value":"False"}},{"5":{"Elements":[34,35,0]}},{"9":{}},{"6":{"Value":"True"}},{"6":{"Value":"False"}},{"5":{"Elements":[38,39,0]}},{"6":{"Value":"Quick"}},{"6":{"Value":"Full"}},{"5":{"Elements":[41,42,0]}},{"2":{"Name":"TrackedResourceTags","Properties":{},"AdditionalProperties":0}},{"4":{"Name":"Microsoft.Automanage/configurationProfilePreferences@2020-06-30-preview","ScopeType":8,"Body":29,"Flags":0}}]
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Automanage/accounts"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-06-30-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Automanage/accounts",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "The identity of the Automanage account."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AccountIdentity",
+    "properties": {
+      "principalId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The principal id of Automanage account identity."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The tenant id associated with the Automanage account."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "The type of identity used for the Automanage account. Currently, the only supported type is 'SystemAssigned', which implicitly creates an identity."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SystemAssigned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/5"
+      },
+      {
+        "$ref": "#/6"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Automanage/accounts@2020-06-30-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Automanage/configurationProfileAssignments"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-06-30-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Automanage/configurationProfileAssignments",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "Properties of the configuration profile assignment."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConfigurationProfileAssignmentProperties",
+    "properties": {
+      "configurationProfile": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 0,
+        "description": "A value indicating configuration profile."
+      },
+      "targetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The target VM resource URI"
+      },
+      "accountId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The Automanage account ARM Resource URI"
+      },
+      "configurationProfilePreferenceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The configuration profile custom preferences ARM resource URI"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 2,
+        "description": "The state of onboarding, which only appears in the response."
+      },
+      "compliance": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "The configuration setting for the configuration profile."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Azure virtual machine best practices – Dev/Test"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Azure virtual machine best practices – Production"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/14"
+      },
+      {
+        "$ref": "#/15"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Created"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/18"
+      },
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConfigurationProfileAssignmentCompliance",
+    "properties": {
+      "updateStatus": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 2,
+        "description": "The state of compliance, which only appears in the response."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Created"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/24"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Automanage/configurationProfileAssignments@2020-06-30-preview",
+    "scopeType": 16,
+    "body": {
+      "$ref": "#/12"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Automanage/configurationProfilePreferences"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-06-30-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Automanage/configurationProfilePreferences",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "Properties of the configuration profile preference."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConfigurationProfilePreferenceProperties",
+    "properties": {
+      "vmBackup": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0,
+        "description": "The custom preferences for Azure VM Backup."
+      },
+      "antiMalware": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0,
+        "description": "The custom preferences for Azure Antimalware."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConfigurationProfilePreferenceVmBackup",
+    "properties": {
+      "timeZone": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "TimeZone optional input as string. For example: Pacific Standard Time"
+      },
+      "instantRpRetentionRangeInDays": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 0,
+        "description": "Instant RP retention policy range in days"
+      },
+      "retentionPolicy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Retention policy with the details on backup copy retention ranges."
+      },
+      "schedulePolicy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Backup schedule specified as part of backup policy."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConfigurationProfilePreferenceAntiMalware",
+    "properties": {
+      "enableRealTimeProtection": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 0,
+        "description": "Enables or disables Real Time Protection"
+      },
+      "exclusions": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 0,
+        "description": "Extensions, Paths and Processes that must be excluded from scan"
+      },
+      "runScheduledScan": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0,
+        "description": "Enables or disables a periodic scan for antimalware"
+      },
+      "scanType": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 0,
+        "description": "Type of scheduled scan"
+      },
+      "scanDay": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Schedule scan settings day"
+      },
+      "scanTimeInMinutes": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Schedule scan settings time"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "True"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "False"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/34"
+      },
+      {
+        "$ref": "#/35"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "True"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "False"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/38"
+      },
+      {
+        "$ref": "#/39"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Quick"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Full"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/41"
+      },
+      {
+        "$ref": "#/42"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Automanage/configurationProfilePreferences@2020-06-30-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/29"
+    },
+    "flags": 0
+  }
+]

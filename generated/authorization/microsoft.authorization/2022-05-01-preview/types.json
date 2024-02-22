@@ -1,1 +1,216 @@
-[{"13":{}},{"6":{"Value":"Microsoft.Authorization/roleDefinitions"}},{"6":{"Value":"2022-05-01-preview"}},{"2":{"Name":"Microsoft.Authorization/roleDefinitions","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":1,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":2,"Flags":10,"Description":"The resource api version"},"properties":{"Type":4,"Flags":0,"Description":"Role definition properties."}}}},{"2":{"Name":"RoleDefinitionProperties","Properties":{"roleName":{"Type":0,"Flags":0,"Description":"The role name."},"description":{"Type":0,"Flags":0,"Description":"The role definition description."},"type":{"Type":0,"Flags":0,"Description":"The role type."},"permissions":{"Type":10,"Flags":0,"Description":"Role definition permissions."},"assignableScopes":{"Type":11,"Flags":0,"Description":"Role definition assignable scopes."},"createdOn":{"Type":0,"Flags":2,"Description":"Time it was created"},"updatedOn":{"Type":0,"Flags":2,"Description":"Time it was updated"},"createdBy":{"Type":0,"Flags":2,"Description":"Id of the user who created the assignment"},"updatedBy":{"Type":0,"Flags":2,"Description":"Id of the user who updated the assignment"}}}},{"2":{"Name":"Permission","Properties":{"actions":{"Type":6,"Flags":0,"Description":"Allowed actions."},"notActions":{"Type":7,"Flags":0,"Description":"Denied actions."},"dataActions":{"Type":8,"Flags":0,"Description":"Allowed Data actions."},"notDataActions":{"Type":9,"Flags":0,"Description":"Denied Data actions."},"condition":{"Type":0,"Flags":2,"Description":"The conditions on the role definition. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'"},"conditionVersion":{"Type":0,"Flags":2,"Description":"Version of the condition. Currently the only accepted value is '2.0'"}}}},{"3":{"ItemType":0}},{"3":{"ItemType":0}},{"3":{"ItemType":0}},{"3":{"ItemType":0}},{"3":{"ItemType":5}},{"3":{"ItemType":0}},{"4":{"Name":"Microsoft.Authorization/roleDefinitions@2022-05-01-preview","ScopeType":0,"Body":3,"Flags":0}}]
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Authorization/roleDefinitions"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2022-05-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Authorization/roleDefinitions",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "Role definition properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RoleDefinitionProperties",
+    "properties": {
+      "roleName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The role name."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The role definition description."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The role type."
+      },
+      "permissions": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "Role definition permissions."
+      },
+      "assignableScopes": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 0,
+        "description": "Role definition assignable scopes."
+      },
+      "createdOn": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Time it was created"
+      },
+      "updatedOn": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Time it was updated"
+      },
+      "createdBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Id of the user who created the assignment"
+      },
+      "updatedBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Id of the user who updated the assignment"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Permission",
+    "properties": {
+      "actions": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Allowed actions."
+      },
+      "notActions": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "Denied actions."
+      },
+      "dataActions": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 0,
+        "description": "Allowed Data actions."
+      },
+      "notDataActions": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "Denied Data actions."
+      },
+      "condition": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The conditions on the role definition. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'"
+      },
+      "conditionVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Version of the condition. Currently the only accepted value is '2.0'"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/5"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Authorization/roleDefinitions@2022-05-01-preview",
+    "scopeType": 0,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  }
+]

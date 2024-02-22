@@ -1,1 +1,248 @@
-[{"6":{"Value":"vaultstorageconfig"}},{"6":{"Value":"Microsoft.RecoveryServices/vaults/backupstorageconfig"}},{"13":{}},{"6":{"Value":"2018-12-20"}},{"2":{"Name":"Microsoft.RecoveryServices/vaults/backupstorageconfig","Properties":{"id":{"Type":2,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":1,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":3,"Flags":10,"Description":"The resource api version"},"properties":{"Type":5,"Flags":0,"Description":"BackupResourceConfigResource properties"},"location":{"Type":2,"Flags":0,"Description":"Resource location."},"tags":{"Type":23,"Flags":0,"Description":"Resource tags."},"eTag":{"Type":2,"Flags":0,"Description":"Optional ETag."}}}},{"2":{"Name":"BackupResourceConfig","Properties":{"storageModelType":{"Type":11,"Flags":0,"Description":"Storage type"},"storageType":{"Type":17,"Flags":0,"Description":"Storage type."},"storageTypeState":{"Type":21,"Flags":0,"Description":"Locked or Unlocked. Once a machine is registered against a resource, the storageTypeState is always Locked."},"crossRegionRestoreFlag":{"Type":22,"Flags":0,"Description":"Opt in details of Cross Region Restore feature."}}}},{"6":{"Value":"Invalid"}},{"6":{"Value":"GeoRedundant"}},{"6":{"Value":"LocallyRedundant"}},{"6":{"Value":"ZoneRedundant"}},{"6":{"Value":"ReadAccessGeoZoneRedundant"}},{"5":{"Elements":[6,7,8,9,10,2]}},{"6":{"Value":"Invalid"}},{"6":{"Value":"GeoRedundant"}},{"6":{"Value":"LocallyRedundant"}},{"6":{"Value":"ZoneRedundant"}},{"6":{"Value":"ReadAccessGeoZoneRedundant"}},{"5":{"Elements":[12,13,14,15,16,2]}},{"6":{"Value":"Invalid"}},{"6":{"Value":"Locked"}},{"6":{"Value":"Unlocked"}},{"5":{"Elements":[18,19,20,2]}},{"11":{}},{"2":{"Name":"ResourceTags","Properties":{},"AdditionalProperties":2}},{"4":{"Name":"Microsoft.RecoveryServices/vaults/backupstorageconfig@2018-12-20","ScopeType":8,"Body":4,"Flags":0}}]
+[
+  {
+    "$type": "StringLiteralType",
+    "value": "vaultstorageconfig"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.RecoveryServices/vaults/backupstorageconfig"
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-12-20"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.RecoveryServices/vaults/backupstorageconfig",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "BackupResourceConfigResource properties"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Resource location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "eTag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Optional ETag."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BackupResourceConfig",
+    "properties": {
+      "storageModelType": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 0,
+        "description": "Storage type"
+      },
+      "storageType": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "Storage type."
+      },
+      "storageTypeState": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "Locked or Unlocked. Once a machine is registered against a resource, the storageTypeState is always Locked."
+      },
+      "crossRegionRestoreFlag": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 0,
+        "description": "Opt in details of Cross Region Restore feature."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GeoRedundant"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LocallyRedundant"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ZoneRedundant"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ReadAccessGeoZoneRedundant"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GeoRedundant"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LocallyRedundant"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ZoneRedundant"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ReadAccessGeoZoneRedundant"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/14"
+      },
+      {
+        "$ref": "#/15"
+      },
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Locked"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unlocked"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/18"
+      },
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/20"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.RecoveryServices/vaults/backupstorageconfig@2018-12-20",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/4"
+    },
+    "flags": 0
+  }
+]

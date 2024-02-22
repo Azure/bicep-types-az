@@ -1,1 +1,2118 @@
-[{"13":{}},{"6":{"Value":"Microsoft.Web/hostingEnvironments"}},{"6":{"Value":"2016-09-01"}},{"2":{"Name":"Microsoft.Web/hostingEnvironments","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":1,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":2,"Flags":10,"Description":"The resource api version"},"properties":{"Type":4,"Flags":0,"Description":"Core resource properties"},"kind":{"Type":0,"Flags":0,"Description":"Kind of resource."},"location":{"Type":0,"Flags":1,"Description":"Resource Location."},"tags":{"Type":54,"Flags":0,"Description":"Resource tags."}}}},{"2":{"Name":"AppServiceEnvironment","Properties":{"name":{"Type":0,"Flags":1,"Description":"Name of the App Service Environment."},"location":{"Type":0,"Flags":1,"Description":"Location of the App Service Environment, e.g. \"West US\"."},"provisioningState":{"Type":10,"Flags":2,"Description":"Provisioning state of the App Service Environment."},"status":{"Type":15,"Flags":2,"Description":"Current status of the App Service Environment."},"vnetName":{"Type":0,"Flags":0,"Description":"Name of the Virtual Network for the App Service Environment."},"vnetResourceGroupName":{"Type":0,"Flags":0,"Description":"Resource group of the Virtual Network."},"vnetSubnetName":{"Type":0,"Flags":0,"Description":"Subnet of the Virtual Network."},"virtualNetwork":{"Type":16,"Flags":1,"Description":"Description of the Virtual Network."},"internalLoadBalancingMode":{"Type":20,"Flags":0,"Description":"Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment."},"multiSize":{"Type":0,"Flags":0,"Description":"Front-end VM size, e.g. \"Medium\", \"Large\"."},"multiRoleCount":{"Type":21,"Flags":0,"Description":"Number of front-end instances."},"workerPools":{"Type":28,"Flags":1,"Description":"Description of worker pools with worker size IDs, VM sizes, and number of workers in each pool."},"ipsslAddressCount":{"Type":21,"Flags":0,"Description":"Number of IP SSL addresses reserved for the App Service Environment."},"databaseEdition":{"Type":0,"Flags":2,"Description":"Edition of the metadata database for the App Service Environment, e.g. \"Standard\"."},"databaseServiceObjective":{"Type":0,"Flags":2,"Description":"Service objective of the metadata database for the App Service Environment, e.g. \"S0\"."},"upgradeDomains":{"Type":21,"Flags":2,"Description":"Number of upgrade domains of the App Service Environment."},"subscriptionId":{"Type":0,"Flags":2,"Description":"Subscription of the App Service Environment."},"dnsSuffix":{"Type":0,"Flags":0,"Description":"DNS suffix of the App Service Environment."},"lastAction":{"Type":0,"Flags":2,"Description":"Last deployment action on the App Service Environment."},"lastActionResult":{"Type":0,"Flags":2,"Description":"Result of the last deployment action on the App Service Environment."},"allowedMultiSizes":{"Type":0,"Flags":2,"Description":"List of comma separated strings describing which VM sizes are allowed for front-ends."},"allowedWorkerSizes":{"Type":0,"Flags":2,"Description":"List of comma separated strings describing which VM sizes are allowed for workers."},"maximumNumberOfMachines":{"Type":21,"Flags":2,"Description":"Maximum number of VMs in the App Service Environment."},"vipMappings":{"Type":31,"Flags":2,"Description":"Description of IP SSL mapping for the App Service Environment."},"environmentCapacities":{"Type":45,"Flags":2,"Description":"Current total, used, and available worker capacities."},"networkAccessControlList":{"Type":50,"Flags":0,"Description":"Access control list for controlling traffic to the App Service Environment."},"environmentIsHealthy":{"Type":30,"Flags":2,"Description":"True/false indicating whether the App Service Environment is healthy."},"environmentStatus":{"Type":0,"Flags":2,"Description":"Detailed message about with results of the last check of the App Service Environment."},"resourceGroup":{"Type":0,"Flags":2,"Description":"Resource group of the App Service Environment."},"frontEndScaleFactor":{"Type":21,"Flags":0,"Description":"Scale factor for front-ends."},"defaultFrontEndScaleFactor":{"Type":21,"Flags":2,"Description":"Default Scale Factor for FrontEnds."},"apiManagementAccountId":{"Type":0,"Flags":0,"Description":"API Management Account associated with the App Service Environment."},"suspended":{"Type":30,"Flags":0,"Description":"<code>true</code> if the App Service Environment is suspended; otherwise, <code>false</code>. The environment can be suspended, e.g. when the management endpoint is no longer available\n (most likely because NSG blocked the incoming traffic)."},"dynamicCacheEnabled":{"Type":30,"Flags":0,"Description":"True/false indicating whether the App Service Environment is suspended. The environment can be suspended e.g. when the management endpoint is no longer available\n(most likely because NSG blocked the incoming traffic)."},"clusterSettings":{"Type":52,"Flags":0,"Description":"Custom settings for changing the behavior of the App Service Environment."},"userWhitelistedIpRanges":{"Type":53,"Flags":0,"Description":"User added list of IP Ranges allowed on ASE db"}}}},{"6":{"Value":"Succeeded"}},{"6":{"Value":"Failed"}},{"6":{"Value":"Canceled"}},{"6":{"Value":"InProgress"}},{"6":{"Value":"Deleting"}},{"5":{"Elements":[5,6,7,8,9]}},{"6":{"Value":"Preparing"}},{"6":{"Value":"Ready"}},{"6":{"Value":"Scaling"}},{"6":{"Value":"Deleting"}},{"5":{"Elements":[11,12,13,14]}},{"2":{"Name":"VirtualNetworkProfile","Properties":{"id":{"Type":0,"Flags":0,"Description":"Resource id of the Virtual Network."},"name":{"Type":0,"Flags":2,"Description":"Name of the Virtual Network (read-only)."},"type":{"Type":0,"Flags":2,"Description":"Resource type of the Virtual Network (read-only)."},"subnet":{"Type":0,"Flags":0,"Description":"Subnet within the Virtual Network."}}}},{"6":{"Value":"None"}},{"6":{"Value":"Web"}},{"6":{"Value":"Publishing"}},{"5":{"Elements":[17,18,19]}},{"12":{}},{"2":{"Name":"WorkerPool","Properties":{"workerSizeId":{"Type":21,"Flags":0,"Description":"Worker size ID for referencing this worker pool."},"computeMode":{"Type":26,"Flags":0,"Description":"Shared or dedicated app hosting."},"workerSize":{"Type":0,"Flags":0,"Description":"VM size of the worker pool instances."},"workerCount":{"Type":21,"Flags":0,"Description":"Number of instances in the worker pool."},"instanceNames":{"Type":27,"Flags":2,"Description":"Names of all instances in the worker pool (read only)."}}}},{"6":{"Value":"Shared"}},{"6":{"Value":"Dedicated"}},{"6":{"Value":"Dynamic"}},{"5":{"Elements":[23,24,25]}},{"3":{"ItemType":0}},{"3":{"ItemType":22}},{"2":{"Name":"VirtualIPMapping","Properties":{"virtualIP":{"Type":0,"Flags":0,"Description":"Virtual IP address."},"internalHttpPort":{"Type":21,"Flags":0,"Description":"Internal HTTP port."},"internalHttpsPort":{"Type":21,"Flags":0,"Description":"Internal HTTPS port."},"inUse":{"Type":30,"Flags":0,"Description":"Is virtual IP mapping in use."}}}},{"11":{}},{"3":{"ItemType":29}},{"2":{"Name":"StampCapacity","Properties":{"name":{"Type":0,"Flags":0,"Description":"Name of the stamp."},"availableCapacity":{"Type":21,"Flags":0,"Description":"Available capacity (# of machines, bytes of storage etc...)."},"totalCapacity":{"Type":21,"Flags":0,"Description":"Total capacity (# of machines, bytes of storage etc...)."},"unit":{"Type":0,"Flags":0,"Description":"Name of the unit."},"computeMode":{"Type":36,"Flags":0,"Description":"Shared/dedicated workers."},"workerSize":{"Type":44,"Flags":0,"Description":"Size of the machines."},"workerSizeId":{"Type":21,"Flags":0,"Description":"Size ID of machines: \n0 - Small\n1 - Medium\n2 - Large"},"excludeFromCapacityAllocation":{"Type":30,"Flags":0,"Description":"If <code>true</code>, it includes basic apps.\nBasic apps are not used for capacity allocation."},"isApplicableForAllComputeModes":{"Type":30,"Flags":0,"Description":"<code>true</code> if capacity is applicable for all apps; otherwise, <code>false</code>."},"siteMode":{"Type":0,"Flags":0,"Description":"Shared or Dedicated."}}}},{"6":{"Value":"Shared"}},{"6":{"Value":"Dedicated"}},{"6":{"Value":"Dynamic"}},{"5":{"Elements":[33,34,35]}},{"6":{"Value":"Default"}},{"6":{"Value":"Small"}},{"6":{"Value":"Medium"}},{"6":{"Value":"Large"}},{"6":{"Value":"D1"}},{"6":{"Value":"D2"}},{"6":{"Value":"D3"}},{"5":{"Elements":[37,38,39,40,41,42,43]}},{"3":{"ItemType":32}},{"2":{"Name":"NetworkAccessControlEntry","Properties":{"action":{"Type":49,"Flags":0,"Description":"Action object."},"description":{"Type":0,"Flags":0,"Description":"Description of network access control entry."},"order":{"Type":21,"Flags":0,"Description":"Order of precedence."},"remoteSubnet":{"Type":0,"Flags":0,"Description":"Remote subnet."}}}},{"6":{"Value":"Permit"}},{"6":{"Value":"Deny"}},{"5":{"Elements":[47,48]}},{"3":{"ItemType":46}},{"2":{"Name":"NameValuePair","Properties":{"name":{"Type":0,"Flags":0,"Description":"Pair name."},"value":{"Type":0,"Flags":0,"Description":"Pair value."}}}},{"3":{"ItemType":51}},{"3":{"ItemType":0}},{"2":{"Name":"ResourceTags","Properties":{},"AdditionalProperties":0}},{"4":{"Name":"Microsoft.Web/hostingEnvironments@2016-09-01","ScopeType":8,"Body":3,"Flags":0}},{"6":{"Value":"default"}},{"6":{"Value":"Microsoft.Web/hostingEnvironments/multiRolePools"}},{"6":{"Value":"2016-09-01"}},{"2":{"Name":"Microsoft.Web/hostingEnvironments/multiRolePools","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":56,"Flags":9,"Description":"The resource name"},"type":{"Type":57,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":58,"Flags":10,"Description":"The resource api version"},"properties":{"Type":22,"Flags":0,"Description":"Core resource properties"},"sku":{"Type":60,"Flags":0,"Description":"Description of a SKU for a scalable resource."},"kind":{"Type":0,"Flags":0,"Description":"Kind of resource."}}}},{"2":{"Name":"SkuDescription","Properties":{"name":{"Type":0,"Flags":0,"Description":"Name of the resource SKU."},"tier":{"Type":0,"Flags":0,"Description":"Service tier of the resource SKU."},"size":{"Type":0,"Flags":0,"Description":"Size specifier of the resource SKU."},"family":{"Type":0,"Flags":0,"Description":"Family code of the resource SKU."},"capacity":{"Type":21,"Flags":0,"Description":"Current number of instances assigned to the resource."},"skuCapacity":{"Type":61,"Flags":0,"Description":"Min, max, and default scale values of the SKU."},"locations":{"Type":62,"Flags":0,"Description":"Locations of the SKU."},"capabilities":{"Type":64,"Flags":0,"Description":"Capabilities of the SKU, e.g., is traffic manager enabled?"}}}},{"2":{"Name":"SkuCapacity","Properties":{"minimum":{"Type":21,"Flags":0,"Description":"Minimum number of workers for this App Service plan SKU."},"maximum":{"Type":21,"Flags":0,"Description":"Maximum number of workers for this App Service plan SKU."},"default":{"Type":21,"Flags":0,"Description":"Default number of workers for this App Service plan SKU."},"scaleType":{"Type":0,"Flags":0,"Description":"Available scale configurations for an App Service plan."}}}},{"3":{"ItemType":0}},{"2":{"Name":"Capability","Properties":{"name":{"Type":0,"Flags":0,"Description":"Name of the SKU capability."},"value":{"Type":0,"Flags":0,"Description":"Value of the SKU capability."},"reason":{"Type":0,"Flags":0,"Description":"Reason of the SKU capability."}}}},{"3":{"ItemType":63}},{"4":{"Name":"Microsoft.Web/hostingEnvironments/multiRolePools@2016-09-01","ScopeType":8,"Body":59,"Flags":0}},{"6":{"Value":"Microsoft.Web/hostingEnvironments/workerPools"}},{"6":{"Value":"2016-09-01"}},{"2":{"Name":"Microsoft.Web/hostingEnvironments/workerPools","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":66,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":67,"Flags":10,"Description":"The resource api version"},"properties":{"Type":22,"Flags":0,"Description":"Core resource properties"},"sku":{"Type":60,"Flags":0,"Description":"Description of a SKU for a scalable resource."},"kind":{"Type":0,"Flags":0,"Description":"Kind of resource."}}}},{"4":{"Name":"Microsoft.Web/hostingEnvironments/workerPools@2016-09-01","ScopeType":8,"Body":68,"Flags":0}},{"6":{"Value":"Microsoft.Web/serverfarms"}},{"6":{"Value":"2016-09-01"}},{"2":{"Name":"Microsoft.Web/serverfarms","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":70,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":71,"Flags":10,"Description":"The resource api version"},"properties":{"Type":73,"Flags":0,"Description":"AppServicePlan resource specific properties"},"sku":{"Type":60,"Flags":0,"Description":"Description of a SKU for a scalable resource."},"kind":{"Type":0,"Flags":0,"Description":"Kind of resource."},"location":{"Type":0,"Flags":1,"Description":"Resource Location."},"tags":{"Type":85,"Flags":0,"Description":"Resource tags."}}}},{"2":{"Name":"AppServicePlanProperties","Properties":{"name":{"Type":0,"Flags":1,"Description":"Name for the App Service plan."},"workerTierName":{"Type":0,"Flags":0,"Description":"Target worker tier assigned to the App Service plan."},"status":{"Type":77,"Flags":2,"Description":"App Service plan status."},"subscription":{"Type":0,"Flags":2,"Description":"App Service plan subscription."},"adminSiteName":{"Type":0,"Flags":0,"Description":"App Service plan administration site."},"hostingEnvironmentProfile":{"Type":78,"Flags":0,"Description":"Specification for the App Service Environment to use for the App Service plan."},"maximumNumberOfWorkers":{"Type":21,"Flags":2,"Description":"Maximum number of instances that can be assigned to this App Service plan."},"geoRegion":{"Type":0,"Flags":2,"Description":"Geographical location for the App Service plan."},"perSiteScaling":{"Type":30,"Flags":0,"Description":"If <code>true</code>, apps assigned to this App Service plan can be scaled independently.\nIf <code>false</code>, apps assigned to this App Service plan will scale to all instances of the plan."},"numberOfSites":{"Type":21,"Flags":2,"Description":"Number of apps assigned to this App Service plan."},"isSpot":{"Type":30,"Flags":0,"Description":"If <code>true</code>, this App Service Plan owns spot instances."},"spotExpirationTime":{"Type":0,"Flags":0,"Description":"The time when the server farm expires. Valid only if it is a spot server farm."},"resourceGroup":{"Type":0,"Flags":2,"Description":"Resource group of the App Service plan."},"reserved":{"Type":30,"Flags":0,"Description":"If Linux app service plan <code>true</code>, <code>false</code> otherwise."},"targetWorkerCount":{"Type":21,"Flags":0,"Description":"Scaling worker count."},"targetWorkerSizeId":{"Type":21,"Flags":0,"Description":"Scaling worker size ID."},"provisioningState":{"Type":84,"Flags":2,"Description":"Provisioning state of the App Service Environment."}}}},{"6":{"Value":"Ready"}},{"6":{"Value":"Pending"}},{"6":{"Value":"Creating"}},{"5":{"Elements":[74,75,76]}},{"2":{"Name":"HostingEnvironmentProfile","Properties":{"id":{"Type":0,"Flags":0,"Description":"Resource ID of the App Service Environment."},"name":{"Type":0,"Flags":2,"Description":"Name of the App Service Environment."},"type":{"Type":0,"Flags":2,"Description":"Resource type of the App Service Environment."}}}},{"6":{"Value":"Succeeded"}},{"6":{"Value":"Failed"}},{"6":{"Value":"Canceled"}},{"6":{"Value":"InProgress"}},{"6":{"Value":"Deleting"}},{"5":{"Elements":[79,80,81,82,83]}},{"2":{"Name":"ResourceTags","Properties":{},"AdditionalProperties":0}},{"4":{"Name":"Microsoft.Web/serverfarms@2016-09-01","ScopeType":8,"Body":72,"Flags":0}},{"6":{"Value":"Microsoft.Web/serverfarms/virtualNetworkConnections/gateways"}},{"6":{"Value":"2016-09-01"}},{"2":{"Name":"Microsoft.Web/serverfarms/virtualNetworkConnections/gateways","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":87,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":88,"Flags":10,"Description":"The resource api version"},"properties":{"Type":90,"Flags":0,"Description":"VnetGateway resource specific properties"},"kind":{"Type":0,"Flags":0,"Description":"Kind of resource."}}}},{"2":{"Name":"VnetGatewayProperties","Properties":{"vnetName":{"Type":0,"Flags":0,"Description":"The Virtual Network name."},"vpnPackageUri":{"Type":0,"Flags":5,"Description":"The URI where the VPN package can be downloaded."}}}},{"4":{"Name":"Microsoft.Web/serverfarms/virtualNetworkConnections/gateways@2016-09-01","ScopeType":8,"Body":89,"Flags":0}},{"6":{"Value":"Microsoft.Web/serverfarms/virtualNetworkConnections/routes"}},{"6":{"Value":"2016-09-01"}},{"2":{"Name":"Microsoft.Web/serverfarms/virtualNetworkConnections/routes","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":92,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":93,"Flags":10,"Description":"The resource api version"},"properties":{"Type":95,"Flags":4,"Description":"VnetRoute resource specific properties"},"kind":{"Type":0,"Flags":4,"Description":"Kind of resource."}}}},{"2":{"Name":"VnetRouteProperties","Properties":{"name":{"Type":0,"Flags":0,"Description":"The name of this route. This is only returned by the server and does not need to be set by the client."},"startAddress":{"Type":0,"Flags":0,"Description":"The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified."},"endAddress":{"Type":0,"Flags":0,"Description":"The ending address for this route. If the start address is specified in CIDR notation, this must be omitted."},"routeType":{"Type":99,"Flags":0,"Description":"The type of route this is:\nDEFAULT - By default, every app has routes to the local address ranges specified by RFC1918\nINHERITED - Routes inherited from the real Virtual Network routes\nSTATIC - Static route set on the app only\n\nThese values will be used for syncing an app's routes with those from a Virtual Network."}}}},{"6":{"Value":"DEFAULT"}},{"6":{"Value":"INHERITED"}},{"6":{"Value":"STATIC"}},{"5":{"Elements":[96,97,98,0]}},{"4":{"Name":"Microsoft.Web/serverfarms/virtualNetworkConnections/routes@2016-09-01","ScopeType":8,"Body":94,"Flags":0}},{"6":{"Value":"Microsoft.Web/serverfarms/hybridConnectionNamespaces/relays"}},{"6":{"Value":"2016-09-01"}},{"2":{"Name":"Microsoft.Web/serverfarms/hybridConnectionNamespaces/relays","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":101,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":102,"Flags":10,"Description":"The resource api version"},"properties":{"Type":104,"Flags":2,"Description":"HybridConnection resource specific properties"},"kind":{"Type":0,"Flags":2,"Description":"Kind of resource."}}}},{"2":{"Name":"HybridConnectionProperties","Properties":{"serviceBusNamespace":{"Type":0,"Flags":0,"Description":"The name of the Service Bus namespace."},"relayName":{"Type":0,"Flags":0,"Description":"The name of the Service Bus relay."},"relayArmUri":{"Type":0,"Flags":0,"Description":"The ARM URI to the Service Bus relay."},"hostname":{"Type":0,"Flags":0,"Description":"The hostname of the endpoint."},"port":{"Type":21,"Flags":0,"Description":"The port of the endpoint."},"sendKeyName":{"Type":0,"Flags":0,"Description":"The name of the Service Bus key which has Send permissions. This is used to authenticate to Service Bus."},"sendKeyValue":{"Type":0,"Flags":0,"Description":"The value of the Service Bus key. This is used to authenticate to Service Bus. In ARM this key will not be returned\nnormally, use the POST /listKeys API instead."},"serviceBusSuffix":{"Type":0,"Flags":0,"Description":"The suffix for the service bus endpoint. By default this is .servicebus.windows.net"}}}},{"4":{"Name":"Microsoft.Web/serverfarms/hybridConnectionNamespaces/relays@2016-09-01","ScopeType":8,"Body":103,"Flags":1}},{"6":{"Value":"limit"}},{"6":{"Value":"Microsoft.Web/serverfarms/hybridConnectionPlanLimits"}},{"6":{"Value":"2016-09-01"}},{"2":{"Name":"Microsoft.Web/serverfarms/hybridConnectionPlanLimits","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":106,"Flags":9,"Description":"The resource name"},"type":{"Type":107,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":108,"Flags":10,"Description":"The resource api version"},"properties":{"Type":110,"Flags":2,"Description":"HybridConnectionLimits resource specific properties"},"kind":{"Type":0,"Flags":2,"Description":"Kind of resource."}}}},{"2":{"Name":"HybridConnectionLimitsProperties","Properties":{"current":{"Type":21,"Flags":2,"Description":"The current number of Hybrid Connections."},"maximum":{"Type":21,"Flags":2,"Description":"The maximum number of Hybrid Connections allowed."}}}},{"4":{"Name":"Microsoft.Web/serverfarms/hybridConnectionPlanLimits@2016-09-01","ScopeType":8,"Body":109,"Flags":1}},{"6":{"Value":"Microsoft.Web/serverfarms/virtualNetworkConnections"}},{"6":{"Value":"2016-09-01"}},{"2":{"Name":"Microsoft.Web/serverfarms/virtualNetworkConnections","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":112,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":113,"Flags":10,"Description":"The resource api version"},"properties":{"Type":115,"Flags":2,"Description":"VnetInfo resource specific properties"},"kind":{"Type":0,"Flags":2,"Description":"Kind of resource."}}}},{"2":{"Name":"VnetInfoProperties","Properties":{"vnetResourceId":{"Type":0,"Flags":0,"Description":"The Virtual Network's resource ID."},"certThumbprint":{"Type":0,"Flags":2,"Description":"The client certificate thumbprint."},"certBlob":{"Type":116,"Flags":0,"Description":"A certificate file (.cer) blob containing the public key of the private key used to authenticate a \nPoint-To-Site VPN connection."},"routes":{"Type":118,"Flags":2,"Description":"The routes that this Virtual Network connection uses."},"resyncRequired":{"Type":30,"Flags":2,"Description":"<code>true</code> if a resync is required; otherwise, <code>false</code>."},"dnsServers":{"Type":0,"Flags":0,"Description":"DNS servers to be used by this Virtual Network. This should be a comma-separated list of IP addresses."}}}},{"9":{}},{"2":{"Name":"VnetRoute","Properties":{"properties":{"Type":95,"Flags":0,"Description":"VnetRoute resource specific properties"},"id":{"Type":0,"Flags":2,"Description":"Resource Id."},"name":{"Type":0,"Flags":2,"Description":"Resource Name."},"kind":{"Type":0,"Flags":0,"Description":"Kind of resource."},"type":{"Type":0,"Flags":2,"Description":"Resource type."}}}},{"3":{"ItemType":117}},{"4":{"Name":"Microsoft.Web/serverfarms/virtualNetworkConnections@2016-09-01","ScopeType":8,"Body":114,"Flags":1}},{"2":{"Name":"HybridConnectionKey","Properties":{"properties":{"Type":121,"Flags":0,"Description":"HybridConnectionKey resource specific properties"},"id":{"Type":0,"Flags":2,"Description":"Resource Id."},"name":{"Type":0,"Flags":2,"Description":"Resource Name."},"kind":{"Type":0,"Flags":0,"Description":"Kind of resource."},"type":{"Type":0,"Flags":2,"Description":"Resource type."}}}},{"2":{"Name":"HybridConnectionKeyProperties","Properties":{"sendKeyName":{"Type":0,"Flags":2,"Description":"The name of the send key."},"sendKeyValue":{"Type":0,"Flags":2,"Description":"The value of the send key."}}}},{"8":{"Name":"listKeys","ResourceType":"Microsoft.Web/serverfarms/hybridConnectionNamespaces/relays","ApiVersion":"2016-09-01","Output":120}}]
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Web/hostingEnvironments"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2016-09-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Web/hostingEnvironments",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "Core resource properties"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Kind of resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource Location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/54"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AppServiceEnvironment",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Name of the App Service Environment."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Location of the App Service Environment, e.g. \"West US\"."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 2,
+        "description": "Provisioning state of the App Service Environment."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "Current status of the App Service Environment."
+      },
+      "vnetName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the Virtual Network for the App Service Environment."
+      },
+      "vnetResourceGroupName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource group of the Virtual Network."
+      },
+      "vnetSubnetName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Subnet of the Virtual Network."
+      },
+      "virtualNetwork": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 1,
+        "description": "Description of the Virtual Network."
+      },
+      "internalLoadBalancingMode": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0,
+        "description": "Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment."
+      },
+      "multiSize": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Front-end VM size, e.g. \"Medium\", \"Large\"."
+      },
+      "multiRoleCount": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "Number of front-end instances."
+      },
+      "workerPools": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 1,
+        "description": "Description of worker pools with worker size IDs, VM sizes, and number of workers in each pool."
+      },
+      "ipsslAddressCount": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "Number of IP SSL addresses reserved for the App Service Environment."
+      },
+      "databaseEdition": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Edition of the metadata database for the App Service Environment, e.g. \"Standard\"."
+      },
+      "databaseServiceObjective": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Service objective of the metadata database for the App Service Environment, e.g. \"S0\"."
+      },
+      "upgradeDomains": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 2,
+        "description": "Number of upgrade domains of the App Service Environment."
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Subscription of the App Service Environment."
+      },
+      "dnsSuffix": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "DNS suffix of the App Service Environment."
+      },
+      "lastAction": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Last deployment action on the App Service Environment."
+      },
+      "lastActionResult": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Result of the last deployment action on the App Service Environment."
+      },
+      "allowedMultiSizes": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "List of comma separated strings describing which VM sizes are allowed for front-ends."
+      },
+      "allowedWorkerSizes": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "List of comma separated strings describing which VM sizes are allowed for workers."
+      },
+      "maximumNumberOfMachines": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 2,
+        "description": "Maximum number of VMs in the App Service Environment."
+      },
+      "vipMappings": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 2,
+        "description": "Description of IP SSL mapping for the App Service Environment."
+      },
+      "environmentCapacities": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 2,
+        "description": "Current total, used, and available worker capacities."
+      },
+      "networkAccessControlList": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 0,
+        "description": "Access control list for controlling traffic to the App Service Environment."
+      },
+      "environmentIsHealthy": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 2,
+        "description": "True/false indicating whether the App Service Environment is healthy."
+      },
+      "environmentStatus": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Detailed message about with results of the last check of the App Service Environment."
+      },
+      "resourceGroup": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource group of the App Service Environment."
+      },
+      "frontEndScaleFactor": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "Scale factor for front-ends."
+      },
+      "defaultFrontEndScaleFactor": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 2,
+        "description": "Default Scale Factor for FrontEnds."
+      },
+      "apiManagementAccountId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "API Management Account associated with the App Service Environment."
+      },
+      "suspended": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "<code>true</code> if the App Service Environment is suspended; otherwise, <code>false</code>. The environment can be suspended, e.g. when the management endpoint is no longer available\n (most likely because NSG blocked the incoming traffic)."
+      },
+      "dynamicCacheEnabled": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "True/false indicating whether the App Service Environment is suspended. The environment can be suspended e.g. when the management endpoint is no longer available\n(most likely because NSG blocked the incoming traffic)."
+      },
+      "clusterSettings": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 0,
+        "description": "Custom settings for changing the behavior of the App Service Environment."
+      },
+      "userWhitelistedIpRanges": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 0,
+        "description": "User added list of IP Ranges allowed on ASE db"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/5"
+      },
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Preparing"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ready"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Scaling"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/14"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualNetworkProfile",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource id of the Virtual Network."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Name of the Virtual Network (read-only)."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type of the Virtual Network (read-only)."
+      },
+      "subnet": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Subnet within the Virtual Network."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Web"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Publishing"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/18"
+      },
+      {
+        "$ref": "#/19"
+      }
+    ]
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WorkerPool",
+    "properties": {
+      "workerSizeId": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "Worker size ID for referencing this worker pool."
+      },
+      "computeMode": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "Shared or dedicated app hosting."
+      },
+      "workerSize": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "VM size of the worker pool instances."
+      },
+      "workerCount": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "Number of instances in the worker pool."
+      },
+      "instanceNames": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 2,
+        "description": "Names of all instances in the worker pool (read only)."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Shared"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Dedicated"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Dynamic"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/24"
+      },
+      {
+        "$ref": "#/25"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/22"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualIPMapping",
+    "properties": {
+      "virtualIP": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Virtual IP address."
+      },
+      "internalHttpPort": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "Internal HTTP port."
+      },
+      "internalHttpsPort": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "Internal HTTPS port."
+      },
+      "inUse": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "Is virtual IP mapping in use."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/29"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StampCapacity",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the stamp."
+      },
+      "availableCapacity": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "Available capacity (# of machines, bytes of storage etc...)."
+      },
+      "totalCapacity": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "Total capacity (# of machines, bytes of storage etc...)."
+      },
+      "unit": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the unit."
+      },
+      "computeMode": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 0,
+        "description": "Shared/dedicated workers."
+      },
+      "workerSize": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "Size of the machines."
+      },
+      "workerSizeId": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "Size ID of machines: \n0 - Small\n1 - Medium\n2 - Large"
+      },
+      "excludeFromCapacityAllocation": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "If <code>true</code>, it includes basic apps.\nBasic apps are not used for capacity allocation."
+      },
+      "isApplicableForAllComputeModes": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "<code>true</code> if capacity is applicable for all apps; otherwise, <code>false</code>."
+      },
+      "siteMode": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Shared or Dedicated."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Shared"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Dedicated"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Dynamic"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/33"
+      },
+      {
+        "$ref": "#/34"
+      },
+      {
+        "$ref": "#/35"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Default"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Small"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Medium"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Large"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "D1"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "D2"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "D3"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/37"
+      },
+      {
+        "$ref": "#/38"
+      },
+      {
+        "$ref": "#/39"
+      },
+      {
+        "$ref": "#/40"
+      },
+      {
+        "$ref": "#/41"
+      },
+      {
+        "$ref": "#/42"
+      },
+      {
+        "$ref": "#/43"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/32"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkAccessControlEntry",
+    "properties": {
+      "action": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 0,
+        "description": "Action object."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Description of network access control entry."
+      },
+      "order": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "Order of precedence."
+      },
+      "remoteSubnet": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Remote subnet."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Permit"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deny"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/47"
+      },
+      {
+        "$ref": "#/48"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/46"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NameValuePair",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Pair name."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Pair value."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/51"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Web/hostingEnvironments@2016-09-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "default"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Web/hostingEnvironments/multiRolePools"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2016-09-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Web/hostingEnvironments/multiRolePools",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/56"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/58"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 0,
+        "description": "Core resource properties"
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/60"
+        },
+        "flags": 0,
+        "description": "Description of a SKU for a scalable resource."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Kind of resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SkuDescription",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the resource SKU."
+      },
+      "tier": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Service tier of the resource SKU."
+      },
+      "size": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Size specifier of the resource SKU."
+      },
+      "family": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Family code of the resource SKU."
+      },
+      "capacity": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "Current number of instances assigned to the resource."
+      },
+      "skuCapacity": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 0,
+        "description": "Min, max, and default scale values of the SKU."
+      },
+      "locations": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 0,
+        "description": "Locations of the SKU."
+      },
+      "capabilities": {
+        "type": {
+          "$ref": "#/64"
+        },
+        "flags": 0,
+        "description": "Capabilities of the SKU, e.g., is traffic manager enabled?"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SkuCapacity",
+    "properties": {
+      "minimum": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "Minimum number of workers for this App Service plan SKU."
+      },
+      "maximum": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "Maximum number of workers for this App Service plan SKU."
+      },
+      "default": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "Default number of workers for this App Service plan SKU."
+      },
+      "scaleType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Available scale configurations for an App Service plan."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Capability",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Name of the SKU capability."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Value of the SKU capability."
+      },
+      "reason": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Reason of the SKU capability."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/63"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Web/hostingEnvironments/multiRolePools@2016-09-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/59"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Web/hostingEnvironments/workerPools"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2016-09-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Web/hostingEnvironments/workerPools",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/66"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 0,
+        "description": "Core resource properties"
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/60"
+        },
+        "flags": 0,
+        "description": "Description of a SKU for a scalable resource."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Kind of resource."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Web/hostingEnvironments/workerPools@2016-09-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/68"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Web/serverfarms"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2016-09-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Web/serverfarms",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/71"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/73"
+        },
+        "flags": 0,
+        "description": "AppServicePlan resource specific properties"
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/60"
+        },
+        "flags": 0,
+        "description": "Description of a SKU for a scalable resource."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Kind of resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource Location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/85"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AppServicePlanProperties",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Name for the App Service plan."
+      },
+      "workerTierName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Target worker tier assigned to the App Service plan."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/77"
+        },
+        "flags": 2,
+        "description": "App Service plan status."
+      },
+      "subscription": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "App Service plan subscription."
+      },
+      "adminSiteName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "App Service plan administration site."
+      },
+      "hostingEnvironmentProfile": {
+        "type": {
+          "$ref": "#/78"
+        },
+        "flags": 0,
+        "description": "Specification for the App Service Environment to use for the App Service plan."
+      },
+      "maximumNumberOfWorkers": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 2,
+        "description": "Maximum number of instances that can be assigned to this App Service plan."
+      },
+      "geoRegion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Geographical location for the App Service plan."
+      },
+      "perSiteScaling": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "If <code>true</code>, apps assigned to this App Service plan can be scaled independently.\nIf <code>false</code>, apps assigned to this App Service plan will scale to all instances of the plan."
+      },
+      "numberOfSites": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 2,
+        "description": "Number of apps assigned to this App Service plan."
+      },
+      "isSpot": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "If <code>true</code>, this App Service Plan owns spot instances."
+      },
+      "spotExpirationTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The time when the server farm expires. Valid only if it is a spot server farm."
+      },
+      "resourceGroup": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource group of the App Service plan."
+      },
+      "reserved": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "If Linux app service plan <code>true</code>, <code>false</code> otherwise."
+      },
+      "targetWorkerCount": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "Scaling worker count."
+      },
+      "targetWorkerSizeId": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "Scaling worker size ID."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/84"
+        },
+        "flags": 2,
+        "description": "Provisioning state of the App Service Environment."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ready"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Pending"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/74"
+      },
+      {
+        "$ref": "#/75"
+      },
+      {
+        "$ref": "#/76"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HostingEnvironmentProfile",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource ID of the App Service Environment."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Name of the App Service Environment."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type of the App Service Environment."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/79"
+      },
+      {
+        "$ref": "#/80"
+      },
+      {
+        "$ref": "#/81"
+      },
+      {
+        "$ref": "#/82"
+      },
+      {
+        "$ref": "#/83"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Web/serverfarms@2016-09-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/72"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Web/serverfarms/virtualNetworkConnections/gateways"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2016-09-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Web/serverfarms/virtualNetworkConnections/gateways",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/88"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/90"
+        },
+        "flags": 0,
+        "description": "VnetGateway resource specific properties"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Kind of resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VnetGatewayProperties",
+    "properties": {
+      "vnetName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The Virtual Network name."
+      },
+      "vpnPackageUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 5,
+        "description": "The URI where the VPN package can be downloaded."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Web/serverfarms/virtualNetworkConnections/gateways@2016-09-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/89"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Web/serverfarms/virtualNetworkConnections/routes"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2016-09-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Web/serverfarms/virtualNetworkConnections/routes",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/92"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/93"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/95"
+        },
+        "flags": 4,
+        "description": "VnetRoute resource specific properties"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 4,
+        "description": "Kind of resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VnetRouteProperties",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of this route. This is only returned by the server and does not need to be set by the client."
+      },
+      "startAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified."
+      },
+      "endAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The ending address for this route. If the start address is specified in CIDR notation, this must be omitted."
+      },
+      "routeType": {
+        "type": {
+          "$ref": "#/99"
+        },
+        "flags": 0,
+        "description": "The type of route this is:\nDEFAULT - By default, every app has routes to the local address ranges specified by RFC1918\nINHERITED - Routes inherited from the real Virtual Network routes\nSTATIC - Static route set on the app only\n\nThese values will be used for syncing an app's routes with those from a Virtual Network."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DEFAULT"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "INHERITED"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "STATIC"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/96"
+      },
+      {
+        "$ref": "#/97"
+      },
+      {
+        "$ref": "#/98"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Web/serverfarms/virtualNetworkConnections/routes@2016-09-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/94"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Web/serverfarms/hybridConnectionNamespaces/relays"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2016-09-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Web/serverfarms/hybridConnectionNamespaces/relays",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/101"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/102"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/104"
+        },
+        "flags": 2,
+        "description": "HybridConnection resource specific properties"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Kind of resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HybridConnectionProperties",
+    "properties": {
+      "serviceBusNamespace": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the Service Bus namespace."
+      },
+      "relayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the Service Bus relay."
+      },
+      "relayArmUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The ARM URI to the Service Bus relay."
+      },
+      "hostname": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The hostname of the endpoint."
+      },
+      "port": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "The port of the endpoint."
+      },
+      "sendKeyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the Service Bus key which has Send permissions. This is used to authenticate to Service Bus."
+      },
+      "sendKeyValue": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The value of the Service Bus key. This is used to authenticate to Service Bus. In ARM this key will not be returned\nnormally, use the POST /listKeys API instead."
+      },
+      "serviceBusSuffix": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The suffix for the service bus endpoint. By default this is .servicebus.windows.net"
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Web/serverfarms/hybridConnectionNamespaces/relays@2016-09-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/103"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "limit"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Web/serverfarms/hybridConnectionPlanLimits"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2016-09-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Web/serverfarms/hybridConnectionPlanLimits",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/106"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/107"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/108"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/110"
+        },
+        "flags": 2,
+        "description": "HybridConnectionLimits resource specific properties"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Kind of resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HybridConnectionLimitsProperties",
+    "properties": {
+      "current": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 2,
+        "description": "The current number of Hybrid Connections."
+      },
+      "maximum": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 2,
+        "description": "The maximum number of Hybrid Connections allowed."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Web/serverfarms/hybridConnectionPlanLimits@2016-09-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/109"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Web/serverfarms/virtualNetworkConnections"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2016-09-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Web/serverfarms/virtualNetworkConnections",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/112"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/113"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/115"
+        },
+        "flags": 2,
+        "description": "VnetInfo resource specific properties"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Kind of resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VnetInfoProperties",
+    "properties": {
+      "vnetResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The Virtual Network's resource ID."
+      },
+      "certThumbprint": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The client certificate thumbprint."
+      },
+      "certBlob": {
+        "type": {
+          "$ref": "#/116"
+        },
+        "flags": 0,
+        "description": "A certificate file (.cer) blob containing the public key of the private key used to authenticate a \nPoint-To-Site VPN connection."
+      },
+      "routes": {
+        "type": {
+          "$ref": "#/118"
+        },
+        "flags": 2,
+        "description": "The routes that this Virtual Network connection uses."
+      },
+      "resyncRequired": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 2,
+        "description": "<code>true</code> if a resync is required; otherwise, <code>false</code>."
+      },
+      "dnsServers": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "DNS servers to be used by this Virtual Network. This should be a comma-separated list of IP addresses."
+      }
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VnetRoute",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/95"
+        },
+        "flags": 0,
+        "description": "VnetRoute resource specific properties"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Id."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Name."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Kind of resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/117"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Web/serverfarms/virtualNetworkConnections@2016-09-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/114"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HybridConnectionKey",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/121"
+        },
+        "flags": 0,
+        "description": "HybridConnectionKey resource specific properties"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Id."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Name."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Kind of resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource type."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HybridConnectionKeyProperties",
+    "properties": {
+      "sendKeyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the send key."
+      },
+      "sendKeyValue": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The value of the send key."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listKeys",
+    "resourceType": "Microsoft.Web/serverfarms/hybridConnectionNamespaces/relays",
+    "apiVersion": "2016-09-01",
+    "output": {
+      "$ref": "#/120"
+    }
+  }
+]

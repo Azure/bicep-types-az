@@ -1,1 +1,1491 @@
-[{"13":{}},{"6":{"Value":"Microsoft.Billing/billingAccounts/billingSubscriptionAliases"}},{"6":{"Value":"2021-10-01"}},{"2":{"Name":"Microsoft.Billing/billingAccounts/billingSubscriptionAliases","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":1,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":2,"Flags":10,"Description":"The resource api version"},"properties":{"Type":4,"Flags":0,"Description":"Billing subscription alias properties."}}}},{"2":{"Name":"BillingSubscriptionAliasProperties","Properties":{"billingSubscriptionId":{"Type":0,"Flags":2,"Description":"The ID of the billing subscription with the subscription alias."},"autoRenew":{"Type":7,"Flags":0,"Description":"Indicates whether auto renewal is turned on or off for a subscription."},"beneficiaryTenantId":{"Type":0,"Flags":0,"Description":"The provisioning tenant of the subscription."},"billingFrequency":{"Type":0,"Flags":0,"Description":"The billing frequency of the subscription in the ISO8601 format. Example: P1M, P3M, P1Y"},"billingProfileId":{"Type":0,"Flags":0,"Description":"The ID of the billing profile to which the subscription is billed. This field is only applicable for Microsoft Customer Agreement billing accounts."},"billingPolicies":{"Type":8,"Flags":2,"Description":"Dictionary of billing policies associated with the subscription."},"billingProfileDisplayName":{"Type":0,"Flags":2,"Description":"The display name of the billing profile to which the subscription is billed. This field is only applicable for Microsoft Customer Agreement billing accounts."},"billingProfileName":{"Type":0,"Flags":2,"Description":"The name of the billing profile to which the subscription is billed. This field is only applicable for Microsoft Customer Agreement billing accounts."},"consumptionCostCenter":{"Type":0,"Flags":0,"Description":"The cost center applied to the subscription. This field is only available for consumption subscriptions of Microsoft Customer Agreement Type billing accounts."},"customerId":{"Type":0,"Flags":0,"Description":"The ID of the customer for whom the subscription was created. The field is applicable only for Microsoft Partner Agreement billing accounts."},"customerDisplayName":{"Type":0,"Flags":2,"Description":"The name of the customer for whom the subscription was created. The field is applicable only for Microsoft Partner Agreement billing accounts."},"customerName":{"Type":0,"Flags":2,"Description":"The name of the customer for whom the subscription was created. The field is applicable only for Microsoft Partner Agreement billing accounts."},"displayName":{"Type":0,"Flags":0,"Description":"The name of the subscription."},"enrollmentAccountId":{"Type":0,"Flags":2,"Description":"The enrollment Account ID associated with the subscription. This field is available only for the Enterprise Agreement billing accounts."},"enrollmentAccountDisplayName":{"Type":0,"Flags":2,"Description":"The enrollment Account name associated with the subscription. This field is available only for the Enterprise Agreement billing accounts."},"enrollmentAccountSubscriptionDetails":{"Type":9,"Flags":2,"Description":"The billing properties that can be modified. This field is available only for the Enterprise Agreement billing accounts."},"invoiceSectionId":{"Type":0,"Flags":0,"Description":"The ID of the invoice section to which the subscription is billed. The field is applicable only for Microsoft Partner Agreement billing accounts."},"invoiceSectionDisplayName":{"Type":0,"Flags":2,"Description":"The display name of the invoice section to which the subscription is billed. The field is applicable only for Microsoft Partner Agreement billing accounts."},"invoiceSectionName":{"Type":0,"Flags":2,"Description":"The name of the invoice section to which the subscription is billed. The field is applicable only for Microsoft Partner Agreement billing accounts."},"lastMonthCharges":{"Type":17,"Flags":2,"Description":"The last month's charges. This field is only available for usage based subscriptions of Microsoft Customer Agreement billing accounts."},"monthToDateCharges":{"Type":17,"Flags":2,"Description":"The current month to date charges. This field is only available for usage based subscriptions of Microsoft Customer Agreement billing accounts."},"nextBillingCycleDetails":{"Type":19,"Flags":2,"Description":"Next billing cycle details of the subscription."},"offerId":{"Type":0,"Flags":2,"Description":"The offer ID for the subscription. This field is only available for the Microsoft Online Services Program billing accounts."},"productCategory":{"Type":0,"Flags":2,"Description":"The category of the product for which the subscription is purchased. Possible values include: AzureSupport, Hardware, ReservationOrder, SaaS, SavingsPlanOrder, Software, UsageBased, Other"},"productType":{"Type":0,"Flags":2,"Description":"The type of the product for which the subscription is purchased"},"productTypeId":{"Type":0,"Flags":0,"Description":"The ID of the product for which the subscription is purchased"},"purchaseDate":{"Type":0,"Flags":2,"Description":"The purchase date of the subscription in UTC time."},"quantity":{"Type":18,"Flags":0,"Description":"The number of licenses purchased for the subscription"},"reseller":{"Type":20,"Flags":2,"Description":"The reseller for which the subscription is created. The field is available for Microsoft Partner Agreement billing accounts."},"renewalTermDetails":{"Type":21,"Flags":2,"Description":"The term details of the subscription at the next renewal."},"skuDescription":{"Type":0,"Flags":2,"Description":"The SKU description of the product for which the subscription is purchased. This field is only available for Microsoft Customer Agreement billing accounts."},"skuId":{"Type":0,"Flags":0,"Description":"The SKU ID of the product for which the subscription is purchased. This field is only available for Microsoft Customer Agreement billing accounts."},"status":{"Type":32,"Flags":2,"Description":"The status of the subscription. This field is not available for Enterprise Agreement billing accounts."},"subscriptionId":{"Type":0,"Flags":2,"Description":"The ID of the usage-based subscription. This field is only available for usage-based subscriptions of Microsoft Customer Agreement billing accounts."},"suspensionReasons":{"Type":33,"Flags":2,"Description":"The suspension reason for the subscription. This field is not available for Enterprise Agreement billing accounts."},"termDuration":{"Type":0,"Flags":0,"Description":"The duration for which you can use the subscription. Example P1Y and P1M"},"termStartDate":{"Type":0,"Flags":2,"Description":"The start date of the term in UTC time."},"termEndDate":{"Type":0,"Flags":2,"Description":"The end date of the term in UTC time."}}}},{"6":{"Value":"Off"}},{"6":{"Value":"On"}},{"5":{"Elements":[5,6,0]}},{"2":{"Name":"BillingSubscriptionPropertiesBillingPolicies","Properties":{},"AdditionalProperties":0}},{"2":{"Name":"EnrollmentAccountSubscriptionDetails","Properties":{"subscriptionEnrollmentAccountStatus":{"Type":16,"Flags":2,"Description":"The current enrollment account status of the subscription. This field is available only for the Enterprise Agreement billing accounts."},"enrollmentAccountStartDate":{"Type":0,"Flags":2,"Description":"The enrollment Account and the subscription association start date. This field is available only for the Enterprise Agreement billing accounts."}}}},{"6":{"Value":"Active"}},{"6":{"Value":"Cancelled"}},{"6":{"Value":"Expired"}},{"6":{"Value":"Deleted"}},{"6":{"Value":"TransferredOut"}},{"6":{"Value":"Transferring"}},{"5":{"Elements":[10,11,12,13,14,15,0]}},{"2":{"Name":"Amount","Properties":{"currency":{"Type":0,"Flags":2,"Description":"The currency for the amount value."},"value":{"Type":18,"Flags":2,"Description":"Amount value."}}}},{"12":{}},{"2":{"Name":"NextBillingCycleDetails","Properties":{"billingFrequency":{"Type":0,"Flags":2,"Description":"The billing frequency of the subscription in the next billing cycle."}}}},{"2":{"Name":"Reseller","Properties":{"resellerId":{"Type":0,"Flags":2,"Description":"The MPN ID of the reseller."},"description":{"Type":0,"Flags":2,"Description":"The name of the reseller."}}}},{"2":{"Name":"RenewalTermDetails","Properties":{"billingFrequency":{"Type":0,"Flags":2,"Description":"The billing frequency of the subscription."},"productTypeId":{"Type":0,"Flags":2,"Description":"The ID of the product."},"quantity":{"Type":18,"Flags":0,"Description":"The number of licenses"},"skuId":{"Type":0,"Flags":2,"Description":"The SKU ID of the product"},"termDuration":{"Type":0,"Flags":2,"Description":"The term duration of the subscription. Example P1M and P1Y"}}}},{"6":{"Value":"Unknown"}},{"6":{"Value":"Active"}},{"6":{"Value":"Disabled"}},{"6":{"Value":"Deleted"}},{"6":{"Value":"Warned"}},{"6":{"Value":"Expiring"}},{"6":{"Value":"Expired"}},{"6":{"Value":"AutoRenew"}},{"6":{"Value":"Cancelled"}},{"6":{"Value":"Suspended"}},{"5":{"Elements":[22,23,24,25,26,27,28,29,30,31,0]}},{"3":{"ItemType":0}},{"4":{"Name":"Microsoft.Billing/billingAccounts/billingSubscriptionAliases@2021-10-01","ScopeType":1,"Body":3,"Flags":0}},{"6":{"Value":"Microsoft.Billing/billingAccounts/billingSubscriptions"}},{"6":{"Value":"2021-10-01"}},{"2":{"Name":"Microsoft.Billing/billingAccounts/billingSubscriptions","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":35,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":36,"Flags":10,"Description":"The resource api version"},"properties":{"Type":38,"Flags":2,"Description":"The billing properties of a subscription."}}}},{"2":{"Name":"BillingSubscriptionProperties","Properties":{"autoRenew":{"Type":41,"Flags":0,"Description":"Indicates whether auto renewal is turned on or off for a subscription."},"beneficiaryTenantId":{"Type":0,"Flags":0,"Description":"The provisioning tenant of the subscription."},"billingFrequency":{"Type":0,"Flags":0,"Description":"The billing frequency of the subscription in the ISO8601 format. Example: P1M, P3M, P1Y"},"billingProfileId":{"Type":0,"Flags":0,"Description":"The ID of the billing profile to which the subscription is billed. This field is only applicable for Microsoft Customer Agreement billing accounts."},"billingPolicies":{"Type":42,"Flags":2,"Description":"Dictionary of billing policies associated with the subscription."},"billingProfileDisplayName":{"Type":0,"Flags":2,"Description":"The display name of the billing profile to which the subscription is billed. This field is only applicable for Microsoft Customer Agreement billing accounts."},"billingProfileName":{"Type":0,"Flags":2,"Description":"The name of the billing profile to which the subscription is billed. This field is only applicable for Microsoft Customer Agreement billing accounts."},"consumptionCostCenter":{"Type":0,"Flags":0,"Description":"The cost center applied to the subscription. This field is only available for consumption subscriptions of Microsoft Customer Agreement Type billing accounts."},"customerId":{"Type":0,"Flags":0,"Description":"The ID of the customer for whom the subscription was created. The field is applicable only for Microsoft Partner Agreement billing accounts."},"customerDisplayName":{"Type":0,"Flags":2,"Description":"The name of the customer for whom the subscription was created. The field is applicable only for Microsoft Partner Agreement billing accounts."},"customerName":{"Type":0,"Flags":2,"Description":"The name of the customer for whom the subscription was created. The field is applicable only for Microsoft Partner Agreement billing accounts."},"displayName":{"Type":0,"Flags":0,"Description":"The name of the subscription."},"enrollmentAccountId":{"Type":0,"Flags":2,"Description":"The enrollment Account ID associated with the subscription. This field is available only for the Enterprise Agreement billing accounts."},"enrollmentAccountDisplayName":{"Type":0,"Flags":2,"Description":"The enrollment Account name associated with the subscription. This field is available only for the Enterprise Agreement billing accounts."},"enrollmentAccountSubscriptionDetails":{"Type":9,"Flags":2,"Description":"The billing properties that can be modified. This field is available only for the Enterprise Agreement billing accounts."},"invoiceSectionId":{"Type":0,"Flags":0,"Description":"The ID of the invoice section to which the subscription is billed. The field is applicable only for Microsoft Partner Agreement billing accounts."},"invoiceSectionDisplayName":{"Type":0,"Flags":2,"Description":"The display name of the invoice section to which the subscription is billed. The field is applicable only for Microsoft Partner Agreement billing accounts."},"invoiceSectionName":{"Type":0,"Flags":2,"Description":"The name of the invoice section to which the subscription is billed. The field is applicable only for Microsoft Partner Agreement billing accounts."},"lastMonthCharges":{"Type":17,"Flags":2,"Description":"The last month's charges. This field is only available for usage based subscriptions of Microsoft Customer Agreement billing accounts."},"monthToDateCharges":{"Type":17,"Flags":2,"Description":"The current month to date charges. This field is only available for usage based subscriptions of Microsoft Customer Agreement billing accounts."},"nextBillingCycleDetails":{"Type":19,"Flags":2,"Description":"Next billing cycle details of the subscription."},"offerId":{"Type":0,"Flags":2,"Description":"The offer ID for the subscription. This field is only available for the Microsoft Online Services Program billing accounts."},"productCategory":{"Type":0,"Flags":2,"Description":"The category of the product for which the subscription is purchased. Possible values include: AzureSupport, Hardware, ReservationOrder, SaaS, SavingsPlanOrder, Software, UsageBased, Other"},"productType":{"Type":0,"Flags":2,"Description":"The type of the product for which the subscription is purchased"},"productTypeId":{"Type":0,"Flags":0,"Description":"The ID of the product for which the subscription is purchased"},"purchaseDate":{"Type":0,"Flags":2,"Description":"The purchase date of the subscription in UTC time."},"quantity":{"Type":18,"Flags":0,"Description":"The number of licenses purchased for the subscription"},"reseller":{"Type":20,"Flags":2,"Description":"The reseller for which the subscription is created. The field is available for Microsoft Partner Agreement billing accounts."},"renewalTermDetails":{"Type":21,"Flags":2,"Description":"The term details of the subscription at the next renewal."},"skuDescription":{"Type":0,"Flags":2,"Description":"The SKU description of the product for which the subscription is purchased. This field is only available for Microsoft Customer Agreement billing accounts."},"skuId":{"Type":0,"Flags":0,"Description":"The SKU ID of the product for which the subscription is purchased. This field is only available for Microsoft Customer Agreement billing accounts."},"status":{"Type":53,"Flags":2,"Description":"The status of the subscription. This field is not available for Enterprise Agreement billing accounts."},"subscriptionId":{"Type":0,"Flags":2,"Description":"The ID of the usage-based subscription. This field is only available for usage-based subscriptions of Microsoft Customer Agreement billing accounts."},"suspensionReasons":{"Type":54,"Flags":2,"Description":"The suspension reason for the subscription. This field is not available for Enterprise Agreement billing accounts."},"termDuration":{"Type":0,"Flags":0,"Description":"The duration for which you can use the subscription. Example P1Y and P1M"},"termStartDate":{"Type":0,"Flags":2,"Description":"The start date of the term in UTC time."},"termEndDate":{"Type":0,"Flags":2,"Description":"The end date of the term in UTC time."}}}},{"6":{"Value":"Off"}},{"6":{"Value":"On"}},{"5":{"Elements":[39,40,0]}},{"2":{"Name":"BillingSubscriptionPropertiesBillingPolicies","Properties":{},"AdditionalProperties":0}},{"6":{"Value":"Unknown"}},{"6":{"Value":"Active"}},{"6":{"Value":"Disabled"}},{"6":{"Value":"Deleted"}},{"6":{"Value":"Warned"}},{"6":{"Value":"Expiring"}},{"6":{"Value":"Expired"}},{"6":{"Value":"AutoRenew"}},{"6":{"Value":"Cancelled"}},{"6":{"Value":"Suspended"}},{"5":{"Elements":[43,44,45,46,47,48,49,50,51,52,0]}},{"3":{"ItemType":0}},{"4":{"Name":"Microsoft.Billing/billingAccounts/billingSubscriptions@2021-10-01","ScopeType":1,"Body":37,"Flags":1}},{"6":{"Value":"Microsoft.Billing/paymentMethods"}},{"6":{"Value":"2021-10-01"}},{"2":{"Name":"Microsoft.Billing/paymentMethods","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":56,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":57,"Flags":10,"Description":"The resource api version"},"properties":{"Type":59,"Flags":2,"Description":"The properties of a payment method."}}}},{"2":{"Name":"PaymentMethodProperties","Properties":{"family":{"Type":62,"Flags":0,"Description":"The family of payment method."},"type":{"Type":0,"Flags":2,"Description":"The type of payment method."},"accountHolderName":{"Type":0,"Flags":2,"Description":"The account holder name for the payment method. This is only supported for payment methods with family CreditCard."},"expiration":{"Type":0,"Flags":2,"Description":"The expiration month and year of the payment method. This is only supported for payment methods with family CreditCard."},"lastFourDigits":{"Type":0,"Flags":2,"Description":"Last four digits of payment method."},"displayName":{"Type":0,"Flags":2,"Description":"The display name of the payment method."},"logos":{"Type":64,"Flags":0,"Description":"The list of logos for the payment method."},"status":{"Type":67,"Flags":0,"Description":"Status of the payment method."}}}},{"6":{"Value":"CreditCard"}},{"6":{"Value":"CheckWire"}},{"5":{"Elements":[60,61,0]}},{"2":{"Name":"PaymentMethodLogo","Properties":{"mimeType":{"Type":0,"Flags":2,"Description":"MIME type of the logo."},"url":{"Type":0,"Flags":2,"Description":"Public URL of image of the logo."}}}},{"3":{"ItemType":63}},{"6":{"Value":"active"}},{"6":{"Value":"inactive"}},{"5":{"Elements":[65,66,0]}},{"4":{"Name":"Microsoft.Billing/paymentMethods@2021-10-01","ScopeType":1,"Body":58,"Flags":1}},{"6":{"Value":"Microsoft.Billing/billingAccounts/paymentMethods"}},{"6":{"Value":"2021-10-01"}},{"2":{"Name":"Microsoft.Billing/billingAccounts/paymentMethods","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":69,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":70,"Flags":10,"Description":"The resource api version"},"properties":{"Type":59,"Flags":2,"Description":"The properties of a payment method."}}}},{"4":{"Name":"Microsoft.Billing/billingAccounts/paymentMethods@2021-10-01","ScopeType":1,"Body":71,"Flags":1}},{"6":{"Value":"Microsoft.Billing/billingAccounts/billingProfiles/paymentMethodLinks"}},{"6":{"Value":"2021-10-01"}},{"2":{"Name":"Microsoft.Billing/billingAccounts/billingProfiles/paymentMethodLinks","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":73,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":74,"Flags":10,"Description":"The resource api version"},"properties":{"Type":76,"Flags":2,"Description":"The properties of a payment method link."}}}},{"2":{"Name":"PaymentMethodLinkProperties","Properties":{"paymentMethod":{"Type":77,"Flags":0,"Description":"Projection of a payment method"}}}},{"2":{"Name":"PaymentMethodProjectionProperties","Properties":{"id":{"Type":0,"Flags":2,"Description":"Id of payment method."},"family":{"Type":80,"Flags":0,"Description":"The family of payment method."},"type":{"Type":0,"Flags":2,"Description":"The type of payment method."},"accountHolderName":{"Type":0,"Flags":2,"Description":"The account holder name for the payment method. This is only supported for payment methods with family CreditCard."},"expiration":{"Type":0,"Flags":2,"Description":"The expiration month and year of the payment method. This is only supported for payment methods with family CreditCard."},"lastFourDigits":{"Type":0,"Flags":2,"Description":"Last four digits of payment method."},"displayName":{"Type":0,"Flags":2,"Description":"The display name of the payment method."},"logos":{"Type":81,"Flags":0,"Description":"The list of logos for the payment method."},"status":{"Type":84,"Flags":0,"Description":"Status of the payment method."}}}},{"6":{"Value":"CreditCard"}},{"6":{"Value":"CheckWire"}},{"5":{"Elements":[78,79,0]}},{"3":{"ItemType":63}},{"6":{"Value":"active"}},{"6":{"Value":"inactive"}},{"5":{"Elements":[82,83,0]}},{"4":{"Name":"Microsoft.Billing/billingAccounts/billingProfiles/paymentMethodLinks@2021-10-01","ScopeType":1,"Body":75,"Flags":1}}]
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Billing/billingAccounts/billingSubscriptionAliases"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-10-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Billing/billingAccounts/billingSubscriptionAliases",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "Billing subscription alias properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BillingSubscriptionAliasProperties",
+    "properties": {
+      "billingSubscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The ID of the billing subscription with the subscription alias."
+      },
+      "autoRenew": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "Indicates whether auto renewal is turned on or off for a subscription."
+      },
+      "beneficiaryTenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The provisioning tenant of the subscription."
+      },
+      "billingFrequency": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The billing frequency of the subscription in the ISO8601 format. Example: P1M, P3M, P1Y"
+      },
+      "billingProfileId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The ID of the billing profile to which the subscription is billed. This field is only applicable for Microsoft Customer Agreement billing accounts."
+      },
+      "billingPolicies": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 2,
+        "description": "Dictionary of billing policies associated with the subscription."
+      },
+      "billingProfileDisplayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The display name of the billing profile to which the subscription is billed. This field is only applicable for Microsoft Customer Agreement billing accounts."
+      },
+      "billingProfileName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the billing profile to which the subscription is billed. This field is only applicable for Microsoft Customer Agreement billing accounts."
+      },
+      "consumptionCostCenter": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The cost center applied to the subscription. This field is only available for consumption subscriptions of Microsoft Customer Agreement Type billing accounts."
+      },
+      "customerId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The ID of the customer for whom the subscription was created. The field is applicable only for Microsoft Partner Agreement billing accounts."
+      },
+      "customerDisplayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the customer for whom the subscription was created. The field is applicable only for Microsoft Partner Agreement billing accounts."
+      },
+      "customerName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the customer for whom the subscription was created. The field is applicable only for Microsoft Partner Agreement billing accounts."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the subscription."
+      },
+      "enrollmentAccountId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The enrollment Account ID associated with the subscription. This field is available only for the Enterprise Agreement billing accounts."
+      },
+      "enrollmentAccountDisplayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The enrollment Account name associated with the subscription. This field is available only for the Enterprise Agreement billing accounts."
+      },
+      "enrollmentAccountSubscriptionDetails": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 2,
+        "description": "The billing properties that can be modified. This field is available only for the Enterprise Agreement billing accounts."
+      },
+      "invoiceSectionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The ID of the invoice section to which the subscription is billed. The field is applicable only for Microsoft Partner Agreement billing accounts."
+      },
+      "invoiceSectionDisplayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The display name of the invoice section to which the subscription is billed. The field is applicable only for Microsoft Partner Agreement billing accounts."
+      },
+      "invoiceSectionName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the invoice section to which the subscription is billed. The field is applicable only for Microsoft Partner Agreement billing accounts."
+      },
+      "lastMonthCharges": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 2,
+        "description": "The last month's charges. This field is only available for usage based subscriptions of Microsoft Customer Agreement billing accounts."
+      },
+      "monthToDateCharges": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 2,
+        "description": "The current month to date charges. This field is only available for usage based subscriptions of Microsoft Customer Agreement billing accounts."
+      },
+      "nextBillingCycleDetails": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 2,
+        "description": "Next billing cycle details of the subscription."
+      },
+      "offerId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The offer ID for the subscription. This field is only available for the Microsoft Online Services Program billing accounts."
+      },
+      "productCategory": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The category of the product for which the subscription is purchased. Possible values include: AzureSupport, Hardware, ReservationOrder, SaaS, SavingsPlanOrder, Software, UsageBased, Other"
+      },
+      "productType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The type of the product for which the subscription is purchased"
+      },
+      "productTypeId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The ID of the product for which the subscription is purchased"
+      },
+      "purchaseDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The purchase date of the subscription in UTC time."
+      },
+      "quantity": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "The number of licenses purchased for the subscription"
+      },
+      "reseller": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 2,
+        "description": "The reseller for which the subscription is created. The field is available for Microsoft Partner Agreement billing accounts."
+      },
+      "renewalTermDetails": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 2,
+        "description": "The term details of the subscription at the next renewal."
+      },
+      "skuDescription": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The SKU description of the product for which the subscription is purchased. This field is only available for Microsoft Customer Agreement billing accounts."
+      },
+      "skuId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The SKU ID of the product for which the subscription is purchased. This field is only available for Microsoft Customer Agreement billing accounts."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 2,
+        "description": "The status of the subscription. This field is not available for Enterprise Agreement billing accounts."
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The ID of the usage-based subscription. This field is only available for usage-based subscriptions of Microsoft Customer Agreement billing accounts."
+      },
+      "suspensionReasons": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 2,
+        "description": "The suspension reason for the subscription. This field is not available for Enterprise Agreement billing accounts."
+      },
+      "termDuration": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The duration for which you can use the subscription. Example P1Y and P1M"
+      },
+      "termStartDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The start date of the term in UTC time."
+      },
+      "termEndDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The end date of the term in UTC time."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Off"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "On"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/5"
+      },
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BillingSubscriptionPropertiesBillingPolicies",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EnrollmentAccountSubscriptionDetails",
+    "properties": {
+      "subscriptionEnrollmentAccountStatus": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 2,
+        "description": "The current enrollment account status of the subscription. This field is available only for the Enterprise Agreement billing accounts."
+      },
+      "enrollmentAccountStartDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The enrollment Account and the subscription association start date. This field is available only for the Enterprise Agreement billing accounts."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Active"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cancelled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Expired"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TransferredOut"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Transferring"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/14"
+      },
+      {
+        "$ref": "#/15"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Amount",
+    "properties": {
+      "currency": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The currency for the amount value."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 2,
+        "description": "Amount value."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NextBillingCycleDetails",
+    "properties": {
+      "billingFrequency": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The billing frequency of the subscription in the next billing cycle."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Reseller",
+    "properties": {
+      "resellerId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The MPN ID of the reseller."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the reseller."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RenewalTermDetails",
+    "properties": {
+      "billingFrequency": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The billing frequency of the subscription."
+      },
+      "productTypeId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The ID of the product."
+      },
+      "quantity": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "The number of licenses"
+      },
+      "skuId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The SKU ID of the product"
+      },
+      "termDuration": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The term duration of the subscription. Example P1M and P1Y"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Active"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Warned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Expiring"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Expired"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AutoRenew"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cancelled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Suspended"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/24"
+      },
+      {
+        "$ref": "#/25"
+      },
+      {
+        "$ref": "#/26"
+      },
+      {
+        "$ref": "#/27"
+      },
+      {
+        "$ref": "#/28"
+      },
+      {
+        "$ref": "#/29"
+      },
+      {
+        "$ref": "#/30"
+      },
+      {
+        "$ref": "#/31"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Billing/billingAccounts/billingSubscriptionAliases@2021-10-01",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Billing/billingAccounts/billingSubscriptions"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-10-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Billing/billingAccounts/billingSubscriptions",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 2,
+        "description": "The billing properties of a subscription."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BillingSubscriptionProperties",
+    "properties": {
+      "autoRenew": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 0,
+        "description": "Indicates whether auto renewal is turned on or off for a subscription."
+      },
+      "beneficiaryTenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The provisioning tenant of the subscription."
+      },
+      "billingFrequency": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The billing frequency of the subscription in the ISO8601 format. Example: P1M, P3M, P1Y"
+      },
+      "billingProfileId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The ID of the billing profile to which the subscription is billed. This field is only applicable for Microsoft Customer Agreement billing accounts."
+      },
+      "billingPolicies": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 2,
+        "description": "Dictionary of billing policies associated with the subscription."
+      },
+      "billingProfileDisplayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The display name of the billing profile to which the subscription is billed. This field is only applicable for Microsoft Customer Agreement billing accounts."
+      },
+      "billingProfileName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the billing profile to which the subscription is billed. This field is only applicable for Microsoft Customer Agreement billing accounts."
+      },
+      "consumptionCostCenter": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The cost center applied to the subscription. This field is only available for consumption subscriptions of Microsoft Customer Agreement Type billing accounts."
+      },
+      "customerId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The ID of the customer for whom the subscription was created. The field is applicable only for Microsoft Partner Agreement billing accounts."
+      },
+      "customerDisplayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the customer for whom the subscription was created. The field is applicable only for Microsoft Partner Agreement billing accounts."
+      },
+      "customerName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the customer for whom the subscription was created. The field is applicable only for Microsoft Partner Agreement billing accounts."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the subscription."
+      },
+      "enrollmentAccountId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The enrollment Account ID associated with the subscription. This field is available only for the Enterprise Agreement billing accounts."
+      },
+      "enrollmentAccountDisplayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The enrollment Account name associated with the subscription. This field is available only for the Enterprise Agreement billing accounts."
+      },
+      "enrollmentAccountSubscriptionDetails": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 2,
+        "description": "The billing properties that can be modified. This field is available only for the Enterprise Agreement billing accounts."
+      },
+      "invoiceSectionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The ID of the invoice section to which the subscription is billed. The field is applicable only for Microsoft Partner Agreement billing accounts."
+      },
+      "invoiceSectionDisplayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The display name of the invoice section to which the subscription is billed. The field is applicable only for Microsoft Partner Agreement billing accounts."
+      },
+      "invoiceSectionName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the invoice section to which the subscription is billed. The field is applicable only for Microsoft Partner Agreement billing accounts."
+      },
+      "lastMonthCharges": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 2,
+        "description": "The last month's charges. This field is only available for usage based subscriptions of Microsoft Customer Agreement billing accounts."
+      },
+      "monthToDateCharges": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 2,
+        "description": "The current month to date charges. This field is only available for usage based subscriptions of Microsoft Customer Agreement billing accounts."
+      },
+      "nextBillingCycleDetails": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 2,
+        "description": "Next billing cycle details of the subscription."
+      },
+      "offerId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The offer ID for the subscription. This field is only available for the Microsoft Online Services Program billing accounts."
+      },
+      "productCategory": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The category of the product for which the subscription is purchased. Possible values include: AzureSupport, Hardware, ReservationOrder, SaaS, SavingsPlanOrder, Software, UsageBased, Other"
+      },
+      "productType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The type of the product for which the subscription is purchased"
+      },
+      "productTypeId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The ID of the product for which the subscription is purchased"
+      },
+      "purchaseDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The purchase date of the subscription in UTC time."
+      },
+      "quantity": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "The number of licenses purchased for the subscription"
+      },
+      "reseller": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 2,
+        "description": "The reseller for which the subscription is created. The field is available for Microsoft Partner Agreement billing accounts."
+      },
+      "renewalTermDetails": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 2,
+        "description": "The term details of the subscription at the next renewal."
+      },
+      "skuDescription": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The SKU description of the product for which the subscription is purchased. This field is only available for Microsoft Customer Agreement billing accounts."
+      },
+      "skuId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The SKU ID of the product for which the subscription is purchased. This field is only available for Microsoft Customer Agreement billing accounts."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 2,
+        "description": "The status of the subscription. This field is not available for Enterprise Agreement billing accounts."
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The ID of the usage-based subscription. This field is only available for usage-based subscriptions of Microsoft Customer Agreement billing accounts."
+      },
+      "suspensionReasons": {
+        "type": {
+          "$ref": "#/54"
+        },
+        "flags": 2,
+        "description": "The suspension reason for the subscription. This field is not available for Enterprise Agreement billing accounts."
+      },
+      "termDuration": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The duration for which you can use the subscription. Example P1Y and P1M"
+      },
+      "termStartDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The start date of the term in UTC time."
+      },
+      "termEndDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The end date of the term in UTC time."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Off"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "On"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/39"
+      },
+      {
+        "$ref": "#/40"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BillingSubscriptionPropertiesBillingPolicies",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Active"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Warned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Expiring"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Expired"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AutoRenew"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cancelled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Suspended"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/43"
+      },
+      {
+        "$ref": "#/44"
+      },
+      {
+        "$ref": "#/45"
+      },
+      {
+        "$ref": "#/46"
+      },
+      {
+        "$ref": "#/47"
+      },
+      {
+        "$ref": "#/48"
+      },
+      {
+        "$ref": "#/49"
+      },
+      {
+        "$ref": "#/50"
+      },
+      {
+        "$ref": "#/51"
+      },
+      {
+        "$ref": "#/52"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Billing/billingAccounts/billingSubscriptions@2021-10-01",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/37"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Billing/paymentMethods"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-10-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Billing/paymentMethods",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/56"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 2,
+        "description": "The properties of a payment method."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PaymentMethodProperties",
+    "properties": {
+      "family": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 0,
+        "description": "The family of payment method."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The type of payment method."
+      },
+      "accountHolderName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The account holder name for the payment method. This is only supported for payment methods with family CreditCard."
+      },
+      "expiration": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The expiration month and year of the payment method. This is only supported for payment methods with family CreditCard."
+      },
+      "lastFourDigits": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Last four digits of payment method."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The display name of the payment method."
+      },
+      "logos": {
+        "type": {
+          "$ref": "#/64"
+        },
+        "flags": 0,
+        "description": "The list of logos for the payment method."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 0,
+        "description": "Status of the payment method."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CreditCard"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CheckWire"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/60"
+      },
+      {
+        "$ref": "#/61"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PaymentMethodLogo",
+    "properties": {
+      "mimeType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "MIME type of the logo."
+      },
+      "url": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Public URL of image of the logo."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/63"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "active"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "inactive"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/65"
+      },
+      {
+        "$ref": "#/66"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Billing/paymentMethods@2021-10-01",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/58"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Billing/billingAccounts/paymentMethods"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-10-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Billing/billingAccounts/paymentMethods",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/69"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 2,
+        "description": "The properties of a payment method."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Billing/billingAccounts/paymentMethods@2021-10-01",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/71"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Billing/billingAccounts/billingProfiles/paymentMethodLinks"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-10-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Billing/billingAccounts/billingProfiles/paymentMethodLinks",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/73"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/74"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/76"
+        },
+        "flags": 2,
+        "description": "The properties of a payment method link."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PaymentMethodLinkProperties",
+    "properties": {
+      "paymentMethod": {
+        "type": {
+          "$ref": "#/77"
+        },
+        "flags": 0,
+        "description": "Projection of a payment method"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PaymentMethodProjectionProperties",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Id of payment method."
+      },
+      "family": {
+        "type": {
+          "$ref": "#/80"
+        },
+        "flags": 0,
+        "description": "The family of payment method."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The type of payment method."
+      },
+      "accountHolderName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The account holder name for the payment method. This is only supported for payment methods with family CreditCard."
+      },
+      "expiration": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The expiration month and year of the payment method. This is only supported for payment methods with family CreditCard."
+      },
+      "lastFourDigits": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Last four digits of payment method."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The display name of the payment method."
+      },
+      "logos": {
+        "type": {
+          "$ref": "#/81"
+        },
+        "flags": 0,
+        "description": "The list of logos for the payment method."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/84"
+        },
+        "flags": 0,
+        "description": "Status of the payment method."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CreditCard"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CheckWire"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/78"
+      },
+      {
+        "$ref": "#/79"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/63"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "active"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "inactive"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/82"
+      },
+      {
+        "$ref": "#/83"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Billing/billingAccounts/billingProfiles/paymentMethodLinks@2021-10-01",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/75"
+    },
+    "flags": 1
+  }
+]
