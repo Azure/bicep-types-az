@@ -48,7 +48,7 @@ describe('integration tests', () => {
   ]
 
   // set to true to overwrite baselines
-  const record = false;
+  const record = true;
 
   // bump timeout - autorest can take a while to run
   jest.setTimeout(60000);
