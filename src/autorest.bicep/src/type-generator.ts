@@ -21,7 +21,7 @@ import {
   UriSchema,
 } from "@autorest/codemodel";
 import { Channel, AutorestExtensionHost } from "@autorest/extension-base";
-import { BuiltInTypeKind, DiscriminatedObjectType, ObjectTypeProperty, ObjectTypePropertyFlags, ResourceFlags, TypeBaseKind, TypeFactory, TypeReference } from "bicep-types";
+import { DiscriminatedObjectType, ObjectTypeProperty, ObjectTypePropertyFlags, ResourceFlags, TypeBaseKind, TypeFactory, TypeReference } from "bicep-types";
 import { uniq, keys, Dictionary, chain } from 'lodash';
 import { getFullyQualifiedType, getNameSchema, getSerializedName, NameSchema, ProviderDefinition, ResourceDefinition, ResourceDescriptor, ResourceOperationDefintion } from "./resources";
 import { failure, success } from "./utils";
@@ -66,7 +66,7 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     // is used for other resource properties.
     const {putOperation, getOperation} = definition;
     const nameLiterals = new Set<string>();
-    const nameTypes = new Set<BuiltInTypeKind>();
+    const nameTypes = new Set<TypeReference>();
     const nameSchemata = {
       put: putOperation ? getSchema(putOperation) : undefined,
       get: getOperation ? getSchema(getOperation) : undefined,
@@ -466,7 +466,7 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     return flags;
   }
 
-  function toBuiltInType(schema: PrimitiveSchema): number {
+  function toBuiltInType(schema: PrimitiveSchema): TypeReference {
     switch (schema.type) {
       case SchemaType.Boolean:
         return factory.addBooleanType();
@@ -497,7 +497,7 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     }
   }
 
-  function convertNumberSchema(schema: NumberSchema): number {
+  function convertNumberSchema(schema: NumberSchema): TypeReference {
     let minimum: number|undefined = schema.minimum;
     if (minimum !== undefined && schema.exclusiveMinimum) {
       minimum += 1;
@@ -511,7 +511,7 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     return factory.addIntegerType(minimum, maximum);
   }
 
-  function convertStringSchema(schema: PrimitiveSchema): number {
+  function convertStringSchema(schema: PrimitiveSchema): TypeReference {
     const secret: true|undefined = schema.extensions?.['x-ms-secret'] === true ? true : undefined;
     let minLength: number|undefined;
     let maxLength: number|undefined;
@@ -578,15 +578,15 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
 
       const objectTypeRef = parseObjectType(putSubType, getSubType, ancestorsToExclude);
       const objectType = factory.lookupType(objectTypeRef);
-      if (objectType.Type !== TypeBaseKind.ObjectType) {
-        logWarning(`Found unexpected element of discriminated type '${discriminatedObjectType.Name}'`)
+      if (objectType.type !== TypeBaseKind.ObjectType) {
+        logWarning(`Found unexpected element of discriminated type '${discriminatedObjectType.name}'`)
         continue;
       }
 
-      discriminatedObjectType.Elements[combinedSubType.discriminatorValue] = objectTypeRef;
+      discriminatedObjectType.elements[combinedSubType.discriminatorValue] = objectTypeRef;
 
       const description = (putSchema ?? getSchema)?.discriminator?.property.language.default.description;
-      objectType.Properties[discriminatedObjectType.Discriminator] = createObjectTypeProperty(
+      objectType.properties[discriminatedObjectType.discriminator] = createObjectTypeProperty(
         factory.addStringLiteralType(combinedSubType.discriminatorValue),
         ObjectTypePropertyFlags.Required,
         description);
@@ -737,7 +737,7 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
   }
 
   function createObjectTypeProperty(type: TypeReference, flags: ObjectTypePropertyFlags, description?: string): ObjectTypeProperty {
-    return { Type: type, Flags: flags, Description: description?.trim() || undefined };
+    return { type: type, flags: flags, description: description?.trim() || undefined };
   }
 
   return generateTypes();

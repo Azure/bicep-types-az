@@ -1,1 +1,818 @@
-[{"13":{}},{"6":{"Value":"Microsoft.CertificateRegistration/certificateOrders"}},{"6":{"Value":"2020-09-01"}},{"2":{"Name":"Microsoft.CertificateRegistration/certificateOrders","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":1,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":2,"Flags":10,"Description":"The resource api version"},"properties":{"Type":4,"Flags":0,"Description":"AppServiceCertificateOrder resource specific properties"},"kind":{"Type":0,"Flags":0,"Description":"Kind of resource."},"location":{"Type":0,"Flags":1,"Description":"Resource Location."},"tags":{"Type":48,"Flags":0,"Description":"Resource tags."},"systemData":{"Type":49,"Flags":2,"Description":"The system metadata relating to this resource."}}}},{"2":{"Name":"AppServiceCertificateOrderProperties","Properties":{"certificates":{"Type":18,"Flags":0,"Description":"State of the Key Vault secret."},"distinguishedName":{"Type":0,"Flags":0,"Description":"Certificate distinguished name."},"domainVerificationToken":{"Type":0,"Flags":2,"Description":"Domain verification token."},"validityInYears":{"Type":19,"Flags":0,"Description":"Duration in years (must be between 1 and 3)."},"keySize":{"Type":20,"Flags":0,"Description":"Certificate key size."},"productType":{"Type":23,"Flags":1,"Description":"Certificate product type."},"autoRenew":{"Type":24,"Flags":0,"Description":"<code>true</code> if the certificate should be automatically renewed when it expires; otherwise, <code>false</code>."},"provisioningState":{"Type":30,"Flags":2,"Description":"Status of certificate order."},"status":{"Type":41,"Flags":2,"Description":"Current order status."},"signedCertificate":{"Type":42,"Flags":2,"Description":"Signed certificate."},"csr":{"Type":0,"Flags":0,"Description":"Last CSR that was created for this order."},"intermediate":{"Type":42,"Flags":2,"Description":"Intermediate certificate."},"root":{"Type":42,"Flags":2,"Description":"Root certificate."},"serialNumber":{"Type":0,"Flags":2,"Description":"Current serial number of the certificate."},"lastCertificateIssuanceTime":{"Type":0,"Flags":2,"Description":"Certificate last issuance time."},"expirationTime":{"Type":0,"Flags":2,"Description":"Certificate expiration time."},"isPrivateKeyExternal":{"Type":24,"Flags":2,"Description":"<code>true</code> if private key is external; otherwise, <code>false</code>."},"appServiceCertificateNotRenewableReasons":{"Type":47,"Flags":2,"Description":"Reasons why App Service Certificate is not renewable at the current moment."},"nextAutoRenewalTimeStamp":{"Type":0,"Flags":2,"Description":"Time stamp when the certificate would be auto renewed next"}}}},{"2":{"Name":"AppServiceCertificate","Properties":{"keyVaultId":{"Type":0,"Flags":0,"Description":"Key Vault resource Id."},"keyVaultSecretName":{"Type":0,"Flags":0,"Description":"Key Vault secret name."},"provisioningState":{"Type":17,"Flags":2,"Description":"Status of the Key Vault secret."}}}},{"6":{"Value":"Initialized"}},{"6":{"Value":"WaitingOnCertificateOrder"}},{"6":{"Value":"Succeeded"}},{"6":{"Value":"CertificateOrderFailed"}},{"6":{"Value":"OperationNotPermittedOnKeyVault"}},{"6":{"Value":"AzureServiceUnauthorizedToAccessKeyVault"}},{"6":{"Value":"KeyVaultDoesNotExist"}},{"6":{"Value":"KeyVaultSecretDoesNotExist"}},{"6":{"Value":"UnknownError"}},{"6":{"Value":"ExternalPrivateKey"}},{"6":{"Value":"Unknown"}},{"5":{"Elements":[6,7,8,9,10,11,12,13,14,15,16]}},{"2":{"Name":"AppServiceCertificateOrderPropertiesCertificates","Properties":{},"AdditionalProperties":5}},{"12":{"MinValue":1,"MaxValue":3}},{"12":{}},{"6":{"Value":"StandardDomainValidatedSsl"}},{"6":{"Value":"StandardDomainValidatedWildCardSsl"}},{"5":{"Elements":[21,22]}},{"11":{}},{"6":{"Value":"Succeeded"}},{"6":{"Value":"Failed"}},{"6":{"Value":"Canceled"}},{"6":{"Value":"InProgress"}},{"6":{"Value":"Deleting"}},{"5":{"Elements":[25,26,27,28,29]}},{"6":{"Value":"Pendingissuance"}},{"6":{"Value":"Issued"}},{"6":{"Value":"Revoked"}},{"6":{"Value":"Canceled"}},{"6":{"Value":"Denied"}},{"6":{"Value":"Pendingrevocation"}},{"6":{"Value":"PendingRekey"}},{"6":{"Value":"Unused"}},{"6":{"Value":"Expired"}},{"6":{"Value":"NotSubmitted"}},{"5":{"Elements":[31,32,33,34,35,36,37,38,39,40]}},{"2":{"Name":"CertificateDetails","Properties":{"version":{"Type":20,"Flags":2,"Description":"Certificate Version."},"serialNumber":{"Type":0,"Flags":2,"Description":"Certificate Serial Number."},"thumbprint":{"Type":0,"Flags":2,"Description":"Certificate Thumbprint."},"subject":{"Type":0,"Flags":2,"Description":"Certificate Subject."},"notBefore":{"Type":0,"Flags":2,"Description":"Date Certificate is valid from."},"notAfter":{"Type":0,"Flags":2,"Description":"Date Certificate is valid to."},"signatureAlgorithm":{"Type":0,"Flags":2,"Description":"Certificate Signature algorithm."},"issuer":{"Type":0,"Flags":2,"Description":"Certificate Issuer."},"rawData":{"Type":0,"Flags":2,"Description":"Raw certificate data."}}}},{"6":{"Value":"RegistrationStatusNotSupportedForRenewal"}},{"6":{"Value":"ExpirationNotInRenewalTimeRange"}},{"6":{"Value":"SubscriptionNotActive"}},{"5":{"Elements":[43,44,45,0]}},{"3":{"ItemType":46}},{"2":{"Name":"ResourceTags","Properties":{},"AdditionalProperties":0}},{"2":{"Name":"SystemData","Properties":{"createdBy":{"Type":0,"Flags":0,"Description":"The identity that created the resource."},"createdByType":{"Type":54,"Flags":0,"Description":"The type of identity that created the resource."},"createdAt":{"Type":0,"Flags":0,"Description":"The timestamp of resource creation (UTC)."},"lastModifiedBy":{"Type":0,"Flags":0,"Description":"The identity that last modified the resource."},"lastModifiedByType":{"Type":59,"Flags":0,"Description":"The type of identity that last modified the resource."},"lastModifiedAt":{"Type":0,"Flags":0,"Description":"The timestamp of resource last modification (UTC)"}}}},{"6":{"Value":"User"}},{"6":{"Value":"Application"}},{"6":{"Value":"ManagedIdentity"}},{"6":{"Value":"Key"}},{"5":{"Elements":[50,51,52,53,0]}},{"6":{"Value":"User"}},{"6":{"Value":"Application"}},{"6":{"Value":"ManagedIdentity"}},{"6":{"Value":"Key"}},{"5":{"Elements":[55,56,57,58,0]}},{"4":{"Name":"Microsoft.CertificateRegistration/certificateOrders@2020-09-01","ScopeType":8,"Body":3,"Flags":0}},{"6":{"Value":"Microsoft.CertificateRegistration/certificateOrders/certificates"}},{"6":{"Value":"2020-09-01"}},{"2":{"Name":"Microsoft.CertificateRegistration/certificateOrders/certificates","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":61,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":62,"Flags":10,"Description":"The resource api version"},"properties":{"Type":5,"Flags":0,"Description":"Core resource properties"},"kind":{"Type":0,"Flags":0,"Description":"Kind of resource."},"location":{"Type":0,"Flags":1,"Description":"Resource Location."},"tags":{"Type":64,"Flags":0,"Description":"Resource tags."},"systemData":{"Type":49,"Flags":2,"Description":"The system metadata relating to this resource."}}}},{"2":{"Name":"ResourceTags","Properties":{},"AdditionalProperties":0}},{"4":{"Name":"Microsoft.CertificateRegistration/certificateOrders/certificates@2020-09-01","ScopeType":8,"Body":63,"Flags":0}}]
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.CertificateRegistration/certificateOrders"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-09-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.CertificateRegistration/certificateOrders",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "AppServiceCertificateOrder resource specific properties"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Kind of resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource Location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 2,
+        "description": "The system metadata relating to this resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AppServiceCertificateOrderProperties",
+    "properties": {
+      "certificates": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "State of the Key Vault secret."
+      },
+      "distinguishedName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Certificate distinguished name."
+      },
+      "domainVerificationToken": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Domain verification token."
+      },
+      "validityInYears": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "Duration in years (must be between 1 and 3)."
+      },
+      "keySize": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0,
+        "description": "Certificate key size."
+      },
+      "productType": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 1,
+        "description": "Certificate product type."
+      },
+      "autoRenew": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "<code>true</code> if the certificate should be automatically renewed when it expires; otherwise, <code>false</code>."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 2,
+        "description": "Status of certificate order."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 2,
+        "description": "Current order status."
+      },
+      "signedCertificate": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 2,
+        "description": "Signed certificate."
+      },
+      "csr": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Last CSR that was created for this order."
+      },
+      "intermediate": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 2,
+        "description": "Intermediate certificate."
+      },
+      "root": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 2,
+        "description": "Root certificate."
+      },
+      "serialNumber": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Current serial number of the certificate."
+      },
+      "lastCertificateIssuanceTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Certificate last issuance time."
+      },
+      "expirationTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Certificate expiration time."
+      },
+      "isPrivateKeyExternal": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 2,
+        "description": "<code>true</code> if private key is external; otherwise, <code>false</code>."
+      },
+      "appServiceCertificateNotRenewableReasons": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 2,
+        "description": "Reasons why App Service Certificate is not renewable at the current moment."
+      },
+      "nextAutoRenewalTimeStamp": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Time stamp when the certificate would be auto renewed next"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AppServiceCertificate",
+    "properties": {
+      "keyVaultId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Key Vault resource Id."
+      },
+      "keyVaultSecretName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Key Vault secret name."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 2,
+        "description": "Status of the Key Vault secret."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Initialized"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "WaitingOnCertificateOrder"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CertificateOrderFailed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "OperationNotPermittedOnKeyVault"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureServiceUnauthorizedToAccessKeyVault"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "KeyVaultDoesNotExist"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "KeyVaultSecretDoesNotExist"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UnknownError"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ExternalPrivateKey"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/14"
+      },
+      {
+        "$ref": "#/15"
+      },
+      {
+        "$ref": "#/16"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AppServiceCertificateOrderPropertiesCertificates",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/5"
+    }
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 1,
+    "maxValue": 3
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "StandardDomainValidatedSsl"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "StandardDomainValidatedWildCardSsl"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/21"
+      },
+      {
+        "$ref": "#/22"
+      }
+    ]
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/25"
+      },
+      {
+        "$ref": "#/26"
+      },
+      {
+        "$ref": "#/27"
+      },
+      {
+        "$ref": "#/28"
+      },
+      {
+        "$ref": "#/29"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Pendingissuance"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Issued"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Revoked"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Denied"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Pendingrevocation"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PendingRekey"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unused"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Expired"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSubmitted"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/31"
+      },
+      {
+        "$ref": "#/32"
+      },
+      {
+        "$ref": "#/33"
+      },
+      {
+        "$ref": "#/34"
+      },
+      {
+        "$ref": "#/35"
+      },
+      {
+        "$ref": "#/36"
+      },
+      {
+        "$ref": "#/37"
+      },
+      {
+        "$ref": "#/38"
+      },
+      {
+        "$ref": "#/39"
+      },
+      {
+        "$ref": "#/40"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CertificateDetails",
+    "properties": {
+      "version": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 2,
+        "description": "Certificate Version."
+      },
+      "serialNumber": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Certificate Serial Number."
+      },
+      "thumbprint": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Certificate Thumbprint."
+      },
+      "subject": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Certificate Subject."
+      },
+      "notBefore": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Date Certificate is valid from."
+      },
+      "notAfter": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Date Certificate is valid to."
+      },
+      "signatureAlgorithm": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Certificate Signature algorithm."
+      },
+      "issuer": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Certificate Issuer."
+      },
+      "rawData": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Raw certificate data."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RegistrationStatusNotSupportedForRenewal"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ExpirationNotInRenewalTimeRange"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SubscriptionNotActive"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/43"
+      },
+      {
+        "$ref": "#/44"
+      },
+      {
+        "$ref": "#/45"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/46"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SystemData",
+    "properties": {
+      "createdBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that created the resource."
+      },
+      "createdByType": {
+        "type": {
+          "$ref": "#/54"
+        },
+        "flags": 0,
+        "description": "The type of identity that created the resource."
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource creation (UTC)."
+      },
+      "lastModifiedBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that last modified the resource."
+      },
+      "lastModifiedByType": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 0,
+        "description": "The type of identity that last modified the resource."
+      },
+      "lastModifiedAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource last modification (UTC)"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/50"
+      },
+      {
+        "$ref": "#/51"
+      },
+      {
+        "$ref": "#/52"
+      },
+      {
+        "$ref": "#/53"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/55"
+      },
+      {
+        "$ref": "#/56"
+      },
+      {
+        "$ref": "#/57"
+      },
+      {
+        "$ref": "#/58"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.CertificateRegistration/certificateOrders@2020-09-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.CertificateRegistration/certificateOrders/certificates"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-09-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.CertificateRegistration/certificateOrders/certificates",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Core resource properties"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Kind of resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource Location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/64"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 2,
+        "description": "The system metadata relating to this resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.CertificateRegistration/certificateOrders/certificates@2020-09-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/63"
+    },
+    "flags": 0
+  }
+]

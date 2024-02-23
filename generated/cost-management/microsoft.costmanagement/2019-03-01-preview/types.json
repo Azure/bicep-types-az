@@ -1,1 +1,842 @@
-[{"13":{}},{"6":{"Value":"Microsoft.CostManagement/cloudConnectors"}},{"6":{"Value":"2019-03-01-preview"}},{"2":{"Name":"Microsoft.CostManagement/cloudConnectors","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":1,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":2,"Flags":10,"Description":"The resource api version"},"kind":{"Type":0,"Flags":0,"Description":"Connector kind (eg aws)"},"properties":{"Type":4,"Flags":0,"Description":"Connector properties"}}}},{"2":{"Name":"ConnectorProperties","Properties":{"displayName":{"Type":0,"Flags":0,"Description":"Connector DisplayName"},"providerBillingAccountId":{"Type":0,"Flags":2,"Description":"Connector providerBillingAccountId, determined from credentials (eg AWS Consolidated account number)"},"providerBillingAccountDisplayName":{"Type":0,"Flags":2,"Description":"The display name of the providerBillingAccountId as defined on the external provider"},"credentialsKey":{"Type":0,"Flags":0,"Description":"Credentials authentication key (eg AWS ARN)"},"credentialsSecret":{"Type":0,"Flags":4,"Description":"Credentials secret (eg AWS ExternalId)"},"reportId":{"Type":0,"Flags":0,"Description":"Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources)"},"createdOn":{"Type":0,"Flags":2,"Description":"Connector definition creation datetime"},"modifiedOn":{"Type":0,"Flags":2,"Description":"Connector last modified datetime"},"status":{"Type":9,"Flags":2,"Description":"Connector status"},"externalBillingAccountId":{"Type":0,"Flags":2,"Description":"Associated ExternalBillingAccountId"},"defaultManagementGroupId":{"Type":0,"Flags":0,"Description":"Default ManagementGroupId"},"subscriptionId":{"Type":0,"Flags":0,"Description":"Billing SubscriptionId"},"billingModel":{"Type":14,"Flags":0,"Description":"Connector billing model"},"daysTrialRemaining":{"Type":15,"Flags":2,"Description":"Number of days remaining of trial"},"collectionInfo":{"Type":16,"Flags":2,"Description":"Collection information"}}}},{"6":{"Value":"active"}},{"6":{"Value":"error"}},{"6":{"Value":"expired"}},{"6":{"Value":"warning"}},{"5":{"Elements":[5,6,7,8,0]}},{"6":{"Value":"trial"}},{"6":{"Value":"autoUpgrade"}},{"6":{"Value":"premium"}},{"6":{"Value":"expired"}},{"5":{"Elements":[10,11,12,13,0]}},{"12":{}},{"2":{"Name":"ConnectorCollectionInfo","Properties":{"lastChecked":{"Type":0,"Flags":2,"Description":"Last time the data acquisition process initiated connecting to the external provider"},"sourceLastUpdated":{"Type":0,"Flags":2,"Description":"Source timestamp of external data currently available in Azure (eg AWS last processed CUR file timestamp)"},"lastUpdated":{"Type":0,"Flags":2,"Description":"Last time the external data was updated into Azure"},"error":{"Type":17,"Flags":0,"Description":"Error information of last collection"}}}},{"2":{"Name":"ConnectorCollectionErrorInfo","Properties":{"errorMessage":{"Type":0,"Flags":2,"Description":"Detailed error message"},"errorInnerMessage":{"Type":0,"Flags":2,"Description":"External Provider error message"},"errorCode":{"Type":0,"Flags":2,"Description":"Short error code"},"errorStartTime":{"Type":0,"Flags":2,"Description":"Time the error started occurring (Last time error occurred in lastChecked)"}}}},{"4":{"Name":"Microsoft.CostManagement/cloudConnectors@2019-03-01-preview","ScopeType":1,"Body":3,"Flags":0}},{"6":{"Value":"Microsoft.CostManagement/externalSubscriptions"}},{"6":{"Value":"2019-03-01-preview"}},{"2":{"Name":"Microsoft.CostManagement/externalSubscriptions","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":19,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":20,"Flags":10,"Description":"The resource api version"}}}},{"4":{"Name":"Microsoft.CostManagement/externalSubscriptions@2019-03-01-preview","ScopeType":3,"ReadOnlyScopes":1,"Body":21,"Flags":0}},{"6":{"Value":"Microsoft.CostManagement/showbackRules"}},{"6":{"Value":"2019-03-01-preview"}},{"2":{"Name":"Microsoft.CostManagement/showbackRules","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":23,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":24,"Flags":10,"Description":"The resource api version"},"properties":{"Type":26,"Flags":0,"Description":"Showback rule properties"}}}},{"7":{"Name":"ShowbackRuleProperties","Discriminator":"ruleType","BaseProperties":{"description":{"Type":0,"Flags":0,"Description":"Description of a showback rule."},"status":{"Type":29,"Flags":0,"Description":"The current status of the showback rule."},"version":{"Type":15,"Flags":2,"Description":"The current version of showback rule."},"scopes":{"Type":31,"Flags":0,"Description":"List of authorized assigned scopes."},"creationTime":{"Type":0,"Flags":2,"Description":"The time when the showback rule was created."},"deprecationTime":{"Type":0,"Flags":2,"Description":"The current time when showback rule was deprecate."},"modificationTime":{"Type":0,"Flags":2,"Description":"The current status when showback rule was modified."}},"Elements":{"CostAllocation":32,"CustomPrice":39}}},{"6":{"Value":"NotActive"}},{"6":{"Value":"Active"}},{"5":{"Elements":[27,28,0]}},{"2":{"Name":"Scope","Properties":{"id":{"Type":0,"Flags":0,"Description":"Scope id"},"name":{"Type":0,"Flags":0,"Description":"Scope name"},"type":{"Type":0,"Flags":0,"Description":"Scope type"},"childScope":{"Type":30,"Flags":0,"Description":"The Scope model definition"}}}},{"3":{"ItemType":30}},{"2":{"Name":"CostAllocationDetailsKind","Properties":{"details":{"Type":33,"Flags":0,"Description":"The CostAllocation properties to validate."},"ruleType":{"Type":38,"Flags":1,"Description":"The rule type of the showback rule solution."}}}},{"2":{"Name":"CostAllocationDetails","Properties":{"policy":{"Type":37,"Flags":0,"Description":"Cost allocation policy."}}}},{"6":{"Value":"Proportional"}},{"6":{"Value":"Evenly"}},{"6":{"Value":"Fixed"}},{"5":{"Elements":[34,35,36,0]}},{"6":{"Value":"CostAllocation"}},{"2":{"Name":"CustomPriceDetailsKind","Properties":{"details":{"Type":40,"Flags":0,"Description":"The Custom price properties to validate."},"ruleType":{"Type":50,"Flags":1,"Description":"The rule type of the showback rule solution."}}}},{"2":{"Name":"CustomPriceDetails","Properties":{"pricesheet":{"Type":0,"Flags":0},"benefits":{"Type":47,"Flags":0,"Description":"Array of benefits."},"markups":{"Type":49,"Flags":0,"Description":"List of markups."}}}},{"6":{"Value":"Sum"}},{"6":{"Value":"None"}},{"6":{"Value":"All"}},{"6":{"Value":"AHUB"}},{"6":{"Value":"Reservations"}},{"5":{"Elements":[41,42,43,44,45,0]}},{"3":{"ItemType":46}},{"2":{"Name":"Markup","Properties":{"percentage":{"Type":0,"Flags":0}}}},{"3":{"ItemType":48}},{"6":{"Value":"CustomPrice"}},{"4":{"Name":"Microsoft.CostManagement/showbackRules@2019-03-01-preview","ScopeType":16,"Body":25,"Flags":0}},{"6":{"Value":"Microsoft.CostManagement/externalBillingAccounts"}},{"6":{"Value":"2019-03-01-preview"}},{"2":{"Name":"Microsoft.CostManagement/externalBillingAccounts","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":52,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":53,"Flags":10,"Description":"The resource api version"},"kind":{"Type":0,"Flags":2,"Description":"ExternalBillingAccount kind (eg aws)"},"properties":{"Type":55,"Flags":2,"Description":"ExternalBillingAccount properties"}}}},{"2":{"Name":"ExternalBillingAccountProperties","Properties":{"displayName":{"Type":0,"Flags":2,"Description":"ExternalBillingAccount DisplayName"},"providerBillingAccountId":{"Type":0,"Flags":2,"Description":"Provider BillingAccountId (eg AWS Consolidated Account number)"},"connectorId":{"Type":0,"Flags":2,"Description":"Underlying ConnectorId"},"collectionInfo":{"Type":16,"Flags":2,"Description":"Collection information"}}}},{"4":{"Name":"Microsoft.CostManagement/externalBillingAccounts@2019-03-01-preview","ScopeType":1,"Body":54,"Flags":1}}]
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.CostManagement/cloudConnectors"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-03-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.CostManagement/cloudConnectors",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Connector kind (eg aws)"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "Connector properties"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConnectorProperties",
+    "properties": {
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Connector DisplayName"
+      },
+      "providerBillingAccountId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Connector providerBillingAccountId, determined from credentials (eg AWS Consolidated account number)"
+      },
+      "providerBillingAccountDisplayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The display name of the providerBillingAccountId as defined on the external provider"
+      },
+      "credentialsKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Credentials authentication key (eg AWS ARN)"
+      },
+      "credentialsSecret": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 4,
+        "description": "Credentials secret (eg AWS ExternalId)"
+      },
+      "reportId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources)"
+      },
+      "createdOn": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Connector definition creation datetime"
+      },
+      "modifiedOn": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Connector last modified datetime"
+      },
+      "status": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 2,
+        "description": "Connector status"
+      },
+      "externalBillingAccountId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Associated ExternalBillingAccountId"
+      },
+      "defaultManagementGroupId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Default ManagementGroupId"
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Billing SubscriptionId"
+      },
+      "billingModel": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 0,
+        "description": "Connector billing model"
+      },
+      "daysTrialRemaining": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "Number of days remaining of trial"
+      },
+      "collectionInfo": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 2,
+        "description": "Collection information"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "active"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "error"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "expired"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "warning"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/5"
+      },
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "trial"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "autoUpgrade"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "premium"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "expired"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConnectorCollectionInfo",
+    "properties": {
+      "lastChecked": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Last time the data acquisition process initiated connecting to the external provider"
+      },
+      "sourceLastUpdated": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Source timestamp of external data currently available in Azure (eg AWS last processed CUR file timestamp)"
+      },
+      "lastUpdated": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Last time the external data was updated into Azure"
+      },
+      "error": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "Error information of last collection"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConnectorCollectionErrorInfo",
+    "properties": {
+      "errorMessage": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Detailed error message"
+      },
+      "errorInnerMessage": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "External Provider error message"
+      },
+      "errorCode": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Short error code"
+      },
+      "errorStartTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Time the error started occurring (Last time error occurred in lastChecked)"
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.CostManagement/cloudConnectors@2019-03-01-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.CostManagement/externalSubscriptions"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-03-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.CostManagement/externalSubscriptions",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.CostManagement/externalSubscriptions@2019-03-01-preview",
+    "scopeType": 3,
+    "readOnlyScopes": 1,
+    "body": {
+      "$ref": "#/21"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.CostManagement/showbackRules"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-03-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.CostManagement/showbackRules",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "Showback rule properties"
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "ShowbackRuleProperties",
+    "discriminator": "ruleType",
+    "baseProperties": {
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Description of a showback rule."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "The current status of the showback rule."
+      },
+      "version": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "The current version of showback rule."
+      },
+      "scopes": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0,
+        "description": "List of authorized assigned scopes."
+      },
+      "creationTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The time when the showback rule was created."
+      },
+      "deprecationTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The current time when showback rule was deprecate."
+      },
+      "modificationTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The current status when showback rule was modified."
+      }
+    },
+    "elements": {
+      "CostAllocation": {
+        "$ref": "#/32"
+      },
+      "CustomPrice": {
+        "$ref": "#/39"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotActive"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Active"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/27"
+      },
+      {
+        "$ref": "#/28"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Scope",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Scope id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Scope name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Scope type"
+      },
+      "childScope": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "The Scope model definition"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/30"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CostAllocationDetailsKind",
+    "properties": {
+      "details": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0,
+        "description": "The CostAllocation properties to validate."
+      },
+      "ruleType": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 1,
+        "description": "The rule type of the showback rule solution."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CostAllocationDetails",
+    "properties": {
+      "policy": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 0,
+        "description": "Cost allocation policy."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Proportional"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Evenly"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Fixed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/34"
+      },
+      {
+        "$ref": "#/35"
+      },
+      {
+        "$ref": "#/36"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CostAllocation"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CustomPriceDetailsKind",
+    "properties": {
+      "details": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0,
+        "description": "The Custom price properties to validate."
+      },
+      "ruleType": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 1,
+        "description": "The rule type of the showback rule solution."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CustomPriceDetails",
+    "properties": {
+      "pricesheet": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "benefits": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 0,
+        "description": "Array of benefits."
+      },
+      "markups": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 0,
+        "description": "List of markups."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Sum"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "All"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AHUB"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Reservations"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/41"
+      },
+      {
+        "$ref": "#/42"
+      },
+      {
+        "$ref": "#/43"
+      },
+      {
+        "$ref": "#/44"
+      },
+      {
+        "$ref": "#/45"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/46"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Markup",
+    "properties": {
+      "percentage": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/48"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CustomPrice"
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.CostManagement/showbackRules@2019-03-01-preview",
+    "scopeType": 16,
+    "body": {
+      "$ref": "#/25"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.CostManagement/externalBillingAccounts"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-03-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.CostManagement/externalBillingAccounts",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "ExternalBillingAccount kind (eg aws)"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/55"
+        },
+        "flags": 2,
+        "description": "ExternalBillingAccount properties"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExternalBillingAccountProperties",
+    "properties": {
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "ExternalBillingAccount DisplayName"
+      },
+      "providerBillingAccountId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Provider BillingAccountId (eg AWS Consolidated Account number)"
+      },
+      "connectorId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Underlying ConnectorId"
+      },
+      "collectionInfo": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 2,
+        "description": "Collection information"
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.CostManagement/externalBillingAccounts@2019-03-01-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/54"
+    },
+    "flags": 1
+  }
+]

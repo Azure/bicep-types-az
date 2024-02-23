@@ -1,1 +1,3572 @@
-[{"13":{}},{"6":{"Value":"PaloAltoNetworks.Cloudngfw/globalRulestacks"}},{"6":{"Value":"2023-09-01-preview"}},{"2":{"Name":"PaloAltoNetworks.Cloudngfw/globalRulestacks","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":1,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":2,"Flags":10,"Description":"The resource api version"},"properties":{"Type":4,"Flags":1,"Description":"The resource-specific properties for this resource."},"location":{"Type":0,"Flags":1,"Description":"Global Location"},"identity":{"Type":24,"Flags":0,"Description":"The managed service identities assigned to this resource."},"systemData":{"Type":32,"Flags":2,"Description":"Azure Resource Manager metadata containing createdBy and modifiedBy information."}}}},{"2":{"Name":"RulestackProperties","Properties":{"panEtag":{"Type":0,"Flags":0,"Description":"PanEtag info"},"panLocation":{"Type":0,"Flags":0,"Description":"Rulestack Location, Required for GlobalRulestacks, Not for LocalRulestacks"},"scope":{"Type":7,"Flags":0,"Description":"Rulestack Type"},"associatedSubscriptions":{"Type":8,"Flags":0,"Description":"subscription scope of global rulestack"},"description":{"Type":0,"Flags":0,"Description":"rulestack description"},"defaultMode":{"Type":12,"Flags":0,"Description":"Mode for default rules creation"},"minAppIdVersion":{"Type":0,"Flags":0,"Description":"minimum version"},"provisioningState":{"Type":22,"Flags":2,"Description":"Provisioning state of the resource."},"securityServices":{"Type":23,"Flags":0,"Description":"Security Profile"}}}},{"6":{"Value":"LOCAL"}},{"6":{"Value":"GLOBAL"}},{"5":{"Elements":[5,6,0]}},{"3":{"ItemType":0}},{"6":{"Value":"IPS"}},{"6":{"Value":"FIREWALL"}},{"6":{"Value":"NONE"}},{"5":{"Elements":[9,10,11,0]}},{"6":{"Value":"Accepted"}},{"6":{"Value":"Creating"}},{"6":{"Value":"Updating"}},{"6":{"Value":"Deleting"}},{"6":{"Value":"Succeeded"}},{"6":{"Value":"Failed"}},{"6":{"Value":"Canceled"}},{"6":{"Value":"Deleted"}},{"6":{"Value":"NotSpecified"}},{"5":{"Elements":[13,14,15,16,17,18,19,20,21,0]}},{"2":{"Name":"SecurityServices","Properties":{"vulnerabilityProfile":{"Type":0,"Flags":0,"Description":"IPs Vulnerability Profile Data"},"antiSpywareProfile":{"Type":0,"Flags":0,"Description":"Anti spyware Profile data"},"antiVirusProfile":{"Type":0,"Flags":0,"Description":"anti virus profile data"},"urlFilteringProfile":{"Type":0,"Flags":0,"Description":"URL filtering profile data"},"fileBlockingProfile":{"Type":0,"Flags":0,"Description":"File blocking profile data"},"dnsSubscription":{"Type":0,"Flags":0,"Description":"DNS Subscription profile data"},"outboundUnTrustCertificate":{"Type":0,"Flags":0,"Description":"Untrusted Egress Decryption profile data"},"outboundTrustCertificate":{"Type":0,"Flags":0,"Description":"Trusted Egress Decryption profile data"}}}},{"2":{"Name":"AzureResourceManagerManagedIdentityProperties","Properties":{"tenantId":{"Type":0,"Flags":2,"Description":"The Active Directory tenant id of the principal."},"principalId":{"Type":0,"Flags":2,"Description":"The active directory identifier of this principal."},"type":{"Type":29,"Flags":1,"Description":"The type of managed identity assigned to this resource."},"userAssignedIdentities":{"Type":31,"Flags":0,"Description":"The identities assigned to this resource by the user."}}}},{"6":{"Value":"None"}},{"6":{"Value":"SystemAssigned"}},{"6":{"Value":"UserAssigned"}},{"6":{"Value":"SystemAssigned,UserAssigned"}},{"5":{"Elements":[25,26,27,28,0]}},{"2":{"Name":"AzureResourceManagerUserAssignedIdentity","Properties":{"clientId":{"Type":0,"Flags":0,"Description":"The active directory client identifier for this principal."},"principalId":{"Type":0,"Flags":0,"Description":"The active directory identifier for this principal."}}}},{"2":{"Name":"AzureResourceManagerManagedIdentityPropertiesUserAssignedIdentities","Properties":{},"AdditionalProperties":30}},{"2":{"Name":"SystemData","Properties":{"createdBy":{"Type":0,"Flags":0,"Description":"The identity that created the resource."},"createdByType":{"Type":37,"Flags":0,"Description":"The type of identity that created the resource."},"createdAt":{"Type":0,"Flags":0,"Description":"The timestamp of resource creation (UTC)."},"lastModifiedBy":{"Type":0,"Flags":0,"Description":"The identity that last modified the resource."},"lastModifiedByType":{"Type":42,"Flags":0,"Description":"The type of identity that last modified the resource."},"lastModifiedAt":{"Type":0,"Flags":0,"Description":"The timestamp of resource last modification (UTC)"}}}},{"6":{"Value":"User"}},{"6":{"Value":"Application"}},{"6":{"Value":"ManagedIdentity"}},{"6":{"Value":"Key"}},{"5":{"Elements":[33,34,35,36,0]}},{"6":{"Value":"User"}},{"6":{"Value":"Application"}},{"6":{"Value":"ManagedIdentity"}},{"6":{"Value":"Key"}},{"5":{"Elements":[38,39,40,41,0]}},{"4":{"Name":"PaloAltoNetworks.Cloudngfw/globalRulestacks@2023-09-01-preview","ScopeType":1,"Body":3,"Flags":0}},{"6":{"Value":"PaloAltoNetworks.Cloudngfw/globalRulestacks/certificates"}},{"6":{"Value":"2023-09-01-preview"}},{"2":{"Name":"PaloAltoNetworks.Cloudngfw/globalRulestacks/certificates","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":44,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":45,"Flags":10,"Description":"The resource api version"},"properties":{"Type":47,"Flags":1,"Description":"The resource-specific properties for this resource."},"systemData":{"Type":32,"Flags":2,"Description":"Azure Resource Manager metadata containing createdBy and modifiedBy information."}}}},{"2":{"Name":"CertificateObject","Properties":{"certificateSignerResourceId":{"Type":0,"Flags":0,"Description":"Resource Id of certificate signer, to be populated only when certificateSelfSigned is false"},"certificateSelfSigned":{"Type":50,"Flags":1,"Description":"use certificate self signed"},"auditComment":{"Type":0,"Flags":0,"Description":"comment for this object"},"description":{"Type":0,"Flags":0,"Description":"user description for this object"},"etag":{"Type":0,"Flags":0,"Description":"read only string representing last create or update"},"provisioningState":{"Type":60,"Flags":2,"Description":"Provisioning state of the resource."}}}},{"6":{"Value":"TRUE"}},{"6":{"Value":"FALSE"}},{"5":{"Elements":[48,49,0]}},{"6":{"Value":"Accepted"}},{"6":{"Value":"Creating"}},{"6":{"Value":"Updating"}},{"6":{"Value":"Deleting"}},{"6":{"Value":"Succeeded"}},{"6":{"Value":"Failed"}},{"6":{"Value":"Canceled"}},{"6":{"Value":"Deleted"}},{"6":{"Value":"NotSpecified"}},{"5":{"Elements":[51,52,53,54,55,56,57,58,59,0]}},{"4":{"Name":"PaloAltoNetworks.Cloudngfw/globalRulestacks/certificates@2023-09-01-preview","ScopeType":1,"Body":46,"Flags":0}},{"6":{"Value":"PaloAltoNetworks.Cloudngfw/globalRulestacks/fqdnlists"}},{"6":{"Value":"2023-09-01-preview"}},{"2":{"Name":"PaloAltoNetworks.Cloudngfw/globalRulestacks/fqdnlists","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":62,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":63,"Flags":10,"Description":"The resource api version"},"properties":{"Type":65,"Flags":1,"Description":"The resource-specific properties for this resource."},"systemData":{"Type":32,"Flags":2,"Description":"Azure Resource Manager metadata containing createdBy and modifiedBy information."}}}},{"2":{"Name":"FqdnObject","Properties":{"description":{"Type":0,"Flags":0,"Description":"fqdn object description"},"fqdnList":{"Type":66,"Flags":1,"Description":"fqdn list"},"etag":{"Type":0,"Flags":0,"Description":"etag info"},"auditComment":{"Type":0,"Flags":0,"Description":"comment for this object"},"provisioningState":{"Type":76,"Flags":2,"Description":"Provisioning state of the resource."}}}},{"3":{"ItemType":0}},{"6":{"Value":"Accepted"}},{"6":{"Value":"Creating"}},{"6":{"Value":"Updating"}},{"6":{"Value":"Deleting"}},{"6":{"Value":"Succeeded"}},{"6":{"Value":"Failed"}},{"6":{"Value":"Canceled"}},{"6":{"Value":"Deleted"}},{"6":{"Value":"NotSpecified"}},{"5":{"Elements":[67,68,69,70,71,72,73,74,75,0]}},{"4":{"Name":"PaloAltoNetworks.Cloudngfw/globalRulestacks/fqdnlists@2023-09-01-preview","ScopeType":1,"Body":64,"Flags":0}},{"6":{"Value":"PaloAltoNetworks.Cloudngfw/globalRulestacks/postRules"}},{"6":{"Value":"2023-09-01-preview"}},{"2":{"Name":"PaloAltoNetworks.Cloudngfw/globalRulestacks/postRules","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":78,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":79,"Flags":10,"Description":"The resource api version"},"properties":{"Type":81,"Flags":1,"Description":"The resource-specific properties for this resource."},"systemData":{"Type":32,"Flags":2,"Description":"Azure Resource Manager metadata containing createdBy and modifiedBy information."}}}},{"2":{"Name":"RuleEntry","Properties":{"etag":{"Type":0,"Flags":0,"Description":"etag info"},"ruleName":{"Type":0,"Flags":1,"Description":"rule name"},"priority":{"Type":82,"Flags":2},"description":{"Type":0,"Flags":0,"Description":"rule description"},"ruleState":{"Type":85,"Flags":0,"Description":"state of this rule"},"source":{"Type":86,"Flags":0,"Description":"source address"},"negateSource":{"Type":93,"Flags":0,"Description":"cidr should not be 'any'"},"destination":{"Type":94,"Flags":0,"Description":"destination address"},"negateDestination":{"Type":102,"Flags":0,"Description":"cidr should not be 'any'"},"applications":{"Type":103,"Flags":0,"Description":"array of rule applications"},"category":{"Type":104,"Flags":0,"Description":"rule category"},"protocol":{"Type":0,"Flags":0,"Description":"any, application-default, TCP:number, UDP:number"},"protocolPortList":{"Type":107,"Flags":0,"Description":"prot port list"},"inboundInspectionCertificate":{"Type":0,"Flags":0,"Description":"inbound Inspection Certificate"},"auditComment":{"Type":0,"Flags":0,"Description":"rule comment"},"actionType":{"Type":112,"Flags":0,"Description":"rule action"},"enableLogging":{"Type":115,"Flags":0,"Description":"enable or disable logging"},"decryptionRuleType":{"Type":119,"Flags":0,"Description":"enable or disable decryption"},"tags":{"Type":121,"Flags":0,"Description":"tag for rule"},"provisioningState":{"Type":131,"Flags":2,"Description":"Provisioning state of the resource."}}}},{"12":{}},{"6":{"Value":"DISABLED"}},{"6":{"Value":"ENABLED"}},{"5":{"Elements":[83,84,0]}},{"2":{"Name":"SourceAddr","Properties":{"cidrs":{"Type":87,"Flags":0,"Description":"special value 'any'"},"countries":{"Type":88,"Flags":0,"Description":"list of countries"},"feeds":{"Type":89,"Flags":0,"Description":"list of feeds"},"prefixLists":{"Type":90,"Flags":0,"Description":"prefix list"}}}},{"3":{"ItemType":0}},{"3":{"ItemType":0}},{"3":{"ItemType":0}},{"3":{"ItemType":0}},{"6":{"Value":"TRUE"}},{"6":{"Value":"FALSE"}},{"5":{"Elements":[91,92,0]}},{"2":{"Name":"DestinationAddr","Properties":{"cidrs":{"Type":95,"Flags":0,"Description":"special value 'any'"},"countries":{"Type":96,"Flags":0,"Description":"list of countries"},"feeds":{"Type":97,"Flags":0,"Description":"list of feeds"},"prefixLists":{"Type":98,"Flags":0,"Description":"prefix list"},"fqdnLists":{"Type":99,"Flags":0,"Description":"fqdn list"}}}},{"3":{"ItemType":0}},{"3":{"ItemType":0}},{"3":{"ItemType":0}},{"3":{"ItemType":0}},{"3":{"ItemType":0}},{"6":{"Value":"TRUE"}},{"6":{"Value":"FALSE"}},{"5":{"Elements":[100,101,0]}},{"3":{"ItemType":0}},{"2":{"Name":"Category","Properties":{"urlCustom":{"Type":105,"Flags":1,"Description":"custom URL"},"feeds":{"Type":106,"Flags":1,"Description":"feed list"}}}},{"3":{"ItemType":0}},{"3":{"ItemType":0}},{"3":{"ItemType":0}},{"6":{"Value":"Allow"}},{"6":{"Value":"DenySilent"}},{"6":{"Value":"DenyResetServer"}},{"6":{"Value":"DenyResetBoth"}},{"5":{"Elements":[108,109,110,111,0]}},{"6":{"Value":"DISABLED"}},{"6":{"Value":"ENABLED"}},{"5":{"Elements":[113,114,0]}},{"6":{"Value":"SSLOutboundInspection"}},{"6":{"Value":"SSLInboundInspection"}},{"6":{"Value":"None"}},{"5":{"Elements":[116,117,118,0]}},{"2":{"Name":"TagInfo","Properties":{"key":{"Type":0,"Flags":1,"Description":"tag name"},"value":{"Type":0,"Flags":1,"Description":"tag value"}}}},{"3":{"ItemType":120}},{"6":{"Value":"Accepted"}},{"6":{"Value":"Creating"}},{"6":{"Value":"Updating"}},{"6":{"Value":"Deleting"}},{"6":{"Value":"Succeeded"}},{"6":{"Value":"Failed"}},{"6":{"Value":"Canceled"}},{"6":{"Value":"Deleted"}},{"6":{"Value":"NotSpecified"}},{"5":{"Elements":[122,123,124,125,126,127,128,129,130,0]}},{"4":{"Name":"PaloAltoNetworks.Cloudngfw/globalRulestacks/postRules@2023-09-01-preview","ScopeType":1,"Body":80,"Flags":0}},{"6":{"Value":"PaloAltoNetworks.Cloudngfw/globalRulestacks/prefixlists"}},{"6":{"Value":"2023-09-01-preview"}},{"2":{"Name":"PaloAltoNetworks.Cloudngfw/globalRulestacks/prefixlists","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":133,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":134,"Flags":10,"Description":"The resource api version"},"properties":{"Type":136,"Flags":1,"Description":"The resource-specific properties for this resource."},"systemData":{"Type":32,"Flags":2,"Description":"Azure Resource Manager metadata containing createdBy and modifiedBy information."}}}},{"2":{"Name":"PrefixObject","Properties":{"description":{"Type":0,"Flags":0,"Description":"prefix description"},"prefixList":{"Type":137,"Flags":1,"Description":"prefix list"},"etag":{"Type":0,"Flags":0,"Description":"etag info"},"auditComment":{"Type":0,"Flags":0,"Description":"comment for this object"},"provisioningState":{"Type":147,"Flags":2,"Description":"Provisioning state of the resource."}}}},{"3":{"ItemType":0}},{"6":{"Value":"Accepted"}},{"6":{"Value":"Creating"}},{"6":{"Value":"Updating"}},{"6":{"Value":"Deleting"}},{"6":{"Value":"Succeeded"}},{"6":{"Value":"Failed"}},{"6":{"Value":"Canceled"}},{"6":{"Value":"Deleted"}},{"6":{"Value":"NotSpecified"}},{"5":{"Elements":[138,139,140,141,142,143,144,145,146,0]}},{"4":{"Name":"PaloAltoNetworks.Cloudngfw/globalRulestacks/prefixlists@2023-09-01-preview","ScopeType":1,"Body":135,"Flags":0}},{"6":{"Value":"PaloAltoNetworks.Cloudngfw/globalRulestacks/preRules"}},{"6":{"Value":"2023-09-01-preview"}},{"2":{"Name":"PaloAltoNetworks.Cloudngfw/globalRulestacks/preRules","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":149,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":150,"Flags":10,"Description":"The resource api version"},"properties":{"Type":81,"Flags":1,"Description":"The resource-specific properties for this resource."},"systemData":{"Type":32,"Flags":2,"Description":"Azure Resource Manager metadata containing createdBy and modifiedBy information."}}}},{"4":{"Name":"PaloAltoNetworks.Cloudngfw/globalRulestacks/preRules@2023-09-01-preview","ScopeType":1,"Body":151,"Flags":0}},{"6":{"Value":"PaloAltoNetworks.Cloudngfw/firewalls"}},{"6":{"Value":"2023-09-01-preview"}},{"2":{"Name":"PaloAltoNetworks.Cloudngfw/firewalls","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":153,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":154,"Flags":10,"Description":"The resource api version"},"properties":{"Type":156,"Flags":1,"Description":"The resource-specific properties for this resource."},"identity":{"Type":24,"Flags":0,"Description":"The managed service identities assigned to this resource."},"tags":{"Type":216,"Flags":0,"Description":"Resource tags."},"location":{"Type":0,"Flags":1,"Description":"The geo-location where the resource lives"},"systemData":{"Type":32,"Flags":2,"Description":"Azure Resource Manager metadata containing createdBy and modifiedBy information."}}}},{"2":{"Name":"FirewallDeploymentProperties","Properties":{"panEtag":{"Type":0,"Flags":0,"Description":"panEtag info"},"networkProfile":{"Type":157,"Flags":1,"Description":"Network settings"},"isPanoramaManaged":{"Type":173,"Flags":0,"Description":"Panorama Managed: Default is False. Default will be CloudSec managed"},"panoramaConfig":{"Type":174,"Flags":0,"Description":"Panorama Configuration"},"associatedRulestack":{"Type":175,"Flags":0,"Description":"Associated Rulestack"},"dnsSettings":{"Type":176,"Flags":1,"Description":"DNS settings for Firewall"},"frontEndSettings":{"Type":189,"Flags":0,"Description":"Frontend settings for Firewall"},"provisioningState":{"Type":199,"Flags":2,"Description":"Provisioning state of the resource."},"planData":{"Type":200,"Flags":1,"Description":"Billing plan information."},"marketplaceDetails":{"Type":208,"Flags":1,"Description":"Marketplace details"}}}},{"2":{"Name":"NetworkProfile","Properties":{"vnetConfiguration":{"Type":158,"Flags":0,"Description":"Vnet configurations"},"vwanConfiguration":{"Type":161,"Flags":0,"Description":"Vwan configurations"},"networkType":{"Type":164,"Flags":1,"Description":"vnet or vwan, cannot be updated"},"publicIps":{"Type":165,"Flags":1,"Description":"List of IPs associated with the Firewall"},"enableEgressNat":{"Type":168,"Flags":1,"Description":"Enable egress NAT, enabled by default"},"egressNatIp":{"Type":169,"Flags":0,"Description":"Egress nat IP to use"},"trustedRanges":{"Type":170,"Flags":0,"Description":"Non-RFC 1918 address"}}}},{"2":{"Name":"VnetConfiguration","Properties":{"vnet":{"Type":159,"Flags":1,"Description":"Azure Virtual Network"},"trustSubnet":{"Type":159,"Flags":1,"Description":"Trust Subnet"},"unTrustSubnet":{"Type":159,"Flags":1,"Description":"Untrust Subnet"},"ipOfTrustSubnetForUdr":{"Type":160,"Flags":0,"Description":"IP of trust subnet for UDR"}}}},{"2":{"Name":"IPAddressSpace","Properties":{"resourceId":{"Type":0,"Flags":0,"Description":"Resource Id"},"addressSpace":{"Type":0,"Flags":0,"Description":"Address Space"}}}},{"2":{"Name":"IPAddress","Properties":{"resourceId":{"Type":0,"Flags":0,"Description":"Resource Id"},"address":{"Type":0,"Flags":0,"Description":"Address value"}}}},{"2":{"Name":"VwanConfiguration","Properties":{"networkVirtualApplianceId":{"Type":0,"Flags":0,"Description":"Network Virtual Appliance resource ID"},"vHub":{"Type":159,"Flags":1,"Description":"vHub Address"},"trustSubnet":{"Type":159,"Flags":0,"Description":"Trust Subnet"},"unTrustSubnet":{"Type":159,"Flags":0,"Description":"Untrust Subnet"},"ipOfTrustSubnetForUdr":{"Type":160,"Flags":0,"Description":"IP of trust subnet for UDR"}}}},{"6":{"Value":"VNET"}},{"6":{"Value":"VWAN"}},{"5":{"Elements":[162,163,0]}},{"3":{"ItemType":160}},{"6":{"Value":"DISABLED"}},{"6":{"Value":"ENABLED"}},{"5":{"Elements":[166,167,0]}},{"3":{"ItemType":160}},{"3":{"ItemType":0}},{"6":{"Value":"TRUE"}},{"6":{"Value":"FALSE"}},{"5":{"Elements":[171,172,0]}},{"2":{"Name":"PanoramaConfig","Properties":{"configString":{"Type":0,"Flags":1,"Description":"Base64 encoded string representing Panorama parameters to be used by Firewall to connect to Panorama. This string is generated via azure plugin in Panorama"},"vmAuthKey":{"Type":0,"Flags":2,"Description":"VM auth key for panorama connectivity"},"panoramaServer":{"Type":0,"Flags":2,"Description":"Primary Panorama Server IP address value in dotted format for IPv4"},"panoramaServer2":{"Type":0,"Flags":2,"Description":"Secondary Panorama Server IP address value in dotted format for IPv4"},"dgName":{"Type":0,"Flags":2,"Description":"Panorama Device Group to join"},"tplName":{"Type":0,"Flags":2,"Description":"Panorama Template Stack to join - (Once configured we can not edit the value)"},"cgName":{"Type":0,"Flags":2,"Description":"Panorama Collector Group to join - (Once configured we can not edit the value)"},"hostName":{"Type":0,"Flags":2,"Description":"Resource name(may be unique) for PN admin"}}}},{"2":{"Name":"RulestackDetails","Properties":{"resourceId":{"Type":0,"Flags":0,"Description":"Resource Id"},"rulestackId":{"Type":0,"Flags":0,"Description":"Associated rulestack Id"},"location":{"Type":0,"Flags":0,"Description":"Rulestack location"}}}},{"2":{"Name":"DNSSettings","Properties":{"enableDnsProxy":{"Type":179,"Flags":0,"Description":"Enable DNS proxy, disabled by default"},"enabledDnsType":{"Type":182,"Flags":0,"Description":"Enabled DNS proxy type, disabled by default"},"dnsServers":{"Type":183,"Flags":0,"Description":"List of IPs associated with the Firewall"}}}},{"6":{"Value":"DISABLED"}},{"6":{"Value":"ENABLED"}},{"5":{"Elements":[177,178,0]}},{"6":{"Value":"CUSTOM"}},{"6":{"Value":"AZURE"}},{"5":{"Elements":[180,181,0]}},{"3":{"ItemType":160}},{"2":{"Name":"FrontendSetting","Properties":{"name":{"Type":0,"Flags":1,"Description":"Settings name"},"protocol":{"Type":187,"Flags":1,"Description":"Protocol Type"},"frontendConfiguration":{"Type":188,"Flags":1,"Description":"Frontend configurations"},"backendConfiguration":{"Type":188,"Flags":1,"Description":"Backend configurations"}}}},{"6":{"Value":"TCP"}},{"6":{"Value":"UDP"}},{"5":{"Elements":[185,186,0]}},{"2":{"Name":"EndpointConfiguration","Properties":{"port":{"Type":0,"Flags":1,"Description":"port ID"},"address":{"Type":160,"Flags":1,"Description":"Address Space"}}}},{"3":{"ItemType":184}},{"6":{"Value":"Accepted"}},{"6":{"Value":"Creating"}},{"6":{"Value":"Updating"}},{"6":{"Value":"Deleting"}},{"6":{"Value":"Succeeded"}},{"6":{"Value":"Failed"}},{"6":{"Value":"Canceled"}},{"6":{"Value":"Deleted"}},{"6":{"Value":"NotSpecified"}},{"5":{"Elements":[190,191,192,193,194,195,196,197,198,0]}},{"2":{"Name":"PlanData","Properties":{"usageType":{"Type":203,"Flags":0,"Description":"different usage type like PAYG/COMMITTED"},"billingCycle":{"Type":206,"Flags":1,"Description":"different billing cycles like MONTHLY/WEEKLY"},"planId":{"Type":207,"Flags":1,"Description":"plan id as published by Liftr.PAN"},"effectiveDate":{"Type":0,"Flags":2,"Description":"date when plan was applied"}}}},{"6":{"Value":"PAYG"}},{"6":{"Value":"COMMITTED"}},{"5":{"Elements":[201,202,0]}},{"6":{"Value":"WEEKLY"}},{"6":{"Value":"MONTHLY"}},{"5":{"Elements":[204,205,0]}},{"13":{"MaxLength":50}},{"2":{"Name":"MarketplaceDetails","Properties":{"marketplaceSubscriptionId":{"Type":0,"Flags":2,"Description":"Marketplace Subscription Id"},"offerId":{"Type":0,"Flags":1,"Description":"Offer Id"},"publisherId":{"Type":0,"Flags":1,"Description":"Publisher Id"},"marketplaceSubscriptionStatus":{"Type":215,"Flags":0,"Description":"Marketplace Subscription Status"}}}},{"6":{"Value":"PendingFulfillmentStart"}},{"6":{"Value":"Subscribed"}},{"6":{"Value":"Suspended"}},{"6":{"Value":"Unsubscribed"}},{"6":{"Value":"NotStarted"}},{"6":{"Value":"FulfillmentRequested"}},{"5":{"Elements":[209,210,211,212,213,214,0]}},{"2":{"Name":"TrackedResourceTags","Properties":{},"AdditionalProperties":0}},{"4":{"Name":"PaloAltoNetworks.Cloudngfw/firewalls@2023-09-01-preview","ScopeType":8,"Body":155,"Flags":0}},{"6":{"Value":"PaloAltoNetworks.Cloudngfw/localRulestacks"}},{"6":{"Value":"2023-09-01-preview"}},{"2":{"Name":"PaloAltoNetworks.Cloudngfw/localRulestacks","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":218,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":219,"Flags":10,"Description":"The resource api version"},"properties":{"Type":4,"Flags":1,"Description":"The resource-specific properties for this resource."},"identity":{"Type":24,"Flags":0,"Description":"The managed service identities assigned to this resource."},"tags":{"Type":221,"Flags":0,"Description":"Resource tags."},"location":{"Type":0,"Flags":1,"Description":"The geo-location where the resource lives"},"systemData":{"Type":32,"Flags":2,"Description":"Azure Resource Manager metadata containing createdBy and modifiedBy information."}}}},{"2":{"Name":"TrackedResourceTags","Properties":{},"AdditionalProperties":0}},{"4":{"Name":"PaloAltoNetworks.Cloudngfw/localRulestacks@2023-09-01-preview","ScopeType":8,"Body":220,"Flags":0}},{"6":{"Value":"PaloAltoNetworks.Cloudngfw/localRulestacks/certificates"}},{"6":{"Value":"2023-09-01-preview"}},{"2":{"Name":"PaloAltoNetworks.Cloudngfw/localRulestacks/certificates","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":223,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":224,"Flags":10,"Description":"The resource api version"},"properties":{"Type":47,"Flags":1,"Description":"The resource-specific properties for this resource."},"systemData":{"Type":32,"Flags":2,"Description":"Azure Resource Manager metadata containing createdBy and modifiedBy information."}}}},{"4":{"Name":"PaloAltoNetworks.Cloudngfw/localRulestacks/certificates@2023-09-01-preview","ScopeType":8,"Body":225,"Flags":0}},{"6":{"Value":"PaloAltoNetworks.Cloudngfw/localRulestacks/fqdnlists"}},{"6":{"Value":"2023-09-01-preview"}},{"2":{"Name":"PaloAltoNetworks.Cloudngfw/localRulestacks/fqdnlists","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":227,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":228,"Flags":10,"Description":"The resource api version"},"properties":{"Type":65,"Flags":1,"Description":"The resource-specific properties for this resource."},"systemData":{"Type":32,"Flags":2,"Description":"Azure Resource Manager metadata containing createdBy and modifiedBy information."}}}},{"4":{"Name":"PaloAltoNetworks.Cloudngfw/localRulestacks/fqdnlists@2023-09-01-preview","ScopeType":8,"Body":229,"Flags":0}},{"6":{"Value":"PaloAltoNetworks.Cloudngfw/localRulestacks/localRules"}},{"6":{"Value":"2023-09-01-preview"}},{"2":{"Name":"PaloAltoNetworks.Cloudngfw/localRulestacks/localRules","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":231,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":232,"Flags":10,"Description":"The resource api version"},"properties":{"Type":81,"Flags":1,"Description":"The resource-specific properties for this resource."},"systemData":{"Type":32,"Flags":2,"Description":"Azure Resource Manager metadata containing createdBy and modifiedBy information."}}}},{"4":{"Name":"PaloAltoNetworks.Cloudngfw/localRulestacks/localRules@2023-09-01-preview","ScopeType":8,"Body":233,"Flags":0}},{"6":{"Value":"PaloAltoNetworks.Cloudngfw/localRulestacks/prefixlists"}},{"6":{"Value":"2023-09-01-preview"}},{"2":{"Name":"PaloAltoNetworks.Cloudngfw/localRulestacks/prefixlists","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":235,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":236,"Flags":10,"Description":"The resource api version"},"properties":{"Type":136,"Flags":1,"Description":"The resource-specific properties for this resource."},"systemData":{"Type":32,"Flags":2,"Description":"Azure Resource Manager metadata containing createdBy and modifiedBy information."}}}},{"4":{"Name":"PaloAltoNetworks.Cloudngfw/localRulestacks/prefixlists@2023-09-01-preview","ScopeType":8,"Body":237,"Flags":0}},{"6":{"Value":"default"}},{"6":{"Value":"PaloAltoNetworks.Cloudngfw/firewalls/statuses"}},{"6":{"Value":"2023-09-01-preview"}},{"2":{"Name":"PaloAltoNetworks.Cloudngfw/firewalls/statuses","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":239,"Flags":9,"Description":"The resource name"},"type":{"Type":240,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":241,"Flags":10,"Description":"The resource api version"},"properties":{"Type":243,"Flags":2,"Description":"The resource-specific properties for this resource."},"systemData":{"Type":32,"Flags":2,"Description":"Azure Resource Manager metadata containing createdBy and modifiedBy information."}}}},{"2":{"Name":"FirewallStatusProperty","Properties":{"isPanoramaManaged":{"Type":246,"Flags":2,"Description":"Panorama Managed: Default is False. Default will be CloudSec managed"},"healthStatus":{"Type":251,"Flags":2,"Description":"Current status of the Firewall"},"healthReason":{"Type":0,"Flags":2,"Description":"Detail description of current health of the Firewall"},"panoramaStatus":{"Type":252,"Flags":2,"Description":"Panorama Status"},"provisioningState":{"Type":262,"Flags":2,"Description":"Provisioning state of the resource."}}}},{"6":{"Value":"TRUE"}},{"6":{"Value":"FALSE"}},{"5":{"Elements":[244,245,0]}},{"6":{"Value":"GREEN"}},{"6":{"Value":"YELLOW"}},{"6":{"Value":"RED"}},{"6":{"Value":"INITIALIZING"}},{"5":{"Elements":[247,248,249,250,0]}},{"2":{"Name":"PanoramaStatus","Properties":{"panoramaServerStatus":{"Type":255,"Flags":2,"Description":"Primary Panorama connection status"},"panoramaServer2Status":{"Type":258,"Flags":2,"Description":"Secondary Panorama connection status"}}}},{"6":{"Value":"UP"}},{"6":{"Value":"DOWN"}},{"5":{"Elements":[253,254,0]}},{"6":{"Value":"UP"}},{"6":{"Value":"DOWN"}},{"5":{"Elements":[256,257,0]}},{"6":{"Value":"Succeeded"}},{"6":{"Value":"Failed"}},{"6":{"Value":"Deleted"}},{"5":{"Elements":[259,260,261,0]}},{"4":{"Name":"PaloAltoNetworks.Cloudngfw/firewalls/statuses@2023-09-01-preview","ScopeType":8,"Body":242,"Flags":1}},{"2":{"Name":"ListAppIdResponse","Properties":{"value":{"Type":265,"Flags":1,"Description":"List of AppIds"},"nextLink":{"Type":0,"Flags":0,"Description":"next Link"}}}},{"3":{"ItemType":0}},{"8":{"Name":"listAppIds","ResourceType":"PaloAltoNetworks.Cloudngfw/globalRulestacks","ApiVersion":"2023-09-01-preview","Output":264}},{"2":{"Name":"CountriesResponse","Properties":{"value":{"Type":269,"Flags":1,"Description":"List of countries"},"nextLink":{"Type":0,"Flags":0,"Description":"next link"}}}},{"2":{"Name":"Country","Properties":{"code":{"Type":0,"Flags":1,"Description":"country code"},"description":{"Type":0,"Flags":0,"Description":"code description"}}}},{"3":{"ItemType":268}},{"8":{"Name":"listCountries","ResourceType":"PaloAltoNetworks.Cloudngfw/globalRulestacks","ApiVersion":"2023-09-01-preview","Output":267}},{"2":{"Name":"ListFirewallsResponse","Properties":{"value":{"Type":272,"Flags":1,"Description":"firewalls list"},"nextLink":{"Type":0,"Flags":0,"Description":"next link"}}}},{"3":{"ItemType":0}},{"8":{"Name":"listFirewalls","ResourceType":"PaloAltoNetworks.Cloudngfw/globalRulestacks","ApiVersion":"2023-09-01-preview","Output":271}},{"2":{"Name":"PredefinedUrlCategoriesResponse","Properties":{"value":{"Type":276,"Flags":1,"Description":"predefined url categories"},"nextLink":{"Type":0,"Flags":0,"Description":"next link"}}}},{"2":{"Name":"PredefinedUrlCategory","Properties":{"action":{"Type":0,"Flags":1},"name":{"Type":0,"Flags":1}}}},{"3":{"ItemType":275}},{"8":{"Name":"listPredefinedUrlCategories","ResourceType":"PaloAltoNetworks.Cloudngfw/globalRulestacks","ApiVersion":"2023-09-01-preview","Output":274}},{"8":{"Name":"listAppIds","ResourceType":"PaloAltoNetworks.Cloudngfw/localRulestacks","ApiVersion":"2023-09-01-preview","Output":264}},{"8":{"Name":"listCountries","ResourceType":"PaloAltoNetworks.Cloudngfw/localRulestacks","ApiVersion":"2023-09-01-preview","Output":267}},{"8":{"Name":"listFirewalls","ResourceType":"PaloAltoNetworks.Cloudngfw/localRulestacks","ApiVersion":"2023-09-01-preview","Output":271}},{"8":{"Name":"listPredefinedUrlCategories","ResourceType":"PaloAltoNetworks.Cloudngfw/localRulestacks","ApiVersion":"2023-09-01-preview","Output":274}}]
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PaloAltoNetworks.Cloudngfw/globalRulestacks"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-09-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PaloAltoNetworks.Cloudngfw/globalRulestacks",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 1,
+        "description": "The resource-specific properties for this resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Global Location"
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "The managed service identities assigned to this resource."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RulestackProperties",
+    "properties": {
+      "panEtag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "PanEtag info"
+      },
+      "panLocation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Rulestack Location, Required for GlobalRulestacks, Not for LocalRulestacks"
+      },
+      "scope": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "Rulestack Type"
+      },
+      "associatedSubscriptions": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 0,
+        "description": "subscription scope of global rulestack"
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "rulestack description"
+      },
+      "defaultMode": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "Mode for default rules creation"
+      },
+      "minAppIdVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "minimum version"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 2,
+        "description": "Provisioning state of the resource."
+      },
+      "securityServices": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0,
+        "description": "Security Profile"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LOCAL"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GLOBAL"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/5"
+      },
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "IPS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FIREWALL"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NONE"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/14"
+      },
+      {
+        "$ref": "#/15"
+      },
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/18"
+      },
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/20"
+      },
+      {
+        "$ref": "#/21"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SecurityServices",
+    "properties": {
+      "vulnerabilityProfile": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "IPs Vulnerability Profile Data"
+      },
+      "antiSpywareProfile": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Anti spyware Profile data"
+      },
+      "antiVirusProfile": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "anti virus profile data"
+      },
+      "urlFilteringProfile": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "URL filtering profile data"
+      },
+      "fileBlockingProfile": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "File blocking profile data"
+      },
+      "dnsSubscription": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "DNS Subscription profile data"
+      },
+      "outboundUnTrustCertificate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Untrusted Egress Decryption profile data"
+      },
+      "outboundTrustCertificate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Trusted Egress Decryption profile data"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureResourceManagerManagedIdentityProperties",
+    "properties": {
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The Active Directory tenant id of the principal."
+      },
+      "principalId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The active directory identifier of this principal."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 1,
+        "description": "The type of managed identity assigned to this resource."
+      },
+      "userAssignedIdentities": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0,
+        "description": "The identities assigned to this resource by the user."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SystemAssigned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UserAssigned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SystemAssigned,UserAssigned"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/25"
+      },
+      {
+        "$ref": "#/26"
+      },
+      {
+        "$ref": "#/27"
+      },
+      {
+        "$ref": "#/28"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureResourceManagerUserAssignedIdentity",
+    "properties": {
+      "clientId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The active directory client identifier for this principal."
+      },
+      "principalId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The active directory identifier for this principal."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureResourceManagerManagedIdentityPropertiesUserAssignedIdentities",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/30"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SystemData",
+    "properties": {
+      "createdBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that created the resource."
+      },
+      "createdByType": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 0,
+        "description": "The type of identity that created the resource."
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource creation (UTC)."
+      },
+      "lastModifiedBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that last modified the resource."
+      },
+      "lastModifiedByType": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 0,
+        "description": "The type of identity that last modified the resource."
+      },
+      "lastModifiedAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource last modification (UTC)"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/33"
+      },
+      {
+        "$ref": "#/34"
+      },
+      {
+        "$ref": "#/35"
+      },
+      {
+        "$ref": "#/36"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/38"
+      },
+      {
+        "$ref": "#/39"
+      },
+      {
+        "$ref": "#/40"
+      },
+      {
+        "$ref": "#/41"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "PaloAltoNetworks.Cloudngfw/globalRulestacks@2023-09-01-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PaloAltoNetworks.Cloudngfw/globalRulestacks/certificates"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-09-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PaloAltoNetworks.Cloudngfw/globalRulestacks/certificates",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 1,
+        "description": "The resource-specific properties for this resource."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CertificateObject",
+    "properties": {
+      "certificateSignerResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource Id of certificate signer, to be populated only when certificateSelfSigned is false"
+      },
+      "certificateSelfSigned": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 1,
+        "description": "use certificate self signed"
+      },
+      "auditComment": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "comment for this object"
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "user description for this object"
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "read only string representing last create or update"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/60"
+        },
+        "flags": 2,
+        "description": "Provisioning state of the resource."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TRUE"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FALSE"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/48"
+      },
+      {
+        "$ref": "#/49"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/51"
+      },
+      {
+        "$ref": "#/52"
+      },
+      {
+        "$ref": "#/53"
+      },
+      {
+        "$ref": "#/54"
+      },
+      {
+        "$ref": "#/55"
+      },
+      {
+        "$ref": "#/56"
+      },
+      {
+        "$ref": "#/57"
+      },
+      {
+        "$ref": "#/58"
+      },
+      {
+        "$ref": "#/59"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "PaloAltoNetworks.Cloudngfw/globalRulestacks/certificates@2023-09-01-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/46"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PaloAltoNetworks.Cloudngfw/globalRulestacks/fqdnlists"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-09-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PaloAltoNetworks.Cloudngfw/globalRulestacks/fqdnlists",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/63"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/65"
+        },
+        "flags": 1,
+        "description": "The resource-specific properties for this resource."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FqdnObject",
+    "properties": {
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "fqdn object description"
+      },
+      "fqdnList": {
+        "type": {
+          "$ref": "#/66"
+        },
+        "flags": 1,
+        "description": "fqdn list"
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "etag info"
+      },
+      "auditComment": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "comment for this object"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/76"
+        },
+        "flags": 2,
+        "description": "Provisioning state of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/67"
+      },
+      {
+        "$ref": "#/68"
+      },
+      {
+        "$ref": "#/69"
+      },
+      {
+        "$ref": "#/70"
+      },
+      {
+        "$ref": "#/71"
+      },
+      {
+        "$ref": "#/72"
+      },
+      {
+        "$ref": "#/73"
+      },
+      {
+        "$ref": "#/74"
+      },
+      {
+        "$ref": "#/75"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "PaloAltoNetworks.Cloudngfw/globalRulestacks/fqdnlists@2023-09-01-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/64"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PaloAltoNetworks.Cloudngfw/globalRulestacks/postRules"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-09-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PaloAltoNetworks.Cloudngfw/globalRulestacks/postRules",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/78"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/79"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/81"
+        },
+        "flags": 1,
+        "description": "The resource-specific properties for this resource."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RuleEntry",
+    "properties": {
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "etag info"
+      },
+      "ruleName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "rule name"
+      },
+      "priority": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 2
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "rule description"
+      },
+      "ruleState": {
+        "type": {
+          "$ref": "#/85"
+        },
+        "flags": 0,
+        "description": "state of this rule"
+      },
+      "source": {
+        "type": {
+          "$ref": "#/86"
+        },
+        "flags": 0,
+        "description": "source address"
+      },
+      "negateSource": {
+        "type": {
+          "$ref": "#/93"
+        },
+        "flags": 0,
+        "description": "cidr should not be 'any'"
+      },
+      "destination": {
+        "type": {
+          "$ref": "#/94"
+        },
+        "flags": 0,
+        "description": "destination address"
+      },
+      "negateDestination": {
+        "type": {
+          "$ref": "#/102"
+        },
+        "flags": 0,
+        "description": "cidr should not be 'any'"
+      },
+      "applications": {
+        "type": {
+          "$ref": "#/103"
+        },
+        "flags": 0,
+        "description": "array of rule applications"
+      },
+      "category": {
+        "type": {
+          "$ref": "#/104"
+        },
+        "flags": 0,
+        "description": "rule category"
+      },
+      "protocol": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "any, application-default, TCP:number, UDP:number"
+      },
+      "protocolPortList": {
+        "type": {
+          "$ref": "#/107"
+        },
+        "flags": 0,
+        "description": "prot port list"
+      },
+      "inboundInspectionCertificate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "inbound Inspection Certificate"
+      },
+      "auditComment": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "rule comment"
+      },
+      "actionType": {
+        "type": {
+          "$ref": "#/112"
+        },
+        "flags": 0,
+        "description": "rule action"
+      },
+      "enableLogging": {
+        "type": {
+          "$ref": "#/115"
+        },
+        "flags": 0,
+        "description": "enable or disable logging"
+      },
+      "decryptionRuleType": {
+        "type": {
+          "$ref": "#/119"
+        },
+        "flags": 0,
+        "description": "enable or disable decryption"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/121"
+        },
+        "flags": 0,
+        "description": "tag for rule"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/131"
+        },
+        "flags": 2,
+        "description": "Provisioning state of the resource."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DISABLED"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ENABLED"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/83"
+      },
+      {
+        "$ref": "#/84"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SourceAddr",
+    "properties": {
+      "cidrs": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 0,
+        "description": "special value 'any'"
+      },
+      "countries": {
+        "type": {
+          "$ref": "#/88"
+        },
+        "flags": 0,
+        "description": "list of countries"
+      },
+      "feeds": {
+        "type": {
+          "$ref": "#/89"
+        },
+        "flags": 0,
+        "description": "list of feeds"
+      },
+      "prefixLists": {
+        "type": {
+          "$ref": "#/90"
+        },
+        "flags": 0,
+        "description": "prefix list"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TRUE"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FALSE"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/91"
+      },
+      {
+        "$ref": "#/92"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DestinationAddr",
+    "properties": {
+      "cidrs": {
+        "type": {
+          "$ref": "#/95"
+        },
+        "flags": 0,
+        "description": "special value 'any'"
+      },
+      "countries": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 0,
+        "description": "list of countries"
+      },
+      "feeds": {
+        "type": {
+          "$ref": "#/97"
+        },
+        "flags": 0,
+        "description": "list of feeds"
+      },
+      "prefixLists": {
+        "type": {
+          "$ref": "#/98"
+        },
+        "flags": 0,
+        "description": "prefix list"
+      },
+      "fqdnLists": {
+        "type": {
+          "$ref": "#/99"
+        },
+        "flags": 0,
+        "description": "fqdn list"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TRUE"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FALSE"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/100"
+      },
+      {
+        "$ref": "#/101"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Category",
+    "properties": {
+      "urlCustom": {
+        "type": {
+          "$ref": "#/105"
+        },
+        "flags": 1,
+        "description": "custom URL"
+      },
+      "feeds": {
+        "type": {
+          "$ref": "#/106"
+        },
+        "flags": 1,
+        "description": "feed list"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Allow"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DenySilent"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DenyResetServer"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DenyResetBoth"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/108"
+      },
+      {
+        "$ref": "#/109"
+      },
+      {
+        "$ref": "#/110"
+      },
+      {
+        "$ref": "#/111"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DISABLED"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ENABLED"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/113"
+      },
+      {
+        "$ref": "#/114"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SSLOutboundInspection"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SSLInboundInspection"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/116"
+      },
+      {
+        "$ref": "#/117"
+      },
+      {
+        "$ref": "#/118"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TagInfo",
+    "properties": {
+      "key": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "tag name"
+      },
+      "value": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "tag value"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/120"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/122"
+      },
+      {
+        "$ref": "#/123"
+      },
+      {
+        "$ref": "#/124"
+      },
+      {
+        "$ref": "#/125"
+      },
+      {
+        "$ref": "#/126"
+      },
+      {
+        "$ref": "#/127"
+      },
+      {
+        "$ref": "#/128"
+      },
+      {
+        "$ref": "#/129"
+      },
+      {
+        "$ref": "#/130"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "PaloAltoNetworks.Cloudngfw/globalRulestacks/postRules@2023-09-01-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/80"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PaloAltoNetworks.Cloudngfw/globalRulestacks/prefixlists"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-09-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PaloAltoNetworks.Cloudngfw/globalRulestacks/prefixlists",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/133"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/134"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/136"
+        },
+        "flags": 1,
+        "description": "The resource-specific properties for this resource."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrefixObject",
+    "properties": {
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "prefix description"
+      },
+      "prefixList": {
+        "type": {
+          "$ref": "#/137"
+        },
+        "flags": 1,
+        "description": "prefix list"
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "etag info"
+      },
+      "auditComment": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "comment for this object"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/147"
+        },
+        "flags": 2,
+        "description": "Provisioning state of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/138"
+      },
+      {
+        "$ref": "#/139"
+      },
+      {
+        "$ref": "#/140"
+      },
+      {
+        "$ref": "#/141"
+      },
+      {
+        "$ref": "#/142"
+      },
+      {
+        "$ref": "#/143"
+      },
+      {
+        "$ref": "#/144"
+      },
+      {
+        "$ref": "#/145"
+      },
+      {
+        "$ref": "#/146"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "PaloAltoNetworks.Cloudngfw/globalRulestacks/prefixlists@2023-09-01-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/135"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PaloAltoNetworks.Cloudngfw/globalRulestacks/preRules"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-09-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PaloAltoNetworks.Cloudngfw/globalRulestacks/preRules",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/149"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/150"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/81"
+        },
+        "flags": 1,
+        "description": "The resource-specific properties for this resource."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "PaloAltoNetworks.Cloudngfw/globalRulestacks/preRules@2023-09-01-preview",
+    "scopeType": 1,
+    "body": {
+      "$ref": "#/151"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PaloAltoNetworks.Cloudngfw/firewalls"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-09-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PaloAltoNetworks.Cloudngfw/firewalls",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/153"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/154"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/156"
+        },
+        "flags": 1,
+        "description": "The resource-specific properties for this resource."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "The managed service identities assigned to this resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/216"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FirewallDeploymentProperties",
+    "properties": {
+      "panEtag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "panEtag info"
+      },
+      "networkProfile": {
+        "type": {
+          "$ref": "#/157"
+        },
+        "flags": 1,
+        "description": "Network settings"
+      },
+      "isPanoramaManaged": {
+        "type": {
+          "$ref": "#/173"
+        },
+        "flags": 0,
+        "description": "Panorama Managed: Default is False. Default will be CloudSec managed"
+      },
+      "panoramaConfig": {
+        "type": {
+          "$ref": "#/174"
+        },
+        "flags": 0,
+        "description": "Panorama Configuration"
+      },
+      "associatedRulestack": {
+        "type": {
+          "$ref": "#/175"
+        },
+        "flags": 0,
+        "description": "Associated Rulestack"
+      },
+      "dnsSettings": {
+        "type": {
+          "$ref": "#/176"
+        },
+        "flags": 1,
+        "description": "DNS settings for Firewall"
+      },
+      "frontEndSettings": {
+        "type": {
+          "$ref": "#/189"
+        },
+        "flags": 0,
+        "description": "Frontend settings for Firewall"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/199"
+        },
+        "flags": 2,
+        "description": "Provisioning state of the resource."
+      },
+      "planData": {
+        "type": {
+          "$ref": "#/200"
+        },
+        "flags": 1,
+        "description": "Billing plan information."
+      },
+      "marketplaceDetails": {
+        "type": {
+          "$ref": "#/208"
+        },
+        "flags": 1,
+        "description": "Marketplace details"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkProfile",
+    "properties": {
+      "vnetConfiguration": {
+        "type": {
+          "$ref": "#/158"
+        },
+        "flags": 0,
+        "description": "Vnet configurations"
+      },
+      "vwanConfiguration": {
+        "type": {
+          "$ref": "#/161"
+        },
+        "flags": 0,
+        "description": "Vwan configurations"
+      },
+      "networkType": {
+        "type": {
+          "$ref": "#/164"
+        },
+        "flags": 1,
+        "description": "vnet or vwan, cannot be updated"
+      },
+      "publicIps": {
+        "type": {
+          "$ref": "#/165"
+        },
+        "flags": 1,
+        "description": "List of IPs associated with the Firewall"
+      },
+      "enableEgressNat": {
+        "type": {
+          "$ref": "#/168"
+        },
+        "flags": 1,
+        "description": "Enable egress NAT, enabled by default"
+      },
+      "egressNatIp": {
+        "type": {
+          "$ref": "#/169"
+        },
+        "flags": 0,
+        "description": "Egress nat IP to use"
+      },
+      "trustedRanges": {
+        "type": {
+          "$ref": "#/170"
+        },
+        "flags": 0,
+        "description": "Non-RFC 1918 address"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VnetConfiguration",
+    "properties": {
+      "vnet": {
+        "type": {
+          "$ref": "#/159"
+        },
+        "flags": 1,
+        "description": "Azure Virtual Network"
+      },
+      "trustSubnet": {
+        "type": {
+          "$ref": "#/159"
+        },
+        "flags": 1,
+        "description": "Trust Subnet"
+      },
+      "unTrustSubnet": {
+        "type": {
+          "$ref": "#/159"
+        },
+        "flags": 1,
+        "description": "Untrust Subnet"
+      },
+      "ipOfTrustSubnetForUdr": {
+        "type": {
+          "$ref": "#/160"
+        },
+        "flags": 0,
+        "description": "IP of trust subnet for UDR"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IPAddressSpace",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource Id"
+      },
+      "addressSpace": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Address Space"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IPAddress",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource Id"
+      },
+      "address": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Address value"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VwanConfiguration",
+    "properties": {
+      "networkVirtualApplianceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Network Virtual Appliance resource ID"
+      },
+      "vHub": {
+        "type": {
+          "$ref": "#/159"
+        },
+        "flags": 1,
+        "description": "vHub Address"
+      },
+      "trustSubnet": {
+        "type": {
+          "$ref": "#/159"
+        },
+        "flags": 0,
+        "description": "Trust Subnet"
+      },
+      "unTrustSubnet": {
+        "type": {
+          "$ref": "#/159"
+        },
+        "flags": 0,
+        "description": "Untrust Subnet"
+      },
+      "ipOfTrustSubnetForUdr": {
+        "type": {
+          "$ref": "#/160"
+        },
+        "flags": 0,
+        "description": "IP of trust subnet for UDR"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VNET"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VWAN"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/162"
+      },
+      {
+        "$ref": "#/163"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/160"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DISABLED"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ENABLED"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/166"
+      },
+      {
+        "$ref": "#/167"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/160"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TRUE"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FALSE"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/171"
+      },
+      {
+        "$ref": "#/172"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PanoramaConfig",
+    "properties": {
+      "configString": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Base64 encoded string representing Panorama parameters to be used by Firewall to connect to Panorama. This string is generated via azure plugin in Panorama"
+      },
+      "vmAuthKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "VM auth key for panorama connectivity"
+      },
+      "panoramaServer": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Primary Panorama Server IP address value in dotted format for IPv4"
+      },
+      "panoramaServer2": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Secondary Panorama Server IP address value in dotted format for IPv4"
+      },
+      "dgName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Panorama Device Group to join"
+      },
+      "tplName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Panorama Template Stack to join - (Once configured we can not edit the value)"
+      },
+      "cgName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Panorama Collector Group to join - (Once configured we can not edit the value)"
+      },
+      "hostName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource name(may be unique) for PN admin"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RulestackDetails",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource Id"
+      },
+      "rulestackId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Associated rulestack Id"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Rulestack location"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DNSSettings",
+    "properties": {
+      "enableDnsProxy": {
+        "type": {
+          "$ref": "#/179"
+        },
+        "flags": 0,
+        "description": "Enable DNS proxy, disabled by default"
+      },
+      "enabledDnsType": {
+        "type": {
+          "$ref": "#/182"
+        },
+        "flags": 0,
+        "description": "Enabled DNS proxy type, disabled by default"
+      },
+      "dnsServers": {
+        "type": {
+          "$ref": "#/183"
+        },
+        "flags": 0,
+        "description": "List of IPs associated with the Firewall"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DISABLED"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ENABLED"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/177"
+      },
+      {
+        "$ref": "#/178"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CUSTOM"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AZURE"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/180"
+      },
+      {
+        "$ref": "#/181"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/160"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FrontendSetting",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Settings name"
+      },
+      "protocol": {
+        "type": {
+          "$ref": "#/187"
+        },
+        "flags": 1,
+        "description": "Protocol Type"
+      },
+      "frontendConfiguration": {
+        "type": {
+          "$ref": "#/188"
+        },
+        "flags": 1,
+        "description": "Frontend configurations"
+      },
+      "backendConfiguration": {
+        "type": {
+          "$ref": "#/188"
+        },
+        "flags": 1,
+        "description": "Backend configurations"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TCP"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UDP"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/185"
+      },
+      {
+        "$ref": "#/186"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EndpointConfiguration",
+    "properties": {
+      "port": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "port ID"
+      },
+      "address": {
+        "type": {
+          "$ref": "#/160"
+        },
+        "flags": 1,
+        "description": "Address Space"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/184"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/190"
+      },
+      {
+        "$ref": "#/191"
+      },
+      {
+        "$ref": "#/192"
+      },
+      {
+        "$ref": "#/193"
+      },
+      {
+        "$ref": "#/194"
+      },
+      {
+        "$ref": "#/195"
+      },
+      {
+        "$ref": "#/196"
+      },
+      {
+        "$ref": "#/197"
+      },
+      {
+        "$ref": "#/198"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PlanData",
+    "properties": {
+      "usageType": {
+        "type": {
+          "$ref": "#/203"
+        },
+        "flags": 0,
+        "description": "different usage type like PAYG/COMMITTED"
+      },
+      "billingCycle": {
+        "type": {
+          "$ref": "#/206"
+        },
+        "flags": 1,
+        "description": "different billing cycles like MONTHLY/WEEKLY"
+      },
+      "planId": {
+        "type": {
+          "$ref": "#/207"
+        },
+        "flags": 1,
+        "description": "plan id as published by Liftr.PAN"
+      },
+      "effectiveDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "date when plan was applied"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PAYG"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "COMMITTED"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/201"
+      },
+      {
+        "$ref": "#/202"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "WEEKLY"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MONTHLY"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/204"
+      },
+      {
+        "$ref": "#/205"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringType",
+    "maxLength": 50
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MarketplaceDetails",
+    "properties": {
+      "marketplaceSubscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Marketplace Subscription Id"
+      },
+      "offerId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Offer Id"
+      },
+      "publisherId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Publisher Id"
+      },
+      "marketplaceSubscriptionStatus": {
+        "type": {
+          "$ref": "#/215"
+        },
+        "flags": 0,
+        "description": "Marketplace Subscription Status"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PendingFulfillmentStart"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Subscribed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Suspended"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unsubscribed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotStarted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FulfillmentRequested"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/209"
+      },
+      {
+        "$ref": "#/210"
+      },
+      {
+        "$ref": "#/211"
+      },
+      {
+        "$ref": "#/212"
+      },
+      {
+        "$ref": "#/213"
+      },
+      {
+        "$ref": "#/214"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "PaloAltoNetworks.Cloudngfw/firewalls@2023-09-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/155"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PaloAltoNetworks.Cloudngfw/localRulestacks"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-09-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PaloAltoNetworks.Cloudngfw/localRulestacks",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/218"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/219"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 1,
+        "description": "The resource-specific properties for this resource."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "The managed service identities assigned to this resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/221"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "PaloAltoNetworks.Cloudngfw/localRulestacks@2023-09-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/220"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PaloAltoNetworks.Cloudngfw/localRulestacks/certificates"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-09-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PaloAltoNetworks.Cloudngfw/localRulestacks/certificates",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/223"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/224"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 1,
+        "description": "The resource-specific properties for this resource."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "PaloAltoNetworks.Cloudngfw/localRulestacks/certificates@2023-09-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/225"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PaloAltoNetworks.Cloudngfw/localRulestacks/fqdnlists"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-09-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PaloAltoNetworks.Cloudngfw/localRulestacks/fqdnlists",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/227"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/228"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/65"
+        },
+        "flags": 1,
+        "description": "The resource-specific properties for this resource."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "PaloAltoNetworks.Cloudngfw/localRulestacks/fqdnlists@2023-09-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/229"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PaloAltoNetworks.Cloudngfw/localRulestacks/localRules"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-09-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PaloAltoNetworks.Cloudngfw/localRulestacks/localRules",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/231"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/232"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/81"
+        },
+        "flags": 1,
+        "description": "The resource-specific properties for this resource."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "PaloAltoNetworks.Cloudngfw/localRulestacks/localRules@2023-09-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/233"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PaloAltoNetworks.Cloudngfw/localRulestacks/prefixlists"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-09-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PaloAltoNetworks.Cloudngfw/localRulestacks/prefixlists",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/235"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/236"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/136"
+        },
+        "flags": 1,
+        "description": "The resource-specific properties for this resource."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "PaloAltoNetworks.Cloudngfw/localRulestacks/prefixlists@2023-09-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/237"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "default"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PaloAltoNetworks.Cloudngfw/firewalls/statuses"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-09-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PaloAltoNetworks.Cloudngfw/firewalls/statuses",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/239"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/240"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/241"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/243"
+        },
+        "flags": 2,
+        "description": "The resource-specific properties for this resource."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FirewallStatusProperty",
+    "properties": {
+      "isPanoramaManaged": {
+        "type": {
+          "$ref": "#/246"
+        },
+        "flags": 2,
+        "description": "Panorama Managed: Default is False. Default will be CloudSec managed"
+      },
+      "healthStatus": {
+        "type": {
+          "$ref": "#/251"
+        },
+        "flags": 2,
+        "description": "Current status of the Firewall"
+      },
+      "healthReason": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Detail description of current health of the Firewall"
+      },
+      "panoramaStatus": {
+        "type": {
+          "$ref": "#/252"
+        },
+        "flags": 2,
+        "description": "Panorama Status"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/262"
+        },
+        "flags": 2,
+        "description": "Provisioning state of the resource."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TRUE"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FALSE"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/244"
+      },
+      {
+        "$ref": "#/245"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GREEN"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "YELLOW"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RED"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "INITIALIZING"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/247"
+      },
+      {
+        "$ref": "#/248"
+      },
+      {
+        "$ref": "#/249"
+      },
+      {
+        "$ref": "#/250"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PanoramaStatus",
+    "properties": {
+      "panoramaServerStatus": {
+        "type": {
+          "$ref": "#/255"
+        },
+        "flags": 2,
+        "description": "Primary Panorama connection status"
+      },
+      "panoramaServer2Status": {
+        "type": {
+          "$ref": "#/258"
+        },
+        "flags": 2,
+        "description": "Secondary Panorama connection status"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UP"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DOWN"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/253"
+      },
+      {
+        "$ref": "#/254"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UP"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DOWN"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/256"
+      },
+      {
+        "$ref": "#/257"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/259"
+      },
+      {
+        "$ref": "#/260"
+      },
+      {
+        "$ref": "#/261"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "PaloAltoNetworks.Cloudngfw/firewalls/statuses@2023-09-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/242"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ListAppIdResponse",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/265"
+        },
+        "flags": 1,
+        "description": "List of AppIds"
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "next Link"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listAppIds",
+    "resourceType": "PaloAltoNetworks.Cloudngfw/globalRulestacks",
+    "apiVersion": "2023-09-01-preview",
+    "output": {
+      "$ref": "#/264"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CountriesResponse",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/269"
+        },
+        "flags": 1,
+        "description": "List of countries"
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "next link"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Country",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "country code"
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "code description"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/268"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listCountries",
+    "resourceType": "PaloAltoNetworks.Cloudngfw/globalRulestacks",
+    "apiVersion": "2023-09-01-preview",
+    "output": {
+      "$ref": "#/267"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ListFirewallsResponse",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/272"
+        },
+        "flags": 1,
+        "description": "firewalls list"
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "next link"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listFirewalls",
+    "resourceType": "PaloAltoNetworks.Cloudngfw/globalRulestacks",
+    "apiVersion": "2023-09-01-preview",
+    "output": {
+      "$ref": "#/271"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PredefinedUrlCategoriesResponse",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/276"
+        },
+        "flags": 1,
+        "description": "predefined url categories"
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "next link"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PredefinedUrlCategory",
+    "properties": {
+      "action": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/275"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listPredefinedUrlCategories",
+    "resourceType": "PaloAltoNetworks.Cloudngfw/globalRulestacks",
+    "apiVersion": "2023-09-01-preview",
+    "output": {
+      "$ref": "#/274"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listAppIds",
+    "resourceType": "PaloAltoNetworks.Cloudngfw/localRulestacks",
+    "apiVersion": "2023-09-01-preview",
+    "output": {
+      "$ref": "#/264"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listCountries",
+    "resourceType": "PaloAltoNetworks.Cloudngfw/localRulestacks",
+    "apiVersion": "2023-09-01-preview",
+    "output": {
+      "$ref": "#/267"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listFirewalls",
+    "resourceType": "PaloAltoNetworks.Cloudngfw/localRulestacks",
+    "apiVersion": "2023-09-01-preview",
+    "output": {
+      "$ref": "#/271"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listPredefinedUrlCategories",
+    "resourceType": "PaloAltoNetworks.Cloudngfw/localRulestacks",
+    "apiVersion": "2023-09-01-preview",
+    "output": {
+      "$ref": "#/274"
+    }
+  }
+]

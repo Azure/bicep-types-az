@@ -1,1 +1,361 @@
-[{"13":{}},{"6":{"Value":"Microsoft.RecoveryServices/vaults/backupFabrics/backupProtectionIntent"}},{"6":{"Value":"2017-07-01"}},{"2":{"Name":"Microsoft.RecoveryServices/vaults/backupFabrics/backupProtectionIntent","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":1,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":2,"Flags":10,"Description":"The resource api version"},"properties":{"Type":4,"Flags":0,"Description":"ProtectionIntentResource properties"},"location":{"Type":0,"Flags":0,"Description":"Resource location."},"tags":{"Type":33,"Flags":0,"Description":"Resource tags."},"eTag":{"Type":0,"Flags":0,"Description":"Optional ETag."}}}},{"7":{"Name":"ProtectionIntent","Discriminator":"protectionIntentItemType","BaseProperties":{"backupManagementType":{"Type":14,"Flags":0,"Description":"Type of backup management for the backed up item."},"sourceResourceId":{"Type":0,"Flags":0,"Description":"ARM ID of the resource to be backed up."},"itemId":{"Type":0,"Flags":0,"Description":"ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId"},"policyId":{"Type":0,"Flags":0,"Description":"ID of the backup policy with which this item is backed up."},"protectionState":{"Type":20,"Flags":0,"Description":"Backup state of this backup item."}},"Elements":{"AzureResourceItem":21,"AzureWorkloadSQLAutoProtectionIntent":23}}},{"6":{"Value":"Invalid"}},{"6":{"Value":"AzureIaasVM"}},{"6":{"Value":"MAB"}},{"6":{"Value":"DPM"}},{"6":{"Value":"AzureBackupServer"}},{"6":{"Value":"AzureSql"}},{"6":{"Value":"AzureStorage"}},{"6":{"Value":"AzureWorkload"}},{"6":{"Value":"DefaultBackup"}},{"5":{"Elements":[5,6,7,8,9,10,11,12,13,0]}},{"6":{"Value":"Invalid"}},{"6":{"Value":"NotProtected"}},{"6":{"Value":"Protecting"}},{"6":{"Value":"Protected"}},{"6":{"Value":"ProtectionFailed"}},{"5":{"Elements":[15,16,17,18,19,0]}},{"2":{"Name":"AzureResourceProtectionIntent","Properties":{"friendlyName":{"Type":0,"Flags":0,"Description":"Friendly name of the VM represented by this backup item."},"protectionIntentItemType":{"Type":22,"Flags":1,"Description":"backup protectionIntent type."}}}},{"6":{"Value":"AzureResourceItem"}},{"2":{"Name":"AzureWorkloadSQLAutoProtectionIntent","Properties":{"workloadItemType":{"Type":31,"Flags":0,"Description":"Workload item type of the item for which intent is to be set"},"protectionIntentItemType":{"Type":32,"Flags":1,"Description":"backup protectionIntent type."}}}},{"6":{"Value":"Invalid"}},{"6":{"Value":"SQLInstance"}},{"6":{"Value":"SQLDataBase"}},{"6":{"Value":"SAPHanaSystem"}},{"6":{"Value":"SAPHanaDatabase"}},{"6":{"Value":"SAPAseSystem"}},{"6":{"Value":"SAPAseDatabase"}},{"5":{"Elements":[24,25,26,27,28,29,30,0]}},{"6":{"Value":"AzureWorkloadSQLAutoProtectionIntent"}},{"2":{"Name":"ResourceTags","Properties":{},"AdditionalProperties":0}},{"4":{"Name":"Microsoft.RecoveryServices/vaults/backupFabrics/backupProtectionIntent@2017-07-01","ScopeType":8,"Body":3,"Flags":0}}]
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.RecoveryServices/vaults/backupFabrics/backupProtectionIntent"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2017-07-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.RecoveryServices/vaults/backupFabrics/backupProtectionIntent",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "ProtectionIntentResource properties"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "eTag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Optional ETag."
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "ProtectionIntent",
+    "discriminator": "protectionIntentItemType",
+    "baseProperties": {
+      "backupManagementType": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 0,
+        "description": "Type of backup management for the backed up item."
+      },
+      "sourceResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "ARM ID of the resource to be backed up."
+      },
+      "itemId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId"
+      },
+      "policyId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "ID of the backup policy with which this item is backed up."
+      },
+      "protectionState": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0,
+        "description": "Backup state of this backup item."
+      }
+    },
+    "elements": {
+      "AzureResourceItem": {
+        "$ref": "#/21"
+      },
+      "AzureWorkloadSQLAutoProtectionIntent": {
+        "$ref": "#/23"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureIaasVM"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MAB"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DPM"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureBackupServer"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureSql"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureStorage"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureWorkload"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DefaultBackup"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/5"
+      },
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotProtected"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Protecting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Protected"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ProtectionFailed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/15"
+      },
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/18"
+      },
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureResourceProtectionIntent",
+    "properties": {
+      "friendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Friendly name of the VM represented by this backup item."
+      },
+      "protectionIntentItemType": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 1,
+        "description": "backup protectionIntent type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureResourceItem"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureWorkloadSQLAutoProtectionIntent",
+    "properties": {
+      "workloadItemType": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0,
+        "description": "Workload item type of the item for which intent is to be set"
+      },
+      "protectionIntentItemType": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 1,
+        "description": "backup protectionIntent type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SQLInstance"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SQLDataBase"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SAPHanaSystem"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SAPHanaDatabase"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SAPAseSystem"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SAPAseDatabase"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/24"
+      },
+      {
+        "$ref": "#/25"
+      },
+      {
+        "$ref": "#/26"
+      },
+      {
+        "$ref": "#/27"
+      },
+      {
+        "$ref": "#/28"
+      },
+      {
+        "$ref": "#/29"
+      },
+      {
+        "$ref": "#/30"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureWorkloadSQLAutoProtectionIntent"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.RecoveryServices/vaults/backupFabrics/backupProtectionIntent@2017-07-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  }
+]

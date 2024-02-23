@@ -1,1 +1,1902 @@
-[{"13":{}},{"6":{"Value":"Microsoft.SecurityInsights/incidents"}},{"6":{"Value":"2021-04-01"}},{"2":{"Name":"Microsoft.SecurityInsights/incidents","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":1,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":2,"Flags":10,"Description":"The resource api version"},"properties":{"Type":4,"Flags":0,"Description":"Incident properties"},"etag":{"Type":0,"Flags":0,"Description":"Etag of the azure resource"},"systemData":{"Type":49,"Flags":2,"Description":"Azure Resource Manager metadata containing createdBy and modifiedBy information."}}}},{"2":{"Name":"IncidentProperties","Properties":{"additionalData":{"Type":5,"Flags":2,"Description":"Additional data on the incident"},"classification":{"Type":26,"Flags":0,"Description":"The reason the incident was closed"},"classificationComment":{"Type":0,"Flags":0,"Description":"Describes the reason the incident was closed"},"classificationReason":{"Type":31,"Flags":0,"Description":"The classification reason the incident was closed with"},"createdTimeUtc":{"Type":0,"Flags":2,"Description":"The time the incident was created"},"description":{"Type":0,"Flags":0,"Description":"The description of the incident"},"firstActivityTimeUtc":{"Type":0,"Flags":0,"Description":"The time of the first activity in the incident"},"incidentUrl":{"Type":0,"Flags":2,"Description":"The deep-link url to the incident in Azure portal"},"incidentNumber":{"Type":6,"Flags":2,"Description":"A sequential number"},"labels":{"Type":36,"Flags":0,"Description":"List of labels relevant to this incident"},"lastActivityTimeUtc":{"Type":0,"Flags":0,"Description":"The time of the last activity in the incident"},"lastModifiedTimeUtc":{"Type":0,"Flags":2,"Description":"The last time the incident was updated"},"owner":{"Type":37,"Flags":0,"Description":"Describes a user that the incident is assigned to"},"relatedAnalyticRuleIds":{"Type":39,"Flags":2,"Description":"List of resource ids of Analytic rules related to the incident"},"severity":{"Type":44,"Flags":1,"Description":"The severity of the incident"},"status":{"Type":48,"Flags":1,"Description":"The status of the incident"},"title":{"Type":0,"Flags":1,"Description":"The title of the incident"}}}},{"2":{"Name":"IncidentAdditionalData","Properties":{"alertsCount":{"Type":6,"Flags":2,"Description":"The number of alerts in the incident"},"bookmarksCount":{"Type":6,"Flags":2,"Description":"The number of bookmarks in the incident"},"commentsCount":{"Type":6,"Flags":2,"Description":"The number of comments in the incident"},"alertProductNames":{"Type":7,"Flags":2,"Description":"List of product names of alerts in the incident"},"tactics":{"Type":21,"Flags":2,"Description":"The tactics associated with incident"}}}},{"12":{}},{"3":{"ItemType":0}},{"6":{"Value":"InitialAccess"}},{"6":{"Value":"Execution"}},{"6":{"Value":"Persistence"}},{"6":{"Value":"PrivilegeEscalation"}},{"6":{"Value":"DefenseEvasion"}},{"6":{"Value":"CredentialAccess"}},{"6":{"Value":"Discovery"}},{"6":{"Value":"LateralMovement"}},{"6":{"Value":"Collection"}},{"6":{"Value":"Exfiltration"}},{"6":{"Value":"CommandAndControl"}},{"6":{"Value":"Impact"}},{"5":{"Elements":[8,9,10,11,12,13,14,15,16,17,18,19,0]}},{"3":{"ItemType":20}},{"6":{"Value":"Undetermined"}},{"6":{"Value":"TruePositive"}},{"6":{"Value":"BenignPositive"}},{"6":{"Value":"FalsePositive"}},{"5":{"Elements":[22,23,24,25,0]}},{"6":{"Value":"SuspiciousActivity"}},{"6":{"Value":"SuspiciousButExpected"}},{"6":{"Value":"IncorrectAlertLogic"}},{"6":{"Value":"InaccurateData"}},{"5":{"Elements":[27,28,29,30,0]}},{"2":{"Name":"IncidentLabel","Properties":{"labelName":{"Type":0,"Flags":1,"Description":"The name of the label"},"labelType":{"Type":35,"Flags":2,"Description":"The type of the label"}}}},{"6":{"Value":"User"}},{"6":{"Value":"System"}},{"5":{"Elements":[33,34,0]}},{"3":{"ItemType":32}},{"2":{"Name":"IncidentOwnerInfo","Properties":{"email":{"Type":0,"Flags":0,"Description":"The email of the user the incident is assigned to."},"assignedTo":{"Type":0,"Flags":0,"Description":"The name of the user the incident is assigned to."},"objectId":{"Type":38,"Flags":0,"Description":"The object id of the user the incident is assigned to."},"userPrincipalName":{"Type":0,"Flags":0,"Description":"The user principal name of the user the incident is assigned to."}}}},{"13":{"MinLength":36,"MaxLength":36,"Pattern":"^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}},{"3":{"ItemType":0}},{"6":{"Value":"High"}},{"6":{"Value":"Medium"}},{"6":{"Value":"Low"}},{"6":{"Value":"Informational"}},{"5":{"Elements":[40,41,42,43,0]}},{"6":{"Value":"New"}},{"6":{"Value":"Active"}},{"6":{"Value":"Closed"}},{"5":{"Elements":[45,46,47,0]}},{"2":{"Name":"SystemData","Properties":{"createdBy":{"Type":0,"Flags":0,"Description":"The identity that created the resource."},"createdByType":{"Type":54,"Flags":0,"Description":"The type of identity that created the resource."},"createdAt":{"Type":0,"Flags":0,"Description":"The timestamp of resource creation (UTC)."},"lastModifiedBy":{"Type":0,"Flags":0,"Description":"The identity that last modified the resource."},"lastModifiedByType":{"Type":59,"Flags":0,"Description":"The type of identity that last modified the resource."},"lastModifiedAt":{"Type":0,"Flags":0,"Description":"The timestamp of resource last modification (UTC)"}}}},{"6":{"Value":"User"}},{"6":{"Value":"Application"}},{"6":{"Value":"ManagedIdentity"}},{"6":{"Value":"Key"}},{"5":{"Elements":[50,51,52,53,0]}},{"6":{"Value":"User"}},{"6":{"Value":"Application"}},{"6":{"Value":"ManagedIdentity"}},{"6":{"Value":"Key"}},{"5":{"Elements":[55,56,57,58,0]}},{"4":{"Name":"Microsoft.SecurityInsights/incidents@2021-04-01","ScopeType":16,"Body":3,"Flags":0}},{"6":{"Value":"Microsoft.SecurityInsights/incidents/comments"}},{"6":{"Value":"2021-04-01"}},{"2":{"Name":"Microsoft.SecurityInsights/incidents/comments","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":61,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":62,"Flags":10,"Description":"The resource api version"},"properties":{"Type":64,"Flags":0,"Description":"Incident comment properties"},"etag":{"Type":0,"Flags":0,"Description":"Etag of the azure resource"},"systemData":{"Type":49,"Flags":2,"Description":"Azure Resource Manager metadata containing createdBy and modifiedBy information."}}}},{"2":{"Name":"IncidentCommentProperties","Properties":{"createdTimeUtc":{"Type":0,"Flags":2,"Description":"The time the comment was created"},"lastModifiedTimeUtc":{"Type":0,"Flags":2,"Description":"The time the comment was updated"},"message":{"Type":0,"Flags":1,"Description":"The comment message"},"author":{"Type":65,"Flags":2,"Description":"Describes the client that created the comment"}}}},{"2":{"Name":"ClientInfo","Properties":{"email":{"Type":0,"Flags":0,"Description":"The email of the client."},"name":{"Type":0,"Flags":0,"Description":"The name of the client."},"objectId":{"Type":38,"Flags":0,"Description":"The object id of the client."},"userPrincipalName":{"Type":0,"Flags":0,"Description":"The user principal name of the client."}}}},{"4":{"Name":"Microsoft.SecurityInsights/incidents/comments@2021-04-01","ScopeType":16,"Body":63,"Flags":0}},{"6":{"Value":"Microsoft.SecurityInsights/incidents/relations"}},{"6":{"Value":"2021-04-01"}},{"2":{"Name":"Microsoft.SecurityInsights/incidents/relations","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":67,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":68,"Flags":10,"Description":"The resource api version"},"properties":{"Type":70,"Flags":0,"Description":"Relation properties"},"etag":{"Type":0,"Flags":0,"Description":"Etag of the azure resource"},"systemData":{"Type":49,"Flags":2,"Description":"Azure Resource Manager metadata containing createdBy and modifiedBy information."}}}},{"2":{"Name":"RelationProperties","Properties":{"relatedResourceId":{"Type":0,"Flags":1,"Description":"The resource ID of the related resource"},"relatedResourceName":{"Type":0,"Flags":2,"Description":"The name of the related resource"},"relatedResourceType":{"Type":0,"Flags":2,"Description":"The resource type of the related resource"},"relatedResourceKind":{"Type":0,"Flags":2,"Description":"The resource kind of the related resource"}}}},{"4":{"Name":"Microsoft.SecurityInsights/incidents/relations@2021-04-01","ScopeType":16,"Body":69,"Flags":0}},{"6":{"Value":"Microsoft.SecurityInsights/watchlists"}},{"6":{"Value":"2021-04-01"}},{"2":{"Name":"Microsoft.SecurityInsights/watchlists","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":72,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":73,"Flags":10,"Description":"The resource api version"},"properties":{"Type":75,"Flags":0,"Description":"Watchlist properties"},"etag":{"Type":0,"Flags":0,"Description":"Etag of the azure resource"},"systemData":{"Type":49,"Flags":2,"Description":"Azure Resource Manager metadata containing createdBy and modifiedBy information."}}}},{"2":{"Name":"WatchlistProperties","Properties":{"watchlistId":{"Type":0,"Flags":0,"Description":"The id (a Guid) of the watchlist"},"displayName":{"Type":0,"Flags":1,"Description":"The display name of the watchlist"},"provider":{"Type":0,"Flags":1,"Description":"The provider of the watchlist"},"source":{"Type":78,"Flags":1,"Description":"The source of the watchlist"},"created":{"Type":0,"Flags":0,"Description":"The time the watchlist was created"},"updated":{"Type":0,"Flags":0,"Description":"The last time the watchlist was updated"},"createdBy":{"Type":79,"Flags":0,"Description":"Describes a user that created the watchlist"},"updatedBy":{"Type":79,"Flags":0,"Description":"Describes a user that updated the watchlist"},"description":{"Type":0,"Flags":0,"Description":"A description of the watchlist"},"watchlistType":{"Type":0,"Flags":0,"Description":"The type of the watchlist"},"watchlistAlias":{"Type":0,"Flags":0,"Description":"The alias of the watchlist"},"isDeleted":{"Type":80,"Flags":0,"Description":"A flag that indicates if the watchlist is deleted or not"},"labels":{"Type":81,"Flags":0,"Description":"List of labels relevant to this watchlist"},"defaultDuration":{"Type":0,"Flags":0,"Description":"The default duration of a watchlist (in ISO 8601 duration format)"},"tenantId":{"Type":0,"Flags":0,"Description":"The tenantId where the watchlist belongs to"},"numberOfLinesToSkip":{"Type":6,"Flags":0,"Description":"The number of lines in a csv content to skip before the header"},"rawContent":{"Type":0,"Flags":0,"Description":"The raw content that represents to watchlist items to create. Example : This line will be skipped\nheader1,header2\nvalue1,value2"},"itemsSearchKey":{"Type":0,"Flags":1,"Description":"The search key is used to optimize query performance when using watchlists for joins with other data. For example, enable a column with IP addresses to be the designated SearchKey field, then use this field as the key field when joining to other event data by IP address."},"contentType":{"Type":0,"Flags":0,"Description":"The content type of the raw content. For now, only text/csv is valid"},"uploadStatus":{"Type":0,"Flags":0,"Description":"The status of the Watchlist upload : New, InProgress or Complete. **Note** : When a Watchlist upload status is InProgress, the Watchlist cannot be deleted"}}}},{"6":{"Value":"Local file"}},{"6":{"Value":"Remote storage"}},{"5":{"Elements":[76,77,0]}},{"2":{"Name":"UserInfo","Properties":{"email":{"Type":0,"Flags":2,"Description":"The email of the user."},"name":{"Type":0,"Flags":2,"Description":"The name of the user."},"objectId":{"Type":38,"Flags":0,"Description":"The object id of the user."}}}},{"11":{}},{"3":{"ItemType":0}},{"4":{"Name":"Microsoft.SecurityInsights/watchlists@2021-04-01","ScopeType":16,"Body":74,"Flags":0}},{"6":{"Value":"Microsoft.SecurityInsights/watchlists/watchlistItems"}},{"6":{"Value":"2021-04-01"}},{"2":{"Name":"Microsoft.SecurityInsights/watchlists/watchlistItems","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":83,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":84,"Flags":10,"Description":"The resource api version"},"properties":{"Type":86,"Flags":0,"Description":"Watchlist Item properties"},"etag":{"Type":0,"Flags":0,"Description":"Etag of the azure resource"},"systemData":{"Type":49,"Flags":2,"Description":"Azure Resource Manager metadata containing createdBy and modifiedBy information."}}}},{"2":{"Name":"WatchlistItemProperties","Properties":{"watchlistItemType":{"Type":0,"Flags":0,"Description":"The type of the watchlist item"},"watchlistItemId":{"Type":0,"Flags":0,"Description":"The id (a Guid) of the watchlist item"},"tenantId":{"Type":0,"Flags":0,"Description":"The tenantId to which the watchlist item belongs to"},"isDeleted":{"Type":80,"Flags":0,"Description":"A flag that indicates if the watchlist item is deleted or not"},"created":{"Type":0,"Flags":0,"Description":"The time the watchlist item was created"},"updated":{"Type":0,"Flags":0,"Description":"The last time the watchlist item was updated"},"createdBy":{"Type":79,"Flags":0,"Description":"Describes a user that created the watchlist item"},"updatedBy":{"Type":79,"Flags":0,"Description":"Describes a user that updated the watchlist item"},"itemsKeyValue":{"Type":87,"Flags":1,"Description":"key-value pairs for a watchlist item"},"entityMapping":{"Type":87,"Flags":0,"Description":"key-value pairs for a watchlist item entity mapping"}}}},{"9":{}},{"4":{"Name":"Microsoft.SecurityInsights/watchlists/watchlistItems@2021-04-01","ScopeType":16,"Body":85,"Flags":0}},{"6":{"Value":"Microsoft.SecurityInsights/threatIntelligence/indicators"}},{"6":{"Value":"2021-04-01"}},{"2":{"Name":"Microsoft.SecurityInsights/threatIntelligence/indicators","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":89,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":90,"Flags":10,"Description":"The resource api version"},"etag":{"Type":0,"Flags":0,"Description":"Etag of the azure resource"},"properties":{"Type":92,"Flags":4,"Description":"Threat Intelligence Entity properties"},"kind":{"Type":113,"Flags":1,"Description":"The kind of the entity."},"systemData":{"Type":49,"Flags":2,"Description":"Azure Resource Manager metadata containing createdBy and modifiedBy information."}}}},{"2":{"Name":"ThreatIntelligenceIndicatorProperties","Properties":{"threatIntelligenceTags":{"Type":93,"Flags":0,"Description":"List of tags"},"lastUpdatedTimeUtc":{"Type":0,"Flags":0,"Description":"Last updated time in UTC"},"source":{"Type":0,"Flags":0,"Description":"Source of a threat intelligence entity"},"displayName":{"Type":0,"Flags":0,"Description":"Display name of a threat intelligence entity"},"description":{"Type":0,"Flags":0,"Description":"Description of a threat intelligence entity"},"indicatorTypes":{"Type":94,"Flags":0,"Description":"Indicator types of threat intelligence entities"},"pattern":{"Type":0,"Flags":0,"Description":"Pattern of a threat intelligence entity"},"patternType":{"Type":0,"Flags":0,"Description":"Pattern type of a threat intelligence entity"},"patternVersion":{"Type":0,"Flags":0,"Description":"Pattern version of a threat intelligence entity"},"killChainPhases":{"Type":96,"Flags":0,"Description":"Kill chain phases"},"parsedPattern":{"Type":100,"Flags":0,"Description":"Parsed patterns"},"externalId":{"Type":0,"Flags":0,"Description":"External ID of threat intelligence entity"},"createdByRef":{"Type":0,"Flags":0,"Description":"Created by reference of threat intelligence entity"},"defanged":{"Type":80,"Flags":0,"Description":"Is threat intelligence entity defanged"},"externalLastUpdatedTimeUtc":{"Type":0,"Flags":0,"Description":"External last updated time in UTC"},"externalReferences":{"Type":103,"Flags":0,"Description":"External References"},"granularMarkings":{"Type":106,"Flags":0,"Description":"Granular Markings"},"labels":{"Type":107,"Flags":0,"Description":"Labels  of threat intelligence entity"},"revoked":{"Type":80,"Flags":0,"Description":"Is threat intelligence entity revoked"},"confidence":{"Type":6,"Flags":0,"Description":"Confidence of threat intelligence entity"},"objectMarkingRefs":{"Type":108,"Flags":0,"Description":"Threat intelligence entity object marking references"},"language":{"Type":0,"Flags":0,"Description":"Language of threat intelligence entity"},"threatTypes":{"Type":109,"Flags":0,"Description":"Threat types"},"validFrom":{"Type":0,"Flags":0,"Description":"Valid from"},"validUntil":{"Type":0,"Flags":0,"Description":"Valid until"},"created":{"Type":0,"Flags":0,"Description":"Created by"},"modified":{"Type":0,"Flags":0,"Description":"Modified by"},"extensions":{"Type":110,"Flags":0,"Description":"Extensions map"},"additionalData":{"Type":111,"Flags":2,"Description":"A bag of custom fields that should be part of the entity and will be presented to the user."},"friendlyName":{"Type":0,"Flags":2,"Description":"The graph item display name which is a short humanly readable description of the graph item instance. This property is optional and might be system generated."}}}},{"3":{"ItemType":0}},{"3":{"ItemType":0}},{"2":{"Name":"ThreatIntelligenceKillChainPhase","Properties":{"killChainName":{"Type":0,"Flags":0,"Description":"Kill chainName name"},"phaseName":{"Type":0,"Flags":0,"Description":"Phase name"}}}},{"3":{"ItemType":95}},{"2":{"Name":"ThreatIntelligenceParsedPattern","Properties":{"patternTypeKey":{"Type":0,"Flags":0,"Description":"Pattern type key"},"patternTypeValues":{"Type":99,"Flags":0,"Description":"Pattern type keys"}}}},{"2":{"Name":"ThreatIntelligenceParsedPatternTypeValue","Properties":{"valueType":{"Type":0,"Flags":0,"Description":"Type of the value"},"value":{"Type":0,"Flags":0,"Description":"Value of parsed pattern"}}}},{"3":{"ItemType":98}},{"3":{"ItemType":97}},{"2":{"Name":"ThreatIntelligenceExternalReference","Properties":{"description":{"Type":0,"Flags":0,"Description":"External reference description"},"externalId":{"Type":0,"Flags":0,"Description":"External reference ID"},"sourceName":{"Type":0,"Flags":0,"Description":"External reference source name"},"url":{"Type":0,"Flags":0,"Description":"External reference URL"},"hashes":{"Type":102,"Flags":0,"Description":"External reference hashes"}}}},{"2":{"Name":"ThreatIntelligenceExternalReferenceHashes","Properties":{},"AdditionalProperties":0}},{"3":{"ItemType":101}},{"2":{"Name":"ThreatIntelligenceGranularMarkingModel","Properties":{"language":{"Type":0,"Flags":0,"Description":"Language granular marking model"},"markingRef":{"Type":6,"Flags":0,"Description":"marking reference granular marking model"},"selectors":{"Type":105,"Flags":0,"Description":"granular marking model selectors"}}}},{"3":{"ItemType":0}},{"3":{"ItemType":104}},{"3":{"ItemType":0}},{"3":{"ItemType":0}},{"3":{"ItemType":0}},{"2":{"Name":"ThreatIntelligenceIndicatorPropertiesExtensions","Properties":{},"AdditionalProperties":87}},{"2":{"Name":"EntityCommonPropertiesAdditionalData","Properties":{},"AdditionalProperties":87}},{"6":{"Value":"indicator"}},{"5":{"Elements":[112,0]}},{"4":{"Name":"Microsoft.SecurityInsights/threatIntelligence/indicators@2021-04-01","ScopeType":16,"Body":91,"Flags":0}}]
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.SecurityInsights/incidents"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-04-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.SecurityInsights/incidents",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "Incident properties"
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Etag of the azure resource"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IncidentProperties",
+    "properties": {
+      "additionalData": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "Additional data on the incident"
+      },
+      "classification": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "The reason the incident was closed"
+      },
+      "classificationComment": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Describes the reason the incident was closed"
+      },
+      "classificationReason": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0,
+        "description": "The classification reason the incident was closed with"
+      },
+      "createdTimeUtc": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The time the incident was created"
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The description of the incident"
+      },
+      "firstActivityTimeUtc": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The time of the first activity in the incident"
+      },
+      "incidentUrl": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The deep-link url to the incident in Azure portal"
+      },
+      "incidentNumber": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 2,
+        "description": "A sequential number"
+      },
+      "labels": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 0,
+        "description": "List of labels relevant to this incident"
+      },
+      "lastActivityTimeUtc": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The time of the last activity in the incident"
+      },
+      "lastModifiedTimeUtc": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The last time the incident was updated"
+      },
+      "owner": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 0,
+        "description": "Describes a user that the incident is assigned to"
+      },
+      "relatedAnalyticRuleIds": {
+        "type": {
+          "$ref": "#/39"
+        },
+        "flags": 2,
+        "description": "List of resource ids of Analytic rules related to the incident"
+      },
+      "severity": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 1,
+        "description": "The severity of the incident"
+      },
+      "status": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 1,
+        "description": "The status of the incident"
+      },
+      "title": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The title of the incident"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IncidentAdditionalData",
+    "properties": {
+      "alertsCount": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 2,
+        "description": "The number of alerts in the incident"
+      },
+      "bookmarksCount": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 2,
+        "description": "The number of bookmarks in the incident"
+      },
+      "commentsCount": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 2,
+        "description": "The number of comments in the incident"
+      },
+      "alertProductNames": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 2,
+        "description": "List of product names of alerts in the incident"
+      },
+      "tactics": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 2,
+        "description": "The tactics associated with incident"
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InitialAccess"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Execution"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Persistence"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PrivilegeEscalation"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DefenseEvasion"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CredentialAccess"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Discovery"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LateralMovement"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Collection"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Exfiltration"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CommandAndControl"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Impact"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/14"
+      },
+      {
+        "$ref": "#/15"
+      },
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/18"
+      },
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/20"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Undetermined"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TruePositive"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "BenignPositive"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FalsePositive"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/24"
+      },
+      {
+        "$ref": "#/25"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SuspiciousActivity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SuspiciousButExpected"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "IncorrectAlertLogic"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InaccurateData"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/27"
+      },
+      {
+        "$ref": "#/28"
+      },
+      {
+        "$ref": "#/29"
+      },
+      {
+        "$ref": "#/30"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IncidentLabel",
+    "properties": {
+      "labelName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of the label"
+      },
+      "labelType": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 2,
+        "description": "The type of the label"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "System"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/33"
+      },
+      {
+        "$ref": "#/34"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/32"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IncidentOwnerInfo",
+    "properties": {
+      "email": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The email of the user the incident is assigned to."
+      },
+      "assignedTo": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the user the incident is assigned to."
+      },
+      "objectId": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 0,
+        "description": "The object id of the user the incident is assigned to."
+      },
+      "userPrincipalName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The user principal name of the user the incident is assigned to."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "minLength": 36,
+    "maxLength": 36,
+    "pattern": "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "High"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Medium"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Low"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Informational"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/40"
+      },
+      {
+        "$ref": "#/41"
+      },
+      {
+        "$ref": "#/42"
+      },
+      {
+        "$ref": "#/43"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "New"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Active"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Closed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/45"
+      },
+      {
+        "$ref": "#/46"
+      },
+      {
+        "$ref": "#/47"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SystemData",
+    "properties": {
+      "createdBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that created the resource."
+      },
+      "createdByType": {
+        "type": {
+          "$ref": "#/54"
+        },
+        "flags": 0,
+        "description": "The type of identity that created the resource."
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource creation (UTC)."
+      },
+      "lastModifiedBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that last modified the resource."
+      },
+      "lastModifiedByType": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 0,
+        "description": "The type of identity that last modified the resource."
+      },
+      "lastModifiedAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource last modification (UTC)"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/50"
+      },
+      {
+        "$ref": "#/51"
+      },
+      {
+        "$ref": "#/52"
+      },
+      {
+        "$ref": "#/53"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/55"
+      },
+      {
+        "$ref": "#/56"
+      },
+      {
+        "$ref": "#/57"
+      },
+      {
+        "$ref": "#/58"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.SecurityInsights/incidents@2021-04-01",
+    "scopeType": 16,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.SecurityInsights/incidents/comments"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-04-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.SecurityInsights/incidents/comments",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/64"
+        },
+        "flags": 0,
+        "description": "Incident comment properties"
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Etag of the azure resource"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IncidentCommentProperties",
+    "properties": {
+      "createdTimeUtc": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The time the comment was created"
+      },
+      "lastModifiedTimeUtc": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The time the comment was updated"
+      },
+      "message": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The comment message"
+      },
+      "author": {
+        "type": {
+          "$ref": "#/65"
+        },
+        "flags": 2,
+        "description": "Describes the client that created the comment"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ClientInfo",
+    "properties": {
+      "email": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The email of the client."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the client."
+      },
+      "objectId": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 0,
+        "description": "The object id of the client."
+      },
+      "userPrincipalName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The user principal name of the client."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.SecurityInsights/incidents/comments@2021-04-01",
+    "scopeType": 16,
+    "body": {
+      "$ref": "#/63"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.SecurityInsights/incidents/relations"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-04-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.SecurityInsights/incidents/relations",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/68"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 0,
+        "description": "Relation properties"
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Etag of the azure resource"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RelationProperties",
+    "properties": {
+      "relatedResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The resource ID of the related resource"
+      },
+      "relatedResourceName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the related resource"
+      },
+      "relatedResourceType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The resource type of the related resource"
+      },
+      "relatedResourceKind": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The resource kind of the related resource"
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.SecurityInsights/incidents/relations@2021-04-01",
+    "scopeType": 16,
+    "body": {
+      "$ref": "#/69"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.SecurityInsights/watchlists"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-04-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.SecurityInsights/watchlists",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/72"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/73"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/75"
+        },
+        "flags": 0,
+        "description": "Watchlist properties"
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Etag of the azure resource"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WatchlistProperties",
+    "properties": {
+      "watchlistId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The id (a Guid) of the watchlist"
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The display name of the watchlist"
+      },
+      "provider": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The provider of the watchlist"
+      },
+      "source": {
+        "type": {
+          "$ref": "#/78"
+        },
+        "flags": 1,
+        "description": "The source of the watchlist"
+      },
+      "created": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The time the watchlist was created"
+      },
+      "updated": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The last time the watchlist was updated"
+      },
+      "createdBy": {
+        "type": {
+          "$ref": "#/79"
+        },
+        "flags": 0,
+        "description": "Describes a user that created the watchlist"
+      },
+      "updatedBy": {
+        "type": {
+          "$ref": "#/79"
+        },
+        "flags": 0,
+        "description": "Describes a user that updated the watchlist"
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A description of the watchlist"
+      },
+      "watchlistType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The type of the watchlist"
+      },
+      "watchlistAlias": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The alias of the watchlist"
+      },
+      "isDeleted": {
+        "type": {
+          "$ref": "#/80"
+        },
+        "flags": 0,
+        "description": "A flag that indicates if the watchlist is deleted or not"
+      },
+      "labels": {
+        "type": {
+          "$ref": "#/81"
+        },
+        "flags": 0,
+        "description": "List of labels relevant to this watchlist"
+      },
+      "defaultDuration": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The default duration of a watchlist (in ISO 8601 duration format)"
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The tenantId where the watchlist belongs to"
+      },
+      "numberOfLinesToSkip": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "The number of lines in a csv content to skip before the header"
+      },
+      "rawContent": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The raw content that represents to watchlist items to create. Example : This line will be skipped\nheader1,header2\nvalue1,value2"
+      },
+      "itemsSearchKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The search key is used to optimize query performance when using watchlists for joins with other data. For example, enable a column with IP addresses to be the designated SearchKey field, then use this field as the key field when joining to other event data by IP address."
+      },
+      "contentType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The content type of the raw content. For now, only text/csv is valid"
+      },
+      "uploadStatus": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The status of the Watchlist upload : New, InProgress or Complete. **Note** : When a Watchlist upload status is InProgress, the Watchlist cannot be deleted"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Local file"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Remote storage"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/76"
+      },
+      {
+        "$ref": "#/77"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UserInfo",
+    "properties": {
+      "email": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The email of the user."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the user."
+      },
+      "objectId": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 0,
+        "description": "The object id of the user."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.SecurityInsights/watchlists@2021-04-01",
+    "scopeType": 16,
+    "body": {
+      "$ref": "#/74"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.SecurityInsights/watchlists/watchlistItems"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-04-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.SecurityInsights/watchlists/watchlistItems",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/83"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/84"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/86"
+        },
+        "flags": 0,
+        "description": "Watchlist Item properties"
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Etag of the azure resource"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WatchlistItemProperties",
+    "properties": {
+      "watchlistItemType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The type of the watchlist item"
+      },
+      "watchlistItemId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The id (a Guid) of the watchlist item"
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The tenantId to which the watchlist item belongs to"
+      },
+      "isDeleted": {
+        "type": {
+          "$ref": "#/80"
+        },
+        "flags": 0,
+        "description": "A flag that indicates if the watchlist item is deleted or not"
+      },
+      "created": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The time the watchlist item was created"
+      },
+      "updated": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The last time the watchlist item was updated"
+      },
+      "createdBy": {
+        "type": {
+          "$ref": "#/79"
+        },
+        "flags": 0,
+        "description": "Describes a user that created the watchlist item"
+      },
+      "updatedBy": {
+        "type": {
+          "$ref": "#/79"
+        },
+        "flags": 0,
+        "description": "Describes a user that updated the watchlist item"
+      },
+      "itemsKeyValue": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 1,
+        "description": "key-value pairs for a watchlist item"
+      },
+      "entityMapping": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 0,
+        "description": "key-value pairs for a watchlist item entity mapping"
+      }
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.SecurityInsights/watchlists/watchlistItems@2021-04-01",
+    "scopeType": 16,
+    "body": {
+      "$ref": "#/85"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.SecurityInsights/threatIntelligence/indicators"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-04-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.SecurityInsights/threatIntelligence/indicators",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/89"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/90"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Etag of the azure resource"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/92"
+        },
+        "flags": 4,
+        "description": "Threat Intelligence Entity properties"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/113"
+        },
+        "flags": 1,
+        "description": "The kind of the entity."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ThreatIntelligenceIndicatorProperties",
+    "properties": {
+      "threatIntelligenceTags": {
+        "type": {
+          "$ref": "#/93"
+        },
+        "flags": 0,
+        "description": "List of tags"
+      },
+      "lastUpdatedTimeUtc": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Last updated time in UTC"
+      },
+      "source": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Source of a threat intelligence entity"
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Display name of a threat intelligence entity"
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Description of a threat intelligence entity"
+      },
+      "indicatorTypes": {
+        "type": {
+          "$ref": "#/94"
+        },
+        "flags": 0,
+        "description": "Indicator types of threat intelligence entities"
+      },
+      "pattern": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Pattern of a threat intelligence entity"
+      },
+      "patternType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Pattern type of a threat intelligence entity"
+      },
+      "patternVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Pattern version of a threat intelligence entity"
+      },
+      "killChainPhases": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 0,
+        "description": "Kill chain phases"
+      },
+      "parsedPattern": {
+        "type": {
+          "$ref": "#/100"
+        },
+        "flags": 0,
+        "description": "Parsed patterns"
+      },
+      "externalId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "External ID of threat intelligence entity"
+      },
+      "createdByRef": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Created by reference of threat intelligence entity"
+      },
+      "defanged": {
+        "type": {
+          "$ref": "#/80"
+        },
+        "flags": 0,
+        "description": "Is threat intelligence entity defanged"
+      },
+      "externalLastUpdatedTimeUtc": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "External last updated time in UTC"
+      },
+      "externalReferences": {
+        "type": {
+          "$ref": "#/103"
+        },
+        "flags": 0,
+        "description": "External References"
+      },
+      "granularMarkings": {
+        "type": {
+          "$ref": "#/106"
+        },
+        "flags": 0,
+        "description": "Granular Markings"
+      },
+      "labels": {
+        "type": {
+          "$ref": "#/107"
+        },
+        "flags": 0,
+        "description": "Labels  of threat intelligence entity"
+      },
+      "revoked": {
+        "type": {
+          "$ref": "#/80"
+        },
+        "flags": 0,
+        "description": "Is threat intelligence entity revoked"
+      },
+      "confidence": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "Confidence of threat intelligence entity"
+      },
+      "objectMarkingRefs": {
+        "type": {
+          "$ref": "#/108"
+        },
+        "flags": 0,
+        "description": "Threat intelligence entity object marking references"
+      },
+      "language": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Language of threat intelligence entity"
+      },
+      "threatTypes": {
+        "type": {
+          "$ref": "#/109"
+        },
+        "flags": 0,
+        "description": "Threat types"
+      },
+      "validFrom": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Valid from"
+      },
+      "validUntil": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Valid until"
+      },
+      "created": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Created by"
+      },
+      "modified": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Modified by"
+      },
+      "extensions": {
+        "type": {
+          "$ref": "#/110"
+        },
+        "flags": 0,
+        "description": "Extensions map"
+      },
+      "additionalData": {
+        "type": {
+          "$ref": "#/111"
+        },
+        "flags": 2,
+        "description": "A bag of custom fields that should be part of the entity and will be presented to the user."
+      },
+      "friendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The graph item display name which is a short humanly readable description of the graph item instance. This property is optional and might be system generated."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ThreatIntelligenceKillChainPhase",
+    "properties": {
+      "killChainName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Kill chainName name"
+      },
+      "phaseName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Phase name"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/95"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ThreatIntelligenceParsedPattern",
+    "properties": {
+      "patternTypeKey": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Pattern type key"
+      },
+      "patternTypeValues": {
+        "type": {
+          "$ref": "#/99"
+        },
+        "flags": 0,
+        "description": "Pattern type keys"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ThreatIntelligenceParsedPatternTypeValue",
+    "properties": {
+      "valueType": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Type of the value"
+      },
+      "value": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Value of parsed pattern"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/98"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/97"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ThreatIntelligenceExternalReference",
+    "properties": {
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "External reference description"
+      },
+      "externalId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "External reference ID"
+      },
+      "sourceName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "External reference source name"
+      },
+      "url": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "External reference URL"
+      },
+      "hashes": {
+        "type": {
+          "$ref": "#/102"
+        },
+        "flags": 0,
+        "description": "External reference hashes"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ThreatIntelligenceExternalReferenceHashes",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/101"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ThreatIntelligenceGranularMarkingModel",
+    "properties": {
+      "language": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Language granular marking model"
+      },
+      "markingRef": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 0,
+        "description": "marking reference granular marking model"
+      },
+      "selectors": {
+        "type": {
+          "$ref": "#/105"
+        },
+        "flags": 0,
+        "description": "granular marking model selectors"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/104"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ThreatIntelligenceIndicatorPropertiesExtensions",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/87"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EntityCommonPropertiesAdditionalData",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/87"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "indicator"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/112"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.SecurityInsights/threatIntelligence/indicators@2021-04-01",
+    "scopeType": 16,
+    "body": {
+      "$ref": "#/91"
+    },
+    "flags": 0
+  }
+]

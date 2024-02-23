@@ -1,1 +1,3052 @@
-[{"13":{"Pattern":"[a-zA-Z0-9-_\\.]+"}},{"6":{"Value":"Microsoft.HybridCompute/licenses"}},{"13":{}},{"6":{"Value":"2023-06-20-preview"}},{"2":{"Name":"Microsoft.HybridCompute/licenses","Properties":{"id":{"Type":2,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":1,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":3,"Flags":10,"Description":"The resource api version"},"properties":{"Type":5,"Flags":0,"Description":"Hybrid Compute License properties"},"tags":{"Type":31,"Flags":0,"Description":"Resource tags."},"location":{"Type":2,"Flags":1,"Description":"The geo-location where the resource lives"},"systemData":{"Type":32,"Flags":2,"Description":"Azure Resource Manager metadata containing createdBy and modifiedBy information."}}}},{"2":{"Name":"LicenseProperties","Properties":{"provisioningState":{"Type":14,"Flags":2,"Description":"The provisioning state, which only appears in the response."},"tenantId":{"Type":2,"Flags":0,"Description":"Describes the tenant id."},"licenseType":{"Type":16,"Flags":0,"Description":"The type of the license resource."},"licenseDetails":{"Type":17,"Flags":0,"Description":"Describes the properties of a License."}}}},{"6":{"Value":"Creating"}},{"6":{"Value":"Updating"}},{"6":{"Value":"Deleting"}},{"6":{"Value":"Succeeded"}},{"6":{"Value":"Failed"}},{"6":{"Value":"Accepted"}},{"6":{"Value":"Canceled"}},{"6":{"Value":"Deleted"}},{"5":{"Elements":[6,7,8,9,10,11,12,13,2]}},{"6":{"Value":"ESU"}},{"5":{"Elements":[15,2]}},{"2":{"Name":"LicenseDetails","Properties":{"state":{"Type":20,"Flags":0,"Description":"Describes the state of the license."},"target":{"Type":23,"Flags":0,"Description":"Describes the license target server."},"edition":{"Type":26,"Flags":0,"Description":"Describes the edition of the license. The values are either Standard or Datacenter."},"type":{"Type":29,"Flags":0,"Description":"Describes the license core type (pCore or vCore)."},"processors":{"Type":30,"Flags":0,"Description":"Describes the number of processors."},"assignedLicenses":{"Type":30,"Flags":2,"Description":"Describes the number of assigned licenses."},"immutableId":{"Type":2,"Flags":2,"Description":"Describes the immutable id."}}}},{"6":{"Value":"Activated"}},{"6":{"Value":"Deactivated"}},{"5":{"Elements":[18,19,2]}},{"6":{"Value":"Windows Server 2012"}},{"6":{"Value":"Windows Server 2012 R2"}},{"5":{"Elements":[21,22,2]}},{"6":{"Value":"Standard"}},{"6":{"Value":"Datacenter"}},{"5":{"Elements":[24,25,2]}},{"6":{"Value":"pCore"}},{"6":{"Value":"vCore"}},{"5":{"Elements":[27,28,2]}},{"12":{}},{"2":{"Name":"TrackedResourceTags","Properties":{},"AdditionalProperties":2}},{"2":{"Name":"SystemData","Properties":{"createdBy":{"Type":2,"Flags":0,"Description":"The identity that created the resource."},"createdByType":{"Type":37,"Flags":0,"Description":"The type of identity that created the resource."},"createdAt":{"Type":2,"Flags":0,"Description":"The timestamp of resource creation (UTC)."},"lastModifiedBy":{"Type":2,"Flags":0,"Description":"The identity that last modified the resource."},"lastModifiedByType":{"Type":42,"Flags":0,"Description":"The type of identity that last modified the resource."},"lastModifiedAt":{"Type":2,"Flags":0,"Description":"The timestamp of resource last modification (UTC)"}}}},{"6":{"Value":"User"}},{"6":{"Value":"Application"}},{"6":{"Value":"ManagedIdentity"}},{"6":{"Value":"Key"}},{"5":{"Elements":[33,34,35,36,2]}},{"6":{"Value":"User"}},{"6":{"Value":"Application"}},{"6":{"Value":"ManagedIdentity"}},{"6":{"Value":"Key"}},{"5":{"Elements":[38,39,40,41,2]}},{"4":{"Name":"Microsoft.HybridCompute/licenses@2023-06-20-preview","ScopeType":8,"Body":4,"Flags":0}},{"13":{"MinLength":1,"MaxLength":54,"Pattern":"[a-zA-Z0-9-_\\.]"}},{"6":{"Value":"Microsoft.HybridCompute/machines"}},{"6":{"Value":"2023-06-20-preview"}},{"2":{"Name":"Microsoft.HybridCompute/machines","Properties":{"id":{"Type":2,"Flags":10,"Description":"The resource id"},"name":{"Type":44,"Flags":9,"Description":"The resource name"},"type":{"Type":45,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":46,"Flags":10,"Description":"The resource api version"},"properties":{"Type":48,"Flags":0,"Description":"Hybrid Compute Machine properties"},"resources":{"Type":128,"Flags":2,"Description":"The list of extensions affiliated to the machine"},"identity":{"Type":129,"Flags":0,"Description":"Identity for the resource."},"kind":{"Type":138,"Flags":0,"Description":"Indicates which kind of Arc machine placement on-premises, such as HCI, SCVMM or VMware etc."},"tags":{"Type":139,"Flags":0,"Description":"Resource tags."},"location":{"Type":2,"Flags":1,"Description":"The geo-location where the resource lives"},"systemData":{"Type":32,"Flags":2,"Description":"Azure Resource Manager metadata containing createdBy and modifiedBy information."}}}},{"2":{"Name":"MachineProperties","Properties":{"locationData":{"Type":49,"Flags":0,"Description":"Metadata pertaining to the geographic location of the resource."},"agentConfiguration":{"Type":51,"Flags":2,"Description":"Configurable properties that the user can set locally via the azcmagent config command, or remotely via ARM."},"serviceStatuses":{"Type":60,"Flags":0,"Description":"Statuses of dependent services that are reported back to ARM."},"cloudMetadata":{"Type":62,"Flags":0,"Description":"The metadata of the cloud environment (Azure/GCP/AWS/OCI...)."},"agentUpgrade":{"Type":63,"Flags":0,"Description":"The info of the machine w.r.t Agent Upgrade"},"osProfile":{"Type":68,"Flags":0,"Description":"Specifies the operating system settings for the hybrid machine."},"licenseProfile":{"Type":80,"Flags":0,"Description":"Specifies the ESU related properties for a machine."},"provisioningState":{"Type":2,"Flags":2,"Description":"The provisioning state, which only appears in the response."},"status":{"Type":102,"Flags":2,"Description":"The status of the hybrid machine agent."},"lastStatusChange":{"Type":2,"Flags":2,"Description":"The time of the last status change."},"errorDetails":{"Type":108,"Flags":2,"Description":"Details about the error state."},"agentVersion":{"Type":2,"Flags":2,"Description":"The hybrid machine agent full version."},"vmId":{"Type":2,"Flags":0,"Description":"Specifies the hybrid machine unique ID."},"displayName":{"Type":2,"Flags":2,"Description":"Specifies the hybrid machine display name."},"machineFqdn":{"Type":2,"Flags":2,"Description":"Specifies the hybrid machine FQDN."},"clientPublicKey":{"Type":2,"Flags":0,"Description":"Public Key that the client provides to be used during initial resource onboarding"},"osName":{"Type":2,"Flags":2,"Description":"The Operating System running on the hybrid machine."},"osVersion":{"Type":2,"Flags":2,"Description":"The version of Operating System running on the hybrid machine."},"osType":{"Type":2,"Flags":0,"Description":"The type of Operating System (windows/linux)."},"vmUuid":{"Type":2,"Flags":2,"Description":"Specifies the Arc Machine's unique SMBIOS ID"},"extensions":{"Type":115,"Flags":0,"Description":"Machine Extensions information (deprecated field)"},"osSku":{"Type":2,"Flags":2,"Description":"Specifies the Operating System product SKU."},"domainName":{"Type":2,"Flags":2,"Description":"Specifies the Windows domain name."},"adFqdn":{"Type":2,"Flags":2,"Description":"Specifies the AD fully qualified display name."},"dnsFqdn":{"Type":2,"Flags":2,"Description":"Specifies the DNS fully qualified display name."},"privateLinkScopeResourceId":{"Type":2,"Flags":0,"Description":"The resource id of the private link scope this machine is assigned to, if any."},"parentClusterResourceId":{"Type":2,"Flags":0,"Description":"The resource id of the parent cluster (Azure HCI) this machine is assigned to, if any."},"mssqlDiscovered":{"Type":2,"Flags":0,"Description":"Specifies whether any MS SQL instance is discovered on the machine."},"detectedProperties":{"Type":116,"Flags":2,"Description":"Detected properties from the machine."},"networkProfile":{"Type":117,"Flags":2,"Description":"Information about the network the machine is on."}}}},{"2":{"Name":"LocationData","Properties":{"name":{"Type":50,"Flags":1,"Description":"A canonical name for the geographic or physical location."},"city":{"Type":2,"Flags":0,"Description":"The city or locality where the resource is located."},"district":{"Type":2,"Flags":0,"Description":"The district, state, or province where the resource is located."},"countryOrRegion":{"Type":2,"Flags":0,"Description":"The country or region where the resource is located"}}}},{"13":{"MaxLength":256}},{"2":{"Name":"AgentConfiguration","Properties":{"proxyUrl":{"Type":2,"Flags":2,"Description":"Specifies the URL of the proxy to be used."},"incomingConnectionsPorts":{"Type":52,"Flags":2,"Description":"Specifies the list of ports that the agent will be able to listen on."},"extensionsAllowList":{"Type":54,"Flags":2,"Description":"Array of extensions that are allowed to be installed or updated."},"extensionsBlockList":{"Type":55,"Flags":2,"Description":"Array of extensions that are blocked (cannot be installed or updated)"},"proxyBypass":{"Type":56,"Flags":2,"Description":"List of service names which should not use the specified proxy server."},"extensionsEnabled":{"Type":2,"Flags":2,"Description":"Specifies whether the extension service is enabled or disabled."},"guestConfigurationEnabled":{"Type":2,"Flags":2,"Description":"Specified whether the guest configuration service is enabled or disabled."},"configMode":{"Type":59,"Flags":2,"Description":"Name of configuration mode to use. Modes are pre-defined configurations of security controls, extension allowlists and guest configuration, maintained by Microsoft."}}}},{"3":{"ItemType":2}},{"2":{"Name":"ConfigurationExtension","Properties":{"publisher":{"Type":2,"Flags":2,"Description":"Publisher of the extension."},"type":{"Type":2,"Flags":2,"Description":"Type of the extension."}}}},{"3":{"ItemType":53}},{"3":{"ItemType":53}},{"3":{"ItemType":2}},{"6":{"Value":"full"}},{"6":{"Value":"monitor"}},{"5":{"Elements":[57,58,2]}},{"2":{"Name":"ServiceStatuses","Properties":{"extensionService":{"Type":61,"Flags":0,"Description":"The state of the extension service on the Arc-enabled machine."},"guestConfigurationService":{"Type":61,"Flags":0,"Description":"The state of the guest configuration service on the Arc-enabled machine."}}}},{"2":{"Name":"ServiceStatus","Properties":{"status":{"Type":2,"Flags":0,"Description":"The current status of the service."},"startupType":{"Type":2,"Flags":0,"Description":"The behavior of the service when the Arc-enabled machine starts up."}}}},{"2":{"Name":"CloudMetadata","Properties":{"provider":{"Type":2,"Flags":2,"Description":"Specifies the cloud provider (Azure/AWS/GCP...)."}}}},{"2":{"Name":"AgentUpgrade","Properties":{"desiredVersion":{"Type":2,"Flags":0,"Description":"Specifies the version info w.r.t AgentUpgrade for the machine."},"correlationId":{"Type":2,"Flags":0,"Description":"The correlation ID passed in from RSM per upgrade."},"enableAutomaticUpgrade":{"Type":64,"Flags":0,"Description":"Specifies if RSM should try to upgrade this machine"},"lastAttemptDesiredVersion":{"Type":2,"Flags":2,"Description":"Specifies the version of the last attempt"},"lastAttemptTimestamp":{"Type":2,"Flags":2,"Description":"Timestamp of last upgrade attempt"},"lastAttemptStatus":{"Type":67,"Flags":2,"Description":"Specifies the status of Agent Upgrade."},"lastAttemptMessage":{"Type":2,"Flags":2,"Description":"Failure message of last upgrade attempt if any."}}}},{"11":{}},{"6":{"Value":"Success"}},{"6":{"Value":"Failed"}},{"5":{"Elements":[65,66,2]}},{"2":{"Name":"OSProfile","Properties":{"computerName":{"Type":2,"Flags":2,"Description":"Specifies the host OS name of the hybrid machine."},"windowsConfiguration":{"Type":69,"Flags":0,"Description":"Specifies the windows configuration for update management."},"linuxConfiguration":{"Type":79,"Flags":0,"Description":"Specifies the linux configuration for update management."}}}},{"2":{"Name":"OSProfileWindowsConfiguration","Properties":{"patchSettings":{"Type":70,"Flags":0,"Description":"Specifies the patch settings."}}}},{"2":{"Name":"PatchSettings","Properties":{"assessmentMode":{"Type":73,"Flags":0,"Description":"Specifies the assessment mode."},"patchMode":{"Type":78,"Flags":0,"Description":"Specifies the patch mode."}}}},{"6":{"Value":"ImageDefault"}},{"6":{"Value":"AutomaticByPlatform"}},{"5":{"Elements":[71,72,2]}},{"6":{"Value":"ImageDefault"}},{"6":{"Value":"AutomaticByPlatform"}},{"6":{"Value":"AutomaticByOS"}},{"6":{"Value":"Manual"}},{"5":{"Elements":[74,75,76,77,2]}},{"2":{"Name":"OSProfileLinuxConfiguration","Properties":{"patchSettings":{"Type":70,"Flags":0,"Description":"Specifies the patch settings."}}}},{"2":{"Name":"LicenseProfileMachineInstanceView","Properties":{"esuProfile":{"Type":81,"Flags":0,"Description":"Properties for the Machine ESU profile."}}}},{"2":{"Name":"LicenseProfileMachineInstanceViewEsuProperties","Properties":{"assignedLicense":{"Type":82,"Flags":0,"Description":"The assigned license resource."},"licenseAssignmentState":{"Type":86,"Flags":0,"Description":"Describes the license assignment state (Assigned or NotAssigned)."},"serverType":{"Type":89,"Flags":2,"Description":"The type of the Esu servers."},"esuEligibility":{"Type":93,"Flags":2,"Description":"Indicates the eligibility state of Esu."},"esuKeyState":{"Type":96,"Flags":2,"Description":"Indicates whether there is an ESU Key currently active for the machine."},"assignedLicenseImmutableId":{"Type":2,"Flags":2,"Description":"The guid id of the license."},"esuKeys":{"Type":98,"Flags":2,"Description":"The list of ESU keys."}}}},{"2":{"Name":"License","Properties":{"properties":{"Type":5,"Flags":0,"Description":"Hybrid Compute License properties"},"tags":{"Type":83,"Flags":0,"Description":"Resource tags."},"location":{"Type":2,"Flags":1,"Description":"The geo-location where the resource lives"},"id":{"Type":2,"Flags":2,"Description":"Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"},"name":{"Type":2,"Flags":2,"Description":"The name of the resource"},"type":{"Type":2,"Flags":2,"Description":"The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""},"systemData":{"Type":32,"Flags":2,"Description":"Azure Resource Manager metadata containing createdBy and modifiedBy information."}}}},{"2":{"Name":"TrackedResourceTags","Properties":{},"AdditionalProperties":2}},{"6":{"Value":"Assigned"}},{"6":{"Value":"NotAssigned"}},{"5":{"Elements":[84,85,2]}},{"6":{"Value":"Standard"}},{"6":{"Value":"Datacenter"}},{"5":{"Elements":[87,88,2]}},{"6":{"Value":"Eligible"}},{"6":{"Value":"Ineligible"}},{"6":{"Value":"Unknown"}},{"5":{"Elements":[90,91,92,2]}},{"6":{"Value":"Inactive"}},{"6":{"Value":"Active"}},{"5":{"Elements":[94,95,2]}},{"2":{"Name":"EsuKey","Properties":{"sku":{"Type":2,"Flags":0,"Description":"SKU number."},"licenseStatus":{"Type":2,"Flags":0,"Description":"The current status of the license profile key."}}}},{"3":{"ItemType":97}},{"6":{"Value":"Connected"}},{"6":{"Value":"Disconnected"}},{"6":{"Value":"Error"}},{"5":{"Elements":[99,100,101,2]}},{"2":{"Name":"ErrorDetail","Properties":{"code":{"Type":2,"Flags":2,"Description":"The error code."},"message":{"Type":2,"Flags":2,"Description":"The error message."},"target":{"Type":2,"Flags":2,"Description":"The error target."},"details":{"Type":104,"Flags":2,"Description":"The error details."},"additionalInfo":{"Type":107,"Flags":2,"Description":"The error additional info."}}}},{"3":{"ItemType":103}},{"2":{"Name":"ErrorAdditionalInfo","Properties":{"type":{"Type":2,"Flags":2,"Description":"The additional info type."},"info":{"Type":106,"Flags":2,"Description":"The additional info."}}}},{"9":{}},{"3":{"ItemType":105}},{"3":{"ItemType":103}},{"2":{"Name":"MachineExtensionInstanceView","Properties":{"name":{"Type":2,"Flags":0,"Description":"The machine extension name."},"type":{"Type":2,"Flags":0,"Description":"Specifies the type of the extension; an example is \"CustomScriptExtension\"."},"typeHandlerVersion":{"Type":2,"Flags":0,"Description":"Specifies the version of the script handler."},"status":{"Type":110,"Flags":0,"Description":"Instance view status."}}}},{"2":{"Name":"MachineExtensionInstanceViewStatus","Properties":{"code":{"Type":2,"Flags":0,"Description":"The status code."},"level":{"Type":114,"Flags":0,"Description":"The level code."},"displayStatus":{"Type":2,"Flags":0,"Description":"The short localizable label for the status."},"message":{"Type":2,"Flags":0,"Description":"The detailed status message, including for alerts and error messages."},"time":{"Type":2,"Flags":0,"Description":"The time of the status."}}}},{"6":{"Value":"Info"}},{"6":{"Value":"Warning"}},{"6":{"Value":"Error"}},{"5":{"Elements":[111,112,113,2]}},{"3":{"ItemType":109}},{"2":{"Name":"DetectedProperties","Properties":{},"AdditionalProperties":2}},{"2":{"Name":"NetworkProfile","Properties":{"networkInterfaces":{"Type":122,"Flags":0,"Description":"The list of network interfaces."}}}},{"2":{"Name":"NetworkInterface","Properties":{"ipAddresses":{"Type":121,"Flags":0,"Description":"The list of IP addresses in this interface."}}}},{"2":{"Name":"IpAddress","Properties":{"address":{"Type":2,"Flags":0,"Description":"Represents the IP Address."},"ipAddressVersion":{"Type":2,"Flags":0,"Description":"Represents the Ip Address Version."},"subnet":{"Type":120,"Flags":2,"Description":"The subnet to which this IP address belongs."}}}},{"2":{"Name":"Subnet","Properties":{"addressPrefix":{"Type":2,"Flags":0,"Description":"Represents address prefix."}}}},{"3":{"ItemType":119}},{"3":{"ItemType":118}},{"2":{"Name":"MachineExtension","Properties":{"properties":{"Type":124,"Flags":0,"Description":"Describes Machine Extension Properties."},"tags":{"Type":127,"Flags":0,"Description":"Resource tags."},"location":{"Type":2,"Flags":1,"Description":"The geo-location where the resource lives"},"id":{"Type":2,"Flags":2,"Description":"Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"},"name":{"Type":2,"Flags":2,"Description":"The name of the resource"},"type":{"Type":2,"Flags":2,"Description":"The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""},"systemData":{"Type":32,"Flags":2,"Description":"Azure Resource Manager metadata containing createdBy and modifiedBy information."}}}},{"2":{"Name":"MachineExtensionProperties","Properties":{"forceUpdateTag":{"Type":2,"Flags":0,"Description":"How the extension handler should be forced to update even if the extension configuration has not changed."},"publisher":{"Type":2,"Flags":0,"Description":"The name of the extension handler publisher."},"type":{"Type":2,"Flags":0,"Description":"Specifies the type of the extension; an example is \"CustomScriptExtension\"."},"typeHandlerVersion":{"Type":2,"Flags":0,"Description":"Specifies the version of the script handler."},"enableAutomaticUpgrade":{"Type":64,"Flags":0,"Description":"Indicates whether the extension should be automatically upgraded by the platform if there is a newer version available."},"autoUpgradeMinorVersion":{"Type":64,"Flags":0,"Description":"Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true."},"settings":{"Type":125,"Flags":0,"Description":"Json formatted public settings for the extension."},"protectedSettings":{"Type":126,"Flags":0,"Description":"The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all."},"provisioningState":{"Type":2,"Flags":2,"Description":"The provisioning state, which only appears in the response."},"instanceView":{"Type":109,"Flags":0,"Description":"The machine extension instance view."}}}},{"2":{"Name":"MachineExtensionPropertiesSettings","Properties":{},"AdditionalProperties":106}},{"2":{"Name":"MachineExtensionPropertiesProtectedSettings","Properties":{},"AdditionalProperties":106}},{"2":{"Name":"TrackedResourceTags","Properties":{},"AdditionalProperties":2}},{"3":{"ItemType":123}},{"2":{"Name":"Identity","Properties":{"principalId":{"Type":2,"Flags":2,"Description":"The principal ID of resource identity."},"tenantId":{"Type":2,"Flags":2,"Description":"The tenant ID of resource."},"type":{"Type":130,"Flags":0,"Description":"The identity type."}}}},{"6":{"Value":"SystemAssigned"}},{"6":{"Value":"AVS"}},{"6":{"Value":"HCI"}},{"6":{"Value":"SCVMM"}},{"6":{"Value":"VMware"}},{"6":{"Value":"EPS"}},{"6":{"Value":"GCP"}},{"6":{"Value":"AWS"}},{"5":{"Elements":[131,132,133,134,135,136,137,2]}},{"2":{"Name":"TrackedResourceTags","Properties":{},"AdditionalProperties":2}},{"4":{"Name":"Microsoft.HybridCompute/machines@2023-06-20-preview","ScopeType":8,"Body":47,"Flags":0}},{"6":{"Value":"default"}},{"6":{"Value":"Microsoft.HybridCompute/machines/licenseProfiles"}},{"6":{"Value":"2023-06-20-preview"}},{"2":{"Name":"Microsoft.HybridCompute/machines/licenseProfiles","Properties":{"id":{"Type":2,"Flags":10,"Description":"The resource id"},"name":{"Type":141,"Flags":9,"Description":"The resource name"},"type":{"Type":142,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":143,"Flags":10,"Description":"The resource api version"},"properties":{"Type":145,"Flags":0,"Description":"Describe the properties of a license profile."},"tags":{"Type":167,"Flags":0,"Description":"Resource tags."},"location":{"Type":2,"Flags":1,"Description":"The geo-location where the resource lives"},"systemData":{"Type":32,"Flags":2,"Description":"Azure Resource Manager metadata containing createdBy and modifiedBy information."}}}},{"2":{"Name":"LicenseProfileProperties","Properties":{"esuProfile":{"Type":146,"Flags":0,"Description":"Hybrid Compute ESU Profile properties"},"provisioningState":{"Type":166,"Flags":2,"Description":"The provisioning state, which only appears in the response."}}}},{"2":{"Name":"LicenseProfileArmEsuProperties","Properties":{"assignedLicense":{"Type":2,"Flags":0,"Description":"The resource id of the license."},"serverType":{"Type":149,"Flags":2,"Description":"The type of the Esu servers."},"esuEligibility":{"Type":153,"Flags":2,"Description":"Indicates the eligibility state of Esu."},"esuKeyState":{"Type":156,"Flags":2,"Description":"Indicates whether there is an ESU Key currently active for the machine."},"assignedLicenseImmutableId":{"Type":2,"Flags":2,"Description":"The guid id of the license."},"esuKeys":{"Type":157,"Flags":2,"Description":"The list of ESU keys."}}}},{"6":{"Value":"Standard"}},{"6":{"Value":"Datacenter"}},{"5":{"Elements":[147,148,2]}},{"6":{"Value":"Eligible"}},{"6":{"Value":"Ineligible"}},{"6":{"Value":"Unknown"}},{"5":{"Elements":[150,151,152,2]}},{"6":{"Value":"Inactive"}},{"6":{"Value":"Active"}},{"5":{"Elements":[154,155,2]}},{"3":{"ItemType":97}},{"6":{"Value":"Creating"}},{"6":{"Value":"Updating"}},{"6":{"Value":"Deleting"}},{"6":{"Value":"Succeeded"}},{"6":{"Value":"Failed"}},{"6":{"Value":"Accepted"}},{"6":{"Value":"Canceled"}},{"6":{"Value":"Deleted"}},{"5":{"Elements":[158,159,160,161,162,163,164,165,2]}},{"2":{"Name":"TrackedResourceTags","Properties":{},"AdditionalProperties":2}},{"4":{"Name":"Microsoft.HybridCompute/machines/licenseProfiles@2023-06-20-preview","ScopeType":8,"Body":144,"Flags":0}},{"6":{"Value":"Microsoft.HybridCompute/machines/extensions"}},{"6":{"Value":"2023-06-20-preview"}},{"2":{"Name":"Microsoft.HybridCompute/machines/extensions","Properties":{"id":{"Type":2,"Flags":10,"Description":"The resource id"},"name":{"Type":2,"Flags":9,"Description":"The resource name"},"type":{"Type":169,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":170,"Flags":10,"Description":"The resource api version"},"properties":{"Type":124,"Flags":0,"Description":"Describes Machine Extension Properties."},"tags":{"Type":172,"Flags":0,"Description":"Resource tags."},"location":{"Type":2,"Flags":1,"Description":"The geo-location where the resource lives"},"systemData":{"Type":32,"Flags":2,"Description":"Azure Resource Manager metadata containing createdBy and modifiedBy information."}}}},{"2":{"Name":"TrackedResourceTags","Properties":{},"AdditionalProperties":2}},{"4":{"Name":"Microsoft.HybridCompute/machines/extensions@2023-06-20-preview","ScopeType":8,"Body":171,"Flags":0}},{"6":{"Value":"Microsoft.HybridCompute/privateLinkScopes"}},{"6":{"Value":"2023-06-20-preview"}},{"2":{"Name":"Microsoft.HybridCompute/privateLinkScopes","Properties":{"id":{"Type":2,"Flags":10,"Description":"The resource id"},"name":{"Type":2,"Flags":9,"Description":"The resource name"},"type":{"Type":174,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":175,"Flags":10,"Description":"The resource api version"},"properties":{"Type":177,"Flags":0,"Description":"Properties that define a Azure Arc PrivateLinkScope resource."},"systemData":{"Type":32,"Flags":2,"Description":"The system meta data relating to this resource."},"location":{"Type":2,"Flags":1,"Description":"Resource location"},"tags":{"Type":187,"Flags":0,"Description":"Resource tags"}}}},{"2":{"Name":"HybridComputePrivateLinkScopeProperties","Properties":{"publicNetworkAccess":{"Type":180,"Flags":0,"Description":"Indicates whether machines associated with the private link scope can also use public Azure Arc service endpoints."},"provisioningState":{"Type":2,"Flags":2,"Description":"Current state of this PrivateLinkScope: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Provisioning ,Succeeded, Canceled and Failed."},"privateLinkScopeId":{"Type":2,"Flags":2,"Description":"The Guid id of the private link scope."},"privateEndpointConnections":{"Type":186,"Flags":2,"Description":"The collection of associated Private Endpoint Connections."}}}},{"6":{"Value":"Enabled"}},{"6":{"Value":"Disabled"}},{"5":{"Elements":[178,179,2]}},{"2":{"Name":"PrivateEndpointConnectionDataModel","Properties":{"id":{"Type":2,"Flags":2,"Description":"The ARM Resource Id of the Private Endpoint."},"name":{"Type":2,"Flags":2,"Description":"The Name of the Private Endpoint."},"type":{"Type":2,"Flags":2,"Description":"Azure resource type"},"properties":{"Type":182,"Flags":0,"Description":"The Private Endpoint Connection properties."}}}},{"2":{"Name":"PrivateEndpointConnectionProperties","Properties":{"privateEndpoint":{"Type":183,"Flags":0,"Description":"Private endpoint which the connection belongs to."},"privateLinkServiceConnectionState":{"Type":184,"Flags":0,"Description":"Connection state of the private endpoint connection."},"provisioningState":{"Type":2,"Flags":2,"Description":"State of the private endpoint connection."},"groupIds":{"Type":185,"Flags":2,"Description":"List of group IDs."}}}},{"2":{"Name":"PrivateEndpointProperty","Properties":{"id":{"Type":2,"Flags":0,"Description":"Resource id of the private endpoint."}}}},{"2":{"Name":"PrivateLinkServiceConnectionStateProperty","Properties":{"status":{"Type":2,"Flags":1,"Description":"The private link service connection status."},"description":{"Type":2,"Flags":1,"Description":"The private link service connection description."},"actionsRequired":{"Type":2,"Flags":2,"Description":"The actions required for private link service connection."}}}},{"3":{"ItemType":2}},{"3":{"ItemType":181}},{"2":{"Name":"PrivateLinkScopesResourceTags","Properties":{},"AdditionalProperties":2}},{"4":{"Name":"Microsoft.HybridCompute/privateLinkScopes@2023-06-20-preview","ScopeType":8,"Body":176,"Flags":0}},{"6":{"Value":"Microsoft.HybridCompute/privateLinkScopes/privateEndpointConnections"}},{"6":{"Value":"2023-06-20-preview"}},{"2":{"Name":"Microsoft.HybridCompute/privateLinkScopes/privateEndpointConnections","Properties":{"id":{"Type":2,"Flags":10,"Description":"The resource id"},"name":{"Type":2,"Flags":9,"Description":"The resource name"},"type":{"Type":189,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":190,"Flags":10,"Description":"The resource api version"},"properties":{"Type":182,"Flags":0,"Description":"Resource properties."},"systemData":{"Type":32,"Flags":2,"Description":"Azure Resource Manager metadata containing createdBy and modifiedBy information."}}}},{"4":{"Name":"Microsoft.HybridCompute/privateLinkScopes/privateEndpointConnections@2023-06-20-preview","ScopeType":8,"Body":191,"Flags":0}},{"6":{"Value":"Microsoft.HybridCompute/locations/publishers/extensionTypes/versions"}},{"6":{"Value":"2023-06-20-preview"}},{"2":{"Name":"Microsoft.HybridCompute/locations/publishers/extensionTypes/versions","Properties":{"id":{"Type":2,"Flags":10,"Description":"The resource id"},"name":{"Type":2,"Flags":9,"Description":"The resource name"},"type":{"Type":193,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":194,"Flags":10,"Description":"The resource api version"},"properties":{"Type":196,"Flags":2,"Description":"The single extension based on search criteria"},"systemData":{"Type":32,"Flags":2,"Description":"Azure Resource Manager metadata containing createdBy and modifiedBy information."}}}},{"2":{"Name":"ExtensionValueProperties","Properties":{"version":{"Type":2,"Flags":2,"Description":"The version of the Extension being received."},"extensionType":{"Type":2,"Flags":2,"Description":"The type of the Extension being received."},"publisher":{"Type":2,"Flags":2,"Description":"The publisher of the Extension being received."}}}},{"4":{"Name":"Microsoft.HybridCompute/locations/publishers/extensionTypes/versions@2023-06-20-preview","ScopeType":4,"Body":195,"Flags":1}},{"13":{"Pattern":"[a-zA-Z0-9-_\\.]"}},{"6":{"Value":"Microsoft.HybridCompute/machines/hybridIdentityMetadata"}},{"6":{"Value":"2023-06-20-preview"}},{"2":{"Name":"Microsoft.HybridCompute/machines/hybridIdentityMetadata","Properties":{"id":{"Type":2,"Flags":10,"Description":"The resource id"},"name":{"Type":198,"Flags":9,"Description":"The resource name"},"type":{"Type":199,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":200,"Flags":10,"Description":"The resource api version"},"properties":{"Type":202,"Flags":2,"Description":"Resource properties."},"systemData":{"Type":32,"Flags":2,"Description":"Azure Resource Manager metadata containing createdBy and modifiedBy information."}}}},{"2":{"Name":"HybridIdentityMetadataProperties","Properties":{"vmId":{"Type":2,"Flags":0,"Description":"The unique identifier for the resource."},"publicKey":{"Type":2,"Flags":0,"Description":"The Public Key."},"identity":{"Type":129,"Flags":2,"Description":"Identity for the resource."}}}},{"4":{"Name":"Microsoft.HybridCompute/machines/hybridIdentityMetadata@2023-06-20-preview","ScopeType":8,"Body":201,"Flags":1}},{"6":{"Value":"Microsoft.HybridCompute/privateLinkScopes/privateLinkResources"}},{"6":{"Value":"2023-06-20-preview"}},{"2":{"Name":"Microsoft.HybridCompute/privateLinkScopes/privateLinkResources","Properties":{"id":{"Type":2,"Flags":10,"Description":"The resource id"},"name":{"Type":2,"Flags":9,"Description":"The resource name"},"type":{"Type":204,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":205,"Flags":10,"Description":"The resource api version"},"properties":{"Type":207,"Flags":2,"Description":"Resource properties."},"systemData":{"Type":32,"Flags":2,"Description":"Azure Resource Manager metadata containing createdBy and modifiedBy information."}}}},{"2":{"Name":"PrivateLinkResourceProperties","Properties":{"groupId":{"Type":2,"Flags":2,"Description":"The private link resource group id."},"requiredMembers":{"Type":208,"Flags":2,"Description":"The private link resource required member names."},"requiredZoneNames":{"Type":209,"Flags":2,"Description":"Required DNS zone names of the the private link resource."}}}},{"3":{"ItemType":2}},{"3":{"ItemType":2}},{"4":{"Name":"Microsoft.HybridCompute/privateLinkScopes/privateLinkResources@2023-06-20-preview","ScopeType":8,"Body":206,"Flags":1}}]
+[
+  {
+    "$type": "StringType",
+    "pattern": "[a-zA-Z0-9-_\\.]+"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.HybridCompute/licenses"
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-06-20-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.HybridCompute/licenses",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Hybrid Compute License properties"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LicenseProperties",
+    "properties": {
+      "provisioningState": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 2,
+        "description": "The provisioning state, which only appears in the response."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Describes the tenant id."
+      },
+      "licenseType": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 0,
+        "description": "The type of the license resource."
+      },
+      "licenseDetails": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "Describes the properties of a License."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ESU"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/15"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LicenseDetails",
+    "properties": {
+      "state": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0,
+        "description": "Describes the state of the license."
+      },
+      "target": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0,
+        "description": "Describes the license target server."
+      },
+      "edition": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "Describes the edition of the license. The values are either Standard or Datacenter."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "Describes the license core type (pCore or vCore)."
+      },
+      "processors": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "Describes the number of processors."
+      },
+      "assignedLicenses": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 2,
+        "description": "Describes the number of assigned licenses."
+      },
+      "immutableId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Describes the immutable id."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Activated"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deactivated"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/18"
+      },
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Windows Server 2012"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Windows Server 2012 R2"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/21"
+      },
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Datacenter"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/24"
+      },
+      {
+        "$ref": "#/25"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "pCore"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "vCore"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/27"
+      },
+      {
+        "$ref": "#/28"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SystemData",
+    "properties": {
+      "createdBy": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The identity that created the resource."
+      },
+      "createdByType": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 0,
+        "description": "The type of identity that created the resource."
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource creation (UTC)."
+      },
+      "lastModifiedBy": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The identity that last modified the resource."
+      },
+      "lastModifiedByType": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 0,
+        "description": "The type of identity that last modified the resource."
+      },
+      "lastModifiedAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource last modification (UTC)"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/33"
+      },
+      {
+        "$ref": "#/34"
+      },
+      {
+        "$ref": "#/35"
+      },
+      {
+        "$ref": "#/36"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/38"
+      },
+      {
+        "$ref": "#/39"
+      },
+      {
+        "$ref": "#/40"
+      },
+      {
+        "$ref": "#/41"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.HybridCompute/licenses@2023-06-20-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/4"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringType",
+    "minLength": 1,
+    "maxLength": 54,
+    "pattern": "[a-zA-Z0-9-_\\.]"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.HybridCompute/machines"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-06-20-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.HybridCompute/machines",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 0,
+        "description": "Hybrid Compute Machine properties"
+      },
+      "resources": {
+        "type": {
+          "$ref": "#/128"
+        },
+        "flags": 2,
+        "description": "The list of extensions affiliated to the machine"
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/129"
+        },
+        "flags": 0,
+        "description": "Identity for the resource."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/138"
+        },
+        "flags": 0,
+        "description": "Indicates which kind of Arc machine placement on-premises, such as HCI, SCVMM or VMware etc."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/139"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MachineProperties",
+    "properties": {
+      "locationData": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 0,
+        "description": "Metadata pertaining to the geographic location of the resource."
+      },
+      "agentConfiguration": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 2,
+        "description": "Configurable properties that the user can set locally via the azcmagent config command, or remotely via ARM."
+      },
+      "serviceStatuses": {
+        "type": {
+          "$ref": "#/60"
+        },
+        "flags": 0,
+        "description": "Statuses of dependent services that are reported back to ARM."
+      },
+      "cloudMetadata": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 0,
+        "description": "The metadata of the cloud environment (Azure/GCP/AWS/OCI...)."
+      },
+      "agentUpgrade": {
+        "type": {
+          "$ref": "#/63"
+        },
+        "flags": 0,
+        "description": "The info of the machine w.r.t Agent Upgrade"
+      },
+      "osProfile": {
+        "type": {
+          "$ref": "#/68"
+        },
+        "flags": 0,
+        "description": "Specifies the operating system settings for the hybrid machine."
+      },
+      "licenseProfile": {
+        "type": {
+          "$ref": "#/80"
+        },
+        "flags": 0,
+        "description": "Specifies the ESU related properties for a machine."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The provisioning state, which only appears in the response."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/102"
+        },
+        "flags": 2,
+        "description": "The status of the hybrid machine agent."
+      },
+      "lastStatusChange": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The time of the last status change."
+      },
+      "errorDetails": {
+        "type": {
+          "$ref": "#/108"
+        },
+        "flags": 2,
+        "description": "Details about the error state."
+      },
+      "agentVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The hybrid machine agent full version."
+      },
+      "vmId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Specifies the hybrid machine unique ID."
+      },
+      "displayName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Specifies the hybrid machine display name."
+      },
+      "machineFqdn": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Specifies the hybrid machine FQDN."
+      },
+      "clientPublicKey": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Public Key that the client provides to be used during initial resource onboarding"
+      },
+      "osName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The Operating System running on the hybrid machine."
+      },
+      "osVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The version of Operating System running on the hybrid machine."
+      },
+      "osType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The type of Operating System (windows/linux)."
+      },
+      "vmUuid": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Specifies the Arc Machine's unique SMBIOS ID"
+      },
+      "extensions": {
+        "type": {
+          "$ref": "#/115"
+        },
+        "flags": 0,
+        "description": "Machine Extensions information (deprecated field)"
+      },
+      "osSku": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Specifies the Operating System product SKU."
+      },
+      "domainName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Specifies the Windows domain name."
+      },
+      "adFqdn": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Specifies the AD fully qualified display name."
+      },
+      "dnsFqdn": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Specifies the DNS fully qualified display name."
+      },
+      "privateLinkScopeResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource id of the private link scope this machine is assigned to, if any."
+      },
+      "parentClusterResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource id of the parent cluster (Azure HCI) this machine is assigned to, if any."
+      },
+      "mssqlDiscovered": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Specifies whether any MS SQL instance is discovered on the machine."
+      },
+      "detectedProperties": {
+        "type": {
+          "$ref": "#/116"
+        },
+        "flags": 2,
+        "description": "Detected properties from the machine."
+      },
+      "networkProfile": {
+        "type": {
+          "$ref": "#/117"
+        },
+        "flags": 2,
+        "description": "Information about the network the machine is on."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LocationData",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 1,
+        "description": "A canonical name for the geographic or physical location."
+      },
+      "city": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The city or locality where the resource is located."
+      },
+      "district": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The district, state, or province where the resource is located."
+      },
+      "countryOrRegion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The country or region where the resource is located"
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "maxLength": 256
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AgentConfiguration",
+    "properties": {
+      "proxyUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Specifies the URL of the proxy to be used."
+      },
+      "incomingConnectionsPorts": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 2,
+        "description": "Specifies the list of ports that the agent will be able to listen on."
+      },
+      "extensionsAllowList": {
+        "type": {
+          "$ref": "#/54"
+        },
+        "flags": 2,
+        "description": "Array of extensions that are allowed to be installed or updated."
+      },
+      "extensionsBlockList": {
+        "type": {
+          "$ref": "#/55"
+        },
+        "flags": 2,
+        "description": "Array of extensions that are blocked (cannot be installed or updated)"
+      },
+      "proxyBypass": {
+        "type": {
+          "$ref": "#/56"
+        },
+        "flags": 2,
+        "description": "List of service names which should not use the specified proxy server."
+      },
+      "extensionsEnabled": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Specifies whether the extension service is enabled or disabled."
+      },
+      "guestConfigurationEnabled": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Specified whether the guest configuration service is enabled or disabled."
+      },
+      "configMode": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 2,
+        "description": "Name of configuration mode to use. Modes are pre-defined configurations of security controls, extension allowlists and guest configuration, maintained by Microsoft."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ConfigurationExtension",
+    "properties": {
+      "publisher": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Publisher of the extension."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Type of the extension."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/53"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/53"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "full"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "monitor"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/57"
+      },
+      {
+        "$ref": "#/58"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServiceStatuses",
+    "properties": {
+      "extensionService": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 0,
+        "description": "The state of the extension service on the Arc-enabled machine."
+      },
+      "guestConfigurationService": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 0,
+        "description": "The state of the guest configuration service on the Arc-enabled machine."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServiceStatus",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The current status of the service."
+      },
+      "startupType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The behavior of the service when the Arc-enabled machine starts up."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CloudMetadata",
+    "properties": {
+      "provider": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Specifies the cloud provider (Azure/AWS/GCP...)."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AgentUpgrade",
+    "properties": {
+      "desiredVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Specifies the version info w.r.t AgentUpgrade for the machine."
+      },
+      "correlationId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The correlation ID passed in from RSM per upgrade."
+      },
+      "enableAutomaticUpgrade": {
+        "type": {
+          "$ref": "#/64"
+        },
+        "flags": 0,
+        "description": "Specifies if RSM should try to upgrade this machine"
+      },
+      "lastAttemptDesiredVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Specifies the version of the last attempt"
+      },
+      "lastAttemptTimestamp": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Timestamp of last upgrade attempt"
+      },
+      "lastAttemptStatus": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 2,
+        "description": "Specifies the status of Agent Upgrade."
+      },
+      "lastAttemptMessage": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Failure message of last upgrade attempt if any."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Success"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/65"
+      },
+      {
+        "$ref": "#/66"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OSProfile",
+    "properties": {
+      "computerName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Specifies the host OS name of the hybrid machine."
+      },
+      "windowsConfiguration": {
+        "type": {
+          "$ref": "#/69"
+        },
+        "flags": 0,
+        "description": "Specifies the windows configuration for update management."
+      },
+      "linuxConfiguration": {
+        "type": {
+          "$ref": "#/79"
+        },
+        "flags": 0,
+        "description": "Specifies the linux configuration for update management."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OSProfileWindowsConfiguration",
+    "properties": {
+      "patchSettings": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 0,
+        "description": "Specifies the patch settings."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PatchSettings",
+    "properties": {
+      "assessmentMode": {
+        "type": {
+          "$ref": "#/73"
+        },
+        "flags": 0,
+        "description": "Specifies the assessment mode."
+      },
+      "patchMode": {
+        "type": {
+          "$ref": "#/78"
+        },
+        "flags": 0,
+        "description": "Specifies the patch mode."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ImageDefault"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AutomaticByPlatform"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/71"
+      },
+      {
+        "$ref": "#/72"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ImageDefault"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AutomaticByPlatform"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AutomaticByOS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Manual"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/74"
+      },
+      {
+        "$ref": "#/75"
+      },
+      {
+        "$ref": "#/76"
+      },
+      {
+        "$ref": "#/77"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OSProfileLinuxConfiguration",
+    "properties": {
+      "patchSettings": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 0,
+        "description": "Specifies the patch settings."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LicenseProfileMachineInstanceView",
+    "properties": {
+      "esuProfile": {
+        "type": {
+          "$ref": "#/81"
+        },
+        "flags": 0,
+        "description": "Properties for the Machine ESU profile."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LicenseProfileMachineInstanceViewEsuProperties",
+    "properties": {
+      "assignedLicense": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 0,
+        "description": "The assigned license resource."
+      },
+      "licenseAssignmentState": {
+        "type": {
+          "$ref": "#/86"
+        },
+        "flags": 0,
+        "description": "Describes the license assignment state (Assigned or NotAssigned)."
+      },
+      "serverType": {
+        "type": {
+          "$ref": "#/89"
+        },
+        "flags": 2,
+        "description": "The type of the Esu servers."
+      },
+      "esuEligibility": {
+        "type": {
+          "$ref": "#/93"
+        },
+        "flags": 2,
+        "description": "Indicates the eligibility state of Esu."
+      },
+      "esuKeyState": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 2,
+        "description": "Indicates whether there is an ESU Key currently active for the machine."
+      },
+      "assignedLicenseImmutableId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The guid id of the license."
+      },
+      "esuKeys": {
+        "type": {
+          "$ref": "#/98"
+        },
+        "flags": 2,
+        "description": "The list of ESU keys."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "License",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Hybrid Compute License properties"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/83"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Assigned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotAssigned"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/84"
+      },
+      {
+        "$ref": "#/85"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Datacenter"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/87"
+      },
+      {
+        "$ref": "#/88"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Eligible"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ineligible"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/90"
+      },
+      {
+        "$ref": "#/91"
+      },
+      {
+        "$ref": "#/92"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Inactive"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Active"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/94"
+      },
+      {
+        "$ref": "#/95"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EsuKey",
+    "properties": {
+      "sku": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "SKU number."
+      },
+      "licenseStatus": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The current status of the license profile key."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/97"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Connected"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disconnected"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Error"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/99"
+      },
+      {
+        "$ref": "#/100"
+      },
+      {
+        "$ref": "#/101"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ErrorDetail",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The error code."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The error message."
+      },
+      "target": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The error target."
+      },
+      "details": {
+        "type": {
+          "$ref": "#/104"
+        },
+        "flags": 2,
+        "description": "The error details."
+      },
+      "additionalInfo": {
+        "type": {
+          "$ref": "#/107"
+        },
+        "flags": 2,
+        "description": "The error additional info."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/103"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ErrorAdditionalInfo",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The additional info type."
+      },
+      "info": {
+        "type": {
+          "$ref": "#/106"
+        },
+        "flags": 2,
+        "description": "The additional info."
+      }
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/105"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/103"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MachineExtensionInstanceView",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The machine extension name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Specifies the type of the extension; an example is \"CustomScriptExtension\"."
+      },
+      "typeHandlerVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Specifies the version of the script handler."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/110"
+        },
+        "flags": 0,
+        "description": "Instance view status."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MachineExtensionInstanceViewStatus",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The status code."
+      },
+      "level": {
+        "type": {
+          "$ref": "#/114"
+        },
+        "flags": 0,
+        "description": "The level code."
+      },
+      "displayStatus": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The short localizable label for the status."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The detailed status message, including for alerts and error messages."
+      },
+      "time": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The time of the status."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Info"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Warning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Error"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/111"
+      },
+      {
+        "$ref": "#/112"
+      },
+      {
+        "$ref": "#/113"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/109"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DetectedProperties",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkProfile",
+    "properties": {
+      "networkInterfaces": {
+        "type": {
+          "$ref": "#/122"
+        },
+        "flags": 0,
+        "description": "The list of network interfaces."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkInterface",
+    "properties": {
+      "ipAddresses": {
+        "type": {
+          "$ref": "#/121"
+        },
+        "flags": 0,
+        "description": "The list of IP addresses in this interface."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IpAddress",
+    "properties": {
+      "address": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Represents the IP Address."
+      },
+      "ipAddressVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Represents the Ip Address Version."
+      },
+      "subnet": {
+        "type": {
+          "$ref": "#/120"
+        },
+        "flags": 2,
+        "description": "The subnet to which this IP address belongs."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Subnet",
+    "properties": {
+      "addressPrefix": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Represents address prefix."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/119"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/118"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MachineExtension",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/124"
+        },
+        "flags": 0,
+        "description": "Describes Machine Extension Properties."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/127"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MachineExtensionProperties",
+    "properties": {
+      "forceUpdateTag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "How the extension handler should be forced to update even if the extension configuration has not changed."
+      },
+      "publisher": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the extension handler publisher."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Specifies the type of the extension; an example is \"CustomScriptExtension\"."
+      },
+      "typeHandlerVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Specifies the version of the script handler."
+      },
+      "enableAutomaticUpgrade": {
+        "type": {
+          "$ref": "#/64"
+        },
+        "flags": 0,
+        "description": "Indicates whether the extension should be automatically upgraded by the platform if there is a newer version available."
+      },
+      "autoUpgradeMinorVersion": {
+        "type": {
+          "$ref": "#/64"
+        },
+        "flags": 0,
+        "description": "Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true."
+      },
+      "settings": {
+        "type": {
+          "$ref": "#/125"
+        },
+        "flags": 0,
+        "description": "Json formatted public settings for the extension."
+      },
+      "protectedSettings": {
+        "type": {
+          "$ref": "#/126"
+        },
+        "flags": 0,
+        "description": "The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The provisioning state, which only appears in the response."
+      },
+      "instanceView": {
+        "type": {
+          "$ref": "#/109"
+        },
+        "flags": 0,
+        "description": "The machine extension instance view."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MachineExtensionPropertiesSettings",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/106"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MachineExtensionPropertiesProtectedSettings",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/106"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/123"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Identity",
+    "properties": {
+      "principalId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The principal ID of resource identity."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The tenant ID of resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/130"
+        },
+        "flags": 0,
+        "description": "The identity type."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SystemAssigned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AVS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HCI"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SCVMM"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VMware"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "EPS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GCP"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AWS"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/131"
+      },
+      {
+        "$ref": "#/132"
+      },
+      {
+        "$ref": "#/133"
+      },
+      {
+        "$ref": "#/134"
+      },
+      {
+        "$ref": "#/135"
+      },
+      {
+        "$ref": "#/136"
+      },
+      {
+        "$ref": "#/137"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.HybridCompute/machines@2023-06-20-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/47"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "default"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.HybridCompute/machines/licenseProfiles"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-06-20-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.HybridCompute/machines/licenseProfiles",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/141"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/142"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/143"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/145"
+        },
+        "flags": 0,
+        "description": "Describe the properties of a license profile."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/167"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LicenseProfileProperties",
+    "properties": {
+      "esuProfile": {
+        "type": {
+          "$ref": "#/146"
+        },
+        "flags": 0,
+        "description": "Hybrid Compute ESU Profile properties"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/166"
+        },
+        "flags": 2,
+        "description": "The provisioning state, which only appears in the response."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LicenseProfileArmEsuProperties",
+    "properties": {
+      "assignedLicense": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource id of the license."
+      },
+      "serverType": {
+        "type": {
+          "$ref": "#/149"
+        },
+        "flags": 2,
+        "description": "The type of the Esu servers."
+      },
+      "esuEligibility": {
+        "type": {
+          "$ref": "#/153"
+        },
+        "flags": 2,
+        "description": "Indicates the eligibility state of Esu."
+      },
+      "esuKeyState": {
+        "type": {
+          "$ref": "#/156"
+        },
+        "flags": 2,
+        "description": "Indicates whether there is an ESU Key currently active for the machine."
+      },
+      "assignedLicenseImmutableId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The guid id of the license."
+      },
+      "esuKeys": {
+        "type": {
+          "$ref": "#/157"
+        },
+        "flags": 2,
+        "description": "The list of ESU keys."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Datacenter"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/147"
+      },
+      {
+        "$ref": "#/148"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Eligible"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ineligible"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/150"
+      },
+      {
+        "$ref": "#/151"
+      },
+      {
+        "$ref": "#/152"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Inactive"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Active"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/154"
+      },
+      {
+        "$ref": "#/155"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/97"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/158"
+      },
+      {
+        "$ref": "#/159"
+      },
+      {
+        "$ref": "#/160"
+      },
+      {
+        "$ref": "#/161"
+      },
+      {
+        "$ref": "#/162"
+      },
+      {
+        "$ref": "#/163"
+      },
+      {
+        "$ref": "#/164"
+      },
+      {
+        "$ref": "#/165"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.HybridCompute/machines/licenseProfiles@2023-06-20-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/144"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.HybridCompute/machines/extensions"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-06-20-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.HybridCompute/machines/extensions",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/169"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/170"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/124"
+        },
+        "flags": 0,
+        "description": "Describes Machine Extension Properties."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/172"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.HybridCompute/machines/extensions@2023-06-20-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/171"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.HybridCompute/privateLinkScopes"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-06-20-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.HybridCompute/privateLinkScopes",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/174"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/175"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/177"
+        },
+        "flags": 0,
+        "description": "Properties that define a Azure Arc PrivateLinkScope resource."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 2,
+        "description": "The system meta data relating to this resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Resource location"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/187"
+        },
+        "flags": 0,
+        "description": "Resource tags"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HybridComputePrivateLinkScopeProperties",
+    "properties": {
+      "publicNetworkAccess": {
+        "type": {
+          "$ref": "#/180"
+        },
+        "flags": 0,
+        "description": "Indicates whether machines associated with the private link scope can also use public Azure Arc service endpoints."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Current state of this PrivateLinkScope: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Provisioning ,Succeeded, Canceled and Failed."
+      },
+      "privateLinkScopeId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The Guid id of the private link scope."
+      },
+      "privateEndpointConnections": {
+        "type": {
+          "$ref": "#/186"
+        },
+        "flags": 2,
+        "description": "The collection of associated Private Endpoint Connections."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/178"
+      },
+      {
+        "$ref": "#/179"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateEndpointConnectionDataModel",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The ARM Resource Id of the Private Endpoint."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The Name of the Private Endpoint."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Azure resource type"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/182"
+        },
+        "flags": 0,
+        "description": "The Private Endpoint Connection properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateEndpointConnectionProperties",
+    "properties": {
+      "privateEndpoint": {
+        "type": {
+          "$ref": "#/183"
+        },
+        "flags": 0,
+        "description": "Private endpoint which the connection belongs to."
+      },
+      "privateLinkServiceConnectionState": {
+        "type": {
+          "$ref": "#/184"
+        },
+        "flags": 0,
+        "description": "Connection state of the private endpoint connection."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "State of the private endpoint connection."
+      },
+      "groupIds": {
+        "type": {
+          "$ref": "#/185"
+        },
+        "flags": 2,
+        "description": "List of group IDs."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateEndpointProperty",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Resource id of the private endpoint."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateLinkServiceConnectionStateProperty",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The private link service connection status."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The private link service connection description."
+      },
+      "actionsRequired": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The actions required for private link service connection."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/181"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateLinkScopesResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.HybridCompute/privateLinkScopes@2023-06-20-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/176"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.HybridCompute/privateLinkScopes/privateEndpointConnections"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-06-20-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.HybridCompute/privateLinkScopes/privateEndpointConnections",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/189"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/190"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/182"
+        },
+        "flags": 0,
+        "description": "Resource properties."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.HybridCompute/privateLinkScopes/privateEndpointConnections@2023-06-20-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/191"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.HybridCompute/locations/publishers/extensionTypes/versions"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-06-20-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.HybridCompute/locations/publishers/extensionTypes/versions",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/193"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/194"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/196"
+        },
+        "flags": 2,
+        "description": "The single extension based on search criteria"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExtensionValueProperties",
+    "properties": {
+      "version": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The version of the Extension being received."
+      },
+      "extensionType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the Extension being received."
+      },
+      "publisher": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The publisher of the Extension being received."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.HybridCompute/locations/publishers/extensionTypes/versions@2023-06-20-preview",
+    "scopeType": 4,
+    "body": {
+      "$ref": "#/195"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringType",
+    "pattern": "[a-zA-Z0-9-_\\.]"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.HybridCompute/machines/hybridIdentityMetadata"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-06-20-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.HybridCompute/machines/hybridIdentityMetadata",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/198"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/199"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/200"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/202"
+        },
+        "flags": 2,
+        "description": "Resource properties."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HybridIdentityMetadataProperties",
+    "properties": {
+      "vmId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The unique identifier for the resource."
+      },
+      "publicKey": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The Public Key."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/129"
+        },
+        "flags": 2,
+        "description": "Identity for the resource."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.HybridCompute/machines/hybridIdentityMetadata@2023-06-20-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/201"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.HybridCompute/privateLinkScopes/privateLinkResources"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-06-20-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.HybridCompute/privateLinkScopes/privateLinkResources",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/204"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/205"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/207"
+        },
+        "flags": 2,
+        "description": "Resource properties."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateLinkResourceProperties",
+    "properties": {
+      "groupId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The private link resource group id."
+      },
+      "requiredMembers": {
+        "type": {
+          "$ref": "#/208"
+        },
+        "flags": 2,
+        "description": "The private link resource required member names."
+      },
+      "requiredZoneNames": {
+        "type": {
+          "$ref": "#/209"
+        },
+        "flags": 2,
+        "description": "Required DNS zone names of the the private link resource."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.HybridCompute/privateLinkScopes/privateLinkResources@2023-06-20-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/206"
+    },
+    "flags": 1
+  }
+]

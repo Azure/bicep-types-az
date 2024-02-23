@@ -1,1 +1,1377 @@
-[{"6":{"Value":"vaultstorageconfig"}},{"6":{"Value":"Microsoft.RecoveryServices/vaults/backupstorageconfig"}},{"13":{}},{"6":{"Value":"2023-01-15"}},{"2":{"Name":"Microsoft.RecoveryServices/vaults/backupstorageconfig","Properties":{"id":{"Type":2,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":1,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":3,"Flags":10,"Description":"The resource api version"},"properties":{"Type":5,"Flags":0,"Description":"BackupResourceConfigResource properties"},"location":{"Type":2,"Flags":0,"Description":"Resource location."},"tags":{"Type":23,"Flags":0,"Description":"Resource tags."},"eTag":{"Type":2,"Flags":0,"Description":"Optional ETag."}}}},{"2":{"Name":"BackupResourceConfig","Properties":{"storageModelType":{"Type":11,"Flags":0,"Description":"Storage type"},"storageType":{"Type":17,"Flags":0,"Description":"Storage type."},"storageTypeState":{"Type":21,"Flags":0,"Description":"Locked or Unlocked. Once a machine is registered against a resource, the storageTypeState is always Locked."},"crossRegionRestoreFlag":{"Type":22,"Flags":0,"Description":"Opt in details of Cross Region Restore feature."}}}},{"6":{"Value":"Invalid"}},{"6":{"Value":"GeoRedundant"}},{"6":{"Value":"LocallyRedundant"}},{"6":{"Value":"ZoneRedundant"}},{"6":{"Value":"ReadAccessGeoZoneRedundant"}},{"5":{"Elements":[6,7,8,9,10,2]}},{"6":{"Value":"Invalid"}},{"6":{"Value":"GeoRedundant"}},{"6":{"Value":"LocallyRedundant"}},{"6":{"Value":"ZoneRedundant"}},{"6":{"Value":"ReadAccessGeoZoneRedundant"}},{"5":{"Elements":[12,13,14,15,16,2]}},{"6":{"Value":"Invalid"}},{"6":{"Value":"Locked"}},{"6":{"Value":"Unlocked"}},{"5":{"Elements":[18,19,20,2]}},{"11":{}},{"2":{"Name":"ResourceTags","Properties":{},"AdditionalProperties":2}},{"4":{"Name":"Microsoft.RecoveryServices/vaults/backupstorageconfig@2023-01-15","ScopeType":8,"Body":4,"Flags":0}},{"6":{"Value":"Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems/recoveryPoints"}},{"6":{"Value":"2023-01-15"}},{"2":{"Name":"Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems/recoveryPoints","Properties":{"id":{"Type":2,"Flags":10,"Description":"The resource id"},"name":{"Type":2,"Flags":9,"Description":"The resource name"},"type":{"Type":25,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":26,"Flags":10,"Description":"The resource api version"},"properties":{"Type":28,"Flags":2,"Description":"RecoveryPointResource properties"},"location":{"Type":2,"Flags":2,"Description":"Resource location."},"tags":{"Type":101,"Flags":2,"Description":"Resource tags."},"eTag":{"Type":2,"Flags":2,"Description":"Optional ETag."}}}},{"7":{"Name":"RecoveryPoint","Discriminator":"objectType","BaseProperties":{},"Elements":{"AzureFileShareRecoveryPoint":29,"AzureWorkloadSAPHanaPointInTimeRecoveryPoint":33,"AzureWorkloadSAPHanaRecoveryPoint":59,"AzureWorkloadSQLPointInTimeRecoveryPoint":69,"GenericRecoveryPoint":87,"IaasVMRecoveryPoint":89}}},{"2":{"Name":"AzureFileShareRecoveryPoint","Properties":{"recoveryPointType":{"Type":2,"Flags":2,"Description":"Type of the backup copy. Specifies whether it is a crash consistent backup or app consistent."},"recoveryPointTime":{"Type":2,"Flags":2,"Description":"Time at which this backup copy was created."},"fileShareSnapshotUri":{"Type":2,"Flags":2,"Description":"Contains Url to the snapshot of fileshare, if applicable"},"recoveryPointSizeInGB":{"Type":30,"Flags":2,"Description":"Contains recovery point size"},"recoveryPointProperties":{"Type":31,"Flags":0,"Description":"Properties of Recovery Point"},"objectType":{"Type":32,"Flags":1,"Description":"This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."}}}},{"12":{}},{"2":{"Name":"RecoveryPointProperties","Properties":{"expiryTime":{"Type":2,"Flags":0,"Description":"Expiry time of Recovery Point in UTC."},"ruleName":{"Type":2,"Flags":0,"Description":"Rule name tagged on Recovery Point that governs life cycle"},"isSoftDeleted":{"Type":22,"Flags":0,"Description":"Bool to indicate whether RP is in soft delete state or not"}}}},{"6":{"Value":"AzureFileShareRecoveryPoint"}},{"2":{"Name":"AzureWorkloadSAPHanaPointInTimeRecoveryPoint","Properties":{"timeRanges":{"Type":35,"Flags":0,"Description":"List of log ranges"},"recoveryPointTimeInUTC":{"Type":2,"Flags":2,"Description":"UTC time at which recovery point was created"},"type":{"Type":41,"Flags":2,"Description":"Type of restore point"},"recoveryPointTierDetails":{"Type":55,"Flags":0,"Description":"Recovery point tier information."},"recoveryPointMoveReadinessInfo":{"Type":57,"Flags":0,"Description":"Eligibility of RP to be moved to another tier"},"recoveryPointProperties":{"Type":31,"Flags":0,"Description":"Properties of Recovery Point"},"objectType":{"Type":58,"Flags":1,"Description":"This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."}}}},{"2":{"Name":"PointInTimeRange","Properties":{"startTime":{"Type":2,"Flags":0,"Description":"Start time of the time range for log recovery."},"endTime":{"Type":2,"Flags":0,"Description":"End time of the time range for log recovery."}}}},{"3":{"ItemType":34}},{"6":{"Value":"Invalid"}},{"6":{"Value":"Full"}},{"6":{"Value":"Log"}},{"6":{"Value":"Differential"}},{"6":{"Value":"Incremental"}},{"5":{"Elements":[36,37,38,39,40,2]}},{"2":{"Name":"RecoveryPointTierInformation","Properties":{"type":{"Type":47,"Flags":0,"Description":"Recovery point tier type."},"status":{"Type":53,"Flags":0,"Description":"Recovery point tier status."},"extendedInfo":{"Type":54,"Flags":0,"Description":"Recovery point tier status."}}}},{"6":{"Value":"Invalid"}},{"6":{"Value":"InstantRP"}},{"6":{"Value":"HardenedRP"}},{"6":{"Value":"ArchivedRP"}},{"5":{"Elements":[43,44,45,46]}},{"6":{"Value":"Invalid"}},{"6":{"Value":"Valid"}},{"6":{"Value":"Disabled"}},{"6":{"Value":"Deleted"}},{"6":{"Value":"Rehydrated"}},{"5":{"Elements":[48,49,50,51,52]}},{"2":{"Name":"RecoveryPointTierInformationExtendedInfo","Properties":{},"AdditionalProperties":2}},{"3":{"ItemType":42}},{"2":{"Name":"RecoveryPointMoveReadinessInfo","Properties":{"isReadyForMove":{"Type":22,"Flags":0},"additionalInfo":{"Type":2,"Flags":0}}}},{"2":{"Name":"AzureWorkloadRecoveryPointMoveReadinessInfo","Properties":{},"AdditionalProperties":56}},{"6":{"Value":"AzureWorkloadSAPHanaPointInTimeRecoveryPoint"}},{"2":{"Name":"AzureWorkloadSAPHanaRecoveryPoint","Properties":{"recoveryPointTimeInUTC":{"Type":2,"Flags":2,"Description":"UTC time at which recovery point was created"},"type":{"Type":65,"Flags":2,"Description":"Type of restore point"},"recoveryPointTierDetails":{"Type":66,"Flags":0,"Description":"Recovery point tier information."},"recoveryPointMoveReadinessInfo":{"Type":67,"Flags":0,"Description":"Eligibility of RP to be moved to another tier"},"recoveryPointProperties":{"Type":31,"Flags":0,"Description":"Properties of Recovery Point"},"objectType":{"Type":68,"Flags":1,"Description":"This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."}}}},{"6":{"Value":"Invalid"}},{"6":{"Value":"Full"}},{"6":{"Value":"Log"}},{"6":{"Value":"Differential"}},{"6":{"Value":"Incremental"}},{"5":{"Elements":[60,61,62,63,64,2]}},{"3":{"ItemType":42}},{"2":{"Name":"AzureWorkloadRecoveryPointMoveReadinessInfo","Properties":{},"AdditionalProperties":56}},{"6":{"Value":"AzureWorkloadSAPHanaRecoveryPoint"}},{"2":{"Name":"AzureWorkloadSQLPointInTimeRecoveryPoint","Properties":{"timeRanges":{"Type":70,"Flags":0,"Description":"List of log ranges"},"extendedInfo":{"Type":71,"Flags":0,"Description":"Extended Info that provides data directory details. Will be populated in two cases:\r\nWhen a specific recovery point is accessed using GetRecoveryPoint\r\nOr when ListRecoveryPoints is called for Log RP only with ExtendedInfo query filter"},"recoveryPointTimeInUTC":{"Type":2,"Flags":2,"Description":"UTC time at which recovery point was created"},"type":{"Type":83,"Flags":2,"Description":"Type of restore point"},"recoveryPointTierDetails":{"Type":84,"Flags":0,"Description":"Recovery point tier information."},"recoveryPointMoveReadinessInfo":{"Type":85,"Flags":0,"Description":"Eligibility of RP to be moved to another tier"},"recoveryPointProperties":{"Type":31,"Flags":0,"Description":"Properties of Recovery Point"},"objectType":{"Type":86,"Flags":1,"Description":"This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."}}}},{"3":{"ItemType":34}},{"2":{"Name":"AzureWorkloadSQLRecoveryPointExtendedInfo","Properties":{"dataDirectoryTimeInUTC":{"Type":2,"Flags":2,"Description":"UTC time at which data directory info was captured"},"dataDirectoryPaths":{"Type":77,"Flags":2,"Description":"List of data directory paths during restore operation."}}}},{"2":{"Name":"SQLDataDirectory","Properties":{"type":{"Type":76,"Flags":0,"Description":"Type of data directory mapping"},"path":{"Type":2,"Flags":0,"Description":"File path"},"logicalName":{"Type":2,"Flags":0,"Description":"Logical name of the file"}}}},{"6":{"Value":"Invalid"}},{"6":{"Value":"Data"}},{"6":{"Value":"Log"}},{"5":{"Elements":[73,74,75,2]}},{"3":{"ItemType":72}},{"6":{"Value":"Invalid"}},{"6":{"Value":"Full"}},{"6":{"Value":"Log"}},{"6":{"Value":"Differential"}},{"6":{"Value":"Incremental"}},{"5":{"Elements":[78,79,80,81,82,2]}},{"3":{"ItemType":42}},{"2":{"Name":"AzureWorkloadRecoveryPointMoveReadinessInfo","Properties":{},"AdditionalProperties":56}},{"6":{"Value":"AzureWorkloadSQLPointInTimeRecoveryPoint"}},{"2":{"Name":"GenericRecoveryPoint","Properties":{"friendlyName":{"Type":2,"Flags":0,"Description":"Friendly name of the backup copy."},"recoveryPointType":{"Type":2,"Flags":0,"Description":"Type of the backup copy."},"recoveryPointTime":{"Type":2,"Flags":0,"Description":"Time at which this backup copy was created."},"recoveryPointAdditionalInfo":{"Type":2,"Flags":0,"Description":"Additional information associated with this backup copy."},"recoveryPointProperties":{"Type":31,"Flags":0,"Description":"Properties of Recovery Point"},"objectType":{"Type":88,"Flags":1,"Description":"This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."}}}},{"6":{"Value":"GenericRecoveryPoint"}},{"2":{"Name":"IaasVMRecoveryPoint","Properties":{"recoveryPointType":{"Type":2,"Flags":2,"Description":"Type of the backup copy."},"recoveryPointTime":{"Type":2,"Flags":2,"Description":"Time at which this backup copy was created."},"recoveryPointAdditionalInfo":{"Type":2,"Flags":2,"Description":"Additional information associated with this backup copy."},"sourceVMStorageType":{"Type":2,"Flags":2,"Description":"Storage type of the VM whose backup copy is created."},"isSourceVMEncrypted":{"Type":22,"Flags":2,"Description":"Identifies whether the VM was encrypted when the backup copy is created."},"keyAndSecret":{"Type":90,"Flags":0,"Description":"Required details for recovering an encrypted VM. Applicable only when IsSourceVMEncrypted is true."},"isInstantIlrSessionActive":{"Type":22,"Flags":0,"Description":"Is the session to recover items from this backup copy still active."},"recoveryPointTierDetails":{"Type":93,"Flags":0,"Description":"Recovery point tier information."},"isManagedVirtualMachine":{"Type":22,"Flags":0,"Description":"Whether VM is with Managed Disks"},"virtualMachineSize":{"Type":2,"Flags":0,"Description":"Virtual Machine Size"},"originalStorageAccountOption":{"Type":22,"Flags":0,"Description":"Original Storage Account Option"},"osType":{"Type":2,"Flags":0,"Description":"OS type"},"recoveryPointDiskConfiguration":{"Type":94,"Flags":0,"Description":"Disk configuration"},"zones":{"Type":98,"Flags":0,"Description":"Identifies the zone of the VM at the time of backup. Applicable only for zone-pinned Vms"},"recoveryPointMoveReadinessInfo":{"Type":99,"Flags":0,"Description":"Eligibility of RP to be moved to another tier"},"recoveryPointProperties":{"Type":31,"Flags":0,"Description":"Properties of Recovery Point"},"objectType":{"Type":100,"Flags":1,"Description":"This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."}}}},{"2":{"Name":"KeyAndSecretDetails","Properties":{"kekDetails":{"Type":91,"Flags":0,"Description":"KEK is encryption key for BEK."},"bekDetails":{"Type":92,"Flags":0,"Description":"BEK is bitlocker encryption key."},"encryptionMechanism":{"Type":2,"Flags":0,"Description":"Encryption mechanism: None/ SinglePass/ DoublePass"}}}},{"2":{"Name":"KEKDetails","Properties":{"keyUrl":{"Type":2,"Flags":0,"Description":"Key is KEK."},"keyVaultId":{"Type":2,"Flags":0,"Description":"Key Vault ID where this Key is stored."},"keyBackupData":{"Type":2,"Flags":0,"Description":"KEK data."}}}},{"2":{"Name":"BEKDetails","Properties":{"secretUrl":{"Type":2,"Flags":0,"Description":"Secret is BEK."},"secretVaultId":{"Type":2,"Flags":0,"Description":"ID of the Key Vault where this Secret is stored."},"secretData":{"Type":2,"Flags":0,"Description":"BEK data."}}}},{"3":{"ItemType":42}},{"2":{"Name":"RecoveryPointDiskConfiguration","Properties":{"numberOfDisksIncludedInBackup":{"Type":30,"Flags":0,"Description":"Number of disks included in backup"},"numberOfDisksAttachedToVm":{"Type":30,"Flags":0,"Description":"Number of disks attached to the VM"},"includedDiskList":{"Type":96,"Flags":0,"Description":"Information of disks included in backup"},"excludedDiskList":{"Type":97,"Flags":0,"Description":"Information of disks excluded from backup"}}}},{"2":{"Name":"DiskInformation","Properties":{"lun":{"Type":30,"Flags":0},"name":{"Type":2,"Flags":0}}}},{"3":{"ItemType":95}},{"3":{"ItemType":95}},{"3":{"ItemType":2}},{"2":{"Name":"IaasVMRecoveryPointMoveReadinessInfo","Properties":{},"AdditionalProperties":56}},{"6":{"Value":"IaasVMRecoveryPoint"}},{"2":{"Name":"ResourceTags","Properties":{},"AdditionalProperties":2}},{"4":{"Name":"Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems/recoveryPoints@2023-01-15","ScopeType":8,"Body":27,"Flags":1}}]
+[
+  {
+    "$type": "StringLiteralType",
+    "value": "vaultstorageconfig"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.RecoveryServices/vaults/backupstorageconfig"
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-01-15"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.RecoveryServices/vaults/backupstorageconfig",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "BackupResourceConfigResource properties"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Resource location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "eTag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Optional ETag."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BackupResourceConfig",
+    "properties": {
+      "storageModelType": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 0,
+        "description": "Storage type"
+      },
+      "storageType": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "Storage type."
+      },
+      "storageTypeState": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "Locked or Unlocked. Once a machine is registered against a resource, the storageTypeState is always Locked."
+      },
+      "crossRegionRestoreFlag": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 0,
+        "description": "Opt in details of Cross Region Restore feature."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GeoRedundant"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LocallyRedundant"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ZoneRedundant"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ReadAccessGeoZoneRedundant"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GeoRedundant"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "LocallyRedundant"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ZoneRedundant"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ReadAccessGeoZoneRedundant"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/14"
+      },
+      {
+        "$ref": "#/15"
+      },
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Locked"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unlocked"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/18"
+      },
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/20"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.RecoveryServices/vaults/backupstorageconfig@2023-01-15",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/4"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems/recoveryPoints"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-01-15"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems/recoveryPoints",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 2,
+        "description": "RecoveryPointResource properties"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Resource location."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/101"
+        },
+        "flags": 2,
+        "description": "Resource tags."
+      },
+      "eTag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Optional ETag."
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "RecoveryPoint",
+    "discriminator": "objectType",
+    "baseProperties": {},
+    "elements": {
+      "AzureFileShareRecoveryPoint": {
+        "$ref": "#/29"
+      },
+      "AzureWorkloadSAPHanaPointInTimeRecoveryPoint": {
+        "$ref": "#/33"
+      },
+      "AzureWorkloadSAPHanaRecoveryPoint": {
+        "$ref": "#/59"
+      },
+      "AzureWorkloadSQLPointInTimeRecoveryPoint": {
+        "$ref": "#/69"
+      },
+      "GenericRecoveryPoint": {
+        "$ref": "#/87"
+      },
+      "IaasVMRecoveryPoint": {
+        "$ref": "#/89"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureFileShareRecoveryPoint",
+    "properties": {
+      "recoveryPointType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Type of the backup copy. Specifies whether it is a crash consistent backup or app consistent."
+      },
+      "recoveryPointTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Time at which this backup copy was created."
+      },
+      "fileShareSnapshotUri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Contains Url to the snapshot of fileshare, if applicable"
+      },
+      "recoveryPointSizeInGB": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 2,
+        "description": "Contains recovery point size"
+      },
+      "recoveryPointProperties": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0,
+        "description": "Properties of Recovery Point"
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 1,
+        "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RecoveryPointProperties",
+    "properties": {
+      "expiryTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Expiry time of Recovery Point in UTC."
+      },
+      "ruleName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Rule name tagged on Recovery Point that governs life cycle"
+      },
+      "isSoftDeleted": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 0,
+        "description": "Bool to indicate whether RP is in soft delete state or not"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureFileShareRecoveryPoint"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureWorkloadSAPHanaPointInTimeRecoveryPoint",
+    "properties": {
+      "timeRanges": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 0,
+        "description": "List of log ranges"
+      },
+      "recoveryPointTimeInUTC": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "UTC time at which recovery point was created"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 2,
+        "description": "Type of restore point"
+      },
+      "recoveryPointTierDetails": {
+        "type": {
+          "$ref": "#/55"
+        },
+        "flags": 0,
+        "description": "Recovery point tier information."
+      },
+      "recoveryPointMoveReadinessInfo": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0,
+        "description": "Eligibility of RP to be moved to another tier"
+      },
+      "recoveryPointProperties": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0,
+        "description": "Properties of Recovery Point"
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/58"
+        },
+        "flags": 1,
+        "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PointInTimeRange",
+    "properties": {
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Start time of the time range for log recovery."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "End time of the time range for log recovery."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/34"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Full"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Log"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Differential"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Incremental"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/36"
+      },
+      {
+        "$ref": "#/37"
+      },
+      {
+        "$ref": "#/38"
+      },
+      {
+        "$ref": "#/39"
+      },
+      {
+        "$ref": "#/40"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RecoveryPointTierInformation",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 0,
+        "description": "Recovery point tier type."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 0,
+        "description": "Recovery point tier status."
+      },
+      "extendedInfo": {
+        "type": {
+          "$ref": "#/54"
+        },
+        "flags": 0,
+        "description": "Recovery point tier status."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InstantRP"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HardenedRP"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ArchivedRP"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/43"
+      },
+      {
+        "$ref": "#/44"
+      },
+      {
+        "$ref": "#/45"
+      },
+      {
+        "$ref": "#/46"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Valid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Rehydrated"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/48"
+      },
+      {
+        "$ref": "#/49"
+      },
+      {
+        "$ref": "#/50"
+      },
+      {
+        "$ref": "#/51"
+      },
+      {
+        "$ref": "#/52"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RecoveryPointTierInformationExtendedInfo",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/42"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RecoveryPointMoveReadinessInfo",
+    "properties": {
+      "isReadyForMove": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 0
+      },
+      "additionalInfo": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureWorkloadRecoveryPointMoveReadinessInfo",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/56"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureWorkloadSAPHanaPointInTimeRecoveryPoint"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureWorkloadSAPHanaRecoveryPoint",
+    "properties": {
+      "recoveryPointTimeInUTC": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "UTC time at which recovery point was created"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/65"
+        },
+        "flags": 2,
+        "description": "Type of restore point"
+      },
+      "recoveryPointTierDetails": {
+        "type": {
+          "$ref": "#/66"
+        },
+        "flags": 0,
+        "description": "Recovery point tier information."
+      },
+      "recoveryPointMoveReadinessInfo": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 0,
+        "description": "Eligibility of RP to be moved to another tier"
+      },
+      "recoveryPointProperties": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0,
+        "description": "Properties of Recovery Point"
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/68"
+        },
+        "flags": 1,
+        "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Full"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Log"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Differential"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Incremental"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/60"
+      },
+      {
+        "$ref": "#/61"
+      },
+      {
+        "$ref": "#/62"
+      },
+      {
+        "$ref": "#/63"
+      },
+      {
+        "$ref": "#/64"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/42"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureWorkloadRecoveryPointMoveReadinessInfo",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/56"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureWorkloadSAPHanaRecoveryPoint"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureWorkloadSQLPointInTimeRecoveryPoint",
+    "properties": {
+      "timeRanges": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 0,
+        "description": "List of log ranges"
+      },
+      "extendedInfo": {
+        "type": {
+          "$ref": "#/71"
+        },
+        "flags": 0,
+        "description": "Extended Info that provides data directory details. Will be populated in two cases:\r\nWhen a specific recovery point is accessed using GetRecoveryPoint\r\nOr when ListRecoveryPoints is called for Log RP only with ExtendedInfo query filter"
+      },
+      "recoveryPointTimeInUTC": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "UTC time at which recovery point was created"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/83"
+        },
+        "flags": 2,
+        "description": "Type of restore point"
+      },
+      "recoveryPointTierDetails": {
+        "type": {
+          "$ref": "#/84"
+        },
+        "flags": 0,
+        "description": "Recovery point tier information."
+      },
+      "recoveryPointMoveReadinessInfo": {
+        "type": {
+          "$ref": "#/85"
+        },
+        "flags": 0,
+        "description": "Eligibility of RP to be moved to another tier"
+      },
+      "recoveryPointProperties": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0,
+        "description": "Properties of Recovery Point"
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/86"
+        },
+        "flags": 1,
+        "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/34"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureWorkloadSQLRecoveryPointExtendedInfo",
+    "properties": {
+      "dataDirectoryTimeInUTC": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "UTC time at which data directory info was captured"
+      },
+      "dataDirectoryPaths": {
+        "type": {
+          "$ref": "#/77"
+        },
+        "flags": 2,
+        "description": "List of data directory paths during restore operation."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SQLDataDirectory",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/76"
+        },
+        "flags": 0,
+        "description": "Type of data directory mapping"
+      },
+      "path": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "File path"
+      },
+      "logicalName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Logical name of the file"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Data"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Log"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/73"
+      },
+      {
+        "$ref": "#/74"
+      },
+      {
+        "$ref": "#/75"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/72"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Full"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Log"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Differential"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Incremental"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/78"
+      },
+      {
+        "$ref": "#/79"
+      },
+      {
+        "$ref": "#/80"
+      },
+      {
+        "$ref": "#/81"
+      },
+      {
+        "$ref": "#/82"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/42"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureWorkloadRecoveryPointMoveReadinessInfo",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/56"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureWorkloadSQLPointInTimeRecoveryPoint"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GenericRecoveryPoint",
+    "properties": {
+      "friendlyName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Friendly name of the backup copy."
+      },
+      "recoveryPointType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Type of the backup copy."
+      },
+      "recoveryPointTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Time at which this backup copy was created."
+      },
+      "recoveryPointAdditionalInfo": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Additional information associated with this backup copy."
+      },
+      "recoveryPointProperties": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0,
+        "description": "Properties of Recovery Point"
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/88"
+        },
+        "flags": 1,
+        "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GenericRecoveryPoint"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IaasVMRecoveryPoint",
+    "properties": {
+      "recoveryPointType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Type of the backup copy."
+      },
+      "recoveryPointTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Time at which this backup copy was created."
+      },
+      "recoveryPointAdditionalInfo": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Additional information associated with this backup copy."
+      },
+      "sourceVMStorageType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Storage type of the VM whose backup copy is created."
+      },
+      "isSourceVMEncrypted": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 2,
+        "description": "Identifies whether the VM was encrypted when the backup copy is created."
+      },
+      "keyAndSecret": {
+        "type": {
+          "$ref": "#/90"
+        },
+        "flags": 0,
+        "description": "Required details for recovering an encrypted VM. Applicable only when IsSourceVMEncrypted is true."
+      },
+      "isInstantIlrSessionActive": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 0,
+        "description": "Is the session to recover items from this backup copy still active."
+      },
+      "recoveryPointTierDetails": {
+        "type": {
+          "$ref": "#/93"
+        },
+        "flags": 0,
+        "description": "Recovery point tier information."
+      },
+      "isManagedVirtualMachine": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 0,
+        "description": "Whether VM is with Managed Disks"
+      },
+      "virtualMachineSize": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Virtual Machine Size"
+      },
+      "originalStorageAccountOption": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 0,
+        "description": "Original Storage Account Option"
+      },
+      "osType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "OS type"
+      },
+      "recoveryPointDiskConfiguration": {
+        "type": {
+          "$ref": "#/94"
+        },
+        "flags": 0,
+        "description": "Disk configuration"
+      },
+      "zones": {
+        "type": {
+          "$ref": "#/98"
+        },
+        "flags": 0,
+        "description": "Identifies the zone of the VM at the time of backup. Applicable only for zone-pinned Vms"
+      },
+      "recoveryPointMoveReadinessInfo": {
+        "type": {
+          "$ref": "#/99"
+        },
+        "flags": 0,
+        "description": "Eligibility of RP to be moved to another tier"
+      },
+      "recoveryPointProperties": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0,
+        "description": "Properties of Recovery Point"
+      },
+      "objectType": {
+        "type": {
+          "$ref": "#/100"
+        },
+        "flags": 1,
+        "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KeyAndSecretDetails",
+    "properties": {
+      "kekDetails": {
+        "type": {
+          "$ref": "#/91"
+        },
+        "flags": 0,
+        "description": "KEK is encryption key for BEK."
+      },
+      "bekDetails": {
+        "type": {
+          "$ref": "#/92"
+        },
+        "flags": 0,
+        "description": "BEK is bitlocker encryption key."
+      },
+      "encryptionMechanism": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Encryption mechanism: None/ SinglePass/ DoublePass"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KEKDetails",
+    "properties": {
+      "keyUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Key is KEK."
+      },
+      "keyVaultId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Key Vault ID where this Key is stored."
+      },
+      "keyBackupData": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "KEK data."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "BEKDetails",
+    "properties": {
+      "secretUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Secret is BEK."
+      },
+      "secretVaultId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "ID of the Key Vault where this Secret is stored."
+      },
+      "secretData": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "BEK data."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/42"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RecoveryPointDiskConfiguration",
+    "properties": {
+      "numberOfDisksIncludedInBackup": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "Number of disks included in backup"
+      },
+      "numberOfDisksAttachedToVm": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "Number of disks attached to the VM"
+      },
+      "includedDiskList": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 0,
+        "description": "Information of disks included in backup"
+      },
+      "excludedDiskList": {
+        "type": {
+          "$ref": "#/97"
+        },
+        "flags": 0,
+        "description": "Information of disks excluded from backup"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DiskInformation",
+    "properties": {
+      "lun": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/95"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/95"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IaasVMRecoveryPointMoveReadinessInfo",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/56"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "IaasVMRecoveryPoint"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems/recoveryPoints@2023-01-15",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/27"
+    },
+    "flags": 1
+  }
+]

@@ -1,1 +1,1041 @@
-[{"13":{"MinLength":2,"MaxLength":64,"Pattern":"^[a-zA-Z0-9][a-zA-Z0-9_.-]*$"}},{"6":{"Value":"Microsoft.CognitiveServices/accounts"}},{"13":{}},{"6":{"Value":"2017-04-18"}},{"2":{"Name":"Microsoft.CognitiveServices/accounts","Properties":{"id":{"Type":2,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":1,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":3,"Flags":10,"Description":"The resource api version"},"etag":{"Type":2,"Flags":2,"Description":"Entity Tag"},"kind":{"Type":2,"Flags":0,"Description":"The Kind of the resource."},"location":{"Type":2,"Flags":0,"Description":"The location of the resource"},"properties":{"Type":5,"Flags":0,"Description":"Properties of Cognitive Services account."},"sku":{"Type":51,"Flags":0,"Description":"The SKU of Cognitive Services account."},"tags":{"Type":57,"Flags":0,"Description":"Gets or sets a list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters."},"identity":{"Type":58,"Flags":0,"Description":"The identity of Cognitive Services account."}}}},{"2":{"Name":"CognitiveServicesAccountProperties","Properties":{"provisioningState":{"Type":12,"Flags":2,"Description":"Gets the status of the cognitive services account at the time the operation was called."},"endpoint":{"Type":2,"Flags":2,"Description":"Endpoint of the created account."},"internalId":{"Type":2,"Flags":2,"Description":"The internal identifier."},"capabilities":{"Type":14,"Flags":2,"Description":"Gets the capabilities of the cognitive services account. Each item indicates the capability of a specific feature. The values are read-only and for reference only."},"isMigrated":{"Type":15,"Flags":2,"Description":"If the resource is migrated from an existing key."},"skuChangeInfo":{"Type":16,"Flags":2,"Description":"Sku change info of account."},"customSubDomainName":{"Type":2,"Flags":0,"Description":"Optional subdomain name used for token-based authentication."},"networkAcls":{"Type":18,"Flags":0,"Description":"A collection of rules governing the accessibility from specific network locations."},"encryption":{"Type":26,"Flags":0,"Description":"The encryption properties for this resource."},"userOwnedStorage":{"Type":32,"Flags":0,"Description":"The storage accounts for this resource."},"privateEndpointConnections":{"Type":43,"Flags":0,"Description":"The private endpoint connection associated with the Cognitive Services account."},"publicNetworkAccess":{"Type":46,"Flags":0,"Description":"Whether or not public endpoint access is allowed for this account. Value is optional but if passed in, must be 'Enabled' or 'Disabled'"},"apiProperties":{"Type":47,"Flags":0,"Description":"The api properties for special APIs."},"dateCreated":{"Type":2,"Flags":2,"Description":"Gets the date of cognitive services account creation."}}}},{"6":{"Value":"Creating"}},{"6":{"Value":"ResolvingDNS"}},{"6":{"Value":"Moving"}},{"6":{"Value":"Deleting"}},{"6":{"Value":"Succeeded"}},{"6":{"Value":"Failed"}},{"5":{"Elements":[6,7,8,9,10,11,2]}},{"2":{"Name":"SkuCapability","Properties":{"name":{"Type":2,"Flags":0,"Description":"The name of the SkuCapability."},"value":{"Type":2,"Flags":0,"Description":"The value of the SkuCapability."}}}},{"3":{"ItemType":13}},{"11":{}},{"2":{"Name":"CognitiveServicesAccountSkuChangeInfo","Properties":{"countOfDowngrades":{"Type":17,"Flags":2,"Description":"Gets the count of downgrades."},"countOfUpgradesAfterDowngrades":{"Type":17,"Flags":2,"Description":"Gets the count of upgrades after downgrades."},"lastChangeDate":{"Type":2,"Flags":2,"Description":"Gets the last change date."}}}},{"12":{}},{"2":{"Name":"NetworkRuleSet","Properties":{"defaultAction":{"Type":21,"Flags":0,"Description":"The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated."},"ipRules":{"Type":23,"Flags":0,"Description":"The list of IP address rules."},"virtualNetworkRules":{"Type":25,"Flags":0,"Description":"The list of virtual network rules."}}}},{"6":{"Value":"Allow"}},{"6":{"Value":"Deny"}},{"5":{"Elements":[19,20,2]}},{"2":{"Name":"IpRule","Properties":{"value":{"Type":2,"Flags":1,"Description":"An IPv4 address range in CIDR notation, such as '124.56.78.91' (simple IP address) or '124.56.78.0/24' (all addresses that start with 124.56.78)."}}}},{"3":{"ItemType":22}},{"2":{"Name":"VirtualNetworkRule","Properties":{"id":{"Type":2,"Flags":1,"Description":"Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'."},"state":{"Type":2,"Flags":0,"Description":"Gets the state of virtual network rule."},"ignoreMissingVnetServiceEndpoint":{"Type":15,"Flags":0,"Description":"Ignore missing vnet service endpoint or not."}}}},{"3":{"ItemType":24}},{"2":{"Name":"Encryption","Properties":{"keyVaultProperties":{"Type":27,"Flags":0,"Description":"Properties of KeyVault"},"keySource":{"Type":30,"Flags":0,"Description":"Enumerates the possible value of keySource for Encryption"}}}},{"2":{"Name":"KeyVaultProperties","Properties":{"keyName":{"Type":2,"Flags":0,"Description":"Name of the Key from KeyVault"},"keyVersion":{"Type":2,"Flags":0,"Description":"Version of the Key from KeyVault"},"keyVaultUri":{"Type":2,"Flags":0,"Description":"Uri of KeyVault"}}}},{"6":{"Value":"Microsoft.CognitiveServices"}},{"6":{"Value":"Microsoft.KeyVault"}},{"5":{"Elements":[28,29,2]}},{"2":{"Name":"UserOwnedStorage","Properties":{"resourceId":{"Type":2,"Flags":0,"Description":"Full resource id of a Microsoft.Storage resource."}}}},{"3":{"ItemType":31}},{"2":{"Name":"PrivateEndpointConnection","Properties":{"properties":{"Type":34,"Flags":0,"Description":"Resource properties."},"etag":{"Type":2,"Flags":2,"Description":"Entity Tag"},"location":{"Type":2,"Flags":0,"Description":"The location of the private endpoint connection"},"id":{"Type":2,"Flags":2,"Description":"Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"},"name":{"Type":2,"Flags":2,"Description":"The name of the resource"},"type":{"Type":2,"Flags":2,"Description":"The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""}}}},{"2":{"Name":"PrivateEndpointConnectionProperties","Properties":{"privateEndpoint":{"Type":35,"Flags":0,"Description":"The resource of private end point."},"privateLinkServiceConnectionState":{"Type":36,"Flags":1,"Description":"A collection of information about the state of the connection between service consumer and provider."},"groupIds":{"Type":42,"Flags":0,"Description":"The private link resource group ids."}}}},{"2":{"Name":"PrivateEndpoint","Properties":{"id":{"Type":2,"Flags":2,"Description":"The ARM identifier for Private Endpoint"}}}},{"2":{"Name":"PrivateLinkServiceConnectionState","Properties":{"status":{"Type":41,"Flags":0,"Description":"Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service."},"description":{"Type":2,"Flags":0,"Description":"The reason for approval/rejection of the connection."},"actionsRequired":{"Type":2,"Flags":0,"Description":"A message indicating if changes on the service provider require any updates on the consumer."}}}},{"6":{"Value":"Pending"}},{"6":{"Value":"Approved"}},{"6":{"Value":"Rejected"}},{"6":{"Value":"Disconnected"}},{"5":{"Elements":[37,38,39,40,2]}},{"3":{"ItemType":2}},{"3":{"ItemType":33}},{"6":{"Value":"Enabled"}},{"6":{"Value":"Disabled"}},{"5":{"Elements":[44,45,2]}},{"2":{"Name":"CognitiveServicesAccountApiProperties","Properties":{"qnaRuntimeEndpoint":{"Type":2,"Flags":0,"Description":"(QnAMaker Only) The runtime endpoint of QnAMaker."},"qnaAzureSearchEndpointKey":{"Type":2,"Flags":0,"Description":"(QnAMaker Only) The Azure Search endpoint key of QnAMaker."},"qnaAzureSearchEndpointId":{"Type":2,"Flags":0,"Description":"(QnAMaker Only) The Azure Search endpoint id of QnAMaker."},"statisticsEnabled":{"Type":15,"Flags":0,"Description":"(Bing Search Only) The flag to enable statistics of Bing Search."},"eventHubConnectionString":{"Type":48,"Flags":0,"Description":"(Personalization Only) The flag to enable statistics of Bing Search."},"storageAccountConnectionString":{"Type":49,"Flags":0,"Description":"(Personalization Only) The storage account connection string."},"aadClientId":{"Type":50,"Flags":0,"Description":"(Metrics Advisor Only) The Azure AD Client Id (Application Id)."},"aadTenantId":{"Type":50,"Flags":0,"Description":"(Metrics Advisor Only) The Azure AD Tenant Id."},"superUser":{"Type":50,"Flags":0,"Description":"(Metrics Advisor Only) The super user of Metrics Advisor."},"websiteName":{"Type":50,"Flags":0,"Description":"(Metrics Advisor Only) The website name of Metrics Advisor."}}}},{"13":{"MaxLength":1000,"Pattern":"^( *)Endpoint=sb://(.*);( *)SharedAccessKeyName=(.*);( *)SharedAccessKey=(.*)$"}},{"13":{"MaxLength":1000,"Pattern":"^(( *)DefaultEndpointsProtocol=(http|https)( *);( *))?AccountName=(.*)AccountKey=(.*)EndpointSuffix=(.*)$"}},{"13":{"MaxLength":500}},{"2":{"Name":"Sku","Properties":{"name":{"Type":2,"Flags":1,"Description":"Gets or sets the sku name. Required for account creation, optional for update."},"tier":{"Type":56,"Flags":2,"Description":"Gets the sku tier. This is based on the SKU name."}}}},{"6":{"Value":"Free"}},{"6":{"Value":"Standard"}},{"6":{"Value":"Premium"}},{"6":{"Value":"Enterprise"}},{"5":{"Elements":[52,53,54,55,2]}},{"2":{"Name":"CognitiveServicesAccountTags","Properties":{},"AdditionalProperties":2}},{"2":{"Name":"Identity","Properties":{"type":{"Type":62,"Flags":0,"Description":"Type of managed service identity."},"tenantId":{"Type":2,"Flags":2,"Description":"Tenant of managed service identity."},"principalId":{"Type":2,"Flags":2,"Description":"Principal Id of managed service identity."},"userAssignedIdentities":{"Type":64,"Flags":0,"Description":"The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}"}}}},{"6":{"Value":"None"}},{"6":{"Value":"SystemAssigned"}},{"6":{"Value":"UserAssigned"}},{"5":{"Elements":[59,60,61]}},{"2":{"Name":"UserAssignedIdentity","Properties":{"principalId":{"Type":2,"Flags":0,"Description":"Azure Active Directory principal ID associated with this Identity."},"clientId":{"Type":2,"Flags":0,"Description":"Client App Id associated with this identity."}}}},{"2":{"Name":"IdentityUserAssignedIdentities","Properties":{},"AdditionalProperties":63}},{"4":{"Name":"Microsoft.CognitiveServices/accounts@2017-04-18","ScopeType":8,"Body":4,"Flags":0}},{"6":{"Value":"Microsoft.CognitiveServices/accounts/privateEndpointConnections"}},{"6":{"Value":"2017-04-18"}},{"2":{"Name":"Microsoft.CognitiveServices/accounts/privateEndpointConnections","Properties":{"id":{"Type":2,"Flags":10,"Description":"The resource id"},"name":{"Type":2,"Flags":9,"Description":"The resource name"},"type":{"Type":66,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":67,"Flags":10,"Description":"The resource api version"},"properties":{"Type":34,"Flags":0,"Description":"Resource properties."},"etag":{"Type":2,"Flags":2,"Description":"Entity Tag"},"location":{"Type":2,"Flags":0,"Description":"The location of the private endpoint connection"}}}},{"4":{"Name":"Microsoft.CognitiveServices/accounts/privateEndpointConnections@2017-04-18","ScopeType":8,"Body":68,"Flags":0}},{"2":{"Name":"CognitiveServicesAccountKeys","Properties":{"key1":{"Type":2,"Flags":0,"Description":"Gets the value of key 1."},"key2":{"Type":2,"Flags":0,"Description":"Gets the value of key 2."}}}},{"8":{"Name":"listKeys","ResourceType":"Microsoft.CognitiveServices/accounts","ApiVersion":"2017-04-18","Output":70}}]
+[
+  {
+    "$type": "StringType",
+    "minLength": 2,
+    "maxLength": 64,
+    "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.-]*$"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.CognitiveServices/accounts"
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2017-04-18"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.CognitiveServices/accounts",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Entity Tag"
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The Kind of the resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The location of the resource"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Properties of Cognitive Services account."
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 0,
+        "description": "The SKU of Cognitive Services account."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 0,
+        "description": "Gets or sets a list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/58"
+        },
+        "flags": 0,
+        "description": "The identity of Cognitive Services account."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CognitiveServicesAccountProperties",
+    "properties": {
+      "provisioningState": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 2,
+        "description": "Gets the status of the cognitive services account at the time the operation was called."
+      },
+      "endpoint": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Endpoint of the created account."
+      },
+      "internalId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The internal identifier."
+      },
+      "capabilities": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 2,
+        "description": "Gets the capabilities of the cognitive services account. Each item indicates the capability of a specific feature. The values are read-only and for reference only."
+      },
+      "isMigrated": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "If the resource is migrated from an existing key."
+      },
+      "skuChangeInfo": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 2,
+        "description": "Sku change info of account."
+      },
+      "customSubDomainName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Optional subdomain name used for token-based authentication."
+      },
+      "networkAcls": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "A collection of rules governing the accessibility from specific network locations."
+      },
+      "encryption": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "The encryption properties for this resource."
+      },
+      "userOwnedStorage": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 0,
+        "description": "The storage accounts for this resource."
+      },
+      "privateEndpointConnections": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 0,
+        "description": "The private endpoint connection associated with the Cognitive Services account."
+      },
+      "publicNetworkAccess": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 0,
+        "description": "Whether or not public endpoint access is allowed for this account. Value is optional but if passed in, must be 'Enabled' or 'Disabled'"
+      },
+      "apiProperties": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 0,
+        "description": "The api properties for special APIs."
+      },
+      "dateCreated": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets the date of cognitive services account creation."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ResolvingDNS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Moving"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SkuCapability",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The name of the SkuCapability."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The value of the SkuCapability."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/13"
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CognitiveServicesAccountSkuChangeInfo",
+    "properties": {
+      "countOfDowngrades": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 2,
+        "description": "Gets the count of downgrades."
+      },
+      "countOfUpgradesAfterDowngrades": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 2,
+        "description": "Gets the count of upgrades after downgrades."
+      },
+      "lastChangeDate": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets the last change date."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NetworkRuleSet",
+    "properties": {
+      "defaultAction": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated."
+      },
+      "ipRules": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0,
+        "description": "The list of IP address rules."
+      },
+      "virtualNetworkRules": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 0,
+        "description": "The list of virtual network rules."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Allow"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deny"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/20"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IpRule",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "An IPv4 address range in CIDR notation, such as '124.56.78.91' (simple IP address) or '124.56.78.0/24' (all addresses that start with 124.56.78)."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/22"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualNetworkRule",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'."
+      },
+      "state": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Gets the state of virtual network rule."
+      },
+      "ignoreMissingVnetServiceEndpoint": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "Ignore missing vnet service endpoint or not."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/24"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Encryption",
+    "properties": {
+      "keyVaultProperties": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 0,
+        "description": "Properties of KeyVault"
+      },
+      "keySource": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 0,
+        "description": "Enumerates the possible value of keySource for Encryption"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KeyVaultProperties",
+    "properties": {
+      "keyName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of the Key from KeyVault"
+      },
+      "keyVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Version of the Key from KeyVault"
+      },
+      "keyVaultUri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Uri of KeyVault"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.CognitiveServices"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.KeyVault"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/28"
+      },
+      {
+        "$ref": "#/29"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UserOwnedStorage",
+    "properties": {
+      "resourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Full resource id of a Microsoft.Storage resource."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/31"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateEndpointConnection",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 0,
+        "description": "Resource properties."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Entity Tag"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The location of the private endpoint connection"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateEndpointConnectionProperties",
+    "properties": {
+      "privateEndpoint": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 0,
+        "description": "The resource of private end point."
+      },
+      "privateLinkServiceConnectionState": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 1,
+        "description": "A collection of information about the state of the connection between service consumer and provider."
+      },
+      "groupIds": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 0,
+        "description": "The private link resource group ids."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateEndpoint",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The ARM identifier for Private Endpoint"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateLinkServiceConnectionState",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 0,
+        "description": "Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The reason for approval/rejection of the connection."
+      },
+      "actionsRequired": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "A message indicating if changes on the service provider require any updates on the consumer."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Pending"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Approved"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Rejected"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disconnected"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/37"
+      },
+      {
+        "$ref": "#/38"
+      },
+      {
+        "$ref": "#/39"
+      },
+      {
+        "$ref": "#/40"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/33"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/44"
+      },
+      {
+        "$ref": "#/45"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CognitiveServicesAccountApiProperties",
+    "properties": {
+      "qnaRuntimeEndpoint": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "(QnAMaker Only) The runtime endpoint of QnAMaker."
+      },
+      "qnaAzureSearchEndpointKey": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "(QnAMaker Only) The Azure Search endpoint key of QnAMaker."
+      },
+      "qnaAzureSearchEndpointId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "(QnAMaker Only) The Azure Search endpoint id of QnAMaker."
+      },
+      "statisticsEnabled": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "(Bing Search Only) The flag to enable statistics of Bing Search."
+      },
+      "eventHubConnectionString": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 0,
+        "description": "(Personalization Only) The flag to enable statistics of Bing Search."
+      },
+      "storageAccountConnectionString": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 0,
+        "description": "(Personalization Only) The storage account connection string."
+      },
+      "aadClientId": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 0,
+        "description": "(Metrics Advisor Only) The Azure AD Client Id (Application Id)."
+      },
+      "aadTenantId": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 0,
+        "description": "(Metrics Advisor Only) The Azure AD Tenant Id."
+      },
+      "superUser": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 0,
+        "description": "(Metrics Advisor Only) The super user of Metrics Advisor."
+      },
+      "websiteName": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 0,
+        "description": "(Metrics Advisor Only) The website name of Metrics Advisor."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "maxLength": 1000,
+    "pattern": "^( *)Endpoint=sb://(.*);( *)SharedAccessKeyName=(.*);( *)SharedAccessKey=(.*)$"
+  },
+  {
+    "$type": "StringType",
+    "maxLength": 1000,
+    "pattern": "^(( *)DefaultEndpointsProtocol=(http|https)( *);( *))?AccountName=(.*)AccountKey=(.*)EndpointSuffix=(.*)$"
+  },
+  {
+    "$type": "StringType",
+    "maxLength": 500
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Sku",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Gets or sets the sku name. Required for account creation, optional for update."
+      },
+      "tier": {
+        "type": {
+          "$ref": "#/56"
+        },
+        "flags": 2,
+        "description": "Gets the sku tier. This is based on the SKU name."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Free"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Premium"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enterprise"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/52"
+      },
+      {
+        "$ref": "#/53"
+      },
+      {
+        "$ref": "#/54"
+      },
+      {
+        "$ref": "#/55"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CognitiveServicesAccountTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Identity",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 0,
+        "description": "Type of managed service identity."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Tenant of managed service identity."
+      },
+      "principalId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Principal Id of managed service identity."
+      },
+      "userAssignedIdentities": {
+        "type": {
+          "$ref": "#/64"
+        },
+        "flags": 0,
+        "description": "The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SystemAssigned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UserAssigned"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/59"
+      },
+      {
+        "$ref": "#/60"
+      },
+      {
+        "$ref": "#/61"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UserAssignedIdentity",
+    "properties": {
+      "principalId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Azure Active Directory principal ID associated with this Identity."
+      },
+      "clientId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Client App Id associated with this identity."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IdentityUserAssignedIdentities",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/63"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.CognitiveServices/accounts@2017-04-18",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/4"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.CognitiveServices/accounts/privateEndpointConnections"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2017-04-18"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.CognitiveServices/accounts/privateEndpointConnections",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/66"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 0,
+        "description": "Resource properties."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Entity Tag"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The location of the private endpoint connection"
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.CognitiveServices/accounts/privateEndpointConnections@2017-04-18",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/68"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CognitiveServicesAccountKeys",
+    "properties": {
+      "key1": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Gets the value of key 1."
+      },
+      "key2": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Gets the value of key 2."
+      }
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listKeys",
+    "resourceType": "Microsoft.CognitiveServices/accounts",
+    "apiVersion": "2017-04-18",
+    "output": {
+      "$ref": "#/70"
+    }
+  }
+]

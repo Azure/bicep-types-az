@@ -1,1 +1,709 @@
-[{"13":{}},{"6":{"Value":"Microsoft.AlertsManagement/actionRules"}},{"6":{"Value":"2021-08-08-preview"}},{"2":{"Name":"Microsoft.AlertsManagement/actionRules","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":1,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":2,"Flags":10,"Description":"The resource api version"},"properties":{"Type":4,"Flags":0,"Description":"Alert processing rule properties."},"systemData":{"Type":55,"Flags":2,"Description":"Alert processing rule system data."},"location":{"Type":0,"Flags":1,"Description":"Resource location"},"tags":{"Type":66,"Flags":0,"Description":"Resource tags"}}}},{"2":{"Name":"AlertProcessingRuleProperties","Properties":{"scopes":{"Type":5,"Flags":1,"Description":"Scopes on which alert processing rule will apply."},"conditions":{"Type":25,"Flags":0,"Description":"Conditions on which alerts will be filtered."},"schedule":{"Type":26,"Flags":0,"Description":"Scheduling for alert processing rule."},"actions":{"Type":53,"Flags":1,"Description":"Actions to be applied."},"description":{"Type":0,"Flags":0,"Description":"Description of alert processing rule."},"enabled":{"Type":54,"Flags":0,"Description":"Indicates if the given alert processing rule is enabled or disabled."}}}},{"3":{"ItemType":0}},{"2":{"Name":"Condition","Properties":{"field":{"Type":18,"Flags":0,"Description":"Field for a given condition."},"operator":{"Type":23,"Flags":0,"Description":"Operator for a given condition."},"values":{"Type":24,"Flags":0,"Description":"List of values to match for a given condition."}}}},{"6":{"Value":"Severity"}},{"6":{"Value":"MonitorService"}},{"6":{"Value":"MonitorCondition"}},{"6":{"Value":"SignalType"}},{"6":{"Value":"TargetResourceType"}},{"6":{"Value":"TargetResource"}},{"6":{"Value":"TargetResourceGroup"}},{"6":{"Value":"AlertRuleId"}},{"6":{"Value":"AlertRuleName"}},{"6":{"Value":"Description"}},{"6":{"Value":"AlertContext"}},{"5":{"Elements":[7,8,9,10,11,12,13,14,15,16,17,0]}},{"6":{"Value":"Equals"}},{"6":{"Value":"NotEquals"}},{"6":{"Value":"Contains"}},{"6":{"Value":"DoesNotContain"}},{"5":{"Elements":[19,20,21,22,0]}},{"3":{"ItemType":0}},{"3":{"ItemType":6}},{"2":{"Name":"Schedule","Properties":{"effectiveFrom":{"Type":27,"Flags":0,"Description":"Scheduling effective from time. Date-Time in ISO-8601 format without timezone suffix."},"effectiveUntil":{"Type":27,"Flags":0,"Description":"Scheduling effective until time. Date-Time in ISO-8601 format without timezone suffix."},"timeZone":{"Type":0,"Flags":0,"Description":"Scheduling time zone."},"recurrences":{"Type":46,"Flags":0,"Description":"List of recurrences."}}}},{"13":{"Pattern":"^(?:(\\d{4}-\\d{2}-\\d{2})T(\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?))$"}},{"7":{"Name":"Recurrence","Discriminator":"recurrenceType","BaseProperties":{"startTime":{"Type":0,"Flags":0,"Description":"Start time for recurrence."},"endTime":{"Type":0,"Flags":0,"Description":"End time for recurrence."}},"Elements":{"Daily":29,"Monthly":31,"Weekly":35}}},{"2":{"Name":"DailyRecurrence","Properties":{"recurrenceType":{"Type":30,"Flags":1,"Description":"Specifies when the recurrence should be applied."}}}},{"6":{"Value":"Daily"}},{"2":{"Name":"MonthlyRecurrence","Properties":{"daysOfMonth":{"Type":33,"Flags":1,"Description":"Specifies the values for monthly recurrence pattern."},"recurrenceType":{"Type":34,"Flags":1,"Description":"Specifies when the recurrence should be applied."}}}},{"12":{}},{"3":{"ItemType":32}},{"6":{"Value":"Monthly"}},{"2":{"Name":"WeeklyRecurrence","Properties":{"daysOfWeek":{"Type":44,"Flags":1,"Description":"Specifies the values for weekly recurrence pattern."},"recurrenceType":{"Type":45,"Flags":1,"Description":"Specifies when the recurrence should be applied."}}}},{"6":{"Value":"Sunday"}},{"6":{"Value":"Monday"}},{"6":{"Value":"Tuesday"}},{"6":{"Value":"Wednesday"}},{"6":{"Value":"Thursday"}},{"6":{"Value":"Friday"}},{"6":{"Value":"Saturday"}},{"5":{"Elements":[36,37,38,39,40,41,42,0]}},{"3":{"ItemType":43}},{"6":{"Value":"Weekly"}},{"3":{"ItemType":28}},{"7":{"Name":"Action","Discriminator":"actionType","BaseProperties":{},"Elements":{"AddActionGroups":48,"RemoveAllActionGroups":51}}},{"2":{"Name":"AddActionGroups","Properties":{"actionGroupIds":{"Type":49,"Flags":1,"Description":"List of action group Ids to add to alert processing rule."},"actionType":{"Type":50,"Flags":1,"Description":"Action that should be applied."}}}},{"3":{"ItemType":0}},{"6":{"Value":"AddActionGroups"}},{"2":{"Name":"RemoveAllActionGroups","Properties":{"actionType":{"Type":52,"Flags":1,"Description":"Action that should be applied."}}}},{"6":{"Value":"RemoveAllActionGroups"}},{"3":{"ItemType":47}},{"11":{}},{"2":{"Name":"SystemData","Properties":{"createdBy":{"Type":0,"Flags":0,"Description":"The identity that created the resource."},"createdByType":{"Type":60,"Flags":0,"Description":"The type of identity that created the resource."},"createdAt":{"Type":0,"Flags":0,"Description":"The timestamp of resource creation (UTC)."},"lastModifiedBy":{"Type":0,"Flags":0,"Description":"The identity that last modified the resource."},"lastModifiedByType":{"Type":65,"Flags":0,"Description":"The type of identity that last modified the resource."},"lastModifiedAt":{"Type":0,"Flags":0,"Description":"The timestamp of resource last modification (UTC)"}}}},{"6":{"Value":"User"}},{"6":{"Value":"Application"}},{"6":{"Value":"ManagedIdentity"}},{"6":{"Value":"Key"}},{"5":{"Elements":[56,57,58,59,0]}},{"6":{"Value":"User"}},{"6":{"Value":"Application"}},{"6":{"Value":"ManagedIdentity"}},{"6":{"Value":"Key"}},{"5":{"Elements":[61,62,63,64,0]}},{"2":{"Name":"ManagedResourceTags","Properties":{},"AdditionalProperties":0}},{"4":{"Name":"Microsoft.AlertsManagement/actionRules@2021-08-08-preview","ScopeType":8,"Body":3,"Flags":0}}]
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.AlertsManagement/actionRules"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-08-08-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.AlertsManagement/actionRules",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "Alert processing rule properties."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/55"
+        },
+        "flags": 2,
+        "description": "Alert processing rule system data."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource location"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/66"
+        },
+        "flags": 0,
+        "description": "Resource tags"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AlertProcessingRuleProperties",
+    "properties": {
+      "scopes": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 1,
+        "description": "Scopes on which alert processing rule will apply."
+      },
+      "conditions": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 0,
+        "description": "Conditions on which alerts will be filtered."
+      },
+      "schedule": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "Scheduling for alert processing rule."
+      },
+      "actions": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 1,
+        "description": "Actions to be applied."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Description of alert processing rule."
+      },
+      "enabled": {
+        "type": {
+          "$ref": "#/54"
+        },
+        "flags": 0,
+        "description": "Indicates if the given alert processing rule is enabled or disabled."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Condition",
+    "properties": {
+      "field": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "Field for a given condition."
+      },
+      "operator": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0,
+        "description": "Operator for a given condition."
+      },
+      "values": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "List of values to match for a given condition."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Severity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MonitorService"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MonitorCondition"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SignalType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TargetResourceType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TargetResource"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TargetResourceGroup"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlertRuleId"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlertRuleName"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Description"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AlertContext"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/14"
+      },
+      {
+        "$ref": "#/15"
+      },
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Equals"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotEquals"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Contains"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DoesNotContain"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/20"
+      },
+      {
+        "$ref": "#/21"
+      },
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/6"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Schedule",
+    "properties": {
+      "effectiveFrom": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 0,
+        "description": "Scheduling effective from time. Date-Time in ISO-8601 format without timezone suffix."
+      },
+      "effectiveUntil": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 0,
+        "description": "Scheduling effective until time. Date-Time in ISO-8601 format without timezone suffix."
+      },
+      "timeZone": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Scheduling time zone."
+      },
+      "recurrences": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 0,
+        "description": "List of recurrences."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "pattern": "^(?:(\\d{4}-\\d{2}-\\d{2})T(\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?))$"
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "Recurrence",
+    "discriminator": "recurrenceType",
+    "baseProperties": {
+      "startTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Start time for recurrence."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "End time for recurrence."
+      }
+    },
+    "elements": {
+      "Daily": {
+        "$ref": "#/29"
+      },
+      "Monthly": {
+        "$ref": "#/31"
+      },
+      "Weekly": {
+        "$ref": "#/35"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DailyRecurrence",
+    "properties": {
+      "recurrenceType": {
+        "type": {
+          "$ref": "#/30"
+        },
+        "flags": 1,
+        "description": "Specifies when the recurrence should be applied."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Daily"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MonthlyRecurrence",
+    "properties": {
+      "daysOfMonth": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 1,
+        "description": "Specifies the values for monthly recurrence pattern."
+      },
+      "recurrenceType": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 1,
+        "description": "Specifies when the recurrence should be applied."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/32"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Monthly"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WeeklyRecurrence",
+    "properties": {
+      "daysOfWeek": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 1,
+        "description": "Specifies the values for weekly recurrence pattern."
+      },
+      "recurrenceType": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 1,
+        "description": "Specifies when the recurrence should be applied."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Sunday"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Monday"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Tuesday"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Wednesday"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Thursday"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Friday"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Saturday"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/36"
+      },
+      {
+        "$ref": "#/37"
+      },
+      {
+        "$ref": "#/38"
+      },
+      {
+        "$ref": "#/39"
+      },
+      {
+        "$ref": "#/40"
+      },
+      {
+        "$ref": "#/41"
+      },
+      {
+        "$ref": "#/42"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/43"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Weekly"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/28"
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "Action",
+    "discriminator": "actionType",
+    "baseProperties": {},
+    "elements": {
+      "AddActionGroups": {
+        "$ref": "#/48"
+      },
+      "RemoveAllActionGroups": {
+        "$ref": "#/51"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AddActionGroups",
+    "properties": {
+      "actionGroupIds": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 1,
+        "description": "List of action group Ids to add to alert processing rule."
+      },
+      "actionType": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 1,
+        "description": "Action that should be applied."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AddActionGroups"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RemoveAllActionGroups",
+    "properties": {
+      "actionType": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 1,
+        "description": "Action that should be applied."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RemoveAllActionGroups"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/47"
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SystemData",
+    "properties": {
+      "createdBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that created the resource."
+      },
+      "createdByType": {
+        "type": {
+          "$ref": "#/60"
+        },
+        "flags": 0,
+        "description": "The type of identity that created the resource."
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource creation (UTC)."
+      },
+      "lastModifiedBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that last modified the resource."
+      },
+      "lastModifiedByType": {
+        "type": {
+          "$ref": "#/65"
+        },
+        "flags": 0,
+        "description": "The type of identity that last modified the resource."
+      },
+      "lastModifiedAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource last modification (UTC)"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/56"
+      },
+      {
+        "$ref": "#/57"
+      },
+      {
+        "$ref": "#/58"
+      },
+      {
+        "$ref": "#/59"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/61"
+      },
+      {
+        "$ref": "#/62"
+      },
+      {
+        "$ref": "#/63"
+      },
+      {
+        "$ref": "#/64"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.AlertsManagement/actionRules@2021-08-08-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  }
+]

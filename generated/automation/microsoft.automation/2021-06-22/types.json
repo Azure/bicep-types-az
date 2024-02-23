@@ -1,1 +1,1078 @@
-[{"13":{}},{"6":{"Value":"Microsoft.Automation/automationAccounts"}},{"6":{"Value":"2021-06-22"}},{"2":{"Name":"Microsoft.Automation/automationAccounts","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":1,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":2,"Flags":10,"Description":"The resource api version"},"properties":{"Type":4,"Flags":0,"Description":"Gets or sets account create or update properties."},"location":{"Type":0,"Flags":0,"Description":"Gets or sets the location of the resource."},"identity":{"Type":28,"Flags":0,"Description":"Sets the identity property for automation account"},"tags":{"Type":36,"Flags":0,"Description":"Gets or sets the tags attached to the resource."},"etag":{"Type":0,"Flags":2,"Description":"Gets or sets the etag of the resource."},"systemData":{"Type":37,"Flags":2,"Description":"Resource system metadata."}}}},{"2":{"Name":"AutomationAccountCreateOrUpdatePropertiesOrAutomationAccountProperties","Properties":{"sku":{"Type":5,"Flags":0,"Description":"Gets or sets account SKU."},"encryption":{"Type":10,"Flags":0,"Description":"Set the encryption properties for the automation account"},"publicNetworkAccess":{"Type":17,"Flags":0,"Description":"Indicates whether traffic on the non-ARM endpoint (Webhook/Agent) is allowed from the public internet"},"disableLocalAuth":{"Type":17,"Flags":0,"Description":"Indicates whether requests using non-AAD authentication are blocked"},"lastModifiedBy":{"Type":0,"Flags":2,"Description":"Gets or sets the last modified by."},"state":{"Type":21,"Flags":2,"Description":"Gets status of account."},"creationTime":{"Type":0,"Flags":2,"Description":"Gets the creation time."},"lastModifiedTime":{"Type":0,"Flags":2,"Description":"Gets the last modified time."},"description":{"Type":0,"Flags":2,"Description":"Gets or sets the description."},"privateEndpointConnections":{"Type":27,"Flags":2,"Description":"List of Automation operations supported by the Automation resource provider."},"automationHybridServiceUrl":{"Type":0,"Flags":2,"Description":"URL of automation hybrid service which is used for hybrid worker on-boarding."}}}},{"2":{"Name":"Sku","Properties":{"name":{"Type":8,"Flags":1,"Description":"Gets or sets the SKU name of the account."},"family":{"Type":0,"Flags":0,"Description":"Gets or sets the SKU family."},"capacity":{"Type":9,"Flags":0,"Description":"Gets or sets the SKU capacity."}}}},{"6":{"Value":"Free"}},{"6":{"Value":"Basic"}},{"5":{"Elements":[6,7,0]}},{"12":{}},{"2":{"Name":"EncryptionProperties","Properties":{"keyVaultProperties":{"Type":11,"Flags":0,"Description":"Key vault properties."},"keySource":{"Type":14,"Flags":0,"Description":"Encryption Key Source"},"identity":{"Type":15,"Flags":0,"Description":"User identity used for CMK."}}}},{"2":{"Name":"KeyVaultProperties","Properties":{"keyvaultUri":{"Type":0,"Flags":0,"Description":"The URI of the key vault key used to encrypt data."},"keyName":{"Type":0,"Flags":0,"Description":"The name of key used to encrypt data."},"keyVersion":{"Type":0,"Flags":0,"Description":"The key version of the key used to encrypt data."}}}},{"6":{"Value":"Microsoft.Automation"}},{"6":{"Value":"Microsoft.Keyvault"}},{"5":{"Elements":[12,13]}},{"2":{"Name":"EncryptionPropertiesIdentity","Properties":{"userAssignedIdentity":{"Type":16,"Flags":0,"Description":"The user identity used for CMK. It will be an ARM resource id in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'."}}}},{"9":{}},{"11":{}},{"6":{"Value":"Ok"}},{"6":{"Value":"Unavailable"}},{"6":{"Value":"Suspended"}},{"5":{"Elements":[18,19,20,0]}},{"2":{"Name":"PrivateEndpointConnection","Properties":{"properties":{"Type":23,"Flags":0,"Description":"Resource properties."},"id":{"Type":0,"Flags":2,"Description":"Fully qualified resource Id for the resource"},"name":{"Type":0,"Flags":2,"Description":"The name of the resource"},"type":{"Type":0,"Flags":2,"Description":"The type of the resource."}}}},{"2":{"Name":"PrivateEndpointConnectionProperties","Properties":{"privateEndpoint":{"Type":24,"Flags":0,"Description":"Private endpoint which the connection belongs to."},"groupIds":{"Type":25,"Flags":0,"Description":"Gets the groupIds."},"privateLinkServiceConnectionState":{"Type":26,"Flags":0,"Description":"Connection State of the Private Endpoint Connection."}}}},{"2":{"Name":"PrivateEndpointProperty","Properties":{"id":{"Type":0,"Flags":0,"Description":"Resource id of the private endpoint."}}}},{"3":{"ItemType":0}},{"2":{"Name":"PrivateLinkServiceConnectionStateProperty","Properties":{"status":{"Type":0,"Flags":0,"Description":"The private link service connection status."},"description":{"Type":0,"Flags":0,"Description":"The private link service connection description."},"actionsRequired":{"Type":0,"Flags":2,"Description":"Any action that is required beyond basic workflow (approve/ reject/ disconnect)"}}}},{"3":{"ItemType":22}},{"2":{"Name":"Identity","Properties":{"principalId":{"Type":0,"Flags":2,"Description":"The principal ID of resource identity."},"tenantId":{"Type":0,"Flags":2,"Description":"The tenant ID of resource."},"type":{"Type":33,"Flags":0,"Description":"The identity type."},"userAssignedIdentities":{"Type":35,"Flags":0,"Description":"The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'."}}}},{"6":{"Value":"SystemAssigned"}},{"6":{"Value":"UserAssigned"}},{"6":{"Value":"SystemAssigned, UserAssigned"}},{"6":{"Value":"None"}},{"5":{"Elements":[29,30,31,32]}},{"2":{"Name":"ComponentsSgqdofSchemasIdentityPropertiesUserassignedidentitiesAdditionalproperties","Properties":{"principalId":{"Type":0,"Flags":2,"Description":"The principal id of user assigned identity."},"clientId":{"Type":0,"Flags":2,"Description":"The client id of user assigned identity."}}}},{"2":{"Name":"IdentityUserAssignedIdentities","Properties":{},"AdditionalProperties":34}},{"2":{"Name":"AutomationAccountCreateOrUpdateParametersTags","Properties":{},"AdditionalProperties":0}},{"2":{"Name":"SystemData","Properties":{"createdBy":{"Type":0,"Flags":0,"Description":"The identity that created the resource."},"createdByType":{"Type":42,"Flags":0,"Description":"The type of identity that created the resource."},"createdAt":{"Type":0,"Flags":0,"Description":"The timestamp of resource creation (UTC)."},"lastModifiedBy":{"Type":0,"Flags":0,"Description":"The identity that last modified the resource."},"lastModifiedByType":{"Type":47,"Flags":0,"Description":"The type of identity that last modified the resource."},"lastModifiedAt":{"Type":0,"Flags":0,"Description":"The timestamp of resource last modification (UTC)"}}}},{"6":{"Value":"User"}},{"6":{"Value":"Application"}},{"6":{"Value":"ManagedIdentity"}},{"6":{"Value":"Key"}},{"5":{"Elements":[38,39,40,41,0]}},{"6":{"Value":"User"}},{"6":{"Value":"Application"}},{"6":{"Value":"ManagedIdentity"}},{"6":{"Value":"Key"}},{"5":{"Elements":[43,44,45,46,0]}},{"4":{"Name":"Microsoft.Automation/automationAccounts@2021-06-22","ScopeType":8,"Body":3,"Flags":0}},{"6":{"Value":"Microsoft.Automation/automationAccounts/hybridRunbookWorkerGroups"}},{"6":{"Value":"2021-06-22"}},{"2":{"Name":"Microsoft.Automation/automationAccounts/hybridRunbookWorkerGroups","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":49,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":50,"Flags":10,"Description":"The resource api version"},"credential":{"Type":52,"Flags":0,"Description":"Sets the credential of a worker group."},"hybridRunbookWorkers":{"Type":54,"Flags":2,"Description":"Gets or sets the list of hybrid runbook workers."},"groupType":{"Type":57,"Flags":2,"Description":"Type of the HybridWorkerGroup."},"systemData":{"Type":37,"Flags":2,"Description":"Resource system metadata."}}}},{"2":{"Name":"RunAsCredentialAssociationProperty","Properties":{"name":{"Type":0,"Flags":0,"Description":"Gets or sets the name of the credential."}}}},{"2":{"Name":"HybridRunbookWorkerLegacy","Properties":{"name":{"Type":0,"Flags":0,"Description":"Gets or sets the worker machine name."},"ip":{"Type":0,"Flags":0,"Description":"Gets or sets the assigned machine IP address."},"registrationTime":{"Type":0,"Flags":0,"Description":"Gets or sets the registration time of the worker machine."},"lastSeenDateTime":{"Type":0,"Flags":0,"Description":"Last Heartbeat from the Worker"}}}},{"3":{"ItemType":53}},{"6":{"Value":"User"}},{"6":{"Value":"System"}},{"5":{"Elements":[55,56,0]}},{"4":{"Name":"Microsoft.Automation/automationAccounts/hybridRunbookWorkerGroups@2021-06-22","ScopeType":8,"Body":51,"Flags":0}},{"6":{"Value":"Microsoft.Automation/automationAccounts/hybridRunbookWorkerGroups/hybridRunbookWorkers"}},{"6":{"Value":"2021-06-22"}},{"2":{"Name":"Microsoft.Automation/automationAccounts/hybridRunbookWorkerGroups/hybridRunbookWorkers","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":59,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":60,"Flags":10,"Description":"The resource api version"},"properties":{"Type":62,"Flags":1,"Description":"Gets or sets hybrid runbook worker group create or update properties."},"systemData":{"Type":37,"Flags":2,"Description":"Resource system metadata."}}}},{"2":{"Name":"HybridRunbookWorkerCreateOrUpdateParametersOrHybridRunbookWorkerProperties","Properties":{"vmResourceId":{"Type":0,"Flags":0,"Description":"Azure Resource Manager Id for a virtual machine."},"ip":{"Type":0,"Flags":2,"Description":"Gets or sets the assigned machine IP address."},"registeredDateTime":{"Type":0,"Flags":2,"Description":"Gets or sets the registration time of the worker machine."},"lastSeenDateTime":{"Type":0,"Flags":2,"Description":"Last Heartbeat from the Worker"},"workerType":{"Type":65,"Flags":2,"Description":"Type of the HybridWorker."},"workerName":{"Type":0,"Flags":2,"Description":"Name of the HybridWorker."}}}},{"6":{"Value":"HybridV1"}},{"6":{"Value":"HybridV2"}},{"5":{"Elements":[63,64,0]}},{"4":{"Name":"Microsoft.Automation/automationAccounts/hybridRunbookWorkerGroups/hybridRunbookWorkers@2021-06-22","ScopeType":8,"Body":61,"Flags":0}},{"2":{"Name":"KeyListResult","Properties":{"keys":{"Type":75,"Flags":0,"Description":"Lists the automation keys."}}}},{"2":{"Name":"Key","Properties":{"KeyName":{"Type":71,"Flags":2,"Description":"Automation key name."},"Permissions":{"Type":74,"Flags":2,"Description":"Automation key permissions."},"Value":{"Type":0,"Flags":2,"Description":"Value of the Automation Key used for registration."}}}},{"6":{"Value":"Primary"}},{"6":{"Value":"Secondary"}},{"5":{"Elements":[69,70,0]}},{"6":{"Value":"Read"}},{"6":{"Value":"Full"}},{"5":{"Elements":[72,73,0]}},{"3":{"ItemType":68}},{"8":{"Name":"listKeys","ResourceType":"Microsoft.Automation/automationAccounts","ApiVersion":"2021-06-22","Output":67}}]
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Automation/automationAccounts"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-06-22"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Automation/automationAccounts",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "Gets or sets account create or update properties."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the location of the resource."
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 0,
+        "description": "Sets the identity property for automation account"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 0,
+        "description": "Gets or sets the tags attached to the resource."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Gets or sets the etag of the resource."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 2,
+        "description": "Resource system metadata."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AutomationAccountCreateOrUpdatePropertiesOrAutomationAccountProperties",
+    "properties": {
+      "sku": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Gets or sets account SKU."
+      },
+      "encryption": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "Set the encryption properties for the automation account"
+      },
+      "publicNetworkAccess": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "Indicates whether traffic on the non-ARM endpoint (Webhook/Agent) is allowed from the public internet"
+      },
+      "disableLocalAuth": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "Indicates whether requests using non-AAD authentication are blocked"
+      },
+      "lastModifiedBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Gets or sets the last modified by."
+      },
+      "state": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 2,
+        "description": "Gets status of account."
+      },
+      "creationTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Gets the creation time."
+      },
+      "lastModifiedTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Gets the last modified time."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Gets or sets the description."
+      },
+      "privateEndpointConnections": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 2,
+        "description": "List of Automation operations supported by the Automation resource provider."
+      },
+      "automationHybridServiceUrl": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "URL of automation hybrid service which is used for hybrid worker on-boarding."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Sku",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 1,
+        "description": "Gets or sets the SKU name of the account."
+      },
+      "family": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the SKU family."
+      },
+      "capacity": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "Gets or sets the SKU capacity."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Free"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Basic"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EncryptionProperties",
+    "properties": {
+      "keyVaultProperties": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 0,
+        "description": "Key vault properties."
+      },
+      "keySource": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 0,
+        "description": "Encryption Key Source"
+      },
+      "identity": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 0,
+        "description": "User identity used for CMK."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KeyVaultProperties",
+    "properties": {
+      "keyvaultUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The URI of the key vault key used to encrypt data."
+      },
+      "keyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of key used to encrypt data."
+      },
+      "keyVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The key version of the key used to encrypt data."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Automation"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Keyvault"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EncryptionPropertiesIdentity",
+    "properties": {
+      "userAssignedIdentity": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 0,
+        "description": "The user identity used for CMK. It will be an ARM resource id in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'."
+      }
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ok"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unavailable"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Suspended"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/18"
+      },
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/20"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateEndpointConnection",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0,
+        "description": "Resource properties."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Fully qualified resource Id for the resource"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The name of the resource"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The type of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateEndpointConnectionProperties",
+    "properties": {
+      "privateEndpoint": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "Private endpoint which the connection belongs to."
+      },
+      "groupIds": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 0,
+        "description": "Gets the groupIds."
+      },
+      "privateLinkServiceConnectionState": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 0,
+        "description": "Connection State of the Private Endpoint Connection."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateEndpointProperty",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource id of the private endpoint."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PrivateLinkServiceConnectionStateProperty",
+    "properties": {
+      "status": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The private link service connection status."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The private link service connection description."
+      },
+      "actionsRequired": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Any action that is required beyond basic workflow (approve/ reject/ disconnect)"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/22"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Identity",
+    "properties": {
+      "principalId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The principal ID of resource identity."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The tenant ID of resource."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 0,
+        "description": "The identity type."
+      },
+      "userAssignedIdentities": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 0,
+        "description": "The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SystemAssigned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UserAssigned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SystemAssigned, UserAssigned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/29"
+      },
+      {
+        "$ref": "#/30"
+      },
+      {
+        "$ref": "#/31"
+      },
+      {
+        "$ref": "#/32"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ComponentsSgqdofSchemasIdentityPropertiesUserassignedidentitiesAdditionalproperties",
+    "properties": {
+      "principalId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The principal id of user assigned identity."
+      },
+      "clientId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The client id of user assigned identity."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IdentityUserAssignedIdentities",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/34"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AutomationAccountCreateOrUpdateParametersTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SystemData",
+    "properties": {
+      "createdBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that created the resource."
+      },
+      "createdByType": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 0,
+        "description": "The type of identity that created the resource."
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource creation (UTC)."
+      },
+      "lastModifiedBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that last modified the resource."
+      },
+      "lastModifiedByType": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 0,
+        "description": "The type of identity that last modified the resource."
+      },
+      "lastModifiedAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource last modification (UTC)"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/38"
+      },
+      {
+        "$ref": "#/39"
+      },
+      {
+        "$ref": "#/40"
+      },
+      {
+        "$ref": "#/41"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/43"
+      },
+      {
+        "$ref": "#/44"
+      },
+      {
+        "$ref": "#/45"
+      },
+      {
+        "$ref": "#/46"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Automation/automationAccounts@2021-06-22",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Automation/automationAccounts/hybridRunbookWorkerGroups"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-06-22"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Automation/automationAccounts/hybridRunbookWorkerGroups",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "credential": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 0,
+        "description": "Sets the credential of a worker group."
+      },
+      "hybridRunbookWorkers": {
+        "type": {
+          "$ref": "#/54"
+        },
+        "flags": 2,
+        "description": "Gets or sets the list of hybrid runbook workers."
+      },
+      "groupType": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 2,
+        "description": "Type of the HybridWorkerGroup."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 2,
+        "description": "Resource system metadata."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RunAsCredentialAssociationProperty",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the name of the credential."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HybridRunbookWorkerLegacy",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the worker machine name."
+      },
+      "ip": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the assigned machine IP address."
+      },
+      "registrationTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Gets or sets the registration time of the worker machine."
+      },
+      "lastSeenDateTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Last Heartbeat from the Worker"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/53"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "System"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/55"
+      },
+      {
+        "$ref": "#/56"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Automation/automationAccounts/hybridRunbookWorkerGroups@2021-06-22",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/51"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Automation/automationAccounts/hybridRunbookWorkerGroups/hybridRunbookWorkers"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-06-22"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Automation/automationAccounts/hybridRunbookWorkerGroups/hybridRunbookWorkers",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/60"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 1,
+        "description": "Gets or sets hybrid runbook worker group create or update properties."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 2,
+        "description": "Resource system metadata."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "HybridRunbookWorkerCreateOrUpdateParametersOrHybridRunbookWorkerProperties",
+    "properties": {
+      "vmResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Azure Resource Manager Id for a virtual machine."
+      },
+      "ip": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Gets or sets the assigned machine IP address."
+      },
+      "registeredDateTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Gets or sets the registration time of the worker machine."
+      },
+      "lastSeenDateTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Last Heartbeat from the Worker"
+      },
+      "workerType": {
+        "type": {
+          "$ref": "#/65"
+        },
+        "flags": 2,
+        "description": "Type of the HybridWorker."
+      },
+      "workerName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Name of the HybridWorker."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HybridV1"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HybridV2"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/63"
+      },
+      {
+        "$ref": "#/64"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Automation/automationAccounts/hybridRunbookWorkerGroups/hybridRunbookWorkers@2021-06-22",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/61"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "KeyListResult",
+    "properties": {
+      "keys": {
+        "type": {
+          "$ref": "#/75"
+        },
+        "flags": 0,
+        "description": "Lists the automation keys."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Key",
+    "properties": {
+      "KeyName": {
+        "type": {
+          "$ref": "#/71"
+        },
+        "flags": 2,
+        "description": "Automation key name."
+      },
+      "Permissions": {
+        "type": {
+          "$ref": "#/74"
+        },
+        "flags": 2,
+        "description": "Automation key permissions."
+      },
+      "Value": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Value of the Automation Key used for registration."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Primary"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Secondary"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/69"
+      },
+      {
+        "$ref": "#/70"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Read"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Full"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/72"
+      },
+      {
+        "$ref": "#/73"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/68"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listKeys",
+    "resourceType": "Microsoft.Automation/automationAccounts",
+    "apiVersion": "2021-06-22",
+    "output": {
+      "$ref": "#/67"
+    }
+  }
+]

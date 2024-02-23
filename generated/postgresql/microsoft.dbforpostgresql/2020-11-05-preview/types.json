@@ -1,1 +1,83 @@
-[{"13":{}},{"6":{"Value":"Microsoft.DBForPostgreSql/flexibleServers/databases"}},{"6":{"Value":"2020-11-05-preview"}},{"2":{"Name":"Microsoft.DBForPostgreSql/flexibleServers/databases","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":1,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":2,"Flags":10,"Description":"The resource api version"},"properties":{"Type":4,"Flags":0,"Description":"The properties of a database."}}}},{"2":{"Name":"DatabaseProperties","Properties":{"charset":{"Type":0,"Flags":0,"Description":"The charset of the database."},"collation":{"Type":0,"Flags":0,"Description":"The collation of the database."}}}},{"4":{"Name":"Microsoft.DBForPostgreSql/flexibleServers/databases@2020-11-05-preview","ScopeType":8,"Body":3,"Flags":0}}]
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DBForPostgreSql/flexibleServers/databases"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2020-11-05-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DBForPostgreSql/flexibleServers/databases",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "The properties of a database."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DatabaseProperties",
+    "properties": {
+      "charset": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The charset of the database."
+      },
+      "collation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The collation of the database."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DBForPostgreSql/flexibleServers/databases@2020-11-05-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  }
+]

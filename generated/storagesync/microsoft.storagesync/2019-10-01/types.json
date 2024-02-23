@@ -1,1 +1,1624 @@
-[{"13":{}},{"6":{"Value":"Microsoft.StorageSync/storageSyncServices"}},{"6":{"Value":"2019-10-01"}},{"2":{"Name":"Microsoft.StorageSync/storageSyncServices","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":1,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":2,"Flags":10,"Description":"The resource api version"},"location":{"Type":0,"Flags":1,"Description":"Required. Gets or sets the location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed."},"tags":{"Type":4,"Flags":0,"Description":"Gets or sets a list of key value pairs that describe the resource. These tags can be used for viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key with a length no greater than 128 characters and a value with a length no greater than 256 characters."},"properties":{"Type":5,"Flags":0,"Description":"Anything"}}}},{"2":{"Name":"StorageSyncServiceCreateParametersTags","Properties":{},"AdditionalProperties":0}},{"9":{}},{"4":{"Name":"Microsoft.StorageSync/storageSyncServices@2019-10-01","ScopeType":8,"Body":3,"Flags":0}},{"6":{"Value":"Microsoft.StorageSync/storageSyncServices/syncGroups"}},{"6":{"Value":"2019-10-01"}},{"2":{"Name":"Microsoft.StorageSync/storageSyncServices/syncGroups","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":7,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":8,"Flags":10,"Description":"The resource api version"},"properties":{"Type":5,"Flags":0,"Description":"The parameters used to create the sync group"}}}},{"4":{"Name":"Microsoft.StorageSync/storageSyncServices/syncGroups@2019-10-01","ScopeType":8,"Body":9,"Flags":0}},{"6":{"Value":"Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints"}},{"6":{"Value":"2019-10-01"}},{"2":{"Name":"Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":11,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":12,"Flags":10,"Description":"The resource api version"},"properties":{"Type":14,"Flags":0,"Description":"The parameters used to create the cloud endpoint."}}}},{"2":{"Name":"CloudEndpointCreateParametersPropertiesOrCloudEndpointProperties","Properties":{"storageAccountResourceId":{"Type":0,"Flags":0,"Description":"Storage Account Resource Id"},"azureFileShareName":{"Type":0,"Flags":0,"Description":"Azure file share name"},"storageAccountTenantId":{"Type":0,"Flags":0,"Description":"Storage Account Tenant Id"},"friendlyName":{"Type":0,"Flags":0,"Description":"Friendly Name"},"partnershipId":{"Type":0,"Flags":2,"Description":"Partnership Id"},"backupEnabled":{"Type":0,"Flags":2,"Description":"Backup Enabled"},"provisioningState":{"Type":0,"Flags":2,"Description":"CloudEndpoint Provisioning State"},"lastWorkflowId":{"Type":0,"Flags":2,"Description":"CloudEndpoint lastWorkflowId"},"lastOperationName":{"Type":0,"Flags":2,"Description":"Resource Last Operation Name"}}}},{"4":{"Name":"Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints@2019-10-01","ScopeType":8,"Body":13,"Flags":0}},{"6":{"Value":"Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints"}},{"6":{"Value":"2019-10-01"}},{"2":{"Name":"Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":16,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":17,"Flags":10,"Description":"The resource api version"},"properties":{"Type":19,"Flags":0,"Description":"The parameters used to create the server endpoint."}}}},{"2":{"Name":"ServerEndpointCreateParametersPropertiesOrServerEndpointProperties","Properties":{"serverLocalPath":{"Type":0,"Flags":0,"Description":"Server Local path."},"cloudTiering":{"Type":22,"Flags":0,"Description":"Cloud Tiering."},"volumeFreeSpacePercent":{"Type":23,"Flags":0,"Description":"Level of free space to be maintained by Cloud Tiering if it is enabled."},"tierFilesOlderThanDays":{"Type":24,"Flags":0,"Description":"Tier files older than days."},"friendlyName":{"Type":0,"Flags":0,"Description":"Friendly Name"},"serverResourceId":{"Type":0,"Flags":0,"Description":"Server Resource Id."},"offlineDataTransfer":{"Type":27,"Flags":0,"Description":"Offline data transfer"},"offlineDataTransferShareName":{"Type":0,"Flags":0,"Description":"Offline data transfer share name"},"provisioningState":{"Type":0,"Flags":2,"Description":"ServerEndpoint Provisioning State"},"lastWorkflowId":{"Type":0,"Flags":2,"Description":"ServerEndpoint lastWorkflowId"},"lastOperationName":{"Type":0,"Flags":2,"Description":"Resource Last Operation Name"},"syncStatus":{"Type":28,"Flags":2,"Description":"Server Endpoint sync status"},"offlineDataTransferStorageAccountResourceId":{"Type":0,"Flags":2,"Description":"Offline data transfer storage account resource ID"},"offlineDataTransferStorageAccountTenantId":{"Type":0,"Flags":2,"Description":"Offline data transfer storage account tenant ID"},"cloudTieringStatus":{"Type":62,"Flags":2,"Description":"Cloud tiering status. Only populated if cloud tiering is enabled."},"recallStatus":{"Type":73,"Flags":2,"Description":"Recall status. Only populated if cloud tiering is enabled."}}}},{"6":{"Value":"on"}},{"6":{"Value":"off"}},{"5":{"Elements":[20,21,0]}},{"12":{"MinValue":0,"MaxValue":100}},{"12":{"MinValue":0,"MaxValue":2147483647}},{"6":{"Value":"on"}},{"6":{"Value":"off"}},{"5":{"Elements":[25,26,0]}},{"2":{"Name":"ServerEndpointSyncStatus","Properties":{"downloadHealth":{"Type":34,"Flags":2,"Description":"Download Health Status."},"uploadHealth":{"Type":40,"Flags":2,"Description":"Upload Health Status."},"combinedHealth":{"Type":46,"Flags":2,"Description":"Combined Health Status."},"syncActivity":{"Type":50,"Flags":2,"Description":"Sync activity"},"totalPersistentFilesNotSyncingCount":{"Type":51,"Flags":2,"Description":"Total count of persistent files not syncing (combined upload + download)."},"lastUpdatedTimestamp":{"Type":0,"Flags":2,"Description":"Last Updated Timestamp"},"uploadStatus":{"Type":52,"Flags":2,"Description":"Upload Status"},"downloadStatus":{"Type":52,"Flags":2,"Description":"Download Status"},"uploadActivity":{"Type":56,"Flags":2,"Description":"Upload sync activity"},"downloadActivity":{"Type":56,"Flags":2,"Description":"Download sync activity"},"offlineDataTransferStatus":{"Type":61,"Flags":2,"Description":"Offline Data Transfer State"}}}},{"6":{"Value":"Healthy"}},{"6":{"Value":"Error"}},{"6":{"Value":"SyncBlockedForRestore"}},{"6":{"Value":"SyncBlockedForChangeDetectionPostRestore"}},{"6":{"Value":"NoActivity"}},{"5":{"Elements":[29,30,31,32,33,0]}},{"6":{"Value":"Healthy"}},{"6":{"Value":"Error"}},{"6":{"Value":"SyncBlockedForRestore"}},{"6":{"Value":"SyncBlockedForChangeDetectionPostRestore"}},{"6":{"Value":"NoActivity"}},{"5":{"Elements":[35,36,37,38,39,0]}},{"6":{"Value":"Healthy"}},{"6":{"Value":"Error"}},{"6":{"Value":"SyncBlockedForRestore"}},{"6":{"Value":"SyncBlockedForChangeDetectionPostRestore"}},{"6":{"Value":"NoActivity"}},{"5":{"Elements":[41,42,43,44,45,0]}},{"6":{"Value":"Upload"}},{"6":{"Value":"Download"}},{"6":{"Value":"UploadAndDownload"}},{"5":{"Elements":[47,48,49,0]}},{"12":{"MinValue":0}},{"2":{"Name":"SyncSessionStatus","Properties":{"lastSyncResult":{"Type":53,"Flags":2,"Description":"Last sync result (HResult)"},"lastSyncTimestamp":{"Type":0,"Flags":2,"Description":"Last sync timestamp"},"lastSyncSuccessTimestamp":{"Type":0,"Flags":2,"Description":"Last sync success timestamp"},"lastSyncPerItemErrorCount":{"Type":51,"Flags":2,"Description":"Last sync per item error count."},"persistentFilesNotSyncingCount":{"Type":51,"Flags":2,"Description":"Count of persistent files not syncing."},"transientFilesNotSyncingCount":{"Type":51,"Flags":2,"Description":"Count of transient files not syncing."},"filesNotSyncingErrors":{"Type":55,"Flags":2,"Description":"Array of per-item errors coming from the last sync session."}}}},{"12":{}},{"2":{"Name":"ServerEndpointFilesNotSyncingError","Properties":{"errorCode":{"Type":53,"Flags":2,"Description":"Error code (HResult)"},"persistentCount":{"Type":51,"Flags":2,"Description":"Count of persistent files not syncing with the specified error code"},"transientCount":{"Type":51,"Flags":2,"Description":"Count of transient files not syncing with the specified error code"}}}},{"3":{"ItemType":54}},{"2":{"Name":"SyncActivityStatus","Properties":{"timestamp":{"Type":0,"Flags":2,"Description":"Timestamp when properties were updated"},"perItemErrorCount":{"Type":51,"Flags":2,"Description":"Per item error count"},"appliedItemCount":{"Type":51,"Flags":2,"Description":"Applied item count."},"totalItemCount":{"Type":51,"Flags":2,"Description":"Total item count (if available)"},"appliedBytes":{"Type":51,"Flags":2,"Description":"Applied bytes"},"totalBytes":{"Type":51,"Flags":2,"Description":"Total bytes (if available)"}}}},{"6":{"Value":"InProgress"}},{"6":{"Value":"Stopping"}},{"6":{"Value":"NotRunning"}},{"6":{"Value":"Complete"}},{"5":{"Elements":[57,58,59,60,0]}},{"2":{"Name":"ServerEndpointCloudTieringStatus","Properties":{"lastUpdatedTimestamp":{"Type":0,"Flags":2,"Description":"Last updated timestamp"},"health":{"Type":65,"Flags":2,"Description":"Cloud tiering health state."},"healthLastUpdatedTimestamp":{"Type":0,"Flags":2,"Description":"The last updated timestamp of health state"},"lastCloudTieringResult":{"Type":53,"Flags":2,"Description":"Last cloud tiering result (HResult)"},"lastSuccessTimestamp":{"Type":0,"Flags":2,"Description":"Last cloud tiering success timestamp"},"spaceSavings":{"Type":66,"Flags":2,"Description":"Information regarding how much local space cloud tiering is saving."},"cachePerformance":{"Type":67,"Flags":2,"Description":"Information regarding how well the local cache on the server is performing."},"filesNotTiering":{"Type":68,"Flags":2,"Description":"Information regarding files that failed to be tiered"},"volumeFreeSpacePolicyStatus":{"Type":71,"Flags":2,"Description":"Status of the volume free space policy"},"datePolicyStatus":{"Type":72,"Flags":2,"Description":"Status of the date policy"}}}},{"6":{"Value":"Healthy"}},{"6":{"Value":"Error"}},{"5":{"Elements":[63,64,0]}},{"2":{"Name":"CloudTieringSpaceSavings","Properties":{"lastUpdatedTimestamp":{"Type":0,"Flags":2,"Description":"Last updated timestamp"},"volumeSizeBytes":{"Type":51,"Flags":2,"Description":"Volume size"},"totalSizeCloudBytes":{"Type":51,"Flags":2,"Description":"Total size of content in the azure file share"},"cachedSizeBytes":{"Type":51,"Flags":2,"Description":"Cached content size on the server"},"spaceSavingsPercent":{"Type":23,"Flags":2,"Description":"Percentage of cached size over total size"},"spaceSavingsBytes":{"Type":51,"Flags":2,"Description":"Count of bytes saved on the server"}}}},{"2":{"Name":"CloudTieringCachePerformance","Properties":{"lastUpdatedTimestamp":{"Type":0,"Flags":2,"Description":"Last updated timestamp"},"cacheHitBytes":{"Type":51,"Flags":2,"Description":"Count of bytes that were served from the local server"},"cacheMissBytes":{"Type":51,"Flags":2,"Description":"Count of bytes that were served from the cloud"},"cacheHitBytesPercent":{"Type":23,"Flags":2,"Description":"Percentage of total bytes (hit + miss) that were served from the local server"}}}},{"2":{"Name":"CloudTieringFilesNotTiering","Properties":{"lastUpdatedTimestamp":{"Type":0,"Flags":2,"Description":"Last updated timestamp"},"totalFileCount":{"Type":51,"Flags":2,"Description":"Last cloud tiering result (HResult)"},"errors":{"Type":70,"Flags":2,"Description":"Array of tiering errors"}}}},{"2":{"Name":"FilesNotTieringError","Properties":{"errorCode":{"Type":53,"Flags":2,"Description":"Error code (HResult)"},"fileCount":{"Type":51,"Flags":2,"Description":"Count of files with this error"}}}},{"3":{"ItemType":69}},{"2":{"Name":"CloudTieringVolumeFreeSpacePolicyStatus","Properties":{"lastUpdatedTimestamp":{"Type":0,"Flags":2,"Description":"Last updated timestamp"},"effectiveVolumeFreeSpacePolicy":{"Type":23,"Flags":2,"Description":"In the case where multiple server endpoints are present in a volume, an effective free space policy is applied."},"currentVolumeFreeSpacePercent":{"Type":23,"Flags":2,"Description":"Current volume free space percentage."}}}},{"2":{"Name":"CloudTieringDatePolicyStatus","Properties":{"lastUpdatedTimestamp":{"Type":0,"Flags":2,"Description":"Last updated timestamp"},"tieredFilesMostRecentAccessTimestamp":{"Type":0,"Flags":2,"Description":"Most recent access time of tiered files"}}}},{"2":{"Name":"ServerEndpointRecallStatus","Properties":{"lastUpdatedTimestamp":{"Type":0,"Flags":2,"Description":"Last updated timestamp"},"totalRecallErrorsCount":{"Type":51,"Flags":2,"Description":"Total count of recall errors."},"recallErrors":{"Type":75,"Flags":2,"Description":"Array of recall errors"}}}},{"2":{"Name":"ServerEndpointRecallError","Properties":{"errorCode":{"Type":53,"Flags":2,"Description":"Error code (HResult)"},"count":{"Type":51,"Flags":2,"Description":"Count of occurences of the error"}}}},{"3":{"ItemType":74}},{"4":{"Name":"Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints@2019-10-01","ScopeType":8,"Body":18,"Flags":0}},{"6":{"Value":"Microsoft.StorageSync/storageSyncServices/registeredServers"}},{"6":{"Value":"2019-10-01"}},{"2":{"Name":"Microsoft.StorageSync/storageSyncServices/registeredServers","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":77,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":78,"Flags":10,"Description":"The resource api version"},"properties":{"Type":80,"Flags":0,"Description":"The parameters used to create the registered server."}}}},{"2":{"Name":"RegisteredServerCreateParametersPropertiesOrRegisteredServerProperties","Properties":{"serverCertificate":{"Type":0,"Flags":0,"Description":"Registered Server Certificate"},"agentVersion":{"Type":0,"Flags":0,"Description":"Registered Server Agent Version"},"serverOSVersion":{"Type":0,"Flags":0,"Description":"Registered Server OS Version"},"lastHeartBeat":{"Type":0,"Flags":0,"Description":"Registered Server last heart beat"},"serverRole":{"Type":0,"Flags":0,"Description":"Registered Server serverRole"},"clusterId":{"Type":0,"Flags":0,"Description":"Registered Server clusterId"},"clusterName":{"Type":0,"Flags":0,"Description":"Registered Server clusterName"},"serverId":{"Type":0,"Flags":0,"Description":"Registered Server serverId"},"friendlyName":{"Type":0,"Flags":0,"Description":"Friendly Name"},"serverManagementErrorCode":{"Type":53,"Flags":2,"Description":"Registered Server Management Error Code"},"provisioningState":{"Type":0,"Flags":2,"Description":"Registered Server Provisioning State"},"storageSyncServiceUid":{"Type":0,"Flags":2,"Description":"Registered Server storageSyncServiceUid"},"lastWorkflowId":{"Type":0,"Flags":2,"Description":"Registered Server lastWorkflowId"},"lastOperationName":{"Type":0,"Flags":2,"Description":"Resource Last Operation Name"},"discoveryEndpointUri":{"Type":0,"Flags":2,"Description":"Resource discoveryEndpointUri"},"resourceLocation":{"Type":0,"Flags":2,"Description":"Resource Location"},"serviceLocation":{"Type":0,"Flags":2,"Description":"Service Location"},"managementEndpointUri":{"Type":0,"Flags":2,"Description":"Management Endpoint Uri"},"monitoringConfiguration":{"Type":0,"Flags":2,"Description":"Monitoring Configuration"}}}},{"4":{"Name":"Microsoft.StorageSync/storageSyncServices/registeredServers@2019-10-01","ScopeType":8,"Body":79,"Flags":0}},{"6":{"Value":"Microsoft.StorageSync/storageSyncServices/workflows"}},{"6":{"Value":"2019-10-01"}},{"2":{"Name":"Microsoft.StorageSync/storageSyncServices/workflows","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":82,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":83,"Flags":10,"Description":"The resource api version"},"properties":{"Type":85,"Flags":2,"Description":"Workflow properties."}}}},{"2":{"Name":"WorkflowProperties","Properties":{"lastStepName":{"Type":0,"Flags":0,"Description":"last step name"},"status":{"Type":91,"Flags":0,"Description":"workflow status."},"operation":{"Type":95,"Flags":0,"Description":"operation direction."},"steps":{"Type":0,"Flags":0,"Description":"workflow steps"},"lastOperationId":{"Type":0,"Flags":0,"Description":"workflow last operation identifier."}}}},{"6":{"Value":"active"}},{"6":{"Value":"expired"}},{"6":{"Value":"succeeded"}},{"6":{"Value":"aborted"}},{"6":{"Value":"failed"}},{"5":{"Elements":[86,87,88,89,90,0]}},{"6":{"Value":"do"}},{"6":{"Value":"undo"}},{"6":{"Value":"cancel"}},{"5":{"Elements":[92,93,94,0]}},{"4":{"Name":"Microsoft.StorageSync/storageSyncServices/workflows@2019-10-01","ScopeType":8,"Body":84,"Flags":1}}]
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.StorageSync/storageSyncServices"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-10-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.StorageSync/storageSyncServices",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Required. Gets or sets the location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 0,
+        "description": "Gets or sets a list of key value pairs that describe the resource. These tags can be used for viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key with a length no greater than 128 characters and a value with a length no greater than 256 characters."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Anything"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "StorageSyncServiceCreateParametersTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "AnyType"
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.StorageSync/storageSyncServices@2019-10-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.StorageSync/storageSyncServices/syncGroups"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-10-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.StorageSync/storageSyncServices/syncGroups",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "The parameters used to create the sync group"
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.StorageSync/storageSyncServices/syncGroups@2019-10-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/9"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-10-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 0,
+        "description": "The parameters used to create the cloud endpoint."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CloudEndpointCreateParametersPropertiesOrCloudEndpointProperties",
+    "properties": {
+      "storageAccountResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Storage Account Resource Id"
+      },
+      "azureFileShareName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Azure file share name"
+      },
+      "storageAccountTenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Storage Account Tenant Id"
+      },
+      "friendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Friendly Name"
+      },
+      "partnershipId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Partnership Id"
+      },
+      "backupEnabled": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Backup Enabled"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "CloudEndpoint Provisioning State"
+      },
+      "lastWorkflowId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "CloudEndpoint lastWorkflowId"
+      },
+      "lastOperationName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Last Operation Name"
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints@2019-10-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/13"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-10-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0,
+        "description": "The parameters used to create the server endpoint."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServerEndpointCreateParametersPropertiesOrServerEndpointProperties",
+    "properties": {
+      "serverLocalPath": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Server Local path."
+      },
+      "cloudTiering": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 0,
+        "description": "Cloud Tiering."
+      },
+      "volumeFreeSpacePercent": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0,
+        "description": "Level of free space to be maintained by Cloud Tiering if it is enabled."
+      },
+      "tierFilesOlderThanDays": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 0,
+        "description": "Tier files older than days."
+      },
+      "friendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Friendly Name"
+      },
+      "serverResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Server Resource Id."
+      },
+      "offlineDataTransfer": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 0,
+        "description": "Offline data transfer"
+      },
+      "offlineDataTransferShareName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Offline data transfer share name"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "ServerEndpoint Provisioning State"
+      },
+      "lastWorkflowId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "ServerEndpoint lastWorkflowId"
+      },
+      "lastOperationName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Last Operation Name"
+      },
+      "syncStatus": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 2,
+        "description": "Server Endpoint sync status"
+      },
+      "offlineDataTransferStorageAccountResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Offline data transfer storage account resource ID"
+      },
+      "offlineDataTransferStorageAccountTenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Offline data transfer storage account tenant ID"
+      },
+      "cloudTieringStatus": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 2,
+        "description": "Cloud tiering status. Only populated if cloud tiering is enabled."
+      },
+      "recallStatus": {
+        "type": {
+          "$ref": "#/73"
+        },
+        "flags": 2,
+        "description": "Recall status. Only populated if cloud tiering is enabled."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "on"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "off"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/20"
+      },
+      {
+        "$ref": "#/21"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 0,
+    "maxValue": 100
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 0,
+    "maxValue": 2147483647
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "on"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "off"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/25"
+      },
+      {
+        "$ref": "#/26"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServerEndpointSyncStatus",
+    "properties": {
+      "downloadHealth": {
+        "type": {
+          "$ref": "#/34"
+        },
+        "flags": 2,
+        "description": "Download Health Status."
+      },
+      "uploadHealth": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 2,
+        "description": "Upload Health Status."
+      },
+      "combinedHealth": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 2,
+        "description": "Combined Health Status."
+      },
+      "syncActivity": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 2,
+        "description": "Sync activity"
+      },
+      "totalPersistentFilesNotSyncingCount": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 2,
+        "description": "Total count of persistent files not syncing (combined upload + download)."
+      },
+      "lastUpdatedTimestamp": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Last Updated Timestamp"
+      },
+      "uploadStatus": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 2,
+        "description": "Upload Status"
+      },
+      "downloadStatus": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 2,
+        "description": "Download Status"
+      },
+      "uploadActivity": {
+        "type": {
+          "$ref": "#/56"
+        },
+        "flags": 2,
+        "description": "Upload sync activity"
+      },
+      "downloadActivity": {
+        "type": {
+          "$ref": "#/56"
+        },
+        "flags": 2,
+        "description": "Download sync activity"
+      },
+      "offlineDataTransferStatus": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 2,
+        "description": "Offline Data Transfer State"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Healthy"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Error"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SyncBlockedForRestore"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SyncBlockedForChangeDetectionPostRestore"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NoActivity"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/29"
+      },
+      {
+        "$ref": "#/30"
+      },
+      {
+        "$ref": "#/31"
+      },
+      {
+        "$ref": "#/32"
+      },
+      {
+        "$ref": "#/33"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Healthy"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Error"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SyncBlockedForRestore"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SyncBlockedForChangeDetectionPostRestore"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NoActivity"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/35"
+      },
+      {
+        "$ref": "#/36"
+      },
+      {
+        "$ref": "#/37"
+      },
+      {
+        "$ref": "#/38"
+      },
+      {
+        "$ref": "#/39"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Healthy"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Error"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SyncBlockedForRestore"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SyncBlockedForChangeDetectionPostRestore"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NoActivity"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/41"
+      },
+      {
+        "$ref": "#/42"
+      },
+      {
+        "$ref": "#/43"
+      },
+      {
+        "$ref": "#/44"
+      },
+      {
+        "$ref": "#/45"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Upload"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Download"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UploadAndDownload"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/47"
+      },
+      {
+        "$ref": "#/48"
+      },
+      {
+        "$ref": "#/49"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SyncSessionStatus",
+    "properties": {
+      "lastSyncResult": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 2,
+        "description": "Last sync result (HResult)"
+      },
+      "lastSyncTimestamp": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Last sync timestamp"
+      },
+      "lastSyncSuccessTimestamp": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Last sync success timestamp"
+      },
+      "lastSyncPerItemErrorCount": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 2,
+        "description": "Last sync per item error count."
+      },
+      "persistentFilesNotSyncingCount": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 2,
+        "description": "Count of persistent files not syncing."
+      },
+      "transientFilesNotSyncingCount": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 2,
+        "description": "Count of transient files not syncing."
+      },
+      "filesNotSyncingErrors": {
+        "type": {
+          "$ref": "#/55"
+        },
+        "flags": 2,
+        "description": "Array of per-item errors coming from the last sync session."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServerEndpointFilesNotSyncingError",
+    "properties": {
+      "errorCode": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 2,
+        "description": "Error code (HResult)"
+      },
+      "persistentCount": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 2,
+        "description": "Count of persistent files not syncing with the specified error code"
+      },
+      "transientCount": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 2,
+        "description": "Count of transient files not syncing with the specified error code"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/54"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SyncActivityStatus",
+    "properties": {
+      "timestamp": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Timestamp when properties were updated"
+      },
+      "perItemErrorCount": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 2,
+        "description": "Per item error count"
+      },
+      "appliedItemCount": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 2,
+        "description": "Applied item count."
+      },
+      "totalItemCount": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 2,
+        "description": "Total item count (if available)"
+      },
+      "appliedBytes": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 2,
+        "description": "Applied bytes"
+      },
+      "totalBytes": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 2,
+        "description": "Total bytes (if available)"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Stopping"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotRunning"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Complete"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/57"
+      },
+      {
+        "$ref": "#/58"
+      },
+      {
+        "$ref": "#/59"
+      },
+      {
+        "$ref": "#/60"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServerEndpointCloudTieringStatus",
+    "properties": {
+      "lastUpdatedTimestamp": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Last updated timestamp"
+      },
+      "health": {
+        "type": {
+          "$ref": "#/65"
+        },
+        "flags": 2,
+        "description": "Cloud tiering health state."
+      },
+      "healthLastUpdatedTimestamp": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The last updated timestamp of health state"
+      },
+      "lastCloudTieringResult": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 2,
+        "description": "Last cloud tiering result (HResult)"
+      },
+      "lastSuccessTimestamp": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Last cloud tiering success timestamp"
+      },
+      "spaceSavings": {
+        "type": {
+          "$ref": "#/66"
+        },
+        "flags": 2,
+        "description": "Information regarding how much local space cloud tiering is saving."
+      },
+      "cachePerformance": {
+        "type": {
+          "$ref": "#/67"
+        },
+        "flags": 2,
+        "description": "Information regarding how well the local cache on the server is performing."
+      },
+      "filesNotTiering": {
+        "type": {
+          "$ref": "#/68"
+        },
+        "flags": 2,
+        "description": "Information regarding files that failed to be tiered"
+      },
+      "volumeFreeSpacePolicyStatus": {
+        "type": {
+          "$ref": "#/71"
+        },
+        "flags": 2,
+        "description": "Status of the volume free space policy"
+      },
+      "datePolicyStatus": {
+        "type": {
+          "$ref": "#/72"
+        },
+        "flags": 2,
+        "description": "Status of the date policy"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Healthy"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Error"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/63"
+      },
+      {
+        "$ref": "#/64"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CloudTieringSpaceSavings",
+    "properties": {
+      "lastUpdatedTimestamp": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Last updated timestamp"
+      },
+      "volumeSizeBytes": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 2,
+        "description": "Volume size"
+      },
+      "totalSizeCloudBytes": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 2,
+        "description": "Total size of content in the azure file share"
+      },
+      "cachedSizeBytes": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 2,
+        "description": "Cached content size on the server"
+      },
+      "spaceSavingsPercent": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 2,
+        "description": "Percentage of cached size over total size"
+      },
+      "spaceSavingsBytes": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 2,
+        "description": "Count of bytes saved on the server"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CloudTieringCachePerformance",
+    "properties": {
+      "lastUpdatedTimestamp": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Last updated timestamp"
+      },
+      "cacheHitBytes": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 2,
+        "description": "Count of bytes that were served from the local server"
+      },
+      "cacheMissBytes": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 2,
+        "description": "Count of bytes that were served from the cloud"
+      },
+      "cacheHitBytesPercent": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 2,
+        "description": "Percentage of total bytes (hit + miss) that were served from the local server"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CloudTieringFilesNotTiering",
+    "properties": {
+      "lastUpdatedTimestamp": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Last updated timestamp"
+      },
+      "totalFileCount": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 2,
+        "description": "Last cloud tiering result (HResult)"
+      },
+      "errors": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 2,
+        "description": "Array of tiering errors"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FilesNotTieringError",
+    "properties": {
+      "errorCode": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 2,
+        "description": "Error code (HResult)"
+      },
+      "fileCount": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 2,
+        "description": "Count of files with this error"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/69"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CloudTieringVolumeFreeSpacePolicyStatus",
+    "properties": {
+      "lastUpdatedTimestamp": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Last updated timestamp"
+      },
+      "effectiveVolumeFreeSpacePolicy": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 2,
+        "description": "In the case where multiple server endpoints are present in a volume, an effective free space policy is applied."
+      },
+      "currentVolumeFreeSpacePercent": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 2,
+        "description": "Current volume free space percentage."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "CloudTieringDatePolicyStatus",
+    "properties": {
+      "lastUpdatedTimestamp": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Last updated timestamp"
+      },
+      "tieredFilesMostRecentAccessTimestamp": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Most recent access time of tiered files"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServerEndpointRecallStatus",
+    "properties": {
+      "lastUpdatedTimestamp": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Last updated timestamp"
+      },
+      "totalRecallErrorsCount": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 2,
+        "description": "Total count of recall errors."
+      },
+      "recallErrors": {
+        "type": {
+          "$ref": "#/75"
+        },
+        "flags": 2,
+        "description": "Array of recall errors"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServerEndpointRecallError",
+    "properties": {
+      "errorCode": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 2,
+        "description": "Error code (HResult)"
+      },
+      "count": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 2,
+        "description": "Count of occurences of the error"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/74"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints@2019-10-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/18"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.StorageSync/storageSyncServices/registeredServers"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-10-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.StorageSync/storageSyncServices/registeredServers",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/77"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/78"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/80"
+        },
+        "flags": 0,
+        "description": "The parameters used to create the registered server."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RegisteredServerCreateParametersPropertiesOrRegisteredServerProperties",
+    "properties": {
+      "serverCertificate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Registered Server Certificate"
+      },
+      "agentVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Registered Server Agent Version"
+      },
+      "serverOSVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Registered Server OS Version"
+      },
+      "lastHeartBeat": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Registered Server last heart beat"
+      },
+      "serverRole": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Registered Server serverRole"
+      },
+      "clusterId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Registered Server clusterId"
+      },
+      "clusterName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Registered Server clusterName"
+      },
+      "serverId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Registered Server serverId"
+      },
+      "friendlyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Friendly Name"
+      },
+      "serverManagementErrorCode": {
+        "type": {
+          "$ref": "#/53"
+        },
+        "flags": 2,
+        "description": "Registered Server Management Error Code"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Registered Server Provisioning State"
+      },
+      "storageSyncServiceUid": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Registered Server storageSyncServiceUid"
+      },
+      "lastWorkflowId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Registered Server lastWorkflowId"
+      },
+      "lastOperationName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Last Operation Name"
+      },
+      "discoveryEndpointUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource discoveryEndpointUri"
+      },
+      "resourceLocation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Location"
+      },
+      "serviceLocation": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Service Location"
+      },
+      "managementEndpointUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Management Endpoint Uri"
+      },
+      "monitoringConfiguration": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Monitoring Configuration"
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.StorageSync/storageSyncServices/registeredServers@2019-10-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/79"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.StorageSync/storageSyncServices/workflows"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-10-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.StorageSync/storageSyncServices/workflows",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/83"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/85"
+        },
+        "flags": 2,
+        "description": "Workflow properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WorkflowProperties",
+    "properties": {
+      "lastStepName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "last step name"
+      },
+      "status": {
+        "type": {
+          "$ref": "#/91"
+        },
+        "flags": 0,
+        "description": "workflow status."
+      },
+      "operation": {
+        "type": {
+          "$ref": "#/95"
+        },
+        "flags": 0,
+        "description": "operation direction."
+      },
+      "steps": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "workflow steps"
+      },
+      "lastOperationId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "workflow last operation identifier."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "active"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "expired"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "aborted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/86"
+      },
+      {
+        "$ref": "#/87"
+      },
+      {
+        "$ref": "#/88"
+      },
+      {
+        "$ref": "#/89"
+      },
+      {
+        "$ref": "#/90"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "do"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "undo"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "cancel"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/92"
+      },
+      {
+        "$ref": "#/93"
+      },
+      {
+        "$ref": "#/94"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.StorageSync/storageSyncServices/workflows@2019-10-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/84"
+    },
+    "flags": 1
+  }
+]

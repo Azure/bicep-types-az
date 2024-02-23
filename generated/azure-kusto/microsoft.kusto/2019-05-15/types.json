@@ -1,1 +1,1427 @@
-[{"13":{}},{"6":{"Value":"Microsoft.Kusto/clusters"}},{"6":{"Value":"2019-05-15"}},{"2":{"Name":"Microsoft.Kusto/clusters","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":1,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":2,"Flags":10,"Description":"The resource api version"},"sku":{"Type":4,"Flags":1,"Description":"The SKU of the cluster."},"zones":{"Type":22,"Flags":0,"Description":"The availability zones of the cluster."},"properties":{"Type":23,"Flags":0,"Description":"The cluster properties."},"tags":{"Type":46,"Flags":0,"Description":"Resource tags."},"location":{"Type":0,"Flags":1,"Description":"The geo-location where the resource lives"}}}},{"2":{"Name":"AzureSku","Properties":{"name":{"Type":17,"Flags":1,"Description":"SKU name."},"capacity":{"Type":18,"Flags":0,"Description":"The number of instances of the cluster."},"tier":{"Type":21,"Flags":1,"Description":"SKU tier."}}}},{"6":{"Value":"Standard_DS13_v2+1TB_PS"}},{"6":{"Value":"Standard_DS13_v2+2TB_PS"}},{"6":{"Value":"Standard_DS14_v2+3TB_PS"}},{"6":{"Value":"Standard_DS14_v2+4TB_PS"}},{"6":{"Value":"Standard_D13_v2"}},{"6":{"Value":"Standard_D14_v2"}},{"6":{"Value":"Standard_L8s"}},{"6":{"Value":"Standard_L16s"}},{"6":{"Value":"Standard_D11_v2"}},{"6":{"Value":"Standard_D12_v2"}},{"6":{"Value":"Standard_L4s"}},{"6":{"Value":"Dev(No SLA)_Standard_D11_v2"}},{"5":{"Elements":[5,6,7,8,9,10,11,12,13,14,15,16,0]}},{"12":{}},{"6":{"Value":"Basic"}},{"6":{"Value":"Standard"}},{"5":{"Elements":[19,20,0]}},{"3":{"ItemType":0}},{"2":{"Name":"ClusterProperties","Properties":{"state":{"Type":33,"Flags":2,"Description":"The state of the resource."},"provisioningState":{"Type":40,"Flags":2,"Description":"The provisioned state of the resource."},"uri":{"Type":0,"Flags":2,"Description":"The cluster URI."},"dataIngestionUri":{"Type":0,"Flags":2,"Description":"The cluster data ingestion URI."},"trustedExternalTenants":{"Type":42,"Flags":0,"Description":"The cluster's external tenants."},"optimizedAutoscale":{"Type":43,"Flags":0,"Description":"Optimized auto scale definition."},"enableDiskEncryption":{"Type":44,"Flags":0,"Description":"A boolean value that indicates if the cluster's disks are encrypted."},"enableStreamingIngest":{"Type":44,"Flags":0,"Description":"A boolean value that indicates if the streaming ingest is enabled."},"virtualNetworkConfiguration":{"Type":45,"Flags":0,"Description":"Virtual network definition."}}}},{"6":{"Value":"Creating"}},{"6":{"Value":"Unavailable"}},{"6":{"Value":"Running"}},{"6":{"Value":"Deleting"}},{"6":{"Value":"Deleted"}},{"6":{"Value":"Stopping"}},{"6":{"Value":"Stopped"}},{"6":{"Value":"Starting"}},{"6":{"Value":"Updating"}},{"5":{"Elements":[24,25,26,27,28,29,30,31,32,0]}},{"6":{"Value":"Running"}},{"6":{"Value":"Creating"}},{"6":{"Value":"Deleting"}},{"6":{"Value":"Succeeded"}},{"6":{"Value":"Failed"}},{"6":{"Value":"Moving"}},{"5":{"Elements":[34,35,36,37,38,39,0]}},{"2":{"Name":"TrustedExternalTenant","Properties":{"value":{"Type":0,"Flags":0,"Description":"GUID representing an external tenant."}}}},{"3":{"ItemType":41}},{"2":{"Name":"OptimizedAutoscale","Properties":{"version":{"Type":18,"Flags":1,"Description":"The version of the template defined, for instance 1."},"isEnabled":{"Type":44,"Flags":1,"Description":"A boolean value that indicate if the optimized autoscale feature is enabled or not."},"minimum":{"Type":18,"Flags":1,"Description":"Minimum allowed instances count."},"maximum":{"Type":18,"Flags":1,"Description":"Maximum allowed instances count."}}}},{"11":{}},{"2":{"Name":"VirtualNetworkConfiguration","Properties":{"subnetId":{"Type":0,"Flags":1,"Description":"The subnet resource id."},"enginePublicIpId":{"Type":0,"Flags":1,"Description":"Engine service's public IP address resource id."},"dataManagementPublicIpId":{"Type":0,"Flags":1,"Description":"Data management's service public IP address resource id."}}}},{"2":{"Name":"TrackedResourceTags","Properties":{},"AdditionalProperties":0}},{"4":{"Name":"Microsoft.Kusto/clusters@2019-05-15","ScopeType":8,"Body":3,"Flags":0}},{"6":{"Value":"Microsoft.Kusto/clusters/databases"}},{"6":{"Value":"2019-05-15"}},{"2":{"Name":"Microsoft.Kusto/clusters/databases","Properties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":48,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":49,"Flags":10,"Description":"The resource api version"},"location":{"Type":0,"Flags":0,"Description":"Resource location."},"properties":{"Type":51,"Flags":0,"Description":"The database properties."}}}},{"2":{"Name":"DatabaseProperties","Properties":{"provisioningState":{"Type":58,"Flags":2,"Description":"The provisioned state of the resource."},"softDeletePeriod":{"Type":0,"Flags":0,"Description":"The time the data should be kept before it stops being accessible to queries in TimeSpan."},"hotCachePeriod":{"Type":0,"Flags":0,"Description":"The time the data should be kept in cache for fast queries in TimeSpan."},"statistics":{"Type":59,"Flags":2,"Description":"The statistics of the database."}}}},{"6":{"Value":"Running"}},{"6":{"Value":"Creating"}},{"6":{"Value":"Deleting"}},{"6":{"Value":"Succeeded"}},{"6":{"Value":"Failed"}},{"6":{"Value":"Moving"}},{"5":{"Elements":[52,53,54,55,56,57,0]}},{"2":{"Name":"DatabaseStatistics","Properties":{"size":{"Type":18,"Flags":0,"Description":"The database size - the total size of compressed data and index in bytes."}}}},{"4":{"Name":"Microsoft.Kusto/clusters/databases@2019-05-15","ScopeType":8,"Body":50,"Flags":0}},{"6":{"Value":"Microsoft.Kusto/clusters/databases/dataConnections"}},{"6":{"Value":"2019-05-15"}},{"7":{"Name":"Microsoft.Kusto/clusters/databases/dataConnections","Discriminator":"kind","BaseProperties":{"id":{"Type":0,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":61,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":62,"Flags":10,"Description":"The resource api version"},"location":{"Type":0,"Flags":0,"Description":"Resource location."}},"Elements":{"EventGrid":64,"EventHub":80,"IotHub":97}}},{"2":{"Name":"EventGridDataConnection","Properties":{"properties":{"Type":65,"Flags":0,"Description":"The properties of the Event Grid data connection."},"kind":{"Type":79,"Flags":1,"Description":"Kind of the endpoint for the data connection"}}}},{"2":{"Name":"EventGridConnectionProperties","Properties":{"storageAccountResourceId":{"Type":0,"Flags":1,"Description":"The resource ID of the storage account where the data resides."},"eventHubResourceId":{"Type":0,"Flags":1,"Description":"The resource ID where the event grid is configured to send events."},"consumerGroup":{"Type":0,"Flags":1,"Description":"The event hub consumer group."},"tableName":{"Type":0,"Flags":1,"Description":"The table where the data should be ingested. Optionally the table information can be added to each message."},"mappingRuleName":{"Type":0,"Flags":0,"Description":"The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message."},"dataFormat":{"Type":78,"Flags":1,"Description":"The data format of the message. Optionally the data format can be added to each message."}}}},{"6":{"Value":"MULTIJSON"}},{"6":{"Value":"JSON"}},{"6":{"Value":"CSV"}},{"6":{"Value":"TSV"}},{"6":{"Value":"SCSV"}},{"6":{"Value":"SOHSV"}},{"6":{"Value":"PSV"}},{"6":{"Value":"TXT"}},{"6":{"Value":"RAW"}},{"6":{"Value":"SINGLEJSON"}},{"6":{"Value":"AVRO"}},{"6":{"Value":"TSVE"}},{"5":{"Elements":[66,67,68,69,70,71,72,73,74,75,76,77,0]}},{"6":{"Value":"EventGrid"}},{"2":{"Name":"EventHubDataConnection","Properties":{"properties":{"Type":81,"Flags":0,"Description":"The Event Hub data connection properties to validate."},"kind":{"Type":96,"Flags":1,"Description":"Kind of the endpoint for the data connection"}}}},{"2":{"Name":"EventHubConnectionProperties","Properties":{"eventHubResourceId":{"Type":0,"Flags":1,"Description":"The resource ID of the event hub to be used to create a data connection."},"consumerGroup":{"Type":0,"Flags":1,"Description":"The event hub consumer group."},"tableName":{"Type":0,"Flags":0,"Description":"The table where the data should be ingested. Optionally the table information can be added to each message."},"mappingRuleName":{"Type":0,"Flags":0,"Description":"The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message."},"dataFormat":{"Type":94,"Flags":0,"Description":"The data format of the message. Optionally the data format can be added to each message."},"eventSystemProperties":{"Type":95,"Flags":0,"Description":"System properties of the event hub"}}}},{"6":{"Value":"MULTIJSON"}},{"6":{"Value":"JSON"}},{"6":{"Value":"CSV"}},{"6":{"Value":"TSV"}},{"6":{"Value":"SCSV"}},{"6":{"Value":"SOHSV"}},{"6":{"Value":"PSV"}},{"6":{"Value":"TXT"}},{"6":{"Value":"RAW"}},{"6":{"Value":"SINGLEJSON"}},{"6":{"Value":"AVRO"}},{"6":{"Value":"TSVE"}},{"5":{"Elements":[82,83,84,85,86,87,88,89,90,91,92,93,0]}},{"3":{"ItemType":0}},{"6":{"Value":"EventHub"}},{"2":{"Name":"IotHubDataConnection","Properties":{"properties":{"Type":98,"Flags":0,"Description":"The Iot Hub data connection properties."},"kind":{"Type":113,"Flags":1,"Description":"Kind of the endpoint for the data connection"}}}},{"2":{"Name":"IotHubConnectionProperties","Properties":{"iotHubResourceId":{"Type":0,"Flags":1,"Description":"The resource ID of the Iot hub to be used to create a data connection."},"consumerGroup":{"Type":0,"Flags":1,"Description":"The iot hub consumer group."},"tableName":{"Type":0,"Flags":0,"Description":"The table where the data should be ingested. Optionally the table information can be added to each message."},"mappingRuleName":{"Type":0,"Flags":0,"Description":"The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message."},"dataFormat":{"Type":111,"Flags":0,"Description":"The data format of the message. Optionally the data format can be added to each message."},"eventSystemProperties":{"Type":112,"Flags":0,"Description":"System properties of the iot hub"},"sharedAccessPolicyName":{"Type":0,"Flags":1,"Description":"The name of the share access policy name"}}}},{"6":{"Value":"MULTIJSON"}},{"6":{"Value":"JSON"}},{"6":{"Value":"CSV"}},{"6":{"Value":"TSV"}},{"6":{"Value":"SCSV"}},{"6":{"Value":"SOHSV"}},{"6":{"Value":"PSV"}},{"6":{"Value":"TXT"}},{"6":{"Value":"RAW"}},{"6":{"Value":"SINGLEJSON"}},{"6":{"Value":"AVRO"}},{"6":{"Value":"TSVE"}},{"5":{"Elements":[99,100,101,102,103,104,105,106,107,108,109,110,0]}},{"3":{"ItemType":0}},{"6":{"Value":"IotHub"}},{"4":{"Name":"Microsoft.Kusto/clusters/databases/dataConnections@2019-05-15","ScopeType":8,"Body":63,"Flags":0}},{"2":{"Name":"DatabasePrincipalListResult","Properties":{"value":{"Type":128,"Flags":0,"Description":"The list of Kusto database principals."}}}},{"2":{"Name":"DatabasePrincipal","Properties":{"role":{"Type":123,"Flags":1,"Description":"Database principal role."},"name":{"Type":0,"Flags":1,"Description":"Database principal name."},"type":{"Type":127,"Flags":1,"Description":"Database principal type."},"fqn":{"Type":0,"Flags":0,"Description":"Database principal fully qualified name."},"email":{"Type":0,"Flags":0,"Description":"Database principal email if exists."},"appId":{"Type":0,"Flags":0,"Description":"Application id - relevant only for application principal type."},"tenantName":{"Type":0,"Flags":2,"Description":"The tenant name of the principal"}}}},{"6":{"Value":"Admin"}},{"6":{"Value":"Ingestor"}},{"6":{"Value":"Monitor"}},{"6":{"Value":"User"}},{"6":{"Value":"UnrestrictedViewers"}},{"6":{"Value":"Viewer"}},{"5":{"Elements":[117,118,119,120,121,122,0]}},{"6":{"Value":"App"}},{"6":{"Value":"Group"}},{"6":{"Value":"User"}},{"5":{"Elements":[124,125,126,0]}},{"3":{"ItemType":116}},{"8":{"Name":"listPrincipals","ResourceType":"Microsoft.Kusto/clusters/databases","ApiVersion":"2019-05-15","Output":115}}]
+[
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Kusto/clusters"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-05-15"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Kusto/clusters",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/4"
+        },
+        "flags": 1,
+        "description": "The SKU of the cluster."
+      },
+      "zones": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 0,
+        "description": "The availability zones of the cluster."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/23"
+        },
+        "flags": 0,
+        "description": "The cluster properties."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureSku",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 1,
+        "description": "SKU name."
+      },
+      "capacity": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "The number of instances of the cluster."
+      },
+      "tier": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 1,
+        "description": "SKU tier."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard_DS13_v2+1TB_PS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard_DS13_v2+2TB_PS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard_DS14_v2+3TB_PS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard_DS14_v2+4TB_PS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard_D13_v2"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard_D14_v2"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard_L8s"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard_L16s"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard_D11_v2"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard_D12_v2"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard_L4s"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Dev(No SLA)_Standard_D11_v2"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/5"
+      },
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/13"
+      },
+      {
+        "$ref": "#/14"
+      },
+      {
+        "$ref": "#/15"
+      },
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Basic"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/20"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ClusterProperties",
+    "properties": {
+      "state": {
+        "type": {
+          "$ref": "#/33"
+        },
+        "flags": 2,
+        "description": "The state of the resource."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 2,
+        "description": "The provisioned state of the resource."
+      },
+      "uri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The cluster URI."
+      },
+      "dataIngestionUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The cluster data ingestion URI."
+      },
+      "trustedExternalTenants": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 0,
+        "description": "The cluster's external tenants."
+      },
+      "optimizedAutoscale": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 0,
+        "description": "Optimized auto scale definition."
+      },
+      "enableDiskEncryption": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "A boolean value that indicates if the cluster's disks are encrypted."
+      },
+      "enableStreamingIngest": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 0,
+        "description": "A boolean value that indicates if the streaming ingest is enabled."
+      },
+      "virtualNetworkConfiguration": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 0,
+        "description": "Virtual network definition."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unavailable"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Running"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Stopping"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Stopped"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Starting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/24"
+      },
+      {
+        "$ref": "#/25"
+      },
+      {
+        "$ref": "#/26"
+      },
+      {
+        "$ref": "#/27"
+      },
+      {
+        "$ref": "#/28"
+      },
+      {
+        "$ref": "#/29"
+      },
+      {
+        "$ref": "#/30"
+      },
+      {
+        "$ref": "#/31"
+      },
+      {
+        "$ref": "#/32"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Running"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Moving"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/34"
+      },
+      {
+        "$ref": "#/35"
+      },
+      {
+        "$ref": "#/36"
+      },
+      {
+        "$ref": "#/37"
+      },
+      {
+        "$ref": "#/38"
+      },
+      {
+        "$ref": "#/39"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrustedExternalTenant",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "GUID representing an external tenant."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/41"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OptimizedAutoscale",
+    "properties": {
+      "version": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 1,
+        "description": "The version of the template defined, for instance 1."
+      },
+      "isEnabled": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 1,
+        "description": "A boolean value that indicate if the optimized autoscale feature is enabled or not."
+      },
+      "minimum": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 1,
+        "description": "Minimum allowed instances count."
+      },
+      "maximum": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 1,
+        "description": "Maximum allowed instances count."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VirtualNetworkConfiguration",
+    "properties": {
+      "subnetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The subnet resource id."
+      },
+      "enginePublicIpId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Engine service's public IP address resource id."
+      },
+      "dataManagementPublicIpId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Data management's service public IP address resource id."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Kusto/clusters@2019-05-15",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Kusto/clusters/databases"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-05-15"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Kusto/clusters/databases",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/49"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource location."
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 0,
+        "description": "The database properties."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DatabaseProperties",
+    "properties": {
+      "provisioningState": {
+        "type": {
+          "$ref": "#/58"
+        },
+        "flags": 2,
+        "description": "The provisioned state of the resource."
+      },
+      "softDeletePeriod": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The time the data should be kept before it stops being accessible to queries in TimeSpan."
+      },
+      "hotCachePeriod": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The time the data should be kept in cache for fast queries in TimeSpan."
+      },
+      "statistics": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 2,
+        "description": "The statistics of the database."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Running"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Moving"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/52"
+      },
+      {
+        "$ref": "#/53"
+      },
+      {
+        "$ref": "#/54"
+      },
+      {
+        "$ref": "#/55"
+      },
+      {
+        "$ref": "#/56"
+      },
+      {
+        "$ref": "#/57"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DatabaseStatistics",
+    "properties": {
+      "size": {
+        "type": {
+          "$ref": "#/18"
+        },
+        "flags": 0,
+        "description": "The database size - the total size of compressed data and index in bytes."
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Kusto/clusters/databases@2019-05-15",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/50"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Kusto/clusters/databases/dataConnections"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2019-05-15"
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "Microsoft.Kusto/clusters/databases/dataConnections",
+    "discriminator": "kind",
+    "baseProperties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Resource location."
+      }
+    },
+    "elements": {
+      "EventGrid": {
+        "$ref": "#/64"
+      },
+      "EventHub": {
+        "$ref": "#/80"
+      },
+      "IotHub": {
+        "$ref": "#/97"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EventGridDataConnection",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/65"
+        },
+        "flags": 0,
+        "description": "The properties of the Event Grid data connection."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/79"
+        },
+        "flags": 1,
+        "description": "Kind of the endpoint for the data connection"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EventGridConnectionProperties",
+    "properties": {
+      "storageAccountResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The resource ID of the storage account where the data resides."
+      },
+      "eventHubResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The resource ID where the event grid is configured to send events."
+      },
+      "consumerGroup": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The event hub consumer group."
+      },
+      "tableName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The table where the data should be ingested. Optionally the table information can be added to each message."
+      },
+      "mappingRuleName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message."
+      },
+      "dataFormat": {
+        "type": {
+          "$ref": "#/78"
+        },
+        "flags": 1,
+        "description": "The data format of the message. Optionally the data format can be added to each message."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MULTIJSON"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "JSON"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CSV"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TSV"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SCSV"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SOHSV"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PSV"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TXT"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RAW"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SINGLEJSON"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AVRO"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TSVE"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/66"
+      },
+      {
+        "$ref": "#/67"
+      },
+      {
+        "$ref": "#/68"
+      },
+      {
+        "$ref": "#/69"
+      },
+      {
+        "$ref": "#/70"
+      },
+      {
+        "$ref": "#/71"
+      },
+      {
+        "$ref": "#/72"
+      },
+      {
+        "$ref": "#/73"
+      },
+      {
+        "$ref": "#/74"
+      },
+      {
+        "$ref": "#/75"
+      },
+      {
+        "$ref": "#/76"
+      },
+      {
+        "$ref": "#/77"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "EventGrid"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EventHubDataConnection",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/81"
+        },
+        "flags": 0,
+        "description": "The Event Hub data connection properties to validate."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 1,
+        "description": "Kind of the endpoint for the data connection"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EventHubConnectionProperties",
+    "properties": {
+      "eventHubResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The resource ID of the event hub to be used to create a data connection."
+      },
+      "consumerGroup": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The event hub consumer group."
+      },
+      "tableName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The table where the data should be ingested. Optionally the table information can be added to each message."
+      },
+      "mappingRuleName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message."
+      },
+      "dataFormat": {
+        "type": {
+          "$ref": "#/94"
+        },
+        "flags": 0,
+        "description": "The data format of the message. Optionally the data format can be added to each message."
+      },
+      "eventSystemProperties": {
+        "type": {
+          "$ref": "#/95"
+        },
+        "flags": 0,
+        "description": "System properties of the event hub"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MULTIJSON"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "JSON"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CSV"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TSV"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SCSV"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SOHSV"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PSV"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TXT"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RAW"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SINGLEJSON"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AVRO"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TSVE"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/82"
+      },
+      {
+        "$ref": "#/83"
+      },
+      {
+        "$ref": "#/84"
+      },
+      {
+        "$ref": "#/85"
+      },
+      {
+        "$ref": "#/86"
+      },
+      {
+        "$ref": "#/87"
+      },
+      {
+        "$ref": "#/88"
+      },
+      {
+        "$ref": "#/89"
+      },
+      {
+        "$ref": "#/90"
+      },
+      {
+        "$ref": "#/91"
+      },
+      {
+        "$ref": "#/92"
+      },
+      {
+        "$ref": "#/93"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "EventHub"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IotHubDataConnection",
+    "properties": {
+      "properties": {
+        "type": {
+          "$ref": "#/98"
+        },
+        "flags": 0,
+        "description": "The Iot Hub data connection properties."
+      },
+      "kind": {
+        "type": {
+          "$ref": "#/113"
+        },
+        "flags": 1,
+        "description": "Kind of the endpoint for the data connection"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IotHubConnectionProperties",
+    "properties": {
+      "iotHubResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The resource ID of the Iot hub to be used to create a data connection."
+      },
+      "consumerGroup": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The iot hub consumer group."
+      },
+      "tableName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The table where the data should be ingested. Optionally the table information can be added to each message."
+      },
+      "mappingRuleName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message."
+      },
+      "dataFormat": {
+        "type": {
+          "$ref": "#/111"
+        },
+        "flags": 0,
+        "description": "The data format of the message. Optionally the data format can be added to each message."
+      },
+      "eventSystemProperties": {
+        "type": {
+          "$ref": "#/112"
+        },
+        "flags": 0,
+        "description": "System properties of the iot hub"
+      },
+      "sharedAccessPolicyName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of the share access policy name"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MULTIJSON"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "JSON"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CSV"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TSV"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SCSV"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SOHSV"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PSV"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TXT"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RAW"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SINGLEJSON"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AVRO"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TSVE"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/99"
+      },
+      {
+        "$ref": "#/100"
+      },
+      {
+        "$ref": "#/101"
+      },
+      {
+        "$ref": "#/102"
+      },
+      {
+        "$ref": "#/103"
+      },
+      {
+        "$ref": "#/104"
+      },
+      {
+        "$ref": "#/105"
+      },
+      {
+        "$ref": "#/106"
+      },
+      {
+        "$ref": "#/107"
+      },
+      {
+        "$ref": "#/108"
+      },
+      {
+        "$ref": "#/109"
+      },
+      {
+        "$ref": "#/110"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "IotHub"
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Kusto/clusters/databases/dataConnections@2019-05-15",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/63"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DatabasePrincipalListResult",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/128"
+        },
+        "flags": 0,
+        "description": "The list of Kusto database principals."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DatabasePrincipal",
+    "properties": {
+      "role": {
+        "type": {
+          "$ref": "#/123"
+        },
+        "flags": 1,
+        "description": "Database principal role."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Database principal name."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/127"
+        },
+        "flags": 1,
+        "description": "Database principal type."
+      },
+      "fqn": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Database principal fully qualified name."
+      },
+      "email": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Database principal email if exists."
+      },
+      "appId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Application id - relevant only for application principal type."
+      },
+      "tenantName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The tenant name of the principal"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Admin"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Ingestor"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Monitor"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UnrestrictedViewers"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Viewer"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/117"
+      },
+      {
+        "$ref": "#/118"
+      },
+      {
+        "$ref": "#/119"
+      },
+      {
+        "$ref": "#/120"
+      },
+      {
+        "$ref": "#/121"
+      },
+      {
+        "$ref": "#/122"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "App"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Group"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/124"
+      },
+      {
+        "$ref": "#/125"
+      },
+      {
+        "$ref": "#/126"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/116"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listPrincipals",
+    "resourceType": "Microsoft.Kusto/clusters/databases",
+    "apiVersion": "2019-05-15",
+    "output": {
+      "$ref": "#/115"
+    }
+  }
+]

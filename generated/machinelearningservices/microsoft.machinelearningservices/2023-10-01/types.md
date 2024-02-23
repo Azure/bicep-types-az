@@ -2617,8 +2617,9 @@ This property will always be returned as null. AuthKey values must be retrieved 
 ## OnlineRequestSettings
 ### Properties
 * **maxConcurrentRequestsPerInstance**: int: The number of maximum concurrent requests per node allowed per deployment. Defaults to 1.
-* **maxQueueWait**: string: The maximum amount of time a request will stay in the queue in ISO 8601 format.
+* **maxQueueWait**: string: (Deprecated for Managed Online Endpoints) The maximum amount of time a request will stay in the queue in ISO 8601 format.
 Defaults to 500ms.
+(Now increase `request_timeout_ms` to account for any networking/queue delays)
 * **requestTimeout**: string: The scoring timeout in ISO 8601 format.
 Defaults to 5000ms.
 

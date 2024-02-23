@@ -1,1 +1,970 @@
-[{"6":{"Value":"content"}},{"6":{"Value":"Microsoft.Automation/automationAccounts/runbooks/draft"}},{"13":{}},{"6":{"Value":"2018-06-30"}},{"2":{"Name":"Microsoft.Automation/automationAccounts/runbooks/draft","Properties":{"id":{"Type":2,"Flags":10,"Description":"The resource id"},"name":{"Type":0,"Flags":9,"Description":"The resource name"},"type":{"Type":1,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":3,"Flags":10,"Description":"The resource api version"}}}},{"6":{"Value":"testJob"}},{"6":{"Value":"Microsoft.Automation/automationAccounts/runbooks/draft"}},{"6":{"Value":"2018-06-30"}},{"2":{"Name":"Microsoft.Automation/automationAccounts/runbooks/draft","Properties":{"id":{"Type":2,"Flags":10,"Description":"The resource id"},"name":{"Type":5,"Flags":9,"Description":"The resource name"},"type":{"Type":6,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":7,"Flags":10,"Description":"The resource api version"},"parameters":{"Type":9,"Flags":0,"Description":"Gets or sets the parameters of the test job."},"runOn":{"Type":2,"Flags":0,"Description":"Gets or sets the runOn which specifies the group name where the job is to be executed."},"creationTime":{"Type":2,"Flags":2,"Description":"Gets or sets the creation time of the test job."},"status":{"Type":2,"Flags":2,"Description":"Gets or sets the status of the test job."},"statusDetails":{"Type":2,"Flags":2,"Description":"Gets or sets the status details of the test job."},"startTime":{"Type":2,"Flags":2,"Description":"Gets or sets the start time of the test job."},"endTime":{"Type":2,"Flags":2,"Description":"Gets or sets the end time of the test job."},"exception":{"Type":2,"Flags":2,"Description":"Gets or sets the exception of the test job."},"lastModifiedTime":{"Type":2,"Flags":2,"Description":"Gets or sets the last modified time of the test job."},"lastStatusModifiedTime":{"Type":2,"Flags":2,"Description":"Gets or sets the last status modified time of the test job."},"logActivityTrace":{"Type":10,"Flags":2,"Description":"The activity-level tracing options of the runbook."}}}},{"2":{"Name":"TestJobCreateParameters","Properties":{},"AdditionalProperties":2}},{"12":{}},{"7":{"Name":"microsoft.automation/automationaccounts/runbooks/draft","Discriminator":"name","BaseProperties":{},"Elements":{"content":4,"testJob":8}}},{"4":{"Name":"Microsoft.Automation/automationAccounts/runbooks/draft@2018-06-30","ScopeType":8,"Body":11,"Flags":0}},{"6":{"Value":"Microsoft.Automation/automationAccounts/runbooks"}},{"6":{"Value":"2018-06-30"}},{"2":{"Name":"Microsoft.Automation/automationAccounts/runbooks","Properties":{"id":{"Type":2,"Flags":10,"Description":"The resource id"},"name":{"Type":2,"Flags":9,"Description":"The resource name"},"type":{"Type":13,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":14,"Flags":10,"Description":"The resource api version"},"properties":{"Type":16,"Flags":1,"Description":"Gets or sets runbook create or update properties."},"location":{"Type":2,"Flags":0,"Description":"Gets or sets the location of the resource."},"tags":{"Type":40,"Flags":0,"Description":"Gets or sets the tags attached to the resource."},"etag":{"Type":2,"Flags":2,"Description":"Gets or sets the etag of the resource."}}}},{"2":{"Name":"RunbookCreateOrUpdatePropertiesOrRunbookProperties","Properties":{"logVerbose":{"Type":17,"Flags":0,"Description":"Gets or sets verbose log option."},"logProgress":{"Type":17,"Flags":0,"Description":"Gets or sets progress log option."},"runbookType":{"Type":26,"Flags":1,"Description":"Gets or sets the type of the runbook."},"draft":{"Type":27,"Flags":0,"Description":"Gets or sets the draft runbook properties."},"publishContentLink":{"Type":28,"Flags":0,"Description":"Gets or sets the published runbook content link."},"description":{"Type":2,"Flags":0,"Description":"Gets or sets the description of the runbook."},"logActivityTrace":{"Type":10,"Flags":0,"Description":"Gets or sets the activity-level tracing options of the runbook."},"state":{"Type":36,"Flags":2,"Description":"Gets or sets the state of the runbook."},"jobCount":{"Type":10,"Flags":2,"Description":"Gets or sets the job count of the runbook."},"parameters":{"Type":37,"Flags":2,"Description":"Gets or sets the runbook parameters."},"outputTypes":{"Type":38,"Flags":2,"Description":"Gets or sets the runbook output types."},"provisioningState":{"Type":39,"Flags":2,"Description":"Gets or sets the provisioning state of the runbook."},"lastModifiedBy":{"Type":2,"Flags":2,"Description":"Gets or sets the last modified by."},"creationTime":{"Type":2,"Flags":2,"Description":"Gets or sets the creation time."},"lastModifiedTime":{"Type":2,"Flags":2,"Description":"Gets or sets the last modified time."}}}},{"11":{}},{"6":{"Value":"Script"}},{"6":{"Value":"Graph"}},{"6":{"Value":"PowerShellWorkflow"}},{"6":{"Value":"PowerShell"}},{"6":{"Value":"GraphPowerShellWorkflow"}},{"6":{"Value":"GraphPowerShell"}},{"6":{"Value":"Python2"}},{"6":{"Value":"Python3"}},{"5":{"Elements":[18,19,20,21,22,23,24,25,2]}},{"2":{"Name":"RunbookDraft","Properties":{"inEdit":{"Type":17,"Flags":0,"Description":"Gets or sets whether runbook is in edit mode."},"draftContentLink":{"Type":28,"Flags":0,"Description":"Gets or sets the draft runbook content link."},"creationTime":{"Type":2,"Flags":0,"Description":"Gets or sets the creation time of the runbook draft."},"lastModifiedTime":{"Type":2,"Flags":0,"Description":"Gets or sets the last modified time of the runbook draft."},"parameters":{"Type":31,"Flags":0,"Description":"Gets or sets the runbook draft parameters."},"outputTypes":{"Type":32,"Flags":0,"Description":"Gets or sets the runbook output types."}}}},{"2":{"Name":"ContentLink","Properties":{"uri":{"Type":2,"Flags":0,"Description":"Gets or sets the uri of the runbook content."},"contentHash":{"Type":29,"Flags":0,"Description":"Gets or sets the hash."},"version":{"Type":2,"Flags":0,"Description":"Gets or sets the version of the content."}}}},{"2":{"Name":"ContentHash","Properties":{"algorithm":{"Type":2,"Flags":1,"Description":"Gets or sets the content hash algorithm used to hash the content."},"value":{"Type":2,"Flags":1,"Description":"Gets or sets expected hash value of the content."}}}},{"2":{"Name":"RunbookParameter","Properties":{"type":{"Type":2,"Flags":0,"Description":"Gets or sets the type of the parameter."},"isMandatory":{"Type":17,"Flags":0,"Description":"Gets or sets a Boolean value to indicate whether the parameter is mandatory or not."},"position":{"Type":10,"Flags":0,"Description":"Get or sets the position of the parameter."},"defaultValue":{"Type":2,"Flags":0,"Description":"Gets or sets the default value of parameter."}}}},{"2":{"Name":"RunbookDraftParameters","Properties":{},"AdditionalProperties":30}},{"3":{"ItemType":2}},{"6":{"Value":"New"}},{"6":{"Value":"Edit"}},{"6":{"Value":"Published"}},{"5":{"Elements":[33,34,35,2]}},{"2":{"Name":"RunbookPropertiesParameters","Properties":{},"AdditionalProperties":30}},{"3":{"ItemType":2}},{"6":{"Value":"Succeeded"}},{"2":{"Name":"RunbookCreateOrUpdateParametersTags","Properties":{},"AdditionalProperties":2}},{"4":{"Name":"Microsoft.Automation/automationAccounts/runbooks@2018-06-30","ScopeType":8,"Body":15,"Flags":0}},{"6":{"Value":"Microsoft.Automation/automationAccounts/python2Packages"}},{"6":{"Value":"2018-06-30"}},{"2":{"Name":"Microsoft.Automation/automationAccounts/python2Packages","Properties":{"id":{"Type":2,"Flags":10,"Description":"The resource id"},"name":{"Type":2,"Flags":9,"Description":"The resource name"},"type":{"Type":42,"Flags":10,"Description":"The resource type"},"apiVersion":{"Type":43,"Flags":10,"Description":"The resource api version"},"properties":{"Type":45,"Flags":1,"Description":"Gets or sets the module create properties."},"tags":{"Type":64,"Flags":0,"Description":"Gets or sets the tags attached to the resource."},"etag":{"Type":2,"Flags":2,"Description":"Gets or sets the etag of the resource."},"location":{"Type":2,"Flags":2,"Description":"The Azure Region where the resource lives"}}}},{"2":{"Name":"PythonPackageCreatePropertiesOrModuleProperties","Properties":{"contentLink":{"Type":28,"Flags":1,"Description":"Gets or sets the module content link."},"isGlobal":{"Type":17,"Flags":2,"Description":"Gets or sets the isGlobal flag of the module."},"version":{"Type":2,"Flags":2,"Description":"Gets or sets the version of the module."},"sizeInBytes":{"Type":10,"Flags":2,"Description":"Gets or sets the size in bytes of the module."},"activityCount":{"Type":10,"Flags":2,"Description":"Gets or sets the activity count of the module."},"provisioningState":{"Type":62,"Flags":2,"Description":"Gets or sets the provisioning state of the module."},"error":{"Type":63,"Flags":2,"Description":"Gets or sets the error info of the module."},"creationTime":{"Type":2,"Flags":2,"Description":"Gets or sets the creation time."},"lastModifiedTime":{"Type":2,"Flags":2,"Description":"Gets or sets the last modified time."},"description":{"Type":2,"Flags":2,"Description":"Gets or sets the description."},"isComposite":{"Type":17,"Flags":2,"Description":"Gets or sets type of module, if its composite or not."}}}},{"6":{"Value":"Created"}},{"6":{"Value":"Creating"}},{"6":{"Value":"StartingImportModuleRunbook"}},{"6":{"Value":"RunningImportModuleRunbook"}},{"6":{"Value":"ContentRetrieved"}},{"6":{"Value":"ContentDownloaded"}},{"6":{"Value":"ContentValidated"}},{"6":{"Value":"ConnectionTypeImported"}},{"6":{"Value":"ContentStored"}},{"6":{"Value":"ModuleDataStored"}},{"6":{"Value":"ActivitiesStored"}},{"6":{"Value":"ModuleImportRunbookComplete"}},{"6":{"Value":"Succeeded"}},{"6":{"Value":"Failed"}},{"6":{"Value":"Cancelled"}},{"6":{"Value":"Updating"}},{"5":{"Elements":[46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61]}},{"2":{"Name":"ModuleErrorInfo","Properties":{"code":{"Type":2,"Flags":0,"Description":"Gets or sets the error code."},"message":{"Type":2,"Flags":0,"Description":"Gets or sets the error message."}}}},{"2":{"Name":"PythonPackageCreateParametersTags","Properties":{},"AdditionalProperties":2}},{"4":{"Name":"Microsoft.Automation/automationAccounts/python2Packages@2018-06-30","ScopeType":8,"Body":44,"Flags":0}}]
+[
+  {
+    "$type": "StringLiteralType",
+    "value": "content"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Automation/automationAccounts/runbooks/draft"
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-06-30"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Automation/automationAccounts/runbooks/draft",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "testJob"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Automation/automationAccounts/runbooks/draft"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-06-30"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Automation/automationAccounts/runbooks/draft",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/6"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/7"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "parameters": {
+        "type": {
+          "$ref": "#/9"
+        },
+        "flags": 0,
+        "description": "Gets or sets the parameters of the test job."
+      },
+      "runOn": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Gets or sets the runOn which specifies the group name where the job is to be executed."
+      },
+      "creationTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets or sets the creation time of the test job."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets or sets the status of the test job."
+      },
+      "statusDetails": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets or sets the status details of the test job."
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets or sets the start time of the test job."
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets or sets the end time of the test job."
+      },
+      "exception": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets or sets the exception of the test job."
+      },
+      "lastModifiedTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets or sets the last modified time of the test job."
+      },
+      "lastStatusModifiedTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets or sets the last status modified time of the test job."
+      },
+      "logActivityTrace": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 2,
+        "description": "The activity-level tracing options of the runbook."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TestJobCreateParameters",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "microsoft.automation/automationaccounts/runbooks/draft",
+    "discriminator": "name",
+    "baseProperties": {},
+    "elements": {
+      "content": {
+        "$ref": "#/4"
+      },
+      "testJob": {
+        "$ref": "#/8"
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Automation/automationAccounts/runbooks/draft@2018-06-30",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/11"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Automation/automationAccounts/runbooks"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-06-30"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Automation/automationAccounts/runbooks",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 1,
+        "description": "Gets or sets runbook create or update properties."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Gets or sets the location of the resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/40"
+        },
+        "flags": 0,
+        "description": "Gets or sets the tags attached to the resource."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets or sets the etag of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RunbookCreateOrUpdatePropertiesOrRunbookProperties",
+    "properties": {
+      "logVerbose": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "Gets or sets verbose log option."
+      },
+      "logProgress": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "Gets or sets progress log option."
+      },
+      "runbookType": {
+        "type": {
+          "$ref": "#/26"
+        },
+        "flags": 1,
+        "description": "Gets or sets the type of the runbook."
+      },
+      "draft": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 0,
+        "description": "Gets or sets the draft runbook properties."
+      },
+      "publishContentLink": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 0,
+        "description": "Gets or sets the published runbook content link."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Gets or sets the description of the runbook."
+      },
+      "logActivityTrace": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "Gets or sets the activity-level tracing options of the runbook."
+      },
+      "state": {
+        "type": {
+          "$ref": "#/36"
+        },
+        "flags": 2,
+        "description": "Gets or sets the state of the runbook."
+      },
+      "jobCount": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 2,
+        "description": "Gets or sets the job count of the runbook."
+      },
+      "parameters": {
+        "type": {
+          "$ref": "#/37"
+        },
+        "flags": 2,
+        "description": "Gets or sets the runbook parameters."
+      },
+      "outputTypes": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 2,
+        "description": "Gets or sets the runbook output types."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/39"
+        },
+        "flags": 2,
+        "description": "Gets or sets the provisioning state of the runbook."
+      },
+      "lastModifiedBy": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets or sets the last modified by."
+      },
+      "creationTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets or sets the creation time."
+      },
+      "lastModifiedTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets or sets the last modified time."
+      }
+    }
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Script"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Graph"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PowerShellWorkflow"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PowerShell"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GraphPowerShellWorkflow"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "GraphPowerShell"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Python2"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Python3"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/18"
+      },
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/20"
+      },
+      {
+        "$ref": "#/21"
+      },
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/23"
+      },
+      {
+        "$ref": "#/24"
+      },
+      {
+        "$ref": "#/25"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RunbookDraft",
+    "properties": {
+      "inEdit": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "Gets or sets whether runbook is in edit mode."
+      },
+      "draftContentLink": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 0,
+        "description": "Gets or sets the draft runbook content link."
+      },
+      "creationTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Gets or sets the creation time of the runbook draft."
+      },
+      "lastModifiedTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Gets or sets the last modified time of the runbook draft."
+      },
+      "parameters": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0,
+        "description": "Gets or sets the runbook draft parameters."
+      },
+      "outputTypes": {
+        "type": {
+          "$ref": "#/32"
+        },
+        "flags": 0,
+        "description": "Gets or sets the runbook output types."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ContentLink",
+    "properties": {
+      "uri": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Gets or sets the uri of the runbook content."
+      },
+      "contentHash": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 0,
+        "description": "Gets or sets the hash."
+      },
+      "version": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Gets or sets the version of the content."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ContentHash",
+    "properties": {
+      "algorithm": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Gets or sets the content hash algorithm used to hash the content."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Gets or sets expected hash value of the content."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RunbookParameter",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Gets or sets the type of the parameter."
+      },
+      "isMandatory": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 0,
+        "description": "Gets or sets a Boolean value to indicate whether the parameter is mandatory or not."
+      },
+      "position": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "Get or sets the position of the parameter."
+      },
+      "defaultValue": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Gets or sets the default value of parameter."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RunbookDraftParameters",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/30"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "New"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Edit"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Published"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/33"
+      },
+      {
+        "$ref": "#/34"
+      },
+      {
+        "$ref": "#/35"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RunbookPropertiesParameters",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/30"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RunbookCreateOrUpdateParametersTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Automation/automationAccounts/runbooks@2018-06-30",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/15"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Automation/automationAccounts/python2Packages"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2018-06-30"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Automation/automationAccounts/python2Packages",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 1,
+        "description": "Gets or sets the module create properties."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/64"
+        },
+        "flags": 0,
+        "description": "Gets or sets the tags attached to the resource."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets or sets the etag of the resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The Azure Region where the resource lives"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PythonPackageCreatePropertiesOrModuleProperties",
+    "properties": {
+      "contentLink": {
+        "type": {
+          "$ref": "#/28"
+        },
+        "flags": 1,
+        "description": "Gets or sets the module content link."
+      },
+      "isGlobal": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 2,
+        "description": "Gets or sets the isGlobal flag of the module."
+      },
+      "version": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets or sets the version of the module."
+      },
+      "sizeInBytes": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 2,
+        "description": "Gets or sets the size in bytes of the module."
+      },
+      "activityCount": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 2,
+        "description": "Gets or sets the activity count of the module."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/62"
+        },
+        "flags": 2,
+        "description": "Gets or sets the provisioning state of the module."
+      },
+      "error": {
+        "type": {
+          "$ref": "#/63"
+        },
+        "flags": 2,
+        "description": "Gets or sets the error info of the module."
+      },
+      "creationTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets or sets the creation time."
+      },
+      "lastModifiedTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets or sets the last modified time."
+      },
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Gets or sets the description."
+      },
+      "isComposite": {
+        "type": {
+          "$ref": "#/17"
+        },
+        "flags": 2,
+        "description": "Gets or sets type of module, if its composite or not."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Created"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "StartingImportModuleRunbook"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RunningImportModuleRunbook"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ContentRetrieved"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ContentDownloaded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ContentValidated"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ConnectionTypeImported"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ContentStored"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ModuleDataStored"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ActivitiesStored"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ModuleImportRunbookComplete"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cancelled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/46"
+      },
+      {
+        "$ref": "#/47"
+      },
+      {
+        "$ref": "#/48"
+      },
+      {
+        "$ref": "#/49"
+      },
+      {
+        "$ref": "#/50"
+      },
+      {
+        "$ref": "#/51"
+      },
+      {
+        "$ref": "#/52"
+      },
+      {
+        "$ref": "#/53"
+      },
+      {
+        "$ref": "#/54"
+      },
+      {
+        "$ref": "#/55"
+      },
+      {
+        "$ref": "#/56"
+      },
+      {
+        "$ref": "#/57"
+      },
+      {
+        "$ref": "#/58"
+      },
+      {
+        "$ref": "#/59"
+      },
+      {
+        "$ref": "#/60"
+      },
+      {
+        "$ref": "#/61"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ModuleErrorInfo",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Gets or sets the error code."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Gets or sets the error message."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PythonPackageCreateParametersTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Automation/automationAccounts/python2Packages@2018-06-30",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/44"
+    },
+    "flags": 0
+  }
+]

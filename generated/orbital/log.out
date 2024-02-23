@@ -2,6 +2,26 @@ AutoRest code generation utility [cli version: 3.7.1; node: v16.20.2]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'GroundStation-properties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/orbital/resource-manager/Microsoft.Orbital/aodg/preview/2024-03-01-preview/aodg.json:1128:9
+warning | PreCheck/SchemaMissingType | The schema 'EdgeSitesProperties-globalCommunicationsSite' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/orbital/resource-manager/Microsoft.Orbital/aodg/preview/2024-03-01-preview/aodg.json:1163:9
+warning | PreCheck/SchemaMissingType | The schema 'GlobalCommunicationsSitesProperties-locationData' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/orbital/resource-manager/Microsoft.Orbital/aodg/preview/2024-03-01-preview/aodg.json:1233:9
+warning | PreCheck/SchemaMissingType | The schema 'GlobalCommunicationsSite-properties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/orbital/resource-manager/Microsoft.Orbital/aodg/preview/2024-03-01-preview/aodg.json:1272:9
+warning | PreCheck/SchemaMissingType | The schema 'EdgeSite-properties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/orbital/resource-manager/Microsoft.Orbital/aodg/preview/2024-03-01-preview/aodg.json:1313:9
+warning | PreCheck/SchemaMissingType | The schema 'L2ConnectionsProperties-edgeSite' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/orbital/resource-manager/Microsoft.Orbital/aodg/preview/2024-03-01-preview/aodg.json:1373:9
+warning | PreCheck/SchemaMissingType | The schema 'L2ConnectionsProperties-groundStation' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/orbital/resource-manager/Microsoft.Orbital/aodg/preview/2024-03-01-preview/aodg.json:1399:9
+warning | PreCheck/SchemaMissingType | The schema 'L2Connection-properties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/orbital/resource-manager/Microsoft.Orbital/aodg/preview/2024-03-01-preview/aodg.json:1441:9
+warning | PreCheck/SchemaMissingType | The schema 'GroundStationsProperties-globalCommunicationsSite' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/orbital/resource-manager/Microsoft.Orbital/aodg/preview/2024-03-01-preview/aodg.json:1564:9
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ContactsProperties-contactProfile' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/orbital/resource-manager/Microsoft.Orbital/stable/2022-11-01/orbital.json:1434:9
 warning | PreCheck/SchemaMissingType | The schema 'ContactProfile-properties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
