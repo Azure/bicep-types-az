@@ -1677,6 +1677,13 @@
 * **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'GoogleBigQuerySource' (Required): Copy source type.
 
+### GoogleBigQueryV2Source
+#### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+* **type**: 'GoogleBigQueryV2Source' (Required): Copy source type.
+
 ### GreenplumSource
 #### Properties
 * **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
@@ -1892,6 +1899,13 @@
 * **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'PostgreSqlSource' (Required): Copy source type.
 
+### PostgreSqlV2Source
+#### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **query**: any: Database query. Type: string (or Expression with resultType string).
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+* **type**: 'PostgreSqlV2Source' (Required): Copy source type.
+
 ### PrestoSource
 #### Properties
 * **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
@@ -2041,6 +2055,13 @@
 * **query**: any: A query to retrieve data from source. Type: string (or Expression with resultType string).
 * **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'ServiceNowSource' (Required): Copy source type.
+
+### ServiceNowV2Source
+#### Properties
+* **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **expression**: [ExpressionV2](#expressionv2): Expression to filter data from source.
+* **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+* **type**: 'ServiceNowV2Source' (Required): Copy source type.
 
 ### SharePointOnlineListSource
 #### Properties
@@ -2617,6 +2638,11 @@
 * **type**: 'GoogleBigQueryObject' (Required): Type of dataset.
 * **typeProperties**: [GoogleBigQueryDatasetTypeProperties](#googlebigquerydatasettypeproperties): Properties specific to this dataset type.
 
+### GoogleBigQueryV2ObjectDataset
+#### Properties
+* **type**: 'GoogleBigQueryV2Object' (Required): Type of dataset.
+* **typeProperties**: [GoogleBigQueryV2DatasetTypeProperties](#googlebigqueryv2datasettypeproperties): Properties specific to this dataset type.
+
 ### GreenplumTableDataset
 #### Properties
 * **type**: 'GreenplumTable' (Required): Type of dataset.
@@ -2762,6 +2788,11 @@
 * **type**: 'PostgreSqlTable' (Required): Type of dataset.
 * **typeProperties**: [PostgreSqlTableDatasetTypeProperties](#postgresqltabledatasettypeproperties): PostgreSQL table dataset properties.
 
+### PostgreSqlV2TableDataset
+#### Properties
+* **type**: 'PostgreSqlV2Table' (Required): Type of dataset.
+* **typeProperties**: [PostgreSqlV2TableDatasetTypeProperties](#postgresqlv2tabledatasettypeproperties): PostgreSQLV2 table dataset properties.
+
 ### PrestoObjectDataset
 #### Properties
 * **type**: 'PrestoObject' (Required): Type of dataset.
@@ -2849,6 +2880,11 @@
 ### ServiceNowObjectDataset
 #### Properties
 * **type**: 'ServiceNowObject' (Required): Type of dataset.
+* **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties): Properties specific to this dataset type.
+
+### ServiceNowV2ObjectDataset
+#### Properties
+* **type**: 'ServiceNowV2Object' (Required): Type of dataset.
 * **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties): Properties specific to this dataset type.
 
 ### SharePointOnlineListResourceDataset
@@ -3360,6 +3396,13 @@
 * **type**: 'Expression' | string (Required): Expression type.
 * **value**: string (Required): Expression value.
 
+## ExpressionV2
+### Properties
+* **operands**: [ExpressionV2](#expressionv2)[]: List of nested expressions.
+* **operator**: string: Expression operator value Type: string.
+* **type**: 'Binary' | 'Constant' | 'Field' | 'Unary' | string: Type of expressions supported by the system. Type: string.
+* **value**: string: Value for Constant/Field Type: string.
+
 ## FactoryIdentity
 ### Properties
 * **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The principal id of the identity.
@@ -3562,6 +3605,21 @@
 * **requestGoogleDriveScope**: any: Whether to request access to Google Drive. Allowing Google Drive access enables support for federated tables that combine BigQuery data with data from Google Drive. The default value is false. Type: string (or Expression with resultType string).
 * **trustedCertPath**: any: The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR. Type: string (or Expression with resultType string).
 * **useSystemTrustStore**: any: Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.Type: boolean (or Expression with resultType boolean).
+
+## GoogleBigQueryV2DatasetTypeProperties
+### Properties
+* **dataset**: any: The database name of the Google BigQuery. Type: string (or Expression with resultType string).
+* **table**: any: The table name of the Google BigQuery. Type: string (or Expression with resultType string).
+
+## GoogleBigQueryV2LinkedServiceTypeProperties
+### Properties
+* **authenticationType**: 'ServiceAuthentication' | 'UserAuthentication' | string (Required): The OAuth 2.0 authentication mechanism used for authentication.
+* **clientId**: any: The client id of the google application used to acquire the refresh token. Type: string (or Expression with resultType string).
+* **clientSecret**: [SecretBase](#secretbase): The client secret of the google application used to acquire the refresh token.
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
+* **keyFileContent**: [SecretBase](#secretbase): The content of the .json key file that is used to authenticate the service account. Type: string (or Expression with resultType string).
+* **projectId**: any (Required): The default BigQuery project id to query against. Type: string (or Expression with resultType string).
+* **refreshToken**: [SecretBase](#secretbase): The refresh token obtained from Google for authorizing access to BigQuery for UserAuthentication.
 
 ## GoogleCloudStorageLinkedServiceTypeProperties
 ### Properties
@@ -4270,6 +4328,11 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **type**: 'GoogleBigQuery' (Required): Type of linked service.
 * **typeProperties**: [GoogleBigQueryLinkedServiceTypeProperties](#googlebigquerylinkedservicetypeproperties) (Required): Google BigQuery service linked service properties.
 
+### GoogleBigQueryV2LinkedService
+#### Properties
+* **type**: 'GoogleBigQueryV2' (Required): Type of linked service.
+* **typeProperties**: [GoogleBigQueryV2LinkedServiceTypeProperties](#googlebigqueryv2linkedservicetypeproperties) (Required): Google BigQuery service linked service properties.
+
 ### GoogleCloudStorageLinkedService
 #### Properties
 * **type**: 'GoogleCloudStorage' (Required): Type of linked service.
@@ -4430,6 +4493,11 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **type**: 'PostgreSql' (Required): Type of linked service.
 * **typeProperties**: [PostgreSqlLinkedServiceTypeProperties](#postgresqllinkedservicetypeproperties) (Required): PostgreSQL linked service properties.
 
+### PostgreSqlV2LinkedService
+#### Properties
+* **type**: 'PostgreSqlV2' (Required): Type of linked service.
+* **typeProperties**: [PostgreSqlV2LinkedServiceTypeProperties](#postgresqlv2linkedservicetypeproperties) (Required): PostgreSQLV2 linked service properties.
+
 ### PrestoLinkedService
 #### Properties
 * **type**: 'Presto' (Required): Type of linked service.
@@ -4519,6 +4587,11 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 #### Properties
 * **type**: 'ServiceNow' (Required): Type of linked service.
 * **typeProperties**: [ServiceNowLinkedServiceTypeProperties](#servicenowlinkedservicetypeproperties) (Required): ServiceNow server linked service properties.
+
+### ServiceNowV2LinkedService
+#### Properties
+* **type**: 'ServiceNowV2' (Required): Type of linked service.
+* **typeProperties**: [ServiceNowV2LinkedServiceTypeProperties](#servicenowv2linkedservicetypeproperties) (Required): ServiceNowV2 server linked service properties.
 
 ### SftpServerLinkedService
 #### Properties
@@ -5171,6 +5244,33 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **table**: any: The PostgreSQL table name. Type: string (or Expression with resultType string).
 * **tableName**: any: This property will be retired. Please consider using schema + table properties instead.
 
+## PostgreSqlV2LinkedServiceTypeProperties
+### Properties
+* **commandTimeout**: any: The time to wait (in seconds) while trying to execute a command before terminating the attempt and generating an error. Set to zero for infinity. Type: integer.
+* **connectionTimeout**: any: The time to wait (in seconds) while trying to establish a connection before terminating the attempt and generating an error. Type: integer.
+* **database**: any (Required): Database name for connection. Type: string.
+* **encoding**: any: Gets or sets the .NET encoding that will be used to encode/decode PostgreSQL string data. Type: string
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
+* **logParameters**: any: When enabled, parameter values are logged when commands are executed. Type: boolean.
+* **password**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of password in connection string. Type: string.
+* **pooling**: any: Whether connection pooling should be used. Type: boolean.
+* **port**: any: The port for the connection. Type: integer.
+* **readBufferSize**: any: Determines the size of the internal buffer uses when reading. Increasing may improve performance if transferring large values from the database. Type: integer.
+* **schema**: any: Sets the schema search path. Type: string.
+* **server**: any (Required): Server name for connection. Type: string.
+* **sslCertificate**: any: Location of a client certificate to be sent to the server. Type: string.
+* **sslKey**: any: Location of a client key for a client certificate to be sent to the server. Type: string.
+* **sslMode**: any (Required): SSL mode for connection. Type: integer. 0: disable, 1:allow, 2: prefer, 3: require, 4: verify-ca, 5: verify-full. Type: integer.
+* **sslPassword**: any: Password for a key for a client certificate. Type: string.
+* **timezone**: any: Gets or sets the session timezone. Type: string.
+* **trustServerCertificate**: any: Whether to trust the server certificate without validating it. Type: boolean.
+* **username**: any (Required): Username for authentication. Type: string.
+
+## PostgreSqlV2TableDatasetTypeProperties
+### Properties
+* **schema**: any: The PostgreSQL schema name. Type: string (or Expression with resultType string).
+* **table**: any: The PostgreSQL table name. Type: string (or Expression with resultType string).
+
 ## PowerQuerySink
 ### Properties
 * **dataset**: [DatasetReference](#datasetreference): Dataset reference.
@@ -5645,6 +5745,17 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **useHostVerification**: any: Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
 * **usePeerVerification**: any: Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
 * **username**: any: The user name used to connect to the ServiceNow server for Basic and OAuth2 authentication.
+
+## ServiceNowV2LinkedServiceTypeProperties
+### Properties
+* **authenticationType**: 'Basic' | 'OAuth2' | string (Required): The authentication type to use.
+* **clientId**: any: The client id for OAuth2 authentication.
+* **clientSecret**: [SecretBase](#secretbase): The client secret for OAuth2 authentication.
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
+* **endpoint**: any (Required): The endpoint of the ServiceNowV2 server. (i.e. <instance>.service-now.com)
+* **grantType**: any: GrantType for OAuth2 authentication. Default value is password.
+* **password**: [SecretBase](#secretbase): The password corresponding to the user name for Basic and OAuth2 authentication.
+* **username**: any: The user name used to connect to the ServiceNowV2 server for Basic and OAuth2 authentication.
 
 ## SetVariableActivityTypeProperties
 ### Properties

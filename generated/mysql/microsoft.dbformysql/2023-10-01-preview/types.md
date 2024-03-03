@@ -24,6 +24,36 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DBforMySQL/flexibleServers/advancedThreatProtectionSettings' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.DBforMySQL/flexibleServers/backups@2023-10-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string {pattern: "^[-\w\._]+$"} (Required, DeployTimeConstant): The resource name
+* **properties**: [ServerBackupProperties](#serverbackupproperties) (ReadOnly): The properties of a server backup.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.DBforMySQL/flexibleServers/backups' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.DBforMySQL/flexibleServers/backupsV2@2023-10-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string {pattern: "^[-\w\._]+$"} (Required, DeployTimeConstant): The resource name
+* **properties**: [ServerBackupPropertiesV2](#serverbackuppropertiesv2): The properties of a server backup.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.DBforMySQL/flexibleServers/backupsV2' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.DBforMySQL/flexibleServers/maintenances@2023-10-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string {pattern: "^[a-zA-Z0-9-_]*$"} (Required, DeployTimeConstant): The resource name
+* **properties**: [MaintenanceProperties](#maintenanceproperties) (ReadOnly): The properties of a maintenance
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.DBforMySQL/flexibleServers/maintenances' (ReadOnly, DeployTimeConstant): The resource type
+
 ## AdvancedThreatProtectionProperties
 ### Properties
 * **creationTime**: string (ReadOnly): Specifies the UTC creation time of the policy.
@@ -56,6 +86,20 @@
 * **sasToken**: string {sensitive} (WriteOnly): Sas token for accessing source storage. Read and list permissions are required for sas token.
 * **storageType**: 'AzureBlob' | string: Storage type of import source.
 * **storageUrl**: string: Uri of the import source storage.
+
+## MaintenanceProperties
+### Properties
+* **maintenanceAvailableScheduleMaxTime**: string (ReadOnly): The max time the maintenance can be rescheduled.
+* **maintenanceAvailableScheduleMinTime**: string (ReadOnly): The min time the maintenance can be rescheduled.
+* **maintenanceDescription**: string (ReadOnly): The maintenance description.
+* **maintenanceEndTime**: string (ReadOnly): The end time for a maintenance.
+* **maintenanceExecutionEndTime**: string (ReadOnly): The end time for a maintenance execution.
+* **maintenanceExecutionStartTime**: string (ReadOnly): The start time for a maintenance execution.
+* **maintenanceStartTime**: string: The start time for a maintenance.
+* **maintenanceState**: 'Canceled' | 'Completed' | 'InPreparation' | 'Processing' | 'ReScheduled' | 'Scheduled' | string (ReadOnly): A string describes the maintenance status
+* **maintenanceTitle**: string (ReadOnly): The maintenance title.
+* **maintenanceType**: 'HotFixes' | 'MinorVersionUpgrade' | 'RoutineMaintenance' | 'SecurityPatches' | string (ReadOnly): A string defines maintenance type.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): Provisioning state of the Maintenance.
 
 ## MaintenanceWindow
 ### Properties
@@ -111,6 +155,20 @@
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
 * **status**: 'Approved' | 'Pending' | 'Rejected' | string: Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
+
+## ServerBackupProperties
+### Properties
+* **backupType**: string: Backup type.
+* **completedTime**: string: Backup completed time (ISO8601 format).
+* **source**: string: Backup source
+
+## ServerBackupPropertiesV2
+### Properties
+* **backupNameV2**: string: Backup name
+* **backupType**: 'FULL' | string
+* **completedTime**: string: Backup completed time (ISO8601 format).
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The provisioning state of backup resource.
+* **source**: string: Backup source
 
 ## ServerProperties
 ### Properties

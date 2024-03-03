@@ -750,28 +750,38 @@
     "$type": "ObjectType",
     "name": "NetworkRuleSetProperties",
     "properties": {
+      "trustedServiceAccessEnabled": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 0,
+        "description": "Value that indicates whether Trusted Service Access is Enabled or not."
+      },
       "defaultAction": {
         "type": {
-          "$ref": "#/63"
+          "$ref": "#/64"
         },
         "flags": 0,
         "description": "Default Action for Network Rule Set"
       },
       "publicNetworkAccess": {
         "type": {
-          "$ref": "#/67"
+          "$ref": "#/68"
         },
         "flags": 0,
         "description": "This determines if traffic is allowed over public network. By default it is enabled"
       },
       "ipRules": {
         "type": {
-          "$ref": "#/71"
+          "$ref": "#/72"
         },
         "flags": 0,
         "description": "List of IpRules"
       }
     }
+  },
+  {
+    "$type": "BooleanType"
   },
   {
     "$type": "StringLiteralType",
@@ -785,10 +795,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/61"
+        "$ref": "#/62"
       },
       {
-        "$ref": "#/62"
+        "$ref": "#/63"
       },
       {
         "$ref": "#/2"
@@ -811,13 +821,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/64"
-      },
-      {
         "$ref": "#/65"
       },
       {
         "$ref": "#/66"
+      },
+      {
+        "$ref": "#/67"
       },
       {
         "$ref": "#/2"
@@ -837,7 +847,7 @@
       },
       "action": {
         "type": {
-          "$ref": "#/70"
+          "$ref": "#/71"
         },
         "flags": 0,
         "description": "The IP Filter Action"
@@ -852,7 +862,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/69"
+        "$ref": "#/70"
       },
       {
         "$ref": "#/2"
@@ -862,7 +872,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/68"
+      "$ref": "#/69"
     }
   },
   {
@@ -902,14 +912,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/73"
+          "$ref": "#/74"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/74"
+          "$ref": "#/75"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -942,7 +952,7 @@
     "name": "Microsoft.Relay/namespaces/hybridConnections/authorizationRules@2021-11-01",
     "scopeType": 8,
     "body": {
-      "$ref": "#/75"
+      "$ref": "#/76"
     },
     "flags": 0
   },
@@ -974,21 +984,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/77"
+          "$ref": "#/78"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/78"
+          "$ref": "#/79"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/80"
+          "$ref": "#/81"
         },
         "flags": 0,
         "description": "Properties of the HybridConnection."
@@ -1029,14 +1039,14 @@
       },
       "listenerCount": {
         "type": {
-          "$ref": "#/81"
+          "$ref": "#/82"
         },
         "flags": 2,
         "description": "The number of listeners for this hybrid connection. Note that min : 1 and max:25 are supported."
       },
       "requiresClientAuthorization": {
         "type": {
-          "$ref": "#/82"
+          "$ref": "#/61"
         },
         "flags": 0,
         "description": "Returns true if client authorization is needed for this hybrid connection; otherwise, false."
@@ -1056,14 +1066,11 @@
     "maxValue": 25
   },
   {
-    "$type": "BooleanType"
-  },
-  {
     "$type": "ResourceType",
     "name": "Microsoft.Relay/namespaces/hybridConnections@2021-11-01",
     "scopeType": 8,
     "body": {
-      "$ref": "#/79"
+      "$ref": "#/80"
     },
     "flags": 0
   },
@@ -1208,7 +1215,7 @@
     "properties": {
       "isDynamic": {
         "type": {
-          "$ref": "#/82"
+          "$ref": "#/61"
         },
         "flags": 2,
         "description": "Returns true if the relay is dynamic; otherwise, false."
@@ -1229,7 +1236,7 @@
       },
       "listenerCount": {
         "type": {
-          "$ref": "#/81"
+          "$ref": "#/82"
         },
         "flags": 2,
         "description": "The number of listeners for this relay. Note that min :1 and max:25 are supported."
@@ -1243,14 +1250,14 @@
       },
       "requiresClientAuthorization": {
         "type": {
-          "$ref": "#/82"
+          "$ref": "#/61"
         },
         "flags": 0,
         "description": "Returns true if client authorization is needed for this relay; otherwise, false."
       },
       "requiresTransportSecurity": {
         "type": {
-          "$ref": "#/82"
+          "$ref": "#/61"
         },
         "flags": 0,
         "description": "Returns true if transport security is needed for this relay; otherwise, false."
