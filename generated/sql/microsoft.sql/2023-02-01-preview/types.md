@@ -2266,9 +2266,9 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
 * **servicePrincipal**: [ServicePrincipal](#serviceprincipal): The managed instance's service principal.
 * **sourceManagedInstanceId**: string (WriteOnly): The resource identifier of the source managed instance associated with create operation of this instance.
 * **state**: string (ReadOnly): The state of the managed instance.
-* **storageIOps**: int: Storage IOps. Minimum value: 120. Maximum value: 120000. Increments of 1 IOps allowed only. Maximum value depends on the selected hardware family and number of vCores.
+* **storageIOps**: int: Storage IOps. Minimum value: 300. Maximum value: 80000. Increments of 1 IOps allowed only. Maximum value depends on the selected hardware family and number of vCores.
 * **storageSizeInGB**: int: Storage size in GB. Minimum value: 32. Maximum value: 16384. Increments of 32 GB allowed only. Maximum value depends on the selected hardware family and number of vCores.
-* **storageThroughputMBps**: int: Storage throughput in MBps. Minimum value: 25. Maximum value: 4000. Increments of 1 MBps allowed only. Maximum value depends on the selected hardware family and number of vCores.
+* **storageThroughputMBps**: int: Storage throughput MBps parameter is not supported in the instance create/update operation.
 * **subnetId**: string: Subnet resource ID for the managed instance.
 * **timezoneId**: string: Id of the timezone. Allowed values are timezones supported by Windows.
 Windows keeps details on supported timezones, including the id, in registry under

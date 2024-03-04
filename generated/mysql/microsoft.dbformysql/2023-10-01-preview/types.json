@@ -1277,6 +1277,265 @@
     "flags": 0
   },
   {
+    "$type": "StringType",
+    "pattern": "^[-\\w\\._]+$"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DBforMySQL/flexibleServers/backups"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-10-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DBforMySQL/flexibleServers/backups",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/104"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/105"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/106"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/108"
+        },
+        "flags": 2,
+        "description": "The properties of a server backup."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/86"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServerBackupProperties",
+    "properties": {
+      "backupType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Backup type."
+      },
+      "completedTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Backup completed time (ISO8601 format)."
+      },
+      "source": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Backup source"
+      }
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DBforMySQL/flexibleServers/backups@2023-10-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/107"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DBforMySQL/flexibleServers/backupsV2"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-10-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DBforMySQL/flexibleServers/backupsV2",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/104"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/110"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/111"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/113"
+        },
+        "flags": 0,
+        "description": "The properties of a server backup."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/86"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServerBackupPropertiesV2",
+    "properties": {
+      "backupNameV2": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Backup name"
+      },
+      "backupType": {
+        "type": {
+          "$ref": "#/115"
+        },
+        "flags": 0
+      },
+      "completedTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Backup completed time (ISO8601 format)."
+      },
+      "source": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Backup source"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/121"
+        },
+        "flags": 2,
+        "description": "The provisioning state of backup resource."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "FULL"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/114"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/116"
+      },
+      {
+        "$ref": "#/117"
+      },
+      {
+        "$ref": "#/118"
+      },
+      {
+        "$ref": "#/119"
+      },
+      {
+        "$ref": "#/120"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DBforMySQL/flexibleServers/backupsV2@2023-10-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/112"
+    },
+    "flags": 0
+  },
+  {
     "$type": "StringLiteralType",
     "value": "Default"
   },
@@ -1284,7 +1543,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/104"
+        "$ref": "#/123"
       },
       {
         "$ref": "#/2"
@@ -1312,28 +1571,28 @@
       },
       "name": {
         "type": {
-          "$ref": "#/105"
+          "$ref": "#/124"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/106"
+          "$ref": "#/125"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/107"
+          "$ref": "#/126"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/109"
+          "$ref": "#/128"
         },
         "flags": 2,
         "description": "Resource properties."
@@ -1360,14 +1619,14 @@
       },
       "state": {
         "type": {
-          "$ref": "#/112"
+          "$ref": "#/131"
         },
         "flags": 0,
         "description": "Specifies the state of the Advanced Threat Protection, whether it is enabled or disabled or a state has not been applied yet on the specific database or server."
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/117"
+          "$ref": "#/136"
         },
         "flags": 2,
         "description": "Provisioning state of the Threat Protection."
@@ -1386,10 +1645,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/110"
+        "$ref": "#/129"
       },
       {
-        "$ref": "#/111"
+        "$ref": "#/130"
       },
       {
         "$ref": "#/2"
@@ -1416,16 +1675,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/113"
+        "$ref": "#/132"
       },
       {
-        "$ref": "#/114"
+        "$ref": "#/133"
       },
       {
-        "$ref": "#/115"
+        "$ref": "#/134"
       },
       {
-        "$ref": "#/116"
+        "$ref": "#/135"
       },
       {
         "$ref": "#/2"
@@ -1437,7 +1696,281 @@
     "name": "Microsoft.DBforMySQL/flexibleServers/advancedThreatProtectionSettings@2023-10-01-preview",
     "scopeType": 8,
     "body": {
-      "$ref": "#/108"
+      "$ref": "#/127"
+    },
+    "flags": 1
+  },
+  {
+    "$type": "StringType",
+    "pattern": "^[a-zA-Z0-9-_]*$"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.DBforMySQL/flexibleServers/maintenances"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2023-10-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.DBforMySQL/flexibleServers/maintenances",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/138"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/139"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/140"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/142"
+        },
+        "flags": 2,
+        "description": "The properties of a maintenance"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/86"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "MaintenanceProperties",
+    "properties": {
+      "maintenanceType": {
+        "type": {
+          "$ref": "#/147"
+        },
+        "flags": 2,
+        "description": "A string defines maintenance type."
+      },
+      "maintenanceState": {
+        "type": {
+          "$ref": "#/154"
+        },
+        "flags": 2,
+        "description": "A string describes the maintenance status"
+      },
+      "maintenanceStartTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The start time for a maintenance."
+      },
+      "maintenanceEndTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The end time for a maintenance."
+      },
+      "maintenanceExecutionStartTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The start time for a maintenance execution."
+      },
+      "maintenanceExecutionEndTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The end time for a maintenance execution."
+      },
+      "maintenanceAvailableScheduleMinTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The min time the maintenance can be rescheduled."
+      },
+      "maintenanceAvailableScheduleMaxTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The max time the maintenance can be rescheduled."
+      },
+      "maintenanceTitle": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The maintenance title."
+      },
+      "maintenanceDescription": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The maintenance description."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/159"
+        },
+        "flags": 2,
+        "description": "Provisioning state of the Maintenance."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RoutineMaintenance"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MinorVersionUpgrade"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SecurityPatches"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HotFixes"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/143"
+      },
+      {
+        "$ref": "#/144"
+      },
+      {
+        "$ref": "#/145"
+      },
+      {
+        "$ref": "#/146"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Scheduled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ReScheduled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InPreparation"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Processing"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Completed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/148"
+      },
+      {
+        "$ref": "#/149"
+      },
+      {
+        "$ref": "#/150"
+      },
+      {
+        "$ref": "#/151"
+      },
+      {
+        "$ref": "#/152"
+      },
+      {
+        "$ref": "#/153"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/155"
+      },
+      {
+        "$ref": "#/156"
+      },
+      {
+        "$ref": "#/157"
+      },
+      {
+        "$ref": "#/158"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.DBforMySQL/flexibleServers/maintenances@2023-10-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/141"
     },
     "flags": 1
   }

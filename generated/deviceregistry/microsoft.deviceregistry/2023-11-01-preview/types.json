@@ -53,7 +53,7 @@
           "$ref": "#/5"
         },
         "flags": 0,
-        "description": "Asset resource properties."
+        "description": "The resource-specific properties for this resource."
       },
       "extendedLocation": {
         "type": {
@@ -135,7 +135,7 @@
         "type": {
           "$ref": "#/2"
         },
-        "flags": 0,
+        "flags": 1,
         "description": "A reference to the asset endpoint profile (connection information) used by brokers to connect to an endpoint that provides data points for this asset. Must have the format <ModuleCR.metadata.namespace>/<ModuleCR.metadata.name>."
       },
       "version": {
@@ -271,7 +271,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "AssetPropertiesDataPointsItem",
+    "name": "DataPoint",
     "properties": {
       "name": {
         "type": {
@@ -361,7 +361,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "AssetPropertiesEventsItem",
+    "name": "Event",
     "properties": {
       "name": {
         "type": {
@@ -430,7 +430,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "AssetPropertiesStatus",
+    "name": "AssetStatus",
     "properties": {
       "errors": {
         "type": {
@@ -450,7 +450,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "AssetPropertiesStatusErrorsItem",
+    "name": "AssetStatusError",
     "properties": {
       "code": {
         "type": {
@@ -512,20 +512,20 @@
   },
   {
     "$type": "ObjectType",
-    "name": "AssetExtendedLocation",
+    "name": "ExtendedLocation",
     "properties": {
       "type": {
         "type": {
           "$ref": "#/2"
         },
-        "flags": 0,
+        "flags": 1,
         "description": "The extended location type."
       },
       "name": {
         "type": {
           "$ref": "#/2"
         },
-        "flags": 0,
+        "flags": 1,
         "description": "The extended location name."
       }
     }
@@ -712,18 +712,18 @@
           "$ref": "#/48"
         },
         "flags": 0,
-        "description": "Asset Endpoint Profile resource properties."
+        "description": "The resource-specific properties for this resource."
       },
       "extendedLocation": {
         "type": {
-          "$ref": "#/64"
+          "$ref": "#/31"
         },
         "flags": 1,
         "description": "The extended location."
       },
       "tags": {
         "type": {
-          "$ref": "#/65"
+          "$ref": "#/64"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -794,7 +794,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "AssetEndpointProfilePropertiesUserAuthentication",
+    "name": "UserAuthentication",
     "properties": {
       "mode": {
         "type": {
@@ -850,7 +850,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "AssetEndpointProfilePropertiesUserAuthenticationUsernamePasswordCredentials",
+    "name": "UsernamePasswordCredentials",
     "properties": {
       "usernameReference": {
         "type": {
@@ -870,7 +870,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "AssetEndpointProfilePropertiesUserAuthenticationX509Credentials",
+    "name": "X509Credentials",
     "properties": {
       "certificateReference": {
         "type": {
@@ -883,7 +883,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "AssetEndpointProfilePropertiesTransportAuthentication",
+    "name": "TransportAuthentication",
     "properties": {
       "ownCertificates": {
         "type": {
@@ -896,7 +896,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "AssetEndpointProfilePropertiesTransportAuthenticationOwnCertificatesItem",
+    "name": "OwnCertificate",
     "properties": {
       "certThumbprint": {
         "type": {
@@ -917,7 +917,7 @@
           "$ref": "#/2"
         },
         "flags": 0,
-        "description": "Secret Reference Name (Pfx or Pem password)"
+        "description": "Secret Reference Name (Pfx or Pem password)."
       }
     }
   },
@@ -962,26 +962,6 @@
         "$ref": "#/2"
       }
     ]
-  },
-  {
-    "$type": "ObjectType",
-    "name": "AssetEndpointProfileExtendedLocation",
-    "properties": {
-      "type": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The extended location type."
-      },
-      "name": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The extended location name."
-      }
-    }
   },
   {
     "$type": "ObjectType",
