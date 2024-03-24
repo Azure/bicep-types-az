@@ -1709,7 +1709,7 @@
         "type": {
           "$ref": "#/2"
         },
-        "flags": 0,
+        "flags": 2,
         "description": "The link to the next page of items"
       }
     }
@@ -1798,7 +1798,7 @@
         "type": {
           "$ref": "#/2"
         },
-        "flags": 0,
+        "flags": 2,
         "description": "The link to the next page of items"
       }
     }
@@ -1877,7 +1877,7 @@
         "type": {
           "$ref": "#/2"
         },
-        "flags": 0,
+        "flags": 2,
         "description": "The link to the next page of items"
       }
     }
@@ -1977,7 +1977,7 @@
         "type": {
           "$ref": "#/2"
         },
-        "flags": 0,
+        "flags": 2,
         "description": "The link to the next page of items"
       }
     }

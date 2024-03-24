@@ -100,9 +100,7 @@
 ## ManagedClusterUpgradeSpec
 ### Properties
 * **kubernetesVersion**: string: The Kubernetes version to upgrade the member clusters to.
-* **type**: 'Full' | 'NodeImageOnly' | string (Required): The upgrade type.
-Full requires the KubernetesVersion property to be set.
-NodeImageOnly requires the KubernetesVersion property not to be set.
+* **type**: 'Full' | 'NodeImageOnly' | string (Required): ManagedClusterUpgradeType is the type of upgrade to be applied.
 
 ## ManagedServiceIdentity
 ### Properties

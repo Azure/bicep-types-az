@@ -117,7 +117,7 @@
 
 ## DeploymentListResult
 ### Properties
-* **nextLink**: string: The link to the next page of items
+* **nextLink**: string (ReadOnly): The link to the next page of items
 * **value**: [Deployment](#deployment)[] (Required): The Deployment items on this page
 
 ## DeploymentProperties
@@ -145,7 +145,7 @@
 
 ## DeviceGroupListResult
 ### Properties
-* **nextLink**: string: The link to the next page of items
+* **nextLink**: string (ReadOnly): The link to the next page of items
 * **value**: [DeviceGroup](#devicegroup)[] (Required): The DeviceGroup items on this page
 
 ## DeviceGroupProperties
@@ -171,7 +171,7 @@
 
 ## DeviceListResult
 ### Properties
-* **nextLink**: string: The link to the next page of items
+* **nextLink**: string (ReadOnly): The link to the next page of items
 * **value**: [Device](#device)[] (Required): The Device items on this page
 
 ## DeviceProperties
@@ -210,7 +210,7 @@
 
 ## PagedDeviceInsight
 ### Properties
-* **nextLink**: string: The link to the next page of items
+* **nextLink**: string (ReadOnly): The link to the next page of items
 * **value**: [DeviceInsight](#deviceinsight)[] (Required): The DeviceInsight items on this page
 
 ## ProductProperties

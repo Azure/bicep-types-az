@@ -30,7 +30,7 @@
 * **etag**: string (ReadOnly): Etag identifies change in the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {minLength: 1, maxLength: 127, pattern: "^([_A-Za-z0-9]|([_A-Za-z0-9][-_A-Za-z0-9]{0,125}[_A-Za-z0-9]))$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [ManagedIdentityCredential](#managedidentitycredential) (Required): Managed Identity Credential properties.
+* **properties**: [Credential](#credential) (Required): Properties of credentials.
 * **type**: 'Microsoft.DataFactory/factories/credentials' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataFactory/factories/dataflows@2018-06-01
@@ -741,7 +741,7 @@
 ## AzureFunctionActivityTypePropertiesHeaders
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: string
+* **Additional Properties Type**: any
 
 ## AzureFunctionLinkedServiceTypeProperties
 ### Properties
@@ -2248,6 +2248,23 @@
 * **connectionString**: any: An ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
 * **credString**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of credString in connection string.
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
+
+## Credential
+* **Discriminator**: type
+
+### Base Properties
+* **annotations**: any[]: List of tags that can be used for describing the Credential.
+* **description**: string: Credential description.
+
+### ManagedIdentityCredential
+#### Properties
+* **type**: 'ManagedIdentity' (Required): Type of credential.
+
+### ServicePrincipalCredential
+#### Properties
+* **type**: 'ServicePrincipal' (Required): Type of credential.
+* **typeProperties**: [ServicePrincipalCredentialTypeProperties](#serviceprincipalcredentialtypeproperties) (Required): Service Principal credential properties.
+
 
 ## CredentialReference
 ### Properties
@@ -4730,19 +4747,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **useHostVerification**: any: Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
 * **usePeerVerification**: any: Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
 
-## ManagedIdentityCredential
-### Properties
-* **annotations**: any[]: List of tags that can be used for describing the Credential.
-* **description**: string: Credential description.
-* **type**: string (Required): Type of credential.
-* **typeProperties**: [ManagedIdentityTypeProperties](#managedidentitytypeproperties): Managed identity credential properties.
-### Additional Properties
-* **Additional Properties Type**: any
-
-## ManagedIdentityTypeProperties
-### Properties
-* **resourceId**: string: The resource id of user assigned managed identity
-
 ## ManagedIntegrationRuntimeTypeProperties
 ### Properties
 * **computeProperties**: [IntegrationRuntimeComputeProperties](#integrationruntimecomputeproperties): The compute resource for managed integration runtime.
@@ -5757,6 +5761,12 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **password**: [SecretBase](#secretbase): The password corresponding to the user name for Basic and OAuth2 authentication.
 * **username**: any: The user name used to connect to the ServiceNowV2 server for Basic and OAuth2 authentication.
 
+## ServicePrincipalCredentialTypeProperties
+### Properties
+* **servicePrincipalId**: any: The app ID of the service principal used to authenticate
+* **servicePrincipalKey**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The key of the service principal used to authenticate.
+* **tenant**: any: The ID of the tenant to which the service principal belongs
+
 ## SetVariableActivityTypeProperties
 ### Properties
 * **setSystemVariable**: bool: If set to true, it sets the pipeline run return value.
@@ -6557,7 +6567,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## WebActivityTypePropertiesHeaders
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: string
+* **Additional Properties Type**: any
 
 ## WebHookActivityTypeProperties
 ### Properties
@@ -6572,7 +6582,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## WebHookActivityTypePropertiesHeaders
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: string
+* **Additional Properties Type**: any
 
 ## WebLinkedServiceTypeProperties
 * **Discriminator**: authenticationType

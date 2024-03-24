@@ -19724,7 +19724,7 @@
     "name": "AzureFunctionActivityTypePropertiesHeaders",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/2"
+      "$ref": "#/11"
     }
   },
   {
@@ -20861,7 +20861,7 @@
     "name": "WebHookActivityTypePropertiesHeaders",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/2"
+      "$ref": "#/11"
     }
   },
   {
@@ -34356,7 +34356,7 @@
     "name": "WebActivityTypePropertiesHeaders",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/2"
+      "$ref": "#/11"
     }
   },
   {
@@ -36546,7 +36546,7 @@
           "$ref": "#/1932"
         },
         "flags": 1,
-        "description": "Managed Identity Credential properties."
+        "description": "Properties of credentials."
       },
       "etag": {
         "type": {
@@ -36558,23 +36558,10 @@
     }
   },
   {
-    "$type": "ObjectType",
-    "name": "ManagedIdentityCredential",
-    "properties": {
-      "typeProperties": {
-        "type": {
-          "$ref": "#/1933"
-        },
-        "flags": 0,
-        "description": "Managed identity credential properties."
-      },
-      "type": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 1,
-        "description": "Type of credential."
-      },
+    "$type": "DiscriminatedObjectType",
+    "name": "Credential",
+    "discriminator": "type",
+    "baseProperties": {
       "description": {
         "type": {
           "$ref": "#/2"
@@ -36584,26 +36571,18 @@
       },
       "annotations": {
         "type": {
-          "$ref": "#/1934"
+          "$ref": "#/1933"
         },
         "flags": 0,
         "description": "List of tags that can be used for describing the Credential."
       }
     },
-    "additionalProperties": {
-      "$ref": "#/11"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "ManagedIdentityTypeProperties",
-    "properties": {
-      "resourceId": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The resource id of user assigned managed identity"
+    "elements": {
+      "ManagedIdentity": {
+        "$ref": "#/1934"
+      },
+      "ServicePrincipal": {
+        "$ref": "#/1936"
       }
     }
   },
@@ -36612,6 +36591,74 @@
     "itemType": {
       "$ref": "#/11"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ManagedIdentityCredential",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/1935"
+        },
+        "flags": 1,
+        "description": "Type of credential."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServicePrincipalCredential",
+    "properties": {
+      "typeProperties": {
+        "type": {
+          "$ref": "#/1937"
+        },
+        "flags": 1,
+        "description": "Service Principal credential properties."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1938"
+        },
+        "flags": 1,
+        "description": "Type of credential."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServicePrincipalCredentialTypeProperties",
+    "properties": {
+      "servicePrincipalId": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 0,
+        "description": "The app ID of the service principal used to authenticate"
+      },
+      "servicePrincipalKey": {
+        "type": {
+          "$ref": "#/193"
+        },
+        "flags": 0,
+        "description": "The key of the service principal used to authenticate."
+      },
+      "tenant": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 0,
+        "description": "The ID of the tenant to which the service principal belongs"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ServicePrincipal"
   },
   {
     "$type": "ResourceType",
@@ -36650,21 +36697,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1936"
+          "$ref": "#/1940"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1937"
+          "$ref": "#/1941"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1939"
+          "$ref": "#/1943"
         },
         "flags": 0,
         "description": "Core resource properties"
@@ -36684,14 +36731,14 @@
     "properties": {
       "privateLinkServiceConnectionState": {
         "type": {
-          "$ref": "#/1940"
+          "$ref": "#/1944"
         },
         "flags": 0,
         "description": "The state of a private link connection"
       },
       "privateEndpoint": {
         "type": {
-          "$ref": "#/1941"
+          "$ref": "#/1945"
         },
         "flags": 0,
         "description": "The resource of private endpoint."
@@ -36749,7 +36796,7 @@
     "name": "Microsoft.DataFactory/factories/privateEndpointConnections@2018-06-01",
     "scopeType": 8,
     "body": {
-      "$ref": "#/1938"
+      "$ref": "#/1942"
     },
     "flags": 0
   },
@@ -36781,21 +36828,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1943"
+          "$ref": "#/1947"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1944"
+          "$ref": "#/1948"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1946"
+          "$ref": "#/1950"
         },
         "flags": 1,
         "description": "Properties of the global parameter."
@@ -36822,7 +36869,7 @@
     "name": "Microsoft.DataFactory/factories/globalParameters@2018-06-01",
     "scopeType": 8,
     "body": {
-      "$ref": "#/1945"
+      "$ref": "#/1949"
     },
     "flags": 0
   },
@@ -36854,21 +36901,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1948"
+          "$ref": "#/1952"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1949"
+          "$ref": "#/1953"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1951"
+          "$ref": "#/1955"
         },
         "flags": 1,
         "description": "Properties of the change data capture."
@@ -36888,7 +36935,7 @@
     "properties": {
       "folder": {
         "type": {
-          "$ref": "#/1952"
+          "$ref": "#/1956"
         },
         "flags": 0,
         "description": "The folder that this CDC is in. If not specified, CDC will appear at the root level."
@@ -36902,21 +36949,21 @@
       },
       "sourceConnectionsInfo": {
         "type": {
-          "$ref": "#/1965"
+          "$ref": "#/1969"
         },
         "flags": 1,
         "description": "List of sources connections that can be used as sources in the CDC."
       },
       "targetConnectionsInfo": {
         "type": {
-          "$ref": "#/1983"
+          "$ref": "#/1987"
         },
         "flags": 1,
         "description": "List of target connections that can be used as sources in the CDC."
       },
       "policy": {
         "type": {
-          "$ref": "#/1984"
+          "$ref": "#/1988"
         },
         "flags": 1,
         "description": "CDC policy"
@@ -36956,14 +37003,14 @@
     "properties": {
       "sourceEntities": {
         "type": {
-          "$ref": "#/1960"
+          "$ref": "#/1964"
         },
         "flags": 0,
         "description": "List of source tables for a source connection."
       },
       "connection": {
         "type": {
-          "$ref": "#/1961"
+          "$ref": "#/1965"
         },
         "flags": 0,
         "description": "Source connection details."
@@ -36983,7 +37030,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/1955"
+          "$ref": "#/1959"
         },
         "flags": 0,
         "description": "Table properties."
@@ -36996,14 +37043,14 @@
     "properties": {
       "schema": {
         "type": {
-          "$ref": "#/1957"
+          "$ref": "#/1961"
         },
         "flags": 0,
         "description": "List of columns for the source table."
       },
       "dslConnectorProperties": {
         "type": {
-          "$ref": "#/1959"
+          "$ref": "#/1963"
         },
         "flags": 0,
         "description": "List of name/value pairs for connection properties."
@@ -37033,7 +37080,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1956"
+      "$ref": "#/1960"
     }
   },
   {
@@ -37059,13 +37106,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1958"
+      "$ref": "#/1962"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1954"
+      "$ref": "#/1958"
     }
   },
   {
@@ -37088,7 +37135,7 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1963"
+          "$ref": "#/1967"
         },
         "flags": 1,
         "description": "Type of connection via linked service or dataset."
@@ -37102,7 +37149,7 @@
       },
       "commonDslConnectorProperties": {
         "type": {
-          "$ref": "#/1964"
+          "$ref": "#/1968"
         },
         "flags": 0,
         "description": "List of name/value pairs for connection properties."
@@ -37117,7 +37164,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1962"
+        "$ref": "#/1966"
       },
       {
         "$ref": "#/2"
@@ -37127,13 +37174,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1958"
+      "$ref": "#/1962"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1953"
+      "$ref": "#/1957"
     }
   },
   {
@@ -37142,28 +37189,28 @@
     "properties": {
       "targetEntities": {
         "type": {
-          "$ref": "#/1967"
+          "$ref": "#/1971"
         },
         "flags": 0,
         "description": "List of source tables for a target connection."
       },
       "connection": {
         "type": {
-          "$ref": "#/1961"
+          "$ref": "#/1965"
         },
         "flags": 0,
         "description": "Source connection details."
       },
       "dataMapperMappings": {
         "type": {
-          "$ref": "#/1981"
+          "$ref": "#/1985"
         },
         "flags": 0,
         "description": "List of table mappings."
       },
       "relationships": {
         "type": {
-          "$ref": "#/1982"
+          "$ref": "#/1986"
         },
         "flags": 0,
         "description": "List of relationship info among the tables."
@@ -37173,7 +37220,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1954"
+      "$ref": "#/1958"
     }
   },
   {
@@ -37196,14 +37243,14 @@
       },
       "sourceConnectionReference": {
         "type": {
-          "$ref": "#/1969"
+          "$ref": "#/1973"
         },
         "flags": 0,
         "description": "The connection reference for the source connection."
       },
       "attributeMappingInfo": {
         "type": {
-          "$ref": "#/1972"
+          "$ref": "#/1976"
         },
         "flags": 0,
         "description": "This holds the user provided attribute mapping information."
@@ -37230,7 +37277,7 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1971"
+          "$ref": "#/1975"
         },
         "flags": 0,
         "description": "Type of connection via linked service or dataset."
@@ -37245,7 +37292,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1970"
+        "$ref": "#/1974"
       },
       {
         "$ref": "#/2"
@@ -37258,7 +37305,7 @@
     "properties": {
       "attributeMappings": {
         "type": {
-          "$ref": "#/1980"
+          "$ref": "#/1984"
         },
         "flags": 0,
         "description": "List of attribute mappings."
@@ -37278,7 +37325,7 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1977"
+          "$ref": "#/1981"
         },
         "flags": 0,
         "description": "Type of the CDC attribute mapping. Note: 'Advanced' mapping type is also saved as 'Derived'."
@@ -37299,14 +37346,14 @@
       },
       "attributeReference": {
         "type": {
-          "$ref": "#/1978"
+          "$ref": "#/1982"
         },
         "flags": 0,
         "description": "Reference of the source column used in the mapping. It is used for 'Direct' mapping type only."
       },
       "attributeReferences": {
         "type": {
-          "$ref": "#/1979"
+          "$ref": "#/1983"
         },
         "flags": 0,
         "description": "List of references for source columns. It is used for 'Derived' and 'Aggregate' type mappings only."
@@ -37329,13 +37376,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1974"
+        "$ref": "#/1978"
       },
       {
-        "$ref": "#/1975"
+        "$ref": "#/1979"
       },
       {
-        "$ref": "#/1976"
+        "$ref": "#/1980"
       },
       {
         "$ref": "#/2"
@@ -37362,7 +37409,7 @@
       },
       "entityConnectionReference": {
         "type": {
-          "$ref": "#/1969"
+          "$ref": "#/1973"
         },
         "flags": 0,
         "description": "The connection reference for the connection."
@@ -37372,19 +37419,19 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1978"
+      "$ref": "#/1982"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1973"
+      "$ref": "#/1977"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1968"
+      "$ref": "#/1972"
     }
   },
   {
@@ -37396,7 +37443,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1966"
+      "$ref": "#/1970"
     }
   },
   {
@@ -37412,7 +37459,7 @@
       },
       "recurrence": {
         "type": {
-          "$ref": "#/1985"
+          "$ref": "#/1989"
         },
         "flags": 0,
         "description": "Defines the frequency and interval for running the CDC for batch mode."
@@ -37425,7 +37472,7 @@
     "properties": {
       "frequency": {
         "type": {
-          "$ref": "#/1989"
+          "$ref": "#/1993"
         },
         "flags": 0,
         "description": "Frequency of period in terms of 'Hour', 'Minute' or 'Second'."
@@ -37455,13 +37502,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1986"
+        "$ref": "#/1990"
       },
       {
-        "$ref": "#/1987"
+        "$ref": "#/1991"
       },
       {
-        "$ref": "#/1988"
+        "$ref": "#/1992"
       },
       {
         "$ref": "#/2"
@@ -37473,7 +37520,7 @@
     "name": "Microsoft.DataFactory/factories/adfcdcs@2018-06-01",
     "scopeType": 8,
     "body": {
-      "$ref": "#/1950"
+      "$ref": "#/1954"
     },
     "flags": 0
   },
@@ -37503,7 +37550,7 @@
     "resourceType": "Microsoft.DataFactory/factories/integrationRuntimes",
     "apiVersion": "2018-06-01",
     "output": {
-      "$ref": "#/1991"
+      "$ref": "#/1995"
     }
   }
 ]

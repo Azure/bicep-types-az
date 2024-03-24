@@ -1257,7 +1257,9 @@ vCPU VM Sizes.
 ### Properties
 * **hyperthreadCoreToMemoryRatio**: int (Required): Hyperthread core to memory ratio.
 * **price**: int (Required): Compute Price.
+* **rhelLinuxServerLicensing**: [LinuxServerLicensingSettings](#linuxserverlicensingsettings) (Required): Linux Rhel Server licensing settings.
 * **sqlServerLicensing**: [SqlServerLicensingSettings](#sqlserverlicensingsettings)[] (Required): SQL Server licensing settings.
+* **suseLinuxServerLicensing**: [LinuxServerLicensingSettings](#linuxserverlicensingsettings) (Required): Linux Suse Server licensing settings.
 * **virtualizationSoftwareSettings**: [VirtualizationSoftwareSettings](#virtualizationsoftwaresettings) (Required): Virtualization software settings.
 * **windowsServerLicensing**: [WindowsServerLicensingSettings](#windowsserverlicensingsettings) (Required): Windows Server licensing settings.
 
@@ -1274,10 +1276,11 @@ vCPU VM Sizes.
 
 ## CostDetails
 ### Properties
-* **ahubSavings**: int (ReadOnly): The AhubSavings.
+* **ahubSavings**: int (ReadOnly): The windows AhubSavings.
 * **computeCost**: int (ReadOnly): The compute cost.
 * **esuSavings**: int (ReadOnly): esu savings.
 * **itLaborCost**: int (ReadOnly): The IT labor cost.
+* **linuxAhubSavings**: int (ReadOnly): The linux AhubSavings.
 * **managementCostDetails**: [ManagementCostDetails](#managementcostdetails) (ReadOnly): Management Cost Details.
 * **networkCost**: int (ReadOnly): The network cost.
 * **securityCost**: int (ReadOnly): Security Cost.
@@ -1472,6 +1475,10 @@ vCPU VM Sizes.
 * **hourlyAdminCost**: int (Required): Hourly administrator cost.
 * **physicalServersPerAdmin**: int {minValue: 1} (Required): Physical servers per administrator.
 * **virtualMachinesPerAdmin**: int {minValue: 1} (Required): Virtual machines per administrator.
+
+## LinuxServerLicensingSettings
+### Properties
+* **licenseCost**: int (Required): Licence Cost.
 
 ## MachineAssessmentProperties
 ### Properties
@@ -1728,6 +1735,7 @@ environment.
 ### Properties
 * **esuSavingsFor4years**: int (ReadOnly): ESU Savings 4 Years.
 * **iaasOsDistribution**: [IaasOsDistribution](#iaasosdistribution) (ReadOnly): Shows the infrastructure as a service machine OS distribution.
+* **linuxAhubSavings**: int (ReadOnly): The linux ahub saving.
 * **managementCostSavings**: int (ReadOnly): The management cost saving.
 * **osSupportStatusDistribution**: [SupportStatusDistribution](#supportstatusdistribution) (ReadOnly): OS Support Status Distribution.
 * **paasDistribution**: [PaasDistribution](#paasdistribution) (ReadOnly): Shows the distribution of platforms.
@@ -2354,7 +2362,7 @@ assessment.
 ## WebAppDistribution
 ### Properties
 * **numberOfWebApps**: int (ReadOnly): The cost details.
-* **webAppType**: 'ASPNET' | 'Tomcat' | 'Unknown' | string (ReadOnly): WebApp type.
+* **webAppType**: 'ASPNET' | 'Java' | 'Unknown' | string (ReadOnly): WebApp type.
 
 ## WebAppMigrationIssues
 ### Properties

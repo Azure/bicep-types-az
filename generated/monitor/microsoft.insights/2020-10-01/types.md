@@ -5,7 +5,7 @@
 ### Properties
 * **apiVersion**: '2020-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: The location of the resource. Since Azure Activity Log Alerts is a global service, the location of the rules should always be 'global'.
+* **location**: string: The location of the resource. Azure Activity Log Alert rules are supported on Global, West Europe and North Europe regions.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [AlertRuleProperties](#alertruleproperties): The Activity Log Alert rule properties of the resource.
 * **tags**: [AzureResourceTags](#azureresourcetags): The tags of the resource.

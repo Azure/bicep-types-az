@@ -75,7 +75,6 @@
 * **connectionServerName**: string {maxLength: 200} (Required): The server name to use in the connection string when connecting to a target. Port number and instance name must be specified separately.
 * **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): The provisioning state of the resource.
 * **targetAuthenticationType**: 'Aad' | 'Sql' | string (Required): The type of authentication to use when connecting to a target.
-* **targetCollectionStatus**: 'Disabled' | 'Enabled' | string: The target collection status.
 * **targetVault**: [VaultSecret](#vaultsecret): To use SQL authentication when connecting to targets, specify the vault where the login name and password secrets are stored.
 
 ### SqlDbSingleDatabaseTargetProperties
@@ -124,8 +123,8 @@
 ## VaultSecret
 ### Properties
 * **akvResourceId**: string: The Azure ResourceId of the Key Vault instance storing database authentication secrets.
-* **akvTargetPassword**: string: The path to the Key Vault secret storing the password for authentication to a target.
-* **akvTargetUser**: string: The path to the Key Vault secret storing the login name (aka user name, aka account name) for authentication to a target.
+* **akvTargetPassword**: string {pattern: "^[a-zA-Z0-9-]{1,127}$"}: The path to the Key Vault secret storing the password for authentication to a target.
+* **akvTargetUser**: string {pattern: "^[a-zA-Z0-9-]{1,127}$"}: The path to the Key Vault secret storing the login name (aka user name, aka account name) for authentication to a target.
 
 ## WatcherProperties
 ### Properties

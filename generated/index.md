@@ -1691,6 +1691,7 @@
 * **Link**: [2022-05-01](appconfiguration/microsoft.appconfiguration/2022-05-01/types.md#resource-microsoftappconfigurationconfigurationstores2022-05-01)
 * **Link**: [2023-03-01](appconfiguration/microsoft.appconfiguration/2023-03-01/types.md#resource-microsoftappconfigurationconfigurationstores2023-03-01)
 * **Link**: [2023-08-01-preview](appconfiguration/microsoft.appconfiguration/2023-08-01-preview/types.md#resource-microsoftappconfigurationconfigurationstores2023-08-01-preview)
+* **Link**: [2023-09-01-preview](appconfiguration/microsoft.appconfiguration/2023-09-01-preview/types.md#resource-microsoftappconfigurationconfigurationstores2023-09-01-preview)
 
 ### microsoft.appconfiguration/configurationstores/keyvalues
 * **Link**: [2020-07-01-preview](appconfiguration/microsoft.appconfiguration/2020-07-01-preview/types.md#resource-microsoftappconfigurationconfigurationstoreskeyvalues2020-07-01-preview)
@@ -1700,6 +1701,7 @@
 * **Link**: [2022-05-01](appconfiguration/microsoft.appconfiguration/2022-05-01/types.md#resource-microsoftappconfigurationconfigurationstoreskeyvalues2022-05-01)
 * **Link**: [2023-03-01](appconfiguration/microsoft.appconfiguration/2023-03-01/types.md#resource-microsoftappconfigurationconfigurationstoreskeyvalues2023-03-01)
 * **Link**: [2023-08-01-preview](appconfiguration/microsoft.appconfiguration/2023-08-01-preview/types.md#resource-microsoftappconfigurationconfigurationstoreskeyvalues2023-08-01-preview)
+* **Link**: [2023-09-01-preview](appconfiguration/microsoft.appconfiguration/2023-09-01-preview/types.md#resource-microsoftappconfigurationconfigurationstoreskeyvalues2023-09-01-preview)
 
 ### microsoft.appconfiguration/configurationstores/privateendpointconnections
 * **Link**: [2019-11-01-preview](appconfiguration/microsoft.appconfiguration/2019-11-01-preview/types.md#resource-microsoftappconfigurationconfigurationstoresprivateendpointconnections2019-11-01-preview)
@@ -1711,14 +1713,17 @@
 * **Link**: [2022-05-01](appconfiguration/microsoft.appconfiguration/2022-05-01/types.md#resource-microsoftappconfigurationconfigurationstoresprivateendpointconnections2022-05-01)
 * **Link**: [2023-03-01](appconfiguration/microsoft.appconfiguration/2023-03-01/types.md#resource-microsoftappconfigurationconfigurationstoresprivateendpointconnections2023-03-01)
 * **Link**: [2023-08-01-preview](appconfiguration/microsoft.appconfiguration/2023-08-01-preview/types.md#resource-microsoftappconfigurationconfigurationstoresprivateendpointconnections2023-08-01-preview)
+* **Link**: [2023-09-01-preview](appconfiguration/microsoft.appconfiguration/2023-09-01-preview/types.md#resource-microsoftappconfigurationconfigurationstoresprivateendpointconnections2023-09-01-preview)
 
 ### microsoft.appconfiguration/configurationstores/replicas
 * **Link**: [2022-03-01-preview](appconfiguration/microsoft.appconfiguration/2022-03-01-preview/types.md#resource-microsoftappconfigurationconfigurationstoresreplicas2022-03-01-preview)
 * **Link**: [2023-03-01](appconfiguration/microsoft.appconfiguration/2023-03-01/types.md#resource-microsoftappconfigurationconfigurationstoresreplicas2023-03-01)
 * **Link**: [2023-08-01-preview](appconfiguration/microsoft.appconfiguration/2023-08-01-preview/types.md#resource-microsoftappconfigurationconfigurationstoresreplicas2023-08-01-preview)
+* **Link**: [2023-09-01-preview](appconfiguration/microsoft.appconfiguration/2023-09-01-preview/types.md#resource-microsoftappconfigurationconfigurationstoresreplicas2023-09-01-preview)
 
 ### microsoft.appconfiguration/configurationstores/snapshots
 * **Link**: [2023-08-01-preview](appconfiguration/microsoft.appconfiguration/2023-08-01-preview/types.md#resource-microsoftappconfigurationconfigurationstoressnapshots2023-08-01-preview)
+* **Link**: [2023-09-01-preview](appconfiguration/microsoft.appconfiguration/2023-09-01-preview/types.md#resource-microsoftappconfigurationconfigurationstoressnapshots2023-09-01-preview)
 
 ## microsoft.appplatform
 ### microsoft.appplatform/spring
@@ -2646,6 +2651,7 @@
 * **Link**: [2021-12-01](vmware/microsoft.avs/2021-12-01/types.md#resource-microsoftavsprivateclouds2021-12-01)
 * **Link**: [2022-05-01](vmware/microsoft.avs/2022-05-01/types.md#resource-microsoftavsprivateclouds2022-05-01)
 * **Link**: [2023-03-01](vmware/microsoft.avs/2023-03-01/types.md#resource-microsoftavsprivateclouds2023-03-01)
+* **Link**: [2023-09-01](vmware/microsoft.avs/2023-09-01/types.md#resource-microsoftavsprivateclouds2023-09-01)
 
 ### microsoft.avs/privateclouds/addons
 * **Link**: [2020-07-17-preview](vmware/microsoft.avs/2020-07-17-preview/types.md#resource-microsoftavsprivatecloudsaddons2020-07-17-preview)
@@ -2654,6 +2660,7 @@
 * **Link**: [2021-12-01](vmware/microsoft.avs/2021-12-01/types.md#resource-microsoftavsprivatecloudsaddons2021-12-01)
 * **Link**: [2022-05-01](vmware/microsoft.avs/2022-05-01/types.md#resource-microsoftavsprivatecloudsaddons2022-05-01)
 * **Link**: [2023-03-01](vmware/microsoft.avs/2023-03-01/types.md#resource-microsoftavsprivatecloudsaddons2023-03-01)
+* **Link**: [2023-09-01](vmware/microsoft.avs/2023-09-01/types.md#resource-microsoftavsprivatecloudsaddons2023-09-01)
 
 ### microsoft.avs/privateclouds/authorizations
 * **Link**: [2020-03-20](vmware/microsoft.avs/2020-03-20/types.md#resource-microsoftavsprivatecloudsauthorizations2020-03-20)
@@ -2663,12 +2670,14 @@
 * **Link**: [2021-12-01](vmware/microsoft.avs/2021-12-01/types.md#resource-microsoftavsprivatecloudsauthorizations2021-12-01)
 * **Link**: [2022-05-01](vmware/microsoft.avs/2022-05-01/types.md#resource-microsoftavsprivatecloudsauthorizations2022-05-01)
 * **Link**: [2023-03-01](vmware/microsoft.avs/2023-03-01/types.md#resource-microsoftavsprivatecloudsauthorizations2023-03-01)
+* **Link**: [2023-09-01](vmware/microsoft.avs/2023-09-01/types.md#resource-microsoftavsprivatecloudsauthorizations2023-09-01)
 
 ### microsoft.avs/privateclouds/cloudlinks
 * **Link**: [2021-06-01](vmware/microsoft.avs/2021-06-01/types.md#resource-microsoftavsprivatecloudscloudlinks2021-06-01)
 * **Link**: [2021-12-01](vmware/microsoft.avs/2021-12-01/types.md#resource-microsoftavsprivatecloudscloudlinks2021-12-01)
 * **Link**: [2022-05-01](vmware/microsoft.avs/2022-05-01/types.md#resource-microsoftavsprivatecloudscloudlinks2022-05-01)
 * **Link**: [2023-03-01](vmware/microsoft.avs/2023-03-01/types.md#resource-microsoftavsprivatecloudscloudlinks2023-03-01)
+* **Link**: [2023-09-01](vmware/microsoft.avs/2023-09-01/types.md#resource-microsoftavsprivatecloudscloudlinks2023-09-01)
 
 ### microsoft.avs/privateclouds/clusters
 * **Link**: [2020-03-20](vmware/microsoft.avs/2020-03-20/types.md#resource-microsoftavsprivatecloudsclusters2020-03-20)
@@ -2678,6 +2687,7 @@
 * **Link**: [2021-12-01](vmware/microsoft.avs/2021-12-01/types.md#resource-microsoftavsprivatecloudsclusters2021-12-01)
 * **Link**: [2022-05-01](vmware/microsoft.avs/2022-05-01/types.md#resource-microsoftavsprivatecloudsclusters2022-05-01)
 * **Link**: [2023-03-01](vmware/microsoft.avs/2023-03-01/types.md#resource-microsoftavsprivatecloudsclusters2023-03-01)
+* **Link**: [2023-09-01](vmware/microsoft.avs/2023-09-01/types.md#resource-microsoftavsprivatecloudsclusters2023-09-01)
 
 ### microsoft.avs/privateclouds/clusters/datastores
 * **Link**: [2021-01-01-preview](vmware/microsoft.avs/2021-01-01-preview/types.md#resource-microsoftavsprivatecloudsclustersdatastores2021-01-01-preview)
@@ -2685,16 +2695,19 @@
 * **Link**: [2021-12-01](vmware/microsoft.avs/2021-12-01/types.md#resource-microsoftavsprivatecloudsclustersdatastores2021-12-01)
 * **Link**: [2022-05-01](vmware/microsoft.avs/2022-05-01/types.md#resource-microsoftavsprivatecloudsclustersdatastores2022-05-01)
 * **Link**: [2023-03-01](vmware/microsoft.avs/2023-03-01/types.md#resource-microsoftavsprivatecloudsclustersdatastores2023-03-01)
+* **Link**: [2023-09-01](vmware/microsoft.avs/2023-09-01/types.md#resource-microsoftavsprivatecloudsclustersdatastores2023-09-01)
 
 ### microsoft.avs/privateclouds/clusters/placementpolicies
 * **Link**: [2021-12-01](vmware/microsoft.avs/2021-12-01/types.md#resource-microsoftavsprivatecloudsclustersplacementpolicies2021-12-01)
 * **Link**: [2022-05-01](vmware/microsoft.avs/2022-05-01/types.md#resource-microsoftavsprivatecloudsclustersplacementpolicies2022-05-01)
 * **Link**: [2023-03-01](vmware/microsoft.avs/2023-03-01/types.md#resource-microsoftavsprivatecloudsclustersplacementpolicies2023-03-01)
+* **Link**: [2023-09-01](vmware/microsoft.avs/2023-09-01/types.md#resource-microsoftavsprivatecloudsclustersplacementpolicies2023-09-01)
 
 ### microsoft.avs/privateclouds/clusters/virtualmachines
 * **Link**: [2021-12-01](vmware/microsoft.avs/2021-12-01/types.md#resource-microsoftavsprivatecloudsclustersvirtualmachines2021-12-01)
 * **Link**: [2022-05-01](vmware/microsoft.avs/2022-05-01/types.md#resource-microsoftavsprivatecloudsclustersvirtualmachines2022-05-01)
 * **Link**: [2023-03-01](vmware/microsoft.avs/2023-03-01/types.md#resource-microsoftavsprivatecloudsclustersvirtualmachines2023-03-01)
+* **Link**: [2023-09-01](vmware/microsoft.avs/2023-09-01/types.md#resource-microsoftavsprivatecloudsclustersvirtualmachines2023-09-01)
 
 ### microsoft.avs/privateclouds/globalreachconnections
 * **Link**: [2020-07-17-preview](vmware/microsoft.avs/2020-07-17-preview/types.md#resource-microsoftavsprivatecloudsglobalreachconnections2020-07-17-preview)
@@ -2703,6 +2716,7 @@
 * **Link**: [2021-12-01](vmware/microsoft.avs/2021-12-01/types.md#resource-microsoftavsprivatecloudsglobalreachconnections2021-12-01)
 * **Link**: [2022-05-01](vmware/microsoft.avs/2022-05-01/types.md#resource-microsoftavsprivatecloudsglobalreachconnections2022-05-01)
 * **Link**: [2023-03-01](vmware/microsoft.avs/2023-03-01/types.md#resource-microsoftavsprivatecloudsglobalreachconnections2023-03-01)
+* **Link**: [2023-09-01](vmware/microsoft.avs/2023-09-01/types.md#resource-microsoftavsprivatecloudsglobalreachconnections2023-09-01)
 
 ### microsoft.avs/privateclouds/hcxenterprisesites
 * **Link**: [2020-03-20](vmware/microsoft.avs/2020-03-20/types.md#resource-microsoftavsprivatecloudshcxenterprisesites2020-03-20)
@@ -2712,28 +2726,36 @@
 * **Link**: [2021-12-01](vmware/microsoft.avs/2021-12-01/types.md#resource-microsoftavsprivatecloudshcxenterprisesites2021-12-01)
 * **Link**: [2022-05-01](vmware/microsoft.avs/2022-05-01/types.md#resource-microsoftavsprivatecloudshcxenterprisesites2022-05-01)
 * **Link**: [2023-03-01](vmware/microsoft.avs/2023-03-01/types.md#resource-microsoftavsprivatecloudshcxenterprisesites2023-03-01)
+* **Link**: [2023-09-01](vmware/microsoft.avs/2023-09-01/types.md#resource-microsoftavsprivatecloudshcxenterprisesites2023-09-01)
+
+### microsoft.avs/privateclouds/iscsipaths
+* **Link**: [2023-09-01](vmware/microsoft.avs/2023-09-01/types.md#resource-microsoftavsprivatecloudsiscsipaths2023-09-01)
 
 ### microsoft.avs/privateclouds/scriptexecutions
 * **Link**: [2021-06-01](vmware/microsoft.avs/2021-06-01/types.md#resource-microsoftavsprivatecloudsscriptexecutions2021-06-01)
 * **Link**: [2021-12-01](vmware/microsoft.avs/2021-12-01/types.md#resource-microsoftavsprivatecloudsscriptexecutions2021-12-01)
 * **Link**: [2022-05-01](vmware/microsoft.avs/2022-05-01/types.md#resource-microsoftavsprivatecloudsscriptexecutions2022-05-01)
 * **Link**: [2023-03-01](vmware/microsoft.avs/2023-03-01/types.md#resource-microsoftavsprivatecloudsscriptexecutions2023-03-01)
+* **Link**: [2023-09-01](vmware/microsoft.avs/2023-09-01/types.md#resource-microsoftavsprivatecloudsscriptexecutions2023-09-01)
 
 ### microsoft.avs/privateclouds/scriptpackages
 * **Link**: [2021-06-01](vmware/microsoft.avs/2021-06-01/types.md#resource-microsoftavsprivatecloudsscriptpackages2021-06-01)
 * **Link**: [2021-12-01](vmware/microsoft.avs/2021-12-01/types.md#resource-microsoftavsprivatecloudsscriptpackages2021-12-01)
 * **Link**: [2022-05-01](vmware/microsoft.avs/2022-05-01/types.md#resource-microsoftavsprivatecloudsscriptpackages2022-05-01)
 * **Link**: [2023-03-01](vmware/microsoft.avs/2023-03-01/types.md#resource-microsoftavsprivatecloudsscriptpackages2023-03-01)
+* **Link**: [2023-09-01](vmware/microsoft.avs/2023-09-01/types.md#resource-microsoftavsprivatecloudsscriptpackages2023-09-01)
 
 ### microsoft.avs/privateclouds/scriptpackages/scriptcmdlets
 * **Link**: [2021-06-01](vmware/microsoft.avs/2021-06-01/types.md#resource-microsoftavsprivatecloudsscriptpackagesscriptcmdlets2021-06-01)
 * **Link**: [2021-12-01](vmware/microsoft.avs/2021-12-01/types.md#resource-microsoftavsprivatecloudsscriptpackagesscriptcmdlets2021-12-01)
 * **Link**: [2022-05-01](vmware/microsoft.avs/2022-05-01/types.md#resource-microsoftavsprivatecloudsscriptpackagesscriptcmdlets2022-05-01)
 * **Link**: [2023-03-01](vmware/microsoft.avs/2023-03-01/types.md#resource-microsoftavsprivatecloudsscriptpackagesscriptcmdlets2023-03-01)
+* **Link**: [2023-09-01](vmware/microsoft.avs/2023-09-01/types.md#resource-microsoftavsprivatecloudsscriptpackagesscriptcmdlets2023-09-01)
 
 ### microsoft.avs/privateclouds/workloadnetworks
 * **Link**: [2022-05-01](vmware/microsoft.avs/2022-05-01/types.md#resource-microsoftavsprivatecloudsworkloadnetworks2022-05-01)
 * **Link**: [2023-03-01](vmware/microsoft.avs/2023-03-01/types.md#resource-microsoftavsprivatecloudsworkloadnetworks2023-03-01)
+* **Link**: [2023-09-01](vmware/microsoft.avs/2023-09-01/types.md#resource-microsoftavsprivatecloudsworkloadnetworks2023-09-01)
 
 ### microsoft.avs/privateclouds/workloadnetworks/dhcpconfigurations
 * **Link**: [2020-07-17-preview](vmware/microsoft.avs/2020-07-17-preview/types.md#resource-microsoftavsprivatecloudsworkloadnetworksdhcpconfigurations2020-07-17-preview)
@@ -2742,6 +2764,7 @@
 * **Link**: [2021-12-01](vmware/microsoft.avs/2021-12-01/types.md#resource-microsoftavsprivatecloudsworkloadnetworksdhcpconfigurations2021-12-01)
 * **Link**: [2022-05-01](vmware/microsoft.avs/2022-05-01/types.md#resource-microsoftavsprivatecloudsworkloadnetworksdhcpconfigurations2022-05-01)
 * **Link**: [2023-03-01](vmware/microsoft.avs/2023-03-01/types.md#resource-microsoftavsprivatecloudsworkloadnetworksdhcpconfigurations2023-03-01)
+* **Link**: [2023-09-01](vmware/microsoft.avs/2023-09-01/types.md#resource-microsoftavsprivatecloudsworkloadnetworksdhcpconfigurations2023-09-01)
 
 ### microsoft.avs/privateclouds/workloadnetworks/dnsservices
 * **Link**: [2020-07-17-preview](vmware/microsoft.avs/2020-07-17-preview/types.md#resource-microsoftavsprivatecloudsworkloadnetworksdnsservices2020-07-17-preview)
@@ -2750,6 +2773,7 @@
 * **Link**: [2021-12-01](vmware/microsoft.avs/2021-12-01/types.md#resource-microsoftavsprivatecloudsworkloadnetworksdnsservices2021-12-01)
 * **Link**: [2022-05-01](vmware/microsoft.avs/2022-05-01/types.md#resource-microsoftavsprivatecloudsworkloadnetworksdnsservices2022-05-01)
 * **Link**: [2023-03-01](vmware/microsoft.avs/2023-03-01/types.md#resource-microsoftavsprivatecloudsworkloadnetworksdnsservices2023-03-01)
+* **Link**: [2023-09-01](vmware/microsoft.avs/2023-09-01/types.md#resource-microsoftavsprivatecloudsworkloadnetworksdnsservices2023-09-01)
 
 ### microsoft.avs/privateclouds/workloadnetworks/dnszones
 * **Link**: [2020-07-17-preview](vmware/microsoft.avs/2020-07-17-preview/types.md#resource-microsoftavsprivatecloudsworkloadnetworksdnszones2020-07-17-preview)
@@ -2758,6 +2782,7 @@
 * **Link**: [2021-12-01](vmware/microsoft.avs/2021-12-01/types.md#resource-microsoftavsprivatecloudsworkloadnetworksdnszones2021-12-01)
 * **Link**: [2022-05-01](vmware/microsoft.avs/2022-05-01/types.md#resource-microsoftavsprivatecloudsworkloadnetworksdnszones2022-05-01)
 * **Link**: [2023-03-01](vmware/microsoft.avs/2023-03-01/types.md#resource-microsoftavsprivatecloudsworkloadnetworksdnszones2023-03-01)
+* **Link**: [2023-09-01](vmware/microsoft.avs/2023-09-01/types.md#resource-microsoftavsprivatecloudsworkloadnetworksdnszones2023-09-01)
 
 ### microsoft.avs/privateclouds/workloadnetworks/gateways
 * **Link**: [2020-07-17-preview](vmware/microsoft.avs/2020-07-17-preview/types.md#resource-microsoftavsprivatecloudsworkloadnetworksgateways2020-07-17-preview)
@@ -2766,6 +2791,7 @@
 * **Link**: [2021-12-01](vmware/microsoft.avs/2021-12-01/types.md#resource-microsoftavsprivatecloudsworkloadnetworksgateways2021-12-01)
 * **Link**: [2022-05-01](vmware/microsoft.avs/2022-05-01/types.md#resource-microsoftavsprivatecloudsworkloadnetworksgateways2022-05-01)
 * **Link**: [2023-03-01](vmware/microsoft.avs/2023-03-01/types.md#resource-microsoftavsprivatecloudsworkloadnetworksgateways2023-03-01)
+* **Link**: [2023-09-01](vmware/microsoft.avs/2023-09-01/types.md#resource-microsoftavsprivatecloudsworkloadnetworksgateways2023-09-01)
 
 ### microsoft.avs/privateclouds/workloadnetworks/portmirroringprofiles
 * **Link**: [2020-07-17-preview](vmware/microsoft.avs/2020-07-17-preview/types.md#resource-microsoftavsprivatecloudsworkloadnetworksportmirroringprofiles2020-07-17-preview)
@@ -2774,12 +2800,14 @@
 * **Link**: [2021-12-01](vmware/microsoft.avs/2021-12-01/types.md#resource-microsoftavsprivatecloudsworkloadnetworksportmirroringprofiles2021-12-01)
 * **Link**: [2022-05-01](vmware/microsoft.avs/2022-05-01/types.md#resource-microsoftavsprivatecloudsworkloadnetworksportmirroringprofiles2022-05-01)
 * **Link**: [2023-03-01](vmware/microsoft.avs/2023-03-01/types.md#resource-microsoftavsprivatecloudsworkloadnetworksportmirroringprofiles2023-03-01)
+* **Link**: [2023-09-01](vmware/microsoft.avs/2023-09-01/types.md#resource-microsoftavsprivatecloudsworkloadnetworksportmirroringprofiles2023-09-01)
 
 ### microsoft.avs/privateclouds/workloadnetworks/publicips
 * **Link**: [2021-06-01](vmware/microsoft.avs/2021-06-01/types.md#resource-microsoftavsprivatecloudsworkloadnetworkspublicips2021-06-01)
 * **Link**: [2021-12-01](vmware/microsoft.avs/2021-12-01/types.md#resource-microsoftavsprivatecloudsworkloadnetworkspublicips2021-12-01)
 * **Link**: [2022-05-01](vmware/microsoft.avs/2022-05-01/types.md#resource-microsoftavsprivatecloudsworkloadnetworkspublicips2022-05-01)
 * **Link**: [2023-03-01](vmware/microsoft.avs/2023-03-01/types.md#resource-microsoftavsprivatecloudsworkloadnetworkspublicips2023-03-01)
+* **Link**: [2023-09-01](vmware/microsoft.avs/2023-09-01/types.md#resource-microsoftavsprivatecloudsworkloadnetworkspublicips2023-09-01)
 
 ### microsoft.avs/privateclouds/workloadnetworks/segments
 * **Link**: [2020-07-17-preview](vmware/microsoft.avs/2020-07-17-preview/types.md#resource-microsoftavsprivatecloudsworkloadnetworkssegments2020-07-17-preview)
@@ -2788,6 +2816,7 @@
 * **Link**: [2021-12-01](vmware/microsoft.avs/2021-12-01/types.md#resource-microsoftavsprivatecloudsworkloadnetworkssegments2021-12-01)
 * **Link**: [2022-05-01](vmware/microsoft.avs/2022-05-01/types.md#resource-microsoftavsprivatecloudsworkloadnetworkssegments2022-05-01)
 * **Link**: [2023-03-01](vmware/microsoft.avs/2023-03-01/types.md#resource-microsoftavsprivatecloudsworkloadnetworkssegments2023-03-01)
+* **Link**: [2023-09-01](vmware/microsoft.avs/2023-09-01/types.md#resource-microsoftavsprivatecloudsworkloadnetworkssegments2023-09-01)
 
 ### microsoft.avs/privateclouds/workloadnetworks/virtualmachines
 * **Link**: [2020-07-17-preview](vmware/microsoft.avs/2020-07-17-preview/types.md#resource-microsoftavsprivatecloudsworkloadnetworksvirtualmachines2020-07-17-preview)
@@ -2796,6 +2825,7 @@
 * **Link**: [2021-12-01](vmware/microsoft.avs/2021-12-01/types.md#resource-microsoftavsprivatecloudsworkloadnetworksvirtualmachines2021-12-01)
 * **Link**: [2022-05-01](vmware/microsoft.avs/2022-05-01/types.md#resource-microsoftavsprivatecloudsworkloadnetworksvirtualmachines2022-05-01)
 * **Link**: [2023-03-01](vmware/microsoft.avs/2023-03-01/types.md#resource-microsoftavsprivatecloudsworkloadnetworksvirtualmachines2023-03-01)
+* **Link**: [2023-09-01](vmware/microsoft.avs/2023-09-01/types.md#resource-microsoftavsprivatecloudsworkloadnetworksvirtualmachines2023-09-01)
 
 ### microsoft.avs/privateclouds/workloadnetworks/vmgroups
 * **Link**: [2020-07-17-preview](vmware/microsoft.avs/2020-07-17-preview/types.md#resource-microsoftavsprivatecloudsworkloadnetworksvmgroups2020-07-17-preview)
@@ -2804,6 +2834,7 @@
 * **Link**: [2021-12-01](vmware/microsoft.avs/2021-12-01/types.md#resource-microsoftavsprivatecloudsworkloadnetworksvmgroups2021-12-01)
 * **Link**: [2022-05-01](vmware/microsoft.avs/2022-05-01/types.md#resource-microsoftavsprivatecloudsworkloadnetworksvmgroups2022-05-01)
 * **Link**: [2023-03-01](vmware/microsoft.avs/2023-03-01/types.md#resource-microsoftavsprivatecloudsworkloadnetworksvmgroups2023-03-01)
+* **Link**: [2023-09-01](vmware/microsoft.avs/2023-09-01/types.md#resource-microsoftavsprivatecloudsworkloadnetworksvmgroups2023-09-01)
 
 ## microsoft.azureactivedirectory
 ### microsoft.azureactivedirectory/b2cdirectories
@@ -3771,6 +3802,7 @@
 * **Link**: [2022-11-01-preview](cdn/microsoft.cdn/2022-11-01-preview/types.md#resource-microsoftcdncdnwebapplicationfirewallpolicies2022-11-01-preview)
 * **Link**: [2023-05-01](cdn/microsoft.cdn/2023-05-01/types.md#resource-microsoftcdncdnwebapplicationfirewallpolicies2023-05-01)
 * **Link**: [2023-07-01-preview](cdn/microsoft.cdn/2023-07-01-preview/types.md#resource-microsoftcdncdnwebapplicationfirewallpolicies2023-07-01-preview)
+* **Link**: [2024-02-01](cdn/microsoft.cdn/2024-02-01/types.md#resource-microsoftcdncdnwebapplicationfirewallpolicies2024-02-01)
 
 ### microsoft.cdn/profiles
 * **Link**: [2015-06-01](cdn/microsoft.cdn/2015-06-01/types.md#resource-microsoftcdnprofiles2015-06-01)
@@ -3789,6 +3821,7 @@
 * **Link**: [2022-11-01-preview](cdn/microsoft.cdn/2022-11-01-preview/types.md#resource-microsoftcdnprofiles2022-11-01-preview)
 * **Link**: [2023-05-01](cdn/microsoft.cdn/2023-05-01/types.md#resource-microsoftcdnprofiles2023-05-01)
 * **Link**: [2023-07-01-preview](cdn/microsoft.cdn/2023-07-01-preview/types.md#resource-microsoftcdnprofiles2023-07-01-preview)
+* **Link**: [2024-02-01](cdn/microsoft.cdn/2024-02-01/types.md#resource-microsoftcdnprofiles2024-02-01)
 
 ### microsoft.cdn/profiles/afdendpoints
 * **Link**: [2020-09-01](cdn/microsoft.cdn/2020-09-01/types.md#resource-microsoftcdnprofilesafdendpoints2020-09-01)
@@ -3797,6 +3830,7 @@
 * **Link**: [2022-11-01-preview](cdn/microsoft.cdn/2022-11-01-preview/types.md#resource-microsoftcdnprofilesafdendpoints2022-11-01-preview)
 * **Link**: [2023-05-01](cdn/microsoft.cdn/2023-05-01/types.md#resource-microsoftcdnprofilesafdendpoints2023-05-01)
 * **Link**: [2023-07-01-preview](cdn/microsoft.cdn/2023-07-01-preview/types.md#resource-microsoftcdnprofilesafdendpoints2023-07-01-preview)
+* **Link**: [2024-02-01](cdn/microsoft.cdn/2024-02-01/types.md#resource-microsoftcdnprofilesafdendpoints2024-02-01)
 
 ### microsoft.cdn/profiles/afdendpoints/routes
 * **Link**: [2020-09-01](cdn/microsoft.cdn/2020-09-01/types.md#resource-microsoftcdnprofilesafdendpointsroutes2020-09-01)
@@ -3805,6 +3839,7 @@
 * **Link**: [2022-11-01-preview](cdn/microsoft.cdn/2022-11-01-preview/types.md#resource-microsoftcdnprofilesafdendpointsroutes2022-11-01-preview)
 * **Link**: [2023-05-01](cdn/microsoft.cdn/2023-05-01/types.md#resource-microsoftcdnprofilesafdendpointsroutes2023-05-01)
 * **Link**: [2023-07-01-preview](cdn/microsoft.cdn/2023-07-01-preview/types.md#resource-microsoftcdnprofilesafdendpointsroutes2023-07-01-preview)
+* **Link**: [2024-02-01](cdn/microsoft.cdn/2024-02-01/types.md#resource-microsoftcdnprofilesafdendpointsroutes2024-02-01)
 
 ### microsoft.cdn/profiles/customdomains
 * **Link**: [2020-09-01](cdn/microsoft.cdn/2020-09-01/types.md#resource-microsoftcdnprofilescustomdomains2020-09-01)
@@ -3813,6 +3848,7 @@
 * **Link**: [2022-11-01-preview](cdn/microsoft.cdn/2022-11-01-preview/types.md#resource-microsoftcdnprofilescustomdomains2022-11-01-preview)
 * **Link**: [2023-05-01](cdn/microsoft.cdn/2023-05-01/types.md#resource-microsoftcdnprofilescustomdomains2023-05-01)
 * **Link**: [2023-07-01-preview](cdn/microsoft.cdn/2023-07-01-preview/types.md#resource-microsoftcdnprofilescustomdomains2023-07-01-preview)
+* **Link**: [2024-02-01](cdn/microsoft.cdn/2024-02-01/types.md#resource-microsoftcdnprofilescustomdomains2024-02-01)
 
 ### microsoft.cdn/profiles/endpoints
 * **Link**: [2015-06-01](cdn/microsoft.cdn/2015-06-01/types.md#resource-microsoftcdnprofilesendpoints2015-06-01)
@@ -3831,6 +3867,7 @@
 * **Link**: [2022-11-01-preview](cdn/microsoft.cdn/2022-11-01-preview/types.md#resource-microsoftcdnprofilesendpoints2022-11-01-preview)
 * **Link**: [2023-05-01](cdn/microsoft.cdn/2023-05-01/types.md#resource-microsoftcdnprofilesendpoints2023-05-01)
 * **Link**: [2023-07-01-preview](cdn/microsoft.cdn/2023-07-01-preview/types.md#resource-microsoftcdnprofilesendpoints2023-07-01-preview)
+* **Link**: [2024-02-01](cdn/microsoft.cdn/2024-02-01/types.md#resource-microsoftcdnprofilesendpoints2024-02-01)
 
 ### microsoft.cdn/profiles/endpoints/customdomains
 * **Link**: [2015-06-01](cdn/microsoft.cdn/2015-06-01/types.md#resource-microsoftcdnprofilesendpointscustomdomains2015-06-01)
@@ -3849,6 +3886,7 @@
 * **Link**: [2022-11-01-preview](cdn/microsoft.cdn/2022-11-01-preview/types.md#resource-microsoftcdnprofilesendpointscustomdomains2022-11-01-preview)
 * **Link**: [2023-05-01](cdn/microsoft.cdn/2023-05-01/types.md#resource-microsoftcdnprofilesendpointscustomdomains2023-05-01)
 * **Link**: [2023-07-01-preview](cdn/microsoft.cdn/2023-07-01-preview/types.md#resource-microsoftcdnprofilesendpointscustomdomains2023-07-01-preview)
+* **Link**: [2024-02-01](cdn/microsoft.cdn/2024-02-01/types.md#resource-microsoftcdnprofilesendpointscustomdomains2024-02-01)
 
 ### microsoft.cdn/profiles/endpoints/origingroups
 * **Link**: [2019-12-31](cdn/microsoft.cdn/2019-12-31/types.md#resource-microsoftcdnprofilesendpointsorigingroups2019-12-31)
@@ -3859,6 +3897,7 @@
 * **Link**: [2022-11-01-preview](cdn/microsoft.cdn/2022-11-01-preview/types.md#resource-microsoftcdnprofilesendpointsorigingroups2022-11-01-preview)
 * **Link**: [2023-05-01](cdn/microsoft.cdn/2023-05-01/types.md#resource-microsoftcdnprofilesendpointsorigingroups2023-05-01)
 * **Link**: [2023-07-01-preview](cdn/microsoft.cdn/2023-07-01-preview/types.md#resource-microsoftcdnprofilesendpointsorigingroups2023-07-01-preview)
+* **Link**: [2024-02-01](cdn/microsoft.cdn/2024-02-01/types.md#resource-microsoftcdnprofilesendpointsorigingroups2024-02-01)
 
 ### microsoft.cdn/profiles/endpoints/origins
 * **Link**: [2015-06-01](cdn/microsoft.cdn/2015-06-01/types.md#resource-microsoftcdnprofilesendpointsorigins2015-06-01)
@@ -3877,6 +3916,7 @@
 * **Link**: [2022-11-01-preview](cdn/microsoft.cdn/2022-11-01-preview/types.md#resource-microsoftcdnprofilesendpointsorigins2022-11-01-preview)
 * **Link**: [2023-05-01](cdn/microsoft.cdn/2023-05-01/types.md#resource-microsoftcdnprofilesendpointsorigins2023-05-01)
 * **Link**: [2023-07-01-preview](cdn/microsoft.cdn/2023-07-01-preview/types.md#resource-microsoftcdnprofilesendpointsorigins2023-07-01-preview)
+* **Link**: [2024-02-01](cdn/microsoft.cdn/2024-02-01/types.md#resource-microsoftcdnprofilesendpointsorigins2024-02-01)
 
 ### microsoft.cdn/profiles/keygroups
 * **Link**: [2023-07-01-preview](cdn/microsoft.cdn/2023-07-01-preview/types.md#resource-microsoftcdnprofileskeygroups2023-07-01-preview)
@@ -3888,6 +3928,7 @@
 * **Link**: [2022-11-01-preview](cdn/microsoft.cdn/2022-11-01-preview/types.md#resource-microsoftcdnprofilesorigingroups2022-11-01-preview)
 * **Link**: [2023-05-01](cdn/microsoft.cdn/2023-05-01/types.md#resource-microsoftcdnprofilesorigingroups2023-05-01)
 * **Link**: [2023-07-01-preview](cdn/microsoft.cdn/2023-07-01-preview/types.md#resource-microsoftcdnprofilesorigingroups2023-07-01-preview)
+* **Link**: [2024-02-01](cdn/microsoft.cdn/2024-02-01/types.md#resource-microsoftcdnprofilesorigingroups2024-02-01)
 
 ### microsoft.cdn/profiles/origingroups/origins
 * **Link**: [2020-09-01](cdn/microsoft.cdn/2020-09-01/types.md#resource-microsoftcdnprofilesorigingroupsorigins2020-09-01)
@@ -3896,6 +3937,7 @@
 * **Link**: [2022-11-01-preview](cdn/microsoft.cdn/2022-11-01-preview/types.md#resource-microsoftcdnprofilesorigingroupsorigins2022-11-01-preview)
 * **Link**: [2023-05-01](cdn/microsoft.cdn/2023-05-01/types.md#resource-microsoftcdnprofilesorigingroupsorigins2023-05-01)
 * **Link**: [2023-07-01-preview](cdn/microsoft.cdn/2023-07-01-preview/types.md#resource-microsoftcdnprofilesorigingroupsorigins2023-07-01-preview)
+* **Link**: [2024-02-01](cdn/microsoft.cdn/2024-02-01/types.md#resource-microsoftcdnprofilesorigingroupsorigins2024-02-01)
 
 ### microsoft.cdn/profiles/rulesets
 * **Link**: [2020-09-01](cdn/microsoft.cdn/2020-09-01/types.md#resource-microsoftcdnprofilesrulesets2020-09-01)
@@ -3904,6 +3946,7 @@
 * **Link**: [2022-11-01-preview](cdn/microsoft.cdn/2022-11-01-preview/types.md#resource-microsoftcdnprofilesrulesets2022-11-01-preview)
 * **Link**: [2023-05-01](cdn/microsoft.cdn/2023-05-01/types.md#resource-microsoftcdnprofilesrulesets2023-05-01)
 * **Link**: [2023-07-01-preview](cdn/microsoft.cdn/2023-07-01-preview/types.md#resource-microsoftcdnprofilesrulesets2023-07-01-preview)
+* **Link**: [2024-02-01](cdn/microsoft.cdn/2024-02-01/types.md#resource-microsoftcdnprofilesrulesets2024-02-01)
 
 ### microsoft.cdn/profiles/rulesets/rules
 * **Link**: [2020-09-01](cdn/microsoft.cdn/2020-09-01/types.md#resource-microsoftcdnprofilesrulesetsrules2020-09-01)
@@ -3912,6 +3955,7 @@
 * **Link**: [2022-11-01-preview](cdn/microsoft.cdn/2022-11-01-preview/types.md#resource-microsoftcdnprofilesrulesetsrules2022-11-01-preview)
 * **Link**: [2023-05-01](cdn/microsoft.cdn/2023-05-01/types.md#resource-microsoftcdnprofilesrulesetsrules2023-05-01)
 * **Link**: [2023-07-01-preview](cdn/microsoft.cdn/2023-07-01-preview/types.md#resource-microsoftcdnprofilesrulesetsrules2023-07-01-preview)
+* **Link**: [2024-02-01](cdn/microsoft.cdn/2024-02-01/types.md#resource-microsoftcdnprofilesrulesetsrules2024-02-01)
 
 ### microsoft.cdn/profiles/secrets
 * **Link**: [2020-09-01](cdn/microsoft.cdn/2020-09-01/types.md#resource-microsoftcdnprofilessecrets2020-09-01)
@@ -3920,6 +3964,7 @@
 * **Link**: [2022-11-01-preview](cdn/microsoft.cdn/2022-11-01-preview/types.md#resource-microsoftcdnprofilessecrets2022-11-01-preview)
 * **Link**: [2023-05-01](cdn/microsoft.cdn/2023-05-01/types.md#resource-microsoftcdnprofilessecrets2023-05-01)
 * **Link**: [2023-07-01-preview](cdn/microsoft.cdn/2023-07-01-preview/types.md#resource-microsoftcdnprofilessecrets2023-07-01-preview)
+* **Link**: [2024-02-01](cdn/microsoft.cdn/2024-02-01/types.md#resource-microsoftcdnprofilessecrets2024-02-01)
 
 ### microsoft.cdn/profiles/securitypolicies
 * **Link**: [2020-09-01](cdn/microsoft.cdn/2020-09-01/types.md#resource-microsoftcdnprofilessecuritypolicies2020-09-01)
@@ -3928,6 +3973,7 @@
 * **Link**: [2022-11-01-preview](cdn/microsoft.cdn/2022-11-01-preview/types.md#resource-microsoftcdnprofilessecuritypolicies2022-11-01-preview)
 * **Link**: [2023-05-01](cdn/microsoft.cdn/2023-05-01/types.md#resource-microsoftcdnprofilessecuritypolicies2023-05-01)
 * **Link**: [2023-07-01-preview](cdn/microsoft.cdn/2023-07-01-preview/types.md#resource-microsoftcdnprofilessecuritypolicies2023-07-01-preview)
+* **Link**: [2024-02-01](cdn/microsoft.cdn/2024-02-01/types.md#resource-microsoftcdnprofilessecuritypolicies2024-02-01)
 
 ## microsoft.certificateregistration
 ### microsoft.certificateregistration/certificateorders
@@ -4037,6 +4083,13 @@
 * **Link**: [2023-10-27-preview](chaos/microsoft.chaos/2023-10-27-preview/types.md#resource-microsoftchaostargetscapabilities2023-10-27-preview)
 * **Link**: [2023-11-01](chaos/microsoft.chaos/2023-11-01/types.md#resource-microsoftchaostargetscapabilities2023-11-01)
 * **Link**: [2024-01-01](chaos/microsoft.chaos/2024-01-01/types.md#resource-microsoftchaostargetscapabilities2024-01-01)
+
+## microsoft.codesigning
+### microsoft.codesigning/codesigningaccounts
+* **Link**: [2024-02-05-preview](codesigning/microsoft.codesigning/2024-02-05-preview/types.md#resource-microsoftcodesigningcodesigningaccounts2024-02-05-preview)
+
+### microsoft.codesigning/codesigningaccounts/certificateprofiles
+* **Link**: [2024-02-05-preview](codesigning/microsoft.codesigning/2024-02-05-preview/types.md#resource-microsoftcodesigningcodesigningaccountscertificateprofiles2024-02-05-preview)
 
 ## microsoft.cognitiveservices
 ### microsoft.cognitiveservices/accounts
@@ -4179,6 +4232,7 @@
 * **Link**: [2023-03-01](compute/microsoft.compute/2023-03-01/types.md#resource-microsoftcomputeavailabilitysets2023-03-01)
 * **Link**: [2023-07-01](compute/microsoft.compute/2023-07-01/types.md#resource-microsoftcomputeavailabilitysets2023-07-01)
 * **Link**: [2023-09-01](compute/microsoft.compute/2023-09-01/types.md#resource-microsoftcomputeavailabilitysets2023-09-01)
+* **Link**: [2024-03-01](compute/microsoft.compute/2024-03-01/types.md#resource-microsoftcomputeavailabilitysets2024-03-01)
 
 ### microsoft.compute/capacityreservationgroups
 * **Link**: [2021-04-01](compute/microsoft.compute/2021-04-01/types.md#resource-microsoftcomputecapacityreservationgroups2021-04-01)
@@ -4190,6 +4244,7 @@
 * **Link**: [2023-03-01](compute/microsoft.compute/2023-03-01/types.md#resource-microsoftcomputecapacityreservationgroups2023-03-01)
 * **Link**: [2023-07-01](compute/microsoft.compute/2023-07-01/types.md#resource-microsoftcomputecapacityreservationgroups2023-07-01)
 * **Link**: [2023-09-01](compute/microsoft.compute/2023-09-01/types.md#resource-microsoftcomputecapacityreservationgroups2023-09-01)
+* **Link**: [2024-03-01](compute/microsoft.compute/2024-03-01/types.md#resource-microsoftcomputecapacityreservationgroups2024-03-01)
 
 ### microsoft.compute/capacityreservationgroups/capacityreservations
 * **Link**: [2021-04-01](compute/microsoft.compute/2021-04-01/types.md#resource-microsoftcomputecapacityreservationgroupscapacityreservations2021-04-01)
@@ -4201,6 +4256,7 @@
 * **Link**: [2023-03-01](compute/microsoft.compute/2023-03-01/types.md#resource-microsoftcomputecapacityreservationgroupscapacityreservations2023-03-01)
 * **Link**: [2023-07-01](compute/microsoft.compute/2023-07-01/types.md#resource-microsoftcomputecapacityreservationgroupscapacityreservations2023-07-01)
 * **Link**: [2023-09-01](compute/microsoft.compute/2023-09-01/types.md#resource-microsoftcomputecapacityreservationgroupscapacityreservations2023-09-01)
+* **Link**: [2024-03-01](compute/microsoft.compute/2024-03-01/types.md#resource-microsoftcomputecapacityreservationgroupscapacityreservations2024-03-01)
 
 ### microsoft.compute/cloudservices
 * **Link**: [2020-10-01-preview](compute/microsoft.compute/2020-10-01-preview/types.md#resource-microsoftcomputecloudservices2020-10-01-preview)
@@ -4395,6 +4451,7 @@
 * **Link**: [2023-03-01](compute/microsoft.compute/2023-03-01/types.md#resource-microsoftcomputehostgroups2023-03-01)
 * **Link**: [2023-07-01](compute/microsoft.compute/2023-07-01/types.md#resource-microsoftcomputehostgroups2023-07-01)
 * **Link**: [2023-09-01](compute/microsoft.compute/2023-09-01/types.md#resource-microsoftcomputehostgroups2023-09-01)
+* **Link**: [2024-03-01](compute/microsoft.compute/2024-03-01/types.md#resource-microsoftcomputehostgroups2024-03-01)
 
 ### microsoft.compute/hostgroups/hosts
 * **Link**: [2019-03-01](compute/microsoft.compute/2019-03-01/types.md#resource-microsoftcomputehostgroupshosts2019-03-01)
@@ -4412,6 +4469,7 @@
 * **Link**: [2023-03-01](compute/microsoft.compute/2023-03-01/types.md#resource-microsoftcomputehostgroupshosts2023-03-01)
 * **Link**: [2023-07-01](compute/microsoft.compute/2023-07-01/types.md#resource-microsoftcomputehostgroupshosts2023-07-01)
 * **Link**: [2023-09-01](compute/microsoft.compute/2023-09-01/types.md#resource-microsoftcomputehostgroupshosts2023-09-01)
+* **Link**: [2024-03-01](compute/microsoft.compute/2024-03-01/types.md#resource-microsoftcomputehostgroupshosts2024-03-01)
 
 ### microsoft.compute/images
 * **Link**: [2016-04-30-preview](compute/microsoft.compute/2016-04-30-preview/types.md#resource-microsoftcomputeimages2016-04-30-preview)
@@ -4435,6 +4493,10 @@
 * **Link**: [2023-03-01](compute/microsoft.compute/2023-03-01/types.md#resource-microsoftcomputeimages2023-03-01)
 * **Link**: [2023-07-01](compute/microsoft.compute/2023-07-01/types.md#resource-microsoftcomputeimages2023-07-01)
 * **Link**: [2023-09-01](compute/microsoft.compute/2023-09-01/types.md#resource-microsoftcomputeimages2023-09-01)
+* **Link**: [2024-03-01](compute/microsoft.compute/2024-03-01/types.md#resource-microsoftcomputeimages2024-03-01)
+
+### microsoft.compute/locations/diagnostics
+* **Link**: [2024-03-01-preview](compute/microsoft.compute/2024-03-01-preview/types.md#resource-microsoftcomputelocationsdiagnostics2024-03-01-preview)
 
 ### microsoft.compute/locations/edgezones/publishers/artifacttypes/offers/skus/versions
 * **Link**: [2020-12-01](compute/microsoft.compute/2020-12-01/types.md#resource-microsoftcomputelocationsedgezonespublishersartifacttypesoffersskusversions2020-12-01)
@@ -4488,6 +4550,7 @@
 * **Link**: [2023-03-01](compute/microsoft.compute/2023-03-01/types.md#resource-microsoftcomputelocationspublishersartifacttypestypesversions2023-03-01)
 * **Link**: [2023-07-01](compute/microsoft.compute/2023-07-01/types.md#resource-microsoftcomputelocationspublishersartifacttypestypesversions2023-07-01)
 * **Link**: [2023-09-01](compute/microsoft.compute/2023-09-01/types.md#resource-microsoftcomputelocationspublishersartifacttypestypesversions2023-09-01)
+* **Link**: [2024-03-01](compute/microsoft.compute/2024-03-01/types.md#resource-microsoftcomputelocationspublishersartifacttypestypesversions2024-03-01)
 
 ### microsoft.compute/proximityplacementgroups
 * **Link**: [2018-04-01](compute/microsoft.compute/2018-04-01/types.md#resource-microsoftcomputeproximityplacementgroups2018-04-01)
@@ -4508,6 +4571,7 @@
 * **Link**: [2023-03-01](compute/microsoft.compute/2023-03-01/types.md#resource-microsoftcomputeproximityplacementgroups2023-03-01)
 * **Link**: [2023-07-01](compute/microsoft.compute/2023-07-01/types.md#resource-microsoftcomputeproximityplacementgroups2023-07-01)
 * **Link**: [2023-09-01](compute/microsoft.compute/2023-09-01/types.md#resource-microsoftcomputeproximityplacementgroups2023-09-01)
+* **Link**: [2024-03-01](compute/microsoft.compute/2024-03-01/types.md#resource-microsoftcomputeproximityplacementgroups2024-03-01)
 
 ### microsoft.compute/restorepointcollections
 * **Link**: [2021-03-01](compute/microsoft.compute/2021-03-01/types.md#resource-microsoftcomputerestorepointcollections2021-03-01)
@@ -4520,6 +4584,7 @@
 * **Link**: [2023-03-01](compute/microsoft.compute/2023-03-01/types.md#resource-microsoftcomputerestorepointcollections2023-03-01)
 * **Link**: [2023-07-01](compute/microsoft.compute/2023-07-01/types.md#resource-microsoftcomputerestorepointcollections2023-07-01)
 * **Link**: [2023-09-01](compute/microsoft.compute/2023-09-01/types.md#resource-microsoftcomputerestorepointcollections2023-09-01)
+* **Link**: [2024-03-01](compute/microsoft.compute/2024-03-01/types.md#resource-microsoftcomputerestorepointcollections2024-03-01)
 
 ### microsoft.compute/restorepointcollections/restorepoints
 * **Link**: [2021-03-01](compute/microsoft.compute/2021-03-01/types.md#resource-microsoftcomputerestorepointcollectionsrestorepoints2021-03-01)
@@ -4532,6 +4597,7 @@
 * **Link**: [2023-03-01](compute/microsoft.compute/2023-03-01/types.md#resource-microsoftcomputerestorepointcollectionsrestorepoints2023-03-01)
 * **Link**: [2023-07-01](compute/microsoft.compute/2023-07-01/types.md#resource-microsoftcomputerestorepointcollectionsrestorepoints2023-07-01)
 * **Link**: [2023-09-01](compute/microsoft.compute/2023-09-01/types.md#resource-microsoftcomputerestorepointcollectionsrestorepoints2023-09-01)
+* **Link**: [2024-03-01](compute/microsoft.compute/2024-03-01/types.md#resource-microsoftcomputerestorepointcollectionsrestorepoints2024-03-01)
 
 ### microsoft.compute/snapshots
 * **Link**: [2016-04-30-preview](compute/microsoft.compute/2016-04-30-preview/types.md#resource-microsoftcomputesnapshots2016-04-30-preview)
@@ -4569,6 +4635,7 @@
 * **Link**: [2023-03-01](compute/microsoft.compute/2023-03-01/types.md#resource-microsoftcomputesshpublickeys2023-03-01)
 * **Link**: [2023-07-01](compute/microsoft.compute/2023-07-01/types.md#resource-microsoftcomputesshpublickeys2023-07-01)
 * **Link**: [2023-09-01](compute/microsoft.compute/2023-09-01/types.md#resource-microsoftcomputesshpublickeys2023-09-01)
+* **Link**: [2024-03-01](compute/microsoft.compute/2024-03-01/types.md#resource-microsoftcomputesshpublickeys2024-03-01)
 
 ### microsoft.compute/virtualmachines
 * **Link**: [2015-06-15](compute/microsoft.compute/2015-06-15/types.md#resource-microsoftcomputevirtualmachines2015-06-15)
@@ -4594,6 +4661,7 @@
 * **Link**: [2023-03-01](compute/microsoft.compute/2023-03-01/types.md#resource-microsoftcomputevirtualmachines2023-03-01)
 * **Link**: [2023-07-01](compute/microsoft.compute/2023-07-01/types.md#resource-microsoftcomputevirtualmachines2023-07-01)
 * **Link**: [2023-09-01](compute/microsoft.compute/2023-09-01/types.md#resource-microsoftcomputevirtualmachines2023-09-01)
+* **Link**: [2024-03-01](compute/microsoft.compute/2024-03-01/types.md#resource-microsoftcomputevirtualmachines2024-03-01)
 
 ### microsoft.compute/virtualmachines/extensions
 * **Link**: [2015-06-15](compute/microsoft.compute/2015-06-15/types.md#resource-microsoftcomputevirtualmachinesextensions2015-06-15)
@@ -4619,6 +4687,7 @@
 * **Link**: [2023-03-01](compute/microsoft.compute/2023-03-01/types.md#resource-microsoftcomputevirtualmachinesextensions2023-03-01)
 * **Link**: [2023-07-01](compute/microsoft.compute/2023-07-01/types.md#resource-microsoftcomputevirtualmachinesextensions2023-07-01)
 * **Link**: [2023-09-01](compute/microsoft.compute/2023-09-01/types.md#resource-microsoftcomputevirtualmachinesextensions2023-09-01)
+* **Link**: [2024-03-01](compute/microsoft.compute/2024-03-01/types.md#resource-microsoftcomputevirtualmachinesextensions2024-03-01)
 
 ### microsoft.compute/virtualmachines/runcommands
 * **Link**: [2020-06-01](compute/microsoft.compute/2020-06-01/types.md#resource-microsoftcomputevirtualmachinesruncommands2020-06-01)
@@ -4633,6 +4702,7 @@
 * **Link**: [2023-03-01](compute/microsoft.compute/2023-03-01/types.md#resource-microsoftcomputevirtualmachinesruncommands2023-03-01)
 * **Link**: [2023-07-01](compute/microsoft.compute/2023-07-01/types.md#resource-microsoftcomputevirtualmachinesruncommands2023-07-01)
 * **Link**: [2023-09-01](compute/microsoft.compute/2023-09-01/types.md#resource-microsoftcomputevirtualmachinesruncommands2023-09-01)
+* **Link**: [2024-03-01](compute/microsoft.compute/2024-03-01/types.md#resource-microsoftcomputevirtualmachinesruncommands2024-03-01)
 
 ### microsoft.compute/virtualmachinescalesets
 * **Link**: [2015-06-15](compute/microsoft.compute/2015-06-15/types.md#resource-microsoftcomputevirtualmachinescalesets2015-06-15)
@@ -4658,6 +4728,7 @@
 * **Link**: [2023-03-01](compute/microsoft.compute/2023-03-01/types.md#resource-microsoftcomputevirtualmachinescalesets2023-03-01)
 * **Link**: [2023-07-01](compute/microsoft.compute/2023-07-01/types.md#resource-microsoftcomputevirtualmachinescalesets2023-07-01)
 * **Link**: [2023-09-01](compute/microsoft.compute/2023-09-01/types.md#resource-microsoftcomputevirtualmachinescalesets2023-09-01)
+* **Link**: [2024-03-01](compute/microsoft.compute/2024-03-01/types.md#resource-microsoftcomputevirtualmachinescalesets2024-03-01)
 
 ### microsoft.compute/virtualmachinescalesets/extensions
 * **Link**: [2017-03-30](compute/microsoft.compute/2017-03-30/types.md#resource-microsoftcomputevirtualmachinescalesetsextensions2017-03-30)
@@ -4680,6 +4751,7 @@
 * **Link**: [2023-03-01](compute/microsoft.compute/2023-03-01/types.md#resource-microsoftcomputevirtualmachinescalesetsextensions2023-03-01)
 * **Link**: [2023-07-01](compute/microsoft.compute/2023-07-01/types.md#resource-microsoftcomputevirtualmachinescalesetsextensions2023-07-01)
 * **Link**: [2023-09-01](compute/microsoft.compute/2023-09-01/types.md#resource-microsoftcomputevirtualmachinescalesetsextensions2023-09-01)
+* **Link**: [2024-03-01](compute/microsoft.compute/2024-03-01/types.md#resource-microsoftcomputevirtualmachinescalesetsextensions2024-03-01)
 
 ### microsoft.compute/virtualmachinescalesets/rollingupgrades
 * **Link**: [2017-03-30](compute/microsoft.compute/2017-03-30/types.md#resource-microsoftcomputevirtualmachinescalesetsrollingupgrades2017-03-30)
@@ -4702,6 +4774,7 @@
 * **Link**: [2023-03-01](compute/microsoft.compute/2023-03-01/types.md#resource-microsoftcomputevirtualmachinescalesetsrollingupgrades2023-03-01)
 * **Link**: [2023-07-01](compute/microsoft.compute/2023-07-01/types.md#resource-microsoftcomputevirtualmachinescalesetsrollingupgrades2023-07-01)
 * **Link**: [2023-09-01](compute/microsoft.compute/2023-09-01/types.md#resource-microsoftcomputevirtualmachinescalesetsrollingupgrades2023-09-01)
+* **Link**: [2024-03-01](compute/microsoft.compute/2024-03-01/types.md#resource-microsoftcomputevirtualmachinescalesetsrollingupgrades2024-03-01)
 
 ### microsoft.compute/virtualmachinescalesets/virtualmachines
 * **Link**: [2015-06-15](compute/microsoft.compute/2015-06-15/types.md#resource-microsoftcomputevirtualmachinescalesetsvirtualmachines2015-06-15)
@@ -4727,6 +4800,7 @@
 * **Link**: [2023-03-01](compute/microsoft.compute/2023-03-01/types.md#resource-microsoftcomputevirtualmachinescalesetsvirtualmachines2023-03-01)
 * **Link**: [2023-07-01](compute/microsoft.compute/2023-07-01/types.md#resource-microsoftcomputevirtualmachinescalesetsvirtualmachines2023-07-01)
 * **Link**: [2023-09-01](compute/microsoft.compute/2023-09-01/types.md#resource-microsoftcomputevirtualmachinescalesetsvirtualmachines2023-09-01)
+* **Link**: [2024-03-01](compute/microsoft.compute/2024-03-01/types.md#resource-microsoftcomputevirtualmachinescalesetsvirtualmachines2024-03-01)
 
 ### microsoft.compute/virtualmachinescalesets/virtualmachines/extensions
 * **Link**: [2019-07-01](compute/microsoft.compute/2019-07-01/types.md#resource-microsoftcomputevirtualmachinescalesetsvirtualmachinesextensions2019-07-01)
@@ -4743,6 +4817,7 @@
 * **Link**: [2023-03-01](compute/microsoft.compute/2023-03-01/types.md#resource-microsoftcomputevirtualmachinescalesetsvirtualmachinesextensions2023-03-01)
 * **Link**: [2023-07-01](compute/microsoft.compute/2023-07-01/types.md#resource-microsoftcomputevirtualmachinescalesetsvirtualmachinesextensions2023-07-01)
 * **Link**: [2023-09-01](compute/microsoft.compute/2023-09-01/types.md#resource-microsoftcomputevirtualmachinescalesetsvirtualmachinesextensions2023-09-01)
+* **Link**: [2024-03-01](compute/microsoft.compute/2024-03-01/types.md#resource-microsoftcomputevirtualmachinescalesetsvirtualmachinesextensions2024-03-01)
 
 ### microsoft.compute/virtualmachinescalesets/virtualmachines/networkinterfaces
 * **Link**: [2015-05-01-preview](network/microsoft.compute/2015-05-01-preview/types.md#resource-microsoftcomputevirtualmachinescalesetsvirtualmachinesnetworkinterfaces2015-05-01-preview)
@@ -4900,6 +4975,7 @@
 * **Link**: [2023-03-01](compute/microsoft.compute/2023-03-01/types.md#resource-microsoftcomputevirtualmachinescalesetsvirtualmachinesruncommands2023-03-01)
 * **Link**: [2023-07-01](compute/microsoft.compute/2023-07-01/types.md#resource-microsoftcomputevirtualmachinescalesetsvirtualmachinesruncommands2023-07-01)
 * **Link**: [2023-09-01](compute/microsoft.compute/2023-09-01/types.md#resource-microsoftcomputevirtualmachinescalesetsvirtualmachinesruncommands2023-09-01)
+* **Link**: [2024-03-01](compute/microsoft.compute/2024-03-01/types.md#resource-microsoftcomputevirtualmachinescalesetsvirtualmachinesruncommands2024-03-01)
 
 ## microsoft.compute.admin
 ### microsoft.compute.admin/locations/artifacttypes/publishers/offers/skus/versions
@@ -5395,6 +5471,7 @@
 * **Link**: [2023-06-15-preview](containerservice/microsoft.containerservice/2023-06-15-preview/types.md#resource-microsoftcontainerservicefleets2023-06-15-preview)
 * **Link**: [2023-08-15-preview](containerservice/microsoft.containerservice/2023-08-15-preview/types.md#resource-microsoftcontainerservicefleets2023-08-15-preview)
 * **Link**: [2023-10-15](containerservice/microsoft.containerservice/2023-10-15/types.md#resource-microsoftcontainerservicefleets2023-10-15)
+* **Link**: [2024-02-02-preview](containerservice/microsoft.containerservice/2024-02-02-preview/types.md#resource-microsoftcontainerservicefleets2024-02-02-preview)
 
 ### microsoft.containerservice/fleets/members
 * **Link**: [2022-06-02-preview](containerservice/microsoft.containerservice/2022-06-02-preview/types.md#resource-microsoftcontainerservicefleetsmembers2022-06-02-preview)
@@ -5404,16 +5481,19 @@
 * **Link**: [2023-06-15-preview](containerservice/microsoft.containerservice/2023-06-15-preview/types.md#resource-microsoftcontainerservicefleetsmembers2023-06-15-preview)
 * **Link**: [2023-08-15-preview](containerservice/microsoft.containerservice/2023-08-15-preview/types.md#resource-microsoftcontainerservicefleetsmembers2023-08-15-preview)
 * **Link**: [2023-10-15](containerservice/microsoft.containerservice/2023-10-15/types.md#resource-microsoftcontainerservicefleetsmembers2023-10-15)
+* **Link**: [2024-02-02-preview](containerservice/microsoft.containerservice/2024-02-02-preview/types.md#resource-microsoftcontainerservicefleetsmembers2024-02-02-preview)
 
 ### microsoft.containerservice/fleets/updateruns
 * **Link**: [2023-03-15-preview](containerservice/microsoft.containerservice/2023-03-15-preview/types.md#resource-microsoftcontainerservicefleetsupdateruns2023-03-15-preview)
 * **Link**: [2023-06-15-preview](containerservice/microsoft.containerservice/2023-06-15-preview/types.md#resource-microsoftcontainerservicefleetsupdateruns2023-06-15-preview)
 * **Link**: [2023-08-15-preview](containerservice/microsoft.containerservice/2023-08-15-preview/types.md#resource-microsoftcontainerservicefleetsupdateruns2023-08-15-preview)
 * **Link**: [2023-10-15](containerservice/microsoft.containerservice/2023-10-15/types.md#resource-microsoftcontainerservicefleetsupdateruns2023-10-15)
+* **Link**: [2024-02-02-preview](containerservice/microsoft.containerservice/2024-02-02-preview/types.md#resource-microsoftcontainerservicefleetsupdateruns2024-02-02-preview)
 
 ### microsoft.containerservice/fleets/updatestrategies
 * **Link**: [2023-08-15-preview](containerservice/microsoft.containerservice/2023-08-15-preview/types.md#resource-microsoftcontainerservicefleetsupdatestrategies2023-08-15-preview)
 * **Link**: [2023-10-15](containerservice/microsoft.containerservice/2023-10-15/types.md#resource-microsoftcontainerservicefleetsupdatestrategies2023-10-15)
+* **Link**: [2024-02-02-preview](containerservice/microsoft.containerservice/2024-02-02-preview/types.md#resource-microsoftcontainerservicefleetsupdatestrategies2024-02-02-preview)
 
 ### microsoft.containerservice/locations/guardrailsversions
 * **Link**: [2023-07-02-preview](containerservice/microsoft.containerservice/2023-07-02-preview/types.md#resource-microsoftcontainerservicelocationsguardrailsversions2023-07-02-preview)
@@ -6596,6 +6676,7 @@
 * **Link**: [2023-08-01-preview](dataprotection/microsoft.dataprotection/2023-08-01-preview/types.md#resource-microsoftdataprotectionbackupvaults2023-08-01-preview)
 * **Link**: [2023-11-01](dataprotection/microsoft.dataprotection/2023-11-01/types.md#resource-microsoftdataprotectionbackupvaults2023-11-01)
 * **Link**: [2023-12-01](dataprotection/microsoft.dataprotection/2023-12-01/types.md#resource-microsoftdataprotectionbackupvaults2023-12-01)
+* **Link**: [2024-02-01-preview](dataprotection/microsoft.dataprotection/2024-02-01-preview/types.md#resource-microsoftdataprotectionbackupvaults2024-02-01-preview)
 
 ### microsoft.dataprotection/backupvaults/backupinstances
 * **Link**: [2021-01-01](dataprotection/microsoft.dataprotection/2021-01-01/types.md#resource-microsoftdataprotectionbackupvaultsbackupinstances2021-01-01)
@@ -6621,6 +6702,7 @@
 * **Link**: [2023-08-01-preview](dataprotection/microsoft.dataprotection/2023-08-01-preview/types.md#resource-microsoftdataprotectionbackupvaultsbackupinstances2023-08-01-preview)
 * **Link**: [2023-11-01](dataprotection/microsoft.dataprotection/2023-11-01/types.md#resource-microsoftdataprotectionbackupvaultsbackupinstances2023-11-01)
 * **Link**: [2023-12-01](dataprotection/microsoft.dataprotection/2023-12-01/types.md#resource-microsoftdataprotectionbackupvaultsbackupinstances2023-12-01)
+* **Link**: [2024-02-01-preview](dataprotection/microsoft.dataprotection/2024-02-01-preview/types.md#resource-microsoftdataprotectionbackupvaultsbackupinstances2024-02-01-preview)
 
 ### microsoft.dataprotection/backupvaults/backupinstances/operationresults
 * **Link**: [2022-01-01](dataprotection/microsoft.dataprotection/2022-01-01/types.md#resource-microsoftdataprotectionbackupvaultsbackupinstancesoperationresults2022-01-01)
@@ -6640,6 +6722,7 @@
 * **Link**: [2023-08-01-preview](dataprotection/microsoft.dataprotection/2023-08-01-preview/types.md#resource-microsoftdataprotectionbackupvaultsbackupinstancesoperationresults2023-08-01-preview)
 * **Link**: [2023-11-01](dataprotection/microsoft.dataprotection/2023-11-01/types.md#resource-microsoftdataprotectionbackupvaultsbackupinstancesoperationresults2023-11-01)
 * **Link**: [2023-12-01](dataprotection/microsoft.dataprotection/2023-12-01/types.md#resource-microsoftdataprotectionbackupvaultsbackupinstancesoperationresults2023-12-01)
+* **Link**: [2024-02-01-preview](dataprotection/microsoft.dataprotection/2024-02-01-preview/types.md#resource-microsoftdataprotectionbackupvaultsbackupinstancesoperationresults2024-02-01-preview)
 
 ### microsoft.dataprotection/backupvaults/backupinstances/recoverypoints
 * **Link**: [2021-01-01](dataprotection/microsoft.dataprotection/2021-01-01/types.md#resource-microsoftdataprotectionbackupvaultsbackupinstancesrecoverypoints2021-01-01)
@@ -6665,6 +6748,7 @@
 * **Link**: [2023-08-01-preview](dataprotection/microsoft.dataprotection/2023-08-01-preview/types.md#resource-microsoftdataprotectionbackupvaultsbackupinstancesrecoverypoints2023-08-01-preview)
 * **Link**: [2023-11-01](dataprotection/microsoft.dataprotection/2023-11-01/types.md#resource-microsoftdataprotectionbackupvaultsbackupinstancesrecoverypoints2023-11-01)
 * **Link**: [2023-12-01](dataprotection/microsoft.dataprotection/2023-12-01/types.md#resource-microsoftdataprotectionbackupvaultsbackupinstancesrecoverypoints2023-12-01)
+* **Link**: [2024-02-01-preview](dataprotection/microsoft.dataprotection/2024-02-01-preview/types.md#resource-microsoftdataprotectionbackupvaultsbackupinstancesrecoverypoints2024-02-01-preview)
 
 ### microsoft.dataprotection/backupvaults/backupjobs
 * **Link**: [2021-01-01](dataprotection/microsoft.dataprotection/2021-01-01/types.md#resource-microsoftdataprotectionbackupvaultsbackupjobs2021-01-01)
@@ -6690,6 +6774,7 @@
 * **Link**: [2023-08-01-preview](dataprotection/microsoft.dataprotection/2023-08-01-preview/types.md#resource-microsoftdataprotectionbackupvaultsbackupjobs2023-08-01-preview)
 * **Link**: [2023-11-01](dataprotection/microsoft.dataprotection/2023-11-01/types.md#resource-microsoftdataprotectionbackupvaultsbackupjobs2023-11-01)
 * **Link**: [2023-12-01](dataprotection/microsoft.dataprotection/2023-12-01/types.md#resource-microsoftdataprotectionbackupvaultsbackupjobs2023-12-01)
+* **Link**: [2024-02-01-preview](dataprotection/microsoft.dataprotection/2024-02-01-preview/types.md#resource-microsoftdataprotectionbackupvaultsbackupjobs2024-02-01-preview)
 
 ### microsoft.dataprotection/backupvaults/backuppolicies
 * **Link**: [2021-01-01](dataprotection/microsoft.dataprotection/2021-01-01/types.md#resource-microsoftdataprotectionbackupvaultsbackuppolicies2021-01-01)
@@ -6715,6 +6800,7 @@
 * **Link**: [2023-08-01-preview](dataprotection/microsoft.dataprotection/2023-08-01-preview/types.md#resource-microsoftdataprotectionbackupvaultsbackuppolicies2023-08-01-preview)
 * **Link**: [2023-11-01](dataprotection/microsoft.dataprotection/2023-11-01/types.md#resource-microsoftdataprotectionbackupvaultsbackuppolicies2023-11-01)
 * **Link**: [2023-12-01](dataprotection/microsoft.dataprotection/2023-12-01/types.md#resource-microsoftdataprotectionbackupvaultsbackuppolicies2023-12-01)
+* **Link**: [2024-02-01-preview](dataprotection/microsoft.dataprotection/2024-02-01-preview/types.md#resource-microsoftdataprotectionbackupvaultsbackuppolicies2024-02-01-preview)
 
 ### microsoft.dataprotection/backupvaults/backupresourceguardproxies
 * **Link**: [2022-09-01-preview](dataprotection/microsoft.dataprotection/2022-09-01-preview/types.md#resource-microsoftdataprotectionbackupvaultsbackupresourceguardproxies2022-09-01-preview)
@@ -6727,6 +6813,7 @@
 * **Link**: [2023-08-01-preview](dataprotection/microsoft.dataprotection/2023-08-01-preview/types.md#resource-microsoftdataprotectionbackupvaultsbackupresourceguardproxies2023-08-01-preview)
 * **Link**: [2023-11-01](dataprotection/microsoft.dataprotection/2023-11-01/types.md#resource-microsoftdataprotectionbackupvaultsbackupresourceguardproxies2023-11-01)
 * **Link**: [2023-12-01](dataprotection/microsoft.dataprotection/2023-12-01/types.md#resource-microsoftdataprotectionbackupvaultsbackupresourceguardproxies2023-12-01)
+* **Link**: [2024-02-01-preview](dataprotection/microsoft.dataprotection/2024-02-01-preview/types.md#resource-microsoftdataprotectionbackupvaultsbackupresourceguardproxies2024-02-01-preview)
 
 ### microsoft.dataprotection/backupvaults/deletedbackupinstances
 * **Link**: [2022-09-01-preview](dataprotection/microsoft.dataprotection/2022-09-01-preview/types.md#resource-microsoftdataprotectionbackupvaultsdeletedbackupinstances2022-09-01-preview)
@@ -6740,6 +6827,7 @@
 * **Link**: [2023-08-01-preview](dataprotection/microsoft.dataprotection/2023-08-01-preview/types.md#resource-microsoftdataprotectionbackupvaultsdeletedbackupinstances2023-08-01-preview)
 * **Link**: [2023-11-01](dataprotection/microsoft.dataprotection/2023-11-01/types.md#resource-microsoftdataprotectionbackupvaultsdeletedbackupinstances2023-11-01)
 * **Link**: [2023-12-01](dataprotection/microsoft.dataprotection/2023-12-01/types.md#resource-microsoftdataprotectionbackupvaultsdeletedbackupinstances2023-12-01)
+* **Link**: [2024-02-01-preview](dataprotection/microsoft.dataprotection/2024-02-01-preview/types.md#resource-microsoftdataprotectionbackupvaultsdeletedbackupinstances2024-02-01-preview)
 
 ### microsoft.dataprotection/backupvaults/operationresults
 * **Link**: [2021-01-01](dataprotection/microsoft.dataprotection/2021-01-01/types.md#resource-microsoftdataprotectionbackupvaultsoperationresults2021-01-01)
@@ -6765,6 +6853,7 @@
 * **Link**: [2023-08-01-preview](dataprotection/microsoft.dataprotection/2023-08-01-preview/types.md#resource-microsoftdataprotectionbackupvaultsoperationresults2023-08-01-preview)
 * **Link**: [2023-11-01](dataprotection/microsoft.dataprotection/2023-11-01/types.md#resource-microsoftdataprotectionbackupvaultsoperationresults2023-11-01)
 * **Link**: [2023-12-01](dataprotection/microsoft.dataprotection/2023-12-01/types.md#resource-microsoftdataprotectionbackupvaultsoperationresults2023-12-01)
+* **Link**: [2024-02-01-preview](dataprotection/microsoft.dataprotection/2024-02-01-preview/types.md#resource-microsoftdataprotectionbackupvaultsoperationresults2024-02-01-preview)
 
 ### microsoft.dataprotection/resourceguards
 * **Link**: [2021-07-01](dataprotection/microsoft.dataprotection/2021-07-01/types.md#resource-microsoftdataprotectionresourceguards2021-07-01)
@@ -6787,6 +6876,7 @@
 * **Link**: [2023-08-01-preview](dataprotection/microsoft.dataprotection/2023-08-01-preview/types.md#resource-microsoftdataprotectionresourceguards2023-08-01-preview)
 * **Link**: [2023-11-01](dataprotection/microsoft.dataprotection/2023-11-01/types.md#resource-microsoftdataprotectionresourceguards2023-11-01)
 * **Link**: [2023-12-01](dataprotection/microsoft.dataprotection/2023-12-01/types.md#resource-microsoftdataprotectionresourceguards2023-12-01)
+* **Link**: [2024-02-01-preview](dataprotection/microsoft.dataprotection/2024-02-01-preview/types.md#resource-microsoftdataprotectionresourceguards2024-02-01-preview)
 
 ## microsoft.datareplication
 ### microsoft.datareplication/replicationfabrics
@@ -6942,6 +7032,7 @@
 * **Link**: [2023-06-30](mysql/microsoft.dbformysql/2023-06-30/types.md#resource-microsoftdbformysqlflexibleservers2023-06-30)
 * **Link**: [2023-10-01-preview](mysql/microsoft.dbformysql/2023-10-01-preview/types.md#resource-microsoftdbformysqlflexibleservers2023-10-01-preview)
 * **Link**: [2023-12-01-preview](mysql/microsoft.dbformysql/2023-12-01-preview/types.md#resource-microsoftdbformysqlflexibleservers2023-12-01-preview)
+* **Link**: [2023-12-30](mysql/microsoft.dbformysql/2023-12-30/types.md#resource-microsoftdbformysqlflexibleservers2023-12-30)
 
 ### microsoft.dbformysql/flexibleservers/administrators
 * **Link**: [2021-12-01-preview](mysql/microsoft.dbformysql/2021-12-01-preview/types.md#resource-microsoftdbformysqlflexibleserversadministrators2021-12-01-preview)
@@ -6952,6 +7043,7 @@
 ### microsoft.dbformysql/flexibleservers/advancedthreatprotectionsettings
 * **Link**: [2023-10-01-preview](mysql/microsoft.dbformysql/2023-10-01-preview/types.md#resource-microsoftdbformysqlflexibleserversadvancedthreatprotectionsettings2023-10-01-preview)
 * **Link**: [2023-12-01-preview](mysql/microsoft.dbformysql/2023-12-01-preview/types.md#resource-microsoftdbformysqlflexibleserversadvancedthreatprotectionsettings2023-12-01-preview)
+* **Link**: [2023-12-30](mysql/microsoft.dbformysql/2023-12-30/types.md#resource-microsoftdbformysqlflexibleserversadvancedthreatprotectionsettings2023-12-30)
 
 ### microsoft.dbformysql/flexibleservers/backups
 * **Link**: [2021-05-01](mysql/microsoft.dbformysql/2021-05-01/types.md#resource-microsoftdbformysqlflexibleserversbackups2021-05-01)
@@ -7011,6 +7103,7 @@
 * **Link**: [2023-06-01-preview](mysql/microsoft.dbformysql/2023-06-01-preview/types.md#resource-microsoftdbformysqllocationscapabilitysets2023-06-01-preview)
 * **Link**: [2023-06-30](mysql/microsoft.dbformysql/2023-06-30/types.md#resource-microsoftdbformysqllocationscapabilitysets2023-06-30)
 * **Link**: [2023-12-01-preview](mysql/microsoft.dbformysql/2023-12-01-preview/types.md#resource-microsoftdbformysqllocationscapabilitysets2023-12-01-preview)
+* **Link**: [2023-12-30](mysql/microsoft.dbformysql/2023-12-30/types.md#resource-microsoftdbformysqllocationscapabilitysets2023-12-30)
 
 ### microsoft.dbformysql/servers
 * **Link**: [2017-12-01](mysql/microsoft.dbformysql/2017-12-01/types.md#resource-microsoftdbformysqlservers2017-12-01)
@@ -7074,15 +7167,18 @@
 * **Link**: [2022-12-01](postgresql/microsoft.dbforpostgresql/2022-12-01/types.md#resource-microsoftdbforpostgresqlflexibleservers2022-12-01)
 * **Link**: [2023-03-01-preview](postgresql/microsoft.dbforpostgresql/2023-03-01-preview/types.md#resource-microsoftdbforpostgresqlflexibleservers2023-03-01-preview)
 * **Link**: [2023-06-01-preview](postgresql/microsoft.dbforpostgresql/2023-06-01-preview/types.md#resource-microsoftdbforpostgresqlflexibleservers2023-06-01-preview)
+* **Link**: [2023-12-01-preview](postgresql/microsoft.dbforpostgresql/2023-12-01-preview/types.md#resource-microsoftdbforpostgresqlflexibleservers2023-12-01-preview)
 
 ### microsoft.dbforpostgresql/flexibleservers/administrators
 * **Link**: [2022-03-08-preview](postgresql/microsoft.dbforpostgresql/2022-03-08-preview/types.md#resource-microsoftdbforpostgresqlflexibleserversadministrators2022-03-08-preview)
 * **Link**: [2022-12-01](postgresql/microsoft.dbforpostgresql/2022-12-01/types.md#resource-microsoftdbforpostgresqlflexibleserversadministrators2022-12-01)
 * **Link**: [2023-03-01-preview](postgresql/microsoft.dbforpostgresql/2023-03-01-preview/types.md#resource-microsoftdbforpostgresqlflexibleserversadministrators2023-03-01-preview)
 * **Link**: [2023-06-01-preview](postgresql/microsoft.dbforpostgresql/2023-06-01-preview/types.md#resource-microsoftdbforpostgresqlflexibleserversadministrators2023-06-01-preview)
+* **Link**: [2023-12-01-preview](postgresql/microsoft.dbforpostgresql/2023-12-01-preview/types.md#resource-microsoftdbforpostgresqlflexibleserversadministrators2023-12-01-preview)
 
 ### microsoft.dbforpostgresql/flexibleservers/advancedthreatprotectionsettings
 * **Link**: [2023-06-01-preview](postgresql/microsoft.dbforpostgresql/2023-06-01-preview/types.md#resource-microsoftdbforpostgresqlflexibleserversadvancedthreatprotectionsettings2023-06-01-preview)
+* **Link**: [2023-12-01-preview](postgresql/microsoft.dbforpostgresql/2023-12-01-preview/types.md#resource-microsoftdbforpostgresqlflexibleserversadvancedthreatprotectionsettings2023-12-01-preview)
 
 ### microsoft.dbforpostgresql/flexibleservers/advisors
 * **Link**: [2021-06-01-preview](postgresql/microsoft.dbforpostgresql/2021-06-01-preview/types.md#resource-microsoftdbforpostgresqlflexibleserversadvisors2021-06-01-preview)
@@ -7093,6 +7189,7 @@
 * **Link**: [2022-12-01](postgresql/microsoft.dbforpostgresql/2022-12-01/types.md#resource-microsoftdbforpostgresqlflexibleserversbackups2022-12-01)
 * **Link**: [2023-03-01-preview](postgresql/microsoft.dbforpostgresql/2023-03-01-preview/types.md#resource-microsoftdbforpostgresqlflexibleserversbackups2023-03-01-preview)
 * **Link**: [2023-06-01-preview](postgresql/microsoft.dbforpostgresql/2023-06-01-preview/types.md#resource-microsoftdbforpostgresqlflexibleserversbackups2023-06-01-preview)
+* **Link**: [2023-12-01-preview](postgresql/microsoft.dbforpostgresql/2023-12-01-preview/types.md#resource-microsoftdbforpostgresqlflexibleserversbackups2023-12-01-preview)
 
 ### microsoft.dbforpostgresql/flexibleservers/configurations
 * **Link**: [2020-02-14-preview](postgresql/microsoft.dbforpostgresql/2020-02-14-preview/types.md#resource-microsoftdbforpostgresqlflexibleserversconfigurations2020-02-14-preview)
@@ -7103,6 +7200,7 @@
 * **Link**: [2022-12-01](postgresql/microsoft.dbforpostgresql/2022-12-01/types.md#resource-microsoftdbforpostgresqlflexibleserversconfigurations2022-12-01)
 * **Link**: [2023-03-01-preview](postgresql/microsoft.dbforpostgresql/2023-03-01-preview/types.md#resource-microsoftdbforpostgresqlflexibleserversconfigurations2023-03-01-preview)
 * **Link**: [2023-06-01-preview](postgresql/microsoft.dbforpostgresql/2023-06-01-preview/types.md#resource-microsoftdbforpostgresqlflexibleserversconfigurations2023-06-01-preview)
+* **Link**: [2023-12-01-preview](postgresql/microsoft.dbforpostgresql/2023-12-01-preview/types.md#resource-microsoftdbforpostgresqlflexibleserversconfigurations2023-12-01-preview)
 
 ### microsoft.dbforpostgresql/flexibleservers/databases
 * **Link**: [2020-11-05-preview](postgresql/microsoft.dbforpostgresql/2020-11-05-preview/types.md#resource-microsoftdbforpostgresqlflexibleserversdatabases2020-11-05-preview)
@@ -7113,6 +7211,7 @@
 * **Link**: [2022-12-01](postgresql/microsoft.dbforpostgresql/2022-12-01/types.md#resource-microsoftdbforpostgresqlflexibleserversdatabases2022-12-01)
 * **Link**: [2023-03-01-preview](postgresql/microsoft.dbforpostgresql/2023-03-01-preview/types.md#resource-microsoftdbforpostgresqlflexibleserversdatabases2023-03-01-preview)
 * **Link**: [2023-06-01-preview](postgresql/microsoft.dbforpostgresql/2023-06-01-preview/types.md#resource-microsoftdbforpostgresqlflexibleserversdatabases2023-06-01-preview)
+* **Link**: [2023-12-01-preview](postgresql/microsoft.dbforpostgresql/2023-12-01-preview/types.md#resource-microsoftdbforpostgresqlflexibleserversdatabases2023-12-01-preview)
 
 ### microsoft.dbforpostgresql/flexibleservers/firewallrules
 * **Link**: [2020-02-14-preview](postgresql/microsoft.dbforpostgresql/2020-02-14-preview/types.md#resource-microsoftdbforpostgresqlflexibleserversfirewallrules2020-02-14-preview)
@@ -7123,27 +7222,33 @@
 * **Link**: [2022-12-01](postgresql/microsoft.dbforpostgresql/2022-12-01/types.md#resource-microsoftdbforpostgresqlflexibleserversfirewallrules2022-12-01)
 * **Link**: [2023-03-01-preview](postgresql/microsoft.dbforpostgresql/2023-03-01-preview/types.md#resource-microsoftdbforpostgresqlflexibleserversfirewallrules2023-03-01-preview)
 * **Link**: [2023-06-01-preview](postgresql/microsoft.dbforpostgresql/2023-06-01-preview/types.md#resource-microsoftdbforpostgresqlflexibleserversfirewallrules2023-06-01-preview)
+* **Link**: [2023-12-01-preview](postgresql/microsoft.dbforpostgresql/2023-12-01-preview/types.md#resource-microsoftdbforpostgresqlflexibleserversfirewallrules2023-12-01-preview)
 
 ### microsoft.dbforpostgresql/flexibleservers/ltrbackupoperations
 * **Link**: [2023-03-01-preview](postgresql/microsoft.dbforpostgresql/2023-03-01-preview/types.md#resource-microsoftdbforpostgresqlflexibleserversltrbackupoperations2023-03-01-preview)
 * **Link**: [2023-06-01-preview](postgresql/microsoft.dbforpostgresql/2023-06-01-preview/types.md#resource-microsoftdbforpostgresqlflexibleserversltrbackupoperations2023-06-01-preview)
+* **Link**: [2023-12-01-preview](postgresql/microsoft.dbforpostgresql/2023-12-01-preview/types.md#resource-microsoftdbforpostgresqlflexibleserversltrbackupoperations2023-12-01-preview)
 
 ### microsoft.dbforpostgresql/flexibleservers/migrations
 * **Link**: [2022-05-01-preview](postgresql/microsoft.dbforpostgresql/2022-05-01-preview/types.md#resource-microsoftdbforpostgresqlflexibleserversmigrations2022-05-01-preview)
 * **Link**: [2023-03-01-preview](postgresql/microsoft.dbforpostgresql/2023-03-01-preview/types.md#resource-microsoftdbforpostgresqlflexibleserversmigrations2023-03-01-preview)
 * **Link**: [2023-06-01-preview](postgresql/microsoft.dbforpostgresql/2023-06-01-preview/types.md#resource-microsoftdbforpostgresqlflexibleserversmigrations2023-06-01-preview)
+* **Link**: [2023-12-01-preview](postgresql/microsoft.dbforpostgresql/2023-12-01-preview/types.md#resource-microsoftdbforpostgresqlflexibleserversmigrations2023-12-01-preview)
 
 ### microsoft.dbforpostgresql/flexibleservers/privateendpointconnections
 * **Link**: [2023-06-01-preview](postgresql/microsoft.dbforpostgresql/2023-06-01-preview/types.md#resource-microsoftdbforpostgresqlflexibleserversprivateendpointconnections2023-06-01-preview)
+* **Link**: [2023-12-01-preview](postgresql/microsoft.dbforpostgresql/2023-12-01-preview/types.md#resource-microsoftdbforpostgresqlflexibleserversprivateendpointconnections2023-12-01-preview)
 
 ### microsoft.dbforpostgresql/flexibleservers/privatelinkresources
 * **Link**: [2023-06-01-preview](postgresql/microsoft.dbforpostgresql/2023-06-01-preview/types.md#resource-microsoftdbforpostgresqlflexibleserversprivatelinkresources2023-06-01-preview)
+* **Link**: [2023-12-01-preview](postgresql/microsoft.dbforpostgresql/2023-12-01-preview/types.md#resource-microsoftdbforpostgresqlflexibleserversprivatelinkresources2023-12-01-preview)
 
 ### microsoft.dbforpostgresql/flexibleservers/querytexts
 * **Link**: [2021-06-01-preview](postgresql/microsoft.dbforpostgresql/2021-06-01-preview/types.md#resource-microsoftdbforpostgresqlflexibleserversquerytexts2021-06-01-preview)
 
 ### microsoft.dbforpostgresql/flexibleservers/virtualendpoints
 * **Link**: [2023-06-01-preview](postgresql/microsoft.dbforpostgresql/2023-06-01-preview/types.md#resource-microsoftdbforpostgresqlflexibleserversvirtualendpoints2023-06-01-preview)
+* **Link**: [2023-12-01-preview](postgresql/microsoft.dbforpostgresql/2023-12-01-preview/types.md#resource-microsoftdbforpostgresqlflexibleserversvirtualendpoints2023-12-01-preview)
 
 ### microsoft.dbforpostgresql/servergroupsv2
 * **Link**: [2022-11-08](postgresqlhsc/microsoft.dbforpostgresql/2022-11-08/types.md#resource-microsoftdbforpostgresqlservergroupsv22022-11-08)
@@ -7281,6 +7386,7 @@
 * **Link**: [2023-10-04-preview](desktopvirtualization/microsoft.desktopvirtualization/2023-10-04-preview/types.md#resource-microsoftdesktopvirtualizationappattachpackages2023-10-04-preview)
 * **Link**: [2023-11-01-preview](desktopvirtualization/microsoft.desktopvirtualization/2023-11-01-preview/types.md#resource-microsoftdesktopvirtualizationappattachpackages2023-11-01-preview)
 * **Link**: [2024-01-16-preview](desktopvirtualization/microsoft.desktopvirtualization/2024-01-16-preview/types.md#resource-microsoftdesktopvirtualizationappattachpackages2024-01-16-preview)
+* **Link**: [2024-03-06-preview](desktopvirtualization/microsoft.desktopvirtualization/2024-03-06-preview/types.md#resource-microsoftdesktopvirtualizationappattachpackages2024-03-06-preview)
 
 ### microsoft.desktopvirtualization/applicationgroups
 * **Link**: [2019-01-23-preview](desktopvirtualization/microsoft.desktopvirtualization/2019-01-23-preview/types.md#resource-microsoftdesktopvirtualizationapplicationgroups2019-01-23-preview)
@@ -7305,6 +7411,7 @@
 * **Link**: [2023-10-04-preview](desktopvirtualization/microsoft.desktopvirtualization/2023-10-04-preview/types.md#resource-microsoftdesktopvirtualizationapplicationgroups2023-10-04-preview)
 * **Link**: [2023-11-01-preview](desktopvirtualization/microsoft.desktopvirtualization/2023-11-01-preview/types.md#resource-microsoftdesktopvirtualizationapplicationgroups2023-11-01-preview)
 * **Link**: [2024-01-16-preview](desktopvirtualization/microsoft.desktopvirtualization/2024-01-16-preview/types.md#resource-microsoftdesktopvirtualizationapplicationgroups2024-01-16-preview)
+* **Link**: [2024-03-06-preview](desktopvirtualization/microsoft.desktopvirtualization/2024-03-06-preview/types.md#resource-microsoftdesktopvirtualizationapplicationgroups2024-03-06-preview)
 
 ### microsoft.desktopvirtualization/applicationgroups/applications
 * **Link**: [2019-01-23-preview](desktopvirtualization/microsoft.desktopvirtualization/2019-01-23-preview/types.md#resource-microsoftdesktopvirtualizationapplicationgroupsapplications2019-01-23-preview)
@@ -7329,6 +7436,7 @@
 * **Link**: [2023-10-04-preview](desktopvirtualization/microsoft.desktopvirtualization/2023-10-04-preview/types.md#resource-microsoftdesktopvirtualizationapplicationgroupsapplications2023-10-04-preview)
 * **Link**: [2023-11-01-preview](desktopvirtualization/microsoft.desktopvirtualization/2023-11-01-preview/types.md#resource-microsoftdesktopvirtualizationapplicationgroupsapplications2023-11-01-preview)
 * **Link**: [2024-01-16-preview](desktopvirtualization/microsoft.desktopvirtualization/2024-01-16-preview/types.md#resource-microsoftdesktopvirtualizationapplicationgroupsapplications2024-01-16-preview)
+* **Link**: [2024-03-06-preview](desktopvirtualization/microsoft.desktopvirtualization/2024-03-06-preview/types.md#resource-microsoftdesktopvirtualizationapplicationgroupsapplications2024-03-06-preview)
 
 ### microsoft.desktopvirtualization/applicationgroups/desktops
 * **Link**: [2019-01-23-preview](desktopvirtualization/microsoft.desktopvirtualization/2019-01-23-preview/types.md#resource-microsoftdesktopvirtualizationapplicationgroupsdesktops2019-01-23-preview)
@@ -7353,6 +7461,7 @@
 * **Link**: [2023-10-04-preview](desktopvirtualization/microsoft.desktopvirtualization/2023-10-04-preview/types.md#resource-microsoftdesktopvirtualizationapplicationgroupsdesktops2023-10-04-preview)
 * **Link**: [2023-11-01-preview](desktopvirtualization/microsoft.desktopvirtualization/2023-11-01-preview/types.md#resource-microsoftdesktopvirtualizationapplicationgroupsdesktops2023-11-01-preview)
 * **Link**: [2024-01-16-preview](desktopvirtualization/microsoft.desktopvirtualization/2024-01-16-preview/types.md#resource-microsoftdesktopvirtualizationapplicationgroupsdesktops2024-01-16-preview)
+* **Link**: [2024-03-06-preview](desktopvirtualization/microsoft.desktopvirtualization/2024-03-06-preview/types.md#resource-microsoftdesktopvirtualizationapplicationgroupsdesktops2024-03-06-preview)
 
 ### microsoft.desktopvirtualization/hostpools
 * **Link**: [2019-01-23-preview](desktopvirtualization/microsoft.desktopvirtualization/2019-01-23-preview/types.md#resource-microsoftdesktopvirtualizationhostpools2019-01-23-preview)
@@ -7377,10 +7486,12 @@
 * **Link**: [2023-10-04-preview](desktopvirtualization/microsoft.desktopvirtualization/2023-10-04-preview/types.md#resource-microsoftdesktopvirtualizationhostpools2023-10-04-preview)
 * **Link**: [2023-11-01-preview](desktopvirtualization/microsoft.desktopvirtualization/2023-11-01-preview/types.md#resource-microsoftdesktopvirtualizationhostpools2023-11-01-preview)
 * **Link**: [2024-01-16-preview](desktopvirtualization/microsoft.desktopvirtualization/2024-01-16-preview/types.md#resource-microsoftdesktopvirtualizationhostpools2024-01-16-preview)
+* **Link**: [2024-03-06-preview](desktopvirtualization/microsoft.desktopvirtualization/2024-03-06-preview/types.md#resource-microsoftdesktopvirtualizationhostpools2024-03-06-preview)
 
 ### microsoft.desktopvirtualization/hostpools/activesessionhostconfigurations
 * **Link**: [2023-11-01-preview](desktopvirtualization/microsoft.desktopvirtualization/2023-11-01-preview/types.md#resource-microsoftdesktopvirtualizationhostpoolsactivesessionhostconfigurations2023-11-01-preview)
 * **Link**: [2024-01-16-preview](desktopvirtualization/microsoft.desktopvirtualization/2024-01-16-preview/types.md#resource-microsoftdesktopvirtualizationhostpoolsactivesessionhostconfigurations2024-01-16-preview)
+* **Link**: [2024-03-06-preview](desktopvirtualization/microsoft.desktopvirtualization/2024-03-06-preview/types.md#resource-microsoftdesktopvirtualizationhostpoolsactivesessionhostconfigurations2024-03-06-preview)
 
 ### microsoft.desktopvirtualization/hostpools/msixpackages
 * **Link**: [2020-09-21-preview](desktopvirtualization/microsoft.desktopvirtualization/2020-09-21-preview/types.md#resource-microsoftdesktopvirtualizationhostpoolsmsixpackages2020-09-21-preview)
@@ -7402,6 +7513,7 @@
 * **Link**: [2023-10-04-preview](desktopvirtualization/microsoft.desktopvirtualization/2023-10-04-preview/types.md#resource-microsoftdesktopvirtualizationhostpoolsmsixpackages2023-10-04-preview)
 * **Link**: [2023-11-01-preview](desktopvirtualization/microsoft.desktopvirtualization/2023-11-01-preview/types.md#resource-microsoftdesktopvirtualizationhostpoolsmsixpackages2023-11-01-preview)
 * **Link**: [2024-01-16-preview](desktopvirtualization/microsoft.desktopvirtualization/2024-01-16-preview/types.md#resource-microsoftdesktopvirtualizationhostpoolsmsixpackages2024-01-16-preview)
+* **Link**: [2024-03-06-preview](desktopvirtualization/microsoft.desktopvirtualization/2024-03-06-preview/types.md#resource-microsoftdesktopvirtualizationhostpoolsmsixpackages2024-03-06-preview)
 
 ### microsoft.desktopvirtualization/hostpools/privateendpointconnections
 * **Link**: [2021-04-01-preview](desktopvirtualization/microsoft.desktopvirtualization/2021-04-01-preview/types.md#resource-microsoftdesktopvirtualizationhostpoolsprivateendpointconnections2021-04-01-preview)
@@ -7414,14 +7526,17 @@
 * **Link**: [2023-10-04-preview](desktopvirtualization/microsoft.desktopvirtualization/2023-10-04-preview/types.md#resource-microsoftdesktopvirtualizationhostpoolsprivateendpointconnections2023-10-04-preview)
 * **Link**: [2023-11-01-preview](desktopvirtualization/microsoft.desktopvirtualization/2023-11-01-preview/types.md#resource-microsoftdesktopvirtualizationhostpoolsprivateendpointconnections2023-11-01-preview)
 * **Link**: [2024-01-16-preview](desktopvirtualization/microsoft.desktopvirtualization/2024-01-16-preview/types.md#resource-microsoftdesktopvirtualizationhostpoolsprivateendpointconnections2024-01-16-preview)
+* **Link**: [2024-03-06-preview](desktopvirtualization/microsoft.desktopvirtualization/2024-03-06-preview/types.md#resource-microsoftdesktopvirtualizationhostpoolsprivateendpointconnections2024-03-06-preview)
 
 ### microsoft.desktopvirtualization/hostpools/sessionhostconfigurations
 * **Link**: [2023-11-01-preview](desktopvirtualization/microsoft.desktopvirtualization/2023-11-01-preview/types.md#resource-microsoftdesktopvirtualizationhostpoolssessionhostconfigurations2023-11-01-preview)
 * **Link**: [2024-01-16-preview](desktopvirtualization/microsoft.desktopvirtualization/2024-01-16-preview/types.md#resource-microsoftdesktopvirtualizationhostpoolssessionhostconfigurations2024-01-16-preview)
+* **Link**: [2024-03-06-preview](desktopvirtualization/microsoft.desktopvirtualization/2024-03-06-preview/types.md#resource-microsoftdesktopvirtualizationhostpoolssessionhostconfigurations2024-03-06-preview)
 
 ### microsoft.desktopvirtualization/hostpools/sessionhostmanagements
 * **Link**: [2023-11-01-preview](desktopvirtualization/microsoft.desktopvirtualization/2023-11-01-preview/types.md#resource-microsoftdesktopvirtualizationhostpoolssessionhostmanagements2023-11-01-preview)
 * **Link**: [2024-01-16-preview](desktopvirtualization/microsoft.desktopvirtualization/2024-01-16-preview/types.md#resource-microsoftdesktopvirtualizationhostpoolssessionhostmanagements2024-01-16-preview)
+* **Link**: [2024-03-06-preview](desktopvirtualization/microsoft.desktopvirtualization/2024-03-06-preview/types.md#resource-microsoftdesktopvirtualizationhostpoolssessionhostmanagements2024-03-06-preview)
 
 ### microsoft.desktopvirtualization/hostpools/sessionhosts
 * **Link**: [2019-01-23-preview](desktopvirtualization/microsoft.desktopvirtualization/2019-01-23-preview/types.md#resource-microsoftdesktopvirtualizationhostpoolssessionhosts2019-01-23-preview)
@@ -7446,6 +7561,7 @@
 * **Link**: [2023-10-04-preview](desktopvirtualization/microsoft.desktopvirtualization/2023-10-04-preview/types.md#resource-microsoftdesktopvirtualizationhostpoolssessionhosts2023-10-04-preview)
 * **Link**: [2023-11-01-preview](desktopvirtualization/microsoft.desktopvirtualization/2023-11-01-preview/types.md#resource-microsoftdesktopvirtualizationhostpoolssessionhosts2023-11-01-preview)
 * **Link**: [2024-01-16-preview](desktopvirtualization/microsoft.desktopvirtualization/2024-01-16-preview/types.md#resource-microsoftdesktopvirtualizationhostpoolssessionhosts2024-01-16-preview)
+* **Link**: [2024-03-06-preview](desktopvirtualization/microsoft.desktopvirtualization/2024-03-06-preview/types.md#resource-microsoftdesktopvirtualizationhostpoolssessionhosts2024-03-06-preview)
 
 ### microsoft.desktopvirtualization/hostpools/sessionhosts/usersessions
 * **Link**: [2019-01-23-preview](desktopvirtualization/microsoft.desktopvirtualization/2019-01-23-preview/types.md#resource-microsoftdesktopvirtualizationhostpoolssessionhostsusersessions2019-01-23-preview)
@@ -7470,6 +7586,7 @@
 * **Link**: [2023-10-04-preview](desktopvirtualization/microsoft.desktopvirtualization/2023-10-04-preview/types.md#resource-microsoftdesktopvirtualizationhostpoolssessionhostsusersessions2023-10-04-preview)
 * **Link**: [2023-11-01-preview](desktopvirtualization/microsoft.desktopvirtualization/2023-11-01-preview/types.md#resource-microsoftdesktopvirtualizationhostpoolssessionhostsusersessions2023-11-01-preview)
 * **Link**: [2024-01-16-preview](desktopvirtualization/microsoft.desktopvirtualization/2024-01-16-preview/types.md#resource-microsoftdesktopvirtualizationhostpoolssessionhostsusersessions2024-01-16-preview)
+* **Link**: [2024-03-06-preview](desktopvirtualization/microsoft.desktopvirtualization/2024-03-06-preview/types.md#resource-microsoftdesktopvirtualizationhostpoolssessionhostsusersessions2024-03-06-preview)
 
 ### microsoft.desktopvirtualization/scalingplans
 * **Link**: [2020-11-10-preview](desktopvirtualization/microsoft.desktopvirtualization/2020-11-10-preview/types.md#resource-microsoftdesktopvirtualizationscalingplans2020-11-10-preview)
@@ -7488,6 +7605,7 @@
 * **Link**: [2023-10-04-preview](desktopvirtualization/microsoft.desktopvirtualization/2023-10-04-preview/types.md#resource-microsoftdesktopvirtualizationscalingplans2023-10-04-preview)
 * **Link**: [2023-11-01-preview](desktopvirtualization/microsoft.desktopvirtualization/2023-11-01-preview/types.md#resource-microsoftdesktopvirtualizationscalingplans2023-11-01-preview)
 * **Link**: [2024-01-16-preview](desktopvirtualization/microsoft.desktopvirtualization/2024-01-16-preview/types.md#resource-microsoftdesktopvirtualizationscalingplans2024-01-16-preview)
+* **Link**: [2024-03-06-preview](desktopvirtualization/microsoft.desktopvirtualization/2024-03-06-preview/types.md#resource-microsoftdesktopvirtualizationscalingplans2024-03-06-preview)
 
 ### microsoft.desktopvirtualization/scalingplans/personalschedules
 * **Link**: [2023-07-07-preview](desktopvirtualization/microsoft.desktopvirtualization/2023-07-07-preview/types.md#resource-microsoftdesktopvirtualizationscalingplanspersonalschedules2023-07-07-preview)
@@ -7495,6 +7613,7 @@
 * **Link**: [2023-10-04-preview](desktopvirtualization/microsoft.desktopvirtualization/2023-10-04-preview/types.md#resource-microsoftdesktopvirtualizationscalingplanspersonalschedules2023-10-04-preview)
 * **Link**: [2023-11-01-preview](desktopvirtualization/microsoft.desktopvirtualization/2023-11-01-preview/types.md#resource-microsoftdesktopvirtualizationscalingplanspersonalschedules2023-11-01-preview)
 * **Link**: [2024-01-16-preview](desktopvirtualization/microsoft.desktopvirtualization/2024-01-16-preview/types.md#resource-microsoftdesktopvirtualizationscalingplanspersonalschedules2024-01-16-preview)
+* **Link**: [2024-03-06-preview](desktopvirtualization/microsoft.desktopvirtualization/2024-03-06-preview/types.md#resource-microsoftdesktopvirtualizationscalingplanspersonalschedules2024-03-06-preview)
 
 ### microsoft.desktopvirtualization/scalingplans/pooledschedules
 * **Link**: [2022-04-01-preview](desktopvirtualization/microsoft.desktopvirtualization/2022-04-01-preview/types.md#resource-microsoftdesktopvirtualizationscalingplanspooledschedules2022-04-01-preview)
@@ -7505,6 +7624,7 @@
 * **Link**: [2023-10-04-preview](desktopvirtualization/microsoft.desktopvirtualization/2023-10-04-preview/types.md#resource-microsoftdesktopvirtualizationscalingplanspooledschedules2023-10-04-preview)
 * **Link**: [2023-11-01-preview](desktopvirtualization/microsoft.desktopvirtualization/2023-11-01-preview/types.md#resource-microsoftdesktopvirtualizationscalingplanspooledschedules2023-11-01-preview)
 * **Link**: [2024-01-16-preview](desktopvirtualization/microsoft.desktopvirtualization/2024-01-16-preview/types.md#resource-microsoftdesktopvirtualizationscalingplanspooledschedules2024-01-16-preview)
+* **Link**: [2024-03-06-preview](desktopvirtualization/microsoft.desktopvirtualization/2024-03-06-preview/types.md#resource-microsoftdesktopvirtualizationscalingplanspooledschedules2024-03-06-preview)
 
 ### microsoft.desktopvirtualization/workspaces
 * **Link**: [2019-01-23-preview](desktopvirtualization/microsoft.desktopvirtualization/2019-01-23-preview/types.md#resource-microsoftdesktopvirtualizationworkspaces2019-01-23-preview)
@@ -7529,6 +7649,7 @@
 * **Link**: [2023-10-04-preview](desktopvirtualization/microsoft.desktopvirtualization/2023-10-04-preview/types.md#resource-microsoftdesktopvirtualizationworkspaces2023-10-04-preview)
 * **Link**: [2023-11-01-preview](desktopvirtualization/microsoft.desktopvirtualization/2023-11-01-preview/types.md#resource-microsoftdesktopvirtualizationworkspaces2023-11-01-preview)
 * **Link**: [2024-01-16-preview](desktopvirtualization/microsoft.desktopvirtualization/2024-01-16-preview/types.md#resource-microsoftdesktopvirtualizationworkspaces2024-01-16-preview)
+* **Link**: [2024-03-06-preview](desktopvirtualization/microsoft.desktopvirtualization/2024-03-06-preview/types.md#resource-microsoftdesktopvirtualizationworkspaces2024-03-06-preview)
 
 ### microsoft.desktopvirtualization/workspaces/privateendpointconnections
 * **Link**: [2021-04-01-preview](desktopvirtualization/microsoft.desktopvirtualization/2021-04-01-preview/types.md#resource-microsoftdesktopvirtualizationworkspacesprivateendpointconnections2021-04-01-preview)
@@ -7541,6 +7662,7 @@
 * **Link**: [2023-10-04-preview](desktopvirtualization/microsoft.desktopvirtualization/2023-10-04-preview/types.md#resource-microsoftdesktopvirtualizationworkspacesprivateendpointconnections2023-10-04-preview)
 * **Link**: [2023-11-01-preview](desktopvirtualization/microsoft.desktopvirtualization/2023-11-01-preview/types.md#resource-microsoftdesktopvirtualizationworkspacesprivateendpointconnections2023-11-01-preview)
 * **Link**: [2024-01-16-preview](desktopvirtualization/microsoft.desktopvirtualization/2024-01-16-preview/types.md#resource-microsoftdesktopvirtualizationworkspacesprivateendpointconnections2024-01-16-preview)
+* **Link**: [2024-03-06-preview](desktopvirtualization/microsoft.desktopvirtualization/2024-03-06-preview/types.md#resource-microsoftdesktopvirtualizationworkspacesprivateendpointconnections2024-03-06-preview)
 
 ## microsoft.devcenter
 ### microsoft.devcenter/devcenters
@@ -9419,6 +9541,10 @@
 * **Link**: [2022-05-01-preview](edgeorder/microsoft.edgeorder/2022-05-01-preview/types.md#resource-microsoftedgeorderorderitems2022-05-01-preview)
 * **Link**: [2024-02-01](edgeorder/microsoft.edgeorder/2024-02-01/types.md#resource-microsoftedgeorderorderitems2024-02-01)
 
+## microsoft.edgezones
+### microsoft.edgezones/extendedzones
+* **Link**: [2024-04-01-preview](edgezones/microsoft.edgezones/2024-04-01-preview/types.md#resource-microsoftedgezonesextendedzones2024-04-01-preview)
+
 ## microsoft.education
 ### microsoft.education/grants
 * **Link**: [2021-12-01-preview](education/microsoft.education/2021-12-01-preview/types.md#resource-microsofteducationgrants2021-12-01-preview)
@@ -10074,10 +10200,12 @@
 ### microsoft.hdinsight/clusterpools
 * **Link**: [2023-06-01-preview](hdinsight/microsoft.hdinsight/2023-06-01-preview/types.md#resource-microsofthdinsightclusterpools2023-06-01-preview)
 * **Link**: [2023-11-01-preview](hdinsight/microsoft.hdinsight/2023-11-01-preview/types.md#resource-microsofthdinsightclusterpools2023-11-01-preview)
+* **Link**: [2024-05-01](hdinsight/microsoft.hdinsight/2024-05-01/types.md#resource-microsofthdinsightclusterpools2024-05-01)
 
 ### microsoft.hdinsight/clusterpools/clusters
 * **Link**: [2023-06-01-preview](hdinsight/microsoft.hdinsight/2023-06-01-preview/types.md#resource-microsofthdinsightclusterpoolsclusters2023-06-01-preview)
 * **Link**: [2023-11-01-preview](hdinsight/microsoft.hdinsight/2023-11-01-preview/types.md#resource-microsofthdinsightclusterpoolsclusters2023-11-01-preview)
+* **Link**: [2024-05-01](hdinsight/microsoft.hdinsight/2024-05-01/types.md#resource-microsofthdinsightclusterpoolsclusters2024-05-01)
 
 ### microsoft.hdinsight/clusters
 * **Link**: [2015-03-01-preview](hdinsight/microsoft.hdinsight/2015-03-01-preview/types.md#resource-microsofthdinsightclusters2015-03-01-preview)
@@ -10133,6 +10261,7 @@
 * **Link**: [2023-11-01](healthcareapis/microsoft.healthcareapis/2023-11-01/types.md#resource-microsofthealthcareapisservices2023-11-01)
 * **Link**: [2023-12-01](healthcareapis/microsoft.healthcareapis/2023-12-01/types.md#resource-microsofthealthcareapisservices2023-12-01)
 * **Link**: [2024-03-01](healthcareapis/microsoft.healthcareapis/2024-03-01/types.md#resource-microsofthealthcareapisservices2024-03-01)
+* **Link**: [2024-03-31](healthcareapis/microsoft.healthcareapis/2024-03-31/types.md#resource-microsofthealthcareapisservices2024-03-31)
 
 ### microsoft.healthcareapis/services/privateendpointconnections
 * **Link**: [2020-03-30](healthcareapis/microsoft.healthcareapis/2020-03-30/types.md#resource-microsofthealthcareapisservicesprivateendpointconnections2020-03-30)
@@ -10149,6 +10278,7 @@
 * **Link**: [2023-11-01](healthcareapis/microsoft.healthcareapis/2023-11-01/types.md#resource-microsofthealthcareapisservicesprivateendpointconnections2023-11-01)
 * **Link**: [2023-12-01](healthcareapis/microsoft.healthcareapis/2023-12-01/types.md#resource-microsofthealthcareapisservicesprivateendpointconnections2023-12-01)
 * **Link**: [2024-03-01](healthcareapis/microsoft.healthcareapis/2024-03-01/types.md#resource-microsofthealthcareapisservicesprivateendpointconnections2024-03-01)
+* **Link**: [2024-03-31](healthcareapis/microsoft.healthcareapis/2024-03-31/types.md#resource-microsofthealthcareapisservicesprivateendpointconnections2024-03-31)
 
 ### microsoft.healthcareapis/services/privatelinkresources
 * **Link**: [2020-03-30](healthcareapis/microsoft.healthcareapis/2020-03-30/types.md#resource-microsofthealthcareapisservicesprivatelinkresources2020-03-30)
@@ -10165,6 +10295,7 @@
 * **Link**: [2023-11-01](healthcareapis/microsoft.healthcareapis/2023-11-01/types.md#resource-microsofthealthcareapisservicesprivatelinkresources2023-11-01)
 * **Link**: [2023-12-01](healthcareapis/microsoft.healthcareapis/2023-12-01/types.md#resource-microsofthealthcareapisservicesprivatelinkresources2023-12-01)
 * **Link**: [2024-03-01](healthcareapis/microsoft.healthcareapis/2024-03-01/types.md#resource-microsofthealthcareapisservicesprivatelinkresources2024-03-01)
+* **Link**: [2024-03-31](healthcareapis/microsoft.healthcareapis/2024-03-31/types.md#resource-microsofthealthcareapisservicesprivatelinkresources2024-03-31)
 
 ### microsoft.healthcareapis/workspaces
 * **Link**: [2021-06-01-preview](healthcareapis/microsoft.healthcareapis/2021-06-01-preview/types.md#resource-microsofthealthcareapisworkspaces2021-06-01-preview)
@@ -10179,6 +10310,7 @@
 * **Link**: [2023-11-01](healthcareapis/microsoft.healthcareapis/2023-11-01/types.md#resource-microsofthealthcareapisworkspaces2023-11-01)
 * **Link**: [2023-12-01](healthcareapis/microsoft.healthcareapis/2023-12-01/types.md#resource-microsofthealthcareapisworkspaces2023-12-01)
 * **Link**: [2024-03-01](healthcareapis/microsoft.healthcareapis/2024-03-01/types.md#resource-microsofthealthcareapisworkspaces2024-03-01)
+* **Link**: [2024-03-31](healthcareapis/microsoft.healthcareapis/2024-03-31/types.md#resource-microsofthealthcareapisworkspaces2024-03-31)
 
 ### microsoft.healthcareapis/workspaces/analyticsconnectors
 * **Link**: [2022-10-01-preview](healthcareapis/microsoft.healthcareapis/2022-10-01-preview/types.md#resource-microsofthealthcareapisworkspacesanalyticsconnectors2022-10-01-preview)
@@ -10196,6 +10328,7 @@
 * **Link**: [2023-11-01](healthcareapis/microsoft.healthcareapis/2023-11-01/types.md#resource-microsofthealthcareapisworkspacesdicomservices2023-11-01)
 * **Link**: [2023-12-01](healthcareapis/microsoft.healthcareapis/2023-12-01/types.md#resource-microsofthealthcareapisworkspacesdicomservices2023-12-01)
 * **Link**: [2024-03-01](healthcareapis/microsoft.healthcareapis/2024-03-01/types.md#resource-microsofthealthcareapisworkspacesdicomservices2024-03-01)
+* **Link**: [2024-03-31](healthcareapis/microsoft.healthcareapis/2024-03-31/types.md#resource-microsofthealthcareapisworkspacesdicomservices2024-03-31)
 
 ### microsoft.healthcareapis/workspaces/fhirservices
 * **Link**: [2021-06-01-preview](healthcareapis/microsoft.healthcareapis/2021-06-01-preview/types.md#resource-microsofthealthcareapisworkspacesfhirservices2021-06-01-preview)
@@ -10210,6 +10343,7 @@
 * **Link**: [2023-11-01](healthcareapis/microsoft.healthcareapis/2023-11-01/types.md#resource-microsofthealthcareapisworkspacesfhirservices2023-11-01)
 * **Link**: [2023-12-01](healthcareapis/microsoft.healthcareapis/2023-12-01/types.md#resource-microsofthealthcareapisworkspacesfhirservices2023-12-01)
 * **Link**: [2024-03-01](healthcareapis/microsoft.healthcareapis/2024-03-01/types.md#resource-microsofthealthcareapisworkspacesfhirservices2024-03-01)
+* **Link**: [2024-03-31](healthcareapis/microsoft.healthcareapis/2024-03-31/types.md#resource-microsofthealthcareapisworkspacesfhirservices2024-03-31)
 
 ### microsoft.healthcareapis/workspaces/iotconnectors
 * **Link**: [2021-06-01-preview](healthcareapis/microsoft.healthcareapis/2021-06-01-preview/types.md#resource-microsofthealthcareapisworkspacesiotconnectors2021-06-01-preview)
@@ -10224,6 +10358,7 @@
 * **Link**: [2023-11-01](healthcareapis/microsoft.healthcareapis/2023-11-01/types.md#resource-microsofthealthcareapisworkspacesiotconnectors2023-11-01)
 * **Link**: [2023-12-01](healthcareapis/microsoft.healthcareapis/2023-12-01/types.md#resource-microsofthealthcareapisworkspacesiotconnectors2023-12-01)
 * **Link**: [2024-03-01](healthcareapis/microsoft.healthcareapis/2024-03-01/types.md#resource-microsofthealthcareapisworkspacesiotconnectors2024-03-01)
+* **Link**: [2024-03-31](healthcareapis/microsoft.healthcareapis/2024-03-31/types.md#resource-microsofthealthcareapisworkspacesiotconnectors2024-03-31)
 
 ### microsoft.healthcareapis/workspaces/iotconnectors/fhirdestinations
 * **Link**: [2021-06-01-preview](healthcareapis/microsoft.healthcareapis/2021-06-01-preview/types.md#resource-microsofthealthcareapisworkspacesiotconnectorsfhirdestinations2021-06-01-preview)
@@ -10238,6 +10373,7 @@
 * **Link**: [2023-11-01](healthcareapis/microsoft.healthcareapis/2023-11-01/types.md#resource-microsofthealthcareapisworkspacesiotconnectorsfhirdestinations2023-11-01)
 * **Link**: [2023-12-01](healthcareapis/microsoft.healthcareapis/2023-12-01/types.md#resource-microsofthealthcareapisworkspacesiotconnectorsfhirdestinations2023-12-01)
 * **Link**: [2024-03-01](healthcareapis/microsoft.healthcareapis/2024-03-01/types.md#resource-microsofthealthcareapisworkspacesiotconnectorsfhirdestinations2024-03-01)
+* **Link**: [2024-03-31](healthcareapis/microsoft.healthcareapis/2024-03-31/types.md#resource-microsofthealthcareapisworkspacesiotconnectorsfhirdestinations2024-03-31)
 
 ### microsoft.healthcareapis/workspaces/privateendpointconnections
 * **Link**: [2021-11-01](healthcareapis/microsoft.healthcareapis/2021-11-01/types.md#resource-microsofthealthcareapisworkspacesprivateendpointconnections2021-11-01)
@@ -10251,6 +10387,7 @@
 * **Link**: [2023-11-01](healthcareapis/microsoft.healthcareapis/2023-11-01/types.md#resource-microsofthealthcareapisworkspacesprivateendpointconnections2023-11-01)
 * **Link**: [2023-12-01](healthcareapis/microsoft.healthcareapis/2023-12-01/types.md#resource-microsofthealthcareapisworkspacesprivateendpointconnections2023-12-01)
 * **Link**: [2024-03-01](healthcareapis/microsoft.healthcareapis/2024-03-01/types.md#resource-microsofthealthcareapisworkspacesprivateendpointconnections2024-03-01)
+* **Link**: [2024-03-31](healthcareapis/microsoft.healthcareapis/2024-03-31/types.md#resource-microsofthealthcareapisworkspacesprivateendpointconnections2024-03-31)
 
 ### microsoft.healthcareapis/workspaces/privatelinkresources
 * **Link**: [2021-11-01](healthcareapis/microsoft.healthcareapis/2021-11-01/types.md#resource-microsofthealthcareapisworkspacesprivatelinkresources2021-11-01)
@@ -10264,6 +10401,7 @@
 * **Link**: [2023-11-01](healthcareapis/microsoft.healthcareapis/2023-11-01/types.md#resource-microsofthealthcareapisworkspacesprivatelinkresources2023-11-01)
 * **Link**: [2023-12-01](healthcareapis/microsoft.healthcareapis/2023-12-01/types.md#resource-microsofthealthcareapisworkspacesprivatelinkresources2023-12-01)
 * **Link**: [2024-03-01](healthcareapis/microsoft.healthcareapis/2024-03-01/types.md#resource-microsofthealthcareapisworkspacesprivatelinkresources2024-03-01)
+* **Link**: [2024-03-31](healthcareapis/microsoft.healthcareapis/2024-03-31/types.md#resource-microsofthealthcareapisworkspacesprivatelinkresources2024-03-31)
 
 ## microsoft.help
 ### microsoft.help/diagnostics
@@ -11062,6 +11200,23 @@
 * **Link**: [2022-07-01](kubernetesconfiguration/microsoft.kubernetesconfiguration/2022-07-01/types.md#resource-microsoftkubernetesconfigurationsourcecontrolconfigurations2022-07-01)
 * **Link**: [2022-11-01](kubernetesconfiguration/microsoft.kubernetesconfiguration/2022-11-01/types.md#resource-microsoftkubernetesconfigurationsourcecontrolconfigurations2022-11-01)
 * **Link**: [2023-05-01](kubernetesconfiguration/microsoft.kubernetesconfiguration/2023-05-01/types.md#resource-microsoftkubernetesconfigurationsourcecontrolconfigurations2023-05-01)
+
+## microsoft.kubernetesruntime
+### microsoft.kubernetesruntime/bgppeers
+* **Link**: [2023-10-01-preview](kubernetesruntime/microsoft.kubernetesruntime/2023-10-01-preview/types.md#resource-microsoftkubernetesruntimebgppeers2023-10-01-preview)
+* **Link**: [2024-03-01](kubernetesruntime/microsoft.kubernetesruntime/2024-03-01/types.md#resource-microsoftkubernetesruntimebgppeers2024-03-01)
+
+### microsoft.kubernetesruntime/loadbalancers
+* **Link**: [2023-10-01-preview](kubernetesruntime/microsoft.kubernetesruntime/2023-10-01-preview/types.md#resource-microsoftkubernetesruntimeloadbalancers2023-10-01-preview)
+* **Link**: [2024-03-01](kubernetesruntime/microsoft.kubernetesruntime/2024-03-01/types.md#resource-microsoftkubernetesruntimeloadbalancers2024-03-01)
+
+### microsoft.kubernetesruntime/services
+* **Link**: [2023-10-01-preview](kubernetesruntime/microsoft.kubernetesruntime/2023-10-01-preview/types.md#resource-microsoftkubernetesruntimeservices2023-10-01-preview)
+* **Link**: [2024-03-01](kubernetesruntime/microsoft.kubernetesruntime/2024-03-01/types.md#resource-microsoftkubernetesruntimeservices2024-03-01)
+
+### microsoft.kubernetesruntime/storageclasses
+* **Link**: [2023-10-01-preview](kubernetesruntime/microsoft.kubernetesruntime/2023-10-01-preview/types.md#resource-microsoftkubernetesruntimestorageclasses2023-10-01-preview)
+* **Link**: [2024-03-01](kubernetesruntime/microsoft.kubernetesruntime/2024-03-01/types.md#resource-microsoftkubernetesruntimestorageclasses2024-03-01)
 
 ## microsoft.kusto
 ### microsoft.kusto/clusters
@@ -14562,6 +14717,7 @@
 * **Link**: [2020-11-01](frontdoor/microsoft.network/2020-11-01/types.md#resource-microsoftnetworkfrontdoorwebapplicationfirewallpolicies2020-11-01)
 * **Link**: [2021-06-01](frontdoor/microsoft.network/2021-06-01/types.md#resource-microsoftnetworkfrontdoorwebapplicationfirewallpolicies2021-06-01)
 * **Link**: [2022-05-01](frontdoor/microsoft.network/2022-05-01/types.md#resource-microsoftnetworkfrontdoorwebapplicationfirewallpolicies2022-05-01)
+* **Link**: [2024-02-01](frontdoor/microsoft.network/2024-02-01/types.md#resource-microsoftnetworkfrontdoorwebapplicationfirewallpolicies2024-02-01)
 
 ### microsoft.network/interfaceendpoints
 * **Link**: [2018-08-01](network/microsoft.network/2018-08-01/types.md#resource-microsoftnetworkinterfaceendpoints2018-08-01)
@@ -17559,18 +17715,23 @@
 ## microsoft.offazurespringboot
 ### microsoft.offazurespringboot/springbootsites
 * **Link**: [2023-01-01-preview](offazurespringboot/microsoft.offazurespringboot/2023-01-01-preview/types.md#resource-microsoftoffazurespringbootspringbootsites2023-01-01-preview)
+* **Link**: [2024-04-01-preview](offazurespringboot/microsoft.offazurespringboot/2024-04-01-preview/types.md#resource-microsoftoffazurespringbootspringbootsites2024-04-01-preview)
 
 ### microsoft.offazurespringboot/springbootsites/errorsummaries
 * **Link**: [2023-01-01-preview](offazurespringboot/microsoft.offazurespringboot/2023-01-01-preview/types.md#resource-microsoftoffazurespringbootspringbootsiteserrorsummaries2023-01-01-preview)
+* **Link**: [2024-04-01-preview](offazurespringboot/microsoft.offazurespringboot/2024-04-01-preview/types.md#resource-microsoftoffazurespringbootspringbootsiteserrorsummaries2024-04-01-preview)
 
 ### microsoft.offazurespringboot/springbootsites/springbootapps
 * **Link**: [2023-01-01-preview](offazurespringboot/microsoft.offazurespringboot/2023-01-01-preview/types.md#resource-microsoftoffazurespringbootspringbootsitesspringbootapps2023-01-01-preview)
+* **Link**: [2024-04-01-preview](offazurespringboot/microsoft.offazurespringboot/2024-04-01-preview/types.md#resource-microsoftoffazurespringbootspringbootsitesspringbootapps2024-04-01-preview)
 
 ### microsoft.offazurespringboot/springbootsites/springbootservers
 * **Link**: [2023-01-01-preview](offazurespringboot/microsoft.offazurespringboot/2023-01-01-preview/types.md#resource-microsoftoffazurespringbootspringbootsitesspringbootservers2023-01-01-preview)
+* **Link**: [2024-04-01-preview](offazurespringboot/microsoft.offazurespringboot/2024-04-01-preview/types.md#resource-microsoftoffazurespringbootspringbootsitesspringbootservers2024-04-01-preview)
 
 ### microsoft.offazurespringboot/springbootsites/summaries
 * **Link**: [2023-01-01-preview](offazurespringboot/microsoft.offazurespringboot/2023-01-01-preview/types.md#resource-microsoftoffazurespringbootspringbootsitessummaries2023-01-01-preview)
+* **Link**: [2024-04-01-preview](offazurespringboot/microsoft.offazurespringboot/2024-04-01-preview/types.md#resource-microsoftoffazurespringbootspringbootsitessummaries2024-04-01-preview)
 
 ## microsoft.openenergyplatform
 ### microsoft.openenergyplatform/energyservices
@@ -17999,6 +18160,7 @@
 * **Link**: [2023-06-01](recoveryservices/microsoft.recoveryservices/2023-06-01/types.md#resource-microsoftrecoveryservicesvaults2023-06-01)
 * **Link**: [2023-08-01](recoveryservices/microsoft.recoveryservices/2023-08-01/types.md#resource-microsoftrecoveryservicesvaults2023-08-01)
 * **Link**: [2024-01-01](recoveryservices/microsoft.recoveryservices/2024-01-01/types.md#resource-microsoftrecoveryservicesvaults2024-01-01)
+* **Link**: [2024-02-01](recoveryservices/microsoft.recoveryservices/2024-02-01/types.md#resource-microsoftrecoveryservicesvaults2024-02-01)
 
 ### microsoft.recoveryservices/vaults/backupconfig
 * **Link**: [2019-05-13](recoveryservicesbackup/microsoft.recoveryservices/2019-05-13/types.md#resource-microsoftrecoveryservicesvaultsbackupconfig2019-05-13)
@@ -18448,6 +18610,7 @@
 * **Link**: [2023-06-01](recoveryservices/microsoft.recoveryservices/2023-06-01/types.md#resource-microsoftrecoveryservicesvaultscertificates2023-06-01)
 * **Link**: [2023-08-01](recoveryservices/microsoft.recoveryservices/2023-08-01/types.md#resource-microsoftrecoveryservicesvaultscertificates2023-08-01)
 * **Link**: [2024-01-01](recoveryservices/microsoft.recoveryservices/2024-01-01/types.md#resource-microsoftrecoveryservicesvaultscertificates2024-01-01)
+* **Link**: [2024-02-01](recoveryservices/microsoft.recoveryservices/2024-02-01/types.md#resource-microsoftrecoveryservicesvaultscertificates2024-02-01)
 
 ### microsoft.recoveryservices/vaults/extendedinformation
 * **Link**: [2016-06-01](recoveryservices/microsoft.recoveryservices/2016-06-01/types.md#resource-microsoftrecoveryservicesvaultsextendedinformation2016-06-01)
@@ -18478,6 +18641,7 @@
 * **Link**: [2023-06-01](recoveryservices/microsoft.recoveryservices/2023-06-01/types.md#resource-microsoftrecoveryservicesvaultsextendedinformation2023-06-01)
 * **Link**: [2023-08-01](recoveryservices/microsoft.recoveryservices/2023-08-01/types.md#resource-microsoftrecoveryservicesvaultsextendedinformation2023-08-01)
 * **Link**: [2024-01-01](recoveryservices/microsoft.recoveryservices/2024-01-01/types.md#resource-microsoftrecoveryservicesvaultsextendedinformation2024-01-01)
+* **Link**: [2024-02-01](recoveryservices/microsoft.recoveryservices/2024-02-01/types.md#resource-microsoftrecoveryservicesvaultsextendedinformation2024-02-01)
 
 ### microsoft.recoveryservices/vaults/operationresults
 * **Link**: [2020-02-02](recoveryservices/microsoft.recoveryservices/2020-02-02/types.md#resource-microsoftrecoveryservicesvaultsoperationresults2020-02-02)
@@ -18507,6 +18671,7 @@
 * **Link**: [2023-06-01](recoveryservices/microsoft.recoveryservices/2023-06-01/types.md#resource-microsoftrecoveryservicesvaultsoperationresults2023-06-01)
 * **Link**: [2023-08-01](recoveryservices/microsoft.recoveryservices/2023-08-01/types.md#resource-microsoftrecoveryservicesvaultsoperationresults2023-08-01)
 * **Link**: [2024-01-01](recoveryservices/microsoft.recoveryservices/2024-01-01/types.md#resource-microsoftrecoveryservicesvaultsoperationresults2024-01-01)
+* **Link**: [2024-02-01](recoveryservices/microsoft.recoveryservices/2024-02-01/types.md#resource-microsoftrecoveryservicesvaultsoperationresults2024-02-01)
 
 ### microsoft.recoveryservices/vaults/privateendpointconnections
 * **Link**: [2020-02-02](recoveryservicesbackup/microsoft.recoveryservices/2020-02-02/types.md#resource-microsoftrecoveryservicesvaultsprivateendpointconnections2020-02-02)
@@ -18564,6 +18729,7 @@
 * **Link**: [2023-04-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-04-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationalertsettings2023-04-01)
 * **Link**: [2023-06-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-06-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationalertsettings2023-06-01)
 * **Link**: [2023-08-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-08-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationalertsettings2023-08-01)
+* **Link**: [2024-01-01](recoveryservicessiterecovery/microsoft.recoveryservices/2024-01-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationalertsettings2024-01-01)
 
 ### microsoft.recoveryservices/vaults/replicationevents
 * **Link**: [2016-08-10](recoveryservicessiterecovery/microsoft.recoveryservices/2016-08-10/types.md#resource-microsoftrecoveryservicesvaultsreplicationevents2016-08-10)
@@ -18591,6 +18757,7 @@
 * **Link**: [2023-04-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-04-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationevents2023-04-01)
 * **Link**: [2023-06-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-06-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationevents2023-06-01)
 * **Link**: [2023-08-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-08-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationevents2023-08-01)
+* **Link**: [2024-01-01](recoveryservicessiterecovery/microsoft.recoveryservices/2024-01-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationevents2024-01-01)
 
 ### microsoft.recoveryservices/vaults/replicationfabrics
 * **Link**: [2016-08-10](recoveryservicessiterecovery/microsoft.recoveryservices/2016-08-10/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabrics2016-08-10)
@@ -18618,6 +18785,7 @@
 * **Link**: [2023-04-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-04-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabrics2023-04-01)
 * **Link**: [2023-06-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-06-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabrics2023-06-01)
 * **Link**: [2023-08-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-08-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabrics2023-08-01)
+* **Link**: [2024-01-01](recoveryservicessiterecovery/microsoft.recoveryservices/2024-01-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabrics2024-01-01)
 
 ### microsoft.recoveryservices/vaults/replicationfabrics/replicationlogicalnetworks
 * **Link**: [2016-08-10](recoveryservicessiterecovery/microsoft.recoveryservices/2016-08-10/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationlogicalnetworks2016-08-10)
@@ -18645,6 +18813,7 @@
 * **Link**: [2023-04-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-04-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationlogicalnetworks2023-04-01)
 * **Link**: [2023-06-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-06-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationlogicalnetworks2023-06-01)
 * **Link**: [2023-08-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-08-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationlogicalnetworks2023-08-01)
+* **Link**: [2024-01-01](recoveryservicessiterecovery/microsoft.recoveryservices/2024-01-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationlogicalnetworks2024-01-01)
 
 ### microsoft.recoveryservices/vaults/replicationfabrics/replicationnetworks
 * **Link**: [2016-08-10](recoveryservicessiterecovery/microsoft.recoveryservices/2016-08-10/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationnetworks2016-08-10)
@@ -18672,6 +18841,7 @@
 * **Link**: [2023-04-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-04-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationnetworks2023-04-01)
 * **Link**: [2023-06-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-06-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationnetworks2023-06-01)
 * **Link**: [2023-08-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-08-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationnetworks2023-08-01)
+* **Link**: [2024-01-01](recoveryservicessiterecovery/microsoft.recoveryservices/2024-01-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationnetworks2024-01-01)
 
 ### microsoft.recoveryservices/vaults/replicationfabrics/replicationnetworks/replicationnetworkmappings
 * **Link**: [2016-08-10](recoveryservicessiterecovery/microsoft.recoveryservices/2016-08-10/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationnetworksreplicationnetworkmappings2016-08-10)
@@ -18699,6 +18869,7 @@
 * **Link**: [2023-04-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-04-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationnetworksreplicationnetworkmappings2023-04-01)
 * **Link**: [2023-06-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-06-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationnetworksreplicationnetworkmappings2023-06-01)
 * **Link**: [2023-08-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-08-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationnetworksreplicationnetworkmappings2023-08-01)
+* **Link**: [2024-01-01](recoveryservicessiterecovery/microsoft.recoveryservices/2024-01-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationnetworksreplicationnetworkmappings2024-01-01)
 
 ### microsoft.recoveryservices/vaults/replicationfabrics/replicationprotectioncontainers
 * **Link**: [2016-08-10](recoveryservicessiterecovery/microsoft.recoveryservices/2016-08-10/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationprotectioncontainers2016-08-10)
@@ -18726,6 +18897,7 @@
 * **Link**: [2023-04-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-04-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationprotectioncontainers2023-04-01)
 * **Link**: [2023-06-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-06-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationprotectioncontainers2023-06-01)
 * **Link**: [2023-08-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-08-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationprotectioncontainers2023-08-01)
+* **Link**: [2024-01-01](recoveryservicessiterecovery/microsoft.recoveryservices/2024-01-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationprotectioncontainers2024-01-01)
 
 ### microsoft.recoveryservices/vaults/replicationfabrics/replicationprotectioncontainers/replicationmigrationitems
 * **Link**: [2018-01-10](recoveryservicessiterecovery/microsoft.recoveryservices/2018-01-10/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationprotectioncontainersreplicationmigrationitems2018-01-10)
@@ -18752,6 +18924,7 @@
 * **Link**: [2023-04-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-04-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationprotectioncontainersreplicationmigrationitems2023-04-01)
 * **Link**: [2023-06-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-06-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationprotectioncontainersreplicationmigrationitems2023-06-01)
 * **Link**: [2023-08-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-08-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationprotectioncontainersreplicationmigrationitems2023-08-01)
+* **Link**: [2024-01-01](recoveryservicessiterecovery/microsoft.recoveryservices/2024-01-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationprotectioncontainersreplicationmigrationitems2024-01-01)
 
 ### microsoft.recoveryservices/vaults/replicationfabrics/replicationprotectioncontainers/replicationmigrationitems/migrationrecoverypoints
 * **Link**: [2018-01-10](recoveryservicessiterecovery/microsoft.recoveryservices/2018-01-10/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationprotectioncontainersreplicationmigrationitemsmigrationrecoverypoints2018-01-10)
@@ -18778,6 +18951,7 @@
 * **Link**: [2023-04-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-04-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationprotectioncontainersreplicationmigrationitemsmigrationrecoverypoints2023-04-01)
 * **Link**: [2023-06-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-06-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationprotectioncontainersreplicationmigrationitemsmigrationrecoverypoints2023-06-01)
 * **Link**: [2023-08-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-08-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationprotectioncontainersreplicationmigrationitemsmigrationrecoverypoints2023-08-01)
+* **Link**: [2024-01-01](recoveryservicessiterecovery/microsoft.recoveryservices/2024-01-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationprotectioncontainersreplicationmigrationitemsmigrationrecoverypoints2024-01-01)
 
 ### microsoft.recoveryservices/vaults/replicationfabrics/replicationprotectioncontainers/replicationprotectableitems
 * **Link**: [2016-08-10](recoveryservicessiterecovery/microsoft.recoveryservices/2016-08-10/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationprotectioncontainersreplicationprotectableitems2016-08-10)
@@ -18805,6 +18979,7 @@
 * **Link**: [2023-04-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-04-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationprotectioncontainersreplicationprotectableitems2023-04-01)
 * **Link**: [2023-06-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-06-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationprotectioncontainersreplicationprotectableitems2023-06-01)
 * **Link**: [2023-08-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-08-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationprotectioncontainersreplicationprotectableitems2023-08-01)
+* **Link**: [2024-01-01](recoveryservicessiterecovery/microsoft.recoveryservices/2024-01-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationprotectioncontainersreplicationprotectableitems2024-01-01)
 
 ### microsoft.recoveryservices/vaults/replicationfabrics/replicationprotectioncontainers/replicationprotecteditems
 * **Link**: [2016-08-10](recoveryservicessiterecovery/microsoft.recoveryservices/2016-08-10/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationprotectioncontainersreplicationprotecteditems2016-08-10)
@@ -18832,6 +19007,7 @@
 * **Link**: [2023-04-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-04-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationprotectioncontainersreplicationprotecteditems2023-04-01)
 * **Link**: [2023-06-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-06-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationprotectioncontainersreplicationprotecteditems2023-06-01)
 * **Link**: [2023-08-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-08-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationprotectioncontainersreplicationprotecteditems2023-08-01)
+* **Link**: [2024-01-01](recoveryservicessiterecovery/microsoft.recoveryservices/2024-01-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationprotectioncontainersreplicationprotecteditems2024-01-01)
 
 ### microsoft.recoveryservices/vaults/replicationfabrics/replicationprotectioncontainers/replicationprotecteditems/recoverypoints
 * **Link**: [2016-08-10](recoveryservicessiterecovery/microsoft.recoveryservices/2016-08-10/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationprotectioncontainersreplicationprotecteditemsrecoverypoints2016-08-10)
@@ -18859,6 +19035,7 @@
 * **Link**: [2023-04-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-04-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationprotectioncontainersreplicationprotecteditemsrecoverypoints2023-04-01)
 * **Link**: [2023-06-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-06-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationprotectioncontainersreplicationprotecteditemsrecoverypoints2023-06-01)
 * **Link**: [2023-08-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-08-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationprotectioncontainersreplicationprotecteditemsrecoverypoints2023-08-01)
+* **Link**: [2024-01-01](recoveryservicessiterecovery/microsoft.recoveryservices/2024-01-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationprotectioncontainersreplicationprotecteditemsrecoverypoints2024-01-01)
 
 ### microsoft.recoveryservices/vaults/replicationfabrics/replicationprotectioncontainers/replicationprotectioncontainermappings
 * **Link**: [2016-08-10](recoveryservicessiterecovery/microsoft.recoveryservices/2016-08-10/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationprotectioncontainersreplicationprotectioncontainermappings2016-08-10)
@@ -18886,6 +19063,7 @@
 * **Link**: [2023-04-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-04-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationprotectioncontainersreplicationprotectioncontainermappings2023-04-01)
 * **Link**: [2023-06-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-06-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationprotectioncontainersreplicationprotectioncontainermappings2023-06-01)
 * **Link**: [2023-08-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-08-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationprotectioncontainersreplicationprotectioncontainermappings2023-08-01)
+* **Link**: [2024-01-01](recoveryservicessiterecovery/microsoft.recoveryservices/2024-01-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationprotectioncontainersreplicationprotectioncontainermappings2024-01-01)
 
 ### microsoft.recoveryservices/vaults/replicationfabrics/replicationrecoveryservicesproviders
 * **Link**: [2016-08-10](recoveryservicessiterecovery/microsoft.recoveryservices/2016-08-10/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationrecoveryservicesproviders2016-08-10)
@@ -18913,6 +19091,7 @@
 * **Link**: [2023-04-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-04-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationrecoveryservicesproviders2023-04-01)
 * **Link**: [2023-06-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-06-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationrecoveryservicesproviders2023-06-01)
 * **Link**: [2023-08-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-08-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationrecoveryservicesproviders2023-08-01)
+* **Link**: [2024-01-01](recoveryservicessiterecovery/microsoft.recoveryservices/2024-01-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationrecoveryservicesproviders2024-01-01)
 
 ### microsoft.recoveryservices/vaults/replicationfabrics/replicationstorageclassifications
 * **Link**: [2016-08-10](recoveryservicessiterecovery/microsoft.recoveryservices/2016-08-10/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationstorageclassifications2016-08-10)
@@ -18940,6 +19119,7 @@
 * **Link**: [2023-04-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-04-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationstorageclassifications2023-04-01)
 * **Link**: [2023-06-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-06-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationstorageclassifications2023-06-01)
 * **Link**: [2023-08-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-08-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationstorageclassifications2023-08-01)
+* **Link**: [2024-01-01](recoveryservicessiterecovery/microsoft.recoveryservices/2024-01-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationstorageclassifications2024-01-01)
 
 ### microsoft.recoveryservices/vaults/replicationfabrics/replicationstorageclassifications/replicationstorageclassificationmappings
 * **Link**: [2016-08-10](recoveryservicessiterecovery/microsoft.recoveryservices/2016-08-10/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationstorageclassificationsreplicationstorageclassificationmappings2016-08-10)
@@ -18967,6 +19147,7 @@
 * **Link**: [2023-04-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-04-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationstorageclassificationsreplicationstorageclassificationmappings2023-04-01)
 * **Link**: [2023-06-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-06-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationstorageclassificationsreplicationstorageclassificationmappings2023-06-01)
 * **Link**: [2023-08-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-08-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationstorageclassificationsreplicationstorageclassificationmappings2023-08-01)
+* **Link**: [2024-01-01](recoveryservicessiterecovery/microsoft.recoveryservices/2024-01-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationstorageclassificationsreplicationstorageclassificationmappings2024-01-01)
 
 ### microsoft.recoveryservices/vaults/replicationfabrics/replicationvcenters
 * **Link**: [2016-08-10](recoveryservicessiterecovery/microsoft.recoveryservices/2016-08-10/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationvcenters2016-08-10)
@@ -18994,6 +19175,7 @@
 * **Link**: [2023-04-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-04-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationvcenters2023-04-01)
 * **Link**: [2023-06-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-06-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationvcenters2023-06-01)
 * **Link**: [2023-08-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-08-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationvcenters2023-08-01)
+* **Link**: [2024-01-01](recoveryservicessiterecovery/microsoft.recoveryservices/2024-01-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationfabricsreplicationvcenters2024-01-01)
 
 ### microsoft.recoveryservices/vaults/replicationjobs
 * **Link**: [2016-08-10](recoveryservicessiterecovery/microsoft.recoveryservices/2016-08-10/types.md#resource-microsoftrecoveryservicesvaultsreplicationjobs2016-08-10)
@@ -19021,6 +19203,7 @@
 * **Link**: [2023-04-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-04-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationjobs2023-04-01)
 * **Link**: [2023-06-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-06-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationjobs2023-06-01)
 * **Link**: [2023-08-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-08-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationjobs2023-08-01)
+* **Link**: [2024-01-01](recoveryservicessiterecovery/microsoft.recoveryservices/2024-01-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationjobs2024-01-01)
 
 ### microsoft.recoveryservices/vaults/replicationpolicies
 * **Link**: [2016-08-10](recoveryservicessiterecovery/microsoft.recoveryservices/2016-08-10/types.md#resource-microsoftrecoveryservicesvaultsreplicationpolicies2016-08-10)
@@ -19048,6 +19231,7 @@
 * **Link**: [2023-04-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-04-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationpolicies2023-04-01)
 * **Link**: [2023-06-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-06-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationpolicies2023-06-01)
 * **Link**: [2023-08-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-08-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationpolicies2023-08-01)
+* **Link**: [2024-01-01](recoveryservicessiterecovery/microsoft.recoveryservices/2024-01-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationpolicies2024-01-01)
 
 ### microsoft.recoveryservices/vaults/replicationprotectionintents
 * **Link**: [2018-07-10](recoveryservicessiterecovery/microsoft.recoveryservices/2018-07-10/types.md#resource-microsoftrecoveryservicesvaultsreplicationprotectionintents2018-07-10)
@@ -19073,6 +19257,7 @@
 * **Link**: [2023-04-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-04-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationprotectionintents2023-04-01)
 * **Link**: [2023-06-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-06-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationprotectionintents2023-06-01)
 * **Link**: [2023-08-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-08-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationprotectionintents2023-08-01)
+* **Link**: [2024-01-01](recoveryservicessiterecovery/microsoft.recoveryservices/2024-01-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationprotectionintents2024-01-01)
 
 ### microsoft.recoveryservices/vaults/replicationrecoveryplans
 * **Link**: [2016-08-10](recoveryservicessiterecovery/microsoft.recoveryservices/2016-08-10/types.md#resource-microsoftrecoveryservicesvaultsreplicationrecoveryplans2016-08-10)
@@ -19100,6 +19285,7 @@
 * **Link**: [2023-04-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-04-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationrecoveryplans2023-04-01)
 * **Link**: [2023-06-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-06-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationrecoveryplans2023-06-01)
 * **Link**: [2023-08-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-08-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationrecoveryplans2023-08-01)
+* **Link**: [2024-01-01](recoveryservicessiterecovery/microsoft.recoveryservices/2024-01-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationrecoveryplans2024-01-01)
 
 ### microsoft.recoveryservices/vaults/replicationvaultsettings
 * **Link**: [2018-07-10](recoveryservicessiterecovery/microsoft.recoveryservices/2018-07-10/types.md#resource-microsoftrecoveryservicesvaultsreplicationvaultsettings2018-07-10)
@@ -19125,6 +19311,7 @@
 * **Link**: [2023-04-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-04-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationvaultsettings2023-04-01)
 * **Link**: [2023-06-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-06-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationvaultsettings2023-06-01)
 * **Link**: [2023-08-01](recoveryservicessiterecovery/microsoft.recoveryservices/2023-08-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationvaultsettings2023-08-01)
+* **Link**: [2024-01-01](recoveryservicessiterecovery/microsoft.recoveryservices/2024-01-01/types.md#resource-microsoftrecoveryservicesvaultsreplicationvaultsettings2024-01-01)
 
 ## microsoft.redhatopenshift
 ### microsoft.redhatopenshift/openshiftclusters
@@ -19224,6 +19411,7 @@
 * **Link**: [2022-10-01-preview](resourcehealth/microsoft.resourcehealth/2022-10-01-preview/types.md#resource-microsoftresourcehealthemergingissues2022-10-01-preview)
 * **Link**: [2023-07-01-preview](resourcehealth/microsoft.resourcehealth/2023-07-01-preview/types.md#resource-microsoftresourcehealthemergingissues2023-07-01-preview)
 * **Link**: [2023-10-01-preview](resourcehealth/microsoft.resourcehealth/2023-10-01-preview/types.md#resource-microsoftresourcehealthemergingissues2023-10-01-preview)
+* **Link**: [2024-02-01](resourcehealth/microsoft.resourcehealth/2024-02-01/types.md#resource-microsoftresourcehealthemergingissues2024-02-01)
 
 ### microsoft.resourcehealth/events
 * **Link**: [2022-05-01](resourcehealth/microsoft.resourcehealth/2022-05-01/types.md#resource-microsoftresourcehealthevents2022-05-01)
@@ -19232,6 +19420,7 @@
 * **Link**: [2022-10-01-preview](resourcehealth/microsoft.resourcehealth/2022-10-01-preview/types.md#resource-microsoftresourcehealthevents2022-10-01-preview)
 * **Link**: [2023-07-01-preview](resourcehealth/microsoft.resourcehealth/2023-07-01-preview/types.md#resource-microsoftresourcehealthevents2023-07-01-preview)
 * **Link**: [2023-10-01-preview](resourcehealth/microsoft.resourcehealth/2023-10-01-preview/types.md#resource-microsoftresourcehealthevents2023-10-01-preview)
+* **Link**: [2024-02-01](resourcehealth/microsoft.resourcehealth/2024-02-01/types.md#resource-microsoftresourcehealthevents2024-02-01)
 
 ### microsoft.resourcehealth/events/impactedresources
 * **Link**: [2022-05-01](resourcehealth/microsoft.resourcehealth/2022-05-01/types.md#resource-microsoftresourcehealtheventsimpactedresources2022-05-01)
@@ -19240,6 +19429,7 @@
 * **Link**: [2022-10-01-preview](resourcehealth/microsoft.resourcehealth/2022-10-01-preview/types.md#resource-microsoftresourcehealtheventsimpactedresources2022-10-01-preview)
 * **Link**: [2023-07-01-preview](resourcehealth/microsoft.resourcehealth/2023-07-01-preview/types.md#resource-microsoftresourcehealtheventsimpactedresources2023-07-01-preview)
 * **Link**: [2023-10-01-preview](resourcehealth/microsoft.resourcehealth/2023-10-01-preview/types.md#resource-microsoftresourcehealtheventsimpactedresources2023-10-01-preview)
+* **Link**: [2024-02-01](resourcehealth/microsoft.resourcehealth/2024-02-01/types.md#resource-microsoftresourcehealtheventsimpactedresources2024-02-01)
 
 ### microsoft.resourcehealth/metadata
 * **Link**: [2018-07-01](resourcehealth/microsoft.resourcehealth/2018-07-01/types.md#resource-microsoftresourcehealthmetadata2018-07-01)
@@ -19248,6 +19438,7 @@
 * **Link**: [2022-10-01-preview](resourcehealth/microsoft.resourcehealth/2022-10-01-preview/types.md#resource-microsoftresourcehealthmetadata2022-10-01-preview)
 * **Link**: [2023-07-01-preview](resourcehealth/microsoft.resourcehealth/2023-07-01-preview/types.md#resource-microsoftresourcehealthmetadata2023-07-01-preview)
 * **Link**: [2023-10-01-preview](resourcehealth/microsoft.resourcehealth/2023-10-01-preview/types.md#resource-microsoftresourcehealthmetadata2023-10-01-preview)
+* **Link**: [2024-02-01](resourcehealth/microsoft.resourcehealth/2024-02-01/types.md#resource-microsoftresourcehealthmetadata2024-02-01)
 
 ## microsoft.resources
 ### microsoft.resources/builtintemplatespecs
@@ -19505,6 +19696,7 @@
 
 ### microsoft.security/automations
 * **Link**: [2019-01-01-preview](security/microsoft.security/2019-01-01-preview/types.md#resource-microsoftsecurityautomations2019-01-01-preview)
+* **Link**: [2023-12-01-preview](security/microsoft.security/2023-12-01-preview/types.md#resource-microsoftsecurityautomations2023-12-01-preview)
 
 ### microsoft.security/autoprovisioningsettings
 * **Link**: [2017-08-01-preview](security/microsoft.security/2017-08-01-preview/types.md#resource-microsoftsecurityautoprovisioningsettings2017-08-01-preview)
@@ -19671,6 +19863,7 @@
 ### microsoft.security/securitycontacts
 * **Link**: [2017-08-01-preview](security/microsoft.security/2017-08-01-preview/types.md#resource-microsoftsecuritysecuritycontacts2017-08-01-preview)
 * **Link**: [2020-01-01-preview](security/microsoft.security/2020-01-01-preview/types.md#resource-microsoftsecuritysecuritycontacts2020-01-01-preview)
+* **Link**: [2023-12-01-preview](security/microsoft.security/2023-12-01-preview/types.md#resource-microsoftsecuritysecuritycontacts2023-12-01-preview)
 
 ### microsoft.security/sensitivitysettings
 * **Link**: [2023-02-15-preview](security/microsoft.security/2023-02-15-preview/types.md#resource-microsoftsecuritysensitivitysettings2023-02-15-preview)
@@ -19825,6 +20018,7 @@
 * **Link**: [2023-11-01](securityinsights/microsoft.securityinsights/2023-11-01/types.md#resource-microsoftsecurityinsightsalertrules2023-11-01)
 * **Link**: [2023-12-01-preview](securityinsights/microsoft.securityinsights/2023-12-01-preview/types.md#resource-microsoftsecurityinsightsalertrules2023-12-01-preview)
 * **Link**: [2024-01-01-preview](securityinsights/microsoft.securityinsights/2024-01-01-preview/types.md#resource-microsoftsecurityinsightsalertrules2024-01-01-preview)
+* **Link**: [2024-03-01](securityinsights/microsoft.securityinsights/2024-03-01/types.md#resource-microsoftsecurityinsightsalertrules2024-03-01)
 
 ### microsoft.securityinsights/alertrules/actions
 * **Link**: [2019-01-01-preview](securityinsights/microsoft.securityinsights/2019-01-01-preview/types.md#resource-microsoftsecurityinsightsalertrulesactions2019-01-01-preview)
@@ -19858,6 +20052,7 @@
 * **Link**: [2023-11-01](securityinsights/microsoft.securityinsights/2023-11-01/types.md#resource-microsoftsecurityinsightsalertrulesactions2023-11-01)
 * **Link**: [2023-12-01-preview](securityinsights/microsoft.securityinsights/2023-12-01-preview/types.md#resource-microsoftsecurityinsightsalertrulesactions2023-12-01-preview)
 * **Link**: [2024-01-01-preview](securityinsights/microsoft.securityinsights/2024-01-01-preview/types.md#resource-microsoftsecurityinsightsalertrulesactions2024-01-01-preview)
+* **Link**: [2024-03-01](securityinsights/microsoft.securityinsights/2024-03-01/types.md#resource-microsoftsecurityinsightsalertrulesactions2024-03-01)
 
 ### microsoft.securityinsights/alertruletemplates
 * **Link**: [2019-01-01-preview](securityinsights/microsoft.securityinsights/2019-01-01-preview/types.md#resource-microsoftsecurityinsightsalertruletemplates2019-01-01-preview)
@@ -19891,6 +20086,7 @@
 * **Link**: [2023-11-01](securityinsights/microsoft.securityinsights/2023-11-01/types.md#resource-microsoftsecurityinsightsalertruletemplates2023-11-01)
 * **Link**: [2023-12-01-preview](securityinsights/microsoft.securityinsights/2023-12-01-preview/types.md#resource-microsoftsecurityinsightsalertruletemplates2023-12-01-preview)
 * **Link**: [2024-01-01-preview](securityinsights/microsoft.securityinsights/2024-01-01-preview/types.md#resource-microsoftsecurityinsightsalertruletemplates2024-01-01-preview)
+* **Link**: [2024-03-01](securityinsights/microsoft.securityinsights/2024-03-01/types.md#resource-microsoftsecurityinsightsalertruletemplates2024-03-01)
 
 ### microsoft.securityinsights/automationrules
 * **Link**: [2019-01-01-preview](securityinsights/microsoft.securityinsights/2019-01-01-preview/types.md#resource-microsoftsecurityinsightsautomationrules2019-01-01-preview)
@@ -19922,6 +20118,7 @@
 * **Link**: [2023-11-01](securityinsights/microsoft.securityinsights/2023-11-01/types.md#resource-microsoftsecurityinsightsautomationrules2023-11-01)
 * **Link**: [2023-12-01-preview](securityinsights/microsoft.securityinsights/2023-12-01-preview/types.md#resource-microsoftsecurityinsightsautomationrules2023-12-01-preview)
 * **Link**: [2024-01-01-preview](securityinsights/microsoft.securityinsights/2024-01-01-preview/types.md#resource-microsoftsecurityinsightsautomationrules2024-01-01-preview)
+* **Link**: [2024-03-01](securityinsights/microsoft.securityinsights/2024-03-01/types.md#resource-microsoftsecurityinsightsautomationrules2024-03-01)
 
 ### microsoft.securityinsights/billingstatistics
 * **Link**: [2023-05-01-preview](securityinsights/microsoft.securityinsights/2023-05-01-preview/types.md#resource-microsoftsecurityinsightsbillingstatistics2023-05-01-preview)
@@ -19964,6 +20161,7 @@
 * **Link**: [2023-11-01](securityinsights/microsoft.securityinsights/2023-11-01/types.md#resource-microsoftsecurityinsightsbookmarks2023-11-01)
 * **Link**: [2023-12-01-preview](securityinsights/microsoft.securityinsights/2023-12-01-preview/types.md#resource-microsoftsecurityinsightsbookmarks2023-12-01-preview)
 * **Link**: [2024-01-01-preview](securityinsights/microsoft.securityinsights/2024-01-01-preview/types.md#resource-microsoftsecurityinsightsbookmarks2024-01-01-preview)
+* **Link**: [2024-03-01](securityinsights/microsoft.securityinsights/2024-03-01/types.md#resource-microsoftsecurityinsightsbookmarks2024-03-01)
 
 ### microsoft.securityinsights/bookmarks/relations
 * **Link**: [2019-01-01-preview](securityinsights/microsoft.securityinsights/2019-01-01-preview/types.md#resource-microsoftsecurityinsightsbookmarksrelations2019-01-01-preview)
@@ -20011,6 +20209,7 @@
 * **Link**: [2023-11-01](securityinsights/microsoft.securityinsights/2023-11-01/types.md#resource-microsoftsecurityinsightscontentpackages2023-11-01)
 * **Link**: [2023-12-01-preview](securityinsights/microsoft.securityinsights/2023-12-01-preview/types.md#resource-microsoftsecurityinsightscontentpackages2023-12-01-preview)
 * **Link**: [2024-01-01-preview](securityinsights/microsoft.securityinsights/2024-01-01-preview/types.md#resource-microsoftsecurityinsightscontentpackages2024-01-01-preview)
+* **Link**: [2024-03-01](securityinsights/microsoft.securityinsights/2024-03-01/types.md#resource-microsoftsecurityinsightscontentpackages2024-03-01)
 
 ### microsoft.securityinsights/contentproductpackages
 * **Link**: [2023-04-01-preview](securityinsights/microsoft.securityinsights/2023-04-01-preview/types.md#resource-microsoftsecurityinsightscontentproductpackages2023-04-01-preview)
@@ -20023,6 +20222,7 @@
 * **Link**: [2023-11-01](securityinsights/microsoft.securityinsights/2023-11-01/types.md#resource-microsoftsecurityinsightscontentproductpackages2023-11-01)
 * **Link**: [2023-12-01-preview](securityinsights/microsoft.securityinsights/2023-12-01-preview/types.md#resource-microsoftsecurityinsightscontentproductpackages2023-12-01-preview)
 * **Link**: [2024-01-01-preview](securityinsights/microsoft.securityinsights/2024-01-01-preview/types.md#resource-microsoftsecurityinsightscontentproductpackages2024-01-01-preview)
+* **Link**: [2024-03-01](securityinsights/microsoft.securityinsights/2024-03-01/types.md#resource-microsoftsecurityinsightscontentproductpackages2024-03-01)
 
 ### microsoft.securityinsights/contentproducttemplates
 * **Link**: [2023-04-01-preview](securityinsights/microsoft.securityinsights/2023-04-01-preview/types.md#resource-microsoftsecurityinsightscontentproducttemplates2023-04-01-preview)
@@ -20035,6 +20235,7 @@
 * **Link**: [2023-11-01](securityinsights/microsoft.securityinsights/2023-11-01/types.md#resource-microsoftsecurityinsightscontentproducttemplates2023-11-01)
 * **Link**: [2023-12-01-preview](securityinsights/microsoft.securityinsights/2023-12-01-preview/types.md#resource-microsoftsecurityinsightscontentproducttemplates2023-12-01-preview)
 * **Link**: [2024-01-01-preview](securityinsights/microsoft.securityinsights/2024-01-01-preview/types.md#resource-microsoftsecurityinsightscontentproducttemplates2024-01-01-preview)
+* **Link**: [2024-03-01](securityinsights/microsoft.securityinsights/2024-03-01/types.md#resource-microsoftsecurityinsightscontentproducttemplates2024-03-01)
 
 ### microsoft.securityinsights/contenttemplates
 * **Link**: [2023-04-01-preview](securityinsights/microsoft.securityinsights/2023-04-01-preview/types.md#resource-microsoftsecurityinsightscontenttemplates2023-04-01-preview)
@@ -20047,6 +20248,7 @@
 * **Link**: [2023-11-01](securityinsights/microsoft.securityinsights/2023-11-01/types.md#resource-microsoftsecurityinsightscontenttemplates2023-11-01)
 * **Link**: [2023-12-01-preview](securityinsights/microsoft.securityinsights/2023-12-01-preview/types.md#resource-microsoftsecurityinsightscontenttemplates2023-12-01-preview)
 * **Link**: [2024-01-01-preview](securityinsights/microsoft.securityinsights/2024-01-01-preview/types.md#resource-microsoftsecurityinsightscontenttemplates2024-01-01-preview)
+* **Link**: [2024-03-01](securityinsights/microsoft.securityinsights/2024-03-01/types.md#resource-microsoftsecurityinsightscontenttemplates2024-03-01)
 
 ### microsoft.securityinsights/dataconnectordefinitions
 * **Link**: [2023-07-01-preview](securityinsights/microsoft.securityinsights/2023-07-01-preview/types.md#resource-microsoftsecurityinsightsdataconnectordefinitions2023-07-01-preview)
@@ -20088,6 +20290,7 @@
 * **Link**: [2023-11-01](securityinsights/microsoft.securityinsights/2023-11-01/types.md#resource-microsoftsecurityinsightsdataconnectors2023-11-01)
 * **Link**: [2023-12-01-preview](securityinsights/microsoft.securityinsights/2023-12-01-preview/types.md#resource-microsoftsecurityinsightsdataconnectors2023-12-01-preview)
 * **Link**: [2024-01-01-preview](securityinsights/microsoft.securityinsights/2024-01-01-preview/types.md#resource-microsoftsecurityinsightsdataconnectors2024-01-01-preview)
+* **Link**: [2024-03-01](securityinsights/microsoft.securityinsights/2024-03-01/types.md#resource-microsoftsecurityinsightsdataconnectors2024-03-01)
 
 ### microsoft.securityinsights/entities
 * **Link**: [2019-01-01-preview](securityinsights/microsoft.securityinsights/2019-01-01-preview/types.md#resource-microsoftsecurityinsightsentities2019-01-01-preview)
@@ -20278,6 +20481,7 @@
 * **Link**: [2023-11-01](securityinsights/microsoft.securityinsights/2023-11-01/types.md#resource-microsoftsecurityinsightsincidents2023-11-01)
 * **Link**: [2023-12-01-preview](securityinsights/microsoft.securityinsights/2023-12-01-preview/types.md#resource-microsoftsecurityinsightsincidents2023-12-01-preview)
 * **Link**: [2024-01-01-preview](securityinsights/microsoft.securityinsights/2024-01-01-preview/types.md#resource-microsoftsecurityinsightsincidents2024-01-01-preview)
+* **Link**: [2024-03-01](securityinsights/microsoft.securityinsights/2024-03-01/types.md#resource-microsoftsecurityinsightsincidents2024-03-01)
 
 ### microsoft.securityinsights/incidents/comments
 * **Link**: [2019-01-01-preview](securityinsights/microsoft.securityinsights/2019-01-01-preview/types.md#resource-microsoftsecurityinsightsincidentscomments2019-01-01-preview)
@@ -20312,6 +20516,7 @@
 * **Link**: [2023-11-01](securityinsights/microsoft.securityinsights/2023-11-01/types.md#resource-microsoftsecurityinsightsincidentscomments2023-11-01)
 * **Link**: [2023-12-01-preview](securityinsights/microsoft.securityinsights/2023-12-01-preview/types.md#resource-microsoftsecurityinsightsincidentscomments2023-12-01-preview)
 * **Link**: [2024-01-01-preview](securityinsights/microsoft.securityinsights/2024-01-01-preview/types.md#resource-microsoftsecurityinsightsincidentscomments2024-01-01-preview)
+* **Link**: [2024-03-01](securityinsights/microsoft.securityinsights/2024-03-01/types.md#resource-microsoftsecurityinsightsincidentscomments2024-03-01)
 
 ### microsoft.securityinsights/incidents/relations
 * **Link**: [2019-01-01-preview](securityinsights/microsoft.securityinsights/2019-01-01-preview/types.md#resource-microsoftsecurityinsightsincidentsrelations2019-01-01-preview)
@@ -20345,6 +20550,7 @@
 * **Link**: [2023-11-01](securityinsights/microsoft.securityinsights/2023-11-01/types.md#resource-microsoftsecurityinsightsincidentsrelations2023-11-01)
 * **Link**: [2023-12-01-preview](securityinsights/microsoft.securityinsights/2023-12-01-preview/types.md#resource-microsoftsecurityinsightsincidentsrelations2023-12-01-preview)
 * **Link**: [2024-01-01-preview](securityinsights/microsoft.securityinsights/2024-01-01-preview/types.md#resource-microsoftsecurityinsightsincidentsrelations2024-01-01-preview)
+* **Link**: [2024-03-01](securityinsights/microsoft.securityinsights/2024-03-01/types.md#resource-microsoftsecurityinsightsincidentsrelations2024-03-01)
 
 ### microsoft.securityinsights/incidents/tasks
 * **Link**: [2022-12-01-preview](securityinsights/microsoft.securityinsights/2022-12-01-preview/types.md#resource-microsoftsecurityinsightsincidentstasks2022-12-01-preview)
@@ -20359,6 +20565,7 @@
 * **Link**: [2023-10-01-preview](securityinsights/microsoft.securityinsights/2023-10-01-preview/types.md#resource-microsoftsecurityinsightsincidentstasks2023-10-01-preview)
 * **Link**: [2023-12-01-preview](securityinsights/microsoft.securityinsights/2023-12-01-preview/types.md#resource-microsoftsecurityinsightsincidentstasks2023-12-01-preview)
 * **Link**: [2024-01-01-preview](securityinsights/microsoft.securityinsights/2024-01-01-preview/types.md#resource-microsoftsecurityinsightsincidentstasks2024-01-01-preview)
+* **Link**: [2024-03-01](securityinsights/microsoft.securityinsights/2024-03-01/types.md#resource-microsoftsecurityinsightsincidentstasks2024-03-01)
 
 ### microsoft.securityinsights/metadata
 * **Link**: [2021-03-01-preview](securityinsights/microsoft.securityinsights/2021-03-01-preview/types.md#resource-microsoftsecurityinsightsmetadata2021-03-01-preview)
@@ -20387,6 +20594,7 @@
 * **Link**: [2023-11-01](securityinsights/microsoft.securityinsights/2023-11-01/types.md#resource-microsoftsecurityinsightsmetadata2023-11-01)
 * **Link**: [2023-12-01-preview](securityinsights/microsoft.securityinsights/2023-12-01-preview/types.md#resource-microsoftsecurityinsightsmetadata2023-12-01-preview)
 * **Link**: [2024-01-01-preview](securityinsights/microsoft.securityinsights/2024-01-01-preview/types.md#resource-microsoftsecurityinsightsmetadata2024-01-01-preview)
+* **Link**: [2024-03-01](securityinsights/microsoft.securityinsights/2024-03-01/types.md#resource-microsoftsecurityinsightsmetadata2024-03-01)
 
 ### microsoft.securityinsights/officeconsents
 * **Link**: [2019-01-01-preview](securityinsights/microsoft.securityinsights/2019-01-01-preview/types.md#resource-microsoftsecurityinsightsofficeconsents2019-01-01-preview)
@@ -20444,6 +20652,7 @@
 * **Link**: [2023-11-01](securityinsights/microsoft.securityinsights/2023-11-01/types.md#resource-microsoftsecurityinsightsonboardingstates2023-11-01)
 * **Link**: [2023-12-01-preview](securityinsights/microsoft.securityinsights/2023-12-01-preview/types.md#resource-microsoftsecurityinsightsonboardingstates2023-12-01-preview)
 * **Link**: [2024-01-01-preview](securityinsights/microsoft.securityinsights/2024-01-01-preview/types.md#resource-microsoftsecurityinsightsonboardingstates2024-01-01-preview)
+* **Link**: [2024-03-01](securityinsights/microsoft.securityinsights/2024-03-01/types.md#resource-microsoftsecurityinsightsonboardingstates2024-03-01)
 
 ### microsoft.securityinsights/recommendations
 * **Link**: [2024-01-01-preview](securityinsights/microsoft.securityinsights/2024-01-01-preview/types.md#resource-microsoftsecurityinsightsrecommendations2024-01-01-preview)
@@ -20471,6 +20680,7 @@
 * **Link**: [2023-11-01](securityinsights/microsoft.securityinsights/2023-11-01/types.md#resource-microsoftsecurityinsightssecuritymlanalyticssettings2023-11-01)
 * **Link**: [2023-12-01-preview](securityinsights/microsoft.securityinsights/2023-12-01-preview/types.md#resource-microsoftsecurityinsightssecuritymlanalyticssettings2023-12-01-preview)
 * **Link**: [2024-01-01-preview](securityinsights/microsoft.securityinsights/2024-01-01-preview/types.md#resource-microsoftsecurityinsightssecuritymlanalyticssettings2024-01-01-preview)
+* **Link**: [2024-03-01](securityinsights/microsoft.securityinsights/2024-03-01/types.md#resource-microsoftsecurityinsightssecuritymlanalyticssettings2024-03-01)
 
 ### microsoft.securityinsights/settings
 * **Link**: [2019-01-01-preview](securityinsights/microsoft.securityinsights/2019-01-01-preview/types.md#resource-microsoftsecurityinsightssettings2019-01-01-preview)
@@ -20525,6 +20735,7 @@
 * **Link**: [2023-11-01](securityinsights/microsoft.securityinsights/2023-11-01/types.md#resource-microsoftsecurityinsightssourcecontrols2023-11-01)
 * **Link**: [2023-12-01-preview](securityinsights/microsoft.securityinsights/2023-12-01-preview/types.md#resource-microsoftsecurityinsightssourcecontrols2023-12-01-preview)
 * **Link**: [2024-01-01-preview](securityinsights/microsoft.securityinsights/2024-01-01-preview/types.md#resource-microsoftsecurityinsightssourcecontrols2024-01-01-preview)
+* **Link**: [2024-03-01](securityinsights/microsoft.securityinsights/2024-03-01/types.md#resource-microsoftsecurityinsightssourcecontrols2024-03-01)
 
 ### microsoft.securityinsights/threatintelligence/indicators
 * **Link**: [2019-01-01-preview](securityinsights/microsoft.securityinsights/2019-01-01-preview/types.md#resource-microsoftsecurityinsightsthreatintelligenceindicators2019-01-01-preview)
@@ -20557,6 +20768,7 @@
 * **Link**: [2023-11-01](securityinsights/microsoft.securityinsights/2023-11-01/types.md#resource-microsoftsecurityinsightsthreatintelligenceindicators2023-11-01)
 * **Link**: [2023-12-01-preview](securityinsights/microsoft.securityinsights/2023-12-01-preview/types.md#resource-microsoftsecurityinsightsthreatintelligenceindicators2023-12-01-preview)
 * **Link**: [2024-01-01-preview](securityinsights/microsoft.securityinsights/2024-01-01-preview/types.md#resource-microsoftsecurityinsightsthreatintelligenceindicators2024-01-01-preview)
+* **Link**: [2024-03-01](securityinsights/microsoft.securityinsights/2024-03-01/types.md#resource-microsoftsecurityinsightsthreatintelligenceindicators2024-03-01)
 
 ### microsoft.securityinsights/triggeredanalyticsruleruns
 * **Link**: [2023-02-01-preview](securityinsights/microsoft.securityinsights/2023-02-01-preview/types.md#resource-microsoftsecurityinsightstriggeredanalyticsruleruns2023-02-01-preview)
@@ -20603,6 +20815,7 @@
 * **Link**: [2023-11-01](securityinsights/microsoft.securityinsights/2023-11-01/types.md#resource-microsoftsecurityinsightswatchlists2023-11-01)
 * **Link**: [2023-12-01-preview](securityinsights/microsoft.securityinsights/2023-12-01-preview/types.md#resource-microsoftsecurityinsightswatchlists2023-12-01-preview)
 * **Link**: [2024-01-01-preview](securityinsights/microsoft.securityinsights/2024-01-01-preview/types.md#resource-microsoftsecurityinsightswatchlists2024-01-01-preview)
+* **Link**: [2024-03-01](securityinsights/microsoft.securityinsights/2024-03-01/types.md#resource-microsoftsecurityinsightswatchlists2024-03-01)
 
 ### microsoft.securityinsights/watchlists/watchlistitems
 * **Link**: [2019-01-01-preview](securityinsights/microsoft.securityinsights/2019-01-01-preview/types.md#resource-microsoftsecurityinsightswatchlistswatchlistitems2019-01-01-preview)
@@ -20636,6 +20849,7 @@
 * **Link**: [2023-11-01](securityinsights/microsoft.securityinsights/2023-11-01/types.md#resource-microsoftsecurityinsightswatchlistswatchlistitems2023-11-01)
 * **Link**: [2023-12-01-preview](securityinsights/microsoft.securityinsights/2023-12-01-preview/types.md#resource-microsoftsecurityinsightswatchlistswatchlistitems2023-12-01-preview)
 * **Link**: [2024-01-01-preview](securityinsights/microsoft.securityinsights/2024-01-01-preview/types.md#resource-microsoftsecurityinsightswatchlistswatchlistitems2024-01-01-preview)
+* **Link**: [2024-03-01](securityinsights/microsoft.securityinsights/2024-03-01/types.md#resource-microsoftsecurityinsightswatchlistswatchlistitems2024-03-01)
 
 ### microsoft.securityinsights/workspacemanagerassignments
 * **Link**: [2023-04-01-preview](securityinsights/microsoft.securityinsights/2023-04-01-preview/types.md#resource-microsoftsecurityinsightsworkspacemanagerassignments2023-04-01-preview)
@@ -21024,18 +21238,22 @@
 ## microsoft.servicelinker
 ### microsoft.servicelinker/dryruns
 * **Link**: [2022-11-01-preview](servicelinker/microsoft.servicelinker/2022-11-01-preview/types.md#resource-microsoftservicelinkerdryruns2022-11-01-preview)
+* **Link**: [2023-04-01-preview](servicelinker/microsoft.servicelinker/2023-04-01-preview/types.md#resource-microsoftservicelinkerdryruns2023-04-01-preview)
 
 ### microsoft.servicelinker/linkers
 * **Link**: [2021-11-01-preview](servicelinker/microsoft.servicelinker/2021-11-01-preview/types.md#resource-microsoftservicelinkerlinkers2021-11-01-preview)
 * **Link**: [2022-01-01-preview](servicelinker/microsoft.servicelinker/2022-01-01-preview/types.md#resource-microsoftservicelinkerlinkers2022-01-01-preview)
 * **Link**: [2022-05-01](servicelinker/microsoft.servicelinker/2022-05-01/types.md#resource-microsoftservicelinkerlinkers2022-05-01)
 * **Link**: [2022-11-01-preview](servicelinker/microsoft.servicelinker/2022-11-01-preview/types.md#resource-microsoftservicelinkerlinkers2022-11-01-preview)
+* **Link**: [2023-04-01-preview](servicelinker/microsoft.servicelinker/2023-04-01-preview/types.md#resource-microsoftservicelinkerlinkers2023-04-01-preview)
 
 ### microsoft.servicelinker/locations/connectors
 * **Link**: [2022-11-01-preview](servicelinker/microsoft.servicelinker/2022-11-01-preview/types.md#resource-microsoftservicelinkerlocationsconnectors2022-11-01-preview)
+* **Link**: [2023-04-01-preview](servicelinker/microsoft.servicelinker/2023-04-01-preview/types.md#resource-microsoftservicelinkerlocationsconnectors2023-04-01-preview)
 
 ### microsoft.servicelinker/locations/dryruns
 * **Link**: [2022-11-01-preview](servicelinker/microsoft.servicelinker/2022-11-01-preview/types.md#resource-microsoftservicelinkerlocationsdryruns2022-11-01-preview)
+* **Link**: [2023-04-01-preview](servicelinker/microsoft.servicelinker/2023-04-01-preview/types.md#resource-microsoftservicelinkerlocationsdryruns2023-04-01-preview)
 
 ## microsoft.servicenetworking
 ### microsoft.servicenetworking/trafficcontrollers
@@ -23267,6 +23485,7 @@
 * **Link**: [2022-05-01](storage/microsoft.storage/2022-05-01/types.md#resource-microsoftstoragelocationsdeletedaccounts2022-05-01)
 * **Link**: [2022-09-01](storage/microsoft.storage/2022-09-01/types.md#resource-microsoftstoragelocationsdeletedaccounts2022-09-01)
 * **Link**: [2023-01-01](storage/microsoft.storage/2023-01-01/types.md#resource-microsoftstoragelocationsdeletedaccounts2023-01-01)
+* **Link**: [2023-04-01](storage/microsoft.storage/2023-04-01/types.md#resource-microsoftstoragelocationsdeletedaccounts2023-04-01)
 
 ### microsoft.storage/storageaccounts
 * **Link**: [2015-05-01-preview](storage/microsoft.storage/2015-05-01-preview/types.md#resource-microsoftstoragestorageaccounts2015-05-01-preview)
@@ -23292,6 +23511,7 @@
 * **Link**: [2022-05-01](storage/microsoft.storage/2022-05-01/types.md#resource-microsoftstoragestorageaccounts2022-05-01)
 * **Link**: [2022-09-01](storage/microsoft.storage/2022-09-01/types.md#resource-microsoftstoragestorageaccounts2022-09-01)
 * **Link**: [2023-01-01](storage/microsoft.storage/2023-01-01/types.md#resource-microsoftstoragestorageaccounts2023-01-01)
+* **Link**: [2023-04-01](storage/microsoft.storage/2023-04-01/types.md#resource-microsoftstoragestorageaccounts2023-04-01)
 
 ### microsoft.storage/storageaccounts/blobservices
 * **Link**: [2018-07-01](storage/microsoft.storage/2018-07-01/types.md#resource-microsoftstoragestorageaccountsblobservices2018-07-01)
@@ -23308,6 +23528,7 @@
 * **Link**: [2022-05-01](storage/microsoft.storage/2022-05-01/types.md#resource-microsoftstoragestorageaccountsblobservices2022-05-01)
 * **Link**: [2022-09-01](storage/microsoft.storage/2022-09-01/types.md#resource-microsoftstoragestorageaccountsblobservices2022-09-01)
 * **Link**: [2023-01-01](storage/microsoft.storage/2023-01-01/types.md#resource-microsoftstoragestorageaccountsblobservices2023-01-01)
+* **Link**: [2023-04-01](storage/microsoft.storage/2023-04-01/types.md#resource-microsoftstoragestorageaccountsblobservices2023-04-01)
 
 ### microsoft.storage/storageaccounts/blobservices/containers
 * **Link**: [2018-02-01](storage/microsoft.storage/2018-02-01/types.md#resource-microsoftstoragestorageaccountsblobservicescontainers2018-02-01)
@@ -23326,6 +23547,7 @@
 * **Link**: [2022-05-01](storage/microsoft.storage/2022-05-01/types.md#resource-microsoftstoragestorageaccountsblobservicescontainers2022-05-01)
 * **Link**: [2022-09-01](storage/microsoft.storage/2022-09-01/types.md#resource-microsoftstoragestorageaccountsblobservicescontainers2022-09-01)
 * **Link**: [2023-01-01](storage/microsoft.storage/2023-01-01/types.md#resource-microsoftstoragestorageaccountsblobservicescontainers2023-01-01)
+* **Link**: [2023-04-01](storage/microsoft.storage/2023-04-01/types.md#resource-microsoftstoragestorageaccountsblobservicescontainers2023-04-01)
 
 ### microsoft.storage/storageaccounts/blobservices/containers/immutabilitypolicies
 * **Link**: [2018-02-01](storage/microsoft.storage/2018-02-01/types.md#resource-microsoftstoragestorageaccountsblobservicescontainersimmutabilitypolicies2018-02-01)
@@ -23344,6 +23566,7 @@
 * **Link**: [2022-05-01](storage/microsoft.storage/2022-05-01/types.md#resource-microsoftstoragestorageaccountsblobservicescontainersimmutabilitypolicies2022-05-01)
 * **Link**: [2022-09-01](storage/microsoft.storage/2022-09-01/types.md#resource-microsoftstoragestorageaccountsblobservicescontainersimmutabilitypolicies2022-09-01)
 * **Link**: [2023-01-01](storage/microsoft.storage/2023-01-01/types.md#resource-microsoftstoragestorageaccountsblobservicescontainersimmutabilitypolicies2023-01-01)
+* **Link**: [2023-04-01](storage/microsoft.storage/2023-04-01/types.md#resource-microsoftstoragestorageaccountsblobservicescontainersimmutabilitypolicies2023-04-01)
 
 ### microsoft.storage/storageaccounts/encryptionscopes
 * **Link**: [2019-06-01](storage/microsoft.storage/2019-06-01/types.md#resource-microsoftstoragestorageaccountsencryptionscopes2019-06-01)
@@ -23357,6 +23580,7 @@
 * **Link**: [2022-05-01](storage/microsoft.storage/2022-05-01/types.md#resource-microsoftstoragestorageaccountsencryptionscopes2022-05-01)
 * **Link**: [2022-09-01](storage/microsoft.storage/2022-09-01/types.md#resource-microsoftstoragestorageaccountsencryptionscopes2022-09-01)
 * **Link**: [2023-01-01](storage/microsoft.storage/2023-01-01/types.md#resource-microsoftstoragestorageaccountsencryptionscopes2023-01-01)
+* **Link**: [2023-04-01](storage/microsoft.storage/2023-04-01/types.md#resource-microsoftstoragestorageaccountsencryptionscopes2023-04-01)
 
 ### microsoft.storage/storageaccounts/fileservices
 * **Link**: [2019-04-01](storage/microsoft.storage/2019-04-01/types.md#resource-microsoftstoragestorageaccountsfileservices2019-04-01)
@@ -23371,6 +23595,7 @@
 * **Link**: [2022-05-01](storage/microsoft.storage/2022-05-01/types.md#resource-microsoftstoragestorageaccountsfileservices2022-05-01)
 * **Link**: [2022-09-01](storage/microsoft.storage/2022-09-01/types.md#resource-microsoftstoragestorageaccountsfileservices2022-09-01)
 * **Link**: [2023-01-01](storage/microsoft.storage/2023-01-01/types.md#resource-microsoftstoragestorageaccountsfileservices2023-01-01)
+* **Link**: [2023-04-01](storage/microsoft.storage/2023-04-01/types.md#resource-microsoftstoragestorageaccountsfileservices2023-04-01)
 
 ### microsoft.storage/storageaccounts/fileservices/shares
 * **Link**: [2019-04-01](storage/microsoft.storage/2019-04-01/types.md#resource-microsoftstoragestorageaccountsfileservicesshares2019-04-01)
@@ -23385,6 +23610,7 @@
 * **Link**: [2022-05-01](storage/microsoft.storage/2022-05-01/types.md#resource-microsoftstoragestorageaccountsfileservicesshares2022-05-01)
 * **Link**: [2022-09-01](storage/microsoft.storage/2022-09-01/types.md#resource-microsoftstoragestorageaccountsfileservicesshares2022-09-01)
 * **Link**: [2023-01-01](storage/microsoft.storage/2023-01-01/types.md#resource-microsoftstoragestorageaccountsfileservicesshares2023-01-01)
+* **Link**: [2023-04-01](storage/microsoft.storage/2023-04-01/types.md#resource-microsoftstoragestorageaccountsfileservicesshares2023-04-01)
 
 ### microsoft.storage/storageaccounts/inventorypolicies
 * **Link**: [2019-06-01](storage/microsoft.storage/2019-06-01/types.md#resource-microsoftstoragestorageaccountsinventorypolicies2019-06-01)
@@ -23398,6 +23624,7 @@
 * **Link**: [2022-05-01](storage/microsoft.storage/2022-05-01/types.md#resource-microsoftstoragestorageaccountsinventorypolicies2022-05-01)
 * **Link**: [2022-09-01](storage/microsoft.storage/2022-09-01/types.md#resource-microsoftstoragestorageaccountsinventorypolicies2022-09-01)
 * **Link**: [2023-01-01](storage/microsoft.storage/2023-01-01/types.md#resource-microsoftstoragestorageaccountsinventorypolicies2023-01-01)
+* **Link**: [2023-04-01](storage/microsoft.storage/2023-04-01/types.md#resource-microsoftstoragestorageaccountsinventorypolicies2023-04-01)
 
 ### microsoft.storage/storageaccounts/localusers
 * **Link**: [2021-08-01](storage/microsoft.storage/2021-08-01/types.md#resource-microsoftstoragestorageaccountslocalusers2021-08-01)
@@ -23405,6 +23632,7 @@
 * **Link**: [2022-05-01](storage/microsoft.storage/2022-05-01/types.md#resource-microsoftstoragestorageaccountslocalusers2022-05-01)
 * **Link**: [2022-09-01](storage/microsoft.storage/2022-09-01/types.md#resource-microsoftstoragestorageaccountslocalusers2022-09-01)
 * **Link**: [2023-01-01](storage/microsoft.storage/2023-01-01/types.md#resource-microsoftstoragestorageaccountslocalusers2023-01-01)
+* **Link**: [2023-04-01](storage/microsoft.storage/2023-04-01/types.md#resource-microsoftstoragestorageaccountslocalusers2023-04-01)
 
 ### microsoft.storage/storageaccounts/managementpolicies
 * **Link**: [2018-03-01-preview](storage/microsoft.storage/2018-03-01-preview/types.md#resource-microsoftstoragestorageaccountsmanagementpolicies2018-03-01-preview)
@@ -23421,6 +23649,10 @@
 * **Link**: [2022-05-01](storage/microsoft.storage/2022-05-01/types.md#resource-microsoftstoragestorageaccountsmanagementpolicies2022-05-01)
 * **Link**: [2022-09-01](storage/microsoft.storage/2022-09-01/types.md#resource-microsoftstoragestorageaccountsmanagementpolicies2022-09-01)
 * **Link**: [2023-01-01](storage/microsoft.storage/2023-01-01/types.md#resource-microsoftstoragestorageaccountsmanagementpolicies2023-01-01)
+* **Link**: [2023-04-01](storage/microsoft.storage/2023-04-01/types.md#resource-microsoftstoragestorageaccountsmanagementpolicies2023-04-01)
+
+### microsoft.storage/storageaccounts/networksecurityperimeterconfigurations
+* **Link**: [2023-04-01](storage/microsoft.storage/2023-04-01/types.md#resource-microsoftstoragestorageaccountsnetworksecurityperimeterconfigurations2023-04-01)
 
 ### microsoft.storage/storageaccounts/objectreplicationpolicies
 * **Link**: [2019-06-01](storage/microsoft.storage/2019-06-01/types.md#resource-microsoftstoragestorageaccountsobjectreplicationpolicies2019-06-01)
@@ -23434,6 +23666,7 @@
 * **Link**: [2022-05-01](storage/microsoft.storage/2022-05-01/types.md#resource-microsoftstoragestorageaccountsobjectreplicationpolicies2022-05-01)
 * **Link**: [2022-09-01](storage/microsoft.storage/2022-09-01/types.md#resource-microsoftstoragestorageaccountsobjectreplicationpolicies2022-09-01)
 * **Link**: [2023-01-01](storage/microsoft.storage/2023-01-01/types.md#resource-microsoftstoragestorageaccountsobjectreplicationpolicies2023-01-01)
+* **Link**: [2023-04-01](storage/microsoft.storage/2023-04-01/types.md#resource-microsoftstoragestorageaccountsobjectreplicationpolicies2023-04-01)
 
 ### microsoft.storage/storageaccounts/privateendpointconnections
 * **Link**: [2019-06-01](storage/microsoft.storage/2019-06-01/types.md#resource-microsoftstoragestorageaccountsprivateendpointconnections2019-06-01)
@@ -23447,6 +23680,7 @@
 * **Link**: [2022-05-01](storage/microsoft.storage/2022-05-01/types.md#resource-microsoftstoragestorageaccountsprivateendpointconnections2022-05-01)
 * **Link**: [2022-09-01](storage/microsoft.storage/2022-09-01/types.md#resource-microsoftstoragestorageaccountsprivateendpointconnections2022-09-01)
 * **Link**: [2023-01-01](storage/microsoft.storage/2023-01-01/types.md#resource-microsoftstoragestorageaccountsprivateendpointconnections2023-01-01)
+* **Link**: [2023-04-01](storage/microsoft.storage/2023-04-01/types.md#resource-microsoftstoragestorageaccountsprivateendpointconnections2023-04-01)
 
 ### microsoft.storage/storageaccounts/queueservices
 * **Link**: [2019-06-01](storage/microsoft.storage/2019-06-01/types.md#resource-microsoftstoragestorageaccountsqueueservices2019-06-01)
@@ -23460,6 +23694,7 @@
 * **Link**: [2022-05-01](storage/microsoft.storage/2022-05-01/types.md#resource-microsoftstoragestorageaccountsqueueservices2022-05-01)
 * **Link**: [2022-09-01](storage/microsoft.storage/2022-09-01/types.md#resource-microsoftstoragestorageaccountsqueueservices2022-09-01)
 * **Link**: [2023-01-01](storage/microsoft.storage/2023-01-01/types.md#resource-microsoftstoragestorageaccountsqueueservices2023-01-01)
+* **Link**: [2023-04-01](storage/microsoft.storage/2023-04-01/types.md#resource-microsoftstoragestorageaccountsqueueservices2023-04-01)
 
 ### microsoft.storage/storageaccounts/queueservices/queues
 * **Link**: [2019-06-01](storage/microsoft.storage/2019-06-01/types.md#resource-microsoftstoragestorageaccountsqueueservicesqueues2019-06-01)
@@ -23473,6 +23708,7 @@
 * **Link**: [2022-05-01](storage/microsoft.storage/2022-05-01/types.md#resource-microsoftstoragestorageaccountsqueueservicesqueues2022-05-01)
 * **Link**: [2022-09-01](storage/microsoft.storage/2022-09-01/types.md#resource-microsoftstoragestorageaccountsqueueservicesqueues2022-09-01)
 * **Link**: [2023-01-01](storage/microsoft.storage/2023-01-01/types.md#resource-microsoftstoragestorageaccountsqueueservicesqueues2023-01-01)
+* **Link**: [2023-04-01](storage/microsoft.storage/2023-04-01/types.md#resource-microsoftstoragestorageaccountsqueueservicesqueues2023-04-01)
 
 ### microsoft.storage/storageaccounts/tableservices
 * **Link**: [2019-06-01](storage/microsoft.storage/2019-06-01/types.md#resource-microsoftstoragestorageaccountstableservices2019-06-01)
@@ -23486,6 +23722,7 @@
 * **Link**: [2022-05-01](storage/microsoft.storage/2022-05-01/types.md#resource-microsoftstoragestorageaccountstableservices2022-05-01)
 * **Link**: [2022-09-01](storage/microsoft.storage/2022-09-01/types.md#resource-microsoftstoragestorageaccountstableservices2022-09-01)
 * **Link**: [2023-01-01](storage/microsoft.storage/2023-01-01/types.md#resource-microsoftstoragestorageaccountstableservices2023-01-01)
+* **Link**: [2023-04-01](storage/microsoft.storage/2023-04-01/types.md#resource-microsoftstoragestorageaccountstableservices2023-04-01)
 
 ### microsoft.storage/storageaccounts/tableservices/tables
 * **Link**: [2019-06-01](storage/microsoft.storage/2019-06-01/types.md#resource-microsoftstoragestorageaccountstableservicestables2019-06-01)
@@ -23499,6 +23736,7 @@
 * **Link**: [2022-05-01](storage/microsoft.storage/2022-05-01/types.md#resource-microsoftstoragestorageaccountstableservicestables2022-05-01)
 * **Link**: [2022-09-01](storage/microsoft.storage/2022-09-01/types.md#resource-microsoftstoragestorageaccountstableservicestables2022-09-01)
 * **Link**: [2023-01-01](storage/microsoft.storage/2023-01-01/types.md#resource-microsoftstoragestorageaccountstableservicestables2023-01-01)
+* **Link**: [2023-04-01](storage/microsoft.storage/2023-04-01/types.md#resource-microsoftstoragestorageaccountstableservicestables2023-04-01)
 
 ## microsoft.storage.admin
 ### microsoft.storage.admin/locations/quotas
@@ -26482,11 +26720,13 @@
 * **Link**: [2023-11-01-preview](newrelic/newrelic.observability/2023-11-01-preview/types.md#resource-newrelicobservabilitymonitors2023-11-01-preview)
 * **Link**: [2024-01-01](newrelic/newrelic.observability/2024-01-01/types.md#resource-newrelicobservabilitymonitors2024-01-01)
 * **Link**: [2024-01-01-preview](newrelic/newrelic.observability/2024-01-01-preview/types.md#resource-newrelicobservabilitymonitors2024-01-01-preview)
+* **Link**: [2024-03-01](newrelic/newrelic.observability/2024-03-01/types.md#resource-newrelicobservabilitymonitors2024-03-01)
 
 ### newrelic.observability/monitors/monitoredsubscriptions
 * **Link**: [2023-11-01-preview](newrelic/newrelic.observability/2023-11-01-preview/types.md#resource-newrelicobservabilitymonitorsmonitoredsubscriptions2023-11-01-preview)
 * **Link**: [2024-01-01](newrelic/newrelic.observability/2024-01-01/types.md#resource-newrelicobservabilitymonitorsmonitoredsubscriptions2024-01-01)
 * **Link**: [2024-01-01-preview](newrelic/newrelic.observability/2024-01-01-preview/types.md#resource-newrelicobservabilitymonitorsmonitoredsubscriptions2024-01-01-preview)
+* **Link**: [2024-03-01](newrelic/newrelic.observability/2024-03-01/types.md#resource-newrelicobservabilitymonitorsmonitoredsubscriptions2024-03-01)
 
 ### newrelic.observability/monitors/tagrules
 * **Link**: [2022-07-01](newrelic/newrelic.observability/2022-07-01/types.md#resource-newrelicobservabilitymonitorstagrules2022-07-01)
@@ -26495,6 +26735,7 @@
 * **Link**: [2023-11-01-preview](newrelic/newrelic.observability/2023-11-01-preview/types.md#resource-newrelicobservabilitymonitorstagrules2023-11-01-preview)
 * **Link**: [2024-01-01](newrelic/newrelic.observability/2024-01-01/types.md#resource-newrelicobservabilitymonitorstagrules2024-01-01)
 * **Link**: [2024-01-01-preview](newrelic/newrelic.observability/2024-01-01-preview/types.md#resource-newrelicobservabilitymonitorstagrules2024-01-01-preview)
+* **Link**: [2024-03-01](newrelic/newrelic.observability/2024-03-01/types.md#resource-newrelicobservabilitymonitorstagrules2024-03-01)
 
 ## nginx.nginxplus
 ### nginx.nginxplus/nginxdeployments
