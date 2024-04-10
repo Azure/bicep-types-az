@@ -7,7 +7,7 @@ import { chain, Dictionary, escapeRegExp, keys, orderBy, uniq } from 'lodash';
 import { getFullyQualifiedType, getNameSchema, getSerializedName, NameSchema, ProviderDefinition, ResourceDefinition, ResourceDescriptor } from "./resources";
 import { isEmpty } from 'lodash';
 import { ScopeType } from "bicep-types";
-import { AnyObjectSchema, AnySchema, ArraySchema, ByteArraySchema, ChoiceSchema, ComplexSchema, ConstantSchema, DateTimeSchema, DictionarySchema, NumberSchema, ObjectSchema, PrimitiveSchema, Property, Schema, SchemaType, SealedChoiceSchema, StringSchema, UuidSchema } from '@autorest/codemodel';
+import { AnyObjectSchema, AnySchema, ArraySchema, ByteArraySchema, ChoiceSchema, ComplexSchema, ConstantSchema, DateTimeSchema, DictionarySchema, Metadata, NumberSchema, ObjectSchema, PrimitiveSchema, Property, Schema, SchemaType, SealedChoiceSchema, StringSchema, UuidSchema } from '@autorest/codemodel';
 import { failure, success } from './utils';
 
 interface SchemaData {
@@ -120,14 +120,12 @@ export function generateSchema(host: AutorestExtensionHost, definition: Provider
     }
   }
 
-  function getTypeDescription(schema: Schema | undefined) {
+  function getDescription(schema: Metadata | undefined) {
     return schema?.language.default.description || undefined;
   }
 
   function getPropertyDescription(putProperty: Property | undefined) {
-    const propertyDescription = putProperty?.language.default.description;
-
-    return propertyDescription ?? getTypeDescription(putProperty?.schema);
+    return getDescription(putProperty) ?? getDescription(putProperty?.schema);
   }
 
   function flattenDiscriminatorSubTypes(schema: ObjectSchema | undefined) {
@@ -505,7 +503,7 @@ export function generateSchema(host: AutorestExtensionHost, definition: Provider
     const additionalProperties = putParentDictionary ? parseType(putParentDictionary?.elementType, true) : undefined;
 
     const definition = createObject({}, additionalProperties);
-    definition.description = getTypeDescription(putSchema);
+    definition.description = getDescription(putSchema);
     if (!ancestorsToExclude) {
       // cache the definition so that it can be re-used
       schemaData.definitions[definitionName] = definition;
