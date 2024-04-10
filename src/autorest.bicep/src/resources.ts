@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import { ChoiceSchema, CodeModel, ComplexSchema, HttpMethod, HttpParameter, HttpRequest, HttpResponse, ImplementationLocation, isObjectSchema, ObjectSchema, Operation, Parameter, ParameterLocation, Request, Response, Schema, SchemaResponse, SealedChoiceSchema, Metadata } from "@autorest/codemodel";
+import { ChoiceSchema, CodeModel, ComplexSchema, HttpMethod, HttpParameter, HttpRequest, HttpResponse, ImplementationLocation, isObjectSchema, ObjectSchema, Operation, Parameter, ParameterLocation, Request, Response, Schema, SchemaResponse, SealedChoiceSchema, Metadata, ConstantSchema } from "@autorest/codemodel";
 import { Channel, AutorestExtensionHost } from "@autorest/extension-base";
 import { keys, Dictionary, values, groupBy, uniqBy, chain, flatten } from 'lodash';
 import { success, failure, Result } from './utils';
@@ -115,6 +115,7 @@ export function getSerializedName(metadata: Metadata) {
 interface ParameterizedName {
   type: 'parameterized';
   schema: Schema;
+  description?: string;
 }
 
 interface ConstantName {
@@ -146,7 +147,11 @@ export function getNameSchema(request: HttpRequest, parameters: Parameter[]): Re
       return failure(`Unable to locate parameter with name '${resNameParam}'`);
     }
 
-    return success({type: 'parameterized', schema: param.schema});
+    if (param.schema instanceof ConstantSchema) {
+      return success({ type: 'constant', value: param.schema.value.value.toString() });
+    }
+
+    return success({type: 'parameterized', schema: param.schema, description: param.language.default.description });
   }
 
   if (!/^[a-zA-Z0-9]*$/.test(resNameParam)) {

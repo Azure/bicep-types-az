@@ -1,10 +1,13 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
+import os from 'os';
 import path from 'path';
 import { createWriteStream } from 'fs';
 import { readdir, stat, mkdir, rm, copyFile } from 'fs/promises';
 import { spawn } from 'child_process';
 import colors from 'colors';
+
+export const extensionDir = path.resolve(`${__dirname}/../../`);
 
 export interface ILogger {
   out: (data: string) => void;
@@ -120,4 +123,47 @@ export async function getLogger(logFilePath: string): Promise<ILogger> {
       logFileStream.write(colors.stripColors(data));
     },
   };
+}
+
+export async function runAutorest(logger: ILogger, readme: string, outputBaseDir: string, armSchema: boolean, verbose: boolean, waitForDebugger: boolean) {
+  let autoRestParams = [
+    `--use=@autorest/modelerfour`,
+    `--use=${extensionDir}`,
+    '--bicep',
+    `--output-folder=${outputBaseDir}`,
+    `--multiapi`,
+    '--title=none',
+    // This is necessary to avoid failures such as "ERROR: Semantic violation: Discriminator must be a required property." blocking type generation.
+    // In an ideal world, we'd raise issues in https://github.com/Azure/azure-rest-api-specs and force RP teams to fix them, but this isn't very practical
+    // as new validations are added continuously, and there's often quite a lag before teams will fix them - we don't want to be blocked by this in generating types. 
+    `--skip-semantics-validation`,
+    readme,
+  ];
+
+  if (armSchema) {
+    autoRestParams = autoRestParams.concat([
+      `--arm-schema=true`,
+    ]);
+  }
+
+  if (verbose) {
+    autoRestParams = autoRestParams.concat([
+      `--debug`,
+      `--verbose`,
+    ]);
+  }
+
+  if (waitForDebugger) {
+    autoRestParams = autoRestParams.concat([
+      `--bicep.debugger`,
+    ]);
+  }
+
+  const autorestBinary = os.platform() === 'win32' ? 'autorest.cmd' : 'autorest';
+  return await executeCmd(logger, verbose, __dirname, autorestBinary, autoRestParams);
+}
+
+export function isBaselineRecordEnabled() {
+  // set to true to overwrite baselines
+  return process.env['BASELINE_RECORD']?.toLowerCase() === 'true';
 }

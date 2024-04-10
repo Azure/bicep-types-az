@@ -73,7 +73,7 @@ executeSynchronous(async () => {
     try {
       // autorest readme.bicep.md files are not checked in, so we must generate them before invoking autorest
       await generateAutorestConfig(logger, readmePath, bicepReadmePath, config);
-      await generateSchema(logger, readmePath, tmpOutputDir, logLevel, waitForDebugger);
+      await runAutorest(logger, readmePath, tmpOutputDir, logLevel, waitForDebugger);
 
       if (!subdirsCreated.has(outputDir)) {
         subdirsCreated.add(outputDir);
@@ -106,6 +106,9 @@ ${err}
 
   // build the type index
   await buildTypeIndex(defaultLogger, outputBaseDir);
+
+  // log if there are any type dirs with no corresponding readme (e.g. if a swagger directory has been removed).
+  await logStaleReadmes(defaultLogger, outputBaseDir, specsPath, readmePaths);
 });
 
 function normalizeJsonPath(jsonPath: string) {
@@ -189,7 +192,7 @@ ${yaml.dump({ 'input-file': filesByTag[tag] }, { lineWidth: 1000})}
   await writeFile(bicepReadmePath, generatedContent);
 }
 
-async function generateSchema(logger: ILogger, readme: string, outputBaseDir: string, logLevel: string, waitForDebugger: boolean) {
+async function runAutorest(logger: ILogger, readme: string, outputBaseDir: string, logLevel: string, waitForDebugger: boolean) {
   let autoRestParams = [
     `--use=@autorest/modelerfour`,
     `--use=${extensionDir}`,
@@ -238,6 +241,27 @@ async function findReadmePaths(specsPath: string) {
       .split(path.sep)
       .some(parent => parent == 'resource-manager');
   });
+}
+
+async function logStaleReadmes(logger: ILogger, outputBaseDir: string, specsPath: string, readmePaths: string[]) {
+  const typesPaths = await findRecursive(outputBaseDir, filePath => {
+    return path.basename(filePath) === 'types.json';
+  });
+
+  const typesBasePaths = typesPaths.map(p => path.relative(outputBaseDir, p).split(path.sep)[0].toLowerCase());
+  const readmeBasePaths = readmePaths.map(p => path.relative(specsPath, p).split(path.sep)[0].toLowerCase());
+
+  const staleBasePaths = typesBasePaths
+    .filter(p => !readmeBasePaths.includes(p))
+    .filter((value, index, array) => array.indexOf(value) === index);
+
+  if (staleBasePaths.length > 0) {
+    logOut(logger, `Found the following type folders which have no corresponding readme: '${staleBasePaths.join("', '")}'. Cleaning them up.`);
+  }
+
+  for (const basePath of staleBasePaths) {
+    await rm(`${outputBaseDir}/${basePath}`, { recursive: true, force: true, });
+  }
 }
 
 async function buildTypeIndex(logger: ILogger, baseDir: string) {
