@@ -236,7 +236,6 @@ export function generateSchema(host: AutorestExtensionHost, definition: Provider
     if (putSchema instanceof AnyObjectSchema) {
       return {
         type: 'object',
-        properties: {},
       };
     }
 
@@ -479,7 +478,7 @@ export function generateSchema(host: AutorestExtensionHost, definition: Provider
   }
 
   function parseObjectType(putSchema: ObjectSchema | undefined, ancestorsToExclude?: Set<ComplexSchema>) {
-    const combinedSchema = throwIfNull(putSchema);
+    putSchema = throwIfNull(putSchema);
     const definitionName = getObjectName(putSchema);
 
     if (!ancestorsToExclude && schemaData.definitions[definitionName]) {
@@ -506,23 +505,13 @@ export function generateSchema(host: AutorestExtensionHost, definition: Provider
     const additionalProperties = putParentDictionary ? parseType(putParentDictionary?.elementType, true) : undefined;
 
     const definition = createObject({}, additionalProperties);
-    definition.description = getTypeDescription(combinedSchema);
+    definition.description = getTypeDescription(putSchema);
     if (!ancestorsToExclude) {
       // cache the definition so that it can be re-used
       schemaData.definitions[definitionName] = definition;
     }
 
-    // Only make a distinction between what's defined on PUT vs GET if we're dealing with a synthetic object or a discriminated subtype.
-    // If the schema on both PUT and GET is the same named object (or if one of the two is undefined),
-    // use the combined schema as both GET and PUT schemata to prevent ReadOnly/WriteOnly flags from trickling down
-    // to object properties (which is problematic if shapes are reused across resources)
-    //
-    // For discriminated subtypes, Bicep's type system does not have a great way to communicate which variants are available on read vs write, but this
-    // can be communicated on variant properties. NB: `putSchema` and `getSchema` will only be different in a discriminated subtype if the discriminated
-    // object was synthetic.
-    const schemaForPut = ancestorsToExclude ? putSchema : combinedSchema;
-
-    for (const { propertyName, putProperty } of getObjectTypeProperties(schemaForPut, ancestorsToExclude)) {
+    for (const { propertyName, putProperty } of getObjectTypeProperties(putSchema, ancestorsToExclude)) {
       const propertyDefinition = parseType(putProperty?.schema, true);
       if (propertyDefinition !== undefined) {
         const description = getPropertyDescription(putProperty);
@@ -538,8 +527,8 @@ export function generateSchema(host: AutorestExtensionHost, definition: Provider
       }
     }
 
-    if (combinedSchema.discriminator) {
-      handlePolymorphicType(definition, schemaForPut);
+    if (putSchema.discriminator) {
+      handlePolymorphicType(definition, putSchema);
     }
 
     if (!ancestorsToExclude) {
