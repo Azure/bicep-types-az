@@ -57,7 +57,6 @@
           "type": "string"
         },
         "properties": {
-          "description": "",
           "oneOf": [
             {
               "$ref": "#/definitions/TestType1Properties"
@@ -254,7 +253,6 @@
           "type": "string"
         },
         "properties": {
-          "description": "",
           "oneOf": [
             {
               "$ref": "#/definitions/TestType1Properties"
@@ -385,7 +383,6 @@
           ]
         },
         "password": {
-          "description": "",
           "oneOf": [
             {
               "pattern": "^[a-zA-Z0-9\\.]$",
@@ -429,7 +426,6 @@
           ]
         },
         "uuidProperty": {
-          "description": "",
           "oneOf": [
             {
               "pattern": "^[0-9a-fA-F]{8}(-[0-9a-fA-F]{4}){3}-[0-9a-fA-F]{12}$",
@@ -446,16 +442,13 @@
     "TestType1Properties": {
       "properties": {
         "base64EncodedBytes": {
-          "description": "",
           "type": "string"
         },
         "basicString": {
           "description": "Description for a basic string property.",
           "type": "string"
         },
-        "binaryBuffer": {
-          "description": ""
-        },
+        "binaryBuffer": {},
         "encryptionProperties": {
           "description": "TestType1 encryption properties",
           "oneOf": [
@@ -479,7 +472,6 @@
           ]
         },
         "password": {
-          "description": "",
           "oneOf": [
             {
               "pattern": "^[a-zA-Z0-9\\.]$",
@@ -491,7 +483,6 @@
           ]
         },
         "percentageProperty": {
-          "description": "",
           "oneOf": [
             {
               "maximum": 100,
@@ -540,7 +531,6 @@
           "type": "string"
         },
         "uuidProperty": {
-          "description": "",
           "oneOf": [
             {
               "pattern": "^[0-9a-fA-F]{8}(-[0-9a-fA-F]{4}){3}-[0-9a-fA-F]{12}$",
