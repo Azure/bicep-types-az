@@ -335,7 +335,9 @@ export function generateSchema(host: AutorestExtensionHost, definition: Provider
       oneOf.push(childSchema);
     }
 
-    schema.oneOf = oneOf;
+    if (oneOf.length > 0) {
+      schema.oneOf = oneOf;
+    }
   }
 
   function processResourceBody(fullyQualifiedType: string, definition: ResourceDefinition, isChildDefinition: boolean) {
@@ -358,7 +360,6 @@ export function generateSchema(host: AutorestExtensionHost, definition: Provider
 
     const schema: JSONSchema4 = {
       type: 'object',
-      description: getFullyQualifiedType(descriptor),
       properties: {
         name,
       },
@@ -403,6 +404,7 @@ export function generateSchema(host: AutorestExtensionHost, definition: Provider
   }
 
   function addResourceTypeAndApiVersion(descriptor: ResourceDescriptor, schema: JSONSchema4, isChildDefinition: boolean): JSONSchema4 {
+    schema.description ??= getFullyQualifiedType(descriptor),
     schema.properties ??= {};
     schema.required ??= [];
 
