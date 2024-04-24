@@ -805,10 +805,9 @@
     "value": "2021-10-31"
   },
   {
-    "$type": "DiscriminatedObjectType",
+    "$type": "ObjectType",
     "name": "Test.Rp1/discriminatedUnionTestType",
-    "discriminator": "type",
-    "baseProperties": {
+    "properties": {
       "id": {
         "type": {
           "$ref": "#/2"
@@ -837,6 +836,19 @@
         "flags": 10,
         "description": "The resource api version"
       },
+      "properties": {
+        "type": {
+          "$ref": "#/63"
+        },
+        "flags": 1
+      }
+    }
+  },
+  {
+    "$type": "DiscriminatedObjectType",
+    "name": "DiscriminatedUnionTestTypeProperties",
+    "discriminator": "type",
+    "baseProperties": {
       "bar": {
         "type": {
           "$ref": "#/2"
@@ -854,19 +866,19 @@
     },
     "elements": {
       "inherited": {
-        "$ref": "#/63"
+        "$ref": "#/64"
       },
       "inline": {
-        "$ref": "#/65"
+        "$ref": "#/66"
       },
       "override": {
-        "$ref": "#/67"
+        "$ref": "#/68"
       }
     }
   },
   {
     "$type": "ObjectType",
-    "name": "DiscriminatedUnionTestTypeBranchWithInheritedProps",
+    "name": "DiscriminatedUnionTestTypePropertiesBranchWithInheritedProps",
     "properties": {
       "quux": {
         "type": {
@@ -884,7 +896,7 @@
       },
       "type": {
         "type": {
-          "$ref": "#/64"
+          "$ref": "#/65"
         },
         "flags": 1,
         "description": "The variant of this type"
@@ -897,7 +909,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "DiscriminatedUnionTestTypeBranchWithAllInlineProps",
+    "name": "DiscriminatedUnionTestTypePropertiesBranchWithAllInlineProps",
     "properties": {
       "fizz": {
         "type": {
@@ -922,7 +934,7 @@
       },
       "type": {
         "type": {
-          "$ref": "#/66"
+          "$ref": "#/67"
         },
         "flags": 1,
         "description": "The variant of this type"
@@ -935,18 +947,18 @@
   },
   {
     "$type": "ObjectType",
-    "name": "DiscriminatedUnionTestTypeBranchWithOverride",
+    "name": "DiscriminatedUnionTestTypePropertiesBranchWithOverride",
     "properties": {
       "foo": {
         "type": {
-          "$ref": "#/68"
+          "$ref": "#/69"
         },
         "flags": 0,
         "description": "The overridden foo property"
       },
       "type": {
         "type": {
-          "$ref": "#/69"
+          "$ref": "#/70"
         },
         "flags": 1,
         "description": "The variant of this type"
@@ -997,27 +1009,27 @@
       },
       "type": {
         "type": {
-          "$ref": "#/71"
+          "$ref": "#/72"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/72"
+          "$ref": "#/73"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/74"
+          "$ref": "#/75"
         },
         "flags": 2
       },
       "tags": {
         "type": {
-          "$ref": "#/76"
+          "$ref": "#/77"
         },
         "flags": 2,
         "description": "Resource tags."
@@ -1044,7 +1056,7 @@
     "properties": {
       "plan": {
         "type": {
-          "$ref": "#/75"
+          "$ref": "#/76"
         },
         "flags": 0,
         "description": "Plan for the resource."
@@ -1105,7 +1117,7 @@
     "name": "Test.Rp1/readOnlyTestType@2021-10-31",
     "scopeType": 8,
     "body": {
-      "$ref": "#/73"
+      "$ref": "#/74"
     },
     "flags": 1
   },
@@ -1148,16 +1160,16 @@
     "resourceType": "Test.Rp1/testType1",
     "apiVersion": "2021-10-31",
     "output": {
-      "$ref": "#/79"
+      "$ref": "#/80"
     },
     "input": {
-      "$ref": "#/78"
+      "$ref": "#/79"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/79"
+      "$ref": "#/80"
     },
     "minLength": 1,
     "maxLength": 10
@@ -1168,7 +1180,7 @@
     "resourceType": "Test.Rp1/testType1",
     "apiVersion": "2021-10-31",
     "output": {
-      "$ref": "#/81"
+      "$ref": "#/82"
     }
   }
 ]

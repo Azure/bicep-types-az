@@ -189,8 +189,19 @@
       "maxItems": 10
     },
     "DiscriminatedUnionTestType": {
+      "type": "object",
+      "required": [
+        "properties"
+      ],
+      "properties": {
+        "properties": {
+          "$ref": "#/definitions/DiscriminatedUnionTestTypeProperties"
+        }
+      }
+    },
+    "DiscriminatedUnionTestTypeProperties": {
       "allOf": [
-        {"$ref": "#/definitions/DiscriminatedUnionTestTypeAncestor"}
+        {"$ref": "#/definitions/DiscriminatedUnionTestTypePropertiesAncestor"}
       ],
       "type": "object",
       "required": [
@@ -213,7 +224,7 @@
       },
       "discriminator": "type"
     },
-    "DiscriminatedUnionTestTypeAncestor": {
+    "DiscriminatedUnionTestTypePropertiesAncestor": {
       "type": "object",
       "properties": {
         "foo": {
@@ -222,10 +233,10 @@
         }
       }
     },
-    "DiscriminatedUnionTestTypeBranchWithInheritedProps": {
+    "DiscriminatedUnionTestTypePropertiesBranchWithInheritedProps": {
       "allOf": [
-        {"$ref": "#/definitions/DiscriminatedUnionTestType"},
-        {"$ref": "#/definitions/DiscriminatedUnionTestTypeBranchWithInheritedPropsAncestor" }
+        {"$ref": "#/definitions/DiscriminatedUnionTestTypeProperties"},
+        {"$ref": "#/definitions/DiscriminatedUnionTestTypePropertiesBranchWithInheritedPropsAncestor" }
       ],
       "type": "object",
       "properties": {
@@ -236,7 +247,7 @@
       },
       "x-ms-discriminator-value": "inherited"
     },
-    "DiscriminatedUnionTestTypeBranchWithInheritedPropsAncestor": {
+    "DiscriminatedUnionTestTypePropertiesBranchWithInheritedPropsAncestor": {
       "type": "object",
       "properties": {
         "baz": {
@@ -245,9 +256,9 @@
         }
       }
     },
-    "DiscriminatedUnionTestTypeBranchWithAllInlineProps": {
+    "DiscriminatedUnionTestTypePropertiesBranchWithAllInlineProps": {
       "allOf": [
-        {"$ref": "#/definitions/DiscriminatedUnionTestType"}
+        {"$ref": "#/definitions/DiscriminatedUnionTestTypeProperties"}
       ],
       "type": "object",
       "properties": {
@@ -266,9 +277,9 @@
       },
       "x-ms-discriminator-value": "inline"
     },
-    "DiscriminatedUnionTestTypeBranchWithOverride": {
+    "DiscriminatedUnionTestTypePropertiesBranchWithOverride": {
       "allOf": [
-        {"$ref": "#/definitions/DiscriminatedUnionTestType"}
+        {"$ref": "#/definitions/DiscriminatedUnionTestTypeProperties"}
       ],
       "type": "object",
       "properties": {

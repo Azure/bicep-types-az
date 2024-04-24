@@ -1,0 +1,1603 @@
+{
+  "id": "https://schema.management.azure.com/schemas/2021-08-01/Microsoft.Network.json#",
+  "title": "Microsoft.Network",
+  "description": "Microsoft Network Resource Types",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "resourceDefinitions": {
+    "firewallPolicies": {
+      "description": "Microsoft.Network/firewallPolicies",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2021-08-01"
+          ],
+          "type": "string"
+        },
+        "id": {
+          "description": "Resource ID.",
+          "type": "string"
+        },
+        "identity": {
+          "description": "The identity of the firewall policy.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ManagedServiceIdentity"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "location": {
+          "description": "Resource location.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the Firewall Policy.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "Properties of the firewall policy.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/FirewallPolicyPropertiesFormat"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "resources": {
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/definitions/firewallPolicies_signatureOverrides_childResource"
+              },
+              {
+                "$ref": "#/definitions/firewallPolicies_ruleCollectionGroups_childResource"
+              }
+            ]
+          },
+          "type": "array"
+        },
+        "tags": {
+          "description": "Resource tags.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.Network/firewallPolicies"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "firewallPolicies_ruleCollectionGroups": {
+      "description": "Microsoft.Network/firewallPolicies/ruleCollectionGroups",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2021-08-01"
+          ],
+          "type": "string"
+        },
+        "id": {
+          "description": "Resource ID.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the FirewallPolicyRuleCollectionGroup.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The properties of the firewall policy rule collection group.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/FirewallPolicyRuleCollectionGroupProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.Network/firewallPolicies/ruleCollectionGroups"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "firewallPolicies_signatureOverrides": {
+      "description": "Microsoft.Network/firewallPolicies/signatureOverrides",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2021-08-01"
+          ],
+          "type": "string"
+        },
+        "id": {
+          "description": "Will contain the resource id of the signature override resource",
+          "type": "string"
+        },
+        "name": {
+          "oneOf": [
+            {
+              "pattern": "^.*/default$",
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "properties": {
+          "description": "Will contain the properties of the resource (the actual signature overrides)",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/SignaturesOverridesProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "Microsoft.Network/firewallPolicies/signatureOverrides"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    }
+  },
+  "definitions": {
+    "Components1Jq1T4ISchemasManagedserviceidentityPropertiesUserassignedidentitiesAdditionalproperties": {
+      "properties": {},
+      "type": "object"
+    },
+    "DnsSettings": {
+      "description": "DNS Proxy Settings in Firewall Policy.",
+      "properties": {
+        "enableProxy": {
+          "description": "Enable DNS Proxy on Firewalls attached to the Firewall Policy.",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "requireProxyForNetworkRules": {
+          "description": "FQDNs in Network Rules are supported when set to true.",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "servers": {
+          "description": "List of Custom DNS Servers.",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ExplicitProxySettings": {
+      "description": "Explicit Proxy Settings in Firewall Policy.",
+      "properties": {
+        "enableExplicitProxy": {
+          "description": "When set to true, explicit proxy mode is enabled.",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "httpPort": {
+          "description": "Port number for explicit proxy http protocol, cannot be greater than 64000.",
+          "oneOf": [
+            {
+              "maximum": 64000,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "httpsPort": {
+          "description": "Port number for explicit proxy https protocol, cannot be greater than 64000.",
+          "oneOf": [
+            {
+              "maximum": 64000,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "pacFile": {
+          "description": "SAS URL for PAC file.",
+          "type": "string"
+        },
+        "pacFilePort": {
+          "description": "Port number for firewall to serve PAC file.",
+          "oneOf": [
+            {
+              "maximum": 64000,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "FirewallPolicyCertificateAuthority": {
+      "description": "Trusted Root certificates properties for tls.",
+      "properties": {
+        "keyVaultSecretId": {
+          "description": "Secret Id of (base-64 encoded unencrypted pfx) 'Secret' or 'Certificate' object stored in KeyVault.",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of the CA certificate.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "FirewallPolicyFilterRuleCollectionAction": {
+      "description": "Properties of the FirewallPolicyFilterRuleCollectionAction.",
+      "properties": {
+        "type": {
+          "description": "The type of action.",
+          "oneOf": [
+            {
+              "enum": [
+                "Allow",
+                "Deny"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "FirewallPolicyInsights": {
+      "description": "Firewall Policy Insights.",
+      "properties": {
+        "isEnabled": {
+          "description": "A flag to indicate if the insights are enabled on the policy.",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "logAnalyticsResources": {
+          "description": "Workspaces needed to configure the Firewall Policy Insights.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/FirewallPolicyLogAnalyticsResources"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "retentionDays": {
+          "description": "Number of days the insights should be enabled on the policy.",
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "FirewallPolicyIntrusionDetection": {
+      "description": "Configuration for intrusion detection mode and rules.",
+      "properties": {
+        "configuration": {
+          "description": "Intrusion detection configuration properties.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/FirewallPolicyIntrusionDetectionConfiguration"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "mode": {
+          "description": "Intrusion detection general state.",
+          "oneOf": [
+            {
+              "enum": [
+                "Off",
+                "Alert",
+                "Deny"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "FirewallPolicyIntrusionDetectionBypassTrafficSpecifications": {
+      "description": "Intrusion detection bypass traffic specification.",
+      "properties": {
+        "description": {
+          "description": "Description of the bypass traffic rule.",
+          "type": "string"
+        },
+        "destinationAddresses": {
+          "description": "List of destination IP addresses or ranges for this rule.",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "destinationIpGroups": {
+          "description": "List of destination IpGroups for this rule.",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "destinationPorts": {
+          "description": "List of destination ports or ranges.",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "name": {
+          "description": "Name of the bypass traffic rule.",
+          "type": "string"
+        },
+        "protocol": {
+          "description": "The rule bypass protocol.",
+          "oneOf": [
+            {
+              "enum": [
+                "TCP",
+                "UDP",
+                "ICMP",
+                "ANY"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "sourceAddresses": {
+          "description": "List of source IP addresses or ranges for this rule.",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "sourceIpGroups": {
+          "description": "List of source IpGroups for this rule.",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "FirewallPolicyIntrusionDetectionConfiguration": {
+      "description": "The operation for configuring intrusion detection.",
+      "properties": {
+        "bypassTrafficSettings": {
+          "description": "List of rules for traffic to bypass.",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/FirewallPolicyIntrusionDetectionBypassTrafficSpecifications"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "privateRanges": {
+          "description": "IDPS Private IP address ranges are used to identify traffic direction (i.e. inbound, outbound, etc.). By default, only ranges defined by IANA RFC 1918 are considered private IP addresses. To modify default ranges, specify your Private IP address ranges with this property",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "signatureOverrides": {
+          "description": "List of specific signatures states.",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/FirewallPolicyIntrusionDetectionSignatureSpecification"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "FirewallPolicyIntrusionDetectionSignatureSpecification": {
+      "description": "Intrusion detection signatures specification states.",
+      "properties": {
+        "id": {
+          "description": "Signature id.",
+          "type": "string"
+        },
+        "mode": {
+          "description": "The signature state.",
+          "oneOf": [
+            {
+              "enum": [
+                "Off",
+                "Alert",
+                "Deny"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "FirewallPolicyLogAnalyticsResources": {
+      "description": "Log Analytics Resources for Firewall Policy Insights.",
+      "properties": {
+        "defaultWorkspaceId": {
+          "description": "The default workspace Id for Firewall Policy Insights.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/SubResource"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "workspaces": {
+          "description": "List of workspaces for Firewall Policy Insights.",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/FirewallPolicyLogAnalyticsWorkspace"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "FirewallPolicyLogAnalyticsWorkspace": {
+      "description": "Log Analytics Workspace for Firewall Policy Insights.",
+      "properties": {
+        "region": {
+          "description": "Region to configure the Workspace.",
+          "type": "string"
+        },
+        "workspaceId": {
+          "description": "The workspace Id for Firewall Policy Insights.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/SubResource"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "FirewallPolicyNatRuleCollectionAction": {
+      "description": "Properties of the FirewallPolicyNatRuleCollectionAction.",
+      "properties": {
+        "type": {
+          "description": "The type of action.",
+          "oneOf": [
+            {
+              "enum": [
+                "DNAT"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "FirewallPolicyPropertiesFormat": {
+      "description": "Firewall Policy definition.",
+      "properties": {
+        "basePolicy": {
+          "description": "The parent firewall policy from which rules are inherited.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/SubResource"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "dnsSettings": {
+          "description": "DNS Proxy Settings definition.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/DnsSettings"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "explicitProxySettings": {
+          "description": "Explicit Proxy Settings definition.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ExplicitProxySettings"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "insights": {
+          "description": "Insights on Firewall Policy.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/FirewallPolicyInsights"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "intrusionDetection": {
+          "description": "The configuration for Intrusion detection.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/FirewallPolicyIntrusionDetection"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "sku": {
+          "description": "The Firewall Policy SKU.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/FirewallPolicySku"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "snat": {
+          "description": "The private IP addresses/IP ranges to which traffic will not be SNAT.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/FirewallPolicySnat"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "sql": {
+          "description": "SQL Settings definition.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/FirewallPolicySQL"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "threatIntelMode": {
+          "description": "The operation mode for Threat Intelligence.",
+          "oneOf": [
+            {
+              "enum": [
+                "Alert",
+                "Deny",
+                "Off"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "threatIntelWhitelist": {
+          "description": "ThreatIntel Whitelist for Firewall Policy.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/FirewallPolicyThreatIntelWhitelist"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "transportSecurity": {
+          "description": "TLS Configuration definition.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/FirewallPolicyTransportSecurity"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "FirewallPolicyRule": {
+      "description": "Properties of a rule.",
+      "oneOf": [
+        {
+          "description": "Rule of type application.",
+          "properties": {
+            "destinationAddresses": {
+              "description": "List of destination IP addresses or Service Tags.",
+              "oneOf": [
+                {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            },
+            "fqdnTags": {
+              "description": "List of FQDN Tags for this rule.",
+              "oneOf": [
+                {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            },
+            "protocols": {
+              "description": "Array of Application Protocols.",
+              "oneOf": [
+                {
+                  "items": {
+                    "$ref": "#/definitions/FirewallPolicyRuleApplicationProtocol"
+                  },
+                  "type": "array"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            },
+            "ruleType": {
+              "enum": [
+                "ApplicationRule"
+              ],
+              "type": "string"
+            },
+            "sourceAddresses": {
+              "description": "List of source IP addresses for this rule.",
+              "oneOf": [
+                {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            },
+            "sourceIpGroups": {
+              "description": "List of source IpGroups for this rule.",
+              "oneOf": [
+                {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            },
+            "targetFqdns": {
+              "description": "List of FQDNs for this rule.",
+              "oneOf": [
+                {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            },
+            "targetUrls": {
+              "description": "List of Urls for this rule condition.",
+              "oneOf": [
+                {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            },
+            "terminateTLS": {
+              "description": "Terminate TLS connections for this rule.",
+              "oneOf": [
+                {
+                  "type": "boolean"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            },
+            "webCategories": {
+              "description": "List of destination azure web categories.",
+              "oneOf": [
+                {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            }
+          },
+          "required": [
+            "ruleType"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Rule of type nat.",
+          "properties": {
+            "destinationAddresses": {
+              "description": "List of destination IP addresses or Service Tags.",
+              "oneOf": [
+                {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            },
+            "destinationPorts": {
+              "description": "List of destination ports.",
+              "oneOf": [
+                {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            },
+            "ipProtocols": {
+              "description": "Array of FirewallPolicyRuleNetworkProtocols.",
+              "oneOf": [
+                {
+                  "items": {
+                    "enum": [
+                      "TCP",
+                      "UDP",
+                      "Any",
+                      "ICMP"
+                    ],
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            },
+            "ruleType": {
+              "enum": [
+                "NatRule"
+              ],
+              "type": "string"
+            },
+            "sourceAddresses": {
+              "description": "List of source IP addresses for this rule.",
+              "oneOf": [
+                {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            },
+            "sourceIpGroups": {
+              "description": "List of source IpGroups for this rule.",
+              "oneOf": [
+                {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            },
+            "translatedAddress": {
+              "description": "The translated address for this NAT rule.",
+              "type": "string"
+            },
+            "translatedFqdn": {
+              "description": "The translated FQDN for this NAT rule.",
+              "type": "string"
+            },
+            "translatedPort": {
+              "description": "The translated port for this NAT rule.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "ruleType"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Rule of type network.",
+          "properties": {
+            "destinationAddresses": {
+              "description": "List of destination IP addresses or Service Tags.",
+              "oneOf": [
+                {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            },
+            "destinationFqdns": {
+              "description": "List of destination FQDNs.",
+              "oneOf": [
+                {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            },
+            "destinationIpGroups": {
+              "description": "List of destination IpGroups for this rule.",
+              "oneOf": [
+                {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            },
+            "destinationPorts": {
+              "description": "List of destination ports.",
+              "oneOf": [
+                {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            },
+            "ipProtocols": {
+              "description": "Array of FirewallPolicyRuleNetworkProtocols.",
+              "oneOf": [
+                {
+                  "items": {
+                    "enum": [
+                      "TCP",
+                      "UDP",
+                      "Any",
+                      "ICMP"
+                    ],
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            },
+            "ruleType": {
+              "enum": [
+                "NetworkRule"
+              ],
+              "type": "string"
+            },
+            "sourceAddresses": {
+              "description": "List of source IP addresses for this rule.",
+              "oneOf": [
+                {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            },
+            "sourceIpGroups": {
+              "description": "List of source IpGroups for this rule.",
+              "oneOf": [
+                {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            }
+          },
+          "required": [
+            "ruleType"
+          ],
+          "type": "object"
+        }
+      ],
+      "properties": {
+        "description": {
+          "description": "Description of the rule.",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of the rule.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "FirewallPolicyRuleApplicationProtocol": {
+      "description": "Properties of the application rule protocol.",
+      "properties": {
+        "port": {
+          "description": "Port number for the protocol, cannot be greater than 64000.",
+          "oneOf": [
+            {
+              "maximum": 64000,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "protocolType": {
+          "description": "Protocol type.",
+          "oneOf": [
+            {
+              "enum": [
+                "Http",
+                "Https"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "FirewallPolicyRuleCollection": {
+      "description": "Properties of the rule collection.",
+      "oneOf": [
+        {
+          "description": "Firewall Policy Filter Rule Collection.",
+          "properties": {
+            "action": {
+              "description": "The action type of a Filter rule collection.",
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/FirewallPolicyFilterRuleCollectionAction"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            },
+            "ruleCollectionType": {
+              "enum": [
+                "FirewallPolicyFilterRuleCollection"
+              ],
+              "type": "string"
+            },
+            "rules": {
+              "description": "List of rules included in a rule collection.",
+              "oneOf": [
+                {
+                  "items": {
+                    "$ref": "#/definitions/FirewallPolicyRule"
+                  },
+                  "type": "array"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            }
+          },
+          "required": [
+            "ruleCollectionType"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Firewall Policy NAT Rule Collection.",
+          "properties": {
+            "action": {
+              "description": "The action type of a Nat rule collection.",
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/FirewallPolicyNatRuleCollectionAction"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            },
+            "ruleCollectionType": {
+              "enum": [
+                "FirewallPolicyNatRuleCollection"
+              ],
+              "type": "string"
+            },
+            "rules": {
+              "description": "List of rules included in a rule collection.",
+              "oneOf": [
+                {
+                  "items": {
+                    "$ref": "#/definitions/FirewallPolicyRule"
+                  },
+                  "type": "array"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            }
+          },
+          "required": [
+            "ruleCollectionType"
+          ],
+          "type": "object"
+        }
+      ],
+      "properties": {
+        "name": {
+          "description": "The name of the rule collection.",
+          "type": "string"
+        },
+        "priority": {
+          "description": "Priority of the Firewall Policy Rule Collection resource.",
+          "oneOf": [
+            {
+              "maximum": 65000,
+              "minimum": 100,
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "FirewallPolicyRuleCollectionGroupProperties": {
+      "description": "Properties of the rule collection group.",
+      "properties": {
+        "priority": {
+          "description": "Priority of the Firewall Policy Rule Collection Group resource.",
+          "oneOf": [
+            {
+              "maximum": 65000,
+              "minimum": 100,
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "ruleCollections": {
+          "description": "Group of Firewall Policy rule collections.",
+          "oneOf": [
+            {
+              "items": {
+                "$ref": "#/definitions/FirewallPolicyRuleCollection"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "FirewallPolicySQL": {
+      "description": "SQL Settings in Firewall Policy.",
+      "properties": {
+        "allowSqlRedirect": {
+          "description": "A flag to indicate if SQL Redirect traffic filtering is enabled. Turning on the flag requires no rule using port 11000-11999.",
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "FirewallPolicySku": {
+      "description": "SKU of Firewall policy.",
+      "properties": {
+        "tier": {
+          "description": "Tier of Firewall Policy.",
+          "oneOf": [
+            {
+              "enum": [
+                "Standard",
+                "Premium",
+                "Basic"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "FirewallPolicySnat": {
+      "description": "The private IP addresses/IP ranges to which traffic will not be SNAT.",
+      "properties": {
+        "privateRanges": {
+          "description": "List of private IP addresses/IP address ranges to not be SNAT.",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "FirewallPolicyThreatIntelWhitelist": {
+      "description": "ThreatIntel Whitelist for Firewall Policy.",
+      "properties": {
+        "fqdns": {
+          "description": "List of FQDNs for the ThreatIntel Whitelist.",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "ipAddresses": {
+          "description": "List of IP addresses for the ThreatIntel Whitelist.",
+          "oneOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "FirewallPolicyTransportSecurity": {
+      "description": "Configuration needed to perform TLS termination & initiation.",
+      "properties": {
+        "certificateAuthority": {
+          "description": "The CA used for intermediate CA generation.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/FirewallPolicyCertificateAuthority"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ManagedServiceIdentity": {
+      "description": "Identity for the resource.",
+      "properties": {
+        "type": {
+          "description": "The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine.",
+          "oneOf": [
+            {
+              "enum": [
+                "SystemAssigned",
+                "UserAssigned",
+                "SystemAssigned, UserAssigned",
+                "None"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "userAssignedIdentities": {
+          "description": "The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "$ref": "#/definitions/Components1Jq1T4ISchemasManagedserviceidentityPropertiesUserassignedidentitiesAdditionalproperties"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "SignaturesOverridesProperties": {
+      "description": "Will contain the properties of the resource (the actual signature overrides)",
+      "properties": {
+        "signatures": {
+          "description": "Dictionary of <string>",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "SubResource": {
+      "description": "Reference to another subresource.",
+      "properties": {
+        "id": {
+          "description": "Resource ID.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "firewallPolicies_ruleCollectionGroups_childResource": {
+      "description": "Microsoft.Network/firewallPolicies/ruleCollectionGroups",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2021-08-01"
+          ],
+          "type": "string"
+        },
+        "id": {
+          "description": "Resource ID.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of the FirewallPolicyRuleCollectionGroup.",
+          "type": "string"
+        },
+        "properties": {
+          "description": "The properties of the firewall policy rule collection group.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/FirewallPolicyRuleCollectionGroupProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "ruleCollectionGroups"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    },
+    "firewallPolicies_signatureOverrides_childResource": {
+      "description": "Microsoft.Network/firewallPolicies/signatureOverrides",
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "2021-08-01"
+          ],
+          "type": "string"
+        },
+        "id": {
+          "description": "Will contain the resource id of the signature override resource",
+          "type": "string"
+        },
+        "name": {
+          "oneOf": [
+            {
+              "enum": [
+                "default"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "properties": {
+          "description": "Will contain the properties of the resource (the actual signature overrides)",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/SignaturesOverridesProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "enum": [
+            "signatureOverrides"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "properties",
+        "apiVersion",
+        "type"
+      ],
+      "type": "object"
+    }
+  }
+}

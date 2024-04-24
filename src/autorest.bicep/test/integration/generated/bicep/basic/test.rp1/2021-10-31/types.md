@@ -2,34 +2,12 @@
 
 ## Resource Test.Rp1/discriminatedUnionTestType@2021-10-31
 * **Valid Scope(s)**: ResourceGroup
-* **Discriminator**: type
-
-### Base Properties
+### Properties
 * **apiVersion**: '2021-10-31' (ReadOnly, DeployTimeConstant): The resource api version
-* **bar**: string: The bar property
-* **foo**: string: The foo property
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DiscriminatedUnionTestTypeProperties](#discriminateduniontesttypeproperties) (Required)
 * **type**: 'Test.Rp1/discriminatedUnionTestType' (ReadOnly, DeployTimeConstant): The resource type
-
-### DiscriminatedUnionTestTypeBranchWithInheritedProps
-#### Properties
-* **baz**: string: The baz property
-* **quux**: string: A property defined inline
-* **type**: 'inherited' (Required): The variant of this type
-
-### DiscriminatedUnionTestTypeBranchWithAllInlineProps
-#### Properties
-* **buzz**: string: The buzz property
-* **fizz**: string: The fizz property
-* **pop**: string: The pop property
-* **type**: 'inline' (Required): The variant of this type
-
-### DiscriminatedUnionTestTypeBranchWithOverride
-#### Properties
-* **foo**: int: The overridden foo property
-* **type**: 'override' (Required): The variant of this type
-
 
 ## Resource Test.Rp1/partlyReadonlyType@2021-10-31
 * **Valid Scope(s)**: Tenant (ReadOnly), ResourceGroup
@@ -89,6 +67,32 @@
 * **ApiVersion**: 2021-10-31
 * **Input**: [FoosRequest](#foosrequest)
 * **Output**: [FoosResponse](#foosresponse)
+
+## DiscriminatedUnionTestTypeProperties
+* **Discriminator**: type
+
+### Base Properties
+* **bar**: string: The bar property
+* **foo**: string: The foo property
+
+### DiscriminatedUnionTestTypePropertiesBranchWithInheritedProps
+#### Properties
+* **baz**: string: The baz property
+* **quux**: string: A property defined inline
+* **type**: 'inherited' (Required): The variant of this type
+
+### DiscriminatedUnionTestTypePropertiesBranchWithAllInlineProps
+#### Properties
+* **buzz**: string: The buzz property
+* **fizz**: string: The fizz property
+* **pop**: string: The pop property
+* **type**: 'inline' (Required): The variant of this type
+
+### DiscriminatedUnionTestTypePropertiesBranchWithOverride
+#### Properties
+* **foo**: int: The overridden foo property
+* **type**: 'override' (Required): The variant of this type
+
 
 ## EncryptionProperties
 ### Properties
