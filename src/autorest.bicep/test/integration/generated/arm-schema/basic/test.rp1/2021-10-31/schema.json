@@ -13,17 +13,19 @@
           ],
           "type": "string"
         },
-        "bar": {
-          "description": "The bar property",
-          "type": "string"
-        },
-        "foo": {
-          "description": "The foo property",
-          "type": "string"
-        },
         "name": {
           "description": "The discriminatedUnionTestType resource name.",
           "type": "string"
+        },
+        "properties": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/DiscriminatedUnionTestTypeProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
         },
         "type": {
           "enum": [
@@ -34,6 +36,7 @@
       },
       "required": [
         "name",
+        "properties",
         "apiVersion",
         "type"
       ],
@@ -294,6 +297,94 @@
     }
   },
   "definitions": {
+    "DiscriminatedUnionTestTypeProperties": {
+      "oneOf": [
+        {
+          "properties": {
+            "baz": {
+              "description": "The baz property",
+              "type": "string"
+            },
+            "quux": {
+              "description": "A property defined inline",
+              "type": "string"
+            },
+            "type": {
+              "enum": [
+                "inherited"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "type"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "buzz": {
+              "description": "The buzz property",
+              "type": "string"
+            },
+            "fizz": {
+              "description": "The fizz property",
+              "type": "string"
+            },
+            "pop": {
+              "description": "The pop property",
+              "type": "string"
+            },
+            "type": {
+              "enum": [
+                "inline"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "type"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "foo": {
+              "description": "The overridden foo property",
+              "oneOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            },
+            "type": {
+              "enum": [
+                "override"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "type"
+          ],
+          "type": "object"
+        }
+      ],
+      "properties": {
+        "bar": {
+          "description": "The bar property",
+          "type": "string"
+        },
+        "foo": {
+          "description": "The foo property",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
     "EncryptionProperties": {
       "description": "Configuration of key for data encryption",
       "properties": {

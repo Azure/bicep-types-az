@@ -324,12 +324,31 @@ export function generateSchema(host: AutorestExtensionHost, definition: Provider
       ancestorsToExclude.add(putSchema);
     }
 
+    const discriminatorName = putSchema?.discriminator?.property.serializedName;
+
     const oneOf: JSONSchema4[] = [];
-    for (const { putSubType } of getDiscriminatedSubTypes(putSchema)) {
+    for (const { subTypeName, putSubType } of getDiscriminatedSubTypes(putSchema)) {
       const childSchema = parseObjectType(putSubType, ancestorsToExclude);
+
+      if (!putSubType.discriminatorValue) {
+        logWarning(`Found discriminated sub-type '${subTypeName}' without discriminator value`);
+        continue;
+      }
+ 
       if (childSchema.type !== 'object') {
         logWarning(`Found unexpected element of discriminated type '${childSchema.type}'`);
         continue;
+      }
+
+      if (discriminatorName) {
+        childSchema.properties ??= {};
+        childSchema.properties[discriminatorName] = {
+          type: 'string',
+          enum: [putSubType.discriminatorValue],
+        };
+  
+        childSchema.required = Array.isArray(childSchema.required) ? childSchema.required : [];
+        childSchema.required.push(discriminatorName);
       }
 
       oneOf.push(childSchema);

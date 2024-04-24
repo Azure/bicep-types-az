@@ -9,7 +9,8 @@ const outputBaseDir = `${__dirname}/generated`;
 
 // add any new spec paths under ./specs to this list
 const specs = [
-  `basic`
+  `basic`,
+  `firewalls`
 ]
 
 for (const armSchema of [false, true]) {
