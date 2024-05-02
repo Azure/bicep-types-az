@@ -108,7 +108,11 @@ ${err}
   await buildTypeIndex(defaultLogger, outputBaseDir);
 
   // log if there are any type dirs with no corresponding readme (e.g. if a swagger directory has been removed).
-  await logStaleReadmes(defaultLogger, outputBaseDir, specsPath, readmePaths);
+  const shouldRebuildTypeIndex = await clearStaleTypeFolders(defaultLogger, outputBaseDir, specsPath, readmePaths);
+  
+  if (shouldRebuildTypeIndex) {
+    await buildTypeIndex(defaultLogger, outputBaseDir);
+  }
 });
 
 function normalizeJsonPath(jsonPath: string) {
@@ -243,7 +247,7 @@ async function findReadmePaths(specsPath: string) {
   });
 }
 
-async function logStaleReadmes(logger: ILogger, outputBaseDir: string, specsPath: string, readmePaths: string[]) {
+async function clearStaleTypeFolders(logger: ILogger, outputBaseDir: string, specsPath: string, readmePaths: string[]) {
   const typesPaths = await findRecursive(outputBaseDir, filePath => {
     return path.basename(filePath) === 'types.json';
   });
@@ -262,6 +266,8 @@ async function logStaleReadmes(logger: ILogger, outputBaseDir: string, specsPath
   for (const basePath of staleBasePaths) {
     await rm(`${outputBaseDir}/${basePath}`, { recursive: true, force: true, });
   }
+  
+  return staleBasePaths.length > 0;
 }
 
 async function buildTypeIndex(logger: ILogger, baseDir: string) {
