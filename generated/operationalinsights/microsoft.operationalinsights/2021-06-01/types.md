@@ -45,7 +45,7 @@
 * **clusterId**: string (ReadOnly): The ID associated with the cluster.
 * **createdDate**: string (ReadOnly): The cluster creation time
 * **isAvailabilityZonesEnabled**: bool: Sets whether the cluster will support availability zones. This can be set as true only in regions where Azure Data Explorer support Availability Zones. This Property can not be modified after cluster creation. Default value is 'true' if region supports Availability Zones.
-* **isDoubleEncryptionEnabled**: bool (WriteOnly): Configures whether cluster will use double encryption. This Property can not be modified after cluster creation. Default value is 'true'
+* **isDoubleEncryptionEnabled**: bool: Configures whether cluster will use double encryption. This Property can not be modified after cluster creation. Default value is 'true'
 * **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties): The associated key properties.
 * **lastModifiedDate**: string (ReadOnly): The last time the cluster was updated.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ProvisioningAccount' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the cluster.

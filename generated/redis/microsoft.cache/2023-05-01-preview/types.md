@@ -138,6 +138,7 @@
 * **maxmemory-delta**: string: Value in megabytes reserved for non-cache usage per shard e.g. failover.
 * **maxmemory-policy**: string: The eviction strategy used when your data won't fit within its memory limit.
 * **maxmemory-reserved**: string: Value in megabytes reserved for non-cache usage per shard e.g. failover.
+* **notify-keyspace-events**: string: The keyspace events which should be monitored.
 * **preferred-data-archive-auth-method**: string (ReadOnly): Preferred auth method to communicate to storage account used for data archive, specify SAS or ManagedIdentity, default value is SAS
 * **preferred-data-persistence-auth-method**: string: Preferred auth method to communicate to storage account used for data persistence, specify SAS or ManagedIdentity, default value is SAS
 * **rdb-backup-enabled**: string: Specifies whether the rdb backup is enabled

@@ -128,6 +128,7 @@
 * **description**: string (Required): Detailed description of the question or issue.
 * **enrollmentId**: string (ReadOnly): Enrollment Id associated with the support ticket.
 * **fileWorkspaceName**: string: File workspace name.
+* **isTemporaryTicket**: 'No' | 'Yes' | string (ReadOnly): This property indicates if support ticket is a temporary ticket.
 * **modifiedDate**: string (ReadOnly): Time in UTC (ISO 8601 format) when the support ticket was last modified.
 * **problemClassificationDisplayName**: string (ReadOnly): Localized name of problem classification.
 * **problemClassificationId**: string (Required): Each Azure service has its own set of issue categories, also known as problem classification. This parameter is the unique Id for the type of problem you are experiencing.

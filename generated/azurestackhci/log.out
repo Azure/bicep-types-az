@@ -4,6 +4,121 @@ https://aka.ms/autorest
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'AdapterPropertyOverrides' (6 differences):
+  - properties.jumboPacket.$ref: "#/components/schemas/schemas:171" => "#/components/schemas/schemas:270"
+  - properties.jumboPacket.readOnly: <none> => true
+  - properties.networkDirect.$ref: "#/components/schemas/schemas:172" => "#/components/schemas/schemas:271"
+  - properties.networkDirect.readOnly: <none> => true
+  - properties.networkDirectTechnology.$ref: "#/components/schemas/schemas:173" => "#/components/schemas/schemas:272"
+  - properties.networkDirectTechnology.readOnly: <none> => true
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'HostNetwork' (11 differences):
+  - properties.intents.x-ms-identifiers.0: "name" => "intentName"
+  - properties.intents.$ref: "#/components/schemas/schemas:199" => "#/components/schemas/schemas:321"
+  - properties.intents.readOnly: <none> => true
+  - properties.storageNetworks.x-ms-identifiers.0: "name" => "networkAdapterName"
+  - properties.storageNetworks.$ref: "#/components/schemas/schemas:200" => "#/components/schemas/schemas:322"
+  - properties.storageNetworks.readOnly: <none> => true
+  - properties.storageConnectivitySwitchless.description: "Defines how the storage adapters between nodes are connected either switch or switch less.." => "Defines how the storage adapters between nodes are connected either switch or switch less."
+  - properties.storageConnectivitySwitchless.default: false => <none>
+  - properties.storageConnectivitySwitchless.readOnly: <none> => true
+  - properties.enableStorageAutoIp.default: false => <none>
+  - properties.enableStorageAutoIp.readOnly: <none> => true
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Intents' (25 differences):
+  - properties.name: {"$ref":"#/components/schemas/schemas:208","description":"Name of the network intent you wish to create."} => <none>
+  - properties.trafficType: {"$ref":"#/components/schemas/schemas:209","description":"List of network traffic types. Only allowed values are 'Compute', 'Storage', 'Management'."} => <none>
+  - properties.adapter: {"$ref":"#/components/schemas/schemas:211","description":"Array of network interfaces used for the network intent."} => <none>
+  - properties.overrideVirtualSwitchConfiguration.default: false => <none>
+  - properties.overrideVirtualSwitchConfiguration.readOnly: <none> => true
+  - properties.virtualSwitchConfigurationOverrides.$ref: "#/components/schemas/schemas:259" => "#/components/schemas/schemas:367"
+  - properties.virtualSwitchConfigurationOverrides.readOnly: <none> => true
+  - properties.overrideQosPolicy.default: false => <none>
+  - properties.overrideQosPolicy.readOnly: <none> => true
+  - properties.qosPolicyOverrides.readOnly: <none> => true
+  - properties.overrideAdapterProperty.default: false => <none>
+  - properties.overrideAdapterProperty.readOnly: <none> => true
+  - properties.adapterPropertyOverrides.$ref: "#/components/schemas/schemas:170" => "#/components/schemas/schemas:269"
+  - properties.adapterPropertyOverrides.readOnly: <none> => true
+  - properties.scope: <none> => {"$ref":"#/components/schemas/schemas:324","description":"Scope for host network intent.","readOnly":true}
+  - properties.intentType: <none> => {"$ref":"#/components/schemas/schemas:325","description":"IntentType for host network intent.","readOnly":true}
+  - properties.isComputeIntentSet: <none> => {"type":"boolean","description":"IsComputeIntentSet for host network intent.","readOnly":true}
+  - properties.isStorageIntentSet: <none> => {"type":"boolean","description":"IsStorageIntentSet for host network intent.","readOnly":true}
+  - properties.isOnlyStorage: <none> => {"type":"boolean","description":"IntentType for host network intent.","readOnly":true}
+  - properties.isManagementIntentSet: <none> => {"type":"boolean","description":"IsManagementIntentSet for host network intent.","readOnly":true}
+  - properties.isStretchIntentSet: <none> => {"type":"boolean","description":"IsStretchIntentSet for host network intent.","readOnly":true}
+  - properties.isOnlyStretch: <none> => {"type":"boolean","description":"IsOnlyStretch for host network intent.","readOnly":true}
+  - properties.isNetworkIntentType: <none> => {"type":"boolean","description":"IsNetworkIntentType for host network intent.","readOnly":true}
+  - properties.intentName: <none> => {"$ref":"#/components/schemas/schemas:326","description":"Name of the network intent you wish to create.","readOnly":true}
+  - properties.intentAdapters: <none> => {"$ref":"#/components/schemas/schemas:327","description":"Array of adapters used for the network intent.","readOnly":true}
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'StorageAdapterIPInfo' (6 differences):
+  - properties.physicalNode.$ref: "#/components/schemas/schemas:251" => "#/components/schemas/schemas:346"
+  - properties.physicalNode.readOnly: <none> => true
+  - properties.ipv4Address.$ref: "#/components/schemas/schemas:252" => "#/components/schemas/schemas:347"
+  - properties.ipv4Address.readOnly: <none> => true
+  - properties.subnetMask.$ref: "#/components/schemas/schemas:253" => "#/components/schemas/schemas:348"
+  - properties.subnetMask.readOnly: <none> => true
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'StorageNetworks' (8 differences):
+  - properties.name.$ref: "#/components/schemas/schemas:255" => "#/components/schemas/schemas:350"
+  - properties.name.readOnly: <none> => true
+  - properties.networkAdapterName.$ref: "#/components/schemas/schemas:256" => "#/components/schemas/schemas:351"
+  - properties.networkAdapterName.readOnly: <none> => true
+  - properties.vlanId: {"$ref":"#/components/schemas/schemas:257","description":"ID specified for the VLAN storage network. This setting is applied to the network interfaces that route the storage and VM migration traffic. "} => <none>
+  - properties.storageAdapterIPInfo.$ref: "#/components/schemas/schemas:258" => "#/components/schemas/schemas:353"
+  - properties.storageAdapterIPInfo.readOnly: <none> => true
+  - properties.storageVlanId: <none> => {"$ref":"#/components/schemas/schemas:352","description":"ID specified for the VLAN storage network. This setting is applied to the network interfaces that route the storage and VM migration traffic. ","readOnly":true}
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'VirtualSwitchConfigurationOverrides' (4 differences):
+  - properties.enableIov.$ref: "#/components/schemas/schemas:260" => "#/components/schemas/schemas:368"
+  - properties.enableIov.readOnly: <none> => true
+  - properties.loadBalancingAlgorithm.$ref: "#/components/schemas/schemas:261" => "#/components/schemas/schemas:369"
+  - properties.loadBalancingAlgorithm.readOnly: <none> => true
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorDetail' (6 differences):
+  - properties.exception: {"$ref":"#/components/schemas/schemas:285","description":"Exception details while installing extension.","readOnly":true} => <none>
+  - properties.code: <none> => {"$ref":"#/components/schemas/schemas:664","description":"The error code.","readOnly":true}
+  - properties.message: <none> => {"$ref":"#/components/schemas/schemas:665","description":"The error message.","readOnly":true}
+  - properties.target: <none> => {"$ref":"#/components/schemas/schemas:666","description":"The error target.","readOnly":true}
+  - properties.details: <none> => {"x-ms-identifiers":["message","target"],"$ref":"#/components/schemas/schemas:667","description":"The error details.","readOnly":true}
+  - properties.additionalInfo: <none> => {"x-ms-identifiers":[],"$ref":"#/components/schemas/schemas:668","description":"The error additional info.","readOnly":true}
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorDetail' (6 differences):
+  - properties.exception: {"$ref":"#/components/schemas/schemas:285","description":"Exception details while installing extension.","readOnly":true} => <none>
+  - properties.code: <none> => {"$ref":"#/components/schemas/schemas:664","description":"The error code.","readOnly":true}
+  - properties.message: <none> => {"$ref":"#/components/schemas/schemas:665","description":"The error message.","readOnly":true}
+  - properties.target: <none> => {"$ref":"#/components/schemas/schemas:666","description":"The error target.","readOnly":true}
+  - properties.details: <none> => {"x-ms-identifiers":["message","target"],"$ref":"#/components/schemas/schemas:759","description":"The error details.","readOnly":true}
+  - properties.additionalInfo: <none> => {"x-ms-identifiers":[],"$ref":"#/components/schemas/schemas:668","description":"The error additional info.","readOnly":true}
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Extension' (8 differences):
+  - properties.extensionName: {"$ref":"#/components/schemas/schemas:287","description":"Arc extension name installed on edge device.","readOnly":true} => <none>
+  - properties.state: {"$ref":"#/components/schemas/ArcExtensionState","description":"Arc extension state from arc machine extension.","readOnly":true} => <none>
+  - properties.errorDetails: {"x-ms-identifiers":[],"$ref":"#/components/schemas/schemas:288","description":"Error details while installing Arc extension.","readOnly":true} => <none>
+  - properties.extensionResourceId: {"$ref":"#/components/schemas/schemas:289","description":"Arc Extension Azure resource id.","readOnly":true} => <none>
+  - properties.typeHandlerVersion: {"$ref":"#/components/schemas/schemas:290","description":"Extension version installed.","readOnly":true} => <none>
+  - properties.managedBy: {"x-ms-enum":{"name":"ExtensionManagedBy","modelAsString":true},"$ref":"#/components/schemas/ExtensionManagedBy","description":"Extension managed by user or Azure.","readOnly":true} => <none>
+  - properties.properties: <none> => {"description":"Describes Machine Extension Properties.","$ref":"#/components/schemas/schemas:382","x-ms-client-flatten":true}
+  - allOf: <none> => [{"$ref":"#/components/schemas/schemas:639"}]
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (3 differences):
+  - properties.id.$ref: "#/components/schemas/schemas:630" => "#/components/schemas/schemas:722"
+  - properties.id.description: "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}" => "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
+  - properties.systemData.type: "object" => <none>
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProxyResource' (1 differences):
+  - allOf.0.$ref: "#/components/schemas/schemas:629" => "#/components/schemas/schemas:721"
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorResponse' (1 differences):
+  - properties.error.$ref: "#/components/schemas/schemas:663" => "#/components/schemas/schemas:755"
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ProxyResource' -> 'ProxyResourceAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'Resource' -> 'ResourceAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorResponse' -> 'ErrorResponseAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorDetail' -> 'ErrorDetailAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorDetail' -> 'ErrorDetailAutoGenerated2'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'HostNetwork' -> 'HostNetworkAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'Intents' -> 'IntentsAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'VirtualSwitchConfigurationOverrides' -> 'VirtualSwitchConfigurationOverridesAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'AdapterPropertyOverrides' -> 'AdapterPropertyOverridesAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'StorageNetworks' -> 'StorageNetworksAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'StorageAdapterIPInfo' -> 'StorageAdapterIPInfoAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'Extension' -> 'ExtensionAutoGenerated'
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'GalleryOSDiskImage' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/stable/2024-01-01/galleryImages.json:512:5
 warning | PreCheck/SchemaMissingType | The schema 'GalleryOSDiskImage' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'

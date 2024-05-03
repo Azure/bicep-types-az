@@ -97,9 +97,7 @@
 ## ManagedClusterUpgradeSpec
 ### Properties
 * **kubernetesVersion**: string: The Kubernetes version to upgrade the member clusters to.
-* **type**: 'Full' | 'NodeImageOnly' | string (Required): The upgrade type.
-Full requires the KubernetesVersion property to be set.
-NodeImageOnly requires the KubernetesVersion property not to be set.
+* **type**: 'Full' | 'NodeImageOnly' | string (Required): ManagedClusterUpgradeType is the type of upgrade to be applied.
 
 ## ManagedServiceIdentity
 ### Properties
@@ -170,7 +168,7 @@ When creating a new run, there are three ways to define a strategy for the run:
 
 Setting both "updateStrategyId" and "strategy" is invalid.
 
-UpdateRuns created by "updateStrategyId" snapshot the referenced UpdateStrategy at the time of creation and store it in the "strategy" field.
+UpdateRuns created by "updateStrategyId" snapshot the referenced UpdateStrategy at the time of creation and store it in the "strategy" field. 
 Subsequent changes to the referenced FleetUpdateStrategy resource do not propagate.
 UpdateRunStrategy changes can be made directly on the "strategy" field before launching the UpdateRun.
 

@@ -5088,8 +5088,8 @@
         "type": {
           "$ref": "#/472"
         },
-        "flags": 0,
-        "description": "The display name of the sku."
+        "flags": 2,
+        "description": "The model name."
       }
     }
   },
