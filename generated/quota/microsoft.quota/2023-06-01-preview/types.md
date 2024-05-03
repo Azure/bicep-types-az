@@ -10,25 +10,55 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Quota/groupQuotas' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Quota/groupQuotas/groupQuotaLimits@2023-06-01-preview
-* **Valid Scope(s)**: Extension
+## Resource Microsoft.Quota/groupQuotas/groupQuotaRequests@2023-06-01-preview (ReadOnly)
+* **Valid Scope(s)**: ManagementGroup
 ### Properties
 * **apiVersion**: '2023-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {minLength: 3, maxLength: 63, pattern: "^[a-z][a-z0-9]*$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [GroupQuotaDetails](#groupquotadetails): Group Quota properties for the specified resource.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [SubmittedResourceRequestStatusProperties](#submittedresourcerequeststatusproperties) (ReadOnly)
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **type**: 'Microsoft.Quota/groupQuotas/groupQuotaLimits' (ReadOnly, DeployTimeConstant): The resource type
+* **type**: 'Microsoft.Quota/groupQuotas/groupQuotaRequests' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Quota/groupQuotas/quotaAllocations@2023-06-01-preview
+## Resource Microsoft.Quota/groupQuotas/quotaAllocationRequests@2023-06-01-preview (ReadOnly)
+* **Valid Scope(s)**: Extension
+### Properties
+* **apiVersion**: '2023-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [QuotaAllocationRequestStatusProperties](#quotaallocationrequeststatusproperties) (ReadOnly)
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.Quota/groupQuotas/quotaAllocationRequests' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Quota/groupQuotas/resourceProviders/groupQuotaRequests@2023-06-01-preview
+* **Valid Scope(s)**: ManagementGroup
+### Properties
+* **apiVersion**: '2023-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string {minLength: 3, maxLength: 63, pattern: "^[a-z][a-z0-9]*$"} (Required, DeployTimeConstant): The resource name
+* **properties**: [SubmittedResourceRequestStatusProperties](#submittedresourcerequeststatusproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.Quota/groupQuotas/resourceProviders/groupQuotaRequests' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Quota/groupQuotas/resourceProviders/locationSettings@2023-06-01-preview
+* **Valid Scope(s)**: ManagementGroup
+### Properties
+* **apiVersion**: '2023-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string {minLength: 1} (Required, DeployTimeConstant): The resource name
+* **properties**: [GroupQuotasEnforcementResponseProperties](#groupquotasenforcementresponseproperties)
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.Quota/groupQuotas/resourceProviders/locationSettings' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Quota/groupQuotas/resourceProviders/quotaAllocationRequests@2023-06-01-preview
 * **Valid Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2023-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {minLength: 3, maxLength: 63, pattern: "^[a-z][a-z0-9]*$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [SubscriptionQuotaDetails](#subscriptionquotadetails): Quota properties for the specified resource.
+* **properties**: [QuotaAllocationRequestStatusProperties](#quotaallocationrequeststatusproperties)
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **type**: 'Microsoft.Quota/groupQuotas/quotaAllocations' (ReadOnly, DeployTimeConstant): The resource type
+* **type**: 'Microsoft.Quota/groupQuotas/resourceProviders/quotaAllocationRequests' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Quota/groupQuotas/subscriptionRequests@2023-06-01-preview (ReadOnly)
 * **Valid Scope(s)**: ManagementGroup
@@ -36,7 +66,7 @@
 * **apiVersion**: '2023-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [GroupQuotaSubscriptionIdProperties](#groupquotasubscriptionidproperties) (ReadOnly)
+* **properties**: [GroupQuotaSubscriptionRequestStatusProperties](#groupquotasubscriptionrequeststatusproperties) (ReadOnly)
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Quota/groupQuotas/subscriptionRequests' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -50,39 +80,59 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Quota/groupQuotas/subscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.Quota/quotas@2023-06-01-preview
+* **Valid Scope(s)**: Unknown
+### Properties
+* **apiVersion**: '2023-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [QuotaProperties](#quotaproperties): Quota properties for the specified resource, based on the API called, Quotas or Usages.
+* **type**: 'Microsoft.Quota/quotas' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.Quota/usages@2023-06-01-preview (ReadOnly)
+* **Valid Scope(s)**: Unknown
+### Properties
+* **apiVersion**: '2023-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [UsagesProperties](#usagesproperties) (ReadOnly): Usage properties for the specified resource.
+* **type**: 'Microsoft.Quota/usages' (ReadOnly, DeployTimeConstant): The resource type
+
 ## AdditionalAttributes
 ### Properties
 * **environment**: 'NonProduction' | 'Production' | string: Environment name.
-* **groupId**: [GroupingId](#groupingid) (Required): The grouping Id for the group quota. It can be management Group Id or ServiceTreeId if applicable.
-
-## AssignedToSubscription
-### Properties
-* **quotaAllocated**: int: The amount of quota allocated to this subscriptionId from the GroupQuotasEntity.
-* **subscriptionId**: string: An Azure subscriptionId.
+* **groupId**: [GroupingId](#groupingid) (Required): The grouping Id for the group quota. It can be Billing Id or ServiceTreeId if applicable.
 
 ## GroupingId
 ### Properties
-* **groupingIdType**: 'BillingId' | 'ServiceTreeId' | string: GroupingId type. It is a required property. More types of groupIds can be supported in future. MGID is already in the URI, so it's not needed.'
-* **value**: string: GroupId value based on the groupingType selected - management Group Id or ServiceTreeId.
+* **groupingIdType**: 'BillingId' | 'ServiceTreeId' | string: GroupingId type. It is a required property. More types of groupIds can be supported in future.
+* **value**: string: GroupId value based on the groupingType selected - Billing Id or ServiceTreeId.
 
-## GroupQuotaDetails
+## GroupQuotaRequestBase
 ### Properties
-* **assignedToSubscriptions**: [AssignedToSubscription](#assignedtosubscription)[] (ReadOnly): Assigned Group Quota to subscriptions.
-* **availableLimit**: int (ReadOnly): The available Group Quota Limit at the MG level. This Group quota can be assigned to subscription(s).
-* **comment**: string: Any comment related to quota request.
-* **limit**: int: The current Group Quota Limit at the parentId level.
-* **name**: [GroupQuotaDetailsName](#groupquotadetailsname): Name of the resource provided by the resource Provider. This property is already included in the request URI, so it is a readonly property returned in the response.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Failed' | 'InProgress' | 'Invalid' | 'Succeeded' | string (ReadOnly): Request status.
-* **unit**: string (ReadOnly): The usages units, such as Count and Bytes. When requesting quota, use the **unit** value returned in the GET response in the request body of your PUT operation.
+* **properties**: [GroupQuotaRequestBaseProperties](#groupquotarequestbaseproperties)
 
-## GroupQuotaDetailsName
+## GroupQuotaRequestBaseProperties
+### Properties
+* **comments**: string: GroupQuota Request comments and details for request. This is optional paramter to provide more details related to the requested resource.
+* **limit**: int: The new quota limit for the subscription. The incremental quota will be allocated from pre-approved group quota.
+* **name**: [GroupQuotaRequestBasePropertiesName](#groupquotarequestbasepropertiesname) (ReadOnly): Name of the resource provided by the resource provider. This property is already included in the request URI, so it is a readonly property returned in the response.
+* **region**: string: Location/Azure region for the quota requested for resource.
+
+## GroupQuotaRequestBasePropertiesName
 ### Properties
 * **localizedValue**: string (ReadOnly): Resource display name.
 * **value**: string (ReadOnly): Resource name.
 
+## GroupQuotasEnforcementResponseProperties
+### Properties
+* **enforcementEnabled**: 'Disabled' | 'Enabled' | 'NotAvailable' | string: Is the GroupQuota Enforcement enabled for the Azure region.
+* **faultCode**: string (ReadOnly): Details of the failure.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Failed' | 'InProgress' | 'Invalid' | 'Succeeded' | string (ReadOnly): Request status.
+
 ## GroupQuotasEntityBase
 ### Properties
-* **additionalAttributes**: [AdditionalAttributes](#additionalattributes): Additional attributes to allow subscription, which can be added to the subscriptionIds.
+* **additionalAttributes**: [AdditionalAttributes](#additionalattributes): Additional attributes to filter/restrict the subscriptions, which can be added to the subscriptionIds.
 * **displayName**: string: Display name of the GroupQuota entity.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Failed' | 'InProgress' | 'Invalid' | 'Succeeded' | string (ReadOnly): Provisioning state of the operation.
 
@@ -91,17 +141,71 @@
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Failed' | 'InProgress' | 'Invalid' | 'Succeeded' | string (ReadOnly): Status of this subscriptionId being associated with the GroupQuotasEntity.
 * **subscriptionId**: string (ReadOnly): An Azure subscriptionId.
 
-## SubscriptionGroupQuotaAssignment
+## GroupQuotaSubscriptionRequestStatusProperties
 ### Properties
-* **managementGroupId**: string: The management group id of the quota source.
-* **quotaAllocated**: int: The amount of quota allocated to this subscriptionId from the quota source.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Failed' | 'InProgress' | 'Invalid' | 'Succeeded' | string (ReadOnly): Status of this subscriptionId being associated with the GroupQuotasEntity.
+* **requestSubmitTime**: string: The request submission time. The date conforms to the following format specified by the ISO 8601 standard: yyyy-MM-ddTHH:mm:ssZ
+* **subscriptionId**: string: The subscription Id
 
-## SubscriptionQuotaDetails
+## LimitJsonObject
+* **Discriminator**: limitObjectType
+
+### Base Properties
+
+### LimitObject
+#### Properties
+* **limitObjectType**: 'LimitValue' (Required): The limit object type.
+* **limitType**: 'Independent' | 'Shared' | string: The quota or usages limit types.
+* **value**: int (Required): The quota/limit value
+
+
+## QuotaAllocationRequestBase
 ### Properties
-* **limit**: int (ReadOnly): The total quota limit for the subscription.
-* **nonShareableQuota**: int (ReadOnly): The non shareable quota for the subscription.
+* **properties**: [QuotaAllocationRequestBaseProperties](#quotaallocationrequestbaseproperties)
+
+## QuotaAllocationRequestBaseProperties
+### Properties
+* **limit**: int: The new quota limit for the subscription. The incremental quota will be allocated from pre-approved group quota.
+* **name**: [QuotaAllocationRequestBasePropertiesName](#quotaallocationrequestbasepropertiesname) (ReadOnly): Name of the resource provided by the resource provider. This property is already included in the request URI, so it is a readonly property returned in the response.
+* **region**: string: The location for which the subscription is allocated
+
+## QuotaAllocationRequestBasePropertiesName
+### Properties
+* **localizedValue**: string (ReadOnly): Resource display name.
+* **value**: string (ReadOnly): Resource name.
+
+## QuotaAllocationRequestStatusProperties
+### Properties
+* **faultCode**: string (ReadOnly): Details of the failure.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Failed' | 'InProgress' | 'Invalid' | 'Succeeded' | string (ReadOnly): Request status.
-* **quotaSources**: [SubscriptionGroupQuotaAssignment](#subscriptiongroupquotaassignment)[]: Assigned Group Quota to subscriptions.
+* **requestedResource**: [QuotaAllocationRequestBase](#quotaallocationrequestbase): The new quota request allocated to subscription.
+* **requestSubmitTime**: string (ReadOnly): The request submission time. The date conforms to the following format specified by the ISO 8601 standard: yyyy-MM-ddTHH:mm:ssZ
+
+## QuotaProperties
+### Properties
+* **isQuotaApplicable**: bool (ReadOnly): States if quota can be requested for this resource.
+* **limit**: [LimitJsonObject](#limitjsonobject): Resource quota limit properties.
+* **name**: [ResourceName](#resourcename): Resource name provided by the resource provider. Use this property name when requesting quota.
+* **properties**: any: Additional properties for the specific resource provider.
+* **quotaPeriod**: string (ReadOnly): The time period over which the quota usage values are summarized. For example:
+*P1D (per one day)
+*PT1M (per one minute)
+*PT1S (per one second).
+This parameter is optional because, for some resources like compute, the period is irrelevant.
+* **resourceType**: string: The name of the resource type. Optional field.
+* **unit**: string (ReadOnly): The quota units, such as Count and Bytes. When requesting quota, use the **unit** value returned in the GET response in the request body of your PUT operation.
+
+## ResourceName
+### Properties
+* **localizedValue**: string (ReadOnly): Resource display name.
+* **value**: string: Resource name.
+
+## SubmittedResourceRequestStatusProperties
+### Properties
+* **faultCode**: string (ReadOnly): Details of the failure.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Failed' | 'InProgress' | 'Invalid' | 'Succeeded' | string (ReadOnly): Request status.
+* **requestedResource**: [GroupQuotaRequestBase](#groupquotarequestbase): Requested Resource.
+* **requestSubmitTime**: string (ReadOnly): The request submission time. The date conforms to the following format specified by the ISO 8601 standard: yyyy-MM-ddTHH:mm:ssZ
 
 ## SystemData
 ### Properties
@@ -111,4 +215,23 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## UsagesObject
+### Properties
+* **usagesType**: 'Combined' | 'Individual' | string: The quota or usages limit types.
+* **value**: int (Required): The usages value.
+
+## UsagesProperties
+### Properties
+* **isQuotaApplicable**: bool (ReadOnly): States if quota can be requested for this resource.
+* **name**: [ResourceName](#resourcename): Resource name provided by the resource provider. Use this property name when requesting quota.
+* **properties**: any: Additional properties for the specific resource provider.
+* **quotaPeriod**: string (ReadOnly): The time period for the summary of the quota usage values. For example:
+*P1D (per one day)
+*PT1M (per one minute)
+*PT1S (per one second).
+This parameter is optional because it is not relevant for all resources such as compute.
+* **resourceType**: string: The name of the resource type. Optional field.
+* **unit**: string (ReadOnly): The units for the quota usage, such as Count and Bytes. When requesting quota, use the **unit** value returned in the GET response in the request body of your PUT operation.
+* **usages**: [UsagesObject](#usagesobject): The quota limit properties for this resource.
 

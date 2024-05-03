@@ -235,7 +235,6 @@
 * **status**: string (ReadOnly): Status of the Cluster resource
 * **supportsScaling**: bool: A value that indicates whether Scaling is Supported.
 * **updatedAt**: string (ReadOnly): The UTC time when the Event Hubs Cluster was last updated.
-* **upgradePreferences**: [UpgradePreferences](#upgradepreferences): Properties of the cluster upgrade preferences.
 
 ## ClusterSku
 ### Properties
@@ -304,6 +303,7 @@
 * **retentionDescription**: [RetentionDescription](#retentiondescription): Event Hub retention settings
 * **status**: 'Active' | 'Creating' | 'Deleting' | 'Disabled' | 'ReceiveDisabled' | 'Renaming' | 'Restoring' | 'SendDisabled' | 'Unknown': Enumerates the possible values for the status of the Event Hub.
 * **updatedAt**: string (ReadOnly): The exact time the message was updated.
+* **userMetadata**: string: Gets and Sets Metadata of User.
 
 ## Identity
 ### Properties
@@ -409,11 +409,6 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## UpgradePreferences
-### Properties
-* **startDayOfWeek**: 'Any' | 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday' | string: Preferred day of the week in UTC time to begin an upgrade. If 'Any' is selected, upgrade will proceed at any given weekday
-* **startHourOfDay**: int {minValue: 0, maxValue: 23}: Preferred hour of the day in UTC time to begin an upgrade
 
 ## UserAssignedIdentity
 ### Properties

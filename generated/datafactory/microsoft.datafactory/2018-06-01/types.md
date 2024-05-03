@@ -30,7 +30,7 @@
 * **etag**: string (ReadOnly): Etag identifies change in the resource.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {minLength: 1, maxLength: 127, pattern: "^([_A-Za-z0-9]|([_A-Za-z0-9][-_A-Za-z0-9]{0,125}[_A-Za-z0-9]))$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [ManagedIdentityCredential](#managedidentitycredential) (Required): Managed Identity Credential properties.
+* **properties**: [Credential](#credential) (Required): Properties of credentials.
 * **type**: 'Microsoft.DataFactory/factories/credentials' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataFactory/factories/dataflows@2018-06-01
@@ -454,9 +454,29 @@
 ## AmazonRdsForSqlServerLinkedServiceTypeProperties
 ### Properties
 * **alwaysEncryptedSettings**: [SqlAlwaysEncryptedProperties](#sqlalwaysencryptedproperties): Sql always encrypted properties.
-* **connectionString**: any (Required): The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **applicationIntent**: any: The application workload type when connecting to a server, used by recommended version. Possible values are ReadOnly and ReadWrite. Type: string (or Expression with resultType string).
+* **authenticationType**: 'SQL' | 'Windows' | string: The type used for authentication. Type: string.
+* **commandTimeout**: any: The default wait time (in seconds) before terminating the attempt to execute a command and generating an error, used by recommended version. Type: integer (or Expression with resultType integer).
+* **connectionString**: any: The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **connectRetryCount**: any: The number of re-connections attempted after identifying that there was an idle connection failure, used by recommended version. This must be an integer between 0 and 255. Type: integer (or Expression with resultType integer).
+* **connectRetryInterval**: any: The amount of time (in seconds) between each re-connection attempt after identifying that there was an idle connection failure, used by recommended version. This must be an integer between 1 and 60. Type: integer (or Expression with resultType integer).
+* **connectTimeout**: any: The length of time (in seconds) to wait for a connection to the server before terminating the attempt and generating an error, used by recommended version. Type: integer (or Expression with resultType integer).
+* **database**: any: The name of the database, used by recommended version. Type: string (or Expression with resultType string).
+* **encrypt**: any: Indicate whether TLS encryption is required for all data sent between the client and server, used by recommended version. Possible values are true/yes/mandatory, false/no/optional and strict. Type: string (or Expression with resultType string).
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
+* **failoverPartner**: any: The name or address of the partner server to connect to if the primary server is down, used by recommended version. Type: string (or Expression with resultType string).
+* **hostNameInCertificate**: any: The host name to use when validating the server certificate for the connection. When not specified, the server name from the Data Source is used for certificate validation, used by recommended version. Type: string (or Expression with resultType string).
+* **integratedSecurity**: any: Indicate whether User ID and Password are specified in the connection (when false) or whether the current Windows account credentials are used for authentication (when true), used by recommended version. Type: Boolean (or Expression with resultType boolean).
+* **loadBalanceTimeout**: any: The minimum time, in seconds, for the connection to live in the connection pool before being destroyed, used by recommended version. Type: integer (or Expression with resultType integer).
+* **maxPoolSize**: any: The maximum number of connections allowed in the connection pool for this specific connection string, used by recommended version. Type: integer (or Expression with resultType integer).
+* **minPoolSize**: any: The minimum number of connections allowed in the connection pool for this specific connection string, used by recommended version. Type: integer (or Expression with resultType integer).
+* **multipleActiveResultSets**: any: When true, an application can maintain multiple active result sets (MARS). When false, an application must process or cancel all result sets from one batch before it can execute any other batch on that connection, used by recommended version. Type: Boolean (or Expression with resultType boolean).
+* **multiSubnetFailover**: any: If your application is connecting to an AlwaysOn availability group (AG) on different subnets, setting MultiSubnetFailover=true provides faster detection of and connection to the (currently) active server, used by recommended version. Type: Boolean (or Expression with resultType boolean).
+* **packetSize**: any: The size in bytes of the network packets used to communicate with an instance of server, used by recommended version. Type: integer (or Expression with resultType integer).
 * **password**: [SecretBase](#secretbase): The on-premises Windows authentication password.
+* **pooling**: any: Indicate whether the connection will be pooled or explicitly opened every time that the connection is requested, used by recommended version. Type: Boolean (or Expression with resultType boolean).
+* **server**: any: The name or network address of the instance of SQL Server to which to connect, used by recommended version. Type: string (or Expression with resultType string).
+* **trustServerCertificate**: any: Indicate whether the channel will be encrypted while bypassing walking the certificate chain to validate trust, used by recommended version. Type: Boolean (or Expression with resultType boolean).
 * **userName**: any: The on-premises Windows authentication user name. Type: string (or Expression with resultType string).
 
 ## AmazonRdsForSqlServerTableDatasetTypeProperties
@@ -741,7 +761,7 @@
 ## AzureFunctionActivityTypePropertiesHeaders
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: string
+* **Additional Properties Type**: any
 
 ## AzureFunctionLinkedServiceTypeProperties
 ### Properties
@@ -871,25 +891,71 @@
 ## AzureSqlDatabaseLinkedServiceTypeProperties
 ### Properties
 * **alwaysEncryptedSettings**: [SqlAlwaysEncryptedProperties](#sqlalwaysencryptedproperties): Sql always encrypted properties.
+* **applicationIntent**: any: The application workload type when connecting to a server, used by recommended version. Possible values are ReadOnly and ReadWrite. Type: string (or Expression with resultType string).
+* **authenticationType**: 'SQL' | 'ServicePrincipal' | 'SystemAssignedManagedIdentity' | 'UserAssignedManagedIdentity' | string: The type used for authentication. Type: string.
 * **azureCloudType**: any: Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
-* **connectionString**: any (Required): The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **commandTimeout**: any: The default wait time (in seconds) before terminating the attempt to execute a command and generating an error, used by recommended version. Type: integer (or Expression with resultType integer).
+* **connectionString**: any: The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **connectRetryCount**: any: The number of re-connections attempted after identifying that there was an idle connection failure, used by recommended version. This must be an integer between 0 and 255. Type: integer (or Expression with resultType integer).
+* **connectRetryInterval**: any: The amount of time (in seconds) between each re-connection attempt after identifying that there was an idle connection failure, used by recommended version. This must be an integer between 1 and 60. Type: integer (or Expression with resultType integer).
+* **connectTimeout**: any: The length of time (in seconds) to wait for a connection to the server before terminating the attempt and generating an error, used by recommended version. Type: integer (or Expression with resultType integer).
 * **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
+* **database**: any: The name of the database, used by recommended version. Type: string (or Expression with resultType string).
+* **encrypt**: any: Indicate whether TLS encryption is required for all data sent between the client and server, used by recommended version. Possible values are true/yes/mandatory, false/no/optional and strict. Type: string (or Expression with resultType string).
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
+* **failoverPartner**: any: The name or address of the partner server to connect to if the primary server is down, used by recommended version. Type: string (or Expression with resultType string).
+* **hostNameInCertificate**: any: The host name to use when validating the server certificate for the connection. When not specified, the server name from the Data Source is used for certificate validation, used by recommended version. Type: string (or Expression with resultType string).
+* **integratedSecurity**: any: Indicate whether User ID and Password are specified in the connection (when false) or whether the current Windows account credentials are used for authentication (when true), used by recommended version. Type: Boolean (or Expression with resultType boolean).
+* **loadBalanceTimeout**: any: The minimum time, in seconds, for the connection to live in the connection pool before being destroyed, used by recommended version. Type: integer (or Expression with resultType integer).
+* **maxPoolSize**: any: The maximum number of connections allowed in the connection pool for this specific connection string, used by recommended version. Type: integer (or Expression with resultType integer).
+* **minPoolSize**: any: The minimum number of connections allowed in the connection pool for this specific connection string, used by recommended version. Type: integer (or Expression with resultType integer).
+* **multipleActiveResultSets**: any: When true, an application can maintain multiple active result sets (MARS). When false, an application must process or cancel all result sets from one batch before it can execute any other batch on that connection, used by recommended version. Type: Boolean (or Expression with resultType boolean).
+* **multiSubnetFailover**: any: If your application is connecting to an AlwaysOn availability group (AG) on different subnets, setting MultiSubnetFailover=true provides faster detection of and connection to the (currently) active server, used by recommended version. Type: Boolean (or Expression with resultType boolean).
+* **packetSize**: any: The size in bytes of the network packets used to communicate with an instance of server, used by recommended version. Type: integer (or Expression with resultType integer).
 * **password**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of password in connection string.
+* **pooling**: any: Indicate whether the connection will be pooled or explicitly opened every time that the connection is requested, used by recommended version. Type: Boolean (or Expression with resultType boolean).
+* **server**: any: The name or network address of the instance of SQL Server to which to connect, used by recommended version. Type: string (or Expression with resultType string).
+* **servicePrincipalCredential**: [SecretBase](#secretbase): The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.
+* **servicePrincipalCredentialType**: any: The service principal credential type to use in Server-To-Server authentication. 'ServicePrincipalKey' for key/secret, 'ServicePrincipalCert' for certificate. Type: string (or Expression with resultType string).
 * **servicePrincipalId**: any: The ID of the service principal used to authenticate against Azure SQL Database. Type: string (or Expression with resultType string).
 * **servicePrincipalKey**: [SecretBase](#secretbase): The key of the service principal used to authenticate against Azure SQL Database.
 * **tenant**: any: The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
+* **trustServerCertificate**: any: Indicate whether the channel will be encrypted while bypassing walking the certificate chain to validate trust, used by recommended version. Type: Boolean (or Expression with resultType boolean).
+* **userName**: any: The user name to be used when connecting to server. Type: string (or Expression with resultType string).
 
 ## AzureSqlDWLinkedServiceTypeProperties
 ### Properties
+* **applicationIntent**: any: The application workload type when connecting to a server, used by recommended version. Possible values are ReadOnly and ReadWrite. Type: string (or Expression with resultType string).
+* **authenticationType**: 'SQL' | 'ServicePrincipal' | 'SystemAssignedManagedIdentity' | 'UserAssignedManagedIdentity' | string: The type used for authentication. Type: string.
 * **azureCloudType**: any: Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
-* **connectionString**: any (Required): The connection string. Type: string, SecureString or AzureKeyVaultSecretReference. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **commandTimeout**: any: The default wait time (in seconds) before terminating the attempt to execute a command and generating an error, used by recommended version. Type: integer (or Expression with resultType integer).
+* **connectionString**: any: The connection string. Type: string, SecureString or AzureKeyVaultSecretReference. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **connectRetryCount**: any: The number of re-connections attempted after identifying that there was an idle connection failure, used by recommended version. This must be an integer between 0 and 255. Type: integer (or Expression with resultType integer).
+* **connectRetryInterval**: any: The amount of time (in seconds) between each re-connection attempt after identifying that there was an idle connection failure, used by recommended version. This must be an integer between 1 and 60. Type: integer (or Expression with resultType integer).
+* **connectTimeout**: any: The length of time (in seconds) to wait for a connection to the server before terminating the attempt and generating an error, used by recommended version. Type: integer (or Expression with resultType integer).
 * **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
+* **database**: any: The name of the database, used by recommended version. Type: string (or Expression with resultType string).
+* **encrypt**: any: Indicate whether TLS encryption is required for all data sent between the client and server, used by recommended version. Possible values are true/yes/mandatory, false/no/optional and strict. Type: string (or Expression with resultType string).
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
+* **failoverPartner**: any: The name or address of the partner server to connect to if the primary server is down, used by recommended version. Type: string (or Expression with resultType string).
+* **hostNameInCertificate**: any: The host name to use when validating the server certificate for the connection. When not specified, the server name from the Data Source is used for certificate validation, used by recommended version. Type: string (or Expression with resultType string).
+* **integratedSecurity**: any: Indicate whether User ID and Password are specified in the connection (when false) or whether the current Windows account credentials are used for authentication (when true), used by recommended version. Type: Boolean (or Expression with resultType boolean).
+* **loadBalanceTimeout**: any: The minimum time, in seconds, for the connection to live in the connection pool before being destroyed, used by recommended version. Type: integer (or Expression with resultType integer).
+* **maxPoolSize**: any: The maximum number of connections allowed in the connection pool for this specific connection string, used by recommended version. Type: integer (or Expression with resultType integer).
+* **minPoolSize**: any: The minimum number of connections allowed in the connection pool for this specific connection string, used by recommended version. Type: integer (or Expression with resultType integer).
+* **multipleActiveResultSets**: any: When true, an application can maintain multiple active result sets (MARS). When false, an application must process or cancel all result sets from one batch before it can execute any other batch on that connection, used by recommended version. Type: Boolean (or Expression with resultType boolean).
+* **multiSubnetFailover**: any: If your application is connecting to an AlwaysOn availability group (AG) on different subnets, setting MultiSubnetFailover=true provides faster detection of and connection to the (currently) active server, used by recommended version. Type: Boolean (or Expression with resultType boolean).
+* **packetSize**: any: The size in bytes of the network packets used to communicate with an instance of server, used by recommended version. Type: integer (or Expression with resultType integer).
 * **password**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of password in connection string.
+* **pooling**: any: Indicate whether the connection will be pooled or explicitly opened every time that the connection is requested, used by recommended version. Type: Boolean (or Expression with resultType boolean).
+* **server**: any: The name or network address of the instance of SQL Server to which to connect, used by recommended version. Type: string (or Expression with resultType string).
+* **servicePrincipalCredential**: [SecretBase](#secretbase): The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.
+* **servicePrincipalCredentialType**: any: The service principal credential type to use in Server-To-Server authentication. 'ServicePrincipalKey' for key/secret, 'ServicePrincipalCert' for certificate. Type: string (or Expression with resultType string).
 * **servicePrincipalId**: any: The ID of the service principal used to authenticate against Azure SQL Data Warehouse. Type: string (or Expression with resultType string).
 * **servicePrincipalKey**: [SecretBase](#secretbase): The key of the service principal used to authenticate against Azure SQL Data Warehouse.
 * **tenant**: any: The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
+* **trustServerCertificate**: any: Indicate whether the channel will be encrypted while bypassing walking the certificate chain to validate trust, used by recommended version. Type: Boolean (or Expression with resultType boolean).
+* **userName**: any: The user name to be used when connecting to server. Type: string (or Expression with resultType string).
 
 ## AzureSqlDWTableDatasetTypeProperties
 ### Properties
@@ -900,14 +966,37 @@
 ## AzureSqlMILinkedServiceTypeProperties
 ### Properties
 * **alwaysEncryptedSettings**: [SqlAlwaysEncryptedProperties](#sqlalwaysencryptedproperties): Sql always encrypted properties.
+* **applicationIntent**: any: The application workload type when connecting to a server, used by recommended version. Possible values are ReadOnly and ReadWrite. Type: string (or Expression with resultType string).
+* **authenticationType**: 'SQL' | 'ServicePrincipal' | 'SystemAssignedManagedIdentity' | 'UserAssignedManagedIdentity' | string: The type used for authentication. Type: string.
 * **azureCloudType**: any: Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
-* **connectionString**: any (Required): The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **commandTimeout**: any: The default wait time (in seconds) before terminating the attempt to execute a command and generating an error, used by recommended version. Type: integer (or Expression with resultType integer).
+* **connectionString**: any: The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **connectRetryCount**: any: The number of re-connections attempted after identifying that there was an idle connection failure, used by recommended version. This must be an integer between 0 and 255. Type: integer (or Expression with resultType integer).
+* **connectRetryInterval**: any: The amount of time (in seconds) between each re-connection attempt after identifying that there was an idle connection failure, used by recommended version. This must be an integer between 1 and 60. Type: integer (or Expression with resultType integer).
+* **connectTimeout**: any: The length of time (in seconds) to wait for a connection to the server before terminating the attempt and generating an error, used by recommended version. Type: integer (or Expression with resultType integer).
 * **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
+* **database**: any: The name of the database, used by recommended version. Type: string (or Expression with resultType string).
+* **encrypt**: any: Indicate whether TLS encryption is required for all data sent between the client and server, used by recommended version. Possible values are true/yes/mandatory, false/no/optional and strict. Type: string (or Expression with resultType string).
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
+* **failoverPartner**: any: The name or address of the partner server to connect to if the primary server is down, used by recommended version. Type: string (or Expression with resultType string).
+* **hostNameInCertificate**: any: The host name to use when validating the server certificate for the connection. When not specified, the server name from the Data Source is used for certificate validation, used by recommended version. Type: string (or Expression with resultType string).
+* **integratedSecurity**: any: Indicate whether User ID and Password are specified in the connection (when false) or whether the current Windows account credentials are used for authentication (when true), used by recommended version. Type: Boolean (or Expression with resultType boolean).
+* **loadBalanceTimeout**: any: The minimum time, in seconds, for the connection to live in the connection pool before being destroyed, used by recommended version. Type: integer (or Expression with resultType integer).
+* **maxPoolSize**: any: The maximum number of connections allowed in the connection pool for this specific connection string, used by recommended version. Type: integer (or Expression with resultType integer).
+* **minPoolSize**: any: The minimum number of connections allowed in the connection pool for this specific connection string, used by recommended version. Type: integer (or Expression with resultType integer).
+* **multipleActiveResultSets**: any: When true, an application can maintain multiple active result sets (MARS). When false, an application must process or cancel all result sets from one batch before it can execute any other batch on that connection, used by recommended version. Type: Boolean (or Expression with resultType boolean).
+* **multiSubnetFailover**: any: If your application is connecting to an AlwaysOn availability group (AG) on different subnets, setting MultiSubnetFailover=true provides faster detection of and connection to the (currently) active server, used by recommended version. Type: Boolean (or Expression with resultType boolean).
+* **packetSize**: any: The size in bytes of the network packets used to communicate with an instance of server, used by recommended version. Type: integer (or Expression with resultType integer).
 * **password**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of password in connection string.
+* **pooling**: any: Indicate whether the connection will be pooled or explicitly opened every time that the connection is requested, used by recommended version. Type: Boolean (or Expression with resultType boolean).
+* **server**: any: The name or network address of the instance of SQL Server to which to connect, used by recommended version. Type: string (or Expression with resultType string).
+* **servicePrincipalCredential**: [SecretBase](#secretbase): The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.
+* **servicePrincipalCredentialType**: any: The service principal credential type to use in Server-To-Server authentication. 'ServicePrincipalKey' for key/secret, 'ServicePrincipalCert' for certificate. Type: string (or Expression with resultType string).
 * **servicePrincipalId**: any: The ID of the service principal used to authenticate against Azure SQL Managed Instance. Type: string (or Expression with resultType string).
 * **servicePrincipalKey**: [SecretBase](#secretbase): The key of the service principal used to authenticate against Azure SQL Managed Instance.
 * **tenant**: any: The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
+* **trustServerCertificate**: any: Indicate whether the channel will be encrypted while bypassing walking the certificate chain to validate trust, used by recommended version. Type: Boolean (or Expression with resultType boolean).
+* **userName**: any: The user name to be used when connecting to server. Type: string (or Expression with resultType string).
 
 ## AzureSqlMITableDatasetTypeProperties
 ### Properties
@@ -2248,6 +2337,24 @@
 * **connectionString**: any: An ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
 * **credString**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of credString in connection string.
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
+
+## Credential
+* **Discriminator**: type
+
+### Base Properties
+* **annotations**: any[]: List of tags that can be used for describing the Credential.
+* **description**: string: Credential description.
+
+### ManagedIdentityCredential
+#### Properties
+* **type**: 'ManagedIdentity' (Required): Type of credential.
+* **typeProperties**: [ManagedIdentityTypeProperties](#managedidentitytypeproperties): Managed identity credential properties.
+
+### ServicePrincipalCredential
+#### Properties
+* **type**: 'ServicePrincipal' (Required): Type of credential.
+* **typeProperties**: [ServicePrincipalCredentialTypeProperties](#serviceprincipalcredentialtypeproperties) (Required): Service Principal credential properties.
+
 
 ## CredentialReference
 ### Properties
@@ -4730,15 +4837,6 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **useHostVerification**: any: Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
 * **usePeerVerification**: any: Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
 
-## ManagedIdentityCredential
-### Properties
-* **annotations**: any[]: List of tags that can be used for describing the Credential.
-* **description**: string: Credential description.
-* **type**: string (Required): Type of credential.
-* **typeProperties**: [ManagedIdentityTypeProperties](#managedidentitytypeproperties): Managed identity credential properties.
-### Additional Properties
-* **Additional Properties Type**: any
-
 ## ManagedIdentityTypeProperties
 ### Properties
 * **resourceId**: string: The resource id of user assigned managed identity
@@ -5687,7 +5785,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### Properties
 * **parameters**: [ScriptActivityParameter](#scriptactivityparameter)[]: Array of script parameters. Type: array.
 * **text**: any (Required): The query text. Type: string (or Expression with resultType string).
-* **type**: 'NonQuery' | 'Query' | string (Required): The type of the query. Type: string.
+* **type**: any (Required): The type of the query. Please refer to the ScriptType for valid options. Type: string (or Expression with resultType string).
 
 ## ScriptActivityTypeProperties
 ### Properties
@@ -5756,6 +5854,12 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **grantType**: any: GrantType for OAuth2 authentication. Default value is password.
 * **password**: [SecretBase](#secretbase): The password corresponding to the user name for Basic and OAuth2 authentication.
 * **username**: any: The user name used to connect to the ServiceNowV2 server for Basic and OAuth2 authentication.
+
+## ServicePrincipalCredentialTypeProperties
+### Properties
+* **servicePrincipalId**: any: The app ID of the service principal used to authenticate
+* **servicePrincipalKey**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The key of the service principal used to authenticate.
+* **tenant**: any: The ID of the tenant to which the service principal belongs
 
 ## SetVariableActivityTypeProperties
 ### Properties
@@ -5920,9 +6024,29 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## SqlServerLinkedServiceTypeProperties
 ### Properties
 * **alwaysEncryptedSettings**: [SqlAlwaysEncryptedProperties](#sqlalwaysencryptedproperties): Sql always encrypted properties.
-* **connectionString**: any (Required): The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **applicationIntent**: any: The application workload type when connecting to a server, used by recommended version. Possible values are ReadOnly and ReadWrite. Type: string (or Expression with resultType string).
+* **authenticationType**: 'SQL' | 'Windows' | string: The type used for authentication. Type: string.
+* **commandTimeout**: any: The default wait time (in seconds) before terminating the attempt to execute a command and generating an error, used by recommended version. Type: integer (or Expression with resultType integer).
+* **connectionString**: any: The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **connectRetryCount**: any: The number of re-connections attempted after identifying that there was an idle connection failure, used by recommended version. This must be an integer between 0 and 255. Type: integer (or Expression with resultType integer).
+* **connectRetryInterval**: any: The amount of time (in seconds) between each re-connection attempt after identifying that there was an idle connection failure, used by recommended version. This must be an integer between 1 and 60. Type: integer (or Expression with resultType integer).
+* **connectTimeout**: any: The length of time (in seconds) to wait for a connection to the server before terminating the attempt and generating an error, used by recommended version. Type: integer (or Expression with resultType integer).
+* **database**: any: The name of the database, used by recommended version. Type: string (or Expression with resultType string).
+* **encrypt**: any: Indicate whether TLS encryption is required for all data sent between the client and server, used by recommended version. Possible values are true/yes/mandatory, false/no/optional and strict. Type: string (or Expression with resultType string).
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
+* **failoverPartner**: any: The name or address of the partner server to connect to if the primary server is down, used by recommended version. Type: string (or Expression with resultType string).
+* **hostNameInCertificate**: any: The host name to use when validating the server certificate for the connection. When not specified, the server name from the Data Source is used for certificate validation, used by recommended version. Type: string (or Expression with resultType string).
+* **integratedSecurity**: any: Indicate whether User ID and Password are specified in the connection (when false) or whether the current Windows account credentials are used for authentication (when true), used by recommended version. Type: Boolean (or Expression with resultType boolean).
+* **loadBalanceTimeout**: any: The minimum time, in seconds, for the connection to live in the connection pool before being destroyed, used by recommended version. Type: integer (or Expression with resultType integer).
+* **maxPoolSize**: any: The maximum number of connections allowed in the connection pool for this specific connection string, used by recommended version. Type: integer (or Expression with resultType integer).
+* **minPoolSize**: any: The minimum number of connections allowed in the connection pool for this specific connection string, used by recommended version. Type: integer (or Expression with resultType integer).
+* **multipleActiveResultSets**: any: When true, an application can maintain multiple active result sets (MARS). When false, an application must process or cancel all result sets from one batch before it can execute any other batch on that connection, used by recommended version. Type: Boolean (or Expression with resultType boolean).
+* **multiSubnetFailover**: any: If your application is connecting to an AlwaysOn availability group (AG) on different subnets, setting MultiSubnetFailover=true provides faster detection of and connection to the (currently) active server, used by recommended version. Type: Boolean (or Expression with resultType boolean).
+* **packetSize**: any: The size in bytes of the network packets used to communicate with an instance of server, used by recommended version. Type: integer (or Expression with resultType integer).
 * **password**: [SecretBase](#secretbase): The on-premises Windows authentication password.
+* **pooling**: any: Indicate whether the connection will be pooled or explicitly opened every time that the connection is requested, used by recommended version. Type: Boolean (or Expression with resultType boolean).
+* **server**: any: The name or network address of the instance of SQL Server to which to connect, used by recommended version. Type: string (or Expression with resultType string).
+* **trustServerCertificate**: any: Indicate whether the channel will be encrypted while bypassing walking the certificate chain to validate trust, used by recommended version. Type: Boolean (or Expression with resultType boolean).
 * **userName**: any: The on-premises Windows authentication user name. Type: string (or Expression with resultType string).
 
 ## SqlServerStoredProcedureActivityTypeProperties
@@ -6557,7 +6681,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## WebActivityTypePropertiesHeaders
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: string
+* **Additional Properties Type**: any
 
 ## WebHookActivityTypeProperties
 ### Properties
@@ -6572,7 +6696,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## WebHookActivityTypePropertiesHeaders
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: string
+* **Additional Properties Type**: any
 
 ## WebLinkedServiceTypeProperties
 * **Discriminator**: authenticationType

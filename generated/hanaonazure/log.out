@@ -3,37 +3,37 @@ AutoRest code generation utility [cli version: 3.7.1; node: v16.20.2]
 https://aka.ms/autorest
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hanaonazure/resource-manager/Microsoft.HanaOnAzure/preview/2017-11-03-preview/hanaonazure.json:490:5
-warning | PreCheck/SchemaMissingType | The schema 'HanaInstancesListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hanaonazure/resource-manager/Microsoft.HanaOnAzure/preview/2017-11-03-preview/hanaonazure.json:522:5
+warning | PreCheck/SchemaMissingType | The schema 'HanaInstancesListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hanaonazure/resource-manager/Microsoft.HanaOnAzure/preview/2017-11-03-preview/hanaonazure.json:554:5
 warning | PreCheck/SchemaMissingType | The schema 'HanaInstance' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hanaonazure/resource-manager/Microsoft.HanaOnAzure/preview/2017-11-03-preview/hanaonazure.json:538:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hanaonazure/resource-manager/Microsoft.HanaOnAzure/preview/2017-11-03-preview/hanaonazure.json:570:5
 warning | PreCheck/SchemaMissingType | The schema 'HanaInstanceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hanaonazure/resource-manager/Microsoft.HanaOnAzure/preview/2017-11-03-preview/hanaonazure.json:553:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hanaonazure/resource-manager/Microsoft.HanaOnAzure/preview/2017-11-03-preview/hanaonazure.json:585:5
 warning | PreCheck/SchemaMissingType | The schema 'HardwareProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hanaonazure/resource-manager/Microsoft.HanaOnAzure/preview/2017-11-03-preview/hanaonazure.json:628:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hanaonazure/resource-manager/Microsoft.HanaOnAzure/preview/2017-11-03-preview/hanaonazure.json:660:5
 warning | PreCheck/SchemaMissingType | The schema 'Disk' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hanaonazure/resource-manager/Microsoft.HanaOnAzure/preview/2017-11-03-preview/hanaonazure.json:700:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hanaonazure/resource-manager/Microsoft.HanaOnAzure/preview/2017-11-03-preview/hanaonazure.json:732:5
 warning | PreCheck/SchemaMissingType | The schema 'StorageProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hanaonazure/resource-manager/Microsoft.HanaOnAzure/preview/2017-11-03-preview/hanaonazure.json:747:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hanaonazure/resource-manager/Microsoft.HanaOnAzure/preview/2017-11-03-preview/hanaonazure.json:779:5
 warning | PreCheck/SchemaMissingType | The schema 'OSProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hanaonazure/resource-manager/Microsoft.HanaOnAzure/preview/2017-11-03-preview/hanaonazure.json:771:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hanaonazure/resource-manager/Microsoft.HanaOnAzure/preview/2017-11-03-preview/hanaonazure.json:803:5
 warning | PreCheck/SchemaMissingType | The schema 'NetworkProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hanaonazure/resource-manager/Microsoft.HanaOnAzure/preview/2017-11-03-preview/hanaonazure.json:794:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hanaonazure/resource-manager/Microsoft.HanaOnAzure/preview/2017-11-03-preview/hanaonazure.json:826:5
 warning | PreCheck/SchemaMissingType | The schema 'IpAddress' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hanaonazure/resource-manager/Microsoft.HanaOnAzure/preview/2017-11-03-preview/hanaonazure.json:811:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hanaonazure/resource-manager/Microsoft.HanaOnAzure/preview/2017-11-03-preview/hanaonazure.json:843:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'SapMonitorListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hanaonazure/resource-manager/Microsoft.HanaOnAzure/preview/2020-02-07-preview/hanaonazure.json:597:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hanaonazure/resource-manager/Microsoft.HanaOnAzure/preview/2020-02-07-preview/hanaonazure.json:630:5
 warning | PreCheck/SchemaMissingType | The schema 'SapMonitor' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hanaonazure/resource-manager/Microsoft.HanaOnAzure/preview/2020-02-07-preview/hanaonazure.json:613:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hanaonazure/resource-manager/Microsoft.HanaOnAzure/preview/2020-02-07-preview/hanaonazure.json:646:5
 warning | PreCheck/SchemaMissingType | The schema 'SapMonitorProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hanaonazure/resource-manager/Microsoft.HanaOnAzure/preview/2020-02-07-preview/hanaonazure.json:628:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hanaonazure/resource-manager/Microsoft.HanaOnAzure/preview/2020-02-07-preview/hanaonazure.json:661:5
 warning | PreCheck/SchemaMissingType | The schema 'ProviderInstanceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hanaonazure/resource-manager/Microsoft.HanaOnAzure/preview/2020-02-07-preview/hanaonazure.json:681:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hanaonazure/resource-manager/Microsoft.HanaOnAzure/preview/2020-02-07-preview/hanaonazure.json:714:5
 warning | PreCheck/SchemaMissingType | The schema 'ProviderInstance' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hanaonazure/resource-manager/Microsoft.HanaOnAzure/preview/2020-02-07-preview/hanaonazure.json:697:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hanaonazure/resource-manager/Microsoft.HanaOnAzure/preview/2020-02-07-preview/hanaonazure.json:730:5
 warning | PreCheck/SchemaMissingType | The schema 'ProviderInstanceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hanaonazure/resource-manager/Microsoft.HanaOnAzure/preview/2020-02-07-preview/hanaonazure.json:712:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/hanaonazure/resource-manager/Microsoft.HanaOnAzure/preview/2020-02-07-preview/hanaonazure.json:745:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.

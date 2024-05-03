@@ -57,7 +57,7 @@
 
 ## StandbyVirtualMachinePoolElasticityProfile
 ### Properties
-* **maxReadyCapacity**: int {minValue: 0, maxValue: 2000} (Required): Specifies maximum number of virtual machines in the standby virtual machine pool.
+* **maxReadyCapacity**: int {minValue: 0, maxValue: 2000} (Required): Specifies the maximum number of virtual machines in the standby virtual machine pool.
 
 ## StandbyVirtualMachinePoolResourceProperties
 ### Properties

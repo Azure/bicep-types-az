@@ -552,7 +552,7 @@ Read only field
 ### Properties
 * **displayName**: string: The display name of the sku.
 * **family**: string: The sku family.
-* **model**: 'DataBox' | 'DataBoxCustomerDisk' | 'DataBoxDisk' | 'DataBoxHeavy' | 'DataBoxV2x100' | 'DataBoxV2x500': The display name of the sku.
+* **model**: 'DataBox' | 'DataBoxCustomerDisk' | 'DataBoxDisk' | 'DataBoxHeavy' | 'DataBoxV2x100' | 'DataBoxV2x500' (ReadOnly): The model name.
 * **name**: 'DataBox' | 'DataBoxCustomerDisk' | 'DataBoxDisk' | 'DataBoxHeavy' (Required): The sku name.
 
 ## SystemData

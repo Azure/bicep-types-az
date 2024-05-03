@@ -117,7 +117,7 @@ where key represents a valid service configuration name and value represents the
 
 ## ClusterPoolResourcePropertiesNetworkProfile
 ### Properties
-* **apiServerAuthorizedIpRanges**: string[]: IP ranges are specified in CIDR format, e.g. 137.117.106.88/29. This feature is not compatible with private AKS clusters. So you cannot set enablePrivateApiServer to true and apiServerAuthorizedIpRanges at the same time.
+* **apiServerAuthorizedIpRanges**: string[]: IP ranges are specified in CIDR format, e.g. 137.117.106.88/29. This feature is not compatible with private AKS clusters. So you cannot set enablePrivateApiServer to true and apiServerAuthorizedIpRanges at the same time. Currently, this property is not supported and please don't use it.
 * **enablePrivateApiServer**: bool: ClusterPool is based on AKS cluster. AKS cluster exposes the API server to public internet by default. If you set this property to true, a private AKS cluster will be created, and it will use private apiserver, which is not exposed to public internet.
 * **outboundType**: 'loadBalancer' | 'userDefinedRouting' | string: This can only be set at cluster pool creation time and cannot be changed later.
 * **subnetId**: string (Required): Cluster pool subnet resource id.

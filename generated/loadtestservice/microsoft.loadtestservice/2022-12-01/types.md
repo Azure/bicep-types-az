@@ -5,10 +5,10 @@
 ### Properties
 * **apiVersion**: '2022-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The type of identity used for the resource.
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The managed service identities assigned to this resource.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [LoadTestProperties](#loadtestproperties): Load Test resource properties
+* **properties**: [LoadTestProperties](#loadtestproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.LoadTestService/loadTests' (ReadOnly, DeployTimeConstant): The resource type
@@ -19,7 +19,7 @@
 * **apiVersion**: '2022-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [QuotaResourceProperties](#quotaresourceproperties) (ReadOnly): Quota bucket resource properties.
+* **properties**: [QuotaResourceProperties](#quotaresourceproperties) (ReadOnly): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.LoadTestService/locations/quotas' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -30,8 +30,8 @@
 
 ## EncryptionPropertiesIdentity
 ### Properties
-* **resourceId**: string: user assigned identity to use for accessing key encryption key Url. Ex: /subscriptions/fa5fc227-a624-475e-b696-cdd604c735bc/resourceGroups/<resource group>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myId
-* **type**: 'SystemAssigned' | 'UserAssigned' | string: Managed identity type to use for accessing encryption key Url
+* **resourceId**: string: User assigned identity to use for accessing key encryption key Url. Ex: /subscriptions/fa5fc227-a624-475e-b696-cdd604c735bc/resourceGroups/<resource group>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myId.
+* **type**: 'SystemAssigned' | 'UserAssigned' | string: Managed identity type to use for accessing encryption key Url.
 
 ## LoadTestProperties
 ### Properties
