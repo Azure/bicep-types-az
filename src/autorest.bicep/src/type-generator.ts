@@ -507,6 +507,17 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     if (maximum !== undefined && schema.exclusiveMaximum) {
       maximum -= 1;
     }
+    
+    // Round up the minimum and down the maximum to the nearest integer
+    // in case they are floating-point numbers, which are not yet supported in Bicep.
+    // This ensures correct type checking for integers, while still allowing
+    // users the flexibility to use json('float').
+    if (minimum !== undefined) {
+      minimum = Math.ceil(minimum);
+    }
+    if (maximum !== undefined) {
+      maximum = Math.floor(maximum);
+    }
 
     return factory.addIntegerType(minimum, maximum);
   }
