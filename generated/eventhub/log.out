@@ -1443,27 +1443,27 @@ warning | PreCheck/SchemaMissingType | The schema 'EHNamespace' with an undefine
 warning | PreCheck/SchemaMissingType | The schema 'EHNamespace-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2023-01-01-preview/namespaces-preview.json:765:9
 warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2023-01-01-preview/namespaces-preview.json:996:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2023-01-01-preview/namespaces-preview.json:995:5
 warning | PreCheck/SchemaMissingType | The schema 'Encryption' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2023-01-01-preview/namespaces-preview.json:1051:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2023-01-01-preview/namespaces-preview.json:1050:5
 warning | PreCheck/SchemaMissingType | The schema 'KeyVaultProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2023-01-01-preview/namespaces-preview.json:1081:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2023-01-01-preview/namespaces-preview.json:1080:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2023-01-01-preview/namespaces-preview.json:1104:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2023-01-01-preview/namespaces-preview.json:1103:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2023-01-01-preview/namespaces-preview.json:1124:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2023-01-01-preview/namespaces-preview.json:1123:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2023-01-01-preview/namespaces-preview.json:1153:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2023-01-01-preview/namespaces-preview.json:1152:5
 warning | PreCheck/SchemaMissingType | The schema 'ConnectionState' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2023-01-01-preview/namespaces-preview.json:1162:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2023-01-01-preview/namespaces-preview.json:1161:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2023-01-01-preview/namespaces-preview.json:1185:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2023-01-01-preview/namespaces-preview.json:1184:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2023-01-01-preview/namespaces-preview.json:1201:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2023-01-01-preview/namespaces-preview.json:1200:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2023-01-01-preview/namespaces-preview.json:1223:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2023-01-01-preview/namespaces-preview.json:1222:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourcesListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2023-01-01-preview/namespaces-preview.json:1246:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2023-01-01-preview/namespaces-preview.json:1245:5
 warning | PreCheck/SchemaMissingType | The schema 'Subnet' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2023-01-01-preview/networkrulessets-preview.json:172:5
 warning | PreCheck/SchemaMissingType | The schema 'NWRuleSetIpRules' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -1522,12 +1522,12 @@ warning | PreCheck/SchemaMissingType | The schema 'TrackedResource' with an unde
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorDetail' (4 differences):
-  - properties.details.$ref: "#/components/schemas/schemas:313" => "#/components/schemas/schemas:365"
+  - properties.details.$ref: "#/components/schemas/schemas:312" => "#/components/schemas/schemas:364"
   - properties.details.x-ms-identifiers: <none> => ["message","target"]
-  - properties.additionalInfo.$ref: "#/components/schemas/schemas:314" => "#/components/schemas/schemas:366"
+  - properties.additionalInfo.$ref: "#/components/schemas/schemas:313" => "#/components/schemas/schemas:365"
   - properties.additionalInfo.x-ms-identifiers: <none> => []
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorResponse' (2 differences):
-  - properties.error.$ref: "#/components/schemas/schemas:309" => "#/components/schemas/schemas:361"
+  - properties.error.$ref: "#/components/schemas/schemas:308" => "#/components/schemas/schemas:360"
   - title: <none> => "Error response"
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorResponse' -> 'ErrorResponseAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorDetail' -> 'ErrorDetailAutoGenerated'
@@ -1751,27 +1751,27 @@ warning | PreCheck/SchemaMissingType | The schema 'EHNamespace' with an undefine
 warning | PreCheck/SchemaMissingType | The schema 'EHNamespace-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2024-05-01-preview/namespaces.json:780:9
 warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2024-05-01-preview/namespaces.json:1012:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2024-05-01-preview/namespaces.json:1011:5
 warning | PreCheck/SchemaMissingType | The schema 'Encryption' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2024-05-01-preview/namespaces.json:1067:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2024-05-01-preview/namespaces.json:1066:5
 warning | PreCheck/SchemaMissingType | The schema 'KeyVaultProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2024-05-01-preview/namespaces.json:1097:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2024-05-01-preview/namespaces.json:1096:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2024-05-01-preview/namespaces.json:1120:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2024-05-01-preview/namespaces.json:1119:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2024-05-01-preview/namespaces.json:1140:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2024-05-01-preview/namespaces.json:1139:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2024-05-01-preview/namespaces.json:1169:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2024-05-01-preview/namespaces.json:1168:5
 warning | PreCheck/SchemaMissingType | The schema 'ConnectionState' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2024-05-01-preview/namespaces.json:1178:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2024-05-01-preview/namespaces.json:1177:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2024-05-01-preview/namespaces.json:1201:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2024-05-01-preview/namespaces.json:1200:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2024-05-01-preview/namespaces.json:1217:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2024-05-01-preview/namespaces.json:1216:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2024-05-01-preview/namespaces.json:1239:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2024-05-01-preview/namespaces.json:1238:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourcesListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2024-05-01-preview/namespaces.json:1262:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2024-05-01-preview/namespaces.json:1261:5
 warning | PreCheck/SchemaMissingType | The schema 'Subnet' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2024-05-01-preview/networkrulessets-preview.json:172:5
 warning | PreCheck/SchemaMissingType | The schema 'NWRuleSetIpRules' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -1815,17 +1815,17 @@ warning | PreCheck/SchemaMissingType | The schema 'ArmDisasterRecoveryListResult
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2024-05-01-preview/operations.json:75:5
 warning | PreCheck/SchemaMissingType | The schema 'CaptureDescription' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2024-05-01-preview/eventhubs.json:236:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2024-05-01-preview/eventhubs.json:239:5
 warning | PreCheck/SchemaMissingType | The schema 'Eventhub' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2024-05-01-preview/eventhubs.json:309:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2024-05-01-preview/eventhubs.json:330:5
 warning | PreCheck/SchemaMissingType | The schema 'Eventhub-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2024-05-01-preview/eventhubs.json:311:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2024-05-01-preview/eventhubs.json:332:9
 warning | PreCheck/SchemaMissingType | The schema 'EventHubListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2024-05-01-preview/eventhubs.json:410:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2024-05-01-preview/eventhubs.json:423:5
 warning | PreCheck/SchemaMissingType | The schema 'Destination' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2024-05-01-preview/eventhubs.json:448:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2024-05-01-preview/eventhubs.json:461:5
 warning | PreCheck/SchemaMissingType | The schema 'Destination-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2024-05-01-preview/eventhubs.json:457:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2024-05-01-preview/eventhubs.json:470:9
 warning | PreCheck/SchemaMissingType | The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.

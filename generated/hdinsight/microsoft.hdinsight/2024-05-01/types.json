@@ -51,7 +51,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/26"
+          "$ref": "#/27"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -65,7 +65,7 @@
       },
       "systemData": {
         "type": {
-          "$ref": "#/27"
+          "$ref": "#/28"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -120,21 +120,21 @@
       },
       "aksClusterProfile": {
         "type": {
-          "$ref": "#/16"
+          "$ref": "#/17"
         },
         "flags": 2,
         "description": "Properties of underlying AKS cluster."
       },
       "networkProfile": {
         "type": {
-          "$ref": "#/19"
+          "$ref": "#/20"
         },
         "flags": 0,
         "description": "Cluster pool network profile."
       },
       "logAnalyticsProfile": {
         "type": {
-          "$ref": "#/25"
+          "$ref": "#/26"
         },
         "flags": 0,
         "description": "Cluster pool log analytics profile to enable OMS agent for AKS cluster."
@@ -223,6 +223,13 @@
         },
         "flags": 2,
         "description": "The number of virtual machines."
+      },
+      "availabilityZones": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 0,
+        "description": "The list of Availability zones to use for AKS VMSS nodes."
       }
     }
   },
@@ -232,6 +239,12 @@
   },
   {
     "$type": "IntegerType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
   },
   {
     "$type": "ObjectType",
@@ -246,7 +259,7 @@
       },
       "aksClusterAgentPoolIdentityProfile": {
         "type": {
-          "$ref": "#/17"
+          "$ref": "#/18"
         },
         "flags": 0,
         "description": "Identity properties of the AKS cluster agentpool MSI"
@@ -273,14 +286,14 @@
       },
       "msiClientId": {
         "type": {
-          "$ref": "#/18"
+          "$ref": "#/19"
         },
         "flags": 1,
         "description": "ClientId of the MSI."
       },
       "msiObjectId": {
         "type": {
-          "$ref": "#/18"
+          "$ref": "#/19"
         },
         "flags": 1,
         "description": "ObjectId of the MSI."
@@ -304,21 +317,21 @@
       },
       "outboundType": {
         "type": {
-          "$ref": "#/22"
+          "$ref": "#/23"
         },
         "flags": 0,
         "description": "This can only be set at cluster pool creation time and cannot be changed later."
       },
       "enablePrivateApiServer": {
         "type": {
-          "$ref": "#/23"
+          "$ref": "#/24"
         },
         "flags": 0,
         "description": "ClusterPool is based on AKS cluster. AKS cluster exposes the API server to public internet by default. If you set this property to true, a private AKS cluster will be created, and it will use private apiserver, which is not exposed to public internet."
       },
       "apiServerAuthorizedIpRanges": {
         "type": {
-          "$ref": "#/24"
+          "$ref": "#/25"
         },
         "flags": 0,
         "description": "IP ranges are specified in CIDR format, e.g. 137.117.106.88/29. This feature is not compatible with private AKS clusters. So you cannot set enablePrivateApiServer to true and apiServerAuthorizedIpRanges at the same time. Currently, this property is not supported and please don't use it."
@@ -337,10 +350,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/20"
+        "$ref": "#/21"
       },
       {
-        "$ref": "#/21"
+        "$ref": "#/22"
       },
       {
         "$ref": "#/0"
@@ -362,7 +375,7 @@
     "properties": {
       "enabled": {
         "type": {
-          "$ref": "#/23"
+          "$ref": "#/24"
         },
         "flags": 1,
         "description": "True if log analytics is enabled for cluster pool, otherwise false."
@@ -397,7 +410,7 @@
       },
       "createdByType": {
         "type": {
-          "$ref": "#/32"
+          "$ref": "#/33"
         },
         "flags": 0,
         "description": "The type of identity that created the resource."
@@ -418,7 +431,7 @@
       },
       "lastModifiedByType": {
         "type": {
-          "$ref": "#/37"
+          "$ref": "#/38"
         },
         "flags": 0,
         "description": "The type of identity that last modified the resource."
@@ -452,9 +465,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/28"
-      },
-      {
         "$ref": "#/29"
       },
       {
@@ -462,6 +472,9 @@
       },
       {
         "$ref": "#/31"
+      },
+      {
+        "$ref": "#/32"
       },
       {
         "$ref": "#/0"
@@ -488,9 +501,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/33"
-      },
-      {
         "$ref": "#/34"
       },
       {
@@ -498,6 +508,9 @@
       },
       {
         "$ref": "#/36"
+      },
+      {
+        "$ref": "#/37"
       },
       {
         "$ref": "#/0"
@@ -541,28 +554,28 @@
       },
       "type": {
         "type": {
-          "$ref": "#/39"
+          "$ref": "#/40"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/40"
+          "$ref": "#/41"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/42"
+          "$ref": "#/43"
         },
         "flags": 0,
         "description": "Gets or sets the properties. Define cluster specific properties."
       },
       "tags": {
         "type": {
-          "$ref": "#/201"
+          "$ref": "#/203"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -576,7 +589,7 @@
       },
       "systemData": {
         "type": {
-          "$ref": "#/27"
+          "$ref": "#/28"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -589,14 +602,14 @@
     "properties": {
       "provisioningState": {
         "type": {
-          "$ref": "#/47"
+          "$ref": "#/48"
         },
         "flags": 2,
         "description": "Provisioning state of the resource."
       },
       "clusterType": {
         "type": {
-          "$ref": "#/48"
+          "$ref": "#/49"
         },
         "flags": 1,
         "description": "The type of cluster."
@@ -610,14 +623,14 @@
       },
       "computeProfile": {
         "type": {
-          "$ref": "#/49"
+          "$ref": "#/50"
         },
         "flags": 1,
         "description": "The compute profile."
       },
       "clusterProfile": {
         "type": {
-          "$ref": "#/54"
+          "$ref": "#/56"
         },
         "flags": 1,
         "description": "Cluster profile."
@@ -651,9 +664,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/43"
-      },
-      {
         "$ref": "#/44"
       },
       {
@@ -661,6 +671,9 @@
       },
       {
         "$ref": "#/46"
+      },
+      {
+        "$ref": "#/47"
       },
       {
         "$ref": "#/0"
@@ -677,10 +690,17 @@
     "properties": {
       "nodes": {
         "type": {
-          "$ref": "#/53"
+          "$ref": "#/54"
         },
         "flags": 1,
         "description": "The nodes definitions."
+      },
+      "availabilityZones": {
+        "type": {
+          "$ref": "#/55"
+        },
+        "flags": 0,
+        "description": "The list of Availability zones to use for AKS VMSS nodes."
       }
     }
   },
@@ -690,7 +710,7 @@
     "properties": {
       "type": {
         "type": {
-          "$ref": "#/51"
+          "$ref": "#/52"
         },
         "flags": 1,
         "description": "The node type."
@@ -704,7 +724,7 @@
       },
       "count": {
         "type": {
-          "$ref": "#/52"
+          "$ref": "#/53"
         },
         "flags": 1,
         "description": "The number of virtual machines."
@@ -722,7 +742,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/50"
+      "$ref": "#/51"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
     }
   },
   {
@@ -731,161 +757,161 @@
     "properties": {
       "clusterVersion": {
         "type": {
-          "$ref": "#/55"
+          "$ref": "#/57"
         },
         "flags": 1,
         "description": "Version with 3/4 part."
       },
       "ossVersion": {
         "type": {
-          "$ref": "#/56"
+          "$ref": "#/58"
         },
         "flags": 1,
         "description": "Version with three part."
       },
       "components": {
         "type": {
-          "$ref": "#/58"
+          "$ref": "#/60"
         },
         "flags": 2,
         "description": "Component list of this cluster type and version."
       },
       "identityProfile": {
         "type": {
-          "$ref": "#/59"
+          "$ref": "#/61"
         },
         "flags": 0,
         "description": "This is deprecated. Please use managed identity profile instead."
       },
       "managedIdentityProfile": {
         "type": {
-          "$ref": "#/60"
+          "$ref": "#/62"
         },
         "flags": 0,
         "description": "This property is required by Trino, Spark and Flink cluster but is optional for Kafka cluster."
       },
       "authorizationProfile": {
         "type": {
-          "$ref": "#/67"
+          "$ref": "#/69"
         },
         "flags": 1,
         "description": "Authorization profile with details of AAD user Ids and group Ids authorized for data plane access."
       },
       "secretsProfile": {
         "type": {
-          "$ref": "#/70"
+          "$ref": "#/72"
         },
         "flags": 0,
         "description": "The cluster secret profile."
       },
       "serviceConfigsProfiles": {
         "type": {
-          "$ref": "#/87"
+          "$ref": "#/89"
         },
         "flags": 0,
         "description": "The service configs profiles."
       },
       "connectivityProfile": {
         "type": {
-          "$ref": "#/88"
+          "$ref": "#/90"
         },
         "flags": 2,
         "description": "Cluster connectivity profile."
       },
       "clusterAccessProfile": {
         "type": {
-          "$ref": "#/92"
+          "$ref": "#/94"
         },
         "flags": 0,
         "description": "Cluster access profile."
       },
       "logAnalyticsProfile": {
         "type": {
-          "$ref": "#/93"
+          "$ref": "#/95"
         },
         "flags": 0,
         "description": "Cluster log analytics profile to enable or disable OMS agent for cluster."
       },
       "prometheusProfile": {
         "type": {
-          "$ref": "#/95"
+          "$ref": "#/97"
         },
         "flags": 0,
         "description": "Cluster Prometheus profile."
       },
       "sshProfile": {
         "type": {
-          "$ref": "#/96"
+          "$ref": "#/98"
         },
         "flags": 0,
         "description": "Ssh profile for the cluster."
       },
       "autoscaleProfile": {
         "type": {
-          "$ref": "#/98"
+          "$ref": "#/100"
         },
         "flags": 0,
         "description": "This is the Autoscale profile for the cluster. This will allow customer to create cluster enabled with Autoscale."
       },
       "rangerPluginProfile": {
         "type": {
-          "$ref": "#/127"
+          "$ref": "#/129"
         },
         "flags": 0,
         "description": "Cluster Ranger plugin profile."
       },
       "kafkaProfile": {
         "type": {
-          "$ref": "#/128"
+          "$ref": "#/130"
         },
         "flags": 0,
         "description": "The Kafka cluster profile."
       },
       "trinoProfile": {
         "type": {
-          "$ref": "#/140"
+          "$ref": "#/142"
         },
         "flags": 0,
         "description": "Trino Cluster profile."
       },
       "llapProfile": {
         "type": {
-          "$ref": "#/158"
+          "$ref": "#/160"
         },
         "flags": 0,
         "description": "LLAP cluster profile."
       },
       "flinkProfile": {
         "type": {
-          "$ref": "#/159"
+          "$ref": "#/161"
         },
         "flags": 0,
         "description": "The Flink cluster profile."
       },
       "sparkProfile": {
         "type": {
-          "$ref": "#/177"
+          "$ref": "#/179"
         },
         "flags": 0,
         "description": "The spark cluster profile."
       },
       "rangerProfile": {
         "type": {
-          "$ref": "#/185"
+          "$ref": "#/187"
         },
         "flags": 0,
         "description": "The ranger cluster profile."
       },
       "stubProfile": {
         "type": {
-          "$ref": "#/196"
+          "$ref": "#/198"
         },
         "flags": 0,
         "description": "Stub cluster profile."
       },
       "scriptActionProfiles": {
         "type": {
-          "$ref": "#/200"
+          "$ref": "#/202"
         },
         "flags": 0,
         "description": "The script action profile list."
@@ -921,7 +947,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/57"
+      "$ref": "#/59"
     }
   },
   {
@@ -937,14 +963,14 @@
       },
       "msiClientId": {
         "type": {
-          "$ref": "#/18"
+          "$ref": "#/19"
         },
         "flags": 1,
         "description": "ClientId of the MSI."
       },
       "msiObjectId": {
         "type": {
-          "$ref": "#/18"
+          "$ref": "#/19"
         },
         "flags": 1,
         "description": "ObjectId of the MSI."
@@ -957,7 +983,7 @@
     "properties": {
       "identityList": {
         "type": {
-          "$ref": "#/66"
+          "$ref": "#/68"
         },
         "flags": 1,
         "description": "The list of managed identity."
@@ -970,7 +996,7 @@
     "properties": {
       "type": {
         "type": {
-          "$ref": "#/65"
+          "$ref": "#/67"
         },
         "flags": 1,
         "description": "The type of managed identity."
@@ -984,14 +1010,14 @@
       },
       "clientId": {
         "type": {
-          "$ref": "#/18"
+          "$ref": "#/19"
         },
         "flags": 1,
         "description": "ClientId of the managed identity."
       },
       "objectId": {
         "type": {
-          "$ref": "#/18"
+          "$ref": "#/19"
         },
         "flags": 1,
         "description": "ObjectId of the managed identity."
@@ -1014,13 +1040,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/62"
-      },
-      {
-        "$ref": "#/63"
-      },
-      {
         "$ref": "#/64"
+      },
+      {
+        "$ref": "#/65"
+      },
+      {
+        "$ref": "#/66"
       },
       {
         "$ref": "#/0"
@@ -1030,7 +1056,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/61"
+      "$ref": "#/63"
     }
   },
   {
@@ -1039,14 +1065,14 @@
     "properties": {
       "userIds": {
         "type": {
-          "$ref": "#/68"
+          "$ref": "#/70"
         },
         "flags": 0,
         "description": "AAD user Ids authorized for data plane access."
       },
       "groupIds": {
         "type": {
-          "$ref": "#/69"
+          "$ref": "#/71"
         },
         "flags": 0,
         "description": "AAD group Ids authorized for data plane access."
@@ -1078,7 +1104,7 @@
       },
       "secrets": {
         "type": {
-          "$ref": "#/77"
+          "$ref": "#/79"
         },
         "flags": 0,
         "description": "Properties of Key Vault secret."
@@ -1098,7 +1124,7 @@
       },
       "type": {
         "type": {
-          "$ref": "#/75"
+          "$ref": "#/77"
         },
         "flags": 1,
         "description": "Type of key vault object: secret, key or certificate."
@@ -1112,7 +1138,7 @@
       },
       "keyVaultObjectName": {
         "type": {
-          "$ref": "#/76"
+          "$ref": "#/78"
         },
         "flags": 1,
         "description": "Object identifier name of the secret in key vault."
@@ -1135,13 +1161,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/72"
-      },
-      {
-        "$ref": "#/73"
-      },
-      {
         "$ref": "#/74"
+      },
+      {
+        "$ref": "#/75"
+      },
+      {
+        "$ref": "#/76"
       },
       {
         "$ref": "#/0"
@@ -1155,7 +1181,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/71"
+      "$ref": "#/73"
     }
   },
   {
@@ -1171,7 +1197,7 @@
       },
       "configs": {
         "type": {
-          "$ref": "#/86"
+          "$ref": "#/88"
         },
         "flags": 1,
         "description": "List of service configs."
@@ -1191,7 +1217,7 @@
       },
       "files": {
         "type": {
-          "$ref": "#/85"
+          "$ref": "#/87"
         },
         "flags": 1,
         "description": "List of Config Files."
@@ -1218,7 +1244,7 @@
       },
       "encoding": {
         "type": {
-          "$ref": "#/83"
+          "$ref": "#/85"
         },
         "flags": 0,
         "description": "This property indicates if the content is encoded and is case-insensitive. Please set the value to base64 if the content is base64 encoded. Set it to none or skip it if the content is plain text."
@@ -1232,7 +1258,7 @@
       },
       "values": {
         "type": {
-          "$ref": "#/84"
+          "$ref": "#/86"
         },
         "flags": 0,
         "description": "List of key value pairs\nwhere key represents a valid service configuration name and value represents the value of the config."
@@ -1251,10 +1277,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/81"
+        "$ref": "#/83"
       },
       {
-        "$ref": "#/82"
+        "$ref": "#/84"
       },
       {
         "$ref": "#/0"
@@ -1272,19 +1298,19 @@
   {
     "$type": "ArrayType",
     "itemType": {
+      "$ref": "#/82"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/81"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
       "$ref": "#/80"
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/79"
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/78"
     }
   },
   {
@@ -1293,14 +1319,14 @@
     "properties": {
       "web": {
         "type": {
-          "$ref": "#/89"
+          "$ref": "#/91"
         },
         "flags": 1,
         "description": "Web connectivity endpoint details."
       },
       "ssh": {
         "type": {
-          "$ref": "#/91"
+          "$ref": "#/93"
         },
         "flags": 0,
         "description": "List of SSH connectivity endpoints."
@@ -1350,7 +1376,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/90"
+      "$ref": "#/92"
     }
   },
   {
@@ -1359,7 +1385,7 @@
     "properties": {
       "enableInternalIngress": {
         "type": {
-          "$ref": "#/23"
+          "$ref": "#/24"
         },
         "flags": 1,
         "description": "Whether to create cluster using private IP instead of public IP. This property must be set at create time."
@@ -1379,21 +1405,21 @@
     "properties": {
       "enabled": {
         "type": {
-          "$ref": "#/23"
+          "$ref": "#/24"
         },
         "flags": 1,
         "description": "True if log analytics is enabled for the cluster, otherwise false."
       },
       "applicationLogs": {
         "type": {
-          "$ref": "#/94"
+          "$ref": "#/96"
         },
         "flags": 0,
         "description": "Collection of logs to be enabled or disabled for log analytics."
       },
       "metricsEnabled": {
         "type": {
-          "$ref": "#/23"
+          "$ref": "#/24"
         },
         "flags": 0,
         "description": "True if metrics are enabled, otherwise false."
@@ -1406,14 +1432,14 @@
     "properties": {
       "stdOutEnabled": {
         "type": {
-          "$ref": "#/23"
+          "$ref": "#/24"
         },
         "flags": 0,
         "description": "True if stdout is enabled, otherwise false."
       },
       "stdErrorEnabled": {
         "type": {
-          "$ref": "#/23"
+          "$ref": "#/24"
         },
         "flags": 0,
         "description": "True if stderror is enabled, otherwise false."
@@ -1426,7 +1452,7 @@
     "properties": {
       "enabled": {
         "type": {
-          "$ref": "#/23"
+          "$ref": "#/24"
         },
         "flags": 1,
         "description": "Enable Prometheus for cluster or not."
@@ -1439,7 +1465,7 @@
     "properties": {
       "count": {
         "type": {
-          "$ref": "#/97"
+          "$ref": "#/99"
         },
         "flags": 1,
         "description": "Number of ssh pods per cluster."
@@ -1471,7 +1497,7 @@
     "properties": {
       "enabled": {
         "type": {
-          "$ref": "#/23"
+          "$ref": "#/24"
         },
         "flags": 1,
         "description": "This indicates whether auto scale is enabled on HDInsight on AKS cluster."
@@ -1485,21 +1511,21 @@
       },
       "autoscaleType": {
         "type": {
-          "$ref": "#/101"
+          "$ref": "#/103"
         },
         "flags": 0,
         "description": "User to specify which type of Autoscale to be implemented - Scheduled Based or Load Based."
       },
       "scheduleBasedConfig": {
         "type": {
-          "$ref": "#/102"
+          "$ref": "#/104"
         },
         "flags": 0,
         "description": "Profiles of schedule based Autoscale."
       },
       "loadBasedConfig": {
         "type": {
-          "$ref": "#/115"
+          "$ref": "#/117"
         },
         "flags": 0,
         "description": "Profiles of load based Autoscale."
@@ -1518,10 +1544,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/99"
+        "$ref": "#/101"
       },
       {
-        "$ref": "#/100"
+        "$ref": "#/102"
       },
       {
         "$ref": "#/0"
@@ -1548,7 +1574,7 @@
       },
       "schedules": {
         "type": {
-          "$ref": "#/114"
+          "$ref": "#/116"
         },
         "flags": 1,
         "description": "This specifies the schedules where scheduled based Autoscale to be enabled, the user has a choice to set multiple rules within the schedule across days and times (start/end)."
@@ -1561,14 +1587,14 @@
     "properties": {
       "startTime": {
         "type": {
-          "$ref": "#/104"
+          "$ref": "#/106"
         },
         "flags": 1,
         "description": "User has to set the start time of current schedule configuration, format like 10:30 (HH:MM)."
       },
       "endTime": {
         "type": {
-          "$ref": "#/104"
+          "$ref": "#/106"
         },
         "flags": 1,
         "description": "User has to set the end time of current schedule configuration, format like 10:30 (HH:MM)."
@@ -1582,7 +1608,7 @@
       },
       "days": {
         "type": {
-          "$ref": "#/113"
+          "$ref": "#/115"
         },
         "flags": 1,
         "description": "User has to set the days where schedule has to be set for autoscale operation."
@@ -1625,12 +1651,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/105"
-      },
-      {
-        "$ref": "#/106"
-      },
-      {
         "$ref": "#/107"
       },
       {
@@ -1646,6 +1666,12 @@
         "$ref": "#/111"
       },
       {
+        "$ref": "#/112"
+      },
+      {
+        "$ref": "#/113"
+      },
+      {
         "$ref": "#/0"
       }
     ]
@@ -1653,13 +1679,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/112"
+      "$ref": "#/114"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/103"
+      "$ref": "#/105"
     }
   },
   {
@@ -1696,7 +1722,7 @@
       },
       "scalingRules": {
         "type": {
-          "$ref": "#/126"
+          "$ref": "#/128"
         },
         "flags": 1,
         "description": "The scaling rules."
@@ -1709,7 +1735,7 @@
     "properties": {
       "actionType": {
         "type": {
-          "$ref": "#/119"
+          "$ref": "#/121"
         },
         "flags": 1,
         "description": "The action type."
@@ -1730,7 +1756,7 @@
       },
       "comparisonRule": {
         "type": {
-          "$ref": "#/120"
+          "$ref": "#/122"
         },
         "flags": 1,
         "description": "The comparison rule."
@@ -1749,10 +1775,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/117"
+        "$ref": "#/119"
       },
       {
-        "$ref": "#/118"
+        "$ref": "#/120"
       },
       {
         "$ref": "#/0"
@@ -1765,7 +1791,7 @@
     "properties": {
       "operator": {
         "type": {
-          "$ref": "#/125"
+          "$ref": "#/127"
         },
         "flags": 1,
         "description": "The comparison operator."
@@ -1799,16 +1825,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/121"
-      },
-      {
-        "$ref": "#/122"
-      },
-      {
         "$ref": "#/123"
       },
       {
         "$ref": "#/124"
+      },
+      {
+        "$ref": "#/125"
+      },
+      {
+        "$ref": "#/126"
       },
       {
         "$ref": "#/0"
@@ -1818,7 +1844,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/116"
+      "$ref": "#/118"
     }
   },
   {
@@ -1827,7 +1853,7 @@
     "properties": {
       "enabled": {
         "type": {
-          "$ref": "#/23"
+          "$ref": "#/24"
         },
         "flags": 1,
         "description": "Enable Ranger for cluster or not."
@@ -1840,35 +1866,35 @@
     "properties": {
       "enableKRaft": {
         "type": {
-          "$ref": "#/23"
+          "$ref": "#/24"
         },
         "flags": 0,
         "description": "Expose Kafka cluster in KRaft mode."
       },
       "enablePublicEndpoints": {
         "type": {
-          "$ref": "#/23"
+          "$ref": "#/24"
         },
         "flags": 0,
         "description": "Expose worker nodes as public endpoints."
       },
       "remoteStorageUri": {
         "type": {
-          "$ref": "#/129"
+          "$ref": "#/131"
         },
         "flags": 0,
         "description": "Fully qualified path of Azure Storage container used for Tiered Storage."
       },
       "diskStorage": {
         "type": {
-          "$ref": "#/130"
+          "$ref": "#/132"
         },
         "flags": 1,
         "description": "Kafka disk storage profile."
       },
       "connectivityEndpoints": {
         "type": {
-          "$ref": "#/138"
+          "$ref": "#/140"
         },
         "flags": 2,
         "description": "Kafka bootstrap server and brokers related connectivity endpoints."
@@ -1892,7 +1918,7 @@
       },
       "dataDiskType": {
         "type": {
-          "$ref": "#/137"
+          "$ref": "#/139"
         },
         "flags": 1,
         "description": "Managed Disk Type."
@@ -1927,12 +1953,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/131"
-      },
-      {
-        "$ref": "#/132"
-      },
-      {
         "$ref": "#/133"
       },
       {
@@ -1943,6 +1963,12 @@
       },
       {
         "$ref": "#/136"
+      },
+      {
+        "$ref": "#/137"
+      },
+      {
+        "$ref": "#/138"
       },
       {
         "$ref": "#/0"
@@ -1962,7 +1988,7 @@
       },
       "brokerEndpoints": {
         "type": {
-          "$ref": "#/139"
+          "$ref": "#/141"
         },
         "flags": 0,
         "description": "Kafka broker endpoint list."
@@ -1981,35 +2007,35 @@
     "properties": {
       "catalogOptions": {
         "type": {
-          "$ref": "#/141"
+          "$ref": "#/143"
         },
         "flags": 0,
         "description": "Trino cluster catalog options."
       },
       "coordinator": {
         "type": {
-          "$ref": "#/148"
+          "$ref": "#/150"
         },
         "flags": 0,
         "description": "Trino Coordinator."
       },
       "userPluginsSpec": {
         "type": {
-          "$ref": "#/150"
+          "$ref": "#/152"
         },
         "flags": 0,
         "description": "Trino user plugins spec"
       },
       "userTelemetrySpec": {
         "type": {
-          "$ref": "#/154"
+          "$ref": "#/156"
         },
         "flags": 0,
         "description": "User telemetry"
       },
       "worker": {
         "type": {
-          "$ref": "#/156"
+          "$ref": "#/158"
         },
         "flags": 0,
         "description": "Trino worker."
@@ -2022,7 +2048,7 @@
     "properties": {
       "hive": {
         "type": {
-          "$ref": "#/147"
+          "$ref": "#/149"
         },
         "flags": 0,
         "description": "hive catalog options."
@@ -2035,14 +2061,14 @@
     "properties": {
       "catalogName": {
         "type": {
-          "$ref": "#/143"
+          "$ref": "#/145"
         },
         "flags": 1,
         "description": "Name of trino catalog which should use specified hive metastore."
       },
       "metastoreDbConnectionAuthenticationMode": {
         "type": {
-          "$ref": "#/146"
+          "$ref": "#/148"
         },
         "flags": 0,
         "description": "The authentication mode to connect to your Hive metastore database. More details: https://learn.microsoft.com/en-us/azure/azure-sql/database/logins-create-manage?view=azuresql#authentication-and-authorization"
@@ -2093,10 +2119,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/144"
+        "$ref": "#/146"
       },
       {
-        "$ref": "#/145"
+        "$ref": "#/147"
       },
       {
         "$ref": "#/0"
@@ -2106,7 +2132,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/142"
+      "$ref": "#/144"
     }
   },
   {
@@ -2115,14 +2141,14 @@
     "properties": {
       "debug": {
         "type": {
-          "$ref": "#/149"
+          "$ref": "#/151"
         },
         "flags": 0,
         "description": "Trino debug configuration."
       },
       "highAvailabilityEnabled": {
         "type": {
-          "$ref": "#/23"
+          "$ref": "#/24"
         },
         "flags": 0,
         "description": "The flag that if enable coordinator HA, uses multiple coordinator replicas with auto failover, one per each head node. Default: true."
@@ -2135,7 +2161,7 @@
     "properties": {
       "enable": {
         "type": {
-          "$ref": "#/23"
+          "$ref": "#/24"
         },
         "flags": 0,
         "description": "The flag that if enable debug or not."
@@ -2149,7 +2175,7 @@
       },
       "suspend": {
         "type": {
-          "$ref": "#/23"
+          "$ref": "#/24"
         },
         "flags": 0,
         "description": "The flag that if suspend debug or not."
@@ -2162,7 +2188,7 @@
     "properties": {
       "plugins": {
         "type": {
-          "$ref": "#/153"
+          "$ref": "#/155"
         },
         "flags": 0,
         "description": "Trino user plugins."
@@ -2175,21 +2201,21 @@
     "properties": {
       "enabled": {
         "type": {
-          "$ref": "#/23"
+          "$ref": "#/24"
         },
         "flags": 0,
         "description": "Denotes whether the plugin is active or not."
       },
       "name": {
         "type": {
-          "$ref": "#/143"
+          "$ref": "#/145"
         },
         "flags": 0,
         "description": "This field maps to the sub-directory in trino plugins location, that will contain all the plugins under path."
       },
       "path": {
         "type": {
-          "$ref": "#/152"
+          "$ref": "#/154"
         },
         "flags": 0,
         "description": "Fully qualified path to the folder containing the plugins."
@@ -2204,7 +2230,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/151"
+      "$ref": "#/153"
     }
   },
   {
@@ -2213,7 +2239,7 @@
     "properties": {
       "storage": {
         "type": {
-          "$ref": "#/155"
+          "$ref": "#/157"
         },
         "flags": 0,
         "description": "Trino user telemetry definition."
@@ -2226,7 +2252,7 @@
     "properties": {
       "hivecatalogName": {
         "type": {
-          "$ref": "#/143"
+          "$ref": "#/145"
         },
         "flags": 0,
         "description": "Hive Catalog name used to mount external tables on the logs written by trino, if not specified there tables are not created."
@@ -2247,7 +2273,7 @@
       },
       "path": {
         "type": {
-          "$ref": "#/143"
+          "$ref": "#/145"
         },
         "flags": 0,
         "description": "Azure storage location of the blobs."
@@ -2260,7 +2286,7 @@
     "properties": {
       "debug": {
         "type": {
-          "$ref": "#/149"
+          "$ref": "#/151"
         },
         "flags": 0,
         "description": "Trino debug configuration."
@@ -2275,7 +2301,7 @@
     "name": "ClusterProfileLlapProfile",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/157"
+      "$ref": "#/159"
     }
   },
   {
@@ -2284,7 +2310,7 @@
     "properties": {
       "storage": {
         "type": {
-          "$ref": "#/160"
+          "$ref": "#/162"
         },
         "flags": 1,
         "description": "The storage profile"
@@ -2298,42 +2324,42 @@
       },
       "jobManager": {
         "type": {
-          "$ref": "#/163"
+          "$ref": "#/165"
         },
         "flags": 1,
         "description": "Job Manager container/ process CPU and memory requirements"
       },
       "historyServer": {
         "type": {
-          "$ref": "#/163"
+          "$ref": "#/165"
         },
         "flags": 0,
         "description": "History Server container/ process CPU and memory requirements"
       },
       "taskManager": {
         "type": {
-          "$ref": "#/163"
+          "$ref": "#/165"
         },
         "flags": 1,
         "description": "Task Manager container/ process CPU and memory requirements"
       },
       "catalogOptions": {
         "type": {
-          "$ref": "#/164"
+          "$ref": "#/166"
         },
         "flags": 0,
         "description": "Flink cluster catalog options."
       },
       "deploymentMode": {
         "type": {
-          "$ref": "#/171"
+          "$ref": "#/173"
         },
         "flags": 0,
         "description": "A string property that indicates the deployment mode of Flink cluster. It can have one of the following enum values => Application, Session. Default value is Session"
       },
       "jobSpec": {
         "type": {
-          "$ref": "#/172"
+          "$ref": "#/174"
         },
         "flags": 0,
         "description": "Job specifications for flink clusters in application deployment mode. The specification is immutable even if job properties are changed by calling the RunJob API, please use the ListJob API to get the latest job information."
@@ -2346,14 +2372,14 @@
     "properties": {
       "storageUri": {
         "type": {
-          "$ref": "#/161"
+          "$ref": "#/163"
         },
         "flags": 1,
         "description": "Storage account uri which is used for savepoint and checkpoint state."
       },
       "storagekey": {
         "type": {
-          "$ref": "#/162"
+          "$ref": "#/164"
         },
         "flags": 0,
         "description": "Storage key is only required for wasb(s) storage."
@@ -2394,7 +2420,7 @@
     "properties": {
       "hive": {
         "type": {
-          "$ref": "#/165"
+          "$ref": "#/167"
         },
         "flags": 0,
         "description": "Hive Catalog Option for Flink cluster."
@@ -2407,7 +2433,7 @@
     "properties": {
       "metastoreDbConnectionAuthenticationMode": {
         "type": {
-          "$ref": "#/168"
+          "$ref": "#/170"
         },
         "flags": 0,
         "description": "The authentication mode to connect to your Hive metastore database. More details: https://learn.microsoft.com/en-us/azure/azure-sql/database/logins-create-manage?view=azuresql#authentication-and-authorization"
@@ -2447,10 +2473,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/166"
+        "$ref": "#/168"
       },
       {
-        "$ref": "#/167"
+        "$ref": "#/169"
       },
       {
         "$ref": "#/0"
@@ -2469,10 +2495,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/169"
+        "$ref": "#/171"
       },
       {
-        "$ref": "#/170"
+        "$ref": "#/172"
       },
       {
         "$ref": "#/0"
@@ -2520,7 +2546,7 @@
       },
       "upgradeMode": {
         "type": {
-          "$ref": "#/176"
+          "$ref": "#/178"
         },
         "flags": 1,
         "description": "A string property that indicates the upgrade mode to be performed on the Flink job. It can have one of the following enum values => STATELESS_UPDATE, UPDATE, LAST_STATE_UPDATE."
@@ -2543,13 +2569,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/173"
-      },
-      {
-        "$ref": "#/174"
-      },
-      {
         "$ref": "#/175"
+      },
+      {
+        "$ref": "#/176"
+      },
+      {
+        "$ref": "#/177"
       },
       {
         "$ref": "#/0"
@@ -2569,14 +2595,14 @@
       },
       "metastoreSpec": {
         "type": {
-          "$ref": "#/178"
+          "$ref": "#/180"
         },
         "flags": 0,
         "description": "The metastore specification for Spark cluster."
       },
       "userPluginsSpec": {
         "type": {
-          "$ref": "#/182"
+          "$ref": "#/184"
         },
         "flags": 0,
         "description": "Spark user plugins spec"
@@ -2603,7 +2629,7 @@
       },
       "dbConnectionAuthenticationMode": {
         "type": {
-          "$ref": "#/181"
+          "$ref": "#/183"
         },
         "flags": 0,
         "description": "The authentication mode to connect to your Hive metastore database. More details: https://learn.microsoft.com/en-us/azure/azure-sql/database/logins-create-manage?view=azuresql#authentication-and-authorization"
@@ -2650,10 +2676,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/179"
+        "$ref": "#/181"
       },
       {
-        "$ref": "#/180"
+        "$ref": "#/182"
       },
       {
         "$ref": "#/0"
@@ -2666,7 +2692,7 @@
     "properties": {
       "plugins": {
         "type": {
-          "$ref": "#/184"
+          "$ref": "#/186"
         },
         "flags": 0,
         "description": "Spark user plugins."
@@ -2679,7 +2705,7 @@
     "properties": {
       "path": {
         "type": {
-          "$ref": "#/152"
+          "$ref": "#/154"
         },
         "flags": 1,
         "description": "Fully qualified path to the folder containing the plugins."
@@ -2689,7 +2715,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/183"
+      "$ref": "#/185"
     }
   },
   {
@@ -2698,21 +2724,21 @@
     "properties": {
       "rangerAdmin": {
         "type": {
-          "$ref": "#/186"
+          "$ref": "#/188"
         },
         "flags": 1,
         "description": "Specification for the Ranger Admin service."
       },
       "rangerAudit": {
         "type": {
-          "$ref": "#/189"
+          "$ref": "#/191"
         },
         "flags": 0,
         "description": "Properties required to describe audit log storage."
       },
       "rangerUsersync": {
         "type": {
-          "$ref": "#/190"
+          "$ref": "#/192"
         },
         "flags": 1,
         "description": "Specification for the Ranger Usersync service"
@@ -2725,14 +2751,14 @@
     "properties": {
       "admins": {
         "type": {
-          "$ref": "#/187"
+          "$ref": "#/189"
         },
         "flags": 1,
         "description": "List of usernames that should be marked as ranger admins. These usernames should match the user principal name (UPN) of the respective AAD users."
       },
       "database": {
         "type": {
-          "$ref": "#/188"
+          "$ref": "#/190"
         },
         "flags": 1
       }
@@ -2784,7 +2810,7 @@
     "properties": {
       "storageAccount": {
         "type": {
-          "$ref": "#/152"
+          "$ref": "#/154"
         },
         "flags": 0,
         "description": "Azure storage location of the blobs. MSI should have read/write access to this Storage account."
@@ -2797,35 +2823,35 @@
     "properties": {
       "enabled": {
         "type": {
-          "$ref": "#/23"
+          "$ref": "#/24"
         },
         "flags": 0,
         "description": "Denotes whether usersync service should be enabled"
       },
       "groups": {
         "type": {
-          "$ref": "#/191"
+          "$ref": "#/193"
         },
         "flags": 0,
         "description": "List of groups that should be synced. These group names should match the object id of the respective AAD groups."
       },
       "mode": {
         "type": {
-          "$ref": "#/194"
+          "$ref": "#/196"
         },
         "flags": 0,
         "description": "User & groups can be synced automatically or via a static list that's refreshed."
       },
       "userMappingLocation": {
         "type": {
-          "$ref": "#/152"
+          "$ref": "#/154"
         },
         "flags": 0,
         "description": "Azure storage location of a mapping file that lists user & group associations."
       },
       "users": {
         "type": {
-          "$ref": "#/195"
+          "$ref": "#/197"
         },
         "flags": 0,
         "description": "List of user names that should be synced. These usernames should match the User principal name of the respective AAD users."
@@ -2850,10 +2876,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/192"
+        "$ref": "#/194"
       },
       {
-        "$ref": "#/193"
+        "$ref": "#/195"
       },
       {
         "$ref": "#/0"
@@ -2871,7 +2897,7 @@
     "name": "ClusterProfileStubProfile",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/157"
+      "$ref": "#/159"
     }
   },
   {
@@ -2894,7 +2920,7 @@
       },
       "url": {
         "type": {
-          "$ref": "#/198"
+          "$ref": "#/200"
         },
         "flags": 1,
         "description": "Url of the script file."
@@ -2908,7 +2934,7 @@
       },
       "services": {
         "type": {
-          "$ref": "#/199"
+          "$ref": "#/201"
         },
         "flags": 1,
         "description": "List of services to apply the script action."
@@ -2922,7 +2948,7 @@
       },
       "shouldPersist": {
         "type": {
-          "$ref": "#/23"
+          "$ref": "#/24"
         },
         "flags": 0,
         "description": "Specify if the script should persist on the cluster."
@@ -2942,7 +2968,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/197"
+      "$ref": "#/199"
     }
   },
   {
@@ -2958,7 +2984,7 @@
     "name": "Microsoft.HDInsight/clusterpools/clusters@2024-05-01",
     "scopeType": 8,
     "body": {
-      "$ref": "#/41"
+      "$ref": "#/42"
     },
     "flags": 0
   }

@@ -2051,7 +2051,8 @@
 #### Properties
 * **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **includeDeletedObjects**: any: This property control whether query result contains Deleted objects. Default is false. Type: boolean (or Expression with resultType boolean).
-* **SOQLQuery**: any: Database query. Type: string (or Expression with resultType string).
+* **query**: any: You can only use Salesforce Object Query Language (SOQL) query with limitations. For SOQL limitations, see this article: https://developer.salesforce.com/docs/atlas.en-us.api_asynch.meta/api_asynch/queries.htm#SOQL%20Considerations. If query is not specified, all the data of the Salesforce object specified in ObjectApiName/reportId in dataset will be retrieved. Type: string (or Expression with resultType string).
+* **SOQLQuery**: any: Deprecating, please use 'query' property instead. Type: string (or Expression with resultType string).
 * **type**: 'SalesforceServiceCloudV2Source' (Required): Copy source type.
 
 ### SalesforceSource
@@ -2066,8 +2067,9 @@
 #### Properties
 * **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **includeDeletedObjects**: any: This property control whether query result contains Deleted objects. Default is false. Type: boolean (or Expression with resultType boolean).
+* **query**: any: You can only use Salesforce Object Query Language (SOQL) query with limitations. For SOQL limitations, see this article: https://developer.salesforce.com/docs/atlas.en-us.api_asynch.meta/api_asynch/queries.htm#SOQL%20Considerations. If query is not specified, all the data of the Salesforce object specified in ObjectApiName/reportId in dataset will be retrieved. Type: string (or Expression with resultType string).
 * **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-* **SOQLQuery**: any: Database query. Type: string (or Expression with resultType string).
+* **SOQLQuery**: any: Deprecating, please use 'query' property instead. Type: string (or Expression with resultType string).
 * **type**: 'SalesforceV2Source' (Required): Copy source type.
 
 ### SapBwSource
@@ -3343,6 +3345,7 @@
 ## DynamicsCrmLinkedServiceTypeProperties
 ### Properties
 * **authenticationType**: any (Required): The authentication type to connect to Dynamics CRM server. 'Office365' for online scenario, 'Ifd' for on-premises with Ifd scenario, 'AADServicePrincipal' for Server-To-Server authentication in online scenario. Type: string (or Expression with resultType string).
+* **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
 * **deploymentType**: any (Required): The deployment type of the Dynamics CRM instance. 'Online' for Dynamics CRM Online and 'OnPremisesWithIfd' for Dynamics CRM on-premises with Ifd. Type: string (or Expression with resultType string).
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **hostName**: any: The host name of the on-premises Dynamics CRM server. The property is required for on-prem and not allowed for online. Type: string (or Expression with resultType string).
@@ -3506,8 +3509,8 @@
 ## ExpressionV2
 ### Properties
 * **operands**: [ExpressionV2](#expressionv2)[]: List of nested expressions.
-* **operator**: string: Expression operator value Type: string.
-* **type**: 'Binary' | 'Constant' | 'Field' | 'Unary' | string: Type of expressions supported by the system. Type: string.
+* **operators**: string[]: Expression operator value Type: list of strings.
+* **type**: 'Binary' | 'Constant' | 'Field' | 'NAry' | 'Unary' | string: Type of expressions supported by the system. Type: string.
 * **value**: string: Value for Constant/Field Type: string.
 
 ## FactoryIdentity
@@ -4157,6 +4160,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## LakeHouseTableDatasetTypeProperties
 ### Properties
+* **schema**: any: The schema name of Microsoft Fabric LakeHouse Table. Type: string (or Expression with resultType string).
 * **table**: any: The name of Microsoft Fabric LakeHouse Table. Type: string (or Expression with resultType string).
 
 ## LicensedComponentSetupTypeProperties

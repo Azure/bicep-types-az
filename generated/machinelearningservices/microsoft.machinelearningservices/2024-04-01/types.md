@@ -334,6 +334,16 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/jobs' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.MachineLearningServices/workspaces/marketplaceSubscriptions@2024-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9\-_]{0,254}$"} (Required, DeployTimeConstant): The resource name
+* **properties**: [MarketplaceSubscriptionProperties](#marketplacesubscriptionproperties) (Required): [Required] Additional attributes of the entity.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.MachineLearningServices/workspaces/marketplaceSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.MachineLearningServices/workspaces/models@2024-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -418,6 +428,21 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/schedules' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.MachineLearningServices/workspaces/serverlessEndpoints@2024-04-01
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Managed service identity (system assigned and/or user assigned identities)
+* **kind**: string: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type.
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string {pattern: "^[a-zA-Z][a-zA-Z0-9-]{0,51}$"} (Required, DeployTimeConstant): The resource name
+* **properties**: [ServerlessEndpointProperties](#serverlessendpointproperties) (Required): [Required] Additional attributes of the entity.
+* **sku**: [Sku](#sku): Sku details required for ARM contract for Autoscaling.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: 'Microsoft.MachineLearningServices/workspaces/serverlessEndpoints' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Function listKeys (Microsoft.MachineLearningServices/workspaces@2024-04-01)
 * **Resource**: Microsoft.MachineLearningServices/workspaces
 * **ApiVersion**: 2024-04-01
@@ -435,6 +460,11 @@
 
 ## Function listKeys (Microsoft.MachineLearningServices/workspaces/onlineEndpoints@2024-04-01)
 * **Resource**: Microsoft.MachineLearningServices/workspaces/onlineEndpoints
+* **ApiVersion**: 2024-04-01
+* **Output**: [EndpointAuthKeys](#endpointauthkeys)
+
+## Function listKeys (Microsoft.MachineLearningServices/workspaces/serverlessEndpoints@2024-04-01)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/serverlessEndpoints
 * **ApiVersion**: 2024-04-01
 * **Output**: [EndpointAuthKeys](#endpointauthkeys)
 
@@ -1142,6 +1172,10 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 * **memory**: string: Memory size request/limit for container. More info:
 https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
 
+## ContentSafety
+### Properties
+* **contentSafetyStatus**: 'Disabled' | 'Enabled' | string (Required): [Required] Specifies the status of content safety.
+
 ## CosmosDbSettings
 ### Properties
 * **collectionsThroughput**: int: The throughput of the collections in cosmosdb database
@@ -1498,6 +1532,11 @@ The other benefit of rolling path is that model monitoring ui is able to select 
 * **protocol**: 'http' | 'tcp' | 'udp' | string: Protocol over which communication will happen over this endpoint
 * **published**: int: Port over which the application is exposed from container.
 * **target**: int: Application port inside the container.
+
+## EndpointAuthKeys
+### Properties
+* **primaryKey**: string: The primary key.
+* **secondaryKey**: string: The secondary key.
 
 ## EndpointAuthKeys
 ### Properties
@@ -2337,6 +2376,19 @@ If Nodes is not set or set to null, the service will only be started on leader n
 * **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' | string (Required): Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed).
 * **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.
 
+## MarketplacePlan
+### Properties
+* **offerId**: string (ReadOnly): The identifying name of the Offer of the Marketplace Plan.
+* **planId**: string (ReadOnly): The identifying name of the Plan of the Marketplace Plan.
+* **publisherId**: string (ReadOnly): The identifying name of the Publisher of the Marketplace Plan.
+
+## MarketplaceSubscriptionProperties
+### Properties
+* **marketplacePlan**: [MarketplacePlan](#marketplaceplan) (ReadOnly): Marketplace Plan associated with the Marketplace Subscription.
+* **marketplaceSubscriptionStatus**: 'Subscribed' | 'Suspended' | 'Unsubscribed' | string (ReadOnly): Current status of the Marketplace Subscription.
+* **modelId**: string {minLength: 1, pattern: "[a-zA-Z0-9_]"} (Required): [Required] Target Marketplace Model ID to create a Marketplace Subscription for.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning State of the Marketplace Subscription.
+
 ## MaterializationComputeResource
 ### Properties
 * **instanceType**: string: Specifies the instance type
@@ -2377,6 +2429,10 @@ If Nodes is not set or set to null, the service will only be started on leader n
 * **properties**: [ResourceBaseProperties](#resourcebaseproperties): The asset property dictionary.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state for the model container.
 * **tags**: [ResourceBaseTags](#resourcebasetags): Tag dictionary. Tags can be added, removed, and updated.
+
+## ModelSettings
+### Properties
+* **modelId**: string: The unique model identifier that this ServerlessEndpoint should provision.
 
 ## ModelVersionFlavors
 ### Properties
@@ -3267,6 +3323,26 @@ Configure this parameter with a higher value than 300 secs, if more time is need
 * **serverlessComputeCustomSubnet**: string: The resource ID of an existing virtual network subnet in which serverless compute nodes should be deployed
 * **serverlessComputeNoPublicIP**: bool: The flag to signal if serverless compute nodes deployed in custom vNet would have no public IP addresses for a workspace with private endpoint
 
+## ServerlessEndpointProperties
+### Properties
+* **authMode**: 'Key' | string (Required): [Required] Specifies the authentication mode for the Serverless endpoint.
+* **contentSafety**: [ContentSafety](#contentsafety): Specifies the content safety options. If omitted, the default content safety settings will be configured
+* **endpointState**: 'Creating' | 'CreationFailed' | 'Deleting' | 'DeletionFailed' | 'Online' | 'Reinstating' | 'Suspended' | 'Suspending' | 'Unknown' | string (ReadOnly): The current state of the ServerlessEndpoint.
+* **inferenceEndpoint**: [ServerlessInferenceEndpoint](#serverlessinferenceendpoint) (ReadOnly): The inference uri to target when making requests against the serverless endpoint
+* **marketplaceSubscriptionId**: string (ReadOnly): The MarketplaceSubscription Azure ID associated to this ServerlessEndpoint.
+* **modelSettings**: [ModelSettings](#modelsettings): The model settings (model id) for the model being serviced on the ServerlessEndpoint.
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state for the endpoint.
+
+## ServerlessInferenceEndpoint
+### Properties
+* **headers**: [ServerlessInferenceEndpointHeaders](#serverlessinferenceendpointheaders) (ReadOnly): Specifies any required headers to target this serverless endpoint.
+* **uri**: string (Required, ReadOnly): [Required] The inference uri to target when making requests against the Serverless Endpoint.
+
+## ServerlessInferenceEndpointHeaders
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
 ## ServiceManagedResourcesSettings
 ### Properties
 * **cosmosDb**: [CosmosDbSettings](#cosmosdbsettings): The settings for the service managed cosmosdb account.
@@ -3501,6 +3577,11 @@ If 'Custom' is selected then user can specify additional inputs to customize how
 ## TmpfsOptions
 ### Properties
 * **size**: int: Mention the Tmpfs size
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TrackedResourceTags
 ### Properties

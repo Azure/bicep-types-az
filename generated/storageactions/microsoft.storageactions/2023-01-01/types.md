@@ -5,10 +5,10 @@
 ### Properties
 * **apiVersion**: '2023-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The managed service identity of the resource.
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity) (Required): The managed service identity of the resource.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {minLength: 3, maxLength: 18, pattern: "^[a-z0-9]{3,18}$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [StorageTaskProperties](#storagetaskproperties): Properties of the storage task.
+* **properties**: [StorageTaskProperties](#storagetaskproperties) (Required): Properties of the storage task.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.StorageActions/storageTasks' (ReadOnly, DeployTimeConstant): The resource type
@@ -19,7 +19,7 @@
 
 ## IfCondition
 ### Properties
-* **condition**: string (Required): The condition predicate which is composed of object properties, eg: blob and container properties.
+* **condition**: string (Required): Condition predicate to evaluate each object. See https://aka.ms/storagetaskconditions for valid properties and operators.
 * **operations**: [StorageTaskOperation](#storagetaskoperation)[] (Required): List of operations to execute when the condition predicate satisfies.
 
 ## ManagedServiceIdentity

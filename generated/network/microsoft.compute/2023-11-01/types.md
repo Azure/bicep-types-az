@@ -136,11 +136,6 @@
 * **tunnelInterfaces**: [GatewayLoadBalancerTunnelInterface](#gatewayloadbalancertunnelinterface)[]: An array of gateway load balancer tunnel interfaces.
 * **virtualNetwork**: [SubResource](#subresource): A reference to a virtual network.
 
-## Components1Jq1T4ISchemasManagedserviceidentityPropertiesUserassignedidentitiesAdditionalproperties
-### Properties
-* **clientId**: string (ReadOnly): The client id of user assigned identity.
-* **principalId**: string (ReadOnly): The principal id of user assigned identity.
-
 ## CustomDnsConfigPropertiesFormat
 ### Properties
 * **fqdn**: string: Fqdn that resolves to private endpoint ip address.
@@ -168,7 +163,6 @@
 ### Properties
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
 * **id**: string: Resource ID.
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): FlowLog resource Managed Identity
 * **location**: string: Resource location.
 * **name**: string (ReadOnly): Resource name.
 * **properties**: [FlowLogPropertiesFormat](#flowlogpropertiesformat): Properties of the flow log.
@@ -292,18 +286,6 @@
 * **networkInterfaceIPConfiguration**: [SubResource](#subresource) (ReadOnly): Reference to IP address defined in network interfaces.
 * **subnet**: [SubResource](#subresource): Reference to an existing subnet.
 * **virtualNetwork**: [SubResource](#subresource): Reference to an existing virtual network.
-
-## ManagedServiceIdentity
-### Properties
-* **principalId**: string (ReadOnly): The principal id of the system assigned identity. This property will only be provided for a system assigned identity.
-* **tenantId**: string (ReadOnly): The tenant id of the system assigned identity. This property will only be provided for a system assigned identity.
-* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned': The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine.
-* **userAssignedIdentities**: [ManagedServiceIdentityUserAssignedIdentities](#managedserviceidentityuserassignedidentities): The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
-
-## ManagedServiceIdentityUserAssignedIdentities
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [Components1Jq1T4ISchemasManagedserviceidentityPropertiesUserassignedidentitiesAdditionalproperties](#components1jq1t4ischemasmanagedserviceidentitypropertiesuserassignedidentitiesadditionalproperties)
 
 ## NatGateway
 ### Properties

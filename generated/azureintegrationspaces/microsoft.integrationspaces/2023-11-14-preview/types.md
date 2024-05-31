@@ -73,7 +73,7 @@
 ### Properties
 * **description**: string: The description of the resource.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): The status of the last operation.
-* **trackingDataStores**: [ApplicationPropertiesTrackingDataStores](#applicationpropertiestrackingdatastores) (Required): The tracking data stores.
+* **trackingDataStores**: [ApplicationPropertiesTrackingDataStores](#applicationpropertiestrackingdatastores): The tracking data stores.
 
 ## ApplicationPropertiesTrackingDataStores
 ### Properties
@@ -218,10 +218,10 @@
 
 ## TrackingDataStore
 ### Properties
-* **databaseName**: string (Required): The database name.
-* **dataStoreIngestionUri**: string (Required): The data store ingestion URI.
-* **dataStoreResourceId**: string (Required): The data store resource id.
-* **dataStoreUri**: string (Required): The data store URI.
+* **databaseName**: string: The database name.
+* **dataStoreIngestionUri**: string: The data store ingestion URI.
+* **dataStoreResourceId**: string: The data store resource id.
+* **dataStoreUri**: string: The data store URI.
 
 ## TrackingEventDefinition
 ### Properties

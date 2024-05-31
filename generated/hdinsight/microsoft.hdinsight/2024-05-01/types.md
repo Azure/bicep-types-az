@@ -107,6 +107,7 @@ where key represents a valid service configuration name and value represents the
 
 ## ClusterPoolResourcePropertiesComputeProfile
 ### Properties
+* **availabilityZones**: string[]: The list of Availability zones to use for AKS VMSS nodes.
 * **count**: int (ReadOnly): The number of virtual machines.
 * **vmSize**: string {pattern: "^[a-zA-Z0-9_\-]{0,256}$"} (Required): The virtual machine SKU.
 
@@ -192,6 +193,7 @@ where key represents a valid service configuration name and value represents the
 
 ## ComputeProfile
 ### Properties
+* **availabilityZones**: string[]: The list of Availability zones to use for AKS VMSS nodes.
 * **nodes**: [NodeProfile](#nodeprofile)[] (Required): The nodes definitions.
 
 ## ComputeResourceDefinition
