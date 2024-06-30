@@ -128,6 +128,7 @@
 
 ## PolicyAssignmentProperties
 ### Properties
+* **definitionVersion**: string: The version of the policy definition to use.
 * **description**: string: This message will be part of response in case of policy violation.
 * **displayName**: string: The display name of the policy assignment.
 * **enforcementMode**: 'Default' | 'DoNotEnforce' | string: The policy assignment enforcement mode. Possible values are Default and DoNotEnforce.
@@ -162,6 +163,7 @@
 
 ## PolicyDefinitionReference
 ### Properties
+* **definitionVersion**: string: The version of the policy definition to use.
 * **groupNames**: string[]: The name of the groups that this policy definition reference belongs to.
 * **parameters**: [ParameterValues](#parametervalues): The parameter values for the referenced policy rule. The keys are the parameter names.
 * **policyDefinitionId**: string (Required): The ID of the policy definition or policy set definition.

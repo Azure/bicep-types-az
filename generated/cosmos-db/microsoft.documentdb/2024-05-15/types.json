@@ -7555,7 +7555,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "DataTransferServiceResourceCreateUpdateParametersOrDataTransferServiceResourceProperties",
+    "name": "DataTransferServiceResourceCreateUpdatePropertiesOrDataTransferServiceResourceProperties",
     "properties": {
       "locations": {
         "type": {
@@ -7662,7 +7662,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "GraphAPIComputeServiceResourceCreateUpdateParametersOrGraphAPIComputeServiceResourceProperties",
+    "name": "GraphAPIComputeServiceResourceCreateUpdatePropertiesOrGraphAPIComputeServiceResourceProperties",
     "properties": {
       "graphApiComputeEndpoint": {
         "type": {
@@ -7783,7 +7783,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "MaterializedViewsBuilderServiceResourceCreateUpdateParametersOrMaterializedViewsBuilderServiceResourceProperties",
+    "name": "MaterializedViewsBuilderServiceResourceCreateUpdatePropertiesOrMaterializedViewsBuilderServiceResourceProperties",
     "properties": {
       "locations": {
         "type": {
@@ -7890,7 +7890,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "SqlDedicatedGatewayServiceResourceCreateUpdateParametersOrSqlDedicatedGatewayServiceResourceProperties",
+    "name": "SqlDedicatedGatewayServiceResourceCreateUpdatePropertiesOrSqlDedicatedGatewayServiceResourceProperties",
     "properties": {
       "dedicatedGatewayType": {
         "type": {

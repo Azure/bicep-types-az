@@ -37,14 +37,6 @@
 * **ApiVersion**: 2024-03-01-preview
 * **Output**: [ListConnectionStringsResult](#listconnectionstringsresult)
 
-## AzureResourceManagerPrivateEndpointConnection
-### Properties
-* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
-* **name**: string (ReadOnly): The name of the resource
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): The private endpoint connection properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-
 ## ConnectionString
 ### Properties
 * **connectionString**: string (ReadOnly): Value of the connection string
@@ -69,7 +61,7 @@
 * **createMode**: 'Default' | 'PointInTimeRestore' | string (WriteOnly): The mode to create a mongo cluster.
 * **earliestRestoreTime**: string (ReadOnly): Earliest restore timestamp in UTC ISO8601 format.
 * **nodeGroupSpecs**: [NodeGroupSpec](#nodegroupspec)[]: The list of node group specs in the cluster.
-* **privateEndpointConnections**: [AzureResourceManagerPrivateEndpointConnection](#azureresourcemanagerprivateendpointconnection)[] (ReadOnly): List of private endpoint connections.
+* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): List of private endpoint connections.
 * **provisioningState**: 'Canceled' | 'Dropping' | 'Failed' | 'InProgress' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the mongo cluster.
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Whether or not public endpoint access is allowed for this mongo cluster.
 * **restoreParameters**: [MongoClusterRestoreParameters](#mongoclusterrestoreparameters) (WriteOnly): The parameters to create a point-in-time restore mongo cluster.
@@ -91,6 +83,14 @@
 ## PrivateEndpoint
 ### Properties
 * **id**: string (ReadOnly): The ARM identifier for private endpoint.
+
+## PrivateEndpointConnection
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## PrivateEndpointConnectionProperties
 ### Properties

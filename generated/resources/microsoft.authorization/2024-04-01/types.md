@@ -47,6 +47,7 @@
 ## PolicyAssignmentProperties
 ### Properties
 * **assignmentType**: 'Custom' | 'NotSpecified' | 'System' | 'SystemHidden' | string: The type of policy assignment. Possible values are NotSpecified, System, SystemHidden, and Custom. Immutable.
+* **definitionVersion**: string: The version of the policy definition to use.
 * **description**: string: This message will be part of response in case of policy violation.
 * **displayName**: string: The display name of the policy assignment.
 * **enforcementMode**: 'Default' | 'DoNotEnforce' | string: The policy assignment enforcement mode. Possible values are Default and DoNotEnforce.

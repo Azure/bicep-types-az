@@ -3722,6 +3722,10 @@ The expression should follow NCronTab format.
 * **accessKeyId**: string
 * **secretAccessKey**: string
 
+## WorkspaceConnectionAccountKey
+### Properties
+* **key**: string {sensitive}
+
 ## WorkspaceConnectionApiKey
 ### Properties
 * **key**: string
@@ -3775,7 +3779,7 @@ which requires UsernamePassword
 ### AccountKeyAuthTypeWorkspaceConnectionProperties
 #### Properties
 * **authType**: 'AccountKey' (Required): Authentication type of the connection target
-* **credentials**: [WorkspaceConnectionSharedAccessSignature](#workspaceconnectionsharedaccesssignature)
+* **credentials**: [WorkspaceConnectionAccountKey](#workspaceconnectionaccountkey)
 
 ### ApiKeyAuthWorkspaceConnectionProperties
 #### Properties

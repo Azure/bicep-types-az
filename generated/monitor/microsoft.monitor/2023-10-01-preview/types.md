@@ -43,17 +43,9 @@
 * **accountId**: string (ReadOnly): The immutable ID of the Azure Monitor workspace. This property is read-only.
 * **defaultIngestionSettings**: [IngestionSettings](#ingestionsettings) (ReadOnly): The Data Collection Rule and Endpoint used for ingestion by default.
 * **metrics**: [Metrics](#metrics): Information about metrics for the Azure Monitor workspace
-* **privateEndpointConnections**: [AzureResourceManagerPrivateEndpointConnection](#azureresourcemanagerprivateendpointconnection)[] (ReadOnly): List of private endpoint connections.
+* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): List of private endpoint connections.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The provisioning state of the Azure Monitor workspace. Set to Succeeded if everything is healthy.
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' | string (ReadOnly): Gets or sets allow or disallow public network access to workspace
-
-## AzureResourceManagerPrivateEndpointConnection
-### Properties
-* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-* **name**: string (ReadOnly): The name of the resource
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): The private endpoint connection properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## BatchProcessor
 ### Properties
@@ -134,6 +126,14 @@
 ## PrivateEndpoint
 ### Properties
 * **id**: string (ReadOnly): The ARM identifier for private endpoint.
+
+## PrivateEndpointConnection
+### Properties
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. E.g. "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## PrivateEndpointConnectionProperties
 ### Properties

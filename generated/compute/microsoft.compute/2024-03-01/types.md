@@ -954,8 +954,9 @@
 
 ## SecurityPostureReference
 ### Properties
-* **excludeExtensions**: [VirtualMachineExtension](#virtualmachineextension)[]: List of virtual machine extensions to exclude when applying the Security Posture.
-* **id**: string: The security posture reference id in the form of /CommunityGalleries/{communityGalleryName}/securityPostures/{securityPostureName}/versions/{major.minor.patch}|{major.*}|latest
+* **excludeExtensions**: string[]: The list of virtual machine extension names to exclude when applying the security posture.
+* **id**: string (Required): The security posture reference id in the form of /CommunityGalleries/{communityGalleryName}/securityPostures/{securityPostureName}/versions/{major.minor.patch}|latest
+* **isOverridable**: bool: Whether the security posture can be overridden by the user.
 
 ## SecurityProfile
 ### Properties
@@ -1507,7 +1508,7 @@
 * **osProfile**: [VirtualMachineScaleSetOSProfile](#virtualmachinescalesetosprofile): Specifies the operating system settings for the virtual machines in the scale set.
 * **priority**: 'Low' | 'Regular' | 'Spot' | string: Specifies the priority for the virtual machines in the scale set. Minimum api-version: 2017-10-30-preview.
 * **scheduledEventsProfile**: [ScheduledEventsProfile](#scheduledeventsprofile): Specifies Scheduled Event related configurations.
-* **securityPostureReference**: [SecurityPostureReference](#securityposturereference): Specifies the security posture to be used for all virtual machines in the scale set. Minimum api-version: 2023-03-01
+* **securityPostureReference**: [SecurityPostureReference](#securityposturereference): Specifies the security posture to be used in the scale set. Minimum api-version: 2023-03-01
 * **securityProfile**: [SecurityProfile](#securityprofile): Specifies the Security related profile settings for the virtual machines in the scale set.
 * **serviceArtifactReference**: [ServiceArtifactReference](#serviceartifactreference): Specifies the service artifact reference id used to set same image version for all virtual machines in the scale set when using 'latest' image version. Minimum api-version: 2022-11-01
 * **storageProfile**: [VirtualMachineScaleSetStorageProfile](#virtualmachinescalesetstorageprofile): Specifies the storage settings for the virtual machine disks.

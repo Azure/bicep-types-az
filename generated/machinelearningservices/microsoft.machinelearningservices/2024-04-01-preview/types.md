@@ -246,6 +246,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9_-]{2,32}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [EndpointDeploymentResourceProperties](#endpointdeploymentresourceproperties) (Required)
+* **sku**: [CognitiveServicesSku](#cognitiveservicessku)
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/connections/deployments' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -326,6 +327,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {pattern: "^[a-zA-Z0-9][a-zA-Z0-9_-]{2,32}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [EndpointDeploymentResourceProperties](#endpointdeploymentresourceproperties) (Required)
+* **sku**: [CognitiveServicesSku](#cognitiveservicessku)
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/endpoints/deployments' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -1944,40 +1946,11 @@ with encryption
 * **Additional Properties Type**: string
 
 ## EndpointDeploymentResourceProperties
-* **Discriminator**: type
-
-### Base Properties
-* **failureReason**: string: The failure reason if the creation failed.
+### Properties
+* **model**: [EndpointDeploymentModel](#endpointdeploymentmodel) (Required): Model used for the endpoint deployment.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'NotStarted' | 'Succeeded' | 'Updating' | string (ReadOnly): Read-only provision state status property.
-
-### ContentSafetyEndpointDeploymentResourceProperties
-#### Properties
-* **model**: [EndpointDeploymentModel](#endpointdeploymentmodel) (Required): Model used for the endpoint deployment.
 * **raiPolicyName**: string: The name of RAI policy.
-* **sku**: [CognitiveServicesSku](#cognitiveservicessku)
-* **type**: 'Azure.ContentSafety' (Required): Kind of the deployment.
 * **versionUpgradeOption**: 'NoAutoUpgrade' | 'OnceCurrentVersionExpired' | 'OnceNewDefaultVersionAvailable' | string: Deployment model version upgrade option.
-
-### OpenAIEndpointDeploymentResourceProperties
-#### Properties
-* **model**: [EndpointDeploymentModel](#endpointdeploymentmodel) (Required): Model used for the endpoint deployment.
-* **raiPolicyName**: string: The name of RAI policy.
-* **sku**: [CognitiveServicesSku](#cognitiveservicessku)
-* **type**: 'Azure.OpenAI' (Required): Kind of the deployment.
-* **versionUpgradeOption**: 'NoAutoUpgrade' | 'OnceCurrentVersionExpired' | 'OnceNewDefaultVersionAvailable' | string: Deployment model version upgrade option.
-
-### SpeechEndpointDeploymentResourceProperties
-#### Properties
-* **model**: [EndpointDeploymentModel](#endpointdeploymentmodel) (Required): Model used for the endpoint deployment.
-* **raiPolicyName**: string: The name of RAI policy.
-* **sku**: [CognitiveServicesSku](#cognitiveservicessku)
-* **type**: 'Azure.Speech' (Required): Kind of the deployment.
-* **versionUpgradeOption**: 'NoAutoUpgrade' | 'OnceCurrentVersionExpired' | 'OnceNewDefaultVersionAvailable' | string: Deployment model version upgrade option.
-
-### ManagedOnlineEndpointDeploymentResourceProperties
-#### Properties
-* **type**: 'managedOnlineEndpoint' (Required): Kind of the deployment.
-
 
 ## EndpointKeys
 ### Properties
@@ -4793,6 +4766,10 @@ The expression should follow NCronTab format.
 * **accessKeyId**: string
 * **secretAccessKey**: string
 
+## WorkspaceConnectionAccountKey
+### Properties
+* **key**: string {sensitive}
+
 ## WorkspaceConnectionApiKey
 ### Properties
 * **key**: string
@@ -4844,7 +4821,7 @@ which requires UsernamePassword
 ### AccountKeyAuthTypeWorkspaceConnectionProperties
 #### Properties
 * **authType**: 'AccountKey' (Required): Authentication type of the connection target
-* **credentials**: [WorkspaceConnectionSharedAccessSignature](#workspaceconnectionsharedaccesssignature)
+* **credentials**: [WorkspaceConnectionAccountKey](#workspaceconnectionaccountkey)
 
 ### ApiKeyAuthWorkspaceConnectionProperties
 #### Properties

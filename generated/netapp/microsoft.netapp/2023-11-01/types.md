@@ -478,7 +478,7 @@
  Default - Data will be pulled from cool tier to standard storage on random reads. This policy is the default.
  OnRead - All client-driven data read is pulled from cool tier to standard storage on both sequential and random reads.
  Never - No client-driven data is pulled from cool tier to standard storage.
-* **coolnessPeriod**: int {minValue: 7, maxValue: 183}: Specifies the number of days after which data that is not accessed by clients will be tiered.
+* **coolnessPeriod**: int {minValue: 2, maxValue: 183}: Specifies the number of days after which data that is not accessed by clients will be tiered.
 * **creationToken**: string {minLength: 1, maxLength: 80, pattern: "^[a-zA-Z][a-zA-Z0-9\-]{0,79}$"} (Required): A unique file path for the volume. Used when creating mount targets
 * **dataProtection**: [VolumePropertiesDataProtection](#volumepropertiesdataprotection): DataProtection type volumes include an object containing details of the replication
 * **dataStoreResourceId**: string[] (ReadOnly): Data store resource unique identifier

@@ -31,7 +31,7 @@
 ## LiftrBaseMarketplaceDetails
 ### Properties
 * **offerDetails**: [LiftrBaseOfferDetails](#liftrbaseofferdetails) (Required): Offer details for the marketplace that is selected by the user
-* **subscriptionId**: string (Required): Azure subscription id for the the marketplace offer is purchased from
+* **subscriptionId**: string: Azure subscription id for the the marketplace offer is purchased from
 * **subscriptionStatus**: 'PendingFulfillmentStart' | 'Subscribed' | 'Suspended' | 'Unsubscribed' | string: Marketplace subscription status
 
 ## LiftrBaseOfferDetails

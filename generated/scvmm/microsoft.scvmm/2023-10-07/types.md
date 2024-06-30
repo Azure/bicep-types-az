@@ -8,7 +8,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {minLength: 1, maxLength: 54, pattern: "[a-zA-Z0-9-_\.]"} (Required, DeployTimeConstant): The resource name
-* **properties**: [AvailabilitySetProperties](#availabilitysetproperties) (Required): Resource properties.
+* **properties**: [AvailabilitySetProperties](#availabilitysetproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.ScVmm/availabilitySets' (ReadOnly, DeployTimeConstant): The resource type
@@ -21,7 +21,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {minLength: 1, maxLength: 54, pattern: "[a-zA-Z0-9-_\.]"} (Required, DeployTimeConstant): The resource name
-* **properties**: [CloudProperties](#cloudproperties) (Required): Resource properties.
+* **properties**: [CloudProperties](#cloudproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.ScVmm/clouds' (ReadOnly, DeployTimeConstant): The resource type
@@ -33,7 +33,7 @@
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): Gets or sets the extended location.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **properties**: [VirtualMachineInstanceProperties](#virtualmachineinstanceproperties) (Required): Resource properties.
+* **properties**: [VirtualMachineInstanceProperties](#virtualmachineinstanceproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ScVmm/virtualMachineInstances' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -43,7 +43,7 @@
 * **apiVersion**: '2023-10-07' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **properties**: [GuestAgentProperties](#guestagentproperties) (Required): Resource properties.
+* **properties**: [GuestAgentProperties](#guestagentproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ScVmm/virtualMachineInstances/guestAgents' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -53,7 +53,7 @@
 * **apiVersion**: '2023-10-07' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **properties**: [VmInstanceHybridIdentityMetadataProperties](#vminstancehybrididentitymetadataproperties) (ReadOnly): Resource properties.
+* **properties**: [VmInstanceHybridIdentityMetadataProperties](#vminstancehybrididentitymetadataproperties) (ReadOnly): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ScVmm/virtualMachineInstances/hybridIdentityMetadata' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -65,7 +65,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {minLength: 1, maxLength: 54, pattern: "[a-zA-Z0-9-_\.]"} (Required, DeployTimeConstant): The resource name
-* **properties**: [VirtualMachineTemplateProperties](#virtualmachinetemplateproperties) (Required): Resource properties.
+* **properties**: [VirtualMachineTemplateProperties](#virtualmachinetemplateproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.ScVmm/virtualMachineTemplates' (ReadOnly, DeployTimeConstant): The resource type
@@ -78,7 +78,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {minLength: 1, maxLength: 54, pattern: "[a-zA-Z0-9-_\.]"} (Required, DeployTimeConstant): The resource name
-* **properties**: [VirtualNetworkProperties](#virtualnetworkproperties) (Required): Resource properties.
+* **properties**: [VirtualNetworkProperties](#virtualnetworkproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.ScVmm/virtualNetworks' (ReadOnly, DeployTimeConstant): The resource type
@@ -91,7 +91,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {minLength: 1, maxLength: 54, pattern: "[a-zA-Z0-9-_\.]"} (Required, DeployTimeConstant): The resource name
-* **properties**: [VMMServerProperties](#vmmserverproperties) (Required): Resource properties.
+* **properties**: [VmmServerProperties](#vmmserverproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.ScVmm/vmmServers' (ReadOnly, DeployTimeConstant): The resource type
@@ -103,7 +103,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: string: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **name**: string {pattern: "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [InventoryItemProperties](#inventoryitemproperties) (Required): Resource properties.
+* **properties**: [InventoryItemProperties](#inventoryitemproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ScVmm/vmmServers/inventoryItems' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -127,18 +127,18 @@
 
 ## CloudCapacity
 ### Properties
-* **cpuCount**: int: CPUCount specifies the maximum number of CPUs that can be allocated in the cloud.
-* **memoryMB**: int: MemoryMB specifies a memory usage limit in megabytes.
-* **vmCount**: int: VMCount gives the max number of VMs that can be deployed in the cloud.
+* **cpuCount**: int (ReadOnly): CPUCount specifies the maximum number of CPUs that can be allocated in the cloud.
+* **memoryMB**: int (ReadOnly): MemoryMB specifies a memory usage limit in megabytes.
+* **vmCount**: int (ReadOnly): VMCount gives the max number of VMs that can be deployed in the cloud.
 
 ## CloudProperties
 ### Properties
 * **cloudCapacity**: [CloudCapacity](#cloudcapacity) (ReadOnly): Capacity of the cloud.
-* **cloudName**: string (ReadOnly): Name of the cloud in VMMServer.
+* **cloudName**: string (ReadOnly): Name of the cloud in VmmServer.
 * **inventoryItemId**: string: Gets or sets the inventory Item ID for the resource.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
-* **storageQoSPolicies**: [StorageQoSPolicy](#storageqospolicy)[] (ReadOnly): List of QoS policies available for the cloud.
-* **uuid**: string {minLength: 1}: Unique ID of the cloud.
+* **storageQoSPolicies**: [StorageQosPolicy](#storageqospolicy)[] (ReadOnly): List of QoS policies available for the cloud.
+* **uuid**: string {pattern: "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$"}: Unique ID of the cloud.
 * **vmmServerId**: string: ARM Id of the vmmServer resource in which this resource resides.
 
 ## ExtendedLocation
@@ -178,7 +178,7 @@
 ## InfrastructureProfile
 ### Properties
 * **biosGuid**: string: Gets or sets the bios guid for the vm.
-* **checkpoints**: [Checkpoint](#checkpoint)[]: Checkpoints in the vm.
+* **checkpoints**: [Checkpoint](#checkpoint)[] (ReadOnly): Checkpoints in the vm.
 * **checkpointType**: string: Type of checkpoint supported for the vm.
 * **cloudId**: string: ARM Id of the cloud resource to use for deploying the vm.
 * **generation**: int: Gets or sets the generation for the vm.
@@ -187,21 +187,21 @@
 * **templateId**: string: ARM Id of the template resource to use for deploying the vm.
 * **uuid**: string: Unique ID of the virtual machine.
 * **vmmServerId**: string: ARM Id of the vmmServer resource in which this resource resides.
-* **vmName**: string {minLength: 1}: VMName is the name of VM on the SCVMM server.
+* **vmName**: string {minLength: 1}: VMName is the name of VM on the SCVmm server.
 
 ## InventoryItemDetails
 ### Properties
 * **inventoryItemId**: string: Gets or sets the inventory Item ID for the resource.
-* **inventoryItemName**: string: Gets or sets the Managed Object name in VMM for the resource.
+* **inventoryItemName**: string: Gets or sets the Managed Object name in Vmm for the resource.
 
 ## InventoryItemProperties
 * **Discriminator**: inventoryType
 
 ### Base Properties
-* **inventoryItemName**: string (ReadOnly): Gets the Managed Object name in VMM for the inventory item.
+* **inventoryItemName**: string (ReadOnly): Gets the Managed Object name in Vmm for the inventory item.
 * **managedResourceId**: string (ReadOnly): Gets the tracked resource id corresponding to the inventory resource.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
-* **uuid**: string (ReadOnly): Gets the UUID (which is assigned by VMM) for the inventory item.
+* **uuid**: string (ReadOnly): Gets the UUID (which is assigned by Vmm) for the inventory item.
 
 ### CloudInventoryItem
 #### Properties
@@ -250,7 +250,7 @@
 ### Properties
 * **networkInterfaces**: [NetworkInterface](#networkinterface)[]: Gets or sets the list of network interfaces associated with the virtual machine.
 
-## OsProfileForVMInstance
+## OsProfileForVmInstance
 ### Properties
 * **adminPassword**: string {sensitive} (WriteOnly): Admin password of the virtual machine.
 * **computerName**: string: Gets or sets computer name.
@@ -262,7 +262,7 @@
 ### Properties
 * **disks**: [VirtualDisk](#virtualdisk)[]: Gets or sets the list of virtual disks associated with the virtual machine.
 
-## StorageQoSPolicy
+## StorageQosPolicy
 ### Properties
 * **bandwidthLimit**: int: The Bandwidth Limit for internet traffic.
 * **id**: string: The ID of the QoS policy.
@@ -271,7 +271,7 @@
 * **name**: string: The name of the policy.
 * **policyId**: string: The underlying policy.
 
-## StorageQoSPolicyDetails
+## StorageQosPolicyDetails
 ### Properties
 * **id**: string: The ID of the QoS policy.
 * **name**: string: The name of the policy.
@@ -321,7 +321,7 @@
 * **lun**: int: Gets or sets the disk lun.
 * **maxDiskSizeGB**: int (ReadOnly): Gets the max disk size.
 * **name**: string: Gets or sets the name of the disk.
-* **storageQoSPolicy**: [StorageQoSPolicyDetails](#storageqospolicydetails): The QoS policy for the disk.
+* **storageQoSPolicy**: [StorageQosPolicyDetails](#storageqospolicydetails): The QoS policy for the disk.
 * **templateDiskId**: string: Gets or sets the disk id in the template.
 * **vhdFormatType**: string (ReadOnly): Gets the disk vhd format type.
 * **vhdType**: string: Gets or sets the disk vhd type.
@@ -333,7 +333,7 @@
 * **hardwareProfile**: [HardwareProfile](#hardwareprofile): Hardware properties.
 * **infrastructureProfile**: [InfrastructureProfile](#infrastructureprofile): Gets the infrastructure profile.
 * **networkProfile**: [NetworkProfile](#networkprofile): Network properties.
-* **osProfile**: [OsProfileForVMInstance](#osprofileforvminstance): OS properties.
+* **osProfile**: [OsProfileForVmInstance](#osprofileforvminstance): OS properties.
 * **powerState**: string (ReadOnly): Gets the power state of the virtual machine.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
 * **storageProfile**: [StorageProfile](#storageprofile): Storage properties.
@@ -356,7 +356,7 @@
 * **osName**: string (ReadOnly): Gets os name.
 * **osType**: 'Linux' | 'Other' | 'Windows' | string (ReadOnly): Gets the type of the os.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
-* **uuid**: string {minLength: 1}: Unique ID of the virtual machine template.
+* **uuid**: string {pattern: "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$"}: Unique ID of the virtual machine template.
 * **vmmServerId**: string: ARM Id of the vmmServer resource in which this resource resides.
 
 ## VirtualNetworkProperties
@@ -364,7 +364,7 @@
 * **inventoryItemId**: string: Gets or sets the inventory Item ID for the resource.
 * **networkName**: string (ReadOnly): Name of the virtual network in vmmServer.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Created' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
-* **uuid**: string {minLength: 1}: Unique ID of the virtual network.
+* **uuid**: string {pattern: "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$"}: Unique ID of the virtual network.
 * **vmmServerId**: string: ARM Id of the vmmServer resource in which this resource resides.
 
 ## VmInstanceHybridIdentityMetadataProperties
@@ -373,15 +373,15 @@
 * **publicKey**: string: Gets or sets the Public Key.
 * **resourceUid**: string: The unique identifier for the resource.
 
-## VMMCredential
+## VmmCredential
 ### Properties
-* **password**: string {sensitive} (WriteOnly): Password to use to connect to VMMServer.
-* **username**: string: Username to use to connect to VMMServer.
+* **password**: string {sensitive} (WriteOnly): Password to use to connect to VmmServer.
+* **username**: string: Username to use to connect to VmmServer.
 
-## VMMServerProperties
+## VmmServerProperties
 ### Properties
 * **connectionStatus**: string (ReadOnly): Gets the connection status to the vmmServer.
-* **credentials**: [VMMCredential](#vmmcredential): Credentials to connect to VMMServer.
+* **credentials**: [VmmCredential](#vmmcredential): Credentials to connect to VmmServer.
 * **errorMessage**: string (ReadOnly): Gets any error message if connection to vmmServer is having any issue.
 * **fqdn**: string {minLength: 1} (Required): Fqdn is the hostname/ip of the vmmServer.
 * **port**: int {minValue: 1, maxValue: 65535}: Port is the port on which the vmmServer is listening.
