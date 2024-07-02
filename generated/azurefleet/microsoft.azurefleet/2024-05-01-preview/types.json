@@ -69,14 +69,14 @@
       },
       "plan": {
         "type": {
-          "$ref": "#/256"
+          "$ref": "#/255"
         },
         "flags": 0,
         "description": "Details of the resource plan."
       },
       "tags": {
         "type": {
-          "$ref": "#/257"
+          "$ref": "#/256"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -90,7 +90,7 @@
       },
       "systemData": {
         "type": {
-          "$ref": "#/258"
+          "$ref": "#/257"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -3478,14 +3478,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/253"
+          "$ref": "#/252"
         },
         "flags": 1,
         "description": "Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed)."
       },
       "userAssignedIdentities": {
         "type": {
-          "$ref": "#/255"
+          "$ref": "#/254"
         },
         "flags": 0,
         "description": "The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests."
@@ -3515,10 +3515,6 @@
     "value": "SystemAssigned,UserAssigned"
   },
   {
-    "$type": "StringLiteralType",
-    "value": "SystemAssigned, UserAssigned"
-  },
-  {
     "$type": "UnionType",
     "elements": [
       {
@@ -3532,9 +3528,6 @@
       },
       {
         "$ref": "#/251"
-      },
-      {
-        "$ref": "#/252"
       },
       {
         "$ref": "#/2"
@@ -3566,7 +3559,7 @@
     "name": "UserAssignedIdentities",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/254"
+      "$ref": "#/253"
     }
   },
   {
@@ -3631,7 +3624,7 @@
       },
       "createdByType": {
         "type": {
-          "$ref": "#/263"
+          "$ref": "#/262"
         },
         "flags": 0,
         "description": "The type of identity that created the resource."
@@ -3652,7 +3645,7 @@
       },
       "lastModifiedByType": {
         "type": {
-          "$ref": "#/268"
+          "$ref": "#/267"
         },
         "flags": 0,
         "description": "The type of identity that last modified the resource."
@@ -3686,6 +3679,9 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/258"
+      },
+      {
         "$ref": "#/259"
       },
       {
@@ -3693,9 +3689,6 @@
       },
       {
         "$ref": "#/261"
-      },
-      {
-        "$ref": "#/262"
       },
       {
         "$ref": "#/2"
@@ -3722,6 +3715,9 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/263"
+      },
+      {
         "$ref": "#/264"
       },
       {
@@ -3729,9 +3725,6 @@
       },
       {
         "$ref": "#/266"
-      },
-      {
-        "$ref": "#/267"
       },
       {
         "$ref": "#/2"

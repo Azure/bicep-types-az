@@ -1865,7 +1865,7 @@ If <code>false</code>, this App Service Plan will not perform availability zone 
 
 ## ArcConfiguration
 ### Properties
-* **artifactsStorageType**: 'LocalNode' | 'NetworkFileSystem' | 'blobContainer' | string: Property to select Azure Storage type. Available options: blobContainer.
+* **artifactsStorageType**: 'LocalNode' | 'NetworkFileSystem'
 * **artifactStorageAccessMode**: string
 * **artifactStorageClassName**: string
 * **artifactStorageMountPath**: string
@@ -2685,7 +2685,7 @@ Value can range between 25 and 100.
 ## FunctionsDeploymentStorage
 ### Properties
 * **authentication**: [FunctionsDeploymentStorageAuthentication](#functionsdeploymentstorageauthentication): Authentication method to access the storage account for deployment.
-* **type**: 'LocalNode' | 'NetworkFileSystem' | 'blobContainer' | string: Property to select Azure Storage type. Available options: blobContainer.
+* **type**: 'blobContainer' | string: Property to select Azure Storage type. Available options: blobContainer.
 * **value**: string: Property to set the URL for the selected Azure Storage type. Example: For blobContainer, the value could be https://<storageAccountName>.blob.core.windows.net/<containerName>.
 
 ## FunctionsDeploymentStorageAuthentication

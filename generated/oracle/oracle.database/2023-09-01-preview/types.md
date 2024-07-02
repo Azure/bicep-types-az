@@ -6,7 +6,7 @@
 * **apiVersion**: '2023-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string {minLength: 1, maxLength: 30} (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 30, pattern: ".*"} (Required, DeployTimeConstant): The resource name
 * **properties**: [AutonomousDatabaseBaseProperties](#autonomousdatabasebaseproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -17,7 +17,7 @@
 ### Properties
 * **apiVersion**: '2023-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: ".*"} (Required, DeployTimeConstant): The resource name
 * **properties**: [AutonomousDatabaseBackupProperties](#autonomousdatabasebackupproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Oracle.Database/autonomousDatabases/autonomousDatabaseBackups' (ReadOnly, DeployTimeConstant): The resource type
@@ -28,7 +28,7 @@
 * **apiVersion**: '2023-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: ".*"} (Required, DeployTimeConstant): The resource name
 * **properties**: [CloudExadataInfrastructureProperties](#cloudexadatainfrastructureproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -40,7 +40,7 @@
 ### Properties
 * **apiVersion**: '2023-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {minLength: 1, maxLength: 255} (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 255, pattern: ".*"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DbServerProperties](#dbserverproperties) (ReadOnly): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Oracle.Database/cloudExadataInfrastructures/dbServers' (ReadOnly, DeployTimeConstant): The resource type
@@ -51,7 +51,7 @@
 * **apiVersion**: '2023-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: ".*"} (Required, DeployTimeConstant): The resource name
 * **properties**: [CloudVmClusterProperties](#cloudvmclusterproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -62,7 +62,7 @@
 ### Properties
 * **apiVersion**: '2023-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {minLength: 1, maxLength: 255} (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 255, pattern: ".*"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DbNodeProperties](#dbnodeproperties) (ReadOnly): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Oracle.Database/cloudVmClusters/dbNodes' (ReadOnly, DeployTimeConstant): The resource type
@@ -72,7 +72,7 @@
 ### Properties
 * **apiVersion**: '2023-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {minLength: 1, maxLength: 63} (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 63, pattern: ".*"} (Required, DeployTimeConstant): The resource name
 * **properties**: [VirtualNetworkAddressProperties](#virtualnetworkaddressproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Oracle.Database/cloudVmClusters/virtualNetworkAddresses' (ReadOnly, DeployTimeConstant): The resource type
@@ -82,7 +82,7 @@
 ### Properties
 * **apiVersion**: '2023-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: ".*"} (Required, DeployTimeConstant): The resource name
 * **properties**: [AutonomousDatabaseCharacterSetProperties](#autonomousdatabasecharactersetproperties) (ReadOnly): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Oracle.Database/locations/autonomousDatabaseCharacterSets' (ReadOnly, DeployTimeConstant): The resource type
@@ -92,7 +92,7 @@
 ### Properties
 * **apiVersion**: '2023-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: ".*"} (Required, DeployTimeConstant): The resource name
 * **properties**: [AutonomousDatabaseNationalCharacterSetProperties](#autonomousdatabasenationalcharactersetproperties) (ReadOnly): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Oracle.Database/locations/autonomousDatabaseNationalCharacterSets' (ReadOnly, DeployTimeConstant): The resource type
@@ -102,7 +102,7 @@
 ### Properties
 * **apiVersion**: '2023-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: ".*"} (Required, DeployTimeConstant): The resource name
 * **properties**: [AutonomousDbVersionProperties](#autonomousdbversionproperties) (ReadOnly): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Oracle.Database/locations/autonomousDbVersions' (ReadOnly, DeployTimeConstant): The resource type
@@ -112,7 +112,7 @@
 ### Properties
 * **apiVersion**: '2023-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: ".*"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DbSystemShapeProperties](#dbsystemshapeproperties) (ReadOnly): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Oracle.Database/locations/dbSystemShapes' (ReadOnly, DeployTimeConstant): The resource type
@@ -122,7 +122,7 @@
 ### Properties
 * **apiVersion**: '2023-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {minLength: 1, maxLength: 255} (Required, DeployTimeConstant): The resource name
+* **name**: string {minLength: 1, maxLength: 255, pattern: ".*"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DnsPrivateViewProperties](#dnsprivateviewproperties) (ReadOnly): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Oracle.Database/locations/dnsPrivateViews' (ReadOnly, DeployTimeConstant): The resource type
@@ -132,7 +132,7 @@
 ### Properties
 * **apiVersion**: '2023-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: ".*"} (Required, DeployTimeConstant): The resource name
 * **properties**: [DnsPrivateZoneProperties](#dnsprivatezoneproperties) (ReadOnly): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Oracle.Database/locations/dnsPrivateZones' (ReadOnly, DeployTimeConstant): The resource type
@@ -142,10 +142,20 @@
 ### Properties
 * **apiVersion**: '2023-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: ".*"} (Required, DeployTimeConstant): The resource name
 * **properties**: [GiVersionProperties](#giversionproperties) (ReadOnly): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Oracle.Database/locations/giVersions' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Oracle.Database/locations/systemVersions@2023-09-01-preview (ReadOnly)
+* **Valid Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2023-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string {pattern: ".*"} (Required, DeployTimeConstant): The resource name
+* **properties**: [SystemVersionProperties](#systemversionproperties) (ReadOnly): The resource-specific properties for this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Oracle.Database/locations/systemVersions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Oracle.Database/oracleSubscriptions@2023-09-01-preview
 * **Valid Scope(s)**: Subscription
@@ -197,8 +207,9 @@
 
 ## AutonomousDatabaseBackupProperties
 ### Properties
-* **autonomousDatabaseId**: string (Required, ReadOnly): The OCID of the Autonomous Database.
-* **databaseSizeInTBs**: int (ReadOnly): The size of the database in terabytes at the time the backup was taken.
+* **autonomousDatabaseOcid**: string {minLength: 1, maxLength: 255} (ReadOnly): The OCID of the Autonomous Database.
+* **backupType**: 'Full' | 'Incremental' | 'LongTerm' | string (ReadOnly): The type of backup.
+* **databaseSizeInTbs**: int (ReadOnly): The size of the database in terabytes at the time the backup was taken.
 * **dbVersion**: string (ReadOnly): A valid Oracle Database version for Autonomous Database.
 * **displayName**: string: The user-friendly name for the backup. The name does not have to be unique.
 * **isAutomatic**: bool (ReadOnly): Indicates whether the backup is user-initiated or automatic.
@@ -207,11 +218,11 @@
 * **lifecycleState**: 'Active' | 'Creating' | 'Deleting' | 'Failed' | 'Updating' | string (ReadOnly): The current state of the backup.
 * **ocid**: string {minLength: 1, maxLength: 255} (ReadOnly): The OCID of the Autonomous Database backup.
 * **provisioningState**: 'Canceled' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): Azure resource provisioning state.
-* **retentionPeriodInDays**: int {minValue: 90, maxValue: 3650}: Retention period, in days, for long-term backups.
-* **sizeInTBs**: int (ReadOnly): The backup size in terabytes (TB).
+* **retentionPeriodInDays**: int {minValue: 60, maxValue: 3650}: Retention period, in days, for long-term backups.
+* **sizeInTbs**: int (ReadOnly): The backup size in terabytes (TB).
 * **timeAvailableTil**: string (ReadOnly): Timestamp until when the backup will be available.
 * **timeEnded**: string (ReadOnly): The date and time the backup completed.
-* **type**: 'Full' | 'Incremental' | 'LongTerm' | string (ReadOnly): The type of backup.
+* **timeStarted**: string (ReadOnly): The date and time the backup started.
 
 ## AutonomousDatabaseBaseProperties
 * **Discriminator**: dataBaseType
@@ -254,8 +265,10 @@
 * **localAdgAutoFailoverMaxDataLossLimit**: int {minValue: 0, maxValue: 3600}: Parameter that allows users to select an acceptable maximum data loss limit in seconds, up to which Automatic Failover will be triggered when necessary for a Local Autonomous Data Guard
 * **localDisasterRecoveryType**: 'Adg' | 'BackupBased' | string (ReadOnly): Indicates the local disaster recovery (DR) type of the Autonomous Database Serverless instance.Autonomous Data Guard (ADG) DR type provides business critical DR with a faster recovery time objective (RTO) during failover or switchover.Backup-based DR type provides lower cost DR with a slower RTO during failover or switchover.
 * **localStandbyDb**: [AutonomousDatabaseStandbySummary](#autonomousdatabasestandbysummary) (ReadOnly): Local Autonomous Disaster Recovery standby database details.
+* **longTermBackupSchedule**: [LongTermBackUpScheduleDetails](#longtermbackupscheduledetails): Details for the long-term backup schedule.
 * **memoryPerOracleComputeUnitInGbs**: int (ReadOnly): The amount of memory (in GBs) enabled per ECPU or OCPU.
 * **ncharacterSet**: string {minLength: 1, maxLength: 255}: The character set for the Autonomous Database.
+* **nextLongTermBackupTimeStamp**: string (ReadOnly): The date and time when the next long-term backup would be created.
 * **ocid**: string {minLength: 1, maxLength: 255} (ReadOnly): Database ocid
 * **ociUrl**: string (ReadOnly): HTTPS link to OCI resources exposed to Azure Customer via Azure Interface.
 * **openMode**: 'ReadOnly' | 'ReadWrite' | string: Indicates the Autonomous Database mode.
@@ -309,11 +322,11 @@
 
 ## AutonomousDatabaseCharacterSetProperties
 ### Properties
-* **characterSet**: string {minLength: 1, maxLength: 255} (Required, ReadOnly): The Oracle Autonomous Database supported character sets.
+* **characterSet**: string {minLength: 1, maxLength: 255} (ReadOnly): The Oracle Autonomous Database supported character sets.
 
 ## AutonomousDatabaseNationalCharacterSetProperties
 ### Properties
-* **characterSet**: string {minLength: 1, maxLength: 255} (Required, ReadOnly): The Oracle Autonomous Database supported national character sets.
+* **characterSet**: string {minLength: 1, maxLength: 255} (ReadOnly): The Oracle Autonomous Database supported national character sets.
 
 ## AutonomousDatabaseStandbySummary
 ### Properties
@@ -330,7 +343,7 @@
 * **isDefaultForPaid**: bool (ReadOnly): True if this version of the Oracle Database software's default is paid.
 * **isFreeTierEnabled**: bool (ReadOnly): True if this version of the Oracle Database software can be used for Always-Free Autonomous Databases.
 * **isPaidEnabled**: bool (ReadOnly): True if this version of the Oracle Database software has payments enabled.
-* **version**: string {minLength: 1, maxLength: 255} (Required, ReadOnly): Supported Autonomous Db versions.
+* **version**: string {minLength: 1, maxLength: 255} (ReadOnly): Supported Autonomous Db versions.
 
 ## CloudAccountDetails
 ### Properties
@@ -399,7 +412,7 @@
 * **listenerPort**: int (ReadOnly): The port number configured for the listener on the cloud VM cluster.
 * **memorySizeInGbs**: int: The memory to be allocated in GBs.
 * **nodeCount**: int (ReadOnly): The number of nodes in the cloud VM cluster.
-* **nsgCidrs**: [NSGCidr](#nsgcidr)[]: CIDR blocks for additional NSG ingress rules. The VNET CIDRs used to provision the VM Cluster will be added by default.
+* **nsgCidrs**: [NsgCidr](#nsgcidr)[]: CIDR blocks for additional NSG ingress rules. The VNET CIDRs used to provision the VM Cluster will be added by default.
 * **nsgUrl**: string (ReadOnly): HTTPS link to OCI Network Security Group exposed to Azure Customer via the Azure Interface.
 * **ocid**: string {minLength: 1, maxLength: 255} (ReadOnly): Cloud VM Cluster ocid
 * **ociUrl**: string (ReadOnly): HTTPS link to OCI resources exposed to Azure Customer via Azure Interface.
@@ -415,7 +428,7 @@
 * **storageSizeInGbs**: int: The data disk group size to be allocated in GBs per VM.
 * **subnetId**: string (Required): Client subnet
 * **subnetOcid**: string {minLength: 1, maxLength: 255} (ReadOnly): Cluster subnet ocid
-* **systemVersion**: string {minLength: 1, maxLength: 255} (ReadOnly): Operating system version of the image.
+* **systemVersion**: string {minLength: 1, maxLength: 255}: Operating system version of the image.
 * **timeCreated**: string (ReadOnly): The date and time that the cloud VM cluster was created.
 * **timeZone**: string {minLength: 1, maxLength: 255}: The time zone of the cloud VM cluster. For details, see [Exadata Infrastructure Time Zones](/Content/Database/References/timezones.htm).
 * **vipIds**: string[] (ReadOnly): The virtual IP (VIP) addresses associated with the cloud VM cluster. The Cluster Ready Services (CRS) creates and maintains one VIP address for each node in the Exadata Cloud Service instance to enable failover. If one node fails, the VIP is reassigned to another active node in the cluster. **Note:** For a single-node DB system, this list is empty.
@@ -470,7 +483,7 @@
 * **cpuCoreCount**: int (ReadOnly): The number of CPU cores enabled on the Db node.
 * **dbNodeStorageSizeInGbs**: int (ReadOnly): The allocated local node storage in GBs on the Db node.
 * **dbServerId**: string {minLength: 1, maxLength: 255} (ReadOnly): The OCID of the Exacc Db server associated with the database node.
-* **dbSystemId**: string {minLength: 1, maxLength: 255} (Required, ReadOnly): The OCID of the DB system.
+* **dbSystemId**: string {minLength: 1, maxLength: 255} (ReadOnly): The OCID of the DB system.
 * **faultDomain**: string {minLength: 1, maxLength: 255} (ReadOnly): The name of the Fault Domain the instance is contained in.
 * **hostIpId**: string {minLength: 1, maxLength: 255} (ReadOnly): The OCID of the host IP address associated with the database node.
 * **hostname**: string (ReadOnly): The host name for the database node.
@@ -478,7 +491,7 @@
 * **lifecycleState**: 'Available' | 'Failed' | 'Provisioning' | 'Starting' | 'Stopped' | 'Stopping' | 'Terminated' | 'Terminating' | 'Updating' | string (ReadOnly): The current state of the database node.
 * **maintenanceType**: 'VmdbRebootMigration' | string (ReadOnly): The type of database node maintenance.
 * **memorySizeInGbs**: int (ReadOnly): The allocated memory in GBs on the Db node.
-* **ocid**: string {minLength: 1, maxLength: 255} (Required, ReadOnly): DbNode OCID
+* **ocid**: string {minLength: 1, maxLength: 255} (ReadOnly): DbNode OCID
 * **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): Azure resource provisioning state.
 * **softwareStorageSizeInGb**: int (ReadOnly): The size (in GB) of the block storage volume allocation for the DB system. This attribute applies only for virtual machine DB systems.
 * **timeCreated**: string (ReadOnly): The date and time that the database node was created.
@@ -519,7 +532,7 @@
 
 ## DbSystemShapeProperties
 ### Properties
-* **availableCoreCount**: int (Required, ReadOnly): The maximum number of CPU cores that can be enabled on the DB system for this shape.
+* **availableCoreCount**: int (ReadOnly): The maximum number of CPU cores that can be enabled on the DB system for this shape.
 * **availableCoreCountPerNode**: int (ReadOnly): The maximum number of CPU cores per database node that can be enabled for this shape. Only applicable to the flex Exadata shape and ExaCC Elastic shapes.
 * **availableDataStorageInTbs**: int (ReadOnly): The maximum DATA storage that can be enabled for this shape.
 * **availableDataStoragePerServerInTbs**: int (ReadOnly): The maximum data storage available per storage server for this shape. Only applicable to ExaCC Elastic shapes.
@@ -543,26 +556,26 @@
 ## DnsPrivateViewProperties
 ### Properties
 * **displayName**: string (ReadOnly): The display name of the view resource
-* **isProtected**: bool (Required, ReadOnly): A Boolean flag indicating whether or not parts of the resource are unable to be explicitly managed.
+* **isProtected**: bool (ReadOnly): A Boolean flag indicating whether or not parts of the resource are unable to be explicitly managed.
 * **lifecycleState**: 'Active' | 'Deleted' | 'Deleting' | 'Updating' | string (ReadOnly): Views lifecycleState
-* **ocid**: string {minLength: 1, maxLength: 255} (Required, ReadOnly): The OCID of the view
+* **ocid**: string {minLength: 1, maxLength: 255} (ReadOnly): The OCID of the view
 * **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): Azure resource provisioning state.
-* **self**: string (Required, ReadOnly): The canonical absolute URL of the resource.
-* **timeCreated**: string (Required, ReadOnly): views timeCreated
-* **timeUpdated**: string (Required, ReadOnly): views timeCreated
+* **self**: string (ReadOnly): The canonical absolute URL of the resource.
+* **timeCreated**: string (ReadOnly): views timeCreated
+* **timeUpdated**: string (ReadOnly): views timeCreated
 
 ## DnsPrivateZoneProperties
 ### Properties
-* **isProtected**: bool (Required, ReadOnly): A Boolean flag indicating whether or not parts of the resource are unable to be explicitly managed.
+* **isProtected**: bool (ReadOnly): A Boolean flag indicating whether or not parts of the resource are unable to be explicitly managed.
 * **lifecycleState**: 'Active' | 'Creating' | 'Deleted' | 'Deleting' | 'Updating' | string (ReadOnly): Zones lifecycleState
-* **ocid**: string {minLength: 1, maxLength: 255} (Required, ReadOnly): The OCID of the Zone
+* **ocid**: string {minLength: 1, maxLength: 255} (ReadOnly): The OCID of the Zone
 * **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): Azure resource provisioning state.
-* **self**: string (Required, ReadOnly): The canonical absolute URL of the resource.
-* **serial**: int (Required, ReadOnly): The current serial of the zone. As seen in the zone's SOA record.
-* **timeCreated**: string (Required, ReadOnly): Zones timeCreated
-* **version**: string (Required, ReadOnly): Version is the never-repeating, totally-orderable, version of the zone, from which the serial field of the zone's SOA record is derived.
+* **self**: string (ReadOnly): The canonical absolute URL of the resource.
+* **serial**: int (ReadOnly): The current serial of the zone. As seen in the zone's SOA record.
+* **timeCreated**: string (ReadOnly): Zones timeCreated
+* **version**: string (ReadOnly): Version is the never-repeating, totally-orderable, version of the zone, from which the serial field of the zone's SOA record is derived.
 * **viewId**: string {minLength: 1, maxLength: 255} (ReadOnly): The OCID of the private view containing the zone. This value will be null for zones in the global DNS, which are publicly resolvable and not part of a private view.
-* **zoneType**: 'Primary' | 'Secondary' | string (Required, ReadOnly): The type of the zone. Must be either PRIMARY or SECONDARY. SECONDARY is only supported for GLOBAL zones.
+* **zoneType**: 'Primary' | 'Secondary' | string (ReadOnly): The type of the zone. Must be either PRIMARY or SECONDARY. SECONDARY is only supported for GLOBAL zones.
 
 ## EstimatedPatchingTime
 ### Properties
@@ -580,7 +593,14 @@
 
 ## GiVersionProperties
 ### Properties
-* **version**: string {minLength: 1, maxLength: 255} (Required, ReadOnly): A valid Oracle Grid Infrastructure (GI) software version.
+* **version**: string {minLength: 1, maxLength: 255} (ReadOnly): A valid Oracle Grid Infrastructure (GI) software version.
+
+## LongTermBackUpScheduleDetails
+### Properties
+* **isDisabled**: bool: Indicates if the long-term backup schedule should be deleted. The default value is `FALSE`.
+* **repeatCadence**: 'Monthly' | 'OneTime' | 'Weekly' | 'Yearly' | string: The frequency of the long-term backup schedule
+* **retentionPeriodInDays**: int {minValue: 90, maxValue: 2558}: Retention period, in days, for backups.
+* **timeOfBackup**: string: The timestamp for the long-term backup schedule. For a MONTHLY cadence, months having fewer days than the provided date will have the backup taken on the last day of that month.
 
 ## MaintenanceWindow
 ### Properties
@@ -599,7 +619,7 @@
 ### Properties
 * **name**: 'April' | 'August' | 'December' | 'February' | 'January' | 'July' | 'June' | 'March' | 'May' | 'November' | 'October' | 'September' | string (Required): Name of the month of the year.
 
-## NSGCidr
+## NsgCidr
 ### Properties
 * **destinationPortRange**: [PortRange](#portrange): Destination port range to specify particular destination ports for TCP rules.
 * **source**: string {minLength: 1, maxLength: 128} (Required): Conceptually, this is the range of IP addresses that a packet coming into the instance can come from.
@@ -681,6 +701,10 @@
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## SystemVersionProperties
+### Properties
+* **systemVersion**: string (ReadOnly): A valid Oracle System Version
 
 ## TrackedResourceTags
 ### Properties

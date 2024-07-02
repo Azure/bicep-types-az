@@ -6307,15 +6307,8 @@
         "type": {
           "$ref": "#/455"
         },
-        "flags": 0,
+        "flags": 1,
         "description": "Properties of the storage task assignment."
-      },
-      "systemData": {
-        "type": {
-          "$ref": "#/387"
-        },
-        "flags": 2,
-        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       }
     }
   },
@@ -6382,7 +6375,7 @@
         "type": {
           "$ref": "#/457"
         },
-        "flags": 1,
+        "flags": 0,
         "description": "Execution target of the storage task assignment"
       },
       "trigger": {
@@ -6402,7 +6395,7 @@
         "type": {
           "$ref": "#/458"
         },
-        "flags": 1,
+        "flags": 0,
         "description": "Required list of object prefixes to be included for task execution"
       },
       "excludePrefix": {

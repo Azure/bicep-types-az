@@ -164,8 +164,7 @@
 * **apiVersion**: '2023-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {minLength: 3, maxLength: 24, pattern: "^[a-z0-9]{3,24}$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [StorageTaskAssignmentProperties](#storagetaskassignmentproperties): Properties of the storage task assignment.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **properties**: [StorageTaskAssignmentProperties](#storagetaskassignmentproperties) (Required): Properties of the storage task assignment.
 * **type**: 'Microsoft.Storage/storageAccounts/storageTaskAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Storage/storageAccounts/tableServices@2023-05-01
@@ -448,7 +447,7 @@
 ## ExecutionTarget
 ### Properties
 * **excludePrefix**: string[]: List of object prefixes to be excluded from task execution. If there is a conflict between include and exclude prefixes, the exclude prefix will be the determining factor
-* **prefix**: string[] (Required): Required list of object prefixes to be included for task execution
+* **prefix**: string[]: Required list of object prefixes to be included for task execution
 
 ## ExecutionTrigger
 ### Properties
@@ -950,7 +949,7 @@
 
 ## StorageTaskAssignmentExecutionContext
 ### Properties
-* **target**: [ExecutionTarget](#executiontarget) (Required): Execution target of the storage task assignment
+* **target**: [ExecutionTarget](#executiontarget): Execution target of the storage task assignment
 * **trigger**: [ExecutionTrigger](#executiontrigger) (Required): Execution trigger of the storage task assignment
 
 ## StorageTaskAssignmentProperties

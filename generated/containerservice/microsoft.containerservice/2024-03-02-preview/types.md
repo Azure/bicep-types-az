@@ -232,7 +232,7 @@
 
 ## ContainerServiceNetworkProfile
 ### Properties
-* **advancedNetworking**: [AdvancedNetworking](#advancednetworking): Advanced Networking profile for enabling observability on a cluster. For more information see aka.ms/aksadvancednetworking.
+* **advancedNetworking**: [AdvancedNetworking](#advancednetworking): Advanced Networking profile for enabling observability on a cluster. Note that enabling advanced networking features may incur additional costs. For more information see aka.ms/aksadvancednetworking.
 * **dnsServiceIP**: string {pattern: "^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$"}: An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.
 * **ipFamilies**: ('IPv4' | 'IPv6' | string)[]: IP families are used to determine single-stack or dual-stack clusters. For single-stack, the expected value is IPv4. For dual-stack, the expected values are IPv4 and IPv6.
 * **kubeProxyConfig**: [ContainerServiceNetworkProfileKubeProxyConfig](#containerservicenetworkprofilekubeproxyconfig): Holds configuration customizations for kube-proxy. Any values not defined will use the kube-proxy defaulting behavior. See https://v<version>.docs.kubernetes.io/docs/reference/command-line-tools-reference/kube-proxy/ where <version> is represented by a <major version>-<minor version> string. Kubernetes version 1.23 would be '1-23'.
