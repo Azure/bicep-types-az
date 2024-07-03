@@ -6,6 +6,114 @@ warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'AvailableBalanceProperties-amount' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2024-04-01/availableBalance.json:122:9
+warning | PreCheck/SchemaMissingType | The schema 'AvailableBalanceProperties-totalPaymentsOnAccount' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2024-04-01/availableBalance.json:139:9
+warning | PreCheck/SchemaMissingType | The schema 'PaymentOnAccount-amount' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2024-04-01/availableBalance.json:153:9
+warning | PreCheck/SchemaMissingType | The schema 'BillingAccountProperties-enrollmentDetails' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2024-04-01/billingAccount.json:810:9
+warning | PreCheck/SchemaMissingType | The schema 'BillingAccountProperties-soldTo' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2024-04-01/billingAccount.json:834:9
+warning | PreCheck/SchemaMissingType | The schema 'BillingAccountProperties-registrationNumber' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2024-04-01/billingAccount.json:842:9
+warning | PreCheck/SchemaMissingType | The schema 'EnrollmentDetails-indirectRelationshipInfo' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2024-04-01/billingAccount.json:989:9
+warning | PreCheck/SchemaMissingType | The schema 'BillingProfileProperties-billTo' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2024-04-01/billingProfile.json:387:9
+warning | PreCheck/SchemaMissingType | The schema 'BillingProfileProperties-indirectRelationshipInfo' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2024-04-01/billingProfile.json:417:9
+warning | PreCheck/SchemaMissingType | The schema 'BillingProfileProperties-shipTo' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2024-04-01/billingProfile.json:447:9
+warning | PreCheck/SchemaMissingType | The schema 'BillingProfileProperties-soldTo' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2024-04-01/billingProfile.json:455:9
+warning | PreCheck/SchemaMissingType | The schema 'BillingProfileProperties-currentPaymentTerm' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2024-04-01/billingProfile.json:551:9
+warning | PreCheck/SchemaMissingType | The schema 'BillingPropertyProperties-subscriptionServiceUsageAddress' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2024-04-01/billingProperty.json:501:9
+warning | PreCheck/SchemaMissingType | The schema 'BillingPropertyProperties-enrollmentDetails' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2024-04-01/billingProperty.json:524:9
+warning | PreCheck/SchemaMissingType | The schema 'BillingRequestProperties-reviewedBy' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2024-04-01/billingRequest.json:524:9
+warning | PreCheck/SchemaMissingType | The schema 'BillingRequestProperties-createdBy' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2024-04-01/billingRequest.json:573:9
+warning | PreCheck/SchemaMissingType | The schema 'BillingRequestProperties-lastUpdatedBy' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2024-04-01/billingRequest.json:695:9
+warning | PreCheck/SchemaMissingType | The schema 'InvoiceProperties-amountDue' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2024-04-01/invoice.json:940:9
+warning | PreCheck/SchemaMissingType | The schema 'InvoiceProperties-azurePrepaymentApplied' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2024-04-01/invoice.json:948:9
+warning | PreCheck/SchemaMissingType | The schema 'InvoiceProperties-billedAmount' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2024-04-01/invoice.json:956:9
+warning | PreCheck/SchemaMissingType | The schema 'InvoiceProperties-creditAmount' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2024-04-01/invoice.json:979:9
+warning | PreCheck/SchemaMissingType | The schema 'InvoiceProperties-freeAzureCreditApplied' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2024-04-01/invoice.json:1034:9
+warning | PreCheck/SchemaMissingType | The schema 'InvoiceProperties-rebillDetails' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2024-04-01/invoice.json:1094:9
+warning | PreCheck/SchemaMissingType | The schema 'InvoiceProperties-subTotal' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2024-04-01/invoice.json:1142:9
+warning | PreCheck/SchemaMissingType | The schema 'InvoiceProperties-taxAmount' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2024-04-01/invoice.json:1150:9
+warning | PreCheck/SchemaMissingType | The schema 'InvoiceProperties-totalAmount' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2024-04-01/invoice.json:1158:9
+warning | PreCheck/SchemaMissingType | The schema 'InvoiceProperties-refundDetails' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2024-04-01/invoice.json:1166:9
+warning | PreCheck/SchemaMissingType | The schema 'Payment-amount' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2024-04-01/invoice.json:1180:9
+warning | PreCheck/SchemaMissingType | The schema 'RefundDetailsSummary-amountRequested' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2024-04-01/invoice.json:1273:9
+warning | PreCheck/SchemaMissingType | The schema 'RefundDetailsSummary-amountRefunded' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2024-04-01/invoice.json:1281:9
+warning | PreCheck/SchemaMissingType | The schema 'BillingAccountPolicyProperties-enterpriseAgreementPolicies' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2024-04-01/policy.json:575:9
+warning | PreCheck/SchemaMissingType | The schema 'BillingProfilePolicyProperties-enterpriseAgreementPolicies' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2024-04-01/policy.json:674:9
+warning | PreCheck/SchemaMissingType | The schema 'MoveProductEligibilityResult-errorDetails' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2024-04-01/product.json:538:9
+warning | PreCheck/SchemaMissingType | The schema 'ProductProperties-lastCharge' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2024-04-01/product.json:724:9
+warning | PreCheck/SchemaMissingType | The schema 'ProductProperties-reseller' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2024-04-01/product.json:794:9
+warning | PreCheck/SchemaMissingType | The schema 'RefundTransactionDetails-amountRequested' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2024-04-01/transaction.json:520:9
+warning | PreCheck/SchemaMissingType | The schema 'RefundTransactionDetails-amountRefunded' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2024-04-01/transaction.json:528:9
+warning | PreCheck/SchemaMissingType | The schema 'TransactionProperties-azureCreditApplied' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2024-04-01/transaction.json:583:9
+warning | PreCheck/SchemaMissingType | The schema 'TransactionProperties-consumptionCommitmentDecremented' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2024-04-01/transaction.json:606:9
+warning | PreCheck/SchemaMissingType | The schema 'TransactionProperties-effectivePrice' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2024-04-01/transaction.json:646:9
+warning | PreCheck/SchemaMissingType | The schema 'TransactionProperties-marketPrice' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2024-04-01/transaction.json:691:9
+warning | PreCheck/SchemaMissingType | The schema 'TransactionProperties-subTotal' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2024-04-01/transaction.json:742:9
+warning | PreCheck/SchemaMissingType | The schema 'TransactionProperties-tax' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2024-04-01/transaction.json:750:9
+warning | PreCheck/SchemaMissingType | The schema 'TransactionProperties-transactionAmount' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2024-04-01/transaction.json:758:9
+warning | PreCheck/SchemaMissingType | The schema 'TransactionProperties-refundTransactionDetails' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2024-04-01/transaction.json:794:9
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/PropertyRedeclaration | Schema 'SavingsPlanModel' has a property 'tags' that is conflicting with a property in the parent schema 'ProxyResourceWithTags' differs more than just description : [additionalProperties.$ref => '#/components/schemas/schemas:427']
+warning | PreCheck/PropertyRedeclaration | Schema 'SavingsPlanOrderModel' has a property 'tags' that is conflicting with a property in the parent schema 'ProxyResourceWithTags' differs more than just description : [additionalProperties.$ref => '#/components/schemas/schemas:450']
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'BillingSubscriptionAliasProperties' has a property 'provisioningState' that is already declared the parent schema 'BillingSubscriptionProperties' but isn't significantly different. The property has been removed from BillingSubscriptionAliasProperties
+warning | Modeler/MissingType | The schema 'TransactionProperties-billingProfileDisplayName' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/billing/resource-manager/Microsoft.Billing/stable/2024-04-01/transaction.json#/components/schemas/TransactionProperties-billingProfileDisplayName
+warning | Skipping Transactions_ListByCustomer due to required query parameter "periodStartDate"
+warning | Skipping Transactions_ListByCustomer due to required query parameter "periodEndDate"
+warning | Skipping Transactions_ListByCustomer due to required query parameter "type"
+warning | Skipping Transactions_ListByInvoiceSection due to required query parameter "periodStartDate"
+warning | Skipping Transactions_ListByInvoiceSection due to required query parameter "periodEndDate"
+warning | Skipping Transactions_ListByInvoiceSection due to required query parameter "type"
+warning | Skipping Transactions_ListByBillingProfile due to required query parameter "periodStartDate"
+warning | Skipping Transactions_ListByBillingProfile due to required query parameter "periodEndDate"
+warning | Skipping Transactions_ListByBillingProfile due to required query parameter "type"
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.

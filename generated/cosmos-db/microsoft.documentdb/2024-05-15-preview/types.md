@@ -1307,23 +1307,23 @@
 * **instanceSize**: 'Cosmos.D16s' | 'Cosmos.D4s' | 'Cosmos.D8s' | string: Instance type for the service.
 * **status**: 'Creating' | 'Deleting' | 'Error' | 'Running' | 'Stopped' | 'Updating' | string (ReadOnly): Describes the status of a service.
 
-### DataTransferServiceResourceCreateUpdateParametersOrDataTransferServiceResourceProperties
+### DataTransferServiceResourceCreateUpdatePropertiesOrDataTransferServiceResourceProperties
 #### Properties
 * **locations**: [DataTransferRegionalServiceResource](#datatransferregionalserviceresource)[] (ReadOnly): An array that contains all of the locations for the service.
 * **serviceType**: 'DataTransfer' (Required): ServiceType for the service.
 
-### GraphAPIComputeServiceResourceCreateUpdateParametersOrGraphAPIComputeServiceResourceProperties
+### GraphAPIComputeServiceResourceCreateUpdatePropertiesOrGraphAPIComputeServiceResourceProperties
 #### Properties
 * **graphApiComputeEndpoint**: string (ReadOnly): GraphAPICompute endpoint for the service.
 * **locations**: [GraphAPIComputeRegionalServiceResource](#graphapicomputeregionalserviceresource)[] (ReadOnly): An array that contains all of the locations for the service.
 * **serviceType**: 'GraphAPICompute' (Required): ServiceType for the service.
 
-### MaterializedViewsBuilderServiceResourceCreateUpdateParametersOrMaterializedViewsBuilderServiceResourceProperties
+### MaterializedViewsBuilderServiceResourceCreateUpdatePropertiesOrMaterializedViewsBuilderServiceResourceProperties
 #### Properties
 * **locations**: [MaterializedViewsBuilderRegionalServiceResource](#materializedviewsbuilderregionalserviceresource)[] (ReadOnly): An array that contains all of the locations for the service.
 * **serviceType**: 'MaterializedViewsBuilder' (Required): ServiceType for the service.
 
-### SqlDedicatedGatewayServiceResourceCreateUpdateParametersOrSqlDedicatedGatewayServiceResourceProperties
+### SqlDedicatedGatewayServiceResourceCreateUpdatePropertiesOrSqlDedicatedGatewayServiceResourceProperties
 #### Properties
 * **dedicatedGatewayType**: 'DistributedQuery' | 'IntegratedCache' | string: DedicatedGatewayType for the service.
 * **locations**: [SqlDedicatedGatewayRegionalServiceResource](#sqldedicatedgatewayregionalserviceresource)[] (ReadOnly): An array that contains all of the locations for the service.

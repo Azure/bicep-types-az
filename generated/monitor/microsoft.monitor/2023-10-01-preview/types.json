@@ -166,21 +166,21 @@
   },
   {
     "$type": "ObjectType",
-    "name": "AzureResourceManagerPrivateEndpointConnection",
+    "name": "PrivateEndpointConnection",
     "properties": {
       "properties": {
         "type": {
           "$ref": "#/9"
         },
         "flags": 0,
-        "description": "The private endpoint connection properties"
+        "description": "Resource properties."
       },
       "id": {
         "type": {
           "$ref": "#/2"
         },
         "flags": 2,
-        "description": "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+        "description": "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
       },
       "name": {
         "type": {

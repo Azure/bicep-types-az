@@ -25,6 +25,17 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'Agent' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from Agent
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'StorageMover' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from StorageMover
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'Endpoint' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from Endpoint
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'JobDefinition' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from JobDefinition
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'JobRun' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from JobRun
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'Project' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from Project
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.

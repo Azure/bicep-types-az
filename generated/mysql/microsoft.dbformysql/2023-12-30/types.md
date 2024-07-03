@@ -14,6 +14,16 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DBforMySQL/flexibleServers' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.DBforMySQL/flexibleServers/administrators@2023-12-30
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2023-12-30' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: 'ActiveDirectory' | string (Required, DeployTimeConstant): The resource name
+* **properties**: [AdministratorProperties](#administratorproperties): The properties of an administrator.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.DBforMySQL/flexibleServers/administrators' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.DBforMySQL/flexibleServers/advancedThreatProtectionSettings@2023-12-30
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -24,6 +34,66 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DBforMySQL/flexibleServers/advancedThreatProtectionSettings' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.DBforMySQL/flexibleServers/backups@2023-12-30
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2023-12-30' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string {pattern: "^[-\w\._]+$"} (Required, DeployTimeConstant): The resource name
+* **properties**: [ServerBackupProperties](#serverbackupproperties) (ReadOnly): The properties of a server backup.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.DBforMySQL/flexibleServers/backups' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.DBforMySQL/flexibleServers/backupsV2@2023-12-30
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2023-12-30' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string {pattern: "^[-\w\._]+$"} (Required, DeployTimeConstant): The resource name
+* **properties**: [ServerBackupPropertiesV2](#serverbackuppropertiesv2): The properties of a server backup.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.DBforMySQL/flexibleServers/backupsV2' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.DBforMySQL/flexibleServers/configurations@2023-12-30
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2023-12-30' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ConfigurationProperties](#configurationproperties): The properties of a configuration.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.DBforMySQL/flexibleServers/configurations' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.DBforMySQL/flexibleServers/databases@2023-12-30
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2023-12-30' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DatabaseProperties](#databaseproperties): The properties of a database.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.DBforMySQL/flexibleServers/databases' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.DBforMySQL/flexibleServers/firewallRules@2023-12-30
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2023-12-30' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string {pattern: "^[a-zA-Z0-9][-_a-zA-Z0-9]{0,79}(?<!-)$"} (Required, DeployTimeConstant): The resource name
+* **properties**: [FirewallRuleProperties](#firewallruleproperties) (Required): The properties of a firewall rule.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.DBforMySQL/flexibleServers/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Microsoft.DBforMySQL/flexibleServers/maintenances@2023-12-30 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2023-12-30' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string {pattern: "^[a-zA-Z0-9-_]*$"} (Required, DeployTimeConstant): The resource name
+* **properties**: [MaintenanceProperties](#maintenanceproperties) (ReadOnly): The properties of a maintenance
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.DBforMySQL/flexibleServers/maintenances' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.DBforMySQL/locations/capabilitySets@2023-12-30 (ReadOnly)
 * **Valid Scope(s)**: Subscription
 ### Properties
@@ -33,6 +103,14 @@
 * **properties**: [CapabilityPropertiesV2](#capabilitypropertiesv2) (ReadOnly): The properties of a location capability set.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DBforMySQL/locations/capabilitySets' (ReadOnly, DeployTimeConstant): The resource type
+
+## AdministratorProperties
+### Properties
+* **administratorType**: 'ActiveDirectory' | string: Type of the sever administrator.
+* **identityResourceId**: string: The resource id of the identity used for AAD Authentication.
+* **login**: string: Login name of the server administrator.
+* **sid**: string: SID (object ID) of the server administrator.
+* **tenantId**: string: Tenant ID of the administrator.
 
 ## AdvancedThreatProtectionProperties
 ### Properties
@@ -53,6 +131,25 @@
 * **supportedGeoBackupRegions**: string[] (ReadOnly): supported geo backup regions
 * **supportedServerVersions**: [ServerVersionCapabilityV2](#serverversioncapabilityv2)[] (ReadOnly): A list of supported server versions.
 
+## ConfigurationProperties
+### Properties
+* **allowedValues**: string (ReadOnly): Allowed values of the configuration.
+* **currentValue**: string: Current value of the configuration.
+* **dataType**: string (ReadOnly): Data type of the configuration.
+* **defaultValue**: string (ReadOnly): Default value of the configuration.
+* **description**: string (ReadOnly): Description of the configuration.
+* **documentationLink**: string (ReadOnly): The link used to get the document from community or Azure site.
+* **isConfigPendingRestart**: 'False' | 'True' | string (ReadOnly): If is the configuration pending restart or not.
+* **isDynamicConfig**: 'False' | 'True' | string (ReadOnly): If is the configuration dynamic.
+* **isReadOnly**: 'False' | 'True' | string (ReadOnly): If is the configuration read only.
+* **source**: 'system-default' | 'user-override' | string: Source of the configuration.
+* **value**: string: Value of the configuration.
+
+## DatabaseProperties
+### Properties
+* **charset**: string: The charset of the database.
+* **collation**: string: The collation of the database.
+
 ## DataEncryption
 ### Properties
 * **geoBackupKeyURI**: string: Geo backup key uri as key vault can't cross region, need cmk in same region as geo backup
@@ -60,6 +157,11 @@
 * **primaryKeyURI**: string: Primary key uri
 * **primaryUserAssignedIdentityId**: string: Primary user identity resource id
 * **type**: 'AzureKeyVault' | 'SystemManaged': The key type, AzureKeyVault for enable cmk, SystemManaged for disable cmk.
+
+## FirewallRuleProperties
+### Properties
+* **endIpAddress**: string {pattern: "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"} (Required): The end IP address of the server firewall rule. Must be IPv4 format.
+* **startIpAddress**: string {pattern: "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"} (Required): The start IP address of the server firewall rule. Must be IPv4 format.
 
 ## HighAvailability
 ### Properties
@@ -73,6 +175,20 @@
 * **sasToken**: string {sensitive} (WriteOnly): Sas token for accessing source storage. Read and list permissions are required for sas token.
 * **storageType**: 'AzureBlob' | string: Storage type of import source.
 * **storageUrl**: string: Uri of the import source storage.
+
+## MaintenanceProperties
+### Properties
+* **maintenanceAvailableScheduleMaxTime**: string (ReadOnly): The max time the maintenance can be rescheduled.
+* **maintenanceAvailableScheduleMinTime**: string (ReadOnly): The min time the maintenance can be rescheduled.
+* **maintenanceDescription**: string (ReadOnly): The maintenance description.
+* **maintenanceEndTime**: string (ReadOnly): The end time for a maintenance.
+* **maintenanceExecutionEndTime**: string (ReadOnly): The end time for a maintenance execution.
+* **maintenanceExecutionStartTime**: string (ReadOnly): The start time for a maintenance execution.
+* **maintenanceStartTime**: string: The start time for a maintenance.
+* **maintenanceState**: 'Canceled' | 'Completed' | 'InPreparation' | 'Processing' | 'ReScheduled' | 'Scheduled' | string (ReadOnly): A string describes the maintenance status
+* **maintenanceTitle**: string (ReadOnly): The maintenance title.
+* **maintenanceType**: 'HotFixes' | 'MinorVersionUpgrade' | 'RoutineMaintenance' | 'SecurityPatches' | string (ReadOnly): A string defines maintenance type.
+* **provisioningState**: 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): Provisioning state of the Maintenance.
 
 ## MaintenanceWindow
 ### Properties
@@ -128,6 +244,20 @@
 * **actionsRequired**: string: A message indicating if changes on the service provider require any updates on the consumer.
 * **description**: string: The reason for approval/rejection of the connection.
 * **status**: 'Approved' | 'Pending' | 'Rejected' | string: Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
+
+## ServerBackupProperties
+### Properties
+* **backupType**: string: Backup type.
+* **completedTime**: string: Backup completed time (ISO8601 format).
+* **source**: string: Backup source
+
+## ServerBackupPropertiesV2
+### Properties
+* **backupNameV2**: string: Backup name
+* **backupType**: 'FULL' | string
+* **completedTime**: string: Backup completed time (ISO8601 format).
+* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The provisioning state of backup resource.
+* **source**: string: Backup source
 
 ## ServerEditionCapabilityV2
 ### Properties

@@ -1159,6 +1159,12 @@
 * **description**: string (ReadOnly): The managed private endpoint description
 * **status**: string (ReadOnly): The approval status
 
+## ContinuationSettingsReference
+### Properties
+* **continuationTtlInMinutes**: any: Continuation TTL in minutes.
+* **customizedCheckpointKey**: any: Customized checkpoint key.
+* **idleCondition**: any: Idle condition.
+
 ## CopyActivityLogSettings
 ### Properties
 * **enableReliableLogging**: any: Specifies whether to enable reliable logging. Type: boolean (or Expression with resultType boolean).
@@ -3418,6 +3424,7 @@
 ## ExecuteDataFlowActivityTypeProperties
 ### Properties
 * **compute**: [ExecuteDataFlowActivityTypePropertiesCompute](#executedataflowactivitytypepropertiescompute): Compute properties for data flow activity.
+* **continuationSettings**: [ContinuationSettingsReference](#continuationsettingsreference): Continuation settings for execute data flow activity.
 * **continueOnError**: any: Continue on error setting used for data flow execution. Enables processing to continue if a sink fails. Type: boolean (or Expression with resultType boolean)
 * **dataFlow**: [DataFlowReference](#dataflowreference) (Required): Data flow reference.
 * **integrationRuntime**: [IntegrationRuntimeReference](#integrationruntimereference): The integration runtime reference.
@@ -3446,6 +3453,7 @@
 ## ExecutePowerQueryActivityTypeProperties
 ### Properties
 * **compute**: [ExecuteDataFlowActivityTypePropertiesCompute](#executedataflowactivitytypepropertiescompute): Compute properties for data flow activity.
+* **continuationSettings**: [ContinuationSettingsReference](#continuationsettingsreference): Continuation settings for execute data flow activity.
 * **continueOnError**: any: Continue on error setting used for data flow execution. Enables processing to continue if a sink fails. Type: boolean (or Expression with resultType boolean)
 * **dataFlow**: [DataFlowReference](#dataflowreference) (Required): Data flow reference.
 * **integrationRuntime**: [IntegrationRuntimeReference](#integrationruntimereference): The integration runtime reference.
@@ -5925,6 +5933,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### Properties
 * **additionalCopyOptions**: [SnowflakeExportCopyCommandAdditionalCopyOptions](#snowflakeexportcopycommandadditionalcopyoptions): Additional copy options directly passed to snowflake Copy Command. Type: key value pairs (value should be string type) (or Expression with resultType object). Example: "additionalCopyOptions": { "DATE_FORMAT": "MM/DD/YYYY", "TIME_FORMAT": "'HH24:MI:SS.FF'" }
 * **additionalFormatOptions**: [SnowflakeExportCopyCommandAdditionalFormatOptions](#snowflakeexportcopycommandadditionalformatoptions): Additional format options directly passed to snowflake Copy Command. Type: key value pairs (value should be string type) (or Expression with resultType object). Example: "additionalFormatOptions": { "OVERWRITE": "TRUE", "MAX_FILE_SIZE": "'FALSE'" }
+* **storageIntegration**: any: The name of the snowflake storage integration to use for the copy operation. Type: string (or Expression with resultType string).
 * **type**: string (Required): The export setting type.
 ### Additional Properties
 * **Additional Properties Type**: any
@@ -5943,6 +5952,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### Properties
 * **additionalCopyOptions**: [SnowflakeImportCopyCommandAdditionalCopyOptions](#snowflakeimportcopycommandadditionalcopyoptions): Additional copy options directly passed to snowflake Copy Command. Type: key value pairs (value should be string type) (or Expression with resultType object). Example: "additionalCopyOptions": { "DATE_FORMAT": "MM/DD/YYYY", "TIME_FORMAT": "'HH24:MI:SS.FF'" }
 * **additionalFormatOptions**: [SnowflakeImportCopyCommandAdditionalFormatOptions](#snowflakeimportcopycommandadditionalformatoptions): Additional format options directly passed to snowflake Copy Command. Type: key value pairs (value should be string type) (or Expression with resultType object). Example: "additionalFormatOptions": { "FORCE": "TRUE", "LOAD_UNCERTAIN_FILES": "'FALSE'" }
+* **storageIntegration**: any: The name of the snowflake storage integration to use for the copy operation. Type: string (or Expression with resultType string).
 * **type**: string (Required): The import setting type.
 ### Additional Properties
 * **Additional Properties Type**: any
@@ -6029,12 +6039,13 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### Properties
 * **alwaysEncryptedSettings**: [SqlAlwaysEncryptedProperties](#sqlalwaysencryptedproperties): Sql always encrypted properties.
 * **applicationIntent**: any: The application workload type when connecting to a server, used by recommended version. Possible values are ReadOnly and ReadWrite. Type: string (or Expression with resultType string).
-* **authenticationType**: 'SQL' | 'Windows' | string: The type used for authentication. Type: string.
+* **authenticationType**: 'SQL' | 'UserAssignedManagedIdentity' | 'Windows' | string: The type used for authentication. Type: string.
 * **commandTimeout**: any: The default wait time (in seconds) before terminating the attempt to execute a command and generating an error, used by recommended version. Type: integer (or Expression with resultType integer).
 * **connectionString**: any: The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
 * **connectRetryCount**: any: The number of re-connections attempted after identifying that there was an idle connection failure, used by recommended version. This must be an integer between 0 and 255. Type: integer (or Expression with resultType integer).
 * **connectRetryInterval**: any: The amount of time (in seconds) between each re-connection attempt after identifying that there was an idle connection failure, used by recommended version. This must be an integer between 1 and 60. Type: integer (or Expression with resultType integer).
 * **connectTimeout**: any: The length of time (in seconds) to wait for a connection to the server before terminating the attempt and generating an error, used by recommended version. Type: integer (or Expression with resultType integer).
+* **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
 * **database**: any: The name of the database, used by recommended version. Type: string (or Expression with resultType string).
 * **encrypt**: any: Indicate whether TLS encryption is required for all data sent between the client and server, used by recommended version. Possible values are true/yes/mandatory, false/no/optional and strict. Type: string (or Expression with resultType string).
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.

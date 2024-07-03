@@ -80,7 +80,7 @@
 
 ## MarketplaceDetails
 ### Properties
-* **marketplaceSubscriptionId**: string (Required): Marketplace Subscription Id
+* **marketplaceSubscriptionId**: string: Marketplace Subscription Id
 * **offerDetails**: [OfferDetails](#offerdetails) (Required): Marketplace offer details.
 
 ## NetworkInterfaceConfiguration
