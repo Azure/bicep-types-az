@@ -57,7 +57,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/25"
+          "$ref": "#/26"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -71,7 +71,7 @@
       },
       "systemData": {
         "type": {
-          "$ref": "#/26"
+          "$ref": "#/27"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -122,9 +122,15 @@
         },
         "flags": 0
       },
-      "locationData": {
+      "intWithDefaultValue": {
         "type": {
           "$ref": "#/21"
+        },
+        "flags": 0
+      },
+      "locationData": {
+        "type": {
+          "$ref": "#/22"
         },
         "flags": 2,
         "description": "Metadata pertaining to the geographic location of the resource."
@@ -137,7 +143,7 @@
       },
       "binaryBuffer": {
         "type": {
-          "$ref": "#/23"
+          "$ref": "#/24"
         },
         "flags": 2
       },
@@ -150,7 +156,7 @@
       },
       "percentageProperty": {
         "type": {
-          "$ref": "#/24"
+          "$ref": "#/25"
         },
         "flags": 2
       }
@@ -285,12 +291,15 @@
     "pattern": "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"
   },
   {
+    "$type": "IntegerType"
+  },
+  {
     "$type": "ObjectType",
     "name": "LocationData",
     "properties": {
       "name": {
         "type": {
-          "$ref": "#/22"
+          "$ref": "#/23"
         },
         "flags": 1,
         "description": "A canonical name for the geographic or physical location."
@@ -351,7 +360,7 @@
       },
       "createdByType": {
         "type": {
-          "$ref": "#/31"
+          "$ref": "#/32"
         },
         "flags": 0,
         "description": "The type of identity that created the resource."
@@ -372,7 +381,7 @@
       },
       "lastModifiedByType": {
         "type": {
-          "$ref": "#/36"
+          "$ref": "#/37"
         },
         "flags": 0,
         "description": "The type of identity that last modified the resource."
@@ -406,9 +415,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/27"
-      },
-      {
         "$ref": "#/28"
       },
       {
@@ -416,6 +422,9 @@
       },
       {
         "$ref": "#/30"
+      },
+      {
+        "$ref": "#/31"
       },
       {
         "$ref": "#/2"
@@ -442,9 +451,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/32"
-      },
-      {
         "$ref": "#/33"
       },
       {
@@ -452,6 +458,9 @@
       },
       {
         "$ref": "#/35"
+      },
+      {
+        "$ref": "#/36"
       },
       {
         "$ref": "#/2"
@@ -479,10 +488,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/38"
+        "$ref": "#/39"
       },
       {
-        "$ref": "#/39"
+        "$ref": "#/40"
       },
       {
         "$ref": "#/2"
@@ -510,21 +519,21 @@
       },
       "name": {
         "type": {
-          "$ref": "#/40"
+          "$ref": "#/41"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/41"
+          "$ref": "#/42"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/42"
+          "$ref": "#/43"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -538,7 +547,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/44"
+          "$ref": "#/45"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -552,7 +561,7 @@
       },
       "systemData": {
         "type": {
-          "$ref": "#/26"
+          "$ref": "#/27"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -572,7 +581,7 @@
     "name": "Test.Rp1/splitPutAndGetType@2021-10-31",
     "scopeType": 4,
     "body": {
-      "$ref": "#/43"
+      "$ref": "#/44"
     },
     "flags": 0
   },
@@ -604,27 +613,27 @@
       },
       "type": {
         "type": {
-          "$ref": "#/46"
+          "$ref": "#/47"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/47"
+          "$ref": "#/48"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/49"
+          "$ref": "#/50"
         },
         "flags": 0
       },
       "tags": {
         "type": {
-          "$ref": "#/58"
+          "$ref": "#/59"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -638,7 +647,7 @@
       },
       "systemData": {
         "type": {
-          "$ref": "#/26"
+          "$ref": "#/27"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -651,7 +660,7 @@
     "properties": {
       "locationData": {
         "type": {
-          "$ref": "#/21"
+          "$ref": "#/22"
         },
         "flags": 0,
         "description": "Metadata pertaining to the geographic location of the resource."
@@ -664,7 +673,7 @@
       },
       "binaryBuffer": {
         "type": {
-          "$ref": "#/23"
+          "$ref": "#/24"
         },
         "flags": 0
       },
@@ -677,7 +686,7 @@
       },
       "percentageProperty": {
         "type": {
-          "$ref": "#/24"
+          "$ref": "#/25"
         },
         "flags": 0
       },
@@ -690,14 +699,14 @@
       },
       "stringEnum": {
         "type": {
-          "$ref": "#/52"
+          "$ref": "#/53"
         },
         "flags": 0,
         "description": "Description for a basic enum property."
       },
       "skuTier": {
         "type": {
-          "$ref": "#/57"
+          "$ref": "#/58"
         },
         "flags": 0,
         "description": "This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT."
@@ -720,6 +729,12 @@
           "$ref": "#/20"
         },
         "flags": 0
+      },
+      "intWithDefaultValue": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0
       }
     }
   },
@@ -735,10 +750,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/50"
+        "$ref": "#/51"
       },
       {
-        "$ref": "#/51"
+        "$ref": "#/52"
       },
       {
         "$ref": "#/2"
@@ -765,9 +780,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/53"
-      },
-      {
         "$ref": "#/54"
       },
       {
@@ -775,6 +787,9 @@
       },
       {
         "$ref": "#/56"
+      },
+      {
+        "$ref": "#/57"
       }
     ]
   },
@@ -792,7 +807,7 @@
     "scopeType": 9,
     "readOnlyScopes": 1,
     "body": {
-      "$ref": "#/48"
+      "$ref": "#/49"
     },
     "flags": 0
   },
@@ -824,21 +839,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/60"
+          "$ref": "#/61"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/61"
+          "$ref": "#/62"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/63"
+          "$ref": "#/64"
         },
         "flags": 1
       }
@@ -866,13 +881,13 @@
     },
     "elements": {
       "inherited": {
-        "$ref": "#/64"
+        "$ref": "#/65"
       },
       "inline": {
-        "$ref": "#/66"
+        "$ref": "#/67"
       },
       "override": {
-        "$ref": "#/68"
+        "$ref": "#/69"
       }
     }
   },
@@ -896,7 +911,7 @@
       },
       "type": {
         "type": {
-          "$ref": "#/65"
+          "$ref": "#/66"
         },
         "flags": 1,
         "description": "The variant of this type"
@@ -934,7 +949,7 @@
       },
       "type": {
         "type": {
-          "$ref": "#/67"
+          "$ref": "#/68"
         },
         "flags": 1,
         "description": "The variant of this type"
@@ -951,7 +966,7 @@
     "properties": {
       "foo": {
         "type": {
-          "$ref": "#/69"
+          "$ref": "#/21"
         },
         "flags": 0,
         "description": "The overridden foo property"
@@ -966,9 +981,6 @@
     }
   },
   {
-    "$type": "IntegerType"
-  },
-  {
     "$type": "StringLiteralType",
     "value": "override"
   },
@@ -977,7 +989,7 @@
     "name": "Test.Rp1/discriminatedUnionTestType@2021-10-31",
     "scopeType": 8,
     "body": {
-      "$ref": "#/62"
+      "$ref": "#/63"
     },
     "flags": 0
   },
@@ -1043,7 +1055,7 @@
       },
       "systemData": {
         "type": {
-          "$ref": "#/26"
+          "$ref": "#/27"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -1134,7 +1146,7 @@
       },
       "locationData": {
         "type": {
-          "$ref": "#/21"
+          "$ref": "#/22"
         },
         "flags": 0,
         "description": "Metadata pertaining to the geographic location of the resource."

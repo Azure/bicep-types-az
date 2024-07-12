@@ -473,6 +473,17 @@
             }
           ]
         },
+        "intWithDefaultValue": {
+          "oneOf": [
+            {
+              "default": 7,
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
         "password": {
           "oneOf": [
             {
@@ -545,6 +556,17 @@
           "oneOf": [
             {
               "$ref": "#/definitions/EncryptionProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "intWithDefaultValue": {
+          "oneOf": [
+            {
+              "default": 7,
+              "type": "integer"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"

@@ -101,6 +101,11 @@
         "uuidProperty": {
           "type": "string",
           "format": "uuid"
+        },
+        "intWithDefaultValue": {
+          "format": "int32",
+          "default": 7,
+          "type": "integer"
         }
       }
     },
