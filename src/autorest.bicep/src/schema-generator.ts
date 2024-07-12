@@ -285,13 +285,15 @@ export function generateSchema(host: AutorestExtensionHost, definition: Provider
       return {
         type: 'string',
         format: combinedSchema.format,
+        default: combinedSchema.defaultValue,
       };
     }
 
     if (combinedSchema instanceof UuidSchema) {
       return {
         type: 'string',
-        pattern: '^[0-9a-fA-F]{8}(-[0-9a-fA-F]{4}){3}-[0-9a-fA-F]{12}$'
+        pattern: '^[0-9a-fA-F]{8}(-[0-9a-fA-F]{4}){3}-[0-9a-fA-F]{12}$',
+        default: combinedSchema.defaultValue,
       };
     }
 
@@ -299,6 +301,7 @@ export function generateSchema(host: AutorestExtensionHost, definition: Provider
       return {
         type: 'string',
         pattern: combinedSchema.pattern,
+        default: combinedSchema.defaultValue,
         minLength: combinedSchema.minLength,
         maxLength: combinedSchema.maxLength,
       };
@@ -307,6 +310,7 @@ export function generateSchema(host: AutorestExtensionHost, definition: Provider
     if (combinedSchema instanceof NumberSchema) {
       return {
         type: combinedSchema.type,
+        default: combinedSchema.defaultValue,
         minimum: combinedSchema.minimum,
         maximum: combinedSchema.maximum,
         multipleOf: combinedSchema.multipleOf,
@@ -315,6 +319,7 @@ export function generateSchema(host: AutorestExtensionHost, definition: Provider
 
     return {
       type: toBuiltInTypeKind(combinedSchema),
+      default: combinedSchema.defaultValue,
     };
   }
 

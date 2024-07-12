@@ -151,6 +151,7 @@
 * **basicString**: string: Description for a basic string property.
 * **binaryBuffer**: any (ReadOnly)
 * **encryptionProperties**: [EncryptionProperties](#encryptionproperties): TestType1 encryption properties
+* **intWithDefaultValue**: int
 * **locationData**: [LocationData](#locationdata) (ReadOnly): Metadata pertaining to the geographic location of the resource.
 * **password**: string {sensitive, pattern: "^[a-zA-Z0-9\.]$"}
 * **percentageProperty**: int {minValue: 0, maxValue: 100} (ReadOnly)
@@ -165,6 +166,7 @@
 * **basicString**: string: Description for a basic string property.
 * **binaryBuffer**: any
 * **encryptionProperties**: [EncryptionProperties](#encryptionproperties): TestType1 encryption properties
+* **intWithDefaultValue**: int
 * **locationData**: [LocationData](#locationdata): Metadata pertaining to the geographic location of the resource.
 * **password**: string {sensitive, pattern: "^[a-zA-Z0-9\.]$"}
 * **percentageProperty**: int {minValue: 0, maxValue: 100}
