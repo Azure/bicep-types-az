@@ -223,7 +223,7 @@
 * **key**: string {sensitive}: Value of API key for Open AI resource
 * **lastRefreshAt**: string (ReadOnly): Last Update Timestamp for key updation
 * **openAIResourceEndpoint**: string: The API endpoint for Open AI resource
-* **openAIResourceId**: string: The resource id of Open AI resource
+* **openAIResourceId**: string: The resource name of Open AI resource
 
 ## PlanDetails
 ### Properties

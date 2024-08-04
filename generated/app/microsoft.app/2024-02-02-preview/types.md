@@ -180,13 +180,13 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.App/containerApps/revisions/replicas' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.App/containerApps/sourcecontrols@2024-02-02-preview
+## Resource Microsoft.App/containerApps/sourcecontrols@2024-02-02-preview (ReadOnly)
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-02-02-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SourceControlProperties](#sourcecontrolproperties): SourceControl resource specific properties
+* **properties**: [SourceControlProperties](#sourcecontrolproperties) (ReadOnly): SourceControl resource specific properties
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.App/containerApps/sourcecontrols' (ReadOnly, DeployTimeConstant): The resource type
 

@@ -12,16 +12,6 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Orbital/edgeSites' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Orbital/globalCommunicationsSites@2024-03-01 (ReadOnly)
-* **Valid Scope(s)**: Subscription
-### Properties
-* **apiVersion**: '2024-03-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {minLength: 2, maxLength: 64, pattern: "^[A-Za-z][A-Za-z0-9-_]+$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [GlobalCommunicationsSiteProperties](#globalcommunicationssiteproperties) (ReadOnly): The properties bag for this resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **type**: 'Microsoft.Orbital/globalCommunicationsSites' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.Orbital/groundStations@2024-03-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -64,21 +54,6 @@
 ### Properties
 * **id**: string (Required): Resource ID.
 
-## GlobalCommunicationsSiteProperties
-### Properties
-* **globalCommunicationsSiteType**: 'Edge' | 'GroundStation' | string: The type of the global communications site. EdgeSite or GroundStation.
-* **locationData**: [GlobalCommunicationsSitesPropertiesLocationData](#globalcommunicationssitespropertieslocationdata): Describes the location of the global communications site.
-* **partnerRouters**: [PartnerRouter](#partnerrouter)[] (ReadOnly): Partner routers connected to this site.
-* **partnerSiteBandwidth**: int {minValue: 0} (ReadOnly): The bandwidth per partner router cross-connection at this global communications site, measured in bits per second.
-
-## GlobalCommunicationsSitesPropertiesLocationData
-### Properties
-* **city**: string (Required): The city of the location (e.g., Miami).
-* **closestAzureRegion**: string: The name of the closest Azure region, (e.g., westus2).
-* **country**: string (Required): The nation (e.g., United States of America) of the location.
-* **district**: string (Required): For example, the state (e.g., Florida), province (e.g., Ontario), or region (e.g., Tuscany) of the location.
-* **extra**: string: Any extra information needed to uniquely identify the location (e.g., zip code).
-
 ## GroundStationProperties
 ### Properties
 * **altitudeMeters**: int: Altitude of the ground station.
@@ -119,10 +94,6 @@
 ## L2ConnectionsPropertiesGroundStationPartnerRouter
 ### Properties
 * **name**: string (Required): The unique name of the partner router that cross-connects with the Orbital Edge Router at the ground station site.
-
-## PartnerRouter
-### Properties
-* **name**: string (ReadOnly): The unique name of the partnerRouter.
 
 ## ResourceIdListResult
 ### Properties

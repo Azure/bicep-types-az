@@ -174,6 +174,11 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DesktopVirtualization/workspaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
+## Function listRegistrationTokens (Microsoft.DesktopVirtualization/hostPools@2024-04-03)
+* **Resource**: Microsoft.DesktopVirtualization/hostPools
+* **ApiVersion**: 2024-04-03
+* **Output**: [RegistrationTokenList](#registrationtokenlist)
+
 ## AgentUpdateProperties
 ### Properties
 * **maintenanceWindows**: [MaintenanceWindowProperties](#maintenancewindowproperties)[]: List of maintenance windows. Maintenance windows are 2 hours long.
@@ -336,6 +341,16 @@
 * **expirationTime**: string: Expiration time of registration token.
 * **registrationTokenOperation**: 'Delete' | 'None' | 'Update' | string: The type of resetting the token.
 * **token**: string: The registration token base64 encoded string.
+
+## RegistrationTokenList
+### Properties
+* **nextLink**: string (ReadOnly): Link to the next page of results.
+* **value**: [RegistrationTokenMinimal](#registrationtokenminimal)[]: List of RegistrationToken definitions.
+
+## RegistrationTokenMinimal
+### Properties
+* **expirationTime**: string: Expiration time of registration token.
+* **token**: string {sensitive}: The registration token base64 encoded string.
 
 ## ResourceModelWithAllowedPropertySetIdentity
 ### Properties

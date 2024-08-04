@@ -3,6 +3,67 @@ AutoRest code generation utility [cli version: 3.7.1; node: v16.20.2]
 https://aka.ms/autorest
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'AKS' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/preview/2024-07-01-preview/machineLearningServices.json:1732:5
+warning | PreCheck/SchemaMissingType | The schema 'Kubernetes' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/preview/2024-07-01-preview/machineLearningServices.json:1826:5
+warning | PreCheck/SchemaMissingType | The schema 'AmlCompute' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/preview/2024-07-01-preview/machineLearningServices.json:2039:5
+warning | PreCheck/SchemaMissingType | The schema 'ComputeInstance' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/preview/2024-07-01-preview/machineLearningServices.json:2266:5
+warning | PreCheck/SchemaMissingType | The schema 'VirtualMachine' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/preview/2024-07-01-preview/machineLearningServices.json:2288:5
+warning | PreCheck/SchemaMissingType | The schema 'HDInsight' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/preview/2024-07-01-preview/machineLearningServices.json:2356:5
+warning | PreCheck/SchemaMissingType | The schema 'DataFactory' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/preview/2024-07-01-preview/machineLearningServices.json:2376:5
+warning | PreCheck/SchemaMissingType | The schema 'Databricks' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/preview/2024-07-01-preview/machineLearningServices.json:2399:5
+warning | PreCheck/SchemaMissingType | The schema 'DataLakeAnalytics' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/preview/2024-07-01-preview/machineLearningServices.json:2419:5
+warning | PreCheck/SchemaMissingType | The schema 'AksComputeSecrets' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/preview/2024-07-01-preview/machineLearningServices.json:2873:5
+warning | PreCheck/SchemaMissingType | The schema 'VirtualMachineSecrets' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/preview/2024-07-01-preview/machineLearningServices.json:2885:5
+warning | PreCheck/SchemaMissingType | The schema 'DatabricksComputeSecrets' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/preview/2024-07-01-preview/machineLearningServices.json:2916:5
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Modeler/MissingType | The schema 'components·309t99·schemas·diagnoserequestproperties·properties·applicationinsights·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/preview/2024-07-01-preview/workspaceRP.json#/components/schemas/components·309t99·schemas·diagnoserequestproperties·properties·applicationinsights·additionalproperties
+warning | Modeler/MissingType | The schema 'components·25ikg4·schemas·diagnoserequestproperties·properties·containerregistry·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/preview/2024-07-01-preview/workspaceRP.json#/components/schemas/components·25ikg4·schemas·diagnoserequestproperties·properties·containerregistry·additionalproperties
+warning | Modeler/MissingType | The schema 'components·1308z30·schemas·diagnoserequestproperties·properties·dnsresolution·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/preview/2024-07-01-preview/workspaceRP.json#/components/schemas/components·1308z30·schemas·diagnoserequestproperties·properties·dnsresolution·additionalproperties
+warning | Modeler/MissingType | The schema 'components·i936ih·schemas·diagnoserequestproperties·properties·keyvault·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/preview/2024-07-01-preview/workspaceRP.json#/components/schemas/components·i936ih·schemas·diagnoserequestproperties·properties·keyvault·additionalproperties
+warning | Modeler/MissingType | The schema 'components·1051c9e·schemas·diagnoserequestproperties·properties·nsg·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/preview/2024-07-01-preview/workspaceRP.json#/components/schemas/components·1051c9e·schemas·diagnoserequestproperties·properties·nsg·additionalproperties
+warning | Modeler/MissingType | The schema 'components·1omvafb·schemas·diagnoserequestproperties·properties·others·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/preview/2024-07-01-preview/workspaceRP.json#/components/schemas/components·1omvafb·schemas·diagnoserequestproperties·properties·others·additionalproperties
+warning | Modeler/MissingType | The schema 'components·9pa7fp·schemas·diagnoserequestproperties·properties·requiredresourceproviders·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/preview/2024-07-01-preview/workspaceRP.json#/components/schemas/components·9pa7fp·schemas·diagnoserequestproperties·properties·requiredresourceproviders·additionalproperties
+warning | Modeler/MissingType | The schema 'components·1l019a0·schemas·diagnoserequestproperties·properties·resourcelock·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/preview/2024-07-01-preview/workspaceRP.json#/components/schemas/components·1l019a0·schemas·diagnoserequestproperties·properties·resourcelock·additionalproperties
+warning | Modeler/MissingType | The schema 'components·3kc9ly·schemas·diagnoserequestproperties·properties·storageaccount·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/preview/2024-07-01-preview/workspaceRP.json#/components/schemas/components·3kc9ly·schemas·diagnoserequestproperties·properties·storageaccount·additionalproperties
+warning | Modeler/MissingType | The schema 'components·bqeq8w·schemas·diagnoserequestproperties·properties·udr·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/preview/2024-07-01-preview/workspaceRP.json#/components/schemas/components·bqeq8w·schemas·diagnoserequestproperties·properties·udr·additionalproperties
+warning | Modeler/MissingType | The schema 'ServerlessEndpointResourceProperties-metadata' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/preview/2024-07-01-preview/workspaceRP.json#/components/schemas/ServerlessEndpointResourceProperties-metadata
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'AKS' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2024-04-01/machineLearningServices.json:3665:5
 warning | PreCheck/SchemaMissingType | The schema 'Kubernetes' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2024-04-01/machineLearningServices.json:3759:5

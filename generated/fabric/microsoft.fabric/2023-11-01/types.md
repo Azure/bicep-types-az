@@ -21,7 +21,7 @@
 ### Properties
 * **administration**: [CapacityAdministration](#capacityadministration) (Required): The capacity administration
 * **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): The current deployment state of Microsoft Fabric resource. The provisioningState is to indicate states for resource provisioning.
-* **state**: 'Active' | 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Suspended' | 'Suspending' | 'Updating' | string (Required, ReadOnly): The current state of Microsoft Fabric resource. The state is to indicate more states outside of resource provisioning.
+* **state**: 'Active' | 'Deleting' | 'Failed' | 'Paused' | 'Pausing' | 'Preparing' | 'Provisioning' | 'Resuming' | 'Scaling' | 'Suspended' | 'Suspending' | 'Updating' | string (ReadOnly): The current state of Microsoft Fabric resource. The state is to indicate more states outside of resource provisioning.
 
 ## RpSku
 ### Properties

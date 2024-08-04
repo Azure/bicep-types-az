@@ -4287,46 +4287,46 @@
     "Microsoft.App/managedEnvironments/storages@2024-02-02-preview": {
       "$ref": "app/microsoft.app/2024-02-02-preview/types.json#/571"
     },
-    "Microsoft.App/containerApps/sourcecontrols@2024-02-02-preview": {
-      "$ref": "app/microsoft.app/2024-02-02-preview/types.json#/585"
-    },
     "Microsoft.App/logicApps@2024-02-02-preview": {
-      "$ref": "app/microsoft.app/2024-02-02-preview/types.json#/589"
+      "$ref": "app/microsoft.app/2024-02-02-preview/types.json#/575"
     },
     "Microsoft.App/sessionPools@2024-02-02-preview": {
-      "$ref": "app/microsoft.app/2024-02-02-preview/types.json#/627"
+      "$ref": "app/microsoft.app/2024-02-02-preview/types.json#/613"
     },
     "Microsoft.App/containerApps/revisions@2024-02-02-preview": {
-      "$ref": "app/microsoft.app/2024-02-02-preview/types.json#/649"
+      "$ref": "app/microsoft.app/2024-02-02-preview/types.json#/635"
     },
     "Microsoft.App/containerApps/revisions/replicas@2024-02-02-preview": {
-      "$ref": "app/microsoft.app/2024-02-02-preview/types.json#/665"
+      "$ref": "app/microsoft.app/2024-02-02-preview/types.json#/651"
     },
     "Microsoft.App/containerApps/builds@2024-02-02-preview": {
-      "$ref": "app/microsoft.app/2024-02-02-preview/types.json#/686"
+      "$ref": "app/microsoft.app/2024-02-02-preview/types.json#/672"
     },
     "Microsoft.App/containerApps/patches@2024-02-02-preview": {
-      "$ref": "app/microsoft.app/2024-02-02-preview/types.json#/714"
+      "$ref": "app/microsoft.app/2024-02-02-preview/types.json#/700"
     },
     "Microsoft.App/containerApps/detectors@2024-02-02-preview": {
-      "$ref": "app/microsoft.app/2024-02-02-preview/types.json#/734"
+      "$ref": "app/microsoft.app/2024-02-02-preview/types.json#/720"
     },
     "Microsoft.App/containerApps/detectorProperties/revisions@2024-02-02-preview": {
-      "$ref": "app/microsoft.app/2024-02-02-preview/types.json#/738"
+      "$ref": "app/microsoft.app/2024-02-02-preview/types.json#/724"
     },
     "Microsoft.App/containerApps/detectorProperties@2024-02-02-preview": {
-      "$ref": "app/microsoft.app/2024-02-02-preview/types.json#/746"
+      "$ref": "app/microsoft.app/2024-02-02-preview/types.json#/732"
     },
     "Microsoft.App/managedEnvironments/detectors@2024-02-02-preview": {
-      "$ref": "app/microsoft.app/2024-02-02-preview/types.json#/750"
+      "$ref": "app/microsoft.app/2024-02-02-preview/types.json#/736"
     },
     "Microsoft.App/managedEnvironments/detectorProperties@2024-02-02-preview": {
-      "$ref": "app/microsoft.app/2024-02-02-preview/types.json#/756"
+      "$ref": "app/microsoft.app/2024-02-02-preview/types.json#/742"
     },
     "Microsoft.App/jobs/detectors@2024-02-02-preview": {
-      "$ref": "app/microsoft.app/2024-02-02-preview/types.json#/760"
+      "$ref": "app/microsoft.app/2024-02-02-preview/types.json#/746"
     },
     "Microsoft.App/jobs/detectorProperties@2024-02-02-preview": {
+      "$ref": "app/microsoft.app/2024-02-02-preview/types.json#/752"
+    },
+    "Microsoft.App/containerApps/sourcecontrols@2024-02-02-preview": {
       "$ref": "app/microsoft.app/2024-02-02-preview/types.json#/766"
     },
     "Microsoft.App/containerApps/authConfigs@2024-03-01": {
@@ -6225,6 +6225,15 @@
     "Microsoft.Authorization/roleDefinitions@2022-05-01-preview": {
       "$ref": "authorization/microsoft.authorization/2022-05-01-preview/types.json#/12"
     },
+    "Microsoft.Authorization/roleAssignmentScheduleRequests@2024-02-01-preview": {
+      "$ref": "authorization/microsoft.authorization/2024-02-01-preview/types.json#/55"
+    },
+    "Microsoft.Authorization/roleEligibilityScheduleRequests@2024-02-01-preview": {
+      "$ref": "authorization/microsoft.authorization/2024-02-01-preview/types.json#/106"
+    },
+    "Microsoft.Authorization/roleManagementPolicyAssignments@2024-02-01-preview": {
+      "$ref": "authorization/microsoft.authorization/2024-02-01-preview/types.json#/183"
+    },
     "Microsoft.Automanage/accounts@2020-06-30-preview": {
       "$ref": "automanage/microsoft.automanage/2020-06-30-preview/types.json#/9"
     },
@@ -7609,10 +7618,10 @@
       "$ref": "azuredatatransfer/microsoft.azuredatatransfer/2024-05-07/types.json#/146"
     },
     "Microsoft.AzureFleet/fleets@2023-11-01-preview": {
-      "$ref": "azurefleet/microsoft.azurefleet/2023-11-01-preview/types.json#/266"
+      "$ref": "azurefleet/microsoft.azurefleet/2023-11-01-preview/types.json#/256"
     },
     "Microsoft.AzureFleet/fleets@2024-05-01-preview": {
-      "$ref": "azurefleet/microsoft.azurefleet/2024-05-01-preview/types.json#/268"
+      "$ref": "azurefleet/microsoft.azurefleet/2024-05-01-preview/types.json#/258"
     },
     "Microsoft.IntegrationSpaces/spaces@2023-11-14-preview": {
       "$ref": "azureintegrationspaces/microsoft.integrationspaces/2023-11-14-preview/types.json#/26"
@@ -9610,31 +9619,31 @@
       "$ref": "cdn/microsoft.cdn/2024-02-01/types.json#/196"
     },
     "Microsoft.Cdn/profiles/ruleSets/rules@2024-02-01": {
-      "$ref": "cdn/microsoft.cdn/2024-02-01/types.json#/745"
+      "$ref": "cdn/microsoft.cdn/2024-02-01/types.json#/1143"
     },
     "Microsoft.Cdn/profiles/securityPolicies@2024-02-01": {
-      "$ref": "cdn/microsoft.cdn/2024-02-01/types.json#/768"
+      "$ref": "cdn/microsoft.cdn/2024-02-01/types.json#/1166"
     },
     "Microsoft.Cdn/profiles/secrets@2024-02-01": {
-      "$ref": "cdn/microsoft.cdn/2024-02-01/types.json#/795"
+      "$ref": "cdn/microsoft.cdn/2024-02-01/types.json#/1193"
     },
     "Microsoft.Cdn/profiles@2024-02-01": {
-      "$ref": "cdn/microsoft.cdn/2024-02-01/types.json#/858"
+      "$ref": "cdn/microsoft.cdn/2024-02-01/types.json#/1256"
     },
     "Microsoft.Cdn/profiles/endpoints@2024-02-01": {
-      "$ref": "cdn/microsoft.cdn/2024-02-01/types.json#/931"
+      "$ref": "cdn/microsoft.cdn/2024-02-01/types.json#/1329"
     },
     "Microsoft.Cdn/profiles/endpoints/origins@2024-02-01": {
-      "$ref": "cdn/microsoft.cdn/2024-02-01/types.json#/952"
+      "$ref": "cdn/microsoft.cdn/2024-02-01/types.json#/1350"
     },
     "Microsoft.Cdn/profiles/endpoints/originGroups@2024-02-01": {
-      "$ref": "cdn/microsoft.cdn/2024-02-01/types.json#/968"
+      "$ref": "cdn/microsoft.cdn/2024-02-01/types.json#/1366"
     },
     "Microsoft.Cdn/profiles/endpoints/customDomains@2024-02-01": {
-      "$ref": "cdn/microsoft.cdn/2024-02-01/types.json#/1025"
+      "$ref": "cdn/microsoft.cdn/2024-02-01/types.json#/1425"
     },
     "Microsoft.Cdn/cdnWebApplicationFirewallPolicies@2024-02-01": {
-      "$ref": "cdn/microsoft.cdn/2024-02-01/types.json#/1130"
+      "$ref": "cdn/microsoft.cdn/2024-02-01/types.json#/1530"
     },
     "Microsoft.Cdn/profiles/customDomains@2024-05-01-preview": {
       "$ref": "cdn/microsoft.cdn/2024-05-01-preview/types.json#/92"
@@ -10043,6 +10052,48 @@
     },
     "Microsoft.CognitiveServices/accounts/networkSecurityPerimeterConfigurations@2024-04-01-preview": {
       "$ref": "cognitiveservices/microsoft.cognitiveservices/2024-04-01-preview/types.json#/274"
+    },
+    "Microsoft.CognitiveServices/accounts@2024-06-01-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2024-06-01-preview/types.json#/111"
+    },
+    "Microsoft.CognitiveServices/accounts/privateEndpointConnections@2024-06-01-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2024-06-01-preview/types.json#/115"
+    },
+    "Microsoft.CognitiveServices/accounts/deployments@2024-06-01-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2024-06-01-preview/types.json#/143"
+    },
+    "Microsoft.CognitiveServices/accounts/commitmentPlans@2024-06-01-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2024-06-01-preview/types.json#/165"
+    },
+    "Microsoft.CognitiveServices/commitmentPlans@2024-06-01-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2024-06-01-preview/types.json#/171"
+    },
+    "Microsoft.CognitiveServices/commitmentPlans/accountAssociations@2024-06-01-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2024-06-01-preview/types.json#/177"
+    },
+    "Microsoft.CognitiveServices/accounts/encryptionScopes@2024-06-01-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2024-06-01-preview/types.json#/197"
+    },
+    "Microsoft.CognitiveServices/accounts/raiPolicies@2024-06-01-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2024-06-01-preview/types.json#/225"
+    },
+    "Microsoft.CognitiveServices/accounts/raiBlocklists@2024-06-01-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2024-06-01-preview/types.json#/231"
+    },
+    "Microsoft.CognitiveServices/accounts/raiBlocklists/raiBlocklistItems@2024-06-01-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2024-06-01-preview/types.json#/237"
+    },
+    "Microsoft.CognitiveServices/accounts/defenderForAISettings@2024-06-01-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2024-06-01-preview/types.json#/246"
+    },
+    "Microsoft.CognitiveServices/locations/resourceGroups/deletedAccounts@2024-06-01-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2024-06-01-preview/types.json#/251"
+    },
+    "Microsoft.CognitiveServices/locations/raiContentFilters@2024-06-01-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2024-06-01-preview/types.json#/259"
+    },
+    "Microsoft.CognitiveServices/accounts/networkSecurityPerimeterConfigurations@2024-06-01-preview": {
+      "$ref": "cognitiveservices/microsoft.cognitiveservices/2024-06-01-preview/types.json#/285"
     },
     "Microsoft.Communication/communicationServices@2020-08-20-preview": {
       "$ref": "communication/microsoft.communication/2020-08-20-preview/types.json#/16"
@@ -11691,11 +11742,86 @@
     "Microsoft.Compute/locations/publishers/artifacttypes/types/versions@2024-03-01": {
       "$ref": "compute/microsoft.compute/2024-03-01/types.json#/876"
     },
+    "Microsoft.Compute/disks@2024-03-02": {
+      "$ref": "compute/microsoft.compute/2024-03-02/types.json#/90"
+    },
+    "Microsoft.Compute/diskAccesses@2024-03-02": {
+      "$ref": "compute/microsoft.compute/2024-03-02/types.json#/110"
+    },
+    "Microsoft.Compute/diskAccesses/privateEndpointConnections@2024-03-02": {
+      "$ref": "compute/microsoft.compute/2024-03-02/types.json#/114"
+    },
+    "Microsoft.Compute/diskEncryptionSets@2024-03-02": {
+      "$ref": "compute/microsoft.compute/2024-03-02/types.json#/138"
+    },
+    "Microsoft.Compute/snapshots@2024-03-02": {
+      "$ref": "compute/microsoft.compute/2024-03-02/types.json#/177"
+    },
     "Microsoft.Compute/locations/diagnostics@2024-06-01-preview": {
       "$ref": "compute/microsoft.compute/2024-06-01-preview/types.json#/23"
     },
     "Microsoft.Compute/locations/placementScores@2024-06-01-preview": {
       "$ref": "compute/microsoft.compute/2024-06-01-preview/types.json#/28"
+    },
+    "Microsoft.Compute/virtualMachineScaleSets@2024-07-01": {
+      "$ref": "compute/microsoft.compute/2024-07-01/types.json#/271"
+    },
+    "Microsoft.Compute/virtualMachineScaleSets/extensions@2024-07-01": {
+      "$ref": "compute/microsoft.compute/2024-07-01/types.json#/275"
+    },
+    "Microsoft.Compute/virtualMachineScaleSets/virtualMachines/extensions@2024-07-01": {
+      "$ref": "compute/microsoft.compute/2024-07-01/types.json#/289"
+    },
+    "Microsoft.Compute/virtualMachineScaleSets/virtualMachines@2024-07-01": {
+      "$ref": "compute/microsoft.compute/2024-07-01/types.json#/605"
+    },
+    "Microsoft.Compute/virtualMachines/extensions@2024-07-01": {
+      "$ref": "compute/microsoft.compute/2024-07-01/types.json#/610"
+    },
+    "Microsoft.Compute/virtualMachines@2024-07-01": {
+      "$ref": "compute/microsoft.compute/2024-07-01/types.json#/652"
+    },
+    "Microsoft.Compute/availabilitySets@2024-07-01": {
+      "$ref": "compute/microsoft.compute/2024-07-01/types.json#/660"
+    },
+    "Microsoft.Compute/proximityPlacementGroups@2024-07-01": {
+      "$ref": "compute/microsoft.compute/2024-07-01/types.json#/676"
+    },
+    "Microsoft.Compute/hostGroups@2024-07-01": {
+      "$ref": "compute/microsoft.compute/2024-07-01/types.json#/694"
+    },
+    "Microsoft.Compute/hostGroups/hosts@2024-07-01": {
+      "$ref": "compute/microsoft.compute/2024-07-01/types.json#/707"
+    },
+    "Microsoft.Compute/sshPublicKeys@2024-07-01": {
+      "$ref": "compute/microsoft.compute/2024-07-01/types.json#/713"
+    },
+    "Microsoft.Compute/images@2024-07-01": {
+      "$ref": "compute/microsoft.compute/2024-07-01/types.json#/756"
+    },
+    "Microsoft.Compute/restorePointCollections@2024-07-01": {
+      "$ref": "compute/microsoft.compute/2024-07-01/types.json#/804"
+    },
+    "Microsoft.Compute/restorePointCollections/restorePoints@2024-07-01": {
+      "$ref": "compute/microsoft.compute/2024-07-01/types.json#/808"
+    },
+    "Microsoft.Compute/capacityReservationGroups@2024-07-01": {
+      "$ref": "compute/microsoft.compute/2024-07-01/types.json#/826"
+    },
+    "Microsoft.Compute/capacityReservationGroups/capacityReservations@2024-07-01": {
+      "$ref": "compute/microsoft.compute/2024-07-01/types.json#/836"
+    },
+    "Microsoft.Compute/virtualMachines/runCommands@2024-07-01": {
+      "$ref": "compute/microsoft.compute/2024-07-01/types.json#/857"
+    },
+    "Microsoft.Compute/virtualMachineScaleSets/virtualMachines/runCommands@2024-07-01": {
+      "$ref": "compute/microsoft.compute/2024-07-01/types.json#/862"
+    },
+    "Microsoft.Compute/virtualMachineScaleSets/rollingUpgrades@2024-07-01": {
+      "$ref": "compute/microsoft.compute/2024-07-01/types.json#/879"
+    },
+    "Microsoft.Compute/locations/publishers/artifacttypes/types/versions@2024-07-01": {
+      "$ref": "compute/microsoft.compute/2024-07-01/types.json#/885"
     },
     "Microsoft.ContainerService/containerServices@2015-11-01-preview": {
       "$ref": "compute/microsoft.containerservice/2015-11-01-preview/types.json#/72"
@@ -13947,6 +14073,108 @@
     "Microsoft.ContainerService/managedClusters/agentPools/machines@2024-04-02-preview": {
       "$ref": "containerservice/microsoft.containerservice/2024-04-02-preview/types.json#/618"
     },
+    "Microsoft.ContainerService/managedClusters@2024-05-01": {
+      "$ref": "containerservice/microsoft.containerservice/2024-05-01/types.json#/278"
+    },
+    "Microsoft.ContainerService/managedClusters/maintenanceConfigurations@2024-05-01": {
+      "$ref": "containerservice/microsoft.containerservice/2024-05-01/types.json#/334"
+    },
+    "Microsoft.ContainerService/managedClusters/agentPools@2024-05-01": {
+      "$ref": "containerservice/microsoft.containerservice/2024-05-01/types.json#/383"
+    },
+    "Microsoft.ContainerService/managedClusters/privateEndpointConnections@2024-05-01": {
+      "$ref": "containerservice/microsoft.containerservice/2024-05-01/types.json#/401"
+    },
+    "Microsoft.ContainerService/snapshots@2024-05-01": {
+      "$ref": "containerservice/microsoft.containerservice/2024-05-01/types.json#/418"
+    },
+    "Microsoft.ContainerService/managedClusters/trustedAccessRoleBindings@2024-05-01": {
+      "$ref": "containerservice/microsoft.containerservice/2024-05-01/types.json#/431"
+    },
+    "Microsoft.ContainerService/locations/meshRevisionProfiles@2024-05-01": {
+      "$ref": "containerservice/microsoft.containerservice/2024-05-01/types.json#/443"
+    },
+    "Microsoft.ContainerService/managedClusters/meshUpgradeProfiles@2024-05-01": {
+      "$ref": "containerservice/microsoft.containerservice/2024-05-01/types.json#/450"
+    },
+    "Microsoft.ContainerService/managedClusters@2024-05-02-preview": {
+      "$ref": "containerservice/microsoft.containerservice/2024-05-02-preview/types.json#/361"
+    },
+    "Microsoft.ContainerService/managedClusters/maintenanceConfigurations@2024-05-02-preview": {
+      "$ref": "containerservice/microsoft.containerservice/2024-05-02-preview/types.json#/417"
+    },
+    "Microsoft.ContainerService/managedClusters/agentPools@2024-05-02-preview": {
+      "$ref": "containerservice/microsoft.containerservice/2024-05-02-preview/types.json#/476"
+    },
+    "Microsoft.ContainerService/managedClusters/privateEndpointConnections@2024-05-02-preview": {
+      "$ref": "containerservice/microsoft.containerservice/2024-05-02-preview/types.json#/494"
+    },
+    "Microsoft.ContainerService/snapshots@2024-05-02-preview": {
+      "$ref": "containerservice/microsoft.containerservice/2024-05-02-preview/types.json#/514"
+    },
+    "Microsoft.ContainerService/managedclustersnapshots@2024-05-02-preview": {
+      "$ref": "containerservice/microsoft.containerservice/2024-05-02-preview/types.json#/542"
+    },
+    "Microsoft.ContainerService/managedClusters/trustedAccessRoleBindings@2024-05-02-preview": {
+      "$ref": "containerservice/microsoft.containerservice/2024-05-02-preview/types.json#/555"
+    },
+    "Microsoft.ContainerService/managedClusters/loadBalancers@2024-05-02-preview": {
+      "$ref": "containerservice/microsoft.containerservice/2024-05-02-preview/types.json#/570"
+    },
+    "Microsoft.ContainerService/locations/guardrailsVersions@2024-05-02-preview": {
+      "$ref": "containerservice/microsoft.containerservice/2024-05-02-preview/types.json#/579"
+    },
+    "Microsoft.ContainerService/locations/safeguardsVersions@2024-05-02-preview": {
+      "$ref": "containerservice/microsoft.containerservice/2024-05-02-preview/types.json#/587"
+    },
+    "Microsoft.ContainerService/locations/meshRevisionProfiles@2024-05-02-preview": {
+      "$ref": "containerservice/microsoft.containerservice/2024-05-02-preview/types.json#/599"
+    },
+    "Microsoft.ContainerService/managedClusters/meshUpgradeProfiles@2024-05-02-preview": {
+      "$ref": "containerservice/microsoft.containerservice/2024-05-02-preview/types.json#/606"
+    },
+    "Microsoft.ContainerService/managedClusters/agentPools/machines@2024-05-02-preview": {
+      "$ref": "containerservice/microsoft.containerservice/2024-05-02-preview/types.json#/618"
+    },
+    "Microsoft.ContainerService/managedClusters@2024-06-02-preview": {
+      "$ref": "containerservice/microsoft.containerservice/2024-06-02-preview/types.json#/372"
+    },
+    "Microsoft.ContainerService/managedClusters/maintenanceConfigurations@2024-06-02-preview": {
+      "$ref": "containerservice/microsoft.containerservice/2024-06-02-preview/types.json#/428"
+    },
+    "Microsoft.ContainerService/managedClusters/agentPools@2024-06-02-preview": {
+      "$ref": "containerservice/microsoft.containerservice/2024-06-02-preview/types.json#/487"
+    },
+    "Microsoft.ContainerService/managedClusters/privateEndpointConnections@2024-06-02-preview": {
+      "$ref": "containerservice/microsoft.containerservice/2024-06-02-preview/types.json#/505"
+    },
+    "Microsoft.ContainerService/snapshots@2024-06-02-preview": {
+      "$ref": "containerservice/microsoft.containerservice/2024-06-02-preview/types.json#/525"
+    },
+    "Microsoft.ContainerService/managedclustersnapshots@2024-06-02-preview": {
+      "$ref": "containerservice/microsoft.containerservice/2024-06-02-preview/types.json#/553"
+    },
+    "Microsoft.ContainerService/managedClusters/trustedAccessRoleBindings@2024-06-02-preview": {
+      "$ref": "containerservice/microsoft.containerservice/2024-06-02-preview/types.json#/566"
+    },
+    "Microsoft.ContainerService/managedClusters/loadBalancers@2024-06-02-preview": {
+      "$ref": "containerservice/microsoft.containerservice/2024-06-02-preview/types.json#/581"
+    },
+    "Microsoft.ContainerService/locations/guardrailsVersions@2024-06-02-preview": {
+      "$ref": "containerservice/microsoft.containerservice/2024-06-02-preview/types.json#/590"
+    },
+    "Microsoft.ContainerService/locations/safeguardsVersions@2024-06-02-preview": {
+      "$ref": "containerservice/microsoft.containerservice/2024-06-02-preview/types.json#/598"
+    },
+    "Microsoft.ContainerService/locations/meshRevisionProfiles@2024-06-02-preview": {
+      "$ref": "containerservice/microsoft.containerservice/2024-06-02-preview/types.json#/610"
+    },
+    "Microsoft.ContainerService/managedClusters/meshUpgradeProfiles@2024-06-02-preview": {
+      "$ref": "containerservice/microsoft.containerservice/2024-06-02-preview/types.json#/617"
+    },
+    "Microsoft.ContainerService/managedClusters/agentPools/machines@2024-06-02-preview": {
+      "$ref": "containerservice/microsoft.containerservice/2024-06-02-preview/types.json#/629"
+    },
     "Microsoft.ContainerStorage/pools@2023-07-01-preview": {
       "$ref": "containerstorage/microsoft.containerstorage/2023-07-01-preview/types.json#/79"
     },
@@ -13955,6 +14183,9 @@
     },
     "Microsoft.ContainerStorage/pools/volumes@2023-07-01-preview": {
       "$ref": "containerstorage/microsoft.containerstorage/2023-07-01-preview/types.json#/110"
+    },
+    "Microsoft.Contoso/employees@2021-10-01-preview": {
+      "$ref": "contosowidgetmanager/microsoft.contoso/2021-10-01-preview/types.json#/27"
     },
     "Microsoft.DocumentDB/databaseAccounts@2015-04-01": {
       "$ref": "cosmos-db/microsoft.documentdb/2015-04-01/types.json#/35"
@@ -18021,6 +18252,18 @@
     "Microsoft.DatabaseWatcher/watchers/targets@2023-09-01-preview": {
       "$ref": "databasewatcher/microsoft.databasewatcher/2023-09-01-preview/types.json#/82"
     },
+    "Microsoft.DatabaseWatcher/watchers@2024-07-19-preview": {
+      "$ref": "databasewatcher/microsoft.databasewatcher/2024-07-19-preview/types.json#/42"
+    },
+    "Microsoft.DatabaseWatcher/watchers/alertRuleResources@2024-07-19-preview": {
+      "$ref": "databasewatcher/microsoft.databasewatcher/2024-07-19-preview/types.json#/55"
+    },
+    "Microsoft.DatabaseWatcher/watchers/sharedPrivateLinkResources@2024-07-19-preview": {
+      "$ref": "databasewatcher/microsoft.databasewatcher/2024-07-19-preview/types.json#/69"
+    },
+    "Microsoft.DatabaseWatcher/watchers/targets@2024-07-19-preview": {
+      "$ref": "databasewatcher/microsoft.databasewatcher/2024-07-19-preview/types.json#/94"
+    },
     "Microsoft.DataBox/jobs@2018-01-01": {
       "$ref": "databox/microsoft.databox/2018-01-01/types.json#/112"
     },
@@ -19045,37 +19288,37 @@
       "$ref": "datafactory/microsoft.datafactory/2018-06-01/types.json#/135"
     },
     "Microsoft.DataFactory/factories/linkedservices@2018-06-01": {
-      "$ref": "datafactory/microsoft.datafactory/2018-06-01/types.json#/673"
+      "$ref": "datafactory/microsoft.datafactory/2018-06-01/types.json#/674"
     },
     "Microsoft.DataFactory/factories/datasets@2018-06-01": {
-      "$ref": "datafactory/microsoft.datafactory/2018-06-01/types.json#/1012"
+      "$ref": "datafactory/microsoft.datafactory/2018-06-01/types.json#/1013"
     },
     "Microsoft.DataFactory/factories/pipelines@2018-06-01": {
-      "$ref": "datafactory/microsoft.datafactory/2018-06-01/types.json#/1815"
+      "$ref": "datafactory/microsoft.datafactory/2018-06-01/types.json#/1816"
     },
     "Microsoft.DataFactory/factories/triggers@2018-06-01": {
-      "$ref": "datafactory/microsoft.datafactory/2018-06-01/types.json#/1908"
+      "$ref": "datafactory/microsoft.datafactory/2018-06-01/types.json#/1909"
     },
     "Microsoft.DataFactory/factories/dataflows@2018-06-01": {
-      "$ref": "datafactory/microsoft.datafactory/2018-06-01/types.json#/1937"
+      "$ref": "datafactory/microsoft.datafactory/2018-06-01/types.json#/1938"
     },
     "Microsoft.DataFactory/factories/managedVirtualNetworks@2018-06-01": {
-      "$ref": "datafactory/microsoft.datafactory/2018-06-01/types.json#/1943"
+      "$ref": "datafactory/microsoft.datafactory/2018-06-01/types.json#/1944"
     },
     "Microsoft.DataFactory/factories/managedVirtualNetworks/managedPrivateEndpoints@2018-06-01": {
-      "$ref": "datafactory/microsoft.datafactory/2018-06-01/types.json#/1950"
+      "$ref": "datafactory/microsoft.datafactory/2018-06-01/types.json#/1951"
     },
     "Microsoft.DataFactory/factories/credentials@2018-06-01": {
-      "$ref": "datafactory/microsoft.datafactory/2018-06-01/types.json#/1962"
+      "$ref": "datafactory/microsoft.datafactory/2018-06-01/types.json#/1963"
     },
     "Microsoft.DataFactory/factories/privateEndpointConnections@2018-06-01": {
-      "$ref": "datafactory/microsoft.datafactory/2018-06-01/types.json#/1969"
+      "$ref": "datafactory/microsoft.datafactory/2018-06-01/types.json#/1970"
     },
     "Microsoft.DataFactory/factories/globalParameters@2018-06-01": {
-      "$ref": "datafactory/microsoft.datafactory/2018-06-01/types.json#/1974"
+      "$ref": "datafactory/microsoft.datafactory/2018-06-01/types.json#/1975"
     },
     "Microsoft.DataFactory/factories/adfcdcs@2018-06-01": {
-      "$ref": "datafactory/microsoft.datafactory/2018-06-01/types.json#/2017"
+      "$ref": "datafactory/microsoft.datafactory/2018-06-01/types.json#/2018"
     },
     "Microsoft.DataLakeAnalytics/accounts@2015-10-01-preview": {
       "$ref": "datalake-analytics/microsoft.datalakeanalytics/2015-10-01-preview/types.json#/86"
@@ -21687,6 +21930,93 @@
     "Microsoft.DevCenter/networkConnections/healthChecks@2024-07-01-preview": {
       "$ref": "devcenter/microsoft.devcenter/2024-07-01-preview/types.json#/660"
     },
+    "Microsoft.DevCenter/plans@2024-08-01-preview": {
+      "$ref": "devcenter/microsoft.devcenter/2024-08-01-preview/types.json#/42"
+    },
+    "Microsoft.DevCenter/plans/members@2024-08-01-preview": {
+      "$ref": "devcenter/microsoft.devcenter/2024-08-01-preview/types.json#/81"
+    },
+    "Microsoft.DevCenter/devcenters@2024-08-01-preview": {
+      "$ref": "devcenter/microsoft.devcenter/2024-08-01-preview/types.json#/138"
+    },
+    "Microsoft.DevCenter/devcenters/encryptionSets@2024-08-01-preview": {
+      "$ref": "devcenter/microsoft.devcenter/2024-08-01-preview/types.json#/165"
+    },
+    "Microsoft.DevCenter/devcenters/curationProfiles@2024-08-01-preview": {
+      "$ref": "devcenter/microsoft.devcenter/2024-08-01-preview/types.json#/191"
+    },
+    "Microsoft.DevCenter/projects@2024-08-01-preview": {
+      "$ref": "devcenter/microsoft.devcenter/2024-08-01-preview/types.json#/220"
+    },
+    "Microsoft.DevCenter/devcenters/attachednetworks@2024-08-01-preview": {
+      "$ref": "devcenter/microsoft.devcenter/2024-08-01-preview/types.json#/253"
+    },
+    "Microsoft.DevCenter/projects/catalogs@2024-08-01-preview": {
+      "$ref": "devcenter/microsoft.devcenter/2024-08-01-preview/types.json#/293"
+    },
+    "Microsoft.DevCenter/devcenters/galleries@2024-08-01-preview": {
+      "$ref": "devcenter/microsoft.devcenter/2024-08-01-preview/types.json#/315"
+    },
+    "Microsoft.DevCenter/devcenters/catalogs@2024-08-01-preview": {
+      "$ref": "devcenter/microsoft.devcenter/2024-08-01-preview/types.json#/319"
+    },
+    "Microsoft.DevCenter/devcenters/environmentTypes@2024-08-01-preview": {
+      "$ref": "devcenter/microsoft.devcenter/2024-08-01-preview/types.json#/342"
+    },
+    "Microsoft.DevCenter/projects/environmentTypes@2024-08-01-preview": {
+      "$ref": "devcenter/microsoft.devcenter/2024-08-01-preview/types.json#/374"
+    },
+    "Microsoft.DevCenter/devcenters/devboxdefinitions@2024-08-01-preview": {
+      "$ref": "devcenter/microsoft.devcenter/2024-08-01-preview/types.json#/413"
+    },
+    "Microsoft.DevCenter/projects/pools@2024-08-01-preview": {
+      "$ref": "devcenter/microsoft.devcenter/2024-08-01-preview/types.json#/464"
+    },
+    "Microsoft.DevCenter/projects/pools/schedules@2024-08-01-preview": {
+      "$ref": "devcenter/microsoft.devcenter/2024-08-01-preview/types.json#/495"
+    },
+    "Microsoft.DevCenter/networkConnections@2024-08-01-preview": {
+      "$ref": "devcenter/microsoft.devcenter/2024-08-01-preview/types.json#/530"
+    },
+    "Microsoft.DevCenter/projects/attachednetworks@2024-08-01-preview": {
+      "$ref": "devcenter/microsoft.devcenter/2024-08-01-preview/types.json#/534"
+    },
+    "Microsoft.DevCenter/projects/catalogs/environmentDefinitions@2024-08-01-preview": {
+      "$ref": "devcenter/microsoft.devcenter/2024-08-01-preview/types.json#/554"
+    },
+    "Microsoft.DevCenter/devcenters/catalogs/environmentDefinitions@2024-08-01-preview": {
+      "$ref": "devcenter/microsoft.devcenter/2024-08-01-preview/types.json#/558"
+    },
+    "Microsoft.DevCenter/devcenters/galleries/images@2024-08-01-preview": {
+      "$ref": "devcenter/microsoft.devcenter/2024-08-01-preview/types.json#/586"
+    },
+    "Microsoft.DevCenter/projects/images@2024-08-01-preview": {
+      "$ref": "devcenter/microsoft.devcenter/2024-08-01-preview/types.json#/591"
+    },
+    "Microsoft.DevCenter/devcenters/galleries/images/versions@2024-08-01-preview": {
+      "$ref": "devcenter/microsoft.devcenter/2024-08-01-preview/types.json#/614"
+    },
+    "Microsoft.DevCenter/projects/images/versions@2024-08-01-preview": {
+      "$ref": "devcenter/microsoft.devcenter/2024-08-01-preview/types.json#/618"
+    },
+    "Microsoft.DevCenter/projects/allowedEnvironmentTypes@2024-08-01-preview": {
+      "$ref": "devcenter/microsoft.devcenter/2024-08-01-preview/types.json#/640"
+    },
+    "Microsoft.DevCenter/projects/devboxdefinitions@2024-08-01-preview": {
+      "$ref": "devcenter/microsoft.devcenter/2024-08-01-preview/types.json#/645"
+    },
+    "Microsoft.DevCenter/devcenters/catalogs/tasks@2024-08-01-preview": {
+      "$ref": "devcenter/microsoft.devcenter/2024-08-01-preview/types.json#/661"
+    },
+    "Microsoft.DevCenter/projects/catalogs/imageDefinitions@2024-08-01-preview": {
+      "$ref": "devcenter/microsoft.devcenter/2024-08-01-preview/types.json#/674"
+    },
+    "Microsoft.DevCenter/projects/catalogs/imageDefinitions/builds@2024-08-01-preview": {
+      "$ref": "devcenter/microsoft.devcenter/2024-08-01-preview/types.json#/687"
+    },
+    "Microsoft.DevCenter/networkConnections/healthChecks@2024-08-01-preview": {
+      "$ref": "devcenter/microsoft.devcenter/2024-08-01-preview/types.json#/702"
+    },
     "Microsoft.DevHub/workflows@2022-04-01-preview": {
       "$ref": "developerhub/microsoft.devhub/2022-04-01-preview/types.json#/39"
     },
@@ -23985,6 +24315,9 @@
     "Microsoft.GuestConfiguration/guestConfigurationAssignments@2022-01-25": {
       "$ref": "guestconfiguration/microsoft.guestconfiguration/2022-01-25/types.json#/72"
     },
+    "Microsoft.GuestConfiguration/guestConfigurationAssignments@2024-04-05": {
+      "$ref": "guestconfiguration/microsoft.guestconfiguration/2024-04-05/types.json#/72"
+    },
     "Microsoft.HanaOnAzure/hanaInstances@2017-11-03-preview": {
       "$ref": "hanaonazure/microsoft.hanaonazure/2017-11-03-preview/types.json#/79"
     },
@@ -24078,6 +24411,18 @@
     "Microsoft.HDInsight/clusterpools/clusters@2024-05-01-preview": {
       "$ref": "hdinsight/microsoft.hdinsight/2024-05-01-preview/types.json#/205"
     },
+    "Microsoft.HDInsight/clusters/applications@2024-08-01-preview": {
+      "$ref": "hdinsight/microsoft.hdinsight/2024-08-01-preview/types.json#/81"
+    },
+    "Microsoft.HDInsight/clusters@2024-08-01-preview": {
+      "$ref": "hdinsight/microsoft.hdinsight/2024-08-01-preview/types.json#/163"
+    },
+    "Microsoft.HDInsight/clusters/privateEndpointConnections@2024-08-01-preview": {
+      "$ref": "hdinsight/microsoft.hdinsight/2024-08-01-preview/types.json#/167"
+    },
+    "Microsoft.HDInsight/clusters/privateLinkResources@2024-08-01-preview": {
+      "$ref": "hdinsight/microsoft.hdinsight/2024-08-01-preview/types.json#/174"
+    },
     "Microsoft.HealthBot/healthBots@2020-10-20-preview": {
       "$ref": "healthbot/microsoft.healthbot/2020-10-20-preview/types.json#/26"
     },
@@ -24101,6 +24446,9 @@
     },
     "Microsoft.HealthBot/healthBots@2023-05-01": {
       "$ref": "healthbot/microsoft.healthbot/2023-05-01/types.json#/33"
+    },
+    "Microsoft.HealthBot/healthBots@2024-02-01": {
+      "$ref": "healthbot/microsoft.healthbot/2024-02-01/types.json#/34"
     },
     "Microsoft.HealthcareApis/services@2018-08-20-preview": {
       "$ref": "healthcareapis/microsoft.healthcareapis/2018-08-20-preview/types.json#/38"
@@ -24515,6 +24863,12 @@
     },
     "Microsoft.HealthcareApis/workspaces/privateLinkResources@2024-03-31": {
       "$ref": "healthcareapis/microsoft.healthcareapis/2024-03-31/types.json#/269"
+    },
+    "Microsoft.HealthDataAIServices/deidServices@2024-02-28-preview": {
+      "$ref": "healthdataaiservices/microsoft.healthdataaiservices/2024-02-28-preview/types.json#/53"
+    },
+    "Microsoft.HealthDataAIServices/deidServices/privateEndpointConnections@2024-02-28-preview": {
+      "$ref": "healthdataaiservices/microsoft.healthdataaiservices/2024-02-28-preview/types.json#/57"
     },
     "Microsoft.Help/diagnostics@2023-01-01-preview": {
       "$ref": "help/microsoft.help/2023-01-01-preview/types.json#/42"
@@ -25026,6 +25380,9 @@
     "Microsoft.Kubernetes/connectedClusters@2024-07-01-preview": {
       "$ref": "hybridkubernetes/microsoft.kubernetes/2024-07-01-preview/types.json#/64"
     },
+    "Microsoft.Kubernetes/connectedClusters@2024-07-15-preview": {
+      "$ref": "hybridkubernetes/microsoft.kubernetes/2024-07-15-preview/types.json#/64"
+    },
     "Microsoft.HybridNetwork/networkFunctions@2020-01-01-preview": {
       "$ref": "hybridnetwork/microsoft.hybridnetwork/2020-01-01-preview/types.json#/48"
     },
@@ -25526,6 +25883,30 @@
     },
     "Microsoft.Devices/iotHubs/privateEndpointConnections@2023-06-30": {
       "$ref": "iothub/microsoft.devices/2023-06-30/types.json#/178"
+    },
+    "Microsoft.IoTOperations/instances@2024-07-01-preview": {
+      "$ref": "iotoperations/microsoft.iotoperations/2024-07-01-preview/types.json#/29"
+    },
+    "Microsoft.IoTOperations/instances/brokers@2024-07-01-preview": {
+      "$ref": "iotoperations/microsoft.iotoperations/2024-07-01-preview/types.json#/124"
+    },
+    "Microsoft.IoTOperations/instances/brokers/authentications@2024-07-01-preview": {
+      "$ref": "iotoperations/microsoft.iotoperations/2024-07-01-preview/types.json#/154"
+    },
+    "Microsoft.IoTOperations/instances/brokers/authorizations@2024-07-01-preview": {
+      "$ref": "iotoperations/microsoft.iotoperations/2024-07-01-preview/types.json#/196"
+    },
+    "Microsoft.IoTOperations/instances/brokers/listeners@2024-07-01-preview": {
+      "$ref": "iotoperations/microsoft.iotoperations/2024-07-01-preview/types.json#/230"
+    },
+    "Microsoft.IoTOperations/instances/dataflowEndpoints@2024-07-01-preview": {
+      "$ref": "iotoperations/microsoft.iotoperations/2024-07-01-preview/types.json#/314"
+    },
+    "Microsoft.IoTOperations/instances/dataflowProfiles@2024-07-01-preview": {
+      "$ref": "iotoperations/microsoft.iotoperations/2024-07-01-preview/types.json#/329"
+    },
+    "Microsoft.IoTOperations/instances/dataflowProfiles/dataflows@2024-07-01-preview": {
+      "$ref": "iotoperations/microsoft.iotoperations/2024-07-01-preview/types.json#/380"
     },
     "Microsoft.IoTOperationsDataProcessor/instances@2023-10-04-preview": {
       "$ref": "iotoperationsdataprocessor/microsoft.iotoperationsdataprocessor/2023-10-04-preview/types.json#/27"
@@ -26156,6 +26537,9 @@
     },
     "Qumulo.Storage/fileSystems@2022-10-12": {
       "$ref": "liftrqumulo/qumulo.storage/2022-10-12/types.json#/49"
+    },
+    "Qumulo.Storage/fileSystems@2024-06-19": {
+      "$ref": "liftrqumulo/qumulo.storage/2024-06-19/types.json#/45"
     },
     "Microsoft.LoadTestService/loadTests@2021-12-01-preview": {
       "$ref": "loadtestservice/microsoft.loadtestservice/2021-12-01-preview/types.json#/29"
@@ -28248,61 +28632,61 @@
     "Microsoft.MachineLearningServices/registries/environments/versions@2024-04-01": {
       "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-04-01/types.json#/672"
     },
-    "Microsoft.MachineLearningServices/workspaces/marketplaceSubscriptions@2024-04-01": {
-      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-04-01/types.json#/689"
-    },
     "Microsoft.MachineLearningServices/registries/models@2024-04-01": {
-      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-04-01/types.json#/703"
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-04-01/types.json#/686"
     },
     "Microsoft.MachineLearningServices/registries/models/versions@2024-04-01": {
-      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-04-01/types.json#/720"
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-04-01/types.json#/703"
     },
     "Microsoft.MachineLearningServices/workspaces/batchEndpoints@2024-04-01": {
-      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-04-01/types.json#/740"
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-04-01/types.json#/723"
     },
     "Microsoft.MachineLearningServices/workspaces/batchEndpoints/deployments@2024-04-01": {
-      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-04-01/types.json#/784"
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-04-01/types.json#/767"
     },
     "Microsoft.MachineLearningServices/workspaces/codes@2024-04-01": {
-      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-04-01/types.json#/788"
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-04-01/types.json#/771"
     },
     "Microsoft.MachineLearningServices/workspaces/codes/versions@2024-04-01": {
-      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-04-01/types.json#/792"
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-04-01/types.json#/775"
     },
     "Microsoft.MachineLearningServices/workspaces/components@2024-04-01": {
-      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-04-01/types.json#/796"
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-04-01/types.json#/779"
     },
     "Microsoft.MachineLearningServices/workspaces/components/versions@2024-04-01": {
-      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-04-01/types.json#/800"
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-04-01/types.json#/783"
     },
     "Microsoft.MachineLearningServices/workspaces/data@2024-04-01": {
-      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-04-01/types.json#/804"
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-04-01/types.json#/787"
     },
     "Microsoft.MachineLearningServices/workspaces/data/versions@2024-04-01": {
-      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-04-01/types.json#/808"
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-04-01/types.json#/791"
     },
     "Microsoft.MachineLearningServices/workspaces/datastores@2024-04-01": {
-      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-04-01/types.json#/883"
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-04-01/types.json#/866"
     },
     "Microsoft.MachineLearningServices/workspaces/environments@2024-04-01": {
-      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-04-01/types.json#/887"
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-04-01/types.json#/870"
     },
     "Microsoft.MachineLearningServices/workspaces/environments/versions@2024-04-01": {
-      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-04-01/types.json#/891"
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-04-01/types.json#/874"
     },
     "Microsoft.MachineLearningServices/workspaces/featuresets@2024-04-01": {
-      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-04-01/types.json#/905"
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-04-01/types.json#/888"
     },
     "Microsoft.MachineLearningServices/workspaces/featuresets/versions@2024-04-01": {
-      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-04-01/types.json#/963"
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-04-01/types.json#/946"
     },
     "Microsoft.MachineLearningServices/workspaces/featurestoreEntities@2024-04-01": {
-      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-04-01/types.json#/977"
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-04-01/types.json#/960"
     },
     "Microsoft.MachineLearningServices/workspaces/featurestoreEntities/versions@2024-04-01": {
-      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-04-01/types.json#/1002"
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-04-01/types.json#/985"
     },
     "Microsoft.MachineLearningServices/workspaces/jobs@2024-04-01": {
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-04-01/types.json#/1534"
+    },
+    "Microsoft.MachineLearningServices/workspaces/marketplaceSubscriptions@2024-04-01": {
       "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-04-01/types.json#/1551"
     },
     "Microsoft.MachineLearningServices/workspaces/models@2024-04-01": {
@@ -28328,6 +28712,147 @@
     },
     "Microsoft.MachineLearningServices/workspaces/featuresets/versions/features@2024-04-01": {
       "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-04-01/types.json#/1868"
+    },
+    "Microsoft.MachineLearningServices/workspaces/computes@2024-07-01-preview": {
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/312"
+    },
+    "Microsoft.MachineLearningServices/registries/codes@2024-07-01-preview": {
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/327"
+    },
+    "Microsoft.MachineLearningServices/registries/codes/versions@2024-07-01-preview": {
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/341"
+    },
+    "Microsoft.MachineLearningServices/registries/components@2024-07-01-preview": {
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/355"
+    },
+    "Microsoft.MachineLearningServices/registries/components/versions@2024-07-01-preview": {
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/369"
+    },
+    "Microsoft.MachineLearningServices/registries/data@2024-07-01-preview": {
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/380"
+    },
+    "Microsoft.MachineLearningServices/registries/data/versions@2024-07-01-preview": {
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/395"
+    },
+    "Microsoft.MachineLearningServices/registries/environments@2024-07-01-preview": {
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/409"
+    },
+    "Microsoft.MachineLearningServices/registries/environments/versions@2024-07-01-preview": {
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/435"
+    },
+    "Microsoft.MachineLearningServices/workspaces/marketplaceSubscriptions@2024-07-01-preview": {
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/452"
+    },
+    "Microsoft.MachineLearningServices/registries/models@2024-07-01-preview": {
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/466"
+    },
+    "Microsoft.MachineLearningServices/registries/models/versions@2024-07-01-preview": {
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/483"
+    },
+    "Microsoft.MachineLearningServices/workspaces/batchEndpoints@2024-07-01-preview": {
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/503"
+    },
+    "Microsoft.MachineLearningServices/workspaces/batchEndpoints/deployments@2024-07-01-preview": {
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/547"
+    },
+    "Microsoft.MachineLearningServices/workspaces/codes@2024-07-01-preview": {
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/551"
+    },
+    "Microsoft.MachineLearningServices/workspaces/codes/versions@2024-07-01-preview": {
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/555"
+    },
+    "Microsoft.MachineLearningServices/workspaces/components@2024-07-01-preview": {
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/559"
+    },
+    "Microsoft.MachineLearningServices/workspaces/components/versions@2024-07-01-preview": {
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/563"
+    },
+    "Microsoft.MachineLearningServices/workspaces/data@2024-07-01-preview": {
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/567"
+    },
+    "Microsoft.MachineLearningServices/workspaces/data/versions@2024-07-01-preview": {
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/571"
+    },
+    "Microsoft.MachineLearningServices/workspaces/datastores@2024-07-01-preview": {
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/646"
+    },
+    "Microsoft.MachineLearningServices/workspaces/environments@2024-07-01-preview": {
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/650"
+    },
+    "Microsoft.MachineLearningServices/workspaces/environments/versions@2024-07-01-preview": {
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/654"
+    },
+    "Microsoft.MachineLearningServices/workspaces/featuresets@2024-07-01-preview": {
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/668"
+    },
+    "Microsoft.MachineLearningServices/workspaces/featuresets/versions@2024-07-01-preview": {
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/726"
+    },
+    "Microsoft.MachineLearningServices/workspaces/featurestoreEntities@2024-07-01-preview": {
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/740"
+    },
+    "Microsoft.MachineLearningServices/workspaces/featurestoreEntities/versions@2024-07-01-preview": {
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/765"
+    },
+    "Microsoft.MachineLearningServices/workspaces/jobs@2024-07-01-preview": {
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/1338"
+    },
+    "Microsoft.MachineLearningServices/workspaces/models@2024-07-01-preview": {
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/1342"
+    },
+    "Microsoft.MachineLearningServices/workspaces/models/versions@2024-07-01-preview": {
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/1346"
+    },
+    "Microsoft.MachineLearningServices/workspaces/onlineEndpoints@2024-07-01-preview": {
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/1369"
+    },
+    "Microsoft.MachineLearningServices/workspaces/onlineEndpoints/deployments@2024-07-01-preview": {
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/1415"
+    },
+    "Microsoft.MachineLearningServices/workspaces/schedules@2024-07-01-preview": {
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/1577"
+    },
+    "Microsoft.MachineLearningServices/workspaces/serverlessEndpoints@2024-07-01-preview": {
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/1610"
+    },
+    "Microsoft.MachineLearningServices/registries@2024-07-01-preview": {
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/1643"
+    },
+    "Microsoft.MachineLearningServices/workspaces@2024-07-01-preview": {
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/1748"
+    },
+    "Microsoft.MachineLearningServices/workspaces/connections@2024-07-01-preview": {
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/1909"
+    },
+    "Microsoft.MachineLearningServices/workspaces/connections/deployments@2024-07-01-preview": {
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/1950"
+    },
+    "Microsoft.MachineLearningServices/workspaces/connections/raiBlocklists@2024-07-01-preview": {
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/1956"
+    },
+    "Microsoft.MachineLearningServices/workspaces/connections/raiBlocklists/raiBlocklistItems@2024-07-01-preview": {
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/1961"
+    },
+    "Microsoft.MachineLearningServices/workspaces/connections/raiPolicies@2024-07-01-preview": {
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/1985"
+    },
+    "Microsoft.MachineLearningServices/workspaces/endpoints/deployments@2024-07-01-preview": {
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/1989"
+    },
+    "Microsoft.MachineLearningServices/workspaces/endpoints@2024-07-01-preview": {
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/2045"
+    },
+    "Microsoft.MachineLearningServices/workspaces/endpoints/raiPolicies@2024-07-01-preview": {
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/2049"
+    },
+    "Microsoft.MachineLearningServices/workspaces/outboundRules@2024-07-01-preview": {
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/2053"
+    },
+    "Microsoft.MachineLearningServices/workspaces/privateEndpointConnections@2024-07-01-preview": {
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/2058"
+    },
+    "Microsoft.MachineLearningServices/workspaces/featuresets/versions/features@2024-07-01-preview": {
+      "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/2074"
     },
     "Microsoft.Maintenance/applyUpdates@2018-06-01-preview": {
       "$ref": "maintenance/microsoft.maintenance/2018-06-01-preview/types.json#/13"
@@ -31667,6 +32192,84 @@
     },
     "Microsoft.NetApp/locations/regionInfos@2023-11-01": {
       "$ref": "netapp/microsoft.netapp/2023-11-01/types.json#/254"
+    },
+    "Microsoft.NetApp/netAppAccounts@2024-03-01-preview": {
+      "$ref": "netapp/microsoft.netapp/2024-03-01-preview/types.json#/61"
+    },
+    "Microsoft.NetApp/netAppAccounts/capacityPools@2024-03-01-preview": {
+      "$ref": "netapp/microsoft.netapp/2024-03-01-preview/types.json#/80"
+    },
+    "Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2024-03-01-preview": {
+      "$ref": "netapp/microsoft.netapp/2024-03-01-preview/types.json#/235"
+    },
+    "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots@2024-03-01-preview": {
+      "$ref": "netapp/microsoft.netapp/2024-03-01-preview/types.json#/240"
+    },
+    "Microsoft.NetApp/netAppAccounts/snapshotPolicies@2024-03-01-preview": {
+      "$ref": "netapp/microsoft.netapp/2024-03-01-preview/types.json#/250"
+    },
+    "Microsoft.NetApp/netAppAccounts/backupPolicies@2024-03-01-preview": {
+      "$ref": "netapp/microsoft.netapp/2024-03-01-preview/types.json#/258"
+    },
+    "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/volumeQuotaRules@2024-03-01-preview": {
+      "$ref": "netapp/microsoft.netapp/2024-03-01-preview/types.json#/277"
+    },
+    "Microsoft.NetApp/netAppAccounts/volumeGroups@2024-03-01-preview": {
+      "$ref": "netapp/microsoft.netapp/2024-03-01-preview/types.json#/291"
+    },
+    "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/subvolumes@2024-03-01-preview": {
+      "$ref": "netapp/microsoft.netapp/2024-03-01-preview/types.json#/296"
+    },
+    "Microsoft.NetApp/netAppAccounts/backupVaults/backups@2024-03-01-preview": {
+      "$ref": "netapp/microsoft.netapp/2024-03-01-preview/types.json#/305"
+    },
+    "Microsoft.NetApp/netAppAccounts/backupVaults@2024-03-01-preview": {
+      "$ref": "netapp/microsoft.netapp/2024-03-01-preview/types.json#/312"
+    },
+    "Microsoft.NetApp/locations/quotaLimits@2024-03-01-preview": {
+      "$ref": "netapp/microsoft.netapp/2024-03-01-preview/types.json#/317"
+    },
+    "Microsoft.NetApp/locations/regionInfos@2024-03-01-preview": {
+      "$ref": "netapp/microsoft.netapp/2024-03-01-preview/types.json#/334"
+    },
+    "Microsoft.NetApp/netAppAccounts@2024-03-01": {
+      "$ref": "netapp/microsoft.netapp/2024-03-01/types.json#/60"
+    },
+    "Microsoft.NetApp/netAppAccounts/capacityPools@2024-03-01": {
+      "$ref": "netapp/microsoft.netapp/2024-03-01/types.json#/79"
+    },
+    "Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2024-03-01": {
+      "$ref": "netapp/microsoft.netapp/2024-03-01/types.json#/155"
+    },
+    "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots@2024-03-01": {
+      "$ref": "netapp/microsoft.netapp/2024-03-01/types.json#/160"
+    },
+    "Microsoft.NetApp/netAppAccounts/snapshotPolicies@2024-03-01": {
+      "$ref": "netapp/microsoft.netapp/2024-03-01/types.json#/170"
+    },
+    "Microsoft.NetApp/netAppAccounts/backupPolicies@2024-03-01": {
+      "$ref": "netapp/microsoft.netapp/2024-03-01/types.json#/178"
+    },
+    "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/volumeQuotaRules@2024-03-01": {
+      "$ref": "netapp/microsoft.netapp/2024-03-01/types.json#/197"
+    },
+    "Microsoft.NetApp/netAppAccounts/volumeGroups@2024-03-01": {
+      "$ref": "netapp/microsoft.netapp/2024-03-01/types.json#/211"
+    },
+    "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/subvolumes@2024-03-01": {
+      "$ref": "netapp/microsoft.netapp/2024-03-01/types.json#/216"
+    },
+    "Microsoft.NetApp/netAppAccounts/backupVaults/backups@2024-03-01": {
+      "$ref": "netapp/microsoft.netapp/2024-03-01/types.json#/225"
+    },
+    "Microsoft.NetApp/netAppAccounts/backupVaults@2024-03-01": {
+      "$ref": "netapp/microsoft.netapp/2024-03-01/types.json#/232"
+    },
+    "Microsoft.NetApp/locations/quotaLimits@2024-03-01": {
+      "$ref": "netapp/microsoft.netapp/2024-03-01/types.json#/237"
+    },
+    "Microsoft.NetApp/locations/regionInfos@2024-03-01": {
+      "$ref": "netapp/microsoft.netapp/2024-03-01/types.json#/254"
     },
     "microsoft.compute/virtualMachineScaleSets/virtualMachines/networkInterfaces@2015-05-01-preview": {
       "$ref": "network/microsoft.compute/2015-05-01-preview/types.json#/19"
@@ -43566,6 +44169,102 @@
     "Oracle.Database/cloudVmClusters/dbNodes@2023-09-01": {
       "$ref": "oracle/oracle.database/2023-09-01/types.json#/478"
     },
+    "Oracle.Database/autonomousDatabases@2024-06-01-preview": {
+      "$ref": "oracle/oracle.database/2024-06-01-preview/types.json#/201"
+    },
+    "Oracle.Database/cloudExadataInfrastructures@2024-06-01-preview": {
+      "$ref": "oracle/oracle.database/2024-06-01-preview/types.json#/251"
+    },
+    "Oracle.Database/cloudVmClusters@2024-06-01-preview": {
+      "$ref": "oracle/oracle.database/2024-06-01-preview/types.json#/307"
+    },
+    "Oracle.Database/oracleSubscriptions@2024-06-01-preview": {
+      "$ref": "oracle/oracle.database/2024-06-01-preview/types.json#/330"
+    },
+    "Oracle.Database/autonomousDatabases/autonomousDatabaseBackups@2024-06-01-preview": {
+      "$ref": "oracle/oracle.database/2024-06-01-preview/types.json#/351"
+    },
+    "Oracle.Database/cloudVmClusters/virtualNetworkAddresses@2024-06-01-preview": {
+      "$ref": "oracle/oracle.database/2024-06-01-preview/types.json#/368"
+    },
+    "Oracle.Database/locations/autonomousDatabaseCharacterSets@2024-06-01-preview": {
+      "$ref": "oracle/oracle.database/2024-06-01-preview/types.json#/373"
+    },
+    "Oracle.Database/locations/autonomousDatabaseNationalCharacterSets@2024-06-01-preview": {
+      "$ref": "oracle/oracle.database/2024-06-01-preview/types.json#/378"
+    },
+    "Oracle.Database/locations/autonomousDbVersions@2024-06-01-preview": {
+      "$ref": "oracle/oracle.database/2024-06-01-preview/types.json#/388"
+    },
+    "Oracle.Database/locations/dbSystemShapes@2024-06-01-preview": {
+      "$ref": "oracle/oracle.database/2024-06-01-preview/types.json#/393"
+    },
+    "Oracle.Database/locations/dnsPrivateViews@2024-06-01-preview": {
+      "$ref": "oracle/oracle.database/2024-06-01-preview/types.json#/408"
+    },
+    "Oracle.Database/locations/dnsPrivateZones@2024-06-01-preview": {
+      "$ref": "oracle/oracle.database/2024-06-01-preview/types.json#/426"
+    },
+    "Oracle.Database/locations/giVersions@2024-06-01-preview": {
+      "$ref": "oracle/oracle.database/2024-06-01-preview/types.json#/431"
+    },
+    "Oracle.Database/locations/systemVersions@2024-06-01-preview": {
+      "$ref": "oracle/oracle.database/2024-06-01-preview/types.json#/436"
+    },
+    "Oracle.Database/cloudExadataInfrastructures/dbServers@2024-06-01-preview": {
+      "$ref": "oracle/oracle.database/2024-06-01-preview/types.json#/462"
+    },
+    "Oracle.Database/cloudVmClusters/dbNodes@2024-06-01-preview": {
+      "$ref": "oracle/oracle.database/2024-06-01-preview/types.json#/483"
+    },
+    "Oracle.Database/autonomousDatabases@2024-06-01": {
+      "$ref": "oracle/oracle.database/2024-06-01/types.json#/201"
+    },
+    "Oracle.Database/cloudExadataInfrastructures@2024-06-01": {
+      "$ref": "oracle/oracle.database/2024-06-01/types.json#/251"
+    },
+    "Oracle.Database/cloudVmClusters@2024-06-01": {
+      "$ref": "oracle/oracle.database/2024-06-01/types.json#/307"
+    },
+    "Oracle.Database/oracleSubscriptions@2024-06-01": {
+      "$ref": "oracle/oracle.database/2024-06-01/types.json#/330"
+    },
+    "Oracle.Database/autonomousDatabases/autonomousDatabaseBackups@2024-06-01": {
+      "$ref": "oracle/oracle.database/2024-06-01/types.json#/351"
+    },
+    "Oracle.Database/cloudVmClusters/virtualNetworkAddresses@2024-06-01": {
+      "$ref": "oracle/oracle.database/2024-06-01/types.json#/368"
+    },
+    "Oracle.Database/locations/autonomousDatabaseCharacterSets@2024-06-01": {
+      "$ref": "oracle/oracle.database/2024-06-01/types.json#/373"
+    },
+    "Oracle.Database/locations/autonomousDatabaseNationalCharacterSets@2024-06-01": {
+      "$ref": "oracle/oracle.database/2024-06-01/types.json#/378"
+    },
+    "Oracle.Database/locations/autonomousDbVersions@2024-06-01": {
+      "$ref": "oracle/oracle.database/2024-06-01/types.json#/388"
+    },
+    "Oracle.Database/locations/dbSystemShapes@2024-06-01": {
+      "$ref": "oracle/oracle.database/2024-06-01/types.json#/393"
+    },
+    "Oracle.Database/locations/dnsPrivateViews@2024-06-01": {
+      "$ref": "oracle/oracle.database/2024-06-01/types.json#/408"
+    },
+    "Oracle.Database/locations/dnsPrivateZones@2024-06-01": {
+      "$ref": "oracle/oracle.database/2024-06-01/types.json#/426"
+    },
+    "Oracle.Database/locations/giVersions@2024-06-01": {
+      "$ref": "oracle/oracle.database/2024-06-01/types.json#/431"
+    },
+    "Oracle.Database/locations/systemVersions@2024-06-01": {
+      "$ref": "oracle/oracle.database/2024-06-01/types.json#/436"
+    },
+    "Oracle.Database/cloudExadataInfrastructures/dbServers@2024-06-01": {
+      "$ref": "oracle/oracle.database/2024-06-01/types.json#/462"
+    },
+    "Oracle.Database/cloudVmClusters/dbNodes@2024-06-01": {
+      "$ref": "oracle/oracle.database/2024-06-01/types.json#/483"
+    },
     "Microsoft.Orbital/spacecrafts@2022-03-01": {
       "$ref": "orbital/microsoft.orbital/2022-03-01/types.json#/37"
     },
@@ -43593,9 +44292,6 @@
     "Microsoft.Orbital/l2Connections@2024-03-01-preview": {
       "$ref": "orbital/microsoft.orbital/2024-03-01-preview/types.json#/52"
     },
-    "Microsoft.Orbital/globalCommunicationsSites@2024-03-01-preview": {
-      "$ref": "orbital/microsoft.orbital/2024-03-01-preview/types.json#/64"
-    },
     "Microsoft.Orbital/groundStations@2024-03-01": {
       "$ref": "orbital/microsoft.orbital/2024-03-01/types.json#/27"
     },
@@ -43604,9 +44300,6 @@
     },
     "Microsoft.Orbital/l2Connections@2024-03-01": {
       "$ref": "orbital/microsoft.orbital/2024-03-01/types.json#/52"
-    },
-    "Microsoft.Orbital/globalCommunicationsSites@2024-03-01": {
-      "$ref": "orbital/microsoft.orbital/2024-03-01/types.json#/64"
     },
     "PaloAltoNetworks.Cloudngfw/globalRulestacks@2022-08-29-preview": {
       "$ref": "paloaltonetworks/paloaltonetworks.cloudngfw/2022-08-29-preview/types.json#/43"
@@ -44370,6 +45063,42 @@
     "Microsoft.DBforPostgreSQL/flexibleServers/privateLinkResources@2023-12-01-preview": {
       "$ref": "postgresql/microsoft.dbforpostgresql/2023-12-01-preview/types.json#/353"
     },
+    "Microsoft.DBforPostgreSQL/flexibleServers/administrators@2024-03-01-preview": {
+      "$ref": "postgresql/microsoft.dbforpostgresql/2024-03-01-preview/types.json#/21"
+    },
+    "Microsoft.DBforPostgreSQL/flexibleServers/backups@2024-03-01-preview": {
+      "$ref": "postgresql/microsoft.dbforpostgresql/2024-03-01-preview/types.json#/30"
+    },
+    "Microsoft.DBforPostgreSQL/flexibleServers/configurations@2024-03-01-preview": {
+      "$ref": "postgresql/microsoft.dbforpostgresql/2024-03-01-preview/types.json#/41"
+    },
+    "Microsoft.DBforPostgreSQL/flexibleServers/databases@2024-03-01-preview": {
+      "$ref": "postgresql/microsoft.dbforpostgresql/2024-03-01-preview/types.json#/48"
+    },
+    "Microsoft.DBforPostgreSQL/flexibleServers/firewallRules@2024-03-01-preview": {
+      "$ref": "postgresql/microsoft.dbforpostgresql/2024-03-01-preview/types.json#/54"
+    },
+    "Microsoft.DBforPostgreSQL/flexibleServers@2024-03-01-preview": {
+      "$ref": "postgresql/microsoft.dbforpostgresql/2024-03-01-preview/types.json#/196"
+    },
+    "Microsoft.DBforPostgreSQL/flexibleServers/migrations@2024-03-01-preview": {
+      "$ref": "postgresql/microsoft.dbforpostgresql/2024-03-01-preview/types.json#/309"
+    },
+    "Microsoft.DBforPostgreSQL/flexibleServers/privateEndpointConnections@2024-03-01-preview": {
+      "$ref": "postgresql/microsoft.dbforpostgresql/2024-03-01-preview/types.json#/314"
+    },
+    "Microsoft.DBforPostgreSQL/flexibleServers/advancedThreatProtectionSettings@2024-03-01-preview": {
+      "$ref": "postgresql/microsoft.dbforpostgresql/2024-03-01-preview/types.json#/324"
+    },
+    "Microsoft.DBforPostgreSQL/flexibleServers/virtualendpoints@2024-03-01-preview": {
+      "$ref": "postgresql/microsoft.dbforpostgresql/2024-03-01-preview/types.json#/334"
+    },
+    "Microsoft.DBforPostgreSQL/flexibleServers/ltrBackupOperations@2024-03-01-preview": {
+      "$ref": "postgresql/microsoft.dbforpostgresql/2024-03-01-preview/types.json#/346"
+    },
+    "Microsoft.DBforPostgreSQL/flexibleServers/privateLinkResources@2024-03-01-preview": {
+      "$ref": "postgresql/microsoft.dbforpostgresql/2024-03-01-preview/types.json#/354"
+    },
     "Microsoft.DBforPostgreSQL/serverGroupsv2@2022-11-08": {
       "$ref": "postgresqlhsc/microsoft.dbforpostgresql/2022-11-08/types.json#/35"
     },
@@ -44543,6 +45272,36 @@
     },
     "Microsoft.Network/privateDnsZones/TXT@2020-06-01": {
       "$ref": "privatedns/microsoft.network/2020-06-01/types.json#/81"
+    },
+    "Microsoft.Network/privateDnsZones@2024-06-01": {
+      "$ref": "privatedns/microsoft.network/2024-06-01/types.json#/14"
+    },
+    "Microsoft.Network/privateDnsZones/virtualNetworkLinks@2024-06-01": {
+      "$ref": "privatedns/microsoft.network/2024-06-01/types.json#/35"
+    },
+    "Microsoft.Network/privateDnsZones/A@2024-06-01": {
+      "$ref": "privatedns/microsoft.network/2024-06-01/types.json#/56"
+    },
+    "Microsoft.Network/privateDnsZones/AAAA@2024-06-01": {
+      "$ref": "privatedns/microsoft.network/2024-06-01/types.json#/60"
+    },
+    "Microsoft.Network/privateDnsZones/CNAME@2024-06-01": {
+      "$ref": "privatedns/microsoft.network/2024-06-01/types.json#/64"
+    },
+    "Microsoft.Network/privateDnsZones/MX@2024-06-01": {
+      "$ref": "privatedns/microsoft.network/2024-06-01/types.json#/68"
+    },
+    "Microsoft.Network/privateDnsZones/PTR@2024-06-01": {
+      "$ref": "privatedns/microsoft.network/2024-06-01/types.json#/72"
+    },
+    "Microsoft.Network/privateDnsZones/SOA@2024-06-01": {
+      "$ref": "privatedns/microsoft.network/2024-06-01/types.json#/76"
+    },
+    "Microsoft.Network/privateDnsZones/SRV@2024-06-01": {
+      "$ref": "privatedns/microsoft.network/2024-06-01/types.json#/80"
+    },
+    "Microsoft.Network/privateDnsZones/TXT@2024-06-01": {
+      "$ref": "privatedns/microsoft.network/2024-06-01/types.json#/84"
     },
     "Microsoft.ProfessionalService/resources@2023-07-01-preview": {
       "$ref": "professionalservice/microsoft.professionalservice/2023-07-01-preview/types.json#/19"
@@ -48993,6 +49752,9 @@
     "Microsoft.ResourceGraph/queries@2022-10-01": {
       "$ref": "resourcegraph/microsoft.resourcegraph/2022-10-01/types.json#/9"
     },
+    "Microsoft.ResourceGraph/queries@2024-04-01": {
+      "$ref": "resourcegraph/microsoft.resourcegraph/2024-04-01/types.json#/20"
+    },
     "Microsoft.ResourceHealth/emergingIssues@2017-07-01": {
       "$ref": "resourcehealth/microsoft.resourcehealth/2017-07-01/types.json#/23"
     },
@@ -49266,6 +50028,21 @@
     "Microsoft.Authorization/policyAssignments@2024-04-01": {
       "$ref": "resources/microsoft.authorization/2024-04-01/types.json#/54"
     },
+    "Microsoft.Authorization/policyDefinitions@2024-05-01": {
+      "$ref": "resources/microsoft.authorization/2024-05-01/types.json#/37"
+    },
+    "Microsoft.Authorization/policyDefinitions/versions@2024-05-01": {
+      "$ref": "resources/microsoft.authorization/2024-05-01/types.json#/49"
+    },
+    "Microsoft.Authorization/policySetDefinitions@2024-05-01": {
+      "$ref": "resources/microsoft.authorization/2024-05-01/types.json#/68"
+    },
+    "Microsoft.Authorization/policySetDefinitions/versions@2024-05-01": {
+      "$ref": "resources/microsoft.authorization/2024-05-01/types.json#/81"
+    },
+    "Microsoft.Authorization/policyAssignments@2024-05-01": {
+      "$ref": "resources/microsoft.authorization/2024-05-01/types.json#/122"
+    },
     "Microsoft.Features/featureProviders/subscriptionFeatureRegistrations@2021-07-01": {
       "$ref": "resources/microsoft.features/2021-07-01/types.json#/21"
     },
@@ -49491,6 +50268,9 @@
     "Microsoft.Resources/deploymentStacks@2024-03-01": {
       "$ref": "resources/microsoft.resources/2024-03-01/types.json#/187"
     },
+    "Microsoft.Resources/changes@2024-06-01-preview": {
+      "$ref": "resources/microsoft.resources/2024-06-01-preview/types.json#/30"
+    },
     "Microsoft.Solutions/appliances@2016-09-01-preview": {
       "$ref": "resources/microsoft.solutions/2016-09-01-preview/types.json#/26"
     },
@@ -49686,6 +50466,33 @@
     "Microsoft.ScVmm/virtualMachineInstances/hybridIdentityMetadata@2023-10-07": {
       "$ref": "scvmm/microsoft.scvmm/2023-10-07/types.json#/239"
     },
+    "Microsoft.ScVmm/virtualMachineInstances@2024-06-01": {
+      "$ref": "scvmm/microsoft.scvmm/2024-06-01/types.json#/71"
+    },
+    "Microsoft.ScVmm/virtualMachineInstances/guestAgents@2024-06-01": {
+      "$ref": "scvmm/microsoft.scvmm/2024-06-01/types.json#/92"
+    },
+    "Microsoft.ScVmm/availabilitySets@2024-06-01": {
+      "$ref": "scvmm/microsoft.scvmm/2024-06-01/types.json#/108"
+    },
+    "Microsoft.ScVmm/clouds@2024-06-01": {
+      "$ref": "scvmm/microsoft.scvmm/2024-06-01/types.json#/127"
+    },
+    "Microsoft.ScVmm/virtualMachineTemplates@2024-06-01": {
+      "$ref": "scvmm/microsoft.scvmm/2024-06-01/types.json#/160"
+    },
+    "Microsoft.ScVmm/virtualNetworks@2024-06-01": {
+      "$ref": "scvmm/microsoft.scvmm/2024-06-01/types.json#/175"
+    },
+    "Microsoft.ScVmm/vmmServers@2024-06-01": {
+      "$ref": "scvmm/microsoft.scvmm/2024-06-01/types.json#/192"
+    },
+    "Microsoft.ScVmm/vmmServers/inventoryItems@2024-06-01": {
+      "$ref": "scvmm/microsoft.scvmm/2024-06-01/types.json#/224"
+    },
+    "Microsoft.ScVmm/virtualMachineInstances/hybridIdentityMetadata@2024-06-01": {
+      "$ref": "scvmm/microsoft.scvmm/2024-06-01/types.json#/239"
+    },
     "Microsoft.Search/searchServices@2015-02-28": {
       "$ref": "search/microsoft.search/2015-02-28/types.json#/12"
     },
@@ -49815,32 +50622,29 @@
     "Microsoft.Security/informationProtectionPolicies@2017-08-01-preview": {
       "$ref": "security/microsoft.security/2017-08-01-preview/types.json#/129"
     },
-    "Microsoft.Security/pricings@2017-08-01-preview": {
-      "$ref": "security/microsoft.security/2017-08-01-preview/types.json#/137"
-    },
     "Microsoft.Security/settings@2017-08-01-preview": {
-      "$ref": "security/microsoft.security/2017-08-01-preview/types.json#/147"
+      "$ref": "security/microsoft.security/2017-08-01-preview/types.json#/139"
     },
     "Microsoft.Security/workspaceSettings@2017-08-01-preview": {
-      "$ref": "security/microsoft.security/2017-08-01-preview/types.json#/152"
+      "$ref": "security/microsoft.security/2017-08-01-preview/types.json#/144"
     },
     "Microsoft.Security/iotSecuritySolutions@2017-08-01-preview": {
-      "$ref": "security/microsoft.security/2017-08-01-preview/types.json#/194"
+      "$ref": "security/microsoft.security/2017-08-01-preview/types.json#/186"
     },
     "Microsoft.Security/securityContacts@2017-08-01-preview": {
-      "$ref": "security/microsoft.security/2017-08-01-preview/types.json#/205"
+      "$ref": "security/microsoft.security/2017-08-01-preview/types.json#/197"
     },
     "Microsoft.Security/compliances@2017-08-01-preview": {
-      "$ref": "security/microsoft.security/2017-08-01-preview/types.json#/212"
+      "$ref": "security/microsoft.security/2017-08-01-preview/types.json#/204"
     },
     "Microsoft.Security/iotSecuritySolutions/analyticsModels@2017-08-01-preview": {
-      "$ref": "security/microsoft.security/2017-08-01-preview/types.json#/240"
+      "$ref": "security/microsoft.security/2017-08-01-preview/types.json#/232"
     },
     "Microsoft.Security/iotSecuritySolutions/analyticsModels/aggregatedAlerts@2017-08-01-preview": {
-      "$ref": "security/microsoft.security/2017-08-01-preview/types.json#/251"
+      "$ref": "security/microsoft.security/2017-08-01-preview/types.json#/243"
     },
     "Microsoft.Security/iotSecuritySolutions/analyticsModels/aggregatedRecommendations@2017-08-01-preview": {
-      "$ref": "security/microsoft.security/2017-08-01-preview/types.json#/262"
+      "$ref": "security/microsoft.security/2017-08-01-preview/types.json#/254"
     },
     "Microsoft.Security/complianceResults@2017-08-01": {
       "$ref": "security/microsoft.security/2017-08-01/types.json#/10"
@@ -53063,6 +53867,45 @@
     },
     "Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs/authorizationRules@2022-10-01-preview": {
       "$ref": "servicebus/microsoft.servicebus/2022-10-01-preview/types.json#/192"
+    },
+    "Microsoft.ServiceBus/namespaces@2023-01-01-preview": {
+      "$ref": "servicebus/microsoft.servicebus/2023-01-01-preview/types.json#/72"
+    },
+    "Microsoft.ServiceBus/namespaces/networkRuleSets@2023-01-01-preview": {
+      "$ref": "servicebus/microsoft.servicebus/2023-01-01-preview/types.json#/91"
+    },
+    "Microsoft.ServiceBus/namespaces/AuthorizationRules@2023-01-01-preview": {
+      "$ref": "servicebus/microsoft.servicebus/2023-01-01-preview/types.json#/102"
+    },
+    "Microsoft.ServiceBus/namespaces/privateEndpointConnections@2023-01-01-preview": {
+      "$ref": "servicebus/microsoft.servicebus/2023-01-01-preview/types.json#/106"
+    },
+    "Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs@2023-01-01-preview": {
+      "$ref": "servicebus/microsoft.servicebus/2023-01-01-preview/types.json#/119"
+    },
+    "Microsoft.ServiceBus/namespaces/migrationConfigurations@2023-01-01-preview": {
+      "$ref": "servicebus/microsoft.servicebus/2023-01-01-preview/types.json#/126"
+    },
+    "Microsoft.ServiceBus/namespaces/queues/authorizationRules@2023-01-01-preview": {
+      "$ref": "servicebus/microsoft.servicebus/2023-01-01-preview/types.json#/130"
+    },
+    "Microsoft.ServiceBus/namespaces/queues@2023-01-01-preview": {
+      "$ref": "servicebus/microsoft.servicebus/2023-01-01-preview/types.json#/147"
+    },
+    "Microsoft.ServiceBus/namespaces/topics/authorizationRules@2023-01-01-preview": {
+      "$ref": "servicebus/microsoft.servicebus/2023-01-01-preview/types.json#/151"
+    },
+    "Microsoft.ServiceBus/namespaces/topics@2023-01-01-preview": {
+      "$ref": "servicebus/microsoft.servicebus/2023-01-01-preview/types.json#/166"
+    },
+    "Microsoft.ServiceBus/namespaces/topics/subscriptions/rules@2023-01-01-preview": {
+      "$ref": "servicebus/microsoft.servicebus/2023-01-01-preview/types.json#/178"
+    },
+    "Microsoft.ServiceBus/namespaces/topics/subscriptions@2023-01-01-preview": {
+      "$ref": "servicebus/microsoft.servicebus/2023-01-01-preview/types.json#/194"
+    },
+    "Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs/authorizationRules@2023-01-01-preview": {
+      "$ref": "servicebus/microsoft.servicebus/2023-01-01-preview/types.json#/198"
     },
     "Microsoft.ServiceFabric/clusters@2016-09-01": {
       "$ref": "servicefabric/microsoft.servicefabric/2016-09-01/types.json#/71"
@@ -59231,6 +60074,21 @@
     },
     "Microsoft.StandbyPool/standbyVirtualMachinePools/standbyVirtualMachines@2023-12-01-preview": {
       "$ref": "standbypool/microsoft.standbypool/2023-12-01-preview/types.json#/58"
+    },
+    "Microsoft.StandbyPool/standbyContainerGroupPools@2024-03-01-preview": {
+      "$ref": "standbypool/microsoft.standbypool/2024-03-01-preview/types.json#/32"
+    },
+    "Microsoft.StandbyPool/standbyVirtualMachinePools@2024-03-01-preview": {
+      "$ref": "standbypool/microsoft.standbypool/2024-03-01-preview/types.json#/47"
+    },
+    "Microsoft.StandbyPool/standbyContainerGroupPools/runtimeViews@2024-03-01-preview": {
+      "$ref": "standbypool/microsoft.standbypool/2024-03-01-preview/types.json#/62"
+    },
+    "Microsoft.StandbyPool/standbyVirtualMachinePools/runtimeViews@2024-03-01-preview": {
+      "$ref": "standbypool/microsoft.standbypool/2024-03-01-preview/types.json#/75"
+    },
+    "Microsoft.StandbyPool/standbyVirtualMachinePools/standbyVirtualMachines@2024-03-01-preview": {
+      "$ref": "standbypool/microsoft.standbypool/2024-03-01-preview/types.json#/86"
     },
     "Microsoft.Storage/storageAccounts@2015-05-01-preview": {
       "$ref": "storage/microsoft.storage/2015-05-01-preview/types.json#/25"
@@ -70179,6 +71037,11 @@
         {
           "$ref": "cognitiveservices/microsoft.cognitiveservices/2024-04-01-preview/types.json#/276"
         }
+      ],
+      "2024-06-01-preview": [
+        {
+          "$ref": "cognitiveservices/microsoft.cognitiveservices/2024-06-01-preview/types.json#/287"
+        }
       ]
     },
     "microsoft.communication/communicationservices": {
@@ -70851,6 +71714,21 @@
       "2024-04-02-preview": [
         {
           "$ref": "containerservice/microsoft.containerservice/2024-04-02-preview/types.json#/622"
+        }
+      ],
+      "2024-05-01": [
+        {
+          "$ref": "containerservice/microsoft.containerservice/2024-05-01/types.json#/455"
+        }
+      ],
+      "2024-05-02-preview": [
+        {
+          "$ref": "containerservice/microsoft.containerservice/2024-05-02-preview/types.json#/622"
+        }
+      ],
+      "2024-06-02-preview": [
+        {
+          "$ref": "containerservice/microsoft.containerservice/2024-06-02-preview/types.json#/633"
         }
       ]
     },
@@ -71594,6 +72472,39 @@
         },
         {
           "$ref": "containerservice/microsoft.containerservice/2024-04-02-preview/types.json#/628"
+        }
+      ],
+      "2024-05-01": [
+        {
+          "$ref": "containerservice/microsoft.containerservice/2024-05-01/types.json#/459"
+        },
+        {
+          "$ref": "containerservice/microsoft.containerservice/2024-05-01/types.json#/460"
+        },
+        {
+          "$ref": "containerservice/microsoft.containerservice/2024-05-01/types.json#/461"
+        }
+      ],
+      "2024-05-02-preview": [
+        {
+          "$ref": "containerservice/microsoft.containerservice/2024-05-02-preview/types.json#/626"
+        },
+        {
+          "$ref": "containerservice/microsoft.containerservice/2024-05-02-preview/types.json#/627"
+        },
+        {
+          "$ref": "containerservice/microsoft.containerservice/2024-05-02-preview/types.json#/628"
+        }
+      ],
+      "2024-06-02-preview": [
+        {
+          "$ref": "containerservice/microsoft.containerservice/2024-06-02-preview/types.json#/637"
+        },
+        {
+          "$ref": "containerservice/microsoft.containerservice/2024-06-02-preview/types.json#/638"
+        },
+        {
+          "$ref": "containerservice/microsoft.containerservice/2024-06-02-preview/types.json#/639"
         }
       ]
     },
@@ -72404,7 +73315,7 @@
       ],
       "2018-06-01": [
         {
-          "$ref": "datafactory/microsoft.datafactory/2018-06-01/types.json#/2019"
+          "$ref": "datafactory/microsoft.datafactory/2018-06-01/types.json#/2020"
         }
       ]
     },
@@ -72558,6 +73469,18 @@
         }
       ]
     },
+    "microsoft.desktopvirtualization/hostpools": {
+      "2024-04-03": [
+        {
+          "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2024-04-03/types.json#/372"
+        }
+      ],
+      "2024-04-08-preview": [
+        {
+          "$ref": "desktopvirtualization/microsoft.desktopvirtualization/2024-04-08-preview/types.json#/455"
+        }
+      ]
+    },
     "microsoft.devcenter/projects": {
       "2024-06-01-preview": [
         {
@@ -72567,6 +73490,11 @@
       "2024-07-01-preview": [
         {
           "$ref": "devcenter/microsoft.devcenter/2024-07-01-preview/types.json#/672"
+        }
+      ],
+      "2024-08-01-preview": [
+        {
+          "$ref": "devcenter/microsoft.devcenter/2024-08-01-preview/types.json#/714"
         }
       ]
     },
@@ -73735,6 +74663,11 @@
         {
           "$ref": "hdinsight/microsoft.hdinsight/2023-08-15-preview/types.json#/176"
         }
+      ],
+      "2024-08-01-preview": [
+        {
+          "$ref": "hdinsight/microsoft.hdinsight/2024-08-01-preview/types.json#/177"
+        }
       ]
     },
     "microsoft.healthbot/healthbots": {
@@ -73746,6 +74679,11 @@
       "2023-05-01": [
         {
           "$ref": "healthbot/microsoft.healthbot/2023-05-01/types.json#/38"
+        }
+      ],
+      "2024-02-01": [
+        {
+          "$ref": "healthbot/microsoft.healthbot/2024-02-01/types.json#/39"
         }
       ]
     },
@@ -73842,6 +74780,11 @@
       "2024-07-01-preview": [
         {
           "$ref": "hybridkubernetes/microsoft.kubernetes/2024-07-01-preview/types.json#/74"
+        }
+      ],
+      "2024-07-15-preview": [
+        {
+          "$ref": "hybridkubernetes/microsoft.kubernetes/2024-07-15-preview/types.json#/74"
         }
       ]
     },
@@ -74816,6 +75759,23 @@
         {
           "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-04-01/types.json#/1879"
         }
+      ],
+      "2024-07-01-preview": [
+        {
+          "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/2113"
+        },
+        {
+          "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/2115"
+        },
+        {
+          "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/2116"
+        },
+        {
+          "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/2118"
+        },
+        {
+          "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/2138"
+        }
       ]
     },
     "microsoft.machinelearningservices/workspaces/computes": {
@@ -75087,6 +76047,14 @@
         {
           "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-04-01/types.json#/1898"
         }
+      ],
+      "2024-07-01-preview": [
+        {
+          "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/2085"
+        },
+        {
+          "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/2093"
+        }
       ]
     },
     "microsoft.machinelearningservices/workspaces/batchendpoints": {
@@ -75168,6 +76136,11 @@
       "2024-04-01": [
         {
           "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-04-01/types.json#/1901"
+        }
+      ],
+      "2024-07-01-preview": [
+        {
+          "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/2094"
         }
       ]
     },
@@ -75251,6 +76224,11 @@
         {
           "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-04-01/types.json#/1911"
         }
+      ],
+      "2024-07-01-preview": [
+        {
+          "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/2105"
+        }
       ]
     },
     "microsoft.machinelearningservices/workspaces/onlineendpoints": {
@@ -75333,6 +76311,11 @@
         {
           "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-04-01/types.json#/1912"
         }
+      ],
+      "2024-07-01-preview": [
+        {
+          "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/2106"
+        }
       ]
     },
     "microsoft.machinelearningservices/workspaces/featuresets/versions": {
@@ -75380,6 +76363,11 @@
         {
           "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-04-01/types.json#/1900"
         }
+      ],
+      "2024-07-01-preview": [
+        {
+          "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/2140"
+        }
       ]
     },
     "microsoft.machinelearningservices/workspaces/serverlessendpoints": {
@@ -75402,6 +76390,11 @@
         {
           "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-04-01/types.json#/1913"
         }
+      ],
+      "2024-07-01-preview": [
+        {
+          "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/2107"
+        }
       ]
     },
     "microsoft.machinelearningservices/workspaces/endpoints": {
@@ -75413,6 +76406,11 @@
       "2024-04-01-preview": [
         {
           "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-04-01-preview/types.json#/2380"
+        }
+      ],
+      "2024-07-01-preview": [
+        {
+          "$ref": "machinelearningservices/microsoft.machinelearningservices/2024-07-01-preview/types.json#/2143"
         }
       ]
     },
@@ -75868,6 +76866,19 @@
       "2023-11-01": [
         {
           "$ref": "netapp/microsoft.netapp/2023-11-01/types.json#/265"
+        }
+      ],
+      "2024-03-01-preview": [
+        {
+          "$ref": "netapp/microsoft.netapp/2024-03-01-preview/types.json#/343"
+        },
+        {
+          "$ref": "netapp/microsoft.netapp/2024-03-01-preview/types.json#/354"
+        }
+      ],
+      "2024-03-01": [
+        {
+          "$ref": "netapp/microsoft.netapp/2024-03-01/types.json#/265"
         }
       ]
     },
@@ -76389,6 +77400,16 @@
         {
           "$ref": "oracle/oracle.database/2023-09-01/types.json#/482"
         }
+      ],
+      "2024-06-01-preview": [
+        {
+          "$ref": "oracle/oracle.database/2024-06-01-preview/types.json#/487"
+        }
+      ],
+      "2024-06-01": [
+        {
+          "$ref": "oracle/oracle.database/2024-06-01/types.json#/487"
+        }
       ]
     },
     "oracle.database/oraclesubscriptions": {
@@ -76413,6 +77434,28 @@
         {
           "$ref": "oracle/oracle.database/2023-09-01/types.json#/488"
         }
+      ],
+      "2024-06-01-preview": [
+        {
+          "$ref": "oracle/oracle.database/2024-06-01-preview/types.json#/489"
+        },
+        {
+          "$ref": "oracle/oracle.database/2024-06-01-preview/types.json#/491"
+        },
+        {
+          "$ref": "oracle/oracle.database/2024-06-01-preview/types.json#/493"
+        }
+      ],
+      "2024-06-01": [
+        {
+          "$ref": "oracle/oracle.database/2024-06-01/types.json#/489"
+        },
+        {
+          "$ref": "oracle/oracle.database/2024-06-01/types.json#/491"
+        },
+        {
+          "$ref": "oracle/oracle.database/2024-06-01/types.json#/493"
+        }
       ]
     },
     "microsoft.orbital/spacecrafts": {
@@ -76430,24 +77473,24 @@
     "microsoft.orbital/groundstations": {
       "2024-03-01-preview": [
         {
-          "$ref": "orbital/microsoft.orbital/2024-03-01-preview/types.json#/68"
+          "$ref": "orbital/microsoft.orbital/2024-03-01-preview/types.json#/56"
         }
       ],
       "2024-03-01": [
         {
-          "$ref": "orbital/microsoft.orbital/2024-03-01/types.json#/68"
+          "$ref": "orbital/microsoft.orbital/2024-03-01/types.json#/56"
         }
       ]
     },
     "microsoft.orbital/edgesites": {
       "2024-03-01-preview": [
         {
-          "$ref": "orbital/microsoft.orbital/2024-03-01-preview/types.json#/69"
+          "$ref": "orbital/microsoft.orbital/2024-03-01-preview/types.json#/57"
         }
       ],
       "2024-03-01": [
         {
-          "$ref": "orbital/microsoft.orbital/2024-03-01/types.json#/69"
+          "$ref": "orbital/microsoft.orbital/2024-03-01/types.json#/57"
         }
       ]
     },
@@ -77242,6 +78285,11 @@
         {
           "$ref": "servicebus/microsoft.servicebus/2022-10-01-preview/types.json#/194"
         }
+      ],
+      "2023-01-01-preview": [
+        {
+          "$ref": "servicebus/microsoft.servicebus/2023-01-01-preview/types.json#/200"
+        }
       ]
     },
     "microsoft.servicebus/namespaces/queues/authorizationrules": {
@@ -77283,6 +78331,11 @@
       "2022-10-01-preview": [
         {
           "$ref": "servicebus/microsoft.servicebus/2022-10-01-preview/types.json#/196"
+        }
+      ],
+      "2023-01-01-preview": [
+        {
+          "$ref": "servicebus/microsoft.servicebus/2023-01-01-preview/types.json#/202"
         }
       ]
     },
@@ -77326,6 +78379,11 @@
         {
           "$ref": "servicebus/microsoft.servicebus/2022-10-01-preview/types.json#/197"
         }
+      ],
+      "2023-01-01-preview": [
+        {
+          "$ref": "servicebus/microsoft.servicebus/2023-01-01-preview/types.json#/203"
+        }
       ]
     },
     "microsoft.servicebus/namespaces/disasterrecoveryconfigs/authorizationrules": {
@@ -77362,6 +78420,11 @@
       "2022-10-01-preview": [
         {
           "$ref": "servicebus/microsoft.servicebus/2022-10-01-preview/types.json#/195"
+        }
+      ],
+      "2023-01-01-preview": [
+        {
+          "$ref": "servicebus/microsoft.servicebus/2023-01-01-preview/types.json#/201"
         }
       ]
     },
