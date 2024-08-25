@@ -33,7 +33,7 @@
     "@types/yargs": "^17.0.33",
     "@typescript-eslint/eslint-plugin": "^6.8.0",
     "@typescript-eslint/parser": "^6.7.5",
-    "async": "^3.2.5",
+    "async": "^3.2.6",
     "autorest": "^3.7.1",
     "bicep-types": "file:../../bicep-types/src/bicep-types",
     "colors": "^1.4.0",
