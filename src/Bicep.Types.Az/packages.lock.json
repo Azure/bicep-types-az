@@ -4,11 +4,11 @@
     ".NETStandard,Version=v2.0": {
       "Azure.Bicep.Types": {
         "type": "Direct",
-        "requested": "[0.5.9, )",
-        "resolved": "0.5.9",
-        "contentHash": "Wh1q5ul+OTMtDCuTOjDQffEH9aW4+952IuIMTWZgzJPOPPLvwPxBOJhvNLoAS0omlxKtToslQ49td/RkKYWuhQ==",
+        "requested": "[0.5.81, )",
+        "resolved": "0.5.81",
+        "contentHash": "A/7KLe6jwmS1Dc04tGPc5ABkQfxfgb1dtjvji772s9ji/5tG9nkb/n0aSdd45jJzga0eUvbA9uwjzDIXreW6Lg==",
         "dependencies": {
-          "System.Text.Json": "8.0.2"
+          "System.Text.Json": "8.0.4"
         }
       },
       "Microsoft.SourceLink.GitHub": {
@@ -23,9 +23,9 @@
       },
       "Nerdbank.GitVersioning": {
         "type": "Direct",
-        "requested": "[3.6.133, )",
-        "resolved": "3.6.133",
-        "contentHash": "VZWMd5YAeDxpjWjAP/X6bAxnRMiEf6tES/ITN0X5CHJgkWLLeHGmEALivmTAfYM6P+P/3Szy6VCITUAkqjcHVw=="
+        "requested": "[3.6.143, )",
+        "resolved": "3.6.143",
+        "contentHash": "N24MtdLq4PmdJ2woTQd9515q0I1jeO/DlimYCB/GoRd510Fc9dk9H6YaN8MPPrVF8RHrIalCUfWbWvcoarYeoQ=="
       },
       "NETStandard.Library": {
         "type": "Direct",
@@ -96,8 +96,8 @@
       },
       "System.Text.Json": {
         "type": "Transitive",
-        "resolved": "8.0.2",
-        "contentHash": "29KA2StjWDYp32FvREifawRtNpTziLE1xyuDV9pVQ+MsaE9bIcIieP0io/eZZeLMxR+Nx9zI55RtUtpVpEIdeg==",
+        "resolved": "8.0.4",
+        "contentHash": "bAkhgDJ88XTsqczoxEMliSrpijKZHhbJQldhAmObj/RbrN3sU5dcokuXmWJWsdQAhiMJ9bTayWsL1C9fbbCRhw==",
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "8.0.0",
           "System.Buffers": "4.5.1",
