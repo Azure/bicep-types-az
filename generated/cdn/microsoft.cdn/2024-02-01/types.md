@@ -246,18 +246,18 @@
 * **cacheBehavior**: 'BypassCache' | 'Override' | 'SetIfMissing' | string (Required): Caching behavior for the requests
 * **cacheDuration**: string: The duration for which the content needs to be cached. Allowed format is [d.]hh:mm:ss
 * **cacheType**: 'All' | string (Required): The level at which the content needs to be cached.
-* **typeName**: 'DeliveryRuleCacheExpirationActionParameters' | string (Required)
+* **typeName**: 'DeliveryRuleCacheExpirationActionParameters' | 'DeliveryRuleCacheKeyQueryStringBehaviorActionParameters' | 'DeliveryRuleHeaderActionParameters' | 'DeliveryRuleOriginGroupOverrideActionParameters' | 'DeliveryRuleRouteConfigurationOverrideActionParameters' | 'DeliveryRuleUrlRedirectActionParameters' | 'DeliveryRuleUrlRewriteActionParameters' | 'DeliveryRuleUrlSigningActionParameters' | string (Required)
 
 ## CacheKeyQueryStringActionParameters
 ### Properties
 * **queryParameters**: string: query parameters to include or exclude (comma separated).
 * **queryStringBehavior**: 'Exclude' | 'ExcludeAll' | 'Include' | 'IncludeAll' | string (Required): Caching behavior for the requests
-* **typeName**: 'DeliveryRuleCacheKeyQueryStringBehaviorActionParameters' | string (Required)
+* **typeName**: 'DeliveryRuleCacheExpirationActionParameters' | 'DeliveryRuleCacheKeyQueryStringBehaviorActionParameters' | 'DeliveryRuleHeaderActionParameters' | 'DeliveryRuleOriginGroupOverrideActionParameters' | 'DeliveryRuleRouteConfigurationOverrideActionParameters' | 'DeliveryRuleUrlRedirectActionParameters' | 'DeliveryRuleUrlRewriteActionParameters' | 'DeliveryRuleUrlSigningActionParameters' | string (Required)
 
 ## CdnCertificateSourceParameters
 ### Properties
 * **certificateType**: 'Dedicated' | 'Shared' | string (Required): Type of certificate used
-* **typeName**: 'CdnCertificateSourceParameters' | string (Required)
+* **typeName**: 'CdnCertificateSourceParameters' | 'KeyVaultCertificateSourceParameters' | string (Required)
 
 ## CdnEndpoint
 ### Properties
@@ -285,7 +285,7 @@
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' | string (Required): Describes operator to be matched
 * **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
-* **typeName**: 'DeliveryRuleClientPortConditionParameters' | string (Required)
+* **typeName**: 'DeliveryRuleClientPortConditionParameters' | 'DeliveryRuleCookiesConditionParameters' | 'DeliveryRuleHostNameConditionParameters' | 'DeliveryRuleHttpVersionConditionParameters' | 'DeliveryRuleIsDeviceConditionParameters' | 'DeliveryRulePostArgsConditionParameters' | 'DeliveryRuleQueryStringConditionParameters' | 'DeliveryRuleRemoteAddressConditionParameters' | 'DeliveryRuleRequestBodyConditionParameters' | 'DeliveryRuleRequestHeaderConditionParameters' | 'DeliveryRuleRequestMethodConditionParameters' | 'DeliveryRuleRequestSchemeConditionParameters' | 'DeliveryRuleRequestUriConditionParameters' | 'DeliveryRuleServerPortConditionParameters' | 'DeliveryRuleSocketAddrConditionParameters' | 'DeliveryRuleSslProtocolConditionParameters' | 'DeliveryRuleUrlFileExtensionMatchConditionParameters' | 'DeliveryRuleUrlFilenameConditionParameters' | 'DeliveryRuleUrlPathMatchConditionParameters' | string (Required)
 
 ## CompressionSettings
 ### Properties
@@ -299,7 +299,7 @@
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' | string (Required): Describes operator to be matched
 * **selector**: string: Name of Cookies to be matched
 * **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
-* **typeName**: 'DeliveryRuleCookiesConditionParameters' | string (Required)
+* **typeName**: 'DeliveryRuleClientPortConditionParameters' | 'DeliveryRuleCookiesConditionParameters' | 'DeliveryRuleHostNameConditionParameters' | 'DeliveryRuleHttpVersionConditionParameters' | 'DeliveryRuleIsDeviceConditionParameters' | 'DeliveryRulePostArgsConditionParameters' | 'DeliveryRuleQueryStringConditionParameters' | 'DeliveryRuleRemoteAddressConditionParameters' | 'DeliveryRuleRequestBodyConditionParameters' | 'DeliveryRuleRequestHeaderConditionParameters' | 'DeliveryRuleRequestMethodConditionParameters' | 'DeliveryRuleRequestSchemeConditionParameters' | 'DeliveryRuleRequestUriConditionParameters' | 'DeliveryRuleServerPortConditionParameters' | 'DeliveryRuleSocketAddrConditionParameters' | 'DeliveryRuleSslProtocolConditionParameters' | 'DeliveryRuleUrlFileExtensionMatchConditionParameters' | 'DeliveryRuleUrlFilenameConditionParameters' | 'DeliveryRuleUrlPathMatchConditionParameters' | string (Required)
 
 ## CustomDomainHttpsParameters
 * **Discriminator**: certificateSource
@@ -385,12 +385,12 @@
 
 ## DeliveryRule
 ### Properties
-* **actions**: [DeliveryRuleActionAutoGenerated](#deliveryruleactionautogenerated)[] (Required): A list of actions that are executed when all the conditions of a rule are satisfied.
+* **actions**: [DeliveryRuleAction](#deliveryruleaction)[] (Required): A list of actions that are executed when all the conditions of a rule are satisfied.
 * **conditions**: [DeliveryRuleCondition](#deliveryrulecondition)[]: A list of conditions that must be matched for the actions to be executed
 * **name**: string: Name of the rule
 * **order**: int (Required): The order in which the rules are applied for the endpoint. Possible values {0,1,2,3,………}. A rule with a lesser order will be applied before a rule with a greater order. Rule with order 0 is a special rule. It does not require any condition and actions listed in it will always be applied.
 
-## DeliveryRuleActionAutoGenerated
+## DeliveryRuleAction
 * **Discriminator**: name
 
 ### Base Properties
@@ -589,7 +589,7 @@
 ### Properties
 * **headerAction**: 'Append' | 'Delete' | 'Overwrite' | string (Required): Action to perform
 * **headerName**: string (Required): Name of the header to modify
-* **typeName**: 'DeliveryRuleHeaderActionParameters' | string (Required)
+* **typeName**: 'DeliveryRuleCacheExpirationActionParameters' | 'DeliveryRuleCacheKeyQueryStringBehaviorActionParameters' | 'DeliveryRuleHeaderActionParameters' | 'DeliveryRuleOriginGroupOverrideActionParameters' | 'DeliveryRuleRouteConfigurationOverrideActionParameters' | 'DeliveryRuleUrlRedirectActionParameters' | 'DeliveryRuleUrlRewriteActionParameters' | 'DeliveryRuleUrlSigningActionParameters' | string (Required)
 * **value**: string: Value for the specified action
 
 ## HealthProbeParameters
@@ -605,7 +605,7 @@
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' | string (Required): Describes operator to be matched
 * **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
-* **typeName**: 'DeliveryRuleHostNameConditionParameters' | string (Required)
+* **typeName**: 'DeliveryRuleClientPortConditionParameters' | 'DeliveryRuleCookiesConditionParameters' | 'DeliveryRuleHostNameConditionParameters' | 'DeliveryRuleHttpVersionConditionParameters' | 'DeliveryRuleIsDeviceConditionParameters' | 'DeliveryRulePostArgsConditionParameters' | 'DeliveryRuleQueryStringConditionParameters' | 'DeliveryRuleRemoteAddressConditionParameters' | 'DeliveryRuleRequestBodyConditionParameters' | 'DeliveryRuleRequestHeaderConditionParameters' | 'DeliveryRuleRequestMethodConditionParameters' | 'DeliveryRuleRequestSchemeConditionParameters' | 'DeliveryRuleRequestUriConditionParameters' | 'DeliveryRuleServerPortConditionParameters' | 'DeliveryRuleSocketAddrConditionParameters' | 'DeliveryRuleSslProtocolConditionParameters' | 'DeliveryRuleUrlFileExtensionMatchConditionParameters' | 'DeliveryRuleUrlFilenameConditionParameters' | 'DeliveryRuleUrlPathMatchConditionParameters' | string (Required)
 
 ## HttpErrorRangeParameters
 ### Properties
@@ -618,7 +618,7 @@
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Equal' | string (Required): Describes operator to be matched
 * **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
-* **typeName**: 'DeliveryRuleHttpVersionConditionParameters' | string (Required)
+* **typeName**: 'DeliveryRuleClientPortConditionParameters' | 'DeliveryRuleCookiesConditionParameters' | 'DeliveryRuleHostNameConditionParameters' | 'DeliveryRuleHttpVersionConditionParameters' | 'DeliveryRuleIsDeviceConditionParameters' | 'DeliveryRulePostArgsConditionParameters' | 'DeliveryRuleQueryStringConditionParameters' | 'DeliveryRuleRemoteAddressConditionParameters' | 'DeliveryRuleRequestBodyConditionParameters' | 'DeliveryRuleRequestHeaderConditionParameters' | 'DeliveryRuleRequestMethodConditionParameters' | 'DeliveryRuleRequestSchemeConditionParameters' | 'DeliveryRuleRequestUriConditionParameters' | 'DeliveryRuleServerPortConditionParameters' | 'DeliveryRuleSocketAddrConditionParameters' | 'DeliveryRuleSslProtocolConditionParameters' | 'DeliveryRuleUrlFileExtensionMatchConditionParameters' | 'DeliveryRuleUrlFilenameConditionParameters' | 'DeliveryRuleUrlPathMatchConditionParameters' | string (Required)
 
 ## IsDeviceMatchConditionParameters
 ### Properties
@@ -626,7 +626,7 @@
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Equal' | string (Required): Describes operator to be matched
 * **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
-* **typeName**: 'DeliveryRuleIsDeviceConditionParameters' | string (Required)
+* **typeName**: 'DeliveryRuleClientPortConditionParameters' | 'DeliveryRuleCookiesConditionParameters' | 'DeliveryRuleHostNameConditionParameters' | 'DeliveryRuleHttpVersionConditionParameters' | 'DeliveryRuleIsDeviceConditionParameters' | 'DeliveryRulePostArgsConditionParameters' | 'DeliveryRuleQueryStringConditionParameters' | 'DeliveryRuleRemoteAddressConditionParameters' | 'DeliveryRuleRequestBodyConditionParameters' | 'DeliveryRuleRequestHeaderConditionParameters' | 'DeliveryRuleRequestMethodConditionParameters' | 'DeliveryRuleRequestSchemeConditionParameters' | 'DeliveryRuleRequestUriConditionParameters' | 'DeliveryRuleServerPortConditionParameters' | 'DeliveryRuleSocketAddrConditionParameters' | 'DeliveryRuleSslProtocolConditionParameters' | 'DeliveryRuleUrlFileExtensionMatchConditionParameters' | 'DeliveryRuleUrlFilenameConditionParameters' | 'DeliveryRuleUrlPathMatchConditionParameters' | string (Required)
 
 ## KeyVaultCertificateSourceParameters
 ### Properties
@@ -635,7 +635,7 @@
 * **secretName**: string (Required): The name of Key Vault Secret (representing the full certificate PFX) in Key Vault.
 * **secretVersion**: string: The version(GUID) of Key Vault Secret in Key Vault.
 * **subscriptionId**: string (Required): Subscription Id of the user's Key Vault containing the SSL certificate
-* **typeName**: 'KeyVaultCertificateSourceParameters' | string (Required)
+* **typeName**: 'CdnCertificateSourceParameters' | 'KeyVaultCertificateSourceParameters' | string (Required)
 * **updateRule**: 'NoAction' | string (Required): Describes the action that shall be taken when the certificate is updated in Key Vault.
 * **vaultName**: string (Required): The name of the user's Key Vault containing the SSL certificate
 
@@ -700,7 +700,7 @@
 ## OriginGroupOverrideActionParameters
 ### Properties
 * **originGroup**: [ResourceReference](#resourcereference) (Required): defines the OriginGroup that would override the DefaultOriginGroup.
-* **typeName**: 'DeliveryRuleOriginGroupOverrideActionParameters' | string (Required)
+* **typeName**: 'DeliveryRuleCacheExpirationActionParameters' | 'DeliveryRuleCacheKeyQueryStringBehaviorActionParameters' | 'DeliveryRuleHeaderActionParameters' | 'DeliveryRuleOriginGroupOverrideActionParameters' | 'DeliveryRuleRouteConfigurationOverrideActionParameters' | 'DeliveryRuleUrlRedirectActionParameters' | 'DeliveryRuleUrlRewriteActionParameters' | 'DeliveryRuleUrlSigningActionParameters' | string (Required)
 
 ## OriginGroupProperties
 ### Properties
@@ -743,7 +743,7 @@
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' | string (Required): Describes operator to be matched
 * **selector**: string: Name of PostArg to be matched
 * **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
-* **typeName**: 'DeliveryRulePostArgsConditionParameters' | string (Required)
+* **typeName**: 'DeliveryRuleClientPortConditionParameters' | 'DeliveryRuleCookiesConditionParameters' | 'DeliveryRuleHostNameConditionParameters' | 'DeliveryRuleHttpVersionConditionParameters' | 'DeliveryRuleIsDeviceConditionParameters' | 'DeliveryRulePostArgsConditionParameters' | 'DeliveryRuleQueryStringConditionParameters' | 'DeliveryRuleRemoteAddressConditionParameters' | 'DeliveryRuleRequestBodyConditionParameters' | 'DeliveryRuleRequestHeaderConditionParameters' | 'DeliveryRuleRequestMethodConditionParameters' | 'DeliveryRuleRequestSchemeConditionParameters' | 'DeliveryRuleRequestUriConditionParameters' | 'DeliveryRuleServerPortConditionParameters' | 'DeliveryRuleSocketAddrConditionParameters' | 'DeliveryRuleSslProtocolConditionParameters' | 'DeliveryRuleUrlFileExtensionMatchConditionParameters' | 'DeliveryRuleUrlFilenameConditionParameters' | 'DeliveryRuleUrlPathMatchConditionParameters' | string (Required)
 
 ## ProfileLogScrubbing
 ### Properties
@@ -777,7 +777,7 @@
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' | string (Required): Describes operator to be matched
 * **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
-* **typeName**: 'DeliveryRuleQueryStringConditionParameters' | string (Required)
+* **typeName**: 'DeliveryRuleClientPortConditionParameters' | 'DeliveryRuleCookiesConditionParameters' | 'DeliveryRuleHostNameConditionParameters' | 'DeliveryRuleHttpVersionConditionParameters' | 'DeliveryRuleIsDeviceConditionParameters' | 'DeliveryRulePostArgsConditionParameters' | 'DeliveryRuleQueryStringConditionParameters' | 'DeliveryRuleRemoteAddressConditionParameters' | 'DeliveryRuleRequestBodyConditionParameters' | 'DeliveryRuleRequestHeaderConditionParameters' | 'DeliveryRuleRequestMethodConditionParameters' | 'DeliveryRuleRequestSchemeConditionParameters' | 'DeliveryRuleRequestUriConditionParameters' | 'DeliveryRuleServerPortConditionParameters' | 'DeliveryRuleSocketAddrConditionParameters' | 'DeliveryRuleSslProtocolConditionParameters' | 'DeliveryRuleUrlFileExtensionMatchConditionParameters' | 'DeliveryRuleUrlFilenameConditionParameters' | 'DeliveryRuleUrlPathMatchConditionParameters' | string (Required)
 
 ## RateLimitRule
 ### Properties
@@ -799,7 +799,7 @@
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'GeoMatch' | 'IPMatch' | string (Required): Describes operator to be matched
 * **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
-* **typeName**: 'DeliveryRuleRemoteAddressConditionParameters' | string (Required)
+* **typeName**: 'DeliveryRuleClientPortConditionParameters' | 'DeliveryRuleCookiesConditionParameters' | 'DeliveryRuleHostNameConditionParameters' | 'DeliveryRuleHttpVersionConditionParameters' | 'DeliveryRuleIsDeviceConditionParameters' | 'DeliveryRulePostArgsConditionParameters' | 'DeliveryRuleQueryStringConditionParameters' | 'DeliveryRuleRemoteAddressConditionParameters' | 'DeliveryRuleRequestBodyConditionParameters' | 'DeliveryRuleRequestHeaderConditionParameters' | 'DeliveryRuleRequestMethodConditionParameters' | 'DeliveryRuleRequestSchemeConditionParameters' | 'DeliveryRuleRequestUriConditionParameters' | 'DeliveryRuleServerPortConditionParameters' | 'DeliveryRuleSocketAddrConditionParameters' | 'DeliveryRuleSslProtocolConditionParameters' | 'DeliveryRuleUrlFileExtensionMatchConditionParameters' | 'DeliveryRuleUrlFilenameConditionParameters' | 'DeliveryRuleUrlPathMatchConditionParameters' | string (Required)
 
 ## RequestBodyMatchConditionParameters
 ### Properties
@@ -807,7 +807,7 @@
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' | string (Required): Describes operator to be matched
 * **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
-* **typeName**: 'DeliveryRuleRequestBodyConditionParameters' | string (Required)
+* **typeName**: 'DeliveryRuleClientPortConditionParameters' | 'DeliveryRuleCookiesConditionParameters' | 'DeliveryRuleHostNameConditionParameters' | 'DeliveryRuleHttpVersionConditionParameters' | 'DeliveryRuleIsDeviceConditionParameters' | 'DeliveryRulePostArgsConditionParameters' | 'DeliveryRuleQueryStringConditionParameters' | 'DeliveryRuleRemoteAddressConditionParameters' | 'DeliveryRuleRequestBodyConditionParameters' | 'DeliveryRuleRequestHeaderConditionParameters' | 'DeliveryRuleRequestMethodConditionParameters' | 'DeliveryRuleRequestSchemeConditionParameters' | 'DeliveryRuleRequestUriConditionParameters' | 'DeliveryRuleServerPortConditionParameters' | 'DeliveryRuleSocketAddrConditionParameters' | 'DeliveryRuleSslProtocolConditionParameters' | 'DeliveryRuleUrlFileExtensionMatchConditionParameters' | 'DeliveryRuleUrlFilenameConditionParameters' | 'DeliveryRuleUrlPathMatchConditionParameters' | string (Required)
 
 ## RequestHeaderMatchConditionParameters
 ### Properties
@@ -816,7 +816,7 @@
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' | string (Required): Describes operator to be matched
 * **selector**: string: Name of Header to be matched
 * **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
-* **typeName**: 'DeliveryRuleRequestHeaderConditionParameters' | string (Required)
+* **typeName**: 'DeliveryRuleClientPortConditionParameters' | 'DeliveryRuleCookiesConditionParameters' | 'DeliveryRuleHostNameConditionParameters' | 'DeliveryRuleHttpVersionConditionParameters' | 'DeliveryRuleIsDeviceConditionParameters' | 'DeliveryRulePostArgsConditionParameters' | 'DeliveryRuleQueryStringConditionParameters' | 'DeliveryRuleRemoteAddressConditionParameters' | 'DeliveryRuleRequestBodyConditionParameters' | 'DeliveryRuleRequestHeaderConditionParameters' | 'DeliveryRuleRequestMethodConditionParameters' | 'DeliveryRuleRequestSchemeConditionParameters' | 'DeliveryRuleRequestUriConditionParameters' | 'DeliveryRuleServerPortConditionParameters' | 'DeliveryRuleSocketAddrConditionParameters' | 'DeliveryRuleSslProtocolConditionParameters' | 'DeliveryRuleUrlFileExtensionMatchConditionParameters' | 'DeliveryRuleUrlFilenameConditionParameters' | 'DeliveryRuleUrlPathMatchConditionParameters' | string (Required)
 
 ## RequestMethodMatchConditionParameters
 ### Properties
@@ -824,7 +824,7 @@
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Equal' | string (Required): Describes operator to be matched
 * **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
-* **typeName**: 'DeliveryRuleRequestMethodConditionParameters' | string (Required)
+* **typeName**: 'DeliveryRuleClientPortConditionParameters' | 'DeliveryRuleCookiesConditionParameters' | 'DeliveryRuleHostNameConditionParameters' | 'DeliveryRuleHttpVersionConditionParameters' | 'DeliveryRuleIsDeviceConditionParameters' | 'DeliveryRulePostArgsConditionParameters' | 'DeliveryRuleQueryStringConditionParameters' | 'DeliveryRuleRemoteAddressConditionParameters' | 'DeliveryRuleRequestBodyConditionParameters' | 'DeliveryRuleRequestHeaderConditionParameters' | 'DeliveryRuleRequestMethodConditionParameters' | 'DeliveryRuleRequestSchemeConditionParameters' | 'DeliveryRuleRequestUriConditionParameters' | 'DeliveryRuleServerPortConditionParameters' | 'DeliveryRuleSocketAddrConditionParameters' | 'DeliveryRuleSslProtocolConditionParameters' | 'DeliveryRuleUrlFileExtensionMatchConditionParameters' | 'DeliveryRuleUrlFilenameConditionParameters' | 'DeliveryRuleUrlPathMatchConditionParameters' | string (Required)
 
 ## RequestSchemeMatchConditionParameters
 ### Properties
@@ -832,7 +832,7 @@
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Equal' | string (Required): Describes operator to be matched
 * **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
-* **typeName**: 'DeliveryRuleRequestSchemeConditionParameters' | string (Required)
+* **typeName**: 'DeliveryRuleClientPortConditionParameters' | 'DeliveryRuleCookiesConditionParameters' | 'DeliveryRuleHostNameConditionParameters' | 'DeliveryRuleHttpVersionConditionParameters' | 'DeliveryRuleIsDeviceConditionParameters' | 'DeliveryRulePostArgsConditionParameters' | 'DeliveryRuleQueryStringConditionParameters' | 'DeliveryRuleRemoteAddressConditionParameters' | 'DeliveryRuleRequestBodyConditionParameters' | 'DeliveryRuleRequestHeaderConditionParameters' | 'DeliveryRuleRequestMethodConditionParameters' | 'DeliveryRuleRequestSchemeConditionParameters' | 'DeliveryRuleRequestUriConditionParameters' | 'DeliveryRuleServerPortConditionParameters' | 'DeliveryRuleSocketAddrConditionParameters' | 'DeliveryRuleSslProtocolConditionParameters' | 'DeliveryRuleUrlFileExtensionMatchConditionParameters' | 'DeliveryRuleUrlFilenameConditionParameters' | 'DeliveryRuleUrlPathMatchConditionParameters' | string (Required)
 
 ## RequestUriMatchConditionParameters
 ### Properties
@@ -840,7 +840,7 @@
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' | string (Required): Describes operator to be matched
 * **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
-* **typeName**: 'DeliveryRuleRequestUriConditionParameters' | string (Required)
+* **typeName**: 'DeliveryRuleClientPortConditionParameters' | 'DeliveryRuleCookiesConditionParameters' | 'DeliveryRuleHostNameConditionParameters' | 'DeliveryRuleHttpVersionConditionParameters' | 'DeliveryRuleIsDeviceConditionParameters' | 'DeliveryRulePostArgsConditionParameters' | 'DeliveryRuleQueryStringConditionParameters' | 'DeliveryRuleRemoteAddressConditionParameters' | 'DeliveryRuleRequestBodyConditionParameters' | 'DeliveryRuleRequestHeaderConditionParameters' | 'DeliveryRuleRequestMethodConditionParameters' | 'DeliveryRuleRequestSchemeConditionParameters' | 'DeliveryRuleRequestUriConditionParameters' | 'DeliveryRuleServerPortConditionParameters' | 'DeliveryRuleSocketAddrConditionParameters' | 'DeliveryRuleSslProtocolConditionParameters' | 'DeliveryRuleUrlFileExtensionMatchConditionParameters' | 'DeliveryRuleUrlFilenameConditionParameters' | 'DeliveryRuleUrlPathMatchConditionParameters' | string (Required)
 
 ## ResourceReference
 ### Properties
@@ -856,7 +856,7 @@
 ### Properties
 * **cacheConfiguration**: [CacheConfiguration](#cacheconfiguration): The caching configuration associated with this rule. To disable caching, do not provide a cacheConfiguration object.
 * **originGroupOverride**: [OriginGroupOverride](#origingroupoverride): A reference to the origin group override configuration. Leave empty to use the default origin group on route.
-* **typeName**: 'DeliveryRuleRouteConfigurationOverrideActionParameters' | string (Required)
+* **typeName**: 'DeliveryRuleCacheExpirationActionParameters' | 'DeliveryRuleCacheKeyQueryStringBehaviorActionParameters' | 'DeliveryRuleHeaderActionParameters' | 'DeliveryRuleOriginGroupOverrideActionParameters' | 'DeliveryRuleRouteConfigurationOverrideActionParameters' | 'DeliveryRuleUrlRedirectActionParameters' | 'DeliveryRuleUrlRewriteActionParameters' | 'DeliveryRuleUrlSigningActionParameters' | string (Required)
 
 ## RouteProperties
 ### Properties
@@ -877,7 +877,7 @@
 
 ## RuleProperties
 ### Properties
-* **actions**: [DeliveryRuleActionAutoGenerated](#deliveryruleactionautogenerated)[]: A list of actions that are executed when all the conditions of a rule are satisfied.
+* **actions**: [DeliveryRuleAction](#deliveryruleaction)[]: A list of actions that are executed when all the conditions of a rule are satisfied.
 * **conditions**: [DeliveryRuleCondition](#deliveryrulecondition)[]: A list of conditions that must be matched for the actions to be executed
 * **deploymentStatus**: 'Failed' | 'InProgress' | 'NotStarted' | 'Succeeded' | string (ReadOnly)
 * **matchProcessingBehavior**: 'Continue' | 'Stop' | string: If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue.
@@ -969,7 +969,7 @@
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' | string (Required): Describes operator to be matched
 * **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
-* **typeName**: 'DeliveryRuleServerPortConditionParameters' | string (Required)
+* **typeName**: 'DeliveryRuleClientPortConditionParameters' | 'DeliveryRuleCookiesConditionParameters' | 'DeliveryRuleHostNameConditionParameters' | 'DeliveryRuleHttpVersionConditionParameters' | 'DeliveryRuleIsDeviceConditionParameters' | 'DeliveryRulePostArgsConditionParameters' | 'DeliveryRuleQueryStringConditionParameters' | 'DeliveryRuleRemoteAddressConditionParameters' | 'DeliveryRuleRequestBodyConditionParameters' | 'DeliveryRuleRequestHeaderConditionParameters' | 'DeliveryRuleRequestMethodConditionParameters' | 'DeliveryRuleRequestSchemeConditionParameters' | 'DeliveryRuleRequestUriConditionParameters' | 'DeliveryRuleServerPortConditionParameters' | 'DeliveryRuleSocketAddrConditionParameters' | 'DeliveryRuleSslProtocolConditionParameters' | 'DeliveryRuleUrlFileExtensionMatchConditionParameters' | 'DeliveryRuleUrlFilenameConditionParameters' | 'DeliveryRuleUrlPathMatchConditionParameters' | string (Required)
 
 ## SharedPrivateLinkResourceProperties
 ### Properties
@@ -989,7 +989,7 @@
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'IPMatch' | string (Required): Describes operator to be matched
 * **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
-* **typeName**: 'DeliveryRuleSocketAddrConditionParameters' | string (Required)
+* **typeName**: 'DeliveryRuleClientPortConditionParameters' | 'DeliveryRuleCookiesConditionParameters' | 'DeliveryRuleHostNameConditionParameters' | 'DeliveryRuleHttpVersionConditionParameters' | 'DeliveryRuleIsDeviceConditionParameters' | 'DeliveryRulePostArgsConditionParameters' | 'DeliveryRuleQueryStringConditionParameters' | 'DeliveryRuleRemoteAddressConditionParameters' | 'DeliveryRuleRequestBodyConditionParameters' | 'DeliveryRuleRequestHeaderConditionParameters' | 'DeliveryRuleRequestMethodConditionParameters' | 'DeliveryRuleRequestSchemeConditionParameters' | 'DeliveryRuleRequestUriConditionParameters' | 'DeliveryRuleServerPortConditionParameters' | 'DeliveryRuleSocketAddrConditionParameters' | 'DeliveryRuleSslProtocolConditionParameters' | 'DeliveryRuleUrlFileExtensionMatchConditionParameters' | 'DeliveryRuleUrlFilenameConditionParameters' | 'DeliveryRuleUrlPathMatchConditionParameters' | string (Required)
 
 ## SslProtocolMatchConditionParameters
 ### Properties
@@ -997,7 +997,7 @@
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Equal' | string (Required): Describes operator to be matched
 * **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
-* **typeName**: 'DeliveryRuleSslProtocolConditionParameters' | string (Required)
+* **typeName**: 'DeliveryRuleClientPortConditionParameters' | 'DeliveryRuleCookiesConditionParameters' | 'DeliveryRuleHostNameConditionParameters' | 'DeliveryRuleHttpVersionConditionParameters' | 'DeliveryRuleIsDeviceConditionParameters' | 'DeliveryRulePostArgsConditionParameters' | 'DeliveryRuleQueryStringConditionParameters' | 'DeliveryRuleRemoteAddressConditionParameters' | 'DeliveryRuleRequestBodyConditionParameters' | 'DeliveryRuleRequestHeaderConditionParameters' | 'DeliveryRuleRequestMethodConditionParameters' | 'DeliveryRuleRequestSchemeConditionParameters' | 'DeliveryRuleRequestUriConditionParameters' | 'DeliveryRuleServerPortConditionParameters' | 'DeliveryRuleSocketAddrConditionParameters' | 'DeliveryRuleSslProtocolConditionParameters' | 'DeliveryRuleUrlFileExtensionMatchConditionParameters' | 'DeliveryRuleUrlFilenameConditionParameters' | 'DeliveryRuleUrlPathMatchConditionParameters' | string (Required)
 
 ## SystemData
 ### Properties
@@ -1034,7 +1034,7 @@
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' | string (Required): Describes operator to be matched
 * **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
-* **typeName**: 'DeliveryRuleUrlFileExtensionMatchConditionParameters' | string (Required)
+* **typeName**: 'DeliveryRuleClientPortConditionParameters' | 'DeliveryRuleCookiesConditionParameters' | 'DeliveryRuleHostNameConditionParameters' | 'DeliveryRuleHttpVersionConditionParameters' | 'DeliveryRuleIsDeviceConditionParameters' | 'DeliveryRulePostArgsConditionParameters' | 'DeliveryRuleQueryStringConditionParameters' | 'DeliveryRuleRemoteAddressConditionParameters' | 'DeliveryRuleRequestBodyConditionParameters' | 'DeliveryRuleRequestHeaderConditionParameters' | 'DeliveryRuleRequestMethodConditionParameters' | 'DeliveryRuleRequestSchemeConditionParameters' | 'DeliveryRuleRequestUriConditionParameters' | 'DeliveryRuleServerPortConditionParameters' | 'DeliveryRuleSocketAddrConditionParameters' | 'DeliveryRuleSslProtocolConditionParameters' | 'DeliveryRuleUrlFileExtensionMatchConditionParameters' | 'DeliveryRuleUrlFilenameConditionParameters' | 'DeliveryRuleUrlPathMatchConditionParameters' | string (Required)
 
 ## UrlFileNameMatchConditionParameters
 ### Properties
@@ -1042,7 +1042,7 @@
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' | string (Required): Describes operator to be matched
 * **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
-* **typeName**: 'DeliveryRuleUrlFilenameConditionParameters' | string (Required)
+* **typeName**: 'DeliveryRuleClientPortConditionParameters' | 'DeliveryRuleCookiesConditionParameters' | 'DeliveryRuleHostNameConditionParameters' | 'DeliveryRuleHttpVersionConditionParameters' | 'DeliveryRuleIsDeviceConditionParameters' | 'DeliveryRulePostArgsConditionParameters' | 'DeliveryRuleQueryStringConditionParameters' | 'DeliveryRuleRemoteAddressConditionParameters' | 'DeliveryRuleRequestBodyConditionParameters' | 'DeliveryRuleRequestHeaderConditionParameters' | 'DeliveryRuleRequestMethodConditionParameters' | 'DeliveryRuleRequestSchemeConditionParameters' | 'DeliveryRuleRequestUriConditionParameters' | 'DeliveryRuleServerPortConditionParameters' | 'DeliveryRuleSocketAddrConditionParameters' | 'DeliveryRuleSslProtocolConditionParameters' | 'DeliveryRuleUrlFileExtensionMatchConditionParameters' | 'DeliveryRuleUrlFilenameConditionParameters' | 'DeliveryRuleUrlPathMatchConditionParameters' | string (Required)
 
 ## UrlPathMatchConditionParameters
 ### Properties
@@ -1050,7 +1050,7 @@
 * **negateCondition**: bool: Describes if this is negate condition or not
 * **operator**: 'Any' | 'BeginsWith' | 'Contains' | 'EndsWith' | 'Equal' | 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' | 'RegEx' | 'Wildcard' | string (Required): Describes operator to be matched
 * **transforms**: ('Lowercase' | 'RemoveNulls' | 'Trim' | 'Uppercase' | 'UrlDecode' | 'UrlEncode' | string)[]: List of transforms
-* **typeName**: 'DeliveryRuleUrlPathMatchConditionParameters' | string (Required)
+* **typeName**: 'DeliveryRuleClientPortConditionParameters' | 'DeliveryRuleCookiesConditionParameters' | 'DeliveryRuleHostNameConditionParameters' | 'DeliveryRuleHttpVersionConditionParameters' | 'DeliveryRuleIsDeviceConditionParameters' | 'DeliveryRulePostArgsConditionParameters' | 'DeliveryRuleQueryStringConditionParameters' | 'DeliveryRuleRemoteAddressConditionParameters' | 'DeliveryRuleRequestBodyConditionParameters' | 'DeliveryRuleRequestHeaderConditionParameters' | 'DeliveryRuleRequestMethodConditionParameters' | 'DeliveryRuleRequestSchemeConditionParameters' | 'DeliveryRuleRequestUriConditionParameters' | 'DeliveryRuleServerPortConditionParameters' | 'DeliveryRuleSocketAddrConditionParameters' | 'DeliveryRuleSslProtocolConditionParameters' | 'DeliveryRuleUrlFileExtensionMatchConditionParameters' | 'DeliveryRuleUrlFilenameConditionParameters' | 'DeliveryRuleUrlPathMatchConditionParameters' | string (Required)
 
 ## UrlRedirectActionParameters
 ### Properties
@@ -1060,20 +1060,20 @@
 * **customQueryString**: string: The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in <key>=<value> format. ? and & will be added automatically so do not include them.
 * **destinationProtocol**: 'Http' | 'Https' | 'MatchRequest' | string: Protocol to use for the redirect. The default value is MatchRequest
 * **redirectType**: 'Found' | 'Moved' | 'PermanentRedirect' | 'TemporaryRedirect' | string (Required): The redirect type the rule will use when redirecting traffic.
-* **typeName**: 'DeliveryRuleUrlRedirectActionParameters' | string (Required)
+* **typeName**: 'DeliveryRuleCacheExpirationActionParameters' | 'DeliveryRuleCacheKeyQueryStringBehaviorActionParameters' | 'DeliveryRuleHeaderActionParameters' | 'DeliveryRuleOriginGroupOverrideActionParameters' | 'DeliveryRuleRouteConfigurationOverrideActionParameters' | 'DeliveryRuleUrlRedirectActionParameters' | 'DeliveryRuleUrlRewriteActionParameters' | 'DeliveryRuleUrlSigningActionParameters' | string (Required)
 
 ## UrlRewriteActionParameters
 ### Properties
 * **destination**: string (Required): Define the relative URL to which the above requests will be rewritten by.
 * **preserveUnmatchedPath**: bool: Whether to preserve unmatched path. Default value is true.
 * **sourcePattern**: string (Required): define a request URI pattern that identifies the type of requests that may be rewritten. If value is blank, all strings are matched.
-* **typeName**: 'DeliveryRuleUrlRewriteActionParameters' | string (Required)
+* **typeName**: 'DeliveryRuleCacheExpirationActionParameters' | 'DeliveryRuleCacheKeyQueryStringBehaviorActionParameters' | 'DeliveryRuleHeaderActionParameters' | 'DeliveryRuleOriginGroupOverrideActionParameters' | 'DeliveryRuleRouteConfigurationOverrideActionParameters' | 'DeliveryRuleUrlRedirectActionParameters' | 'DeliveryRuleUrlRewriteActionParameters' | 'DeliveryRuleUrlSigningActionParameters' | string (Required)
 
 ## UrlSigningActionParameters
 ### Properties
 * **algorithm**: 'SHA256' | string: Algorithm to use for URL signing
 * **parameterNameOverride**: [UrlSigningParamIdentifier](#urlsigningparamidentifier)[]: Defines which query string parameters in the url to be considered for expires, key id etc.
-* **typeName**: 'DeliveryRuleUrlSigningActionParameters' | string (Required)
+* **typeName**: 'DeliveryRuleCacheExpirationActionParameters' | 'DeliveryRuleCacheKeyQueryStringBehaviorActionParameters' | 'DeliveryRuleHeaderActionParameters' | 'DeliveryRuleOriginGroupOverrideActionParameters' | 'DeliveryRuleRouteConfigurationOverrideActionParameters' | 'DeliveryRuleUrlRedirectActionParameters' | 'DeliveryRuleUrlRewriteActionParameters' | 'DeliveryRuleUrlSigningActionParameters' | string (Required)
 
 ## UrlSigningKey
 ### Properties

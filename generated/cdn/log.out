@@ -5,6 +5,232 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ManagedCertificate' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/afdx.json:5316:5
+warning | PreCheck/SchemaMissingType | The schema 'AzureFirstPartyManagedCertificate' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/afdx.json:5365:5
+warning | PreCheck/SchemaMissingType | The schema 'KeyGroupProperties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/afdx.json:5434:5
+warning | PreCheck/SchemaMissingType | The schema 'AFDOriginProperties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/afdx.json:6435:5
+warning | PreCheck/SchemaMissingType | The schema 'RouteProperties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/afdx.json:6745:5
+warning | PreCheck/SchemaMissingType | The schema 'AFDTargetGroupProperties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/afdx.json:8005:5
+warning | PreCheck/SchemaMissingType | The schema 'TunnelPolicyProperties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/afdx.json:8096:5
+warning | PreCheck/SchemaMissingType | The schema 'ProfileProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:2937:5
+warning | PreCheck/SchemaMissingType | The schema 'ProfileListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:3028:5
+warning | PreCheck/SchemaMissingType | The schema 'EndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:3433:5
+warning | PreCheck/SchemaMissingType | The schema 'EndpointListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:3515:5
+warning | PreCheck/SchemaMissingType | The schema 'EndpointPropertiesUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:3550:5
+warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:3692:5
+warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRemoteAddressCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:3730:5
+warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRequestMethodCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:3748:5
+warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleQueryStringCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:3766:5
+warning | PreCheck/SchemaMissingType | The schema 'DeliveryRulePostArgsCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:3784:5
+warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRequestUriCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:3802:5
+warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRequestHeaderCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:3820:5
+warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRequestBodyCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:3838:5
+warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRequestSchemeCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:3856:5
+warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleUrlPathCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:3874:5
+warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleUrlFileExtensionCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:3892:5
+warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleUrlFileNameCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:3910:5
+warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleHttpVersionCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:3928:5
+warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleCookiesCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:3946:5
+warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleIsDeviceCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:3964:5
+warning | PreCheck/SchemaMissingType | The schema 'RemoteAddressMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:4077:5
+warning | PreCheck/SchemaMissingType | The schema 'RequestMethodMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:4123:5
+warning | PreCheck/SchemaMissingType | The schema 'QueryStringMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:4180:5
+warning | PreCheck/SchemaMissingType | The schema 'PostArgsMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:4233:5
+warning | PreCheck/SchemaMissingType | The schema 'RequestUriMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:4290:5
+warning | PreCheck/SchemaMissingType | The schema 'RequestHeaderMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:4343:5
+warning | PreCheck/SchemaMissingType | The schema 'RequestBodyMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:4400:5
+warning | PreCheck/SchemaMissingType | The schema 'RequestSchemeMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:4453:5
+warning | PreCheck/SchemaMissingType | The schema 'UrlPathMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:4501:5
+warning | PreCheck/SchemaMissingType | The schema 'UrlFileExtensionMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:4555:5
+warning | PreCheck/SchemaMissingType | The schema 'UrlFileNameMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:4608:5
+warning | PreCheck/SchemaMissingType | The schema 'HttpVersionMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:4661:5
+warning | PreCheck/SchemaMissingType | The schema 'CookiesMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:4705:5
+warning | PreCheck/SchemaMissingType | The schema 'IsDeviceMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:4762:5
+warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:5067:5
+warning | PreCheck/SchemaMissingType | The schema 'UrlRedirectAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:5096:5
+warning | PreCheck/SchemaMissingType | The schema 'UrlRedirectActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:5114:5
+warning | PreCheck/SchemaMissingType | The schema 'UrlSigningAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:5171:5
+warning | PreCheck/SchemaMissingType | The schema 'UrlSigningActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:5189:5
+warning | PreCheck/SchemaMissingType | The schema 'UrlSigningParamIdentifier' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:5221:5
+warning | PreCheck/SchemaMissingType | The schema 'OriginGroupOverrideAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:5247:5
+warning | PreCheck/SchemaMissingType | The schema 'OriginGroupOverrideActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:5265:5
+warning | PreCheck/SchemaMissingType | The schema 'UrlRewriteAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:5284:5
+warning | PreCheck/SchemaMissingType | The schema 'UrlRewriteActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:5302:5
+warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRequestHeaderAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:5329:5
+warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleResponseHeaderAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:5347:5
+warning | PreCheck/SchemaMissingType | The schema 'HeaderActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:5365:5
+warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleCacheExpirationAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:5401:5
+warning | PreCheck/SchemaMissingType | The schema 'CacheExpirationActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:5419:5
+warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleCacheKeyQueryStringAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:5463:5
+warning | PreCheck/SchemaMissingType | The schema 'CacheKeyQueryStringActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:5481:5
+warning | PreCheck/SchemaMissingType | The schema 'ResourceReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:5808:5
+warning | PreCheck/SchemaMissingType | The schema 'UrlSigningKey' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:5868:5
+warning | PreCheck/SchemaMissingType | The schema 'KeyVaultSigningKeyParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:5885:5
+warning | PreCheck/SchemaMissingType | The schema 'OriginProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:5959:5
+warning | PreCheck/SchemaMissingType | The schema 'OriginUpdatePropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:6019:5
+warning | PreCheck/SchemaMissingType | The schema 'OriginListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:6084:5
+warning | PreCheck/SchemaMissingType | The schema 'OriginGroupUpdatePropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:6171:5
+warning | PreCheck/SchemaMissingType | The schema 'HealthProbeParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:6201:5
+warning | PreCheck/SchemaMissingType | The schema 'ResponseBasedOriginErrorDetectionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:6243:5
+warning | PreCheck/SchemaMissingType | The schema 'HttpErrorRangeParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:6276:5
+warning | PreCheck/SchemaMissingType | The schema 'OriginGroupListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:6295:5
+warning | PreCheck/SchemaMissingType | The schema 'CustomDomainProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:6361:5
+warning | PreCheck/SchemaMissingType | The schema 'CustomDomainPropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:6458:5
+warning | PreCheck/SchemaMissingType | The schema 'CustomDomainHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:6470:5
+warning | PreCheck/SchemaMissingType | The schema 'CdnManagedHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:6517:5
+warning | PreCheck/SchemaMissingType | The schema 'CdnCertificateSourceParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:6535:5
+warning | PreCheck/SchemaMissingType | The schema 'UserManagedHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:6561:5
+warning | PreCheck/SchemaMissingType | The schema 'KeyVaultCertificateSourceParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:6579:5
+warning | PreCheck/SchemaMissingType | The schema 'CustomDomainListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:6640:5
+warning | PreCheck/SchemaMissingType | The schema 'ResourceUsageListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:6764:5
+warning | PreCheck/SchemaMissingType | The schema 'OperationsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:6831:5
+warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:6863:9
+warning | PreCheck/SchemaMissingType | The schema 'EdgenodeResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:7052:5
+warning | PreCheck/SchemaMissingType | The schema 'EdgeNodeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:7084:5
+warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:7147:5
+warning | PreCheck/SchemaMissingType | The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:7219:5
+warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdn.json:7248:5
+warning | PreCheck/SchemaMissingType | The schema 'CdnWebApplicationFirewallPolicyList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdnwebapplicationfirewall.json:331:5
+warning | PreCheck/SchemaMissingType | The schema 'CdnWebApplicationFirewallPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdnwebapplicationfirewall.json:348:5
+warning | PreCheck/SchemaMissingType | The schema 'CdnWebApplicationFirewallPolicyProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdnwebapplicationfirewall.json:388:5
+warning | PreCheck/SchemaMissingType | The schema 'policySettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdnwebapplicationfirewall.json:455:5
+warning | PreCheck/SchemaMissingType | The schema 'CustomRuleList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdnwebapplicationfirewall.json:516:5
+warning | PreCheck/SchemaMissingType | The schema 'RateLimitRuleList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdnwebapplicationfirewall.json:580:5
+warning | PreCheck/SchemaMissingType | The schema 'MatchCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdnwebapplicationfirewall.json:626:5
+warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleSetList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdnwebapplicationfirewall.json:715:5
+warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleGroupOverride' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdnwebapplicationfirewall.json:768:5
+warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleOverride' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdnwebapplicationfirewall.json:790:5
+warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleSetDefinitionList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdnwebapplicationfirewall.json:818:5
+warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleSetDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdnwebapplicationfirewall.json:835:5
+warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleSetDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdnwebapplicationfirewall.json:854:5
+warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleGroupDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdnwebapplicationfirewall.json:885:5
+warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-06-01-preview/cdnwebapplicationfirewall.json:911:5
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorResponse' (1 differences):
+  - properties.error.description: <none> => "The error object."
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorResponse' -> 'ErrorResponseAutoGenerated'
+warning | Skipping LogAnalytics_GetLogAnalyticsMetrics due to required query parameter "metrics"
+warning | Skipping LogAnalytics_GetLogAnalyticsMetrics due to required query parameter "dateTimeBegin"
+warning | Skipping LogAnalytics_GetLogAnalyticsMetrics due to required query parameter "dateTimeEnd"
+warning | Skipping LogAnalytics_GetLogAnalyticsMetrics due to required query parameter "granularity"
+warning | Skipping LogAnalytics_GetLogAnalyticsMetrics due to required query parameter "customDomains"
+warning | Skipping LogAnalytics_GetLogAnalyticsMetrics due to required query parameter "protocols"
+warning | Skipping LogAnalytics_GetLogAnalyticsRankings due to required query parameter "rankings"
+warning | Skipping LogAnalytics_GetLogAnalyticsRankings due to required query parameter "metrics"
+warning | Skipping LogAnalytics_GetLogAnalyticsRankings due to required query parameter "maxRanking"
+warning | Skipping LogAnalytics_GetLogAnalyticsRankings due to required query parameter "dateTimeBegin"
+warning | Skipping LogAnalytics_GetLogAnalyticsRankings due to required query parameter "dateTimeEnd"
+warning | Skipping LogAnalytics_GetWafLogAnalyticsMetrics due to required query parameter "metrics"
+warning | Skipping LogAnalytics_GetWafLogAnalyticsMetrics due to required query parameter "dateTimeBegin"
+warning | Skipping LogAnalytics_GetWafLogAnalyticsMetrics due to required query parameter "dateTimeEnd"
+warning | Skipping LogAnalytics_GetWafLogAnalyticsMetrics due to required query parameter "granularity"
+warning | Skipping LogAnalytics_GetWafLogAnalyticsRankings due to required query parameter "metrics"
+warning | Skipping LogAnalytics_GetWafLogAnalyticsRankings due to required query parameter "dateTimeBegin"
+warning | Skipping LogAnalytics_GetWafLogAnalyticsRankings due to required query parameter "dateTimeEnd"
+warning | Skipping LogAnalytics_GetWafLogAnalyticsRankings due to required query parameter "maxRanking"
+warning | Skipping LogAnalytics_GetWafLogAnalyticsRankings due to required query parameter "rankings"
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'ManagedCertificate' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-05-01-preview/afdx.json:4496:5
 warning | PreCheck/SchemaMissingType | The schema 'AzureFirstPartyManagedCertificate' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/preview/2024-05-01-preview/afdx.json:4545:5
@@ -313,157 +539,157 @@ warning | PreCheck/SchemaMissingType | The schema 'ProfileProperties' with an un
 warning | PreCheck/SchemaMissingType | The schema 'ProfileListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:2857:5
 warning | PreCheck/SchemaMissingType | The schema 'EndpointProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:3174:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:3260:5
 warning | PreCheck/SchemaMissingType | The schema 'EndpointListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:3256:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:3342:5
 warning | PreCheck/SchemaMissingType | The schema 'EndpointPropertiesUpdateParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:3291:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:3377:5
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:3433:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:3519:5
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRemoteAddressCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:3471:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:3557:5
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRequestMethodCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:3489:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:3575:5
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleQueryStringCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:3507:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:3593:5
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRulePostArgsCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:3525:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:3611:5
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRequestUriCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:3543:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:3629:5
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRequestHeaderCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:3561:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:3647:5
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRequestBodyCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:3579:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:3665:5
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRequestSchemeCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:3597:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:3683:5
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleUrlPathCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:3615:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:3701:5
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleUrlFileExtensionCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:3633:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:3719:5
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleUrlFileNameCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:3651:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:3737:5
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleHttpVersionCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:3669:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:3755:5
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleCookiesCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:3687:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:3773:5
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleIsDeviceCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:3705:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:3791:5
 warning | PreCheck/SchemaMissingType | The schema 'RemoteAddressMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:3818:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:3904:5
 warning | PreCheck/SchemaMissingType | The schema 'RequestMethodMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:3865:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:3950:5
 warning | PreCheck/SchemaMissingType | The schema 'QueryStringMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:3919:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:4007:5
 warning | PreCheck/SchemaMissingType | The schema 'PostArgsMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:3973:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:4060:5
 warning | PreCheck/SchemaMissingType | The schema 'RequestUriMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:4031:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:4117:5
 warning | PreCheck/SchemaMissingType | The schema 'RequestHeaderMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:4085:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:4170:5
 warning | PreCheck/SchemaMissingType | The schema 'RequestBodyMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:4143:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:4227:5
 warning | PreCheck/SchemaMissingType | The schema 'RequestSchemeMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:4197:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:4280:5
 warning | PreCheck/SchemaMissingType | The schema 'UrlPathMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:4242:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:4328:5
 warning | PreCheck/SchemaMissingType | The schema 'UrlFileExtensionMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:4297:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:4382:5
 warning | PreCheck/SchemaMissingType | The schema 'UrlFileNameMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:4351:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:4435:5
 warning | PreCheck/SchemaMissingType | The schema 'HttpVersionMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:4405:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:4488:5
 warning | PreCheck/SchemaMissingType | The schema 'CookiesMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:4450:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:4532:5
 warning | PreCheck/SchemaMissingType | The schema 'IsDeviceMatchConditionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:4508:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:4589:5
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:4815:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:4894:5
 warning | PreCheck/SchemaMissingType | The schema 'UrlRedirectAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:4843:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:4922:5
 warning | PreCheck/SchemaMissingType | The schema 'UrlRedirectActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:4861:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:4940:5
 warning | PreCheck/SchemaMissingType | The schema 'UrlSigningAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:4919:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:4997:5
 warning | PreCheck/SchemaMissingType | The schema 'UrlSigningActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:4937:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:5015:5
 warning | PreCheck/SchemaMissingType | The schema 'UrlSigningParamIdentifier' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:4972:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:5047:5
 warning | PreCheck/SchemaMissingType | The schema 'OriginGroupOverrideAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:4998:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:5073:5
 warning | PreCheck/SchemaMissingType | The schema 'OriginGroupOverrideActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:5016:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:5091:5
 warning | PreCheck/SchemaMissingType | The schema 'UrlRewriteAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:5036:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:5110:5
 warning | PreCheck/SchemaMissingType | The schema 'UrlRewriteActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:5054:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:5128:5
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleRequestHeaderAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:5082:5
-warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleResponseHeaderAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:5100:5
-warning | PreCheck/SchemaMissingType | The schema 'HeaderActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:5118:5
-warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleCacheExpirationAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:5155:5
-warning | PreCheck/SchemaMissingType | The schema 'CacheExpirationActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleResponseHeaderAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:5173:5
+warning | PreCheck/SchemaMissingType | The schema 'HeaderActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:5191:5
+warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleCacheExpirationAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:5227:5
+warning | PreCheck/SchemaMissingType | The schema 'CacheExpirationActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:5245:5
 warning | PreCheck/SchemaMissingType | The schema 'DeliveryRuleCacheKeyQueryStringAction' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:5218:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:5289:5
 warning | PreCheck/SchemaMissingType | The schema 'CacheKeyQueryStringActionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:5236:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:5307:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:5567:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:5634:5
 warning | PreCheck/SchemaMissingType | The schema 'UrlSigningKey' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:5627:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:5694:5
 warning | PreCheck/SchemaMissingType | The schema 'KeyVaultSigningKeyParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:5644:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:5711:5
 warning | PreCheck/SchemaMissingType | The schema 'OriginProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:5714:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:5785:5
 warning | PreCheck/SchemaMissingType | The schema 'OriginUpdatePropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:5774:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:5845:5
 warning | PreCheck/SchemaMissingType | The schema 'OriginListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:5839:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:5910:5
 warning | PreCheck/SchemaMissingType | The schema 'OriginGroupUpdatePropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:5926:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:5997:5
 warning | PreCheck/SchemaMissingType | The schema 'HealthProbeParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:5956:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:6027:5
 warning | PreCheck/SchemaMissingType | The schema 'ResponseBasedOriginErrorDetectionParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:5998:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:6069:5
 warning | PreCheck/SchemaMissingType | The schema 'HttpErrorRangeParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:6031:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:6102:5
 warning | PreCheck/SchemaMissingType | The schema 'OriginGroupListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:6050:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:6121:5
 warning | PreCheck/SchemaMissingType | The schema 'CustomDomainProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:6116:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:6187:5
 warning | PreCheck/SchemaMissingType | The schema 'CustomDomainPropertiesParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:6213:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:6284:5
 warning | PreCheck/SchemaMissingType | The schema 'CustomDomainHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:6225:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:6296:5
 warning | PreCheck/SchemaMissingType | The schema 'CdnManagedHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:6272:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:6343:5
 warning | PreCheck/SchemaMissingType | The schema 'CdnCertificateSourceParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:6290:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:6361:5
 warning | PreCheck/SchemaMissingType | The schema 'UserManagedHttpsParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:6317:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:6387:5
 warning | PreCheck/SchemaMissingType | The schema 'KeyVaultCertificateSourceParameters' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:6335:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:6405:5
 warning | PreCheck/SchemaMissingType | The schema 'CustomDomainListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:6397:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:6466:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceUsageListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:6521:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:6590:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:6588:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:6657:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:6620:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:6689:9
 warning | PreCheck/SchemaMissingType | The schema 'EdgenodeResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:6809:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:6878:5
 warning | PreCheck/SchemaMissingType | The schema 'EdgeNodeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:6841:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:6910:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:6904:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:6973:5
 warning | PreCheck/SchemaMissingType | The schema 'TrackedResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:6976:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:7045:5
 warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:7005:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdn.json:7074:5
 warning | PreCheck/SchemaMissingType | The schema 'CdnWebApplicationFirewallPolicyList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdnwebapplicationfirewall.json:331:5
 warning | PreCheck/SchemaMissingType | The schema 'CdnWebApplicationFirewallPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -495,14 +721,6 @@ warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleGroupDefinition' w
 warning | PreCheck/SchemaMissingType | The schema 'ManagedRuleDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/stable/2024-02-01/cdnwebapplicationfirewall.json:911:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | PreCheck/DuplicateSchema | Duplicate Schema named 'DeliveryRuleAction' (6 differences):
-  - discriminator: {"propertyName":"name"} => <none>
-  - properties: {"name":{"x-ms-enum":{"name":"DeliveryRuleAction","modelAsString":true},"$ref":"#/components/schemas/DeliveryRuleAction","description":"The name of the action for the delivery rule."}} => <none>
-  - required: ["name"] => <none>
-  - type: "object" => "string"
-  - enum: <none> => ["CacheExpiration","CacheKeyQueryString","ModifyRequestHeader","ModifyResponseHeader","UrlRedirect","UrlRewrite","UrlSigning","OriginGroupOverride","RouteConfigurationOverride"]
-  - x-ms-enum: <none> => {"name":"DeliveryRuleAction","modelAsString":true}
-warning | PreNamer/DeduplicateName | Deduplicating schema name: 'DeliveryRuleAction' -> 'DeliveryRuleActionAutoGenerated'
 warning | Skipping LogAnalytics_GetLogAnalyticsMetrics due to required query parameter "metrics"
 warning | Skipping LogAnalytics_GetLogAnalyticsMetrics due to required query parameter "dateTimeBegin"
 warning | Skipping LogAnalytics_GetLogAnalyticsMetrics due to required query parameter "dateTimeEnd"

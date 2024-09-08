@@ -58,14 +58,14 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Query' (5 differenc
   - properties.maxPageSize: <none> => {"$ref":"#/components/schemas/schemas:1148","description":"Represents the maximum size of the page that will be returned from the query API."}
   - properties.minPageSize: <none> => {"$ref":"#/components/schemas/schemas:1149","description":"Represents the minimum size of the page that will be returned from the query API."}
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'UserInfo' (10 differences):
-  - properties.objectId.$ref: "#/components/schemas/schemas:1157" => "#/components/schemas/schemas:1852"
+  - properties.objectId.$ref: "#/components/schemas/schemas:1157" => "#/components/schemas/schemas:1862"
   - properties.objectId.description: "The user's object ID." => "The object id of the user."
   - properties.objectId.readOnly: true => <none>
   - properties.objectId.nullable: <none> => true
-  - properties.email.$ref: "#/components/schemas/schemas:1158" => "#/components/schemas/schemas:1850"
+  - properties.email.$ref: "#/components/schemas/schemas:1158" => "#/components/schemas/schemas:1860"
   - properties.email.description: "The user's email address." => "The email of the user."
   - properties.email.readOnly: <none> => true
-  - properties.name.$ref: "#/components/schemas/schemas:1159" => "#/components/schemas/schemas:1851"
+  - properties.name.$ref: "#/components/schemas/schemas:1159" => "#/components/schemas/schemas:1861"
   - properties.name.description: "The user's name." => "The name of the user."
   - properties.name.readOnly: <none> => true
 warning | Modeler/MissingType | The schema 'components·1qaufw0·schemas·threatintelligenceindicatorproperties·properties·extensions·additionalproperties' has no type or format information whatsoever. Location:
@@ -415,7 +415,7 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'metadataDependencie
   - properties.criteria.$ref: "#/components/schemas/schemas:337" => "#/components/schemas/schemas:777"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'metadataDependencies' (2 differences):
   - properties.criteria.x-ms-identifiers.0: <none> => "contentId"
-  - properties.criteria.$ref: "#/components/schemas/schemas:337" => "#/components/schemas/schemas:1594"
+  - properties.criteria.$ref: "#/components/schemas/schemas:337" => "#/components/schemas/schemas:1596"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'templateList' (1 differences):
   - properties.value.$ref: "#/components/schemas/schemas:348" => "#/components/schemas/schemas:355"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'templateModel' (1 differences):

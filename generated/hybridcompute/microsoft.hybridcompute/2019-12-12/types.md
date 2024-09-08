@@ -92,7 +92,7 @@
 * **osVersion**: string (ReadOnly): The version of Operating System running on the hybrid machine.
 * **provisioningState**: string (ReadOnly): The provisioning state, which only appears in the response.
 * **status**: 'Connected' | 'Disconnected' | 'Error' | string (ReadOnly): The status of the hybrid machine agent.
-* **vmId**: string: Specifies the hybrid machine unique ID.
+* **vmId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Specifies the hybrid machine unique ID.
 
 ## MachinePropertiesOsProfile
 ### Properties

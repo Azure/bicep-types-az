@@ -728,7 +728,7 @@
 * **statusReasonCode**: 'Other' | 'PastDue' | 'SpendingLimitExpired' | 'SpendingLimitReached' | 'UnusualActivity' | string (ReadOnly): Reason for the specified billing profile status.
 * **systemId**: string (ReadOnly): The system generated unique identifier for a billing profile.
 * **tags**: [BillingProfilePropertiesTags](#billingprofilepropertiestags): Dictionary of metadata associated with the resource. Maximum key/value length supported of 256 characters. Keys/value should not empty value nor null. Keys can not contain < > % & \ ? /
-* **targetClouds**: ('Internal' | 'Other' | 'USGov' | 'USNat' | 'USSec' | string)[] (ReadOnly): Identifies the cloud environments that are associated with a billing profile. This is a system managed optional field and gets updated as the billing profile gets associated with accounts in various clouds.
+* **targetClouds**: string[] (ReadOnly): Identifies the cloud environments that are associated with a billing profile. This is a system managed optional field and gets updated as the billing profile gets associated with accounts in various clouds.
 
 ## BillingProfilePropertiesBillTo
 ### Properties
@@ -1281,7 +1281,7 @@
 * **state**: 'Active' | 'Deleted' | 'Disabled' | 'Other' | 'Restricted' | 'UnderReview' | 'Warned' | string: Identifies the status of an invoice section.
 * **systemId**: string (ReadOnly): The system generated unique identifier for an invoice section.
 * **tags**: [InvoiceSectionPropertiesTags](#invoicesectionpropertiestags): Dictionary of metadata associated with the resource. Maximum key/value length supported of 256 characters. Keys/value should not empty value nor null. Keys can not contain < > % & \ ? /
-* **targetCloud**: 'Internal' | 'Other' | 'USGov' | 'USNat' | 'USSec' | string: Identifies the cloud environments that are associated with an invoice section. This is a system managed optional field and gets updated as the invoice section gets associated with accounts in various clouds.
+* **targetCloud**: string: Identifies the cloud environments that are associated with an invoice section. This is a system managed optional field and gets updated as the invoice section gets associated with accounts in various clouds.
 
 ## InvoiceSectionPropertiesTags
 ### Properties
@@ -1380,7 +1380,6 @@
 * **logos**: [PaymentMethodLogo](#paymentmethodlogo)[]: The list of logos for the payment method.
 * **paymentMethodType**: string (ReadOnly): The type of payment method.
 * **status**: 'active' | 'inactive' | string: Status of the payment method.
-* **type**: string (ReadOnly): The type of payment method.
 
 ## PaymentOnAccount
 ### Properties
@@ -1390,7 +1389,7 @@
 * **date**: string (ReadOnly): The date of the payments on account.
 * **invoiceId**: string (ReadOnly): The ID of the invoice for which the payments on account was generated.
 * **invoiceName**: string (ReadOnly): The name of the invoice for the payments on account.
-* **type**: 'CheckWire' | 'CreditCard' | 'Credits' | 'DirectDebit' | 'EWallet' | 'None' | 'Other' | 'TaskOrder' | string (ReadOnly): Payment on Account type.
+* **paymentMethodType**: 'CheckWire' | 'CreditCard' | 'Credits' | 'DirectDebit' | 'EWallet' | 'None' | 'Other' | 'TaskOrder' | string (ReadOnly): Payment on Account type.
 
 ## PaymentOnAccountAmount
 ### Properties
@@ -1929,7 +1928,6 @@
 * **displayName**: string: Display name
 * **displayProvisioningState**: string (ReadOnly): The provisioning state of the savings plan for display, e.g. Succeeded
 * **effectiveDateTime**: string (ReadOnly): DateTime of the savings plan starting when this version is effective from.
-* **expiryDate**: string (ReadOnly): Date when the Order is expected to expire
 * **expiryDateTime**: string (ReadOnly): This is the date-time when the savings plan will expire.
 * **extendedStatusInfo**: [ExtendedStatusInfo](#extendedstatusinfo) (ReadOnly): Extended status information
 * **productCode**: string: Represents UPN
@@ -1952,7 +1950,6 @@
 * **billingScopeId**: string: Subscription that will be charged for purchasing SavingsPlan
 * **customerId**: string (ReadOnly): Fully-qualified identifier of the customer where the savings plan is applied. Present only for Partner-led customers.
 * **displayName**: string: Display name
-* **expiryDate**: string (ReadOnly): Date when the Order is expected to expire
 * **expiryDateTime**: string (ReadOnly): DateTime when the savings plan will expire.
 * **extendedStatusInfo**: [ExtendedStatusInfo](#extendedstatusinfo) (ReadOnly): Extended status information
 * **planInformation**: [BillingPlanInformation](#billingplaninformation): Information describing the type of billing plan for this savings plan.

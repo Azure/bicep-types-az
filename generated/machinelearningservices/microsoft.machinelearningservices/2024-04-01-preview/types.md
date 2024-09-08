@@ -3634,6 +3634,7 @@ Defaults to 5000ms.
 
 ### Base Properties
 * **category**: 'Dependency' | 'Recommended' | 'Required' | 'UserDefined' | string: Category of a managed network Outbound Rule of a machine learning workspace.
+* **parentRuleNames**: string[] (ReadOnly)
 * **status**: 'Active' | 'Inactive' | string: Type of a managed network Outbound Rule of a machine learning workspace.
 
 ### FqdnOutboundRule
@@ -3644,7 +3645,6 @@ Defaults to 5000ms.
 ### PrivateEndpointOutboundRule
 #### Properties
 * **destination**: [PrivateEndpointDestination](#privateendpointdestination): Private Endpoint destination for a Private Endpoint Outbound Rule for the managed network of a machine learning workspace.
-* **parentRuleName**: string (ReadOnly): The dependency rule name.
 * **type**: 'PrivateEndpoint' (Required): Type of a managed network Outbound Rule of a machine learning workspace.
 
 ### ServiceTagOutboundRule

@@ -330,16 +330,6 @@ warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/SchemaMissingType | The schema 'Rule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2015-06-01-preview/adaptiveNetworkHardenings.json:240:5
-warning | PreCheck/SchemaMissingType | The schema 'EffectiveNetworkSecurityGroups' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2015-06-01-preview/adaptiveNetworkHardenings.json:287:5
-warning | PreCheck/SchemaMissingType | The schema 'AdaptiveNetworkHardeningProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2015-06-01-preview/adaptiveNetworkHardenings.json:303:5
-warning | PreCheck/SchemaMissingType | The schema 'AdaptiveNetworkHardening' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2015-06-01-preview/adaptiveNetworkHardenings.json:327:5
-warning | PreCheck/SchemaMissingType | The schema 'AdaptiveNetworkHardeningsList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2015-06-01-preview/adaptiveNetworkHardenings.json:342:5
 warning | PreCheck/SchemaMissingType | The schema 'ExternalSecuritySolutionList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2015-06-01-preview/externalSecuritySolutions.json:165:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorAdditionalInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -400,8 +390,6 @@ warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and 
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'AdvancedThreatProtectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2017-08-01-preview/advancedThreatProtectionSettings.json:118:5
-warning | PreCheck/SchemaMissingType | The schema 'PricingList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2017-08-01-preview/pricings.json:284:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkspaceSettingList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/preview/2017-08-01-preview/workspaceSettings.json:231:5
 warning | PreCheck/SchemaMissingType | The schema 'IoTSecuritySolutionAnalyticsModelProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -636,16 +624,6 @@ warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/SchemaMissingType | The schema 'Rule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/stable/2020-01-01/adaptiveNetworkHardenings.json:240:5
-warning | PreCheck/SchemaMissingType | The schema 'EffectiveNetworkSecurityGroups' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/stable/2020-01-01/adaptiveNetworkHardenings.json:287:5
-warning | PreCheck/SchemaMissingType | The schema 'AdaptiveNetworkHardeningProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/stable/2020-01-01/adaptiveNetworkHardenings.json:303:5
-warning | PreCheck/SchemaMissingType | The schema 'AdaptiveNetworkHardening' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/stable/2020-01-01/adaptiveNetworkHardenings.json:327:5
-warning | PreCheck/SchemaMissingType | The schema 'AdaptiveNetworkHardeningsList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/stable/2020-01-01/adaptiveNetworkHardenings.json:342:5
 warning | PreCheck/SchemaMissingType | The schema 'ExternalSecuritySolutionList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/security/resource-manager/Microsoft.Security/stable/2020-01-01/externalSecuritySolutions.json:165:5
 warning | PreCheck/SchemaMissingType | The schema 'ErrorAdditionalInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'

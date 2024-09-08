@@ -527,28 +527,28 @@
       },
       "resources": {
         "type": {
-          "$ref": "#/153"
+          "$ref": "#/154"
         },
         "flags": 2,
         "description": "The list of extensions affiliated to the machine"
       },
       "identity": {
         "type": {
-          "$ref": "#/154"
+          "$ref": "#/155"
         },
         "flags": 0,
         "description": "Identity for the resource."
       },
       "kind": {
         "type": {
-          "$ref": "#/163"
+          "$ref": "#/164"
         },
         "flags": 0,
         "description": "Indicates which kind of Arc machine placement on-premises, such as HCI, SCVMM or VMware etc."
       },
       "tags": {
         "type": {
-          "$ref": "#/164"
+          "$ref": "#/165"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -610,14 +610,14 @@
       },
       "osProfile": {
         "type": {
-          "$ref": "#/68"
+          "$ref": "#/69"
         },
         "flags": 0,
         "description": "Specifies the operating system settings for the hybrid machine."
       },
       "licenseProfile": {
         "type": {
-          "$ref": "#/80"
+          "$ref": "#/81"
         },
         "flags": 0,
         "description": "Specifies the License related properties for a machine."
@@ -631,7 +631,7 @@
       },
       "status": {
         "type": {
-          "$ref": "#/127"
+          "$ref": "#/128"
         },
         "flags": 2,
         "description": "The status of the hybrid machine agent."
@@ -645,7 +645,7 @@
       },
       "errorDetails": {
         "type": {
-          "$ref": "#/133"
+          "$ref": "#/134"
         },
         "flags": 2,
         "description": "Details about the error state."
@@ -659,7 +659,7 @@
       },
       "vmId": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/64"
         },
         "flags": 0,
         "description": "Specifies the hybrid machine unique ID."
@@ -708,14 +708,14 @@
       },
       "vmUuid": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/64"
         },
         "flags": 2,
         "description": "Specifies the Arc Machine's unique SMBIOS ID"
       },
       "extensions": {
         "type": {
-          "$ref": "#/140"
+          "$ref": "#/141"
         },
         "flags": 0,
         "description": "Machine Extensions information (deprecated field)"
@@ -778,14 +778,14 @@
       },
       "detectedProperties": {
         "type": {
-          "$ref": "#/141"
+          "$ref": "#/142"
         },
         "flags": 2,
         "description": "Detected properties from the machine."
       },
       "networkProfile": {
         "type": {
-          "$ref": "#/142"
+          "$ref": "#/143"
         },
         "flags": 2,
         "description": "Information about the network the machine is on."
@@ -1024,14 +1024,14 @@
       },
       "correlationId": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/64"
         },
         "flags": 0,
         "description": "The correlation ID passed in from RSM per upgrade."
       },
       "enableAutomaticUpgrade": {
         "type": {
-          "$ref": "#/64"
+          "$ref": "#/65"
         },
         "flags": 0,
         "description": "Specifies if RSM should try to upgrade this machine"
@@ -1052,7 +1052,7 @@
       },
       "lastAttemptStatus": {
         "type": {
-          "$ref": "#/67"
+          "$ref": "#/68"
         },
         "flags": 2,
         "description": "Specifies the status of Agent Upgrade."
@@ -1065,6 +1065,12 @@
         "description": "Failure message of last upgrade attempt if any."
       }
     }
+  },
+  {
+    "$type": "StringType",
+    "minLength": 36,
+    "maxLength": 36,
+    "pattern": "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"
   },
   {
     "$type": "BooleanType"
@@ -1081,10 +1087,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/65"
+        "$ref": "#/66"
       },
       {
-        "$ref": "#/66"
+        "$ref": "#/67"
       },
       {
         "$ref": "#/2"
@@ -1104,14 +1110,14 @@
       },
       "windowsConfiguration": {
         "type": {
-          "$ref": "#/69"
+          "$ref": "#/70"
         },
         "flags": 0,
         "description": "Specifies the windows configuration for update management."
       },
       "linuxConfiguration": {
         "type": {
-          "$ref": "#/79"
+          "$ref": "#/80"
         },
         "flags": 0,
         "description": "Specifies the linux configuration for update management."
@@ -1124,7 +1130,7 @@
     "properties": {
       "patchSettings": {
         "type": {
-          "$ref": "#/70"
+          "$ref": "#/71"
         },
         "flags": 0,
         "description": "Specifies the patch settings."
@@ -1137,14 +1143,14 @@
     "properties": {
       "assessmentMode": {
         "type": {
-          "$ref": "#/73"
+          "$ref": "#/74"
         },
         "flags": 0,
         "description": "Specifies the assessment mode."
       },
       "patchMode": {
         "type": {
-          "$ref": "#/78"
+          "$ref": "#/79"
         },
         "flags": 0,
         "description": "Specifies the patch mode."
@@ -1163,10 +1169,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/71"
+        "$ref": "#/72"
       },
       {
-        "$ref": "#/72"
+        "$ref": "#/73"
       },
       {
         "$ref": "#/2"
@@ -1193,9 +1199,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/74"
-      },
-      {
         "$ref": "#/75"
       },
       {
@@ -1203,6 +1206,9 @@
       },
       {
         "$ref": "#/77"
+      },
+      {
+        "$ref": "#/78"
       },
       {
         "$ref": "#/2"
@@ -1215,7 +1221,7 @@
     "properties": {
       "patchSettings": {
         "type": {
-          "$ref": "#/70"
+          "$ref": "#/71"
         },
         "flags": 0,
         "description": "Specifies the patch settings."
@@ -1228,7 +1234,7 @@
     "properties": {
       "licenseStatus": {
         "type": {
-          "$ref": "#/88"
+          "$ref": "#/89"
         },
         "flags": 2,
         "description": "Indicates the license status of the OS."
@@ -1242,20 +1248,20 @@
       },
       "softwareAssurance": {
         "type": {
-          "$ref": "#/89"
+          "$ref": "#/90"
         },
         "flags": 2
       },
       "esuProfile": {
         "type": {
-          "$ref": "#/90"
+          "$ref": "#/91"
         },
         "flags": 0,
         "description": "Properties for the Machine ESU profile."
       },
       "productProfile": {
         "type": {
-          "$ref": "#/108"
+          "$ref": "#/109"
         },
         "flags": 2,
         "description": "Hybrid Compute Product Profile properties"
@@ -1294,9 +1300,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/81"
-      },
-      {
         "$ref": "#/82"
       },
       {
@@ -1315,6 +1318,9 @@
         "$ref": "#/87"
       },
       {
+        "$ref": "#/88"
+      },
+      {
         "$ref": "#/2"
       }
     ]
@@ -1325,7 +1331,7 @@
     "properties": {
       "softwareAssuranceCustomer": {
         "type": {
-          "$ref": "#/64"
+          "$ref": "#/65"
         },
         "flags": 0,
         "description": "Specifies if this machine is licensed as part of a Software Assurance agreement."
@@ -1338,35 +1344,35 @@
     "properties": {
       "assignedLicense": {
         "type": {
-          "$ref": "#/91"
+          "$ref": "#/92"
         },
         "flags": 0,
         "description": "The assigned license resource."
       },
       "licenseAssignmentState": {
         "type": {
-          "$ref": "#/95"
+          "$ref": "#/96"
         },
         "flags": 0,
         "description": "Describes the license assignment state (Assigned or NotAssigned)."
       },
       "serverType": {
         "type": {
-          "$ref": "#/98"
+          "$ref": "#/99"
         },
         "flags": 2,
         "description": "The type of the Esu servers."
       },
       "esuEligibility": {
         "type": {
-          "$ref": "#/102"
+          "$ref": "#/103"
         },
         "flags": 2,
         "description": "Indicates the eligibility state of Esu."
       },
       "esuKeyState": {
         "type": {
-          "$ref": "#/105"
+          "$ref": "#/106"
         },
         "flags": 2,
         "description": "Indicates whether there is an ESU Key currently active for the machine."
@@ -1380,7 +1386,7 @@
       },
       "esuKeys": {
         "type": {
-          "$ref": "#/107"
+          "$ref": "#/108"
         },
         "flags": 2,
         "description": "The list of ESU keys."
@@ -1400,7 +1406,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/92"
+          "$ref": "#/93"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -1462,10 +1468,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/93"
+        "$ref": "#/94"
       },
       {
-        "$ref": "#/94"
+        "$ref": "#/95"
       },
       {
         "$ref": "#/2"
@@ -1484,10 +1490,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/96"
+        "$ref": "#/97"
       },
       {
-        "$ref": "#/97"
+        "$ref": "#/98"
       },
       {
         "$ref": "#/2"
@@ -1510,13 +1516,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/99"
-      },
-      {
         "$ref": "#/100"
       },
       {
         "$ref": "#/101"
+      },
+      {
+        "$ref": "#/102"
       },
       {
         "$ref": "#/2"
@@ -1535,10 +1541,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/103"
+        "$ref": "#/104"
       },
       {
-        "$ref": "#/104"
+        "$ref": "#/105"
       },
       {
         "$ref": "#/2"
@@ -1568,7 +1574,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/106"
+      "$ref": "#/107"
     }
   },
   {
@@ -1577,14 +1583,14 @@
     "properties": {
       "subscriptionStatus": {
         "type": {
-          "$ref": "#/113"
+          "$ref": "#/114"
         },
         "flags": 0,
         "description": "Indicates the subscription status of the product."
       },
       "productType": {
         "type": {
-          "$ref": "#/116"
+          "$ref": "#/117"
         },
         "flags": 0,
         "description": "Indicates the product type of the license."
@@ -1612,7 +1618,7 @@
       },
       "productFeatures": {
         "type": {
-          "$ref": "#/123"
+          "$ref": "#/124"
         },
         "flags": 0,
         "description": "The list of product features."
@@ -1639,9 +1645,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/109"
-      },
-      {
         "$ref": "#/110"
       },
       {
@@ -1649,6 +1652,9 @@
       },
       {
         "$ref": "#/112"
+      },
+      {
+        "$ref": "#/113"
       },
       {
         "$ref": "#/2"
@@ -1667,10 +1673,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/114"
+        "$ref": "#/115"
       },
       {
-        "$ref": "#/115"
+        "$ref": "#/116"
       },
       {
         "$ref": "#/2"
@@ -1690,7 +1696,7 @@
       },
       "subscriptionStatus": {
         "type": {
-          "$ref": "#/122"
+          "$ref": "#/123"
         },
         "flags": 0,
         "description": "Indicates the current status of the product features."
@@ -1738,9 +1744,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/118"
-      },
-      {
         "$ref": "#/119"
       },
       {
@@ -1750,6 +1753,9 @@
         "$ref": "#/121"
       },
       {
+        "$ref": "#/122"
+      },
+      {
         "$ref": "#/2"
       }
     ]
@@ -1757,7 +1763,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/117"
+      "$ref": "#/118"
     }
   },
   {
@@ -1776,13 +1782,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/124"
-      },
-      {
         "$ref": "#/125"
       },
       {
         "$ref": "#/126"
+      },
+      {
+        "$ref": "#/127"
       },
       {
         "$ref": "#/2"
@@ -1816,14 +1822,14 @@
       },
       "details": {
         "type": {
-          "$ref": "#/129"
+          "$ref": "#/130"
         },
         "flags": 2,
         "description": "The error details."
       },
       "additionalInfo": {
         "type": {
-          "$ref": "#/132"
+          "$ref": "#/133"
         },
         "flags": 2,
         "description": "The error additional info."
@@ -1833,7 +1839,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/128"
+      "$ref": "#/129"
     }
   },
   {
@@ -1849,7 +1855,7 @@
       },
       "info": {
         "type": {
-          "$ref": "#/131"
+          "$ref": "#/132"
         },
         "flags": 2,
         "description": "The additional info."
@@ -1862,13 +1868,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/130"
+      "$ref": "#/131"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/128"
+      "$ref": "#/129"
     }
   },
   {
@@ -1898,7 +1904,7 @@
       },
       "status": {
         "type": {
-          "$ref": "#/135"
+          "$ref": "#/136"
         },
         "flags": 0,
         "description": "Instance view status."
@@ -1918,7 +1924,7 @@
       },
       "level": {
         "type": {
-          "$ref": "#/139"
+          "$ref": "#/140"
         },
         "flags": 0,
         "description": "The level code."
@@ -1962,13 +1968,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/136"
-      },
-      {
         "$ref": "#/137"
       },
       {
         "$ref": "#/138"
+      },
+      {
+        "$ref": "#/139"
       },
       {
         "$ref": "#/2"
@@ -1978,7 +1984,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/134"
+      "$ref": "#/135"
     }
   },
   {
@@ -1995,7 +2001,7 @@
     "properties": {
       "networkInterfaces": {
         "type": {
-          "$ref": "#/147"
+          "$ref": "#/148"
         },
         "flags": 0,
         "description": "The list of network interfaces."
@@ -2008,7 +2014,7 @@
     "properties": {
       "ipAddresses": {
         "type": {
-          "$ref": "#/146"
+          "$ref": "#/147"
         },
         "flags": 0,
         "description": "The list of IP addresses in this interface."
@@ -2035,7 +2041,7 @@
       },
       "subnet": {
         "type": {
-          "$ref": "#/145"
+          "$ref": "#/146"
         },
         "flags": 2,
         "description": "The subnet to which this IP address belongs."
@@ -2058,13 +2064,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/144"
+      "$ref": "#/145"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/143"
+      "$ref": "#/144"
     }
   },
   {
@@ -2073,14 +2079,14 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/149"
+          "$ref": "#/150"
         },
         "flags": 0,
         "description": "Describes Machine Extension Properties."
       },
       "tags": {
         "type": {
-          "$ref": "#/152"
+          "$ref": "#/153"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -2156,28 +2162,28 @@
       },
       "enableAutomaticUpgrade": {
         "type": {
-          "$ref": "#/64"
+          "$ref": "#/65"
         },
         "flags": 0,
         "description": "Indicates whether the extension should be automatically upgraded by the platform if there is a newer version available."
       },
       "autoUpgradeMinorVersion": {
         "type": {
-          "$ref": "#/64"
+          "$ref": "#/65"
         },
         "flags": 0,
         "description": "Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true."
       },
       "settings": {
         "type": {
-          "$ref": "#/150"
+          "$ref": "#/151"
         },
         "flags": 0,
         "description": "Json formatted public settings for the extension."
       },
       "protectedSettings": {
         "type": {
-          "$ref": "#/151"
+          "$ref": "#/152"
         },
         "flags": 0,
         "description": "The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all."
@@ -2191,7 +2197,7 @@
       },
       "instanceView": {
         "type": {
-          "$ref": "#/134"
+          "$ref": "#/135"
         },
         "flags": 0,
         "description": "The machine extension instance view."
@@ -2203,7 +2209,7 @@
     "name": "MachineExtensionPropertiesSettings",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/131"
+      "$ref": "#/132"
     }
   },
   {
@@ -2211,7 +2217,7 @@
     "name": "MachineExtensionPropertiesProtectedSettings",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/131"
+      "$ref": "#/132"
     }
   },
   {
@@ -2225,7 +2231,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/148"
+      "$ref": "#/149"
     }
   },
   {
@@ -2248,7 +2254,7 @@
       },
       "type": {
         "type": {
-          "$ref": "#/155"
+          "$ref": "#/156"
         },
         "flags": 0,
         "description": "The identity type."
@@ -2291,9 +2297,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/156"
-      },
-      {
         "$ref": "#/157"
       },
       {
@@ -2310,6 +2313,9 @@
       },
       {
         "$ref": "#/162"
+      },
+      {
+        "$ref": "#/163"
       },
       {
         "$ref": "#/2"
@@ -2358,35 +2364,35 @@
       },
       "name": {
         "type": {
-          "$ref": "#/166"
+          "$ref": "#/167"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/167"
+          "$ref": "#/168"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/168"
+          "$ref": "#/169"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/170"
+          "$ref": "#/171"
         },
         "flags": 0,
         "description": "Describe the properties of a license profile."
       },
       "tags": {
         "type": {
-          "$ref": "#/193"
+          "$ref": "#/194"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -2413,27 +2419,27 @@
     "properties": {
       "softwareAssurance": {
         "type": {
-          "$ref": "#/171"
+          "$ref": "#/172"
         },
         "flags": 0
       },
       "esuProfile": {
         "type": {
-          "$ref": "#/172"
+          "$ref": "#/173"
         },
         "flags": 0,
         "description": "Hybrid Compute ESU Profile properties"
       },
       "productProfile": {
         "type": {
-          "$ref": "#/108"
+          "$ref": "#/109"
         },
         "flags": 0,
         "description": "Hybrid Compute Product Profile properties"
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/192"
+          "$ref": "#/193"
         },
         "flags": 2,
         "description": "The provisioning state, which only appears in the response."
@@ -2446,7 +2452,7 @@
     "properties": {
       "softwareAssuranceCustomer": {
         "type": {
-          "$ref": "#/64"
+          "$ref": "#/65"
         },
         "flags": 0,
         "description": "Specifies if this machine is licensed as part of a Software Assurance agreement."
@@ -2466,21 +2472,21 @@
       },
       "serverType": {
         "type": {
-          "$ref": "#/175"
+          "$ref": "#/176"
         },
         "flags": 2,
         "description": "The type of the Esu servers."
       },
       "esuEligibility": {
         "type": {
-          "$ref": "#/179"
+          "$ref": "#/180"
         },
         "flags": 2,
         "description": "Indicates the eligibility state of Esu."
       },
       "esuKeyState": {
         "type": {
-          "$ref": "#/182"
+          "$ref": "#/183"
         },
         "flags": 2,
         "description": "Indicates whether there is an ESU Key currently active for the machine."
@@ -2494,7 +2500,7 @@
       },
       "esuKeys": {
         "type": {
-          "$ref": "#/183"
+          "$ref": "#/184"
         },
         "flags": 2,
         "description": "The list of ESU keys."
@@ -2513,10 +2519,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/173"
+        "$ref": "#/174"
       },
       {
-        "$ref": "#/174"
+        "$ref": "#/175"
       },
       {
         "$ref": "#/2"
@@ -2539,13 +2545,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/176"
-      },
-      {
         "$ref": "#/177"
       },
       {
         "$ref": "#/178"
+      },
+      {
+        "$ref": "#/179"
       },
       {
         "$ref": "#/2"
@@ -2564,10 +2570,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/180"
+        "$ref": "#/181"
       },
       {
-        "$ref": "#/181"
+        "$ref": "#/182"
       },
       {
         "$ref": "#/2"
@@ -2577,7 +2583,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/106"
+      "$ref": "#/107"
     }
   },
   {
@@ -2616,9 +2622,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/184"
-      },
-      {
         "$ref": "#/185"
       },
       {
@@ -2640,6 +2643,9 @@
         "$ref": "#/191"
       },
       {
+        "$ref": "#/192"
+      },
+      {
         "$ref": "#/2"
       }
     ]
@@ -2657,7 +2663,7 @@
     "name": "Microsoft.HybridCompute/machines/licenseProfiles@2023-10-03-preview",
     "scopeType": 8,
     "body": {
-      "$ref": "#/169"
+      "$ref": "#/170"
     },
     "flags": 0
   },
@@ -2689,28 +2695,28 @@
       },
       "type": {
         "type": {
-          "$ref": "#/195"
+          "$ref": "#/196"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/196"
+          "$ref": "#/197"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/149"
+          "$ref": "#/150"
         },
         "flags": 0,
         "description": "Describes Machine Extension Properties."
       },
       "tags": {
         "type": {
-          "$ref": "#/198"
+          "$ref": "#/199"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -2744,7 +2750,7 @@
     "name": "Microsoft.HybridCompute/machines/extensions@2023-10-03-preview",
     "scopeType": 8,
     "body": {
-      "$ref": "#/197"
+      "$ref": "#/198"
     },
     "flags": 0
   },
@@ -2776,28 +2782,28 @@
       },
       "type": {
         "type": {
-          "$ref": "#/200"
+          "$ref": "#/201"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/201"
+          "$ref": "#/202"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/203"
+          "$ref": "#/204"
         },
         "flags": 0,
         "description": "Describes Run Command Properties"
       },
       "tags": {
         "type": {
-          "$ref": "#/225"
+          "$ref": "#/226"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -2824,28 +2830,28 @@
     "properties": {
       "source": {
         "type": {
-          "$ref": "#/204"
+          "$ref": "#/205"
         },
         "flags": 0,
         "description": "The source of the run command script."
       },
       "parameters": {
         "type": {
-          "$ref": "#/207"
+          "$ref": "#/208"
         },
         "flags": 0,
         "description": "The parameters used by the script."
       },
       "protectedParameters": {
         "type": {
-          "$ref": "#/208"
+          "$ref": "#/209"
         },
         "flags": 0,
         "description": "The parameters used by the script."
       },
       "asyncExecution": {
         "type": {
-          "$ref": "#/64"
+          "$ref": "#/65"
         },
         "flags": 0,
         "description": "Optional. If set to true, provisioning will complete as soon as script starts and will not wait for script to complete."
@@ -2859,7 +2865,7 @@
       },
       "runAsPassword": {
         "type": {
-          "$ref": "#/209"
+          "$ref": "#/210"
         },
         "flags": 0,
         "description": "Specifies the user account password on the machine when executing the run command."
@@ -2887,14 +2893,14 @@
       },
       "outputBlobManagedIdentity": {
         "type": {
-          "$ref": "#/205"
+          "$ref": "#/206"
         },
         "flags": 0,
         "description": "User-assigned managed identity that has access to outputBlobUri storage blob. Use an empty object in case of system-assigned identity. Make sure managed identity has been given access to blob's container with 'Storage Blob Data Contributor' role assignment. In case of user-assigned identity, make sure you add it under VM's identity. For more info on managed identity and Run Command, refer https://aka.ms/ManagedIdentity and https://aka.ms/RunCommandManaged"
       },
       "errorBlobManagedIdentity": {
         "type": {
-          "$ref": "#/205"
+          "$ref": "#/206"
         },
         "flags": 0,
         "description": "User-assigned managed identity that has access to errorBlobUri storage blob. Use an empty object in case of system-assigned identity. Make sure managed identity has been given access to blob's container with 'Storage Blob Data Contributor' role assignment. In case of user-assigned identity, make sure you add it under VM's identity. For more info on managed identity and Run Command, refer https://aka.ms/ManagedIdentity and https://aka.ms/RunCommandManaged"
@@ -2908,7 +2914,7 @@
       },
       "instanceView": {
         "type": {
-          "$ref": "#/210"
+          "$ref": "#/211"
         },
         "flags": 2,
         "description": "The machine run command instance view."
@@ -2942,7 +2948,7 @@
       },
       "scriptUriManagedIdentity": {
         "type": {
-          "$ref": "#/205"
+          "$ref": "#/206"
         },
         "flags": 0,
         "description": "User-assigned managed identity that has access to scriptUri in case of Azure storage blob. Use an empty object in case of system-assigned identity. Make sure the Azure storage blob exists, and managed identity has been given access to blob's container with 'Storage Blob Data Reader' role assignment. In case of user-assigned identity, make sure you add it under VM's identity. For more info on managed identity and Run Command, refer https://aka.ms/ManagedIdentity and https://aka.ms/RunCommandManaged."
@@ -2992,13 +2998,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/206"
+      "$ref": "#/207"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/206"
+      "$ref": "#/207"
     }
   },
   {
@@ -3011,7 +3017,7 @@
     "properties": {
       "executionState": {
         "type": {
-          "$ref": "#/218"
+          "$ref": "#/219"
         },
         "flags": 0,
         "description": "Script execution status."
@@ -3060,7 +3066,7 @@
       },
       "statuses": {
         "type": {
-          "$ref": "#/224"
+          "$ref": "#/225"
         },
         "flags": 0,
         "description": "The  status information."
@@ -3099,9 +3105,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/211"
-      },
-      {
         "$ref": "#/212"
       },
       {
@@ -3118,6 +3121,9 @@
       },
       {
         "$ref": "#/217"
+      },
+      {
+        "$ref": "#/218"
       },
       {
         "$ref": "#/2"
@@ -3137,7 +3143,7 @@
       },
       "level": {
         "type": {
-          "$ref": "#/223"
+          "$ref": "#/224"
         },
         "flags": 0,
         "description": "The level code."
@@ -3181,20 +3187,20 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/220"
-      },
-      {
         "$ref": "#/221"
       },
       {
         "$ref": "#/222"
+      },
+      {
+        "$ref": "#/223"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/219"
+      "$ref": "#/220"
     }
   },
   {
@@ -3210,7 +3216,7 @@
     "name": "Microsoft.HybridCompute/machines/runCommands@2023-10-03-preview",
     "scopeType": 8,
     "body": {
-      "$ref": "#/202"
+      "$ref": "#/203"
     },
     "flags": 0
   },
@@ -3242,21 +3248,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/227"
+          "$ref": "#/228"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/228"
+          "$ref": "#/229"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/230"
+          "$ref": "#/231"
         },
         "flags": 0,
         "description": "Properties that define a Azure Arc PrivateLinkScope resource."
@@ -3277,7 +3283,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/240"
+          "$ref": "#/241"
         },
         "flags": 0,
         "description": "Resource tags"
@@ -3290,7 +3296,7 @@
     "properties": {
       "publicNetworkAccess": {
         "type": {
-          "$ref": "#/233"
+          "$ref": "#/234"
         },
         "flags": 0,
         "description": "Indicates whether machines associated with the private link scope can also use public Azure Arc service endpoints."
@@ -3311,7 +3317,7 @@
       },
       "privateEndpointConnections": {
         "type": {
-          "$ref": "#/239"
+          "$ref": "#/240"
         },
         "flags": 2,
         "description": "The collection of associated Private Endpoint Connections."
@@ -3330,10 +3336,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/231"
+        "$ref": "#/232"
       },
       {
-        "$ref": "#/232"
+        "$ref": "#/233"
       },
       {
         "$ref": "#/2"
@@ -3367,7 +3373,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/235"
+          "$ref": "#/236"
         },
         "flags": 0,
         "description": "The Private Endpoint Connection properties."
@@ -3380,14 +3386,14 @@
     "properties": {
       "privateEndpoint": {
         "type": {
-          "$ref": "#/236"
+          "$ref": "#/237"
         },
         "flags": 0,
         "description": "Private endpoint which the connection belongs to."
       },
       "privateLinkServiceConnectionState": {
         "type": {
-          "$ref": "#/237"
+          "$ref": "#/238"
         },
         "flags": 0,
         "description": "Connection state of the private endpoint connection."
@@ -3401,7 +3407,7 @@
       },
       "groupIds": {
         "type": {
-          "$ref": "#/238"
+          "$ref": "#/239"
         },
         "flags": 2,
         "description": "List of group IDs."
@@ -3457,7 +3463,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/234"
+      "$ref": "#/235"
     }
   },
   {
@@ -3473,7 +3479,7 @@
     "name": "Microsoft.HybridCompute/privateLinkScopes@2023-10-03-preview",
     "scopeType": 8,
     "body": {
-      "$ref": "#/229"
+      "$ref": "#/230"
     },
     "flags": 0
   },
@@ -3505,21 +3511,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/242"
+          "$ref": "#/243"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/243"
+          "$ref": "#/244"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/235"
+          "$ref": "#/236"
         },
         "flags": 0,
         "description": "Resource properties."
@@ -3538,7 +3544,7 @@
     "name": "Microsoft.HybridCompute/privateLinkScopes/privateEndpointConnections@2023-10-03-preview",
     "scopeType": 8,
     "body": {
-      "$ref": "#/244"
+      "$ref": "#/245"
     },
     "flags": 0
   },
@@ -3567,28 +3573,28 @@
       },
       "name": {
         "type": {
-          "$ref": "#/246"
+          "$ref": "#/247"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/247"
+          "$ref": "#/248"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/248"
+          "$ref": "#/249"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/250"
+          "$ref": "#/251"
         },
         "flags": 0,
         "description": "Network configuration properties"
@@ -3636,7 +3642,7 @@
       },
       "keyProperties": {
         "type": {
-          "$ref": "#/251"
+          "$ref": "#/252"
         },
         "flags": 2,
         "description": "Public key information for client authentication"
@@ -3649,14 +3655,14 @@
     "properties": {
       "clientPublicKey": {
         "type": {
-          "$ref": "#/252"
+          "$ref": "#/253"
         },
         "flags": 2,
         "description": "Current public key details"
       },
       "candidatePublicKey": {
         "type": {
-          "$ref": "#/252"
+          "$ref": "#/253"
         },
         "flags": 2,
         "description": "Candidate public key details"
@@ -3695,7 +3701,7 @@
     "name": "Microsoft.HybridCompute/networkConfigurations@2023-10-03-preview",
     "scopeType": 0,
     "body": {
-      "$ref": "#/249"
+      "$ref": "#/250"
     },
     "flags": 0
   },
@@ -3727,21 +3733,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/254"
+          "$ref": "#/255"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/255"
+          "$ref": "#/256"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/257"
+          "$ref": "#/258"
         },
         "flags": 2,
         "description": "The single extension based on search criteria"
@@ -3787,7 +3793,7 @@
     "name": "Microsoft.HybridCompute/locations/publishers/extensionTypes/versions@2023-10-03-preview",
     "scopeType": 4,
     "body": {
-      "$ref": "#/256"
+      "$ref": "#/257"
     },
     "flags": 1
   },
@@ -3816,28 +3822,28 @@
       },
       "name": {
         "type": {
-          "$ref": "#/259"
+          "$ref": "#/260"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/260"
+          "$ref": "#/261"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/261"
+          "$ref": "#/262"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/263"
+          "$ref": "#/264"
         },
         "flags": 2,
         "description": "Resource properties."
@@ -3871,7 +3877,7 @@
       },
       "identity": {
         "type": {
-          "$ref": "#/154"
+          "$ref": "#/155"
         },
         "flags": 2,
         "description": "Identity for the resource."
@@ -3883,7 +3889,7 @@
     "name": "Microsoft.HybridCompute/machines/hybridIdentityMetadata@2023-10-03-preview",
     "scopeType": 8,
     "body": {
-      "$ref": "#/262"
+      "$ref": "#/263"
     },
     "flags": 1
   },
@@ -3915,21 +3921,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/265"
+          "$ref": "#/266"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/266"
+          "$ref": "#/267"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/268"
+          "$ref": "#/269"
         },
         "flags": 2,
         "description": "Resource properties."
@@ -3956,14 +3962,14 @@
       },
       "requiredMembers": {
         "type": {
-          "$ref": "#/269"
+          "$ref": "#/270"
         },
         "flags": 2,
         "description": "The private link resource required member names."
       },
       "requiredZoneNames": {
         "type": {
-          "$ref": "#/270"
+          "$ref": "#/271"
         },
         "flags": 2,
         "description": "Required DNS zone names of the the private link resource."
@@ -3987,7 +3993,7 @@
     "name": "Microsoft.HybridCompute/privateLinkScopes/privateLinkResources@2023-10-03-preview",
     "scopeType": 8,
     "body": {
-      "$ref": "#/267"
+      "$ref": "#/268"
     },
     "flags": 1
   },
@@ -4016,28 +4022,28 @@
       },
       "name": {
         "type": {
-          "$ref": "#/272"
+          "$ref": "#/273"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/273"
+          "$ref": "#/274"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/274"
+          "$ref": "#/275"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/276"
+          "$ref": "#/277"
         },
         "flags": 2,
         "description": "Properties that define a Network Security Perimeter resource."
@@ -4057,28 +4063,28 @@
       },
       "provisioningIssues": {
         "type": {
-          "$ref": "#/295"
+          "$ref": "#/296"
         },
         "flags": 2,
         "description": "Provisioning issues."
       },
       "networkSecurityPerimeter": {
         "type": {
-          "$ref": "#/296"
+          "$ref": "#/297"
         },
         "flags": 0,
         "description": "The Network Security Perimeter associated with this configuration."
       },
       "resourceAssociation": {
         "type": {
-          "$ref": "#/297"
+          "$ref": "#/298"
         },
         "flags": 0,
         "description": "The Resource Association."
       },
       "profile": {
         "type": {
-          "$ref": "#/302"
+          "$ref": "#/303"
         },
         "flags": 0,
         "description": "Network Security Perimeter profile"
@@ -4098,7 +4104,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/278"
+          "$ref": "#/279"
         },
         "flags": 2,
         "description": "Provisioning issue properties"
@@ -4111,14 +4117,14 @@
     "properties": {
       "issueType": {
         "type": {
-          "$ref": "#/283"
+          "$ref": "#/284"
         },
         "flags": 2,
         "description": "Issue type"
       },
       "severity": {
         "type": {
-          "$ref": "#/286"
+          "$ref": "#/287"
         },
         "flags": 2,
         "description": "Severity of the provisioning issue."
@@ -4132,14 +4138,14 @@
       },
       "suggestedResourceIds": {
         "type": {
-          "$ref": "#/287"
+          "$ref": "#/288"
         },
         "flags": 2,
         "description": "ARM Ids of the resources that can be associated to the same perimeter to remediate the issue"
       },
       "suggestedAccessRules": {
         "type": {
-          "$ref": "#/294"
+          "$ref": "#/295"
         },
         "flags": 2,
         "description": "Access rules that can be added to the perimeter to remediate the issue"
@@ -4166,9 +4172,6 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/279"
-      },
-      {
         "$ref": "#/280"
       },
       {
@@ -4176,6 +4179,9 @@
       },
       {
         "$ref": "#/282"
+      },
+      {
+        "$ref": "#/283"
       },
       {
         "$ref": "#/2"
@@ -4194,10 +4200,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/284"
+        "$ref": "#/285"
       },
       {
-        "$ref": "#/285"
+        "$ref": "#/286"
       },
       {
         "$ref": "#/2"
@@ -4223,7 +4229,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/289"
+          "$ref": "#/290"
         },
         "flags": 2,
         "description": "Access rule properties"
@@ -4236,14 +4242,14 @@
     "properties": {
       "direction": {
         "type": {
-          "$ref": "#/292"
+          "$ref": "#/293"
         },
         "flags": 2,
         "description": "Direction of the access rule."
       },
       "addressPrefixes": {
         "type": {
-          "$ref": "#/293"
+          "$ref": "#/294"
         },
         "flags": 2,
         "description": "Address prefixes that are allowed access."
@@ -4262,10 +4268,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/290"
+        "$ref": "#/291"
       },
       {
-        "$ref": "#/291"
+        "$ref": "#/292"
       },
       {
         "$ref": "#/2"
@@ -4281,13 +4287,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/288"
+      "$ref": "#/289"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/277"
+      "$ref": "#/278"
     }
   },
   {
@@ -4330,7 +4336,7 @@
       },
       "accessMode": {
         "type": {
-          "$ref": "#/301"
+          "$ref": "#/302"
         },
         "flags": 2,
         "description": "The access mode"
@@ -4353,13 +4359,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/298"
-      },
-      {
         "$ref": "#/299"
       },
       {
         "$ref": "#/300"
+      },
+      {
+        "$ref": "#/301"
       },
       {
         "$ref": "#/2"
@@ -4386,7 +4392,7 @@
       },
       "accessRules": {
         "type": {
-          "$ref": "#/303"
+          "$ref": "#/304"
         },
         "flags": 2,
         "description": "Collection of access rules for the profile"
@@ -4400,7 +4406,7 @@
       },
       "enabledLogCategories": {
         "type": {
-          "$ref": "#/304"
+          "$ref": "#/305"
         },
         "flags": 2,
         "description": "Collection of enabled log categories for the profile"
@@ -4410,7 +4416,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/288"
+      "$ref": "#/289"
     }
   },
   {
@@ -4424,7 +4430,7 @@
     "name": "Microsoft.HybridCompute/privateLinkScopes/networkSecurityPerimeterConfigurations@2023-10-03-preview",
     "scopeType": 8,
     "body": {
-      "$ref": "#/275"
+      "$ref": "#/276"
     },
     "flags": 1
   }

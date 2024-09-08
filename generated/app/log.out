@@ -43,6 +43,7 @@ warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Skipping ContainerAppsSourceControls_CreateOrUpdate due to required header parameter "xMsGithubAuxiliary"
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.

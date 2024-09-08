@@ -4,6 +4,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **etag**: string (ReadOnly): Resource entity tag (ETag)
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {pattern: "^(?!-)[a-zA-Z0-9-]+[^-]$"} (Required, DeployTimeConstant): The resource name
@@ -16,7 +17,7 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **extendedLocation**: [ExtendedLocation](#extendedlocation): The extended location for given pipeline group.
+* **extendedLocation**: [AzureResourceManagerCommonTypesExtendedLocation](#azureresourcemanagercommontypesextendedlocation): The extended location for given pipeline group.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {pattern: "^(?!-)[a-zA-Z0-9-]{3,10}[^-]$"} (Required, DeployTimeConstant): The resource name
@@ -47,6 +48,11 @@
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The provisioning state of the Azure Monitor workspace. Set to Succeeded if everything is healthy.
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' | string (ReadOnly): Gets or sets allow or disallow public network access to workspace
 
+## AzureResourceManagerCommonTypesExtendedLocation
+### Properties
+* **name**: string (Required): The name of the extended location.
+* **type**: 'CustomLocation' | 'EdgeZone' | string (Required): The type of the extended location.
+
 ## BatchProcessor
 ### Properties
 * **batchSize**: int {minValue: 10, maxValue: 100000}: Size of the batch.
@@ -68,11 +74,6 @@
 * **name**: string {pattern: "^(?!-)[a-zA-Z0-9-]{3,32}[^-]$"} (Required): The name of exporter.
 * **tcp**: [TcpExporter](#tcpexporter): TCP based exporter. Used for pipelineGroup exporter.
 * **type**: 'AzureMonitorWorkspaceLogs' | 'PipelineGroup' | string (Required): The type of exporter.
-
-## ExtendedLocation
-### Properties
-* **name**: string (Required): The name of extended location.
-* **type**: 'CustomLocation' | string (Required): The type of extended location.
 
 ## IngestionSettings
 ### Properties

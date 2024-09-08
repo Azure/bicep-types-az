@@ -1,14 +1,5 @@
 # Microsoft.Security @ 2015-06-01-preview
 
-## Resource Microsoft.Security/adaptiveNetworkHardenings@2015-06-01-preview (ReadOnly)
-* **Valid Scope(s)**: Extension
-### Properties
-* **apiVersion**: '2015-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AdaptiveNetworkHardeningProperties](#adaptivenetworkhardeningproperties) (ReadOnly): Properties of the Adaptive Network Hardening resource
-* **type**: 'Microsoft.Security/adaptiveNetworkHardenings' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.Security/locations@2015-06-01-preview (ReadOnly)
 * **Valid Scope(s)**: Subscription
 ### Properties
@@ -36,20 +27,6 @@
 * **name**: 'External' | 'Internal' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [AllowedConnectionsResourceProperties](#allowedconnectionsresourceproperties) (ReadOnly): Describes the allowed traffic between Azure resources
 * **type**: 'Microsoft.Security/locations/allowedConnections' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.Security/locations/applicationWhitelistings@2015-06-01-preview
-* **Valid Scope(s)**: Subscription
-### Properties
-* **apiVersion**: '2015-06-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **enforcementMode**: 'Audit' | 'Enforce' | 'None' | string (WriteOnly): The enforcement mode of the group. Can also be defined per collection type by using ProtectionMode
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (ReadOnly): Location where the resource is stored
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **pathRecommendations**: [PathRecommendation](#pathrecommendation)[] (WriteOnly)
-* **properties**: [AppWhitelistingGroupData](#appwhitelistinggroupdata) (ReadOnly): Represents a VM/server group and set of rules that are Recommended by Microsoft Defender for Cloud to be allowed
-* **protectionMode**: [ProtectionMode](#protectionmode) (WriteOnly): The protection mode of the group per collection type. Can also be defined for all collection types by using EnforcementMode
-* **type**: 'Microsoft.Security/locations/applicationWhitelistings' (ReadOnly, DeployTimeConstant): The resource type
-* **vmRecommendations**: [VmRecommendation](#vmrecommendation)[] (WriteOnly)
 
 ## Resource Microsoft.Security/locations/discoveredSecuritySolutions@2015-06-01-preview (ReadOnly)
 * **Valid Scope(s)**: ResourceGroup
@@ -101,12 +78,6 @@
 * **properties**: [TopologyResourceProperties](#topologyresourceproperties) (ReadOnly)
 * **type**: 'Microsoft.Security/locations/topologies' (ReadOnly, DeployTimeConstant): The resource type
 
-## AdaptiveNetworkHardeningProperties
-### Properties
-* **effectiveNetworkSecurityGroups**: [EffectiveNetworkSecurityGroups](#effectivenetworksecuritygroups)[]: The Network Security Groups effective on the network interfaces of the protected resource
-* **rules**: [Rule](#rule)[]: The security rules which are recommended to be effective on the VM
-* **rulesCalculationTime**: string: The UTC time on which the rules were calculated
-
 ## AlertConfidenceReason
 ### Properties
 * **reason**: string (ReadOnly): description of the confidence reason
@@ -154,22 +125,6 @@
 * **calculatedDateTime**: string (ReadOnly): The UTC time on which the allowed connections resource was calculated
 * **connectableResources**: [ConnectableResource](#connectableresource)[] (ReadOnly): List of connectable resources
 
-## AppWhitelistingGroupData
-### Properties
-* **configurationStatus**: 'Configured' | 'Failed' | 'InProgress' | 'NoStatus' | 'NotConfigured' | string: The configuration status of the VM/server group or machine or rule on the machine
-* **enforcementMode**: 'Audit' | 'Enforce' | 'None' | string: The application control policy enforcement/protection mode of the VM/server group
-* **issues**: [AppWhitelistingIssueSummary](#appwhitelistingissuesummary)[]
-* **pathRecommendations**: [PathRecommendation](#pathrecommendation)[]
-* **protectionMode**: [ProtectionMode](#protectionmode): The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.
-* **recommendationStatus**: 'NoStatus' | 'NotAvailable' | 'NotRecommended' | 'Recommended' | string: The recommendation status of the VM/server group or VM/server
-* **sourceSystem**: 'Azure_AppLocker' | 'Azure_AuditD' | 'NonAzure_AppLocker' | 'NonAzure_AuditD' | 'None' | string: The source type of the VM/server group
-* **vmRecommendations**: [VmRecommendation](#vmrecommendation)[]
-
-## AppWhitelistingIssueSummary
-### Properties
-* **issue**: 'ExecutableViolationsAudited' | 'MsiAndScriptViolationsAudited' | 'MsiAndScriptViolationsBlocked' | 'RulesViolatedManually' | 'ViolationsAudited' | 'ViolationsBlocked' | string: An alert that VMs/servers within a group can have
-* **numberOfVms**: int: The number of machines in the VM/server group that have this alert
-
 ## ConnectableResource
 ### Properties
 * **id**: string (ReadOnly): The Azure resource id
@@ -188,11 +143,6 @@
 * **publisher**: string (Required): The security solutions' image publisher
 * **securityFamily**: 'Ngfw' | 'SaasWaf' | 'Va' | 'Waf' | string (Required): The security family of the discovered solution
 * **sku**: string (Required): The security solutions' image sku
-
-## EffectiveNetworkSecurityGroups
-### Properties
-* **networkInterface**: string: The Azure resource ID of the network interface
-* **networkSecurityGroups**: string[]: The Network Security Groups effective on the network interface
 
 ## JitNetworkAccessPolicyProperties
 ### Properties
@@ -236,40 +186,6 @@
 * **id**: string (Required): Resource ID of the virtual machine that is linked to this policy
 * **ports**: [JitNetworkAccessRequestPort](#jitnetworkaccessrequestport)[] (Required): The ports that were opened for the virtual machine
 
-## PathRecommendation
-### Properties
-* **action**: 'Add' | 'Recommended' | 'Remove' | string: The recommendation action of the VM/server or rule
-* **common**: bool: Whether the path is commonly run on the machine
-* **configurationStatus**: 'Configured' | 'Failed' | 'InProgress' | 'NoStatus' | 'NotConfigured' | string: The configuration status of the VM/server group or machine or rule on the machine
-* **fileType**: 'Dll' | 'Exe' | 'Executable' | 'Msi' | 'Script' | 'Unknown' | string: The type of the file (for Linux files - Executable is used)
-* **path**: string: The full path to the application to allow
-* **publisherInfo**: [PublisherInfo](#publisherinfo): Represents the publisher information of a process/rule
-* **type**: 'BinarySignature' | 'File' | 'FileHash' | 'ProductSignature' | 'PublisherSignature' | 'VersionAndAboveSignature' | string: The type of the rule to be allowed
-* **usernames**: [UserRecommendation](#userrecommendation)[]
-* **userSids**: string[]
-
-## ProtectionMode
-### Properties
-* **exe**: 'Audit' | 'Enforce' | 'None' | string: The application control policy enforcement/protection mode of the VM/server group
-* **executable**: 'Audit' | 'Enforce' | 'None' | string: The application control policy enforcement/protection mode of the VM/server group
-* **msi**: 'Audit' | 'Enforce' | 'None' | string: The application control policy enforcement/protection mode of the VM/server group
-* **script**: 'Audit' | 'Enforce' | 'None' | string: The application control policy enforcement/protection mode of the VM/server group
-
-## PublisherInfo
-### Properties
-* **binaryName**: string: The "OriginalName" field taken from the file's version resource
-* **productName**: string: The product name taken from the file's version resource
-* **publisherName**: string: The Subject field of the x.509 certificate used to sign the code, using the following fields -  O = Organization, L = Locality, S = State or Province, and C = Country
-* **version**: string: The binary file version taken from the file's version resource
-
-## Rule
-### Properties
-* **destinationPort**: int {minValue: 0, maxValue: 65535}: The rule's destination port
-* **direction**: 'Inbound' | 'Outbound' | string: The rule's direction
-* **ipAddresses**: string[]: The remote IP addresses that should be able to communicate with the Azure resource on the rule's destination port and protocol
-* **name**: string: The name of the rule
-* **protocols**: ('TCP' | 'UDP' | string)[]: The rule's transport protocols
-
 ## SecurityTaskParameters
 ### Properties
 * **name**: string (ReadOnly): Name of the task type
@@ -307,16 +223,4 @@
 ## TopologySingleResourceParent
 ### Properties
 * **resourceId**: string (ReadOnly): Azure resource id which serves as parent resource in topology view
-
-## UserRecommendation
-### Properties
-* **recommendationAction**: 'Add' | 'Recommended' | 'Remove' | string: The recommendation action of the VM/server or rule
-* **username**: string: Represents a user that is recommended to be allowed for a certain rule
-
-## VmRecommendation
-### Properties
-* **configurationStatus**: 'Configured' | 'Failed' | 'InProgress' | 'NoStatus' | 'NotConfigured' | string: The configuration status of the VM/server group or machine or rule on the machine
-* **enforcementSupport**: 'NotSupported' | 'Supported' | 'Unknown' | string: The VM/server supportability of Enforce feature
-* **recommendationAction**: 'Add' | 'Recommended' | 'Remove' | string: The recommendation action of the VM/server or rule
-* **resourceId**: string: The full azure resource id of the machine
 

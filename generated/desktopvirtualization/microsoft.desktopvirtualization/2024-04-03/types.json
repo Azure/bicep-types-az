@@ -4975,5 +4975,64 @@
       "$ref": "#/326"
     },
     "flags": 1
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RegistrationTokenList",
+    "properties": {
+      "value": {
+        "type": {
+          "$ref": "#/371"
+        },
+        "flags": 0,
+        "description": "List of RegistrationToken definitions."
+      },
+      "nextLink": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "Link to the next page of results."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RegistrationTokenMinimal",
+    "properties": {
+      "expirationTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Expiration time of registration token."
+      },
+      "token": {
+        "type": {
+          "$ref": "#/370"
+        },
+        "flags": 0,
+        "description": "The registration token base64 encoded string."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "sensitive": true
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/369"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listRegistrationTokens",
+    "resourceType": "Microsoft.DesktopVirtualization/hostPools",
+    "apiVersion": "2024-04-03",
+    "output": {
+      "$ref": "#/368"
+    }
   }
 ]

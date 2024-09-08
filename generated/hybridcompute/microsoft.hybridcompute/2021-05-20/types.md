@@ -143,8 +143,8 @@
 * **privateLinkScopeResourceId**: string: The resource id of the private link scope this machine is assigned to, if any.
 * **provisioningState**: string (ReadOnly): The provisioning state, which only appears in the response.
 * **status**: 'Connected' | 'Disconnected' | 'Error' | string (ReadOnly): The status of the hybrid machine agent.
-* **vmId**: string: Specifies the hybrid machine unique ID.
-* **vmUuid**: string (ReadOnly): Specifies the Arc Machine's unique SMBIOS ID
+* **vmId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Specifies the hybrid machine unique ID.
+* **vmUuid**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): Specifies the Arc Machine's unique SMBIOS ID
 
 ## OSProfile
 ### Properties

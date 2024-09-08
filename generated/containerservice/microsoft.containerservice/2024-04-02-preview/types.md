@@ -1097,7 +1097,7 @@
 ## ScaleProfile
 ### Properties
 * **autoscale**: [AutoScaleProfile](#autoscaleprofile)[]: Specifications on how to auto-scale the VirtualMachines agent pool within a predefined size range. Currently, at most one AutoScaleProfile is allowed.
-* **manual**: [ManualScaleProfile](#manualscaleprofile)[]: Specifications on how to scale the VirtualMachines agent pool to a fixed size. Currently, at most one ManualScaleProfile is allowed.
+* **manual**: [ManualScaleProfile](#manualscaleprofile)[]: Specifications on how to scale the VirtualMachines agent pool to a fixed size.
 
 ## Schedule
 ### Properties
