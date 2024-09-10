@@ -1,14 +1,5 @@
 # Microsoft.Security @ 2020-01-01
 
-## Resource Microsoft.Security/adaptiveNetworkHardenings@2020-01-01 (ReadOnly)
-* **Valid Scope(s)**: Extension
-### Properties
-* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AdaptiveNetworkHardeningProperties](#adaptivenetworkhardeningproperties) (ReadOnly): Properties of the Adaptive Network Hardening resource
-* **type**: 'Microsoft.Security/adaptiveNetworkHardenings' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.Security/assessmentMetadata@2020-01-01
 * **Valid Scope(s)**: Tenant (ReadOnly), Subscription
 ### Properties
@@ -45,16 +36,6 @@
 * **name**: 'External' | 'Internal' | string (Required, DeployTimeConstant): The resource name
 * **properties**: [AllowedConnectionsResourceProperties](#allowedconnectionsresourceproperties) (ReadOnly): Describes the allowed traffic between Azure resources
 * **type**: 'Microsoft.Security/locations/allowedConnections' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.Security/locations/applicationWhitelistings@2020-01-01
-* **Valid Scope(s)**: Subscription
-### Properties
-* **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (ReadOnly): Location where the resource is stored
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AdaptiveApplicationControlGroupData](#adaptiveapplicationcontrolgroupdata) (Required): Represents a machines group and set of rules to be allowed running on a machine
-* **type**: 'Microsoft.Security/locations/applicationWhitelistings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/locations/discoveredSecuritySolutions@2020-01-01 (ReadOnly)
 * **Valid Scope(s)**: ResourceGroup
@@ -124,28 +105,6 @@
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [ServerVulnerabilityAssessmentProperties](#servervulnerabilityassessmentproperties) (ReadOnly): describes ServerVulnerabilityAssessment properties.
 * **type**: 'Microsoft.Security/serverVulnerabilityAssessments' (ReadOnly, DeployTimeConstant): The resource type
-
-## AdaptiveApplicationControlGroupData
-### Properties
-* **configurationStatus**: 'Configured' | 'Failed' | 'InProgress' | 'NoStatus' | 'NotConfigured' | string (ReadOnly): The configuration status of the machines group or machine or rule
-* **enforcementMode**: 'Audit' | 'Enforce' | 'None' | string: The application control policy enforcement/protection mode of the machine group
-* **issues**: [AdaptiveApplicationControlIssueSummary](#adaptiveapplicationcontrolissuesummary)[] (ReadOnly)
-* **pathRecommendations**: [PathRecommendation](#pathrecommendation)[]
-* **protectionMode**: [ProtectionMode](#protectionmode): The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.
-* **recommendationStatus**: 'NoStatus' | 'NotAvailable' | 'NotRecommended' | 'Recommended' | string (ReadOnly): The initial recommendation status of the machine group or machine
-* **sourceSystem**: 'Azure_AppLocker' | 'Azure_AuditD' | 'NonAzure_AppLocker' | 'NonAzure_AuditD' | 'None' | string (ReadOnly): The source type of the machine group
-* **vmRecommendations**: [VmRecommendation](#vmrecommendation)[]
-
-## AdaptiveApplicationControlIssueSummary
-### Properties
-* **issue**: 'ExecutableViolationsAudited' | 'MsiAndScriptViolationsAudited' | 'MsiAndScriptViolationsBlocked' | 'RulesViolatedManually' | 'ViolationsAudited' | 'ViolationsBlocked' | string: An alert that machines within a group can have
-* **numberOfVms**: int: The number of machines in the group that have this alert
-
-## AdaptiveNetworkHardeningProperties
-### Properties
-* **effectiveNetworkSecurityGroups**: [EffectiveNetworkSecurityGroups](#effectivenetworksecuritygroups)[]: The Network Security Groups effective on the network interfaces of the protected resource
-* **rules**: [Rule](#rule)[]: The security rules which are recommended to be effective on the VM
-* **rulesCalculationTime**: string: The UTC time on which the rules were calculated
 
 ## AlertEntity
 ### Properties
@@ -223,11 +182,6 @@
 * **securityFamily**: 'Ngfw' | 'SaasWaf' | 'Va' | 'Waf' | string (Required): The security family of the discovered solution
 * **sku**: string (Required): The security solutions' image sku
 
-## EffectiveNetworkSecurityGroups
-### Properties
-* **networkInterface**: string: The Azure resource ID of the network interface
-* **networkSecurityGroups**: string[]: The Network Security Groups effective on the network interface
-
 ## JitNetworkAccessPolicyProperties
 ### Properties
 * **provisioningState**: string (ReadOnly): Gets the provisioning state of the Just-in-Time policy.
@@ -270,32 +224,6 @@
 * **id**: string (Required): Resource ID of the virtual machine that is linked to this policy
 * **ports**: [JitNetworkAccessRequestPort](#jitnetworkaccessrequestport)[] (Required): The ports that were opened for the virtual machine
 
-## PathRecommendation
-### Properties
-* **action**: 'Add' | 'Recommended' | 'Remove' | string: The recommendation action of the machine or rule
-* **common**: bool: Whether the application is commonly run on the machine
-* **configurationStatus**: 'Configured' | 'Failed' | 'InProgress' | 'NoStatus' | 'NotConfigured' | string: The configuration status of the machines group or machine or rule
-* **fileType**: 'Dll' | 'Exe' | 'Executable' | 'Msi' | 'Script' | 'Unknown' | string: The type of the file (for Linux files - Executable is used)
-* **path**: string: The full path of the file, or an identifier of the application
-* **publisherInfo**: [PublisherInfo](#publisherinfo): Represents the publisher information of a process/rule
-* **type**: 'BinarySignature' | 'File' | 'FileHash' | 'ProductSignature' | 'PublisherSignature' | 'VersionAndAboveSignature' | string: The type of the rule to be allowed
-* **usernames**: [UserRecommendation](#userrecommendation)[]
-* **userSids**: string[]
-
-## ProtectionMode
-### Properties
-* **exe**: 'Audit' | 'Enforce' | 'None' | string: The application control policy enforcement/protection mode of the machine group
-* **executable**: 'Audit' | 'Enforce' | 'None' | string: The application control policy enforcement/protection mode of the machine group
-* **msi**: 'Audit' | 'Enforce' | 'None' | string: The application control policy enforcement/protection mode of the machine group
-* **script**: 'Audit' | 'Enforce' | 'None' | string: The application control policy enforcement/protection mode of the machine group
-
-## PublisherInfo
-### Properties
-* **binaryName**: string: The "OriginalName" field taken from the file's version resource
-* **productName**: string: The product name taken from the file's version resource
-* **publisherName**: string: The Subject field of the x.509 certificate used to sign the code, using the following fields -  O = Organization, L = Locality, S = State or Province, and C = Country
-* **version**: string: The binary file version taken from the file's version resource
-
 ## ResourceDetails
 * **Discriminator**: source
 
@@ -335,14 +263,6 @@
 * **workspaceResourceGroup**: string (ReadOnly): The azure resource group for the LogAnalytics workspace storing this alert
 * **workspaceSubscriptionId**: string {pattern: "^[0-9A-Fa-f]{8}-([0-9A-Fa-f]{4}-){3}[0-9A-Fa-f]{12}$"} (ReadOnly): The azure subscription id for the LogAnalytics workspace storing this alert.
 
-
-## Rule
-### Properties
-* **destinationPort**: int {minValue: 0, maxValue: 65535}: The rule's destination port
-* **direction**: 'Inbound' | 'Outbound' | string: The rule's direction
-* **ipAddresses**: string[]: The remote IP addresses that should be able to communicate with the Azure resource on the rule's destination port and protocol
-* **name**: string: The name of the rule
-* **protocols**: ('TCP' | 'UDP' | string)[]: The rule's transport protocols
 
 ## ScoreDetails
 ### Properties
@@ -431,16 +351,4 @@
 ## TopologySingleResourceParent
 ### Properties
 * **resourceId**: string (ReadOnly): Azure resource id which serves as parent resource in topology view
-
-## UserRecommendation
-### Properties
-* **recommendationAction**: 'Add' | 'Recommended' | 'Remove' | string: The recommendation action of the machine or rule
-* **username**: string: Represents a user that is recommended to be allowed for a certain rule
-
-## VmRecommendation
-### Properties
-* **configurationStatus**: 'Configured' | 'Failed' | 'InProgress' | 'NoStatus' | 'NotConfigured' | string: The configuration status of the machines group or machine or rule
-* **enforcementSupport**: 'NotSupported' | 'Supported' | 'Unknown' | string: The machine supportability of Enforce feature
-* **recommendationAction**: 'Add' | 'Recommended' | 'Remove' | string: The recommendation action of the machine or rule
-* **resourceId**: string: The full resource id of the machine
 

@@ -666,7 +666,7 @@
 * **documentEndpoint**: string (ReadOnly): The connection endpoint for the Cosmos DB database account.
 * **enableAnalyticalStorage**: bool: Flag to indicate whether to enable storage analytics.
 * **enableAutomaticFailover**: bool: Enables automatic failover of the write region in the rare event that the region is unavailable due to an outage. Automatic failover will result in a new write region for the account and is chosen based on the failover priorities configured for the account.
-* **enableBurstCapacity**: bool: Flag to indicate enabling/disabling of Burst Capacity Preview feature on the account
+* **enableBurstCapacity**: bool: Flag to indicate enabling/disabling of Burst Capacity feature on the account
 * **enableCassandraConnector**: bool: Enables the cassandra connector on the Cosmos DB C* account
 * **enableFreeTier**: bool: Flag to indicate whether Free Tier is enabled.
 * **enableMultipleWriteLocations**: bool: Enables the account to write in multiple locations

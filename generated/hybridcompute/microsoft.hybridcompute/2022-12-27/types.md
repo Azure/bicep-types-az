@@ -81,7 +81,7 @@
 
 ## AgentUpgrade
 ### Properties
-* **correlationId**: string: The correlation ID passed in from RSM per upgrade.
+* **correlationId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: The correlation ID passed in from RSM per upgrade.
 * **desiredVersion**: string: Specifies the version info w.r.t AgentUpgrade for the machine.
 * **enableAutomaticUpgrade**: bool: Specifies if RSM should try to upgrade this machine
 * **lastAttemptMessage**: string (ReadOnly): Failure message of last upgrade attempt if any.
@@ -217,8 +217,8 @@
 * **provisioningState**: string (ReadOnly): The provisioning state, which only appears in the response.
 * **serviceStatuses**: [ServiceStatuses](#servicestatuses): Statuses of dependent services that are reported back to ARM.
 * **status**: 'Connected' | 'Disconnected' | 'Error' | string (ReadOnly): The status of the hybrid machine agent.
-* **vmId**: string: Specifies the hybrid machine unique ID.
-* **vmUuid**: string (ReadOnly): Specifies the Arc Machine's unique SMBIOS ID
+* **vmId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: Specifies the hybrid machine unique ID.
+* **vmUuid**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): Specifies the Arc Machine's unique SMBIOS ID
 
 ## OSProfile
 ### Properties

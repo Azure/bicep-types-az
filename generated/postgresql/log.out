@@ -20,6 +20,9 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'ActiveDirectoryAdministrator' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from ActiveDirectoryAdministrator
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'ServerBackup' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from ServerBackup
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'Configuration' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from Configuration

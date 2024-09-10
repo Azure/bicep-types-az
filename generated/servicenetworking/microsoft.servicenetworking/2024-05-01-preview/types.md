@@ -73,7 +73,7 @@
 
 ## SecurityPolicyProperties
 ### Properties
-* **policyType**: 'waf' | string (Required, ReadOnly): Type of the Traffic Controller Security Policy
+* **policyType**: 'waf' | string (ReadOnly): Type of the Traffic Controller Security Policy
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning State of Traffic Controller SecurityPolicy Resource
 * **wafPolicy**: [WafPolicy](#wafpolicy): Web Application Firewall Policy of the Traffic Controller Security Policy
 

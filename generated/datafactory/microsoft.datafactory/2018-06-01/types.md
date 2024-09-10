@@ -742,12 +742,14 @@
 ### Properties
 * **accountKey**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of accountKey in connection string.
 * **connectionString**: any: The connection string. It is mutually exclusive with sasUri property. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **fileShare**: any: The azure file share name. It is required when auth with accountKey/sasToken. Type: string (or Expression with resultType string).
 * **host**: any: Host name of the server. Type: string (or Expression with resultType string).
 * **password**: [SecretBase](#secretbase): Password to logon the server.
 * **sasToken**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of sasToken in sas uri.
 * **sasUri**: any: SAS URI of the Azure File resource. It is mutually exclusive with connectionString property. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **serviceEndpoint**: any: File service endpoint of the Azure File Storage resource. It is mutually exclusive with connectionString, sasUri property.
 * **snapshot**: any: The azure file share snapshot version. Type: string (or Expression with resultType string).
 * **userId**: any: User ID to logon the server. Type: string (or Expression with resultType string).
 
@@ -1028,6 +1030,16 @@
 ### Properties
 * **tableName**: any (Required): The table name of the Azure Table storage. Type: string (or Expression with resultType string).
 
+## AzureTableStorageLinkedServiceTypeProperties
+### Properties
+* **accountKey**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of accountKey in connection string.
+* **connectionString**: any: The connection string. It is mutually exclusive with sasUri property. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
+* **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
+* **sasToken**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of sasToken in sas uri.
+* **sasUri**: any: SAS URI of the Azure Storage resource. It is mutually exclusive with connectionString property. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **serviceEndpoint**: any: Table service endpoint of the Azure Table Storage resource. It is mutually exclusive with connectionString, sasUri property.
+
 ## BigDataPoolParametrizationReference
 ### Properties
 * **referenceName**: any (Required): Reference big data pool name. Type: string (or Expression with resultType string).
@@ -1108,8 +1120,9 @@
 
 ## CommonDataServiceForAppsLinkedServiceTypeProperties
 ### Properties
-* **authenticationType**: any (Required): The authentication type to connect to Common Data Service for Apps server. 'Office365' for online scenario, 'Ifd' for on-premises with Ifd scenario. 'AADServicePrincipal' for Server-To-Server authentication in online scenario. Type: string (or Expression with resultType string).
+* **authenticationType**: any (Required): The authentication type to connect to Common Data Service for Apps server. 'Office365' for online scenario, 'Ifd' for on-premises with Ifd scenario. 'AADServicePrincipal' for Server-To-Server authentication in online scenario, 'Active Directory' for Dynamics on-premises with IFD. Type: string (or Expression with resultType string).
 * **deploymentType**: any (Required): The deployment type of the Common Data Service for Apps instance. 'Online' for Common Data Service for Apps Online and 'OnPremisesWithIfd' for Common Data Service for Apps on-premises with Ifd. Type: string (or Expression with resultType string).
+* **domain**: any: The Active Directory domain that will verify user credentials. Type: string (or Expression with resultType string).
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **hostName**: any: The host name of the on-premises Common Data Service for Apps server. The property is required for on-prem and not allowed for online. Type: string (or Expression with resultType string).
 * **organizationName**: any: The organization name of the Common Data Service for Apps instance. The property is required for on-prem and required for online when there are more than one Common Data Service for Apps instances associated with the user. Type: string (or Expression with resultType string).
@@ -1338,6 +1351,12 @@
 #### Properties
 * **copyBehavior**: any: The type of copy behavior for copy sink.
 * **type**: 'FileSystemSink' (Required): Copy sink type.
+
+### IcebergSink
+#### Properties
+* **formatSettings**: [IcebergWriteSettings](#icebergwritesettings): Iceberg format settings.
+* **storeSettings**: [StoreWriteSettings](#storewritesettings): Iceberg store settings.
+* **type**: 'IcebergSink' (Required): Copy sink type.
 
 ### InformixSink
 #### Properties
@@ -2783,6 +2802,11 @@
 * **type**: 'HubspotObject' (Required): Type of dataset.
 * **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties): Properties specific to this dataset type.
 
+### IcebergDataset
+#### Properties
+* **type**: 'Iceberg' (Required): Type of dataset.
+* **typeProperties**: [IcebergDatasetTypeProperties](#icebergdatasettypeproperties): Iceberg dataset properties.
+
 ### ImpalaObjectDataset
 #### Properties
 * **type**: 'ImpalaObject' (Required): Type of dataset.
@@ -3350,9 +3374,10 @@
 
 ## DynamicsCrmLinkedServiceTypeProperties
 ### Properties
-* **authenticationType**: any (Required): The authentication type to connect to Dynamics CRM server. 'Office365' for online scenario, 'Ifd' for on-premises with Ifd scenario, 'AADServicePrincipal' for Server-To-Server authentication in online scenario. Type: string (or Expression with resultType string).
+* **authenticationType**: any (Required): The authentication type to connect to Dynamics CRM server. 'Office365' for online scenario, 'Ifd' for on-premises with Ifd scenario, 'AADServicePrincipal' for Server-To-Server authentication in online scenario, 'Active Directory' for Dynamics on-premises with IFD. Type: string (or Expression with resultType string).
 * **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
 * **deploymentType**: any (Required): The deployment type of the Dynamics CRM instance. 'Online' for Dynamics CRM Online and 'OnPremisesWithIfd' for Dynamics CRM on-premises with Ifd. Type: string (or Expression with resultType string).
+* **domain**: any: The Active Directory domain that will verify user credentials. Type: string (or Expression with resultType string).
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **hostName**: any: The host name of the on-premises Dynamics CRM server. The property is required for on-prem and not allowed for online. Type: string (or Expression with resultType string).
 * **organizationName**: any: The organization name of the Dynamics CRM instance. The property is required for on-prem and required for online when there are more than one Dynamics CRM instances associated with the user. Type: string (or Expression with resultType string).
@@ -3370,9 +3395,10 @@
 
 ## DynamicsLinkedServiceTypeProperties
 ### Properties
-* **authenticationType**: any (Required): The authentication type to connect to Dynamics server. 'Office365' for online scenario, 'Ifd' for on-premises with Ifd scenario, 'AADServicePrincipal' for Server-To-Server authentication in online scenario. Type: string (or Expression with resultType string).
+* **authenticationType**: any (Required): The authentication type to connect to Dynamics server. 'Office365' for online scenario, 'Ifd' for on-premises with Ifd scenario, 'AADServicePrincipal' for Server-To-Server authentication in online scenario, 'Active Directory' for Dynamics on-premises with IFD. Type: string (or Expression with resultType string).
 * **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
 * **deploymentType**: any (Required): The deployment type of the Dynamics instance. 'Online' for Dynamics Online and 'OnPremisesWithIfd' for Dynamics on-premises with Ifd. Type: string (or Expression with resultType string).
+* **domain**: any: The Active Directory domain that will verify user credentials. Type: string (or Expression with resultType string).
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **hostName**: any: The host name of the on-premises Dynamics server. The property is required for on-prem and not allowed for online. Type: string (or Expression with resultType string).
 * **organizationName**: any: The organization name of the Dynamics instance. The property is required for on-prem and required for online when there are more than one Dynamics instances associated with the user. Type: string (or Expression with resultType string).
@@ -3980,6 +4006,16 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **useHostVerification**: any: Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
 * **usePeerVerification**: any: Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
 
+## IcebergDatasetTypeProperties
+### Properties
+* **location**: [DatasetLocation](#datasetlocation) (Required): The location of the iceberg storage. Setting a file name is not allowed for iceberg format.
+
+## IcebergWriteSettings
+### Properties
+* **type**: string (Required): The write setting type.
+### Additional Properties
+* **Additional Properties Type**: any
+
 ## IfConditionActivityTypeProperties
 ### Properties
 * **expression**: [Expression](#expression) (Required): An expression that would evaluate to Boolean. This is used to determine the block of activities (ifTrueActivities or ifFalseActivities) that will be executed.
@@ -4201,6 +4237,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **connectVia**: [IntegrationRuntimeReference](#integrationruntimereference): The integration runtime reference.
 * **description**: string: Linked service description.
 * **parameters**: [ParameterDefinitionSpecification](#parameterdefinitionspecification): Parameters for linked service.
+* **version**: string: Version of the linked service.
 
 ### AmazonMWSLinkedService
 #### Properties
@@ -4355,7 +4392,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### AzureTableStorageLinkedService
 #### Properties
 * **type**: 'AzureTableStorage' (Required): Type of linked service.
-* **typeProperties**: [AzureStorageLinkedServiceTypeProperties](#azurestoragelinkedservicetypeproperties) (Required): Azure Table Storage linked service properties.
+* **typeProperties**: [AzureTableStorageLinkedServiceTypeProperties](#azuretablestoragelinkedservicetypeproperties) (Required): Azure Table Storage linked service properties.
 
 ### CassandraLinkedService
 #### Properties
@@ -4968,12 +5005,14 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ### Properties
 * **connectionString**: any: An ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
 * **database**: any: Database name for connection. Type: string.
-* **driverVersion**: any: The version of the MariaDB driver. Type: string. V1 or empty for legacy driver, V2 for new driver. V1 can support connection string and property bag, V2 can only support connection string.
+* **driverVersion**: any: The version of the MariaDB driver. Type: string. V1 or empty for legacy driver, V2 for new driver. V1 can support connection string and property bag, V2 can only support connection string. The legacy driver is scheduled for deprecation by October 2024.
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **password**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of password in connection string.
 * **port**: any: The port for the connection. Type: integer.
 * **server**: any: Server name for connection. Type: string.
+* **sslMode**: any: This option specifies whether the driver uses TLS encryption and verification when connecting to MariaDB. E.g., SSLMode=<0/1/2/3/4>. Options: DISABLED (0) / PREFERRED (1) (Default) / REQUIRED (2) / VERIFY_CA (3) / VERIFY_IDENTITY (4), REQUIRED (2) is recommended to only allow connections encrypted with SSL/TLS.
 * **username**: any: Username for authentication. Type: string.
+* **useSystemTrustStore**: any: This option specifies whether to use a CA certificate from the system trust store, or from a specified PEM file. E.g. UseSystemTrustStore=<0/1>; Options: Enabled (1) / Disabled (0) (Default)
 
 ## MarketoLinkedServiceTypeProperties
 ### Properties
@@ -5561,6 +5600,9 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **password**: [SecretBase](#secretbase): The password used in Basic authentication type.
 * **resource**: any: The target service or resource to which the access will be requested. Type: string (or Expression with resultType string).
 * **scope**: any: The scope of the access required. It describes what kind of access will be requested. Type: string (or Expression with resultType string).
+* **servicePrincipalCredentialType**: any: The service principal credential type to use in Server-To-Server authentication. 'ServicePrincipalKey' for key/secret, 'ServicePrincipalCert' for certificate. Type: string (or Expression with resultType string).
+* **servicePrincipalEmbeddedCert**: [SecretBase](#secretbase): Specify the base64 encoded certificate of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).
+* **servicePrincipalEmbeddedCertPassword**: [SecretBase](#secretbase): Specify the password of your certificate if your certificate has a password and you are using AadServicePrincipal authentication. Type: string (or Expression with resultType string).
 * **servicePrincipalId**: any: The application's client ID used in AadServicePrincipal authentication type. Type: string (or Expression with resultType string).
 * **servicePrincipalKey**: [SecretBase](#secretbase): The application's key used in AadServicePrincipal authentication type.
 * **tenant**: any: The tenant information (domain name or tenant ID) used in AadServicePrincipal authentication type under which your application resides. Type: string (or Expression with resultType string).
@@ -5900,8 +5942,11 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## SharePointOnlineListLinkedServiceTypeProperties
 ### Properties
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
+* **servicePrincipalCredentialType**: any: The service principal credential type to use in Server-To-Server authentication. 'ServicePrincipalKey' for key/secret, 'ServicePrincipalCert' for certificate. Type: string (or Expression with resultType string).
+* **servicePrincipalEmbeddedCert**: [SecretBase](#secretbase): Specify the base64 encoded certificate of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).
+* **servicePrincipalEmbeddedCertPassword**: [SecretBase](#secretbase): Specify the password of your certificate if your certificate has a password and you are using AadServicePrincipal authentication. Type: string (or Expression with resultType string).
 * **servicePrincipalId**: any (Required): The application (client) ID of your application registered in Azure Active Directory. Make sure to grant SharePoint site permission to this application. Type: string (or Expression with resultType string).
-* **servicePrincipalKey**: [SecretBase](#secretbase) (Required): The client secret of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).
+* **servicePrincipalKey**: [SecretBase](#secretbase): The client secret of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).
 * **siteUrl**: any (Required): The URL of the SharePoint Online site. For example, https://contoso.sharepoint.com/sites/siteName. Type: string (or Expression with resultType string).
 * **tenantId**: any (Required): The tenant ID under which your application resides. You can find it from Azure portal Active Directory overview page. Type: string (or Expression with resultType string).
 
@@ -6645,8 +6690,12 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## VerticaLinkedServiceTypeProperties
 ### Properties
 * **connectionString**: any: An ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **database**: any: Database name for connection. Type: string.
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
+* **port**: any: The port for the connection. Type: integer.
 * **pwd**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of password in connection string.
+* **server**: any: Server name for connection. Type: string.
+* **uid**: any: Username for authentication. Type: string.
 
 ## WaitActivityTypeProperties
 ### Properties
