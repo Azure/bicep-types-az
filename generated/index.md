@@ -3416,6 +3416,7 @@
 * **Link**: [2023-11-01-preview](azurestackhci/microsoft.azurestackhci/2023-11-01-preview/types.md#resource-microsoftazurestackhciclusters2023-11-01-preview)
 * **Link**: [2024-01-01](azurestackhci/microsoft.azurestackhci/2024-01-01/types.md#resource-microsoftazurestackhciclusters2024-01-01)
 * **Link**: [2024-02-15-preview](azurestackhci/microsoft.azurestackhci/2024-02-15-preview/types.md#resource-microsoftazurestackhciclusters2024-02-15-preview)
+* **Link**: [2024-04-01](azurestackhci/microsoft.azurestackhci/2024-04-01/types.md#resource-microsoftazurestackhciclusters2024-04-01)
 
 ### microsoft.azurestackhci/clusters/arcsettings
 * **Link**: [2021-01-01-preview](azurestackhci/microsoft.azurestackhci/2021-01-01-preview/types.md#resource-microsoftazurestackhciclustersarcsettings2021-01-01-preview)
@@ -3436,6 +3437,7 @@
 * **Link**: [2023-11-01-preview](azurestackhci/microsoft.azurestackhci/2023-11-01-preview/types.md#resource-microsoftazurestackhciclustersarcsettings2023-11-01-preview)
 * **Link**: [2024-01-01](azurestackhci/microsoft.azurestackhci/2024-01-01/types.md#resource-microsoftazurestackhciclustersarcsettings2024-01-01)
 * **Link**: [2024-02-15-preview](azurestackhci/microsoft.azurestackhci/2024-02-15-preview/types.md#resource-microsoftazurestackhciclustersarcsettings2024-02-15-preview)
+* **Link**: [2024-04-01](azurestackhci/microsoft.azurestackhci/2024-04-01/types.md#resource-microsoftazurestackhciclustersarcsettings2024-04-01)
 
 ### microsoft.azurestackhci/clusters/arcsettings/extensions
 * **Link**: [2021-01-01-preview](azurestackhci/microsoft.azurestackhci/2021-01-01-preview/types.md#resource-microsoftazurestackhciclustersarcsettingsextensions2021-01-01-preview)
@@ -3456,12 +3458,14 @@
 * **Link**: [2023-11-01-preview](azurestackhci/microsoft.azurestackhci/2023-11-01-preview/types.md#resource-microsoftazurestackhciclustersarcsettingsextensions2023-11-01-preview)
 * **Link**: [2024-01-01](azurestackhci/microsoft.azurestackhci/2024-01-01/types.md#resource-microsoftazurestackhciclustersarcsettingsextensions2024-01-01)
 * **Link**: [2024-02-15-preview](azurestackhci/microsoft.azurestackhci/2024-02-15-preview/types.md#resource-microsoftazurestackhciclustersarcsettingsextensions2024-02-15-preview)
+* **Link**: [2024-04-01](azurestackhci/microsoft.azurestackhci/2024-04-01/types.md#resource-microsoftazurestackhciclustersarcsettingsextensions2024-04-01)
 
 ### microsoft.azurestackhci/clusters/deploymentsettings
 * **Link**: [2023-08-01-preview](azurestackhci/microsoft.azurestackhci/2023-08-01-preview/types.md#resource-microsoftazurestackhciclustersdeploymentsettings2023-08-01-preview)
 * **Link**: [2023-11-01-preview](azurestackhci/microsoft.azurestackhci/2023-11-01-preview/types.md#resource-microsoftazurestackhciclustersdeploymentsettings2023-11-01-preview)
 * **Link**: [2024-01-01](azurestackhci/microsoft.azurestackhci/2024-01-01/types.md#resource-microsoftazurestackhciclustersdeploymentsettings2024-01-01)
 * **Link**: [2024-02-15-preview](azurestackhci/microsoft.azurestackhci/2024-02-15-preview/types.md#resource-microsoftazurestackhciclustersdeploymentsettings2024-02-15-preview)
+* **Link**: [2024-04-01](azurestackhci/microsoft.azurestackhci/2024-04-01/types.md#resource-microsoftazurestackhciclustersdeploymentsettings2024-04-01)
 
 ### microsoft.azurestackhci/clusters/publishers
 * **Link**: [2022-10-01](azurestackhci/microsoft.azurestackhci/2022-10-01/types.md#resource-microsoftazurestackhciclusterspublishers2022-10-01)
@@ -3475,6 +3479,7 @@
 * **Link**: [2023-11-01-preview](azurestackhci/microsoft.azurestackhci/2023-11-01-preview/types.md#resource-microsoftazurestackhciclusterspublishers2023-11-01-preview)
 * **Link**: [2024-01-01](azurestackhci/microsoft.azurestackhci/2024-01-01/types.md#resource-microsoftazurestackhciclusterspublishers2024-01-01)
 * **Link**: [2024-02-15-preview](azurestackhci/microsoft.azurestackhci/2024-02-15-preview/types.md#resource-microsoftazurestackhciclusterspublishers2024-02-15-preview)
+* **Link**: [2024-04-01](azurestackhci/microsoft.azurestackhci/2024-04-01/types.md#resource-microsoftazurestackhciclusterspublishers2024-04-01)
 
 ### microsoft.azurestackhci/clusters/publishers/offers
 * **Link**: [2022-10-01](azurestackhci/microsoft.azurestackhci/2022-10-01/types.md#resource-microsoftazurestackhciclusterspublishersoffers2022-10-01)
@@ -3488,6 +3493,7 @@
 * **Link**: [2023-11-01-preview](azurestackhci/microsoft.azurestackhci/2023-11-01-preview/types.md#resource-microsoftazurestackhciclusterspublishersoffers2023-11-01-preview)
 * **Link**: [2024-01-01](azurestackhci/microsoft.azurestackhci/2024-01-01/types.md#resource-microsoftazurestackhciclusterspublishersoffers2024-01-01)
 * **Link**: [2024-02-15-preview](azurestackhci/microsoft.azurestackhci/2024-02-15-preview/types.md#resource-microsoftazurestackhciclusterspublishersoffers2024-02-15-preview)
+* **Link**: [2024-04-01](azurestackhci/microsoft.azurestackhci/2024-04-01/types.md#resource-microsoftazurestackhciclusterspublishersoffers2024-04-01)
 
 ### microsoft.azurestackhci/clusters/publishers/offers/skus
 * **Link**: [2022-10-01](azurestackhci/microsoft.azurestackhci/2022-10-01/types.md#resource-microsoftazurestackhciclusterspublishersoffersskus2022-10-01)
@@ -3501,11 +3507,13 @@
 * **Link**: [2023-11-01-preview](azurestackhci/microsoft.azurestackhci/2023-11-01-preview/types.md#resource-microsoftazurestackhciclusterspublishersoffersskus2023-11-01-preview)
 * **Link**: [2024-01-01](azurestackhci/microsoft.azurestackhci/2024-01-01/types.md#resource-microsoftazurestackhciclusterspublishersoffersskus2024-01-01)
 * **Link**: [2024-02-15-preview](azurestackhci/microsoft.azurestackhci/2024-02-15-preview/types.md#resource-microsoftazurestackhciclusterspublishersoffersskus2024-02-15-preview)
+* **Link**: [2024-04-01](azurestackhci/microsoft.azurestackhci/2024-04-01/types.md#resource-microsoftazurestackhciclusterspublishersoffersskus2024-04-01)
 
 ### microsoft.azurestackhci/clusters/securitysettings
 * **Link**: [2023-11-01-preview](azurestackhci/microsoft.azurestackhci/2023-11-01-preview/types.md#resource-microsoftazurestackhciclusterssecuritysettings2023-11-01-preview)
 * **Link**: [2024-01-01](azurestackhci/microsoft.azurestackhci/2024-01-01/types.md#resource-microsoftazurestackhciclusterssecuritysettings2024-01-01)
 * **Link**: [2024-02-15-preview](azurestackhci/microsoft.azurestackhci/2024-02-15-preview/types.md#resource-microsoftazurestackhciclusterssecuritysettings2024-02-15-preview)
+* **Link**: [2024-04-01](azurestackhci/microsoft.azurestackhci/2024-04-01/types.md#resource-microsoftazurestackhciclusterssecuritysettings2024-04-01)
 
 ### microsoft.azurestackhci/clusters/updates
 * **Link**: [2022-10-01](azurestackhci/microsoft.azurestackhci/2022-10-01/types.md#resource-microsoftazurestackhciclustersupdates2022-10-01)
@@ -3519,6 +3527,7 @@
 * **Link**: [2023-11-01-preview](azurestackhci/microsoft.azurestackhci/2023-11-01-preview/types.md#resource-microsoftazurestackhciclustersupdates2023-11-01-preview)
 * **Link**: [2024-01-01](azurestackhci/microsoft.azurestackhci/2024-01-01/types.md#resource-microsoftazurestackhciclustersupdates2024-01-01)
 * **Link**: [2024-02-15-preview](azurestackhci/microsoft.azurestackhci/2024-02-15-preview/types.md#resource-microsoftazurestackhciclustersupdates2024-02-15-preview)
+* **Link**: [2024-04-01](azurestackhci/microsoft.azurestackhci/2024-04-01/types.md#resource-microsoftazurestackhciclustersupdates2024-04-01)
 
 ### microsoft.azurestackhci/clusters/updates/updateruns
 * **Link**: [2022-10-01](azurestackhci/microsoft.azurestackhci/2022-10-01/types.md#resource-microsoftazurestackhciclustersupdatesupdateruns2022-10-01)
@@ -3532,6 +3541,7 @@
 * **Link**: [2023-11-01-preview](azurestackhci/microsoft.azurestackhci/2023-11-01-preview/types.md#resource-microsoftazurestackhciclustersupdatesupdateruns2023-11-01-preview)
 * **Link**: [2024-01-01](azurestackhci/microsoft.azurestackhci/2024-01-01/types.md#resource-microsoftazurestackhciclustersupdatesupdateruns2024-01-01)
 * **Link**: [2024-02-15-preview](azurestackhci/microsoft.azurestackhci/2024-02-15-preview/types.md#resource-microsoftazurestackhciclustersupdatesupdateruns2024-02-15-preview)
+* **Link**: [2024-04-01](azurestackhci/microsoft.azurestackhci/2024-04-01/types.md#resource-microsoftazurestackhciclustersupdatesupdateruns2024-04-01)
 
 ### microsoft.azurestackhci/clusters/updatesummaries
 * **Link**: [2022-10-01](azurestackhci/microsoft.azurestackhci/2022-10-01/types.md#resource-microsoftazurestackhciclustersupdatesummaries2022-10-01)
@@ -3545,12 +3555,14 @@
 * **Link**: [2023-11-01-preview](azurestackhci/microsoft.azurestackhci/2023-11-01-preview/types.md#resource-microsoftazurestackhciclustersupdatesummaries2023-11-01-preview)
 * **Link**: [2024-01-01](azurestackhci/microsoft.azurestackhci/2024-01-01/types.md#resource-microsoftazurestackhciclustersupdatesummaries2024-01-01)
 * **Link**: [2024-02-15-preview](azurestackhci/microsoft.azurestackhci/2024-02-15-preview/types.md#resource-microsoftazurestackhciclustersupdatesummaries2024-02-15-preview)
+* **Link**: [2024-04-01](azurestackhci/microsoft.azurestackhci/2024-04-01/types.md#resource-microsoftazurestackhciclustersupdatesummaries2024-04-01)
 
 ### microsoft.azurestackhci/edgedevices
 * **Link**: [2023-08-01-preview](azurestackhci/microsoft.azurestackhci/2023-08-01-preview/types.md#resource-microsoftazurestackhciedgedevices2023-08-01-preview)
 * **Link**: [2023-11-01-preview](azurestackhci/microsoft.azurestackhci/2023-11-01-preview/types.md#resource-microsoftazurestackhciedgedevices2023-11-01-preview)
 * **Link**: [2024-01-01](azurestackhci/microsoft.azurestackhci/2024-01-01/types.md#resource-microsoftazurestackhciedgedevices2024-01-01)
 * **Link**: [2024-02-15-preview](azurestackhci/microsoft.azurestackhci/2024-02-15-preview/types.md#resource-microsoftazurestackhciedgedevices2024-02-15-preview)
+* **Link**: [2024-04-01](azurestackhci/microsoft.azurestackhci/2024-04-01/types.md#resource-microsoftazurestackhciedgedevices2024-04-01)
 
 ### microsoft.azurestackhci/galleryimages
 * **Link**: [2021-07-01-preview](azurestackhci/microsoft.azurestackhci/2021-07-01-preview/types.md#resource-microsoftazurestackhcigalleryimages2021-07-01-preview)
@@ -3560,13 +3572,11 @@
 * **Link**: [2023-09-01-preview](azurestackhci/microsoft.azurestackhci/2023-09-01-preview/types.md#resource-microsoftazurestackhcigalleryimages2023-09-01-preview)
 * **Link**: [2024-01-01](azurestackhci/microsoft.azurestackhci/2024-01-01/types.md#resource-microsoftazurestackhcigalleryimages2024-01-01)
 * **Link**: [2024-02-01-preview](azurestackhci/microsoft.azurestackhci/2024-02-01-preview/types.md#resource-microsoftazurestackhcigalleryimages2024-02-01-preview)
-* **Link**: [2024-05-01-preview](azurestackhci/microsoft.azurestackhci/2024-05-01-preview/types.md#resource-microsoftazurestackhcigalleryimages2024-05-01-preview)
 
 ### microsoft.azurestackhci/logicalnetworks
 * **Link**: [2023-09-01-preview](azurestackhci/microsoft.azurestackhci/2023-09-01-preview/types.md#resource-microsoftazurestackhcilogicalnetworks2023-09-01-preview)
 * **Link**: [2024-01-01](azurestackhci/microsoft.azurestackhci/2024-01-01/types.md#resource-microsoftazurestackhcilogicalnetworks2024-01-01)
 * **Link**: [2024-02-01-preview](azurestackhci/microsoft.azurestackhci/2024-02-01-preview/types.md#resource-microsoftazurestackhcilogicalnetworks2024-02-01-preview)
-* **Link**: [2024-05-01-preview](azurestackhci/microsoft.azurestackhci/2024-05-01-preview/types.md#resource-microsoftazurestackhcilogicalnetworks2024-05-01-preview)
 
 ### microsoft.azurestackhci/marketplacegalleryimages
 * **Link**: [2021-09-01-preview](azurestackhci/microsoft.azurestackhci/2021-09-01-preview/types.md#resource-microsoftazurestackhcimarketplacegalleryimages2021-09-01-preview)
@@ -3575,7 +3585,6 @@
 * **Link**: [2023-09-01-preview](azurestackhci/microsoft.azurestackhci/2023-09-01-preview/types.md#resource-microsoftazurestackhcimarketplacegalleryimages2023-09-01-preview)
 * **Link**: [2024-01-01](azurestackhci/microsoft.azurestackhci/2024-01-01/types.md#resource-microsoftazurestackhcimarketplacegalleryimages2024-01-01)
 * **Link**: [2024-02-01-preview](azurestackhci/microsoft.azurestackhci/2024-02-01-preview/types.md#resource-microsoftazurestackhcimarketplacegalleryimages2024-02-01-preview)
-* **Link**: [2024-05-01-preview](azurestackhci/microsoft.azurestackhci/2024-05-01-preview/types.md#resource-microsoftazurestackhcimarketplacegalleryimages2024-05-01-preview)
 
 ### microsoft.azurestackhci/networkinterfaces
 * **Link**: [2021-07-01-preview](azurestackhci/microsoft.azurestackhci/2021-07-01-preview/types.md#resource-microsoftazurestackhcinetworkinterfaces2021-07-01-preview)
@@ -3585,15 +3594,12 @@
 * **Link**: [2023-09-01-preview](azurestackhci/microsoft.azurestackhci/2023-09-01-preview/types.md#resource-microsoftazurestackhcinetworkinterfaces2023-09-01-preview)
 * **Link**: [2024-01-01](azurestackhci/microsoft.azurestackhci/2024-01-01/types.md#resource-microsoftazurestackhcinetworkinterfaces2024-01-01)
 * **Link**: [2024-02-01-preview](azurestackhci/microsoft.azurestackhci/2024-02-01-preview/types.md#resource-microsoftazurestackhcinetworkinterfaces2024-02-01-preview)
-* **Link**: [2024-05-01-preview](azurestackhci/microsoft.azurestackhci/2024-05-01-preview/types.md#resource-microsoftazurestackhcinetworkinterfaces2024-05-01-preview)
 
 ### microsoft.azurestackhci/networksecuritygroups
 * **Link**: [2024-02-01-preview](azurestackhci/microsoft.azurestackhci/2024-02-01-preview/types.md#resource-microsoftazurestackhcinetworksecuritygroups2024-02-01-preview)
-* **Link**: [2024-05-01-preview](azurestackhci/microsoft.azurestackhci/2024-05-01-preview/types.md#resource-microsoftazurestackhcinetworksecuritygroups2024-05-01-preview)
 
 ### microsoft.azurestackhci/networksecuritygroups/securityrules
 * **Link**: [2024-02-01-preview](azurestackhci/microsoft.azurestackhci/2024-02-01-preview/types.md#resource-microsoftazurestackhcinetworksecuritygroupssecurityrules2024-02-01-preview)
-* **Link**: [2024-05-01-preview](azurestackhci/microsoft.azurestackhci/2024-05-01-preview/types.md#resource-microsoftazurestackhcinetworksecuritygroupssecurityrules2024-05-01-preview)
 
 ### microsoft.azurestackhci/storagecontainers
 * **Link**: [2021-09-01-preview](azurestackhci/microsoft.azurestackhci/2021-09-01-preview/types.md#resource-microsoftazurestackhcistoragecontainers2021-09-01-preview)
@@ -3602,7 +3608,6 @@
 * **Link**: [2023-09-01-preview](azurestackhci/microsoft.azurestackhci/2023-09-01-preview/types.md#resource-microsoftazurestackhcistoragecontainers2023-09-01-preview)
 * **Link**: [2024-01-01](azurestackhci/microsoft.azurestackhci/2024-01-01/types.md#resource-microsoftazurestackhcistoragecontainers2024-01-01)
 * **Link**: [2024-02-01-preview](azurestackhci/microsoft.azurestackhci/2024-02-01-preview/types.md#resource-microsoftazurestackhcistoragecontainers2024-02-01-preview)
-* **Link**: [2024-05-01-preview](azurestackhci/microsoft.azurestackhci/2024-05-01-preview/types.md#resource-microsoftazurestackhcistoragecontainers2024-05-01-preview)
 
 ### microsoft.azurestackhci/virtualharddisks
 * **Link**: [2021-07-01-preview](azurestackhci/microsoft.azurestackhci/2021-07-01-preview/types.md#resource-microsoftazurestackhcivirtualharddisks2021-07-01-preview)
@@ -3612,32 +3617,27 @@
 * **Link**: [2023-09-01-preview](azurestackhci/microsoft.azurestackhci/2023-09-01-preview/types.md#resource-microsoftazurestackhcivirtualharddisks2023-09-01-preview)
 * **Link**: [2024-01-01](azurestackhci/microsoft.azurestackhci/2024-01-01/types.md#resource-microsoftazurestackhcivirtualharddisks2024-01-01)
 * **Link**: [2024-02-01-preview](azurestackhci/microsoft.azurestackhci/2024-02-01-preview/types.md#resource-microsoftazurestackhcivirtualharddisks2024-02-01-preview)
-* **Link**: [2024-05-01-preview](azurestackhci/microsoft.azurestackhci/2024-05-01-preview/types.md#resource-microsoftazurestackhcivirtualharddisks2024-05-01-preview)
 
 ### microsoft.azurestackhci/virtualmachineinstances
 * **Link**: [2023-07-01-preview](azurestackhci/microsoft.azurestackhci/2023-07-01-preview/types.md#resource-microsoftazurestackhcivirtualmachineinstances2023-07-01-preview)
 * **Link**: [2023-09-01-preview](azurestackhci/microsoft.azurestackhci/2023-09-01-preview/types.md#resource-microsoftazurestackhcivirtualmachineinstances2023-09-01-preview)
 * **Link**: [2024-01-01](azurestackhci/microsoft.azurestackhci/2024-01-01/types.md#resource-microsoftazurestackhcivirtualmachineinstances2024-01-01)
 * **Link**: [2024-02-01-preview](azurestackhci/microsoft.azurestackhci/2024-02-01-preview/types.md#resource-microsoftazurestackhcivirtualmachineinstances2024-02-01-preview)
-* **Link**: [2024-05-01-preview](azurestackhci/microsoft.azurestackhci/2024-05-01-preview/types.md#resource-microsoftazurestackhcivirtualmachineinstances2024-05-01-preview)
 
 ### microsoft.azurestackhci/virtualmachineinstances/attestationstatus
 * **Link**: [2024-02-01-preview](azurestackhci/microsoft.azurestackhci/2024-02-01-preview/types.md#resource-microsoftazurestackhcivirtualmachineinstancesattestationstatus2024-02-01-preview)
-* **Link**: [2024-05-01-preview](azurestackhci/microsoft.azurestackhci/2024-05-01-preview/types.md#resource-microsoftazurestackhcivirtualmachineinstancesattestationstatus2024-05-01-preview)
 
 ### microsoft.azurestackhci/virtualmachineinstances/guestagents
 * **Link**: [2023-07-01-preview](azurestackhci/microsoft.azurestackhci/2023-07-01-preview/types.md#resource-microsoftazurestackhcivirtualmachineinstancesguestagents2023-07-01-preview)
 * **Link**: [2023-09-01-preview](azurestackhci/microsoft.azurestackhci/2023-09-01-preview/types.md#resource-microsoftazurestackhcivirtualmachineinstancesguestagents2023-09-01-preview)
 * **Link**: [2024-01-01](azurestackhci/microsoft.azurestackhci/2024-01-01/types.md#resource-microsoftazurestackhcivirtualmachineinstancesguestagents2024-01-01)
 * **Link**: [2024-02-01-preview](azurestackhci/microsoft.azurestackhci/2024-02-01-preview/types.md#resource-microsoftazurestackhcivirtualmachineinstancesguestagents2024-02-01-preview)
-* **Link**: [2024-05-01-preview](azurestackhci/microsoft.azurestackhci/2024-05-01-preview/types.md#resource-microsoftazurestackhcivirtualmachineinstancesguestagents2024-05-01-preview)
 
 ### microsoft.azurestackhci/virtualmachineinstances/hybrididentitymetadata
 * **Link**: [2023-07-01-preview](azurestackhci/microsoft.azurestackhci/2023-07-01-preview/types.md#resource-microsoftazurestackhcivirtualmachineinstanceshybrididentitymetadata2023-07-01-preview)
 * **Link**: [2023-09-01-preview](azurestackhci/microsoft.azurestackhci/2023-09-01-preview/types.md#resource-microsoftazurestackhcivirtualmachineinstanceshybrididentitymetadata2023-09-01-preview)
 * **Link**: [2024-01-01](azurestackhci/microsoft.azurestackhci/2024-01-01/types.md#resource-microsoftazurestackhcivirtualmachineinstanceshybrididentitymetadata2024-01-01)
 * **Link**: [2024-02-01-preview](azurestackhci/microsoft.azurestackhci/2024-02-01-preview/types.md#resource-microsoftazurestackhcivirtualmachineinstanceshybrididentitymetadata2024-02-01-preview)
-* **Link**: [2024-05-01-preview](azurestackhci/microsoft.azurestackhci/2024-05-01-preview/types.md#resource-microsoftazurestackhcivirtualmachineinstanceshybrididentitymetadata2024-05-01-preview)
 
 ### microsoft.azurestackhci/virtualmachines
 * **Link**: [2021-07-01-preview](azurestackhci/microsoft.azurestackhci/2021-07-01-preview/types.md#resource-microsoftazurestackhcivirtualmachines2021-07-01-preview)
@@ -6655,10 +6655,6 @@
 
 ### microsoft.containerstorage/pools/volumes
 * **Link**: [2023-07-01-preview](containerstorage/microsoft.containerstorage/2023-07-01-preview/types.md#resource-microsoftcontainerstoragepoolsvolumes2023-07-01-preview)
-
-## microsoft.contoso
-### microsoft.contoso/employees
-* **Link**: [2021-10-01-preview](contosowidgetmanager/microsoft.contoso/2021-10-01-preview/types.md#resource-microsoftcontosoemployees2021-10-01-preview)
 
 ## microsoft.costmanagement
 ### microsoft.costmanagement/alerts
@@ -11573,13 +11569,6 @@
 * **Link**: [2024-03-01](healthcareapis/microsoft.healthcareapis/2024-03-01/types.md#resource-microsofthealthcareapisworkspacesprivatelinkresources2024-03-01)
 * **Link**: [2024-03-31](healthcareapis/microsoft.healthcareapis/2024-03-31/types.md#resource-microsofthealthcareapisworkspacesprivatelinkresources2024-03-31)
 
-## microsoft.healthdataaiservices
-### microsoft.healthdataaiservices/deidservices
-* **Link**: [2024-02-28-preview](healthdataaiservices/microsoft.healthdataaiservices/2024-02-28-preview/types.md#resource-microsofthealthdataaiservicesdeidservices2024-02-28-preview)
-
-### microsoft.healthdataaiservices/deidservices/privateendpointconnections
-* **Link**: [2024-02-28-preview](healthdataaiservices/microsoft.healthdataaiservices/2024-02-28-preview/types.md#resource-microsofthealthdataaiservicesdeidservicesprivateendpointconnections2024-02-28-preview)
-
 ## microsoft.help
 ### microsoft.help/diagnostics
 * **Link**: [2023-01-01-preview](help/microsoft.help/2023-01-01-preview/types.md#resource-microsofthelpdiagnostics2023-01-01-preview)
@@ -12207,39 +12196,6 @@
 
 ### microsoft.iotfirmwaredefense/workspaces/firmwares/summaries
 * **Link**: [2024-01-10](fist/microsoft.iotfirmwaredefense/2024-01-10/types.md#resource-microsoftiotfirmwaredefenseworkspacesfirmwaressummaries2024-01-10)
-
-## microsoft.iotoperations
-### microsoft.iotoperations/instances
-* **Link**: [2024-07-01-preview](iotoperations/microsoft.iotoperations/2024-07-01-preview/types.md#resource-microsoftiotoperationsinstances2024-07-01-preview)
-* **Link**: [2024-08-15-preview](iotoperations/microsoft.iotoperations/2024-08-15-preview/types.md#resource-microsoftiotoperationsinstances2024-08-15-preview)
-
-### microsoft.iotoperations/instances/brokers
-* **Link**: [2024-07-01-preview](iotoperations/microsoft.iotoperations/2024-07-01-preview/types.md#resource-microsoftiotoperationsinstancesbrokers2024-07-01-preview)
-* **Link**: [2024-08-15-preview](iotoperations/microsoft.iotoperations/2024-08-15-preview/types.md#resource-microsoftiotoperationsinstancesbrokers2024-08-15-preview)
-
-### microsoft.iotoperations/instances/brokers/authentications
-* **Link**: [2024-07-01-preview](iotoperations/microsoft.iotoperations/2024-07-01-preview/types.md#resource-microsoftiotoperationsinstancesbrokersauthentications2024-07-01-preview)
-* **Link**: [2024-08-15-preview](iotoperations/microsoft.iotoperations/2024-08-15-preview/types.md#resource-microsoftiotoperationsinstancesbrokersauthentications2024-08-15-preview)
-
-### microsoft.iotoperations/instances/brokers/authorizations
-* **Link**: [2024-07-01-preview](iotoperations/microsoft.iotoperations/2024-07-01-preview/types.md#resource-microsoftiotoperationsinstancesbrokersauthorizations2024-07-01-preview)
-* **Link**: [2024-08-15-preview](iotoperations/microsoft.iotoperations/2024-08-15-preview/types.md#resource-microsoftiotoperationsinstancesbrokersauthorizations2024-08-15-preview)
-
-### microsoft.iotoperations/instances/brokers/listeners
-* **Link**: [2024-07-01-preview](iotoperations/microsoft.iotoperations/2024-07-01-preview/types.md#resource-microsoftiotoperationsinstancesbrokerslisteners2024-07-01-preview)
-* **Link**: [2024-08-15-preview](iotoperations/microsoft.iotoperations/2024-08-15-preview/types.md#resource-microsoftiotoperationsinstancesbrokerslisteners2024-08-15-preview)
-
-### microsoft.iotoperations/instances/dataflowendpoints
-* **Link**: [2024-07-01-preview](iotoperations/microsoft.iotoperations/2024-07-01-preview/types.md#resource-microsoftiotoperationsinstancesdataflowendpoints2024-07-01-preview)
-* **Link**: [2024-08-15-preview](iotoperations/microsoft.iotoperations/2024-08-15-preview/types.md#resource-microsoftiotoperationsinstancesdataflowendpoints2024-08-15-preview)
-
-### microsoft.iotoperations/instances/dataflowprofiles
-* **Link**: [2024-07-01-preview](iotoperations/microsoft.iotoperations/2024-07-01-preview/types.md#resource-microsoftiotoperationsinstancesdataflowprofiles2024-07-01-preview)
-* **Link**: [2024-08-15-preview](iotoperations/microsoft.iotoperations/2024-08-15-preview/types.md#resource-microsoftiotoperationsinstancesdataflowprofiles2024-08-15-preview)
-
-### microsoft.iotoperations/instances/dataflowprofiles/dataflows
-* **Link**: [2024-07-01-preview](iotoperations/microsoft.iotoperations/2024-07-01-preview/types.md#resource-microsoftiotoperationsinstancesdataflowprofilesdataflows2024-07-01-preview)
-* **Link**: [2024-08-15-preview](iotoperations/microsoft.iotoperations/2024-08-15-preview/types.md#resource-microsoftiotoperationsinstancesdataflowprofilesdataflows2024-08-15-preview)
 
 ## microsoft.iotoperationsdataprocessor
 ### microsoft.iotoperationsdataprocessor/instances

@@ -8610,41 +8610,41 @@
     "Microsoft.AzureStackHCI/clusters/publishers/offers/skus@2024-02-15-preview": {
       "$ref": "azurestackhci/microsoft.azurestackhci/2024-02-15-preview/types.json#/659"
     },
-    "Microsoft.AzureStackHCI/virtualMachineInstances@2024-05-01-preview": {
-      "$ref": "azurestackhci/microsoft.azurestackhci/2024-05-01-preview/types.json#/129"
+    "Microsoft.AzureStackHCI/clusters/arcSettings@2024-04-01": {
+      "$ref": "azurestackhci/microsoft.azurestackhci/2024-04-01/types.json#/78"
     },
-    "Microsoft.AzureStackHCI/virtualMachineInstances/guestAgents@2024-05-01-preview": {
-      "$ref": "azurestackhci/microsoft.azurestackhci/2024-05-01-preview/types.json#/147"
+    "Microsoft.AzureStackHCI/clusters@2024-04-01": {
+      "$ref": "azurestackhci/microsoft.azurestackhci/2024-04-01/types.json#/204"
     },
-    "Microsoft.AzureStackHCI/galleryImages@2024-05-01-preview": {
-      "$ref": "azurestackhci/microsoft.azurestackhci/2024-05-01-preview/types.json#/182"
+    "Microsoft.AzureStackHCI/clusters/deploymentSettings@2024-04-01": {
+      "$ref": "azurestackhci/microsoft.azurestackhci/2024-04-01/types.json#/287"
     },
-    "Microsoft.AzureStackHCI/logicalNetworks@2024-05-01-preview": {
-      "$ref": "azurestackhci/microsoft.azurestackhci/2024-05-01-preview/types.json#/225"
+    "Microsoft.AzureStackHCI/edgeDevices@2024-04-01": {
+      "$ref": "azurestackhci/microsoft.azurestackhci/2024-04-01/types.json#/366"
     },
-    "Microsoft.AzureStackHCI/marketplaceGalleryImages@2024-05-01-preview": {
-      "$ref": "azurestackhci/microsoft.azurestackhci/2024-05-01-preview/types.json#/254"
+    "Microsoft.AzureStackHCI/clusters/arcSettings/extensions@2024-04-01": {
+      "$ref": "azurestackhci/microsoft.azurestackhci/2024-04-01/types.json#/439"
     },
-    "Microsoft.AzureStackHCI/networkInterfaces@2024-05-01-preview": {
-      "$ref": "azurestackhci/microsoft.azurestackhci/2024-05-01-preview/types.json#/279"
+    "Microsoft.AzureStackHCI/clusters/securitySettings@2024-04-01": {
+      "$ref": "azurestackhci/microsoft.azurestackhci/2024-04-01/types.json#/489"
     },
-    "Microsoft.AzureStackHCI/networkSecurityGroups@2024-05-01-preview": {
-      "$ref": "azurestackhci/microsoft.azurestackhci/2024-05-01-preview/types.json#/294"
+    "Microsoft.AzureStackHCI/clusters/updates/updateRuns@2024-04-01": {
+      "$ref": "azurestackhci/microsoft.azurestackhci/2024-04-01/types.json#/520"
     },
-    "Microsoft.AzureStackHCI/storageContainers@2024-05-01-preview": {
-      "$ref": "azurestackhci/microsoft.azurestackhci/2024-05-01-preview/types.json#/313"
+    "Microsoft.AzureStackHCI/clusters/updateSummaries@2024-04-01": {
+      "$ref": "azurestackhci/microsoft.azurestackhci/2024-04-01/types.json#/587"
     },
-    "Microsoft.AzureStackHCI/virtualHardDisks@2024-05-01-preview": {
-      "$ref": "azurestackhci/microsoft.azurestackhci/2024-05-01-preview/types.json#/344"
+    "Microsoft.AzureStackHCI/clusters/updates@2024-04-01": {
+      "$ref": "azurestackhci/microsoft.azurestackhci/2024-04-01/types.json#/651"
     },
-    "Microsoft.AzureStackHCI/networkSecurityGroups/securityRules@2024-05-01-preview": {
-      "$ref": "azurestackhci/microsoft.azurestackhci/2024-05-01-preview/types.json#/371"
+    "Microsoft.AzureStackHCI/clusters/publishers/offers@2024-04-01": {
+      "$ref": "azurestackhci/microsoft.azurestackhci/2024-04-01/types.json#/659"
     },
-    "Microsoft.AzureStackHCI/virtualMachineInstances/attestationStatus@2024-05-01-preview": {
-      "$ref": "azurestackhci/microsoft.azurestackhci/2024-05-01-preview/types.json#/401"
+    "Microsoft.AzureStackHCI/clusters/publishers@2024-04-01": {
+      "$ref": "azurestackhci/microsoft.azurestackhci/2024-04-01/types.json#/664"
     },
-    "Microsoft.AzureStackHCI/virtualMachineInstances/hybridIdentityMetadata@2024-05-01-preview": {
-      "$ref": "azurestackhci/microsoft.azurestackhci/2024-05-01-preview/types.json#/416"
+    "Microsoft.AzureStackHCI/clusters/publishers/offers/skus@2024-04-01": {
+      "$ref": "azurestackhci/microsoft.azurestackhci/2024-04-01/types.json#/670"
     },
     "Microsoft.BareMetalInfrastructure/bareMetalInstances@2020-08-06-preview": {
       "$ref": "baremetalinfrastructure/microsoft.baremetalinfrastructure/2020-08-06-preview/types.json#/77"
@@ -14636,9 +14636,6 @@
     },
     "Microsoft.ContainerStorage/pools/volumes@2023-07-01-preview": {
       "$ref": "containerstorage/microsoft.containerstorage/2023-07-01-preview/types.json#/110"
-    },
-    "Microsoft.Contoso/employees@2021-10-01-preview": {
-      "$ref": "contosowidgetmanager/microsoft.contoso/2021-10-01-preview/types.json#/27"
     },
     "Microsoft.DocumentDB/databaseAccounts@2015-04-01": {
       "$ref": "cosmos-db/microsoft.documentdb/2015-04-01/types.json#/35"
@@ -25341,12 +25338,6 @@
     "Microsoft.HealthcareApis/workspaces/privateLinkResources@2024-03-31": {
       "$ref": "healthcareapis/microsoft.healthcareapis/2024-03-31/types.json#/269"
     },
-    "Microsoft.HealthDataAIServices/deidServices@2024-02-28-preview": {
-      "$ref": "healthdataaiservices/microsoft.healthdataaiservices/2024-02-28-preview/types.json#/53"
-    },
-    "Microsoft.HealthDataAIServices/deidServices/privateEndpointConnections@2024-02-28-preview": {
-      "$ref": "healthdataaiservices/microsoft.healthdataaiservices/2024-02-28-preview/types.json#/57"
-    },
     "Microsoft.Help/diagnostics@2023-01-01-preview": {
       "$ref": "help/microsoft.help/2023-01-01-preview/types.json#/42"
     },
@@ -26489,54 +26480,6 @@
     },
     "Microsoft.Devices/iotHubs/privateEndpointConnections@2023-06-30": {
       "$ref": "iothub/microsoft.devices/2023-06-30/types.json#/178"
-    },
-    "Microsoft.IoTOperations/instances@2024-07-01-preview": {
-      "$ref": "iotoperations/microsoft.iotoperations/2024-07-01-preview/types.json#/29"
-    },
-    "Microsoft.IoTOperations/instances/brokers@2024-07-01-preview": {
-      "$ref": "iotoperations/microsoft.iotoperations/2024-07-01-preview/types.json#/124"
-    },
-    "Microsoft.IoTOperations/instances/brokers/authentications@2024-07-01-preview": {
-      "$ref": "iotoperations/microsoft.iotoperations/2024-07-01-preview/types.json#/154"
-    },
-    "Microsoft.IoTOperations/instances/brokers/authorizations@2024-07-01-preview": {
-      "$ref": "iotoperations/microsoft.iotoperations/2024-07-01-preview/types.json#/196"
-    },
-    "Microsoft.IoTOperations/instances/brokers/listeners@2024-07-01-preview": {
-      "$ref": "iotoperations/microsoft.iotoperations/2024-07-01-preview/types.json#/230"
-    },
-    "Microsoft.IoTOperations/instances/dataflowEndpoints@2024-07-01-preview": {
-      "$ref": "iotoperations/microsoft.iotoperations/2024-07-01-preview/types.json#/314"
-    },
-    "Microsoft.IoTOperations/instances/dataflowProfiles@2024-07-01-preview": {
-      "$ref": "iotoperations/microsoft.iotoperations/2024-07-01-preview/types.json#/329"
-    },
-    "Microsoft.IoTOperations/instances/dataflowProfiles/dataflows@2024-07-01-preview": {
-      "$ref": "iotoperations/microsoft.iotoperations/2024-07-01-preview/types.json#/380"
-    },
-    "Microsoft.IoTOperations/instances@2024-08-15-preview": {
-      "$ref": "iotoperations/microsoft.iotoperations/2024-08-15-preview/types.json#/60"
-    },
-    "Microsoft.IoTOperations/instances/brokers@2024-08-15-preview": {
-      "$ref": "iotoperations/microsoft.iotoperations/2024-08-15-preview/types.json#/155"
-    },
-    "Microsoft.IoTOperations/instances/brokers/authentications@2024-08-15-preview": {
-      "$ref": "iotoperations/microsoft.iotoperations/2024-08-15-preview/types.json#/185"
-    },
-    "Microsoft.IoTOperations/instances/brokers/authorizations@2024-08-15-preview": {
-      "$ref": "iotoperations/microsoft.iotoperations/2024-08-15-preview/types.json#/228"
-    },
-    "Microsoft.IoTOperations/instances/brokers/listeners@2024-08-15-preview": {
-      "$ref": "iotoperations/microsoft.iotoperations/2024-08-15-preview/types.json#/262"
-    },
-    "Microsoft.IoTOperations/instances/dataflowEndpoints@2024-08-15-preview": {
-      "$ref": "iotoperations/microsoft.iotoperations/2024-08-15-preview/types.json#/373"
-    },
-    "Microsoft.IoTOperations/instances/dataflowProfiles@2024-08-15-preview": {
-      "$ref": "iotoperations/microsoft.iotoperations/2024-08-15-preview/types.json#/388"
-    },
-    "Microsoft.IoTOperations/instances/dataflowProfiles/dataflows@2024-08-15-preview": {
-      "$ref": "iotoperations/microsoft.iotoperations/2024-08-15-preview/types.json#/439"
     },
     "Microsoft.IoTOperationsDataProcessor/instances@2023-10-04-preview": {
       "$ref": "iotoperationsdataprocessor/microsoft.iotoperationsdataprocessor/2023-10-04-preview/types.json#/27"
