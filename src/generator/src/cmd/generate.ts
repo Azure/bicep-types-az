@@ -107,11 +107,14 @@ ${err}
   // build the type index
   await buildTypeIndex(defaultLogger, outputBaseDir);
 
-  // log if there are any type dirs with no corresponding readme (e.g. if a swagger directory has been removed).
-  const shouldRebuildTypeIndex = await clearStaleTypeFolders(defaultLogger, outputBaseDir, specsPath, readmePaths);
-  
-  if (shouldRebuildTypeIndex) {
-    await buildTypeIndex(defaultLogger, outputBaseDir);
+  // we only want to clear stale type folders if re-generating the full directory
+  if (!singlePath) {
+    // log if there are any type dirs with no corresponding readme (e.g. if a swagger directory has been removed).
+    const shouldRebuildTypeIndex = await clearStaleTypeFolders(defaultLogger, outputBaseDir, specsPath, readmePaths);
+    
+    if (shouldRebuildTypeIndex) {
+      await buildTypeIndex(defaultLogger, outputBaseDir);
+    }
   }
 });
 
