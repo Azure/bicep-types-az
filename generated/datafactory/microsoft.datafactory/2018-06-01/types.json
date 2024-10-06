@@ -10701,6 +10701,13 @@
         "flags": 1,
         "description": "Database name for connection. Type: string."
       },
+      "authenticationType": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 1,
+        "description": "The authentication type to use. Type: string."
+      },
       "sslMode": {
         "type": {
           "$ref": "#/11"
@@ -27892,6 +27899,13 @@
         },
         "flags": 0,
         "description": "Expression to filter data from source."
+      },
+      "pageSize": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 0,
+        "description": "Page size of the result. Type: integer (or Expression with resultType integer)."
       },
       "queryTimeout": {
         "type": {

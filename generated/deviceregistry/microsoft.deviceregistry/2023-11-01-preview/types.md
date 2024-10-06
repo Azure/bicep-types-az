@@ -28,7 +28,7 @@
 
 ## AssetEndpointProfileProperties
 ### Properties
-* **additionalConfiguration**: string: Contains connectivity type specific further configuration (e.g. OPC UA, Modbus, ONVIF).
+* **additionalConfiguration**: string: Stringified JSON that contains connectivity type specific further configuration (e.g. OPC UA, Modbus, ONVIF).
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): Provisioning state of the resource.
 * **targetAddress**: string (Required): The local valid URI specifying the network address/DNS name of a southbound device. The scheme part of the targetAddress URI specifies the type of the device. The additionalConfiguration field holds further connector type specific configuration.
 * **transportAuthentication**: [TransportAuthentication](#transportauthentication): Defines the authentication mechanism for the southbound connector connecting to the shop floor/OT device.
@@ -40,14 +40,14 @@
 * **assetEndpointProfileUri**: string (Required): A reference to the asset endpoint profile (connection information) used by brokers to connect to an endpoint that provides data points for this asset. Must have the format <ModuleCR.metadata.namespace>/<ModuleCR.metadata.name>.
 * **assetType**: string: Resource path to asset type (model) definition.
 * **attributes**: [AssetPropertiesAttributes](#assetpropertiesattributes): A set of key-value pairs that contain custom attributes set by the customer.
-* **dataPoints**: [DataPoint](#datapoint)[]: Array of data points that are part of the asset. Each data point can reference an asset type capability and have per-data point configuration. See below for more details for the definition of the dataPoints element.
-* **defaultDataPointsConfiguration**: string: Protocol-specific default configuration for all data points. Each data point can have its own configuration that overrides the default settings here. This assumes that each asset instance has one protocol.
-* **defaultEventsConfiguration**: string: Protocol-specific default configuration for all events. Each event can have its own configuration that overrides the default settings here. This assumes that each asset instance has one protocol.
+* **dataPoints**: [DataPoint](#datapoint)[]: Array of data points that are part of the asset. Each data point can reference an asset type capability and have per-data point configuration.
+* **defaultDataPointsConfiguration**: string: Stringified JSON that contains protocol-specific default configuration for all data points. Each data point can have its own configuration that overrides the default settings here.
+* **defaultEventsConfiguration**: string: Stringified JSON that contains connector-specific default configuration for all events. Each event can have its own configuration that overrides the default settings here.
 * **description**: string: Human-readable description of the asset.
 * **displayName**: string: Human-readable display name.
 * **documentationUri**: string: Reference to the documentation.
 * **enabled**: bool: Enabled/Disabled status of the asset.
-* **events**: [Event](#event)[]: Array of events that are part of the asset. Each event can reference an asset type capability and have per-event configuration. See below for more details about the definition of the events element.
+* **events**: [Event](#event)[]: Array of events that are part of the asset. Each event can have per-event configuration.
 * **externalAssetId**: string: Asset id provided by the customer.
 * **hardwareRevision**: string: Revision number of the hardware.
 * **manufacturer**: string: Asset manufacturer name.
@@ -68,18 +68,18 @@
 
 ## AssetStatus
 ### Properties
-* **errors**: [AssetStatusError](#assetstatuserror)[]: Array object to transfer and persist errors that originate from the Edge.
-* **version**: int: A read only incremental counter indicating the number of times the configuration has been modified from the perspective of the current actual (Edge) state of the Asset. Edge would be the only writer of this value and would sync back up to the cloud. In steady state, this should equal version.
+* **errors**: [AssetStatusError](#assetstatuserror)[] (ReadOnly): Array object to transfer and persist errors that originate from the Edge.
+* **version**: int (ReadOnly): A read only incremental counter indicating the number of times the configuration has been modified from the perspective of the current actual (Edge) state of the Asset. Edge would be the only writer of this value and would sync back up to the cloud. In steady state, this should equal version.
 
 ## AssetStatusError
 ### Properties
-* **code**: int: Error code for classification of errors (ex: 400, 404, 500, etc.).
-* **message**: string: Human readable helpful error message to provide additional context for error (ex: “capability Id 'foo' does not exist”).
+* **code**: int (ReadOnly): Error code for classification of errors (ex: 400, 404, 500, etc.).
+* **message**: string (ReadOnly): Human readable helpful error message to provide additional context for error (ex: “capability Id 'foo' does not exist”).
 
 ## DataPoint
 ### Properties
 * **capabilityId**: string: The path to the type definition of the capability (e.g. DTMI, OPC UA information model node id, etc.), for example dtmi:com:example:Robot:_contents:__prop1;1.
-* **dataPointConfiguration**: string: Protocol-specific configuration for the data point. For OPC UA, this could include configuration like, publishingInterval, samplingInterval, and queueSize.
+* **dataPointConfiguration**: string: Stringified JSON that contains connector-specific configuration for the data point. For OPC UA, this could include configuration like, publishingInterval, samplingInterval, and queueSize.
 * **dataSource**: string (Required): The address of the source of the data in the asset (e.g. URL) so that a client can access the data source on the asset.
 * **name**: string: The name of the data point.
 * **observabilityMode**: 'counter' | 'gauge' | 'histogram' | 'log' | 'none' | string: An indication of how the data point should be mapped to OpenTelemetry.
@@ -87,7 +87,7 @@
 ## Event
 ### Properties
 * **capabilityId**: string: The path to the type definition of the capability (e.g. DTMI, OPC UA information model node id, etc.), for example dtmi:com:example:Robot:_contents:__prop1;1.
-* **eventConfiguration**: string: Protocol-specific configuration for the event. For OPC UA, this could include configuration like, publishingInterval, samplingInterval, and queueSize.
+* **eventConfiguration**: string: Stringified JSON that contains connector-specific configuration for the event. For OPC UA, this could include configuration like, publishingInterval, samplingInterval, and queueSize.
 * **eventNotifier**: string (Required): The address of the notifier of the event in the asset (e.g. URL) so that a client can access the event on the asset.
 * **name**: string: The name of the event.
 * **observabilityMode**: 'log' | 'none' | string: An indication of how the event should be mapped to OpenTelemetry.
@@ -128,7 +128,7 @@
 
 ## UserAuthentication
 ### Properties
-* **mode**: 'Anonymous' | 'Certificate' | 'UsernamePassword' | string (Required): Defines the mode to authenticate the user of the client at the server.
+* **mode**: 'Anonymous' | 'Certificate' | 'UsernamePassword' | string (Required): Defines the method to authenticate the user of the client at the server.
 * **usernamePasswordCredentials**: [UsernamePasswordCredentials](#usernamepasswordcredentials): Defines the username and password references when UsernamePassword user authentication mode is selected.
 * **x509Credentials**: [X509Credentials](#x509credentials): Defines the certificate reference when Certificate user authentication mode is selected.
 

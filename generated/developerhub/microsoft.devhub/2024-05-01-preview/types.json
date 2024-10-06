@@ -926,7 +926,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/95"
+          "$ref": "#/96"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -973,7 +973,7 @@
       },
       "templates": {
         "type": {
-          "$ref": "#/94"
+          "$ref": "#/95"
         },
         "flags": 0
       }
@@ -1210,9 +1210,9 @@
       },
       "quickStartTemplateType": {
         "type": {
-          "$ref": "#/93"
+          "$ref": "#/94"
         },
-        "flags": 2,
+        "flags": 0,
         "description": "Determines the authorization status of requests."
       }
     }
@@ -1267,6 +1267,10 @@
     "value": "HCIARCVM"
   },
   {
+    "$type": "StringLiteralType",
+    "value": "ALL"
+  },
+  {
     "$type": "UnionType",
     "elements": [
       {
@@ -1280,6 +1284,9 @@
       },
       {
         "$ref": "#/92"
+      },
+      {
+        "$ref": "#/93"
       },
       {
         "$ref": "#/2"

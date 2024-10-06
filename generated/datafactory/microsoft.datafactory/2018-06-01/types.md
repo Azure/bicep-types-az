@@ -2176,6 +2176,7 @@
 #### Properties
 * **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **expression**: [ExpressionV2](#expressionv2): Expression to filter data from source.
+* **pageSize**: any: Page size of the result. Type: integer (or Expression with resultType integer).
 * **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'ServiceNowV2Source' (Required): Copy source type.
 
@@ -5395,6 +5396,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## PostgreSqlV2LinkedServiceTypeProperties
 ### Properties
+* **authenticationType**: any (Required): The authentication type to use. Type: string.
 * **commandTimeout**: any: The time to wait (in seconds) while trying to execute a command before terminating the attempt and generating an error. Set to zero for infinity. Type: integer.
 * **connectionTimeout**: any: The time to wait (in seconds) while trying to establish a connection before terminating the attempt and generating an error. Type: integer.
 * **database**: any (Required): Database name for connection. Type: string.

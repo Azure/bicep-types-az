@@ -37,16 +37,6 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.HybridCompute/machines/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.HybridCompute/machines/hybridIdentityMetadata@2023-03-15-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2023-03-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {pattern: "[a-zA-Z0-9-_\.]"} (Required, DeployTimeConstant): The resource name
-* **properties**: [HybridIdentityMetadataProperties](#hybrididentitymetadataproperties) (ReadOnly): Resource properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **type**: 'Microsoft.HybridCompute/machines/hybridIdentityMetadata' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.HybridCompute/privateLinkScopes@2023-03-15-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -139,12 +129,6 @@
 * **privateLinkScopeId**: string (ReadOnly): The Guid id of the private link scope.
 * **provisioningState**: string (ReadOnly): Current state of this PrivateLinkScope: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Provisioning ,Succeeded, Canceled and Failed.
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Indicates whether machines associated with the private link scope can also use public Azure Arc service endpoints.
-
-## HybridIdentityMetadataProperties
-### Properties
-* **identity**: [Identity](#identity) (ReadOnly): Identity for the resource.
-* **publicKey**: string: The Public Key.
-* **vmId**: string: The unique identifier for the resource.
 
 ## Identity
 ### Properties

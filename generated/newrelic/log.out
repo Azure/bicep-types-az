@@ -43,3 +43,9 @@ warning | Skipping Accounts_List due to required query parameter "userEmail"
 warning | Skipping Accounts_List due to required query parameter "location"
 warning | Skipping Organizations_List due to required query parameter "userEmail"
 warning | Skipping Organizations_List due to required query parameter "location"
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Skipping Accounts_List due to required query parameter "userEmail"
+warning | Skipping Accounts_List due to required query parameter "location"
+warning | Skipping Organizations_List due to required query parameter "userEmail"
+warning | Skipping Organizations_List due to required query parameter "location"

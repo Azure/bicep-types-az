@@ -1924,102 +1924,6 @@
     "flags": 1
   },
   {
-    "$type": "StringType",
-    "pattern": "[a-zA-Z0-9-_\\.]"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Microsoft.HybridCompute/machines/hybridIdentityMetadata"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "2023-03-15-preview"
-  },
-  {
-    "$type": "ObjectType",
-    "name": "Microsoft.HybridCompute/machines/hybridIdentityMetadata",
-    "properties": {
-      "id": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 10,
-        "description": "The resource id"
-      },
-      "name": {
-        "type": {
-          "$ref": "#/117"
-        },
-        "flags": 9,
-        "description": "The resource name"
-      },
-      "type": {
-        "type": {
-          "$ref": "#/118"
-        },
-        "flags": 10,
-        "description": "The resource type"
-      },
-      "apiVersion": {
-        "type": {
-          "$ref": "#/119"
-        },
-        "flags": 10,
-        "description": "The resource api version"
-      },
-      "properties": {
-        "type": {
-          "$ref": "#/121"
-        },
-        "flags": 2,
-        "description": "Resource properties."
-      },
-      "systemData": {
-        "type": {
-          "$ref": "#/67"
-        },
-        "flags": 2,
-        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "HybridIdentityMetadataProperties",
-    "properties": {
-      "vmId": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The unique identifier for the resource."
-      },
-      "publicKey": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The Public Key."
-      },
-      "identity": {
-        "type": {
-          "$ref": "#/79"
-        },
-        "flags": 2,
-        "description": "Identity for the resource."
-      }
-    }
-  },
-  {
-    "$type": "ResourceType",
-    "name": "Microsoft.HybridCompute/machines/hybridIdentityMetadata@2023-03-15-preview",
-    "scopeType": 8,
-    "body": {
-      "$ref": "#/120"
-    },
-    "flags": 1
-  },
-  {
     "$type": "StringLiteralType",
     "value": "Microsoft.HybridCompute/privateLinkScopes/privateLinkResources"
   },
@@ -2047,21 +1951,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/123"
+          "$ref": "#/117"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/124"
+          "$ref": "#/118"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/126"
+          "$ref": "#/120"
         },
         "flags": 2,
         "description": "Resource properties."
@@ -2088,14 +1992,14 @@
       },
       "requiredMembers": {
         "type": {
-          "$ref": "#/127"
+          "$ref": "#/121"
         },
         "flags": 2,
         "description": "The private link resource required member names."
       },
       "requiredZoneNames": {
         "type": {
-          "$ref": "#/128"
+          "$ref": "#/122"
         },
         "flags": 2,
         "description": "Required DNS zone names of the the private link resource."
@@ -2119,7 +2023,7 @@
     "name": "Microsoft.HybridCompute/privateLinkScopes/privateLinkResources@2023-03-15-preview",
     "scopeType": 8,
     "body": {
-      "$ref": "#/125"
+      "$ref": "#/119"
     },
     "flags": 1
   }
