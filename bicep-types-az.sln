@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30011.22
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bicep.Types.Az", "src\Bicep.Types.Az\Bicep.Types.Az.csproj", "{93159227-767E-4A3F-98A4-143FE6081198}"
 EndProject
@@ -31,11 +31,11 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {C4E85544-D311-47E7-BF1F-1B5C152ACADA}
-	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{1DE3722A-29C6-4C09-8439-21D0324F9C71} = {72C40400-136A-462C-B0A2-107A57E3092C}
 		{BFE13642-B71E-438B-9298-B87AB5F06054} = {1DE3722A-29C6-4C09-8439-21D0324F9C71}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C4E85544-D311-47E7-BF1F-1B5C152ACADA}
 	EndGlobalSection
 EndGlobal
