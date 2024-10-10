@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Azure.Bicep.Types" Version="0.5.81" />
+    <PackageReference Include="Azure.Bicep.Types" Version="0.5.110" />
   </ItemGroup>
 
   <ItemGroup>
