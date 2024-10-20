@@ -1,5 +1,29 @@
 # Microsoft.ContainerInstance @ 2024-05-01-preview
 
+## Resource Microsoft.ContainerInstance/containerGroupProfiles@2024-05-01-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2024-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string: The resource location.
+* **name**: string {minLength: 1, maxLength: 63, pattern: "^(?!.*--)[a-z0-9]([-a-z0-9]*[a-z0-9])?$"} (Required, DeployTimeConstant): The resource name
+* **properties**: [ContainerGroupProfilePropertiesProperties](#containergroupprofilepropertiesproperties) (Required): The container group profile properties
+* **tags**: [ResourceTags](#resourcetags): The resource tags.
+* **type**: 'Microsoft.ContainerInstance/containerGroupProfiles' (ReadOnly, DeployTimeConstant): The resource type
+* **zones**: string[]: The zones for the container group.
+
+## Resource Microsoft.ContainerInstance/containerGroupProfiles/revisions@2024-05-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2024-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): The resource location.
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [ContainerGroupProfilePropertiesProperties](#containergroupprofilepropertiesproperties) (ReadOnly): The container group profile properties
+* **tags**: [ResourceTags](#resourcetags) (ReadOnly): The resource tags.
+* **type**: 'Microsoft.ContainerInstance/containerGroupProfiles/revisions' (ReadOnly, DeployTimeConstant): The resource type
+* **zones**: string[] (ReadOnly): The zones for the container group.
+
 ## Resource Microsoft.ContainerInstance/containerGroups@2024-05-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -57,6 +81,26 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [UserAssignedIdentities](#userassignedidentities)
+
+## ContainerGroupProfilePropertiesProperties
+### Properties
+* **confidentialComputeProperties**: [ConfidentialComputeProperties](#confidentialcomputeproperties): The properties for confidential container group
+* **containers**: [Container](#container)[] (Required): The containers within the container group.
+* **diagnostics**: [ContainerGroupDiagnostics](#containergroupdiagnostics): The diagnostic information for a container group.
+* **encryptionProperties**: [EncryptionProperties](#encryptionproperties): The encryption properties for a container group.
+* **extensions**: [DeploymentExtensionSpec](#deploymentextensionspec)[]: extensions used by virtual kubelet
+* **imageRegistryCredentials**: [ImageRegistryCredential](#imageregistrycredential)[]: The image registry credentials by which the container group is created from.
+* **initContainers**: [InitContainerDefinition](#initcontainerdefinition)[]: The init containers for a container group.
+* **ipAddress**: [IpAddress](#ipaddress): The IP address type of the container group.
+* **osType**: 'Linux' | 'Windows' | string (Required): The operating system type required by the containers in the container group.
+* **priority**: 'Regular' | 'Spot' | string: The priority of the container group.
+* **restartPolicy**: 'Always' | 'Never' | 'OnFailure' | string: Restart policy for all containers within the container group. 
+- `Always` Always restart
+- `OnFailure` Restart on failure
+- `Never` Never restart
+* **revision**: int (ReadOnly): The container group profile current revision number. This only appears in the response.
+* **sku**: 'Confidential' | 'Dedicated' | 'Standard' | string: The SKU for a container group.
+* **volumes**: [Volume](#volume)[]: The list of volumes that can be mounted by containers in this container group.
 
 ## ContainerGroupProfileReferenceDefinition
 ### Properties
@@ -278,6 +322,16 @@
 ### Properties
 * **limits**: [ResourceLimits](#resourcelimits): The resource limits of this container instance.
 * **requests**: [ResourceRequests](#resourcerequests) (Required): The resource requests of this container instance.
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## ResourceTags
 ### Properties

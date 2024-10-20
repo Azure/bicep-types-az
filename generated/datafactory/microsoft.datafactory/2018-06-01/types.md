@@ -2092,6 +2092,7 @@
 #### Properties
 * **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **includeDeletedObjects**: any: This property control whether query result contains Deleted objects. Default is false. Type: boolean (or Expression with resultType boolean).
+* **pageSize**: any: Page size for each http request, too large pageSize will caused timeout, default 300,000. Type: integer (or Expression with resultType integer).
 * **query**: any: You can only use Salesforce Object Query Language (SOQL) query with limitations. For SOQL limitations, see this article: https://developer.salesforce.com/docs/atlas.en-us.api_asynch.meta/api_asynch/queries.htm#SOQL%20Considerations. If query is not specified, all the data of the Salesforce object specified in ObjectApiName/reportId in dataset will be retrieved. Type: string (or Expression with resultType string).
 * **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **SOQLQuery**: any: Deprecating, please use 'query' property instead. Type: string (or Expression with resultType string).
@@ -2176,6 +2177,7 @@
 #### Properties
 * **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
 * **expression**: [ExpressionV2](#expressionv2): Expression to filter data from source.
+* **pageSize**: any: Page size of the result. Type: integer (or Expression with resultType integer).
 * **queryTimeout**: any: Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **type**: 'ServiceNowV2Source' (Required): Copy source type.
 
@@ -5395,6 +5397,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## PostgreSqlV2LinkedServiceTypeProperties
 ### Properties
+* **authenticationType**: any (Required): The authentication type to use. Type: string.
 * **commandTimeout**: any: The time to wait (in seconds) while trying to execute a command before terminating the attempt and generating an error. Set to zero for infinity. Type: integer.
 * **connectionTimeout**: any: The time to wait (in seconds) while trying to establish a connection before terminating the attempt and generating an error. Type: integer.
 * **database**: any (Required): Database name for connection. Type: string.
@@ -6026,6 +6029,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **clientSecret**: [SecretBase](#secretbase): The Azure key vault secret reference of client secret for AADServicePrincipal authentication.
 * **database**: any (Required): The name of the Snowflake database.
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
+* **host**: any: The host name of the Snowflake account.
 * **password**: [SecretBase](#secretbase): The Azure key vault secret reference of password in connection string.
 * **privateKey**: [SecretBase](#secretbase): The Azure key vault secret reference of privateKey for KeyPair auth.
 * **privateKeyPassphrase**: [SecretBase](#secretbase): The Azure key vault secret reference of private key password for KeyPair auth with encrypted private key.

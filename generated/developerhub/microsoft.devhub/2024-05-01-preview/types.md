@@ -111,7 +111,7 @@
 ### Properties
 * **instanceName**: string: the sample instance name of the template
 * **instanceStage**: string: the source stage of the template
-* **quickStartTemplateType**: 'HCI' | 'HCIAKS' | 'HCIARCVM' | 'None' | string (ReadOnly): Determines the authorization status of requests.
+* **quickStartTemplateType**: 'ALL' | 'HCI' | 'HCIAKS' | 'HCIARCVM' | 'None' | string: Determines the authorization status of requests.
 * **sourceResourceId**: string: the source store of the template
 * **templateDetails**: [IacTemplateDetails](#iactemplatedetails)[]
 * **templateName**: string: Template Name

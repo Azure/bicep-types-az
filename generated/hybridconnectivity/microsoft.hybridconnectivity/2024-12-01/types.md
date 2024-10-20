@@ -87,9 +87,9 @@
 
 ## AwsCloudProfile
 ### Properties
-* **accountId**: string (Required, WriteOnly): Account id for the AWS account.
+* **accountId**: string (Required): Account id for the AWS account.
 * **excludedAccounts**: string[]: List of AWS accounts which need to be excluded.
-* **isOrganizationalAccount**: bool (WriteOnly): Boolean value that indicates whether the account is organizational or not. True represents organization account, whereas false represents a single account.
+* **isOrganizationalAccount**: bool: Boolean value that indicates whether the account is organizational or not. True represents organization account, whereas false represents a single account.
 
 ## EndpointAccessResource
 ### Properties
@@ -143,7 +143,7 @@
 ### Properties
 * **awsCloudProfile**: [AwsCloudProfile](#awscloudprofile) (Required): Cloud profile for AWS.
 * **connectorPrimaryIdentifier**: string (ReadOnly): Connector primary identifier.
-* **hostType**: 'AWS' | string (Required, WriteOnly): Host cloud the public cloud connector.
+* **hostType**: 'AWS' | string (Required): Host cloud the public cloud connector.
 * **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): The resource provisioning state.
 
 ## RelayNamespaceAccessProperties

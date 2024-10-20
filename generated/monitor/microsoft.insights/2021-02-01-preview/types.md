@@ -8,7 +8,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **kind**: 'LogAlert' | 'LogToMetric' | string: Indicates the type of scheduled query rule. The default is LogAlert.
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[^#<>%&:\?/{}*]{1,260}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ScheduledQueryRuleProperties](#scheduledqueryruleproperties) (Required): The rule properties of the resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): SystemData of ScheduledQueryRule.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
