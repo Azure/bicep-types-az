@@ -36,7 +36,7 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.ServiceNetworking/trafficControllers/frontends' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ServiceNetworking/trafficControllers/securityPolicy@2024-05-01-preview
+## Resource Microsoft.ServiceNetworking/trafficControllers/securityPolicies@2024-05-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
@@ -46,7 +46,7 @@
 * **properties**: [SecurityPolicyProperties](#securitypolicyproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
-* **type**: 'Microsoft.ServiceNetworking/trafficControllers/securityPolicy' (ReadOnly, DeployTimeConstant): The resource type
+* **type**: 'Microsoft.ServiceNetworking/trafficControllers/securityPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AssociationProperties
 ### Properties

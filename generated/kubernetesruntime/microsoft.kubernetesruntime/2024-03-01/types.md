@@ -63,7 +63,7 @@
 ## ServiceProperties
 ### Properties
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): Resource provision state
-* **rpObjectId**: string (ReadOnly): The object id of the service principal of the RP provisioned in the tenant
+* **rpObjectId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The object id of the service principal of the RP provisioned in the tenant
 
 ## StorageClassProperties
 ### Properties

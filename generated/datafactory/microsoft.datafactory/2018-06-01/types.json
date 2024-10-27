@@ -10701,6 +10701,13 @@
         "flags": 1,
         "description": "Database name for connection. Type: string."
       },
+      "authenticationType": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 1,
+        "description": "The authentication type to use. Type: string."
+      },
       "sslMode": {
         "type": {
           "$ref": "#/11"
@@ -13192,6 +13199,13 @@
         },
         "flags": 0,
         "description": "The Azure key vault secret reference of private key password for KeyPair auth with encrypted private key."
+      },
+      "host": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 0,
+        "description": "The host name of the Snowflake account."
       },
       "encryptedCredential": {
         "type": {
@@ -27371,6 +27385,13 @@
         "flags": 0,
         "description": "This property control whether query result contains Deleted objects. Default is false. Type: boolean (or Expression with resultType boolean)."
       },
+      "pageSize": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 0,
+        "description": "Page size for each http request, too large pageSize will caused timeout, default 300,000. Type: integer (or Expression with resultType integer)."
+      },
       "queryTimeout": {
         "type": {
           "$ref": "#/11"
@@ -27892,6 +27913,13 @@
         },
         "flags": 0,
         "description": "Expression to filter data from source."
+      },
+      "pageSize": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 0,
+        "description": "Page size of the result. Type: integer (or Expression with resultType integer)."
       },
       "queryTimeout": {
         "type": {

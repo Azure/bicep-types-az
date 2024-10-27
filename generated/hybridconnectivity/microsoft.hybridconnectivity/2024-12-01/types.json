@@ -397,7 +397,7 @@
         "type": {
           "$ref": "#/36"
         },
-        "flags": 5,
+        "flags": 1,
         "description": "Host cloud the public cloud connector."
       },
       "provisioningState": {
@@ -424,7 +424,7 @@
         "type": {
           "$ref": "#/2"
         },
-        "flags": 5,
+        "flags": 1,
         "description": "Account id for the AWS account."
       },
       "excludedAccounts": {
@@ -438,7 +438,7 @@
         "type": {
           "$ref": "#/34"
         },
-        "flags": 4,
+        "flags": 0,
         "description": "Boolean value that indicates whether the account is organizational or not. True represents organization account, whereas false represents a single account."
       }
     }
