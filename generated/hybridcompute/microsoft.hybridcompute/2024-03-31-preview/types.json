@@ -3934,163 +3934,6 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "current"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Microsoft.HybridCompute/networkConfigurations"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "2024-03-31-preview"
-  },
-  {
-    "$type": "ObjectType",
-    "name": "Microsoft.HybridCompute/networkConfigurations",
-    "properties": {
-      "id": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 10,
-        "description": "The resource id"
-      },
-      "name": {
-        "type": {
-          "$ref": "#/279"
-        },
-        "flags": 9,
-        "description": "The resource name"
-      },
-      "type": {
-        "type": {
-          "$ref": "#/280"
-        },
-        "flags": 10,
-        "description": "The resource type"
-      },
-      "apiVersion": {
-        "type": {
-          "$ref": "#/281"
-        },
-        "flags": 10,
-        "description": "The resource api version"
-      },
-      "properties": {
-        "type": {
-          "$ref": "#/283"
-        },
-        "flags": 0,
-        "description": "Network configuration properties"
-      },
-      "systemData": {
-        "type": {
-          "$ref": "#/38"
-        },
-        "flags": 2,
-        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "NetworkConfigurationProperties",
-    "properties": {
-      "location": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Resource location"
-      },
-      "tenantId": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 2,
-        "description": "Azure resource tenant Id"
-      },
-      "networkConfigurationScopeId": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Associated Network Configuration Scope Id (GUID)"
-      },
-      "networkConfigurationScopeResourceId": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 1,
-        "description": "Associated Network Configuration Scope Resource Id"
-      },
-      "keyProperties": {
-        "type": {
-          "$ref": "#/284"
-        },
-        "flags": 2,
-        "description": "Public key information for client authentication"
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "KeyProperties",
-    "properties": {
-      "clientPublicKey": {
-        "type": {
-          "$ref": "#/285"
-        },
-        "flags": 2,
-        "description": "Current public key details"
-      },
-      "candidatePublicKey": {
-        "type": {
-          "$ref": "#/285"
-        },
-        "flags": 2,
-        "description": "Candidate public key details"
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "KeyDetails",
-    "properties": {
-      "publicKey": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 2,
-        "description": "Public key"
-      },
-      "notAfter": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 2,
-        "description": "Key expiration date"
-      },
-      "renewAfter": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 2,
-        "description": "Recommended key renewal date"
-      }
-    }
-  },
-  {
-    "$type": "ResourceType",
-    "name": "Microsoft.HybridCompute/networkConfigurations@2024-03-31-preview",
-    "scopeType": 0,
-    "body": {
-      "$ref": "#/282"
-    },
-    "flags": 0
-  },
-  {
-    "$type": "StringLiteralType",
     "value": "Microsoft.HybridCompute/locations/publishers/extensionTypes/versions"
   },
   {
@@ -4117,21 +3960,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/287"
+          "$ref": "#/279"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/288"
+          "$ref": "#/280"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/290"
+          "$ref": "#/282"
         },
         "flags": 2,
         "description": "The single extension based on search criteria"
@@ -4177,103 +4020,7 @@
     "name": "Microsoft.HybridCompute/locations/publishers/extensionTypes/versions@2024-03-31-preview",
     "scopeType": 4,
     "body": {
-      "$ref": "#/289"
-    },
-    "flags": 1
-  },
-  {
-    "$type": "StringType",
-    "pattern": "^[a-zA-Z0-9-_\\.]{1,54}$"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Microsoft.HybridCompute/machines/hybridIdentityMetadata"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "2024-03-31-preview"
-  },
-  {
-    "$type": "ObjectType",
-    "name": "Microsoft.HybridCompute/machines/hybridIdentityMetadata",
-    "properties": {
-      "id": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 10,
-        "description": "The resource id"
-      },
-      "name": {
-        "type": {
-          "$ref": "#/292"
-        },
-        "flags": 9,
-        "description": "The resource name"
-      },
-      "type": {
-        "type": {
-          "$ref": "#/293"
-        },
-        "flags": 10,
-        "description": "The resource type"
-      },
-      "apiVersion": {
-        "type": {
-          "$ref": "#/294"
-        },
-        "flags": 10,
-        "description": "The resource api version"
-      },
-      "properties": {
-        "type": {
-          "$ref": "#/296"
-        },
-        "flags": 2,
-        "description": "Resource properties."
-      },
-      "systemData": {
-        "type": {
-          "$ref": "#/38"
-        },
-        "flags": 2,
-        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "HybridIdentityMetadataProperties",
-    "properties": {
-      "vmId": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The unique identifier for the resource."
-      },
-      "publicKey": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The Public Key."
-      },
-      "identity": {
-        "type": {
-          "$ref": "#/161"
-        },
-        "flags": 2,
-        "description": "Identity for the resource."
-      }
-    }
-  },
-  {
-    "$type": "ResourceType",
-    "name": "Microsoft.HybridCompute/machines/hybridIdentityMetadata@2024-03-31-preview",
-    "scopeType": 8,
-    "body": {
-      "$ref": "#/295"
+      "$ref": "#/281"
     },
     "flags": 1
   },
@@ -4305,21 +4052,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/298"
+          "$ref": "#/284"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/299"
+          "$ref": "#/285"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/301"
+          "$ref": "#/287"
         },
         "flags": 2,
         "description": "Resource properties."
@@ -4346,14 +4093,14 @@
       },
       "requiredMembers": {
         "type": {
-          "$ref": "#/302"
+          "$ref": "#/288"
         },
         "flags": 2,
         "description": "The private link resource required member names."
       },
       "requiredZoneNames": {
         "type": {
-          "$ref": "#/303"
+          "$ref": "#/289"
         },
         "flags": 2,
         "description": "Required DNS zone names of the the private link resource."
@@ -4377,7 +4124,7 @@
     "name": "Microsoft.HybridCompute/privateLinkScopes/privateLinkResources@2024-03-31-preview",
     "scopeType": 8,
     "body": {
-      "$ref": "#/300"
+      "$ref": "#/286"
     },
     "flags": 1
   },
@@ -4406,28 +4153,28 @@
       },
       "name": {
         "type": {
-          "$ref": "#/305"
+          "$ref": "#/291"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/306"
+          "$ref": "#/292"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/307"
+          "$ref": "#/293"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/309"
+          "$ref": "#/295"
         },
         "flags": 2,
         "description": "Properties that define a Network Security Perimeter resource."
@@ -4447,28 +4194,28 @@
       },
       "provisioningIssues": {
         "type": {
-          "$ref": "#/328"
+          "$ref": "#/314"
         },
         "flags": 2,
         "description": "Provisioning issues."
       },
       "networkSecurityPerimeter": {
         "type": {
-          "$ref": "#/329"
+          "$ref": "#/315"
         },
         "flags": 0,
         "description": "The Network Security Perimeter associated with this configuration."
       },
       "resourceAssociation": {
         "type": {
-          "$ref": "#/330"
+          "$ref": "#/316"
         },
         "flags": 0,
         "description": "The Resource Association."
       },
       "profile": {
         "type": {
-          "$ref": "#/335"
+          "$ref": "#/321"
         },
         "flags": 0,
         "description": "Network Security Perimeter profile"
@@ -4488,7 +4235,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/311"
+          "$ref": "#/297"
         },
         "flags": 2,
         "description": "Provisioning issue properties"
@@ -4501,14 +4248,14 @@
     "properties": {
       "issueType": {
         "type": {
-          "$ref": "#/316"
+          "$ref": "#/302"
         },
         "flags": 2,
         "description": "Issue type"
       },
       "severity": {
         "type": {
-          "$ref": "#/319"
+          "$ref": "#/305"
         },
         "flags": 2,
         "description": "Severity of the provisioning issue."
@@ -4522,14 +4269,14 @@
       },
       "suggestedResourceIds": {
         "type": {
-          "$ref": "#/320"
+          "$ref": "#/306"
         },
         "flags": 2,
         "description": "ARM Ids of the resources that can be associated to the same perimeter to remediate the issue"
       },
       "suggestedAccessRules": {
         "type": {
-          "$ref": "#/327"
+          "$ref": "#/313"
         },
         "flags": 2,
         "description": "Access rules that can be added to the perimeter to remediate the issue"
@@ -4556,16 +4303,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/312"
+        "$ref": "#/298"
       },
       {
-        "$ref": "#/313"
+        "$ref": "#/299"
       },
       {
-        "$ref": "#/314"
+        "$ref": "#/300"
       },
       {
-        "$ref": "#/315"
+        "$ref": "#/301"
       },
       {
         "$ref": "#/2"
@@ -4584,10 +4331,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/317"
+        "$ref": "#/303"
       },
       {
-        "$ref": "#/318"
+        "$ref": "#/304"
       },
       {
         "$ref": "#/2"
@@ -4613,7 +4360,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/322"
+          "$ref": "#/308"
         },
         "flags": 2,
         "description": "Access rule properties"
@@ -4626,14 +4373,14 @@
     "properties": {
       "direction": {
         "type": {
-          "$ref": "#/325"
+          "$ref": "#/311"
         },
         "flags": 2,
         "description": "Direction of the access rule."
       },
       "addressPrefixes": {
         "type": {
-          "$ref": "#/326"
+          "$ref": "#/312"
         },
         "flags": 2,
         "description": "Address prefixes that are allowed access."
@@ -4652,10 +4399,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/323"
+        "$ref": "#/309"
       },
       {
-        "$ref": "#/324"
+        "$ref": "#/310"
       },
       {
         "$ref": "#/2"
@@ -4671,13 +4418,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/321"
+      "$ref": "#/307"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/310"
+      "$ref": "#/296"
     }
   },
   {
@@ -4720,7 +4467,7 @@
       },
       "accessMode": {
         "type": {
-          "$ref": "#/334"
+          "$ref": "#/320"
         },
         "flags": 2,
         "description": "The access mode"
@@ -4743,13 +4490,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/331"
+        "$ref": "#/317"
       },
       {
-        "$ref": "#/332"
+        "$ref": "#/318"
       },
       {
-        "$ref": "#/333"
+        "$ref": "#/319"
       },
       {
         "$ref": "#/2"
@@ -4776,7 +4523,7 @@
       },
       "accessRules": {
         "type": {
-          "$ref": "#/336"
+          "$ref": "#/322"
         },
         "flags": 2,
         "description": "Collection of access rules for the profile"
@@ -4790,7 +4537,7 @@
       },
       "enabledLogCategories": {
         "type": {
-          "$ref": "#/337"
+          "$ref": "#/323"
         },
         "flags": 2,
         "description": "Collection of enabled log categories for the profile"
@@ -4800,7 +4547,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/321"
+      "$ref": "#/307"
     }
   },
   {
@@ -4814,7 +4561,7 @@
     "name": "Microsoft.HybridCompute/privateLinkScopes/networkSecurityPerimeterConfigurations@2024-03-31-preview",
     "scopeType": 8,
     "body": {
-      "$ref": "#/308"
+      "$ref": "#/294"
     },
     "flags": 1
   }

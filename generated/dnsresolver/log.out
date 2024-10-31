@@ -13,6 +13,23 @@ warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'DnsResolver' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from DnsResolver
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'InboundEndpoint' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from InboundEndpoint
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'OutboundEndpoint' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from OutboundEndpoint
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'DnsForwardingRuleset' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from DnsForwardingRuleset
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'ForwardingRule' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from ForwardingRule
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'VirtualNetworkLink' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from VirtualNetworkLink
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'DnsResolverPolicy' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from DnsResolverPolicy
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'DnsSecurityRule' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from DnsSecurityRule
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'DnsResolverPolicyVirtualNetworkLink' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from DnsResolverPolicyVirtualNetworkLink
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'DnsResolverDomainList' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from DnsResolverDomainList
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.

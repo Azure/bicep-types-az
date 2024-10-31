@@ -49,16 +49,6 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.HybridCompute/machines/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.HybridCompute/machines/hybridIdentityMetadata@2023-10-03-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2023-10-03-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {pattern: "^[a-zA-Z0-9-_\.]{1,54}$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [HybridIdentityMetadataProperties](#hybrididentitymetadataproperties) (ReadOnly): Resource properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **type**: 'Microsoft.HybridCompute/machines/hybridIdentityMetadata' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.HybridCompute/machines/licenseProfiles@2023-10-03-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -82,16 +72,6 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.HybridCompute/machines/runCommands' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.HybridCompute/networkConfigurations@2023-10-03-preview
-* **Valid Scope(s)**: Unknown
-### Properties
-* **apiVersion**: '2023-10-03-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: 'current' (Required, DeployTimeConstant): The resource name
-* **properties**: [NetworkConfigurationProperties](#networkconfigurationproperties): Network configuration properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **type**: 'Microsoft.HybridCompute/networkConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridCompute/privateLinkScopes@2023-10-03-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -218,12 +198,6 @@
 * **provisioningState**: string (ReadOnly): Current state of this PrivateLinkScope: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Provisioning ,Succeeded, Canceled and Failed.
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Indicates whether machines associated with the private link scope can also use public Azure Arc service endpoints.
 
-## HybridIdentityMetadataProperties
-### Properties
-* **identity**: [Identity](#identity) (ReadOnly): Identity for the resource.
-* **publicKey**: string: The Public Key.
-* **vmId**: string: The unique identifier for the resource.
-
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.
@@ -235,17 +209,6 @@
 * **address**: string: Represents the IP Address.
 * **ipAddressVersion**: string: Represents the Ip Address Version.
 * **subnet**: [Subnet](#subnet) (ReadOnly): The subnet to which this IP address belongs.
-
-## KeyDetails
-### Properties
-* **notAfter**: string (ReadOnly): Key expiration date
-* **publicKey**: string (ReadOnly): Public key
-* **renewAfter**: string (ReadOnly): Recommended key renewal date
-
-## KeyProperties
-### Properties
-* **candidatePublicKey**: [KeyDetails](#keydetails) (ReadOnly): Candidate public key details
-* **clientPublicKey**: [KeyDetails](#keydetails) (ReadOnly): Current public key details
 
 ## License
 ### Properties
@@ -447,14 +410,6 @@
 * **script**: string: Specifies the script content to be executed on the machine.
 * **scriptUri**: string: Specifies the script download location. It can be either SAS URI of an Azure storage blob with read access or public URI.
 * **scriptUriManagedIdentity**: [RunCommandManagedIdentity](#runcommandmanagedidentity): User-assigned managed identity that has access to scriptUri in case of Azure storage blob. Use an empty object in case of system-assigned identity. Make sure the Azure storage blob exists, and managed identity has been given access to blob's container with 'Storage Blob Data Reader' role assignment. In case of user-assigned identity, make sure you add it under VM's identity. For more info on managed identity and Run Command, refer https://aka.ms/ManagedIdentity and https://aka.ms/RunCommandManaged.
-
-## NetworkConfigurationProperties
-### Properties
-* **keyProperties**: [KeyProperties](#keyproperties) (ReadOnly): Public key information for client authentication
-* **location**: string: Resource location
-* **networkConfigurationScopeId**: string: Associated Network Configuration Scope Id (GUID)
-* **networkConfigurationScopeResourceId**: string (Required): Associated Network Configuration Scope Resource Id
-* **tenantId**: string (ReadOnly): Azure resource tenant Id
 
 ## NetworkInterface
 ### Properties

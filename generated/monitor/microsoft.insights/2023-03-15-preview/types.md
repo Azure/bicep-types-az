@@ -9,7 +9,7 @@
 * **identity**: [Identity](#identity): The identity of the resource.
 * **kind**: 'LogAlert' | 'LogToMetric' | string: Indicates the type of scheduled query rule. The default is LogAlert.
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[^#<>%&:\?/{}*]{1,260}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ScheduledQueryRuleProperties](#scheduledqueryruleproperties) (Required): The rule properties of the resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): SystemData of ScheduledQueryRule.
 * **tags**: [ScheduledQueryRuleResourceTags](#scheduledqueryruleresourcetags): Resource tags.
@@ -90,7 +90,7 @@
 * **isWorkspaceAlertsStorageConfigured**: bool (ReadOnly): The flag which indicates whether this scheduled query rule has been configured to be stored in the customer's storage. The default is false.
 * **muteActionsDuration**: string: Mute actions for the chosen period of time (in ISO 8601 duration format) after the alert is fired. Relevant only for rules of the kind LogAlert.
 * **overrideQueryTimeRange**: string: If specified then overrides the query time range (default is WindowSize*NumberOfEvaluationPeriods). Relevant only for rules of the kind LogAlert.
-* **ruleResolveConfiguration**: [RuleResolveConfiguration](#ruleresolveconfiguration): Defines the configuration for resolving fired alerts. Relevant only for rules of the kind LogAlert.
+* **resolveConfiguration**: [RuleResolveConfiguration](#ruleresolveconfiguration): Defines the configuration for resolving fired alerts. Relevant only for rules of the kind LogAlert.
 * **scopes**: string[]: The list of resource id's that this scheduled query rule is scoped to.
 * **severity**: int: Severity of the alert. Should be an integer between [0-4]. Value of 0 is severest. Relevant and required only for rules of the kind LogAlert.
 * **skipQueryValidation**: bool: The flag which indicates whether the provided query should be validated or not. The default is false. Relevant only for rules of the kind LogAlert.

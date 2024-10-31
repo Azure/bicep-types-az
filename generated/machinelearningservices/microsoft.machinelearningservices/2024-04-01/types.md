@@ -443,11 +443,6 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.MachineLearningServices/workspaces/serverlessEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
-## Function listKeys (Microsoft.MachineLearningServices/workspaces@2024-04-01)
-* **Resource**: Microsoft.MachineLearningServices/workspaces
-* **ApiVersion**: 2024-04-01
-* **Output**: [ListWorkspaceKeysResult](#listworkspacekeysresult)
-
 ## Function listKeys (Microsoft.MachineLearningServices/workspaces/computes@2024-04-01)
 * **Resource**: Microsoft.MachineLearningServices/workspaces/computes
 * **ApiVersion**: 2024-04-01
@@ -468,6 +463,11 @@
 * **ApiVersion**: 2024-04-01
 * **Output**: [EndpointAuthKeys](#endpointauthkeys)
 
+## Function listKeys (Microsoft.MachineLearningServices/workspaces@2024-04-01)
+* **Resource**: Microsoft.MachineLearningServices/workspaces
+* **ApiVersion**: 2024-04-01
+* **Output**: [ListWorkspaceKeysResult](#listworkspacekeysresult)
+
 ## Function listNodes (Microsoft.MachineLearningServices/workspaces/computes@2024-04-01)
 * **Resource**: Microsoft.MachineLearningServices/workspaces/computes
 * **ApiVersion**: 2024-04-01
@@ -483,15 +483,15 @@
 * **ApiVersion**: 2024-04-01
 * **Output**: [ListNotebookKeysResult](#listnotebookkeysresult)
 
-## Function listsecrets (Microsoft.MachineLearningServices/workspaces/connections@2024-04-01)
-* **Resource**: Microsoft.MachineLearningServices/workspaces/connections
-* **ApiVersion**: 2024-04-01
-* **Output**: [WorkspaceConnectionPropertiesV2BasicResource](#workspaceconnectionpropertiesv2basicresource)
-
 ## Function listSecrets (Microsoft.MachineLearningServices/workspaces/datastores@2024-04-01)
 * **Resource**: Microsoft.MachineLearningServices/workspaces/datastores
 * **ApiVersion**: 2024-04-01
 * **Output**: [DatastoreSecrets](#datastoresecrets)
+
+## Function listsecrets (Microsoft.MachineLearningServices/workspaces/connections@2024-04-01)
+* **Resource**: Microsoft.MachineLearningServices/workspaces/connections
+* **ApiVersion**: 2024-04-01
+* **Output**: [WorkspaceConnectionPropertiesV2BasicResource](#workspaceconnectionpropertiesv2basicresource)
 
 ## Function listStorageAccountKeys (Microsoft.MachineLearningServices/workspaces@2024-04-01)
 * **Resource**: Microsoft.MachineLearningServices/workspaces

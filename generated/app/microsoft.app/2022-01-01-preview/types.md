@@ -516,9 +516,7 @@ Note that URLs within the current domain are always implicitly allowed.
 
 ## ManagedEnvironmentProperties
 ### Properties
-* **appLogsConfiguration**: [AppLogsConfiguration](#applogsconfiguration): Cluster configuration which enables the log daemon to export
-app logs to a destination. Currently only "log-analytics" is
-supported
+* **appLogsConfiguration**: [AppLogsConfiguration](#applogsconfiguration): Cluster configuration which enables the log daemon to export app logs to configured destination.
 * **daprAIInstrumentationKey**: string: Azure Monitor instrumentation key used by Dapr to export Service to Service communication telemetry
 * **defaultDomain**: string (ReadOnly): Default Domain Name for the cluster
 * **deploymentErrors**: string (ReadOnly): Any errors that occurred during deployment or deployment validation

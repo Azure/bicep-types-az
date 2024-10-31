@@ -56,6 +56,8 @@
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): Provisioning state of Ledger Resource
 * **runningState**: 'Active' | 'Paused' | 'Pausing' | 'Resuming' | 'Unknown' | string: Object representing RunningState for Ledger.
 * **subjectName**: string: CCF Property for the subject name to include in the node certificate. Default: CN=CCF Node.
+* **workerThreads**: int: Number of additional threads processing incoming client requests in the enclave (modify with care!)
+* **writeLBAddressPrefix**: string: Prefix for the write load balancer. Example: write
 
 ## ManagedCCFProperties
 ### Properties

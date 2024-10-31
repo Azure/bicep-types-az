@@ -649,7 +649,7 @@
 ## RoutePropertiesFormat
 ### Properties
 * **addressPrefix**: string: The destination CIDR to which the route applies.
-* **hasBgpOverride**: bool: A value indicating whether this route overrides overlapping BGP routes regardless of LPM.
+* **hasBgpOverride**: bool (ReadOnly): A value indicating whether this route overrides overlapping BGP routes regardless of LPM.
 * **nextHopIpAddress**: string: The IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is VirtualAppliance.
 * **nextHopType**: 'Internet' | 'None' | 'VirtualAppliance' | 'VirtualNetworkGateway' | 'VnetLocal' | string (Required): The type of Azure hop the packet should be sent to.
 * **provisioningState**: 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the route resource.

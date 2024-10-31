@@ -3850,6 +3850,7 @@ This setting only applies to the Consumption and Elastic Plans
 * **enabled**: bool: <code>true</code> if the app is enabled; otherwise, <code>false</code>. Setting this value to false disables the app (takes the app offline).
 * **enabledHostNames**: string[] (ReadOnly): Enabled hostnames for the app.Hostnames need to be assigned (see HostNames) AND enabled. Otherwise,
 the app is not served on those hostnames.
+* **endToEndEncryptionEnabled**: bool: Whether to use end to end encryption between the FrontEnd and the Worker
 * **functionAppConfig**: [FunctionAppConfig](#functionappconfig): Configuration specific of the Azure Function app.
 * **hostingEnvironmentProfile**: [HostingEnvironmentProfile](#hostingenvironmentprofile): App Service Environment to use for the app.
 * **hostNames**: string[] (ReadOnly): Hostnames associated with the app.
