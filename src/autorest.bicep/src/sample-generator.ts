@@ -1,7 +1,6 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import { keys } from 'lodash';
 import { getFullyQualifiedType, ProviderDefinition, PutExample, ResourceDescriptor } from "./resources";
 
 export function getSampleMarkdown(definition: ProviderDefinition) {
@@ -9,7 +8,7 @@ export function getSampleMarkdown(definition: ProviderDefinition) {
 # ${definition.namespace}
 `;
 
-  for (const resourceType of keys(definition.resourcesByType)) {
+  for (const resourceType in definition.resourcesByType) {
     const descriptor = definition.resourcesByType[resourceType][0].descriptor;
     const putExamples = definition.resourcesByType[resourceType].flatMap(x => x.putExamples ?? []);
     if (putExamples.length === 0) {
@@ -49,7 +48,7 @@ function generateBicepSample(provider: ProviderDefinition, descriptor: ResourceD
   }
   result += `  name: 'example'\n`;
 
-  for (const propName of keys(example.body)) {
+  for (const propName in example.body) {
     result += `  ${propName}: ${getBicep(example.body[propName], 1)}\n`;
   }
 
@@ -62,6 +61,7 @@ function getIndent(indent: number) {
   return '  '.repeat(indent);
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function getBicep(value: any, indent: number) {
   if (typeof value === 'string') {
     return getBicepString(value);
@@ -87,7 +87,7 @@ function getBicep(value: any, indent: number) {
 
   if (typeof value === 'object') {
     let result = `{`;
-    for (const key of keys(value)) {
+    for (const key in value) {
       result += `\n${getIndent(indent + 1)}${key}: ${getBicep(value[key], indent + 1)}`;
     }
     result += `\n${getIndent(indent)}}`;
@@ -100,11 +100,11 @@ function getBicep(value: any, indent: number) {
 
 function getBicepString(value: string) {
   const escaped = value
-  .replace("\\", "\\\\") // must do this first!
-  .replace("\r", "\\r")
-  .replace("\n", "\\n")
-  .replace("\t", "\\t")
-  .replace("${", "\\${")
-  .replace("'", "\\'");
+  .replace(/\\/g, "\\\\") // must do this first!
+  .replace(/\r/g, "\\r")
+  .replace(/\n/g, "\\n")
+  .replace(/\t/g, "\\t")
+  .replace(/\${/g, "\\${")
+  .replace(/'/g, "\\'");
   return `'${escaped}'`;
 }
