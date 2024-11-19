@@ -86,6 +86,14 @@
           "description": "Description for a basic enum property.",
           "x-nullable": true
         },
+        "emptyEnum": {
+          "type": "string",
+          "x-ms-enum": {
+            "name": "EmptyEnum",
+            "modelAsString": true
+          },
+          "description": "Description for a empty enum property.",
+        },
         "skuTier": {
           "$ref": "../../../../../common-types/resource-management/v3/types.json#/definitions/SkuTier"
         },

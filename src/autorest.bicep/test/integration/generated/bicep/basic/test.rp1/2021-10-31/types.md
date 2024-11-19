@@ -150,6 +150,7 @@
 * **base64EncodedBytes**: string (ReadOnly)
 * **basicString**: string: Description for a basic string property.
 * **binaryBuffer**: any (ReadOnly)
+* **emptyEnum**: string: Description for a empty enum property.
 * **encryptionProperties**: [EncryptionProperties](#encryptionproperties): TestType1 encryption properties
 * **intWithDefaultValue**: int
 * **locationData**: [LocationData](#locationdata) (ReadOnly): Metadata pertaining to the geographic location of the resource.
@@ -165,6 +166,7 @@
 * **base64EncodedBytes**: string
 * **basicString**: string: Description for a basic string property.
 * **binaryBuffer**: any
+* **emptyEnum**: string: Description for a empty enum property.
 * **encryptionProperties**: [EncryptionProperties](#encryptionproperties): TestType1 encryption properties
 * **intWithDefaultValue**: int
 * **locationData**: [LocationData](#locationdata): Metadata pertaining to the geographic location of the resource.

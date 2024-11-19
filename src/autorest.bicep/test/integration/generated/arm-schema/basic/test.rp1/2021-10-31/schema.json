@@ -462,6 +462,10 @@
           "description": "Description for a basic string property.",
           "type": "string"
         },
+        "emptyEnum": {
+          "description": "Description for a empty enum property.",
+          "type": "string"
+        },
         "encryptionProperties": {
           "description": "TestType1 encryption properties",
           "oneOf": [
@@ -551,6 +555,10 @@
           "type": "string"
         },
         "binaryBuffer": {},
+        "emptyEnum": {
+          "description": "Description for a empty enum property.",
+          "type": "string"
+        },
         "encryptionProperties": {
           "description": "TestType1 encryption properties",
           "oneOf": [

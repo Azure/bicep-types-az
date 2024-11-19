@@ -590,7 +590,8 @@ export function generateSchema(host: AutorestExtensionHost, definition: Provider
 
     return {
       type: 'string',
-      enum: values,
+      // avoid outputting an empty enum - this breaks schema validation
+      enum: values.length > 0 ? values : undefined,
     };
   }
 
