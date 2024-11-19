@@ -96,6 +96,13 @@
         "flags": 0,
         "description": "Description for a basic enum property."
       },
+      "emptyEnum": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Description for a empty enum property."
+      },
       "skuTier": {
         "type": {
           "$ref": "#/13"
@@ -703,6 +710,13 @@
         },
         "flags": 0,
         "description": "Description for a basic enum property."
+      },
+      "emptyEnum": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Description for a empty enum property."
       },
       "skuTier": {
         "type": {
