@@ -553,12 +553,11 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
     }
 
     const putExamples: PutExample[] = [];
-    for (const description of keys(examples)) {
+    for (const description in examples) {
       const example = examples[description];
       const bodyParam = requestSchema.parameters.filter(p => (p.protocol.http as HttpParameter)?.in === ParameterLocation.Body)[0];
       const bodyParamName = bodyParam.language.default.name;
-      const body = example.parameters[bodyParamName];
-
+      const body = example?.parameters?.[bodyParamName];
       if (!body) {
         continue;
       }
