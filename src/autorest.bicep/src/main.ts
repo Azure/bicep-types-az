@@ -26,8 +26,11 @@ export async function processRequest(host: AutorestExtensionHost) {
       if (!session.configuration["arm-schema"]) {
         const types = generateTypes(host, definition);
 
-        // write samples.md
-        host.writeFile({ filename: `${outFolder}/samples.md`, content: getSampleMarkdown(definition) });
+        const samplesMd = getSampleMarkdown(definition);
+        if (samplesMd) {
+          // write samples.md
+          host.writeFile({ filename: `${outFolder}/samples.md`, content: samplesMd });
+        }
   
         // write types.json
         host.writeFile({ filename: `${outFolder}/types.json`, content: writeTypesJson(types) });

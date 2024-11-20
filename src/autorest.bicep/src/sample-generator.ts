@@ -4,9 +4,8 @@
 import { getFullyQualifiedType, ProviderDefinition, PutExample, ResourceDescriptor } from "./resources";
 
 export function getSampleMarkdown(definition: ProviderDefinition) {
-  let mdSamples = `
-# ${definition.namespace}
-`;
+  let hasSamples = false;
+  let mdSamples = `# ${definition.namespace}\n`;
 
   for (const resourceType in definition.resourcesByType) {
     const descriptor = definition.resourcesByType[resourceType][0].descriptor;
@@ -25,6 +24,7 @@ export function getSampleMarkdown(definition: ProviderDefinition) {
         continue;
       }
 
+      hasSamples = true;
       mdSamples += `
 ${example.description}
 \`\`\`bicep
@@ -34,7 +34,7 @@ ${bicepContent}
     }
   }
 
-  return mdSamples;
+  return hasSamples ? mdSamples : null;
 }
 
 function generateBicepSample(provider: ProviderDefinition, descriptor: ResourceDescriptor, example: PutExample) {
