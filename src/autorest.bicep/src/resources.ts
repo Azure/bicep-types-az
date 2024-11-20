@@ -7,6 +7,11 @@ import { keys, Dictionary, values, groupBy, uniqBy, chain, flatten } from 'lodas
 import { success, failure, Result } from './utils';
 import { ScopeType } from "bicep-types";
 
+export interface PutExample {
+  description: string;
+  body: Record<string, unknown>;
+}
+
 export interface ResourceDescriptor {
   scopeType: ScopeType;
   namespace: string;
@@ -35,6 +40,7 @@ export interface ResourceDefinition {
   descriptor: ResourceDescriptor;
   putOperation?: ResourceOperationDefintion;
   getOperation?: ResourceOperationDefintion;
+  putExamples?: PutExample[];
 }
 
 export interface ResourceListActionDefinition {
@@ -405,7 +411,8 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
               requestSchema: (getData?.requestSchema instanceof ObjectSchema) ? getData.requestSchema : undefined,
               responseSchema: (getData?.responseSchema instanceof ObjectSchema) ? getData.responseSchema : undefined,
             }
-            : undefined
+            : undefined,
+          putExamples: putData?.putExamples,
         };
 
         const lcNamespace = descriptor.namespace.toLowerCase();
@@ -536,6 +543,7 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
   }
 
   function getPutSchema(operation?: Operation) {
+    const examples = operation?.extensions?.['x-ms-examples'] ?? {};
     const requests = operation?.requests ?? [];
     const validRequests = requests.filter(r => (r.protocol.http as HttpRequest)?.method === HttpMethod.Put);
     const requestSchema = getRequestSchema(operation, validRequests);
@@ -544,12 +552,29 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
       return;
     }
 
+    const putExamples: PutExample[] = [];
+    for (const description in examples) {
+      const example = examples[description];
+      const bodyParam = requestSchema.parameters.filter(p => (p.protocol.http as HttpParameter)?.in === ParameterLocation.Body)[0];
+      const bodyParamName = bodyParam.language.default.name;
+      const body = example?.parameters?.[bodyParamName];
+      if (!body) {
+        continue;
+      }
+
+      putExamples.push({
+        description,
+        body,
+      });
+    }
+
     return {
       request: requestSchema.request,
       response: responseSchema?.response,
       parameters: requestSchema.parameters,
       requestSchema: requestSchema.schema,
       responseSchema: responseSchema?.schema,
+      putExamples,
     };
   }
 
@@ -834,6 +859,7 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
           },
           putOperation: chain(atPath).map(r => r.putOperation).find().value(),
           getOperation: chain(atPath).map(r => r.getOperation).find().value(),
+          putExamples: atPath.flatMap(r => r.putExamples ?? []),
         }];
       }
     }

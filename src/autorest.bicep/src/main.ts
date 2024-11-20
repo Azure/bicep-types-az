@@ -7,6 +7,7 @@ import { generateSchema } from "./schema-generator";
 import { CodeModel, codeModelSchema } from "@autorest/codemodel";
 import { writeTypesJson, writeMarkdown } from "bicep-types";
 import { getProviderDefinitions } from "./resources";
+import { getSampleMarkdown } from "./sample-generator";
 
 export async function processRequest(host: AutorestExtensionHost) {
   try {
@@ -24,11 +25,17 @@ export async function processRequest(host: AutorestExtensionHost) {
 
       if (!session.configuration["arm-schema"]) {
         const types = generateTypes(host, definition);
+
+        const samplesMd = getSampleMarkdown(definition);
+        if (samplesMd) {
+          // write samples.md
+          host.writeFile({ filename: `${outFolder}/samples.md`, content: samplesMd });
+        }
   
         // write types.json
         host.writeFile({ filename: `${outFolder}/types.json`, content: writeTypesJson(types) });
   
-        // writer types.md
+        // write types.md
         host.writeFile({ filename: `${outFolder}/types.md`, content: writeMarkdown(types, `${namespace} @ ${apiVersion}`) });  
       } else {
         const schema = generateSchema(host, definition);

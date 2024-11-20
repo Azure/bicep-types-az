@@ -412,6 +412,11 @@
             "$ref": "../../../../../common-types/resource-management/v3/types.json#/parameters/ApiVersionParameter"
           }
         ],
+        "x-ms-examples": {
+          "Put a TestType1 Resource": {
+            "$ref": "./examples/putTestType1.json"
+          }
+        },
         "x-ms-long-running-operation": true
       }
     },

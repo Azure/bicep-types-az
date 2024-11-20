@@ -1,0 +1,31 @@
+{
+  "parameters": {
+    "subscriptionId": "00000000-0000-0000-0000-000000000000",
+    "resourceGroupName": "sample-group",
+    "typeName": "sample-res",
+    "api-version": "2021-10-31",
+    "parameters": {
+      "location": "westus",
+      "properties": {
+        "basicString": "I'm a string!",
+        "stringEnum": "Foo",
+        "intWithDefaultValue": 2
+      }
+    }
+  },
+  "responses": {
+    "200": {
+      "body": {
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/sample-group/providers/Test.Rp1/testType1/sample-res",
+        "name": "sample-res",
+        "type": "Test.Rp1/testType1",
+        "location": "westus",
+        "properties": {
+          "basicString": "I'm a string!",
+          "stringEnum": "Foo",
+          "intWithDefaultValue": 2
+        }
+      }
+    }
+  }
+}
