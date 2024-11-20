@@ -1,0 +1,41 @@
+# Microsoft.Communication
+
+## microsoft.communication/communicationservices
+
+Create or update resource
+```bicep
+resource exampleResource 'Microsoft.Communication/communicationServices@2022-07-01-preview' = {
+  name: 'example'
+  location: 'Global'
+  properties: {
+    dataLocation: 'United States'
+  }
+}
+```
+
+## microsoft.communication/emailservices/domains
+
+Create or update Domains resource
+```bicep
+resource exampleResource 'Microsoft.Communication/emailServices/domains@2022-07-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'Global'
+  properties: {
+    domainManagement: 'CustomerManaged'
+  }
+}
+```
+
+## microsoft.communication/emailservices
+
+Create or update EmailService resource
+```bicep
+resource exampleResource 'Microsoft.Communication/emailServices@2022-07-01-preview' = {
+  name: 'example'
+  location: 'Global'
+  properties: {
+    dataLocation: 'United States'
+  }
+}
+```

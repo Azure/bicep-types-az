@@ -27096,16 +27096,6 @@
 * **Link**: [2023-04-01](storage/microsoft.storage/2023-04-01/types.md#resource-microsoftstoragestorageaccountstableservicestables2023-04-01)
 * **Link**: [2023-05-01](storage/microsoft.storage/2023-05-01/types.md#resource-microsoftstoragestorageaccountstableservicestables2023-05-01)
 
-## microsoft.storage.admin
-### microsoft.storage.admin/locations/quotas
-* **Link**: [2019-08-08-preview](azsadmin/microsoft.storage.admin/2019-08-08-preview/types.md#resource-microsoftstorageadminlocationsquotas2019-08-08-preview)
-
-### microsoft.storage.admin/locations/storageaccounts
-* **Link**: [2019-08-08-preview](azsadmin/microsoft.storage.admin/2019-08-08-preview/types.md#resource-microsoftstorageadminlocationsstorageaccounts2019-08-08-preview)
-
-### microsoft.storage.admin/storageservices
-* **Link**: [2019-08-08-preview](azsadmin/microsoft.storage.admin/2019-08-08-preview/types.md#resource-microsoftstorageadminstorageservices2019-08-08-preview)
-
 ## microsoft.storageactions
 ### microsoft.storageactions/storagetasks
 * **Link**: [2023-01-01](storageactions/microsoft.storageactions/2023-01-01/types.md#resource-microsoftstorageactionsstoragetasks2023-01-01)

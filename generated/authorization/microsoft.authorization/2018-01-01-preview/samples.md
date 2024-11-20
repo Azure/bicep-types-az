@@ -1,0 +1,24 @@
+# Microsoft.Authorization
+
+## microsoft.authorization/roledefinitions
+
+Create role definition
+```bicep
+resource exampleResource 'Microsoft.Authorization/roleDefinitions@2018-01-01-preview' = {
+  name: 'example'
+}
+```
+
+## microsoft.authorization/roleassignments
+
+Create role assignment
+```bicep
+resource exampleResource 'Microsoft.Authorization/roleAssignments@2018-01-01-preview' = {
+  name: 'example'
+  properties: {
+    canDelegate: false
+    principalId: 'd93a38bc-d029-4160-bfb0-fbda779ac214'
+    roleDefinitionId: '/subscriptions/4004a9fd-d58e-48dc-aeb2-4a4aec58606f/providers/Microsoft.Authorization/roleDefinitions/de139f84-1756-47ae-9be6-808fbbe84772'
+  }
+}
+```

@@ -1,0 +1,68 @@
+# Microsoft.ContainerService
+
+## microsoft.containerservice/managedclusters
+
+Create/Update Managed Cluster
+```bicep
+resource exampleResource 'Microsoft.ContainerService/managedClusters@2019-04-01' = {
+  name: 'example'
+  location: 'location1'
+  properties: {
+    addonProfiles: {
+    }
+    agentPoolProfiles: [
+      {
+        name: 'nodepool1'
+        count: 3
+        osType: 'Linux'
+        vmSize: 'Standard_DS1_v2'
+      }
+    ]
+    dnsPrefix: 'dnsprefix1'
+    enablePodSecurityPolicy: true
+    enableRBAC: true
+    kubernetesVersion: ''
+    linuxProfile: {
+      adminUsername: 'azureuser'
+      ssh: {
+        publicKeys: [
+          {
+            keyData: 'keydata'
+          }
+        ]
+      }
+    }
+    networkProfile: {
+      loadBalancerSku: 'basic'
+    }
+    servicePrincipalProfile: {
+      clientId: 'clientid'
+      secret: 'secret'
+    }
+    windowsProfile: {
+      adminPassword: 'replacePassword1234$'
+      adminUsername: 'azureuser'
+    }
+  }
+  tags: {
+    archv2: ''
+    tier: 'production'
+  }
+}
+```
+
+## microsoft.containerservice/managedclusters/agentpools
+
+Create/Update Agent Pool
+```bicep
+resource exampleResource 'Microsoft.ContainerService/managedClusters/agentPools@2019-04-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    count: 3
+    orchestratorVersion: ''
+    osType: 'Linux'
+    vmSize: 'Standard_DS1_v2'
+  }
+}
+```

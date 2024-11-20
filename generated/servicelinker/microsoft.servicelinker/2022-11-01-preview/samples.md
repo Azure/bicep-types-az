@@ -1,0 +1,102 @@
+# Microsoft.ServiceLinker
+
+## microsoft.servicelinker/locations/dryruns
+
+ConnectorDryrunCreate
+```bicep
+resource exampleResource 'Microsoft.ServiceLinker/locations/dryruns@2022-11-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    parameters: {
+      actionName: 'createOrUpdate'
+      authInfo: {
+        name: 'name'
+        authType: 'secret'
+        secretInfo: {
+          secretType: 'rawValue'
+          value: 'secret'
+        }
+      }
+      targetService: {
+        type: 'AzureResource'
+        id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test-rg/providers/Microsoft.DocumentDb/databaseAccounts/test-acc/mongodbDatabases/test-db'
+      }
+    }
+  }
+}
+```
+
+## microsoft.servicelinker/locations/connectors
+
+PutConnector
+```bicep
+resource exampleResource 'Microsoft.ServiceLinker/locations/connectors@2022-11-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    authInfo: {
+      authType: 'secret'
+    }
+    secretStore: {
+      keyVaultId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test-rg/providers/Microsoft.KeyVault/vaults/test-kv'
+    }
+    targetService: {
+      type: 'AzureResource'
+      id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test-rg/providers/Microsoft.DocumentDb/databaseAccounts/test-acc/mongodbDatabases/test-db'
+    }
+  }
+}
+```
+
+## microsoft.servicelinker/linkers
+
+PutLinker
+```bicep
+resource exampleResource 'Microsoft.ServiceLinker/linkers@2022-11-01-preview' = {
+  name: 'example'
+  properties: {
+    authInfo: {
+      name: 'name'
+      authType: 'secret'
+      secretInfo: {
+        secretType: 'rawValue'
+        value: 'secret'
+      }
+    }
+    targetService: {
+      type: 'AzureResource'
+      id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test-rg/providers/Microsoft.DBforPostgreSQL/servers/test-pg/databases/test-db'
+    }
+    vNetSolution: {
+      type: 'serviceEndpoint'
+    }
+  }
+}
+```
+
+## microsoft.servicelinker/dryruns
+
+PutDryrun
+```bicep
+resource exampleResource 'Microsoft.ServiceLinker/dryruns@2022-11-01-preview' = {
+  name: 'example'
+  properties: {
+    parameters: {
+      actionName: 'createOrUpdate'
+      authInfo: {
+        name: 'name'
+        authType: 'secret'
+        secretInfo: {
+          secretType: 'rawValue'
+          value: 'secret'
+        }
+      }
+      targetService: {
+        type: 'AzureResource'
+        id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test-rg/providers/Microsoft.DocumentDb/databaseAccounts/test-acc/mongodbDatabases/test-db'
+      }
+    }
+  }
+}
+```

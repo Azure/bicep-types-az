@@ -1,0 +1,96 @@
+# Microsoft.Communication
+
+## microsoft.communication/communicationservices
+
+Create or update resource
+```bicep
+resource exampleResource 'Microsoft.Communication/communicationServices@2023-06-01-preview' = {
+  name: 'example'
+  location: 'Global'
+  properties: {
+    dataLocation: 'United States'
+  }
+}
+```
+
+Create or update resource with managed identity
+```bicep
+resource exampleResource 'Microsoft.Communication/communicationServices@2023-06-01-preview' = {
+  name: 'example'
+  identity: {
+    type: 'SystemAssigned'
+  }
+  location: 'Global'
+  properties: {
+    dataLocation: 'United States'
+  }
+}
+```
+
+## microsoft.communication/emailservices/domains
+
+Create or update Domains resource
+```bicep
+resource exampleResource 'Microsoft.Communication/emailServices/domains@2023-06-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'Global'
+  properties: {
+    domainManagement: 'CustomerManaged'
+  }
+}
+```
+
+## microsoft.communication/emailservices
+
+Create or update EmailService resource
+```bicep
+resource exampleResource 'Microsoft.Communication/emailServices@2023-06-01-preview' = {
+  name: 'example'
+  location: 'Global'
+  properties: {
+    dataLocation: 'United States'
+  }
+}
+```
+
+## microsoft.communication/emailservices/domains/senderusernames
+
+Create or update SenderUsernames resource
+```bicep
+resource exampleResource 'Microsoft.Communication/emailServices/domains/senderUsernames@2023-06-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    displayName: 'Contoso News Alerts'
+    username: 'contosoNewsAlerts'
+  }
+}
+```
+
+## microsoft.communication/emailservices/domains/suppressionlists
+
+CreateOrUpdate SuppressionLists resource.
+```bicep
+resource exampleResource 'Microsoft.Communication/emailServices/domains/suppressionLists@2023-06-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    listName: 'contosoNewsAlerts'
+  }
+}
+```
+
+## microsoft.communication/emailservices/domains/suppressionlists/suppressionlistaddresses
+
+CreateOrUpdate SuppressionListAddress resource
+```bicep
+resource exampleResource 'Microsoft.Communication/emailServices/domains/suppressionLists/suppressionListAddresses@2023-06-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    email: 'newuser1@fabrikam.com'
+    firstName: 'updatedFirstName'
+  }
+}
+```

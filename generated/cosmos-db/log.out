@@ -1944,17 +1944,17 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorResponse' (4 differences):
   - properties.code: {"$ref":"#/components/schemas/schemas:33","description":"Error code."} => <none>
   - properties.message: {"$ref":"#/components/schemas/schemas:34","description":"Error message indicating why the operation failed."} => <none>
-  - properties.error: <none> => {"description":"The error object.","$ref":"#/components/schemas/schemas:1401"}
+  - properties.error: <none> => {"description":"The error object.","$ref":"#/components/schemas/schemas:1499"}
   - title: <none> => "Error response"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProvisioningState' (2 differences):
   - enum: <none> => ["Succeeded","Failed","Canceled","InProgress","Updating","Dropping"]
   - x-ms-enum: <none> => {"name":"ProvisioningState","modelAsString":true}
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (3 differences):
-  - properties.id.$ref: "#/components/schemas/schemas:1195" => "#/components/schemas/schemas:1368"
+  - properties.id.$ref: "#/components/schemas/schemas:1287" => "#/components/schemas/schemas:1466"
   - properties.id.description: "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}" => "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
-  - properties.systemData: <none> => {"readOnly":true,"description":"Azure Resource Manager metadata containing createdBy and modifiedBy information.","$ref":"#/components/schemas/schemas:1260"}
+  - properties.systemData: <none> => {"readOnly":true,"description":"Azure Resource Manager metadata containing createdBy and modifiedBy information.","$ref":"#/components/schemas/schemas:1352"}
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProxyResource' (1 differences):
-  - allOf.0.$ref: "#/components/schemas/schemas:1194" => "#/components/schemas/schemas:1367"
+  - allOf.0.$ref: "#/components/schemas/schemas:1286" => "#/components/schemas/schemas:1465"
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'DatabaseAccountGetResults' has a property 'identity' that is already declared the parent schema 'ARMResourceProperties' but isn't significantly different. The property has been removed from DatabaseAccountGetResults
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'DatabaseAccountCreateUpdateParameters' has a property 'identity' that is already declared the parent schema 'ARMResourceProperties' but isn't significantly different. The property has been removed from DatabaseAccountCreateUpdateParameters
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'RestoreParameters' has a property 'restoreSource' that is already declared the parent schema 'RestoreParametersBase' but isn't significantly different. The property has been removed from RestoreParameters
@@ -2175,17 +2175,17 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorResponse' (4 differences):
   - properties.code: {"$ref":"#/components/schemas/schemas:33","description":"Error code."} => <none>
   - properties.message: {"$ref":"#/components/schemas/schemas:34","description":"Error message indicating why the operation failed."} => <none>
-  - properties.error: <none> => {"description":"The error object.","$ref":"#/components/schemas/schemas:1481"}
+  - properties.error: <none> => {"description":"The error object.","$ref":"#/components/schemas/schemas:1302"}
   - title: <none> => "Error response"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProvisioningState' (2 differences):
   - enum: <none> => ["Succeeded","Failed","Canceled","InProgress","Updating","Dropping"]
   - x-ms-enum: <none> => {"name":"ProvisioningState","modelAsString":true}
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (3 differences):
-  - properties.id.$ref: "#/components/schemas/schemas:1177" => "#/components/schemas/schemas:1448"
-  - properties.id.description: "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}" => "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
-  - properties.systemData: <none> => {"readOnly":true,"description":"Azure Resource Manager metadata containing createdBy and modifiedBy information.","$ref":"#/components/schemas/schemas:1242"}
+  - properties.id.$ref: "#/components/schemas/schemas:1269" => "#/components/schemas/schemas:1367"
+  - properties.id.description: "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\"" => "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
+  - properties.systemData: {"readOnly":true,"description":"Azure Resource Manager metadata containing createdBy and modifiedBy information.","$ref":"#/components/schemas/schemas:1338"} => <none>
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProxyResource' (1 differences):
-  - allOf.0.$ref: "#/components/schemas/schemas:1176" => "#/components/schemas/schemas:1447"
+  - allOf.0.$ref: "#/components/schemas/schemas:1268" => "#/components/schemas/schemas:1366"
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'DatabaseAccountGetResults' has a property 'identity' that is already declared the parent schema 'ARMResourceProperties' but isn't significantly different. The property has been removed from DatabaseAccountGetResults
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'DatabaseAccountCreateUpdateParameters' has a property 'identity' that is already declared the parent schema 'ARMResourceProperties' but isn't significantly different. The property has been removed from DatabaseAccountCreateUpdateParameters
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'RestoreParameters' has a property 'restoreSource' that is already declared the parent schema 'RestoreParametersBase' but isn't significantly different. The property has been removed from RestoreParameters
@@ -2810,17 +2810,17 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorResponse' (4 differences):
   - properties.code: {"$ref":"#/components/schemas/schemas:33","description":"Error code."} => <none>
   - properties.message: {"$ref":"#/components/schemas/schemas:34","description":"Error message indicating why the operation failed."} => <none>
-  - properties.error: <none> => {"description":"The error object.","$ref":"#/components/schemas/schemas:1463"}
+  - properties.error: <none> => {"description":"The error object.","$ref":"#/components/schemas/schemas:1365"}
   - title: <none> => "Error response"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProvisioningState' (2 differences):
   - enum: <none> => ["Succeeded","Failed","Canceled","InProgress","Updating","Dropping"]
   - x-ms-enum: <none> => {"name":"ProvisioningState","modelAsString":true}
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (3 differences):
-  - properties.id.$ref: "#/components/schemas/schemas:1159" => "#/components/schemas/schemas:1430"
+  - properties.id.$ref: "#/components/schemas/schemas:1159" => "#/components/schemas/schemas:1332"
   - properties.id.description: "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}" => "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
   - properties.systemData: <none> => {"readOnly":true,"description":"Azure Resource Manager metadata containing createdBy and modifiedBy information.","$ref":"#/components/schemas/schemas:1224"}
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProxyResource' (1 differences):
-  - allOf.0.$ref: "#/components/schemas/schemas:1158" => "#/components/schemas/schemas:1429"
+  - allOf.0.$ref: "#/components/schemas/schemas:1158" => "#/components/schemas/schemas:1331"
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'DatabaseAccountGetResults' has a property 'identity' that is already declared the parent schema 'ARMResourceProperties' but isn't significantly different. The property has been removed from DatabaseAccountGetResults
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'DatabaseAccountCreateUpdateParameters' has a property 'identity' that is already declared the parent schema 'ARMResourceProperties' but isn't significantly different. The property has been removed from DatabaseAccountCreateUpdateParameters
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'RestoreParameters' has a property 'restoreSource' that is already declared the parent schema 'RestoreParametersBase' but isn't significantly different. The property has been removed from RestoreParameters

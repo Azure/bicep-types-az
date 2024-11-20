@@ -1,0 +1,79 @@
+# Microsoft.VideoIndexer
+
+## microsoft.videoindexer/accounts
+
+Connect classic account to arm account using system assigned Mi
+```bicep
+resource exampleResource 'Microsoft.VideoIndexer/accounts@2024-01-01' = {
+  name: 'example'
+  identity: {
+    type: 'SystemAssigned'
+  }
+  location: 'NorthEurope'
+  properties: {
+    accountId: '462af7c5-d1f6-4b91-86e3-8bc5e8a61574'
+    storageServices: {
+      resourceId: '/subscriptions/xxx/resourceGroups/contoso-videoanalyzer-rg/providers/Microsoft.Storage/storageAccounts/contoso-videoanalyzer-ms'
+    }
+  }
+}
+```
+
+Connect classic account to arm account using user assigned Mi
+```bicep
+resource exampleResource 'Microsoft.VideoIndexer/accounts@2024-01-01' = {
+  name: 'example'
+  identity: {
+    type: 'UserAssigned'
+    userAssignedIdentities: {
+      /subscriptions/xxx/resourceGroups/contoso-videoanalyzer-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/contoso-videoanalyzer-mi: {
+      }
+    }
+  }
+  location: 'NorthEurope'
+  properties: {
+    accountId: '462af7c5-d1f6-4b91-86e3-8bc5e8a61574'
+    storageServices: {
+      resourceId: '/subscriptions/xxx/resourceGroups/contoso-videoanalyzer-rg/providers/Microsoft.Storage/storageAccounts/contoso-videoanalyzer-ms'
+      userAssignedIdentity: '/subscriptions/xxx/resourceGroups/contoso-videoanalyzer-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/contoso-videoanalyzer-mi'
+    }
+  }
+}
+```
+
+Create or update account with system assigned Mi
+```bicep
+resource exampleResource 'Microsoft.VideoIndexer/accounts@2024-01-01' = {
+  name: 'example'
+  identity: {
+    type: 'SystemAssigned'
+  }
+  location: 'NorthEurope'
+  properties: {
+    storageServices: {
+      resourceId: '/subscriptions/xxx/resourceGroups/contoso-videoanalyzer-rg/providers/Microsoft.Storage/storageAccounts/contoso-videoanalyzer-ms'
+    }
+  }
+}
+```
+
+Create or update account with user assigned Mi
+```bicep
+resource exampleResource 'Microsoft.VideoIndexer/accounts@2024-01-01' = {
+  name: 'example'
+  identity: {
+    type: 'UserAssigned'
+    userAssignedIdentities: {
+      /subscriptions/xxx/resourceGroups/contoso-videoanalyzer-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/contoso-videoanalyzer-mi: {
+      }
+    }
+  }
+  location: 'NorthEurope'
+  properties: {
+    storageServices: {
+      resourceId: '/subscriptions/xxx/resourceGroups/contoso-videoanalyzer-rg/providers/Microsoft.Storage/storageAccounts/contoso-videoanalyzer-ms'
+      userAssignedIdentity: '/subscriptions/xxx/resourceGroups/contoso-videoanalyzer-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/contoso-videoanalyzer-mi'
+    }
+  }
+}
+```
