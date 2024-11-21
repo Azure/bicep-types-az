@@ -1,4 +1,8 @@
 # Microsoft.Subscription
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.subscription/aliases
 
@@ -27,6 +31,19 @@ resource exampleResource 'Microsoft.Subscription/aliases@2024-08-01-preview' = {
 }
 ```
 
+## microsoft.subscription/changetenantrequest
+
+putTargetDirectory
+```bicep
+resource exampleResource 'Microsoft.Subscription/changeTenantRequest@2024-08-01-preview' = {
+  name: 'example'
+  properties: {
+    destinationOwnerId: 'abhaypratap@live.com'
+    destinationTenantId: '111a82eb-4c7b-48bb-962b-49363c510130'
+  }
+}
+```
+
 ## microsoft.subscription/policies
 
 TenantPolicy
@@ -39,18 +56,5 @@ resource exampleResource 'Microsoft.Subscription/policies@2024-08-01-preview' = 
     'e879cf0f-2b4d-5431-109a-f72fc9868693'
     '9792da87-c97b-410d-a97d-27021ba09ce6'
   ]
-}
-```
-
-## microsoft.subscription/changetenantrequest
-
-putTargetDirectory
-```bicep
-resource exampleResource 'Microsoft.Subscription/changeTenantRequest@2024-08-01-preview' = {
-  name: 'example'
-  properties: {
-    destinationOwnerId: 'abhaypratap@live.com'
-    destinationTenantId: '111a82eb-4c7b-48bb-962b-49363c510130'
-  }
 }
 ```

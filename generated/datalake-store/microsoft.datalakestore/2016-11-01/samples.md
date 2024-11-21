@@ -1,4 +1,8 @@
 # Microsoft.DataLakeStore
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.datalakestore/accounts
 
@@ -63,19 +67,6 @@ resource exampleResource 'Microsoft.DataLakeStore/accounts/firewallRules@2016-11
 }
 ```
 
-## microsoft.datalakestore/accounts/virtualnetworkrules
-
-Creates or updates the specified virtual network rule. During update, the virtual network rule with the specified name will be replaced with this new virtual network rule.
-```bicep
-resource exampleResource 'Microsoft.DataLakeStore/accounts/virtualNetworkRules@2016-11-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    subnetId: 'test_subnetId'
-  }
-}
-```
-
 ## microsoft.datalakestore/accounts/trustedidproviders
 
 Creates or updates the specified trusted identity provider. During update, the trusted identity provider with the specified name will be replaced with this new provider
@@ -85,6 +76,19 @@ resource exampleResource 'Microsoft.DataLakeStore/accounts/trustedIdProviders@20
   name: 'example'
   properties: {
     idProvider: 'https://sts.windows.net/ea9ec534-a3e3-4e45-ad36-3afc5bb291c1'
+  }
+}
+```
+
+## microsoft.datalakestore/accounts/virtualnetworkrules
+
+Creates or updates the specified virtual network rule. During update, the virtual network rule with the specified name will be replaced with this new virtual network rule.
+```bicep
+resource exampleResource 'Microsoft.DataLakeStore/accounts/virtualNetworkRules@2016-11-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    subnetId: 'test_subnetId'
   }
 }
 ```

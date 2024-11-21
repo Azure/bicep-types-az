@@ -1,30 +1,8 @@
 # Microsoft.App
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
 
-## microsoft.app/containerapps/authconfigs
-
-Create or Update Container App AuthConfig
-```bicep
-resource exampleResource 'Microsoft.App/containerApps/authConfigs@2022-03-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    globalValidation: {
-      unauthenticatedClientAction: 'AllowAnonymous'
-    }
-    identityProviders: {
-      facebook: {
-        registration: {
-          appId: '123'
-          appSecretSettingName: 'facebook-secret'
-        }
-      }
-    }
-    platform: {
-      enabled: true
-    }
-  }
-}
-```
 
 ## microsoft.app/containerapps
 
@@ -109,6 +87,95 @@ resource exampleResource 'Microsoft.App/containerApps@2022-03-01' = {
 }
 ```
 
+## microsoft.app/containerapps/authconfigs
+
+Create or Update Container App AuthConfig
+```bicep
+resource exampleResource 'Microsoft.App/containerApps/authConfigs@2022-03-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    globalValidation: {
+      unauthenticatedClientAction: 'AllowAnonymous'
+    }
+    identityProviders: {
+      facebook: {
+        registration: {
+          appId: '123'
+          appSecretSettingName: 'facebook-secret'
+        }
+      }
+    }
+    platform: {
+      enabled: true
+    }
+  }
+}
+```
+
+## microsoft.app/containerapps/sourcecontrols
+
+Create or Update Container App SourceControl
+```bicep
+resource exampleResource 'Microsoft.App/containerApps/sourcecontrols@2022-03-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    branch: 'master'
+    githubActionConfiguration: {
+      azureCredentials: {
+        clientId: '<clientid>'
+        clientSecret: '<clientsecret>'
+        tenantId: '<tenantid>'
+      }
+      contextPath: './'
+      image: 'image/tag'
+      registryInfo: {
+        registryPassword: '<registrypassword>'
+        registryUrl: 'xwang971reg.azurecr.io'
+        registryUserName: 'xwang971reg'
+      }
+    }
+    repoUrl: 'https://github.com/xwang971/ghatest'
+  }
+}
+```
+
+## microsoft.app/managedenvironments
+
+Create environments
+```bicep
+resource exampleResource 'Microsoft.App/managedEnvironments@2022-03-01' = {
+  name: 'example'
+  location: 'East US'
+  properties: {
+    appLogsConfiguration: {
+      logAnalyticsConfiguration: {
+        customerId: 'string'
+        sharedKey: 'string'
+      }
+    }
+    daprAIConnectionString: 'InstrumentationKey=00000000-0000-0000-0000-000000000000;IngestionEndpoint=https://northcentralus-0.in.applicationinsights.azure.com/'
+    zoneRedundant: true
+  }
+}
+```
+
+## microsoft.app/managedenvironments/certificates
+
+Create or Update Certificate
+```bicep
+resource exampleResource 'Microsoft.App/managedEnvironments/certificates@2022-03-01' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'East US'
+  properties: {
+    password: 'private key password'
+    value: 'Y2VydA=='
+  }
+}
+```
+
 ## microsoft.app/managedenvironments/daprcomponents
 
 Create or update dapr component
@@ -153,41 +220,6 @@ resource exampleResource 'Microsoft.App/managedEnvironments/daprComponents@2022-
 }
 ```
 
-## microsoft.app/managedenvironments
-
-Create environments
-```bicep
-resource exampleResource 'Microsoft.App/managedEnvironments@2022-03-01' = {
-  name: 'example'
-  location: 'East US'
-  properties: {
-    appLogsConfiguration: {
-      logAnalyticsConfiguration: {
-        customerId: 'string'
-        sharedKey: 'string'
-      }
-    }
-    daprAIConnectionString: 'InstrumentationKey=00000000-0000-0000-0000-000000000000;IngestionEndpoint=https://northcentralus-0.in.applicationinsights.azure.com/'
-    zoneRedundant: true
-  }
-}
-```
-
-## microsoft.app/managedenvironments/certificates
-
-Create or Update Certificate
-```bicep
-resource exampleResource 'Microsoft.App/managedEnvironments/certificates@2022-03-01' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'East US'
-  properties: {
-    password: 'private key password'
-    value: 'Y2VydA=='
-  }
-}
-```
-
 ## microsoft.app/managedenvironments/storages
 
 Create or update environments storage
@@ -202,34 +234,6 @@ resource exampleResource 'Microsoft.App/managedEnvironments/storages@2022-03-01'
       accountName: 'account1'
       shareName: 'share1'
     }
-  }
-}
-```
-
-## microsoft.app/containerapps/sourcecontrols
-
-Create or Update Container App SourceControl
-```bicep
-resource exampleResource 'Microsoft.App/containerApps/sourcecontrols@2022-03-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    branch: 'master'
-    githubActionConfiguration: {
-      azureCredentials: {
-        clientId: '<clientid>'
-        clientSecret: '<clientsecret>'
-        tenantId: '<tenantid>'
-      }
-      contextPath: './'
-      image: 'image/tag'
-      registryInfo: {
-        registryPassword: '<registrypassword>'
-        registryUrl: 'xwang971reg.azurecr.io'
-        registryUserName: 'xwang971reg'
-      }
-    }
-    repoUrl: 'https://github.com/xwang971/ghatest'
   }
 }
 ```

@@ -1,163 +1,8 @@
 # Microsoft.ServiceFabric
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
 
-## microsoft.servicefabric/clusters/applicationtypes
-
-Put an application type
-```bicep
-resource exampleResource 'Microsoft.ServiceFabric/clusters/applicationTypes@2017-07-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  name: 'myCluster'
-  type: 'applicationTypes'
-  id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/clusters/myCluster/applicationTypes/myAppType'
-  location: 'eastus'
-}
-```
-
-## microsoft.servicefabric/clusters/applicationtypes/versions
-
-Put an application type version
-```bicep
-resource exampleResource 'Microsoft.ServiceFabric/clusters/applicationTypes/versions@2017-07-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  name: 'myCluster'
-  type: 'versions'
-  id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/clusters/myCluster/applicationTypes/myAppType/versions/1.0'
-  location: 'eastus'
-  properties: {
-    appPackageUrl: 'http://fakelink.test.com/MyAppType'
-  }
-}
-```
-
-## microsoft.servicefabric/clusters/applications
-
-Put an application with maximum parameters
-```bicep
-resource exampleResource 'Microsoft.ServiceFabric/clusters/applications@2017-07-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  name: 'myCluster'
-  type: 'applications'
-  id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/clusters/myCluster/applications/myApp'
-  location: 'eastus'
-  properties: {
-    maximumNodes: 3
-    metrics: [
-      {
-        MaximumCapacity: 3
-        Name: 'metric1'
-        ReservationCapacity: 1
-        TotalApplicationCapacity: 5
-      }
-    ]
-    minimumNodes: 1
-    parameters: {
-      param1: 'value1'
-    }
-    removeApplicationCapacity: false
-    typeName: 'myAppType'
-    typeVersion: '1.0'
-    upgradePolicy: {
-      applicationHealthPolicy: {
-        ConsiderWarningAsError: true
-        DefaultServiceTypeHealthPolicy: {
-          maxPercentUnhealthyPartitionsPerService: 0
-          maxPercentUnhealthyReplicasPerPartition: 0
-          maxPercentUnhealthyServices: 0
-        }
-        MaxPercentUnhealthyDeployedApplications: 0
-      }
-      forceRestart: false
-      rollingUpgradeMonitoringPolicy: {
-        failureAction: 'Rollback'
-        healthCheckRetryTimeout: '00:10:00'
-        healthCheckStableDuration: '00:05:00'
-        healthCheckWaitDuration: '00:02:00'
-        upgradeDomainTimeout: '1.06:00:00'
-        upgradeTimeout: '01:00:00'
-      }
-      upgradeReplicaSetCheckTimeout: '01:00:00'
-    }
-  }
-}
-```
-
-Put an application with minimum parameters
-```bicep
-resource exampleResource 'Microsoft.ServiceFabric/clusters/applications@2017-07-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  name: 'myCluster'
-  type: 'applications'
-  id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/clusters/myCluster/applications/myApp'
-  location: 'eastus'
-  properties: {
-    removeApplicationCapacity: false
-    typeName: 'myAppType'
-    typeVersion: '1.0'
-  }
-}
-```
-
-## microsoft.servicefabric/clusters/applications/services
-
-Put a service with maximum parameters
-```bicep
-resource exampleResource 'Microsoft.ServiceFabric/clusters/applications/services@2017-07-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  name: 'myCluster'
-  type: 'services'
-  id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/clusters/myCluster/applications/myApp/services/myService'
-  location: 'eastus'
-  properties: {
-    correlationScheme: [
-      {
-        Scheme: 'Affinity'
-        ServiceName: 'fabric:/app1/app1~svc1'
-      }
-    ]
-    defaultMoveCost: 'Medium'
-    instanceCount: 5
-    partitionDescription: {
-      PartitionScheme: 'Singleton'
-    }
-    placementConstraints: 'NodeType==frontend'
-    serviceKind: 'Stateless'
-    serviceLoadMetrics: [
-      {
-        Name: 'metric1'
-        Weight: 'Low'
-      }
-    ]
-    servicePlacementPolicies: [
-    ]
-    serviceTypeName: 'myServiceType'
-  }
-}
-```
-
-Put a service with minimum parameters
-```bicep
-resource exampleResource 'Microsoft.ServiceFabric/clusters/applications/services@2017-07-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  name: 'myCluster'
-  type: 'services'
-  id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/clusters/myCluster/applications/myApp/services/myService'
-  location: 'eastus'
-  properties: {
-    instanceCount: 1
-    partitionDescription: {
-      PartitionScheme: 'Singleton'
-    }
-    serviceKind: 'Stateless'
-    serviceTypeName: 'myServiceType'
-  }
-}
-```
 
 ## microsoft.servicefabric/clusters
 
@@ -313,6 +158,165 @@ resource exampleResource 'Microsoft.ServiceFabric/clusters@2017-07-01-preview' =
     ]
     reliabilityLevel: 'Silver'
     upgradeMode: 'Automatic'
+  }
+}
+```
+
+## microsoft.servicefabric/clusters/applications
+
+Put an application with maximum parameters
+```bicep
+resource exampleResource 'Microsoft.ServiceFabric/clusters/applications@2017-07-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  name: 'myCluster'
+  type: 'applications'
+  id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/clusters/myCluster/applications/myApp'
+  location: 'eastus'
+  properties: {
+    maximumNodes: 3
+    metrics: [
+      {
+        MaximumCapacity: 3
+        Name: 'metric1'
+        ReservationCapacity: 1
+        TotalApplicationCapacity: 5
+      }
+    ]
+    minimumNodes: 1
+    parameters: {
+      param1: 'value1'
+    }
+    removeApplicationCapacity: false
+    typeName: 'myAppType'
+    typeVersion: '1.0'
+    upgradePolicy: {
+      applicationHealthPolicy: {
+        ConsiderWarningAsError: true
+        DefaultServiceTypeHealthPolicy: {
+          maxPercentUnhealthyPartitionsPerService: 0
+          maxPercentUnhealthyReplicasPerPartition: 0
+          maxPercentUnhealthyServices: 0
+        }
+        MaxPercentUnhealthyDeployedApplications: 0
+      }
+      forceRestart: false
+      rollingUpgradeMonitoringPolicy: {
+        failureAction: 'Rollback'
+        healthCheckRetryTimeout: '00:10:00'
+        healthCheckStableDuration: '00:05:00'
+        healthCheckWaitDuration: '00:02:00'
+        upgradeDomainTimeout: '1.06:00:00'
+        upgradeTimeout: '01:00:00'
+      }
+      upgradeReplicaSetCheckTimeout: '01:00:00'
+    }
+  }
+}
+```
+
+Put an application with minimum parameters
+```bicep
+resource exampleResource 'Microsoft.ServiceFabric/clusters/applications@2017-07-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  name: 'myCluster'
+  type: 'applications'
+  id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/clusters/myCluster/applications/myApp'
+  location: 'eastus'
+  properties: {
+    removeApplicationCapacity: false
+    typeName: 'myAppType'
+    typeVersion: '1.0'
+  }
+}
+```
+
+## microsoft.servicefabric/clusters/applications/services
+
+Put a service with maximum parameters
+```bicep
+resource exampleResource 'Microsoft.ServiceFabric/clusters/applications/services@2017-07-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  name: 'myCluster'
+  type: 'services'
+  id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/clusters/myCluster/applications/myApp/services/myService'
+  location: 'eastus'
+  properties: {
+    correlationScheme: [
+      {
+        Scheme: 'Affinity'
+        ServiceName: 'fabric:/app1/app1~svc1'
+      }
+    ]
+    defaultMoveCost: 'Medium'
+    instanceCount: 5
+    partitionDescription: {
+      PartitionScheme: 'Singleton'
+    }
+    placementConstraints: 'NodeType==frontend'
+    serviceKind: 'Stateless'
+    serviceLoadMetrics: [
+      {
+        Name: 'metric1'
+        Weight: 'Low'
+      }
+    ]
+    servicePlacementPolicies: [
+    ]
+    serviceTypeName: 'myServiceType'
+  }
+}
+```
+
+Put a service with minimum parameters
+```bicep
+resource exampleResource 'Microsoft.ServiceFabric/clusters/applications/services@2017-07-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  name: 'myCluster'
+  type: 'services'
+  id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/clusters/myCluster/applications/myApp/services/myService'
+  location: 'eastus'
+  properties: {
+    instanceCount: 1
+    partitionDescription: {
+      PartitionScheme: 'Singleton'
+    }
+    serviceKind: 'Stateless'
+    serviceTypeName: 'myServiceType'
+  }
+}
+```
+
+## microsoft.servicefabric/clusters/applicationtypes
+
+Put an application type
+```bicep
+resource exampleResource 'Microsoft.ServiceFabric/clusters/applicationTypes@2017-07-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  name: 'myCluster'
+  type: 'applicationTypes'
+  id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/clusters/myCluster/applicationTypes/myAppType'
+  location: 'eastus'
+}
+```
+
+## microsoft.servicefabric/clusters/applicationtypes/versions
+
+Put an application type version
+```bicep
+resource exampleResource 'Microsoft.ServiceFabric/clusters/applicationTypes/versions@2017-07-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  name: 'myCluster'
+  type: 'versions'
+  id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/clusters/myCluster/applicationTypes/myAppType/versions/1.0'
+  location: 'eastus'
+  properties: {
+    appPackageUrl: 'http://fakelink.test.com/MyAppType'
   }
 }
 ```

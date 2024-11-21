@@ -1,4 +1,8 @@
 # Microsoft.Peering
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.peering/peerasns
 
@@ -26,32 +30,6 @@ resource exampleResource 'Microsoft.Peering/peerAsns@2020-04-01' = {
       }
     ]
     peerName: 'Contoso'
-  }
-}
-```
-
-## microsoft.peering/peerings/registeredasns
-
-Create or update a registered ASN for the peering
-```bicep
-resource exampleResource 'Microsoft.Peering/peerings/registeredAsns@2020-04-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    asn: 65000
-  }
-}
-```
-
-## microsoft.peering/peerings/registeredprefixes
-
-Create or update a registered prefix for the peering
-```bicep
-resource exampleResource 'Microsoft.Peering/peerings/registeredPrefixes@2020-04-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    prefix: '10.22.20.0/24'
   }
 }
 ```
@@ -183,16 +161,28 @@ resource exampleResource 'Microsoft.Peering/peerings@2020-04-01' = {
 }
 ```
 
-## microsoft.peering/peeringservices/prefixes
+## microsoft.peering/peerings/registeredasns
 
-Create or update a prefix for the peering service
+Create or update a registered ASN for the peering
 ```bicep
-resource exampleResource 'Microsoft.Peering/peeringServices/prefixes@2020-04-01' = {
+resource exampleResource 'Microsoft.Peering/peerings/registeredAsns@2020-04-01' = {
   parent: parentResource 
   name: 'example'
   properties: {
-    peeringServicePrefixKey: '00000000-0000-0000-0000-000000000000'
-    prefix: '192.168.1.0/24'
+    asn: 65000
+  }
+}
+```
+
+## microsoft.peering/peerings/registeredprefixes
+
+Create or update a registered prefix for the peering
+```bicep
+resource exampleResource 'Microsoft.Peering/peerings/registeredPrefixes@2020-04-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    prefix: '10.22.20.0/24'
   }
 }
 ```
@@ -207,6 +197,20 @@ resource exampleResource 'Microsoft.Peering/peeringServices@2020-04-01' = {
   properties: {
     peeringServiceLocation: 'state1'
     peeringServiceProvider: 'serviceProvider1'
+  }
+}
+```
+
+## microsoft.peering/peeringservices/prefixes
+
+Create or update a prefix for the peering service
+```bicep
+resource exampleResource 'Microsoft.Peering/peeringServices/prefixes@2020-04-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    peeringServicePrefixKey: '00000000-0000-0000-0000-000000000000'
+    prefix: '192.168.1.0/24'
   }
 }
 ```

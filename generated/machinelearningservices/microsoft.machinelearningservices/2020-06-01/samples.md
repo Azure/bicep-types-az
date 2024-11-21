@@ -1,4 +1,8 @@
 # Microsoft.MachineLearningServices
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.machinelearningservices/workspaces
 
@@ -42,36 +46,7 @@ resource exampleResource 'Microsoft.MachineLearningServices/workspaces@2020-06-0
 }
 ```
 
-## microsoft.machinelearningservices/workspaces/connections
-
-CreateWorkspaceConnection
-```bicep
-resource exampleResource 'Microsoft.MachineLearningServices/workspaces/connections@2020-06-01' = {
-  parent: parentResource 
-  name: 'example'
-  name: 'connection-1'
-  properties: {
-    authType: 'PAT'
-    category: 'ACR'
-    target: 'www.facebook.com'
-    value: 'secrets'
-  }
-}
-```
-
 ## microsoft.machinelearningservices/workspaces/computes
-
-Create AKS Compute
-```bicep
-resource exampleResource 'Microsoft.MachineLearningServices/workspaces/computes@2020-06-01' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'eastus'
-  properties: {
-    computeType: 'AKS'
-  }
-}
-```
 
 Create a AML Compute
 ```bicep
@@ -149,6 +124,18 @@ resource exampleResource 'Microsoft.MachineLearningServices/workspaces/computes@
 }
 ```
 
+Create AKS Compute
+```bicep
+resource exampleResource 'Microsoft.MachineLearningServices/workspaces/computes@2020-06-01' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'eastus'
+  properties: {
+    computeType: 'AKS'
+  }
+}
+```
+
 Update a AKS Compute
 ```bicep
 resource exampleResource 'Microsoft.MachineLearningServices/workspaces/computes@2020-06-01' = {
@@ -188,6 +175,23 @@ resource exampleResource 'Microsoft.MachineLearningServices/workspaces/computes@
         nodeIdleTimeBeforeScaleDown: 'PT5M'
       }
     }
+  }
+}
+```
+
+## microsoft.machinelearningservices/workspaces/connections
+
+CreateWorkspaceConnection
+```bicep
+resource exampleResource 'Microsoft.MachineLearningServices/workspaces/connections@2020-06-01' = {
+  parent: parentResource 
+  name: 'example'
+  name: 'connection-1'
+  properties: {
+    authType: 'PAT'
+    category: 'ACR'
+    target: 'www.facebook.com'
+    value: 'secrets'
   }
 }
 ```

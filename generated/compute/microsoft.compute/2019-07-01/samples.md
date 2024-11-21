@@ -1,4 +1,8 @@
 # Microsoft.Compute
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.compute/availabilitysets
 
@@ -14,15 +18,283 @@ resource exampleResource 'Microsoft.Compute/availabilitySets@2019-07-01' = {
 }
 ```
 
-## microsoft.compute/proximityplacementgroups
+## microsoft.compute/diskencryptionsets
 
-Create or Update a proximity placement group.
+Create a disk encryption set.
 ```bicep
-resource exampleResource 'Microsoft.Compute/proximityPlacementGroups@2019-07-01' = {
+resource exampleResource 'Microsoft.Compute/diskEncryptionSets@2019-07-01' = {
   name: 'example'
-  location: 'westus'
+  identity: {
+    type: 'SystemAssigned'
+  }
+  location: 'West US'
   properties: {
-    proximityPlacementGroupType: 'Standard'
+    activeKey: {
+      keyUrl: 'https://myvmvault.vault-int.azure-int.net/keys/{key}'
+      sourceVault: {
+        id: '/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.KeyVault/vaults/myVMVault'
+      }
+    }
+  }
+}
+```
+
+## microsoft.compute/disks
+
+Create a managed disk by copying a snapshot.
+```bicep
+resource exampleResource 'Microsoft.Compute/disks@2019-07-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    creationData: {
+      createOption: 'Copy'
+      sourceResourceId: 'subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot'
+    }
+  }
+}
+```
+
+Create a managed disk by importing an unmanaged blob from a different subscription.
+```bicep
+resource exampleResource 'Microsoft.Compute/disks@2019-07-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    creationData: {
+      createOption: 'Import'
+      sourceUri: 'https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd'
+      storageAccountId: 'subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount'
+    }
+  }
+}
+```
+
+Create a managed disk by importing an unmanaged blob from the same subscription.
+```bicep
+resource exampleResource 'Microsoft.Compute/disks@2019-07-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    creationData: {
+      createOption: 'Import'
+      sourceUri: 'https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd'
+    }
+  }
+}
+```
+
+Create a managed disk from a platform image.
+```bicep
+resource exampleResource 'Microsoft.Compute/disks@2019-07-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    creationData: {
+      createOption: 'FromImage'
+      imageReference: {
+        id: '/Subscriptions/{subscriptionId}/Providers/Microsoft.Compute/Locations/uswest/Publishers/Microsoft/ArtifactTypes/VMImage/Offers/{offer}'
+      }
+    }
+    osType: 'Windows'
+  }
+}
+```
+
+Create a managed disk from an existing managed disk in the same or different subscription.
+```bicep
+resource exampleResource 'Microsoft.Compute/disks@2019-07-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    creationData: {
+      createOption: 'Copy'
+      sourceResourceId: 'subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myDisk1'
+    }
+  }
+}
+```
+
+Create a managed upload disk.
+```bicep
+resource exampleResource 'Microsoft.Compute/disks@2019-07-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    creationData: {
+      createOption: 'Upload'
+      uploadSizeBytes: 10737418752
+    }
+  }
+}
+```
+
+Create an empty managed disk.
+```bicep
+resource exampleResource 'Microsoft.Compute/disks@2019-07-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    creationData: {
+      createOption: 'Empty'
+    }
+    diskSizeGB: 200
+  }
+}
+```
+
+## microsoft.compute/galleries
+
+Create or update a simple gallery.
+```bicep
+resource exampleResource 'Microsoft.Compute/galleries@2019-07-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    description: 'This is the gallery description.'
+  }
+}
+```
+
+## microsoft.compute/galleries/applications
+
+Create or update a simple gallery Application.
+```bicep
+resource exampleResource 'Microsoft.Compute/galleries/applications@2019-07-01' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'West US'
+  properties: {
+    description: 'This is the gallery application description.'
+    eula: 'This is the gallery application EULA.'
+    privacyStatementUri: 'myPrivacyStatementUri}'
+    releaseNoteUri: 'myReleaseNoteUri'
+    supportedOSType: 'Windows'
+  }
+}
+```
+
+## microsoft.compute/galleries/applications/versions
+
+Create or update a simple gallery Application Version.
+```bicep
+resource exampleResource 'Microsoft.Compute/galleries/applications/versions@2019-07-01' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'West US'
+  properties: {
+    publishingProfile: {
+      endOfLifeDate: '2019-07-01T07:00:00Z'
+      manageActions: {
+        install: 'powershell -command "Expand-Archive -Path package.zip -DestinationPath C:\\package"'
+        remove: 'del C:\\package '
+      }
+      replicaCount: 1
+      source: {
+        mediaLink: 'https://mystorageaccount.blob.core.windows.net/mycontainer/package.zip?{sasKey}'
+      }
+      storageAccountType: 'Standard_LRS'
+      targetRegions: [
+        {
+          name: 'West US'
+          regionalReplicaCount: 1
+          storageAccountType: 'Standard_LRS'
+        }
+      ]
+    }
+  }
+}
+```
+
+## microsoft.compute/galleries/images
+
+Create or update a simple gallery image.
+```bicep
+resource exampleResource 'Microsoft.Compute/galleries/images@2019-07-01' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'West US'
+  properties: {
+    hyperVGeneration: 'V1'
+    identifier: {
+      offer: 'myOfferName'
+      publisher: 'myPublisherName'
+      sku: 'mySkuName'
+    }
+    osState: 'Generalized'
+    osType: 'Windows'
+  }
+}
+```
+
+## microsoft.compute/galleries/images/versions
+
+Create or update a simple Gallery Image Version (Managed Image as source).
+```bicep
+resource exampleResource 'Microsoft.Compute/galleries/images/versions@2019-07-01' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'West US'
+  properties: {
+    publishingProfile: {
+      targetRegions: [
+        {
+          name: 'West US'
+          regionalReplicaCount: 1
+        }
+        {
+          name: 'East US'
+          regionalReplicaCount: 2
+          storageAccountType: 'Standard_ZRS'
+        }
+      ]
+    }
+    storageProfile: {
+      source: {
+        id: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/images/{imageName}'
+      }
+    }
+  }
+}
+```
+
+Create or update a simple Gallery Image Version using snapshots as a source.
+```bicep
+resource exampleResource 'Microsoft.Compute/galleries/images/versions@2019-07-01' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'West US'
+  properties: {
+    publishingProfile: {
+      targetRegions: [
+        {
+          name: 'West US'
+          regionalReplicaCount: 1
+        }
+        {
+          name: 'East US'
+          regionalReplicaCount: 2
+          storageAccountType: 'Standard_ZRS'
+        }
+      ]
+    }
+    storageProfile: {
+      dataDiskImages: [
+        {
+          hostCaching: 'None'
+          lun: 1
+          source: {
+            id: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{diskSnapshotName}'
+          }
+        }
+      ]
+      osDiskImage: {
+        hostCaching: 'ReadOnly'
+        source: {
+          id: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{snapshotName}'
+        }
+      }
+    }
   }
 }
 ```
@@ -62,6 +334,281 @@ resource exampleResource 'Microsoft.Compute/hostGroups/hosts@2019-07-01' = {
   }
   tags: {
     department: 'HR'
+  }
+}
+```
+
+## microsoft.compute/images
+
+Create a virtual machine image from a blob with DiskEncryptionSet resource.
+```bicep
+resource exampleResource 'Microsoft.Compute/images@2019-07-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    storageProfile: {
+      osDisk: {
+        blobUri: 'https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd'
+        diskEncryptionSet: {
+          id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}'
+        }
+        osState: 'Generalized'
+        osType: 'Linux'
+      }
+    }
+  }
+}
+```
+
+Create a virtual machine image from a blob.
+```bicep
+resource exampleResource 'Microsoft.Compute/images@2019-07-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    storageProfile: {
+      osDisk: {
+        blobUri: 'https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd'
+        osState: 'Generalized'
+        osType: 'Linux'
+      }
+      zoneResilient: true
+    }
+  }
+}
+```
+
+Create a virtual machine image from a managed disk with DiskEncryptionSet resource.
+```bicep
+resource exampleResource 'Microsoft.Compute/images@2019-07-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    storageProfile: {
+      osDisk: {
+        diskEncryptionSet: {
+          id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}'
+        }
+        managedDisk: {
+          id: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk'
+        }
+        osState: 'Generalized'
+        osType: 'Linux'
+      }
+    }
+  }
+}
+```
+
+Create a virtual machine image from a managed disk.
+```bicep
+resource exampleResource 'Microsoft.Compute/images@2019-07-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    storageProfile: {
+      osDisk: {
+        managedDisk: {
+          id: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk'
+        }
+        osState: 'Generalized'
+        osType: 'Linux'
+      }
+      zoneResilient: true
+    }
+  }
+}
+```
+
+Create a virtual machine image from a snapshot with DiskEncryptionSet resource.
+```bicep
+resource exampleResource 'Microsoft.Compute/images@2019-07-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    storageProfile: {
+      osDisk: {
+        diskEncryptionSet: {
+          id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}'
+        }
+        osState: 'Generalized'
+        osType: 'Linux'
+        snapshot: {
+          id: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot'
+        }
+      }
+    }
+  }
+}
+```
+
+Create a virtual machine image from a snapshot.
+```bicep
+resource exampleResource 'Microsoft.Compute/images@2019-07-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    storageProfile: {
+      osDisk: {
+        osState: 'Generalized'
+        osType: 'Linux'
+        snapshot: {
+          id: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot'
+        }
+      }
+      zoneResilient: false
+    }
+  }
+}
+```
+
+Create a virtual machine image from an existing virtual machine.
+```bicep
+resource exampleResource 'Microsoft.Compute/images@2019-07-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    sourceVirtualMachine: {
+      id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVM'
+    }
+  }
+}
+```
+
+Create a virtual machine image that includes a data disk from a blob.
+```bicep
+resource exampleResource 'Microsoft.Compute/images@2019-07-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    storageProfile: {
+      dataDisks: [
+        {
+          blobUri: 'https://mystorageaccount.blob.core.windows.net/dataimages/dataimage.vhd'
+          lun: 1
+        }
+      ]
+      osDisk: {
+        blobUri: 'https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd'
+        osState: 'Generalized'
+        osType: 'Linux'
+      }
+      zoneResilient: false
+    }
+  }
+}
+```
+
+Create a virtual machine image that includes a data disk from a managed disk.
+```bicep
+resource exampleResource 'Microsoft.Compute/images@2019-07-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    storageProfile: {
+      dataDisks: [
+        {
+          lun: 1
+          managedDisk: {
+            id: 'subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk2'
+          }
+        }
+      ]
+      osDisk: {
+        managedDisk: {
+          id: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk'
+        }
+        osState: 'Generalized'
+        osType: 'Linux'
+      }
+      zoneResilient: false
+    }
+  }
+}
+```
+
+Create a virtual machine image that includes a data disk from a snapshot.
+```bicep
+resource exampleResource 'Microsoft.Compute/images@2019-07-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    storageProfile: {
+      dataDisks: [
+        {
+          lun: 1
+          snapshot: {
+            id: 'subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot2'
+          }
+        }
+      ]
+      osDisk: {
+        osState: 'Generalized'
+        osType: 'Linux'
+        snapshot: {
+          id: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot'
+        }
+      }
+      zoneResilient: true
+    }
+  }
+}
+```
+
+## microsoft.compute/proximityplacementgroups
+
+Create or Update a proximity placement group.
+```bicep
+resource exampleResource 'Microsoft.Compute/proximityPlacementGroups@2019-07-01' = {
+  name: 'example'
+  location: 'westus'
+  properties: {
+    proximityPlacementGroupType: 'Standard'
+  }
+}
+```
+
+## microsoft.compute/snapshots
+
+Create a snapshot by importing an unmanaged blob from a different subscription.
+```bicep
+resource exampleResource 'Microsoft.Compute/snapshots@2019-07-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    creationData: {
+      createOption: 'Import'
+      sourceUri: 'https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd'
+      storageAccountId: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount'
+    }
+  }
+}
+```
+
+Create a snapshot by importing an unmanaged blob from the same subscription.
+```bicep
+resource exampleResource 'Microsoft.Compute/snapshots@2019-07-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    creationData: {
+      createOption: 'Import'
+      sourceUri: 'https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd'
+    }
+  }
+}
+```
+
+Create a snapshot from an existing snapshot in the same or a different subscription.
+```bicep
+resource exampleResource 'Microsoft.Compute/snapshots@2019-07-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    creationData: {
+      createOption: 'Copy'
+      sourceResourceId: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot1'
+    }
   }
 }
 ```
@@ -260,77 +807,6 @@ resource exampleResource 'Microsoft.Compute/virtualMachines@2019-07-01' = {
 }
 ```
 
-Create a vm with DiskEncryptionSet resource id in the os disk and data disk.
-```bicep
-resource exampleResource 'Microsoft.Compute/virtualMachines@2019-07-01' = {
-  name: 'example'
-  location: 'westus'
-  properties: {
-    hardwareProfile: {
-      vmSize: 'Standard_D1_v2'
-    }
-    networkProfile: {
-      networkInterfaces: [
-        {
-          id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}'
-          properties: {
-            primary: true
-          }
-        }
-      ]
-    }
-    osProfile: {
-      adminPassword: '{your-password}'
-      adminUsername: '{your-username}'
-      computerName: 'myVM'
-    }
-    storageProfile: {
-      dataDisks: [
-        {
-          caching: 'ReadWrite'
-          createOption: 'Empty'
-          diskSizeGB: 1023
-          lun: 0
-          managedDisk: {
-            diskEncryptionSet: {
-              id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}'
-            }
-            storageAccountType: 'Standard_LRS'
-          }
-        }
-        {
-          caching: 'ReadWrite'
-          createOption: 'Attach'
-          diskSizeGB: 1023
-          lun: 1
-          managedDisk: {
-            diskEncryptionSet: {
-              id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}'
-            }
-            id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/{existing-managed-disk-name}'
-            storageAccountType: 'Standard_LRS'
-          }
-        }
-      ]
-      imageReference: {
-        id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}'
-      }
-      osDisk: {
-        name: 'myVMosdisk'
-        caching: 'ReadWrite'
-        createOption: 'FromImage'
-        managedDisk: {
-          diskEncryptionSet: {
-            id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}'
-          }
-          storageAccountType: 'Standard_LRS'
-        }
-      }
-    }
-  }
-}
-```
-
 Create a vm with a marketplace image plan.
 ```bicep
 resource exampleResource 'Microsoft.Compute/virtualMachines@2019-07-01' = {
@@ -422,6 +898,77 @@ resource exampleResource 'Microsoft.Compute/virtualMachines@2019-07-01' = {
         caching: 'ReadWrite'
         createOption: 'FromImage'
         managedDisk: {
+          storageAccountType: 'Standard_LRS'
+        }
+      }
+    }
+  }
+}
+```
+
+Create a vm with DiskEncryptionSet resource id in the os disk and data disk.
+```bicep
+resource exampleResource 'Microsoft.Compute/virtualMachines@2019-07-01' = {
+  name: 'example'
+  location: 'westus'
+  properties: {
+    hardwareProfile: {
+      vmSize: 'Standard_D1_v2'
+    }
+    networkProfile: {
+      networkInterfaces: [
+        {
+          id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}'
+          properties: {
+            primary: true
+          }
+        }
+      ]
+    }
+    osProfile: {
+      adminPassword: '{your-password}'
+      adminUsername: '{your-username}'
+      computerName: 'myVM'
+    }
+    storageProfile: {
+      dataDisks: [
+        {
+          caching: 'ReadWrite'
+          createOption: 'Empty'
+          diskSizeGB: 1023
+          lun: 0
+          managedDisk: {
+            diskEncryptionSet: {
+              id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}'
+            }
+            storageAccountType: 'Standard_LRS'
+          }
+        }
+        {
+          caching: 'ReadWrite'
+          createOption: 'Attach'
+          diskSizeGB: 1023
+          lun: 1
+          managedDisk: {
+            diskEncryptionSet: {
+              id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}'
+            }
+            id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/{existing-managed-disk-name}'
+            storageAccountType: 'Standard_LRS'
+          }
+        }
+      ]
+      imageReference: {
+        id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}'
+      }
+      osDisk: {
+        name: 'myVMosdisk'
+        caching: 'ReadWrite'
+        createOption: 'FromImage'
+        managedDisk: {
+          diskEncryptionSet: {
+            id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}'
+          }
           storageAccountType: 'Standard_LRS'
         }
       }
@@ -680,223 +1227,6 @@ resource exampleResource 'Microsoft.Compute/virtualMachines@2019-07-01' = {
 }
 ```
 
-## microsoft.compute/images
-
-Create a virtual machine image from a blob with DiskEncryptionSet resource.
-```bicep
-resource exampleResource 'Microsoft.Compute/images@2019-07-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    storageProfile: {
-      osDisk: {
-        blobUri: 'https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd'
-        diskEncryptionSet: {
-          id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}'
-        }
-        osState: 'Generalized'
-        osType: 'Linux'
-      }
-    }
-  }
-}
-```
-
-Create a virtual machine image from a blob.
-```bicep
-resource exampleResource 'Microsoft.Compute/images@2019-07-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    storageProfile: {
-      osDisk: {
-        blobUri: 'https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd'
-        osState: 'Generalized'
-        osType: 'Linux'
-      }
-      zoneResilient: true
-    }
-  }
-}
-```
-
-Create a virtual machine image from a managed disk with DiskEncryptionSet resource.
-```bicep
-resource exampleResource 'Microsoft.Compute/images@2019-07-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    storageProfile: {
-      osDisk: {
-        diskEncryptionSet: {
-          id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}'
-        }
-        managedDisk: {
-          id: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk'
-        }
-        osState: 'Generalized'
-        osType: 'Linux'
-      }
-    }
-  }
-}
-```
-
-Create a virtual machine image from a managed disk.
-```bicep
-resource exampleResource 'Microsoft.Compute/images@2019-07-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    storageProfile: {
-      osDisk: {
-        managedDisk: {
-          id: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk'
-        }
-        osState: 'Generalized'
-        osType: 'Linux'
-      }
-      zoneResilient: true
-    }
-  }
-}
-```
-
-Create a virtual machine image from a snapshot with DiskEncryptionSet resource.
-```bicep
-resource exampleResource 'Microsoft.Compute/images@2019-07-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    storageProfile: {
-      osDisk: {
-        diskEncryptionSet: {
-          id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}'
-        }
-        osState: 'Generalized'
-        osType: 'Linux'
-        snapshot: {
-          id: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot'
-        }
-      }
-    }
-  }
-}
-```
-
-Create a virtual machine image from a snapshot.
-```bicep
-resource exampleResource 'Microsoft.Compute/images@2019-07-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    storageProfile: {
-      osDisk: {
-        osState: 'Generalized'
-        osType: 'Linux'
-        snapshot: {
-          id: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot'
-        }
-      }
-      zoneResilient: false
-    }
-  }
-}
-```
-
-Create a virtual machine image from an existing virtual machine.
-```bicep
-resource exampleResource 'Microsoft.Compute/images@2019-07-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    sourceVirtualMachine: {
-      id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVM'
-    }
-  }
-}
-```
-
-Create a virtual machine image that includes a data disk from a blob.
-```bicep
-resource exampleResource 'Microsoft.Compute/images@2019-07-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    storageProfile: {
-      dataDisks: [
-        {
-          blobUri: 'https://mystorageaccount.blob.core.windows.net/dataimages/dataimage.vhd'
-          lun: 1
-        }
-      ]
-      osDisk: {
-        blobUri: 'https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd'
-        osState: 'Generalized'
-        osType: 'Linux'
-      }
-      zoneResilient: false
-    }
-  }
-}
-```
-
-Create a virtual machine image that includes a data disk from a managed disk.
-```bicep
-resource exampleResource 'Microsoft.Compute/images@2019-07-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    storageProfile: {
-      dataDisks: [
-        {
-          lun: 1
-          managedDisk: {
-            id: 'subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk2'
-          }
-        }
-      ]
-      osDisk: {
-        managedDisk: {
-          id: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk'
-        }
-        osState: 'Generalized'
-        osType: 'Linux'
-      }
-      zoneResilient: false
-    }
-  }
-}
-```
-
-Create a virtual machine image that includes a data disk from a snapshot.
-```bicep
-resource exampleResource 'Microsoft.Compute/images@2019-07-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    storageProfile: {
-      dataDisks: [
-        {
-          lun: 1
-          snapshot: {
-            id: 'subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot2'
-          }
-        }
-      ]
-      osDisk: {
-        osState: 'Generalized'
-        osType: 'Linux'
-        snapshot: {
-          id: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot'
-        }
-      }
-      zoneResilient: true
-    }
-  }
-}
-```
-
 ## microsoft.compute/virtualmachinescalesets
 
 Create a custom-image scale set from an unmanaged generalized os image.
@@ -1076,82 +1406,6 @@ resource exampleResource 'Microsoft.Compute/virtualMachineScaleSets@2019-07-01' 
   }
   sku: {
     name: 'Standard_D1_v2'
-    capacity: 3
-    tier: 'Standard'
-  }
-}
-```
-
-Create a scale set with DiskEncryptionSet resource in os disk and data disk.
-```bicep
-resource exampleResource 'Microsoft.Compute/virtualMachineScaleSets@2019-07-01' = {
-  name: 'example'
-  location: 'westus'
-  properties: {
-    overprovision: true
-    upgradePolicy: {
-      mode: 'Manual'
-    }
-    virtualMachineProfile: {
-      networkProfile: {
-        networkInterfaceConfigurations: [
-          {
-            name: '{vmss-name}'
-            properties: {
-              enableIPForwarding: true
-              ipConfigurations: [
-                {
-                  name: '{vmss-name}'
-                  properties: {
-                    subnet: {
-                      id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}'
-                    }
-                  }
-                }
-              ]
-              primary: true
-            }
-          }
-        ]
-      }
-      osProfile: {
-        adminPassword: '{your-password}'
-        adminUsername: '{your-username}'
-        computerNamePrefix: '{vmss-name}'
-      }
-      storageProfile: {
-        dataDisks: [
-          {
-            caching: 'ReadWrite'
-            createOption: 'Empty'
-            diskSizeGB: 1023
-            lun: 0
-            managedDisk: {
-              diskEncryptionSet: {
-                id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}'
-              }
-              storageAccountType: 'Standard_LRS'
-            }
-          }
-        ]
-        imageReference: {
-          id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}'
-        }
-        osDisk: {
-          caching: 'ReadWrite'
-          createOption: 'FromImage'
-          managedDisk: {
-            diskEncryptionSet: {
-              id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}'
-            }
-            storageAccountType: 'Standard_LRS'
-          }
-        }
-      }
-    }
-  }
-  sku: {
-    name: 'Standard_DS1_v2'
     capacity: 3
     tier: 'Standard'
   }
@@ -1498,6 +1752,82 @@ resource exampleResource 'Microsoft.Compute/virtualMachineScaleSets@2019-07-01' 
   }
   sku: {
     name: 'Standard_D1_v2'
+    capacity: 3
+    tier: 'Standard'
+  }
+}
+```
+
+Create a scale set with DiskEncryptionSet resource in os disk and data disk.
+```bicep
+resource exampleResource 'Microsoft.Compute/virtualMachineScaleSets@2019-07-01' = {
+  name: 'example'
+  location: 'westus'
+  properties: {
+    overprovision: true
+    upgradePolicy: {
+      mode: 'Manual'
+    }
+    virtualMachineProfile: {
+      networkProfile: {
+        networkInterfaceConfigurations: [
+          {
+            name: '{vmss-name}'
+            properties: {
+              enableIPForwarding: true
+              ipConfigurations: [
+                {
+                  name: '{vmss-name}'
+                  properties: {
+                    subnet: {
+                      id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}'
+                    }
+                  }
+                }
+              ]
+              primary: true
+            }
+          }
+        ]
+      }
+      osProfile: {
+        adminPassword: '{your-password}'
+        adminUsername: '{your-username}'
+        computerNamePrefix: '{vmss-name}'
+      }
+      storageProfile: {
+        dataDisks: [
+          {
+            caching: 'ReadWrite'
+            createOption: 'Empty'
+            diskSizeGB: 1023
+            lun: 0
+            managedDisk: {
+              diskEncryptionSet: {
+                id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}'
+              }
+              storageAccountType: 'Standard_LRS'
+            }
+          }
+        ]
+        imageReference: {
+          id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}'
+        }
+        osDisk: {
+          caching: 'ReadWrite'
+          createOption: 'FromImage'
+          managedDisk: {
+            diskEncryptionSet: {
+              id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}'
+            }
+            storageAccountType: 'Standard_LRS'
+          }
+        }
+      }
+    }
+  }
+  sku: {
+    name: 'Standard_DS1_v2'
     capacity: 3
     tier: 'Standard'
   }
@@ -2008,332 +2338,6 @@ resource exampleResource 'Microsoft.Compute/virtualMachineScaleSets/virtualMachi
       UserName: 'xyz@microsoft.com'
     }
     typeHandlerVersion: '1.2'
-  }
-}
-```
-
-## microsoft.compute/galleries
-
-Create or update a simple gallery.
-```bicep
-resource exampleResource 'Microsoft.Compute/galleries@2019-07-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    description: 'This is the gallery description.'
-  }
-}
-```
-
-## microsoft.compute/galleries/images
-
-Create or update a simple gallery image.
-```bicep
-resource exampleResource 'Microsoft.Compute/galleries/images@2019-07-01' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'West US'
-  properties: {
-    hyperVGeneration: 'V1'
-    identifier: {
-      offer: 'myOfferName'
-      publisher: 'myPublisherName'
-      sku: 'mySkuName'
-    }
-    osState: 'Generalized'
-    osType: 'Windows'
-  }
-}
-```
-
-## microsoft.compute/galleries/images/versions
-
-Create or update a simple Gallery Image Version (Managed Image as source).
-```bicep
-resource exampleResource 'Microsoft.Compute/galleries/images/versions@2019-07-01' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'West US'
-  properties: {
-    publishingProfile: {
-      targetRegions: [
-        {
-          name: 'West US'
-          regionalReplicaCount: 1
-        }
-        {
-          name: 'East US'
-          regionalReplicaCount: 2
-          storageAccountType: 'Standard_ZRS'
-        }
-      ]
-    }
-    storageProfile: {
-      source: {
-        id: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/images/{imageName}'
-      }
-    }
-  }
-}
-```
-
-Create or update a simple Gallery Image Version using snapshots as a source.
-```bicep
-resource exampleResource 'Microsoft.Compute/galleries/images/versions@2019-07-01' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'West US'
-  properties: {
-    publishingProfile: {
-      targetRegions: [
-        {
-          name: 'West US'
-          regionalReplicaCount: 1
-        }
-        {
-          name: 'East US'
-          regionalReplicaCount: 2
-          storageAccountType: 'Standard_ZRS'
-        }
-      ]
-    }
-    storageProfile: {
-      dataDiskImages: [
-        {
-          hostCaching: 'None'
-          lun: 1
-          source: {
-            id: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{diskSnapshotName}'
-          }
-        }
-      ]
-      osDiskImage: {
-        hostCaching: 'ReadOnly'
-        source: {
-          id: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{snapshotName}'
-        }
-      }
-    }
-  }
-}
-```
-
-## microsoft.compute/galleries/applications
-
-Create or update a simple gallery Application.
-```bicep
-resource exampleResource 'Microsoft.Compute/galleries/applications@2019-07-01' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'West US'
-  properties: {
-    description: 'This is the gallery application description.'
-    eula: 'This is the gallery application EULA.'
-    privacyStatementUri: 'myPrivacyStatementUri}'
-    releaseNoteUri: 'myReleaseNoteUri'
-    supportedOSType: 'Windows'
-  }
-}
-```
-
-## microsoft.compute/galleries/applications/versions
-
-Create or update a simple gallery Application Version.
-```bicep
-resource exampleResource 'Microsoft.Compute/galleries/applications/versions@2019-07-01' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'West US'
-  properties: {
-    publishingProfile: {
-      endOfLifeDate: '2019-07-01T07:00:00Z'
-      manageActions: {
-        install: 'powershell -command "Expand-Archive -Path package.zip -DestinationPath C:\\package"'
-        remove: 'del C:\\package '
-      }
-      replicaCount: 1
-      source: {
-        mediaLink: 'https://mystorageaccount.blob.core.windows.net/mycontainer/package.zip?{sasKey}'
-      }
-      storageAccountType: 'Standard_LRS'
-      targetRegions: [
-        {
-          name: 'West US'
-          regionalReplicaCount: 1
-          storageAccountType: 'Standard_LRS'
-        }
-      ]
-    }
-  }
-}
-```
-
-## microsoft.compute/disks
-
-Create a managed disk by copying a snapshot.
-```bicep
-resource exampleResource 'Microsoft.Compute/disks@2019-07-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    creationData: {
-      createOption: 'Copy'
-      sourceResourceId: 'subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot'
-    }
-  }
-}
-```
-
-Create a managed disk by importing an unmanaged blob from a different subscription.
-```bicep
-resource exampleResource 'Microsoft.Compute/disks@2019-07-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    creationData: {
-      createOption: 'Import'
-      sourceUri: 'https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd'
-      storageAccountId: 'subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount'
-    }
-  }
-}
-```
-
-Create a managed disk by importing an unmanaged blob from the same subscription.
-```bicep
-resource exampleResource 'Microsoft.Compute/disks@2019-07-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    creationData: {
-      createOption: 'Import'
-      sourceUri: 'https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd'
-    }
-  }
-}
-```
-
-Create a managed disk from a platform image.
-```bicep
-resource exampleResource 'Microsoft.Compute/disks@2019-07-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    creationData: {
-      createOption: 'FromImage'
-      imageReference: {
-        id: '/Subscriptions/{subscriptionId}/Providers/Microsoft.Compute/Locations/uswest/Publishers/Microsoft/ArtifactTypes/VMImage/Offers/{offer}'
-      }
-    }
-    osType: 'Windows'
-  }
-}
-```
-
-Create a managed disk from an existing managed disk in the same or different subscription.
-```bicep
-resource exampleResource 'Microsoft.Compute/disks@2019-07-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    creationData: {
-      createOption: 'Copy'
-      sourceResourceId: 'subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myDisk1'
-    }
-  }
-}
-```
-
-Create a managed upload disk.
-```bicep
-resource exampleResource 'Microsoft.Compute/disks@2019-07-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    creationData: {
-      createOption: 'Upload'
-      uploadSizeBytes: 10737418752
-    }
-  }
-}
-```
-
-Create an empty managed disk.
-```bicep
-resource exampleResource 'Microsoft.Compute/disks@2019-07-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    creationData: {
-      createOption: 'Empty'
-    }
-    diskSizeGB: 200
-  }
-}
-```
-
-## microsoft.compute/snapshots
-
-Create a snapshot by importing an unmanaged blob from a different subscription.
-```bicep
-resource exampleResource 'Microsoft.Compute/snapshots@2019-07-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    creationData: {
-      createOption: 'Import'
-      sourceUri: 'https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd'
-      storageAccountId: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount'
-    }
-  }
-}
-```
-
-Create a snapshot by importing an unmanaged blob from the same subscription.
-```bicep
-resource exampleResource 'Microsoft.Compute/snapshots@2019-07-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    creationData: {
-      createOption: 'Import'
-      sourceUri: 'https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd'
-    }
-  }
-}
-```
-
-Create a snapshot from an existing snapshot in the same or a different subscription.
-```bicep
-resource exampleResource 'Microsoft.Compute/snapshots@2019-07-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    creationData: {
-      createOption: 'Copy'
-      sourceResourceId: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot1'
-    }
-  }
-}
-```
-
-## microsoft.compute/diskencryptionsets
-
-Create a disk encryption set.
-```bicep
-resource exampleResource 'Microsoft.Compute/diskEncryptionSets@2019-07-01' = {
-  name: 'example'
-  identity: {
-    type: 'SystemAssigned'
-  }
-  location: 'West US'
-  properties: {
-    activeKey: {
-      keyUrl: 'https://myvmvault.vault-int.azure-int.net/keys/{key}'
-      sourceVault: {
-        id: '/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.KeyVault/vaults/myVMVault'
-      }
-    }
   }
 }
 ```

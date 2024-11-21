@@ -1,4 +1,8 @@
 # Microsoft.Automation
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.automation/automationaccounts
 
@@ -29,6 +33,29 @@ resource exampleResource 'Microsoft.Automation/automationAccounts/certificates@2
     base64Value: 'base 64 value of cert'
     isExportable: false
     thumbprint: 'thumbprint of cert'
+  }
+}
+```
+
+## microsoft.automation/automationaccounts/configurations
+
+Create or Update Configuration
+```bicep
+resource exampleResource 'Microsoft.Automation/automationAccounts/configurations@2023-11-01' = {
+  parent: parentResource 
+  name: 'example'
+  name: 'SetupServer'
+  location: 'East US 2'
+  properties: {
+    description: 'sample configuration'
+    source: {
+      type: 'embeddedContent'
+      hash: {
+        algorithm: 'sha256'
+        value: 'A9E5DB56BA21513F61E0B3868816FDC6D4DF5131F5617D7FF0D769674BD5072F'
+      }
+      value: 'Configuration SetupServer {\r\n    Node localhost {\r\n                               WindowsFeature IIS {\r\n                               Name = "Web-Server";\r\n            Ensure = "Present"\r\n        }\r\n    }\r\n}'
+    }
   }
 }
 ```
@@ -101,55 +128,6 @@ resource exampleResource 'Microsoft.Automation/automationAccounts/credentials@20
 }
 ```
 
-## microsoft.automation/automationaccounts/configurations
-
-Create or Update Configuration
-```bicep
-resource exampleResource 'Microsoft.Automation/automationAccounts/configurations@2023-11-01' = {
-  parent: parentResource 
-  name: 'example'
-  name: 'SetupServer'
-  location: 'East US 2'
-  properties: {
-    description: 'sample configuration'
-    source: {
-      type: 'embeddedContent'
-      hash: {
-        algorithm: 'sha256'
-        value: 'A9E5DB56BA21513F61E0B3868816FDC6D4DF5131F5617D7FF0D769674BD5072F'
-      }
-      value: 'Configuration SetupServer {\r\n    Node localhost {\r\n                               WindowsFeature IIS {\r\n                               Name = "Web-Server";\r\n            Ensure = "Present"\r\n        }\r\n    }\r\n}'
-    }
-  }
-}
-```
-
-## microsoft.automation/automationaccounts/nodeconfigurations
-
-Create node configuration
-```bicep
-resource exampleResource 'Microsoft.Automation/automationAccounts/nodeConfigurations@2023-11-01' = {
-  parent: parentResource 
-  name: 'example'
-  name: 'configName.nodeConfigName'
-  properties: {
-    configuration: {
-      name: 'configName'
-    }
-    incrementNodeConfigurationBuild: true
-    source: {
-      type: 'embeddedContent'
-      hash: {
-        algorithm: 'sha256'
-        value: '6DE256A57F01BFA29B88696D5E77A383D6E61484C7686E8DB955FA10ACE9FFE5'
-      }
-      value: '\r\ninstance of MSFT_RoleResource as $MSFT_RoleResource1ref\r\n{\r\nResourceID = "[WindowsFeature]IIS";\r\n Ensure = "Present";\r\n SourceInfo = "::3::32::WindowsFeature";\r\n Name = "Web-Server";\r\n ModuleName = "PsDesiredStateConfiguration";\r\n\r\nModuleVersion = "1.0";\r\r\n ConfigurationName = "configName";\r\r\n};\r\ninstance of OMI_ConfigurationDocument\r\n\r\r\n                    {\r\n Version="2.0.0";\r\n \r\r\n                        MinimumCompatibleVersion = "1.0.0";\r\n \r\r\n                        CompatibleVersionAdditionalProperties= {"Omi_BaseResource:ConfigurationName"};\r\n \r\r\n                        Author="weijiel";\r\n \r\r\n                        GenerationDate="03/30/2017 13:40:25";\r\n \r\r\n                        GenerationHost="TEST-BACKEND";\r\n \r\r\n                        Name="configName";\r\n\r\r\n                    };\r\n'
-      version: '1.0'
-    }
-  }
-}
-```
-
 ## microsoft.automation/automationaccounts/jobs
 
 Create job
@@ -207,6 +185,32 @@ resource exampleResource 'Microsoft.Automation/automationAccounts/modules@2023-1
       }
       uri: 'https://teststorage.blob.core.windows.net/dsccomposite/OmsCompositeResources.zip'
       version: '1.0.0.0'
+    }
+  }
+}
+```
+
+## microsoft.automation/automationaccounts/nodeconfigurations
+
+Create node configuration
+```bicep
+resource exampleResource 'Microsoft.Automation/automationAccounts/nodeConfigurations@2023-11-01' = {
+  parent: parentResource 
+  name: 'example'
+  name: 'configName.nodeConfigName'
+  properties: {
+    configuration: {
+      name: 'configName'
+    }
+    incrementNodeConfigurationBuild: true
+    source: {
+      type: 'embeddedContent'
+      hash: {
+        algorithm: 'sha256'
+        value: '6DE256A57F01BFA29B88696D5E77A383D6E61484C7686E8DB955FA10ACE9FFE5'
+      }
+      value: '\r\ninstance of MSFT_RoleResource as $MSFT_RoleResource1ref\r\n{\r\nResourceID = "[WindowsFeature]IIS";\r\n Ensure = "Present";\r\n SourceInfo = "::3::32::WindowsFeature";\r\n Name = "Web-Server";\r\n ModuleName = "PsDesiredStateConfiguration";\r\n\r\nModuleVersion = "1.0";\r\r\n ConfigurationName = "configName";\r\r\n};\r\ninstance of OMI_ConfigurationDocument\r\n\r\r\n                    {\r\n Version="2.0.0";\r\n \r\r\n                        MinimumCompatibleVersion = "1.0.0";\r\n \r\r\n                        CompatibleVersionAdditionalProperties= {"Omi_BaseResource:ConfigurationName"};\r\n \r\r\n                        Author="weijiel";\r\n \r\r\n                        GenerationDate="03/30/2017 13:40:25";\r\n \r\r\n                        GenerationHost="TEST-BACKEND";\r\n \r\r\n                        Name="configName";\r\n\r\r\n                    };\r\n'
+      version: '1.0'
     }
   }
 }
@@ -276,21 +280,6 @@ resource exampleResource 'Microsoft.Automation/automationAccounts/python3Package
 }
 ```
 
-## microsoft.automation/automationaccounts/runbooks/draft
-
-Create test job
-```bicep
-resource exampleResource 'Microsoft.Automation/automationAccounts/runbooks/draft@2023-11-01' = {
-  parent: parentResource 
-  name: 'example'
-  parameters: {
-    key01: 'value01'
-    key02: 'value02'
-  }
-  runOn: ''
-}
-```
-
 ## microsoft.automation/automationaccounts/runbooks
 
 Create or update runbook and publish it
@@ -340,6 +329,21 @@ resource exampleResource 'Microsoft.Automation/automationAccounts/runbooks@2023-
     tag01: 'value01'
     tag02: 'value02'
   }
+}
+```
+
+## microsoft.automation/automationaccounts/runbooks/draft
+
+Create test job
+```bicep
+resource exampleResource 'Microsoft.Automation/automationAccounts/runbooks/draft@2023-11-01' = {
+  parent: parentResource 
+  name: 'example'
+  parameters: {
+    key01: 'value01'
+    key02: 'value02'
+  }
+  runOn: ''
 }
 ```
 

@@ -1,4 +1,8 @@
 # Microsoft.HybridCompute
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.hybridcompute/licenses
 
@@ -42,22 +46,6 @@ resource exampleResource 'Microsoft.HybridCompute/machines@2023-06-20-preview' =
 }
 ```
 
-## microsoft.hybridcompute/machines/licenseprofiles
-
-Create or Update a License Profile
-```bicep
-resource exampleResource 'Microsoft.HybridCompute/machines/licenseProfiles@2023-06-20-preview' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'eastus2euap'
-  properties: {
-    esuProfile: {
-      assignedLicense: '{LicenseResourceId}'
-    }
-  }
-}
-```
-
 ## microsoft.hybridcompute/machines/extensions
 
 Create or Update a Machine Extension
@@ -73,6 +61,22 @@ resource exampleResource 'Microsoft.HybridCompute/machines/extensions@2023-06-20
       commandToExecute: 'powershell.exe -c "Get-Process | Where-Object { $_.CPU -gt 10000 }"'
     }
     typeHandlerVersion: '1.10'
+  }
+}
+```
+
+## microsoft.hybridcompute/machines/licenseprofiles
+
+Create or Update a License Profile
+```bicep
+resource exampleResource 'Microsoft.HybridCompute/machines/licenseProfiles@2023-06-20-preview' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'eastus2euap'
+  properties: {
+    esuProfile: {
+      assignedLicense: '{LicenseResourceId}'
+    }
   }
 }
 ```

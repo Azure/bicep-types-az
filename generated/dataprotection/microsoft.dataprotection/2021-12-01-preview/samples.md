@@ -1,4 +1,8 @@
 # Microsoft.DataProtection
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.dataprotection/backupvaults
 
@@ -42,6 +46,57 @@ resource exampleResource 'Microsoft.DataProtection/backupVaults@2021-12-01-previ
   }
   tags: {
     key1: 'val1'
+  }
+}
+```
+
+## microsoft.dataprotection/backupvaults/backupinstances
+
+Create BackupInstance
+```bicep
+resource exampleResource 'Microsoft.DataProtection/backupVaults/backupInstances@2021-12-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    dataSourceInfo: {
+      datasourceType: 'OssDB'
+      objectType: 'Datasource'
+      resourceID: '/subscriptions/f75d8d8b-6735-4697-82e1-1a7a3ff0d5d4/resourceGroups/viveksipgtest/providers/Microsoft.DBforPostgreSQL/servers/viveksipgtest/databases/testdb'
+      resourceLocation: ''
+      resourceName: 'testdb'
+      resourceType: 'Microsoft.DBforPostgreSQL/servers/databases'
+      resourceUri: ''
+    }
+    dataSourceSetInfo: {
+      datasourceType: 'OssDB'
+      objectType: 'DatasourceSet'
+      resourceID: '/subscriptions/f75d8d8b-6735-4697-82e1-1a7a3ff0d5d4/resourceGroups/viveksipgtest/providers/Microsoft.DBforPostgreSQL/servers/viveksipgtest'
+      resourceLocation: ''
+      resourceName: 'viveksipgtest'
+      resourceType: 'Microsoft.DBforPostgreSQL/servers'
+      resourceUri: ''
+    }
+    datasourceAuthCredentials: {
+      objectType: 'SecretStoreBasedAuthCredentials'
+      secretStoreResource: {
+        secretStoreType: 'AzureKeyVault'
+        uri: 'https://samplevault.vault.azure.net/secrets/credentials'
+      }
+    }
+    friendlyName: 'harshitbi2'
+    objectType: 'BackupInstance'
+    policyInfo: {
+      policyId: '/subscriptions/04cf684a-d41f-4550-9f70-7708a3a2283b/resourceGroups/000pikumar/providers/Microsoft.DataProtection/Backupvaults/PratikPrivatePreviewVault1/backupPolicies/PratikPolicy1'
+      policyParameters: {
+        dataStoreParametersList: [
+          {
+            dataStoreType: 'OperationalStore'
+            objectType: 'AzureOperationalStoreParameters'
+            resourceGroupId: '/subscriptions/f75d8d8b-6735-4697-82e1-1a7a3ff0d5d4/resourceGroups/viveksipgtest'
+          }
+        ]
+      }
+    }
   }
 }
 ```
@@ -141,57 +196,6 @@ resource exampleResource 'Microsoft.DataProtection/backupVaults/backupPolicies@2
         objectType: 'AzureRetentionRule'
       }
     ]
-  }
-}
-```
-
-## microsoft.dataprotection/backupvaults/backupinstances
-
-Create BackupInstance
-```bicep
-resource exampleResource 'Microsoft.DataProtection/backupVaults/backupInstances@2021-12-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    dataSourceInfo: {
-      datasourceType: 'OssDB'
-      objectType: 'Datasource'
-      resourceID: '/subscriptions/f75d8d8b-6735-4697-82e1-1a7a3ff0d5d4/resourceGroups/viveksipgtest/providers/Microsoft.DBforPostgreSQL/servers/viveksipgtest/databases/testdb'
-      resourceLocation: ''
-      resourceName: 'testdb'
-      resourceType: 'Microsoft.DBforPostgreSQL/servers/databases'
-      resourceUri: ''
-    }
-    dataSourceSetInfo: {
-      datasourceType: 'OssDB'
-      objectType: 'DatasourceSet'
-      resourceID: '/subscriptions/f75d8d8b-6735-4697-82e1-1a7a3ff0d5d4/resourceGroups/viveksipgtest/providers/Microsoft.DBforPostgreSQL/servers/viveksipgtest'
-      resourceLocation: ''
-      resourceName: 'viveksipgtest'
-      resourceType: 'Microsoft.DBforPostgreSQL/servers'
-      resourceUri: ''
-    }
-    datasourceAuthCredentials: {
-      objectType: 'SecretStoreBasedAuthCredentials'
-      secretStoreResource: {
-        secretStoreType: 'AzureKeyVault'
-        uri: 'https://samplevault.vault.azure.net/secrets/credentials'
-      }
-    }
-    friendlyName: 'harshitbi2'
-    objectType: 'BackupInstance'
-    policyInfo: {
-      policyId: '/subscriptions/04cf684a-d41f-4550-9f70-7708a3a2283b/resourceGroups/000pikumar/providers/Microsoft.DataProtection/Backupvaults/PratikPrivatePreviewVault1/backupPolicies/PratikPolicy1'
-      policyParameters: {
-        dataStoreParametersList: [
-          {
-            dataStoreType: 'OperationalStore'
-            objectType: 'AzureOperationalStoreParameters'
-            resourceGroupId: '/subscriptions/f75d8d8b-6735-4697-82e1-1a7a3ff0d5d4/resourceGroups/viveksipgtest'
-          }
-        ]
-      }
-    }
   }
 }
 ```

@@ -1,165 +1,8 @@
 # Microsoft.AzureArcData
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
 
-## microsoft.azurearcdata/sqlmanagedinstances
-
-Create or update a SQL Managed Instance
-```bicep
-resource exampleResource 'Microsoft.AzureArcData/sqlManagedInstances@2024-05-01-preview' = {
-  name: 'example'
-  extendedLocation: {
-    name: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.ExtendedLocation/customLocations/arclocation'
-    type: 'CustomLocation'
-  }
-  location: 'northeurope'
-  properties: {
-    activeDirectoryInformation: {
-      keytabInformation: {
-        keytab: '********'
-      }
-    }
-    admin: 'Admin user'
-    basicLoginInformation: {
-      password: '********'
-      username: 'username'
-    }
-    clusterId: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Kubernetes/connectedClusters/connectedk8s'
-    endTime: 'Instance end time'
-    extensionId: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Kubernetes/connectedClusters/connectedk8s/providers/Microsoft.KubernetesConfiguration/extensions/extension'
-    k8sRaw: {
-      additionalProperty: 1234
-      spec: {
-        replicas: 1
-        scheduling: {
-          default: {
-            resources: {
-              limits: {
-                additionalProperty: 'additionalValue'
-                cpu: '1'
-                memory: '8Gi'
-              }
-              requests: {
-                additionalProperty: 'additionalValue'
-                cpu: '1'
-                memory: '8Gi'
-              }
-            }
-          }
-        }
-        security: {
-          activeDirectory: {
-            accountName: 'Account name'
-            connector: {
-              name: 'Name of connector'
-              namespace: 'Namespace of connector'
-            }
-            encryptionTypes: [
-              'Encryption type item1, Encryption type item2,...'
-            ]
-            keytabSecret: 'Key tab secret of account'
-          }
-          adminLoginSecret: 'test-sql-login-secret'
-          serviceCertificateSecret: 'Service Certificate Secret'
-          transparentDataEncryption: {
-            mode: 'SystemManaged'
-          }
-        }
-        settings: {
-          network: {
-            forceencryption: 0
-            tlsciphers: 'ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384'
-            tlsprotocols: '1.2'
-          }
-        }
-      }
-    }
-    licenseType: 'LicenseIncluded'
-    startTime: 'Instance start time'
-  }
-  sku: {
-    name: 'vCore'
-    dev: true
-    tier: 'GeneralPurpose'
-  }
-  tags: {
-    mytag: 'myval'
-  }
-}
-```
-
-## microsoft.azurearcdata/sqlmanagedinstances/failovergroups
-
-Create or update a failover group instance.
-```bicep
-resource exampleResource 'Microsoft.AzureArcData/sqlManagedInstances/failoverGroups@2024-05-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    partnerManagedInstanceId: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.AzureArcData/sqlManagedInstances/partnerMI'
-    spec: {
-      partnerSyncMode: 'async'
-      role: 'primary'
-    }
-  }
-}
-```
-
-## microsoft.azurearcdata/sqlserverinstances
-
-Updates a SQL Server Instance tags.
-```bicep
-resource exampleResource 'Microsoft.AzureArcData/sqlServerInstances@2024-05-01-preview' = {
-  name: 'example'
-  location: 'northeurope'
-  properties: {
-    backupPolicy: {
-      differentialBackupHours: 12
-      fullBackupDays: 1
-      retentionPeriodDays: 1
-      transactionLogBackupMinutes: 30
-    }
-    clientConnection: {
-      enabled: false
-    }
-    cores: '4'
-    edition: 'Developer'
-    hostType: 'Physical Server'
-    instanceName: 'name of instance'
-    migration: {
-      assessment: {
-        enabled: false
-      }
-    }
-    monitoring: {
-      enabled: false
-    }
-    serviceType: 'Engine'
-    version: 'SQL Server 2012'
-  }
-  tags: {
-    mytag: 'myval'
-  }
-}
-```
-
-## microsoft.azurearcdata/sqlserverlicenses
-
-Updates a SQL Server license tags.
-```bicep
-resource exampleResource 'Microsoft.AzureArcData/sqlServerLicenses@2024-05-01-preview' = {
-  name: 'example'
-  location: 'northeurope'
-  properties: {
-    activationState: 'Deactivated'
-    billingPlan: 'PAYG'
-    licenseCategory: 'Core'
-    physicalCores: 24
-    scopeType: 'Subscription'
-  }
-  tags: {
-    mytag: 'myval'
-  }
-}
-```
 
 ## microsoft.azurearcdata/datacontrollers
 
@@ -353,6 +196,167 @@ resource exampleResource 'Microsoft.AzureArcData/postgresInstances@2024-05-01-pr
 }
 ```
 
+## microsoft.azurearcdata/sqlmanagedinstances
+
+Create or update a SQL Managed Instance
+```bicep
+resource exampleResource 'Microsoft.AzureArcData/sqlManagedInstances@2024-05-01-preview' = {
+  name: 'example'
+  extendedLocation: {
+    name: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.ExtendedLocation/customLocations/arclocation'
+    type: 'CustomLocation'
+  }
+  location: 'northeurope'
+  properties: {
+    activeDirectoryInformation: {
+      keytabInformation: {
+        keytab: '********'
+      }
+    }
+    admin: 'Admin user'
+    basicLoginInformation: {
+      password: '********'
+      username: 'username'
+    }
+    clusterId: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Kubernetes/connectedClusters/connectedk8s'
+    endTime: 'Instance end time'
+    extensionId: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Kubernetes/connectedClusters/connectedk8s/providers/Microsoft.KubernetesConfiguration/extensions/extension'
+    k8sRaw: {
+      additionalProperty: 1234
+      spec: {
+        replicas: 1
+        scheduling: {
+          default: {
+            resources: {
+              limits: {
+                additionalProperty: 'additionalValue'
+                cpu: '1'
+                memory: '8Gi'
+              }
+              requests: {
+                additionalProperty: 'additionalValue'
+                cpu: '1'
+                memory: '8Gi'
+              }
+            }
+          }
+        }
+        security: {
+          activeDirectory: {
+            accountName: 'Account name'
+            connector: {
+              name: 'Name of connector'
+              namespace: 'Namespace of connector'
+            }
+            encryptionTypes: [
+              'Encryption type item1, Encryption type item2,...'
+            ]
+            keytabSecret: 'Key tab secret of account'
+          }
+          adminLoginSecret: 'test-sql-login-secret'
+          serviceCertificateSecret: 'Service Certificate Secret'
+          transparentDataEncryption: {
+            mode: 'SystemManaged'
+          }
+        }
+        settings: {
+          network: {
+            forceencryption: 0
+            tlsciphers: 'ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384'
+            tlsprotocols: '1.2'
+          }
+        }
+      }
+    }
+    licenseType: 'LicenseIncluded'
+    startTime: 'Instance start time'
+  }
+  sku: {
+    name: 'vCore'
+    dev: true
+    tier: 'GeneralPurpose'
+  }
+  tags: {
+    mytag: 'myval'
+  }
+}
+```
+
+## microsoft.azurearcdata/sqlmanagedinstances/failovergroups
+
+Create or update a failover group instance.
+```bicep
+resource exampleResource 'Microsoft.AzureArcData/sqlManagedInstances/failoverGroups@2024-05-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    partnerManagedInstanceId: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.AzureArcData/sqlManagedInstances/partnerMI'
+    spec: {
+      partnerSyncMode: 'async'
+      role: 'primary'
+    }
+  }
+}
+```
+
+## microsoft.azurearcdata/sqlserveresulicenses
+
+Updates a SQL Server ESU license.
+```bicep
+resource exampleResource 'Microsoft.AzureArcData/sqlServerEsuLicenses@2024-05-01-preview' = {
+  name: 'example'
+  location: 'northeurope'
+  properties: {
+    activationState: 'Inactive'
+    billingPlan: 'PAYG'
+    physicalCores: 24
+    scopeType: 'Subscription'
+    version: 'SQL Server 2012'
+  }
+  tags: {
+    mytag: 'myval'
+  }
+}
+```
+
+## microsoft.azurearcdata/sqlserverinstances
+
+Updates a SQL Server Instance tags.
+```bicep
+resource exampleResource 'Microsoft.AzureArcData/sqlServerInstances@2024-05-01-preview' = {
+  name: 'example'
+  location: 'northeurope'
+  properties: {
+    backupPolicy: {
+      differentialBackupHours: 12
+      fullBackupDays: 1
+      retentionPeriodDays: 1
+      transactionLogBackupMinutes: 30
+    }
+    clientConnection: {
+      enabled: false
+    }
+    cores: '4'
+    edition: 'Developer'
+    hostType: 'Physical Server'
+    instanceName: 'name of instance'
+    migration: {
+      assessment: {
+        enabled: false
+      }
+    }
+    monitoring: {
+      enabled: false
+    }
+    serviceType: 'Engine'
+    version: 'SQL Server 2012'
+  }
+  tags: {
+    mytag: 'myval'
+  }
+}
+```
+
 ## microsoft.azurearcdata/sqlserverinstances/availabilitygroups
 
 Create a Arc Sql Server availability group.
@@ -460,19 +464,19 @@ resource exampleResource 'Microsoft.AzureArcData/sqlServerInstances/databases@20
 }
 ```
 
-## microsoft.azurearcdata/sqlserveresulicenses
+## microsoft.azurearcdata/sqlserverlicenses
 
-Updates a SQL Server ESU license.
+Updates a SQL Server license tags.
 ```bicep
-resource exampleResource 'Microsoft.AzureArcData/sqlServerEsuLicenses@2024-05-01-preview' = {
+resource exampleResource 'Microsoft.AzureArcData/sqlServerLicenses@2024-05-01-preview' = {
   name: 'example'
   location: 'northeurope'
   properties: {
-    activationState: 'Inactive'
+    activationState: 'Deactivated'
     billingPlan: 'PAYG'
+    licenseCategory: 'Core'
     physicalCores: 24
     scopeType: 'Subscription'
-    version: 'SQL Server 2012'
   }
   tags: {
     mytag: 'myval'

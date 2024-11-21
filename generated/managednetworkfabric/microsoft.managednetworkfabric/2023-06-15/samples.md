@@ -1,4 +1,8 @@
 # Microsoft.ManagedNetworkFabric
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.managednetworkfabric/accesscontrollists
 
@@ -117,25 +121,6 @@ resource exampleResource 'Microsoft.ManagedNetworkFabric/accessControlLists@2023
 }
 ```
 
-## microsoft.managednetworkfabric/internetgateways
-
-InternetGateways_Create_MaximumSet_Gen
-```bicep
-resource exampleResource 'Microsoft.ManagedNetworkFabric/internetGateways@2023-06-15' = {
-  name: 'example'
-  location: 'eastus'
-  properties: {
-    type: 'Infrastructure'
-    annotation: 'annotation'
-    internetGatewayRuleId: '/subscriptions/xxxx-xxxx-xxxx-xxxx/providers/Microsoft.ManagedNetworkFabric/internetGatewayRules/example-internetGatewayRule'
-    networkFabricControllerId: '/subscriptions/xxxx-xxxx-xxxx-xxxx/resourcegroups/example-rg/providers/Microsoft.ManagedNetworkFabric/networkFabricControllers/example-networkFabricController'
-  }
-  tags: {
-    key3540: '1234'
-  }
-}
-```
-
 ## microsoft.managednetworkfabric/internetgatewayrules
 
 InternetGatewayRules_Create_MaximumSet_Gen
@@ -154,6 +139,25 @@ resource exampleResource 'Microsoft.ManagedNetworkFabric/internetGatewayRules@20
   }
   tags: {
     keyID: 'keyValue'
+  }
+}
+```
+
+## microsoft.managednetworkfabric/internetgateways
+
+InternetGateways_Create_MaximumSet_Gen
+```bicep
+resource exampleResource 'Microsoft.ManagedNetworkFabric/internetGateways@2023-06-15' = {
+  name: 'example'
+  location: 'eastus'
+  properties: {
+    type: 'Infrastructure'
+    annotation: 'annotation'
+    internetGatewayRuleId: '/subscriptions/xxxx-xxxx-xxxx-xxxx/providers/Microsoft.ManagedNetworkFabric/internetGatewayRules/example-internetGatewayRule'
+    networkFabricControllerId: '/subscriptions/xxxx-xxxx-xxxx-xxxx/resourcegroups/example-rg/providers/Microsoft.ManagedNetworkFabric/networkFabricControllers/example-networkFabricController'
+  }
+  tags: {
+    key3540: '1234'
   }
 }
 ```
@@ -293,6 +297,68 @@ resource exampleResource 'Microsoft.ManagedNetworkFabric/l3IsolationDomains@2023
 }
 ```
 
+## microsoft.managednetworkfabric/l3isolationdomains/externalnetworks
+
+ExternalNetworks_Create_MaximumSet_Gen
+```bicep
+resource exampleResource 'Microsoft.ManagedNetworkFabric/l3IsolationDomains/externalNetworks@2023-06-15' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    annotation: 'annotation'
+    exportRoutePolicy: {
+      exportIpv4RoutePolicyId: '/subscriptions/1234ABCD-0A1B-1234-5678-123456ABCDEF/resourceGroups/example-rg/providers/Microsoft.ManagedNetworkFabric/routePolicies/routePolicyName'
+      exportIpv6RoutePolicyId: '/subscriptions/1234ABCD-0A1B-1234-5678-123456ABCDEF/resourceGroups/example-rg/providers/Microsoft.ManagedNetworkFabric/routePolicies/routePolicyName'
+    }
+    exportRoutePolicyId: '/subscriptions/1234ABCD-0A1B-1234-5678-123456ABCDEF/resourceGroups/example-rg/providers/Microsoft.ManagedNetworkFabric/routePolicies/routePolicyName'
+    importRoutePolicy: {
+      importIpv4RoutePolicyId: '/subscriptions/1234ABCD-0A1B-1234-5678-123456ABCDEF/resourceGroups/example-rg/providers/Microsoft.ManagedNetworkFabric/routePolicies/routePolicyName'
+      importIpv6RoutePolicyId: '/subscriptions/1234ABCD-0A1B-1234-5678-123456ABCDEF/resourceGroups/example-rg/providers/Microsoft.ManagedNetworkFabric/routePolicies/routePolicyName'
+    }
+    importRoutePolicyId: '/subscriptions/1234ABCD-0A1B-1234-5678-123456ABCDEF/resourceGroups/example-rg/providers/Microsoft.ManagedNetworkFabric/routePolicies/routePolicyName'
+    networkToNetworkInterconnectId: '/subscriptions/1234ABCD-0A1B-1234-5678-123456ABCDEF/resourceGroups/example-rg/providers/Microsoft.ManagedNetworkFabric/networkFabrics/example-fabric/networkToNetworkInterconnects/example-nni'
+    optionAProperties: {
+      bfdConfiguration: {
+        intervalInMilliSeconds: 300
+        multiplier: 15
+      }
+      egressAclId: '/subscriptions/1234ABCD-0A1B-1234-5678-123456ABCDEF/resourceGroups/example-rg/providers/Microsoft.ManagedNetworkFabric/accessControlLists/example-acl'
+      ingressAclId: '/subscriptions/1234ABCD-0A1B-1234-5678-123456ABCDEF/resourceGroups/example-rg/providers/Microsoft.ManagedNetworkFabric/accessControlLists/example-acl'
+      mtu: 1500
+      peerASN: 65047
+      primaryIpv4Prefix: '10.1.1.0/30'
+      primaryIpv6Prefix: '3FFE:FFFF:0:CD30::a0/126'
+      secondaryIpv4Prefix: '10.1.1.4/30'
+      secondaryIpv6Prefix: '3FFE:FFFF:0:CD30::a4/126'
+      vlanId: 1001
+    }
+    optionBProperties: {
+      exportRouteTargets: [
+        '65046:10039'
+      ]
+      importRouteTargets: [
+        '65046:10039'
+      ]
+      routeTargets: {
+        exportIpv4RouteTargets: [
+          '65046:10039'
+        ]
+        exportIpv6RouteTargets: [
+          '65046:10039'
+        ]
+        importIpv4RouteTargets: [
+          '65046:10039'
+        ]
+        importIpv6RouteTargets: [
+          '65046:10039'
+        ]
+      }
+    }
+    peeringOption: 'OptionA'
+  }
+}
+```
+
 ## microsoft.managednetworkfabric/l3isolationdomains/internalnetworks
 
 InternalNetworks_Create_MaximumSet_Gen
@@ -380,68 +446,6 @@ resource exampleResource 'Microsoft.ManagedNetworkFabric/l3IsolationDomains/inte
       ]
     }
     vlanId: 755
-  }
-}
-```
-
-## microsoft.managednetworkfabric/l3isolationdomains/externalnetworks
-
-ExternalNetworks_Create_MaximumSet_Gen
-```bicep
-resource exampleResource 'Microsoft.ManagedNetworkFabric/l3IsolationDomains/externalNetworks@2023-06-15' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    annotation: 'annotation'
-    exportRoutePolicy: {
-      exportIpv4RoutePolicyId: '/subscriptions/1234ABCD-0A1B-1234-5678-123456ABCDEF/resourceGroups/example-rg/providers/Microsoft.ManagedNetworkFabric/routePolicies/routePolicyName'
-      exportIpv6RoutePolicyId: '/subscriptions/1234ABCD-0A1B-1234-5678-123456ABCDEF/resourceGroups/example-rg/providers/Microsoft.ManagedNetworkFabric/routePolicies/routePolicyName'
-    }
-    exportRoutePolicyId: '/subscriptions/1234ABCD-0A1B-1234-5678-123456ABCDEF/resourceGroups/example-rg/providers/Microsoft.ManagedNetworkFabric/routePolicies/routePolicyName'
-    importRoutePolicy: {
-      importIpv4RoutePolicyId: '/subscriptions/1234ABCD-0A1B-1234-5678-123456ABCDEF/resourceGroups/example-rg/providers/Microsoft.ManagedNetworkFabric/routePolicies/routePolicyName'
-      importIpv6RoutePolicyId: '/subscriptions/1234ABCD-0A1B-1234-5678-123456ABCDEF/resourceGroups/example-rg/providers/Microsoft.ManagedNetworkFabric/routePolicies/routePolicyName'
-    }
-    importRoutePolicyId: '/subscriptions/1234ABCD-0A1B-1234-5678-123456ABCDEF/resourceGroups/example-rg/providers/Microsoft.ManagedNetworkFabric/routePolicies/routePolicyName'
-    networkToNetworkInterconnectId: '/subscriptions/1234ABCD-0A1B-1234-5678-123456ABCDEF/resourceGroups/example-rg/providers/Microsoft.ManagedNetworkFabric/networkFabrics/example-fabric/networkToNetworkInterconnects/example-nni'
-    optionAProperties: {
-      bfdConfiguration: {
-        intervalInMilliSeconds: 300
-        multiplier: 15
-      }
-      egressAclId: '/subscriptions/1234ABCD-0A1B-1234-5678-123456ABCDEF/resourceGroups/example-rg/providers/Microsoft.ManagedNetworkFabric/accessControlLists/example-acl'
-      ingressAclId: '/subscriptions/1234ABCD-0A1B-1234-5678-123456ABCDEF/resourceGroups/example-rg/providers/Microsoft.ManagedNetworkFabric/accessControlLists/example-acl'
-      mtu: 1500
-      peerASN: 65047
-      primaryIpv4Prefix: '10.1.1.0/30'
-      primaryIpv6Prefix: '3FFE:FFFF:0:CD30::a0/126'
-      secondaryIpv4Prefix: '10.1.1.4/30'
-      secondaryIpv6Prefix: '3FFE:FFFF:0:CD30::a4/126'
-      vlanId: 1001
-    }
-    optionBProperties: {
-      exportRouteTargets: [
-        '65046:10039'
-      ]
-      importRouteTargets: [
-        '65046:10039'
-      ]
-      routeTargets: {
-        exportIpv4RouteTargets: [
-          '65046:10039'
-        ]
-        exportIpv6RouteTargets: [
-          '65046:10039'
-        ]
-        importIpv4RouteTargets: [
-          '65046:10039'
-        ]
-        importIpv6RouteTargets: [
-          '65046:10039'
-        ]
-      }
-    }
-    peeringOption: 'OptionA'
   }
 }
 ```

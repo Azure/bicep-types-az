@@ -1,79 +1,17 @@
 # Microsoft.Network
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
 
-## microsoft.network/networkmanagers/securityuserconfigurations
 
-Create network manager security user configuration
+## microsoft.network/networkmanagerconnections
+
+Create or Update Subscription Network Manager Connection
 ```bicep
-resource exampleResource 'Microsoft.Network/networkManagers/securityUserConfigurations@2022-02-01-preview' = {
-  parent: parentResource 
+resource exampleResource 'Microsoft.Network/networkManagerConnections@2022-02-01-preview' = {
   name: 'example'
   properties: {
-    description: 'A sample policy'
-    deleteExistingNSGs: 'True'
-  }
-}
-```
-
-## microsoft.network/networkmanagers/securityuserconfigurations/rulecollections
-
-Create or Update a User Rule Collection
-```bicep
-resource exampleResource 'Microsoft.Network/networkManagers/securityUserConfigurations/ruleCollections@2022-02-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    description: 'A sample policy'
-    appliesToGroups: [
-      {
-        networkGroupId: '/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/networkManagers/testNetworkManager/networkGroups/testGroup'
-      }
-    ]
-  }
-}
-```
-
-## microsoft.network/networkmanagers/securityuserconfigurations/rulecollections/rules
-
-Create a default user rule
-```bicep
-resource exampleResource 'Microsoft.Network/networkManagers/securityUserConfigurations/ruleCollections/rules@2022-02-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  kind: 'Default'
-  properties: {
-    flag: 'AllowVnetInbound'
-  }
-}
-```
-
-Create a user rule
-```bicep
-resource exampleResource 'Microsoft.Network/networkManagers/securityUserConfigurations/ruleCollections/rules@2022-02-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  kind: 'Custom'
-  properties: {
-    description: 'Sample User Rule'
-    destinationPortRanges: [
-      '22'
-    ]
-    destinations: [
-      {
-        addressPrefix: '*'
-        addressPrefixType: 'IPPrefix'
-      }
-    ]
-    direction: 'Inbound'
-    sourcePortRanges: [
-      '0-65535'
-    ]
-    sources: [
-      {
-        addressPrefix: '*'
-        addressPrefixType: 'IPPrefix'
-      }
-    ]
-    protocol: 'Tcp'
+    networkManagerId: '/subscriptions/subscriptionC/resourceGroup/rg1/providers/Microsoft.Network/networkManagers/testNetworkManager'
   }
 }
 ```
@@ -154,6 +92,21 @@ resource exampleResource 'Microsoft.Network/networkManagers/networkGroups/static
   name: 'example'
   properties: {
     resourceId: '/subscriptions/subscriptionC/resourceGroup/rg1/providers/Microsoft.Network/virtualnetworks/vnet1'
+  }
+}
+```
+
+## microsoft.network/networkmanagers/scopeconnections
+
+Create or Update Network Manager Scope Connection
+```bicep
+resource exampleResource 'Microsoft.Network/networkManagers/scopeConnections@2022-02-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    description: 'This is a scope connection to a cross tenant subscription.'
+    resourceId: 'subscriptions/f0dc2b34-dfad-40e4-83e0-2309fed8d00b'
+    tenantId: '6babcaad-604b-40ac-a9d7-9fd97c0b779f'
   }
 }
 ```
@@ -240,29 +193,80 @@ resource exampleResource 'Microsoft.Network/networkManagers/securityAdminConfigu
 }
 ```
 
-## microsoft.network/networkmanagerconnections
+## microsoft.network/networkmanagers/securityuserconfigurations
 
-Create or Update Subscription Network Manager Connection
+Create network manager security user configuration
 ```bicep
-resource exampleResource 'Microsoft.Network/networkManagerConnections@2022-02-01-preview' = {
+resource exampleResource 'Microsoft.Network/networkManagers/securityUserConfigurations@2022-02-01-preview' = {
+  parent: parentResource 
   name: 'example'
   properties: {
-    networkManagerId: '/subscriptions/subscriptionC/resourceGroup/rg1/providers/Microsoft.Network/networkManagers/testNetworkManager'
+    description: 'A sample policy'
+    deleteExistingNSGs: 'True'
   }
 }
 ```
 
-## microsoft.network/networkmanagers/scopeconnections
+## microsoft.network/networkmanagers/securityuserconfigurations/rulecollections
 
-Create or Update Network Manager Scope Connection
+Create or Update a User Rule Collection
 ```bicep
-resource exampleResource 'Microsoft.Network/networkManagers/scopeConnections@2022-02-01-preview' = {
+resource exampleResource 'Microsoft.Network/networkManagers/securityUserConfigurations/ruleCollections@2022-02-01-preview' = {
   parent: parentResource 
   name: 'example'
   properties: {
-    description: 'This is a scope connection to a cross tenant subscription.'
-    resourceId: 'subscriptions/f0dc2b34-dfad-40e4-83e0-2309fed8d00b'
-    tenantId: '6babcaad-604b-40ac-a9d7-9fd97c0b779f'
+    description: 'A sample policy'
+    appliesToGroups: [
+      {
+        networkGroupId: '/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/networkManagers/testNetworkManager/networkGroups/testGroup'
+      }
+    ]
+  }
+}
+```
+
+## microsoft.network/networkmanagers/securityuserconfigurations/rulecollections/rules
+
+Create a default user rule
+```bicep
+resource exampleResource 'Microsoft.Network/networkManagers/securityUserConfigurations/ruleCollections/rules@2022-02-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  kind: 'Default'
+  properties: {
+    flag: 'AllowVnetInbound'
+  }
+}
+```
+
+Create a user rule
+```bicep
+resource exampleResource 'Microsoft.Network/networkManagers/securityUserConfigurations/ruleCollections/rules@2022-02-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  kind: 'Custom'
+  properties: {
+    description: 'Sample User Rule'
+    destinationPortRanges: [
+      '22'
+    ]
+    destinations: [
+      {
+        addressPrefix: '*'
+        addressPrefixType: 'IPPrefix'
+      }
+    ]
+    direction: 'Inbound'
+    sourcePortRanges: [
+      '0-65535'
+    ]
+    sources: [
+      {
+        addressPrefix: '*'
+        addressPrefixType: 'IPPrefix'
+      }
+    ]
+    protocol: 'Tcp'
   }
 }
 ```

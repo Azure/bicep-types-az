@@ -1,4 +1,8 @@
 # Microsoft.HybridContainerService
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.hybridcontainerservice/provisionedclusters
 
@@ -79,6 +83,22 @@ resource exampleResource 'Microsoft.HybridContainerService/provisionedClusters@2
 }
 ```
 
+## microsoft.hybridcontainerservice/provisionedclusters/agentpools
+
+PutAgentPool
+```bicep
+resource exampleResource 'Microsoft.HybridContainerService/provisionedClusters/agentPools@2022-05-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'westus'
+  properties: {
+    count: 1
+    osType: 'Linux'
+    vmSize: 'Standard_A4_v2'
+  }
+}
+```
+
 ## microsoft.hybridcontainerservice/provisionedclusters/hybrididentitymetadata
 
 CreateHybridIdentityMetadata
@@ -93,18 +113,23 @@ resource exampleResource 'Microsoft.HybridContainerService/provisionedClusters/h
 }
 ```
 
-## microsoft.hybridcontainerservice/provisionedclusters/agentpools
+## microsoft.hybridcontainerservice/storagespaces
 
-PutAgentPool
+PutStorageSpace
 ```bicep
-resource exampleResource 'Microsoft.HybridContainerService/provisionedClusters/agentPools@2022-05-01-preview' = {
-  parent: parentResource 
+resource exampleResource 'Microsoft.HybridContainerService/storageSpaces@2022-05-01-preview' = {
   name: 'example'
+  extendedLocation: {
+    name: '/subscriptions/a3e42606-29b1-4d7d-b1d9-9ff6b9d3c71b/resourcegroups/test-arcappliance-resgrp/providers/microsoft.extendedlocation/customlocations/testcustomlocation'
+    type: 'CustomLocation'
+  }
   location: 'westus'
   properties: {
-    count: 1
-    osType: 'Linux'
-    vmSize: 'Standard_A4_v2'
+    hciStorageProfile: {
+      mocGroup: 'target-group'
+      mocLocation: 'MocLocation'
+      mocStorageContainer: 'WssdStorageContainer'
+    }
   }
 }
 ```
@@ -140,27 +165,6 @@ resource exampleResource 'Microsoft.HybridContainerService/virtualNetworks@2022-
         startIP: '192.168.0.110'
       }
     ]
-  }
-}
-```
-
-## microsoft.hybridcontainerservice/storagespaces
-
-PutStorageSpace
-```bicep
-resource exampleResource 'Microsoft.HybridContainerService/storageSpaces@2022-05-01-preview' = {
-  name: 'example'
-  extendedLocation: {
-    name: '/subscriptions/a3e42606-29b1-4d7d-b1d9-9ff6b9d3c71b/resourcegroups/test-arcappliance-resgrp/providers/microsoft.extendedlocation/customlocations/testcustomlocation'
-    type: 'CustomLocation'
-  }
-  location: 'westus'
-  properties: {
-    hciStorageProfile: {
-      mocGroup: 'target-group'
-      mocLocation: 'MocLocation'
-      mocStorageContainer: 'WssdStorageContainer'
-    }
   }
 }
 ```

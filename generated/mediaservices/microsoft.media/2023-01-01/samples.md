@@ -1,62 +1,8 @@
 # Microsoft.Media
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
 
-## microsoft.media/mediaservices/accountfilters
-
-Create an Account Filter
-```bicep
-resource exampleResource 'Microsoft.Media/mediaServices/accountFilters@2023-01-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    firstQuality: {
-      bitrate: 128000
-    }
-    presentationTimeRange: {
-      endTimestamp: 170000000
-      forceEndTimestamp: false
-      liveBackoffDuration: 0
-      presentationWindowDuration: 9223372036854775000
-      startTimestamp: 0
-      timescale: 10000000
-    }
-    tracks: [
-      {
-        trackSelections: [
-          {
-            operation: 'Equal'
-            property: 'Type'
-            value: 'Audio'
-          }
-          {
-            operation: 'NotEqual'
-            property: 'Language'
-            value: 'en'
-          }
-          {
-            operation: 'NotEqual'
-            property: 'FourCC'
-            value: 'EC-3'
-          }
-        ]
-      }
-      {
-        trackSelections: [
-          {
-            operation: 'Equal'
-            property: 'Type'
-            value: 'Video'
-          }
-          {
-            operation: 'Equal'
-            property: 'Bitrate'
-            value: '3000000-5000000'
-          }
-        ]
-      }
-    ]
-  }
-}
-```
 
 ## microsoft.media/mediaservices
 
@@ -127,18 +73,60 @@ resource exampleResource 'Microsoft.Media/mediaservices@2023-01-01' = {
 }
 ```
 
-## microsoft.media/mediaservices/privateendpointconnections
+## microsoft.media/mediaservices/accountfilters
 
-Update private endpoint connection.
+Create an Account Filter
 ```bicep
-resource exampleResource 'Microsoft.Media/mediaservices/privateEndpointConnections@2023-01-01' = {
+resource exampleResource 'Microsoft.Media/mediaServices/accountFilters@2023-01-01' = {
   parent: parentResource 
   name: 'example'
   properties: {
-    privateLinkServiceConnectionState: {
-      description: 'Test description.'
-      status: 'Approved'
+    firstQuality: {
+      bitrate: 128000
     }
+    presentationTimeRange: {
+      endTimestamp: 170000000
+      forceEndTimestamp: false
+      liveBackoffDuration: 0
+      presentationWindowDuration: 9223372036854775000
+      startTimestamp: 0
+      timescale: 10000000
+    }
+    tracks: [
+      {
+        trackSelections: [
+          {
+            operation: 'Equal'
+            property: 'Type'
+            value: 'Audio'
+          }
+          {
+            operation: 'NotEqual'
+            property: 'Language'
+            value: 'en'
+          }
+          {
+            operation: 'NotEqual'
+            property: 'FourCC'
+            value: 'EC-3'
+          }
+        ]
+      }
+      {
+        trackSelections: [
+          {
+            operation: 'Equal'
+            property: 'Type'
+            value: 'Video'
+          }
+          {
+            operation: 'Equal'
+            property: 'Bitrate'
+            value: '3000000-5000000'
+          }
+        ]
+      }
+    ]
   }
 }
 ```
@@ -277,6 +265,45 @@ resource exampleResource 'Microsoft.Media/mediaServices/contentKeyPolicies@2023-
 }
 ```
 
+Creates a Content Key Policy with multiple options
+```bicep
+resource exampleResource 'Microsoft.Media/mediaServices/contentKeyPolicies@2023-01-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    description: 'ArmPolicyDescription'
+    options: [
+      {
+        name: 'ClearKeyOption'
+        configuration: {
+          @odata.type: '#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration'
+        }
+        restriction: {
+          @odata.type: '#Microsoft.Media.ContentKeyPolicyTokenRestriction'
+          audience: 'urn:audience'
+          issuer: 'urn:issuer'
+          primaryVerificationKey: {
+            @odata.type: '#Microsoft.Media.ContentKeyPolicySymmetricTokenKey'
+            keyValue: 'AAAAAAAAAAAAAAAAAAAAAA=='
+          }
+          restrictionTokenType: 'Swt'
+        }
+      }
+      {
+        name: 'widevineoption'
+        configuration: {
+          @odata.type: '#Microsoft.Media.ContentKeyPolicyWidevineConfiguration'
+          widevineTemplate: '{"allowed_track_types":"SD_HD","content_key_specs":[{"track_type":"SD","security_level":1,"required_output_protection":{"hdcp":"HDCP_V2"}}],"policy_overrides":{"can_play":true,"can_persist":true,"can_renew":false}}'
+        }
+        restriction: {
+          @odata.type: '#Microsoft.Media.ContentKeyPolicyOpenRestriction'
+        }
+      }
+    ]
+  }
+}
+```
+
 Creates a Content Key Policy with PlayReady option and Open Restriction
 ```bicep
 resource exampleResource 'Microsoft.Media/mediaServices/contentKeyPolicies@2023-01-01' = {
@@ -355,46 +382,99 @@ resource exampleResource 'Microsoft.Media/mediaServices/contentKeyPolicies@2023-
 }
 ```
 
-Creates a Content Key Policy with multiple options
+## microsoft.media/mediaservices/privateendpointconnections
+
+Update private endpoint connection.
 ```bicep
-resource exampleResource 'Microsoft.Media/mediaServices/contentKeyPolicies@2023-01-01' = {
+resource exampleResource 'Microsoft.Media/mediaservices/privateEndpointConnections@2023-01-01' = {
   parent: parentResource 
   name: 'example'
   properties: {
-    description: 'ArmPolicyDescription'
-    options: [
+    privateLinkServiceConnectionState: {
+      description: 'Test description.'
+      status: 'Approved'
+    }
+  }
+}
+```
+
+## microsoft.media/mediaservices/streaminglocators
+
+Creates a Streaming Locator with clear streaming
+```bicep
+resource exampleResource 'Microsoft.Media/mediaServices/streamingLocators@2023-01-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    assetName: 'ClimbingMountRainier'
+    streamingPolicyName: 'clearStreamingPolicy'
+  }
+}
+```
+
+Creates a Streaming Locator with secure streaming
+```bicep
+resource exampleResource 'Microsoft.Media/mediaServices/streamingLocators@2023-01-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    assetName: 'ClimbingMountRainier'
+    endTime: '2028-12-31T23:59:59.9999999Z'
+    startTime: '2018-03-01T00:00:00Z'
+    streamingPolicyName: 'UserCreatedSecureStreamingPolicy'
+  }
+}
+```
+
+Creates a Streaming Locator with user defined content keys
+```bicep
+resource exampleResource 'Microsoft.Media/mediaServices/streamingLocators@2023-01-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    assetName: 'ClimbingMountRainier'
+    contentKeys: [
       {
-        name: 'ClearKeyOption'
-        configuration: {
-          @odata.type: '#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration'
-        }
-        restriction: {
-          @odata.type: '#Microsoft.Media.ContentKeyPolicyTokenRestriction'
-          audience: 'urn:audience'
-          issuer: 'urn:issuer'
-          primaryVerificationKey: {
-            @odata.type: '#Microsoft.Media.ContentKeyPolicySymmetricTokenKey'
-            keyValue: 'AAAAAAAAAAAAAAAAAAAAAA=='
-          }
-          restrictionTokenType: 'Swt'
-        }
+        id: '60000000-0000-0000-0000-000000000001'
+        labelReferenceInStreamingPolicy: 'aesDefaultKey'
+        value: '1UqLohAfWsEGkULYxHjYZg=='
       }
       {
-        name: 'widevineoption'
-        configuration: {
-          @odata.type: '#Microsoft.Media.ContentKeyPolicyWidevineConfiguration'
-          widevineTemplate: '{"allowed_track_types":"SD_HD","content_key_specs":[{"track_type":"SD","security_level":1,"required_output_protection":{"hdcp":"HDCP_V2"}}],"policy_overrides":{"can_play":true,"can_persist":true,"can_renew":false}}'
-        }
-        restriction: {
-          @odata.type: '#Microsoft.Media.ContentKeyPolicyOpenRestriction'
-        }
+        id: '60000000-0000-0000-0000-000000000004'
+        labelReferenceInStreamingPolicy: 'cencDefaultKey'
+        value: '4UqLohAfWsEGkULYxHjYZg=='
+      }
+      {
+        id: '60000000-0000-0000-0000-000000000007'
+        labelReferenceInStreamingPolicy: 'cbcsDefaultKey'
+        value: '7UqLohAfWsEGkULYxHjYZg=='
       }
     ]
+    streamingLocatorId: '90000000-0000-0000-0000-00000000000A'
+    streamingPolicyName: 'secureStreamingPolicy'
   }
 }
 ```
 
 ## microsoft.media/mediaservices/streamingpolicies
+
+Creates a Streaming Policy with clear streaming
+```bicep
+resource exampleResource 'Microsoft.Media/mediaServices/streamingPolicies@2023-01-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    noEncryption: {
+      enabledProtocols: {
+        dash: true
+        download: true
+        hls: true
+        smoothStreaming: true
+      }
+    }
+  }
+}
+```
 
 Creates a Streaming Policy with ClearKey encryption in commonEncryptionCbcs.
 ```bicep
@@ -457,24 +537,6 @@ resource exampleResource 'Microsoft.Media/mediaServices/streamingPolicies@2023-0
       }
     }
     defaultContentKeyPolicyName: 'PolicyWithPlayReadyOptionAndOpenRestriction'
-  }
-}
-```
-
-Creates a Streaming Policy with clear streaming
-```bicep
-resource exampleResource 'Microsoft.Media/mediaServices/streamingPolicies@2023-01-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    noEncryption: {
-      enabledProtocols: {
-        dash: true
-        download: true
-        hls: true
-        smoothStreaming: true
-      }
-    }
   }
 }
 ```
@@ -651,64 +713,6 @@ resource exampleResource 'Microsoft.Media/mediaServices/streamingPolicies@2023-0
         smoothStreaming: true
       }
     }
-  }
-}
-```
-
-## microsoft.media/mediaservices/streaminglocators
-
-Creates a Streaming Locator with clear streaming
-```bicep
-resource exampleResource 'Microsoft.Media/mediaServices/streamingLocators@2023-01-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    assetName: 'ClimbingMountRainier'
-    streamingPolicyName: 'clearStreamingPolicy'
-  }
-}
-```
-
-Creates a Streaming Locator with secure streaming
-```bicep
-resource exampleResource 'Microsoft.Media/mediaServices/streamingLocators@2023-01-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    assetName: 'ClimbingMountRainier'
-    endTime: '2028-12-31T23:59:59.9999999Z'
-    startTime: '2018-03-01T00:00:00Z'
-    streamingPolicyName: 'UserCreatedSecureStreamingPolicy'
-  }
-}
-```
-
-Creates a Streaming Locator with user defined content keys
-```bicep
-resource exampleResource 'Microsoft.Media/mediaServices/streamingLocators@2023-01-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    assetName: 'ClimbingMountRainier'
-    contentKeys: [
-      {
-        id: '60000000-0000-0000-0000-000000000001'
-        labelReferenceInStreamingPolicy: 'aesDefaultKey'
-        value: '1UqLohAfWsEGkULYxHjYZg=='
-      }
-      {
-        id: '60000000-0000-0000-0000-000000000004'
-        labelReferenceInStreamingPolicy: 'cencDefaultKey'
-        value: '4UqLohAfWsEGkULYxHjYZg=='
-      }
-      {
-        id: '60000000-0000-0000-0000-000000000007'
-        labelReferenceInStreamingPolicy: 'cbcsDefaultKey'
-        value: '7UqLohAfWsEGkULYxHjYZg=='
-      }
-    ]
-    streamingLocatorId: '90000000-0000-0000-0000-00000000000A'
-    streamingPolicyName: 'secureStreamingPolicy'
   }
 }
 ```

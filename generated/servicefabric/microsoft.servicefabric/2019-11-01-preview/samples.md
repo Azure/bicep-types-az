@@ -1,4 +1,8 @@
 # Microsoft.ServiceFabric
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.servicefabric/clusters
 
@@ -190,29 +194,6 @@ resource exampleResource 'Microsoft.ServiceFabric/clusters@2019-11-01-preview' =
 }
 ```
 
-## microsoft.servicefabric/clusters/applicationtypes
-
-Put an application type
-```bicep
-resource exampleResource 'Microsoft.ServiceFabric/clusters/applicationTypes@2019-11-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-}
-```
-
-## microsoft.servicefabric/clusters/applicationtypes/versions
-
-Put an application type version
-```bicep
-resource exampleResource 'Microsoft.ServiceFabric/clusters/applicationTypes/versions@2019-11-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    appPackageUrl: 'http://fakelink.test.com/MyAppType'
-  }
-}
-```
-
 ## microsoft.servicefabric/clusters/applications
 
 Put an application with maximum parameters
@@ -325,6 +306,29 @@ resource exampleResource 'Microsoft.ServiceFabric/clusters/applications/services
     }
     serviceKind: 'Stateless'
     serviceTypeName: 'myServiceType'
+  }
+}
+```
+
+## microsoft.servicefabric/clusters/applicationtypes
+
+Put an application type
+```bicep
+resource exampleResource 'Microsoft.ServiceFabric/clusters/applicationTypes@2019-11-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+}
+```
+
+## microsoft.servicefabric/clusters/applicationtypes/versions
+
+Put an application type version
+```bicep
+resource exampleResource 'Microsoft.ServiceFabric/clusters/applicationTypes/versions@2019-11-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    appPackageUrl: 'http://fakelink.test.com/MyAppType'
   }
 }
 ```

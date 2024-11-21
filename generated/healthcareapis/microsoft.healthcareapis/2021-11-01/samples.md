@@ -1,4 +1,8 @@
 # Microsoft.HealthcareApis
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.healthcareapis/services
 
@@ -118,6 +122,67 @@ resource exampleResource 'Microsoft.HealthcareApis/workspaces/dicomservices@2021
 }
 ```
 
+## microsoft.healthcareapis/workspaces/fhirservices
+
+Create or update a Fhir Service
+```bicep
+resource exampleResource 'Microsoft.HealthcareApis/workspaces/fhirservices@2021-11-01' = {
+  parent: parentResource 
+  name: 'example'
+  identity: {
+    type: 'SystemAssigned'
+  }
+  kind: 'fhir-R4'
+  location: 'westus'
+  properties: {
+    accessPolicies: [
+      {
+        objectId: 'c487e7d1-3210-41a3-8ccc-e9372b78da47'
+      }
+      {
+        objectId: '5b307da8-43d4-492b-8b66-b0294ade872f'
+      }
+    ]
+    acrConfiguration: {
+      loginServers: [
+        'test1.azurecr.io'
+      ]
+    }
+    authenticationConfiguration: {
+      audience: 'https://azurehealthcareapis.com'
+      authority: 'https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc'
+      smartProxyEnabled: true
+    }
+    corsConfiguration: {
+      allowCredentials: false
+      headers: [
+        '*'
+      ]
+      maxAge: 1440
+      methods: [
+        'DELETE'
+        'GET'
+        'OPTIONS'
+        'PATCH'
+        'POST'
+        'PUT'
+      ]
+      origins: [
+        '*'
+      ]
+    }
+    exportConfiguration: {
+      storageAccountName: 'existingStorageAccount'
+    }
+  }
+  tags: {
+    additionalProp1: 'string'
+    additionalProp2: 'string'
+    additionalProp3: 'string'
+  }
+}
+```
+
 ## microsoft.healthcareapis/workspaces/iotconnectors
 
 Create an IoT Connector
@@ -205,67 +270,6 @@ resource exampleResource 'Microsoft.HealthcareApis/workspaces/iotconnectors/fhir
     }
     fhirServiceResourceId: 'subscriptions/11111111-2222-3333-4444-555566667777/resourceGroups/myrg/providers/Microsoft.HealthcareApis/workspaces/myworkspace/fhirservices/myfhirservice'
     resourceIdentityResolutionType: 'Create'
-  }
-}
-```
-
-## microsoft.healthcareapis/workspaces/fhirservices
-
-Create or update a Fhir Service
-```bicep
-resource exampleResource 'Microsoft.HealthcareApis/workspaces/fhirservices@2021-11-01' = {
-  parent: parentResource 
-  name: 'example'
-  identity: {
-    type: 'SystemAssigned'
-  }
-  kind: 'fhir-R4'
-  location: 'westus'
-  properties: {
-    accessPolicies: [
-      {
-        objectId: 'c487e7d1-3210-41a3-8ccc-e9372b78da47'
-      }
-      {
-        objectId: '5b307da8-43d4-492b-8b66-b0294ade872f'
-      }
-    ]
-    acrConfiguration: {
-      loginServers: [
-        'test1.azurecr.io'
-      ]
-    }
-    authenticationConfiguration: {
-      audience: 'https://azurehealthcareapis.com'
-      authority: 'https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc'
-      smartProxyEnabled: true
-    }
-    corsConfiguration: {
-      allowCredentials: false
-      headers: [
-        '*'
-      ]
-      maxAge: 1440
-      methods: [
-        'DELETE'
-        'GET'
-        'OPTIONS'
-        'PATCH'
-        'POST'
-        'PUT'
-      ]
-      origins: [
-        '*'
-      ]
-    }
-    exportConfiguration: {
-      storageAccountName: 'existingStorageAccount'
-    }
-  }
-  tags: {
-    additionalProp1: 'string'
-    additionalProp2: 'string'
-    additionalProp3: 'string'
   }
 }
 ```

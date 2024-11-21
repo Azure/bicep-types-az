@@ -1,4 +1,8 @@
 # Microsoft.HealthcareApis
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.healthcareapis/services
 
@@ -176,6 +180,76 @@ resource exampleResource 'Microsoft.HealthcareApis/workspaces/dicomservices@2023
 }
 ```
 
+## microsoft.healthcareapis/workspaces/fhirservices
+
+Create or update a Fhir Service
+```bicep
+resource exampleResource 'Microsoft.HealthcareApis/workspaces/fhirservices@2023-11-01' = {
+  parent: parentResource 
+  name: 'example'
+  identity: {
+    type: 'UserAssigned'
+    userAssignedIdentities: {
+      /subscriptions/subid/resourcegroups/testRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/test-mi: {
+      }
+    }
+  }
+  kind: 'fhir-R4'
+  location: 'westus'
+  properties: {
+    acrConfiguration: {
+      loginServers: [
+        'test1.azurecr.io'
+      ]
+    }
+    authenticationConfiguration: {
+      audience: 'https://azurehealthcareapis.com'
+      authority: 'https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc'
+      smartProxyEnabled: true
+    }
+    corsConfiguration: {
+      allowCredentials: false
+      headers: [
+        '*'
+      ]
+      maxAge: 1440
+      methods: [
+        'DELETE'
+        'GET'
+        'OPTIONS'
+        'PATCH'
+        'POST'
+        'PUT'
+      ]
+      origins: [
+        '*'
+      ]
+    }
+    encryption: {
+      customerManagedKeyEncryption: {
+        keyEncryptionKeyUrl: 'https://mykeyvault.vault.azure.net/keys/myEncryptionKey/myKeyVersion'
+      }
+    }
+    exportConfiguration: {
+      storageAccountName: 'existingStorageAccount'
+    }
+    implementationGuidesConfiguration: {
+      usCoreMissingData: false
+    }
+    importConfiguration: {
+      enabled: false
+      initialImportMode: false
+      integrationDataStore: 'existingStorageAccount'
+    }
+  }
+  tags: {
+    additionalProp1: 'string'
+    additionalProp2: 'string'
+    additionalProp3: 'string'
+  }
+}
+```
+
 ## microsoft.healthcareapis/workspaces/iotconnectors
 
 Create an IoT Connector
@@ -263,76 +337,6 @@ resource exampleResource 'Microsoft.HealthcareApis/workspaces/iotconnectors/fhir
     }
     fhirServiceResourceId: 'subscriptions/11111111-2222-3333-4444-555566667777/resourceGroups/myrg/providers/Microsoft.HealthcareApis/workspaces/myworkspace/fhirservices/myfhirservice'
     resourceIdentityResolutionType: 'Create'
-  }
-}
-```
-
-## microsoft.healthcareapis/workspaces/fhirservices
-
-Create or update a Fhir Service
-```bicep
-resource exampleResource 'Microsoft.HealthcareApis/workspaces/fhirservices@2023-11-01' = {
-  parent: parentResource 
-  name: 'example'
-  identity: {
-    type: 'UserAssigned'
-    userAssignedIdentities: {
-      /subscriptions/subid/resourcegroups/testRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/test-mi: {
-      }
-    }
-  }
-  kind: 'fhir-R4'
-  location: 'westus'
-  properties: {
-    acrConfiguration: {
-      loginServers: [
-        'test1.azurecr.io'
-      ]
-    }
-    authenticationConfiguration: {
-      audience: 'https://azurehealthcareapis.com'
-      authority: 'https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc'
-      smartProxyEnabled: true
-    }
-    corsConfiguration: {
-      allowCredentials: false
-      headers: [
-        '*'
-      ]
-      maxAge: 1440
-      methods: [
-        'DELETE'
-        'GET'
-        'OPTIONS'
-        'PATCH'
-        'POST'
-        'PUT'
-      ]
-      origins: [
-        '*'
-      ]
-    }
-    encryption: {
-      customerManagedKeyEncryption: {
-        keyEncryptionKeyUrl: 'https://mykeyvault.vault.azure.net/keys/myEncryptionKey/myKeyVersion'
-      }
-    }
-    exportConfiguration: {
-      storageAccountName: 'existingStorageAccount'
-    }
-    implementationGuidesConfiguration: {
-      usCoreMissingData: false
-    }
-    importConfiguration: {
-      enabled: false
-      initialImportMode: false
-      integrationDataStore: 'existingStorageAccount'
-    }
-  }
-  tags: {
-    additionalProp1: 'string'
-    additionalProp2: 'string'
-    additionalProp3: 'string'
   }
 }
 ```

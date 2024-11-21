@@ -1,4 +1,8 @@
 # Microsoft.Kusto
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.kusto/clusters
 
@@ -26,20 +30,6 @@ resource exampleResource 'Microsoft.Kusto/clusters@2019-09-07' = {
 }
 ```
 
-## microsoft.kusto/clusters/databases
-
-KustoDatabasesCreateOrUpdate
-```bicep
-resource exampleResource 'Microsoft.Kusto/clusters/databases@2019-09-07' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'westus'
-  properties: {
-    softDeletePeriod: 'P1D'
-  }
-}
-```
-
 ## microsoft.kusto/clusters/attacheddatabaseconfigurations
 
 AttachedDatabaseConfigurationsCreateOrUpdate
@@ -52,6 +42,20 @@ resource exampleResource 'Microsoft.Kusto/clusters/attachedDatabaseConfiguration
     clusterResourceId: '/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/Clusters/KustoClusterLeader'
     databaseName: 'db1'
     defaultPrincipalsModificationKind: 'Union'
+  }
+}
+```
+
+## microsoft.kusto/clusters/databases
+
+KustoDatabasesCreateOrUpdate
+```bicep
+resource exampleResource 'Microsoft.Kusto/clusters/databases@2019-09-07' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'westus'
+  properties: {
+    softDeletePeriod: 'P1D'
   }
 }
 ```

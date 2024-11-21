@@ -1,4 +1,8 @@
 # Microsoft.Cache
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.cache/redis
 
@@ -44,6 +48,21 @@ resource exampleResource 'Microsoft.Cache/redis/firewallRules@2020-12-01' = {
 }
 ```
 
+## microsoft.cache/redis/linkedservers
+
+LinkedServer_Create
+```bicep
+resource exampleResource 'Microsoft.Cache/redis/linkedServers@2020-12-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    linkedRedisCacheId: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/Redis/cache2'
+    linkedRedisCacheLocation: 'West US'
+    serverRole: 'Secondary'
+  }
+}
+```
+
 ## microsoft.cache/redis/patchschedules
 
 RedisCachePatchSchedulesCreateOrUpdate
@@ -63,21 +82,6 @@ resource exampleResource 'Microsoft.Cache/redis/patchSchedules@2020-12-01' = {
         startHourUtc: 12
       }
     ]
-  }
-}
-```
-
-## microsoft.cache/redis/linkedservers
-
-LinkedServer_Create
-```bicep
-resource exampleResource 'Microsoft.Cache/redis/linkedServers@2020-12-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    linkedRedisCacheId: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/Redis/cache2'
-    linkedRedisCacheLocation: 'West US'
-    serverRole: 'Secondary'
   }
 }
 ```

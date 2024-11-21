@@ -1,4 +1,20 @@
 # Microsoft.ManagedServices
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
+
+## microsoft.managedservices/registrationassignments
+
+Put Registration Assignment
+```bicep
+resource exampleResource 'Microsoft.ManagedServices/registrationAssignments@2022-01-01-preview' = {
+  name: 'example'
+  properties: {
+    registrationDefinitionId: '/subscriptions/0afefe50-734e-4610-8a82-a144ahf49dea/providers/Microsoft.ManagedServices/registrationDefinitions/26c128c2-fefa-4340-9bb1-6e081c90ada2'
+  }
+}
+```
 
 ## microsoft.managedservices/registrationdefinitions
 
@@ -48,18 +64,6 @@ resource exampleResource 'Microsoft.ManagedServices/registrationDefinitions@2022
     ]
     managedByTenantId: '83abe5cd-bcc3-441a-bd86-e6a75360cecc'
     registrationDefinitionName: 'DefinitionName'
-  }
-}
-```
-
-## microsoft.managedservices/registrationassignments
-
-Put Registration Assignment
-```bicep
-resource exampleResource 'Microsoft.ManagedServices/registrationAssignments@2022-01-01-preview' = {
-  name: 'example'
-  properties: {
-    registrationDefinitionId: '/subscriptions/0afefe50-734e-4610-8a82-a144ahf49dea/providers/Microsoft.ManagedServices/registrationDefinitions/26c128c2-fefa-4340-9bb1-6e081c90ada2'
   }
 }
 ```

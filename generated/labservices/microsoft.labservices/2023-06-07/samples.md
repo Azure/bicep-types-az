@@ -1,17 +1,8 @@
 # Microsoft.LabServices
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
 
-## microsoft.labservices/labplans/images
-
-putImage
-```bicep
-resource exampleResource 'Microsoft.LabServices/labPlans/images@2023-06-07' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    enabledState: 'Enabled'
-  }
-}
-```
 
 ## microsoft.labservices/labplans
 
@@ -45,6 +36,19 @@ resource exampleResource 'Microsoft.LabServices/labPlans@2023-06-07' = {
       phone: '+1-202-555-0123'
       url: 'help.contoso.com'
     }
+  }
+}
+```
+
+## microsoft.labservices/labplans/images
+
+putImage
+```bicep
+resource exampleResource 'Microsoft.LabServices/labPlans/images@2023-06-07' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    enabledState: 'Enabled'
   }
 }
 ```

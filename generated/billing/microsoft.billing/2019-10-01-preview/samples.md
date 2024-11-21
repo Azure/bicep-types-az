@@ -1,19 +1,8 @@
 # Microsoft.Billing
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
 
-## microsoft.billing/billingaccounts/billingprofiles/instructions
-
-PutInstruction
-```bicep
-resource exampleResource 'Microsoft.Billing/billingAccounts/billingProfiles/instructions@2019-10-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    amount: 5000
-    endDate: '2020-12-30T21:26:47.997Z'
-    startDate: '2019-12-30T21:26:47.997Z'
-  }
-}
-```
 
 ## microsoft.billing/billingaccounts/billingprofiles
 
@@ -45,6 +34,21 @@ resource exampleResource 'Microsoft.Billing/billingAccounts/billingProfiles@2019
 }
 ```
 
+## microsoft.billing/billingaccounts/billingprofiles/instructions
+
+PutInstruction
+```bicep
+resource exampleResource 'Microsoft.Billing/billingAccounts/billingProfiles/instructions@2019-10-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    amount: 5000
+    endDate: '2020-12-30T21:26:47.997Z'
+    startDate: '2019-12-30T21:26:47.997Z'
+  }
+}
+```
+
 ## microsoft.billing/billingaccounts/billingprofiles/invoicesections
 
 CreateInvoiceSection
@@ -71,19 +75,6 @@ resource exampleResource 'Microsoft.Billing/billingAccounts/billingProfiles/poli
 }
 ```
 
-## microsoft.billing/billingaccounts/customers/policies
-
-UpdateCustomer
-```bicep
-resource exampleResource 'Microsoft.Billing/billingAccounts/customers/policies@2019-10-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    viewCharges: 'NotAllowed'
-  }
-}
-```
-
 ## microsoft.billing/billingaccounts/billingroleassignments
 
 PutEnrollmentAdministratorRoleAssignment
@@ -95,6 +86,19 @@ resource exampleResource 'Microsoft.Billing/billingAccounts/billingRoleAssignmen
     principalId: '99a1a759-30dd-42c2-828c-db398826bb67'
     principalTenantId: '7ca289b9-c32d-4f01-8566-7ff93261d76f'
     roleDefinitionId: '/providers/Microsoft.Billing/billingAccounts/7898901/billingRoleDefinitions/9f1983cb-2574-400c-87e9-34cf8e2280db'
+  }
+}
+```
+
+## microsoft.billing/billingaccounts/customers/policies
+
+UpdateCustomer
+```bicep
+resource exampleResource 'Microsoft.Billing/billingAccounts/customers/policies@2019-10-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    viewCharges: 'NotAllowed'
   }
 }
 ```

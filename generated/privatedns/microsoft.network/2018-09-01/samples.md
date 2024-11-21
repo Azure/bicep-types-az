@@ -1,4 +1,8 @@
 # Microsoft.Network
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.network/privatednszones
 
@@ -7,26 +11,6 @@ PUT Private DNS Zone
 resource exampleResource 'Microsoft.Network/privateDnsZones@2018-09-01' = {
   name: 'example'
   location: 'Global'
-  tags: {
-    key1: 'value1'
-  }
-}
-```
-
-## microsoft.network/privatednszones/virtualnetworklinks
-
-PUT Private DNS Zone Virtual Network Link
-```bicep
-resource exampleResource 'Microsoft.Network/privateDnsZones/virtualNetworkLinks@2018-09-01' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'Global'
-  properties: {
-    registrationEnabled: false
-    virtualNetwork: {
-      id: '/subscriptions/virtualNetworkSubscriptionId/resourceGroups/virtualNetworkResourceGroup/providers/Microsoft.Network/virtualNetworks/virtualNetworkName'
-    }
-  }
   tags: {
     key1: 'value1'
   }
@@ -1333,6 +1317,26 @@ resource exampleResource 'Microsoft.Network/privateDnsZones/TXT@2018-09-01' = {
         ]
       }
     ]
+  }
+}
+```
+
+## microsoft.network/privatednszones/virtualnetworklinks
+
+PUT Private DNS Zone Virtual Network Link
+```bicep
+resource exampleResource 'Microsoft.Network/privateDnsZones/virtualNetworkLinks@2018-09-01' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'Global'
+  properties: {
+    registrationEnabled: false
+    virtualNetwork: {
+      id: '/subscriptions/virtualNetworkSubscriptionId/resourceGroups/virtualNetworkResourceGroup/providers/Microsoft.Network/virtualNetworks/virtualNetworkName'
+    }
+  }
+  tags: {
+    key1: 'value1'
   }
 }
 ```

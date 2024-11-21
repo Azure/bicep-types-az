@@ -1,4 +1,8 @@
 # Microsoft.ServiceBus
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.servicebus/namespaces
 
@@ -14,6 +18,50 @@ resource exampleResource 'Microsoft.ServiceBus/namespaces@2022-01-01-preview' = 
   tags: {
     tag1: 'value1'
     tag2: 'value2'
+  }
+}
+```
+
+## microsoft.servicebus/namespaces/authorizationrules
+
+NameSpaceAuthorizationRuleCreate
+```bicep
+resource exampleResource 'Microsoft.ServiceBus/namespaces/AuthorizationRules@2022-01-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    rights: [
+      'Listen'
+      'Send'
+    ]
+  }
+}
+```
+
+## microsoft.servicebus/namespaces/disasterrecoveryconfigs
+
+SBAliasCreate
+```bicep
+resource exampleResource 'Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs@2022-01-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    alternateName: 'alternameforAlias-Namespace-8860'
+    partnerNamespace: 'sdk-Namespace-37'
+  }
+}
+```
+
+## microsoft.servicebus/namespaces/migrationconfigurations
+
+MigrationConfigurationsStartMigration
+```bicep
+resource exampleResource 'Microsoft.ServiceBus/namespaces/migrationConfigurations@2022-01-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    postMigrationName: 'sdk-PostMigration-5919'
+    targetNamespace: '/subscriptions/SubscriptionId/resourceGroups/ResourceGroup/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-4028'
   }
 }
 ```
@@ -73,22 +121,6 @@ resource exampleResource 'Microsoft.ServiceBus/namespaces/networkRuleSets@2022-0
 }
 ```
 
-## microsoft.servicebus/namespaces/authorizationrules
-
-NameSpaceAuthorizationRuleCreate
-```bicep
-resource exampleResource 'Microsoft.ServiceBus/namespaces/AuthorizationRules@2022-01-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    rights: [
-      'Listen'
-      'Send'
-    ]
-  }
-}
-```
-
 ## microsoft.servicebus/namespaces/privateendpointconnections
 
 NameSpacePrivateEndPointConnectionCreate
@@ -109,30 +141,15 @@ resource exampleResource 'Microsoft.ServiceBus/namespaces/privateEndpointConnect
 }
 ```
 
-## microsoft.servicebus/namespaces/disasterrecoveryconfigs
+## microsoft.servicebus/namespaces/queues
 
-SBAliasCreate
+QueueCreate
 ```bicep
-resource exampleResource 'Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs@2022-01-01-preview' = {
+resource exampleResource 'Microsoft.ServiceBus/namespaces/queues@2022-01-01-preview' = {
   parent: parentResource 
   name: 'example'
   properties: {
-    alternateName: 'alternameforAlias-Namespace-8860'
-    partnerNamespace: 'sdk-Namespace-37'
-  }
-}
-```
-
-## microsoft.servicebus/namespaces/migrationconfigurations
-
-MigrationConfigurationsStartMigration
-```bicep
-resource exampleResource 'Microsoft.ServiceBus/namespaces/migrationConfigurations@2022-01-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    postMigrationName: 'sdk-PostMigration-5919'
-    targetNamespace: '/subscriptions/SubscriptionId/resourceGroups/ResourceGroup/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-4028'
+    enablePartitioning: true
   }
 }
 ```
@@ -153,15 +170,15 @@ resource exampleResource 'Microsoft.ServiceBus/namespaces/queues/authorizationRu
 }
 ```
 
-## microsoft.servicebus/namespaces/queues
+## microsoft.servicebus/namespaces/topics
 
-QueueCreate
+TopicCreate
 ```bicep
-resource exampleResource 'Microsoft.ServiceBus/namespaces/queues@2022-01-01-preview' = {
+resource exampleResource 'Microsoft.ServiceBus/namespaces/topics@2022-01-01-preview' = {
   parent: parentResource 
   name: 'example'
   properties: {
-    enablePartitioning: true
+    enableExpress: true
   }
 }
 ```
@@ -182,15 +199,15 @@ resource exampleResource 'Microsoft.ServiceBus/namespaces/topics/authorizationRu
 }
 ```
 
-## microsoft.servicebus/namespaces/topics
+## microsoft.servicebus/namespaces/topics/subscriptions
 
-TopicCreate
+SubscriptionCreate
 ```bicep
-resource exampleResource 'Microsoft.ServiceBus/namespaces/topics@2022-01-01-preview' = {
+resource exampleResource 'Microsoft.ServiceBus/namespaces/topics/subscriptions@2022-01-01-preview' = {
   parent: parentResource 
   name: 'example'
   properties: {
-    enableExpress: true
+    enableBatchedOperations: true
   }
 }
 ```
@@ -231,19 +248,6 @@ resource exampleResource 'Microsoft.ServiceBus/namespaces/topics/subscriptions/r
     sqlFilter: {
       sqlExpression: 'myproperty=test'
     }
-  }
-}
-```
-
-## microsoft.servicebus/namespaces/topics/subscriptions
-
-SubscriptionCreate
-```bicep
-resource exampleResource 'Microsoft.ServiceBus/namespaces/topics/subscriptions@2022-01-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    enableBatchedOperations: true
   }
 }
 ```

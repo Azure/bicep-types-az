@@ -1,19 +1,8 @@
 # Microsoft.Billing
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
 
-## microsoft.billing/billingaccounts/billingprofiles/instructions
-
-PutInstruction
-```bicep
-resource exampleResource 'Microsoft.Billing/billingAccounts/billingProfiles/instructions@2020-05-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    amount: 5000
-    endDate: '2020-12-30T21:26:47.997Z'
-    startDate: '2019-12-30T21:26:47.997Z'
-  }
-}
-```
 
 ## microsoft.billing/billingaccounts/billingprofiles
 
@@ -43,6 +32,21 @@ resource exampleResource 'Microsoft.Billing/billingAccounts/billingProfiles@2020
     ]
     invoiceEmailOptIn: true
     poNumber: 'ABC12345'
+  }
+}
+```
+
+## microsoft.billing/billingaccounts/billingprofiles/instructions
+
+PutInstruction
+```bicep
+resource exampleResource 'Microsoft.Billing/billingAccounts/billingProfiles/instructions@2020-05-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    amount: 5000
+    endDate: '2020-12-30T21:26:47.997Z'
+    startDate: '2019-12-30T21:26:47.997Z'
   }
 }
 ```

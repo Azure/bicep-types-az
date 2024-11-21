@@ -1,18 +1,8 @@
 # Microsoft.HybridCloud
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
 
-## microsoft.hybridcloud/cloudconnectors
-
-Create a Cloud Connector
-```bicep
-resource exampleResource 'Microsoft.HybridCloud/cloudConnectors@2023-01-01-preview' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    accountId: '123456789012'
-    cloudType: 'AWS'
-  }
-}
-```
 
 ## microsoft.hybridcloud/cloudconnections
 
@@ -30,6 +20,20 @@ resource exampleResource 'Microsoft.HybridCloud/cloudConnections@2023-01-01-prev
     virtualHub: {
       id: '/subscriptions/subid/resourceGroups/demo-rg/providers/Microsoft.Network/VirtualHubs/testHub'
     }
+  }
+}
+```
+
+## microsoft.hybridcloud/cloudconnectors
+
+Create a Cloud Connector
+```bicep
+resource exampleResource 'Microsoft.HybridCloud/cloudConnectors@2023-01-01-preview' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    accountId: '123456789012'
+    cloudType: 'AWS'
   }
 }
 ```

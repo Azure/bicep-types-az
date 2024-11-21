@@ -1,18 +1,8 @@
 # Microsoft.Solutions
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
 
-## microsoft.solutions/applications
-
-Create or update managed application
-```bicep
-resource exampleResource 'Microsoft.Solutions/applications@2017-09-01' = {
-  name: 'example'
-  kind: 'ServiceCatalog'
-  location: 'East US 2'
-  properties: {
-    managedResourceGroupId: '/subscriptions/subid/resourceGroups/myManagedRG'
-  }
-}
-```
 
 ## microsoft.solutions/applicationdefinitions
 
@@ -32,6 +22,20 @@ resource exampleResource 'Microsoft.Solutions/applicationDefinitions@2017-09-01'
     displayName: 'myManagedApplicationDef'
     lockLevel: 'None'
     packageFileUri: 'https://path/to/packagezipfile'
+  }
+}
+```
+
+## microsoft.solutions/applications
+
+Create or update managed application
+```bicep
+resource exampleResource 'Microsoft.Solutions/applications@2017-09-01' = {
+  name: 'example'
+  kind: 'ServiceCatalog'
+  location: 'East US 2'
+  properties: {
+    managedResourceGroupId: '/subscriptions/subid/resourceGroups/myManagedRG'
   }
 }
 ```

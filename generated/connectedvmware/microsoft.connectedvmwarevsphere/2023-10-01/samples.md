@@ -1,46 +1,14 @@
 # Microsoft.ConnectedVMwarevSphere
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
 
-## microsoft.connectedvmwarevsphere/resourcepools
-
-CreateResourcePool
-```bicep
-resource exampleResource 'Microsoft.ConnectedVMwarevSphere/resourcePools@2023-10-01' = {
-  name: 'example'
-  extendedLocation: {
-    name: '/subscriptions/a5015e1c-867f-4533-8541-85cd470d0cfb/resourceGroups/demoRG/providers/Microsoft.ExtendedLocation/customLocations/contoso'
-    type: 'customLocation'
-  }
-  location: 'East US'
-  properties: {
-    moRefId: 'aaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee'
-    vCenterId: '/subscriptions/fd3c3665-1729-4b7b-9a38-238e83b0f98b/resourceGroups/testrg/providers/Microsoft.ConnectedVMwarevSphere/VCenters/ContosoVCenter'
-  }
-}
-```
 
 ## microsoft.connectedvmwarevsphere/clusters
 
 CreateCluster
 ```bicep
 resource exampleResource 'Microsoft.ConnectedVMwarevSphere/clusters@2023-10-01' = {
-  name: 'example'
-  extendedLocation: {
-    name: '/subscriptions/a5015e1c-867f-4533-8541-85cd470d0cfb/resourceGroups/demoRG/providers/Microsoft.ExtendedLocation/customLocations/contoso'
-    type: 'customLocation'
-  }
-  location: 'East US'
-  properties: {
-    moRefId: 'aaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee'
-    vCenterId: '/subscriptions/fd3c3665-1729-4b7b-9a38-238e83b0f98b/resourceGroups/testrg/providers/Microsoft.ConnectedVMwarevSphere/VCenters/ContosoVCenter'
-  }
-}
-```
-
-## microsoft.connectedvmwarevsphere/hosts
-
-CreateHost
-```bicep
-resource exampleResource 'Microsoft.ConnectedVMwarevSphere/hosts@2023-10-01' = {
   name: 'example'
   extendedLocation: {
     name: '/subscriptions/a5015e1c-867f-4533-8541-85cd470d0cfb/resourceGroups/demoRG/providers/Microsoft.ExtendedLocation/customLocations/contoso'
@@ -72,6 +40,42 @@ resource exampleResource 'Microsoft.ConnectedVMwarevSphere/datastores@2023-10-01
 }
 ```
 
+## microsoft.connectedvmwarevsphere/hosts
+
+CreateHost
+```bicep
+resource exampleResource 'Microsoft.ConnectedVMwarevSphere/hosts@2023-10-01' = {
+  name: 'example'
+  extendedLocation: {
+    name: '/subscriptions/a5015e1c-867f-4533-8541-85cd470d0cfb/resourceGroups/demoRG/providers/Microsoft.ExtendedLocation/customLocations/contoso'
+    type: 'customLocation'
+  }
+  location: 'East US'
+  properties: {
+    moRefId: 'aaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee'
+    vCenterId: '/subscriptions/fd3c3665-1729-4b7b-9a38-238e83b0f98b/resourceGroups/testrg/providers/Microsoft.ConnectedVMwarevSphere/VCenters/ContosoVCenter'
+  }
+}
+```
+
+## microsoft.connectedvmwarevsphere/resourcepools
+
+CreateResourcePool
+```bicep
+resource exampleResource 'Microsoft.ConnectedVMwarevSphere/resourcePools@2023-10-01' = {
+  name: 'example'
+  extendedLocation: {
+    name: '/subscriptions/a5015e1c-867f-4533-8541-85cd470d0cfb/resourceGroups/demoRG/providers/Microsoft.ExtendedLocation/customLocations/contoso'
+    type: 'customLocation'
+  }
+  location: 'East US'
+  properties: {
+    moRefId: 'aaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee'
+    vCenterId: '/subscriptions/fd3c3665-1729-4b7b-9a38-238e83b0f98b/resourceGroups/testrg/providers/Microsoft.ConnectedVMwarevSphere/VCenters/ContosoVCenter'
+  }
+}
+```
+
 ## microsoft.connectedvmwarevsphere/vcenters
 
 CreateVCenter
@@ -90,42 +94,6 @@ resource exampleResource 'Microsoft.ConnectedVMwarevSphere/vcenters@2023-10-01' 
     }
     fqdn: 'ContosoVMware.contoso.com'
     port: 1234
-  }
-}
-```
-
-## microsoft.connectedvmwarevsphere/virtualmachinetemplates
-
-CreateVirtualMachineTemplate
-```bicep
-resource exampleResource 'Microsoft.ConnectedVMwarevSphere/virtualMachineTemplates@2023-10-01' = {
-  name: 'example'
-  extendedLocation: {
-    name: '/subscriptions/a5015e1c-867f-4533-8541-85cd470d0cfb/resourceGroups/demoRG/providers/Microsoft.ExtendedLocation/customLocations/contoso'
-    type: 'customLocation'
-  }
-  location: 'East US'
-  properties: {
-    moRefId: 'aaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee'
-    vCenterId: '/subscriptions/fd3c3665-1729-4b7b-9a38-238e83b0f98b/resourceGroups/testrg/providers/Microsoft.ConnectedVMwarevSphere/VCenters/ContosoVCenter'
-  }
-}
-```
-
-## microsoft.connectedvmwarevsphere/virtualnetworks
-
-CreateVirtualNetwork
-```bicep
-resource exampleResource 'Microsoft.ConnectedVMwarevSphere/virtualNetworks@2023-10-01' = {
-  name: 'example'
-  extendedLocation: {
-    name: '/subscriptions/a5015e1c-867f-4533-8541-85cd470d0cfb/resourceGroups/demoRG/providers/Microsoft.ExtendedLocation/customLocations/contoso'
-    type: 'customLocation'
-  }
-  location: 'East US'
-  properties: {
-    moRefId: 'aaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee'
-    vCenterId: '/subscriptions/fd3c3665-1729-4b7b-9a38-238e83b0f98b/resourceGroups/testrg/providers/Microsoft.ConnectedVMwarevSphere/VCenters/ContosoVCenter'
   }
 }
 ```
@@ -186,6 +154,42 @@ resource exampleResource 'Microsoft.ConnectedVMwarevSphere/virtualMachineInstanc
     }
     privateLinkScopeResourceId: '/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.HybridCompute/privateLinkScopes/privateLinkScopeName'
     provisioningAction: 'install'
+  }
+}
+```
+
+## microsoft.connectedvmwarevsphere/virtualmachinetemplates
+
+CreateVirtualMachineTemplate
+```bicep
+resource exampleResource 'Microsoft.ConnectedVMwarevSphere/virtualMachineTemplates@2023-10-01' = {
+  name: 'example'
+  extendedLocation: {
+    name: '/subscriptions/a5015e1c-867f-4533-8541-85cd470d0cfb/resourceGroups/demoRG/providers/Microsoft.ExtendedLocation/customLocations/contoso'
+    type: 'customLocation'
+  }
+  location: 'East US'
+  properties: {
+    moRefId: 'aaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee'
+    vCenterId: '/subscriptions/fd3c3665-1729-4b7b-9a38-238e83b0f98b/resourceGroups/testrg/providers/Microsoft.ConnectedVMwarevSphere/VCenters/ContosoVCenter'
+  }
+}
+```
+
+## microsoft.connectedvmwarevsphere/virtualnetworks
+
+CreateVirtualNetwork
+```bicep
+resource exampleResource 'Microsoft.ConnectedVMwarevSphere/virtualNetworks@2023-10-01' = {
+  name: 'example'
+  extendedLocation: {
+    name: '/subscriptions/a5015e1c-867f-4533-8541-85cd470d0cfb/resourceGroups/demoRG/providers/Microsoft.ExtendedLocation/customLocations/contoso'
+    type: 'customLocation'
+  }
+  location: 'East US'
+  properties: {
+    moRefId: 'aaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee'
+    vCenterId: '/subscriptions/fd3c3665-1729-4b7b-9a38-238e83b0f98b/resourceGroups/testrg/providers/Microsoft.ConnectedVMwarevSphere/VCenters/ContosoVCenter'
   }
 }
 ```

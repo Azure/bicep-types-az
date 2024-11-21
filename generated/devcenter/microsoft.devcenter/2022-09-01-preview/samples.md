@@ -1,4 +1,8 @@
 # Microsoft.DevCenter
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.devcenter/devcenters
 
@@ -35,23 +39,6 @@ resource exampleResource 'Microsoft.DevCenter/devcenters@2022-09-01-preview' = {
 }
 ```
 
-## microsoft.devcenter/projects
-
-Projects_CreateOrUpdate
-```bicep
-resource exampleResource 'Microsoft.DevCenter/projects@2022-09-01-preview' = {
-  name: 'example'
-  location: 'centralus'
-  properties: {
-    description: 'This is my first project.'
-    devCenterId: '/subscriptions/{subscriptionId}/resourceGroups/rg1/providers/Microsoft.DevCenter/devcenters/{devCenterName}'
-  }
-  tags: {
-    CostCenter: 'R&D'
-  }
-}
-```
-
 ## microsoft.devcenter/devcenters/attachednetworks
 
 AttachedNetworks_Create
@@ -61,19 +48,6 @@ resource exampleResource 'Microsoft.DevCenter/devcenters/attachednetworks@2022-0
   name: 'example'
   properties: {
     networkConnectionId: '/subscriptions/{subscriptionId}/resourceGroups/rg1/providers/Microsoft.DevCenter/NetworkConnections/network-uswest3'
-  }
-}
-```
-
-## microsoft.devcenter/devcenters/galleries
-
-Galleries_CreateOrUpdate
-```bicep
-resource exampleResource 'Microsoft.DevCenter/devcenters/galleries@2022-09-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    galleryResourceId: '/subscriptions/{subscriptionId}/resourceGroups/rg1/providers/Microsoft.Compute/galleries/{galleryName}'
   }
 }
 ```
@@ -112,6 +86,26 @@ resource exampleResource 'Microsoft.DevCenter/devcenters/catalogs@2022-09-01-pre
 }
 ```
 
+## microsoft.devcenter/devcenters/devboxdefinitions
+
+DevBoxDefinitions_Create
+```bicep
+resource exampleResource 'Microsoft.DevCenter/devcenters/devboxdefinitions@2022-09-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'centralus'
+  properties: {
+    imageReference: {
+      id: '/subscriptions/0ac520ee-14c0-480f-b6c9-0a90c58ffff/resourceGroups/Example/providers/Microsoft.DevCenter/devcenters/Contoso/galleries/contosogallery/images/exampleImage/version/1.0.0'
+    }
+    osStorageType: 'SSD_1024'
+    sku: {
+      name: 'Preview'
+    }
+  }
+}
+```
+
 ## microsoft.devcenter/devcenters/environmenttypes
 
 EnvironmentTypes_CreateOrUpdate
@@ -121,6 +115,54 @@ resource exampleResource 'Microsoft.DevCenter/devcenters/environmentTypes@2022-0
   name: 'example'
   tags: {
     Owner: 'superuser'
+  }
+}
+```
+
+## microsoft.devcenter/devcenters/galleries
+
+Galleries_CreateOrUpdate
+```bicep
+resource exampleResource 'Microsoft.DevCenter/devcenters/galleries@2022-09-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    galleryResourceId: '/subscriptions/{subscriptionId}/resourceGroups/rg1/providers/Microsoft.Compute/galleries/{galleryName}'
+  }
+}
+```
+
+## microsoft.devcenter/networkconnections
+
+NetworkConnections_CreateOrUpdate
+```bicep
+resource exampleResource 'Microsoft.DevCenter/networkConnections@2022-09-01-preview' = {
+  name: 'example'
+  location: 'centralus'
+  properties: {
+    domainJoinType: 'HybridAzureADJoin'
+    domainName: 'mydomaincontroller.local'
+    domainPassword: 'Password value for user'
+    domainUsername: 'testuser@mydomaincontroller.local'
+    networkingResourceGroupName: 'NetworkInterfaces'
+    subnetId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ExampleRG/providers/Microsoft.Network/virtualNetworks/ExampleVNet/subnets/default'
+  }
+}
+```
+
+## microsoft.devcenter/projects
+
+Projects_CreateOrUpdate
+```bicep
+resource exampleResource 'Microsoft.DevCenter/projects@2022-09-01-preview' = {
+  name: 'example'
+  location: 'centralus'
+  properties: {
+    description: 'This is my first project.'
+    devCenterId: '/subscriptions/{subscriptionId}/resourceGroups/rg1/providers/Microsoft.DevCenter/devcenters/{devCenterName}'
+  }
+  tags: {
+    CostCenter: 'R&D'
   }
 }
 ```
@@ -163,26 +205,6 @@ resource exampleResource 'Microsoft.DevCenter/projects/environmentTypes@2022-09-
 }
 ```
 
-## microsoft.devcenter/devcenters/devboxdefinitions
-
-DevBoxDefinitions_Create
-```bicep
-resource exampleResource 'Microsoft.DevCenter/devcenters/devboxdefinitions@2022-09-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'centralus'
-  properties: {
-    imageReference: {
-      id: '/subscriptions/0ac520ee-14c0-480f-b6c9-0a90c58ffff/resourceGroups/Example/providers/Microsoft.DevCenter/devcenters/Contoso/galleries/contosogallery/images/exampleImage/version/1.0.0'
-    }
-    osStorageType: 'SSD_1024'
-    sku: {
-      name: 'Preview'
-    }
-  }
-}
-```
-
 ## microsoft.devcenter/projects/pools
 
 Pools_CreateOrUpdate
@@ -213,24 +235,6 @@ resource exampleResource 'Microsoft.DevCenter/projects/pools/schedules@2022-09-0
     state: 'Enabled'
     time: '17:30'
     timeZone: 'America/Los_Angeles'
-  }
-}
-```
-
-## microsoft.devcenter/networkconnections
-
-NetworkConnections_CreateOrUpdate
-```bicep
-resource exampleResource 'Microsoft.DevCenter/networkConnections@2022-09-01-preview' = {
-  name: 'example'
-  location: 'centralus'
-  properties: {
-    domainJoinType: 'HybridAzureADJoin'
-    domainName: 'mydomaincontroller.local'
-    domainPassword: 'Password value for user'
-    domainUsername: 'testuser@mydomaincontroller.local'
-    networkingResourceGroupName: 'NetworkInterfaces'
-    subnetId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ExampleRG/providers/Microsoft.Network/virtualNetworks/ExampleVNet/subnets/default'
   }
 }
 ```

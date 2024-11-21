@@ -1,4 +1,8 @@
 # Microsoft.Billing
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.billing/billingaccounts/associatedtenants
 
@@ -68,20 +72,74 @@ resource exampleResource 'Microsoft.Billing/billingAccounts/billingProfiles@2024
 }
 ```
 
-## microsoft.billing/billingrequests
+## microsoft.billing/billingaccounts/billingprofiles/customers/policies
 
-BillingRequestsCreateOrUpdate
+PoliciesPutByCustomer
 ```bicep
-resource exampleResource 'Microsoft.Billing/billingRequests@2024-04-01' = {
+resource exampleResource 'Microsoft.Billing/billingAccounts/billingProfiles/customers/policies@2024-04-01' = {
+  parent: parentResource 
   name: 'example'
   properties: {
-    type: 'RoleAssignment'
-    additionalInformation: {
-      RoleId: '40000000-aaaa-bbbb-cccc-200000000006'
+    viewCharges: 'Allowed'
+  }
+}
+```
+
+## microsoft.billing/billingaccounts/billingprofiles/customers/transfers
+
+InitiatePartnerTransfer
+```bicep
+resource exampleResource 'Microsoft.Billing/billingAccounts/billingProfiles/customers/transfers@2024-04-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    recipientEmailId: 'user@contoso.com'
+  }
+}
+```
+
+## microsoft.billing/billingaccounts/billingprofiles/invoicesections
+
+InvoiceSectionsCreateOrUpdate
+```bicep
+resource exampleResource 'Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections@2024-04-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    displayName: 'Invoice Section 1'
+    tags: {
+      costCategory: 'Support'
+      pcCode: 'A123456'
     }
-    decisionReason: 'New team member'
-    requestScope: '/providers/Microsoft.Billing/billingAccounts/00000000-0000-0000-0000-000000000000:00000000-0000-0000-0000-000000000000_2019-05-31/billingProfiles/xxxx-xxxx-xxx-xxx'
-    status: 'Pending'
+  }
+}
+```
+
+## microsoft.billing/billingaccounts/billingprofiles/invoicesections/transfers
+
+InitiateTransfer
+```bicep
+resource exampleResource 'Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/transfers@2024-04-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    recipientEmailId: 'user@contoso.com'
+  }
+}
+```
+
+## microsoft.billing/billingaccounts/billingprofiles/policies
+
+PoliciesPutByBillingProfile
+```bicep
+resource exampleResource 'Microsoft.Billing/billingAccounts/billingProfiles/policies@2024-04-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    invoiceSectionLabelManagement: 'Allowed'
+    marketplacePurchases: 'AllAllowed'
+    reservationPurchases: 'Allowed'
+    savingsPlanPurchases: 'Allowed'
   }
 }
 ```
@@ -98,6 +156,36 @@ resource exampleResource 'Microsoft.Billing/billingAccounts/billingRoleAssignmen
     principalTenantId: '076915e7-de10-4323-bb34-a58c904068bb'
     roleDefinitionId: '/providers/Microsoft.Billing/billingAccounts/7898901/billingRoleDefinitions/9f1983cb-2574-400c-87e9-34cf8e2280db'
     userEmailAddress: 'john@contoso.com'
+  }
+}
+```
+
+## microsoft.billing/billingaccounts/billingsubscriptionaliases
+
+BillingSubscriptionAliasCreateOrUpdate
+```bicep
+resource exampleResource 'Microsoft.Billing/billingAccounts/billingSubscriptionAliases@2024-04-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    billingFrequency: 'P1M'
+    displayName: 'Subscription 3'
+    quantity: 1
+    skuId: '0001'
+    termDuration: 'P1M'
+  }
+}
+```
+
+## microsoft.billing/billingaccounts/customers/policies
+
+PoliciesPutByCustomerAtBillingAccount
+```bicep
+resource exampleResource 'Microsoft.Billing/billingAccounts/customers/policies@2024-04-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    viewCharges: 'Allowed'
   }
 }
 ```
@@ -134,82 +222,6 @@ resource exampleResource 'Microsoft.Billing/billingAccounts/enrollmentAccounts/b
 }
 ```
 
-## microsoft.billing/billingaccounts/billingsubscriptionaliases
-
-BillingSubscriptionAliasCreateOrUpdate
-```bicep
-resource exampleResource 'Microsoft.Billing/billingAccounts/billingSubscriptionAliases@2024-04-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    billingFrequency: 'P1M'
-    displayName: 'Subscription 3'
-    quantity: 1
-    skuId: '0001'
-    termDuration: 'P1M'
-  }
-}
-```
-
-## microsoft.billing/billingaccounts/billingprofiles/invoicesections
-
-InvoiceSectionsCreateOrUpdate
-```bicep
-resource exampleResource 'Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections@2024-04-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    displayName: 'Invoice Section 1'
-    tags: {
-      costCategory: 'Support'
-      pcCode: 'A123456'
-    }
-  }
-}
-```
-
-## microsoft.billing/billingaccounts/billingprofiles/customers/policies
-
-PoliciesPutByCustomer
-```bicep
-resource exampleResource 'Microsoft.Billing/billingAccounts/billingProfiles/customers/policies@2024-04-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    viewCharges: 'Allowed'
-  }
-}
-```
-
-## microsoft.billing/billingaccounts/billingprofiles/policies
-
-PoliciesPutByBillingProfile
-```bicep
-resource exampleResource 'Microsoft.Billing/billingAccounts/billingProfiles/policies@2024-04-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    invoiceSectionLabelManagement: 'Allowed'
-    marketplacePurchases: 'AllAllowed'
-    reservationPurchases: 'Allowed'
-    savingsPlanPurchases: 'Allowed'
-  }
-}
-```
-
-## microsoft.billing/billingaccounts/customers/policies
-
-PoliciesPutByCustomerAtBillingAccount
-```bicep
-resource exampleResource 'Microsoft.Billing/billingAccounts/customers/policies@2024-04-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    viewCharges: 'Allowed'
-  }
-}
-```
-
 ## microsoft.billing/billingaccounts/policies
 
 PoliciesPutByBillingAccount
@@ -228,28 +240,20 @@ resource exampleResource 'Microsoft.Billing/billingAccounts/policies@2024-04-01'
 }
 ```
 
-## microsoft.billing/billingaccounts/billingprofiles/invoicesections/transfers
+## microsoft.billing/billingrequests
 
-InitiateTransfer
+BillingRequestsCreateOrUpdate
 ```bicep
-resource exampleResource 'Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/transfers@2024-04-01' = {
-  parent: parentResource 
+resource exampleResource 'Microsoft.Billing/billingRequests@2024-04-01' = {
   name: 'example'
   properties: {
-    recipientEmailId: 'user@contoso.com'
-  }
-}
-```
-
-## microsoft.billing/billingaccounts/billingprofiles/customers/transfers
-
-InitiatePartnerTransfer
-```bicep
-resource exampleResource 'Microsoft.Billing/billingAccounts/billingProfiles/customers/transfers@2024-04-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    recipientEmailId: 'user@contoso.com'
+    type: 'RoleAssignment'
+    additionalInformation: {
+      RoleId: '40000000-aaaa-bbbb-cccc-200000000006'
+    }
+    decisionReason: 'New team member'
+    requestScope: '/providers/Microsoft.Billing/billingAccounts/00000000-0000-0000-0000-000000000000:00000000-0000-0000-0000-000000000000_2019-05-31/billingProfiles/xxxx-xxxx-xxx-xxx'
+    status: 'Pending'
   }
 }
 ```

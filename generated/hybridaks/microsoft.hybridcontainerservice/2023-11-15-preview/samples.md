@@ -1,4 +1,21 @@
 # Microsoft.HybridContainerService
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
+
+## microsoft.hybridcontainerservice/kubernetesversions
+
+PutKubernetesVersions
+```bicep
+resource exampleResource 'Microsoft.HybridContainerService/kubernetesVersions@2023-11-15-preview' = {
+  name: 'example'
+  extendedLocation: {
+    name: '/subscriptions/a3e42606-29b1-4d7d-b1d9-9ff6b9d3c71b/resourcegroups/test-arcappliance-resgrp/providers/microsoft.extendedlocation/customlocations/testcustomlocation'
+    type: 'CustomLocation'
+  }
+}
+```
 
 ## microsoft.hybridcontainerservice/provisionedclusterinstances
 
@@ -61,20 +78,6 @@ resource exampleResource 'Microsoft.HybridContainerService/provisionedClusterIns
 }
 ```
 
-## microsoft.hybridcontainerservice/provisionedclusterinstances/hybrididentitymetadata
-
-CreateHybridIdentityMetadata
-```bicep
-resource exampleResource 'Microsoft.HybridContainerService/provisionedClusterInstances/hybridIdentityMetadata@2023-11-15-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    publicKey: '8ec7d60c-9700-40b1-8e6e-e5b2f6f477f2'
-    resourceUid: 'f8b82dff-38ef-4220-99ef-d3a3f86ddc6c'
-  }
-}
-```
-
 ## microsoft.hybridcontainerservice/provisionedclusterinstances/agentpools
 
 PutAgentPool
@@ -91,15 +94,16 @@ resource exampleResource 'Microsoft.HybridContainerService/provisionedClusterIns
 }
 ```
 
-## microsoft.hybridcontainerservice/kubernetesversions
+## microsoft.hybridcontainerservice/provisionedclusterinstances/hybrididentitymetadata
 
-PutKubernetesVersions
+CreateHybridIdentityMetadata
 ```bicep
-resource exampleResource 'Microsoft.HybridContainerService/kubernetesVersions@2023-11-15-preview' = {
+resource exampleResource 'Microsoft.HybridContainerService/provisionedClusterInstances/hybridIdentityMetadata@2023-11-15-preview' = {
+  parent: parentResource 
   name: 'example'
-  extendedLocation: {
-    name: '/subscriptions/a3e42606-29b1-4d7d-b1d9-9ff6b9d3c71b/resourcegroups/test-arcappliance-resgrp/providers/microsoft.extendedlocation/customlocations/testcustomlocation'
-    type: 'CustomLocation'
+  properties: {
+    publicKey: '8ec7d60c-9700-40b1-8e6e-e5b2f6f477f2'
+    resourceUid: 'f8b82dff-38ef-4220-99ef-d3a3f86ddc6c'
   }
 }
 ```

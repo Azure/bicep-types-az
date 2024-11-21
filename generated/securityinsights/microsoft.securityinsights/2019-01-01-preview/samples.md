@@ -1,4 +1,94 @@
 # Microsoft.SecurityInsights
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
+
+## microsoft.securityinsights/alertrules
+
+Creates or updates a Fusion alert rule.
+```bicep
+resource exampleResource 'Microsoft.SecurityInsights/alertRules@2019-01-01-preview' = {
+  name: 'example'
+  etag: '3d00c3ca-0000-0100-0000-5d42d5010000'
+  kind: 'Fusion'
+  properties: {
+    alertRuleTemplateName: 'f71aba3d-28fb-450b-b192-4e76a83015c8'
+    enabled: true
+  }
+}
+```
+
+Creates or updates a MicrosoftSecurityIncidentCreation rule.
+```bicep
+resource exampleResource 'Microsoft.SecurityInsights/alertRules@2019-01-01-preview' = {
+  name: 'example'
+  etag: '"260097e0-0000-0d00-0000-5d6fa88f0000"'
+  kind: 'MicrosoftSecurityIncidentCreation'
+  properties: {
+    displayName: 'testing displayname'
+    enabled: true
+    productFilter: 'Microsoft Cloud App Security'
+  }
+}
+```
+
+Creates or updates a Scheduled alert rule.
+```bicep
+resource exampleResource 'Microsoft.SecurityInsights/alertRules@2019-01-01-preview' = {
+  name: 'example'
+  etag: '"0300bf09-0000-0000-0000-5c37296e0000"'
+  kind: 'Scheduled'
+  properties: {
+    description: ''
+    displayName: 'Rule2'
+    enabled: true
+    eventGroupingSettings: {
+      aggregationKind: 'AlertPerResult'
+    }
+    incidentConfiguration: {
+      createIncident: true
+      groupingConfiguration: {
+        enabled: true
+        entitiesMatchingMethod: 'Custom'
+        groupByEntities: [
+          'Host'
+          'Account'
+        ]
+        lookbackDuration: 'PT5H'
+        reopenClosedIncident: false
+      }
+    }
+    query: 'ProtectionStatus | extend HostCustomEntity = Computer | extend IPCustomEntity = ComputerIP_Hidden'
+    queryFrequency: 'PT1H'
+    queryPeriod: 'P2DT1H30M'
+    severity: 'High'
+    suppressionDuration: 'PT1H'
+    suppressionEnabled: false
+    tactics: [
+      'Persistence'
+      'LateralMovement'
+    ]
+    triggerOperator: 'GreaterThan'
+    triggerThreshold: 0
+  }
+}
+```
+
+## microsoft.securityinsights/alertrules/actions
+
+Creates or updates an action of alert rule.
+```bicep
+resource exampleResource 'Microsoft.SecurityInsights/alertRules/actions@2019-01-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  etag: '"0300bf09-0000-0000-0000-5c37296e0000"'
+  properties: {
+    logicAppResourceId: '/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.Logic/workflows/MyAlerts'
+    triggerUri: 'https://prod-31.northcentralus.logic.azure.com:443/workflows/cd3765391efd48549fd7681ded1d48d7/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=signature'
+  }
+}
+```
 
 ## microsoft.securityinsights/automationrules
 
@@ -147,92 +237,6 @@ resource exampleResource 'Microsoft.SecurityInsights/cases/relations@2019-01-01-
 }
 ```
 
-## microsoft.securityinsights/alertrules
-
-Creates or updates a Fusion alert rule.
-```bicep
-resource exampleResource 'Microsoft.SecurityInsights/alertRules@2019-01-01-preview' = {
-  name: 'example'
-  etag: '3d00c3ca-0000-0100-0000-5d42d5010000'
-  kind: 'Fusion'
-  properties: {
-    alertRuleTemplateName: 'f71aba3d-28fb-450b-b192-4e76a83015c8'
-    enabled: true
-  }
-}
-```
-
-Creates or updates a MicrosoftSecurityIncidentCreation rule.
-```bicep
-resource exampleResource 'Microsoft.SecurityInsights/alertRules@2019-01-01-preview' = {
-  name: 'example'
-  etag: '"260097e0-0000-0d00-0000-5d6fa88f0000"'
-  kind: 'MicrosoftSecurityIncidentCreation'
-  properties: {
-    displayName: 'testing displayname'
-    enabled: true
-    productFilter: 'Microsoft Cloud App Security'
-  }
-}
-```
-
-Creates or updates a Scheduled alert rule.
-```bicep
-resource exampleResource 'Microsoft.SecurityInsights/alertRules@2019-01-01-preview' = {
-  name: 'example'
-  etag: '"0300bf09-0000-0000-0000-5c37296e0000"'
-  kind: 'Scheduled'
-  properties: {
-    description: ''
-    displayName: 'Rule2'
-    enabled: true
-    eventGroupingSettings: {
-      aggregationKind: 'AlertPerResult'
-    }
-    incidentConfiguration: {
-      createIncident: true
-      groupingConfiguration: {
-        enabled: true
-        entitiesMatchingMethod: 'Custom'
-        groupByEntities: [
-          'Host'
-          'Account'
-        ]
-        lookbackDuration: 'PT5H'
-        reopenClosedIncident: false
-      }
-    }
-    query: 'ProtectionStatus | extend HostCustomEntity = Computer | extend IPCustomEntity = ComputerIP_Hidden'
-    queryFrequency: 'PT1H'
-    queryPeriod: 'P2DT1H30M'
-    severity: 'High'
-    suppressionDuration: 'PT1H'
-    suppressionEnabled: false
-    tactics: [
-      'Persistence'
-      'LateralMovement'
-    ]
-    triggerOperator: 'GreaterThan'
-    triggerThreshold: 0
-  }
-}
-```
-
-## microsoft.securityinsights/alertrules/actions
-
-Creates or updates an action of alert rule.
-```bicep
-resource exampleResource 'Microsoft.SecurityInsights/alertRules/actions@2019-01-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  etag: '"0300bf09-0000-0000-0000-5c37296e0000"'
-  properties: {
-    logicAppResourceId: '/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.Logic/workflows/MyAlerts'
-    triggerUri: 'https://prod-31.northcentralus.logic.azure.com:443/workflows/cd3765391efd48549fd7681ded1d48d7/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=signature'
-  }
-}
-```
-
 ## microsoft.securityinsights/dataconnectors
 
 Creates or updates a Dynamics365 data connector.
@@ -317,19 +321,6 @@ resource exampleResource 'Microsoft.SecurityInsights/dataConnectors@2019-01-01-p
 }
 ```
 
-## microsoft.securityinsights/settings
-
-Update EyesOn settings.
-```bicep
-resource exampleResource 'Microsoft.SecurityInsights/settings@2019-01-01-preview' = {
-  name: 'example'
-  etag: '"0300bf09-0000-0000-0000-5c37296e0000"'
-  kind: 'EyesOn'
-  properties: {
-  }
-}
-```
-
 ## microsoft.securityinsights/incidents
 
 Creates or updates an incident.
@@ -376,6 +367,19 @@ resource exampleResource 'Microsoft.SecurityInsights/incidents/relations@2019-01
   name: 'example'
   properties: {
     relatedResourceId: '/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/bookmarks/2216d0e1-91e3-4902-89fd-d2df8c535096'
+  }
+}
+```
+
+## microsoft.securityinsights/settings
+
+Update EyesOn settings.
+```bicep
+resource exampleResource 'Microsoft.SecurityInsights/settings@2019-01-01-preview' = {
+  name: 'example'
+  etag: '"0300bf09-0000-0000-0000-5c37296e0000"'
+  kind: 'EyesOn'
+  properties: {
   }
 }
 ```

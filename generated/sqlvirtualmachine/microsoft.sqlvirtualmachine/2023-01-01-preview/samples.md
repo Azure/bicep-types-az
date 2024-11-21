@@ -1,4 +1,36 @@
 # Microsoft.SqlVirtualMachine
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
+
+## microsoft.sqlvirtualmachine/sqlvirtualmachinegroups
+
+Creates or updates a SQL virtual machine group.
+```bicep
+resource exampleResource 'Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups@2023-01-01-preview' = {
+  name: 'example'
+  location: 'northeurope'
+  properties: {
+    sqlImageOffer: 'SQL2016-WS2016'
+    sqlImageSku: 'Enterprise'
+    wsfcDomainProfile: {
+      clusterBootstrapAccount: 'testrpadmin'
+      clusterOperatorAccount: 'testrp@testdomain.com'
+      clusterSubnetType: 'MultiSubnet'
+      domainFqdn: 'testdomain.com'
+      isSqlServiceAccountGmsa: false
+      ouPath: 'OU=WSCluster,DC=testdomain,DC=com'
+      sqlServiceAccount: 'sqlservice@testdomain.com'
+      storageAccountPrimaryKey: '<primary storage access key>'
+      storageAccountUrl: 'https://storgact.blob.core.windows.net/'
+    }
+  }
+  tags: {
+    mytag: 'myval'
+  }
+}
+```
 
 ## microsoft.sqlvirtualmachine/sqlvirtualmachinegroups/availabilitygrouplisteners
 
@@ -52,34 +84,6 @@ resource exampleResource 'Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/av
       }
     ]
     port: 1433
-  }
-}
-```
-
-## microsoft.sqlvirtualmachine/sqlvirtualmachinegroups
-
-Creates or updates a SQL virtual machine group.
-```bicep
-resource exampleResource 'Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups@2023-01-01-preview' = {
-  name: 'example'
-  location: 'northeurope'
-  properties: {
-    sqlImageOffer: 'SQL2016-WS2016'
-    sqlImageSku: 'Enterprise'
-    wsfcDomainProfile: {
-      clusterBootstrapAccount: 'testrpadmin'
-      clusterOperatorAccount: 'testrp@testdomain.com'
-      clusterSubnetType: 'MultiSubnet'
-      domainFqdn: 'testdomain.com'
-      isSqlServiceAccountGmsa: false
-      ouPath: 'OU=WSCluster,DC=testdomain,DC=com'
-      sqlServiceAccount: 'sqlservice@testdomain.com'
-      storageAccountPrimaryKey: '<primary storage access key>'
-      storageAccountUrl: 'https://storgact.blob.core.windows.net/'
-    }
-  }
-  tags: {
-    mytag: 'myval'
   }
 }
 ```

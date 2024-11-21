@@ -1,14 +1,32 @@
 # Microsoft.KeyVault
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
 
-## microsoft.keyvault/vaults/keys
 
-Create a key
+## microsoft.keyvault/managedhsms
+
+Create a new managed HSM Pool or update an existing managed HSM Pool
 ```bicep
-resource exampleResource 'Microsoft.KeyVault/vaults/keys@2024-04-01-preview' = {
-  parent: parentResource 
+resource exampleResource 'Microsoft.KeyVault/managedHSMs@2024-04-01-preview' = {
   name: 'example'
+  location: 'westus'
   properties: {
-    kty: 'RSA'
+    enablePurgeProtection: false
+    enableSoftDelete: true
+    initialAdminObjectIds: [
+      '00000000-0000-0000-0000-000000000000'
+    ]
+    softDeleteRetentionInDays: 90
+    tenantId: '00000000-0000-0000-0000-000000000000'
+  }
+  sku: {
+    name: 'Standard_B1'
+    family: 'B'
+  }
+  tags: {
+    Dept: 'hsm'
+    Environment: 'dogfood'
   }
 }
 ```
@@ -22,6 +40,22 @@ resource exampleResource 'Microsoft.KeyVault/managedHSMs/keys@2024-04-01-preview
   name: 'example'
   properties: {
     kty: 'RSA'
+  }
+}
+```
+
+## microsoft.keyvault/managedhsms/privateendpointconnections
+
+ManagedHsmPutPrivateEndpointConnection
+```bicep
+resource exampleResource 'Microsoft.KeyVault/managedHSMs/privateEndpointConnections@2024-04-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    privateLinkServiceConnectionState: {
+      description: 'My name is Joe and I\'m approving this.'
+      status: 'Approved'
+    }
   }
 }
 ```
@@ -163,6 +197,19 @@ resource exampleResource 'Microsoft.KeyVault/vaults/accessPolicies@2024-04-01-pr
 }
 ```
 
+## microsoft.keyvault/vaults/keys
+
+Create a key
+```bicep
+resource exampleResource 'Microsoft.KeyVault/vaults/keys@2024-04-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    kty: 'RSA'
+  }
+}
+```
+
 ## microsoft.keyvault/vaults/privateendpointconnections
 
 KeyVaultPutPrivateEndpointConnection
@@ -171,49 +218,6 @@ resource exampleResource 'Microsoft.KeyVault/vaults/privateEndpointConnections@2
   parent: parentResource 
   name: 'example'
   etag: ''
-  properties: {
-    privateLinkServiceConnectionState: {
-      description: 'My name is Joe and I\'m approving this.'
-      status: 'Approved'
-    }
-  }
-}
-```
-
-## microsoft.keyvault/managedhsms
-
-Create a new managed HSM Pool or update an existing managed HSM Pool
-```bicep
-resource exampleResource 'Microsoft.KeyVault/managedHSMs@2024-04-01-preview' = {
-  name: 'example'
-  location: 'westus'
-  properties: {
-    enablePurgeProtection: false
-    enableSoftDelete: true
-    initialAdminObjectIds: [
-      '00000000-0000-0000-0000-000000000000'
-    ]
-    softDeleteRetentionInDays: 90
-    tenantId: '00000000-0000-0000-0000-000000000000'
-  }
-  sku: {
-    name: 'Standard_B1'
-    family: 'B'
-  }
-  tags: {
-    Dept: 'hsm'
-    Environment: 'dogfood'
-  }
-}
-```
-
-## microsoft.keyvault/managedhsms/privateendpointconnections
-
-ManagedHsmPutPrivateEndpointConnection
-```bicep
-resource exampleResource 'Microsoft.KeyVault/managedHSMs/privateEndpointConnections@2024-04-01-preview' = {
-  parent: parentResource 
-  name: 'example'
   properties: {
     privateLinkServiceConnectionState: {
       description: 'My name is Joe and I\'m approving this.'

@@ -1,4 +1,8 @@
 # Microsoft.OperationalInsights
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.operationalinsights/clusters
 
@@ -24,19 +28,6 @@ resource exampleResource 'Microsoft.OperationalInsights/clusters@2019-08-01-prev
 }
 ```
 
-## microsoft.operationalinsights/workspaces/linkedservices
-
-LinkedServicesCreate
-```bicep
-resource exampleResource 'Microsoft.OperationalInsights/workspaces/linkedServices@2019-08-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    writeAccessResourceId: '/subscriptions/00000000-0000-0000-0000-00000000000/resourceGroups/mms-eus/providers/Microsoft.OperationalInsights/automationClusters/testcluster'
-  }
-}
-```
-
 ## microsoft.operationalinsights/workspaces/dataexports
 
 DataExportCreate
@@ -51,6 +42,19 @@ resource exampleResource 'Microsoft.OperationalInsights/workspaces/dataExports@2
     tableNames: [
       'Heartbeat'
     ]
+  }
+}
+```
+
+## microsoft.operationalinsights/workspaces/linkedservices
+
+LinkedServicesCreate
+```bicep
+resource exampleResource 'Microsoft.OperationalInsights/workspaces/linkedServices@2019-08-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    writeAccessResourceId: '/subscriptions/00000000-0000-0000-0000-00000000000/resourceGroups/mms-eus/providers/Microsoft.OperationalInsights/automationClusters/testcluster'
   }
 }
 ```

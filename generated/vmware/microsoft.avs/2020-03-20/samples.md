@@ -1,4 +1,8 @@
 # Microsoft.AVS
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.avs/privateclouds
 
@@ -18,6 +22,16 @@ resource exampleResource 'Microsoft.AVS/privateClouds@2020-03-20' = {
   }
   tags: {
   }
+}
+```
+
+## microsoft.avs/privateclouds/authorizations
+
+Authorizations_CreateOrUpdate
+```bicep
+resource exampleResource 'Microsoft.AVS/privateClouds/authorizations@2020-03-20' = {
+  parent: parentResource 
+  name: 'example'
 }
 ```
 
@@ -42,16 +56,6 @@ resource exampleResource 'Microsoft.AVS/privateClouds/clusters@2020-03-20' = {
 HcxEnterpriseSites_CreateOrUpdate
 ```bicep
 resource exampleResource 'Microsoft.AVS/privateClouds/hcxEnterpriseSites@2020-03-20' = {
-  parent: parentResource 
-  name: 'example'
-}
-```
-
-## microsoft.avs/privateclouds/authorizations
-
-Authorizations_CreateOrUpdate
-```bicep
-resource exampleResource 'Microsoft.AVS/privateClouds/authorizations@2020-03-20' = {
   parent: parentResource 
   name: 'example'
 }

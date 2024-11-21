@@ -1,4 +1,8 @@
 # Microsoft.ContainerService
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.containerservice/managedclusters
 
@@ -509,74 +513,6 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2021-05-01'
 }
 ```
 
-Create Managed Cluster with PPG
-```bicep
-resource exampleResource 'Microsoft.ContainerService/managedClusters@2021-05-01' = {
-  name: 'example'
-  location: 'location1'
-  properties: {
-    addonProfiles: {
-    }
-    agentPoolProfiles: [
-      {
-        name: 'nodepool1'
-        type: 'VirtualMachineScaleSets'
-        count: 3
-        enableNodePublicIP: true
-        mode: 'System'
-        osType: 'Linux'
-        proximityPlacementGroupID: '/subscriptions/subid1/resourcegroups/rg1/providers//Microsoft.Compute/proximityPlacementGroups/ppg1'
-        vmSize: 'Standard_DS2_v2'
-      }
-    ]
-    autoScalerProfile: {
-      scale-down-delay-after-add: '15m'
-      scan-interval: '20s'
-    }
-    diskEncryptionSetID: '/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
-    dnsPrefix: 'dnsprefix1'
-    enablePodSecurityPolicy: true
-    enableRBAC: true
-    kubernetesVersion: ''
-    linuxProfile: {
-      adminUsername: 'azureuser'
-      ssh: {
-        publicKeys: [
-          {
-            keyData: 'keydata'
-          }
-        ]
-      }
-    }
-    networkProfile: {
-      loadBalancerProfile: {
-        managedOutboundIPs: {
-          count: 2
-        }
-      }
-      loadBalancerSku: 'standard'
-      outboundType: 'loadBalancer'
-    }
-    servicePrincipalProfile: {
-      clientId: 'clientid'
-      secret: 'secret'
-    }
-    windowsProfile: {
-      adminPassword: 'replacePassword1234$'
-      adminUsername: 'azureuser'
-    }
-  }
-  sku: {
-    name: 'Basic'
-    tier: 'Free'
-  }
-  tags: {
-    archv2: ''
-    tier: 'production'
-  }
-}
-```
-
 Create Managed Cluster with PodIdentity enabled
 ```bicep
 resource exampleResource 'Microsoft.ContainerService/managedClusters@2021-05-01' = {
@@ -627,6 +563,74 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2021-05-01'
     podIdentityProfile: {
       allowNetworkPluginKubenet: true
       enabled: true
+    }
+    servicePrincipalProfile: {
+      clientId: 'clientid'
+      secret: 'secret'
+    }
+    windowsProfile: {
+      adminPassword: 'replacePassword1234$'
+      adminUsername: 'azureuser'
+    }
+  }
+  sku: {
+    name: 'Basic'
+    tier: 'Free'
+  }
+  tags: {
+    archv2: ''
+    tier: 'production'
+  }
+}
+```
+
+Create Managed Cluster with PPG
+```bicep
+resource exampleResource 'Microsoft.ContainerService/managedClusters@2021-05-01' = {
+  name: 'example'
+  location: 'location1'
+  properties: {
+    addonProfiles: {
+    }
+    agentPoolProfiles: [
+      {
+        name: 'nodepool1'
+        type: 'VirtualMachineScaleSets'
+        count: 3
+        enableNodePublicIP: true
+        mode: 'System'
+        osType: 'Linux'
+        proximityPlacementGroupID: '/subscriptions/subid1/resourcegroups/rg1/providers//Microsoft.Compute/proximityPlacementGroups/ppg1'
+        vmSize: 'Standard_DS2_v2'
+      }
+    ]
+    autoScalerProfile: {
+      scale-down-delay-after-add: '15m'
+      scan-interval: '20s'
+    }
+    diskEncryptionSetID: '/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
+    dnsPrefix: 'dnsprefix1'
+    enablePodSecurityPolicy: true
+    enableRBAC: true
+    kubernetesVersion: ''
+    linuxProfile: {
+      adminUsername: 'azureuser'
+      ssh: {
+        publicKeys: [
+          {
+            keyData: 'keydata'
+          }
+        ]
+      }
+    }
+    networkProfile: {
+      loadBalancerProfile: {
+        managedOutboundIPs: {
+          count: 2
+        }
+      }
+      loadBalancerSku: 'standard'
+      outboundType: 'loadBalancer'
     }
     servicePrincipalProfile: {
       clientId: 'clientid'
@@ -716,7 +720,7 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2021-05-01'
 }
 ```
 
-Create Managed Private Cluster with Public FQDN specified
+Create Managed Private Cluster with fqdn subdomain specified
 ```bicep
 resource exampleResource 'Microsoft.ContainerService/managedClusters@2021-05-01' = {
   name: 'example'
@@ -738,15 +742,15 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2021-05-01'
     ]
     apiServerAccessProfile: {
       enablePrivateCluster: true
-      enablePrivateClusterPublicFQDN: true
+      privateDNSZone: '/subscriptions/subid1/resourcegroups/rg1/providers/Microsoft.Network/privateDnsZones/privatelink.location1.azmk8s.io'
     }
     autoScalerProfile: {
       scale-down-delay-after-add: '15m'
       scan-interval: '20s'
     }
-    dnsPrefix: 'dnsprefix1'
     enablePodSecurityPolicy: true
     enableRBAC: true
+    fqdnSubdomain: 'domain1'
     kubernetesVersion: ''
     linuxProfile: {
       adminUsername: 'azureuser'
@@ -787,7 +791,7 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2021-05-01'
 }
 ```
 
-Create Managed Private Cluster with fqdn subdomain specified
+Create Managed Private Cluster with Public FQDN specified
 ```bicep
 resource exampleResource 'Microsoft.ContainerService/managedClusters@2021-05-01' = {
   name: 'example'
@@ -809,15 +813,15 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2021-05-01'
     ]
     apiServerAccessProfile: {
       enablePrivateCluster: true
-      privateDNSZone: '/subscriptions/subid1/resourcegroups/rg1/providers/Microsoft.Network/privateDnsZones/privatelink.location1.azmk8s.io'
+      enablePrivateClusterPublicFQDN: true
     }
     autoScalerProfile: {
       scale-down-delay-after-add: '15m'
       scan-interval: '20s'
     }
+    dnsPrefix: 'dnsprefix1'
     enablePodSecurityPolicy: true
     enableRBAC: true
-    fqdnSubdomain: 'domain1'
     kubernetesVersion: ''
     linuxProfile: {
       adminUsername: 'azureuser'
@@ -1098,33 +1102,6 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2021-05-01'
 }
 ```
 
-## microsoft.containerservice/managedclusters/maintenanceconfigurations
-
-Create/Update Maintenance Configuration
-```bicep
-resource exampleResource 'Microsoft.ContainerService/managedClusters/maintenanceConfigurations@2021-05-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    notAllowedTime: [
-      {
-        end: '2020-11-30T12:00:00Z'
-        start: '2020-11-26T03:00:00Z'
-      }
-    ]
-    timeInWeek: [
-      {
-        day: 'Monday'
-        hourSlots: [
-          1
-          2
-        ]
-      }
-    ]
-  }
-}
-```
-
 ## microsoft.containerservice/managedclusters/agentpools
 
 Create Agent Pool with EncryptionAtHost enabled
@@ -1388,6 +1365,33 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters/agentPools@
     scaleSetEvictionPolicy: 'Delete'
     scaleSetPriority: 'Spot'
     vmSize: 'Standard_DS1_v2'
+  }
+}
+```
+
+## microsoft.containerservice/managedclusters/maintenanceconfigurations
+
+Create/Update Maintenance Configuration
+```bicep
+resource exampleResource 'Microsoft.ContainerService/managedClusters/maintenanceConfigurations@2021-05-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    notAllowedTime: [
+      {
+        end: '2020-11-30T12:00:00Z'
+        start: '2020-11-26T03:00:00Z'
+      }
+    ]
+    timeInWeek: [
+      {
+        day: 'Monday'
+        hourSlots: [
+          1
+          2
+        ]
+      }
+    ]
   }
 }
 ```

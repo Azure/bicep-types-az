@@ -1,4 +1,8 @@
 # Dynatrace.Observability
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## dynatrace.observability/monitors
 
@@ -53,6 +57,39 @@ resource exampleResource 'Dynatrace.Observability/monitors@2021-09-01-preview' =
 }
 ```
 
+## dynatrace.observability/monitors/singlesignonconfigurations
+
+SingleSignOn_CreateOrUpdate_MaximumSet_Gen
+```bicep
+resource exampleResource 'Dynatrace.Observability/monitors/singleSignOnConfigurations@2021-09-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    aadDomains: [
+      'mpliftrdt20210811outlook.onmicrosoft.com'
+    ]
+    enterpriseAppId: '00000000-0000-0000-0000-000000000000'
+    provisioningState: 'Accepted'
+    singleSignOnState: 'Enable'
+    singleSignOnUrl: 'https://www.dynatrace.io'
+  }
+}
+```
+
+SingleSignOn_CreateOrUpdate_MinimumSet_Gen
+```bicep
+resource exampleResource 'Dynatrace.Observability/monitors/singleSignOnConfigurations@2021-09-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    aadDomains: [
+      'mpliftrdt20210811outlook.onmicrosoft.com'
+    ]
+    singleSignOnUrl: 'https://www.dynatrace.io'
+  }
+}
+```
+
 ## dynatrace.observability/monitors/tagrules
 
 TagRules_CreateOrUpdate_MaximumSet_Gen
@@ -98,39 +135,6 @@ resource exampleResource 'Dynatrace.Observability/monitors/tagRules@2021-09-01-p
   parent: parentResource 
   name: 'example'
   properties: {
-  }
-}
-```
-
-## dynatrace.observability/monitors/singlesignonconfigurations
-
-SingleSignOn_CreateOrUpdate_MaximumSet_Gen
-```bicep
-resource exampleResource 'Dynatrace.Observability/monitors/singleSignOnConfigurations@2021-09-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    aadDomains: [
-      'mpliftrdt20210811outlook.onmicrosoft.com'
-    ]
-    enterpriseAppId: '00000000-0000-0000-0000-000000000000'
-    provisioningState: 'Accepted'
-    singleSignOnState: 'Enable'
-    singleSignOnUrl: 'https://www.dynatrace.io'
-  }
-}
-```
-
-SingleSignOn_CreateOrUpdate_MinimumSet_Gen
-```bicep
-resource exampleResource 'Dynatrace.Observability/monitors/singleSignOnConfigurations@2021-09-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    aadDomains: [
-      'mpliftrdt20210811outlook.onmicrosoft.com'
-    ]
-    singleSignOnUrl: 'https://www.dynatrace.io'
   }
 }
 ```

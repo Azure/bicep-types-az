@@ -1,4 +1,8 @@
 # Microsoft.CustomerInsights
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.customerinsights/hubs
 
@@ -13,160 +17,6 @@ resource exampleResource 'Microsoft.CustomerInsights/hubs@2017-01-01' = {
       minUnits: 1
       skuName: 'B0'
     }
-  }
-}
-```
-
-## microsoft.customerinsights/hubs/profiles
-
-Profiles_CreateOrUpdate
-```bicep
-resource exampleResource 'Microsoft.CustomerInsights/hubs/profiles@2017-01-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    apiEntitySetName: 'TestProfileType396'
-    fields: [
-      {
-        fieldName: 'Id'
-        fieldType: 'Edm.String'
-        isArray: false
-        isRequired: true
-      }
-      {
-        fieldName: 'ProfileId'
-        fieldType: 'Edm.String'
-        isArray: false
-        isRequired: true
-      }
-      {
-        fieldName: 'LastName'
-        fieldType: 'Edm.String'
-        isArray: false
-        isRequired: true
-      }
-      {
-        fieldName: 'TestProfileType396'
-        fieldType: 'Edm.String'
-        isArray: false
-        isRequired: true
-      }
-      {
-        fieldName: 'SavingAccountBalance'
-        fieldType: 'Edm.Int32'
-        isArray: false
-        isRequired: true
-      }
-    ]
-    largeImage: '\\\\Images\\\\LargeImage'
-    mediumImage: '\\\\Images\\\\MediumImage'
-    schemaItemTypeLink: 'SchemaItemTypeLink'
-    smallImage: '\\\\Images\\\\smallImage'
-    strongIds: [
-      {
-        keyPropertyNames: [
-          'Id'
-          'SavingAccountBalance'
-        ]
-        strongIdName: 'Id'
-      }
-      {
-        keyPropertyNames: [
-          'ProfileId'
-          'LastName'
-        ]
-        strongIdName: 'ProfileId'
-      }
-    ]
-  }
-}
-```
-
-## microsoft.customerinsights/hubs/interactions
-
-Interactions_CreateOrUpdate
-```bicep
-resource exampleResource 'Microsoft.CustomerInsights/hubs/interactions@2017-01-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    apiEntitySetName: 'TestInteractionType6358'
-    fields: [
-      {
-        fieldName: 'TestInteractionType6358'
-        fieldType: 'Edm.String'
-        isArray: false
-        isRequired: true
-      }
-      {
-        fieldName: 'profile1'
-        fieldType: 'Edm.String'
-      }
-    ]
-    idPropertyNames: [
-      'TestInteractionType6358'
-    ]
-    isActivity: false
-    largeImage: '\\\\Images\\\\LargeImage'
-    mediumImage: '\\\\Images\\\\MediumImage'
-    primaryParticipantProfilePropertyName: 'profile1'
-    smallImage: '\\\\Images\\\\smallImage'
-  }
-}
-```
-
-## microsoft.customerinsights/hubs/relationships
-
-Relationships_CreateOrUpdate
-```bicep
-resource exampleResource 'Microsoft.CustomerInsights/hubs/relationships@2017-01-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    description: {
-      en-us: 'Relationship Description'
-    }
-    cardinality: 'OneToOne'
-    displayName: {
-      en-us: 'Relationship DisplayName'
-    }
-    fields: [
-    ]
-    profileType: 'testProfile2326994'
-    relatedProfileType: 'testProfile2326994'
-  }
-}
-```
-
-## microsoft.customerinsights/hubs/relationshiplinks
-
-RelationshipLinks_CreateOrUpdate
-```bicep
-resource exampleResource 'Microsoft.CustomerInsights/hubs/relationshipLinks@2017-01-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    description: {
-      en-us: 'Link Description'
-    }
-    displayName: {
-      en-us: 'Link DisplayName'
-    }
-    interactionType: 'testInteraction4332'
-    linkName: 'Somelink'
-    profilePropertyReferences: [
-      {
-        interactionPropertyName: 'profile1'
-        profilePropertyName: 'ProfileId'
-      }
-    ]
-    relatedProfilePropertyReferences: [
-      {
-        interactionPropertyName: 'profile1'
-        profilePropertyName: 'ProfileId'
-      }
-    ]
-    relationshipName: 'testProfile2326994'
   }
 }
 ```
@@ -258,6 +108,39 @@ resource exampleResource 'Microsoft.CustomerInsights/hubs/connectors/mappings@20
 }
 ```
 
+## microsoft.customerinsights/hubs/interactions
+
+Interactions_CreateOrUpdate
+```bicep
+resource exampleResource 'Microsoft.CustomerInsights/hubs/interactions@2017-01-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    apiEntitySetName: 'TestInteractionType6358'
+    fields: [
+      {
+        fieldName: 'TestInteractionType6358'
+        fieldType: 'Edm.String'
+        isArray: false
+        isRequired: true
+      }
+      {
+        fieldName: 'profile1'
+        fieldType: 'Edm.String'
+      }
+    ]
+    idPropertyNames: [
+      'TestInteractionType6358'
+    ]
+    isActivity: false
+    largeImage: '\\\\Images\\\\LargeImage'
+    mediumImage: '\\\\Images\\\\MediumImage'
+    primaryParticipantProfilePropertyName: 'profile1'
+    smallImage: '\\\\Images\\\\smallImage'
+  }
+}
+```
+
 ## microsoft.customerinsights/hubs/kpi
 
 Kpi_CreateOrUpdate
@@ -292,23 +175,6 @@ resource exampleResource 'Microsoft.CustomerInsights/hubs/kpi@2017-01-01' = {
       upperLimit: 50
     }
     unit: 'unit'
-  }
-}
-```
-
-## microsoft.customerinsights/hubs/views
-
-Views_CreateOrUpdate
-```bicep
-resource exampleResource 'Microsoft.CustomerInsights/hubs/views@2017-01-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    definition: '{\\"isProfileType\\":false,\\"profileTypes\\":[],\\"widgets\\":[],\\"style\\":[]}'
-    displayName: {
-      en: 'some name'
-    }
-    userId: 'testUser'
   }
 }
 ```
@@ -348,6 +214,127 @@ resource exampleResource 'Microsoft.CustomerInsights/hubs/links@2017-01-01' = {
 }
 ```
 
+## microsoft.customerinsights/hubs/profiles
+
+Profiles_CreateOrUpdate
+```bicep
+resource exampleResource 'Microsoft.CustomerInsights/hubs/profiles@2017-01-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    apiEntitySetName: 'TestProfileType396'
+    fields: [
+      {
+        fieldName: 'Id'
+        fieldType: 'Edm.String'
+        isArray: false
+        isRequired: true
+      }
+      {
+        fieldName: 'ProfileId'
+        fieldType: 'Edm.String'
+        isArray: false
+        isRequired: true
+      }
+      {
+        fieldName: 'LastName'
+        fieldType: 'Edm.String'
+        isArray: false
+        isRequired: true
+      }
+      {
+        fieldName: 'TestProfileType396'
+        fieldType: 'Edm.String'
+        isArray: false
+        isRequired: true
+      }
+      {
+        fieldName: 'SavingAccountBalance'
+        fieldType: 'Edm.Int32'
+        isArray: false
+        isRequired: true
+      }
+    ]
+    largeImage: '\\\\Images\\\\LargeImage'
+    mediumImage: '\\\\Images\\\\MediumImage'
+    schemaItemTypeLink: 'SchemaItemTypeLink'
+    smallImage: '\\\\Images\\\\smallImage'
+    strongIds: [
+      {
+        keyPropertyNames: [
+          'Id'
+          'SavingAccountBalance'
+        ]
+        strongIdName: 'Id'
+      }
+      {
+        keyPropertyNames: [
+          'ProfileId'
+          'LastName'
+        ]
+        strongIdName: 'ProfileId'
+      }
+    ]
+  }
+}
+```
+
+## microsoft.customerinsights/hubs/relationshiplinks
+
+RelationshipLinks_CreateOrUpdate
+```bicep
+resource exampleResource 'Microsoft.CustomerInsights/hubs/relationshipLinks@2017-01-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    description: {
+      en-us: 'Link Description'
+    }
+    displayName: {
+      en-us: 'Link DisplayName'
+    }
+    interactionType: 'testInteraction4332'
+    linkName: 'Somelink'
+    profilePropertyReferences: [
+      {
+        interactionPropertyName: 'profile1'
+        profilePropertyName: 'ProfileId'
+      }
+    ]
+    relatedProfilePropertyReferences: [
+      {
+        interactionPropertyName: 'profile1'
+        profilePropertyName: 'ProfileId'
+      }
+    ]
+    relationshipName: 'testProfile2326994'
+  }
+}
+```
+
+## microsoft.customerinsights/hubs/relationships
+
+Relationships_CreateOrUpdate
+```bicep
+resource exampleResource 'Microsoft.CustomerInsights/hubs/relationships@2017-01-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    description: {
+      en-us: 'Relationship Description'
+    }
+    cardinality: 'OneToOne'
+    displayName: {
+      en-us: 'Relationship DisplayName'
+    }
+    fields: [
+    ]
+    profileType: 'testProfile2326994'
+    relatedProfileType: 'testProfile2326994'
+  }
+}
+```
+
 ## microsoft.customerinsights/hubs/roleassignments
 
 RoleAssignments_CreateOrUpdate
@@ -367,6 +354,23 @@ resource exampleResource 'Microsoft.CustomerInsights/hubs/roleAssignments@2017-0
       }
     ]
     role: 'Admin'
+  }
+}
+```
+
+## microsoft.customerinsights/hubs/views
+
+Views_CreateOrUpdate
+```bicep
+resource exampleResource 'Microsoft.CustomerInsights/hubs/views@2017-01-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    definition: '{\\"isProfileType\\":false,\\"profileTypes\\":[],\\"widgets\\":[],\\"style\\":[]}'
+    displayName: {
+      en: 'some name'
+    }
+    userId: 'testUser'
   }
 }
 ```

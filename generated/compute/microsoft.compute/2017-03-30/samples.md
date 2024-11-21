@@ -1,4 +1,22 @@
 # Microsoft.Compute
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
+
+## microsoft.compute/availabilitysets
+
+Create an availability set.
+```bicep
+resource exampleResource 'Microsoft.Compute/availabilitySets@2017-03-30' = {
+  name: 'example'
+  location: 'westus'
+  properties: {
+    platformFaultDomainCount: 2
+    platformUpdateDomainCount: 20
+  }
+}
+```
 
 ## microsoft.compute/disks
 
@@ -96,6 +114,153 @@ resource exampleResource 'Microsoft.Compute/disks@2017-03-30' = {
 }
 ```
 
+## microsoft.compute/images
+
+Create a virtual machine image from a blob.
+```bicep
+resource exampleResource 'Microsoft.Compute/images@2017-03-30' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    storageProfile: {
+      osDisk: {
+        blobUri: 'https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd'
+        osState: 'Generalized'
+        osType: 'Linux'
+      }
+    }
+  }
+}
+```
+
+Create a virtual machine image from a managed disk.
+```bicep
+resource exampleResource 'Microsoft.Compute/images@2017-03-30' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    storageProfile: {
+      osDisk: {
+        managedDisk: {
+          id: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk'
+        }
+        osState: 'Generalized'
+        osType: 'Linux'
+      }
+    }
+  }
+}
+```
+
+Create a virtual machine image from a snapshot.
+```bicep
+resource exampleResource 'Microsoft.Compute/images@2017-03-30' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    storageProfile: {
+      osDisk: {
+        osState: 'Generalized'
+        osType: 'Linux'
+        snapshot: {
+          id: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot'
+        }
+      }
+    }
+  }
+}
+```
+
+Create a virtual machine image from an existing virtual machine.
+```bicep
+resource exampleResource 'Microsoft.Compute/images@2017-03-30' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    sourceVirtualMachine: {
+      id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVM'
+    }
+  }
+}
+```
+
+Create a virtual machine image that includes a data disk from a blob.
+```bicep
+resource exampleResource 'Microsoft.Compute/images@2017-03-30' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    storageProfile: {
+      dataDisks: [
+        {
+          blobUri: 'https://mystorageaccount.blob.core.windows.net/dataimages/dataimage.vhd'
+          lun: 1
+        }
+      ]
+      osDisk: {
+        blobUri: 'https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd'
+        osState: 'Generalized'
+        osType: 'Linux'
+      }
+    }
+  }
+}
+```
+
+Create a virtual machine image that includes a data disk from a managed disk.
+```bicep
+resource exampleResource 'Microsoft.Compute/images@2017-03-30' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    storageProfile: {
+      dataDisks: [
+        {
+          lun: 1
+          managedDisk: {
+            id: 'subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk2'
+          }
+        }
+      ]
+      osDisk: {
+        managedDisk: {
+          id: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk'
+        }
+        osState: 'Generalized'
+        osType: 'Linux'
+      }
+    }
+  }
+}
+```
+
+Create a virtual machine image that includes a data disk from a snapshot.
+```bicep
+resource exampleResource 'Microsoft.Compute/images@2017-03-30' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    storageProfile: {
+      dataDisks: [
+        {
+          lun: 1
+          snapshot: {
+            id: 'subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot2'
+          }
+        }
+      ]
+      osDisk: {
+        osState: 'Generalized'
+        osType: 'Linux'
+        snapshot: {
+          id: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot'
+        }
+      }
+    }
+  }
+}
+```
+
 ## microsoft.compute/snapshots
 
 Create a snapshot by importing an unmanaged blob from a different subscription.
@@ -140,20 +305,6 @@ resource exampleResource 'Microsoft.Compute/snapshots@2017-03-30' = {
       createOption: 'Copy'
       sourceResourceId: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot1'
     }
-  }
-}
-```
-
-## microsoft.compute/availabilitysets
-
-Create an availability set.
-```bicep
-resource exampleResource 'Microsoft.Compute/availabilitySets@2017-03-30' = {
-  name: 'example'
-  location: 'westus'
-  properties: {
-    platformFaultDomainCount: 2
-    platformUpdateDomainCount: 20
   }
 }
 ```
@@ -642,153 +793,6 @@ resource exampleResource 'Microsoft.Compute/virtualMachines@2017-03-30' = {
         createOption: 'FromImage'
         managedDisk: {
           storageAccountType: 'Standard_LRS'
-        }
-      }
-    }
-  }
-}
-```
-
-## microsoft.compute/images
-
-Create a virtual machine image from a blob.
-```bicep
-resource exampleResource 'Microsoft.Compute/images@2017-03-30' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    storageProfile: {
-      osDisk: {
-        blobUri: 'https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd'
-        osState: 'Generalized'
-        osType: 'Linux'
-      }
-    }
-  }
-}
-```
-
-Create a virtual machine image from a managed disk.
-```bicep
-resource exampleResource 'Microsoft.Compute/images@2017-03-30' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    storageProfile: {
-      osDisk: {
-        managedDisk: {
-          id: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk'
-        }
-        osState: 'Generalized'
-        osType: 'Linux'
-      }
-    }
-  }
-}
-```
-
-Create a virtual machine image from a snapshot.
-```bicep
-resource exampleResource 'Microsoft.Compute/images@2017-03-30' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    storageProfile: {
-      osDisk: {
-        osState: 'Generalized'
-        osType: 'Linux'
-        snapshot: {
-          id: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot'
-        }
-      }
-    }
-  }
-}
-```
-
-Create a virtual machine image from an existing virtual machine.
-```bicep
-resource exampleResource 'Microsoft.Compute/images@2017-03-30' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    sourceVirtualMachine: {
-      id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVM'
-    }
-  }
-}
-```
-
-Create a virtual machine image that includes a data disk from a blob.
-```bicep
-resource exampleResource 'Microsoft.Compute/images@2017-03-30' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    storageProfile: {
-      dataDisks: [
-        {
-          blobUri: 'https://mystorageaccount.blob.core.windows.net/dataimages/dataimage.vhd'
-          lun: 1
-        }
-      ]
-      osDisk: {
-        blobUri: 'https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd'
-        osState: 'Generalized'
-        osType: 'Linux'
-      }
-    }
-  }
-}
-```
-
-Create a virtual machine image that includes a data disk from a managed disk.
-```bicep
-resource exampleResource 'Microsoft.Compute/images@2017-03-30' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    storageProfile: {
-      dataDisks: [
-        {
-          lun: 1
-          managedDisk: {
-            id: 'subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk2'
-          }
-        }
-      ]
-      osDisk: {
-        managedDisk: {
-          id: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk'
-        }
-        osState: 'Generalized'
-        osType: 'Linux'
-      }
-    }
-  }
-}
-```
-
-Create a virtual machine image that includes a data disk from a snapshot.
-```bicep
-resource exampleResource 'Microsoft.Compute/images@2017-03-30' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    storageProfile: {
-      dataDisks: [
-        {
-          lun: 1
-          snapshot: {
-            id: 'subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot2'
-          }
-        }
-      ]
-      osDisk: {
-        osState: 'Generalized'
-        osType: 'Linux'
-        snapshot: {
-          id: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot'
         }
       }
     }

@@ -1,4 +1,104 @@
 # Microsoft.Compute
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
+
+## microsoft.compute/disks
+
+Create a managed disk by copying a snapshot.
+```bicep
+resource exampleResource 'Microsoft.Compute/disks@2016-04-30-preview' = {
+  name: 'example'
+  name: 'myDisk'
+  location: 'West US'
+  properties: {
+    creationData: {
+      createOption: 'Copy'
+      sourceResourceId: 'subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot'
+    }
+  }
+}
+```
+
+Create a managed disk by importing an unmanaged blob from a different subscription.
+```bicep
+resource exampleResource 'Microsoft.Compute/disks@2016-04-30-preview' = {
+  name: 'example'
+  name: 'myDisk'
+  location: 'West US'
+  properties: {
+    creationData: {
+      createOption: 'Import'
+      sourceUri: 'https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd'
+      storageAccountId: 'subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount'
+    }
+  }
+}
+```
+
+Create a managed disk by importing an unmanaged blob from the same subscription.
+```bicep
+resource exampleResource 'Microsoft.Compute/disks@2016-04-30-preview' = {
+  name: 'example'
+  name: 'myDisk'
+  location: 'West US'
+  properties: {
+    creationData: {
+      createOption: 'Import'
+      sourceUri: 'https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd'
+    }
+  }
+}
+```
+
+Create a managed disk from a platform image.
+```bicep
+resource exampleResource 'Microsoft.Compute/disks@2016-04-30-preview' = {
+  name: 'example'
+  name: 'myDisk'
+  location: 'West US'
+  properties: {
+    creationData: {
+      createOption: 'FromImage'
+      imageReference: {
+        id: '/Subscriptions/{subscriptionId}/Providers/Microsoft.Compute/Locations/uswest/Publishers/Microsoft/ArtifactTypes/VMImage/Offers/{offer}'
+      }
+    }
+    osType: 'Windows'
+  }
+}
+```
+
+Create a managed disk from an existing managed disk in the same or different subscription.
+```bicep
+resource exampleResource 'Microsoft.Compute/disks@2016-04-30-preview' = {
+  name: 'example'
+  name: 'myDisk2'
+  location: 'West US'
+  properties: {
+    creationData: {
+      createOption: 'Copy'
+      sourceResourceId: 'subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myDisk1'
+    }
+  }
+}
+```
+
+Create an empty managed disk.
+```bicep
+resource exampleResource 'Microsoft.Compute/disks@2016-04-30-preview' = {
+  name: 'example'
+  name: 'myDisk'
+  location: 'West US'
+  properties: {
+    creationData: {
+      createOption: 'Empty'
+    }
+    diskSizeGB: 200
+  }
+}
+```
 
 ## microsoft.compute/images
 
@@ -143,102 +243,6 @@ resource exampleResource 'Microsoft.Compute/images@2016-04-30-preview' = {
         }
       }
     }
-  }
-}
-```
-
-## microsoft.compute/disks
-
-Create a managed disk by copying a snapshot.
-```bicep
-resource exampleResource 'Microsoft.Compute/disks@2016-04-30-preview' = {
-  name: 'example'
-  name: 'myDisk'
-  location: 'West US'
-  properties: {
-    creationData: {
-      createOption: 'Copy'
-      sourceResourceId: 'subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot'
-    }
-  }
-}
-```
-
-Create a managed disk by importing an unmanaged blob from a different subscription.
-```bicep
-resource exampleResource 'Microsoft.Compute/disks@2016-04-30-preview' = {
-  name: 'example'
-  name: 'myDisk'
-  location: 'West US'
-  properties: {
-    creationData: {
-      createOption: 'Import'
-      sourceUri: 'https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd'
-      storageAccountId: 'subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount'
-    }
-  }
-}
-```
-
-Create a managed disk by importing an unmanaged blob from the same subscription.
-```bicep
-resource exampleResource 'Microsoft.Compute/disks@2016-04-30-preview' = {
-  name: 'example'
-  name: 'myDisk'
-  location: 'West US'
-  properties: {
-    creationData: {
-      createOption: 'Import'
-      sourceUri: 'https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd'
-    }
-  }
-}
-```
-
-Create a managed disk from a platform image.
-```bicep
-resource exampleResource 'Microsoft.Compute/disks@2016-04-30-preview' = {
-  name: 'example'
-  name: 'myDisk'
-  location: 'West US'
-  properties: {
-    creationData: {
-      createOption: 'FromImage'
-      imageReference: {
-        id: '/Subscriptions/{subscriptionId}/Providers/Microsoft.Compute/Locations/uswest/Publishers/Microsoft/ArtifactTypes/VMImage/Offers/{offer}'
-      }
-    }
-    osType: 'Windows'
-  }
-}
-```
-
-Create a managed disk from an existing managed disk in the same or different subscription.
-```bicep
-resource exampleResource 'Microsoft.Compute/disks@2016-04-30-preview' = {
-  name: 'example'
-  name: 'myDisk2'
-  location: 'West US'
-  properties: {
-    creationData: {
-      createOption: 'Copy'
-      sourceResourceId: 'subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myDisk1'
-    }
-  }
-}
-```
-
-Create an empty managed disk.
-```bicep
-resource exampleResource 'Microsoft.Compute/disks@2016-04-30-preview' = {
-  name: 'example'
-  name: 'myDisk'
-  location: 'West US'
-  properties: {
-    creationData: {
-      createOption: 'Empty'
-    }
-    diskSizeGB: 200
   }
 }
 ```

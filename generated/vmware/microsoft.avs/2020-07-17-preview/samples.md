@@ -1,4 +1,8 @@
 # Microsoft.AVS
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.avs/privateclouds
 
@@ -21,6 +25,30 @@ resource exampleResource 'Microsoft.AVS/privateClouds@2020-07-17-preview' = {
 }
 ```
 
+## microsoft.avs/privateclouds/addons
+
+Addons_CreateOrUpdate
+```bicep
+resource exampleResource 'Microsoft.AVS/privateClouds/addons@2020-07-17-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    addonType: 'SRM'
+    licenseKey: '41915178-A8FF-4A4D-B683-6D735AF5E3F5'
+  }
+}
+```
+
+## microsoft.avs/privateclouds/authorizations
+
+Authorizations_CreateOrUpdate
+```bicep
+resource exampleResource 'Microsoft.AVS/privateClouds/authorizations@2020-07-17-preview' = {
+  parent: parentResource 
+  name: 'example'
+}
+```
+
 ## microsoft.avs/privateclouds/clusters
 
 Clusters_CreateOrUpdate
@@ -34,26 +62,6 @@ resource exampleResource 'Microsoft.AVS/privateClouds/clusters@2020-07-17-previe
   sku: {
     name: 'AV20'
   }
-}
-```
-
-## microsoft.avs/privateclouds/hcxenterprisesites
-
-HcxEnterpriseSites_CreateOrUpdate
-```bicep
-resource exampleResource 'Microsoft.AVS/privateClouds/hcxEnterpriseSites@2020-07-17-preview' = {
-  parent: parentResource 
-  name: 'example'
-}
-```
-
-## microsoft.avs/privateclouds/authorizations
-
-Authorizations_CreateOrUpdate
-```bicep
-resource exampleResource 'Microsoft.AVS/privateClouds/authorizations@2020-07-17-preview' = {
-  parent: parentResource 
-  name: 'example'
 }
 ```
 
@@ -71,24 +79,13 @@ resource exampleResource 'Microsoft.AVS/privateClouds/globalReachConnections@202
 }
 ```
 
-## microsoft.avs/privateclouds/workloadnetworks/segments
+## microsoft.avs/privateclouds/hcxenterprisesites
 
-WorkloadNetworks_CreateSegments
+HcxEnterpriseSites_CreateOrUpdate
 ```bicep
-resource exampleResource 'Microsoft.AVS/privateClouds/workloadNetworks/segments@2020-07-17-preview' = {
+resource exampleResource 'Microsoft.AVS/privateClouds/hcxEnterpriseSites@2020-07-17-preview' = {
   parent: parentResource 
   name: 'example'
-  properties: {
-    connectedGateway: '/infra/tier-1s/gateway'
-    displayName: 'segment1'
-    revision: 1
-    subnet: {
-      dhcpRanges: [
-        '40.20.0.0-40.20.0.1'
-      ]
-      gatewayAddress: '40.20.20.20/16'
-    }
-  }
 }
 ```
 
@@ -105,40 +102,6 @@ resource exampleResource 'Microsoft.AVS/privateClouds/workloadNetworks/dhcpConfi
     leaseTime: 86400
     revision: 1
     serverAddress: '40.1.5.1/24'
-  }
-}
-```
-
-## microsoft.avs/privateclouds/workloadnetworks/portmirroringprofiles
-
-WorkloadNetworks_CreatePortMirroring
-```bicep
-resource exampleResource 'Microsoft.AVS/privateClouds/workloadNetworks/portMirroringProfiles@2020-07-17-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    destination: 'vmGroup2'
-    direction: 'BIDIRECTIONAL'
-    displayName: 'portMirroring1'
-    revision: 1
-    source: 'vmGroup1'
-  }
-}
-```
-
-## microsoft.avs/privateclouds/workloadnetworks/vmgroups
-
-WorkloadNetworks_CreateVMGroup
-```bicep
-resource exampleResource 'Microsoft.AVS/privateClouds/workloadNetworks/vmGroups@2020-07-17-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    displayName: 'vmGroup1'
-    members: [
-      '564d43da-fefc-2a3b-1d92-42855622fa50'
-    ]
-    revision: 1
   }
 }
 ```
@@ -183,16 +146,57 @@ resource exampleResource 'Microsoft.AVS/privateClouds/workloadNetworks/dnsZones@
 }
 ```
 
-## microsoft.avs/privateclouds/addons
+## microsoft.avs/privateclouds/workloadnetworks/portmirroringprofiles
 
-Addons_CreateOrUpdate
+WorkloadNetworks_CreatePortMirroring
 ```bicep
-resource exampleResource 'Microsoft.AVS/privateClouds/addons@2020-07-17-preview' = {
+resource exampleResource 'Microsoft.AVS/privateClouds/workloadNetworks/portMirroringProfiles@2020-07-17-preview' = {
   parent: parentResource 
   name: 'example'
   properties: {
-    addonType: 'SRM'
-    licenseKey: '41915178-A8FF-4A4D-B683-6D735AF5E3F5'
+    destination: 'vmGroup2'
+    direction: 'BIDIRECTIONAL'
+    displayName: 'portMirroring1'
+    revision: 1
+    source: 'vmGroup1'
+  }
+}
+```
+
+## microsoft.avs/privateclouds/workloadnetworks/segments
+
+WorkloadNetworks_CreateSegments
+```bicep
+resource exampleResource 'Microsoft.AVS/privateClouds/workloadNetworks/segments@2020-07-17-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    connectedGateway: '/infra/tier-1s/gateway'
+    displayName: 'segment1'
+    revision: 1
+    subnet: {
+      dhcpRanges: [
+        '40.20.0.0-40.20.0.1'
+      ]
+      gatewayAddress: '40.20.20.20/16'
+    }
+  }
+}
+```
+
+## microsoft.avs/privateclouds/workloadnetworks/vmgroups
+
+WorkloadNetworks_CreateVMGroup
+```bicep
+resource exampleResource 'Microsoft.AVS/privateClouds/workloadNetworks/vmGroups@2020-07-17-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    displayName: 'vmGroup1'
+    members: [
+      '564d43da-fefc-2a3b-1d92-42855622fa50'
+    ]
+    revision: 1
   }
 }
 ```

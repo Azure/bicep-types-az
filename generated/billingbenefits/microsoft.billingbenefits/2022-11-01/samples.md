@@ -1,4 +1,37 @@
 # Microsoft.BillingBenefits
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
+
+## microsoft.billingbenefits/reservationorderaliases
+
+ReservationOrderAliasCreate
+```bicep
+resource exampleResource 'Microsoft.BillingBenefits/reservationOrderAliases@2022-11-01' = {
+  name: 'example'
+  location: 'eastus'
+  properties: {
+    appliedScopeProperties: {
+      resourceGroupId: '/subscriptions/10000000-0000-0000-0000-000000000000/resourceGroups/testrg'
+    }
+    appliedScopeType: 'Single'
+    billingPlan: 'P1M'
+    billingScopeId: '/subscriptions/10000000-0000-0000-0000-000000000000'
+    displayName: 'ReservationOrder_2022-06-02'
+    quantity: 5
+    renew: true
+    reservedResourceProperties: {
+      instanceFlexibility: 'On'
+    }
+    reservedResourceType: 'VirtualMachines'
+    term: 'P1Y'
+  }
+  sku: {
+    name: 'Standard_M64s_v2'
+  }
+}
+```
 
 ## microsoft.billingbenefits/savingsplanorderaliases
 
@@ -47,35 +80,6 @@ resource exampleResource 'Microsoft.BillingBenefits/savingsPlanOrderAliases@2022
   }
   sku: {
     name: 'Compute_Savings_Plan'
-  }
-}
-```
-
-## microsoft.billingbenefits/reservationorderaliases
-
-ReservationOrderAliasCreate
-```bicep
-resource exampleResource 'Microsoft.BillingBenefits/reservationOrderAliases@2022-11-01' = {
-  name: 'example'
-  location: 'eastus'
-  properties: {
-    appliedScopeProperties: {
-      resourceGroupId: '/subscriptions/10000000-0000-0000-0000-000000000000/resourceGroups/testrg'
-    }
-    appliedScopeType: 'Single'
-    billingPlan: 'P1M'
-    billingScopeId: '/subscriptions/10000000-0000-0000-0000-000000000000'
-    displayName: 'ReservationOrder_2022-06-02'
-    quantity: 5
-    renew: true
-    reservedResourceProperties: {
-      instanceFlexibility: 'On'
-    }
-    reservedResourceType: 'VirtualMachines'
-    term: 'P1Y'
-  }
-  sku: {
-    name: 'Standard_M64s_v2'
   }
 }
 ```

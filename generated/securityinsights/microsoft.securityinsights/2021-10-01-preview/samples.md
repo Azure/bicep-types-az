@@ -1,4 +1,8 @@
 # Microsoft.SecurityInsights
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.securityinsights/alertrules
 
@@ -679,30 +683,6 @@ resource exampleResource 'Microsoft.SecurityInsights/alertRules/actions@2021-10-
 }
 ```
 
-## microsoft.securityinsights/incidents
-
-Creates or updates an incident.
-```bicep
-resource exampleResource 'Microsoft.SecurityInsights/incidents@2021-10-01-preview' = {
-  name: 'example'
-  etag: '"0300bf09-0000-0000-0000-5c37296e0000"'
-  properties: {
-    description: 'This is a demo incident'
-    classification: 'FalsePositive'
-    classificationComment: 'Not a malicious activity'
-    classificationReason: 'IncorrectAlertLogic'
-    firstActivityTimeUtc: '2019-01-01T13:00:30Z'
-    lastActivityTimeUtc: '2019-01-01T13:05:30Z'
-    owner: {
-      objectId: '2046feea-040d-4a46-9e2b-91c2941bfa70'
-    }
-    severity: 'High'
-    status: 'Closed'
-    title: 'My incident'
-  }
-}
-```
-
 ## microsoft.securityinsights/bookmarks
 
 Creates or updates a bookmark.
@@ -757,281 +737,6 @@ resource exampleResource 'Microsoft.SecurityInsights/bookmarks/relations@2021-10
   name: 'example'
   properties: {
     relatedResourceId: '/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/incidents/afbd324f-6c48-459c-8710-8d1e1cd03812'
-  }
-}
-```
-
-## microsoft.securityinsights/entityqueries
-
-Creates or updates an Activity entity query.
-```bicep
-resource exampleResource 'Microsoft.SecurityInsights/entityQueries@2021-10-01-preview' = {
-  name: 'example'
-  etag: '"0300bf09-0000-0000-0000-5c37296e0000"'
-  kind: 'Activity'
-  properties: {
-    description: 'Account deleted on host'
-    content: 'On \'{{Computer}}\' the account \'{{TargetAccount}}\' was deleted by \'{{AddedBy}}\''
-    enabled: true
-    entitiesFilter: {
-      Host_OsFamily: [
-        'Windows'
-      ]
-    }
-    inputEntityType: 'Host'
-    queryDefinitions: {
-      query: 'let GetAccountActions = (v_Host_Name:string, v_Host_NTDomain:string, v_Host_DnsDomain:string, v_Host_AzureID:string, v_Host_OMSAgentID:string){\nSecurityEvent\n| where EventID in (4725, 4726, 4767, 4720, 4722, 4723, 4724)\n// parsing for Host to handle variety of conventions coming from data\n| extend Host_HostName = case(\nComputer has \'@\', tostring(split(Computer, \'@\')[0]),\nComputer has \'\\\\\', tostring(split(Computer, \'\\\\\')[1]),\nComputer has \'.\', tostring(split(Computer, \'.\')[0]),\nComputer\n)\n| extend Host_NTDomain = case(\nComputer has \'\\\\\', tostring(split(Computer, \'\\\\\')[0]), \nComputer has \'.\', tostring(split(Computer, \'.\')[-2]), \nComputer\n)\n| extend Host_DnsDomain = case(\nComputer has \'\\\\\', tostring(split(Computer, \'\\\\\')[0]), \nComputer has \'.\', strcat_array(array_slice(split(Computer,\'.\'),-2,-1),\'.\'), \nComputer\n)\n| where (Host_HostName =~ v_Host_Name and Host_NTDomain =~ v_Host_NTDomain) \nor (Host_HostName =~ v_Host_Name and Host_DnsDomain =~ v_Host_DnsDomain) \nor v_Host_AzureID =~ _ResourceId \nor v_Host_OMSAgentID == SourceComputerId\n| project TimeGenerated, EventID, Activity, Computer, TargetAccount, TargetUserName, TargetDomainName, TargetSid, SubjectUserName, SubjectUserSid, _ResourceId, SourceComputerId\n| extend AddedBy = SubjectUserName\n// Future support for Activities\n| extend timestamp = TimeGenerated, HostCustomEntity = Computer, AccountCustomEntity = TargetAccount\n};\nGetAccountActions(\'{{Host_HostName}}\', \'{{Host_NTDomain}}\', \'{{Host_DnsDomain}}\', \'{{Host_AzureID}}\', \'{{Host_OMSAgentID}}\')\n \n| where EventID == 4726 '
-    }
-    requiredInputFieldsSets: [
-      [
-        'Host_HostName'
-        'Host_NTDomain'
-      ]
-      [
-        'Host_HostName'
-        'Host_DnsDomain'
-      ]
-      [
-        'Host_AzureID'
-      ]
-      [
-        'Host_OMSAgentID'
-      ]
-    ]
-    templateName: {
-    }
-    title: 'An account was deleted on this host'
-  }
-}
-```
-
-## microsoft.securityinsights/incidents/comments
-
-Creates or updates an incident comment.
-```bicep
-resource exampleResource 'Microsoft.SecurityInsights/incidents/comments@2021-10-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    message: 'Some message'
-  }
-}
-```
-
-## microsoft.securityinsights/incidents/relations
-
-Creates or updates an incident relation.
-```bicep
-resource exampleResource 'Microsoft.SecurityInsights/incidents/relations@2021-10-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    relatedResourceId: '/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalIinsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/bookmarks/2216d0e1-91e3-4902-89fd-d2df8c535096'
-  }
-}
-```
-
-## microsoft.securityinsights/metadata
-
-Create/update full metadata.
-```bicep
-resource exampleResource 'Microsoft.SecurityInsights/metadata@2021-10-01-preview' = {
-  name: 'example'
-  properties: {
-    author: {
-      name: 'User Name'
-      email: 'email@microsoft.com'
-    }
-    categories: {
-      domains: [
-        'Application'
-        'Security – Insider Threat'
-      ]
-      verticals: [
-        'Healthcare'
-      ]
-    }
-    contentId: 'c00ee137-7475-47c8-9cce-ec6f0f1bedd0'
-    dependencies: {
-      criteria: [
-        {
-          criteria: [
-            {
-              name: 'Microsoft Defender for Endpoint'
-              contentId: '045d06d0-ee72-4794-aba4-cf5646e4c756'
-              kind: 'DataConnector'
-            }
-            {
-              contentId: 'dbfcb2cc-d782-40ef-8d94-fe7af58a6f2d'
-              kind: 'DataConnector'
-            }
-            {
-              contentId: 'de4dca9b-eb37-47d6-a56f-b8b06b261593'
-              kind: 'DataConnector'
-              version: '2.0'
-            }
-          ]
-          operator: 'OR'
-        }
-        {
-          contentId: '31ee11cc-9989-4de8-b176-5e0ef5c4dbab'
-          kind: 'Playbook'
-          version: '1.0'
-        }
-        {
-          contentId: '21ba424a-9438-4444-953a-7059539a7a1b'
-          kind: 'Parser'
-        }
-      ]
-      operator: 'AND'
-    }
-    firstPublishDate: '2021-05-18'
-    kind: 'AnalyticsRule'
-    lastPublishDate: '2021-05-18'
-    parentId: '/subscriptions/2e1dc338-d04d-4443-b721-037eff4fdcac/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/alertRules/ruleName'
-    providers: [
-      'Amazon'
-      'Microsoft'
-    ]
-    source: {
-      name: 'Contoso Solution 1.0'
-      kind: 'Solution'
-      sourceId: 'b688a130-76f4-4a07-bf57-762222a3cadf'
-    }
-    support: {
-      name: 'Microsoft'
-      email: 'support@microsoft.com'
-      link: 'https://support.microsoft.com/'
-      tier: 'Partner'
-    }
-    version: '1.0.0.0'
-  }
-}
-```
-
-Create/update minimal metadata.
-```bicep
-resource exampleResource 'Microsoft.SecurityInsights/metadata@2021-10-01-preview' = {
-  name: 'example'
-  properties: {
-    contentId: 'c00ee137-7475-47c8-9cce-ec6f0f1bedd0'
-    kind: 'AnalyticsRule'
-    parentId: '/subscriptions/2e1dc338-d04d-4443-b721-037eff4fdcac/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/alertRules/ruleName'
-  }
-}
-```
-
-## microsoft.securityinsights/onboardingstates
-
-Create Sentinel onboarding state
-```bicep
-resource exampleResource 'Microsoft.SecurityInsights/onboardingStates@2021-10-01-preview' = {
-  name: 'example'
-  properties: {
-    customerManagedKey: false
-  }
-}
-```
-
-## microsoft.securityinsights/settings
-
-Update EyesOn settings.
-```bicep
-resource exampleResource 'Microsoft.SecurityInsights/settings@2021-10-01-preview' = {
-  name: 'example'
-  etag: '"0300bf09-0000-0000-0000-5c37296e0000"'
-  kind: 'EyesOn'
-  properties: {
-  }
-}
-```
-
-## microsoft.securityinsights/sourcecontrols
-
-Creates a source control.
-```bicep
-resource exampleResource 'Microsoft.SecurityInsights/sourcecontrols@2021-10-01-preview' = {
-  name: 'example'
-  etag: '"0300bf09-0000-0000-0000-5c37296e0000"'
-  properties: {
-    description: 'This is a source control'
-    contentTypes: [
-      'AnalyticRules'
-      'Workbook'
-    ]
-    displayName: 'My Source Control'
-    repoType: 'Github'
-    repository: {
-      branch: 'master'
-      displayUrl: 'https://github.com/user/repo'
-      pathMapping: [
-        {
-          path: 'path/to/rules'
-          contentType: 'AnalyticRules'
-        }
-        {
-          path: 'path/to/workbooks'
-          contentType: 'Workbook'
-        }
-      ]
-      url: 'https://github.com/user/repo'
-    }
-  }
-}
-```
-
-## microsoft.securityinsights/watchlists
-
-Creates or updates a watchlist and bulk creates watchlist items.
-```bicep
-resource exampleResource 'Microsoft.SecurityInsights/watchlists@2021-10-01-preview' = {
-  name: 'example'
-  etag: '"0300bf09-0000-0000-0000-5c37296e0000"'
-  properties: {
-    description: 'Watchlist from CSV content'
-    contentType: 'text/csv'
-    displayName: 'High Value Assets Watchlist'
-    itemsSearchKey: 'header1'
-    numberOfLinesToSkip: 1
-    provider: 'Microsoft'
-    rawContent: 'This line will be skipped\nheader1,header2\nvalue1,value2'
-    source: 'Local file'
-  }
-}
-```
-
-Creates or updates a watchlist.
-```bicep
-resource exampleResource 'Microsoft.SecurityInsights/watchlists@2021-10-01-preview' = {
-  name: 'example'
-  etag: '"0300bf09-0000-0000-0000-5c37296e0000"'
-  properties: {
-    description: 'Watchlist from CSV content'
-    displayName: 'High Value Assets Watchlist'
-    itemsSearchKey: 'header1'
-    provider: 'Microsoft'
-    source: 'Local file'
-  }
-}
-```
-
-## microsoft.securityinsights/watchlists/watchlistitems
-
-Creates or updates a watchlist item.
-```bicep
-resource exampleResource 'Microsoft.SecurityInsights/watchlists/watchlistItems@2021-10-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  etag: '0300bf09-0000-0000-0000-5c37296e0000'
-  properties: {
-    itemsKeyValue: {
-      Business tier: '10.0.2.0/24'
-      Data tier: '10.0.2.0/24'
-      Gateway subnet: '10.0.255.224/27'
-      Private DMZ in: '10.0.0.0/27'
-      Public DMZ out: '10.0.0.96/27'
-      Web Tier: '10.0.1.0/24'
-    }
   }
 }
 ```
@@ -1361,23 +1066,6 @@ resource exampleResource 'Microsoft.SecurityInsights/dataConnectors@2021-10-01-p
 }
 ```
 
-Creates or updates an Office365 Project data connector
-```bicep
-resource exampleResource 'Microsoft.SecurityInsights/dataConnectors@2021-10-01-preview' = {
-  name: 'example'
-  etag: '"0300bf09-0000-0000-0000-5c37296e0000"'
-  kind: 'Office365Project'
-  properties: {
-    dataTypes: {
-      logs: {
-        state: 'Enabled'
-      }
-    }
-    tenantId: '2070ecc9-b4d5-4ae4-adaa-936fa1954fa8'
-  }
-}
-```
-
 Creates or updates an Office365 data connector
 ```bicep
 resource exampleResource 'Microsoft.SecurityInsights/dataConnectors@2021-10-01-preview' = {
@@ -1401,6 +1089,23 @@ resource exampleResource 'Microsoft.SecurityInsights/dataConnectors@2021-10-01-p
 }
 ```
 
+Creates or updates an Office365 Project data connector
+```bicep
+resource exampleResource 'Microsoft.SecurityInsights/dataConnectors@2021-10-01-preview' = {
+  name: 'example'
+  etag: '"0300bf09-0000-0000-0000-5c37296e0000"'
+  kind: 'Office365Project'
+  properties: {
+    dataTypes: {
+      logs: {
+        state: 'Enabled'
+      }
+    }
+    tenantId: '2070ecc9-b4d5-4ae4-adaa-936fa1954fa8'
+  }
+}
+```
+
 Creates or updates an Threat Intelligence Platform data connector
 ```bicep
 resource exampleResource 'Microsoft.SecurityInsights/dataConnectors@2021-10-01-preview' = {
@@ -1414,6 +1119,305 @@ resource exampleResource 'Microsoft.SecurityInsights/dataConnectors@2021-10-01-p
     }
     tenantId: '06b3ccb8-1384-4bcc-aec7-852f6d57161b'
     tipLookbackPeriod: '2020-01-01T13:00:30.123Z'
+  }
+}
+```
+
+## microsoft.securityinsights/entityqueries
+
+Creates or updates an Activity entity query.
+```bicep
+resource exampleResource 'Microsoft.SecurityInsights/entityQueries@2021-10-01-preview' = {
+  name: 'example'
+  etag: '"0300bf09-0000-0000-0000-5c37296e0000"'
+  kind: 'Activity'
+  properties: {
+    description: 'Account deleted on host'
+    content: 'On \'{{Computer}}\' the account \'{{TargetAccount}}\' was deleted by \'{{AddedBy}}\''
+    enabled: true
+    entitiesFilter: {
+      Host_OsFamily: [
+        'Windows'
+      ]
+    }
+    inputEntityType: 'Host'
+    queryDefinitions: {
+      query: 'let GetAccountActions = (v_Host_Name:string, v_Host_NTDomain:string, v_Host_DnsDomain:string, v_Host_AzureID:string, v_Host_OMSAgentID:string){\nSecurityEvent\n| where EventID in (4725, 4726, 4767, 4720, 4722, 4723, 4724)\n// parsing for Host to handle variety of conventions coming from data\n| extend Host_HostName = case(\nComputer has \'@\', tostring(split(Computer, \'@\')[0]),\nComputer has \'\\\\\', tostring(split(Computer, \'\\\\\')[1]),\nComputer has \'.\', tostring(split(Computer, \'.\')[0]),\nComputer\n)\n| extend Host_NTDomain = case(\nComputer has \'\\\\\', tostring(split(Computer, \'\\\\\')[0]), \nComputer has \'.\', tostring(split(Computer, \'.\')[-2]), \nComputer\n)\n| extend Host_DnsDomain = case(\nComputer has \'\\\\\', tostring(split(Computer, \'\\\\\')[0]), \nComputer has \'.\', strcat_array(array_slice(split(Computer,\'.\'),-2,-1),\'.\'), \nComputer\n)\n| where (Host_HostName =~ v_Host_Name and Host_NTDomain =~ v_Host_NTDomain) \nor (Host_HostName =~ v_Host_Name and Host_DnsDomain =~ v_Host_DnsDomain) \nor v_Host_AzureID =~ _ResourceId \nor v_Host_OMSAgentID == SourceComputerId\n| project TimeGenerated, EventID, Activity, Computer, TargetAccount, TargetUserName, TargetDomainName, TargetSid, SubjectUserName, SubjectUserSid, _ResourceId, SourceComputerId\n| extend AddedBy = SubjectUserName\n// Future support for Activities\n| extend timestamp = TimeGenerated, HostCustomEntity = Computer, AccountCustomEntity = TargetAccount\n};\nGetAccountActions(\'{{Host_HostName}}\', \'{{Host_NTDomain}}\', \'{{Host_DnsDomain}}\', \'{{Host_AzureID}}\', \'{{Host_OMSAgentID}}\')\n \n| where EventID == 4726 '
+    }
+    requiredInputFieldsSets: [
+      [
+        'Host_HostName'
+        'Host_NTDomain'
+      ]
+      [
+        'Host_HostName'
+        'Host_DnsDomain'
+      ]
+      [
+        'Host_AzureID'
+      ]
+      [
+        'Host_OMSAgentID'
+      ]
+    ]
+    templateName: {
+    }
+    title: 'An account was deleted on this host'
+  }
+}
+```
+
+## microsoft.securityinsights/incidents
+
+Creates or updates an incident.
+```bicep
+resource exampleResource 'Microsoft.SecurityInsights/incidents@2021-10-01-preview' = {
+  name: 'example'
+  etag: '"0300bf09-0000-0000-0000-5c37296e0000"'
+  properties: {
+    description: 'This is a demo incident'
+    classification: 'FalsePositive'
+    classificationComment: 'Not a malicious activity'
+    classificationReason: 'IncorrectAlertLogic'
+    firstActivityTimeUtc: '2019-01-01T13:00:30Z'
+    lastActivityTimeUtc: '2019-01-01T13:05:30Z'
+    owner: {
+      objectId: '2046feea-040d-4a46-9e2b-91c2941bfa70'
+    }
+    severity: 'High'
+    status: 'Closed'
+    title: 'My incident'
+  }
+}
+```
+
+## microsoft.securityinsights/incidents/comments
+
+Creates or updates an incident comment.
+```bicep
+resource exampleResource 'Microsoft.SecurityInsights/incidents/comments@2021-10-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    message: 'Some message'
+  }
+}
+```
+
+## microsoft.securityinsights/incidents/relations
+
+Creates or updates an incident relation.
+```bicep
+resource exampleResource 'Microsoft.SecurityInsights/incidents/relations@2021-10-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    relatedResourceId: '/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalIinsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/bookmarks/2216d0e1-91e3-4902-89fd-d2df8c535096'
+  }
+}
+```
+
+## microsoft.securityinsights/metadata
+
+Create/update full metadata.
+```bicep
+resource exampleResource 'Microsoft.SecurityInsights/metadata@2021-10-01-preview' = {
+  name: 'example'
+  properties: {
+    author: {
+      name: 'User Name'
+      email: 'email@microsoft.com'
+    }
+    categories: {
+      domains: [
+        'Application'
+        'Security – Insider Threat'
+      ]
+      verticals: [
+        'Healthcare'
+      ]
+    }
+    contentId: 'c00ee137-7475-47c8-9cce-ec6f0f1bedd0'
+    dependencies: {
+      criteria: [
+        {
+          criteria: [
+            {
+              name: 'Microsoft Defender for Endpoint'
+              contentId: '045d06d0-ee72-4794-aba4-cf5646e4c756'
+              kind: 'DataConnector'
+            }
+            {
+              contentId: 'dbfcb2cc-d782-40ef-8d94-fe7af58a6f2d'
+              kind: 'DataConnector'
+            }
+            {
+              contentId: 'de4dca9b-eb37-47d6-a56f-b8b06b261593'
+              kind: 'DataConnector'
+              version: '2.0'
+            }
+          ]
+          operator: 'OR'
+        }
+        {
+          contentId: '31ee11cc-9989-4de8-b176-5e0ef5c4dbab'
+          kind: 'Playbook'
+          version: '1.0'
+        }
+        {
+          contentId: '21ba424a-9438-4444-953a-7059539a7a1b'
+          kind: 'Parser'
+        }
+      ]
+      operator: 'AND'
+    }
+    firstPublishDate: '2021-05-18'
+    kind: 'AnalyticsRule'
+    lastPublishDate: '2021-05-18'
+    parentId: '/subscriptions/2e1dc338-d04d-4443-b721-037eff4fdcac/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/alertRules/ruleName'
+    providers: [
+      'Amazon'
+      'Microsoft'
+    ]
+    source: {
+      name: 'Contoso Solution 1.0'
+      kind: 'Solution'
+      sourceId: 'b688a130-76f4-4a07-bf57-762222a3cadf'
+    }
+    support: {
+      name: 'Microsoft'
+      email: 'support@microsoft.com'
+      link: 'https://support.microsoft.com/'
+      tier: 'Partner'
+    }
+    version: '1.0.0.0'
+  }
+}
+```
+
+Create/update minimal metadata.
+```bicep
+resource exampleResource 'Microsoft.SecurityInsights/metadata@2021-10-01-preview' = {
+  name: 'example'
+  properties: {
+    contentId: 'c00ee137-7475-47c8-9cce-ec6f0f1bedd0'
+    kind: 'AnalyticsRule'
+    parentId: '/subscriptions/2e1dc338-d04d-4443-b721-037eff4fdcac/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/alertRules/ruleName'
+  }
+}
+```
+
+## microsoft.securityinsights/onboardingstates
+
+Create Sentinel onboarding state
+```bicep
+resource exampleResource 'Microsoft.SecurityInsights/onboardingStates@2021-10-01-preview' = {
+  name: 'example'
+  properties: {
+    customerManagedKey: false
+  }
+}
+```
+
+## microsoft.securityinsights/settings
+
+Update EyesOn settings.
+```bicep
+resource exampleResource 'Microsoft.SecurityInsights/settings@2021-10-01-preview' = {
+  name: 'example'
+  etag: '"0300bf09-0000-0000-0000-5c37296e0000"'
+  kind: 'EyesOn'
+  properties: {
+  }
+}
+```
+
+## microsoft.securityinsights/sourcecontrols
+
+Creates a source control.
+```bicep
+resource exampleResource 'Microsoft.SecurityInsights/sourcecontrols@2021-10-01-preview' = {
+  name: 'example'
+  etag: '"0300bf09-0000-0000-0000-5c37296e0000"'
+  properties: {
+    description: 'This is a source control'
+    contentTypes: [
+      'AnalyticRules'
+      'Workbook'
+    ]
+    displayName: 'My Source Control'
+    repoType: 'Github'
+    repository: {
+      branch: 'master'
+      displayUrl: 'https://github.com/user/repo'
+      pathMapping: [
+        {
+          path: 'path/to/rules'
+          contentType: 'AnalyticRules'
+        }
+        {
+          path: 'path/to/workbooks'
+          contentType: 'Workbook'
+        }
+      ]
+      url: 'https://github.com/user/repo'
+    }
+  }
+}
+```
+
+## microsoft.securityinsights/watchlists
+
+Creates or updates a watchlist and bulk creates watchlist items.
+```bicep
+resource exampleResource 'Microsoft.SecurityInsights/watchlists@2021-10-01-preview' = {
+  name: 'example'
+  etag: '"0300bf09-0000-0000-0000-5c37296e0000"'
+  properties: {
+    description: 'Watchlist from CSV content'
+    contentType: 'text/csv'
+    displayName: 'High Value Assets Watchlist'
+    itemsSearchKey: 'header1'
+    numberOfLinesToSkip: 1
+    provider: 'Microsoft'
+    rawContent: 'This line will be skipped\nheader1,header2\nvalue1,value2'
+    source: 'Local file'
+  }
+}
+```
+
+Creates or updates a watchlist.
+```bicep
+resource exampleResource 'Microsoft.SecurityInsights/watchlists@2021-10-01-preview' = {
+  name: 'example'
+  etag: '"0300bf09-0000-0000-0000-5c37296e0000"'
+  properties: {
+    description: 'Watchlist from CSV content'
+    displayName: 'High Value Assets Watchlist'
+    itemsSearchKey: 'header1'
+    provider: 'Microsoft'
+    source: 'Local file'
+  }
+}
+```
+
+## microsoft.securityinsights/watchlists/watchlistitems
+
+Creates or updates a watchlist item.
+```bicep
+resource exampleResource 'Microsoft.SecurityInsights/watchlists/watchlistItems@2021-10-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  etag: '0300bf09-0000-0000-0000-5c37296e0000'
+  properties: {
+    itemsKeyValue: {
+      Business tier: '10.0.2.0/24'
+      Data tier: '10.0.2.0/24'
+      Gateway subnet: '10.0.255.224/27'
+      Private DMZ in: '10.0.0.0/27'
+      Public DMZ out: '10.0.0.96/27'
+      Web Tier: '10.0.1.0/24'
+    }
   }
 }
 ```

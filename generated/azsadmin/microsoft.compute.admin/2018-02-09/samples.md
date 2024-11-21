@@ -1,24 +1,8 @@
 # Microsoft.Compute.Admin
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
 
-## microsoft.compute.admin/locations/quotas
-
-Creates or Updates a Compute Quota.
-```bicep
-resource exampleResource 'Microsoft.Compute.Admin/locations/quotas@2018-02-09' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    availabilitySetCount: 2
-    coresLimit: 2
-    ddagpuCount: 6
-    maxAllocationPremiumManagedDisksAndSnapshots: 1024
-    maxAllocationStandardManagedDisksAndSnapshots: 1024
-    partitionedGpuCount: 0
-    virtualMachineCount: 2
-    vmScaleSetCount: 2
-  }
-}
-```
 
 ## microsoft.compute.admin/locations/artifacttypes/publishers/offers/skus/versions
 
@@ -78,6 +62,26 @@ resource exampleResource 'Microsoft.Compute.Admin/locations/diskmigrationjobs@20
       sharePath: '\\\\SU1FileServer.mydomain.com\\SU1_ObjStore_2'
       status: 'Unattached'
     }
+  }
+}
+```
+
+## microsoft.compute.admin/locations/quotas
+
+Creates or Updates a Compute Quota.
+```bicep
+resource exampleResource 'Microsoft.Compute.Admin/locations/quotas@2018-02-09' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    availabilitySetCount: 2
+    coresLimit: 2
+    ddagpuCount: 6
+    maxAllocationPremiumManagedDisksAndSnapshots: 1024
+    maxAllocationStandardManagedDisksAndSnapshots: 1024
+    partitionedGpuCount: 0
+    virtualMachineCount: 2
+    vmScaleSetCount: 2
   }
 }
 ```

@@ -1,4 +1,8 @@
 # Microsoft.AppConfiguration
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.appconfiguration/configurationstores
 
@@ -68,22 +72,6 @@ resource exampleResource 'Microsoft.AppConfiguration/configurationStores@2023-08
 }
 ```
 
-## microsoft.appconfiguration/configurationstores/privateendpointconnections
-
-PrivateEndpointConnection_Update
-```bicep
-resource exampleResource 'Microsoft.AppConfiguration/configurationStores/privateEndpointConnections@2023-08-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    privateLinkServiceConnectionState: {
-      description: 'Auto-Approved'
-      status: 'Approved'
-    }
-  }
-}
-```
-
 ## microsoft.appconfiguration/configurationstores/keyvalues
 
 KeyValues_CreateOrUpdate
@@ -97,6 +85,22 @@ resource exampleResource 'Microsoft.AppConfiguration/configurationStores/keyValu
       tag2: 'tagValue2'
     }
     value: 'myValue'
+  }
+}
+```
+
+## microsoft.appconfiguration/configurationstores/privateendpointconnections
+
+PrivateEndpointConnection_Update
+```bicep
+resource exampleResource 'Microsoft.AppConfiguration/configurationStores/privateEndpointConnections@2023-08-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    privateLinkServiceConnectionState: {
+      description: 'Auto-Approved'
+      status: 'Approved'
+    }
   }
 }
 ```

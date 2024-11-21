@@ -1,4 +1,20 @@
 # Microsoft.Automanage
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
+
+## microsoft.automanage/configurationprofileassignments
+
+Create or update configuration profile assignment
+```bicep
+resource exampleResource 'Microsoft.Automanage/configurationProfileAssignments@2021-04-30-preview' = {
+  name: 'example'
+  properties: {
+    configurationProfile: '/providers/Microsoft.Automanage/bestPractices/AzureBestPracticesProduction'
+  }
+}
+```
 
 ## microsoft.automanage/configurationprofiles
 
@@ -101,18 +117,6 @@ resource exampleResource 'Microsoft.Automanage/configurationProfiles/versions@20
   }
   tags: {
     Organization: 'Administration'
-  }
-}
-```
-
-## microsoft.automanage/configurationprofileassignments
-
-Create or update configuration profile assignment
-```bicep
-resource exampleResource 'Microsoft.Automanage/configurationProfileAssignments@2021-04-30-preview' = {
-  name: 'example'
-  properties: {
-    configurationProfile: '/providers/Microsoft.Automanage/bestPractices/AzureBestPracticesProduction'
   }
 }
 ```

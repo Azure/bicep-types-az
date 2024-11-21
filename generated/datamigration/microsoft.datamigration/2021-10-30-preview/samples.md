@@ -1,4 +1,8 @@
 # Microsoft.DataMigration
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.datamigration/databasemigrations
 
@@ -78,24 +82,6 @@ resource exampleResource 'Microsoft.DataMigration/databaseMigrations@2021-10-30-
 }
 ```
 
-## microsoft.datamigration/sqlmigrationservices
-
-Create or Update SQL Migration Service with maximum parameters.
-```bicep
-resource exampleResource 'Microsoft.DataMigration/sqlMigrationServices@2021-10-30-preview' = {
-  name: 'example'
-  location: 'northeurope'
-}
-```
-
-Create or Update SQL Migration Service with minimum parameters.
-```bicep
-resource exampleResource 'Microsoft.DataMigration/sqlMigrationServices@2021-10-30-preview' = {
-  name: 'example'
-  location: 'northeurope'
-}
-```
-
 ## microsoft.datamigration/services
 
 Services_CreateOrUpdate
@@ -108,6 +94,34 @@ resource exampleResource 'Microsoft.DataMigration/services@2021-10-30-preview' =
   }
   sku: {
     name: 'Basic_1vCore'
+  }
+}
+```
+
+## microsoft.datamigration/services/projects
+
+Projects_CreateOrUpdate
+```bicep
+resource exampleResource 'Microsoft.DataMigration/services/projects@2021-10-30-preview' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'southcentralus'
+  properties: {
+    sourcePlatform: 'SQL'
+    targetPlatform: 'SQLDB'
+  }
+}
+```
+
+## microsoft.datamigration/services/projects/files
+
+Files_CreateOrUpdate
+```bicep
+resource exampleResource 'Microsoft.DataMigration/services/projects/files@2021-10-30-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    filePath: 'DmsSdkFilePath/DmsSdkFile.sql'
   }
 }
 ```
@@ -152,30 +166,20 @@ resource exampleResource 'Microsoft.DataMigration/services/serviceTasks@2021-10-
 }
 ```
 
-## microsoft.datamigration/services/projects
+## microsoft.datamigration/sqlmigrationservices
 
-Projects_CreateOrUpdate
+Create or Update SQL Migration Service with maximum parameters.
 ```bicep
-resource exampleResource 'Microsoft.DataMigration/services/projects@2021-10-30-preview' = {
-  parent: parentResource 
+resource exampleResource 'Microsoft.DataMigration/sqlMigrationServices@2021-10-30-preview' = {
   name: 'example'
-  location: 'southcentralus'
-  properties: {
-    sourcePlatform: 'SQL'
-    targetPlatform: 'SQLDB'
-  }
+  location: 'northeurope'
 }
 ```
 
-## microsoft.datamigration/services/projects/files
-
-Files_CreateOrUpdate
+Create or Update SQL Migration Service with minimum parameters.
 ```bicep
-resource exampleResource 'Microsoft.DataMigration/services/projects/files@2021-10-30-preview' = {
-  parent: parentResource 
+resource exampleResource 'Microsoft.DataMigration/sqlMigrationServices@2021-10-30-preview' = {
   name: 'example'
-  properties: {
-    filePath: 'DmsSdkFilePath/DmsSdkFile.sql'
-  }
+  location: 'northeurope'
 }
 ```

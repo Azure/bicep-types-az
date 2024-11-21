@@ -1,4 +1,8 @@
 # Microsoft.LabServices
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.labservices/labplans
 
@@ -105,20 +109,6 @@ resource exampleResource 'Microsoft.LabServices/labs@2021-10-01-preview' = {
 }
 ```
 
-## microsoft.labservices/labs/users
-
-putUser
-```bicep
-resource exampleResource 'Microsoft.LabServices/labs/users@2021-10-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    additionalUsageQuota: '20:00'
-    email: 'testuser@contoso.com'
-  }
-}
-```
-
 ## microsoft.labservices/labs/schedules
 
 putSchedule
@@ -136,6 +126,20 @@ resource exampleResource 'Microsoft.LabServices/labs/schedules@2021-10-01-previe
     startAt: '2020-05-26T12:00:00Z'
     stopAt: '2020-05-26T18:00:00Z'
     timeZoneId: 'America/Los_Angeles'
+  }
+}
+```
+
+## microsoft.labservices/labs/users
+
+putUser
+```bicep
+resource exampleResource 'Microsoft.LabServices/labs/users@2021-10-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    additionalUsageQuota: '20:00'
+    email: 'testuser@contoso.com'
   }
 }
 ```

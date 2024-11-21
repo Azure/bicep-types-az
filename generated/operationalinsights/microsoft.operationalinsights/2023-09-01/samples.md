@@ -1,4 +1,8 @@
 # Microsoft.OperationalInsights
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.operationalinsights/clusters
 
@@ -10,6 +14,25 @@ resource exampleResource 'Microsoft.OperationalInsights/clusters@2023-09-01' = {
   sku: {
     name: 'CapacityReservation'
     capacity: 1000
+  }
+  tags: {
+    tag1: 'val1'
+  }
+}
+```
+
+## microsoft.operationalinsights/workspaces
+
+WorkspacesCreate
+```bicep
+resource exampleResource 'Microsoft.OperationalInsights/workspaces@2023-09-01' = {
+  name: 'example'
+  location: 'australiasoutheast'
+  properties: {
+    retentionInDays: 30
+    sku: {
+      name: 'PerGB2018'
+    }
   }
   tags: {
     tag1: 'val1'
@@ -144,25 +167,6 @@ resource exampleResource 'Microsoft.OperationalInsights/workspaces/tables@2023-0
     }
     retentionInDays: 45
     totalRetentionInDays: 70
-  }
-}
-```
-
-## microsoft.operationalinsights/workspaces
-
-WorkspacesCreate
-```bicep
-resource exampleResource 'Microsoft.OperationalInsights/workspaces@2023-09-01' = {
-  name: 'example'
-  location: 'australiasoutheast'
-  properties: {
-    retentionInDays: 30
-    sku: {
-      name: 'PerGB2018'
-    }
-  }
-  tags: {
-    tag1: 'val1'
   }
 }
 ```

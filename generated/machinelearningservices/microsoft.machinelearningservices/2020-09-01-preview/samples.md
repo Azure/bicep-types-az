@@ -1,68 +1,8 @@
 # Microsoft.MachineLearningServices
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
 
-## microsoft.machinelearningservices/workspaces/labelingjobs
-
-Create or update LabelingJob
-```bicep
-resource exampleResource 'Microsoft.MachineLearningServices/workspaces/labelingJobs@2020-09-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    datasetConfiguration: {
-      assetName: 'testdataasset'
-      datasetVersion: '1'
-      enableIncrementalDatasetRefresh: true
-    }
-    jobInstructions: {
-      uri: 'https://www.testjobInstructions.com/labeling1.txt'
-    }
-    labelCategories: {
-      testCategory: {
-        allowMultiSelect: false
-        classes: {
-          testClass1: {
-            displayName: 'testClass1'
-            subclasses: {
-              testclass1-1: {
-                displayName: 'testClass1-1'
-              }
-            }
-          }
-          testClass2: {
-            displayName: 'testClass2'
-          }
-        }
-        displayName: 'testCategory'
-      }
-    }
-    labelingJobMediaProperties: {
-      annotationType: 'BoundingBox'
-      mediaType: 'Image'
-    }
-    mlAssistConfiguration: {
-      inferencingComputeBinding: {
-        computeId: 'inferencingcompute'
-      }
-      mlAssistEnabled: true
-      modelNamePrefix: 'testmodel_1'
-      prelabelAccuracyThreshold: 0.8
-      trainingComputeBinding: {
-        computeId: 'trainingcompute'
-      }
-    }
-    properties: {
-      additionalProp1: 'string'
-      additionalProp2: 'string'
-      additionalProp3: 'string'
-    }
-    tags: {
-      additionalProp1: 'string'
-      additionalProp2: 'string'
-      additionalProp3: 'string'
-    }
-  }
-}
-```
 
 ## microsoft.machinelearningservices/workspaces
 
@@ -111,18 +51,6 @@ resource exampleResource 'Microsoft.MachineLearningServices/workspaces@2020-09-0
 
 ## microsoft.machinelearningservices/workspaces/computes
 
-Create AKS Compute
-```bicep
-resource exampleResource 'Microsoft.MachineLearningServices/workspaces/computes@2020-09-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'eastus'
-  properties: {
-    computeType: 'AKS'
-  }
-}
-```
-
 Create a AML Compute
 ```bicep
 resource exampleResource 'Microsoft.MachineLearningServices/workspaces/computes@2020-09-01-preview' = {
@@ -159,6 +87,18 @@ resource exampleResource 'Microsoft.MachineLearningServices/workspaces/computes@
   location: 'eastus'
   properties: {
     computeType: 'DataFactory'
+  }
+}
+```
+
+Create AKS Compute
+```bicep
+resource exampleResource 'Microsoft.MachineLearningServices/workspaces/computes@2020-09-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'eastus'
+  properties: {
+    computeType: 'AKS'
   }
 }
 ```
@@ -242,17 +182,82 @@ resource exampleResource 'Microsoft.MachineLearningServices/workspaces/computes@
 }
 ```
 
-## microsoft.machinelearningservices/workspaces/privateendpointconnections
+## microsoft.machinelearningservices/workspaces/connections
 
-WorkspacePutPrivateEndpointConnection
+CreateWorkspaceConnection
 ```bicep
-resource exampleResource 'Microsoft.MachineLearningServices/workspaces/privateEndpointConnections@2020-09-01-preview' = {
+resource exampleResource 'Microsoft.MachineLearningServices/workspaces/connections@2020-09-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  name: 'connection-1'
+  properties: {
+    authType: 'PAT'
+    category: 'ACR'
+    target: 'www.facebook.com'
+    value: 'secrets'
+  }
+}
+```
+
+## microsoft.machinelearningservices/workspaces/labelingjobs
+
+Create or update LabelingJob
+```bicep
+resource exampleResource 'Microsoft.MachineLearningServices/workspaces/labelingJobs@2020-09-01-preview' = {
   parent: parentResource 
   name: 'example'
   properties: {
-    privateLinkServiceConnectionState: {
-      description: 'Auto-Approved'
-      status: 'Approved'
+    datasetConfiguration: {
+      assetName: 'testdataasset'
+      datasetVersion: '1'
+      enableIncrementalDatasetRefresh: true
+    }
+    jobInstructions: {
+      uri: 'https://www.testjobInstructions.com/labeling1.txt'
+    }
+    labelCategories: {
+      testCategory: {
+        allowMultiSelect: false
+        classes: {
+          testClass1: {
+            displayName: 'testClass1'
+            subclasses: {
+              testclass1-1: {
+                displayName: 'testClass1-1'
+              }
+            }
+          }
+          testClass2: {
+            displayName: 'testClass2'
+          }
+        }
+        displayName: 'testCategory'
+      }
+    }
+    labelingJobMediaProperties: {
+      annotationType: 'BoundingBox'
+      mediaType: 'Image'
+    }
+    mlAssistConfiguration: {
+      inferencingComputeBinding: {
+        computeId: 'inferencingcompute'
+      }
+      mlAssistEnabled: true
+      modelNamePrefix: 'testmodel_1'
+      prelabelAccuracyThreshold: 0.8
+      trainingComputeBinding: {
+        computeId: 'trainingcompute'
+      }
+    }
+    properties: {
+      additionalProp1: 'string'
+      additionalProp2: 'string'
+      additionalProp3: 'string'
+    }
+    tags: {
+      additionalProp1: 'string'
+      additionalProp2: 'string'
+      additionalProp3: 'string'
     }
   }
 }
@@ -272,6 +277,22 @@ resource exampleResource 'Microsoft.MachineLearningServices/workspaces/linkedSer
   location: 'westus'
   properties: {
     linkedServiceResourceId: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1/providers/Microsoft.Synapse/workspaces/Syn-1'
+  }
+}
+```
+
+## microsoft.machinelearningservices/workspaces/privateendpointconnections
+
+WorkspacePutPrivateEndpointConnection
+```bicep
+resource exampleResource 'Microsoft.MachineLearningServices/workspaces/privateEndpointConnections@2020-09-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    privateLinkServiceConnectionState: {
+      description: 'Auto-Approved'
+      status: 'Approved'
+    }
   }
 }
 ```
@@ -367,22 +388,5 @@ resource exampleResource 'Microsoft.MachineLearningServices/workspaces/services@
     ]
   }
   location: 'eastus2'
-}
-```
-
-## microsoft.machinelearningservices/workspaces/connections
-
-CreateWorkspaceConnection
-```bicep
-resource exampleResource 'Microsoft.MachineLearningServices/workspaces/connections@2020-09-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  name: 'connection-1'
-  properties: {
-    authType: 'PAT'
-    category: 'ACR'
-    target: 'www.facebook.com'
-    value: 'secrets'
-  }
 }
 ```

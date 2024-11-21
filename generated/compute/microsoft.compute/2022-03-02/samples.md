@@ -1,4 +1,95 @@
 # Microsoft.Compute
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
+
+## microsoft.compute/diskaccesses
+
+Create a disk access resource.
+```bicep
+resource exampleResource 'Microsoft.Compute/diskAccesses@2022-03-02' = {
+  name: 'example'
+  location: 'West US'
+}
+```
+
+## microsoft.compute/diskaccesses/privateendpointconnections
+
+Approve a Private Endpoint Connection under a disk access resource.
+```bicep
+resource exampleResource 'Microsoft.Compute/diskAccesses/privateEndpointConnections@2022-03-02' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    privateLinkServiceConnectionState: {
+      description: 'Approving myPrivateEndpointConnection'
+      status: 'Approved'
+    }
+  }
+}
+```
+
+## microsoft.compute/diskencryptionsets
+
+Create a disk encryption set with key vault from a different subscription.
+```bicep
+resource exampleResource 'Microsoft.Compute/diskEncryptionSets@2022-03-02' = {
+  name: 'example'
+  identity: {
+    type: 'SystemAssigned'
+  }
+  location: 'West US'
+  properties: {
+    activeKey: {
+      keyUrl: 'https://myvaultdifferentsub.vault-int.azure-int.net/keys/{key}'
+    }
+    encryptionType: 'EncryptionAtRestWithCustomerKey'
+  }
+}
+```
+
+Create a disk encryption set with key vault from a different tenant.
+```bicep
+resource exampleResource 'Microsoft.Compute/diskEncryptionSets@2022-03-02' = {
+  name: 'example'
+  identity: {
+    type: 'UserAssigned'
+    userAssignedIdentities: {
+      /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}: {
+      }
+    }
+  }
+  location: 'West US'
+  properties: {
+    activeKey: {
+      keyUrl: 'https://myvaultdifferenttenant.vault-int.azure-int.net/keys/{key}'
+    }
+    encryptionType: 'EncryptionAtRestWithCustomerKey'
+    federatedClientId: '00000000-0000-0000-0000-000000000000'
+  }
+}
+```
+
+Create a disk encryption set.
+```bicep
+resource exampleResource 'Microsoft.Compute/diskEncryptionSets@2022-03-02' = {
+  name: 'example'
+  identity: {
+    type: 'SystemAssigned'
+  }
+  location: 'West US'
+  properties: {
+    activeKey: {
+      keyUrl: 'https://myvmvault.vault-int.azure-int.net/keys/{key}'
+      sourceVault: {
+        id: '/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.KeyVault/vaults/myVMVault'
+      }
+    }
+    encryptionType: 'EncryptionAtRestWithCustomerKey'
+  }
+}
+```
 
 ## microsoft.compute/disks
 
@@ -99,44 +190,6 @@ resource exampleResource 'Microsoft.Compute/disks@2022-03-02' = {
 }
 ```
 
-Create a managed disk from ImportSecure create option
-```bicep
-resource exampleResource 'Microsoft.Compute/disks@2022-03-02' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    creationData: {
-      createOption: 'ImportSecure'
-      securityDataUri: 'https://mystorageaccount.blob.core.windows.net/osimages/vmgs.vhd'
-      sourceUri: 'https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd'
-      storageAccountId: 'subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount'
-    }
-    osType: 'Windows'
-    securityProfile: {
-      securityType: 'ConfidentialVM_VMGuestStateOnlyEncryptedWithPlatformKey'
-    }
-  }
-}
-```
-
-Create a managed disk from UploadPreparedSecure create option
-```bicep
-resource exampleResource 'Microsoft.Compute/disks@2022-03-02' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    creationData: {
-      createOption: 'UploadPreparedSecure'
-      uploadSizeBytes: 10737418752
-    }
-    osType: 'Windows'
-    securityProfile: {
-      securityType: 'TrustedLaunch'
-    }
-  }
-}
-```
-
 Create a managed disk from a platform image.
 ```bicep
 resource exampleResource 'Microsoft.Compute/disks@2022-03-02' = {
@@ -214,6 +267,44 @@ resource exampleResource 'Microsoft.Compute/disks@2022-03-02' = {
     creationData: {
       createOption: 'Copy'
       sourceResourceId: 'subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myDisk1'
+    }
+  }
+}
+```
+
+Create a managed disk from ImportSecure create option
+```bicep
+resource exampleResource 'Microsoft.Compute/disks@2022-03-02' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    creationData: {
+      createOption: 'ImportSecure'
+      securityDataUri: 'https://mystorageaccount.blob.core.windows.net/osimages/vmgs.vhd'
+      sourceUri: 'https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd'
+      storageAccountId: 'subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount'
+    }
+    osType: 'Windows'
+    securityProfile: {
+      securityType: 'ConfidentialVM_VMGuestStateOnlyEncryptedWithPlatformKey'
+    }
+  }
+}
+```
+
+Create a managed disk from UploadPreparedSecure create option
+```bicep
+resource exampleResource 'Microsoft.Compute/disks@2022-03-02' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    creationData: {
+      createOption: 'UploadPreparedSecure'
+      uploadSizeBytes: 10737418752
+    }
+    osType: 'Windows'
+    securityProfile: {
+      securityType: 'TrustedLaunch'
     }
   }
 }
@@ -350,93 +441,6 @@ resource exampleResource 'Microsoft.Compute/disks@2022-03-02' = {
   }
   sku: {
     name: 'UltraSSD_LRS'
-  }
-}
-```
-
-## microsoft.compute/diskaccesses
-
-Create a disk access resource.
-```bicep
-resource exampleResource 'Microsoft.Compute/diskAccesses@2022-03-02' = {
-  name: 'example'
-  location: 'West US'
-}
-```
-
-## microsoft.compute/diskaccesses/privateendpointconnections
-
-Approve a Private Endpoint Connection under a disk access resource.
-```bicep
-resource exampleResource 'Microsoft.Compute/diskAccesses/privateEndpointConnections@2022-03-02' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    privateLinkServiceConnectionState: {
-      description: 'Approving myPrivateEndpointConnection'
-      status: 'Approved'
-    }
-  }
-}
-```
-
-## microsoft.compute/diskencryptionsets
-
-Create a disk encryption set with key vault from a different subscription.
-```bicep
-resource exampleResource 'Microsoft.Compute/diskEncryptionSets@2022-03-02' = {
-  name: 'example'
-  identity: {
-    type: 'SystemAssigned'
-  }
-  location: 'West US'
-  properties: {
-    activeKey: {
-      keyUrl: 'https://myvaultdifferentsub.vault-int.azure-int.net/keys/{key}'
-    }
-    encryptionType: 'EncryptionAtRestWithCustomerKey'
-  }
-}
-```
-
-Create a disk encryption set with key vault from a different tenant.
-```bicep
-resource exampleResource 'Microsoft.Compute/diskEncryptionSets@2022-03-02' = {
-  name: 'example'
-  identity: {
-    type: 'UserAssigned'
-    userAssignedIdentities: {
-      /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}: {
-      }
-    }
-  }
-  location: 'West US'
-  properties: {
-    activeKey: {
-      keyUrl: 'https://myvaultdifferenttenant.vault-int.azure-int.net/keys/{key}'
-    }
-    encryptionType: 'EncryptionAtRestWithCustomerKey'
-    federatedClientId: '00000000-0000-0000-0000-000000000000'
-  }
-}
-```
-
-Create a disk encryption set.
-```bicep
-resource exampleResource 'Microsoft.Compute/diskEncryptionSets@2022-03-02' = {
-  name: 'example'
-  identity: {
-    type: 'SystemAssigned'
-  }
-  location: 'West US'
-  properties: {
-    activeKey: {
-      keyUrl: 'https://myvmvault.vault-int.azure-int.net/keys/{key}'
-      sourceVault: {
-        id: '/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.KeyVault/vaults/myVMVault'
-      }
-    }
-    encryptionType: 'EncryptionAtRestWithCustomerKey'
   }
 }
 ```

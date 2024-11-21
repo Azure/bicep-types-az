@@ -1,4 +1,40 @@
 # Microsoft.Compute
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
+
+## microsoft.compute/diskaccesses
+
+Create a disk access resource.
+```bicep
+resource exampleResource 'Microsoft.Compute/diskAccesses@2020-06-30' = {
+  name: 'example'
+  location: 'West US'
+}
+```
+
+## microsoft.compute/diskencryptionsets
+
+Create a disk encryption set.
+```bicep
+resource exampleResource 'Microsoft.Compute/diskEncryptionSets@2020-06-30' = {
+  name: 'example'
+  identity: {
+    type: 'SystemAssigned'
+  }
+  location: 'West US'
+  properties: {
+    activeKey: {
+      keyUrl: 'https://myvmvault.vault-int.azure-int.net/keys/{key}'
+      sourceVault: {
+        id: '/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.KeyVault/vaults/myVMVault'
+      }
+    }
+    encryptionType: 'EncryptionAtRestWithCustomerKey'
+  }
+}
+```
 
 ## microsoft.compute/disks
 
@@ -197,37 +233,5 @@ resource exampleResource 'Microsoft.Compute/snapshots@2020-06-30' = {
       sourceResourceId: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot1'
     }
   }
-}
-```
-
-## microsoft.compute/diskencryptionsets
-
-Create a disk encryption set.
-```bicep
-resource exampleResource 'Microsoft.Compute/diskEncryptionSets@2020-06-30' = {
-  name: 'example'
-  identity: {
-    type: 'SystemAssigned'
-  }
-  location: 'West US'
-  properties: {
-    activeKey: {
-      keyUrl: 'https://myvmvault.vault-int.azure-int.net/keys/{key}'
-      sourceVault: {
-        id: '/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.KeyVault/vaults/myVMVault'
-      }
-    }
-    encryptionType: 'EncryptionAtRestWithCustomerKey'
-  }
-}
-```
-
-## microsoft.compute/diskaccesses
-
-Create a disk access resource.
-```bicep
-resource exampleResource 'Microsoft.Compute/diskAccesses@2020-06-30' = {
-  name: 'example'
-  location: 'West US'
 }
 ```

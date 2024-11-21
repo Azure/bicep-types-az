@@ -1,4 +1,8 @@
 # Microsoft.Network
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.network/applicationsecuritygroups
 
@@ -177,6 +181,63 @@ resource exampleResource 'Microsoft.Network/loadBalancers@2017-11-01' = {
 }
 ```
 
+Create load balancer with inbound nat pool
+```bicep
+resource exampleResource 'Microsoft.Network/loadBalancers@2017-11-01' = {
+  name: 'example'
+  location: 'eastus'
+  properties: {
+    backendAddressPools: [
+    ]
+    frontendIPConfigurations: [
+      {
+        name: 'test'
+        id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/test'
+        properties: {
+          privateIPAllocationMethod: 'Dynamic'
+          subnet: {
+            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/lbvnet/subnets/lbsubnet'
+            properties: {
+              resourceNavigationLinks: [
+              ]
+              serviceEndpoints: [
+              ]
+            }
+          }
+        }
+        zones: [
+        ]
+      }
+    ]
+    inboundNatPools: [
+      {
+        name: 'test'
+        id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/inboundNatPools/test'
+        properties: {
+          backendPort: 8888
+          enableFloatingIP: true
+          frontendIPConfiguration: {
+            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/test'
+          }
+          frontendPortRangeEnd: 8085
+          frontendPortRangeStart: 8080
+          idleTimeoutInMinutes: 10
+          protocol: 'Tcp'
+        }
+      }
+    ]
+    inboundNatRules: [
+    ]
+    loadBalancingRules: [
+    ]
+    outboundNatRules: [
+    ]
+    probes: [
+    ]
+  }
+}
+```
+
 Create load balancer with Standard SKU
 ```bicep
 resource exampleResource 'Microsoft.Network/loadBalancers@2017-11-01' = {
@@ -256,63 +317,6 @@ resource exampleResource 'Microsoft.Network/loadBalancers@2017-11-01' = {
   }
   sku: {
     name: 'Standard'
-  }
-}
-```
-
-Create load balancer with inbound nat pool
-```bicep
-resource exampleResource 'Microsoft.Network/loadBalancers@2017-11-01' = {
-  name: 'example'
-  location: 'eastus'
-  properties: {
-    backendAddressPools: [
-    ]
-    frontendIPConfigurations: [
-      {
-        name: 'test'
-        id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/test'
-        properties: {
-          privateIPAllocationMethod: 'Dynamic'
-          subnet: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/lbvnet/subnets/lbsubnet'
-            properties: {
-              resourceNavigationLinks: [
-              ]
-              serviceEndpoints: [
-              ]
-            }
-          }
-        }
-        zones: [
-        ]
-      }
-    ]
-    inboundNatPools: [
-      {
-        name: 'test'
-        id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/inboundNatPools/test'
-        properties: {
-          backendPort: 8888
-          enableFloatingIP: true
-          frontendIPConfiguration: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/test'
-          }
-          frontendPortRangeEnd: 8085
-          frontendPortRangeStart: 8080
-          idleTimeoutInMinutes: 10
-          protocol: 'Tcp'
-        }
-      }
-    ]
-    inboundNatRules: [
-    ]
-    loadBalancingRules: [
-    ]
-    outboundNatRules: [
-    ]
-    probes: [
-    ]
   }
 }
 ```
@@ -428,6 +432,26 @@ resource exampleResource 'Microsoft.Network/networkWatchers@2017-11-01' = {
 }
 ```
 
+## microsoft.network/networkwatchers/connectionmonitors
+
+Create connection monitor
+```bicep
+resource exampleResource 'Microsoft.Network/networkWatchers/connectionMonitors@2017-11-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    destination: {
+      address: 'bing.com'
+      port: 80
+    }
+    monitoringIntervalInSeconds: 60
+    source: {
+      resourceId: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Compute/virtualMachines/vm1'
+    }
+  }
+}
+```
+
 ## microsoft.network/networkwatchers/packetcaptures
 
 Create packet capture
@@ -456,40 +480,7 @@ resource exampleResource 'Microsoft.Network/networkWatchers/packetCaptures@2017-
 }
 ```
 
-## microsoft.network/networkwatchers/connectionmonitors
-
-Create connection monitor
-```bicep
-resource exampleResource 'Microsoft.Network/networkWatchers/connectionMonitors@2017-11-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    destination: {
-      address: 'bing.com'
-      port: 80
-    }
-    monitoringIntervalInSeconds: 60
-    source: {
-      resourceId: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Compute/virtualMachines/vm1'
-    }
-  }
-}
-```
-
 ## microsoft.network/publicipaddresses
-
-Create public IP address DNS
-```bicep
-resource exampleResource 'Microsoft.Network/publicIPAddresses@2017-11-01' = {
-  name: 'example'
-  location: 'eastus'
-  properties: {
-    dnsSettings: {
-      domainNameLabel: 'dnslbl'
-    }
-  }
-}
-```
 
 Create public IP address allocation method
 ```bicep
@@ -512,6 +503,19 @@ Create public IP address defaults
 resource exampleResource 'Microsoft.Network/publicIPAddresses@2017-11-01' = {
   name: 'example'
   location: 'eastus'
+}
+```
+
+Create public IP address DNS
+```bicep
+resource exampleResource 'Microsoft.Network/publicIPAddresses@2017-11-01' = {
+  name: 'example'
+  location: 'eastus'
+  properties: {
+    dnsSettings: {
+      domainNameLabel: 'dnslbl'
+    }
+  }
 }
 ```
 

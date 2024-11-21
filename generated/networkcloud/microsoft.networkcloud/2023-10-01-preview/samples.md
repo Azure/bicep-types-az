@@ -1,4 +1,8 @@
 # Microsoft.NetworkCloud
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.networkcloud/baremetalmachines
 
@@ -229,6 +233,121 @@ resource exampleResource 'Microsoft.NetworkCloud/clusters@2023-10-01-preview' = 
 }
 ```
 
+## microsoft.networkcloud/clusters/baremetalmachinekeysets
+
+Create or update bare metal machine key set of cluster
+```bicep
+resource exampleResource 'Microsoft.NetworkCloud/clusters/bareMetalMachineKeySets@2023-10-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  extendedLocation: {
+    name: '/subscriptions/123e4567-e89b-12d3-a456-426655440000/resourceGroups/resourceGroupName/providers/Microsoft.ExtendedLocation/customLocations/clusterExtendedLocationName'
+    type: 'CustomLocation'
+  }
+  location: 'location'
+  properties: {
+    azureGroupId: 'f110271b-XXXX-4163-9b99-214d91660f0e'
+    expiration: '2022-12-31T23:59:59.008Z'
+    jumpHostsAllowed: [
+      '192.0.2.1'
+      '192.0.2.5'
+    ]
+    osGroupName: 'standardAccessGroup'
+    privilegeLevel: 'Standard'
+    userList: [
+      {
+        description: 'Needs access for troubleshooting as a part of the support team'
+        azureUserName: 'userABC'
+        sshPublicKey: {
+          keyData: 'ssh-rsa AAtsE3njSONzDYRIZv/WLjVuMfrUSByHp+jfaaOLHTIIB4fJvo6dQUZxE20w2iDHV3tEkmnTo84eba97VMueQD6OzJPEyWZMRpz8UYWOd0IXeRqiFu1lawNblZhwNT/ojNZfpB3af/YDzwQCZgTcTRyNNhL4o/blKUmug0daSsSXISTRnIDpcf5qytjs1Xo+yYyJMvzLL59mhAyb3p/cD+Y3/s3WhAx+l0XOKpzXnblrv9d3q4c2tWmm/SyFqthaqd0= admin@vm'
+        }
+        userPrincipalName: 'userABC@contoso.com'
+      }
+      {
+        description: 'Needs access for troubleshooting as a part of the support team'
+        azureUserName: 'userXYZ'
+        sshPublicKey: {
+          keyData: 'ssh-rsa AAtsE3njSONzDYRIZv/WLjVuMfrUSByHp+jfaaOLHTIIB4fJvo6dQUZxE20w2iDHV3tEkmnTo84eba97VMueQD6OzJPEyWZMRpz8UYWOd0IXeRqiFu1lawNblZhwNT/ojNZfpB3af/YDzwQCZgTcTRyNNhL4o/blKUmug0daSsSXISTRnIDpcf5qytjs1Xo+yYyJMvzLL59mhAyb3p/cD+Y3/s3WhAx+l0XOKpzXnblrv9d3q4c2tWmm/SyFqthaqd0= admin@vm'
+        }
+        userPrincipalName: 'userABC@contoso.com'
+      }
+    ]
+  }
+  tags: {
+    key1: 'myvalue1'
+    key2: 'myvalue2'
+  }
+}
+```
+
+## microsoft.networkcloud/clusters/bmckeysets
+
+Create or update baseboard management controller key set of cluster
+```bicep
+resource exampleResource 'Microsoft.NetworkCloud/clusters/bmcKeySets@2023-10-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  extendedLocation: {
+    name: '/subscriptions/123e4567-e89b-12d3-a456-426655440000/resourceGroups/resourceGroupName/providers/Microsoft.ExtendedLocation/customLocations/clusterExtendedLocationName'
+    type: 'CustomLocation'
+  }
+  location: 'location'
+  properties: {
+    azureGroupId: 'f110271b-XXXX-4163-9b99-214d91660f0e'
+    expiration: '2022-12-31T23:59:59.008Z'
+    privilegeLevel: 'Administrator'
+    userList: [
+      {
+        description: 'Needs access for troubleshooting as a part of the support team'
+        azureUserName: 'userABC'
+        sshPublicKey: {
+          keyData: 'ssh-rsa AAtsE3njSONzDYRIZv/WLjVuMfrUSByHp+jfaaOLHTIIB4fJvo6dQUZxE20w2iDHV3tEkmnTo84eba97VMueQD6OzJPEyWZMRpz8UYWOd0IXeRqiFu1lawNblZhwNT/ojNZfpB3af/YDzwQCZgTcTRyNNhL4o/blKUmug0daSsSXISTRnIDpcf5qytjs1Xo+yYyJMvzLL59mhAyb3p/cD+Y3/s3WhAx+l0XOKpzXnblrv9d3q4c2tWmm/SyFqthaqd0= admin@vm'
+        }
+        userPrincipalName: 'userABC@contoso.com'
+      }
+      {
+        description: 'Needs access for troubleshooting as a part of the support team'
+        azureUserName: 'userXYZ'
+        sshPublicKey: {
+          keyData: 'ssh-rsa AAtsE3njSONzDYRIZv/WLjVuMfrUSByHp+jfaaOLHTIIB4fJvo6dQUZxE20w2iDHV3tEkmnTo84eba97VMueQD6OzJPEyWZMRpz8UYWOd0IXeRqiFu1lawNblZhwNT/ojNZfpB3af/YDzwQCZgTcTRyNNhL4o/blKUmug0daSsSXISTRnIDpcf5qytjs1Xo+yYyJMvzLL59mhAyb3p/cD+Y3/s3WhAx+l0XOKpzXnblrv9d3q4c2tWmm/SyFqthaqd0= admin@vm'
+        }
+        userPrincipalName: 'userABC@contoso.com'
+      }
+    ]
+  }
+  tags: {
+    key1: 'myvalue1'
+    key2: 'myvalue2'
+  }
+}
+```
+
+## microsoft.networkcloud/clusters/metricsconfigurations
+
+Create or update metrics configuration of cluster
+```bicep
+resource exampleResource 'Microsoft.NetworkCloud/clusters/metricsConfigurations@2023-10-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  extendedLocation: {
+    name: '/subscriptions/123e4567-e89b-12d3-a456-426655440000/resourceGroups/resourceGroupName/providers/Microsoft.ExtendedLocation/customLocations/clusterExtendedLocationName'
+    type: 'CustomLocation'
+  }
+  location: 'location'
+  properties: {
+    collectionInterval: 15
+    enabledMetrics: [
+      'metric1'
+      'metric2'
+    ]
+  }
+  tags: {
+    key1: 'myvalue1'
+    key2: 'myvalue2'
+  }
+}
+```
+
 ## microsoft.networkcloud/kubernetesclusters
 
 Create or update Kubernetes cluster
@@ -409,6 +528,83 @@ resource exampleResource 'Microsoft.NetworkCloud/kubernetesClusters@2023-10-01-p
         '198.51.101.0/24'
       ]
     }
+  }
+  tags: {
+    key1: 'myvalue1'
+    key2: 'myvalue2'
+  }
+}
+```
+
+## microsoft.networkcloud/kubernetesclusters/agentpools
+
+Create or update Kubernetes cluster agent pool
+```bicep
+resource exampleResource 'Microsoft.NetworkCloud/kubernetesClusters/agentPools@2023-10-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  extendedLocation: {
+    name: '/subscriptions/123e4567-e89b-12d3-a456-426655440000/resourceGroups/resourceGroupName/providers/Microsoft.ExtendedLocation/customLocations/clusterExtendedLocationName'
+    type: 'CustomLocation'
+  }
+  location: 'location'
+  properties: {
+    administratorConfiguration: {
+      adminUsername: 'azure'
+      sshPublicKeys: [
+        {
+          keyData: 'ssh-rsa AAtsE3njSONzDYRIZv/WLjVuMfrUSByHp+jfaaOLHTIIB4fJvo6dQUZxE20w2iDHV3tEkmnTo84eba97VMueQD6OzJPEyWZMRpz8UYWOd0IXeRqiFu1lawNblZhwNT/ojNZfpB3af/YDzwQCZgTcTRyNNhL4o/blKUmug0daSsSXISTRnIDpcf5qytjs1Xo+yYyJMvzLL59mhAyb3p/cD+Y3/s3WhAx+l0XOKpzXnblrv9d3q4c2tWmm/SyFqthaqd0= admin@vm'
+        }
+      ]
+    }
+    agentOptions: {
+      hugepagesCount: 96
+      hugepagesSize: '1G'
+    }
+    attachedNetworkConfiguration: {
+      l2Networks: [
+        {
+          networkId: '/subscriptions/123e4567-e89b-12d3-a456-426655440000/resourceGroups/resourceGroupName/providers/Microsoft.NetworkCloud/l2Networks/l2NetworkName'
+          pluginType: 'DPDK'
+        }
+      ]
+      l3Networks: [
+        {
+          ipamEnabled: 'False'
+          networkId: '/subscriptions/123e4567-e89b-12d3-a456-426655440000/resourceGroups/resourceGroupName/providers/Microsoft.NetworkCloud/l3Networks/l3NetworkName'
+          pluginType: 'SRIOV'
+        }
+      ]
+      trunkedNetworks: [
+        {
+          networkId: '/subscriptions/123e4567-e89b-12d3-a456-426655440000/resourceGroups/resourceGroupName/providers/Microsoft.NetworkCloud/trunkedNetworks/trunkedNetworkName'
+          pluginType: 'MACVLAN'
+        }
+      ]
+    }
+    availabilityZones: [
+      '1'
+      '2'
+      '3'
+    ]
+    count: 3
+    labels: [
+      {
+        key: 'kubernetes.label'
+        value: 'true'
+      }
+    ]
+    mode: 'System'
+    taints: [
+      {
+        key: 'kubernetes.taint'
+        value: 'true'
+      }
+    ]
+    upgradeSettings: {
+      maxSurge: '1'
+    }
+    vmSkuName: 'NC_M16_v1'
   }
   tags: {
     key1: 'myvalue1'
@@ -617,219 +813,6 @@ resource exampleResource 'Microsoft.NetworkCloud/virtualMachines@2023-10-01-prev
 }
 ```
 
-## microsoft.networkcloud/volumes
-
-Create or update volume
-```bicep
-resource exampleResource 'Microsoft.NetworkCloud/volumes@2023-10-01-preview' = {
-  name: 'example'
-  extendedLocation: {
-    name: '/subscriptions/123e4567-e89b-12d3-a456-426655440000/resourceGroups/resourceGroupName/providers/Microsoft.ExtendedLocation/customLocations/clusterExtendedLocationName'
-    type: 'CustomLocation'
-  }
-  location: 'location'
-  properties: {
-    sizeMiB: 10000
-  }
-  tags: {
-    key1: 'myvalue1'
-    key2: 'myvalue2'
-  }
-}
-```
-
-## microsoft.networkcloud/clusters/baremetalmachinekeysets
-
-Create or update bare metal machine key set of cluster
-```bicep
-resource exampleResource 'Microsoft.NetworkCloud/clusters/bareMetalMachineKeySets@2023-10-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  extendedLocation: {
-    name: '/subscriptions/123e4567-e89b-12d3-a456-426655440000/resourceGroups/resourceGroupName/providers/Microsoft.ExtendedLocation/customLocations/clusterExtendedLocationName'
-    type: 'CustomLocation'
-  }
-  location: 'location'
-  properties: {
-    azureGroupId: 'f110271b-XXXX-4163-9b99-214d91660f0e'
-    expiration: '2022-12-31T23:59:59.008Z'
-    jumpHostsAllowed: [
-      '192.0.2.1'
-      '192.0.2.5'
-    ]
-    osGroupName: 'standardAccessGroup'
-    privilegeLevel: 'Standard'
-    userList: [
-      {
-        description: 'Needs access for troubleshooting as a part of the support team'
-        azureUserName: 'userABC'
-        sshPublicKey: {
-          keyData: 'ssh-rsa AAtsE3njSONzDYRIZv/WLjVuMfrUSByHp+jfaaOLHTIIB4fJvo6dQUZxE20w2iDHV3tEkmnTo84eba97VMueQD6OzJPEyWZMRpz8UYWOd0IXeRqiFu1lawNblZhwNT/ojNZfpB3af/YDzwQCZgTcTRyNNhL4o/blKUmug0daSsSXISTRnIDpcf5qytjs1Xo+yYyJMvzLL59mhAyb3p/cD+Y3/s3WhAx+l0XOKpzXnblrv9d3q4c2tWmm/SyFqthaqd0= admin@vm'
-        }
-        userPrincipalName: 'userABC@contoso.com'
-      }
-      {
-        description: 'Needs access for troubleshooting as a part of the support team'
-        azureUserName: 'userXYZ'
-        sshPublicKey: {
-          keyData: 'ssh-rsa AAtsE3njSONzDYRIZv/WLjVuMfrUSByHp+jfaaOLHTIIB4fJvo6dQUZxE20w2iDHV3tEkmnTo84eba97VMueQD6OzJPEyWZMRpz8UYWOd0IXeRqiFu1lawNblZhwNT/ojNZfpB3af/YDzwQCZgTcTRyNNhL4o/blKUmug0daSsSXISTRnIDpcf5qytjs1Xo+yYyJMvzLL59mhAyb3p/cD+Y3/s3WhAx+l0XOKpzXnblrv9d3q4c2tWmm/SyFqthaqd0= admin@vm'
-        }
-        userPrincipalName: 'userABC@contoso.com'
-      }
-    ]
-  }
-  tags: {
-    key1: 'myvalue1'
-    key2: 'myvalue2'
-  }
-}
-```
-
-## microsoft.networkcloud/clusters/bmckeysets
-
-Create or update baseboard management controller key set of cluster
-```bicep
-resource exampleResource 'Microsoft.NetworkCloud/clusters/bmcKeySets@2023-10-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  extendedLocation: {
-    name: '/subscriptions/123e4567-e89b-12d3-a456-426655440000/resourceGroups/resourceGroupName/providers/Microsoft.ExtendedLocation/customLocations/clusterExtendedLocationName'
-    type: 'CustomLocation'
-  }
-  location: 'location'
-  properties: {
-    azureGroupId: 'f110271b-XXXX-4163-9b99-214d91660f0e'
-    expiration: '2022-12-31T23:59:59.008Z'
-    privilegeLevel: 'Administrator'
-    userList: [
-      {
-        description: 'Needs access for troubleshooting as a part of the support team'
-        azureUserName: 'userABC'
-        sshPublicKey: {
-          keyData: 'ssh-rsa AAtsE3njSONzDYRIZv/WLjVuMfrUSByHp+jfaaOLHTIIB4fJvo6dQUZxE20w2iDHV3tEkmnTo84eba97VMueQD6OzJPEyWZMRpz8UYWOd0IXeRqiFu1lawNblZhwNT/ojNZfpB3af/YDzwQCZgTcTRyNNhL4o/blKUmug0daSsSXISTRnIDpcf5qytjs1Xo+yYyJMvzLL59mhAyb3p/cD+Y3/s3WhAx+l0XOKpzXnblrv9d3q4c2tWmm/SyFqthaqd0= admin@vm'
-        }
-        userPrincipalName: 'userABC@contoso.com'
-      }
-      {
-        description: 'Needs access for troubleshooting as a part of the support team'
-        azureUserName: 'userXYZ'
-        sshPublicKey: {
-          keyData: 'ssh-rsa AAtsE3njSONzDYRIZv/WLjVuMfrUSByHp+jfaaOLHTIIB4fJvo6dQUZxE20w2iDHV3tEkmnTo84eba97VMueQD6OzJPEyWZMRpz8UYWOd0IXeRqiFu1lawNblZhwNT/ojNZfpB3af/YDzwQCZgTcTRyNNhL4o/blKUmug0daSsSXISTRnIDpcf5qytjs1Xo+yYyJMvzLL59mhAyb3p/cD+Y3/s3WhAx+l0XOKpzXnblrv9d3q4c2tWmm/SyFqthaqd0= admin@vm'
-        }
-        userPrincipalName: 'userABC@contoso.com'
-      }
-    ]
-  }
-  tags: {
-    key1: 'myvalue1'
-    key2: 'myvalue2'
-  }
-}
-```
-
-## microsoft.networkcloud/clusters/metricsconfigurations
-
-Create or update metrics configuration of cluster
-```bicep
-resource exampleResource 'Microsoft.NetworkCloud/clusters/metricsConfigurations@2023-10-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  extendedLocation: {
-    name: '/subscriptions/123e4567-e89b-12d3-a456-426655440000/resourceGroups/resourceGroupName/providers/Microsoft.ExtendedLocation/customLocations/clusterExtendedLocationName'
-    type: 'CustomLocation'
-  }
-  location: 'location'
-  properties: {
-    collectionInterval: 15
-    enabledMetrics: [
-      'metric1'
-      'metric2'
-    ]
-  }
-  tags: {
-    key1: 'myvalue1'
-    key2: 'myvalue2'
-  }
-}
-```
-
-## microsoft.networkcloud/kubernetesclusters/agentpools
-
-Create or update Kubernetes cluster agent pool
-```bicep
-resource exampleResource 'Microsoft.NetworkCloud/kubernetesClusters/agentPools@2023-10-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  extendedLocation: {
-    name: '/subscriptions/123e4567-e89b-12d3-a456-426655440000/resourceGroups/resourceGroupName/providers/Microsoft.ExtendedLocation/customLocations/clusterExtendedLocationName'
-    type: 'CustomLocation'
-  }
-  location: 'location'
-  properties: {
-    administratorConfiguration: {
-      adminUsername: 'azure'
-      sshPublicKeys: [
-        {
-          keyData: 'ssh-rsa AAtsE3njSONzDYRIZv/WLjVuMfrUSByHp+jfaaOLHTIIB4fJvo6dQUZxE20w2iDHV3tEkmnTo84eba97VMueQD6OzJPEyWZMRpz8UYWOd0IXeRqiFu1lawNblZhwNT/ojNZfpB3af/YDzwQCZgTcTRyNNhL4o/blKUmug0daSsSXISTRnIDpcf5qytjs1Xo+yYyJMvzLL59mhAyb3p/cD+Y3/s3WhAx+l0XOKpzXnblrv9d3q4c2tWmm/SyFqthaqd0= admin@vm'
-        }
-      ]
-    }
-    agentOptions: {
-      hugepagesCount: 96
-      hugepagesSize: '1G'
-    }
-    attachedNetworkConfiguration: {
-      l2Networks: [
-        {
-          networkId: '/subscriptions/123e4567-e89b-12d3-a456-426655440000/resourceGroups/resourceGroupName/providers/Microsoft.NetworkCloud/l2Networks/l2NetworkName'
-          pluginType: 'DPDK'
-        }
-      ]
-      l3Networks: [
-        {
-          ipamEnabled: 'False'
-          networkId: '/subscriptions/123e4567-e89b-12d3-a456-426655440000/resourceGroups/resourceGroupName/providers/Microsoft.NetworkCloud/l3Networks/l3NetworkName'
-          pluginType: 'SRIOV'
-        }
-      ]
-      trunkedNetworks: [
-        {
-          networkId: '/subscriptions/123e4567-e89b-12d3-a456-426655440000/resourceGroups/resourceGroupName/providers/Microsoft.NetworkCloud/trunkedNetworks/trunkedNetworkName'
-          pluginType: 'MACVLAN'
-        }
-      ]
-    }
-    availabilityZones: [
-      '1'
-      '2'
-      '3'
-    ]
-    count: 3
-    labels: [
-      {
-        key: 'kubernetes.label'
-        value: 'true'
-      }
-    ]
-    mode: 'System'
-    taints: [
-      {
-        key: 'kubernetes.taint'
-        value: 'true'
-      }
-    ]
-    upgradeSettings: {
-      maxSurge: '1'
-    }
-    vmSkuName: 'NC_M16_v1'
-  }
-  tags: {
-    key1: 'myvalue1'
-    key2: 'myvalue2'
-  }
-}
-```
-
 ## microsoft.networkcloud/virtualmachines/consoles
 
 Create or update virtual machine console
@@ -848,6 +831,27 @@ resource exampleResource 'Microsoft.NetworkCloud/virtualMachines/consoles@2023-1
     sshPublicKey: {
       keyData: 'ssh-rsa AAtsE3njSONzDYRIZv/WLjVuMfrUSByHp+jfaaOLHTIIB4fJvo6dQUZxE20w2iDHV3tEkmnTo84eba97VMueQD6OzJPEyWZMRpz8UYWOd0IXeRqiFu1lawNblZhwNT/ojNZfpB3af/YDzwQCZgTcTRyNNhL4o/blKUmug0daSsSXISTRnIDpcf5qytjs1Xo+yYyJMvzLL59mhAyb3p/cD+Y3/s3WhAx+l0XOKpzXnblrv9d3q4c2tWmm/SyFqthaqd0= admin@vm'
     }
+  }
+  tags: {
+    key1: 'myvalue1'
+    key2: 'myvalue2'
+  }
+}
+```
+
+## microsoft.networkcloud/volumes
+
+Create or update volume
+```bicep
+resource exampleResource 'Microsoft.NetworkCloud/volumes@2023-10-01-preview' = {
+  name: 'example'
+  extendedLocation: {
+    name: '/subscriptions/123e4567-e89b-12d3-a456-426655440000/resourceGroups/resourceGroupName/providers/Microsoft.ExtendedLocation/customLocations/clusterExtendedLocationName'
+    type: 'CustomLocation'
+  }
+  location: 'location'
+  properties: {
+    sizeMiB: 10000
   }
   tags: {
     key1: 'myvalue1'

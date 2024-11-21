@@ -1,26 +1,116 @@
 # Microsoft.ServiceFabric
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
 
-## microsoft.servicefabric/managedclusters/applicationtypes
 
-Put an application type
+## microsoft.servicefabric/managedclusters
+
+Put a cluster with maximum parameters
 ```bicep
-resource exampleResource 'Microsoft.ServiceFabric/managedclusters/applicationTypes@2021-01-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'eastus'
-}
-```
-
-## microsoft.servicefabric/managedclusters/applicationtypes/versions
-
-Put an application type version
-```bicep
-resource exampleResource 'Microsoft.ServiceFabric/managedclusters/applicationTypes/versions@2021-01-01-preview' = {
-  parent: parentResource 
+resource exampleResource 'Microsoft.ServiceFabric/managedClusters@2021-01-01-preview' = {
   name: 'example'
   location: 'eastus'
   properties: {
-    appPackageUrl: 'http://fakelink.test.com/MyAppType'
+    addonFeatures: [
+      'DnsService'
+      'BackupRestoreService'
+      'ResourceMonitorService'
+    ]
+    adminPassword: '{vm-password}'
+    adminUserName: 'vmadmin'
+    allowRdpAccess: true
+    applicationTypeVersionsCleanupPolicy: {
+      maxUnusedVersionsToKeep: 3
+    }
+    clientConnectionPort: 19000
+    clusterCodeVersion: '7.1.168.9494'
+    dnsName: 'myCluster'
+    enableAutoOSUpgrade: true
+    fabricSettings: [
+      {
+        name: 'ManagedIdentityTokenService'
+        parameters: [
+          {
+            name: 'IsEnabled'
+            value: 'true'
+          }
+        ]
+      }
+    ]
+    httpGatewayConnectionPort: 19080
+    loadBalancingRules: [
+      {
+        backendPort: 80
+        frontendPort: 80
+        probeProtocol: 'http'
+        protocol: 'http'
+      }
+      {
+        backendPort: 443
+        frontendPort: 443
+        probeProtocol: 'http'
+        protocol: 'http'
+      }
+      {
+        backendPort: 10000
+        frontendPort: 10000
+        probeProtocol: 'http'
+        protocol: 'tcp'
+      }
+    ]
+    networkSecurityRules: [
+      {
+        name: 'TestName'
+        description: 'Test description'
+        access: 'allow'
+        destinationAddressPrefixes: [
+          '*'
+        ]
+        destinationPortRanges: [
+          '*'
+        ]
+        direction: 'inbound'
+        priority: 1010
+        sourceAddressPrefixes: [
+          '*'
+        ]
+        sourcePortRanges: [
+          '*'
+        ]
+        protocol: 'tcp'
+      }
+    ]
+  }
+  sku: {
+    name: 'Basic'
+  }
+  tags: {
+  }
+}
+```
+
+Put a cluster with minimum parameters
+```bicep
+resource exampleResource 'Microsoft.ServiceFabric/managedClusters@2021-01-01-preview' = {
+  name: 'example'
+  location: 'eastus'
+  properties: {
+    adminPassword: '{vm-password}'
+    adminUserName: 'vmadmin'
+    clusterCodeVersion: '7.1.168.9494'
+    dnsName: 'myCluster'
+    fabricSettings: [
+      {
+        name: 'ManagedIdentityTokenService'
+        parameters: [
+          {
+            name: 'IsEnabled'
+            value: 'true'
+          }
+        ]
+      }
+    ]
   }
 }
 ```
@@ -167,113 +257,27 @@ resource exampleResource 'Microsoft.ServiceFabric/managedclusters/applications/s
 }
 ```
 
-## microsoft.servicefabric/managedclusters
+## microsoft.servicefabric/managedclusters/applicationtypes
 
-Put a cluster with maximum parameters
+Put an application type
 ```bicep
-resource exampleResource 'Microsoft.ServiceFabric/managedClusters@2021-01-01-preview' = {
+resource exampleResource 'Microsoft.ServiceFabric/managedclusters/applicationTypes@2021-01-01-preview' = {
+  parent: parentResource 
   name: 'example'
   location: 'eastus'
-  properties: {
-    addonFeatures: [
-      'DnsService'
-      'BackupRestoreService'
-      'ResourceMonitorService'
-    ]
-    adminPassword: '{vm-password}'
-    adminUserName: 'vmadmin'
-    allowRdpAccess: true
-    applicationTypeVersionsCleanupPolicy: {
-      maxUnusedVersionsToKeep: 3
-    }
-    clientConnectionPort: 19000
-    clusterCodeVersion: '7.1.168.9494'
-    dnsName: 'myCluster'
-    enableAutoOSUpgrade: true
-    fabricSettings: [
-      {
-        name: 'ManagedIdentityTokenService'
-        parameters: [
-          {
-            name: 'IsEnabled'
-            value: 'true'
-          }
-        ]
-      }
-    ]
-    httpGatewayConnectionPort: 19080
-    loadBalancingRules: [
-      {
-        backendPort: 80
-        frontendPort: 80
-        probeProtocol: 'http'
-        protocol: 'http'
-      }
-      {
-        backendPort: 443
-        frontendPort: 443
-        probeProtocol: 'http'
-        protocol: 'http'
-      }
-      {
-        backendPort: 10000
-        frontendPort: 10000
-        probeProtocol: 'http'
-        protocol: 'tcp'
-      }
-    ]
-    networkSecurityRules: [
-      {
-        name: 'TestName'
-        description: 'Test description'
-        access: 'allow'
-        destinationAddressPrefixes: [
-          '*'
-        ]
-        destinationPortRanges: [
-          '*'
-        ]
-        direction: 'inbound'
-        priority: 1010
-        sourceAddressPrefixes: [
-          '*'
-        ]
-        sourcePortRanges: [
-          '*'
-        ]
-        protocol: 'tcp'
-      }
-    ]
-  }
-  sku: {
-    name: 'Basic'
-  }
-  tags: {
-  }
 }
 ```
 
-Put a cluster with minimum parameters
+## microsoft.servicefabric/managedclusters/applicationtypes/versions
+
+Put an application type version
 ```bicep
-resource exampleResource 'Microsoft.ServiceFabric/managedClusters@2021-01-01-preview' = {
+resource exampleResource 'Microsoft.ServiceFabric/managedclusters/applicationTypes/versions@2021-01-01-preview' = {
+  parent: parentResource 
   name: 'example'
   location: 'eastus'
   properties: {
-    adminPassword: '{vm-password}'
-    adminUserName: 'vmadmin'
-    clusterCodeVersion: '7.1.168.9494'
-    dnsName: 'myCluster'
-    fabricSettings: [
-      {
-        name: 'ManagedIdentityTokenService'
-        parameters: [
-          {
-            name: 'IsEnabled'
-            value: 'true'
-          }
-        ]
-      }
-    ]
+    appPackageUrl: 'http://fakelink.test.com/MyAppType'
   }
 }
 ```

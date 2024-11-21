@@ -1,16 +1,8 @@
 # Microsoft.PolicyInsights
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
 
-## microsoft.policyinsights/remediations
-
-Create remediation at management group scope
-```bicep
-resource exampleResource 'Microsoft.PolicyInsights/remediations@2024-10-01' = {
-  name: 'example'
-  properties: {
-    policyAssignmentId: '/providers/microsoft.management/managementGroups/financeMg/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5'
-  }
-}
-```
 
 ## microsoft.policyinsights/attestations
 
@@ -46,6 +38,18 @@ resource exampleResource 'Microsoft.PolicyInsights/attestations@2024-10-01' = {
     owner: '55a32e28-3aa5-4eea-9b5a-4cd85153b966'
     policyAssignmentId: '/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5'
     policyDefinitionReferenceId: '0b158b46-ff42-4799-8e39-08a5c23b4551'
+  }
+}
+```
+
+## microsoft.policyinsights/remediations
+
+Create remediation at management group scope
+```bicep
+resource exampleResource 'Microsoft.PolicyInsights/remediations@2024-10-01' = {
+  name: 'example'
+  properties: {
+    policyAssignmentId: '/providers/microsoft.management/managementGroups/financeMg/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5'
   }
 }
 ```

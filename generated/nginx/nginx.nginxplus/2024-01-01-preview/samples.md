@@ -1,42 +1,8 @@
 # Nginx.NginxPlus
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
 
-## nginx.nginxplus/nginxdeployments/certificates
-
-Certificates_CreateOrUpdate
-```bicep
-resource exampleResource 'Nginx.NginxPlus/nginxDeployments/certificates@2024-01-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    certificateVirtualPath: '/src/cert/somePath.cert'
-    keyVaultSecretId: 'https://someKV.vault.azure.com/someSecretID'
-    keyVirtualPath: '/src/cert/somekey.key'
-  }
-}
-```
-
-## nginx.nginxplus/nginxdeployments/configurations
-
-Configurations_CreateOrUpdate
-```bicep
-resource exampleResource 'Nginx.NginxPlus/nginxDeployments/configurations@2024-01-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    files: [
-      {
-        content: 'ABCDEF=='
-        virtualPath: '/etc/nginx/nginx.conf'
-      }
-    ]
-    package: {
-      data: {
-      }
-    }
-    rootFile: '/etc/nginx/nginx.conf'
-  }
-}
-```
 
 ## nginx.nginxplus/nginxdeployments
 
@@ -79,6 +45,44 @@ resource exampleResource 'Nginx.NginxPlus/nginxDeployments@2024-01-01-preview' =
   }
   tags: {
     Environment: 'Dev'
+  }
+}
+```
+
+## nginx.nginxplus/nginxdeployments/certificates
+
+Certificates_CreateOrUpdate
+```bicep
+resource exampleResource 'Nginx.NginxPlus/nginxDeployments/certificates@2024-01-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    certificateVirtualPath: '/src/cert/somePath.cert'
+    keyVaultSecretId: 'https://someKV.vault.azure.com/someSecretID'
+    keyVirtualPath: '/src/cert/somekey.key'
+  }
+}
+```
+
+## nginx.nginxplus/nginxdeployments/configurations
+
+Configurations_CreateOrUpdate
+```bicep
+resource exampleResource 'Nginx.NginxPlus/nginxDeployments/configurations@2024-01-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    files: [
+      {
+        content: 'ABCDEF=='
+        virtualPath: '/etc/nginx/nginx.conf'
+      }
+    ]
+    package: {
+      data: {
+      }
+    }
+    rootFile: '/etc/nginx/nginx.conf'
   }
 }
 ```

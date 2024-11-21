@@ -1,19 +1,8 @@
 # Microsoft.ServiceBus
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
 
-## microsoft.servicebus/namespaces/ipfilterrules
-
-NameSpaceIpFilterRuleCreate
-```bicep
-resource exampleResource 'Microsoft.ServiceBus/namespaces/ipfilterrules@2018-01-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    action: 'Accept'
-    filterName: 'sdk-IPFilterRules-7337'
-    ipMask: '13.78.143.246/32'
-  }
-}
-```
 
 ## microsoft.servicebus/namespaces
 
@@ -33,19 +22,6 @@ resource exampleResource 'Microsoft.ServiceBus/namespaces@2018-01-01-preview' = 
 }
 ```
 
-## microsoft.servicebus/namespaces/virtualnetworkrules
-
-NameSpaceVirtualNetworkRuleCreate
-```bicep
-resource exampleResource 'Microsoft.ServiceBus/namespaces/virtualnetworkrules@2018-01-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    virtualNetworkSubnetId: '/subscriptions/Subscription/resourceGroups/sbehvnettest/providers/Microsoft.Network/virtualNetworks/sbehvnettest/subnets/default'
-  }
-}
-```
-
 ## microsoft.servicebus/namespaces/authorizationrules
 
 NameSpaceAuthorizationRuleCreate
@@ -58,6 +34,49 @@ resource exampleResource 'Microsoft.ServiceBus/namespaces/AuthorizationRules@201
       'Listen'
       'Send'
     ]
+  }
+}
+```
+
+## microsoft.servicebus/namespaces/disasterrecoveryconfigs
+
+SBAliasCreate
+```bicep
+resource exampleResource 'Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs@2018-01-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    alternateName: 'alternameforAlias-Namespace-8860'
+    partnerNamespace: 'sdk-Namespace-37'
+  }
+}
+```
+
+## microsoft.servicebus/namespaces/ipfilterrules
+
+NameSpaceIpFilterRuleCreate
+```bicep
+resource exampleResource 'Microsoft.ServiceBus/namespaces/ipfilterrules@2018-01-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    action: 'Accept'
+    filterName: 'sdk-IPFilterRules-7337'
+    ipMask: '13.78.143.246/32'
+  }
+}
+```
+
+## microsoft.servicebus/namespaces/migrationconfigurations
+
+MigrationConfigurationsStartMigration
+```bicep
+resource exampleResource 'Microsoft.ServiceBus/namespaces/migrationConfigurations@2018-01-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    postMigrationName: 'sdk-PostMigration-5919'
+    targetNamespace: '/subscriptions/SubscriptionId/resourceGroups/ResourceGroup/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-4028'
   }
 }
 ```
@@ -137,36 +156,6 @@ resource exampleResource 'Microsoft.ServiceBus/namespaces/privateEndpointConnect
 }
 ```
 
-## microsoft.servicebus/namespaces/disasterrecoveryconfigs
-
-SBAliasCreate
-```bicep
-resource exampleResource 'Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs@2018-01-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    alternateName: 'alternameforAlias-Namespace-8860'
-    partnerNamespace: 'sdk-Namespace-37'
-  }
-}
-```
-
-## microsoft.servicebus/namespaces/queues/authorizationrules
-
-QueueAuthorizationRuleCreate
-```bicep
-resource exampleResource 'Microsoft.ServiceBus/namespaces/queues/authorizationRules@2018-01-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    rights: [
-      'Listen'
-      'Send'
-    ]
-  }
-}
-```
-
 ## microsoft.servicebus/namespaces/queues
 
 QueueCreate
@@ -180,11 +169,11 @@ resource exampleResource 'Microsoft.ServiceBus/namespaces/queues@2018-01-01-prev
 }
 ```
 
-## microsoft.servicebus/namespaces/topics/authorizationrules
+## microsoft.servicebus/namespaces/queues/authorizationrules
 
-TopicAuthorizationRuleCreate
+QueueAuthorizationRuleCreate
 ```bicep
-resource exampleResource 'Microsoft.ServiceBus/namespaces/topics/authorizationRules@2018-01-01-preview' = {
+resource exampleResource 'Microsoft.ServiceBus/namespaces/queues/authorizationRules@2018-01-01-preview' = {
   parent: parentResource 
   name: 'example'
   properties: {
@@ -209,16 +198,18 @@ resource exampleResource 'Microsoft.ServiceBus/namespaces/topics@2018-01-01-prev
 }
 ```
 
-## microsoft.servicebus/namespaces/migrationconfigurations
+## microsoft.servicebus/namespaces/topics/authorizationrules
 
-MigrationConfigurationsStartMigration
+TopicAuthorizationRuleCreate
 ```bicep
-resource exampleResource 'Microsoft.ServiceBus/namespaces/migrationConfigurations@2018-01-01-preview' = {
+resource exampleResource 'Microsoft.ServiceBus/namespaces/topics/authorizationRules@2018-01-01-preview' = {
   parent: parentResource 
   name: 'example'
   properties: {
-    postMigrationName: 'sdk-PostMigration-5919'
-    targetNamespace: '/subscriptions/SubscriptionId/resourceGroups/ResourceGroup/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-4028'
+    rights: [
+      'Listen'
+      'Send'
+    ]
   }
 }
 ```
@@ -272,6 +263,19 @@ resource exampleResource 'Microsoft.ServiceBus/namespaces/topics/subscriptions/r
     sqlFilter: {
       sqlExpression: 'myproperty=test'
     }
+  }
+}
+```
+
+## microsoft.servicebus/namespaces/virtualnetworkrules
+
+NameSpaceVirtualNetworkRuleCreate
+```bicep
+resource exampleResource 'Microsoft.ServiceBus/namespaces/virtualnetworkrules@2018-01-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    virtualNetworkSubnetId: '/subscriptions/Subscription/resourceGroups/sbehvnettest/providers/Microsoft.Network/virtualNetworks/sbehvnettest/subnets/default'
   }
 }
 ```

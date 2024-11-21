@@ -1,22 +1,8 @@
 # Microsoft.DesktopVirtualization
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
 
-## microsoft.desktopvirtualization/workspaces
-
-Workspace_Create
-```bicep
-resource exampleResource 'Microsoft.DesktopVirtualization/workspaces@2019-12-10-preview' = {
-  name: 'example'
-  location: 'centralus'
-  properties: {
-    description: 'des1'
-    friendlyName: 'friendly'
-  }
-  tags: {
-    tag1: 'value1'
-    tag2: 'value2'
-  }
-}
-```
 
 ## microsoft.desktopvirtualization/applicationgroups
 
@@ -81,6 +67,24 @@ resource exampleResource 'Microsoft.DesktopVirtualization/hostPools@2019-12-10-p
     }
     ssoContext: 'KeyVaultPath'
     vmTemplate: '{json:json}'
+  }
+  tags: {
+    tag1: 'value1'
+    tag2: 'value2'
+  }
+}
+```
+
+## microsoft.desktopvirtualization/workspaces
+
+Workspace_Create
+```bicep
+resource exampleResource 'Microsoft.DesktopVirtualization/workspaces@2019-12-10-preview' = {
+  name: 'example'
+  location: 'centralus'
+  properties: {
+    description: 'des1'
+    friendlyName: 'friendly'
   }
   tags: {
     tag1: 'value1'

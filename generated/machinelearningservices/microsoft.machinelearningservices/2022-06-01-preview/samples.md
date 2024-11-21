@@ -1,4 +1,8 @@
 # Microsoft.MachineLearningServices
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.machinelearningservices/workspaces
 
@@ -44,6 +48,192 @@ resource exampleResource 'Microsoft.MachineLearningServices/workspaces@2022-06-0
       }
     ]
     storageAccount: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/accountcrud-1234/providers/Microsoft.Storage/storageAccounts/testStorageAccount'
+  }
+}
+```
+
+## microsoft.machinelearningservices/workspaces/batchendpoints
+
+CreateOrUpdate Batch Endpoint.
+```bicep
+resource exampleResource 'Microsoft.MachineLearningServices/workspaces/batchEndpoints@2022-06-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  identity: {
+    type: 'SystemAssigned'
+    userAssignedIdentities: {
+      string: {
+      }
+    }
+  }
+  kind: 'string'
+  location: 'string'
+  properties: {
+    description: 'string'
+    authMode: 'AMLToken'
+    defaults: {
+      deploymentName: 'string'
+    }
+    properties: {
+      string: 'string'
+    }
+  }
+  sku: {
+    name: 'string'
+    capacity: 1
+    family: 'string'
+    size: 'string'
+    tier: 'Free'
+  }
+  tags: {
+  }
+}
+```
+
+## microsoft.machinelearningservices/workspaces/batchendpoints/deployments
+
+CreateOrUpdate Batch Deployment.
+```bicep
+resource exampleResource 'Microsoft.MachineLearningServices/workspaces/batchEndpoints/deployments@2022-06-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  identity: {
+    type: 'SystemAssigned'
+    userAssignedIdentities: {
+      string: {
+      }
+    }
+  }
+  kind: 'string'
+  location: 'string'
+  properties: {
+    description: 'string'
+    codeConfiguration: {
+      codeId: 'string'
+      scoringScript: 'string'
+    }
+    compute: 'string'
+    environmentId: 'string'
+    environmentVariables: {
+      string: 'string'
+    }
+    errorThreshold: 1
+    loggingLevel: 'Info'
+    maxConcurrencyPerInstance: 1
+    miniBatchSize: 1
+    model: {
+      assetId: 'string'
+      referenceType: 'Id'
+    }
+    outputAction: 'SummaryOnly'
+    outputFileName: 'string'
+    properties: {
+      string: 'string'
+    }
+    resources: {
+      instanceCount: 1
+      instanceType: 'string'
+      properties: {
+        string: {
+          cd3c37dc-2876-4ca4-8a54-21bd7619724a: {
+          }
+        }
+      }
+    }
+    retrySettings: {
+      maxRetries: 1
+      timeout: 'PT5M'
+    }
+  }
+  sku: {
+    name: 'string'
+    capacity: 1
+    family: 'string'
+    size: 'string'
+    tier: 'Free'
+  }
+  tags: {
+  }
+}
+```
+
+## microsoft.machinelearningservices/workspaces/codes
+
+CreateOrUpdate Code Container.
+```bicep
+resource exampleResource 'Microsoft.MachineLearningServices/workspaces/codes@2022-06-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    description: 'string'
+    tags: {
+      tag1: 'value1'
+      tag2: 'value2'
+    }
+  }
+}
+```
+
+## microsoft.machinelearningservices/workspaces/codes/versions
+
+CreateOrUpdate Code Version.
+```bicep
+resource exampleResource 'Microsoft.MachineLearningServices/workspaces/codes/versions@2022-06-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    description: 'string'
+    codeUri: 'https://blobStorage/folderName'
+    isAnonymous: false
+    properties: {
+      string: 'string'
+    }
+    tags: {
+      string: 'string'
+    }
+  }
+}
+```
+
+## microsoft.machinelearningservices/workspaces/components
+
+CreateOrUpdate Component Container.
+```bicep
+resource exampleResource 'Microsoft.MachineLearningServices/workspaces/components@2022-06-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    description: 'string'
+    properties: {
+      string: 'string'
+    }
+    tags: {
+      string: 'string'
+    }
+  }
+}
+```
+
+## microsoft.machinelearningservices/workspaces/components/versions
+
+CreateOrUpdate Component Version.
+```bicep
+resource exampleResource 'Microsoft.MachineLearningServices/workspaces/components/versions@2022-06-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    description: 'string'
+    componentSpec: {
+      8ced901b-d826-477d-bfef-329da9672513: {
+      }
+    }
+    isAnonymous: false
+    properties: {
+      string: 'string'
+    }
+    tags: {
+      string: 'string'
+    }
   }
 }
 ```
@@ -257,22 +447,6 @@ resource exampleResource 'Microsoft.MachineLearningServices/workspaces/computes@
 }
 ```
 
-## microsoft.machinelearningservices/workspaces/privateendpointconnections
-
-WorkspacePutPrivateEndpointConnection
-```bicep
-resource exampleResource 'Microsoft.MachineLearningServices/workspaces/privateEndpointConnections@2022-06-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    privateLinkServiceConnectionState: {
-      description: 'Auto-Approved'
-      status: 'Approved'
-    }
-  }
-}
-```
-
 ## microsoft.machinelearningservices/workspaces/connections
 
 CreateWorkspaceConnection
@@ -284,192 +458,6 @@ resource exampleResource 'Microsoft.MachineLearningServices/workspaces/connectio
     authType: 'None'
     category: 'ContainerRegistry'
     target: 'www.facebook.com'
-  }
-}
-```
-
-## microsoft.machinelearningservices/workspaces/batchendpoints
-
-CreateOrUpdate Batch Endpoint.
-```bicep
-resource exampleResource 'Microsoft.MachineLearningServices/workspaces/batchEndpoints@2022-06-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  identity: {
-    type: 'SystemAssigned'
-    userAssignedIdentities: {
-      string: {
-      }
-    }
-  }
-  kind: 'string'
-  location: 'string'
-  properties: {
-    description: 'string'
-    authMode: 'AMLToken'
-    defaults: {
-      deploymentName: 'string'
-    }
-    properties: {
-      string: 'string'
-    }
-  }
-  sku: {
-    name: 'string'
-    capacity: 1
-    family: 'string'
-    size: 'string'
-    tier: 'Free'
-  }
-  tags: {
-  }
-}
-```
-
-## microsoft.machinelearningservices/workspaces/batchendpoints/deployments
-
-CreateOrUpdate Batch Deployment.
-```bicep
-resource exampleResource 'Microsoft.MachineLearningServices/workspaces/batchEndpoints/deployments@2022-06-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  identity: {
-    type: 'SystemAssigned'
-    userAssignedIdentities: {
-      string: {
-      }
-    }
-  }
-  kind: 'string'
-  location: 'string'
-  properties: {
-    description: 'string'
-    codeConfiguration: {
-      codeId: 'string'
-      scoringScript: 'string'
-    }
-    compute: 'string'
-    environmentId: 'string'
-    environmentVariables: {
-      string: 'string'
-    }
-    errorThreshold: 1
-    loggingLevel: 'Info'
-    maxConcurrencyPerInstance: 1
-    miniBatchSize: 1
-    model: {
-      assetId: 'string'
-      referenceType: 'Id'
-    }
-    outputAction: 'SummaryOnly'
-    outputFileName: 'string'
-    properties: {
-      string: 'string'
-    }
-    resources: {
-      instanceCount: 1
-      instanceType: 'string'
-      properties: {
-        string: {
-          cd3c37dc-2876-4ca4-8a54-21bd7619724a: {
-          }
-        }
-      }
-    }
-    retrySettings: {
-      maxRetries: 1
-      timeout: 'PT5M'
-    }
-  }
-  sku: {
-    name: 'string'
-    capacity: 1
-    family: 'string'
-    size: 'string'
-    tier: 'Free'
-  }
-  tags: {
-  }
-}
-```
-
-## microsoft.machinelearningservices/workspaces/codes
-
-CreateOrUpdate Code Container.
-```bicep
-resource exampleResource 'Microsoft.MachineLearningServices/workspaces/codes@2022-06-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    description: 'string'
-    tags: {
-      tag1: 'value1'
-      tag2: 'value2'
-    }
-  }
-}
-```
-
-## microsoft.machinelearningservices/workspaces/codes/versions
-
-CreateOrUpdate Code Version.
-```bicep
-resource exampleResource 'Microsoft.MachineLearningServices/workspaces/codes/versions@2022-06-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    description: 'string'
-    codeUri: 'https://blobStorage/folderName'
-    isAnonymous: false
-    properties: {
-      string: 'string'
-    }
-    tags: {
-      string: 'string'
-    }
-  }
-}
-```
-
-## microsoft.machinelearningservices/workspaces/components
-
-CreateOrUpdate Component Container.
-```bicep
-resource exampleResource 'Microsoft.MachineLearningServices/workspaces/components@2022-06-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    description: 'string'
-    properties: {
-      string: 'string'
-    }
-    tags: {
-      string: 'string'
-    }
-  }
-}
-```
-
-## microsoft.machinelearningservices/workspaces/components/versions
-
-CreateOrUpdate Component Version.
-```bicep
-resource exampleResource 'Microsoft.MachineLearningServices/workspaces/components/versions@2022-06-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    description: 'string'
-    componentSpec: {
-      8ced901b-d826-477d-bfef-329da9672513: {
-      }
-    }
-    isAnonymous: false
-    properties: {
-      string: 'string'
-    }
-    tags: {
-      string: 'string'
-    }
   }
 }
 ```
@@ -1266,6 +1254,22 @@ resource exampleResource 'Microsoft.MachineLearningServices/workspaces/onlineEnd
     tier: 'Free'
   }
   tags: {
+  }
+}
+```
+
+## microsoft.machinelearningservices/workspaces/privateendpointconnections
+
+WorkspacePutPrivateEndpointConnection
+```bicep
+resource exampleResource 'Microsoft.MachineLearningServices/workspaces/privateEndpointConnections@2022-06-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    privateLinkServiceConnectionState: {
+      description: 'Auto-Approved'
+      status: 'Approved'
+    }
   }
 }
 ```

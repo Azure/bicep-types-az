@@ -1,4 +1,8 @@
 # Microsoft.Datadog
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.datadog/agreements
 
@@ -45,6 +49,20 @@ resource exampleResource 'Microsoft.Datadog/monitors@2022-06-01' = {
 }
 ```
 
+## microsoft.datadog/monitors/singlesignonconfigurations
+
+SingleSignOnConfigurations_CreateOrUpdate
+```bicep
+resource exampleResource 'Microsoft.Datadog/monitors/singleSignOnConfigurations@2022-06-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    enterpriseAppId: '00000000-0000-0000-0000-000000000000'
+    singleSignOnState: 'Enable'
+  }
+}
+```
+
 ## microsoft.datadog/monitors/tagrules
 
 TagRules_CreateOrUpdate
@@ -74,20 +92,6 @@ resource exampleResource 'Microsoft.Datadog/monitors/tagRules@2022-06-01' = {
       filteringTags: [
       ]
     }
-  }
-}
-```
-
-## microsoft.datadog/monitors/singlesignonconfigurations
-
-SingleSignOnConfigurations_CreateOrUpdate
-```bicep
-resource exampleResource 'Microsoft.Datadog/monitors/singleSignOnConfigurations@2022-06-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    enterpriseAppId: '00000000-0000-0000-0000-000000000000'
-    singleSignOnState: 'Enable'
   }
 }
 ```

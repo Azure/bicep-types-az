@@ -1,4 +1,8 @@
 # Microsoft.AVS
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.avs/privateclouds
 
@@ -17,6 +21,67 @@ resource exampleResource 'Microsoft.AVS/privateClouds@2021-06-01' = {
     name: 'AV36'
   }
   tags: {
+  }
+}
+```
+
+## microsoft.avs/privateclouds/addons
+
+Addons_CreateOrUpdate_HCX
+```bicep
+resource exampleResource 'Microsoft.AVS/privateClouds/addons@2021-06-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    addonType: 'HCX'
+    offer: 'VMware MaaS Cloud Provider (Enterprise)'
+  }
+}
+```
+
+Addons_CreateOrUpdate_SRM
+```bicep
+resource exampleResource 'Microsoft.AVS/privateClouds/addons@2021-06-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    addonType: 'SRM'
+    licenseKey: '41915178-A8FF-4A4D-B683-6D735AF5E3F5'
+  }
+}
+```
+
+Addons_CreateOrUpdate_VR
+```bicep
+resource exampleResource 'Microsoft.AVS/privateClouds/addons@2021-06-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    addonType: 'VR'
+    vrsCount: 1
+  }
+}
+```
+
+## microsoft.avs/privateclouds/authorizations
+
+Authorizations_CreateOrUpdate
+```bicep
+resource exampleResource 'Microsoft.AVS/privateClouds/authorizations@2021-06-01' = {
+  parent: parentResource 
+  name: 'example'
+}
+```
+
+## microsoft.avs/privateclouds/cloudlinks
+
+CloudLinks_CreateOrUpdate
+```bicep
+resource exampleResource 'Microsoft.AVS/privateClouds/cloudLinks@2021-06-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    linkedCloud: '/subscriptions/12341234-1234-1234-1234-123412341234/resourceGroups/mygroup/providers/Microsoft.AVS/privateClouds/cloud2'
   }
 }
 ```
@@ -52,26 +117,6 @@ resource exampleResource 'Microsoft.AVS/privateClouds/clusters/datastores@2021-0
 }
 ```
 
-## microsoft.avs/privateclouds/hcxenterprisesites
-
-HcxEnterpriseSites_CreateOrUpdate
-```bicep
-resource exampleResource 'Microsoft.AVS/privateClouds/hcxEnterpriseSites@2021-06-01' = {
-  parent: parentResource 
-  name: 'example'
-}
-```
-
-## microsoft.avs/privateclouds/authorizations
-
-Authorizations_CreateOrUpdate
-```bicep
-resource exampleResource 'Microsoft.AVS/privateClouds/authorizations@2021-06-01' = {
-  parent: parentResource 
-  name: 'example'
-}
-```
-
 ## microsoft.avs/privateclouds/globalreachconnections
 
 GlobalReachConnections_CreateOrUpdate
@@ -86,23 +131,46 @@ resource exampleResource 'Microsoft.AVS/privateClouds/globalReachConnections@202
 }
 ```
 
-## microsoft.avs/privateclouds/workloadnetworks/segments
+## microsoft.avs/privateclouds/hcxenterprisesites
 
-WorkloadNetworks_CreateSegments
+HcxEnterpriseSites_CreateOrUpdate
 ```bicep
-resource exampleResource 'Microsoft.AVS/privateClouds/workloadNetworks/segments@2021-06-01' = {
+resource exampleResource 'Microsoft.AVS/privateClouds/hcxEnterpriseSites@2021-06-01' = {
+  parent: parentResource 
+  name: 'example'
+}
+```
+
+## microsoft.avs/privateclouds/scriptexecutions
+
+ScriptExecutions_CreateOrUpdate
+```bicep
+resource exampleResource 'Microsoft.AVS/privateClouds/scriptExecutions@2021-06-01' = {
   parent: parentResource 
   name: 'example'
   properties: {
-    connectedGateway: '/infra/tier-1s/gateway'
-    displayName: 'segment1'
-    revision: 1
-    subnet: {
-      dhcpRanges: [
-        '40.20.0.0-40.20.0.1'
-      ]
-      gatewayAddress: '40.20.20.20/16'
-    }
+    hiddenParameters: [
+      {
+        name: 'Password'
+        type: 'SecureValue'
+        secureValue: 'PlaceholderPassword'
+      }
+    ]
+    parameters: [
+      {
+        name: 'DomainName'
+        type: 'Value'
+        value: 'placeholderDomain.local'
+      }
+      {
+        name: 'BaseUserDN'
+        type: 'Value'
+        value: 'DC=placeholder, DC=placeholder'
+      }
+    ]
+    retention: 'P0Y0M60DT0H60M60S'
+    scriptCmdletId: '/subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/scriptPackages/AVS.PowerCommands@1.0.0/scriptCmdlets/New-SsoExternalIdentitySource'
+    timeout: 'P0Y0M0DT0H60M60S'
   }
 }
 ```
@@ -120,40 +188,6 @@ resource exampleResource 'Microsoft.AVS/privateClouds/workloadNetworks/dhcpConfi
     leaseTime: 86400
     revision: 1
     serverAddress: '40.1.5.1/24'
-  }
-}
-```
-
-## microsoft.avs/privateclouds/workloadnetworks/portmirroringprofiles
-
-WorkloadNetworks_CreatePortMirroring
-```bicep
-resource exampleResource 'Microsoft.AVS/privateClouds/workloadNetworks/portMirroringProfiles@2021-06-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    destination: 'vmGroup2'
-    direction: 'BIDIRECTIONAL'
-    displayName: 'portMirroring1'
-    revision: 1
-    source: 'vmGroup1'
-  }
-}
-```
-
-## microsoft.avs/privateclouds/workloadnetworks/vmgroups
-
-WorkloadNetworks_CreateVMGroup
-```bicep
-resource exampleResource 'Microsoft.AVS/privateClouds/workloadNetworks/vmGroups@2021-06-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    displayName: 'vmGroup1'
-    members: [
-      '564d43da-fefc-2a3b-1d92-42855622fa50'
-    ]
-    revision: 1
   }
 }
 ```
@@ -198,6 +232,23 @@ resource exampleResource 'Microsoft.AVS/privateClouds/workloadNetworks/dnsZones@
 }
 ```
 
+## microsoft.avs/privateclouds/workloadnetworks/portmirroringprofiles
+
+WorkloadNetworks_CreatePortMirroring
+```bicep
+resource exampleResource 'Microsoft.AVS/privateClouds/workloadNetworks/portMirroringProfiles@2021-06-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    destination: 'vmGroup2'
+    direction: 'BIDIRECTIONAL'
+    displayName: 'portMirroring1'
+    revision: 1
+    source: 'vmGroup1'
+  }
+}
+```
+
 ## microsoft.avs/privateclouds/workloadnetworks/publicips
 
 WorkloadNetworks_CreatePublicIP
@@ -212,87 +263,40 @@ resource exampleResource 'Microsoft.AVS/privateClouds/workloadNetworks/publicIPs
 }
 ```
 
-## microsoft.avs/privateclouds/cloudlinks
+## microsoft.avs/privateclouds/workloadnetworks/segments
 
-CloudLinks_CreateOrUpdate
+WorkloadNetworks_CreateSegments
 ```bicep
-resource exampleResource 'Microsoft.AVS/privateClouds/cloudLinks@2021-06-01' = {
+resource exampleResource 'Microsoft.AVS/privateClouds/workloadNetworks/segments@2021-06-01' = {
   parent: parentResource 
   name: 'example'
   properties: {
-    linkedCloud: '/subscriptions/12341234-1234-1234-1234-123412341234/resourceGroups/mygroup/providers/Microsoft.AVS/privateClouds/cloud2'
+    connectedGateway: '/infra/tier-1s/gateway'
+    displayName: 'segment1'
+    revision: 1
+    subnet: {
+      dhcpRanges: [
+        '40.20.0.0-40.20.0.1'
+      ]
+      gatewayAddress: '40.20.20.20/16'
+    }
   }
 }
 ```
 
-## microsoft.avs/privateclouds/addons
+## microsoft.avs/privateclouds/workloadnetworks/vmgroups
 
-Addons_CreateOrUpdate_HCX
+WorkloadNetworks_CreateVMGroup
 ```bicep
-resource exampleResource 'Microsoft.AVS/privateClouds/addons@2021-06-01' = {
+resource exampleResource 'Microsoft.AVS/privateClouds/workloadNetworks/vmGroups@2021-06-01' = {
   parent: parentResource 
   name: 'example'
   properties: {
-    addonType: 'HCX'
-    offer: 'VMware MaaS Cloud Provider (Enterprise)'
-  }
-}
-```
-
-Addons_CreateOrUpdate_SRM
-```bicep
-resource exampleResource 'Microsoft.AVS/privateClouds/addons@2021-06-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    addonType: 'SRM'
-    licenseKey: '41915178-A8FF-4A4D-B683-6D735AF5E3F5'
-  }
-}
-```
-
-Addons_CreateOrUpdate_VR
-```bicep
-resource exampleResource 'Microsoft.AVS/privateClouds/addons@2021-06-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    addonType: 'VR'
-    vrsCount: 1
-  }
-}
-```
-
-## microsoft.avs/privateclouds/scriptexecutions
-
-ScriptExecutions_CreateOrUpdate
-```bicep
-resource exampleResource 'Microsoft.AVS/privateClouds/scriptExecutions@2021-06-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    hiddenParameters: [
-      {
-        name: 'Password'
-        type: 'SecureValue'
-        secureValue: 'PlaceholderPassword'
-      }
+    displayName: 'vmGroup1'
+    members: [
+      '564d43da-fefc-2a3b-1d92-42855622fa50'
     ]
-    parameters: [
-      {
-        name: 'DomainName'
-        type: 'Value'
-        value: 'placeholderDomain.local'
-      }
-      {
-        name: 'BaseUserDN'
-        type: 'Value'
-        value: 'DC=placeholder, DC=placeholder'
-      }
-    ]
-    retention: 'P0Y0M60DT0H60M60S'
-    scriptCmdletId: '/subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/scriptPackages/AVS.PowerCommands@1.0.0/scriptCmdlets/New-SsoExternalIdentitySource'
-    timeout: 'P0Y0M0DT0H60M60S'
+    revision: 1
   }
 }
 ```

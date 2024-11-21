@@ -1,4 +1,8 @@
 # Microsoft.DocumentDB
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.documentdb/databaseaccounts
 
@@ -76,11 +80,44 @@ resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/apis/databases@2
 }
 ```
 
-## microsoft.documentdb/databaseaccounts/apis/databases/settings
+## microsoft.documentdb/databaseaccounts/apis/databases/collections
 
-CosmosDBSqlDatabaseThroughputUpdate
+CosmosDBMongoDBCollectionCreateUpdate
 ```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/apis/databases/settings@2016-03-19' = {
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/apis/databases/collections@2016-03-19' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    options: {
+    }
+    resource: {
+      id: 'testcoll'
+      indexes: [
+        {
+          key: {
+            keys: [
+              'testKey'
+            ]
+          }
+          options: {
+            expireAfterSeconds: 100
+            unique: true
+          }
+        }
+      ]
+      shardKey: {
+        testKey: 'Hash'
+      }
+    }
+  }
+}
+```
+
+## microsoft.documentdb/databaseaccounts/apis/databases/collections/settings
+
+CosmosDBMongoDBCollectionThroughputUpdate
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/apis/databases/collections/settings@2016-03-19' = {
   parent: parentResource 
   name: 'example'
   properties: {
@@ -166,44 +203,71 @@ resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/apis/databases/c
 }
 ```
 
-## microsoft.documentdb/databaseaccounts/apis/databases/collections
+## microsoft.documentdb/databaseaccounts/apis/databases/graphs
 
-CosmosDBMongoDBCollectionCreateUpdate
+CosmosDBGremlinGraphCreateUpdate
 ```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/apis/databases/collections@2016-03-19' = {
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/apis/databases/graphs@2016-03-19' = {
   parent: parentResource 
   name: 'example'
   properties: {
     options: {
     }
     resource: {
-      id: 'testcoll'
-      indexes: [
-        {
-          key: {
-            keys: [
-              'testKey'
+      conflictResolutionPolicy: {
+        conflictResolutionPath: '/path'
+        mode: 'LastWriterWins'
+      }
+      defaultTtl: 100
+      id: 'graphName'
+      indexingPolicy: {
+        automatic: true
+        excludedPaths: [
+        ]
+        includedPaths: [
+          {
+            path: '/*'
+            indexes: [
+              {
+                dataType: 'String'
+                kind: 'Range'
+                precision: -1
+              }
+              {
+                dataType: 'Number'
+                kind: 'Range'
+                precision: -1
+              }
             ]
           }
-          options: {
-            expireAfterSeconds: 100
-            unique: true
+        ]
+        indexingMode: 'Consistent'
+      }
+      partitionKey: {
+        kind: 'Hash'
+        paths: [
+          '/AccountNumber'
+        ]
+      }
+      uniqueKeyPolicy: {
+        uniqueKeys: [
+          {
+            paths: [
+              '/testPath'
+            ]
           }
-        }
-      ]
-      shardKey: {
-        testKey: 'Hash'
+        ]
       }
     }
   }
 }
 ```
 
-## microsoft.documentdb/databaseaccounts/apis/databases/collections/settings
+## microsoft.documentdb/databaseaccounts/apis/databases/graphs/settings
 
-CosmosDBMongoDBCollectionThroughputUpdate
+CosmosDBGremlinGraphThroughputUpdate
 ```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/apis/databases/collections/settings@2016-03-19' = {
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/apis/databases/graphs/settings@2016-03-19' = {
   parent: parentResource 
   name: 'example'
   properties: {
@@ -214,28 +278,11 @@ resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/apis/databases/c
 }
 ```
 
-## microsoft.documentdb/databaseaccounts/apis/tables
+## microsoft.documentdb/databaseaccounts/apis/databases/settings
 
-CosmosDBTableReplace
+CosmosDBSqlDatabaseThroughputUpdate
 ```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/apis/tables@2016-03-19' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    options: {
-    }
-    resource: {
-      id: 'tableName'
-    }
-  }
-}
-```
-
-## microsoft.documentdb/databaseaccounts/apis/tables/settings
-
-CosmosDBTableThroughputUpdate
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/apis/tables/settings@2016-03-19' = {
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/apis/databases/settings@2016-03-19' = {
   parent: parentResource 
   name: 'example'
   properties: {
@@ -330,71 +377,28 @@ resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/apis/keyspaces/t
 }
 ```
 
-## microsoft.documentdb/databaseaccounts/apis/databases/graphs
+## microsoft.documentdb/databaseaccounts/apis/tables
 
-CosmosDBGremlinGraphCreateUpdate
+CosmosDBTableReplace
 ```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/apis/databases/graphs@2016-03-19' = {
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/apis/tables@2016-03-19' = {
   parent: parentResource 
   name: 'example'
   properties: {
     options: {
     }
     resource: {
-      conflictResolutionPolicy: {
-        conflictResolutionPath: '/path'
-        mode: 'LastWriterWins'
-      }
-      defaultTtl: 100
-      id: 'graphName'
-      indexingPolicy: {
-        automatic: true
-        excludedPaths: [
-        ]
-        includedPaths: [
-          {
-            path: '/*'
-            indexes: [
-              {
-                dataType: 'String'
-                kind: 'Range'
-                precision: -1
-              }
-              {
-                dataType: 'Number'
-                kind: 'Range'
-                precision: -1
-              }
-            ]
-          }
-        ]
-        indexingMode: 'Consistent'
-      }
-      partitionKey: {
-        kind: 'Hash'
-        paths: [
-          '/AccountNumber'
-        ]
-      }
-      uniqueKeyPolicy: {
-        uniqueKeys: [
-          {
-            paths: [
-              '/testPath'
-            ]
-          }
-        ]
-      }
+      id: 'tableName'
     }
   }
 }
 ```
 
-## microsoft.documentdb/databaseaccounts/apis/databases/graphs/settings
+## microsoft.documentdb/databaseaccounts/apis/tables/settings
 
-CosmosDBGremlinGraphThroughputUpdate
+CosmosDBTableThroughputUpdate
 ```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/apis/databases/graphs/settings@2016-03-19' = {
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/apis/tables/settings@2016-03-19' = {
   parent: parentResource 
   name: 'example'
   properties: {

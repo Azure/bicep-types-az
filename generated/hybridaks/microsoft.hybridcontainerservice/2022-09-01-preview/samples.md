@@ -1,4 +1,8 @@
 # Microsoft.HybridContainerService
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.hybridcontainerservice/provisionedclusters
 
@@ -79,20 +83,6 @@ resource exampleResource 'Microsoft.HybridContainerService/provisionedClusters@2
 }
 ```
 
-## microsoft.hybridcontainerservice/provisionedclusters/hybrididentitymetadata
-
-CreateHybridIdentityMetadata
-```bicep
-resource exampleResource 'Microsoft.HybridContainerService/provisionedClusters/hybridIdentityMetadata@2022-09-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    publicKey: '8ec7d60c-9700-40b1-8e6e-e5b2f6f477f2'
-    resourceUid: 'f8b82dff-38ef-4220-99ef-d3a3f86ddc6c'
-  }
-}
-```
-
 ## microsoft.hybridcontainerservice/provisionedclusters/agentpools
 
 PutAgentPool
@@ -105,6 +95,20 @@ resource exampleResource 'Microsoft.HybridContainerService/provisionedClusters/a
     count: 1
     osType: 'Linux'
     vmSize: 'Standard_A4_v2'
+  }
+}
+```
+
+## microsoft.hybridcontainerservice/provisionedclusters/hybrididentitymetadata
+
+CreateHybridIdentityMetadata
+```bicep
+resource exampleResource 'Microsoft.HybridContainerService/provisionedClusters/hybridIdentityMetadata@2022-09-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    publicKey: '8ec7d60c-9700-40b1-8e6e-e5b2f6f477f2'
+    resourceUid: 'f8b82dff-38ef-4220-99ef-d3a3f86ddc6c'
   }
 }
 ```

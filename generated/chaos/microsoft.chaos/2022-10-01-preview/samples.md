@@ -1,16 +1,8 @@
 # Microsoft.Chaos
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
 
-## microsoft.chaos/targets/capabilities
-
-Create/update a Capability that extends a virtual machine Target resource.
-```bicep
-resource exampleResource 'Microsoft.Chaos/targets/capabilities@2022-10-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-  }
-}
-```
 
 ## microsoft.chaos/experiments
 
@@ -76,6 +68,18 @@ resource exampleResource 'Microsoft.Chaos/targets@2022-10-01-preview' = {
         subject: 'CN=example.subject'
       }
     ]
+  }
+}
+```
+
+## microsoft.chaos/targets/capabilities
+
+Create/update a Capability that extends a virtual machine Target resource.
+```bicep
+resource exampleResource 'Microsoft.Chaos/targets/capabilities@2022-10-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
   }
 }
 ```

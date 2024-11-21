@@ -1,4 +1,8 @@
 # Microsoft.DataFactory
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.datafactory/factories
 
@@ -16,77 +20,6 @@ resource exampleResource 'Microsoft.DataFactory/factories@2017-09-01-preview' = 
       repositoryName: 'exampleRepo'
       rootFolder: '/'
       tenantId: '12f988bf-86d1-41af-91ab-2d7cd011db49'
-    }
-  }
-}
-```
-
-## microsoft.datafactory/factories/integrationruntimes
-
-IntegrationRuntimes_Create
-```bicep
-resource exampleResource 'Microsoft.DataFactory/factories/integrationRuntimes@2017-09-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    type: 'Managed'
-    description: 'A managed reserved integration runtime'
-    typeProperties: {
-      computeProperties: {
-        location: 'West US'
-        maxParallelExecutionsPerNode: 1
-        nodeSize: 'Standard_D1_v2'
-        numberOfNodes: 1
-      }
-      ssisProperties: {
-        catalogInfo: {
-          catalogAdminPassword: {
-            type: 'SecureString'
-            value: '<value>'
-          }
-          catalogAdminUserName: 'yanzhang'
-          catalogPricingTier: 'S1'
-          catalogServerEndpoint: 'yandongtestsvr.database.windows.net'
-        }
-        licenseType: 'BasePrice'
-      }
-    }
-  }
-}
-```
-
-## microsoft.datafactory/factories/linkedservices
-
-LinkedServices_Create
-```bicep
-resource exampleResource 'Microsoft.DataFactory/factories/linkedservices@2017-09-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    type: 'AzureStorage'
-    typeProperties: {
-      connectionString: {
-        type: 'SecureString'
-        value: 'DefaultEndpointsProtocol=https;AccountName=examplestorageaccount;AccountKey=<storage key>'
-      }
-    }
-  }
-}
-```
-
-LinkedServices_Update
-```bicep
-resource exampleResource 'Microsoft.DataFactory/factories/linkedservices@2017-09-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    type: 'AzureStorage'
-    description: 'Example description'
-    typeProperties: {
-      connectionString: {
-        type: 'SecureString'
-        value: 'DefaultEndpointsProtocol=https;AccountName=examplestorageaccount;AccountKey=<storage key>'
-      }
     }
   }
 }
@@ -161,6 +94,77 @@ resource exampleResource 'Microsoft.DataFactory/factories/datasets@2017-09-01-pr
       folderPath: {
         type: 'Expression'
         value: '@dataset().MyFolderPath'
+      }
+    }
+  }
+}
+```
+
+## microsoft.datafactory/factories/integrationruntimes
+
+IntegrationRuntimes_Create
+```bicep
+resource exampleResource 'Microsoft.DataFactory/factories/integrationRuntimes@2017-09-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    type: 'Managed'
+    description: 'A managed reserved integration runtime'
+    typeProperties: {
+      computeProperties: {
+        location: 'West US'
+        maxParallelExecutionsPerNode: 1
+        nodeSize: 'Standard_D1_v2'
+        numberOfNodes: 1
+      }
+      ssisProperties: {
+        catalogInfo: {
+          catalogAdminPassword: {
+            type: 'SecureString'
+            value: '<value>'
+          }
+          catalogAdminUserName: 'yanzhang'
+          catalogPricingTier: 'S1'
+          catalogServerEndpoint: 'yandongtestsvr.database.windows.net'
+        }
+        licenseType: 'BasePrice'
+      }
+    }
+  }
+}
+```
+
+## microsoft.datafactory/factories/linkedservices
+
+LinkedServices_Create
+```bicep
+resource exampleResource 'Microsoft.DataFactory/factories/linkedservices@2017-09-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    type: 'AzureStorage'
+    typeProperties: {
+      connectionString: {
+        type: 'SecureString'
+        value: 'DefaultEndpointsProtocol=https;AccountName=examplestorageaccount;AccountKey=<storage key>'
+      }
+    }
+  }
+}
+```
+
+LinkedServices_Update
+```bicep
+resource exampleResource 'Microsoft.DataFactory/factories/linkedservices@2017-09-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    type: 'AzureStorage'
+    description: 'Example description'
+    typeProperties: {
+      connectionString: {
+        type: 'SecureString'
+        value: 'DefaultEndpointsProtocol=https;AccountName=examplestorageaccount;AccountKey=<storage key>'
       }
     }
   }

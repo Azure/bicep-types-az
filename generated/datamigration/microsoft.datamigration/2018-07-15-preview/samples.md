@@ -1,4 +1,8 @@
 # Microsoft.DataMigration
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.datamigration/services
 
@@ -12,6 +16,34 @@ resource exampleResource 'Microsoft.DataMigration/services@2018-07-15-preview' =
   }
   sku: {
     name: 'Basic_1vCore'
+  }
+}
+```
+
+## microsoft.datamigration/services/projects
+
+Projects_CreateOrUpdate
+```bicep
+resource exampleResource 'Microsoft.DataMigration/services/projects@2018-07-15-preview' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'southcentralus'
+  properties: {
+    sourcePlatform: 'SQL'
+    targetPlatform: 'SQLDB'
+  }
+}
+```
+
+## microsoft.datamigration/services/projects/files
+
+Files_CreateOrUpdate
+```bicep
+resource exampleResource 'Microsoft.DataMigration/services/projects/files@2018-07-15-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    filePath: 'DmsSdkFilePath/DmsSdkFile.sql'
   }
 }
 ```
@@ -52,34 +84,6 @@ resource exampleResource 'Microsoft.DataMigration/services/serviceTasks@2018-07-
       serverVersion: 'NA'
     }
     taskType: 'Service.Check.OCI'
-  }
-}
-```
-
-## microsoft.datamigration/services/projects
-
-Projects_CreateOrUpdate
-```bicep
-resource exampleResource 'Microsoft.DataMigration/services/projects@2018-07-15-preview' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'southcentralus'
-  properties: {
-    sourcePlatform: 'SQL'
-    targetPlatform: 'SQLDB'
-  }
-}
-```
-
-## microsoft.datamigration/services/projects/files
-
-Files_CreateOrUpdate
-```bicep
-resource exampleResource 'Microsoft.DataMigration/services/projects/files@2018-07-15-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    filePath: 'DmsSdkFilePath/DmsSdkFile.sql'
   }
 }
 ```

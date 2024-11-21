@@ -1,4 +1,8 @@
 # Microsoft.ContainerInstance
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.containerinstance/containergroups
 
@@ -120,64 +124,6 @@ resource exampleResource 'Microsoft.ContainerInstance/containerGroups@2022-10-01
         }
       }
     ]
-  }
-}
-```
-
-ContainerGroupWithEncryptionProperties
-```bicep
-resource exampleResource 'Microsoft.ContainerInstance/containerGroups@2022-10-01-preview' = {
-  name: 'example'
-  identity: {
-    type: 'UserAssigned'
-    userAssignedIdentities: {
-      /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/test-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/container-group-identity: {
-      }
-    }
-  }
-  location: 'eastus2'
-  properties: {
-    containers: [
-      {
-        name: 'demo1'
-        properties: {
-          command: [
-          ]
-          environmentVariables: [
-          ]
-          image: 'nginx'
-          ports: [
-            {
-              port: 80
-            }
-          ]
-          resources: {
-            requests: {
-              cpu: 1
-              memoryInGB: 1.5
-            }
-          }
-        }
-      }
-    ]
-    encryptionProperties: {
-      identity: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/test-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/container-group-identity'
-      keyName: 'test-key'
-      keyVersion: '<key version>'
-      vaultBaseUrl: 'https://testkeyvault.vault.azure.net'
-    }
-    imageRegistryCredentials: [
-    ]
-    ipAddress: {
-      type: 'Public'
-      ports: [
-        {
-          port: 80
-          protocol: 'TCP'
-        }
-      ]
-    }
-    osType: 'Linux'
   }
 }
 ```
@@ -331,6 +277,64 @@ resource exampleResource 'Microsoft.ContainerInstance/containerGroups@2022-10-01
     priority: 'Spot'
     restartPolicy: 'Never'
     sku: 'Standard'
+  }
+}
+```
+
+ContainerGroupWithEncryptionProperties
+```bicep
+resource exampleResource 'Microsoft.ContainerInstance/containerGroups@2022-10-01-preview' = {
+  name: 'example'
+  identity: {
+    type: 'UserAssigned'
+    userAssignedIdentities: {
+      /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/test-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/container-group-identity: {
+      }
+    }
+  }
+  location: 'eastus2'
+  properties: {
+    containers: [
+      {
+        name: 'demo1'
+        properties: {
+          command: [
+          ]
+          environmentVariables: [
+          ]
+          image: 'nginx'
+          ports: [
+            {
+              port: 80
+            }
+          ]
+          resources: {
+            requests: {
+              cpu: 1
+              memoryInGB: 1.5
+            }
+          }
+        }
+      }
+    ]
+    encryptionProperties: {
+      identity: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/test-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/container-group-identity'
+      keyName: 'test-key'
+      keyVersion: '<key version>'
+      vaultBaseUrl: 'https://testkeyvault.vault.azure.net'
+    }
+    imageRegistryCredentials: [
+    ]
+    ipAddress: {
+      type: 'Public'
+      ports: [
+        {
+          port: 80
+          protocol: 'TCP'
+        }
+      ]
+    }
+    osType: 'Linux'
   }
 }
 ```

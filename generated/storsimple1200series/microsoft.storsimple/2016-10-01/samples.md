@@ -1,19 +1,8 @@
 # Microsoft.StorSimple
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
 
-## microsoft.storsimple/managers/certificates
-
-ManagersUploadRegistrationCertificate
-```bicep
-resource exampleResource 'Microsoft.StorSimple/managers/certificates@2016-10-01' = {
-  parent: parentResource 
-  name: 'example'
-  contractVersion: 'V2012_12'
-  properties: {
-    authType: 'AzureActiveDirectory'
-    certificate: 'MIIC3TCCAcWgAwIBAgIQEr0bAWD6wJtA4LIbZ9NtgzANBgkqhkiG9w0BAQUFADAeMRwwGgYDVQQDExNXaW5kb3dzIEF6dXJlIFRvb2xzMB4XDTE4MDkxMDE1MzY0MFoXDTE4MDkxMzE1NDY0MFowHjEcMBoGA1UEAxMTV2luZG93cyBBenVyZSBUb29sczCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANUsKkz2Z4fECKMyNeLb9v3pr1XF4dVe+MITDtgphjl81ng190Y0IHgCVnh4YjfplUSpMk/1xii0rI5AAPwoz3ze2qRPtnwCiTaoVLkUe6knNRPzrRvVXHB81J0/14MO0lwdByHhdccRcVJZPLt5724t4aQny82v2AayJdDDkBBWNlpcqPy6n3sygP00THMPP0O3sFqy924eHqoDj3qSw79/meaZBJt9S5odPuFoskxjHuI4lM6BmK1Ql7p8Wo9/GhTOIoMz81orKPHRDleLjutwL4mb6NnhI5rfT/MxnHD6m82c4YYqiZC3XiTyJWVCkWkp7PK92OdRp6FA87rdKDMCAwEAAaMXMBUwEwYDVR0lBAwwCgYIKwYBBQUHAwIwDQYJKoZIhvcNAQEFBQADggEBAIYlezVU68TuEblkn06vM5dfzSmHKJOQgW61nDlLnyKrmSJtzKZLCAswTE2VyJHwKNdZgW15coJFINjWBLWcLr0/GjNV4u3Z+UL3NhBFQd5xuMtKsIhuoscKtyk0JHQXpBvHNmOUCobfQfOBQfTVC7kmyWdtlGztFUVxD28s6S5gMb1FEWWN68NOOJ3/ZhaTbUEM54yw8Hk8/f0L/Zn/7BYHUyWWA3KStAaYn89C/ZFF+952ark2VaKGIjBRQzgrJEIR8dI4r46I3DoEfzGPESKvQPvVLhOX84RG0PLPOtnRbHBVew1Nh3HE9kgCubkPKK+NPWE9IHZPoRmOTWBe+zU='
-  }
-}
-```
 
 ## microsoft.storsimple/managers/accesscontrolrecords
 
@@ -34,6 +23,21 @@ resource exampleResource 'Microsoft.StorSimple/managers/accessControlRecords@201
   ResourceGroupName: 'ResourceGroupForSDKTest'
   properties: {
     initiatorName: 'iqn.2017-06.com.contoso:ForTest'
+  }
+}
+```
+
+## microsoft.storsimple/managers/certificates
+
+ManagersUploadRegistrationCertificate
+```bicep
+resource exampleResource 'Microsoft.StorSimple/managers/certificates@2016-10-01' = {
+  parent: parentResource 
+  name: 'example'
+  contractVersion: 'V2012_12'
+  properties: {
+    authType: 'AzureActiveDirectory'
+    certificate: 'MIIC3TCCAcWgAwIBAgIQEr0bAWD6wJtA4LIbZ9NtgzANBgkqhkiG9w0BAQUFADAeMRwwGgYDVQQDExNXaW5kb3dzIEF6dXJlIFRvb2xzMB4XDTE4MDkxMDE1MzY0MFoXDTE4MDkxMzE1NDY0MFowHjEcMBoGA1UEAxMTV2luZG93cyBBenVyZSBUb29sczCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANUsKkz2Z4fECKMyNeLb9v3pr1XF4dVe+MITDtgphjl81ng190Y0IHgCVnh4YjfplUSpMk/1xii0rI5AAPwoz3ze2qRPtnwCiTaoVLkUe6knNRPzrRvVXHB81J0/14MO0lwdByHhdccRcVJZPLt5724t4aQny82v2AayJdDDkBBWNlpcqPy6n3sygP00THMPP0O3sFqy924eHqoDj3qSw79/meaZBJt9S5odPuFoskxjHuI4lM6BmK1Ql7p8Wo9/GhTOIoMz81orKPHRDleLjutwL4mb6NnhI5rfT/MxnHD6m82c4YYqiZC3XiTyJWVCkWkp7PK92OdRp6FA87rdKDMCAwEAAaMXMBUwEwYDVR0lBAwwCgYIKwYBBQUHAwIwDQYJKoZIhvcNAQEFBQADggEBAIYlezVU68TuEblkn06vM5dfzSmHKJOQgW61nDlLnyKrmSJtzKZLCAswTE2VyJHwKNdZgW15coJFINjWBLWcLr0/GjNV4u3Z+UL3NhBFQd5xuMtKsIhuoscKtyk0JHQXpBvHNmOUCobfQfOBQfTVC7kmyWdtlGztFUVxD28s6S5gMb1FEWWN68NOOJ3/ZhaTbUEM54yw8Hk8/f0L/Zn/7BYHUyWWA3KStAaYn89C/ZFF+952ark2VaKGIjBRQzgrJEIR8dI4r46I3DoEfzGPESKvQPvVLhOX84RG0PLPOtnRbHBVew1Nh3HE9kgCubkPKK+NPWE9IHZPoRmOTWBe+zU='
   }
 }
 ```
@@ -106,35 +110,6 @@ resource exampleResource 'Microsoft.StorSimple/managers/devices/chapSettings@201
       encryptionCertificateThumbprint: 'D73DB57C4CDD6761E159F8D1E8A7D759424983FD'
       value: '<value>'
     }
-  }
-}
-```
-
-## microsoft.storsimple/managers/devices/iscsiservers/disks
-
-IscsiDisksCreateOrUpdate
-```bicep
-resource exampleResource 'Microsoft.StorSimple/managers/devices/iscsiservers/disks@2016-10-01' = {
-  parent: parentResource 
-  name: 'example'
-  name: 'Auto-TestIscsiDisk1'
-  Client: {
-    AcceptLanguage: 'en-US'
-    BaseUri: 'https://management.azure.com/'
-    GenerateClientRequestId: true
-    LongRunningOperationRetryTimeout: 30
-    SubscriptionId: '9eb689cd-7243-43b4-b6f6-5c65cb296641'
-  }
-  ManagerName: 'hAzureSDKOperations'
-  ResourceGroupName: 'ResourceGroupForSDKTest'
-  properties: {
-    description: 'Demo IscsiDisk for SDK Test Tiered'
-    accessControlRecords: [
-    ]
-    dataPolicy: 'Tiered'
-    diskStatus: 'Online'
-    monitoringStatus: 'Enabled'
-    provisionedCapacityInBytes: 536870912000
   }
 }
 ```
@@ -217,6 +192,35 @@ resource exampleResource 'Microsoft.StorSimple/managers/devices/iscsiservers@201
     chapId: '/subscriptions/9eb689cd-7243-43b4-b6f6-5c65cb296641/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/hAzureSDKOperations/devices/HSDK-WSJQERQW3F/chapSettings/ChapSettingForSDK'
     reverseChapId: ''
     storageDomainId: '/subscriptions/9eb689cd-7243-43b4-b6f6-5c65cb296641/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/hAzureSDKOperations/storageDomains/Default-HSDK-WSJQERQW3F-StorageDomain'
+  }
+}
+```
+
+## microsoft.storsimple/managers/devices/iscsiservers/disks
+
+IscsiDisksCreateOrUpdate
+```bicep
+resource exampleResource 'Microsoft.StorSimple/managers/devices/iscsiservers/disks@2016-10-01' = {
+  parent: parentResource 
+  name: 'example'
+  name: 'Auto-TestIscsiDisk1'
+  Client: {
+    AcceptLanguage: 'en-US'
+    BaseUri: 'https://management.azure.com/'
+    GenerateClientRequestId: true
+    LongRunningOperationRetryTimeout: 30
+    SubscriptionId: '9eb689cd-7243-43b4-b6f6-5c65cb296641'
+  }
+  ManagerName: 'hAzureSDKOperations'
+  ResourceGroupName: 'ResourceGroupForSDKTest'
+  properties: {
+    description: 'Demo IscsiDisk for SDK Test Tiered'
+    accessControlRecords: [
+    ]
+    dataPolicy: 'Tiered'
+    diskStatus: 'Online'
+    monitoringStatus: 'Enabled'
+    provisionedCapacityInBytes: 536870912000
   }
 }
 ```

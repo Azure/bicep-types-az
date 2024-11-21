@@ -1,110 +1,125 @@
 # Microsoft.SecurityInsights
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
 
-## microsoft.securityinsights/incidents
 
-Creates or updates an incident.
+## microsoft.securityinsights/alertrules
+
+Creates or updates a Fusion alert rule.
 ```bicep
-resource exampleResource 'Microsoft.SecurityInsights/incidents@2021-03-01-preview' = {
+resource exampleResource 'Microsoft.SecurityInsights/alertRules@2021-03-01-preview' = {
+  name: 'example'
+  etag: '3d00c3ca-0000-0100-0000-5d42d5010000'
+  kind: 'Fusion'
+  properties: {
+    alertRuleTemplateName: 'f71aba3d-28fb-450b-b192-4e76a83015c8'
+    enabled: true
+  }
+}
+```
+
+Creates or updates a MicrosoftSecurityIncidentCreation rule.
+```bicep
+resource exampleResource 'Microsoft.SecurityInsights/alertRules@2021-03-01-preview' = {
+  name: 'example'
+  etag: '"260097e0-0000-0d00-0000-5d6fa88f0000"'
+  kind: 'MicrosoftSecurityIncidentCreation'
+  properties: {
+    displayName: 'testing displayname'
+    enabled: true
+    productFilter: 'Microsoft Cloud App Security'
+  }
+}
+```
+
+Creates or updates a Scheduled alert rule.
+```bicep
+resource exampleResource 'Microsoft.SecurityInsights/alertRules@2021-03-01-preview' = {
   name: 'example'
   etag: '"0300bf09-0000-0000-0000-5c37296e0000"'
+  kind: 'Scheduled'
   properties: {
-    description: 'This is a demo incident'
-    classification: 'FalsePositive'
-    classificationComment: 'Not a malicious activity'
-    classificationReason: 'IncorrectAlertLogic'
-    firstActivityTimeUtc: '2019-01-01T13:00:30Z'
-    lastActivityTimeUtc: '2019-01-01T13:05:30Z'
-    owner: {
-      objectId: '2046feea-040d-4a46-9e2b-91c2941bfa70'
+    description: 'An example for a scheduled rule'
+    alertDetailsOverride: {
+      alertDescriptionFormat: 'Suspicious activity was made by {{ComputerIP}}'
+      alertDisplayNameFormat: 'Alert from {{Computer}}'
     }
-    severity: 'High'
-    status: 'Closed'
-    title: 'My incident'
-  }
-}
-```
-
-## microsoft.securityinsights/incidents/comments
-
-Creates or updates an incident comment.
-```bicep
-resource exampleResource 'Microsoft.SecurityInsights/incidents/comments@2021-03-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    message: 'Some message'
-  }
-}
-```
-
-## microsoft.securityinsights/incidents/relations
-
-Creates or updates an incident relation.
-```bicep
-resource exampleResource 'Microsoft.SecurityInsights/incidents/relations@2021-03-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    relatedResourceId: '/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalIinsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/bookmarks/2216d0e1-91e3-4902-89fd-d2df8c535096'
-  }
-}
-```
-
-## microsoft.securityinsights/settings
-
-Update EyesOn settings.
-```bicep
-resource exampleResource 'Microsoft.SecurityInsights/settings@2021-03-01-preview' = {
-  name: 'example'
-  etag: '"0300bf09-0000-0000-0000-5c37296e0000"'
-  kind: 'EyesOn'
-  properties: {
-  }
-}
-```
-
-## microsoft.securityinsights/onboardingstates
-
-Create Sentinel onboarding state
-```bicep
-resource exampleResource 'Microsoft.SecurityInsights/onboardingStates@2021-03-01-preview' = {
-  name: 'example'
-  properties: {
-    customerManagedKey: false
-  }
-}
-```
-
-## microsoft.securityinsights/sourcecontrols
-
-Creates a source control.
-```bicep
-resource exampleResource 'Microsoft.SecurityInsights/sourcecontrols@2021-03-01-preview' = {
-  name: 'example'
-  etag: '"0300bf09-0000-0000-0000-5c37296e0000"'
-  properties: {
-    description: 'This is a source control'
-    contentTypes: [
-      'AnalyticRules'
-      'Workbook'
+    customDetails: {
+      OperatingSystemName: 'OSName'
+      OperatingSystemType: 'OSType'
+    }
+    displayName: 'My scheduled rule'
+    enabled: true
+    entityMappings: [
+      {
+        entityType: 'Host'
+        fieldMappings: [
+          {
+            columnName: 'Computer'
+            identifier: 'FullName'
+          }
+        ]
+      }
+      {
+        entityType: 'IP'
+        fieldMappings: [
+          {
+            columnName: 'ComputerIP'
+            identifier: 'Address'
+          }
+        ]
+      }
     ]
-    displayName: 'My Source Control'
-    repoType: 'Github'
-    repository: {
-      branch: 'master'
-      displayUrl: 'https://github.com/user/repo'
-      pathMapping: [
-        {
-          path: 'path/to/rules'
-          contentType: 'AnalyticRules'
-        }
-        {
-          path: 'path/to/workbooks'
-          contentType: 'Workbook'
-        }
-      ]
-      url: 'https://github.com/user/repo'
+    eventGroupingSettings: {
+      aggregationKind: 'AlertPerResult'
     }
+    incidentConfiguration: {
+      createIncident: true
+      groupingConfiguration: {
+        enabled: true
+        groupByAlertDetails: [
+          'DisplayName'
+        ]
+        groupByCustomDetails: [
+          'OperatingSystemType'
+          'OperatingSystemName'
+        ]
+        groupByEntities: [
+          'Host'
+        ]
+        lookbackDuration: 'PT5H'
+        matchingMethod: 'Selected'
+        reopenClosedIncident: false
+      }
+    }
+    query: 'Heartbeat'
+    queryFrequency: 'PT1H'
+    queryPeriod: 'P2DT1H30M'
+    severity: 'High'
+    suppressionDuration: 'PT1H'
+    suppressionEnabled: false
+    tactics: [
+      'Persistence'
+      'LateralMovement'
+    ]
+    triggerOperator: 'GreaterThan'
+    triggerThreshold: 0
+  }
+}
+```
+
+## microsoft.securityinsights/alertrules/actions
+
+Creates or updates an action of alert rule.
+```bicep
+resource exampleResource 'Microsoft.SecurityInsights/alertRules/actions@2021-03-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  etag: '"0300bf09-0000-0000-0000-5c37296e0000"'
+  properties: {
+    logicAppResourceId: '/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.Logic/workflows/MyAlerts'
+    triggerUri: 'https://prod-31.northcentralus.logic.azure.com:443/workflows/cd3765391efd48549fd7681ded1d48d7/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=signature'
   }
 }
 ```
@@ -336,182 +351,6 @@ resource exampleResource 'Microsoft.SecurityInsights/dataConnectors@2021-03-01-p
 }
 ```
 
-## microsoft.securityinsights/watchlists
-
-Creates or updates a watchlist and bulk creates watchlist items.
-```bicep
-resource exampleResource 'Microsoft.SecurityInsights/watchlists@2021-03-01-preview' = {
-  name: 'example'
-  etag: '"0300bf09-0000-0000-0000-5c37296e0000"'
-  properties: {
-    description: 'Watchlist from CSV content'
-    contentType: 'text/csv'
-    displayName: 'High Value Assets Watchlist'
-    itemsSearchKey: 'header1'
-    numberOfLinesToSkip: 1
-    provider: 'Microsoft'
-    rawContent: 'This line will be skipped\nheader1,header2\nvalue1,value2'
-    source: 'Local file'
-  }
-}
-```
-
-Creates or updates a watchlist.
-```bicep
-resource exampleResource 'Microsoft.SecurityInsights/watchlists@2021-03-01-preview' = {
-  name: 'example'
-  etag: '"0300bf09-0000-0000-0000-5c37296e0000"'
-  properties: {
-    description: 'Watchlist from CSV content'
-    displayName: 'High Value Assets Watchlist'
-    itemsSearchKey: 'header1'
-    provider: 'Microsoft'
-    source: 'Local file'
-  }
-}
-```
-
-## microsoft.securityinsights/watchlists/watchlistitems
-
-Creates or updates a watchlist item.
-```bicep
-resource exampleResource 'Microsoft.SecurityInsights/watchlists/watchlistItems@2021-03-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  etag: '0300bf09-0000-0000-0000-5c37296e0000'
-  properties: {
-    itemsKeyValue: {
-      Business tier: '10.0.2.0/24'
-      Data tier: '10.0.2.0/24'
-      Gateway subnet: '10.0.255.224/27'
-      Private DMZ in: '10.0.0.0/27'
-      Public DMZ out: '10.0.0.96/27'
-      Web Tier: '10.0.1.0/24'
-    }
-  }
-}
-```
-
-## microsoft.securityinsights/alertrules
-
-Creates or updates a Fusion alert rule.
-```bicep
-resource exampleResource 'Microsoft.SecurityInsights/alertRules@2021-03-01-preview' = {
-  name: 'example'
-  etag: '3d00c3ca-0000-0100-0000-5d42d5010000'
-  kind: 'Fusion'
-  properties: {
-    alertRuleTemplateName: 'f71aba3d-28fb-450b-b192-4e76a83015c8'
-    enabled: true
-  }
-}
-```
-
-Creates or updates a MicrosoftSecurityIncidentCreation rule.
-```bicep
-resource exampleResource 'Microsoft.SecurityInsights/alertRules@2021-03-01-preview' = {
-  name: 'example'
-  etag: '"260097e0-0000-0d00-0000-5d6fa88f0000"'
-  kind: 'MicrosoftSecurityIncidentCreation'
-  properties: {
-    displayName: 'testing displayname'
-    enabled: true
-    productFilter: 'Microsoft Cloud App Security'
-  }
-}
-```
-
-Creates or updates a Scheduled alert rule.
-```bicep
-resource exampleResource 'Microsoft.SecurityInsights/alertRules@2021-03-01-preview' = {
-  name: 'example'
-  etag: '"0300bf09-0000-0000-0000-5c37296e0000"'
-  kind: 'Scheduled'
-  properties: {
-    description: 'An example for a scheduled rule'
-    alertDetailsOverride: {
-      alertDescriptionFormat: 'Suspicious activity was made by {{ComputerIP}}'
-      alertDisplayNameFormat: 'Alert from {{Computer}}'
-    }
-    customDetails: {
-      OperatingSystemName: 'OSName'
-      OperatingSystemType: 'OSType'
-    }
-    displayName: 'My scheduled rule'
-    enabled: true
-    entityMappings: [
-      {
-        entityType: 'Host'
-        fieldMappings: [
-          {
-            columnName: 'Computer'
-            identifier: 'FullName'
-          }
-        ]
-      }
-      {
-        entityType: 'IP'
-        fieldMappings: [
-          {
-            columnName: 'ComputerIP'
-            identifier: 'Address'
-          }
-        ]
-      }
-    ]
-    eventGroupingSettings: {
-      aggregationKind: 'AlertPerResult'
-    }
-    incidentConfiguration: {
-      createIncident: true
-      groupingConfiguration: {
-        enabled: true
-        groupByAlertDetails: [
-          'DisplayName'
-        ]
-        groupByCustomDetails: [
-          'OperatingSystemType'
-          'OperatingSystemName'
-        ]
-        groupByEntities: [
-          'Host'
-        ]
-        lookbackDuration: 'PT5H'
-        matchingMethod: 'Selected'
-        reopenClosedIncident: false
-      }
-    }
-    query: 'Heartbeat'
-    queryFrequency: 'PT1H'
-    queryPeriod: 'P2DT1H30M'
-    severity: 'High'
-    suppressionDuration: 'PT1H'
-    suppressionEnabled: false
-    tactics: [
-      'Persistence'
-      'LateralMovement'
-    ]
-    triggerOperator: 'GreaterThan'
-    triggerThreshold: 0
-  }
-}
-```
-
-## microsoft.securityinsights/alertrules/actions
-
-Creates or updates an action of alert rule.
-```bicep
-resource exampleResource 'Microsoft.SecurityInsights/alertRules/actions@2021-03-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  etag: '"0300bf09-0000-0000-0000-5c37296e0000"'
-  properties: {
-    logicAppResourceId: '/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.Logic/workflows/MyAlerts'
-    triggerUri: 'https://prod-31.northcentralus.logic.azure.com:443/workflows/cd3765391efd48549fd7681ded1d48d7/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=signature'
-  }
-}
-```
-
 ## microsoft.securityinsights/entityqueries
 
 Creates or updates an Activity entity query.
@@ -552,6 +391,56 @@ resource exampleResource 'Microsoft.SecurityInsights/entityQueries@2021-03-01-pr
     templateName: {
     }
     title: 'An account was deleted on this host'
+  }
+}
+```
+
+## microsoft.securityinsights/incidents
+
+Creates or updates an incident.
+```bicep
+resource exampleResource 'Microsoft.SecurityInsights/incidents@2021-03-01-preview' = {
+  name: 'example'
+  etag: '"0300bf09-0000-0000-0000-5c37296e0000"'
+  properties: {
+    description: 'This is a demo incident'
+    classification: 'FalsePositive'
+    classificationComment: 'Not a malicious activity'
+    classificationReason: 'IncorrectAlertLogic'
+    firstActivityTimeUtc: '2019-01-01T13:00:30Z'
+    lastActivityTimeUtc: '2019-01-01T13:05:30Z'
+    owner: {
+      objectId: '2046feea-040d-4a46-9e2b-91c2941bfa70'
+    }
+    severity: 'High'
+    status: 'Closed'
+    title: 'My incident'
+  }
+}
+```
+
+## microsoft.securityinsights/incidents/comments
+
+Creates or updates an incident comment.
+```bicep
+resource exampleResource 'Microsoft.SecurityInsights/incidents/comments@2021-03-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    message: 'Some message'
+  }
+}
+```
+
+## microsoft.securityinsights/incidents/relations
+
+Creates or updates an incident relation.
+```bicep
+resource exampleResource 'Microsoft.SecurityInsights/incidents/relations@2021-03-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    relatedResourceId: '/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalIinsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/bookmarks/2216d0e1-91e3-4902-89fd-d2df8c535096'
   }
 }
 ```
@@ -642,6 +531,121 @@ resource exampleResource 'Microsoft.SecurityInsights/metadata@2021-03-01-preview
     contentId: 'c00ee137-7475-47c8-9cce-ec6f0f1bedd0'
     kind: 'AnalyticsRule'
     parentId: '/subscriptions/2e1dc338-d04d-4443-b721-037eff4fdcac/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/alertRules/ruleName'
+  }
+}
+```
+
+## microsoft.securityinsights/onboardingstates
+
+Create Sentinel onboarding state
+```bicep
+resource exampleResource 'Microsoft.SecurityInsights/onboardingStates@2021-03-01-preview' = {
+  name: 'example'
+  properties: {
+    customerManagedKey: false
+  }
+}
+```
+
+## microsoft.securityinsights/settings
+
+Update EyesOn settings.
+```bicep
+resource exampleResource 'Microsoft.SecurityInsights/settings@2021-03-01-preview' = {
+  name: 'example'
+  etag: '"0300bf09-0000-0000-0000-5c37296e0000"'
+  kind: 'EyesOn'
+  properties: {
+  }
+}
+```
+
+## microsoft.securityinsights/sourcecontrols
+
+Creates a source control.
+```bicep
+resource exampleResource 'Microsoft.SecurityInsights/sourcecontrols@2021-03-01-preview' = {
+  name: 'example'
+  etag: '"0300bf09-0000-0000-0000-5c37296e0000"'
+  properties: {
+    description: 'This is a source control'
+    contentTypes: [
+      'AnalyticRules'
+      'Workbook'
+    ]
+    displayName: 'My Source Control'
+    repoType: 'Github'
+    repository: {
+      branch: 'master'
+      displayUrl: 'https://github.com/user/repo'
+      pathMapping: [
+        {
+          path: 'path/to/rules'
+          contentType: 'AnalyticRules'
+        }
+        {
+          path: 'path/to/workbooks'
+          contentType: 'Workbook'
+        }
+      ]
+      url: 'https://github.com/user/repo'
+    }
+  }
+}
+```
+
+## microsoft.securityinsights/watchlists
+
+Creates or updates a watchlist and bulk creates watchlist items.
+```bicep
+resource exampleResource 'Microsoft.SecurityInsights/watchlists@2021-03-01-preview' = {
+  name: 'example'
+  etag: '"0300bf09-0000-0000-0000-5c37296e0000"'
+  properties: {
+    description: 'Watchlist from CSV content'
+    contentType: 'text/csv'
+    displayName: 'High Value Assets Watchlist'
+    itemsSearchKey: 'header1'
+    numberOfLinesToSkip: 1
+    provider: 'Microsoft'
+    rawContent: 'This line will be skipped\nheader1,header2\nvalue1,value2'
+    source: 'Local file'
+  }
+}
+```
+
+Creates or updates a watchlist.
+```bicep
+resource exampleResource 'Microsoft.SecurityInsights/watchlists@2021-03-01-preview' = {
+  name: 'example'
+  etag: '"0300bf09-0000-0000-0000-5c37296e0000"'
+  properties: {
+    description: 'Watchlist from CSV content'
+    displayName: 'High Value Assets Watchlist'
+    itemsSearchKey: 'header1'
+    provider: 'Microsoft'
+    source: 'Local file'
+  }
+}
+```
+
+## microsoft.securityinsights/watchlists/watchlistitems
+
+Creates or updates a watchlist item.
+```bicep
+resource exampleResource 'Microsoft.SecurityInsights/watchlists/watchlistItems@2021-03-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  etag: '0300bf09-0000-0000-0000-5c37296e0000'
+  properties: {
+    itemsKeyValue: {
+      Business tier: '10.0.2.0/24'
+      Data tier: '10.0.2.0/24'
+      Gateway subnet: '10.0.255.224/27'
+      Private DMZ in: '10.0.0.0/27'
+      Public DMZ out: '10.0.0.96/27'
+      Web Tier: '10.0.1.0/24'
+    }
   }
 }
 ```

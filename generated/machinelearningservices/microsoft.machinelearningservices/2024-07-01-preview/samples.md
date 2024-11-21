@@ -1,266 +1,167 @@
 # Microsoft.MachineLearningServices
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
 
-## microsoft.machinelearningservices/workspaces/computes
 
-Attach a Kubernetes Compute
+## microsoft.machinelearningservices/registries
+
+CreateOrUpdate Registry with system created accounts.
 ```bicep
-resource exampleResource 'Microsoft.MachineLearningServices/workspaces/computes@2024-07-01-preview' = {
-  parent: parentResource 
+resource exampleResource 'Microsoft.MachineLearningServices/registries@2024-07-01-preview' = {
   name: 'example'
-  location: 'eastus'
-  properties: {
-    description: 'some compute'
-    computeType: 'Kubernetes'
-    properties: {
-      defaultInstanceType: 'defaultInstanceType'
-      instanceTypes: {
-        defaultInstanceType: {
-          nodeSelector: {
-          }
-          resources: {
-            limits: {
-              cpu: '1'
-              memory: '4Gi'
-              nvidia.com/gpu: {
-              }
-            }
-            requests: {
-              cpu: '1'
-              memory: '4Gi'
-              nvidia.com/gpu: {
-              }
-            }
-          }
-        }
+  identity: {
+    type: 'None'
+    userAssignedIdentities: {
+      string: {
       }
-      namespace: 'default'
-    }
-    resourceId: '/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourcegroups/testrg123/providers/Microsoft.ContainerService/managedClusters/compute123-56826-c9b00420020b2'
-  }
-}
-```
-
-Create a AML Compute
-```bicep
-resource exampleResource 'Microsoft.MachineLearningServices/workspaces/computes@2024-07-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'eastus'
-  properties: {
-    computeType: 'AmlCompute'
-    properties: {
-      enableNodePublicIp: true
-      isolatedNetwork: false
-      osType: 'Windows'
-      remoteLoginPortPublicAccess: 'NotSpecified'
-      scaleSettings: {
-        maxNodeCount: 1
-        minNodeCount: 0
-        nodeIdleTimeBeforeScaleDown: 'PT5M'
-      }
-      virtualMachineImage: {
-        id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Compute/galleries/myImageGallery/images/myImageDefinition/versions/0.0.1'
-      }
-      vmPriority: 'Dedicated'
-      vmSize: 'STANDARD_NC6'
     }
   }
-}
-```
-
-Create a DataFactory Compute
-```bicep
-resource exampleResource 'Microsoft.MachineLearningServices/workspaces/computes@2024-07-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'eastus'
+  kind: 'string'
+  location: 'string'
   properties: {
-    computeType: 'DataFactory'
-  }
-}
-```
-
-Create an AKS Compute
-```bicep
-resource exampleResource 'Microsoft.MachineLearningServices/workspaces/computes@2024-07-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'eastus'
-  properties: {
-    computeType: 'AKS'
-  }
-}
-```
-
-Create an ComputeInstance Compute
-```bicep
-resource exampleResource 'Microsoft.MachineLearningServices/workspaces/computes@2024-07-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'eastus'
-  properties: {
-    computeType: 'ComputeInstance'
-    properties: {
-      applicationSharingPolicy: 'Personal'
-      autologgerSettings: {
-        mlflowAutologger: 'Enabled'
-      }
-      computeInstanceAuthorizationType: 'personal'
-      customServices: [
-        {
-          name: 'rstudio-workbench'
-          docker: {
-            privileged: true
-          }
-          endpoints: [
-            {
-              name: 'connect'
-              hostIp: {
-              }
-              published: 4444
-              target: 8787
-              protocol: 'http'
-            }
-          ]
-          environmentVariables: {
-            RSP_LICENSE: {
-              type: 'local'
-              value: 'XXXX-XXXX-XXXX-XXXX-XXXX-XXXX-XXXX'
-            }
-          }
-          image: {
-            type: 'docker'
-            reference: 'ghcr.io/azure/rstudio-workbench:latest'
-          }
-          kernel: {
-            argv: [
-              'option1'
-              'option2'
-              'option3'
-            ]
-            displayName: 'TestKernel'
-            language: 'python'
-          }
-          volumes: [
-            {
-              type: 'bind'
-              readOnly: true
-              source: '/mnt/azureuser/'
-              target: '/home/testuser/'
-            }
-          ]
-        }
-      ]
-      enableOSPatching: true
-      enableRootAccess: true
-      enableSSO: true
-      personalComputeInstanceSettings: {
-        assignedUser: {
-          objectId: '00000000-0000-0000-0000-000000000000'
-          tenantId: '00000000-0000-0000-0000-000000000000'
-        }
-      }
-      releaseQuotaOnStop: true
-      sshSettings: {
-        sshPublicAccess: 'Disabled'
-      }
-      subnet: {
-        id: 'test-subnet-resource-id'
-      }
-      vmSize: 'STANDARD_NC6'
+    discoveryUrl: 'string'
+    intellectualPropertyPublisher: 'string'
+    managedResourceGroup: {
+      resourceId: 'string'
     }
-  }
-}
-```
-
-Create an ComputeInstance Compute with Schedules
-```bicep
-resource exampleResource 'Microsoft.MachineLearningServices/workspaces/computes@2024-07-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'eastus'
-  properties: {
-    computeType: 'ComputeInstance'
-    properties: {
-      applicationSharingPolicy: 'Personal'
-      computeInstanceAuthorizationType: 'personal'
-      personalComputeInstanceSettings: {
-        assignedUser: {
-          objectId: '00000000-0000-0000-0000-000000000000'
-          tenantId: '00000000-0000-0000-0000-000000000000'
-        }
-      }
-      schedules: {
-        computeStartStop: [
+    mlFlowRegistryUri: 'string'
+    publicNetworkAccess: 'string'
+    regionDetails: [
+      {
+        acrDetails: [
           {
-            action: 'Stop'
-            cron: {
-              expression: '0 18 * * *'
-              startTime: '2021-04-23T01:30:00'
-              timeZone: 'Pacific Standard Time'
+            systemCreatedAcrAccount: {
+              acrAccountName: 'string'
+              acrAccountSku: 'string'
+              armResourceId: {
+                resourceId: 'string'
+              }
             }
-            status: 'Enabled'
-            triggerType: 'Cron'
+          }
+        ]
+        location: 'string'
+        storageAccountDetails: [
+          {
+            systemCreatedStorageAccount: {
+              allowBlobPublicAccess: false
+              armResourceId: {
+                resourceId: 'string'
+              }
+              storageAccountHnsEnabled: false
+              storageAccountName: 'string'
+              storageAccountType: 'string'
+            }
           }
         ]
       }
-      sshSettings: {
-        sshPublicAccess: 'Disabled'
+    ]
+    registryPrivateEndpointConnections: [
+      {
+        id: 'string'
+        location: 'string'
+        properties: {
+          groupIds: [
+            'string'
+          ]
+          privateEndpoint: {
+            subnetArmId: 'string'
+          }
+          provisioningState: 'string'
+          registryPrivateLinkServiceConnectionState: {
+            description: 'string'
+            actionsRequired: 'string'
+            status: 'Approved'
+          }
+        }
       }
-      vmSize: 'STANDARD_NC6'
-    }
+    ]
+  }
+  sku: {
+    name: 'string'
+    capacity: 1
+    family: 'string'
+    size: 'string'
+    tier: 'Free'
+  }
+  tags: {
   }
 }
 ```
 
-Create an ComputeInstance Compute with minimal inputs
+CreateOrUpdate Registry with user created accounts.
 ```bicep
-resource exampleResource 'Microsoft.MachineLearningServices/workspaces/computes@2024-07-01-preview' = {
-  parent: parentResource 
+resource exampleResource 'Microsoft.MachineLearningServices/registries@2024-07-01-preview' = {
   name: 'example'
-  location: 'eastus'
-  properties: {
-    computeType: 'ComputeInstance'
-    properties: {
-      vmSize: 'STANDARD_NC6'
-    }
-  }
-}
-```
-
-Update a AML Compute
-```bicep
-resource exampleResource 'Microsoft.MachineLearningServices/workspaces/computes@2024-07-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'eastus'
-  properties: {
-    description: 'some compute'
-    computeType: 'AmlCompute'
-    properties: {
-      scaleSettings: {
-        maxNodeCount: 4
-        minNodeCount: 4
-        nodeIdleTimeBeforeScaleDown: 'PT5M'
+  identity: {
+    type: 'None'
+    userAssignedIdentities: {
+      string: {
       }
     }
   }
-}
-```
-
-Update an AKS Compute
-```bicep
-resource exampleResource 'Microsoft.MachineLearningServices/workspaces/computes@2024-07-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'eastus'
+  kind: 'string'
+  location: 'string'
   properties: {
-    description: 'some compute'
-    computeType: 'AKS'
-    properties: {
-      agentCount: 4
+    discoveryUrl: 'string'
+    intellectualPropertyPublisher: 'string'
+    managedResourceGroup: {
+      resourceId: 'string'
     }
-    resourceId: '/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourcegroups/testrg123/providers/Microsoft.ContainerService/managedClusters/compute123-56826-c9b00420020b2'
+    mlFlowRegistryUri: 'string'
+    publicNetworkAccess: 'string'
+    regionDetails: [
+      {
+        acrDetails: [
+          {
+            userCreatedAcrAccount: {
+              armResourceId: {
+                resourceId: 'string'
+              }
+            }
+          }
+        ]
+        location: 'string'
+        storageAccountDetails: [
+          {
+            userCreatedStorageAccount: {
+              armResourceId: {
+                resourceId: 'string'
+              }
+            }
+          }
+        ]
+      }
+    ]
+    registryPrivateEndpointConnections: [
+      {
+        id: 'string'
+        location: 'string'
+        properties: {
+          groupIds: [
+            'string'
+          ]
+          privateEndpoint: {
+            subnetArmId: 'string'
+          }
+          provisioningState: 'string'
+          registryPrivateLinkServiceConnectionState: {
+            description: 'string'
+            actionsRequired: 'string'
+            status: 'Approved'
+          }
+        }
+      }
+    ]
+  }
+  sku: {
+    name: 'string'
+    capacity: 1
+    family: 'string'
+    size: 'string'
+    tier: 'Free'
+  }
+  tags: {
   }
 }
 ```
@@ -456,19 +357,6 @@ resource exampleResource 'Microsoft.MachineLearningServices/registries/environme
 }
 ```
 
-## microsoft.machinelearningservices/workspaces/marketplacesubscriptions
-
-CreateOrUpdate Workspace Marketplace Subscription.
-```bicep
-resource exampleResource 'Microsoft.MachineLearningServices/workspaces/marketplaceSubscriptions@2024-07-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    modelId: 'string'
-  }
-}
-```
-
 ## microsoft.machinelearningservices/registries/models
 
 CreateOrUpdate Registry Model Container.
@@ -511,6 +399,54 @@ resource exampleResource 'Microsoft.MachineLearningServices/registries/models/ve
     tags: {
       string: 'string'
     }
+  }
+}
+```
+
+## microsoft.machinelearningservices/workspaces
+
+Create Workspace
+```bicep
+resource exampleResource 'Microsoft.MachineLearningServices/workspaces@2024-07-01-preview' = {
+  name: 'example'
+  identity: {
+    type: 'SystemAssigned,UserAssigned'
+    userAssignedIdentities: {
+      /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/testuai: {
+      }
+    }
+  }
+  location: 'eastus2euap'
+  properties: {
+    description: 'test description'
+    applicationInsights: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/microsoft.insights/components/testinsights'
+    containerRegistry: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ContainerRegistry/registries/testRegistry'
+    encryption: {
+      identity: {
+        userAssignedIdentity: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/testuai'
+      }
+      keyVaultProperties: {
+        identityClientId: ''
+        keyIdentifier: 'https://testkv.vault.azure.net/keys/testkey/aabbccddee112233445566778899aabb'
+        keyVaultArmId: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.KeyVault/vaults/testkv'
+      }
+      status: 'Enabled'
+    }
+    friendlyName: 'HelloName'
+    hbiWorkspace: false
+    keyVault: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.KeyVault/vaults/testkv'
+    sharedPrivateLinkResources: [
+      {
+        name: 'testdbresource'
+        properties: {
+          groupId: 'Sql'
+          privateLinkResourceId: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.DocumentDB/databaseAccounts/testdbresource/privateLinkResources/Sql'
+          requestMessage: 'Please approve'
+          status: 'Approved'
+        }
+      }
+    ]
+    storageAccount: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/accountcrud-1234/providers/Microsoft.Storage/storageAccounts/testStorageAccount'
   }
 }
 ```
@@ -701,6 +637,369 @@ resource exampleResource 'Microsoft.MachineLearningServices/workspaces/component
 }
 ```
 
+## microsoft.machinelearningservices/workspaces/computes
+
+Attach a Kubernetes Compute
+```bicep
+resource exampleResource 'Microsoft.MachineLearningServices/workspaces/computes@2024-07-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'eastus'
+  properties: {
+    description: 'some compute'
+    computeType: 'Kubernetes'
+    properties: {
+      defaultInstanceType: 'defaultInstanceType'
+      instanceTypes: {
+        defaultInstanceType: {
+          nodeSelector: {
+          }
+          resources: {
+            limits: {
+              cpu: '1'
+              memory: '4Gi'
+              nvidia.com/gpu: {
+              }
+            }
+            requests: {
+              cpu: '1'
+              memory: '4Gi'
+              nvidia.com/gpu: {
+              }
+            }
+          }
+        }
+      }
+      namespace: 'default'
+    }
+    resourceId: '/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourcegroups/testrg123/providers/Microsoft.ContainerService/managedClusters/compute123-56826-c9b00420020b2'
+  }
+}
+```
+
+Create a AML Compute
+```bicep
+resource exampleResource 'Microsoft.MachineLearningServices/workspaces/computes@2024-07-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'eastus'
+  properties: {
+    computeType: 'AmlCompute'
+    properties: {
+      enableNodePublicIp: true
+      isolatedNetwork: false
+      osType: 'Windows'
+      remoteLoginPortPublicAccess: 'NotSpecified'
+      scaleSettings: {
+        maxNodeCount: 1
+        minNodeCount: 0
+        nodeIdleTimeBeforeScaleDown: 'PT5M'
+      }
+      virtualMachineImage: {
+        id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Compute/galleries/myImageGallery/images/myImageDefinition/versions/0.0.1'
+      }
+      vmPriority: 'Dedicated'
+      vmSize: 'STANDARD_NC6'
+    }
+  }
+}
+```
+
+Create a DataFactory Compute
+```bicep
+resource exampleResource 'Microsoft.MachineLearningServices/workspaces/computes@2024-07-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'eastus'
+  properties: {
+    computeType: 'DataFactory'
+  }
+}
+```
+
+Create an AKS Compute
+```bicep
+resource exampleResource 'Microsoft.MachineLearningServices/workspaces/computes@2024-07-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'eastus'
+  properties: {
+    computeType: 'AKS'
+  }
+}
+```
+
+Create an ComputeInstance Compute
+```bicep
+resource exampleResource 'Microsoft.MachineLearningServices/workspaces/computes@2024-07-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'eastus'
+  properties: {
+    computeType: 'ComputeInstance'
+    properties: {
+      applicationSharingPolicy: 'Personal'
+      autologgerSettings: {
+        mlflowAutologger: 'Enabled'
+      }
+      computeInstanceAuthorizationType: 'personal'
+      customServices: [
+        {
+          name: 'rstudio-workbench'
+          docker: {
+            privileged: true
+          }
+          endpoints: [
+            {
+              name: 'connect'
+              hostIp: {
+              }
+              published: 4444
+              target: 8787
+              protocol: 'http'
+            }
+          ]
+          environmentVariables: {
+            RSP_LICENSE: {
+              type: 'local'
+              value: 'XXXX-XXXX-XXXX-XXXX-XXXX-XXXX-XXXX'
+            }
+          }
+          image: {
+            type: 'docker'
+            reference: 'ghcr.io/azure/rstudio-workbench:latest'
+          }
+          kernel: {
+            argv: [
+              'option1'
+              'option2'
+              'option3'
+            ]
+            displayName: 'TestKernel'
+            language: 'python'
+          }
+          volumes: [
+            {
+              type: 'bind'
+              readOnly: true
+              source: '/mnt/azureuser/'
+              target: '/home/testuser/'
+            }
+          ]
+        }
+      ]
+      enableOSPatching: true
+      enableRootAccess: true
+      enableSSO: true
+      personalComputeInstanceSettings: {
+        assignedUser: {
+          objectId: '00000000-0000-0000-0000-000000000000'
+          tenantId: '00000000-0000-0000-0000-000000000000'
+        }
+      }
+      releaseQuotaOnStop: true
+      sshSettings: {
+        sshPublicAccess: 'Disabled'
+      }
+      subnet: {
+        id: 'test-subnet-resource-id'
+      }
+      vmSize: 'STANDARD_NC6'
+    }
+  }
+}
+```
+
+Create an ComputeInstance Compute with minimal inputs
+```bicep
+resource exampleResource 'Microsoft.MachineLearningServices/workspaces/computes@2024-07-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'eastus'
+  properties: {
+    computeType: 'ComputeInstance'
+    properties: {
+      vmSize: 'STANDARD_NC6'
+    }
+  }
+}
+```
+
+Create an ComputeInstance Compute with Schedules
+```bicep
+resource exampleResource 'Microsoft.MachineLearningServices/workspaces/computes@2024-07-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'eastus'
+  properties: {
+    computeType: 'ComputeInstance'
+    properties: {
+      applicationSharingPolicy: 'Personal'
+      computeInstanceAuthorizationType: 'personal'
+      personalComputeInstanceSettings: {
+        assignedUser: {
+          objectId: '00000000-0000-0000-0000-000000000000'
+          tenantId: '00000000-0000-0000-0000-000000000000'
+        }
+      }
+      schedules: {
+        computeStartStop: [
+          {
+            action: 'Stop'
+            cron: {
+              expression: '0 18 * * *'
+              startTime: '2021-04-23T01:30:00'
+              timeZone: 'Pacific Standard Time'
+            }
+            status: 'Enabled'
+            triggerType: 'Cron'
+          }
+        ]
+      }
+      sshSettings: {
+        sshPublicAccess: 'Disabled'
+      }
+      vmSize: 'STANDARD_NC6'
+    }
+  }
+}
+```
+
+Update a AML Compute
+```bicep
+resource exampleResource 'Microsoft.MachineLearningServices/workspaces/computes@2024-07-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'eastus'
+  properties: {
+    description: 'some compute'
+    computeType: 'AmlCompute'
+    properties: {
+      scaleSettings: {
+        maxNodeCount: 4
+        minNodeCount: 4
+        nodeIdleTimeBeforeScaleDown: 'PT5M'
+      }
+    }
+  }
+}
+```
+
+Update an AKS Compute
+```bicep
+resource exampleResource 'Microsoft.MachineLearningServices/workspaces/computes@2024-07-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'eastus'
+  properties: {
+    description: 'some compute'
+    computeType: 'AKS'
+    properties: {
+      agentCount: 4
+    }
+    resourceId: '/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourcegroups/testrg123/providers/Microsoft.ContainerService/managedClusters/compute123-56826-c9b00420020b2'
+  }
+}
+```
+
+## microsoft.machinelearningservices/workspaces/connections
+
+CreateWorkspaceConnection
+```bicep
+resource exampleResource 'Microsoft.MachineLearningServices/workspaces/connections@2024-07-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    authType: 'None'
+    category: 'ContainerRegistry'
+    expiryTime: '2024-03-15T14:30:00Z'
+    target: 'www.facebook.com'
+  }
+}
+```
+
+## microsoft.machinelearningservices/workspaces/connections/deployments
+
+Create Azure OpenAI Connection Deployment
+```bicep
+resource exampleResource 'Microsoft.MachineLearningServices/workspaces/connections/deployments@2024-07-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    type: 'Azure.OpenAI'
+    model: {
+      name: 'text-davinci-003'
+      format: 'OpenAI'
+      version: '1'
+    }
+    versionUpgradeOption: 'OnceNewDefaultVersionAvailable'
+  }
+}
+```
+
+## microsoft.machinelearningservices/workspaces/connections/raiblocklists
+
+Create Rai Blocklist
+```bicep
+resource exampleResource 'Microsoft.MachineLearningServices/workspaces/connections/raiBlocklists@2024-07-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    description: 'Basic blocklist description'
+  }
+}
+```
+
+## microsoft.machinelearningservices/workspaces/connections/raiblocklists/raiblocklistitems
+
+Create RaiBlocklist Item
+```bicep
+resource exampleResource 'Microsoft.MachineLearningServices/workspaces/connections/raiBlocklists/raiBlocklistItems@2024-07-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    isRegex: false
+    pattern: 'Pattern To Block'
+  }
+}
+```
+
+## microsoft.machinelearningservices/workspaces/connections/raipolicies
+
+Create Rai policy
+```bicep
+resource exampleResource 'Microsoft.MachineLearningServices/workspaces/connections/raiPolicies@2024-07-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    type: 'SystemManaged'
+    basePolicyName: '112'
+    completionBlocklists: [
+      {
+        blocking: false
+        blocklistName: 'blocklistName'
+      }
+    ]
+    contentFilters: [
+      {
+        name: 'policyName'
+        allowedContentLevel: 'Low'
+        blocking: false
+        enabled: false
+        source: 'Prompt'
+      }
+    ]
+    mode: 'Blocking'
+    promptBlocklists: [
+      {
+        blocking: false
+        blocklistName: 'blocklistName'
+      }
+    ]
+  }
+}
+```
+
 ## microsoft.machinelearningservices/workspaces/data
 
 CreateOrUpdate Workspace Data Container.
@@ -860,6 +1159,76 @@ resource exampleResource 'Microsoft.MachineLearningServices/workspaces/datastore
       string: 'string'
     }
     protocol: 'https'
+  }
+}
+```
+
+## microsoft.machinelearningservices/workspaces/endpoints
+
+Create Endpoint
+```bicep
+resource exampleResource 'Microsoft.MachineLearningServices/workspaces/endpoints@2024-07-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    name: 'Azure.OpenAI'
+    associatedResourceId: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/test-rg/providers/Microsoft.CognitiveService/account/account-1'
+    endpointType: 'Azure.OpenAI'
+  }
+}
+```
+
+## microsoft.machinelearningservices/workspaces/endpoints/deployments
+
+Create Endpoint Deployment
+```bicep
+resource exampleResource 'Microsoft.MachineLearningServices/workspaces/endpoints/deployments@2024-07-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    type: 'Azure.OpenAI'
+    model: {
+      name: 'text-davinci-003'
+      format: 'OpenAI'
+      version: '1'
+    }
+    versionUpgradeOption: 'OnceNewDefaultVersionAvailable'
+  }
+}
+```
+
+## microsoft.machinelearningservices/workspaces/endpoints/raipolicies
+
+Create Rai policy
+```bicep
+resource exampleResource 'Microsoft.MachineLearningServices/workspaces/endpoints/raiPolicies@2024-07-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    type: 'SystemManaged'
+    basePolicyName: '112'
+    completionBlocklists: [
+      {
+        blocking: false
+        blocklistName: 'blocklistName'
+      }
+    ]
+    contentFilters: [
+      {
+        name: 'policyName'
+        allowedContentLevel: 'Low'
+        blocking: false
+        enabled: false
+        source: 'Prompt'
+      }
+    ]
+    mode: 'Blocking'
+    promptBlocklists: [
+      {
+        blocking: false
+        blocklistName: 'blocklistName'
+      }
+    ]
   }
 }
 ```
@@ -1374,6 +1743,19 @@ resource exampleResource 'Microsoft.MachineLearningServices/workspaces/jobs@2024
 }
 ```
 
+## microsoft.machinelearningservices/workspaces/marketplacesubscriptions
+
+CreateOrUpdate Workspace Marketplace Subscription.
+```bicep
+resource exampleResource 'Microsoft.MachineLearningServices/workspaces/marketplaceSubscriptions@2024-07-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    modelId: 'string'
+  }
+}
+```
+
 ## microsoft.machinelearningservices/workspaces/models
 
 CreateOrUpdate Workspace Model Container.
@@ -1600,6 +1982,38 @@ resource exampleResource 'Microsoft.MachineLearningServices/workspaces/onlineEnd
 }
 ```
 
+## microsoft.machinelearningservices/workspaces/outboundrules
+
+CreateOrUpdate ManagedNetworkSettingsRule
+```bicep
+resource exampleResource 'Microsoft.MachineLearningServices/workspaces/outboundRules@2024-07-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    type: 'FQDN'
+    category: 'UserDefined'
+    destination: 'destination_endpoint'
+    status: 'Active'
+  }
+}
+```
+
+## microsoft.machinelearningservices/workspaces/privateendpointconnections
+
+WorkspacePutPrivateEndpointConnection
+```bicep
+resource exampleResource 'Microsoft.MachineLearningServices/workspaces/privateEndpointConnections@2024-07-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    privateLinkServiceConnectionState: {
+      description: 'Auto-Approved'
+      status: 'Approved'
+    }
+  }
+}
+```
+
 ## microsoft.machinelearningservices/workspaces/schedules
 
 CreateOrUpdate Schedule.
@@ -1668,416 +2082,6 @@ resource exampleResource 'Microsoft.MachineLearningServices/workspaces/serverles
     tier: 'Standard'
   }
   tags: {
-  }
-}
-```
-
-## microsoft.machinelearningservices/registries
-
-CreateOrUpdate Registry with system created accounts.
-```bicep
-resource exampleResource 'Microsoft.MachineLearningServices/registries@2024-07-01-preview' = {
-  name: 'example'
-  identity: {
-    type: 'None'
-    userAssignedIdentities: {
-      string: {
-      }
-    }
-  }
-  kind: 'string'
-  location: 'string'
-  properties: {
-    discoveryUrl: 'string'
-    intellectualPropertyPublisher: 'string'
-    managedResourceGroup: {
-      resourceId: 'string'
-    }
-    mlFlowRegistryUri: 'string'
-    publicNetworkAccess: 'string'
-    regionDetails: [
-      {
-        acrDetails: [
-          {
-            systemCreatedAcrAccount: {
-              acrAccountName: 'string'
-              acrAccountSku: 'string'
-              armResourceId: {
-                resourceId: 'string'
-              }
-            }
-          }
-        ]
-        location: 'string'
-        storageAccountDetails: [
-          {
-            systemCreatedStorageAccount: {
-              allowBlobPublicAccess: false
-              armResourceId: {
-                resourceId: 'string'
-              }
-              storageAccountHnsEnabled: false
-              storageAccountName: 'string'
-              storageAccountType: 'string'
-            }
-          }
-        ]
-      }
-    ]
-    registryPrivateEndpointConnections: [
-      {
-        id: 'string'
-        location: 'string'
-        properties: {
-          groupIds: [
-            'string'
-          ]
-          privateEndpoint: {
-            subnetArmId: 'string'
-          }
-          provisioningState: 'string'
-          registryPrivateLinkServiceConnectionState: {
-            description: 'string'
-            actionsRequired: 'string'
-            status: 'Approved'
-          }
-        }
-      }
-    ]
-  }
-  sku: {
-    name: 'string'
-    capacity: 1
-    family: 'string'
-    size: 'string'
-    tier: 'Free'
-  }
-  tags: {
-  }
-}
-```
-
-CreateOrUpdate Registry with user created accounts.
-```bicep
-resource exampleResource 'Microsoft.MachineLearningServices/registries@2024-07-01-preview' = {
-  name: 'example'
-  identity: {
-    type: 'None'
-    userAssignedIdentities: {
-      string: {
-      }
-    }
-  }
-  kind: 'string'
-  location: 'string'
-  properties: {
-    discoveryUrl: 'string'
-    intellectualPropertyPublisher: 'string'
-    managedResourceGroup: {
-      resourceId: 'string'
-    }
-    mlFlowRegistryUri: 'string'
-    publicNetworkAccess: 'string'
-    regionDetails: [
-      {
-        acrDetails: [
-          {
-            userCreatedAcrAccount: {
-              armResourceId: {
-                resourceId: 'string'
-              }
-            }
-          }
-        ]
-        location: 'string'
-        storageAccountDetails: [
-          {
-            userCreatedStorageAccount: {
-              armResourceId: {
-                resourceId: 'string'
-              }
-            }
-          }
-        ]
-      }
-    ]
-    registryPrivateEndpointConnections: [
-      {
-        id: 'string'
-        location: 'string'
-        properties: {
-          groupIds: [
-            'string'
-          ]
-          privateEndpoint: {
-            subnetArmId: 'string'
-          }
-          provisioningState: 'string'
-          registryPrivateLinkServiceConnectionState: {
-            description: 'string'
-            actionsRequired: 'string'
-            status: 'Approved'
-          }
-        }
-      }
-    ]
-  }
-  sku: {
-    name: 'string'
-    capacity: 1
-    family: 'string'
-    size: 'string'
-    tier: 'Free'
-  }
-  tags: {
-  }
-}
-```
-
-## microsoft.machinelearningservices/workspaces
-
-Create Workspace
-```bicep
-resource exampleResource 'Microsoft.MachineLearningServices/workspaces@2024-07-01-preview' = {
-  name: 'example'
-  identity: {
-    type: 'SystemAssigned,UserAssigned'
-    userAssignedIdentities: {
-      /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/testuai: {
-      }
-    }
-  }
-  location: 'eastus2euap'
-  properties: {
-    description: 'test description'
-    applicationInsights: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/microsoft.insights/components/testinsights'
-    containerRegistry: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ContainerRegistry/registries/testRegistry'
-    encryption: {
-      identity: {
-        userAssignedIdentity: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/testuai'
-      }
-      keyVaultProperties: {
-        identityClientId: ''
-        keyIdentifier: 'https://testkv.vault.azure.net/keys/testkey/aabbccddee112233445566778899aabb'
-        keyVaultArmId: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.KeyVault/vaults/testkv'
-      }
-      status: 'Enabled'
-    }
-    friendlyName: 'HelloName'
-    hbiWorkspace: false
-    keyVault: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.KeyVault/vaults/testkv'
-    sharedPrivateLinkResources: [
-      {
-        name: 'testdbresource'
-        properties: {
-          groupId: 'Sql'
-          privateLinkResourceId: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.DocumentDB/databaseAccounts/testdbresource/privateLinkResources/Sql'
-          requestMessage: 'Please approve'
-          status: 'Approved'
-        }
-      }
-    ]
-    storageAccount: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/accountcrud-1234/providers/Microsoft.Storage/storageAccounts/testStorageAccount'
-  }
-}
-```
-
-## microsoft.machinelearningservices/workspaces/connections
-
-CreateWorkspaceConnection
-```bicep
-resource exampleResource 'Microsoft.MachineLearningServices/workspaces/connections@2024-07-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    authType: 'None'
-    category: 'ContainerRegistry'
-    expiryTime: '2024-03-15T14:30:00Z'
-    target: 'www.facebook.com'
-  }
-}
-```
-
-## microsoft.machinelearningservices/workspaces/connections/deployments
-
-Create Azure OpenAI Connection Deployment
-```bicep
-resource exampleResource 'Microsoft.MachineLearningServices/workspaces/connections/deployments@2024-07-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    type: 'Azure.OpenAI'
-    model: {
-      name: 'text-davinci-003'
-      format: 'OpenAI'
-      version: '1'
-    }
-    versionUpgradeOption: 'OnceNewDefaultVersionAvailable'
-  }
-}
-```
-
-## microsoft.machinelearningservices/workspaces/connections/raiblocklists
-
-Create Rai Blocklist
-```bicep
-resource exampleResource 'Microsoft.MachineLearningServices/workspaces/connections/raiBlocklists@2024-07-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    description: 'Basic blocklist description'
-  }
-}
-```
-
-## microsoft.machinelearningservices/workspaces/connections/raiblocklists/raiblocklistitems
-
-Create RaiBlocklist Item
-```bicep
-resource exampleResource 'Microsoft.MachineLearningServices/workspaces/connections/raiBlocklists/raiBlocklistItems@2024-07-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    isRegex: false
-    pattern: 'Pattern To Block'
-  }
-}
-```
-
-## microsoft.machinelearningservices/workspaces/connections/raipolicies
-
-Create Rai policy
-```bicep
-resource exampleResource 'Microsoft.MachineLearningServices/workspaces/connections/raiPolicies@2024-07-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    type: 'SystemManaged'
-    basePolicyName: '112'
-    completionBlocklists: [
-      {
-        blocking: false
-        blocklistName: 'blocklistName'
-      }
-    ]
-    contentFilters: [
-      {
-        name: 'policyName'
-        allowedContentLevel: 'Low'
-        blocking: false
-        enabled: false
-        source: 'Prompt'
-      }
-    ]
-    mode: 'Blocking'
-    promptBlocklists: [
-      {
-        blocking: false
-        blocklistName: 'blocklistName'
-      }
-    ]
-  }
-}
-```
-
-## microsoft.machinelearningservices/workspaces/endpoints/deployments
-
-Create Endpoint Deployment
-```bicep
-resource exampleResource 'Microsoft.MachineLearningServices/workspaces/endpoints/deployments@2024-07-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    type: 'Azure.OpenAI'
-    model: {
-      name: 'text-davinci-003'
-      format: 'OpenAI'
-      version: '1'
-    }
-    versionUpgradeOption: 'OnceNewDefaultVersionAvailable'
-  }
-}
-```
-
-## microsoft.machinelearningservices/workspaces/endpoints
-
-Create Endpoint
-```bicep
-resource exampleResource 'Microsoft.MachineLearningServices/workspaces/endpoints@2024-07-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    name: 'Azure.OpenAI'
-    associatedResourceId: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/test-rg/providers/Microsoft.CognitiveService/account/account-1'
-    endpointType: 'Azure.OpenAI'
-  }
-}
-```
-
-## microsoft.machinelearningservices/workspaces/endpoints/raipolicies
-
-Create Rai policy
-```bicep
-resource exampleResource 'Microsoft.MachineLearningServices/workspaces/endpoints/raiPolicies@2024-07-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    type: 'SystemManaged'
-    basePolicyName: '112'
-    completionBlocklists: [
-      {
-        blocking: false
-        blocklistName: 'blocklistName'
-      }
-    ]
-    contentFilters: [
-      {
-        name: 'policyName'
-        allowedContentLevel: 'Low'
-        blocking: false
-        enabled: false
-        source: 'Prompt'
-      }
-    ]
-    mode: 'Blocking'
-    promptBlocklists: [
-      {
-        blocking: false
-        blocklistName: 'blocklistName'
-      }
-    ]
-  }
-}
-```
-
-## microsoft.machinelearningservices/workspaces/outboundrules
-
-CreateOrUpdate ManagedNetworkSettingsRule
-```bicep
-resource exampleResource 'Microsoft.MachineLearningServices/workspaces/outboundRules@2024-07-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    type: 'FQDN'
-    category: 'UserDefined'
-    destination: 'destination_endpoint'
-    status: 'Active'
-  }
-}
-```
-
-## microsoft.machinelearningservices/workspaces/privateendpointconnections
-
-WorkspacePutPrivateEndpointConnection
-```bicep
-resource exampleResource 'Microsoft.MachineLearningServices/workspaces/privateEndpointConnections@2024-07-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    privateLinkServiceConnectionState: {
-      description: 'Auto-Approved'
-      status: 'Approved'
-    }
   }
 }
 ```

@@ -1,4 +1,8 @@
 # Microsoft.Compute
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.compute/availabilitysets
 
@@ -14,15 +18,220 @@ resource exampleResource 'Microsoft.Compute/availabilitySets@2019-03-01' = {
 }
 ```
 
-## microsoft.compute/proximityplacementgroups
+## microsoft.compute/disks
 
-Create or Update a proximity placement group.
+Create a managed disk by copying a snapshot.
 ```bicep
-resource exampleResource 'Microsoft.Compute/proximityPlacementGroups@2019-03-01' = {
+resource exampleResource 'Microsoft.Compute/disks@2019-03-01' = {
   name: 'example'
-  location: 'westus'
+  location: 'West US'
   properties: {
-    proximityPlacementGroupType: 'Standard'
+    creationData: {
+      createOption: 'Copy'
+      sourceResourceId: 'subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot'
+    }
+  }
+}
+```
+
+Create a managed disk by importing an unmanaged blob from a different subscription.
+```bicep
+resource exampleResource 'Microsoft.Compute/disks@2019-03-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    creationData: {
+      createOption: 'Import'
+      sourceUri: 'https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd'
+      storageAccountId: 'subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount'
+    }
+  }
+}
+```
+
+Create a managed disk by importing an unmanaged blob from the same subscription.
+```bicep
+resource exampleResource 'Microsoft.Compute/disks@2019-03-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    creationData: {
+      createOption: 'Import'
+      sourceUri: 'https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd'
+    }
+  }
+}
+```
+
+Create a managed disk from a platform image.
+```bicep
+resource exampleResource 'Microsoft.Compute/disks@2019-03-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    creationData: {
+      createOption: 'FromImage'
+      imageReference: {
+        id: '/Subscriptions/{subscriptionId}/Providers/Microsoft.Compute/Locations/uswest/Publishers/Microsoft/ArtifactTypes/VMImage/Offers/{offer}'
+      }
+    }
+    osType: 'Windows'
+  }
+}
+```
+
+Create a managed disk from an existing managed disk in the same or different subscription.
+```bicep
+resource exampleResource 'Microsoft.Compute/disks@2019-03-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    creationData: {
+      createOption: 'Copy'
+      sourceResourceId: 'subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myDisk1'
+    }
+  }
+}
+```
+
+Create a managed upload disk.
+```bicep
+resource exampleResource 'Microsoft.Compute/disks@2019-03-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    creationData: {
+      createOption: 'Upload'
+      uploadSizeBytes: 10737418752
+    }
+  }
+}
+```
+
+Create an empty managed disk.
+```bicep
+resource exampleResource 'Microsoft.Compute/disks@2019-03-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    creationData: {
+      createOption: 'Empty'
+    }
+    diskSizeGB: 200
+  }
+}
+```
+
+## microsoft.compute/galleries
+
+Create or update a simple gallery.
+```bicep
+resource exampleResource 'Microsoft.Compute/galleries@2019-03-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    description: 'This is the gallery description.'
+  }
+}
+```
+
+## microsoft.compute/galleries/applications
+
+Create or update a simple gallery Application.
+```bicep
+resource exampleResource 'Microsoft.Compute/galleries/applications@2019-03-01' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'West US'
+  properties: {
+    description: 'This is the gallery application description.'
+    eula: 'This is the gallery application EULA.'
+    privacyStatementUri: 'myPrivacyStatementUri}'
+    releaseNoteUri: 'myReleaseNoteUri'
+    supportedOSType: 'Windows'
+  }
+}
+```
+
+## microsoft.compute/galleries/applications/versions
+
+Create or update a simple gallery Application Version.
+```bicep
+resource exampleResource 'Microsoft.Compute/galleries/applications/versions@2019-03-01' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'West US'
+  properties: {
+    publishingProfile: {
+      endOfLifeDate: '2019-07-01T07:00:00Z'
+      manageActions: {
+        install: 'powershell -command "Expand-Archive -Path package.zip -DestinationPath C:\\package"'
+        remove: 'del C:\\package '
+      }
+      replicaCount: 1
+      source: {
+        mediaLink: 'https://mystorageaccount.blob.core.windows.net/mycontainer/package.zip?{sasKey}'
+      }
+      storageAccountType: 'Standard_LRS'
+      targetRegions: [
+        {
+          name: 'West US'
+          regionalReplicaCount: 1
+          storageAccountType: 'Standard_LRS'
+        }
+      ]
+    }
+  }
+}
+```
+
+## microsoft.compute/galleries/images
+
+Create or update a simple gallery image.
+```bicep
+resource exampleResource 'Microsoft.Compute/galleries/images@2019-03-01' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'West US'
+  properties: {
+    identifier: {
+      offer: 'myOfferName'
+      publisher: 'myPublisherName'
+      sku: 'mySkuName'
+    }
+    osState: 'Generalized'
+    osType: 'Windows'
+  }
+}
+```
+
+## microsoft.compute/galleries/images/versions
+
+Create or update a simple Gallery Image Version.
+```bicep
+resource exampleResource 'Microsoft.Compute/galleries/images/versions@2019-03-01' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'West US'
+  properties: {
+    publishingProfile: {
+      source: {
+        managedImage: {
+          id: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/images/{imageName}'
+        }
+      }
+      targetRegions: [
+        {
+          name: 'West US'
+          regionalReplicaCount: 1
+        }
+        {
+          name: 'East US'
+          regionalReplicaCount: 2
+          storageAccountType: 'Standard_ZRS'
+        }
+      ]
+    }
   }
 }
 ```
@@ -62,6 +271,217 @@ resource exampleResource 'Microsoft.Compute/hostGroups/hosts@2019-03-01' = {
   }
   tags: {
     department: 'HR'
+  }
+}
+```
+
+## microsoft.compute/images
+
+Create a virtual machine image from a blob.
+```bicep
+resource exampleResource 'Microsoft.Compute/images@2019-03-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    storageProfile: {
+      osDisk: {
+        blobUri: 'https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd'
+        osState: 'Generalized'
+        osType: 'Linux'
+      }
+      zoneResilient: true
+    }
+  }
+}
+```
+
+Create a virtual machine image from a managed disk.
+```bicep
+resource exampleResource 'Microsoft.Compute/images@2019-03-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    storageProfile: {
+      osDisk: {
+        managedDisk: {
+          id: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk'
+        }
+        osState: 'Generalized'
+        osType: 'Linux'
+      }
+      zoneResilient: true
+    }
+  }
+}
+```
+
+Create a virtual machine image from a snapshot.
+```bicep
+resource exampleResource 'Microsoft.Compute/images@2019-03-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    storageProfile: {
+      osDisk: {
+        osState: 'Generalized'
+        osType: 'Linux'
+        snapshot: {
+          id: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot'
+        }
+      }
+      zoneResilient: false
+    }
+  }
+}
+```
+
+Create a virtual machine image from an existing virtual machine.
+```bicep
+resource exampleResource 'Microsoft.Compute/images@2019-03-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    sourceVirtualMachine: {
+      id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVM'
+    }
+  }
+}
+```
+
+Create a virtual machine image that includes a data disk from a blob.
+```bicep
+resource exampleResource 'Microsoft.Compute/images@2019-03-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    storageProfile: {
+      dataDisks: [
+        {
+          blobUri: 'https://mystorageaccount.blob.core.windows.net/dataimages/dataimage.vhd'
+          lun: 1
+        }
+      ]
+      osDisk: {
+        blobUri: 'https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd'
+        osState: 'Generalized'
+        osType: 'Linux'
+      }
+      zoneResilient: false
+    }
+  }
+}
+```
+
+Create a virtual machine image that includes a data disk from a managed disk.
+```bicep
+resource exampleResource 'Microsoft.Compute/images@2019-03-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    storageProfile: {
+      dataDisks: [
+        {
+          lun: 1
+          managedDisk: {
+            id: 'subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk2'
+          }
+        }
+      ]
+      osDisk: {
+        managedDisk: {
+          id: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk'
+        }
+        osState: 'Generalized'
+        osType: 'Linux'
+      }
+      zoneResilient: false
+    }
+  }
+}
+```
+
+Create a virtual machine image that includes a data disk from a snapshot.
+```bicep
+resource exampleResource 'Microsoft.Compute/images@2019-03-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    storageProfile: {
+      dataDisks: [
+        {
+          lun: 1
+          snapshot: {
+            id: 'subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot2'
+          }
+        }
+      ]
+      osDisk: {
+        osState: 'Generalized'
+        osType: 'Linux'
+        snapshot: {
+          id: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot'
+        }
+      }
+      zoneResilient: true
+    }
+  }
+}
+```
+
+## microsoft.compute/proximityplacementgroups
+
+Create or Update a proximity placement group.
+```bicep
+resource exampleResource 'Microsoft.Compute/proximityPlacementGroups@2019-03-01' = {
+  name: 'example'
+  location: 'westus'
+  properties: {
+    proximityPlacementGroupType: 'Standard'
+  }
+}
+```
+
+## microsoft.compute/snapshots
+
+Create a snapshot by importing an unmanaged blob from a different subscription.
+```bicep
+resource exampleResource 'Microsoft.Compute/snapshots@2019-03-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    creationData: {
+      createOption: 'Import'
+      sourceUri: 'https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd'
+      storageAccountId: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount'
+    }
+  }
+}
+```
+
+Create a snapshot by importing an unmanaged blob from the same subscription.
+```bicep
+resource exampleResource 'Microsoft.Compute/snapshots@2019-03-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    creationData: {
+      createOption: 'Import'
+      sourceUri: 'https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd'
+    }
+  }
+}
+```
+
+Create a snapshot from an existing snapshot in the same or a different subscription.
+```bicep
+resource exampleResource 'Microsoft.Compute/snapshots@2019-03-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    creationData: {
+      createOption: 'Copy'
+      sourceResourceId: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot1'
+    }
   }
 }
 ```
@@ -604,159 +1024,6 @@ resource exampleResource 'Microsoft.Compute/virtualMachines@2019-03-01' = {
           storageAccountType: 'Standard_LRS'
         }
       }
-    }
-  }
-}
-```
-
-## microsoft.compute/images
-
-Create a virtual machine image from a blob.
-```bicep
-resource exampleResource 'Microsoft.Compute/images@2019-03-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    storageProfile: {
-      osDisk: {
-        blobUri: 'https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd'
-        osState: 'Generalized'
-        osType: 'Linux'
-      }
-      zoneResilient: true
-    }
-  }
-}
-```
-
-Create a virtual machine image from a managed disk.
-```bicep
-resource exampleResource 'Microsoft.Compute/images@2019-03-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    storageProfile: {
-      osDisk: {
-        managedDisk: {
-          id: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk'
-        }
-        osState: 'Generalized'
-        osType: 'Linux'
-      }
-      zoneResilient: true
-    }
-  }
-}
-```
-
-Create a virtual machine image from a snapshot.
-```bicep
-resource exampleResource 'Microsoft.Compute/images@2019-03-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    storageProfile: {
-      osDisk: {
-        osState: 'Generalized'
-        osType: 'Linux'
-        snapshot: {
-          id: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot'
-        }
-      }
-      zoneResilient: false
-    }
-  }
-}
-```
-
-Create a virtual machine image from an existing virtual machine.
-```bicep
-resource exampleResource 'Microsoft.Compute/images@2019-03-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    sourceVirtualMachine: {
-      id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVM'
-    }
-  }
-}
-```
-
-Create a virtual machine image that includes a data disk from a blob.
-```bicep
-resource exampleResource 'Microsoft.Compute/images@2019-03-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    storageProfile: {
-      dataDisks: [
-        {
-          blobUri: 'https://mystorageaccount.blob.core.windows.net/dataimages/dataimage.vhd'
-          lun: 1
-        }
-      ]
-      osDisk: {
-        blobUri: 'https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd'
-        osState: 'Generalized'
-        osType: 'Linux'
-      }
-      zoneResilient: false
-    }
-  }
-}
-```
-
-Create a virtual machine image that includes a data disk from a managed disk.
-```bicep
-resource exampleResource 'Microsoft.Compute/images@2019-03-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    storageProfile: {
-      dataDisks: [
-        {
-          lun: 1
-          managedDisk: {
-            id: 'subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk2'
-          }
-        }
-      ]
-      osDisk: {
-        managedDisk: {
-          id: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk'
-        }
-        osState: 'Generalized'
-        osType: 'Linux'
-      }
-      zoneResilient: false
-    }
-  }
-}
-```
-
-Create a virtual machine image that includes a data disk from a snapshot.
-```bicep
-resource exampleResource 'Microsoft.Compute/images@2019-03-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    storageProfile: {
-      dataDisks: [
-        {
-          lun: 1
-          snapshot: {
-            id: 'subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot2'
-          }
-        }
-      ]
-      osDisk: {
-        osState: 'Generalized'
-        osType: 'Linux'
-        snapshot: {
-          id: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot'
-        }
-      }
-      zoneResilient: true
     }
   }
 }
@@ -1772,268 +2039,5 @@ resource exampleResource 'Microsoft.Compute/virtualMachineScaleSets@2019-03-01' 
     '1'
     '3'
   ]
-}
-```
-
-## microsoft.compute/disks
-
-Create a managed disk by copying a snapshot.
-```bicep
-resource exampleResource 'Microsoft.Compute/disks@2019-03-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    creationData: {
-      createOption: 'Copy'
-      sourceResourceId: 'subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot'
-    }
-  }
-}
-```
-
-Create a managed disk by importing an unmanaged blob from a different subscription.
-```bicep
-resource exampleResource 'Microsoft.Compute/disks@2019-03-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    creationData: {
-      createOption: 'Import'
-      sourceUri: 'https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd'
-      storageAccountId: 'subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount'
-    }
-  }
-}
-```
-
-Create a managed disk by importing an unmanaged blob from the same subscription.
-```bicep
-resource exampleResource 'Microsoft.Compute/disks@2019-03-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    creationData: {
-      createOption: 'Import'
-      sourceUri: 'https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd'
-    }
-  }
-}
-```
-
-Create a managed disk from a platform image.
-```bicep
-resource exampleResource 'Microsoft.Compute/disks@2019-03-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    creationData: {
-      createOption: 'FromImage'
-      imageReference: {
-        id: '/Subscriptions/{subscriptionId}/Providers/Microsoft.Compute/Locations/uswest/Publishers/Microsoft/ArtifactTypes/VMImage/Offers/{offer}'
-      }
-    }
-    osType: 'Windows'
-  }
-}
-```
-
-Create a managed disk from an existing managed disk in the same or different subscription.
-```bicep
-resource exampleResource 'Microsoft.Compute/disks@2019-03-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    creationData: {
-      createOption: 'Copy'
-      sourceResourceId: 'subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myDisk1'
-    }
-  }
-}
-```
-
-Create a managed upload disk.
-```bicep
-resource exampleResource 'Microsoft.Compute/disks@2019-03-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    creationData: {
-      createOption: 'Upload'
-      uploadSizeBytes: 10737418752
-    }
-  }
-}
-```
-
-Create an empty managed disk.
-```bicep
-resource exampleResource 'Microsoft.Compute/disks@2019-03-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    creationData: {
-      createOption: 'Empty'
-    }
-    diskSizeGB: 200
-  }
-}
-```
-
-## microsoft.compute/snapshots
-
-Create a snapshot by importing an unmanaged blob from a different subscription.
-```bicep
-resource exampleResource 'Microsoft.Compute/snapshots@2019-03-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    creationData: {
-      createOption: 'Import'
-      sourceUri: 'https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd'
-      storageAccountId: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount'
-    }
-  }
-}
-```
-
-Create a snapshot by importing an unmanaged blob from the same subscription.
-```bicep
-resource exampleResource 'Microsoft.Compute/snapshots@2019-03-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    creationData: {
-      createOption: 'Import'
-      sourceUri: 'https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd'
-    }
-  }
-}
-```
-
-Create a snapshot from an existing snapshot in the same or a different subscription.
-```bicep
-resource exampleResource 'Microsoft.Compute/snapshots@2019-03-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    creationData: {
-      createOption: 'Copy'
-      sourceResourceId: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot1'
-    }
-  }
-}
-```
-
-## microsoft.compute/galleries
-
-Create or update a simple gallery.
-```bicep
-resource exampleResource 'Microsoft.Compute/galleries@2019-03-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    description: 'This is the gallery description.'
-  }
-}
-```
-
-## microsoft.compute/galleries/images
-
-Create or update a simple gallery image.
-```bicep
-resource exampleResource 'Microsoft.Compute/galleries/images@2019-03-01' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'West US'
-  properties: {
-    identifier: {
-      offer: 'myOfferName'
-      publisher: 'myPublisherName'
-      sku: 'mySkuName'
-    }
-    osState: 'Generalized'
-    osType: 'Windows'
-  }
-}
-```
-
-## microsoft.compute/galleries/images/versions
-
-Create or update a simple Gallery Image Version.
-```bicep
-resource exampleResource 'Microsoft.Compute/galleries/images/versions@2019-03-01' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'West US'
-  properties: {
-    publishingProfile: {
-      source: {
-        managedImage: {
-          id: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/images/{imageName}'
-        }
-      }
-      targetRegions: [
-        {
-          name: 'West US'
-          regionalReplicaCount: 1
-        }
-        {
-          name: 'East US'
-          regionalReplicaCount: 2
-          storageAccountType: 'Standard_ZRS'
-        }
-      ]
-    }
-  }
-}
-```
-
-## microsoft.compute/galleries/applications
-
-Create or update a simple gallery Application.
-```bicep
-resource exampleResource 'Microsoft.Compute/galleries/applications@2019-03-01' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'West US'
-  properties: {
-    description: 'This is the gallery application description.'
-    eula: 'This is the gallery application EULA.'
-    privacyStatementUri: 'myPrivacyStatementUri}'
-    releaseNoteUri: 'myReleaseNoteUri'
-    supportedOSType: 'Windows'
-  }
-}
-```
-
-## microsoft.compute/galleries/applications/versions
-
-Create or update a simple gallery Application Version.
-```bicep
-resource exampleResource 'Microsoft.Compute/galleries/applications/versions@2019-03-01' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'West US'
-  properties: {
-    publishingProfile: {
-      endOfLifeDate: '2019-07-01T07:00:00Z'
-      manageActions: {
-        install: 'powershell -command "Expand-Archive -Path package.zip -DestinationPath C:\\package"'
-        remove: 'del C:\\package '
-      }
-      replicaCount: 1
-      source: {
-        mediaLink: 'https://mystorageaccount.blob.core.windows.net/mycontainer/package.zip?{sasKey}'
-      }
-      storageAccountType: 'Standard_LRS'
-      targetRegions: [
-        {
-          name: 'West US'
-          regionalReplicaCount: 1
-          storageAccountType: 'Standard_LRS'
-        }
-      ]
-    }
-  }
 }
 ```

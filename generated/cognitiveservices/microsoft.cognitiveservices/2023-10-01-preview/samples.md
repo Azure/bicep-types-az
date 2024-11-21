@@ -1,4 +1,8 @@
 # Microsoft.CognitiveServices
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.cognitiveservices/accounts
 
@@ -49,18 +53,20 @@ resource exampleResource 'Microsoft.CognitiveServices/accounts@2023-10-01-previe
 }
 ```
 
-## microsoft.cognitiveservices/accounts/privateendpointconnections
+## microsoft.cognitiveservices/accounts/commitmentplans
 
-PutPrivateEndpointConnection
+PutCommitmentPlan
 ```bicep
-resource exampleResource 'Microsoft.CognitiveServices/accounts/privateEndpointConnections@2023-10-01-preview' = {
+resource exampleResource 'Microsoft.CognitiveServices/accounts/commitmentPlans@2023-10-01-preview' = {
   parent: parentResource 
   name: 'example'
   properties: {
-    privateLinkServiceConnectionState: {
-      description: 'Auto-Approved'
-      status: 'Approved'
+    autoRenew: true
+    current: {
+      tier: 'T1'
     }
+    hostingModel: 'Web'
+    planType: 'Speech2Text'
   }
 }
 ```
@@ -86,59 +92,6 @@ resource exampleResource 'Microsoft.CognitiveServices/accounts/deployments@2023-
 }
 ```
 
-## microsoft.cognitiveservices/accounts/commitmentplans
-
-PutCommitmentPlan
-```bicep
-resource exampleResource 'Microsoft.CognitiveServices/accounts/commitmentPlans@2023-10-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    autoRenew: true
-    current: {
-      tier: 'T1'
-    }
-    hostingModel: 'Web'
-    planType: 'Speech2Text'
-  }
-}
-```
-
-## microsoft.cognitiveservices/commitmentplans
-
-Create Commitment Plan
-```bicep
-resource exampleResource 'Microsoft.CognitiveServices/commitmentPlans@2023-10-01-preview' = {
-  name: 'example'
-  kind: 'SpeechServices'
-  location: 'West US'
-  properties: {
-    autoRenew: true
-    current: {
-      tier: 'T1'
-    }
-    hostingModel: 'Web'
-    planType: 'STT'
-  }
-  sku: {
-    name: 'S0'
-  }
-}
-```
-
-## microsoft.cognitiveservices/commitmentplans/accountassociations
-
-PutCommitmentPlan
-```bicep
-resource exampleResource 'Microsoft.CognitiveServices/commitmentPlans/accountAssociations@2023-10-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    accountId: '/subscriptions/subscriptionId/resourceGroups/resourceGroupName/providers/Microsoft.CognitiveServices/accounts/accountName'
-  }
-}
-```
-
 ## microsoft.cognitiveservices/accounts/encryptionscopes
 
 PutEncryptionScope
@@ -155,6 +108,49 @@ resource exampleResource 'Microsoft.CognitiveServices/accounts/encryptionScopes@
       keyVersion: '9f85549d7bf14ff4bf178c10d3bdca95'
     }
     state: 'Enabled'
+  }
+}
+```
+
+## microsoft.cognitiveservices/accounts/privateendpointconnections
+
+PutPrivateEndpointConnection
+```bicep
+resource exampleResource 'Microsoft.CognitiveServices/accounts/privateEndpointConnections@2023-10-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    privateLinkServiceConnectionState: {
+      description: 'Auto-Approved'
+      status: 'Approved'
+    }
+  }
+}
+```
+
+## microsoft.cognitiveservices/accounts/raiblocklists
+
+PutRaiBlocklist
+```bicep
+resource exampleResource 'Microsoft.CognitiveServices/accounts/raiBlocklists@2023-10-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    description: 'Basic blocklist description'
+  }
+}
+```
+
+## microsoft.cognitiveservices/accounts/raiblocklists/raiblocklistitems
+
+PutRaiBlocklistItem
+```bicep
+resource exampleResource 'Microsoft.CognitiveServices/accounts/raiBlocklists/raiBlocklistItems@2023-10-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    isRegex: false
+    pattern: 'Pattern To Block'
   }
 }
 ```
@@ -255,29 +251,37 @@ resource exampleResource 'Microsoft.CognitiveServices/accounts/raiPolicies@2023-
 }
 ```
 
-## microsoft.cognitiveservices/accounts/raiblocklists
+## microsoft.cognitiveservices/commitmentplans
 
-PutRaiBlocklist
+Create Commitment Plan
 ```bicep
-resource exampleResource 'Microsoft.CognitiveServices/accounts/raiBlocklists@2023-10-01-preview' = {
-  parent: parentResource 
+resource exampleResource 'Microsoft.CognitiveServices/commitmentPlans@2023-10-01-preview' = {
   name: 'example'
+  kind: 'SpeechServices'
+  location: 'West US'
   properties: {
-    description: 'Basic blocklist description'
+    autoRenew: true
+    current: {
+      tier: 'T1'
+    }
+    hostingModel: 'Web'
+    planType: 'STT'
+  }
+  sku: {
+    name: 'S0'
   }
 }
 ```
 
-## microsoft.cognitiveservices/accounts/raiblocklists/raiblocklistitems
+## microsoft.cognitiveservices/commitmentplans/accountassociations
 
-PutRaiBlocklistItem
+PutCommitmentPlan
 ```bicep
-resource exampleResource 'Microsoft.CognitiveServices/accounts/raiBlocklists/raiBlocklistItems@2023-10-01-preview' = {
+resource exampleResource 'Microsoft.CognitiveServices/commitmentPlans/accountAssociations@2023-10-01-preview' = {
   parent: parentResource 
   name: 'example'
   properties: {
-    isRegex: false
-    pattern: 'Pattern To Block'
+    accountId: '/subscriptions/subscriptionId/resourceGroups/resourceGroupName/providers/Microsoft.CognitiveServices/accounts/accountName'
   }
 }
 ```

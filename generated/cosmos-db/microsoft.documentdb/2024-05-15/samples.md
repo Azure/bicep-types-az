@@ -1,4 +1,65 @@
 # Microsoft.DocumentDB
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
+
+## microsoft.documentdb/cassandraclusters
+
+CosmosDBManagedCassandraClusterCreate
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/cassandraClusters@2024-05-15' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    authenticationMethod: 'Cassandra'
+    cassandraVersion: '3.11'
+    clientCertificates: [
+      {
+        pem: '-----BEGIN CERTIFICATE-----\n...Base64 encoded certificate...\n-----END CERTIFICATE-----'
+      }
+    ]
+    clusterNameOverride: 'ClusterNameIllegalForAzureResource'
+    delegatedManagementSubnetId: '/subscriptions/536e130b-d7d6-4ac7-98a5-de20d69588d2/resourceGroups/customer-vnet-rg/providers/Microsoft.Network/virtualNetworks/customer-vnet/subnets/management'
+    externalGossipCertificates: [
+      {
+        pem: '-----BEGIN CERTIFICATE-----\n...Base64 encoded certificate...\n-----END CERTIFICATE-----'
+      }
+    ]
+    externalSeedNodes: [
+      {
+        ipAddress: '10.52.221.2'
+      }
+      {
+        ipAddress: '10.52.221.3'
+      }
+      {
+        ipAddress: '10.52.221.4'
+      }
+    ]
+    hoursBetweenBackups: 24
+    initialCassandraAdminPassword: 'mypassword'
+  }
+  tags: {
+  }
+}
+```
+
+## microsoft.documentdb/cassandraclusters/datacenters
+
+CosmosDBManagedCassandraDataCenterCreate
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/cassandraClusters/dataCenters@2024-05-15' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    base64EncodedCassandraYamlFragment: 'Y29tcGFjdGlvbl90aHJvdWdocHV0X21iX3Blcl9zZWM6IDMyCmNvbXBhY3Rpb25fbGFyZ2VfcGFydGl0aW9uX3dhcm5pbmdfdGhyZXNob2xkX21iOiAxMDA='
+    dataCenterLocation: 'West US 2'
+    delegatedSubnetId: '/subscriptions/536e130b-d7d6-4ac7-98a5-de20d69588d2/resourceGroups/customer-vnet-rg/providers/Microsoft.Network/virtualNetworks/customer-vnet/subnets/dc1-subnet'
+    nodeCount: 9
+  }
+}
+```
 
 ## microsoft.documentdb/databaseaccounts
 
@@ -169,456 +230,6 @@ resource exampleResource 'Microsoft.DocumentDB/databaseAccounts@2024-05-15' = {
 }
 ```
 
-## microsoft.documentdb/databaseaccounts/sqldatabases
-
-CosmosDBSqlDatabaseCreateUpdate
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases@2024-05-15' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'West US'
-  properties: {
-    options: {
-    }
-    resource: {
-      id: 'databaseName'
-    }
-  }
-  tags: {
-  }
-}
-```
-
-## microsoft.documentdb/databaseaccounts/sqldatabases/throughputsettings
-
-CosmosDBSqlDatabaseThroughputUpdate
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings@2024-05-15' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'West US'
-  properties: {
-    resource: {
-      throughput: 400
-    }
-  }
-  tags: {
-  }
-}
-```
-
-## microsoft.documentdb/databaseaccounts/sqldatabases/containers
-
-CosmosDBSqlContainerCreateUpdate
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers@2024-05-15' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'West US'
-  properties: {
-    options: {
-    }
-    resource: {
-      clientEncryptionPolicy: {
-        includedPaths: [
-          {
-            path: '/path'
-            clientEncryptionKeyId: 'keyId'
-            encryptionAlgorithm: 'AEAD_AES_256_CBC_HMAC_SHA256'
-            encryptionType: 'Deterministic'
-          }
-        ]
-        policyFormatVersion: 2
-      }
-      computedProperties: [
-        {
-          name: 'cp_lowerName'
-          query: 'SELECT VALUE LOWER(c.name) FROM c'
-        }
-      ]
-      conflictResolutionPolicy: {
-        conflictResolutionPath: '/path'
-        mode: 'LastWriterWins'
-      }
-      defaultTtl: 100
-      id: 'containerName'
-      indexingPolicy: {
-        automatic: true
-        excludedPaths: [
-        ]
-        includedPaths: [
-          {
-            path: '/*'
-            indexes: [
-              {
-                dataType: 'String'
-                kind: 'Range'
-                precision: -1
-              }
-              {
-                dataType: 'Number'
-                kind: 'Range'
-                precision: -1
-              }
-            ]
-          }
-        ]
-        indexingMode: 'consistent'
-      }
-      partitionKey: {
-        kind: 'Hash'
-        paths: [
-          '/AccountNumber'
-        ]
-      }
-      uniqueKeyPolicy: {
-        uniqueKeys: [
-          {
-            paths: [
-              '/testPath'
-            ]
-          }
-        ]
-      }
-    }
-  }
-  tags: {
-  }
-}
-```
-
-## microsoft.documentdb/databaseaccounts/sqldatabases/containers/throughputsettings
-
-CosmosDBSqlContainerThroughputUpdate
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings@2024-05-15' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'West US'
-  properties: {
-    resource: {
-      throughput: 400
-    }
-  }
-  tags: {
-  }
-}
-```
-
-## microsoft.documentdb/databaseaccounts/sqldatabases/clientencryptionkeys
-
-CosmosDBClientEncryptionKeyCreateUpdate
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/clientEncryptionKeys@2024-05-15' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    resource: {
-      encryptionAlgorithm: 'AEAD_AES_256_CBC_HMAC_SHA256'
-      id: 'cekName'
-      keyWrapMetadata: {
-        name: 'customerManagedKey'
-        type: 'AzureKeyVault'
-        algorithm: 'RSA-OAEP'
-        value: 'AzureKeyVault Key URL'
-      }
-      wrappedDataEncryptionKey: 'U3dhZ2dlciByb2Nrcw=='
-    }
-  }
-}
-```
-
-## microsoft.documentdb/databaseaccounts/sqldatabases/containers/storedprocedures
-
-CosmosDBSqlStoredProcedureCreateUpdate
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/storedProcedures@2024-05-15' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    options: {
-    }
-    resource: {
-      body: 'body'
-      id: 'storedProcedureName'
-    }
-  }
-}
-```
-
-## microsoft.documentdb/databaseaccounts/sqldatabases/containers/userdefinedfunctions
-
-CosmosDBSqlUserDefinedFunctionCreateUpdate
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/userDefinedFunctions@2024-05-15' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    options: {
-    }
-    resource: {
-      body: 'body'
-      id: 'userDefinedFunctionName'
-    }
-  }
-}
-```
-
-## microsoft.documentdb/databaseaccounts/sqldatabases/containers/triggers
-
-CosmosDBSqlTriggerCreateUpdate
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/triggers@2024-05-15' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    options: {
-    }
-    resource: {
-      body: 'body'
-      id: 'triggerName'
-      triggerOperation: 'triggerOperation'
-      triggerType: 'triggerType'
-    }
-  }
-}
-```
-
-## microsoft.documentdb/databaseaccounts/sqlroledefinitions
-
-CosmosDBSqlRoleDefinitionCreateUpdate
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/sqlRoleDefinitions@2024-05-15' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    type: 'CustomRole'
-    assignableScopes: [
-      '/subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/dbs/sales'
-      '/subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/dbs/purchases'
-    ]
-    permissions: [
-      {
-        dataActions: [
-          'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/items/create'
-          'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/items/read'
-        ]
-        notDataActions: [
-        ]
-      }
-    ]
-    roleName: 'myRoleName'
-  }
-}
-```
-
-## microsoft.documentdb/databaseaccounts/sqlroleassignments
-
-CosmosDBSqlRoleAssignmentCreateUpdate
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/sqlRoleAssignments@2024-05-15' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    principalId: 'myPrincipalId'
-    roleDefinitionId: '/subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/sqlRoleDefinitions/myRoleDefinitionId'
-    scope: '/subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/dbs/purchases/colls/redmond-purchases'
-  }
-}
-```
-
-## microsoft.documentdb/databaseaccounts/mongodbdatabases
-
-CosmosDBMongoDBDatabaseCreateUpdate
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases@2024-05-15' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'West US'
-  properties: {
-    options: {
-    }
-    resource: {
-      id: 'databaseName'
-    }
-  }
-  tags: {
-  }
-}
-```
-
-## microsoft.documentdb/databaseaccounts/mongodbdatabases/throughputsettings
-
-CosmosDBMongoDBDatabaseThroughputUpdate
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings@2024-05-15' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'West US'
-  properties: {
-    resource: {
-      throughput: 400
-    }
-  }
-  tags: {
-  }
-}
-```
-
-## microsoft.documentdb/databaseaccounts/mongodbdatabases/collections
-
-CosmosDBMongoDBCollectionCreateUpdate
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections@2024-05-15' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'West US'
-  properties: {
-    options: {
-    }
-    resource: {
-      id: 'collectionName'
-      indexes: [
-        {
-          key: {
-            keys: [
-              '_ts'
-            ]
-          }
-          options: {
-            expireAfterSeconds: 100
-            unique: true
-          }
-        }
-        {
-          key: {
-            keys: [
-              '_id'
-            ]
-          }
-        }
-      ]
-      shardKey: {
-        testKey: 'Hash'
-      }
-    }
-  }
-  tags: {
-  }
-}
-```
-
-## microsoft.documentdb/databaseaccounts/mongodbdatabases/collections/throughputsettings
-
-CosmosDBMongoDBCollectionThroughputUpdate
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings@2024-05-15' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'West US'
-  properties: {
-    resource: {
-      throughput: 400
-    }
-  }
-  tags: {
-  }
-}
-```
-
-## microsoft.documentdb/databaseaccounts/mongodbroledefinitions
-
-CosmosDBMongoDBRoleDefinitionCreateUpdate
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/mongodbRoleDefinitions@2024-05-15' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    databaseName: 'sales'
-    privileges: [
-      {
-        actions: [
-          'insert'
-          'find'
-        ]
-        resource: {
-          collection: 'sales'
-          db: 'sales'
-        }
-      }
-    ]
-    roleName: 'myRoleName'
-    roles: [
-      {
-        db: 'sales'
-        role: 'myInheritedRole'
-      }
-    ]
-  }
-}
-```
-
-## microsoft.documentdb/databaseaccounts/mongodbuserdefinitions
-
-CosmosDBMongoDBUserDefinitionCreateUpdate
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/mongodbUserDefinitions@2024-05-15' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    customData: 'My custom data'
-    databaseName: 'sales'
-    mechanisms: 'SCRAM-SHA-256'
-    password: 'myPassword'
-    roles: [
-      {
-        db: 'sales'
-        role: 'myReadRole'
-      }
-    ]
-    userName: 'myUserName'
-  }
-}
-```
-
-## microsoft.documentdb/databaseaccounts/tables
-
-CosmosDBTableReplace
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/tables@2024-05-15' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'West US'
-  properties: {
-    options: {
-    }
-    resource: {
-      id: 'tableName'
-    }
-  }
-  tags: {
-  }
-}
-```
-
-## microsoft.documentdb/databaseaccounts/tables/throughputsettings
-
-CosmosDBTableThroughputUpdate
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings@2024-05-15' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'West US'
-  properties: {
-    resource: {
-      throughput: 400
-    }
-  }
-  tags: {
-  }
-}
-```
-
 ## microsoft.documentdb/databaseaccounts/cassandrakeyspaces
 
 CosmosDBCassandraKeyspaceCreateUpdate
@@ -632,24 +243,6 @@ resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspac
     }
     resource: {
       id: 'keyspaceName'
-    }
-  }
-  tags: {
-  }
-}
-```
-
-## microsoft.documentdb/databaseaccounts/cassandrakeyspaces/throughputsettings
-
-CosmosDBCassandraKeyspaceThroughputUpdate
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings@2024-05-15' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'West US'
-  properties: {
-    resource: {
-      throughput: 400
     }
   }
   tags: {
@@ -715,6 +308,24 @@ resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspac
 }
 ```
 
+## microsoft.documentdb/databaseaccounts/cassandrakeyspaces/throughputsettings
+
+CosmosDBCassandraKeyspaceThroughputUpdate
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings@2024-05-15' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'West US'
+  properties: {
+    resource: {
+      throughput: 400
+    }
+  }
+  tags: {
+  }
+}
+```
+
 ## microsoft.documentdb/databaseaccounts/gremlindatabases
 
 CosmosDBGremlinDatabaseCreateUpdate
@@ -728,24 +339,6 @@ resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/gremlinDatabases
     }
     resource: {
       id: 'databaseName'
-    }
-  }
-  tags: {
-  }
-}
-```
-
-## microsoft.documentdb/databaseaccounts/gremlindatabases/throughputsettings
-
-CosmosDBGremlinDatabaseThroughputUpdate
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings@2024-05-15' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'West US'
-  properties: {
-    resource: {
-      throughput: 400
     }
   }
   tags: {
@@ -834,59 +427,174 @@ resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/gremlinDatabases
 }
 ```
 
-## microsoft.documentdb/cassandraclusters
+## microsoft.documentdb/databaseaccounts/gremlindatabases/throughputsettings
 
-CosmosDBManagedCassandraClusterCreate
+CosmosDBGremlinDatabaseThroughputUpdate
 ```bicep
-resource exampleResource 'Microsoft.DocumentDB/cassandraClusters@2024-05-15' = {
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings@2024-05-15' = {
+  parent: parentResource 
   name: 'example'
   location: 'West US'
   properties: {
-    authenticationMethod: 'Cassandra'
-    cassandraVersion: '3.11'
-    clientCertificates: [
-      {
-        pem: '-----BEGIN CERTIFICATE-----\n...Base64 encoded certificate...\n-----END CERTIFICATE-----'
-      }
-    ]
-    clusterNameOverride: 'ClusterNameIllegalForAzureResource'
-    delegatedManagementSubnetId: '/subscriptions/536e130b-d7d6-4ac7-98a5-de20d69588d2/resourceGroups/customer-vnet-rg/providers/Microsoft.Network/virtualNetworks/customer-vnet/subnets/management'
-    externalGossipCertificates: [
-      {
-        pem: '-----BEGIN CERTIFICATE-----\n...Base64 encoded certificate...\n-----END CERTIFICATE-----'
-      }
-    ]
-    externalSeedNodes: [
-      {
-        ipAddress: '10.52.221.2'
-      }
-      {
-        ipAddress: '10.52.221.3'
-      }
-      {
-        ipAddress: '10.52.221.4'
-      }
-    ]
-    hoursBetweenBackups: 24
-    initialCassandraAdminPassword: 'mypassword'
+    resource: {
+      throughput: 400
+    }
   }
   tags: {
   }
 }
 ```
 
-## microsoft.documentdb/cassandraclusters/datacenters
+## microsoft.documentdb/databaseaccounts/mongodbdatabases
 
-CosmosDBManagedCassandraDataCenterCreate
+CosmosDBMongoDBDatabaseCreateUpdate
 ```bicep
-resource exampleResource 'Microsoft.DocumentDB/cassandraClusters/dataCenters@2024-05-15' = {
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases@2024-05-15' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'West US'
+  properties: {
+    options: {
+    }
+    resource: {
+      id: 'databaseName'
+    }
+  }
+  tags: {
+  }
+}
+```
+
+## microsoft.documentdb/databaseaccounts/mongodbdatabases/collections
+
+CosmosDBMongoDBCollectionCreateUpdate
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections@2024-05-15' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'West US'
+  properties: {
+    options: {
+    }
+    resource: {
+      id: 'collectionName'
+      indexes: [
+        {
+          key: {
+            keys: [
+              '_ts'
+            ]
+          }
+          options: {
+            expireAfterSeconds: 100
+            unique: true
+          }
+        }
+        {
+          key: {
+            keys: [
+              '_id'
+            ]
+          }
+        }
+      ]
+      shardKey: {
+        testKey: 'Hash'
+      }
+    }
+  }
+  tags: {
+  }
+}
+```
+
+## microsoft.documentdb/databaseaccounts/mongodbdatabases/collections/throughputsettings
+
+CosmosDBMongoDBCollectionThroughputUpdate
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings@2024-05-15' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'West US'
+  properties: {
+    resource: {
+      throughput: 400
+    }
+  }
+  tags: {
+  }
+}
+```
+
+## microsoft.documentdb/databaseaccounts/mongodbdatabases/throughputsettings
+
+CosmosDBMongoDBDatabaseThroughputUpdate
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings@2024-05-15' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'West US'
+  properties: {
+    resource: {
+      throughput: 400
+    }
+  }
+  tags: {
+  }
+}
+```
+
+## microsoft.documentdb/databaseaccounts/mongodbroledefinitions
+
+CosmosDBMongoDBRoleDefinitionCreateUpdate
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/mongodbRoleDefinitions@2024-05-15' = {
   parent: parentResource 
   name: 'example'
   properties: {
-    base64EncodedCassandraYamlFragment: 'Y29tcGFjdGlvbl90aHJvdWdocHV0X21iX3Blcl9zZWM6IDMyCmNvbXBhY3Rpb25fbGFyZ2VfcGFydGl0aW9uX3dhcm5pbmdfdGhyZXNob2xkX21iOiAxMDA='
-    dataCenterLocation: 'West US 2'
-    delegatedSubnetId: '/subscriptions/536e130b-d7d6-4ac7-98a5-de20d69588d2/resourceGroups/customer-vnet-rg/providers/Microsoft.Network/virtualNetworks/customer-vnet/subnets/dc1-subnet'
-    nodeCount: 9
+    databaseName: 'sales'
+    privileges: [
+      {
+        actions: [
+          'insert'
+          'find'
+        ]
+        resource: {
+          collection: 'sales'
+          db: 'sales'
+        }
+      }
+    ]
+    roleName: 'myRoleName'
+    roles: [
+      {
+        db: 'sales'
+        role: 'myInheritedRole'
+      }
+    ]
+  }
+}
+```
+
+## microsoft.documentdb/databaseaccounts/mongodbuserdefinitions
+
+CosmosDBMongoDBUserDefinitionCreateUpdate
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/mongodbUserDefinitions@2024-05-15' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    customData: 'My custom data'
+    databaseName: 'sales'
+    mechanisms: 'SCRAM-SHA-256'
+    password: 'myPassword'
+    roles: [
+      {
+        db: 'sales'
+        role: 'myReadRole'
+      }
+    ]
+    userName: 'myUserName'
   }
 }
 ```
@@ -968,6 +676,302 @@ resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/services@2024-05
     instanceCount: 1
     instanceSize: 'Cosmos.D4s'
     serviceType: 'SqlDedicatedGateway'
+  }
+}
+```
+
+## microsoft.documentdb/databaseaccounts/sqldatabases
+
+CosmosDBSqlDatabaseCreateUpdate
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases@2024-05-15' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'West US'
+  properties: {
+    options: {
+    }
+    resource: {
+      id: 'databaseName'
+    }
+  }
+  tags: {
+  }
+}
+```
+
+## microsoft.documentdb/databaseaccounts/sqldatabases/clientencryptionkeys
+
+CosmosDBClientEncryptionKeyCreateUpdate
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/clientEncryptionKeys@2024-05-15' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    resource: {
+      encryptionAlgorithm: 'AEAD_AES_256_CBC_HMAC_SHA256'
+      id: 'cekName'
+      keyWrapMetadata: {
+        name: 'customerManagedKey'
+        type: 'AzureKeyVault'
+        algorithm: 'RSA-OAEP'
+        value: 'AzureKeyVault Key URL'
+      }
+      wrappedDataEncryptionKey: 'U3dhZ2dlciByb2Nrcw=='
+    }
+  }
+}
+```
+
+## microsoft.documentdb/databaseaccounts/sqldatabases/containers
+
+CosmosDBSqlContainerCreateUpdate
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers@2024-05-15' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'West US'
+  properties: {
+    options: {
+    }
+    resource: {
+      clientEncryptionPolicy: {
+        includedPaths: [
+          {
+            path: '/path'
+            clientEncryptionKeyId: 'keyId'
+            encryptionAlgorithm: 'AEAD_AES_256_CBC_HMAC_SHA256'
+            encryptionType: 'Deterministic'
+          }
+        ]
+        policyFormatVersion: 2
+      }
+      computedProperties: [
+        {
+          name: 'cp_lowerName'
+          query: 'SELECT VALUE LOWER(c.name) FROM c'
+        }
+      ]
+      conflictResolutionPolicy: {
+        conflictResolutionPath: '/path'
+        mode: 'LastWriterWins'
+      }
+      defaultTtl: 100
+      id: 'containerName'
+      indexingPolicy: {
+        automatic: true
+        excludedPaths: [
+        ]
+        includedPaths: [
+          {
+            path: '/*'
+            indexes: [
+              {
+                dataType: 'String'
+                kind: 'Range'
+                precision: -1
+              }
+              {
+                dataType: 'Number'
+                kind: 'Range'
+                precision: -1
+              }
+            ]
+          }
+        ]
+        indexingMode: 'consistent'
+      }
+      partitionKey: {
+        kind: 'Hash'
+        paths: [
+          '/AccountNumber'
+        ]
+      }
+      uniqueKeyPolicy: {
+        uniqueKeys: [
+          {
+            paths: [
+              '/testPath'
+            ]
+          }
+        ]
+      }
+    }
+  }
+  tags: {
+  }
+}
+```
+
+## microsoft.documentdb/databaseaccounts/sqldatabases/containers/storedprocedures
+
+CosmosDBSqlStoredProcedureCreateUpdate
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/storedProcedures@2024-05-15' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    options: {
+    }
+    resource: {
+      body: 'body'
+      id: 'storedProcedureName'
+    }
+  }
+}
+```
+
+## microsoft.documentdb/databaseaccounts/sqldatabases/containers/throughputsettings
+
+CosmosDBSqlContainerThroughputUpdate
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings@2024-05-15' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'West US'
+  properties: {
+    resource: {
+      throughput: 400
+    }
+  }
+  tags: {
+  }
+}
+```
+
+## microsoft.documentdb/databaseaccounts/sqldatabases/containers/triggers
+
+CosmosDBSqlTriggerCreateUpdate
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/triggers@2024-05-15' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    options: {
+    }
+    resource: {
+      body: 'body'
+      id: 'triggerName'
+      triggerOperation: 'triggerOperation'
+      triggerType: 'triggerType'
+    }
+  }
+}
+```
+
+## microsoft.documentdb/databaseaccounts/sqldatabases/containers/userdefinedfunctions
+
+CosmosDBSqlUserDefinedFunctionCreateUpdate
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/userDefinedFunctions@2024-05-15' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    options: {
+    }
+    resource: {
+      body: 'body'
+      id: 'userDefinedFunctionName'
+    }
+  }
+}
+```
+
+## microsoft.documentdb/databaseaccounts/sqldatabases/throughputsettings
+
+CosmosDBSqlDatabaseThroughputUpdate
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings@2024-05-15' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'West US'
+  properties: {
+    resource: {
+      throughput: 400
+    }
+  }
+  tags: {
+  }
+}
+```
+
+## microsoft.documentdb/databaseaccounts/sqlroleassignments
+
+CosmosDBSqlRoleAssignmentCreateUpdate
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/sqlRoleAssignments@2024-05-15' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    principalId: 'myPrincipalId'
+    roleDefinitionId: '/subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/sqlRoleDefinitions/myRoleDefinitionId'
+    scope: '/subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/dbs/purchases/colls/redmond-purchases'
+  }
+}
+```
+
+## microsoft.documentdb/databaseaccounts/sqlroledefinitions
+
+CosmosDBSqlRoleDefinitionCreateUpdate
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/sqlRoleDefinitions@2024-05-15' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    type: 'CustomRole'
+    assignableScopes: [
+      '/subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/dbs/sales'
+      '/subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/dbs/purchases'
+    ]
+    permissions: [
+      {
+        dataActions: [
+          'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/items/create'
+          'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/items/read'
+        ]
+        notDataActions: [
+        ]
+      }
+    ]
+    roleName: 'myRoleName'
+  }
+}
+```
+
+## microsoft.documentdb/databaseaccounts/tables
+
+CosmosDBTableReplace
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/tables@2024-05-15' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'West US'
+  properties: {
+    options: {
+    }
+    resource: {
+      id: 'tableName'
+    }
+  }
+  tags: {
+  }
+}
+```
+
+## microsoft.documentdb/databaseaccounts/tables/throughputsettings
+
+CosmosDBTableThroughputUpdate
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/tables/throughputSettings@2024-05-15' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'West US'
+  properties: {
+    resource: {
+      throughput: 400
+    }
+  }
+  tags: {
   }
 }
 ```

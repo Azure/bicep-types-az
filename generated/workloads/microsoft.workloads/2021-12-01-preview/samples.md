@@ -1,4 +1,258 @@
 # Microsoft.Workloads
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
+
+## microsoft.workloads/monitors/providerinstances
+
+Create a Db2 provider
+```bicep
+resource exampleResource 'Microsoft.Workloads/monitors/providerInstances@2021-12-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    providerSettings: {
+      dbName: 'dbName'
+      dbPassword: 'password'
+      dbPasswordUri: ''
+      dbPort: 'dbPort'
+      dbUsername: 'username'
+      hostname: 'hostname'
+      providerType: 'Db2'
+      sapSid: 'SID'
+      sslCertificateUri: 'https://storageaccount.blob.core.windows.net/containername/filename'
+      sslPreference: 'ServerCertificate'
+    }
+  }
+}
+```
+
+Create a Db2 provider with Root Certificate
+```bicep
+resource exampleResource 'Microsoft.Workloads/monitors/providerInstances@2021-12-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    providerSettings: {
+      dbName: 'dbName'
+      dbPassword: 'password'
+      dbPasswordUri: ''
+      dbPort: 'dbPort'
+      dbUsername: 'username'
+      hostname: 'hostname'
+      providerType: 'Db2'
+      sapSid: 'SID'
+      sslPreference: 'RootCertificate'
+    }
+  }
+}
+```
+
+Create a MsSqlServer provider
+```bicep
+resource exampleResource 'Microsoft.Workloads/monitors/providerInstances@2021-12-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    providerSettings: {
+      dbPassword: '****'
+      dbPasswordUri: ''
+      dbPort: '5912'
+      dbUsername: 'user'
+      hostname: 'hostname'
+      providerType: 'MsSqlServer'
+      sapSid: 'sid'
+      sslCertificateUri: 'https://storageaccount.blob.core.windows.net/containername/filename'
+      sslPreference: 'ServerCertificate'
+    }
+  }
+}
+```
+
+Create a MsSqlServer provider with Root Certificate
+```bicep
+resource exampleResource 'Microsoft.Workloads/monitors/providerInstances@2021-12-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    providerSettings: {
+      dbPassword: '****'
+      dbPasswordUri: ''
+      dbPort: '5912'
+      dbUsername: 'user'
+      hostname: 'hostname'
+      providerType: 'MsSqlServer'
+      sapSid: 'sid'
+      sslPreference: 'RootCertificate'
+    }
+  }
+}
+```
+
+Create a OS provider
+```bicep
+resource exampleResource 'Microsoft.Workloads/monitors/providerInstances@2021-12-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    providerSettings: {
+      prometheusUrl: 'http://192.168.0.0:9090/metrics'
+      providerType: 'PrometheusOS'
+      sslCertificateUri: 'https://storageaccount.blob.core.windows.net/containername/filename'
+      sslPreference: 'ServerCertificate'
+    }
+  }
+}
+```
+
+Create a OS provider with Root Certificate
+```bicep
+resource exampleResource 'Microsoft.Workloads/monitors/providerInstances@2021-12-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    providerSettings: {
+      prometheusUrl: 'http://192.168.0.0:9090/metrics'
+      providerType: 'PrometheusOS'
+      sslPreference: 'RootCertificate'
+    }
+  }
+}
+```
+
+Create a PrometheusHaCluster provider
+```bicep
+resource exampleResource 'Microsoft.Workloads/monitors/providerInstances@2021-12-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    providerSettings: {
+      clusterName: 'clusterName'
+      hostname: 'hostname'
+      prometheusUrl: 'http://192.168.0.0:9090/metrics'
+      providerType: 'PrometheusHaCluster'
+      sid: 'sid'
+      sslCertificateUri: 'https://storageaccount.blob.core.windows.net/containername/filename'
+      sslPreference: 'ServerCertificate'
+    }
+  }
+}
+```
+
+Create a PrometheusHaCluster provider with Root Certificate
+```bicep
+resource exampleResource 'Microsoft.Workloads/monitors/providerInstances@2021-12-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    providerSettings: {
+      clusterName: 'clusterName'
+      hostname: 'hostname'
+      prometheusUrl: 'http://192.168.0.0:9090/metrics'
+      providerType: 'PrometheusHaCluster'
+      sid: 'sid'
+      sslPreference: 'RootCertificate'
+    }
+  }
+}
+```
+
+Create a SAP monitor Hana provider
+```bicep
+resource exampleResource 'Microsoft.Workloads/monitors/providerInstances@2021-12-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    providerSettings: {
+      dbName: 'db'
+      dbPassword: '****'
+      dbPasswordUri: ''
+      dbUsername: 'user'
+      hostname: 'name'
+      instanceNumber: '00'
+      providerType: 'SapHana'
+      sqlPort: '0000'
+      sslCertificateUri: 'https://storageaccount.blob.core.windows.net/containername/filename'
+      sslHostNameInCertificate: 'xyz.domain.com'
+      sslPreference: 'ServerCertificate'
+    }
+  }
+}
+```
+
+Create a SAP monitor Hana provider with Root Certificate
+```bicep
+resource exampleResource 'Microsoft.Workloads/monitors/providerInstances@2021-12-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    providerSettings: {
+      dbName: 'db'
+      dbPassword: '****'
+      dbPasswordUri: ''
+      dbUsername: 'user'
+      hostname: 'name'
+      instanceNumber: '00'
+      providerType: 'SapHana'
+      sqlPort: '0000'
+      sslHostNameInCertificate: 'xyz.domain.com'
+      sslPreference: 'RootCertificate'
+    }
+  }
+}
+```
+
+Create a SAP monitor NetWeaver provider
+```bicep
+resource exampleResource 'Microsoft.Workloads/monitors/providerInstances@2021-12-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    providerSettings: {
+      providerType: 'SapNetWeaver'
+      sapClientId: '111'
+      sapHostFileEntries: [
+        '127.0.0.1 name fqdn'
+      ]
+      sapHostname: 'name'
+      sapInstanceNr: '00'
+      sapPassword: '****'
+      sapPasswordUri: ''
+      sapPortNumber: '1234'
+      sapSid: 'SID'
+      sapUsername: 'username'
+      sslCertificateUri: 'https://storageaccount.blob.core.windows.net/containername/filename'
+      sslPreference: 'ServerCertificate'
+    }
+  }
+}
+```
+
+Create a SAP monitor NetWeaver provider with Root Certificate
+```bicep
+resource exampleResource 'Microsoft.Workloads/monitors/providerInstances@2021-12-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    providerSettings: {
+      providerType: 'SapNetWeaver'
+      sapClientId: '111'
+      sapHostFileEntries: [
+        '127.0.0.1 name fqdn'
+      ]
+      sapHostname: 'name'
+      sapInstanceNr: '00'
+      sapPassword: '****'
+      sapPasswordUri: ''
+      sapPortNumber: '1234'
+      sapSid: 'SID'
+      sapUsername: 'username'
+      sslPreference: 'RootCertificate'
+    }
+  }
+}
+```
 
 ## microsoft.workloads/phpworkloads
 
@@ -471,6 +725,216 @@ resource exampleResource 'Microsoft.Workloads/sapVirtualInstances@2021-12-01-pre
       }
     }
     environment: 'NonProd'
+    sapProduct: 'S4HANA'
+  }
+  tags: {
+  }
+}
+```
+
+Create Infrastructure with a new SAP Transport Directory Fileshare
+```bicep
+resource exampleResource 'Microsoft.Workloads/sapVirtualInstances@2021-12-01-preview' = {
+  name: 'example'
+  location: 'westcentralus'
+  properties: {
+    configuration: {
+      appLocation: 'eastus'
+      configurationType: 'DeploymentWithOSConfig'
+      infrastructureConfiguration: {
+        appResourceGroup: 'X00-RG'
+        applicationServer: {
+          instanceCount: 6
+          subnetId: '/subscriptions/49d64d54-e966-4c46-a868-1999802b762c/resourceGroups/test-rg/providers/Microsoft.Networks/virtualNetworks/test-vnet/subnets/appsubnet'
+          virtualMachineConfiguration: {
+            imageReference: {
+              offer: 'RHEL-SAP-HA'
+              publisher: 'RedHat'
+              sku: '84sapha-gen2'
+              version: '8.4.2021091202'
+            }
+            osProfile: {
+              adminUsername: '{your-username}'
+              osConfiguration: {
+                disablePasswordAuthentication: true
+                osType: 'Linux'
+                sshKeyPair: {
+                  privateKey: 'xyz'
+                  publicKey: 'abc'
+                }
+              }
+            }
+            vmSize: 'Standard_E32ds_v4'
+          }
+        }
+        centralServer: {
+          instanceCount: 1
+          subnetId: '/subscriptions/49d64d54-e966-4c46-a868-1999802b762c/resourceGroups/test-rg/providers/Microsoft.Networks/virtualNetworks/test-vnet/subnets/appsubnet'
+          virtualMachineConfiguration: {
+            imageReference: {
+              offer: 'RHEL-SAP-HA'
+              publisher: 'RedHat'
+              sku: '84sapha-gen2'
+              version: '8.4.2021091202'
+            }
+            osProfile: {
+              adminUsername: '{your-username}'
+              osConfiguration: {
+                disablePasswordAuthentication: true
+                osType: 'Linux'
+                sshKeyPair: {
+                  privateKey: 'xyz'
+                  publicKey: 'abc'
+                }
+              }
+            }
+            vmSize: 'Standard_E16ds_v4'
+          }
+        }
+        databaseServer: {
+          databaseType: 'HANA'
+          instanceCount: 1
+          subnetId: '/subscriptions/49d64d54-e966-4c46-a868-1999802b762c/resourceGroups/test-rg/providers/Microsoft.Networks/virtualNetworks/test-vnet/subnets/dbsubnet'
+          virtualMachineConfiguration: {
+            imageReference: {
+              offer: 'RHEL-SAP-HA'
+              publisher: 'RedHat'
+              sku: '84sapha-gen2'
+              version: '8.4.2021091202'
+            }
+            osProfile: {
+              adminUsername: '{your-username}'
+              osConfiguration: {
+                disablePasswordAuthentication: true
+                osType: 'Linux'
+                sshKeyPair: {
+                  privateKey: 'xyz'
+                  publicKey: 'abc'
+                }
+              }
+            }
+            vmSize: 'Standard_M32ts'
+          }
+        }
+        deploymentType: 'ThreeTier'
+        storageConfiguration: {
+          transportFileShareConfiguration: {
+            configurationType: 'CreateAndMount'
+            resourceGroup: 'rgName'
+            storageAccountName: 'storageName'
+          }
+        }
+      }
+      osSapConfiguration: {
+        sapFqdn: 'xyz.test.com'
+      }
+    }
+    environment: 'Prod'
+    sapProduct: 'S4HANA'
+  }
+  tags: {
+  }
+}
+```
+
+Create Infrastructure with an existing SAP Transport Directory Fileshare
+```bicep
+resource exampleResource 'Microsoft.Workloads/sapVirtualInstances@2021-12-01-preview' = {
+  name: 'example'
+  location: 'westcentralus'
+  properties: {
+    configuration: {
+      appLocation: 'eastus'
+      configurationType: 'DeploymentWithOSConfig'
+      infrastructureConfiguration: {
+        appResourceGroup: 'X00-RG'
+        applicationServer: {
+          instanceCount: 6
+          subnetId: '/subscriptions/49d64d54-e966-4c46-a868-1999802b762c/resourceGroups/test-rg/providers/Microsoft.Networks/virtualNetworks/test-vnet/subnets/appsubnet'
+          virtualMachineConfiguration: {
+            imageReference: {
+              offer: 'RHEL-SAP-HA'
+              publisher: 'RedHat'
+              sku: '84sapha-gen2'
+              version: '8.4.2021091202'
+            }
+            osProfile: {
+              adminUsername: '{your-username}'
+              osConfiguration: {
+                disablePasswordAuthentication: true
+                osType: 'Linux'
+                sshKeyPair: {
+                  privateKey: 'xyz'
+                  publicKey: 'abc'
+                }
+              }
+            }
+            vmSize: 'Standard_E32ds_v4'
+          }
+        }
+        centralServer: {
+          instanceCount: 1
+          subnetId: '/subscriptions/49d64d54-e966-4c46-a868-1999802b762c/resourceGroups/test-rg/providers/Microsoft.Networks/virtualNetworks/test-vnet/subnets/appsubnet'
+          virtualMachineConfiguration: {
+            imageReference: {
+              offer: 'RHEL-SAP-HA'
+              publisher: 'RedHat'
+              sku: '84sapha-gen2'
+              version: '8.4.2021091202'
+            }
+            osProfile: {
+              adminUsername: '{your-username}'
+              osConfiguration: {
+                disablePasswordAuthentication: true
+                osType: 'Linux'
+                sshKeyPair: {
+                  privateKey: 'xyz'
+                  publicKey: 'abc'
+                }
+              }
+            }
+            vmSize: 'Standard_E16ds_v4'
+          }
+        }
+        databaseServer: {
+          databaseType: 'HANA'
+          instanceCount: 1
+          subnetId: '/subscriptions/49d64d54-e966-4c46-a868-1999802b762c/resourceGroups/test-rg/providers/Microsoft.Networks/virtualNetworks/test-vnet/subnets/dbsubnet'
+          virtualMachineConfiguration: {
+            imageReference: {
+              offer: 'RHEL-SAP-HA'
+              publisher: 'RedHat'
+              sku: '84sapha-gen2'
+              version: '8.4.2021091202'
+            }
+            osProfile: {
+              adminUsername: '{your-username}'
+              osConfiguration: {
+                disablePasswordAuthentication: true
+                osType: 'Linux'
+                sshKeyPair: {
+                  privateKey: 'xyz'
+                  publicKey: 'abc'
+                }
+              }
+            }
+            vmSize: 'Standard_M32ts'
+          }
+        }
+        deploymentType: 'ThreeTier'
+        storageConfiguration: {
+          transportFileShareConfiguration: {
+            configurationType: 'Mount'
+            id: '/subscriptions/49d64d54-e888-4c46-a868-1936802b762c/resourceGroups/testrg/providers/Microsoft.Storage/storageAccounts/storageaccountname/fileServices/default/shares/transfileshare'
+            privateEndpointId: '/subscriptions/49d64d54-e888-4c46-a868-1936802b762c/resourceGroups/testrg/providers/Microsoft.Network/privateEndpoints/endpoint'
+          }
+        }
+      }
+      osSapConfiguration: {
+        sapFqdn: 'xyz.test.com'
+      }
+    }
+    environment: 'Prod'
     sapProduct: 'S4HANA'
   }
   tags: {
@@ -997,216 +1461,6 @@ resource exampleResource 'Microsoft.Workloads/sapVirtualInstances@2021-12-01-pre
             configurationType: 'Mount'
             id: 'fileshareID'
             privateEndpointId: 'pe-arm-id'
-          }
-        }
-      }
-      osSapConfiguration: {
-        sapFqdn: 'xyz.test.com'
-      }
-    }
-    environment: 'Prod'
-    sapProduct: 'S4HANA'
-  }
-  tags: {
-  }
-}
-```
-
-Create Infrastructure with a new SAP Transport Directory Fileshare
-```bicep
-resource exampleResource 'Microsoft.Workloads/sapVirtualInstances@2021-12-01-preview' = {
-  name: 'example'
-  location: 'westcentralus'
-  properties: {
-    configuration: {
-      appLocation: 'eastus'
-      configurationType: 'DeploymentWithOSConfig'
-      infrastructureConfiguration: {
-        appResourceGroup: 'X00-RG'
-        applicationServer: {
-          instanceCount: 6
-          subnetId: '/subscriptions/49d64d54-e966-4c46-a868-1999802b762c/resourceGroups/test-rg/providers/Microsoft.Networks/virtualNetworks/test-vnet/subnets/appsubnet'
-          virtualMachineConfiguration: {
-            imageReference: {
-              offer: 'RHEL-SAP-HA'
-              publisher: 'RedHat'
-              sku: '84sapha-gen2'
-              version: '8.4.2021091202'
-            }
-            osProfile: {
-              adminUsername: '{your-username}'
-              osConfiguration: {
-                disablePasswordAuthentication: true
-                osType: 'Linux'
-                sshKeyPair: {
-                  privateKey: 'xyz'
-                  publicKey: 'abc'
-                }
-              }
-            }
-            vmSize: 'Standard_E32ds_v4'
-          }
-        }
-        centralServer: {
-          instanceCount: 1
-          subnetId: '/subscriptions/49d64d54-e966-4c46-a868-1999802b762c/resourceGroups/test-rg/providers/Microsoft.Networks/virtualNetworks/test-vnet/subnets/appsubnet'
-          virtualMachineConfiguration: {
-            imageReference: {
-              offer: 'RHEL-SAP-HA'
-              publisher: 'RedHat'
-              sku: '84sapha-gen2'
-              version: '8.4.2021091202'
-            }
-            osProfile: {
-              adminUsername: '{your-username}'
-              osConfiguration: {
-                disablePasswordAuthentication: true
-                osType: 'Linux'
-                sshKeyPair: {
-                  privateKey: 'xyz'
-                  publicKey: 'abc'
-                }
-              }
-            }
-            vmSize: 'Standard_E16ds_v4'
-          }
-        }
-        databaseServer: {
-          databaseType: 'HANA'
-          instanceCount: 1
-          subnetId: '/subscriptions/49d64d54-e966-4c46-a868-1999802b762c/resourceGroups/test-rg/providers/Microsoft.Networks/virtualNetworks/test-vnet/subnets/dbsubnet'
-          virtualMachineConfiguration: {
-            imageReference: {
-              offer: 'RHEL-SAP-HA'
-              publisher: 'RedHat'
-              sku: '84sapha-gen2'
-              version: '8.4.2021091202'
-            }
-            osProfile: {
-              adminUsername: '{your-username}'
-              osConfiguration: {
-                disablePasswordAuthentication: true
-                osType: 'Linux'
-                sshKeyPair: {
-                  privateKey: 'xyz'
-                  publicKey: 'abc'
-                }
-              }
-            }
-            vmSize: 'Standard_M32ts'
-          }
-        }
-        deploymentType: 'ThreeTier'
-        storageConfiguration: {
-          transportFileShareConfiguration: {
-            configurationType: 'CreateAndMount'
-            resourceGroup: 'rgName'
-            storageAccountName: 'storageName'
-          }
-        }
-      }
-      osSapConfiguration: {
-        sapFqdn: 'xyz.test.com'
-      }
-    }
-    environment: 'Prod'
-    sapProduct: 'S4HANA'
-  }
-  tags: {
-  }
-}
-```
-
-Create Infrastructure with an existing SAP Transport Directory Fileshare
-```bicep
-resource exampleResource 'Microsoft.Workloads/sapVirtualInstances@2021-12-01-preview' = {
-  name: 'example'
-  location: 'westcentralus'
-  properties: {
-    configuration: {
-      appLocation: 'eastus'
-      configurationType: 'DeploymentWithOSConfig'
-      infrastructureConfiguration: {
-        appResourceGroup: 'X00-RG'
-        applicationServer: {
-          instanceCount: 6
-          subnetId: '/subscriptions/49d64d54-e966-4c46-a868-1999802b762c/resourceGroups/test-rg/providers/Microsoft.Networks/virtualNetworks/test-vnet/subnets/appsubnet'
-          virtualMachineConfiguration: {
-            imageReference: {
-              offer: 'RHEL-SAP-HA'
-              publisher: 'RedHat'
-              sku: '84sapha-gen2'
-              version: '8.4.2021091202'
-            }
-            osProfile: {
-              adminUsername: '{your-username}'
-              osConfiguration: {
-                disablePasswordAuthentication: true
-                osType: 'Linux'
-                sshKeyPair: {
-                  privateKey: 'xyz'
-                  publicKey: 'abc'
-                }
-              }
-            }
-            vmSize: 'Standard_E32ds_v4'
-          }
-        }
-        centralServer: {
-          instanceCount: 1
-          subnetId: '/subscriptions/49d64d54-e966-4c46-a868-1999802b762c/resourceGroups/test-rg/providers/Microsoft.Networks/virtualNetworks/test-vnet/subnets/appsubnet'
-          virtualMachineConfiguration: {
-            imageReference: {
-              offer: 'RHEL-SAP-HA'
-              publisher: 'RedHat'
-              sku: '84sapha-gen2'
-              version: '8.4.2021091202'
-            }
-            osProfile: {
-              adminUsername: '{your-username}'
-              osConfiguration: {
-                disablePasswordAuthentication: true
-                osType: 'Linux'
-                sshKeyPair: {
-                  privateKey: 'xyz'
-                  publicKey: 'abc'
-                }
-              }
-            }
-            vmSize: 'Standard_E16ds_v4'
-          }
-        }
-        databaseServer: {
-          databaseType: 'HANA'
-          instanceCount: 1
-          subnetId: '/subscriptions/49d64d54-e966-4c46-a868-1999802b762c/resourceGroups/test-rg/providers/Microsoft.Networks/virtualNetworks/test-vnet/subnets/dbsubnet'
-          virtualMachineConfiguration: {
-            imageReference: {
-              offer: 'RHEL-SAP-HA'
-              publisher: 'RedHat'
-              sku: '84sapha-gen2'
-              version: '8.4.2021091202'
-            }
-            osProfile: {
-              adminUsername: '{your-username}'
-              osConfiguration: {
-                disablePasswordAuthentication: true
-                osType: 'Linux'
-                sshKeyPair: {
-                  privateKey: 'xyz'
-                  publicKey: 'abc'
-                }
-              }
-            }
-            vmSize: 'Standard_M32ts'
-          }
-        }
-        deploymentType: 'ThreeTier'
-        storageConfiguration: {
-          transportFileShareConfiguration: {
-            configurationType: 'Mount'
-            id: '/subscriptions/49d64d54-e888-4c46-a868-1936802b762c/resourceGroups/testrg/providers/Microsoft.Storage/storageAccounts/storageaccountname/fileServices/default/shares/transfileshare'
-            privateEndpointId: '/subscriptions/49d64d54-e888-4c46-a868-1936802b762c/resourceGroups/testrg/providers/Microsoft.Network/privateEndpoints/endpoint'
           }
         }
       }
@@ -2101,6 +2355,34 @@ resource exampleResource 'Microsoft.Workloads/sapVirtualInstances@2021-12-01-pre
 }
 ```
 
+## microsoft.workloads/sapvirtualinstances/applicationinstances
+
+Create SAP Application Server Instances for HA System with Availability Set
+```bicep
+resource exampleResource 'Microsoft.Workloads/sapVirtualInstances/applicationInstances@2021-12-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'westcentralus'
+  properties: {
+  }
+  tags: {
+  }
+}
+```
+
+SAPApplicationServerInstances_Create
+```bicep
+resource exampleResource 'Microsoft.Workloads/sapVirtualInstances/applicationInstances@2021-12-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'westcentralus'
+  properties: {
+  }
+  tags: {
+  }
+}
+```
+
 ## microsoft.workloads/sapvirtualinstances/centralinstances
 
 Create SAP Central Instances for HA System with Availability Set
@@ -2153,284 +2435,6 @@ resource exampleResource 'Microsoft.Workloads/sapVirtualInstances/databaseInstan
   properties: {
   }
   tags: {
-  }
-}
-```
-
-## microsoft.workloads/sapvirtualinstances/applicationinstances
-
-Create SAP Application Server Instances for HA System with Availability Set
-```bicep
-resource exampleResource 'Microsoft.Workloads/sapVirtualInstances/applicationInstances@2021-12-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'westcentralus'
-  properties: {
-  }
-  tags: {
-  }
-}
-```
-
-SAPApplicationServerInstances_Create
-```bicep
-resource exampleResource 'Microsoft.Workloads/sapVirtualInstances/applicationInstances@2021-12-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'westcentralus'
-  properties: {
-  }
-  tags: {
-  }
-}
-```
-
-## microsoft.workloads/monitors/providerinstances
-
-Create a Db2 provider
-```bicep
-resource exampleResource 'Microsoft.Workloads/monitors/providerInstances@2021-12-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    providerSettings: {
-      dbName: 'dbName'
-      dbPassword: 'password'
-      dbPasswordUri: ''
-      dbPort: 'dbPort'
-      dbUsername: 'username'
-      hostname: 'hostname'
-      providerType: 'Db2'
-      sapSid: 'SID'
-      sslCertificateUri: 'https://storageaccount.blob.core.windows.net/containername/filename'
-      sslPreference: 'ServerCertificate'
-    }
-  }
-}
-```
-
-Create a Db2 provider with Root Certificate
-```bicep
-resource exampleResource 'Microsoft.Workloads/monitors/providerInstances@2021-12-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    providerSettings: {
-      dbName: 'dbName'
-      dbPassword: 'password'
-      dbPasswordUri: ''
-      dbPort: 'dbPort'
-      dbUsername: 'username'
-      hostname: 'hostname'
-      providerType: 'Db2'
-      sapSid: 'SID'
-      sslPreference: 'RootCertificate'
-    }
-  }
-}
-```
-
-Create a MsSqlServer provider
-```bicep
-resource exampleResource 'Microsoft.Workloads/monitors/providerInstances@2021-12-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    providerSettings: {
-      dbPassword: '****'
-      dbPasswordUri: ''
-      dbPort: '5912'
-      dbUsername: 'user'
-      hostname: 'hostname'
-      providerType: 'MsSqlServer'
-      sapSid: 'sid'
-      sslCertificateUri: 'https://storageaccount.blob.core.windows.net/containername/filename'
-      sslPreference: 'ServerCertificate'
-    }
-  }
-}
-```
-
-Create a MsSqlServer provider with Root Certificate
-```bicep
-resource exampleResource 'Microsoft.Workloads/monitors/providerInstances@2021-12-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    providerSettings: {
-      dbPassword: '****'
-      dbPasswordUri: ''
-      dbPort: '5912'
-      dbUsername: 'user'
-      hostname: 'hostname'
-      providerType: 'MsSqlServer'
-      sapSid: 'sid'
-      sslPreference: 'RootCertificate'
-    }
-  }
-}
-```
-
-Create a OS provider
-```bicep
-resource exampleResource 'Microsoft.Workloads/monitors/providerInstances@2021-12-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    providerSettings: {
-      prometheusUrl: 'http://192.168.0.0:9090/metrics'
-      providerType: 'PrometheusOS'
-      sslCertificateUri: 'https://storageaccount.blob.core.windows.net/containername/filename'
-      sslPreference: 'ServerCertificate'
-    }
-  }
-}
-```
-
-Create a OS provider with Root Certificate
-```bicep
-resource exampleResource 'Microsoft.Workloads/monitors/providerInstances@2021-12-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    providerSettings: {
-      prometheusUrl: 'http://192.168.0.0:9090/metrics'
-      providerType: 'PrometheusOS'
-      sslPreference: 'RootCertificate'
-    }
-  }
-}
-```
-
-Create a PrometheusHaCluster provider
-```bicep
-resource exampleResource 'Microsoft.Workloads/monitors/providerInstances@2021-12-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    providerSettings: {
-      clusterName: 'clusterName'
-      hostname: 'hostname'
-      prometheusUrl: 'http://192.168.0.0:9090/metrics'
-      providerType: 'PrometheusHaCluster'
-      sid: 'sid'
-      sslCertificateUri: 'https://storageaccount.blob.core.windows.net/containername/filename'
-      sslPreference: 'ServerCertificate'
-    }
-  }
-}
-```
-
-Create a PrometheusHaCluster provider with Root Certificate
-```bicep
-resource exampleResource 'Microsoft.Workloads/monitors/providerInstances@2021-12-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    providerSettings: {
-      clusterName: 'clusterName'
-      hostname: 'hostname'
-      prometheusUrl: 'http://192.168.0.0:9090/metrics'
-      providerType: 'PrometheusHaCluster'
-      sid: 'sid'
-      sslPreference: 'RootCertificate'
-    }
-  }
-}
-```
-
-Create a SAP monitor Hana provider
-```bicep
-resource exampleResource 'Microsoft.Workloads/monitors/providerInstances@2021-12-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    providerSettings: {
-      dbName: 'db'
-      dbPassword: '****'
-      dbPasswordUri: ''
-      dbUsername: 'user'
-      hostname: 'name'
-      instanceNumber: '00'
-      providerType: 'SapHana'
-      sqlPort: '0000'
-      sslCertificateUri: 'https://storageaccount.blob.core.windows.net/containername/filename'
-      sslHostNameInCertificate: 'xyz.domain.com'
-      sslPreference: 'ServerCertificate'
-    }
-  }
-}
-```
-
-Create a SAP monitor Hana provider with Root Certificate
-```bicep
-resource exampleResource 'Microsoft.Workloads/monitors/providerInstances@2021-12-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    providerSettings: {
-      dbName: 'db'
-      dbPassword: '****'
-      dbPasswordUri: ''
-      dbUsername: 'user'
-      hostname: 'name'
-      instanceNumber: '00'
-      providerType: 'SapHana'
-      sqlPort: '0000'
-      sslHostNameInCertificate: 'xyz.domain.com'
-      sslPreference: 'RootCertificate'
-    }
-  }
-}
-```
-
-Create a SAP monitor NetWeaver provider
-```bicep
-resource exampleResource 'Microsoft.Workloads/monitors/providerInstances@2021-12-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    providerSettings: {
-      providerType: 'SapNetWeaver'
-      sapClientId: '111'
-      sapHostFileEntries: [
-        '127.0.0.1 name fqdn'
-      ]
-      sapHostname: 'name'
-      sapInstanceNr: '00'
-      sapPassword: '****'
-      sapPasswordUri: ''
-      sapPortNumber: '1234'
-      sapSid: 'SID'
-      sapUsername: 'username'
-      sslCertificateUri: 'https://storageaccount.blob.core.windows.net/containername/filename'
-      sslPreference: 'ServerCertificate'
-    }
-  }
-}
-```
-
-Create a SAP monitor NetWeaver provider with Root Certificate
-```bicep
-resource exampleResource 'Microsoft.Workloads/monitors/providerInstances@2021-12-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    providerSettings: {
-      providerType: 'SapNetWeaver'
-      sapClientId: '111'
-      sapHostFileEntries: [
-        '127.0.0.1 name fqdn'
-      ]
-      sapHostname: 'name'
-      sapInstanceNr: '00'
-      sapPassword: '****'
-      sapPasswordUri: ''
-      sapPortNumber: '1234'
-      sapSid: 'SID'
-      sapUsername: 'username'
-      sslPreference: 'RootCertificate'
-    }
   }
 }
 ```

@@ -1,172 +1,8 @@
 # Microsoft.ServiceFabric
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
 
-## microsoft.servicefabric/managedclusters/applicationtypes
-
-Put an application type
-```bicep
-resource exampleResource 'Microsoft.ServiceFabric/managedclusters/applicationTypes@2023-09-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'eastus'
-}
-```
-
-## microsoft.servicefabric/managedclusters/applicationtypes/versions
-
-Put an application type version
-```bicep
-resource exampleResource 'Microsoft.ServiceFabric/managedclusters/applicationTypes/versions@2023-09-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'eastus'
-  properties: {
-    appPackageUrl: 'http://fakelink.test.com/MyAppType'
-  }
-}
-```
-
-## microsoft.servicefabric/managedclusters/applications
-
-Put an application with maximum parameters
-```bicep
-resource exampleResource 'Microsoft.ServiceFabric/managedclusters/applications@2023-09-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'eastus'
-  properties: {
-    parameters: {
-      param1: 'value1'
-    }
-    upgradePolicy: {
-      applicationHealthPolicy: {
-        considerWarningAsError: true
-        defaultServiceTypeHealthPolicy: {
-          maxPercentUnhealthyPartitionsPerService: 0
-          maxPercentUnhealthyReplicasPerPartition: 0
-          maxPercentUnhealthyServices: 0
-        }
-        maxPercentUnhealthyDeployedApplications: 0
-        serviceTypeHealthPolicyMap: {
-          service1: {
-            maxPercentUnhealthyPartitionsPerService: 30
-            maxPercentUnhealthyReplicasPerPartition: 30
-            maxPercentUnhealthyServices: 30
-          }
-        }
-      }
-      forceRestart: false
-      instanceCloseDelayDuration: 600
-      recreateApplication: false
-      rollingUpgradeMonitoringPolicy: {
-        failureAction: 'Rollback'
-        healthCheckRetryTimeout: '00:10:00'
-        healthCheckStableDuration: '00:05:00'
-        healthCheckWaitDuration: '00:02:00'
-        upgradeDomainTimeout: '00:15:00'
-        upgradeTimeout: '01:00:00'
-      }
-      upgradeMode: 'UnmonitoredAuto'
-      upgradeReplicaSetCheckTimeout: 3600
-    }
-    version: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/managedclusters/myCluster/applicationTypes/myAppType/versions/1.0'
-  }
-  tags: {
-    a: 'b'
-  }
-}
-```
-
-Put an application with minimum parameters
-```bicep
-resource exampleResource 'Microsoft.ServiceFabric/managedclusters/applications@2023-09-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'eastus'
-  properties: {
-    version: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/managedclusters/myCluster/applicationTypes/myAppType/versions/1.0'
-  }
-}
-```
-
-## microsoft.servicefabric/managedclusters/applications/services
-
-Put a service with maximum parameters
-```bicep
-resource exampleResource 'Microsoft.ServiceFabric/managedclusters/applications/services@2023-09-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'eastus'
-  properties: {
-    correlationScheme: [
-      {
-        scheme: 'AlignedAffinity'
-        serviceName: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/managedclusters/myCluster/applications/myApp/services/myService1'
-      }
-    ]
-    defaultMoveCost: 'Medium'
-    instanceCount: 5
-    minInstanceCount: 3
-    minInstancePercentage: 30
-    partitionDescription: {
-      partitionScheme: 'Singleton'
-    }
-    placementConstraints: 'NodeType==frontend'
-    scalingPolicies: [
-      {
-        scalingMechanism: {
-          kind: 'ScalePartitionInstanceCount'
-          maxInstanceCount: 9
-          minInstanceCount: 3
-          scaleIncrement: 2
-        }
-        scalingTrigger: {
-          kind: 'AveragePartitionLoadTrigger'
-          lowerLoadThreshold: 2
-          metricName: 'metricName'
-          scaleInterval: '00:01:00'
-          upperLoadThreshold: 8
-        }
-      }
-    ]
-    serviceDnsName: 'myservicednsname.myApp'
-    serviceKind: 'Stateless'
-    serviceLoadMetrics: [
-      {
-        name: 'metric1'
-        defaultLoad: 3
-        weight: 'Low'
-      }
-    ]
-    servicePackageActivationMode: 'SharedProcess'
-    servicePlacementPolicies: [
-      {
-        type: 'NonPartiallyPlaceService'
-      }
-    ]
-    serviceTypeName: 'myServiceType'
-  }
-  tags: {
-    a: 'b'
-  }
-}
-```
-
-Put a service with minimum parameters
-```bicep
-resource exampleResource 'Microsoft.ServiceFabric/managedclusters/applications/services@2023-09-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'eastus'
-  properties: {
-    instanceCount: 1
-    partitionDescription: {
-      partitionScheme: 'Singleton'
-    }
-    serviceKind: 'Stateless'
-    serviceTypeName: 'myServiceType'
-  }
-}
-```
 
 ## microsoft.servicefabric/managedclusters
 
@@ -325,6 +161,174 @@ resource exampleResource 'Microsoft.ServiceFabric/managedClusters@2023-09-01-pre
   }
   sku: {
     name: 'Basic'
+  }
+}
+```
+
+## microsoft.servicefabric/managedclusters/applications
+
+Put an application with maximum parameters
+```bicep
+resource exampleResource 'Microsoft.ServiceFabric/managedclusters/applications@2023-09-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'eastus'
+  properties: {
+    parameters: {
+      param1: 'value1'
+    }
+    upgradePolicy: {
+      applicationHealthPolicy: {
+        considerWarningAsError: true
+        defaultServiceTypeHealthPolicy: {
+          maxPercentUnhealthyPartitionsPerService: 0
+          maxPercentUnhealthyReplicasPerPartition: 0
+          maxPercentUnhealthyServices: 0
+        }
+        maxPercentUnhealthyDeployedApplications: 0
+        serviceTypeHealthPolicyMap: {
+          service1: {
+            maxPercentUnhealthyPartitionsPerService: 30
+            maxPercentUnhealthyReplicasPerPartition: 30
+            maxPercentUnhealthyServices: 30
+          }
+        }
+      }
+      forceRestart: false
+      instanceCloseDelayDuration: 600
+      recreateApplication: false
+      rollingUpgradeMonitoringPolicy: {
+        failureAction: 'Rollback'
+        healthCheckRetryTimeout: '00:10:00'
+        healthCheckStableDuration: '00:05:00'
+        healthCheckWaitDuration: '00:02:00'
+        upgradeDomainTimeout: '00:15:00'
+        upgradeTimeout: '01:00:00'
+      }
+      upgradeMode: 'UnmonitoredAuto'
+      upgradeReplicaSetCheckTimeout: 3600
+    }
+    version: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/managedclusters/myCluster/applicationTypes/myAppType/versions/1.0'
+  }
+  tags: {
+    a: 'b'
+  }
+}
+```
+
+Put an application with minimum parameters
+```bicep
+resource exampleResource 'Microsoft.ServiceFabric/managedclusters/applications@2023-09-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'eastus'
+  properties: {
+    version: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/managedclusters/myCluster/applicationTypes/myAppType/versions/1.0'
+  }
+}
+```
+
+## microsoft.servicefabric/managedclusters/applications/services
+
+Put a service with maximum parameters
+```bicep
+resource exampleResource 'Microsoft.ServiceFabric/managedclusters/applications/services@2023-09-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'eastus'
+  properties: {
+    correlationScheme: [
+      {
+        scheme: 'AlignedAffinity'
+        serviceName: '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/managedclusters/myCluster/applications/myApp/services/myService1'
+      }
+    ]
+    defaultMoveCost: 'Medium'
+    instanceCount: 5
+    minInstanceCount: 3
+    minInstancePercentage: 30
+    partitionDescription: {
+      partitionScheme: 'Singleton'
+    }
+    placementConstraints: 'NodeType==frontend'
+    scalingPolicies: [
+      {
+        scalingMechanism: {
+          kind: 'ScalePartitionInstanceCount'
+          maxInstanceCount: 9
+          minInstanceCount: 3
+          scaleIncrement: 2
+        }
+        scalingTrigger: {
+          kind: 'AveragePartitionLoadTrigger'
+          lowerLoadThreshold: 2
+          metricName: 'metricName'
+          scaleInterval: '00:01:00'
+          upperLoadThreshold: 8
+        }
+      }
+    ]
+    serviceDnsName: 'myservicednsname.myApp'
+    serviceKind: 'Stateless'
+    serviceLoadMetrics: [
+      {
+        name: 'metric1'
+        defaultLoad: 3
+        weight: 'Low'
+      }
+    ]
+    servicePackageActivationMode: 'SharedProcess'
+    servicePlacementPolicies: [
+      {
+        type: 'NonPartiallyPlaceService'
+      }
+    ]
+    serviceTypeName: 'myServiceType'
+  }
+  tags: {
+    a: 'b'
+  }
+}
+```
+
+Put a service with minimum parameters
+```bicep
+resource exampleResource 'Microsoft.ServiceFabric/managedclusters/applications/services@2023-09-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'eastus'
+  properties: {
+    instanceCount: 1
+    partitionDescription: {
+      partitionScheme: 'Singleton'
+    }
+    serviceKind: 'Stateless'
+    serviceTypeName: 'myServiceType'
+  }
+}
+```
+
+## microsoft.servicefabric/managedclusters/applicationtypes
+
+Put an application type
+```bicep
+resource exampleResource 'Microsoft.ServiceFabric/managedclusters/applicationTypes@2023-09-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'eastus'
+}
+```
+
+## microsoft.servicefabric/managedclusters/applicationtypes/versions
+
+Put an application type version
+```bicep
+resource exampleResource 'Microsoft.ServiceFabric/managedclusters/applicationTypes/versions@2023-09-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'eastus'
+  properties: {
+    appPackageUrl: 'http://fakelink.test.com/MyAppType'
   }
 }
 ```

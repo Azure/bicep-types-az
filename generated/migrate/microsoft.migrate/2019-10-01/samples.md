@@ -1,4 +1,8 @@
 # Microsoft.Migrate
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.migrate/assessmentprojects
 
@@ -103,6 +107,25 @@ resource exampleResource 'Microsoft.Migrate/assessmentProjects/hypervcollectors@
 }
 ```
 
+## microsoft.migrate/assessmentprojects/privateendpointconnections
+
+PrivateEndpointConnections_Create
+```bicep
+resource exampleResource 'Microsoft.Migrate/assessmentprojects/privateEndpointConnections@2019-10-01' = {
+  parent: parentResource 
+  name: 'example'
+  eTag: '"00009300-0000-0300-0000-602b967b0000"'
+  properties: {
+    privateLinkServiceConnectionState: {
+      description: {
+      }
+      actionsRequired: ''
+      status: 'Approved'
+    }
+  }
+}
+```
+
 ## microsoft.migrate/assessmentprojects/servercollectors
 
 ServerCollectors_Create
@@ -145,25 +168,6 @@ resource exampleResource 'Microsoft.Migrate/assessmentProjects/vmwarecollectors@
       }
     }
     discoverySiteId: '/subscriptions/6393a73f-8d55-47ef-b6dd-179b3e0c7910/resourceGroups/abgoyal-westEurope/providers/Microsoft.OffAzure/VMwareSites/PortalvCenterbc2fsite'
-  }
-}
-```
-
-## microsoft.migrate/assessmentprojects/privateendpointconnections
-
-PrivateEndpointConnections_Create
-```bicep
-resource exampleResource 'Microsoft.Migrate/assessmentprojects/privateEndpointConnections@2019-10-01' = {
-  parent: parentResource 
-  name: 'example'
-  eTag: '"00009300-0000-0300-0000-602b967b0000"'
-  properties: {
-    privateLinkServiceConnectionState: {
-      description: {
-      }
-      actionsRequired: ''
-      status: 'Approved'
-    }
   }
 }
 ```

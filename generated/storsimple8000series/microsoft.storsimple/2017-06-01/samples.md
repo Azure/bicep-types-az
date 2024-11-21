@@ -1,4 +1,8 @@
 # Microsoft.StorSimple
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.storsimple/managers
 
@@ -14,20 +18,6 @@ resource exampleResource 'Microsoft.StorSimple/managers@2017-06-01' = {
     sku: {
       name: 'Standard'
     }
-  }
-}
-```
-
-## microsoft.storsimple/managers/extendedinformation
-
-ManagersCreateExtendedInfo
-```bicep
-resource exampleResource 'Microsoft.StorSimple/managers/extendedInformation@2017-06-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    algorithm: 'None'
-    integrityKey: 'BIl+RHqO8PZ6DRvuXTTK7g=='
   }
 }
 ```
@@ -93,23 +83,6 @@ resource exampleResource 'Microsoft.StorSimple/managers/devices/alertSettings@20
 }
 ```
 
-## microsoft.storsimple/managers/devices/timesettings
-
-DeviceSettingsCreateOrUpdateTimeSettings
-```bicep
-resource exampleResource 'Microsoft.StorSimple/managers/devices/timeSettings@2017-06-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    primaryTimeServer: 'time.windows.com'
-    secondaryTimeServer: [
-      '8.8.8.8'
-    ]
-    timeZone: 'Pacific Standard Time'
-  }
-}
-```
-
 ## microsoft.storsimple/managers/devices/backuppolicies
 
 BackupPoliciesCreateOrUpdate
@@ -153,6 +126,23 @@ resource exampleResource 'Microsoft.StorSimple/managers/devices/backupPolicies/s
 }
 ```
 
+## microsoft.storsimple/managers/devices/timesettings
+
+DeviceSettingsCreateOrUpdateTimeSettings
+```bicep
+resource exampleResource 'Microsoft.StorSimple/managers/devices/timeSettings@2017-06-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    primaryTimeServer: 'time.windows.com'
+    secondaryTimeServer: [
+      '8.8.8.8'
+    ]
+    timeZone: 'Pacific Standard Time'
+  }
+}
+```
+
 ## microsoft.storsimple/managers/devices/volumecontainers
 
 VolumeContainersCreateOrUpdate
@@ -187,6 +177,20 @@ resource exampleResource 'Microsoft.StorSimple/managers/devices/volumeContainers
     sizeInBytes: 5368709120
     volumeStatus: 'Offline'
     volumeType: 'Tiered'
+  }
+}
+```
+
+## microsoft.storsimple/managers/extendedinformation
+
+ManagersCreateExtendedInfo
+```bicep
+resource exampleResource 'Microsoft.StorSimple/managers/extendedInformation@2017-06-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    algorithm: 'None'
+    integrityKey: 'BIl+RHqO8PZ6DRvuXTTK7g=='
   }
 }
 ```
