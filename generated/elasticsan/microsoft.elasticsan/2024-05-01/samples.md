@@ -1,4 +1,8 @@
 # Microsoft.ElasticSan
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.elasticsan/elasticsans
 
@@ -35,6 +39,40 @@ resource exampleResource 'Microsoft.ElasticSan/elasticSans@2024-05-01' = {
     extendedCapacitySizeTiB: 27
     sku: {
       name: 'Premium_LRS'
+    }
+  }
+}
+```
+
+## microsoft.elasticsan/elasticsans/privateendpointconnections
+
+PrivateEndpointConnections_Create_MaximumSet_Gen
+```bicep
+resource exampleResource 'Microsoft.ElasticSan/elasticSans/privateEndpointConnections@2024-05-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    groupIds: [
+      'jdwrzpemdjrpiwzvy'
+    ]
+    privateEndpoint: {
+    }
+    privateLinkServiceConnectionState: {
+      description: 'dxl'
+      actionsRequired: 'jhjdpwvyzipggtn'
+      status: 'Pending'
+    }
+  }
+}
+```
+
+PrivateEndpointConnections_Create_MinimumSet_Gen
+```bicep
+resource exampleResource 'Microsoft.ElasticSan/elasticSans/privateEndpointConnections@2024-05-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    privateLinkServiceConnectionState: {
     }
   }
 }
@@ -88,6 +126,34 @@ resource exampleResource 'Microsoft.ElasticSan/elasticSans/volumegroups@2024-05-
 }
 ```
 
+## microsoft.elasticsan/elasticsans/volumegroups/snapshots
+
+VolumeSnapshots_Create_MaximumSet_Gen
+```bicep
+resource exampleResource 'Microsoft.ElasticSan/elasticSans/volumegroups/snapshots@2024-05-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    creationData: {
+      sourceId: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ElasticSan/elasticSans/{elasticSanName}/volumegroups/{volumeGroupName}/volumes/{volumeName}'
+    }
+  }
+}
+```
+
+VolumeSnapshots_Create_MinimumSet_Gen
+```bicep
+resource exampleResource 'Microsoft.ElasticSan/elasticSans/volumegroups/snapshots@2024-05-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    creationData: {
+      sourceId: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ElasticSan/elasticSans/{elasticSanName}/volumegroups/{volumeGroupName}/volumes/{volumeName}'
+    }
+  }
+}
+```
+
 ## microsoft.elasticsan/elasticsans/volumegroups/volumes
 
 Volumes_Create_MaximumSet_Gen
@@ -115,68 +181,6 @@ resource exampleResource 'Microsoft.ElasticSan/elasticSans/volumegroups/volumes@
   name: 'example'
   properties: {
     sizeGiB: 9
-  }
-}
-```
-
-## microsoft.elasticsan/elasticsans/privateendpointconnections
-
-PrivateEndpointConnections_Create_MaximumSet_Gen
-```bicep
-resource exampleResource 'Microsoft.ElasticSan/elasticSans/privateEndpointConnections@2024-05-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    groupIds: [
-      'jdwrzpemdjrpiwzvy'
-    ]
-    privateEndpoint: {
-    }
-    privateLinkServiceConnectionState: {
-      description: 'dxl'
-      actionsRequired: 'jhjdpwvyzipggtn'
-      status: 'Pending'
-    }
-  }
-}
-```
-
-PrivateEndpointConnections_Create_MinimumSet_Gen
-```bicep
-resource exampleResource 'Microsoft.ElasticSan/elasticSans/privateEndpointConnections@2024-05-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    privateLinkServiceConnectionState: {
-    }
-  }
-}
-```
-
-## microsoft.elasticsan/elasticsans/volumegroups/snapshots
-
-VolumeSnapshots_Create_MaximumSet_Gen
-```bicep
-resource exampleResource 'Microsoft.ElasticSan/elasticSans/volumegroups/snapshots@2024-05-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    creationData: {
-      sourceId: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ElasticSan/elasticSans/{elasticSanName}/volumegroups/{volumeGroupName}/volumes/{volumeName}'
-    }
-  }
-}
-```
-
-VolumeSnapshots_Create_MinimumSet_Gen
-```bicep
-resource exampleResource 'Microsoft.ElasticSan/elasticSans/volumegroups/snapshots@2024-05-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    creationData: {
-      sourceId: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ElasticSan/elasticSans/{elasticSanName}/volumegroups/{volumeGroupName}/volumes/{volumeName}'
-    }
   }
 }
 ```

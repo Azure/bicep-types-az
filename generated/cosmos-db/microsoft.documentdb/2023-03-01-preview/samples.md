@@ -1,4 +1,65 @@
 # Microsoft.DocumentDB
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
+
+## microsoft.documentdb/cassandraclusters
+
+CosmosDBManagedCassandraClusterCreate
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/cassandraClusters@2023-03-01-preview' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    authenticationMethod: 'Cassandra'
+    cassandraVersion: '3.11'
+    clientCertificates: [
+      {
+        pem: '-----BEGIN CERTIFICATE-----\n...Base64 encoded certificate...\n-----END CERTIFICATE-----'
+      }
+    ]
+    clusterNameOverride: 'ClusterNameIllegalForAzureResource'
+    delegatedManagementSubnetId: '/subscriptions/536e130b-d7d6-4ac7-98a5-de20d69588d2/resourceGroups/customer-vnet-rg/providers/Microsoft.Network/virtualNetworks/customer-vnet/subnets/management'
+    externalGossipCertificates: [
+      {
+        pem: '-----BEGIN CERTIFICATE-----\n...Base64 encoded certificate...\n-----END CERTIFICATE-----'
+      }
+    ]
+    externalSeedNodes: [
+      {
+        ipAddress: '10.52.221.2'
+      }
+      {
+        ipAddress: '10.52.221.3'
+      }
+      {
+        ipAddress: '10.52.221.4'
+      }
+    ]
+    hoursBetweenBackups: 24
+    initialCassandraAdminPassword: 'mypassword'
+  }
+  tags: {
+  }
+}
+```
+
+## microsoft.documentdb/cassandraclusters/datacenters
+
+CosmosDBManagedCassandraDataCenterCreate
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/cassandraClusters/dataCenters@2023-03-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    base64EncodedCassandraYamlFragment: 'Y29tcGFjdGlvbl90aHJvdWdocHV0X21iX3Blcl9zZWM6IDMyCmNvbXBhY3Rpb25fbGFyZ2VfcGFydGl0aW9uX3dhcm5pbmdfdGhyZXNob2xkX21iOiAxMDA='
+    dataCenterLocation: 'West US 2'
+    delegatedSubnetId: '/subscriptions/536e130b-d7d6-4ac7-98a5-de20d69588d2/resourceGroups/customer-vnet-rg/providers/Microsoft.Network/virtualNetworks/customer-vnet/subnets/dc1-subnet'
+    nodeCount: 9
+  }
+}
+```
 
 ## microsoft.documentdb/databaseaccounts
 
@@ -172,6 +233,162 @@ resource exampleResource 'Microsoft.DocumentDB/databaseAccounts@2023-03-01-previ
 }
 ```
 
+## microsoft.documentdb/databaseaccounts/cassandrakeyspaces
+
+CosmosDBCassandraKeyspaceCreateUpdate
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces@2023-03-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'West US'
+  properties: {
+    options: {
+    }
+    resource: {
+      id: 'keyspaceName'
+    }
+  }
+  tags: {
+  }
+}
+```
+
+## microsoft.documentdb/databaseaccounts/cassandrakeyspaces/tables
+
+CosmosDBCassandraTableCreateUpdate
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables@2023-03-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'West US'
+  properties: {
+    options: {
+    }
+    resource: {
+      schema: {
+        clusterKeys: [
+          {
+            name: 'columnA'
+            orderBy: 'Asc'
+          }
+        ]
+        columns: [
+          {
+            name: 'columnA'
+            type: 'Ascii'
+          }
+        ]
+        partitionKeys: [
+          {
+            name: 'columnA'
+          }
+        ]
+      }
+      analyticalStorageTtl: 500
+      defaultTtl: 100
+      id: 'tableName'
+    }
+  }
+  tags: {
+  }
+}
+```
+
+## microsoft.documentdb/databaseaccounts/cassandrakeyspaces/tables/throughputsettings
+
+CosmosDBCassandraTableThroughputUpdate
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings@2023-03-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'West US'
+  properties: {
+    resource: {
+      throughput: 400
+    }
+  }
+  tags: {
+  }
+}
+```
+
+## microsoft.documentdb/databaseaccounts/cassandrakeyspaces/throughputsettings
+
+CosmosDBCassandraKeyspaceThroughputUpdate
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings@2023-03-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'West US'
+  properties: {
+    resource: {
+      throughput: 400
+    }
+  }
+  tags: {
+  }
+}
+```
+
+## microsoft.documentdb/databaseaccounts/cassandrakeyspaces/views
+
+CosmosDBCassandraViewCreateUpdate
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views@2023-03-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    options: {
+    }
+    resource: {
+      id: 'viewname'
+      viewDefinition: 'SELECT columna, columnb, columnc FROM keyspacename.srctablename WHERE columna IS NOT NULL AND columnc IS NOT NULL PRIMARY (columnc, columna)'
+    }
+  }
+  tags: {
+  }
+}
+```
+
+## microsoft.documentdb/databaseaccounts/cassandrakeyspaces/views/throughputsettings
+
+CosmosDBCassandraViewThroughputUpdate
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views/throughputSettings@2023-03-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    resource: {
+      throughput: 400
+    }
+  }
+  tags: {
+  }
+}
+```
+
+## microsoft.documentdb/databaseaccounts/datatransferjobs
+
+CosmosDBDataTransferJobCreate
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/dataTransferJobs@2023-03-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    destination: {
+      component: 'AzureBlobStorage'
+      containerName: 'blob_container'
+      endpointUrl: 'https://blob.windows.net'
+    }
+    source: {
+      component: 'CosmosDBCassandra'
+      keyspaceName: 'keyspace'
+      tableName: 'table'
+    }
+  }
+}
+```
+
 ## microsoft.documentdb/databaseaccounts/graphs
 
 CosmosDBGraphCreateUpdate
@@ -188,6 +405,406 @@ resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/graphs@2023-03-0
     }
   }
   tags: {
+  }
+}
+```
+
+## microsoft.documentdb/databaseaccounts/gremlindatabases
+
+CosmosDBGremlinDatabaseCreateUpdate
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/gremlinDatabases@2023-03-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'West US'
+  properties: {
+    options: {
+    }
+    resource: {
+      id: 'databaseName'
+    }
+  }
+  tags: {
+  }
+}
+```
+
+## microsoft.documentdb/databaseaccounts/gremlindatabases/graphs
+
+CosmosDBGremlinGraphCreateUpdate
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs@2023-03-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'West US'
+  properties: {
+    options: {
+    }
+    resource: {
+      conflictResolutionPolicy: {
+        conflictResolutionPath: '/path'
+        mode: 'LastWriterWins'
+      }
+      defaultTtl: 100
+      id: 'graphName'
+      indexingPolicy: {
+        automatic: true
+        excludedPaths: [
+        ]
+        includedPaths: [
+          {
+            path: '/*'
+            indexes: [
+              {
+                dataType: 'String'
+                kind: 'Range'
+                precision: -1
+              }
+              {
+                dataType: 'Number'
+                kind: 'Range'
+                precision: -1
+              }
+            ]
+          }
+        ]
+        indexingMode: 'consistent'
+      }
+      partitionKey: {
+        kind: 'Hash'
+        paths: [
+          '/AccountNumber'
+        ]
+      }
+      uniqueKeyPolicy: {
+        uniqueKeys: [
+          {
+            paths: [
+              '/testPath'
+            ]
+          }
+        ]
+      }
+    }
+  }
+  tags: {
+  }
+}
+```
+
+## microsoft.documentdb/databaseaccounts/gremlindatabases/graphs/throughputsettings
+
+CosmosDBGremlinGraphThroughputUpdate
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings@2023-03-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'West US'
+  properties: {
+    resource: {
+      throughput: 400
+    }
+  }
+  tags: {
+  }
+}
+```
+
+## microsoft.documentdb/databaseaccounts/gremlindatabases/throughputsettings
+
+CosmosDBGremlinDatabaseThroughputUpdate
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings@2023-03-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'West US'
+  properties: {
+    resource: {
+      throughput: 400
+    }
+  }
+  tags: {
+  }
+}
+```
+
+## microsoft.documentdb/databaseaccounts/mongodbdatabases
+
+CosmosDBMongoDBDatabaseCreateUpdate
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases@2023-03-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'West US'
+  properties: {
+    options: {
+    }
+    resource: {
+      id: 'databaseName'
+    }
+  }
+  tags: {
+  }
+}
+```
+
+CosmosDBMongoDBDatabaseRestore
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases@2023-03-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'West US'
+  properties: {
+    options: {
+    }
+    resource: {
+      createMode: 'Restore'
+      id: 'databaseName'
+      restoreParameters: {
+        restoreSource: '/subscriptions/subid/providers/Microsoft.DocumentDB/locations/WestUS/restorableDatabaseAccounts/restorableDatabaseAccountId'
+        restoreTimestampInUtc: '2022-07-20T18:28:00Z'
+      }
+    }
+  }
+  tags: {
+  }
+}
+```
+
+## microsoft.documentdb/databaseaccounts/mongodbdatabases/collections
+
+CosmosDBMongoDBCollectionCreateUpdate
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections@2023-03-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'West US'
+  properties: {
+    options: {
+    }
+    resource: {
+      analyticalStorageTtl: 500
+      id: 'collectionName'
+      indexes: [
+        {
+          key: {
+            keys: [
+              '_ts'
+            ]
+          }
+          options: {
+            expireAfterSeconds: 100
+            unique: true
+          }
+        }
+        {
+          key: {
+            keys: [
+              '_id'
+            ]
+          }
+        }
+      ]
+      shardKey: {
+        testKey: 'Hash'
+      }
+    }
+  }
+  tags: {
+  }
+}
+```
+
+CosmosDBMongoDBCollectionRestore
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections@2023-03-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'West US'
+  properties: {
+    options: {
+    }
+    resource: {
+      createMode: 'Restore'
+      id: 'collectionName'
+      restoreParameters: {
+        restoreSource: '/subscriptions/subid/providers/Microsoft.DocumentDB/locations/WestUS/restorableDatabaseAccounts/restorableDatabaseAccountId'
+        restoreTimestampInUtc: '2022-07-20T18:28:00Z'
+      }
+    }
+  }
+  tags: {
+  }
+}
+```
+
+## microsoft.documentdb/databaseaccounts/mongodbdatabases/collections/throughputsettings
+
+CosmosDBMongoDBCollectionThroughputUpdate
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings@2023-03-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'West US'
+  properties: {
+    resource: {
+      throughput: 400
+    }
+  }
+  tags: {
+  }
+}
+```
+
+## microsoft.documentdb/databaseaccounts/mongodbdatabases/throughputsettings
+
+CosmosDBMongoDBDatabaseThroughputUpdate
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings@2023-03-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'West US'
+  properties: {
+    resource: {
+      throughput: 400
+    }
+  }
+  tags: {
+  }
+}
+```
+
+## microsoft.documentdb/databaseaccounts/mongodbroledefinitions
+
+CosmosDBMongoDBRoleDefinitionCreateUpdate
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/mongodbRoleDefinitions@2023-03-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    databaseName: 'sales'
+    privileges: [
+      {
+        actions: [
+          'insert'
+          'find'
+        ]
+        resource: {
+          collection: 'sales'
+          db: 'sales'
+        }
+      }
+    ]
+    roleName: 'myRoleName'
+    roles: [
+      {
+        db: 'sales'
+        role: 'myInheritedRole'
+      }
+    ]
+  }
+}
+```
+
+## microsoft.documentdb/databaseaccounts/mongodbuserdefinitions
+
+CosmosDBMongoDBUserDefinitionCreateUpdate
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/mongodbUserDefinitions@2023-03-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    customData: 'My custom data'
+    databaseName: 'sales'
+    mechanisms: 'SCRAM-SHA-256'
+    password: 'myPassword'
+    roles: [
+      {
+        db: 'sales'
+        role: 'myReadRole'
+      }
+    ]
+    userName: 'myUserName'
+  }
+}
+```
+
+## microsoft.documentdb/databaseaccounts/notebookworkspaces
+
+CosmosDBNotebookWorkspaceCreate
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces@2023-03-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+}
+```
+
+## microsoft.documentdb/databaseaccounts/privateendpointconnections
+
+Approve or reject a private endpoint connection with a given name.
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/privateEndpointConnections@2023-03-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    privateLinkServiceConnectionState: {
+      description: 'Approved by johndoe@contoso.com'
+      status: 'Approved'
+    }
+  }
+}
+```
+
+## microsoft.documentdb/databaseaccounts/services
+
+DataTransferServiceCreate
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/services@2023-03-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    instanceCount: 1
+    instanceSize: 'Cosmos.D4s'
+    serviceType: 'DataTransfer'
+  }
+}
+```
+
+GraphAPIComputeServiceCreate
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/services@2023-03-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    instanceCount: 1
+    instanceSize: 'Cosmos.D4s'
+    serviceType: 'GraphAPICompute'
+  }
+}
+```
+
+MaterializedViewsBuilderServiceCreate
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/services@2023-03-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    instanceCount: 1
+    instanceSize: 'Cosmos.D4s'
+    serviceType: 'MaterializedViewsBuilder'
+  }
+}
+```
+
+SqlDedicatedGatewayServiceCreate
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/services@2023-03-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    instanceCount: 1
+    instanceSize: 'Cosmos.D4s'
+    serviceType: 'SqlDedicatedGateway'
   }
 }
 ```
@@ -228,24 +845,6 @@ resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases@202
         restoreSource: '/subscriptions/subid/providers/Microsoft.DocumentDB/locations/WestUS/restorableDatabaseAccounts/restorableDatabaseAccountId'
         restoreTimestampInUtc: '2022-07-20T18:28:00Z'
       }
-    }
-  }
-  tags: {
-  }
-}
-```
-
-## microsoft.documentdb/databaseaccounts/sqldatabases/throughputsettings
-
-CosmosDBSqlDatabaseThroughputUpdate
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings@2023-03-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'West US'
-  properties: {
-    resource: {
-      throughput: 400
     }
   }
   tags: {
@@ -373,6 +972,24 @@ resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/con
 }
 ```
 
+## microsoft.documentdb/databaseaccounts/sqldatabases/containers/storedprocedures
+
+CosmosDBSqlStoredProcedureCreateUpdate
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/storedProcedures@2023-03-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    options: {
+    }
+    resource: {
+      body: 'body'
+      id: 'storedProcedureName'
+    }
+  }
+}
+```
+
 ## microsoft.documentdb/databaseaccounts/sqldatabases/containers/throughputsettings
 
 CosmosDBSqlContainerThroughputUpdate
@@ -391,11 +1008,11 @@ resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/con
 }
 ```
 
-## microsoft.documentdb/databaseaccounts/sqldatabases/containers/storedprocedures
+## microsoft.documentdb/databaseaccounts/sqldatabases/containers/triggers
 
-CosmosDBSqlStoredProcedureCreateUpdate
+CosmosDBSqlTriggerCreateUpdate
 ```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/storedProcedures@2023-03-01-preview' = {
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/triggers@2023-03-01-preview' = {
   parent: parentResource 
   name: 'example'
   properties: {
@@ -403,7 +1020,9 @@ resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/con
     }
     resource: {
       body: 'body'
-      id: 'storedProcedureName'
+      id: 'triggerName'
+      triggerOperation: 'triggerOperation'
+      triggerType: 'triggerType'
     }
   }
 }
@@ -427,22 +1046,35 @@ resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/con
 }
 ```
 
-## microsoft.documentdb/databaseaccounts/sqldatabases/containers/triggers
+## microsoft.documentdb/databaseaccounts/sqldatabases/throughputsettings
 
-CosmosDBSqlTriggerCreateUpdate
+CosmosDBSqlDatabaseThroughputUpdate
 ```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/triggers@2023-03-01-preview' = {
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/throughputSettings@2023-03-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'West US'
+  properties: {
+    resource: {
+      throughput: 400
+    }
+  }
+  tags: {
+  }
+}
+```
+
+## microsoft.documentdb/databaseaccounts/sqlroleassignments
+
+CosmosDBSqlRoleAssignmentCreateUpdate
+```bicep
+resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/sqlRoleAssignments@2023-03-01-preview' = {
   parent: parentResource 
   name: 'example'
   properties: {
-    options: {
-    }
-    resource: {
-      body: 'body'
-      id: 'triggerName'
-      triggerOperation: 'triggerOperation'
-      triggerType: 'triggerType'
-    }
+    principalId: 'myPrincipalId'
+    roleDefinitionId: '/subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/sqlRoleDefinitions/myRoleDefinitionId'
+    scope: '/subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/dbs/purchases/colls/redmond-purchases'
   }
 }
 ```
@@ -471,222 +1103,6 @@ resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/sqlRoleDefinitio
       }
     ]
     roleName: 'myRoleName'
-  }
-}
-```
-
-## microsoft.documentdb/databaseaccounts/sqlroleassignments
-
-CosmosDBSqlRoleAssignmentCreateUpdate
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/sqlRoleAssignments@2023-03-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    principalId: 'myPrincipalId'
-    roleDefinitionId: '/subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/sqlRoleDefinitions/myRoleDefinitionId'
-    scope: '/subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/dbs/purchases/colls/redmond-purchases'
-  }
-}
-```
-
-## microsoft.documentdb/databaseaccounts/mongodbdatabases
-
-CosmosDBMongoDBDatabaseCreateUpdate
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases@2023-03-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'West US'
-  properties: {
-    options: {
-    }
-    resource: {
-      id: 'databaseName'
-    }
-  }
-  tags: {
-  }
-}
-```
-
-CosmosDBMongoDBDatabaseRestore
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases@2023-03-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'West US'
-  properties: {
-    options: {
-    }
-    resource: {
-      createMode: 'Restore'
-      id: 'databaseName'
-      restoreParameters: {
-        restoreSource: '/subscriptions/subid/providers/Microsoft.DocumentDB/locations/WestUS/restorableDatabaseAccounts/restorableDatabaseAccountId'
-        restoreTimestampInUtc: '2022-07-20T18:28:00Z'
-      }
-    }
-  }
-  tags: {
-  }
-}
-```
-
-## microsoft.documentdb/databaseaccounts/mongodbdatabases/throughputsettings
-
-CosmosDBMongoDBDatabaseThroughputUpdate
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/throughputSettings@2023-03-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'West US'
-  properties: {
-    resource: {
-      throughput: 400
-    }
-  }
-  tags: {
-  }
-}
-```
-
-## microsoft.documentdb/databaseaccounts/mongodbdatabases/collections
-
-CosmosDBMongoDBCollectionCreateUpdate
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections@2023-03-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'West US'
-  properties: {
-    options: {
-    }
-    resource: {
-      analyticalStorageTtl: 500
-      id: 'collectionName'
-      indexes: [
-        {
-          key: {
-            keys: [
-              '_ts'
-            ]
-          }
-          options: {
-            expireAfterSeconds: 100
-            unique: true
-          }
-        }
-        {
-          key: {
-            keys: [
-              '_id'
-            ]
-          }
-        }
-      ]
-      shardKey: {
-        testKey: 'Hash'
-      }
-    }
-  }
-  tags: {
-  }
-}
-```
-
-CosmosDBMongoDBCollectionRestore
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections@2023-03-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'West US'
-  properties: {
-    options: {
-    }
-    resource: {
-      createMode: 'Restore'
-      id: 'collectionName'
-      restoreParameters: {
-        restoreSource: '/subscriptions/subid/providers/Microsoft.DocumentDB/locations/WestUS/restorableDatabaseAccounts/restorableDatabaseAccountId'
-        restoreTimestampInUtc: '2022-07-20T18:28:00Z'
-      }
-    }
-  }
-  tags: {
-  }
-}
-```
-
-## microsoft.documentdb/databaseaccounts/mongodbdatabases/collections/throughputsettings
-
-CosmosDBMongoDBCollectionThroughputUpdate
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/mongodbDatabases/collections/throughputSettings@2023-03-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'West US'
-  properties: {
-    resource: {
-      throughput: 400
-    }
-  }
-  tags: {
-  }
-}
-```
-
-## microsoft.documentdb/databaseaccounts/mongodbroledefinitions
-
-CosmosDBMongoDBRoleDefinitionCreateUpdate
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/mongodbRoleDefinitions@2023-03-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    databaseName: 'sales'
-    privileges: [
-      {
-        actions: [
-          'insert'
-          'find'
-        ]
-        resource: {
-          collection: 'sales'
-          db: 'sales'
-        }
-      }
-    ]
-    roleName: 'myRoleName'
-    roles: [
-      {
-        db: 'sales'
-        role: 'myInheritedRole'
-      }
-    ]
-  }
-}
-```
-
-## microsoft.documentdb/databaseaccounts/mongodbuserdefinitions
-
-CosmosDBMongoDBUserDefinitionCreateUpdate
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/mongodbUserDefinitions@2023-03-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    customData: 'My custom data'
-    databaseName: 'sales'
-    mechanisms: 'SCRAM-SHA-256'
-    password: 'myPassword'
-    roles: [
-      {
-        db: 'sales'
-        role: 'myReadRole'
-      }
-    ]
-    userName: 'myUserName'
   }
 }
 ```
@@ -725,338 +1141,6 @@ resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/tables/throughpu
     }
   }
   tags: {
-  }
-}
-```
-
-## microsoft.documentdb/databaseaccounts/cassandrakeyspaces
-
-CosmosDBCassandraKeyspaceCreateUpdate
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces@2023-03-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'West US'
-  properties: {
-    options: {
-    }
-    resource: {
-      id: 'keyspaceName'
-    }
-  }
-  tags: {
-  }
-}
-```
-
-## microsoft.documentdb/databaseaccounts/cassandrakeyspaces/throughputsettings
-
-CosmosDBCassandraKeyspaceThroughputUpdate
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/throughputSettings@2023-03-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'West US'
-  properties: {
-    resource: {
-      throughput: 400
-    }
-  }
-  tags: {
-  }
-}
-```
-
-## microsoft.documentdb/databaseaccounts/cassandrakeyspaces/tables
-
-CosmosDBCassandraTableCreateUpdate
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables@2023-03-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'West US'
-  properties: {
-    options: {
-    }
-    resource: {
-      schema: {
-        clusterKeys: [
-          {
-            name: 'columnA'
-            orderBy: 'Asc'
-          }
-        ]
-        columns: [
-          {
-            name: 'columnA'
-            type: 'Ascii'
-          }
-        ]
-        partitionKeys: [
-          {
-            name: 'columnA'
-          }
-        ]
-      }
-      analyticalStorageTtl: 500
-      defaultTtl: 100
-      id: 'tableName'
-    }
-  }
-  tags: {
-  }
-}
-```
-
-## microsoft.documentdb/databaseaccounts/cassandrakeyspaces/tables/throughputsettings
-
-CosmosDBCassandraTableThroughputUpdate
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/tables/throughputSettings@2023-03-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'West US'
-  properties: {
-    resource: {
-      throughput: 400
-    }
-  }
-  tags: {
-  }
-}
-```
-
-## microsoft.documentdb/databaseaccounts/cassandrakeyspaces/views
-
-CosmosDBCassandraViewCreateUpdate
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views@2023-03-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    options: {
-    }
-    resource: {
-      id: 'viewname'
-      viewDefinition: 'SELECT columna, columnb, columnc FROM keyspacename.srctablename WHERE columna IS NOT NULL AND columnc IS NOT NULL PRIMARY (columnc, columna)'
-    }
-  }
-  tags: {
-  }
-}
-```
-
-## microsoft.documentdb/databaseaccounts/cassandrakeyspaces/views/throughputsettings
-
-CosmosDBCassandraViewThroughputUpdate
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/cassandraKeyspaces/views/throughputSettings@2023-03-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    resource: {
-      throughput: 400
-    }
-  }
-  tags: {
-  }
-}
-```
-
-## microsoft.documentdb/databaseaccounts/gremlindatabases
-
-CosmosDBGremlinDatabaseCreateUpdate
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/gremlinDatabases@2023-03-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'West US'
-  properties: {
-    options: {
-    }
-    resource: {
-      id: 'databaseName'
-    }
-  }
-  tags: {
-  }
-}
-```
-
-## microsoft.documentdb/databaseaccounts/gremlindatabases/throughputsettings
-
-CosmosDBGremlinDatabaseThroughputUpdate
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/throughputSettings@2023-03-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'West US'
-  properties: {
-    resource: {
-      throughput: 400
-    }
-  }
-  tags: {
-  }
-}
-```
-
-## microsoft.documentdb/databaseaccounts/gremlindatabases/graphs
-
-CosmosDBGremlinGraphCreateUpdate
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs@2023-03-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'West US'
-  properties: {
-    options: {
-    }
-    resource: {
-      conflictResolutionPolicy: {
-        conflictResolutionPath: '/path'
-        mode: 'LastWriterWins'
-      }
-      defaultTtl: 100
-      id: 'graphName'
-      indexingPolicy: {
-        automatic: true
-        excludedPaths: [
-        ]
-        includedPaths: [
-          {
-            path: '/*'
-            indexes: [
-              {
-                dataType: 'String'
-                kind: 'Range'
-                precision: -1
-              }
-              {
-                dataType: 'Number'
-                kind: 'Range'
-                precision: -1
-              }
-            ]
-          }
-        ]
-        indexingMode: 'consistent'
-      }
-      partitionKey: {
-        kind: 'Hash'
-        paths: [
-          '/AccountNumber'
-        ]
-      }
-      uniqueKeyPolicy: {
-        uniqueKeys: [
-          {
-            paths: [
-              '/testPath'
-            ]
-          }
-        ]
-      }
-    }
-  }
-  tags: {
-  }
-}
-```
-
-## microsoft.documentdb/databaseaccounts/gremlindatabases/graphs/throughputsettings
-
-CosmosDBGremlinGraphThroughputUpdate
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/gremlinDatabases/graphs/throughputSettings@2023-03-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'West US'
-  properties: {
-    resource: {
-      throughput: 400
-    }
-  }
-  tags: {
-  }
-}
-```
-
-## microsoft.documentdb/databaseaccounts/datatransferjobs
-
-CosmosDBDataTransferJobCreate
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/dataTransferJobs@2023-03-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    destination: {
-      component: 'AzureBlobStorage'
-      containerName: 'blob_container'
-      endpointUrl: 'https://blob.windows.net'
-    }
-    source: {
-      component: 'CosmosDBCassandra'
-      keyspaceName: 'keyspace'
-      tableName: 'table'
-    }
-  }
-}
-```
-
-## microsoft.documentdb/cassandraclusters
-
-CosmosDBManagedCassandraClusterCreate
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/cassandraClusters@2023-03-01-preview' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    authenticationMethod: 'Cassandra'
-    cassandraVersion: '3.11'
-    clientCertificates: [
-      {
-        pem: '-----BEGIN CERTIFICATE-----\n...Base64 encoded certificate...\n-----END CERTIFICATE-----'
-      }
-    ]
-    clusterNameOverride: 'ClusterNameIllegalForAzureResource'
-    delegatedManagementSubnetId: '/subscriptions/536e130b-d7d6-4ac7-98a5-de20d69588d2/resourceGroups/customer-vnet-rg/providers/Microsoft.Network/virtualNetworks/customer-vnet/subnets/management'
-    externalGossipCertificates: [
-      {
-        pem: '-----BEGIN CERTIFICATE-----\n...Base64 encoded certificate...\n-----END CERTIFICATE-----'
-      }
-    ]
-    externalSeedNodes: [
-      {
-        ipAddress: '10.52.221.2'
-      }
-      {
-        ipAddress: '10.52.221.3'
-      }
-      {
-        ipAddress: '10.52.221.4'
-      }
-    ]
-    hoursBetweenBackups: 24
-    initialCassandraAdminPassword: 'mypassword'
-  }
-  tags: {
-  }
-}
-```
-
-## microsoft.documentdb/cassandraclusters/datacenters
-
-CosmosDBManagedCassandraDataCenterCreate
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/cassandraClusters/dataCenters@2023-03-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    base64EncodedCassandraYamlFragment: 'Y29tcGFjdGlvbl90aHJvdWdocHV0X21iX3Blcl9zZWM6IDMyCmNvbXBhY3Rpb25fbGFyZ2VfcGFydGl0aW9uX3dhcm5pbmdfdGhyZXNob2xkX21iOiAxMDA='
-    dataCenterLocation: 'West US 2'
-    delegatedSubnetId: '/subscriptions/536e130b-d7d6-4ac7-98a5-de20d69588d2/resourceGroups/customer-vnet-rg/providers/Microsoft.Network/virtualNetworks/customer-vnet/subnets/dc1-subnet'
-    nodeCount: 9
   }
 }
 ```
@@ -1110,86 +1194,6 @@ resource exampleResource 'Microsoft.DocumentDB/mongoClusters/firewallRules@2023-
   properties: {
     endIpAddress: '255.255.255.255'
     startIpAddress: '0.0.0.0'
-  }
-}
-```
-
-## microsoft.documentdb/databaseaccounts/notebookworkspaces
-
-CosmosDBNotebookWorkspaceCreate
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/notebookWorkspaces@2023-03-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-}
-```
-
-## microsoft.documentdb/databaseaccounts/privateendpointconnections
-
-Approve or reject a private endpoint connection with a given name.
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/privateEndpointConnections@2023-03-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    privateLinkServiceConnectionState: {
-      description: 'Approved by johndoe@contoso.com'
-      status: 'Approved'
-    }
-  }
-}
-```
-
-## microsoft.documentdb/databaseaccounts/services
-
-DataTransferServiceCreate
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/services@2023-03-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    instanceCount: 1
-    instanceSize: 'Cosmos.D4s'
-    serviceType: 'DataTransfer'
-  }
-}
-```
-
-GraphAPIComputeServiceCreate
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/services@2023-03-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    instanceCount: 1
-    instanceSize: 'Cosmos.D4s'
-    serviceType: 'GraphAPICompute'
-  }
-}
-```
-
-MaterializedViewsBuilderServiceCreate
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/services@2023-03-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    instanceCount: 1
-    instanceSize: 'Cosmos.D4s'
-    serviceType: 'MaterializedViewsBuilder'
-  }
-}
-```
-
-SqlDedicatedGatewayServiceCreate
-```bicep
-resource exampleResource 'Microsoft.DocumentDB/databaseAccounts/services@2023-03-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    instanceCount: 1
-    instanceSize: 'Cosmos.D4s'
-    serviceType: 'SqlDedicatedGateway'
   }
 }
 ```

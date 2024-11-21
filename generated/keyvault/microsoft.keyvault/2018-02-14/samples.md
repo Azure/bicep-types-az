@@ -1,17 +1,8 @@
 # Microsoft.KeyVault
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
 
-## microsoft.keyvault/vaults/secrets
-
-Create a secret
-```bicep
-resource exampleResource 'Microsoft.KeyVault/vaults/secrets@2018-02-14' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    value: 'secret-value'
-  }
-}
-```
 
 ## microsoft.keyvault/vaults
 
@@ -161,6 +152,19 @@ resource exampleResource 'Microsoft.KeyVault/vaults/privateEndpointConnections@2
       description: 'My name is Joe and I\'m approving this.'
       status: 'Approved'
     }
+  }
+}
+```
+
+## microsoft.keyvault/vaults/secrets
+
+Create a secret
+```bicep
+resource exampleResource 'Microsoft.KeyVault/vaults/secrets@2018-02-14' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    value: 'secret-value'
   }
 }
 ```

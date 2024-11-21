@@ -1,4 +1,8 @@
 # Microsoft.DataProtection
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.dataprotection/backupvaults
 
@@ -125,105 +129,6 @@ resource exampleResource 'Microsoft.DataProtection/backupVaults@2024-04-01' = {
 }
 ```
 
-## microsoft.dataprotection/backupvaults/backuppolicies
-
-CreateOrUpdate BackupPolicy
-```bicep
-resource exampleResource 'Microsoft.DataProtection/backupVaults/backupPolicies@2024-04-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    datasourceTypes: [
-      'OssDB'
-    ]
-    objectType: 'BackupPolicy'
-    policyRules: [
-      {
-        name: 'BackupWeekly'
-        backupParameters: {
-          backupType: 'Full'
-          objectType: 'AzureBackupParams'
-        }
-        dataStore: {
-          dataStoreType: 'VaultStore'
-          objectType: 'DataStoreInfoBase'
-        }
-        objectType: 'AzureBackupRule'
-        trigger: {
-          objectType: 'ScheduleBasedTriggerContext'
-          schedule: {
-            repeatingTimeIntervals: [
-              'R/2019-11-20T08:00:00-08:00/P1W'
-            ]
-          }
-          taggingCriteria: [
-            {
-              isDefault: true
-              tagInfo: {
-                tagName: 'Default'
-              }
-              taggingPriority: 99
-            }
-            {
-              criteria: [
-                {
-                  daysOfTheWeek: [
-                    'Sunday'
-                  ]
-                  objectType: 'ScheduleBasedBackupCriteria'
-                  scheduleTimes: [
-                    '2019-03-01T13:00:00Z'
-                  ]
-                }
-              ]
-              isDefault: false
-              tagInfo: {
-                tagName: 'Weekly'
-              }
-              taggingPriority: 20
-            }
-          ]
-        }
-      }
-      {
-        name: 'Default'
-        isDefault: true
-        lifecycles: [
-          {
-            deleteAfter: {
-              duration: 'P1W'
-              objectType: 'AbsoluteDeleteOption'
-            }
-            sourceDataStore: {
-              dataStoreType: 'VaultStore'
-              objectType: 'DataStoreInfoBase'
-            }
-          }
-        ]
-        objectType: 'AzureRetentionRule'
-      }
-      {
-        name: 'Weekly'
-        isDefault: false
-        lifecycles: [
-          {
-            deleteAfter: {
-              duration: 'P12W'
-              objectType: 'AbsoluteDeleteOption'
-            }
-            sourceDataStore: {
-              dataStoreType: 'VaultStore'
-              objectType: 'DataStoreInfoBase'
-            }
-          }
-        ]
-        objectType: 'AzureRetentionRule'
-      }
-    ]
-  }
-}
-```
-
 ## microsoft.dataprotection/backupvaults/backupinstances
 
 Create BackupInstance
@@ -335,15 +240,101 @@ resource exampleResource 'Microsoft.DataProtection/backupVaults/backupInstances@
 }
 ```
 
-## microsoft.dataprotection/resourceguards
+## microsoft.dataprotection/backupvaults/backuppolicies
 
-Create ResourceGuard
+CreateOrUpdate BackupPolicy
 ```bicep
-resource exampleResource 'Microsoft.DataProtection/resourceGuards@2024-04-01' = {
+resource exampleResource 'Microsoft.DataProtection/backupVaults/backupPolicies@2024-04-01' = {
+  parent: parentResource 
   name: 'example'
-  location: 'WestUS'
-  tags: {
-    key1: 'val1'
+  properties: {
+    datasourceTypes: [
+      'OssDB'
+    ]
+    objectType: 'BackupPolicy'
+    policyRules: [
+      {
+        name: 'BackupWeekly'
+        backupParameters: {
+          backupType: 'Full'
+          objectType: 'AzureBackupParams'
+        }
+        dataStore: {
+          dataStoreType: 'VaultStore'
+          objectType: 'DataStoreInfoBase'
+        }
+        objectType: 'AzureBackupRule'
+        trigger: {
+          objectType: 'ScheduleBasedTriggerContext'
+          schedule: {
+            repeatingTimeIntervals: [
+              'R/2019-11-20T08:00:00-08:00/P1W'
+            ]
+          }
+          taggingCriteria: [
+            {
+              isDefault: true
+              tagInfo: {
+                tagName: 'Default'
+              }
+              taggingPriority: 99
+            }
+            {
+              criteria: [
+                {
+                  daysOfTheWeek: [
+                    'Sunday'
+                  ]
+                  objectType: 'ScheduleBasedBackupCriteria'
+                  scheduleTimes: [
+                    '2019-03-01T13:00:00Z'
+                  ]
+                }
+              ]
+              isDefault: false
+              tagInfo: {
+                tagName: 'Weekly'
+              }
+              taggingPriority: 20
+            }
+          ]
+        }
+      }
+      {
+        name: 'Default'
+        isDefault: true
+        lifecycles: [
+          {
+            deleteAfter: {
+              duration: 'P1W'
+              objectType: 'AbsoluteDeleteOption'
+            }
+            sourceDataStore: {
+              dataStoreType: 'VaultStore'
+              objectType: 'DataStoreInfoBase'
+            }
+          }
+        ]
+        objectType: 'AzureRetentionRule'
+      }
+      {
+        name: 'Weekly'
+        isDefault: false
+        lifecycles: [
+          {
+            deleteAfter: {
+              duration: 'P12W'
+              objectType: 'AbsoluteDeleteOption'
+            }
+            sourceDataStore: {
+              dataStoreType: 'VaultStore'
+              objectType: 'DataStoreInfoBase'
+            }
+          }
+        ]
+        objectType: 'AzureRetentionRule'
+      }
+    ]
   }
 }
 ```
@@ -357,6 +348,19 @@ resource exampleResource 'Microsoft.DataProtection/backupVaults/backupResourceGu
   name: 'example'
   properties: {
     resourceGuardResourceId: '/subscriptions/f9e67185-f313-4e79-aa71-6458d429369d/resourceGroups/ResourceGuardSecurityAdminRG/providers/Microsoft.DataProtection/resourceGuards/ResourceGuardTestResource'
+  }
+}
+```
+
+## microsoft.dataprotection/resourceguards
+
+Create ResourceGuard
+```bicep
+resource exampleResource 'Microsoft.DataProtection/resourceGuards@2024-04-01' = {
+  name: 'example'
+  location: 'WestUS'
+  tags: {
+    key1: 'val1'
   }
 }
 ```

@@ -1,4 +1,8 @@
 # Microsoft.StreamAnalytics
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.streamanalytics/streamingjobs
 
@@ -109,6 +113,80 @@ resource exampleResource 'Microsoft.StreamAnalytics/streamingjobs@2016-03-01' = 
 }
 ```
 
+## microsoft.streamanalytics/streamingjobs/functions
+
+Create a JavaScript function
+```bicep
+resource exampleResource 'Microsoft.StreamAnalytics/streamingjobs/functions@2016-03-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    type: 'Scalar'
+    properties: {
+      binding: {
+        type: 'Microsoft.StreamAnalytics/JavascriptUdf'
+        properties: {
+          script: 'function (x, y) { return x + y; }'
+        }
+      }
+      inputs: [
+        {
+          dataType: 'Any'
+        }
+      ]
+      output: {
+        dataType: 'Any'
+      }
+    }
+  }
+}
+```
+
+Create an Azure ML function
+```bicep
+resource exampleResource 'Microsoft.StreamAnalytics/streamingjobs/functions@2016-03-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    type: 'Scalar'
+    properties: {
+      binding: {
+        type: 'Microsoft.MachineLearning/WebService'
+        properties: {
+          apiKey: 'someApiKey=='
+          batchSize: 1000
+          endpoint: 'someAzureMLEndpointURL'
+          inputs: {
+            name: 'input1'
+            columnNames: [
+              {
+                name: 'tweet'
+                dataType: 'string'
+                mapTo: 0
+              }
+            ]
+          }
+          outputs: [
+            {
+              name: 'Sentiment'
+              dataType: 'string'
+            }
+          ]
+        }
+      }
+      inputs: [
+        {
+          dataType: 'nvarchar(max)'
+        }
+      ]
+      output: {
+        dataType: 'nvarchar(max)'
+      }
+    }
+  }
+}
+```
+
 ## microsoft.streamanalytics/streamingjobs/inputs
 
 Create a reference blob input with CSV serialization
@@ -124,6 +202,40 @@ resource exampleResource 'Microsoft.StreamAnalytics/streamingjobs/inputs@2016-03
         container: 'state'
         dateFormat: 'yyyy/MM/dd'
         pathPattern: '{date}/{time}'
+        storageAccounts: [
+          {
+            accountKey: 'someAccountKey=='
+            accountName: 'someAccountName'
+          }
+        ]
+        timeFormat: 'HH'
+      }
+    }
+    serialization: {
+      type: 'Csv'
+      properties: {
+        encoding: 'UTF8'
+        fieldDelimiter: ','
+      }
+    }
+  }
+}
+```
+
+Create a stream blob input with CSV serialization
+```bicep
+resource exampleResource 'Microsoft.StreamAnalytics/streamingjobs/inputs@2016-03-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    type: 'Stream'
+    datasource: {
+      type: 'Microsoft.Storage/Blob'
+      properties: {
+        container: 'state'
+        dateFormat: 'yyyy/MM/dd'
+        pathPattern: '{date}/{time}'
+        sourcePartitionCount: 16
         storageAccounts: [
           {
             accountKey: 'someAccountKey=='
@@ -195,23 +307,23 @@ resource exampleResource 'Microsoft.StreamAnalytics/streamingjobs/inputs@2016-03
 }
 ```
 
-Create a stream blob input with CSV serialization
+## microsoft.streamanalytics/streamingjobs/outputs
+
+Create a blob output with CSV serialization
 ```bicep
-resource exampleResource 'Microsoft.StreamAnalytics/streamingjobs/inputs@2016-03-01' = {
+resource exampleResource 'Microsoft.StreamAnalytics/streamingjobs/outputs@2016-03-01' = {
   parent: parentResource 
   name: 'example'
   properties: {
-    type: 'Stream'
     datasource: {
       type: 'Microsoft.Storage/Blob'
       properties: {
         container: 'state'
         dateFormat: 'yyyy/MM/dd'
         pathPattern: '{date}/{time}'
-        sourcePartitionCount: 16
         storageAccounts: [
           {
-            accountKey: 'someAccountKey=='
+            accountKey: 'accountKey=='
             accountName: 'someAccountName'
           }
         ]
@@ -228,8 +340,6 @@ resource exampleResource 'Microsoft.StreamAnalytics/streamingjobs/inputs@2016-03
   }
 }
 ```
-
-## microsoft.streamanalytics/streamingjobs/outputs
 
 Create a DocumentDB output
 ```bicep
@@ -317,38 +427,6 @@ resource exampleResource 'Microsoft.StreamAnalytics/streamingjobs/outputs@2016-0
         sharedAccessPolicyKey: 'sharedAccessPolicyKey='
         sharedAccessPolicyName: 'RootManageSharedAccessKey'
         topicName: 'sdktopic'
-      }
-    }
-    serialization: {
-      type: 'Csv'
-      properties: {
-        encoding: 'UTF8'
-        fieldDelimiter: ','
-      }
-    }
-  }
-}
-```
-
-Create a blob output with CSV serialization
-```bicep
-resource exampleResource 'Microsoft.StreamAnalytics/streamingjobs/outputs@2016-03-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    datasource: {
-      type: 'Microsoft.Storage/Blob'
-      properties: {
-        container: 'state'
-        dateFormat: 'yyyy/MM/dd'
-        pathPattern: '{date}/{time}'
-        storageAccounts: [
-          {
-            accountKey: 'accountKey=='
-            accountName: 'someAccountName'
-          }
-        ]
-        timeFormat: 'HH'
       }
     }
     serialization: {
@@ -474,80 +552,6 @@ resource exampleResource 'Microsoft.StreamAnalytics/streamingjobs/transformation
   properties: {
     query: 'Select Id, Name from inputtest'
     streamingUnits: 6
-  }
-}
-```
-
-## microsoft.streamanalytics/streamingjobs/functions
-
-Create a JavaScript function
-```bicep
-resource exampleResource 'Microsoft.StreamAnalytics/streamingjobs/functions@2016-03-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    type: 'Scalar'
-    properties: {
-      binding: {
-        type: 'Microsoft.StreamAnalytics/JavascriptUdf'
-        properties: {
-          script: 'function (x, y) { return x + y; }'
-        }
-      }
-      inputs: [
-        {
-          dataType: 'Any'
-        }
-      ]
-      output: {
-        dataType: 'Any'
-      }
-    }
-  }
-}
-```
-
-Create an Azure ML function
-```bicep
-resource exampleResource 'Microsoft.StreamAnalytics/streamingjobs/functions@2016-03-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    type: 'Scalar'
-    properties: {
-      binding: {
-        type: 'Microsoft.MachineLearning/WebService'
-        properties: {
-          apiKey: 'someApiKey=='
-          batchSize: 1000
-          endpoint: 'someAzureMLEndpointURL'
-          inputs: {
-            name: 'input1'
-            columnNames: [
-              {
-                name: 'tweet'
-                dataType: 'string'
-                mapTo: 0
-              }
-            ]
-          }
-          outputs: [
-            {
-              name: 'Sentiment'
-              dataType: 'string'
-            }
-          ]
-        }
-      }
-      inputs: [
-        {
-          dataType: 'nvarchar(max)'
-        }
-      ]
-      output: {
-        dataType: 'nvarchar(max)'
-      }
-    }
   }
 }
 ```

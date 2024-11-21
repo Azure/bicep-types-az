@@ -1,4 +1,18 @@
 # Microsoft.AzureBridge.Admin
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
+
+## microsoft.azurebridge.admin/activations
+
+Return product name.
+```bicep
+resource exampleResource 'Microsoft.AzureBridge.Admin/activations@2016-01-01' = {
+  name: 'example'
+  displayName: 'default'
+}
+```
 
 ## microsoft.azurebridge.admin/activations/downloadedproducts
 
@@ -25,15 +39,5 @@ resource exampleResource 'Microsoft.AzureBridge.Admin/activations/downloadedProd
     }
     productKind: 'virtualMachineExtension'
   }
-}
-```
-
-## microsoft.azurebridge.admin/activations
-
-Return product name.
-```bicep
-resource exampleResource 'Microsoft.AzureBridge.Admin/activations@2016-01-01' = {
-  name: 'example'
-  displayName: 'default'
 }
 ```

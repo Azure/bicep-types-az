@@ -1,4 +1,8 @@
 # Microsoft.DataLakeAnalytics
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.datalakeanalytics/accounts
 
@@ -61,33 +65,6 @@ resource exampleResource 'Microsoft.DataLakeAnalytics/accounts@2016-11-01' = {
 }
 ```
 
-## microsoft.datalakeanalytics/accounts/datalakestoreaccounts
-
-Adds a Data Lake Store account
-```bicep
-resource exampleResource 'Microsoft.DataLakeAnalytics/accounts/dataLakeStoreAccounts@2016-11-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    suffix: 'test_suffix'
-  }
-}
-```
-
-## microsoft.datalakeanalytics/accounts/storageaccounts
-
-Adds an Azure Storage account
-```bicep
-resource exampleResource 'Microsoft.DataLakeAnalytics/accounts/storageAccounts@2016-11-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    accessKey: '34adfa4f-cedf-4dc0-ba29-b6d1a69ab346'
-    suffix: 'test_suffix'
-  }
-}
-```
-
 ## microsoft.datalakeanalytics/accounts/computepolicies
 
 Creates or updates the specified compute policy
@@ -104,6 +81,19 @@ resource exampleResource 'Microsoft.DataLakeAnalytics/accounts/computePolicies@2
 }
 ```
 
+## microsoft.datalakeanalytics/accounts/datalakestoreaccounts
+
+Adds a Data Lake Store account
+```bicep
+resource exampleResource 'Microsoft.DataLakeAnalytics/accounts/dataLakeStoreAccounts@2016-11-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    suffix: 'test_suffix'
+  }
+}
+```
+
 ## microsoft.datalakeanalytics/accounts/firewallrules
 
 Creates or updates the specified firewall rule
@@ -114,6 +104,20 @@ resource exampleResource 'Microsoft.DataLakeAnalytics/accounts/firewallRules@201
   properties: {
     endIpAddress: '2.2.2.2'
     startIpAddress: '1.1.1.1'
+  }
+}
+```
+
+## microsoft.datalakeanalytics/accounts/storageaccounts
+
+Adds an Azure Storage account
+```bicep
+resource exampleResource 'Microsoft.DataLakeAnalytics/accounts/storageAccounts@2016-11-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    accessKey: '34adfa4f-cedf-4dc0-ba29-b6d1a69ab346'
+    suffix: 'test_suffix'
   }
 }
 ```

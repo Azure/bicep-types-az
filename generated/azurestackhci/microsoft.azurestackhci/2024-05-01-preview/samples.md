@@ -1,4 +1,171 @@
 # Microsoft.AzureStackHCI
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
+
+## microsoft.azurestackhci/galleryimages
+
+PutGalleryImage
+```bicep
+resource exampleResource 'Microsoft.AzureStackHCI/galleryImages@2024-05-01-preview' = {
+  name: 'example'
+  extendedLocation: {
+    name: '/subscriptions/a95612cb-f1fa-4daa-a4fd-272844fa512c/resourceGroups/dogfoodarc/providers/Microsoft.ExtendedLocation/customLocations/dogfood-location'
+    type: 'CustomLocation'
+  }
+  location: 'West US2'
+  properties: {
+    containerId: '/subscriptions/a95612cb-f1fa-4daa-a4fd-272844fa512c/resourceGroups/dogfoodarc/providers/Microsoft.AzureStackHCI/storageContainers/test-storage-container'
+    imagePath: 'C:\\test.vhdx'
+    osType: 'Linux'
+  }
+}
+```
+
+## microsoft.azurestackhci/logicalnetworks
+
+PutLogicalNetwork
+```bicep
+resource exampleResource 'Microsoft.AzureStackHCI/logicalNetworks@2024-05-01-preview' = {
+  name: 'example'
+  extendedLocation: {
+    name: '/subscriptions/fd3c3665-1729-4b7b-9a38-238e83b0f98b/resourceGroups/dogfoodarc/providers/Microsoft.ExtendedLocation/customLocations/dogfood-location'
+    type: 'CustomLocation'
+  }
+  location: 'West US2'
+}
+```
+
+## microsoft.azurestackhci/marketplacegalleryimages
+
+PutMarketplaceGalleryImage
+```bicep
+resource exampleResource 'Microsoft.AzureStackHCI/marketplaceGalleryImages@2024-05-01-preview' = {
+  name: 'example'
+  extendedLocation: {
+    name: '/subscriptions/a95612cb-f1fa-4daa-a4fd-272844fa512c/resourceGroups/dogfoodarc/providers/Microsoft.ExtendedLocation/customLocations/dogfood-location'
+    type: 'CustomLocation'
+  }
+  location: 'West US2'
+  properties: {
+    cloudInitDataSource: 'Azure'
+    containerId: '/subscriptions/a95612cb-f1fa-4daa-a4fd-272844fa512c/resourceGroups/dogfoodarc/providers/Microsoft.AzureStackHCI/storageContainers/test-storage-container'
+    hyperVGeneration: 'V1'
+    identifier: {
+      offer: 'myOfferName'
+      publisher: 'myPublisherName'
+      sku: 'mySkuName'
+    }
+    osType: 'Windows'
+    version: {
+      name: '1.0.0'
+    }
+  }
+}
+```
+
+## microsoft.azurestackhci/networkinterfaces
+
+PutNetworkInterface
+```bicep
+resource exampleResource 'Microsoft.AzureStackHCI/networkInterfaces@2024-05-01-preview' = {
+  name: 'example'
+  extendedLocation: {
+    name: '/subscriptions/a95612cb-f1fa-4daa-a4fd-272844fa512c/resourceGroups/dogfoodarc/providers/Microsoft.ExtendedLocation/customLocations/dogfood-location'
+    type: 'CustomLocation'
+  }
+  location: 'eastus'
+  properties: {
+    ipConfigurations: [
+      {
+        name: 'ipconfig-sample'
+        properties: {
+          subnet: {
+            id: '/subscriptions/a95612cb-f1fa-4daa-a4fd-272844fa512c/resourceGroups/dogfoodarc/providers/Microsoft.AzureStackHCI/logicalNetworks/test-lnet'
+          }
+        }
+      }
+    ]
+  }
+}
+```
+
+## microsoft.azurestackhci/networksecuritygroups
+
+CreateNetworkSecurityGroup
+```bicep
+resource exampleResource 'Microsoft.AzureStackHCI/networkSecurityGroups@2024-05-01-preview' = {
+  name: 'example'
+  location: 'eastus'
+}
+```
+
+## microsoft.azurestackhci/networksecuritygroups/securityrules
+
+SecurityRulesCreateOrUpdate
+```bicep
+resource exampleResource 'Microsoft.AzureStackHCI/networkSecurityGroups/securityRules@2024-05-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  extendedLocation: {
+    name: '/subscriptions/fd3c3665-1729-4b7b-9a38-238e83b0f98b/resourceGroups/testrg/providers/Microsoft.ExtendedLocation/customLocations/dogfood-location'
+    type: 'CustomLocation'
+  }
+  properties: {
+    access: 'Allow'
+    destinationAddressPrefixes: [
+      '*'
+    ]
+    destinationPortRanges: [
+      '80'
+    ]
+    direction: 'Inbound'
+    priority: 130
+    sourceAddressPrefixes: [
+      '*'
+    ]
+    sourcePortRanges: [
+      '*'
+    ]
+    protocol: '*'
+  }
+}
+```
+
+## microsoft.azurestackhci/storagecontainers
+
+PutStorageContainer
+```bicep
+resource exampleResource 'Microsoft.AzureStackHCI/storageContainers@2024-05-01-preview' = {
+  name: 'example'
+  extendedLocation: {
+    name: '/subscriptions/a95612cb-f1fa-4daa-a4fd-272844fa512c/resourceGroups/dogfoodarc/providers/Microsoft.ExtendedLocation/customLocations/dogfood-location'
+    type: 'CustomLocation'
+  }
+  location: 'West US2'
+  properties: {
+    path: 'C:\\container_storage'
+  }
+}
+```
+
+## microsoft.azurestackhci/virtualharddisks
+
+PutVirtualHardDisk
+```bicep
+resource exampleResource 'Microsoft.AzureStackHCI/virtualHardDisks@2024-05-01-preview' = {
+  name: 'example'
+  extendedLocation: {
+    name: '/subscriptions/a95612cb-f1fa-4daa-a4fd-272844fa512c/resourceGroups/dogfoodarc/providers/Microsoft.ExtendedLocation/customLocations/dogfood-location'
+    type: 'CustomLocation'
+  }
+  location: 'West US2'
+  properties: {
+    diskSizeGB: 32
+  }
+}
+```
 
 ## microsoft.azurestackhci/virtualmachineinstances
 
@@ -219,169 +386,6 @@ resource exampleResource 'Microsoft.AzureStackHCI/virtualMachineInstances/guestA
       username: 'tempuser'
     }
     provisioningAction: 'install'
-  }
-}
-```
-
-## microsoft.azurestackhci/galleryimages
-
-PutGalleryImage
-```bicep
-resource exampleResource 'Microsoft.AzureStackHCI/galleryImages@2024-05-01-preview' = {
-  name: 'example'
-  extendedLocation: {
-    name: '/subscriptions/a95612cb-f1fa-4daa-a4fd-272844fa512c/resourceGroups/dogfoodarc/providers/Microsoft.ExtendedLocation/customLocations/dogfood-location'
-    type: 'CustomLocation'
-  }
-  location: 'West US2'
-  properties: {
-    containerId: '/subscriptions/a95612cb-f1fa-4daa-a4fd-272844fa512c/resourceGroups/dogfoodarc/providers/Microsoft.AzureStackHCI/storageContainers/test-storage-container'
-    imagePath: 'C:\\test.vhdx'
-    osType: 'Linux'
-  }
-}
-```
-
-## microsoft.azurestackhci/logicalnetworks
-
-PutLogicalNetwork
-```bicep
-resource exampleResource 'Microsoft.AzureStackHCI/logicalNetworks@2024-05-01-preview' = {
-  name: 'example'
-  extendedLocation: {
-    name: '/subscriptions/fd3c3665-1729-4b7b-9a38-238e83b0f98b/resourceGroups/dogfoodarc/providers/Microsoft.ExtendedLocation/customLocations/dogfood-location'
-    type: 'CustomLocation'
-  }
-  location: 'West US2'
-}
-```
-
-## microsoft.azurestackhci/marketplacegalleryimages
-
-PutMarketplaceGalleryImage
-```bicep
-resource exampleResource 'Microsoft.AzureStackHCI/marketplaceGalleryImages@2024-05-01-preview' = {
-  name: 'example'
-  extendedLocation: {
-    name: '/subscriptions/a95612cb-f1fa-4daa-a4fd-272844fa512c/resourceGroups/dogfoodarc/providers/Microsoft.ExtendedLocation/customLocations/dogfood-location'
-    type: 'CustomLocation'
-  }
-  location: 'West US2'
-  properties: {
-    cloudInitDataSource: 'Azure'
-    containerId: '/subscriptions/a95612cb-f1fa-4daa-a4fd-272844fa512c/resourceGroups/dogfoodarc/providers/Microsoft.AzureStackHCI/storageContainers/test-storage-container'
-    hyperVGeneration: 'V1'
-    identifier: {
-      offer: 'myOfferName'
-      publisher: 'myPublisherName'
-      sku: 'mySkuName'
-    }
-    osType: 'Windows'
-    version: {
-      name: '1.0.0'
-    }
-  }
-}
-```
-
-## microsoft.azurestackhci/networkinterfaces
-
-PutNetworkInterface
-```bicep
-resource exampleResource 'Microsoft.AzureStackHCI/networkInterfaces@2024-05-01-preview' = {
-  name: 'example'
-  extendedLocation: {
-    name: '/subscriptions/a95612cb-f1fa-4daa-a4fd-272844fa512c/resourceGroups/dogfoodarc/providers/Microsoft.ExtendedLocation/customLocations/dogfood-location'
-    type: 'CustomLocation'
-  }
-  location: 'eastus'
-  properties: {
-    ipConfigurations: [
-      {
-        name: 'ipconfig-sample'
-        properties: {
-          subnet: {
-            id: '/subscriptions/a95612cb-f1fa-4daa-a4fd-272844fa512c/resourceGroups/dogfoodarc/providers/Microsoft.AzureStackHCI/logicalNetworks/test-lnet'
-          }
-        }
-      }
-    ]
-  }
-}
-```
-
-## microsoft.azurestackhci/networksecuritygroups
-
-CreateNetworkSecurityGroup
-```bicep
-resource exampleResource 'Microsoft.AzureStackHCI/networkSecurityGroups@2024-05-01-preview' = {
-  name: 'example'
-  location: 'eastus'
-}
-```
-
-## microsoft.azurestackhci/storagecontainers
-
-PutStorageContainer
-```bicep
-resource exampleResource 'Microsoft.AzureStackHCI/storageContainers@2024-05-01-preview' = {
-  name: 'example'
-  extendedLocation: {
-    name: '/subscriptions/a95612cb-f1fa-4daa-a4fd-272844fa512c/resourceGroups/dogfoodarc/providers/Microsoft.ExtendedLocation/customLocations/dogfood-location'
-    type: 'CustomLocation'
-  }
-  location: 'West US2'
-  properties: {
-    path: 'C:\\container_storage'
-  }
-}
-```
-
-## microsoft.azurestackhci/virtualharddisks
-
-PutVirtualHardDisk
-```bicep
-resource exampleResource 'Microsoft.AzureStackHCI/virtualHardDisks@2024-05-01-preview' = {
-  name: 'example'
-  extendedLocation: {
-    name: '/subscriptions/a95612cb-f1fa-4daa-a4fd-272844fa512c/resourceGroups/dogfoodarc/providers/Microsoft.ExtendedLocation/customLocations/dogfood-location'
-    type: 'CustomLocation'
-  }
-  location: 'West US2'
-  properties: {
-    diskSizeGB: 32
-  }
-}
-```
-
-## microsoft.azurestackhci/networksecuritygroups/securityrules
-
-SecurityRulesCreateOrUpdate
-```bicep
-resource exampleResource 'Microsoft.AzureStackHCI/networkSecurityGroups/securityRules@2024-05-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  extendedLocation: {
-    name: '/subscriptions/fd3c3665-1729-4b7b-9a38-238e83b0f98b/resourceGroups/testrg/providers/Microsoft.ExtendedLocation/customLocations/dogfood-location'
-    type: 'CustomLocation'
-  }
-  properties: {
-    access: 'Allow'
-    destinationAddressPrefixes: [
-      '*'
-    ]
-    destinationPortRanges: [
-      '80'
-    ]
-    direction: 'Inbound'
-    priority: 130
-    sourceAddressPrefixes: [
-      '*'
-    ]
-    sourcePortRanges: [
-      '*'
-    ]
-    protocol: '*'
   }
 }
 ```

@@ -1,4 +1,8 @@
 # Microsoft.MachineLearningServices
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.machinelearningservices/workspaces
 
@@ -47,18 +51,6 @@ resource exampleResource 'Microsoft.MachineLearningServices/workspaces@2020-05-1
 
 ## microsoft.machinelearningservices/workspaces/computes
 
-Create AKS Compute
-```bicep
-resource exampleResource 'Microsoft.MachineLearningServices/workspaces/computes@2020-05-15-preview' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'eastus'
-  properties: {
-    computeType: 'AKS'
-  }
-}
-```
-
 Create a AML Compute
 ```bicep
 resource exampleResource 'Microsoft.MachineLearningServices/workspaces/computes@2020-05-15-preview' = {
@@ -95,6 +87,18 @@ resource exampleResource 'Microsoft.MachineLearningServices/workspaces/computes@
   location: 'eastus'
   properties: {
     computeType: 'DataFactory'
+  }
+}
+```
+
+Create AKS Compute
+```bicep
+resource exampleResource 'Microsoft.MachineLearningServices/workspaces/computes@2020-05-15-preview' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'eastus'
+  properties: {
+    computeType: 'AKS'
   }
 }
 ```
@@ -136,6 +140,21 @@ resource exampleResource 'Microsoft.MachineLearningServices/workspaces/computes@
 }
 ```
 
+## microsoft.machinelearningservices/workspaces/linkedworkspaces
+
+CreateLinkedWorkspace
+```bicep
+resource exampleResource 'Microsoft.MachineLearningServices/workspaces/linkedWorkspaces@2020-05-15-preview' = {
+  parent: parentResource 
+  name: 'example'
+  name: 'link-1'
+  properties: {
+    linkedWorkspaceResourceId: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1/providers/Microsoft.Synapse/workspaces/linkedWorkspace-1'
+    userAssignedIdentityResourceId: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai1'
+  }
+}
+```
+
 ## microsoft.machinelearningservices/workspaces/privateendpointconnections
 
 WorkspacePutPrivateEndpointConnection
@@ -148,21 +167,6 @@ resource exampleResource 'Microsoft.MachineLearningServices/workspaces/privateEn
       description: 'Auto-Approved'
       status: 'Approved'
     }
-  }
-}
-```
-
-## microsoft.machinelearningservices/workspaces/linkedworkspaces
-
-CreateLinkedWorkspace
-```bicep
-resource exampleResource 'Microsoft.MachineLearningServices/workspaces/linkedWorkspaces@2020-05-15-preview' = {
-  parent: parentResource 
-  name: 'example'
-  name: 'link-1'
-  properties: {
-    linkedWorkspaceResourceId: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1/providers/Microsoft.Synapse/workspaces/linkedWorkspace-1'
-    userAssignedIdentityResourceId: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai1'
   }
 }
 ```

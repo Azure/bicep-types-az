@@ -1,4 +1,22 @@
 # Microsoft.Insights
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
+
+## microsoft.insights/components/analyticsitems
+
+AnalyticsItemPut
+```bicep
+resource exampleResource 'microsoft.insights/components/analyticsItems@2015-05-01' = {
+  parent: parentResource 
+  name: 'example'
+  Content: 'let newExceptionsTimeRange = 1d;\nlet timeRangeToCheckBefore = 7d;\nexceptions\n| where timestamp < ago(timeRangeToCheckBefore)\n| summarize count() by problemId\n| join kind= rightanti (\nexceptions\n| where timestamp >= ago(newExceptionsTimeRange)\n| extend stack = tostring(details[0].rawStack)\n| summarize count(), dcount(user_AuthenticatedId), min(timestamp), max(timestamp), any(stack) by problemId  \n) on problemId \n| order by  count_ desc\n'
+  Name: 'Exceptions - New in the last 24 hours'
+  Scope: 'shared'
+  Type: 'query'
+}
+```
 
 ## microsoft.insights/components/favorites
 
@@ -26,20 +44,6 @@ resource exampleResource 'Microsoft.Insights/components/favorites@2015-05-01' = 
 }
 ```
 
-## microsoft.insights/components/analyticsitems
-
-AnalyticsItemPut
-```bicep
-resource exampleResource 'microsoft.insights/components/analyticsItems@2015-05-01' = {
-  parent: parentResource 
-  name: 'example'
-  Content: 'let newExceptionsTimeRange = 1d;\nlet timeRangeToCheckBefore = 7d;\nexceptions\n| where timestamp < ago(timeRangeToCheckBefore)\n| summarize count() by problemId\n| join kind= rightanti (\nexceptions\n| where timestamp >= ago(newExceptionsTimeRange)\n| extend stack = tostring(details[0].rawStack)\n| summarize count(), dcount(user_AuthenticatedId), min(timestamp), max(timestamp), any(stack) by problemId  \n) on problemId \n| order by  count_ desc\n'
-  Name: 'Exceptions - New in the last 24 hours'
-  Scope: 'shared'
-  Type: 'query'
-}
-```
-
 ## microsoft.insights/components/myanalyticsitems
 
 AnalyticsItemPut
@@ -51,6 +55,29 @@ resource exampleResource 'microsoft.insights/components/myanalyticsItems@2015-05
   Name: 'Exceptions - New in the last 24 hours'
   Scope: 'shared'
   Type: 'query'
+}
+```
+
+## microsoft.insights/myworkbooks
+
+WorkbookAdd
+```bicep
+resource exampleResource 'Microsoft.Insights/myWorkbooks@2015-05-01' = {
+  name: 'example'
+  name: 'deadb33f-8bee-4d3b-a059-9be8dac93960'
+  id: 'c0deea5e-3344-40f2-96f8-6f8e1c3b5722'
+  kind: 'user'
+  location: 'west us'
+  properties: {
+    category: 'workbook'
+    displayName: 'Blah Blah Blah'
+    serializedData: '{"version":"Notebook/1.0","items":[{"type":1,"content":"{"json":"## New workbook\\r\\n---\\r\\n\\r\\nWelcome to your new workbook.  This area will display text formatted as markdown.\\r\\n\\r\\n\\r\\nWe\'ve included a basic analytics query to get you started. Use the `Edit` button below each section to configure it or add more sections."}","halfWidth":null,"conditionalVisibility":null},{"type":3,"content":"{"version":"KqlItem/1.0","query":"union withsource=TableName *\\n| summarize Count=count() by TableName\\n| render barchart","showQuery":false,"size":1,"aggregation":0,"showAnnotations":false}","halfWidth":null,"conditionalVisibility":null}],"isLocked":false}'
+    sourceId: '/subscriptions/00000000-0000-0000-0000-00000000/resourceGroups/MyGroup/providers/Microsoft.Web/sites/MyTestApp-CodeLens'
+  }
+  tags: [
+    'TagSample01'
+    'TagSample02'
+  ]
 }
 ```
 
@@ -73,29 +100,6 @@ resource exampleResource 'microsoft.insights/workbooks@2015-05-01' = {
     }
     userId: 'userId'
     workbookId: 'deadb33f-8bee-4d3b-a059-9be8dac93960'
-  }
-  tags: [
-    'TagSample01'
-    'TagSample02'
-  ]
-}
-```
-
-## microsoft.insights/myworkbooks
-
-WorkbookAdd
-```bicep
-resource exampleResource 'Microsoft.Insights/myWorkbooks@2015-05-01' = {
-  name: 'example'
-  name: 'deadb33f-8bee-4d3b-a059-9be8dac93960'
-  id: 'c0deea5e-3344-40f2-96f8-6f8e1c3b5722'
-  kind: 'user'
-  location: 'west us'
-  properties: {
-    category: 'workbook'
-    displayName: 'Blah Blah Blah'
-    serializedData: '{"version":"Notebook/1.0","items":[{"type":1,"content":"{"json":"## New workbook\\r\\n---\\r\\n\\r\\nWelcome to your new workbook.  This area will display text formatted as markdown.\\r\\n\\r\\n\\r\\nWe\'ve included a basic analytics query to get you started. Use the `Edit` button below each section to configure it or add more sections."}","halfWidth":null,"conditionalVisibility":null},{"type":3,"content":"{"version":"KqlItem/1.0","query":"union withsource=TableName *\\n| summarize Count=count() by TableName\\n| render barchart","showQuery":false,"size":1,"aggregation":0,"showAnnotations":false}","halfWidth":null,"conditionalVisibility":null}],"isLocked":false}'
-    sourceId: '/subscriptions/00000000-0000-0000-0000-00000000/resourceGroups/MyGroup/providers/Microsoft.Web/sites/MyTestApp-CodeLens'
   }
   tags: [
     'TagSample01'

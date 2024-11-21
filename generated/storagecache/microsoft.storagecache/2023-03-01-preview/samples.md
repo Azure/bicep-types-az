@@ -1,4 +1,57 @@
 # Microsoft.StorageCache
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
+
+## microsoft.storagecache/amlfilesystems
+
+amlFilesystems_CreateOrUpdate
+```bicep
+resource exampleResource 'Microsoft.StorageCache/amlFilesystems@2023-03-01-preview' = {
+  name: 'example'
+  identity: {
+    type: 'UserAssigned'
+    userAssignedIdentities: {
+      /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1: {
+      }
+    }
+  }
+  location: 'eastus'
+  properties: {
+    encryptionSettings: {
+      keyEncryptionKey: {
+        keyUrl: 'https://examplekv.vault.azure.net/keys/kvk/3540a47df75541378d3518c6a4bdf5af'
+        sourceVault: {
+          id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.KeyVault/vaults/keyvault-cmk'
+        }
+      }
+    }
+    filesystemSubnet: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.Network/virtualNetworks/scvnet/subnets/fsSub'
+    hsm: {
+      settings: {
+        container: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.Storage/storageAccounts/storageaccountname/blobServices/default/containers/containername'
+        importPrefix: '/'
+        loggingContainer: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.Storage/storageAccounts/storageaccountname/blobServices/default/containers/loggingcontainername'
+      }
+    }
+    maintenanceWindow: {
+      dayOfWeek: 'Friday'
+      timeOfDayUTC: '22:00'
+    }
+    storageCapacityTiB: 16
+  }
+  sku: {
+    name: 'AMLFS-Durable-Premium-250'
+  }
+  tags: {
+    Dept: 'ContosoAds'
+  }
+  zones: [
+    '1'
+  ]
+}
+```
 
 ## microsoft.storagecache/caches
 
@@ -205,54 +258,5 @@ resource exampleResource 'Microsoft.StorageCache/caches/storageTargets@2023-03-0
     }
     targetType: 'nfs3'
   }
-}
-```
-
-## microsoft.storagecache/amlfilesystems
-
-amlFilesystems_CreateOrUpdate
-```bicep
-resource exampleResource 'Microsoft.StorageCache/amlFilesystems@2023-03-01-preview' = {
-  name: 'example'
-  identity: {
-    type: 'UserAssigned'
-    userAssignedIdentities: {
-      /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1: {
-      }
-    }
-  }
-  location: 'eastus'
-  properties: {
-    encryptionSettings: {
-      keyEncryptionKey: {
-        keyUrl: 'https://examplekv.vault.azure.net/keys/kvk/3540a47df75541378d3518c6a4bdf5af'
-        sourceVault: {
-          id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.KeyVault/vaults/keyvault-cmk'
-        }
-      }
-    }
-    filesystemSubnet: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.Network/virtualNetworks/scvnet/subnets/fsSub'
-    hsm: {
-      settings: {
-        container: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.Storage/storageAccounts/storageaccountname/blobServices/default/containers/containername'
-        importPrefix: '/'
-        loggingContainer: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.Storage/storageAccounts/storageaccountname/blobServices/default/containers/loggingcontainername'
-      }
-    }
-    maintenanceWindow: {
-      dayOfWeek: 'Friday'
-      timeOfDayUTC: '22:00'
-    }
-    storageCapacityTiB: 16
-  }
-  sku: {
-    name: 'AMLFS-Durable-Premium-250'
-  }
-  tags: {
-    Dept: 'ContosoAds'
-  }
-  zones: [
-    '1'
-  ]
 }
 ```

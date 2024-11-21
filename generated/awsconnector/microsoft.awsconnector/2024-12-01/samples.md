@@ -1,4 +1,8 @@
 # Microsoft.AwsConnector
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.awsconnector/accessanalyzeranalyzers
 
@@ -3067,53 +3071,6 @@ resource exampleResource 'Microsoft.AwsConnector/ec2Volumes@2024-12-01' = {
 }
 ```
 
-## microsoft.awsconnector/ec2vpcs
-
-Ec2Vpcs_CreateOrReplace
-```bicep
-resource exampleResource 'Microsoft.AwsConnector/ec2Vpcs@2024-12-01' = {
-  name: 'example'
-  location: 'bcrtgodiyozdsiqbhdvsaaog'
-  properties: {
-    arn: 'isskkecektndkosbruasgvkakzf'
-    awsAccountId: 'vskthos'
-    awsProperties: {
-      cidrBlock: 'amstuguadqkmlmofdszmxhgssf'
-      cidrBlockAssociations: [
-        'ykwdexxzxjxowuuawym'
-      ]
-      defaultNetworkAcl: 'lhtepidfpfsyxksnvekueeyvw'
-      defaultSecurityGroup: 'qtqgizvsvzdqxmbwwpmtcnqlfuh'
-      enableDnsHostnames: true
-      enableDnsSupport: true
-      instanceTenancy: 'haqdsdkgbjmnwdgamqs'
-      ipv4IpamPoolId: 'ldzbfvpzpwudqtdyb'
-      ipv4NetmaskLength: 21
-      ipv6CidrBlocks: [
-        'q'
-      ]
-      tags: [
-        {
-          key: 'dn'
-          value: 'tqvkxdrwsaxvxwckrpqk'
-        }
-      ]
-      vpcId: 'wqqqqmtbgzmdfmkiaoyjdkavuzzzzw'
-    }
-    awsRegion: 'paraxj'
-    awsSourceSchema: 'vnjplxwhapuaydjjdqiaqfvbfjam'
-    awsTags: {
-      key96: 'hjcp'
-    }
-    publicCloudConnectorsResourceId: 'hpzdeuzmjfwatmynigq'
-    publicCloudResourceName: 'qjwdilmlbbam'
-  }
-  tags: {
-    key2430: 'wsbwsruiakoihittdhcmmwrjmft'
-  }
-}
-```
-
 ## microsoft.awsconnector/ec2vpcendpoints
 
 Ec2VpcEndpoints_CreateOrReplace
@@ -3197,6 +3154,53 @@ resource exampleResource 'Microsoft.AwsConnector/ec2VPCPeeringConnections@2024-1
   }
   tags: {
     key6160: 'pgblenahxpyuppjtrhgaqsoabsr'
+  }
+}
+```
+
+## microsoft.awsconnector/ec2vpcs
+
+Ec2Vpcs_CreateOrReplace
+```bicep
+resource exampleResource 'Microsoft.AwsConnector/ec2Vpcs@2024-12-01' = {
+  name: 'example'
+  location: 'bcrtgodiyozdsiqbhdvsaaog'
+  properties: {
+    arn: 'isskkecektndkosbruasgvkakzf'
+    awsAccountId: 'vskthos'
+    awsProperties: {
+      cidrBlock: 'amstuguadqkmlmofdszmxhgssf'
+      cidrBlockAssociations: [
+        'ykwdexxzxjxowuuawym'
+      ]
+      defaultNetworkAcl: 'lhtepidfpfsyxksnvekueeyvw'
+      defaultSecurityGroup: 'qtqgizvsvzdqxmbwwpmtcnqlfuh'
+      enableDnsHostnames: true
+      enableDnsSupport: true
+      instanceTenancy: 'haqdsdkgbjmnwdgamqs'
+      ipv4IpamPoolId: 'ldzbfvpzpwudqtdyb'
+      ipv4NetmaskLength: 21
+      ipv6CidrBlocks: [
+        'q'
+      ]
+      tags: [
+        {
+          key: 'dn'
+          value: 'tqvkxdrwsaxvxwckrpqk'
+        }
+      ]
+      vpcId: 'wqqqqmtbgzmdfmkiaoyjdkavuzzzzw'
+    }
+    awsRegion: 'paraxj'
+    awsSourceSchema: 'vnjplxwhapuaydjjdqiaqfvbfjam'
+    awsTags: {
+      key96: 'hjcp'
+    }
+    publicCloudConnectorsResourceId: 'hpzdeuzmjfwatmynigq'
+    publicCloudResourceName: 'qjwdilmlbbam'
+  }
+  tags: {
+    key2430: 'wsbwsruiakoihittdhcmmwrjmft'
   }
 }
 ```
@@ -5179,6 +5183,36 @@ resource exampleResource 'Microsoft.AwsConnector/kmsKeys@2024-12-01' = {
 }
 ```
 
+## microsoft.awsconnector/lambdafunctioncodelocations
+
+LambdaFunctionCodeLocations_CreateOrReplace
+```bicep
+resource exampleResource 'Microsoft.AwsConnector/lambdaFunctionCodeLocations@2024-12-01' = {
+  name: 'example'
+  location: 'qkuouoekvqfxgj'
+  properties: {
+    arn: 'cavnxpszexpsxi'
+    awsAccountId: 'kddvcdwz'
+    awsProperties: {
+      imageUri: 'vgxgdgxjcgxywrlgksntztsti'
+      location: 'wntythncasjf'
+      repositoryType: 'rokpwfiqhiulnmmyjxfwchgk'
+      resolvedImageUri: 'forzmeqdjmd'
+    }
+    awsRegion: 'gpffqddhhsxbkcblgd'
+    awsSourceSchema: 'dqmxkbgxzzurnbdbrodipprola'
+    awsTags: {
+      key6065: 'ghgubugjmthvonixbfyqrkyg'
+    }
+    publicCloudConnectorsResourceId: 'hqutrljrwdofyqxdprvsolekoxh'
+    publicCloudResourceName: 'zqervnldc'
+  }
+  tags: {
+    key5879: 'ddtmzkfuznyfoikgo'
+  }
+}
+```
+
 ## microsoft.awsconnector/lambdafunctions
 
 LambdaFunctions_CreateOrReplace
@@ -5287,36 +5321,6 @@ resource exampleResource 'Microsoft.AwsConnector/lambdaFunctions@2024-12-01' = {
   }
   tags: {
     key9520: 'pnmk'
-  }
-}
-```
-
-## microsoft.awsconnector/lambdafunctioncodelocations
-
-LambdaFunctionCodeLocations_CreateOrReplace
-```bicep
-resource exampleResource 'Microsoft.AwsConnector/lambdaFunctionCodeLocations@2024-12-01' = {
-  name: 'example'
-  location: 'qkuouoekvqfxgj'
-  properties: {
-    arn: 'cavnxpszexpsxi'
-    awsAccountId: 'kddvcdwz'
-    awsProperties: {
-      imageUri: 'vgxgdgxjcgxywrlgksntztsti'
-      location: 'wntythncasjf'
-      repositoryType: 'rokpwfiqhiulnmmyjxfwchgk'
-      resolvedImageUri: 'forzmeqdjmd'
-    }
-    awsRegion: 'gpffqddhhsxbkcblgd'
-    awsSourceSchema: 'dqmxkbgxzzurnbdbrodipprola'
-    awsTags: {
-      key6065: 'ghgubugjmthvonixbfyqrkyg'
-    }
-    publicCloudConnectorsResourceId: 'hqutrljrwdofyqxdprvsolekoxh'
-    publicCloudResourceName: 'zqervnldc'
-  }
-  tags: {
-    key5879: 'ddtmzkfuznyfoikgo'
   }
 }
 ```
@@ -5768,56 +5772,6 @@ resource exampleResource 'Microsoft.AwsConnector/macieAllowLists@2024-12-01' = {
 }
 ```
 
-## microsoft.awsconnector/networkfirewallfirewalls
-
-NetworkFirewallFirewalls_CreateOrReplace
-```bicep
-resource exampleResource 'Microsoft.AwsConnector/networkFirewallFirewalls@2024-12-01' = {
-  name: 'example'
-  location: 'shwlgihd'
-  properties: {
-    arn: 'zc'
-    awsAccountId: 'tcfbgbhrgcpvphfftvjmhjqg'
-    awsProperties: {
-      description: 'yjsjz'
-      deleteProtection: true
-      endpointIds: [
-        'ivgfubgdwmucvasgqbxyoxs'
-      ]
-      firewallArn: 'eukqjtyapnpaslgpyrjsuuuvrja'
-      firewallId: 'ecwdwcfmctxuqrpliya'
-      firewallName: 'rbcjdcahhnsogdcoklk'
-      firewallPolicyArn: 'evdxwcayrnvbn'
-      firewallPolicyChangeProtection: true
-      subnetChangeProtection: true
-      subnetMappings: [
-        {
-          ipAddressType: 'gkcalzfxwkomabldynmunz'
-          subnetId: 'kmo'
-        }
-      ]
-      tags: [
-        {
-          key: 'kasiukxlhrjduzsis'
-          value: 'fnavszvtxyetugcmqvandzxjawuq'
-        }
-      ]
-      vpcId: 'cxrvqz'
-    }
-    awsRegion: 'ctyppkrhygaywzprynu'
-    awsSourceSchema: 'syydqlqovymaflzph'
-    awsTags: {
-      key9022: 'plamuzuouuqwcslfbnicnejtvd'
-    }
-    publicCloudConnectorsResourceId: 'qjo'
-    publicCloudResourceName: 'hloidqb'
-  }
-  tags: {
-    key1029: 'evfw'
-  }
-}
-```
-
 ## microsoft.awsconnector/networkfirewallfirewallpolicies
 
 NetworkFirewallFirewallPolicies_CreateOrReplace
@@ -5904,6 +5858,56 @@ resource exampleResource 'Microsoft.AwsConnector/networkFirewallFirewallPolicies
   }
   tags: {
     key2040: 'rrw'
+  }
+}
+```
+
+## microsoft.awsconnector/networkfirewallfirewalls
+
+NetworkFirewallFirewalls_CreateOrReplace
+```bicep
+resource exampleResource 'Microsoft.AwsConnector/networkFirewallFirewalls@2024-12-01' = {
+  name: 'example'
+  location: 'shwlgihd'
+  properties: {
+    arn: 'zc'
+    awsAccountId: 'tcfbgbhrgcpvphfftvjmhjqg'
+    awsProperties: {
+      description: 'yjsjz'
+      deleteProtection: true
+      endpointIds: [
+        'ivgfubgdwmucvasgqbxyoxs'
+      ]
+      firewallArn: 'eukqjtyapnpaslgpyrjsuuuvrja'
+      firewallId: 'ecwdwcfmctxuqrpliya'
+      firewallName: 'rbcjdcahhnsogdcoklk'
+      firewallPolicyArn: 'evdxwcayrnvbn'
+      firewallPolicyChangeProtection: true
+      subnetChangeProtection: true
+      subnetMappings: [
+        {
+          ipAddressType: 'gkcalzfxwkomabldynmunz'
+          subnetId: 'kmo'
+        }
+      ]
+      tags: [
+        {
+          key: 'kasiukxlhrjduzsis'
+          value: 'fnavszvtxyetugcmqvandzxjawuq'
+        }
+      ]
+      vpcId: 'cxrvqz'
+    }
+    awsRegion: 'ctyppkrhygaywzprynu'
+    awsSourceSchema: 'syydqlqovymaflzph'
+    awsTags: {
+      key9022: 'plamuzuouuqwcslfbnicnejtvd'
+    }
+    publicCloudConnectorsResourceId: 'qjo'
+    publicCloudResourceName: 'hloidqb'
+  }
+  tags: {
+    key1029: 'evfw'
   }
 }
 ```
@@ -6598,6 +6602,41 @@ resource exampleResource 'Microsoft.AwsConnector/rdsDBInstances@2024-12-01' = {
 }
 ```
 
+## microsoft.awsconnector/rdsdbsnapshotattributesresults
+
+RdsDbSnapshotAttributesResults_CreateOrReplace
+```bicep
+resource exampleResource 'Microsoft.AwsConnector/rdsDBSnapshotAttributesResults@2024-12-01' = {
+  name: 'example'
+  location: 'luzcqukssqazokzghltlzp'
+  properties: {
+    arn: 'wctkioaluqun'
+    awsAccountId: 'za'
+    awsProperties: {
+      dbSnapshotAttributes: [
+        {
+          attributeName: 'yszcujemf'
+          attributeValues: [
+            'cffn'
+          ]
+        }
+      ]
+      dbSnapshotIdentifier: 'hgeztauvapideyaajrbafqyup'
+    }
+    awsRegion: 'ndsijffpilnosnrldocuqrlxitjpv'
+    awsSourceSchema: 'w'
+    awsTags: {
+      key3566: 'heyaatumbeog'
+    }
+    publicCloudConnectorsResourceId: 'bmzbcvocakxlkqxmewfdruhn'
+    publicCloudResourceName: 'kuhhovfpzvgapi'
+  }
+  tags: {
+    key3873: 'mmtaqjm'
+  }
+}
+```
+
 ## microsoft.awsconnector/rdsdbsnapshots
 
 RdsDbSnapshots_CreateOrReplace
@@ -6666,41 +6705,6 @@ resource exampleResource 'Microsoft.AwsConnector/rdsDBSnapshots@2024-12-01' = {
   }
   tags: {
     key752: 'byquognttsccsvhrdhc'
-  }
-}
-```
-
-## microsoft.awsconnector/rdsdbsnapshotattributesresults
-
-RdsDbSnapshotAttributesResults_CreateOrReplace
-```bicep
-resource exampleResource 'Microsoft.AwsConnector/rdsDBSnapshotAttributesResults@2024-12-01' = {
-  name: 'example'
-  location: 'luzcqukssqazokzghltlzp'
-  properties: {
-    arn: 'wctkioaluqun'
-    awsAccountId: 'za'
-    awsProperties: {
-      dbSnapshotAttributes: [
-        {
-          attributeName: 'yszcujemf'
-          attributeValues: [
-            'cffn'
-          ]
-        }
-      ]
-      dbSnapshotIdentifier: 'hgeztauvapideyaajrbafqyup'
-    }
-    awsRegion: 'ndsijffpilnosnrldocuqrlxitjpv'
-    awsSourceSchema: 'w'
-    awsTags: {
-      key3566: 'heyaatumbeog'
-    }
-    publicCloudConnectorsResourceId: 'bmzbcvocakxlkqxmewfdruhn'
-    publicCloudResourceName: 'kuhhovfpzvgapi'
-  }
-  tags: {
-    key3873: 'mmtaqjm'
   }
 }
 ```
@@ -6789,6 +6793,47 @@ resource exampleResource 'Microsoft.AwsConnector/rdsExportTasks@2024-12-01' = {
   }
   tags: {
     key6517: 'fgvwvrfxewegzvticmnntbypm'
+  }
+}
+```
+
+## microsoft.awsconnector/redshiftclusterparametergroups
+
+RedshiftClusterParameterGroups_CreateOrReplace
+```bicep
+resource exampleResource 'Microsoft.AwsConnector/redshiftClusterParameterGroups@2024-12-01' = {
+  name: 'example'
+  location: 'gskgxjliwptm'
+  properties: {
+    arn: 'whliokkrefhwytv'
+    awsAccountId: 'fdljzalgig'
+    awsProperties: {
+      description: 'gvl'
+      parameterGroupFamily: 'bbhnqerzrhqtinntphvuim'
+      parameterGroupName: 'tiqxhqigpmuckmnpgijvnpwzb'
+      parameters: [
+        {
+          parameterName: 'jxeucnajvjzv'
+          parameterValue: 'ubxmwmoxeslbruenu'
+        }
+      ]
+      tags: [
+        {
+          key: 'ucdvfenzatoxmpdicwhztuvgtnku'
+          value: 'qpznlj'
+        }
+      ]
+    }
+    awsRegion: 'wrhyhrmwhdmlnjjbrl'
+    awsSourceSchema: 'nkdbqnqvsdnvogwatfxlubppr'
+    awsTags: {
+      key6090: 'vaqtqamdjobsgwecpvyxeerjrrxac'
+    }
+    publicCloudConnectorsResourceId: 'nrs'
+    publicCloudResourceName: 'xnrwtxesebdfzrqiamebczhoyjbqeq'
+  }
+  tags: {
+    key4322: 'zjgvmwcimdtqwxhy'
   }
 }
 ```
@@ -6886,47 +6931,6 @@ resource exampleResource 'Microsoft.AwsConnector/redshiftClusters@2024-12-01' = 
   }
   tags: {
     key5296: 'hllwcfzqbninv'
-  }
-}
-```
-
-## microsoft.awsconnector/redshiftclusterparametergroups
-
-RedshiftClusterParameterGroups_CreateOrReplace
-```bicep
-resource exampleResource 'Microsoft.AwsConnector/redshiftClusterParameterGroups@2024-12-01' = {
-  name: 'example'
-  location: 'gskgxjliwptm'
-  properties: {
-    arn: 'whliokkrefhwytv'
-    awsAccountId: 'fdljzalgig'
-    awsProperties: {
-      description: 'gvl'
-      parameterGroupFamily: 'bbhnqerzrhqtinntphvuim'
-      parameterGroupName: 'tiqxhqigpmuckmnpgijvnpwzb'
-      parameters: [
-        {
-          parameterName: 'jxeucnajvjzv'
-          parameterValue: 'ubxmwmoxeslbruenu'
-        }
-      ]
-      tags: [
-        {
-          key: 'ucdvfenzatoxmpdicwhztuvgtnku'
-          value: 'qpznlj'
-        }
-      ]
-    }
-    awsRegion: 'wrhyhrmwhdmlnjjbrl'
-    awsSourceSchema: 'nkdbqnqvsdnvogwatfxlubppr'
-    awsTags: {
-      key6090: 'vaqtqamdjobsgwecpvyxeerjrrxac'
-    }
-    publicCloudConnectorsResourceId: 'nrs'
-    publicCloudResourceName: 'xnrwtxesebdfzrqiamebczhoyjbqeq'
-  }
-  tags: {
-    key4322: 'zjgvmwcimdtqwxhy'
   }
 }
 ```
@@ -7163,6 +7167,33 @@ resource exampleResource 'Microsoft.AwsConnector/s3AccessPoints@2024-12-01' = {
   }
   tags: {
     key2363: 'vhrwgmqmjqdfyeutonv'
+  }
+}
+```
+
+## microsoft.awsconnector/s3bucketpolicies
+
+S3BucketPolicies_CreateOrReplace
+```bicep
+resource exampleResource 'Microsoft.AwsConnector/s3BucketPolicies@2024-12-01' = {
+  name: 'example'
+  location: 'hsbqwwdspecsoigxusdbqgilaa'
+  properties: {
+    arn: 'ebpwjamccadznftkixikeutdjacadm'
+    awsAccountId: 'czyyfhht'
+    awsProperties: {
+      policy: 'fifgvjoxnidoedtzm'
+    }
+    awsRegion: 'mlepmxnkxjgtrqhtbaaoxuaj'
+    awsSourceSchema: 'wdyfvmrsshlyadt'
+    awsTags: {
+      key5637: 'ympfubnqykwth'
+    }
+    publicCloudConnectorsResourceId: 'n'
+    publicCloudResourceName: 'suksqtvhtayjy'
+  }
+  tags: {
+    key9799: 'kihjvhsun'
   }
 }
 ```
@@ -7534,33 +7565,6 @@ resource exampleResource 'Microsoft.AwsConnector/s3Buckets@2024-12-01' = {
   }
   tags: {
     key8605: 's'
-  }
-}
-```
-
-## microsoft.awsconnector/s3bucketpolicies
-
-S3BucketPolicies_CreateOrReplace
-```bicep
-resource exampleResource 'Microsoft.AwsConnector/s3BucketPolicies@2024-12-01' = {
-  name: 'example'
-  location: 'hsbqwwdspecsoigxusdbqgilaa'
-  properties: {
-    arn: 'ebpwjamccadznftkixikeutdjacadm'
-    awsAccountId: 'czyyfhht'
-    awsProperties: {
-      policy: 'fifgvjoxnidoedtzm'
-    }
-    awsRegion: 'mlepmxnkxjgtrqhtbaaoxuaj'
-    awsSourceSchema: 'wdyfvmrsshlyadt'
-    awsTags: {
-      key5637: 'ympfubnqykwth'
-    }
-    publicCloudConnectorsResourceId: 'n'
-    publicCloudResourceName: 'suksqtvhtayjy'
-  }
-  tags: {
-    key9799: 'kihjvhsun'
   }
 }
 ```

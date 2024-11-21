@@ -1,4 +1,8 @@
 # Microsoft.Workloads
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.workloads/sapvirtualinstances
 
@@ -1315,6 +1319,216 @@ resource exampleResource 'Microsoft.Workloads/sapVirtualInstances@2024-09-01' = 
 }
 ```
 
+Create Infrastructure with a new SAP Transport Directory Fileshare
+```bicep
+resource exampleResource 'Microsoft.Workloads/sapVirtualInstances@2024-09-01' = {
+  name: 'example'
+  location: 'westcentralus'
+  properties: {
+    configuration: {
+      appLocation: 'eastus'
+      configurationType: 'DeploymentWithOSConfig'
+      infrastructureConfiguration: {
+        appResourceGroup: 'X00-RG'
+        applicationServer: {
+          instanceCount: 6
+          subnetId: '/subscriptions/49d64d54-e966-4c46-a868-1999802b762c/resourceGroups/test-rg/providers/Microsoft.Networks/virtualNetworks/test-vnet/subnets/appsubnet'
+          virtualMachineConfiguration: {
+            imageReference: {
+              offer: 'RHEL-SAP'
+              publisher: 'RedHat'
+              sku: '84sapha-gen2'
+              version: 'latest'
+            }
+            osProfile: {
+              adminUsername: '{your-username}'
+              osConfiguration: {
+                disablePasswordAuthentication: true
+                osType: 'Linux'
+                sshKeyPair: {
+                  privateKey: 'xyz'
+                  publicKey: 'abc'
+                }
+              }
+            }
+            vmSize: 'Standard_E32ds_v4'
+          }
+        }
+        centralServer: {
+          instanceCount: 1
+          subnetId: '/subscriptions/49d64d54-e966-4c46-a868-1999802b762c/resourceGroups/test-rg/providers/Microsoft.Networks/virtualNetworks/test-vnet/subnets/appsubnet'
+          virtualMachineConfiguration: {
+            imageReference: {
+              offer: 'RHEL-SAP'
+              publisher: 'RedHat'
+              sku: '84sapha-gen2'
+              version: 'latest'
+            }
+            osProfile: {
+              adminUsername: '{your-username}'
+              osConfiguration: {
+                disablePasswordAuthentication: true
+                osType: 'Linux'
+                sshKeyPair: {
+                  privateKey: 'xyz'
+                  publicKey: 'abc'
+                }
+              }
+            }
+            vmSize: 'Standard_E16ds_v4'
+          }
+        }
+        databaseServer: {
+          databaseType: 'HANA'
+          instanceCount: 1
+          subnetId: '/subscriptions/49d64d54-e966-4c46-a868-1999802b762c/resourceGroups/test-rg/providers/Microsoft.Networks/virtualNetworks/test-vnet/subnets/dbsubnet'
+          virtualMachineConfiguration: {
+            imageReference: {
+              offer: 'RHEL-SAP'
+              publisher: 'RedHat'
+              sku: '84sapha-gen2'
+              version: 'latest'
+            }
+            osProfile: {
+              adminUsername: '{your-username}'
+              osConfiguration: {
+                disablePasswordAuthentication: true
+                osType: 'Linux'
+                sshKeyPair: {
+                  privateKey: 'xyz'
+                  publicKey: 'abc'
+                }
+              }
+            }
+            vmSize: 'Standard_M32ts'
+          }
+        }
+        deploymentType: 'ThreeTier'
+        storageConfiguration: {
+          transportFileShareConfiguration: {
+            configurationType: 'CreateAndMount'
+            resourceGroup: 'rgName'
+            storageAccountName: 'storageName'
+          }
+        }
+      }
+      osSapConfiguration: {
+        sapFqdn: 'xyz.test.com'
+      }
+    }
+    environment: 'Prod'
+    sapProduct: 'S4HANA'
+  }
+  tags: {
+  }
+}
+```
+
+Create Infrastructure with an existing SAP Transport Directory Fileshare
+```bicep
+resource exampleResource 'Microsoft.Workloads/sapVirtualInstances@2024-09-01' = {
+  name: 'example'
+  location: 'westcentralus'
+  properties: {
+    configuration: {
+      appLocation: 'eastus'
+      configurationType: 'DeploymentWithOSConfig'
+      infrastructureConfiguration: {
+        appResourceGroup: 'X00-RG'
+        applicationServer: {
+          instanceCount: 6
+          subnetId: '/subscriptions/49d64d54-e966-4c46-a868-1999802b762c/resourceGroups/test-rg/providers/Microsoft.Networks/virtualNetworks/test-vnet/subnets/appsubnet'
+          virtualMachineConfiguration: {
+            imageReference: {
+              offer: 'RHEL-SAP'
+              publisher: 'RedHat'
+              sku: '84sapha-gen2'
+              version: 'latest'
+            }
+            osProfile: {
+              adminUsername: '{your-username}'
+              osConfiguration: {
+                disablePasswordAuthentication: true
+                osType: 'Linux'
+                sshKeyPair: {
+                  privateKey: 'xyz'
+                  publicKey: 'abc'
+                }
+              }
+            }
+            vmSize: 'Standard_E32ds_v4'
+          }
+        }
+        centralServer: {
+          instanceCount: 1
+          subnetId: '/subscriptions/49d64d54-e966-4c46-a868-1999802b762c/resourceGroups/test-rg/providers/Microsoft.Networks/virtualNetworks/test-vnet/subnets/appsubnet'
+          virtualMachineConfiguration: {
+            imageReference: {
+              offer: 'RHEL-SAP'
+              publisher: 'RedHat'
+              sku: '84sapha-gen2'
+              version: 'latest'
+            }
+            osProfile: {
+              adminUsername: '{your-username}'
+              osConfiguration: {
+                disablePasswordAuthentication: true
+                osType: 'Linux'
+                sshKeyPair: {
+                  privateKey: 'xyz'
+                  publicKey: 'abc'
+                }
+              }
+            }
+            vmSize: 'Standard_E16ds_v4'
+          }
+        }
+        databaseServer: {
+          databaseType: 'HANA'
+          instanceCount: 1
+          subnetId: '/subscriptions/49d64d54-e966-4c46-a868-1999802b762c/resourceGroups/test-rg/providers/Microsoft.Networks/virtualNetworks/test-vnet/subnets/dbsubnet'
+          virtualMachineConfiguration: {
+            imageReference: {
+              offer: 'RHEL-SAP'
+              publisher: 'RedHat'
+              sku: '84sapha-gen2'
+              version: 'latest'
+            }
+            osProfile: {
+              adminUsername: '{your-username}'
+              osConfiguration: {
+                disablePasswordAuthentication: true
+                osType: 'Linux'
+                sshKeyPair: {
+                  privateKey: 'xyz'
+                  publicKey: 'abc'
+                }
+              }
+            }
+            vmSize: 'Standard_M32ts'
+          }
+        }
+        deploymentType: 'ThreeTier'
+        storageConfiguration: {
+          transportFileShareConfiguration: {
+            configurationType: 'Mount'
+            id: '/subscriptions/49d64d54-e888-4c46-a868-1936802b762c/resourceGroups/testrg/providers/Microsoft.Network/privateEndpoints/endpoint'
+            privateEndpointId: '/subscriptions/49d64d54-e888-4c46-a868-1936802b762c/resourceGroups/testrg/providers/Microsoft.Network/privateEndpoints/endpoint'
+          }
+        }
+      }
+      osSapConfiguration: {
+        sapFqdn: 'xyz.test.com'
+      }
+    }
+    environment: 'Prod'
+    sapProduct: 'S4HANA'
+  }
+  tags: {
+  }
+}
+```
+
 Create Infrastructure with Disk and OS configuration for Distributed System (Recommended)
 ```bicep
 resource exampleResource 'Microsoft.Workloads/sapVirtualInstances@2024-09-01' = {
@@ -2192,216 +2406,6 @@ resource exampleResource 'Microsoft.Workloads/sapVirtualInstances@2024-09-01' = 
       }
     }
     environment: 'NonProd'
-    sapProduct: 'S4HANA'
-  }
-  tags: {
-  }
-}
-```
-
-Create Infrastructure with a new SAP Transport Directory Fileshare
-```bicep
-resource exampleResource 'Microsoft.Workloads/sapVirtualInstances@2024-09-01' = {
-  name: 'example'
-  location: 'westcentralus'
-  properties: {
-    configuration: {
-      appLocation: 'eastus'
-      configurationType: 'DeploymentWithOSConfig'
-      infrastructureConfiguration: {
-        appResourceGroup: 'X00-RG'
-        applicationServer: {
-          instanceCount: 6
-          subnetId: '/subscriptions/49d64d54-e966-4c46-a868-1999802b762c/resourceGroups/test-rg/providers/Microsoft.Networks/virtualNetworks/test-vnet/subnets/appsubnet'
-          virtualMachineConfiguration: {
-            imageReference: {
-              offer: 'RHEL-SAP'
-              publisher: 'RedHat'
-              sku: '84sapha-gen2'
-              version: 'latest'
-            }
-            osProfile: {
-              adminUsername: '{your-username}'
-              osConfiguration: {
-                disablePasswordAuthentication: true
-                osType: 'Linux'
-                sshKeyPair: {
-                  privateKey: 'xyz'
-                  publicKey: 'abc'
-                }
-              }
-            }
-            vmSize: 'Standard_E32ds_v4'
-          }
-        }
-        centralServer: {
-          instanceCount: 1
-          subnetId: '/subscriptions/49d64d54-e966-4c46-a868-1999802b762c/resourceGroups/test-rg/providers/Microsoft.Networks/virtualNetworks/test-vnet/subnets/appsubnet'
-          virtualMachineConfiguration: {
-            imageReference: {
-              offer: 'RHEL-SAP'
-              publisher: 'RedHat'
-              sku: '84sapha-gen2'
-              version: 'latest'
-            }
-            osProfile: {
-              adminUsername: '{your-username}'
-              osConfiguration: {
-                disablePasswordAuthentication: true
-                osType: 'Linux'
-                sshKeyPair: {
-                  privateKey: 'xyz'
-                  publicKey: 'abc'
-                }
-              }
-            }
-            vmSize: 'Standard_E16ds_v4'
-          }
-        }
-        databaseServer: {
-          databaseType: 'HANA'
-          instanceCount: 1
-          subnetId: '/subscriptions/49d64d54-e966-4c46-a868-1999802b762c/resourceGroups/test-rg/providers/Microsoft.Networks/virtualNetworks/test-vnet/subnets/dbsubnet'
-          virtualMachineConfiguration: {
-            imageReference: {
-              offer: 'RHEL-SAP'
-              publisher: 'RedHat'
-              sku: '84sapha-gen2'
-              version: 'latest'
-            }
-            osProfile: {
-              adminUsername: '{your-username}'
-              osConfiguration: {
-                disablePasswordAuthentication: true
-                osType: 'Linux'
-                sshKeyPair: {
-                  privateKey: 'xyz'
-                  publicKey: 'abc'
-                }
-              }
-            }
-            vmSize: 'Standard_M32ts'
-          }
-        }
-        deploymentType: 'ThreeTier'
-        storageConfiguration: {
-          transportFileShareConfiguration: {
-            configurationType: 'CreateAndMount'
-            resourceGroup: 'rgName'
-            storageAccountName: 'storageName'
-          }
-        }
-      }
-      osSapConfiguration: {
-        sapFqdn: 'xyz.test.com'
-      }
-    }
-    environment: 'Prod'
-    sapProduct: 'S4HANA'
-  }
-  tags: {
-  }
-}
-```
-
-Create Infrastructure with an existing SAP Transport Directory Fileshare
-```bicep
-resource exampleResource 'Microsoft.Workloads/sapVirtualInstances@2024-09-01' = {
-  name: 'example'
-  location: 'westcentralus'
-  properties: {
-    configuration: {
-      appLocation: 'eastus'
-      configurationType: 'DeploymentWithOSConfig'
-      infrastructureConfiguration: {
-        appResourceGroup: 'X00-RG'
-        applicationServer: {
-          instanceCount: 6
-          subnetId: '/subscriptions/49d64d54-e966-4c46-a868-1999802b762c/resourceGroups/test-rg/providers/Microsoft.Networks/virtualNetworks/test-vnet/subnets/appsubnet'
-          virtualMachineConfiguration: {
-            imageReference: {
-              offer: 'RHEL-SAP'
-              publisher: 'RedHat'
-              sku: '84sapha-gen2'
-              version: 'latest'
-            }
-            osProfile: {
-              adminUsername: '{your-username}'
-              osConfiguration: {
-                disablePasswordAuthentication: true
-                osType: 'Linux'
-                sshKeyPair: {
-                  privateKey: 'xyz'
-                  publicKey: 'abc'
-                }
-              }
-            }
-            vmSize: 'Standard_E32ds_v4'
-          }
-        }
-        centralServer: {
-          instanceCount: 1
-          subnetId: '/subscriptions/49d64d54-e966-4c46-a868-1999802b762c/resourceGroups/test-rg/providers/Microsoft.Networks/virtualNetworks/test-vnet/subnets/appsubnet'
-          virtualMachineConfiguration: {
-            imageReference: {
-              offer: 'RHEL-SAP'
-              publisher: 'RedHat'
-              sku: '84sapha-gen2'
-              version: 'latest'
-            }
-            osProfile: {
-              adminUsername: '{your-username}'
-              osConfiguration: {
-                disablePasswordAuthentication: true
-                osType: 'Linux'
-                sshKeyPair: {
-                  privateKey: 'xyz'
-                  publicKey: 'abc'
-                }
-              }
-            }
-            vmSize: 'Standard_E16ds_v4'
-          }
-        }
-        databaseServer: {
-          databaseType: 'HANA'
-          instanceCount: 1
-          subnetId: '/subscriptions/49d64d54-e966-4c46-a868-1999802b762c/resourceGroups/test-rg/providers/Microsoft.Networks/virtualNetworks/test-vnet/subnets/dbsubnet'
-          virtualMachineConfiguration: {
-            imageReference: {
-              offer: 'RHEL-SAP'
-              publisher: 'RedHat'
-              sku: '84sapha-gen2'
-              version: 'latest'
-            }
-            osProfile: {
-              adminUsername: '{your-username}'
-              osConfiguration: {
-                disablePasswordAuthentication: true
-                osType: 'Linux'
-                sshKeyPair: {
-                  privateKey: 'xyz'
-                  publicKey: 'abc'
-                }
-              }
-            }
-            vmSize: 'Standard_M32ts'
-          }
-        }
-        deploymentType: 'ThreeTier'
-        storageConfiguration: {
-          transportFileShareConfiguration: {
-            configurationType: 'Mount'
-            id: '/subscriptions/49d64d54-e888-4c46-a868-1936802b762c/resourceGroups/testrg/providers/Microsoft.Network/privateEndpoints/endpoint'
-            privateEndpointId: '/subscriptions/49d64d54-e888-4c46-a868-1936802b762c/resourceGroups/testrg/providers/Microsoft.Network/privateEndpoints/endpoint'
-          }
-        }
-      }
-      osSapConfiguration: {
-        sapFqdn: 'xyz.test.com'
-      }
-    }
-    environment: 'Prod'
     sapProduct: 'S4HANA'
   }
   tags: {

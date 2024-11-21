@@ -1,19 +1,8 @@
 # microsoft.insights
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
 
-## microsoft.insights/guestdiagnosticsettingsassociation
-
-Create or update an guest diagnostic settings association
-```bicep
-resource exampleResource 'microsoft.insights/guestDiagnosticSettingsAssociation@2018-06-01-preview' = {
-  name: 'example'
-  location: 'Global'
-  properties: {
-    guestDiagnosticSettingsName: '/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/Default-Association-ResourceGroup/providers/providers/microsoft.insights/guestDiagnosticSettings/vmSettingForSecurity'
-  }
-  tags: {
-  }
-}
-```
 
 ## microsoft.insights/guestdiagnosticsettings
 
@@ -87,6 +76,21 @@ resource exampleResource 'microsoft.insights/guestDiagnosticSettings@2018-06-01-
       }
     ]
     osType: 'Windows'
+  }
+  tags: {
+  }
+}
+```
+
+## microsoft.insights/guestdiagnosticsettingsassociation
+
+Create or update an guest diagnostic settings association
+```bicep
+resource exampleResource 'microsoft.insights/guestDiagnosticSettingsAssociation@2018-06-01-preview' = {
+  name: 'example'
+  location: 'Global'
+  properties: {
+    guestDiagnosticSettingsName: '/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/Default-Association-ResourceGroup/providers/providers/microsoft.insights/guestDiagnosticSettings/vmSettingForSecurity'
   }
   tags: {
   }

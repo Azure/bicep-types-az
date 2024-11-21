@@ -1,4 +1,8 @@
 # Microsoft.KeyVault
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.keyvault/managedhsms
 
@@ -23,19 +27,6 @@ resource exampleResource 'Microsoft.KeyVault/managedHSMs@2020-04-01-preview' = {
   tags: {
     Dept: 'hsm'
     Environment: 'dogfood'
-  }
-}
-```
-
-## microsoft.keyvault/vaults/keys
-
-Create a key
-```bicep
-resource exampleResource 'Microsoft.KeyVault/vaults/keys@2020-04-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    kty: 'RSA'
   }
 }
 ```
@@ -172,6 +163,19 @@ resource exampleResource 'Microsoft.KeyVault/vaults/accessPolicies@2020-04-01-pr
         tenantId: '00000000-0000-0000-0000-000000000000'
       }
     ]
+  }
+}
+```
+
+## microsoft.keyvault/vaults/keys
+
+Create a key
+```bicep
+resource exampleResource 'Microsoft.KeyVault/vaults/keys@2020-04-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    kty: 'RSA'
   }
 }
 ```

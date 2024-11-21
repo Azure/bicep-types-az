@@ -1,4 +1,53 @@
 # Microsoft.DevHub
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
+
+## microsoft.devhub/iacprofiles
+
+Create IacProfile
+```bicep
+resource exampleResource 'Microsoft.DevHub/iacProfiles@2024-05-01-preview' = {
+  name: 'example'
+  location: 'eastus'
+  properties: {
+    githubProfile: {
+      repositoryName: 'localtest'
+      repositoryOwner: 'qfai'
+    }
+    stages: [
+      {
+        dependencies: [
+        ]
+        gitEnvironment: 'Terraform'
+        stageName: 'dev'
+      }
+      {
+        dependencies: [
+          'dev'
+        ]
+        gitEnvironment: 'Terraform'
+        stageName: 'qa'
+      }
+    ]
+    templates: [
+      {
+        instanceName: 'quickinstance'
+        instanceStage: 'dev'
+        quickStartTemplateType: 'HCIAKS'
+        templateName: 'hciaksss'
+      }
+    ]
+    terraformProfile: {
+      storageAccountName: 'iacbackend'
+      storageAccountResourceGroup: 'test'
+      storageAccountSubscription: '586c20df-c465-4f10-8673-65aa4859e7ca'
+      storageContainerName: 'tfbackend'
+    }
+  }
+}
+```
 
 ## microsoft.devhub/workflows
 
@@ -93,51 +142,6 @@ resource exampleResource 'Microsoft.DevHub/workflows@2024-05-01-preview' = {
   }
   tags: {
     appname: 'testApp'
-  }
-}
-```
-
-## microsoft.devhub/iacprofiles
-
-Create IacProfile
-```bicep
-resource exampleResource 'Microsoft.DevHub/iacProfiles@2024-05-01-preview' = {
-  name: 'example'
-  location: 'eastus'
-  properties: {
-    githubProfile: {
-      repositoryName: 'localtest'
-      repositoryOwner: 'qfai'
-    }
-    stages: [
-      {
-        dependencies: [
-        ]
-        gitEnvironment: 'Terraform'
-        stageName: 'dev'
-      }
-      {
-        dependencies: [
-          'dev'
-        ]
-        gitEnvironment: 'Terraform'
-        stageName: 'qa'
-      }
-    ]
-    templates: [
-      {
-        instanceName: 'quickinstance'
-        instanceStage: 'dev'
-        quickStartTemplateType: 'HCIAKS'
-        templateName: 'hciaksss'
-      }
-    ]
-    terraformProfile: {
-      storageAccountName: 'iacbackend'
-      storageAccountResourceGroup: 'test'
-      storageAccountSubscription: '586c20df-c465-4f10-8673-65aa4859e7ca'
-      storageContainerName: 'tfbackend'
-    }
   }
 }
 ```

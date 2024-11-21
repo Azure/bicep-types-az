@@ -1,4 +1,8 @@
 # Microsoft.HealthcareApis
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.healthcareapis/services
 
@@ -105,6 +109,33 @@ resource exampleResource 'Microsoft.HealthcareApis/workspaces@2022-10-01-preview
 }
 ```
 
+## microsoft.healthcareapis/workspaces/analyticsconnectors
+
+Create or update a Analytics Connectors Service
+```bicep
+resource exampleResource 'Microsoft.HealthcareApis/workspaces/analyticsconnectors@2022-10-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'westus'
+  properties: {
+    dataDestinationConfiguration: {
+      type: 'datalake'
+      dataLakeName: 'exampledatalake'
+    }
+    dataMappingConfiguration: {
+      type: 'fhirToParquet'
+      extensionSchemaReference: 'acrexample.azurecr.io/blah@sha256aaa/Extension'
+      filterConfigurationReference: 'acrexample.azurecr.io/blah@sha256xxx'
+    }
+    dataSourceConfiguration: {
+      type: 'fhirservice'
+      kind: 'R4'
+      url: 'https://workspace-examplefhir.fhir.azurehealthcareapis.com'
+    }
+  }
+}
+```
+
 ## microsoft.healthcareapis/workspaces/dicomservices
 
 Create or update a Dicom Service
@@ -114,6 +145,72 @@ resource exampleResource 'Microsoft.HealthcareApis/workspaces/dicomservices@2022
   name: 'example'
   location: 'westus'
   properties: {
+  }
+}
+```
+
+## microsoft.healthcareapis/workspaces/fhirservices
+
+Create or update a Fhir Service
+```bicep
+resource exampleResource 'Microsoft.HealthcareApis/workspaces/fhirservices@2022-10-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  identity: {
+    type: 'SystemAssigned'
+  }
+  kind: 'fhir-R4'
+  location: 'westus'
+  properties: {
+    accessPolicies: [
+      {
+        objectId: 'c487e7d1-3210-41a3-8ccc-e9372b78da47'
+      }
+      {
+        objectId: '5b307da8-43d4-492b-8b66-b0294ade872f'
+      }
+    ]
+    acrConfiguration: {
+      loginServers: [
+        'test1.azurecr.io'
+      ]
+    }
+    authenticationConfiguration: {
+      audience: 'https://azurehealthcareapis.com'
+      authority: 'https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc'
+      smartProxyEnabled: true
+    }
+    corsConfiguration: {
+      allowCredentials: false
+      headers: [
+        '*'
+      ]
+      maxAge: 1440
+      methods: [
+        'DELETE'
+        'GET'
+        'OPTIONS'
+        'PATCH'
+        'POST'
+        'PUT'
+      ]
+      origins: [
+        '*'
+      ]
+    }
+    exportConfiguration: {
+      storageAccountName: 'existingStorageAccount'
+    }
+    importConfiguration: {
+      enabled: false
+      initialImportMode: false
+      integrationDataStore: 'existingStorageAccount'
+    }
+  }
+  tags: {
+    additionalProp1: 'string'
+    additionalProp2: 'string'
+    additionalProp3: 'string'
   }
 }
 ```
@@ -209,72 +306,6 @@ resource exampleResource 'Microsoft.HealthcareApis/workspaces/iotconnectors/fhir
 }
 ```
 
-## microsoft.healthcareapis/workspaces/fhirservices
-
-Create or update a Fhir Service
-```bicep
-resource exampleResource 'Microsoft.HealthcareApis/workspaces/fhirservices@2022-10-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  identity: {
-    type: 'SystemAssigned'
-  }
-  kind: 'fhir-R4'
-  location: 'westus'
-  properties: {
-    accessPolicies: [
-      {
-        objectId: 'c487e7d1-3210-41a3-8ccc-e9372b78da47'
-      }
-      {
-        objectId: '5b307da8-43d4-492b-8b66-b0294ade872f'
-      }
-    ]
-    acrConfiguration: {
-      loginServers: [
-        'test1.azurecr.io'
-      ]
-    }
-    authenticationConfiguration: {
-      audience: 'https://azurehealthcareapis.com'
-      authority: 'https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc'
-      smartProxyEnabled: true
-    }
-    corsConfiguration: {
-      allowCredentials: false
-      headers: [
-        '*'
-      ]
-      maxAge: 1440
-      methods: [
-        'DELETE'
-        'GET'
-        'OPTIONS'
-        'PATCH'
-        'POST'
-        'PUT'
-      ]
-      origins: [
-        '*'
-      ]
-    }
-    exportConfiguration: {
-      storageAccountName: 'existingStorageAccount'
-    }
-    importConfiguration: {
-      enabled: false
-      initialImportMode: false
-      integrationDataStore: 'existingStorageAccount'
-    }
-  }
-  tags: {
-    additionalProp1: 'string'
-    additionalProp2: 'string'
-    additionalProp3: 'string'
-  }
-}
-```
-
 ## microsoft.healthcareapis/workspaces/privateendpointconnections
 
 WorkspacePrivateEndpointConnection_CreateOrUpdate
@@ -286,33 +317,6 @@ resource exampleResource 'Microsoft.HealthcareApis/workspaces/privateEndpointCon
     privateLinkServiceConnectionState: {
       description: 'Auto-Approved'
       status: 'Approved'
-    }
-  }
-}
-```
-
-## microsoft.healthcareapis/workspaces/analyticsconnectors
-
-Create or update a Analytics Connectors Service
-```bicep
-resource exampleResource 'Microsoft.HealthcareApis/workspaces/analyticsconnectors@2022-10-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'westus'
-  properties: {
-    dataDestinationConfiguration: {
-      type: 'datalake'
-      dataLakeName: 'exampledatalake'
-    }
-    dataMappingConfiguration: {
-      type: 'fhirToParquet'
-      extensionSchemaReference: 'acrexample.azurecr.io/blah@sha256aaa/Extension'
-      filterConfigurationReference: 'acrexample.azurecr.io/blah@sha256xxx'
-    }
-    dataSourceConfiguration: {
-      type: 'fhirservice'
-      kind: 'R4'
-      url: 'https://workspace-examplefhir.fhir.azurehealthcareapis.com'
     }
   }
 }

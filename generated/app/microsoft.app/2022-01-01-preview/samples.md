@@ -1,4 +1,8 @@
 # Microsoft.App
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.app/containerapps
 
@@ -76,6 +80,58 @@ resource exampleResource 'Microsoft.App/containerApps@2022-01-01-preview' = {
 }
 ```
 
+## microsoft.app/containerapps/authconfigs
+
+Create or Update Container App AuthConfig
+```bicep
+resource exampleResource 'Microsoft.App/containerApps/authConfigs@2022-01-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    globalValidation: {
+      unauthenticatedClientAction: 'AllowAnonymous'
+    }
+    identityProviders: {
+      facebook: {
+        registration: {
+          appId: '123'
+          appSecretSettingName: 'facebook-secret'
+        }
+      }
+    }
+    platform: {
+      enabled: true
+    }
+  }
+}
+```
+
+## microsoft.app/containerapps/sourcecontrols
+
+Create or Update Container App SourceControl
+```bicep
+resource exampleResource 'Microsoft.App/containerApps/sourcecontrols@2022-01-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    branch: 'master'
+    githubActionConfiguration: {
+      azureCredentials: {
+        clientId: '<clientid>'
+        clientSecret: '<clientsecret>'
+        tenantId: '<tenantid>'
+      }
+      registryInfo: {
+        registryPassword: '<registrypassword>'
+        registryUrl: 'xwang971reg.azurecr.io'
+        registryUserName: 'xwang971reg'
+      }
+    }
+    repoUrl: 'https://github.com/xwang971/ghatest'
+  }
+}
+```
+
 ## microsoft.app/managedenvironments
 
 Create environments
@@ -105,32 +161,6 @@ resource exampleResource 'Microsoft.App/managedEnvironments/certificates@2022-01
   properties: {
     password: 'private key password'
     value: 'Y2VydA=='
-  }
-}
-```
-
-## microsoft.app/containerapps/sourcecontrols
-
-Create or Update Container App SourceControl
-```bicep
-resource exampleResource 'Microsoft.App/containerApps/sourcecontrols@2022-01-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    branch: 'master'
-    githubActionConfiguration: {
-      azureCredentials: {
-        clientId: '<clientid>'
-        clientSecret: '<clientsecret>'
-        tenantId: '<tenantid>'
-      }
-      registryInfo: {
-        registryPassword: '<registrypassword>'
-        registryUrl: 'xwang971reg.azurecr.io'
-        registryUserName: 'xwang971reg'
-      }
-    }
-    repoUrl: 'https://github.com/xwang971/ghatest'
   }
 }
 ```
@@ -175,32 +205,6 @@ resource exampleResource 'Microsoft.App/managedEnvironments/daprComponents@2022-
       }
     ]
     version: 'v1'
-  }
-}
-```
-
-## microsoft.app/containerapps/authconfigs
-
-Create or Update Container App AuthConfig
-```bicep
-resource exampleResource 'Microsoft.App/containerApps/authConfigs@2022-01-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    globalValidation: {
-      unauthenticatedClientAction: 'AllowAnonymous'
-    }
-    identityProviders: {
-      facebook: {
-        registration: {
-          appId: '123'
-          appSecretSettingName: 'facebook-secret'
-        }
-      }
-    }
-    platform: {
-      enabled: true
-    }
   }
 }
 ```

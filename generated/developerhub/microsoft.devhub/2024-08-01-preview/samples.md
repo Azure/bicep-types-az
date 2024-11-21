@@ -1,4 +1,76 @@
 # Microsoft.DevHub
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
+
+## microsoft.devhub/iacprofiles
+
+Create IacProfile
+```bicep
+resource exampleResource 'Microsoft.DevHub/iacProfiles@2024-08-01-preview' = {
+  name: 'example'
+  location: 'location1'
+  properties: {
+    githubProfile: {
+      repositoryMainBranch: 'main'
+      repositoryName: 'localtest'
+      repositoryOwner: 'owner'
+    }
+    stages: [
+      {
+        dependencies: [
+        ]
+        gitEnvironment: 'Terraform'
+        stageName: 'dev'
+      }
+      {
+        dependencies: [
+          'dev'
+        ]
+        gitEnvironment: 'Terraform'
+        stageName: 'qa'
+      }
+      {
+        dependencies: [
+          'qa'
+        ]
+        gitEnvironment: 'Terraform'
+        stageName: 'prod'
+      }
+    ]
+    templates: [
+      {
+        instanceName: 'contoso'
+        instanceStage: 'dev'
+        sourceResourceId: '/subscriptions/xxxx/resourceGroups/xxxx'
+        templateDetails: [
+          {
+            count: 1
+            namingConvention: '$sitid-hci'
+            productName: 'HCI'
+          }
+          {
+            count: 1
+            namingConvention: '$sitid-aks'
+            productName: 'AKSarc'
+          }
+        ]
+        templateName: 'base'
+      }
+    ]
+    terraformProfile: {
+      storageAccountName: 'hybridiac'
+      storageAccountResourceGroup: 'hybrid-iac'
+      storageAccountSubscription: 'subscription'
+      storageContainerName: 'hybridiac'
+    }
+  }
+  tags: {
+    appname: 'testApp'
+  }
+}
+```
 
 ## microsoft.devhub/workflows
 
@@ -89,74 +161,6 @@ resource exampleResource 'Microsoft.DevHub/workflows@2024-08-01-preview' = {
       }
       repositoryName: 'repo1'
       repositoryOwner: 'owner1'
-    }
-  }
-  tags: {
-    appname: 'testApp'
-  }
-}
-```
-
-## microsoft.devhub/iacprofiles
-
-Create IacProfile
-```bicep
-resource exampleResource 'Microsoft.DevHub/iacProfiles@2024-08-01-preview' = {
-  name: 'example'
-  location: 'location1'
-  properties: {
-    githubProfile: {
-      repositoryMainBranch: 'main'
-      repositoryName: 'localtest'
-      repositoryOwner: 'owner'
-    }
-    stages: [
-      {
-        dependencies: [
-        ]
-        gitEnvironment: 'Terraform'
-        stageName: 'dev'
-      }
-      {
-        dependencies: [
-          'dev'
-        ]
-        gitEnvironment: 'Terraform'
-        stageName: 'qa'
-      }
-      {
-        dependencies: [
-          'qa'
-        ]
-        gitEnvironment: 'Terraform'
-        stageName: 'prod'
-      }
-    ]
-    templates: [
-      {
-        instanceName: 'contoso'
-        instanceStage: 'dev'
-        sourceResourceId: '/subscriptions/xxxx/resourceGroups/xxxx'
-        templateDetails: [
-          {
-            count: 1
-            namingConvention: '$sitid-hci'
-            productName: 'HCI'
-          }
-          {
-            count: 1
-            namingConvention: '$sitid-aks'
-            productName: 'AKSarc'
-          }
-        ]
-        templateName: 'base'
-      }
-    ]
-    terraformProfile: {
-      storageAccountName: 'hybridiac'
-      storageAccountResourceGroup: 'hybrid-iac'
-      storageAccountSubscription: 'subscription'
-      storageContainerName: 'hybridiac'
     }
   }
   tags: {

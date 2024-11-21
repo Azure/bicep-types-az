@@ -1,4 +1,8 @@
 # Microsoft.Peering
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.peering/peerasns
 
@@ -26,32 +30,6 @@ resource exampleResource 'Microsoft.Peering/peerAsns@2022-01-01' = {
       }
     ]
     peerName: 'Contoso'
-  }
-}
-```
-
-## microsoft.peering/peerings/registeredasns
-
-Create or update a registered ASN for the peering
-```bicep
-resource exampleResource 'Microsoft.Peering/peerings/registeredAsns@2022-01-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    asn: 65000
-  }
-}
-```
-
-## microsoft.peering/peerings/registeredprefixes
-
-Create or update a registered prefix for the peering
-```bicep
-resource exampleResource 'Microsoft.Peering/peerings/registeredPrefixes@2022-01-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    prefix: '10.22.20.0/24'
   }
 }
 ```
@@ -183,6 +161,48 @@ resource exampleResource 'Microsoft.Peering/peerings@2022-01-01' = {
 }
 ```
 
+## microsoft.peering/peerings/registeredasns
+
+Create or update a registered ASN for the peering
+```bicep
+resource exampleResource 'Microsoft.Peering/peerings/registeredAsns@2022-01-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    asn: 65000
+  }
+}
+```
+
+## microsoft.peering/peerings/registeredprefixes
+
+Create or update a registered prefix for the peering
+```bicep
+resource exampleResource 'Microsoft.Peering/peerings/registeredPrefixes@2022-01-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    prefix: '10.22.20.0/24'
+  }
+}
+```
+
+## microsoft.peering/peeringservices
+
+Create a  peering service
+```bicep
+resource exampleResource 'Microsoft.Peering/peeringServices@2022-01-01' = {
+  name: 'example'
+  location: 'eastus'
+  properties: {
+    peeringServiceLocation: 'state1'
+    peeringServiceProvider: 'serviceProvider1'
+    providerBackupPeeringLocation: 'peeringLocation2'
+    providerPrimaryPeeringLocation: 'peeringLocation1'
+  }
+}
+```
+
 ## microsoft.peering/peeringservices/connectionmonitortests
 
 Create or Update Connection Monitor Test
@@ -209,22 +229,6 @@ resource exampleResource 'Microsoft.Peering/peeringServices/prefixes@2022-01-01'
   properties: {
     peeringServicePrefixKey: '00000000-0000-0000-0000-000000000000'
     prefix: '192.168.1.0/24'
-  }
-}
-```
-
-## microsoft.peering/peeringservices
-
-Create a  peering service
-```bicep
-resource exampleResource 'Microsoft.Peering/peeringServices@2022-01-01' = {
-  name: 'example'
-  location: 'eastus'
-  properties: {
-    peeringServiceLocation: 'state1'
-    peeringServiceProvider: 'serviceProvider1'
-    providerBackupPeeringLocation: 'peeringLocation2'
-    providerPrimaryPeeringLocation: 'peeringLocation1'
   }
 }
 ```

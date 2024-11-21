@@ -1,4 +1,8 @@
 # Microsoft.DBforMariaDB
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.dbformariadb/servers
 
@@ -85,30 +89,16 @@ resource exampleResource 'Microsoft.DBforMariaDB/servers@2018-06-01-preview' = {
 }
 ```
 
-## microsoft.dbformariadb/servers/firewallrules
+## microsoft.dbformariadb/servers/configurations
 
-FirewallRuleCreate
+ConfigurationCreateOrUpdate
 ```bicep
-resource exampleResource 'Microsoft.DBforMariaDB/servers/firewallRules@2018-06-01-preview' = {
+resource exampleResource 'Microsoft.DBforMariaDB/servers/configurations@2018-06-01-preview' = {
   parent: parentResource 
   name: 'example'
   properties: {
-    endIpAddress: '255.255.255.255'
-    startIpAddress: '0.0.0.0'
-  }
-}
-```
-
-## microsoft.dbformariadb/servers/virtualnetworkrules
-
-Create or update a virtual network rule
-```bicep
-resource exampleResource 'Microsoft.DBforMariaDB/servers/virtualNetworkRules@2018-06-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    ignoreMissingVnetServiceEndpoint: false
-    virtualNetworkSubnetId: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup/providers/Microsoft.Network/virtualNetworks/testvnet/subnets/testsubnet'
+    source: 'user-override'
+    value: 'off'
   }
 }
 ```
@@ -127,16 +117,16 @@ resource exampleResource 'Microsoft.DBforMariaDB/servers/databases@2018-06-01-pr
 }
 ```
 
-## microsoft.dbformariadb/servers/configurations
+## microsoft.dbformariadb/servers/firewallrules
 
-ConfigurationCreateOrUpdate
+FirewallRuleCreate
 ```bicep
-resource exampleResource 'Microsoft.DBforMariaDB/servers/configurations@2018-06-01-preview' = {
+resource exampleResource 'Microsoft.DBforMariaDB/servers/firewallRules@2018-06-01-preview' = {
   parent: parentResource 
   name: 'example'
   properties: {
-    source: 'user-override'
-    value: 'off'
+    endIpAddress: '255.255.255.255'
+    startIpAddress: '0.0.0.0'
   }
 }
 ```
@@ -173,6 +163,20 @@ resource exampleResource 'Microsoft.DBforMariaDB/servers/securityAlertPolicies@2
   properties: {
     emailAccountAdmins: true
     state: 'Disabled'
+  }
+}
+```
+
+## microsoft.dbformariadb/servers/virtualnetworkrules
+
+Create or update a virtual network rule
+```bicep
+resource exampleResource 'Microsoft.DBforMariaDB/servers/virtualNetworkRules@2018-06-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    ignoreMissingVnetServiceEndpoint: false
+    virtualNetworkSubnetId: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup/providers/Microsoft.Network/virtualNetworks/testvnet/subnets/testsubnet'
   }
 }
 ```

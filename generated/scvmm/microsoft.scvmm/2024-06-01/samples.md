@@ -1,4 +1,73 @@
 # Microsoft.ScVmm
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
+
+## microsoft.scvmm/availabilitysets
+
+AvailabilitySets_CreateOrUpdate_MaximumSet
+```bicep
+resource exampleResource 'Microsoft.ScVmm/availabilitySets@2024-06-01' = {
+  name: 'example'
+  extendedLocation: {
+    name: '/subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.ExtendedLocation/customLocations/customLocationName'
+    type: 'customLocation'
+  }
+  location: 'jelevilan'
+  properties: {
+    availabilitySetName: 'njrpftunzo'
+    vmmServerId: '/subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.ScVmm/vmmServers/vmmServerName'
+  }
+  tags: {
+    key5701: 'cldtxloqh'
+  }
+}
+```
+
+AvailabilitySets_CreateOrUpdate_MinimumSet
+```bicep
+resource exampleResource 'Microsoft.ScVmm/availabilitySets@2024-06-01' = {
+  name: 'example'
+  extendedLocation: {
+  }
+  location: 'jelevilan'
+}
+```
+
+## microsoft.scvmm/clouds
+
+Clouds_CreateOrUpdate_MaximumSet
+```bicep
+resource exampleResource 'Microsoft.ScVmm/clouds@2024-06-01' = {
+  name: 'example'
+  extendedLocation: {
+    name: '/subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.ExtendedLocation/customLocations/customLocationName'
+    type: 'customLocation'
+  }
+  location: 'khwsdmaxfhmbu'
+  properties: {
+    cloudCapacity: {
+    }
+    inventoryItemId: 'qjd'
+    uuid: '12345678-1234-1234-1234-12345678abcd'
+    vmmServerId: '/subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.ScVmm/vmmServers/vmmServerName'
+  }
+  tags: {
+    key4295: 'wngosgcbdifaxdobufuuqxtho'
+  }
+}
+```
+
+Clouds_CreateOrUpdate_MinimumSet
+```bicep
+resource exampleResource 'Microsoft.ScVmm/clouds@2024-06-01' = {
+  name: 'example'
+  extendedLocation: {
+  }
+  location: 'khwsdmaxfhmbu'
+}
+```
 
 ## microsoft.scvmm/virtualmachineinstances
 
@@ -125,71 +194,6 @@ GuestAgents_Create_MinimumSet
 resource exampleResource 'Microsoft.ScVmm/virtualMachineInstances/guestAgents@2024-06-01' = {
   parent: parentResource 
   name: 'example'
-}
-```
-
-## microsoft.scvmm/availabilitysets
-
-AvailabilitySets_CreateOrUpdate_MaximumSet
-```bicep
-resource exampleResource 'Microsoft.ScVmm/availabilitySets@2024-06-01' = {
-  name: 'example'
-  extendedLocation: {
-    name: '/subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.ExtendedLocation/customLocations/customLocationName'
-    type: 'customLocation'
-  }
-  location: 'jelevilan'
-  properties: {
-    availabilitySetName: 'njrpftunzo'
-    vmmServerId: '/subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.ScVmm/vmmServers/vmmServerName'
-  }
-  tags: {
-    key5701: 'cldtxloqh'
-  }
-}
-```
-
-AvailabilitySets_CreateOrUpdate_MinimumSet
-```bicep
-resource exampleResource 'Microsoft.ScVmm/availabilitySets@2024-06-01' = {
-  name: 'example'
-  extendedLocation: {
-  }
-  location: 'jelevilan'
-}
-```
-
-## microsoft.scvmm/clouds
-
-Clouds_CreateOrUpdate_MaximumSet
-```bicep
-resource exampleResource 'Microsoft.ScVmm/clouds@2024-06-01' = {
-  name: 'example'
-  extendedLocation: {
-    name: '/subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.ExtendedLocation/customLocations/customLocationName'
-    type: 'customLocation'
-  }
-  location: 'khwsdmaxfhmbu'
-  properties: {
-    cloudCapacity: {
-    }
-    inventoryItemId: 'qjd'
-    uuid: '12345678-1234-1234-1234-12345678abcd'
-    vmmServerId: '/subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.ScVmm/vmmServers/vmmServerName'
-  }
-  tags: {
-    key4295: 'wngosgcbdifaxdobufuuqxtho'
-  }
-}
-```
-
-Clouds_CreateOrUpdate_MinimumSet
-```bicep
-resource exampleResource 'Microsoft.ScVmm/clouds@2024-06-01' = {
-  name: 'example'
-  extendedLocation: {
-  }
-  location: 'khwsdmaxfhmbu'
 }
 ```
 

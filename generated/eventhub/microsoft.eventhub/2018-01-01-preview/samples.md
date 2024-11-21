@@ -1,4 +1,8 @@
 # Microsoft.EventHub
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.eventhub/clusters
 
@@ -14,21 +18,6 @@ resource exampleResource 'Microsoft.EventHub/clusters@2018-01-01-preview' = {
   tags: {
     tag1: 'value1'
     tag2: 'value2'
-  }
-}
-```
-
-## microsoft.eventhub/namespaces/ipfilterrules
-
-NameSpaceIpFilterRuleCreate
-```bicep
-resource exampleResource 'Microsoft.EventHub/namespaces/ipfilterrules@2018-01-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    action: 'Accept'
-    filterName: 'sdk-IPFilterRules-7337'
-    ipMask: '13.78.143.246/32'
   }
 }
 ```
@@ -51,15 +40,104 @@ resource exampleResource 'Microsoft.EventHub/namespaces@2018-01-01-preview' = {
 }
 ```
 
-## microsoft.eventhub/namespaces/virtualnetworkrules
+## microsoft.eventhub/namespaces/authorizationrules
 
-NameSpaceVirtualNetworkRuleCreate
+NameSpaceAuthorizationRuleCreate
 ```bicep
-resource exampleResource 'Microsoft.EventHub/namespaces/virtualnetworkrules@2018-01-01-preview' = {
+resource exampleResource 'Microsoft.EventHub/namespaces/authorizationRules@2018-01-01-preview' = {
   parent: parentResource 
   name: 'example'
   properties: {
-    virtualNetworkSubnetId: '/subscriptions/Subscription/resourceGroups/sbehvnettest/providers/Microsoft.Network/virtualNetworks/sbehvnettest/subnets/default'
+    rights: [
+      'Listen'
+      'Send'
+    ]
+  }
+}
+```
+
+## microsoft.eventhub/namespaces/disasterrecoveryconfigs
+
+EHAliasCreate
+```bicep
+resource exampleResource 'Microsoft.EventHub/namespaces/disasterRecoveryConfigs@2018-01-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    partnerNamespace: 'sdk-Namespace-37'
+  }
+}
+```
+
+## microsoft.eventhub/namespaces/eventhubs
+
+EventHubCreate
+```bicep
+resource exampleResource 'Microsoft.EventHub/namespaces/eventhubs@2018-01-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    captureDescription: {
+      destination: {
+        name: 'EventHubArchive.AzureBlockBlob'
+        properties: {
+          archiveNameFormat: '{Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}'
+          blobContainer: 'container'
+          storageAccountResourceId: '/subscriptions/e2f361f0-3b27-4503-a9cc-21cfba380093/resourceGroups/Default-Storage-SouthCentralUS/providers/Microsoft.ClassicStorage/storageAccounts/arjunteststorage'
+        }
+      }
+      enabled: true
+      encoding: 'Avro'
+      intervalInSeconds: 120
+      sizeLimitInBytes: 10485763
+    }
+    messageRetentionInDays: 4
+    partitionCount: 4
+    status: 'Active'
+  }
+}
+```
+
+## microsoft.eventhub/namespaces/eventhubs/authorizationrules
+
+EventHubAuthorizationRuleCreate
+```bicep
+resource exampleResource 'Microsoft.EventHub/namespaces/eventhubs/authorizationRules@2018-01-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    rights: [
+      'Listen'
+      'Send'
+    ]
+  }
+}
+```
+
+## microsoft.eventhub/namespaces/eventhubs/consumergroups
+
+ConsumerGroupCreate
+```bicep
+resource exampleResource 'Microsoft.EventHub/namespaces/eventhubs/consumergroups@2018-01-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    userMetadata: 'New consumergroup'
+  }
+}
+```
+
+## microsoft.eventhub/namespaces/ipfilterrules
+
+NameSpaceIpFilterRuleCreate
+```bicep
+resource exampleResource 'Microsoft.EventHub/namespaces/ipfilterrules@2018-01-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    action: 'Accept'
+    filterName: 'sdk-IPFilterRules-7337'
+    ipMask: '13.78.143.246/32'
   }
 }
 ```
@@ -119,22 +197,6 @@ resource exampleResource 'Microsoft.EventHub/namespaces/networkRuleSets@2018-01-
 }
 ```
 
-## microsoft.eventhub/namespaces/authorizationrules
-
-NameSpaceAuthorizationRuleCreate
-```bicep
-resource exampleResource 'Microsoft.EventHub/namespaces/authorizationRules@2018-01-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    rights: [
-      'Listen'
-      'Send'
-    ]
-  }
-}
-```
-
 ## microsoft.eventhub/namespaces/privateendpointconnections
 
 NameSpacePrivateEndPointConnectionCreate
@@ -155,73 +217,15 @@ resource exampleResource 'Microsoft.EventHub/namespaces/privateEndpointConnectio
 }
 ```
 
-## microsoft.eventhub/namespaces/disasterrecoveryconfigs
+## microsoft.eventhub/namespaces/virtualnetworkrules
 
-EHAliasCreate
+NameSpaceVirtualNetworkRuleCreate
 ```bicep
-resource exampleResource 'Microsoft.EventHub/namespaces/disasterRecoveryConfigs@2018-01-01-preview' = {
+resource exampleResource 'Microsoft.EventHub/namespaces/virtualnetworkrules@2018-01-01-preview' = {
   parent: parentResource 
   name: 'example'
   properties: {
-    partnerNamespace: 'sdk-Namespace-37'
-  }
-}
-```
-
-## microsoft.eventhub/namespaces/eventhubs/authorizationrules
-
-EventHubAuthorizationRuleCreate
-```bicep
-resource exampleResource 'Microsoft.EventHub/namespaces/eventhubs/authorizationRules@2018-01-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    rights: [
-      'Listen'
-      'Send'
-    ]
-  }
-}
-```
-
-## microsoft.eventhub/namespaces/eventhubs
-
-EventHubCreate
-```bicep
-resource exampleResource 'Microsoft.EventHub/namespaces/eventhubs@2018-01-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    captureDescription: {
-      destination: {
-        name: 'EventHubArchive.AzureBlockBlob'
-        properties: {
-          archiveNameFormat: '{Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}'
-          blobContainer: 'container'
-          storageAccountResourceId: '/subscriptions/e2f361f0-3b27-4503-a9cc-21cfba380093/resourceGroups/Default-Storage-SouthCentralUS/providers/Microsoft.ClassicStorage/storageAccounts/arjunteststorage'
-        }
-      }
-      enabled: true
-      encoding: 'Avro'
-      intervalInSeconds: 120
-      sizeLimitInBytes: 10485763
-    }
-    messageRetentionInDays: 4
-    partitionCount: 4
-    status: 'Active'
-  }
-}
-```
-
-## microsoft.eventhub/namespaces/eventhubs/consumergroups
-
-ConsumerGroupCreate
-```bicep
-resource exampleResource 'Microsoft.EventHub/namespaces/eventhubs/consumergroups@2018-01-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    userMetadata: 'New consumergroup'
+    virtualNetworkSubnetId: '/subscriptions/Subscription/resourceGroups/sbehvnettest/providers/Microsoft.Network/virtualNetworks/sbehvnettest/subnets/default'
   }
 }
 ```

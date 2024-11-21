@@ -1,11 +1,14 @@
 # Microsoft.ServiceLinker
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
 
-## microsoft.servicelinker/locations/dryruns
 
-ConnectorDryrunCreate
+## microsoft.servicelinker/dryruns
+
+PutDryrun
 ```bicep
-resource exampleResource 'Microsoft.ServiceLinker/locations/dryruns@2024-04-01' = {
-  parent: parentResource 
+resource exampleResource 'Microsoft.ServiceLinker/dryruns@2024-04-01' = {
   name: 'example'
   properties: {
     parameters: {
@@ -22,28 +25,6 @@ resource exampleResource 'Microsoft.ServiceLinker/locations/dryruns@2024-04-01' 
         type: 'AzureResource'
         id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test-rg/providers/Microsoft.DocumentDb/databaseAccounts/test-acc/mongodbDatabases/test-db'
       }
-    }
-  }
-}
-```
-
-## microsoft.servicelinker/locations/connectors
-
-PutConnector
-```bicep
-resource exampleResource 'Microsoft.ServiceLinker/locations/connectors@2024-04-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    authInfo: {
-      authType: 'secret'
-    }
-    secretStore: {
-      keyVaultId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test-rg/providers/Microsoft.KeyVault/vaults/test-kv'
-    }
-    targetService: {
-      type: 'AzureResource'
-      id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test-rg/providers/Microsoft.DocumentDb/databaseAccounts/test-acc/mongodbDatabases/test-db'
     }
   }
 }
@@ -75,11 +56,34 @@ resource exampleResource 'Microsoft.ServiceLinker/linkers@2024-04-01' = {
 }
 ```
 
-## microsoft.servicelinker/dryruns
+## microsoft.servicelinker/locations/connectors
 
-PutDryrun
+PutConnector
 ```bicep
-resource exampleResource 'Microsoft.ServiceLinker/dryruns@2024-04-01' = {
+resource exampleResource 'Microsoft.ServiceLinker/locations/connectors@2024-04-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    authInfo: {
+      authType: 'secret'
+    }
+    secretStore: {
+      keyVaultId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test-rg/providers/Microsoft.KeyVault/vaults/test-kv'
+    }
+    targetService: {
+      type: 'AzureResource'
+      id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test-rg/providers/Microsoft.DocumentDb/databaseAccounts/test-acc/mongodbDatabases/test-db'
+    }
+  }
+}
+```
+
+## microsoft.servicelinker/locations/dryruns
+
+ConnectorDryrunCreate
+```bicep
+resource exampleResource 'Microsoft.ServiceLinker/locations/dryruns@2024-04-01' = {
+  parent: parentResource 
   name: 'example'
   properties: {
     parameters: {

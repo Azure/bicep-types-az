@@ -1,4 +1,8 @@
 # Microsoft.Network
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.network/applicationgateways
 
@@ -461,6 +465,75 @@ resource exampleResource 'Microsoft.Network/applicationGateways@2019-04-01' = {
 }
 ```
 
+## microsoft.network/applicationgatewaywebapplicationfirewallpolicies
+
+Creates or updates a WAF policy within a resource group
+```bicep
+resource exampleResource 'Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies@2019-04-01' = {
+  name: 'example'
+  location: 'WestUs'
+  properties: {
+    customRules: [
+      {
+        name: 'Rule1'
+        action: 'Block'
+        matchConditions: [
+          {
+            matchValues: [
+              '192.168.1.0/24'
+              '10.0.0.0/24'
+            ]
+            matchVariables: [
+              {
+                selector: {
+                }
+                variableName: 'RemoteAddr'
+              }
+            ]
+            operator: 'IPMatch'
+          }
+        ]
+        priority: 1
+        ruleType: 'MatchRule'
+      }
+      {
+        name: 'Rule2'
+        action: 'Block'
+        matchConditions: [
+          {
+            matchValues: [
+              '192.168.1.0/24'
+            ]
+            matchVariables: [
+              {
+                selector: {
+                }
+                variableName: 'RemoteAddr'
+              }
+            ]
+            operator: 'IPMatch'
+          }
+          {
+            matchValues: [
+              'Windows'
+            ]
+            matchVariables: [
+              {
+                selector: 'UserAgent'
+                variableName: 'RequestHeader'
+              }
+            ]
+            operator: 'Contains'
+          }
+        ]
+        priority: 2
+        ruleType: 'MatchRule'
+      }
+    ]
+  }
+}
+```
+
 ## microsoft.network/applicationsecuritygroups
 
 Create application security group
@@ -745,6 +818,82 @@ resource exampleResource 'Microsoft.Network/bastionHosts@2019-04-01' = {
 }
 ```
 
+## microsoft.network/connections
+
+CreateVirtualNetworkGatewayConnection_S2S
+```bicep
+resource exampleResource 'Microsoft.Network/connections@2019-04-01' = {
+  name: 'example'
+  location: 'centralus'
+  properties: {
+    connectionProtocol: 'IKEv2'
+    connectionType: 'IPsec'
+    enableBgp: false
+    ipsecPolicies: [
+    ]
+    localNetworkGateway2: {
+      etag: 'W/"00000000-0000-0000-0000-000000000000"'
+      id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/localNetworkGateways/localgw'
+      location: 'centralus'
+      properties: {
+        gatewayIpAddress: 'x.x.x.x'
+        localNetworkAddressSpace: {
+          addressPrefixes: [
+            '10.1.0.0/16'
+          ]
+        }
+        resourceGuid: '00000000-0000-0000-0000-000000000000'
+      }
+      tags: {
+      }
+    }
+    routingWeight: 0
+    sharedKey: 'Abc123'
+    usePolicyBasedTrafficSelectors: false
+    virtualNetworkGateway1: {
+      etag: 'W/"00000000-0000-0000-0000-000000000000"'
+      id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vpngw'
+      location: 'centralus'
+      properties: {
+        activeActive: false
+        bgpSettings: {
+          asn: 65514
+          bgpPeeringAddress: '10.0.1.30'
+          peerWeight: 0
+        }
+        enableBgp: false
+        gatewayType: 'Vpn'
+        ipConfigurations: [
+          {
+            name: 'gwipconfig1'
+            etag: 'W/"00000000-0000-0000-0000-000000000000"'
+            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vpngw/ipConfigurations/gwipconfig1'
+            properties: {
+              privateIPAllocationMethod: 'Dynamic'
+              publicIPAddress: {
+                id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/gwpip'
+              }
+              subnet: {
+                id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/GatewaySubnet'
+              }
+            }
+          }
+        ]
+        resourceGuid: '00000000-0000-0000-0000-000000000000'
+        sku: {
+          name: 'VpnGw1'
+          capacity: 2
+          tier: 'VpnGw1'
+        }
+        vpnType: 'RouteBased'
+      }
+      tags: {
+      }
+    }
+  }
+}
+```
+
 ## microsoft.network/ddoscustompolicies
 
 Create DDoS custom policy
@@ -770,6 +919,52 @@ resource exampleResource 'Microsoft.Network/ddosProtectionPlans@2019-04-01' = {
   name: 'example'
   location: 'westus'
   properties: {
+  }
+}
+```
+
+## microsoft.network/expressroutecircuits
+
+Create ExpressRouteCircuit
+```bicep
+resource exampleResource 'Microsoft.Network/expressRouteCircuits@2019-04-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    allowClassicOperations: false
+    authorizations: [
+    ]
+    peerings: [
+    ]
+    serviceProviderProperties: {
+      bandwidthInMbps: 200
+      peeringLocation: 'peeringLocation'
+      serviceProviderName: 'providerName'
+    }
+  }
+  sku: {
+    name: 'Standard_MeteredData'
+    family: 'MeteredData'
+    tier: 'Standard'
+  }
+}
+```
+
+Create ExpressRouteCircuit on ExpressRoutePort
+```bicep
+resource exampleResource 'Microsoft.Network/expressRouteCircuits@2019-04-01' = {
+  name: 'example'
+  location: 'westus'
+  properties: {
+    bandwidthInGbps: 10
+    expressRoutePort: {
+      id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/expressRoutePorts/portName'
+    }
+  }
+  sku: {
+    name: 'Premium_MeteredData'
+    family: 'MeteredData'
+    tier: 'Premium'
   }
 }
 ```
@@ -825,52 +1020,6 @@ resource exampleResource 'Microsoft.Network/expressRouteCircuits/peerings/connec
     peerExpressRouteCircuitPeering: {
       id: '/subscriptions/subid2/resourceGroups/dedharcktpeer/providers/Microsoft.Network/expressRouteCircuits/dedharcktremote/peerings/AzurePrivatePeering'
     }
-  }
-}
-```
-
-## microsoft.network/expressroutecircuits
-
-Create ExpressRouteCircuit
-```bicep
-resource exampleResource 'Microsoft.Network/expressRouteCircuits@2019-04-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    allowClassicOperations: false
-    authorizations: [
-    ]
-    peerings: [
-    ]
-    serviceProviderProperties: {
-      bandwidthInMbps: 200
-      peeringLocation: 'peeringLocation'
-      serviceProviderName: 'providerName'
-    }
-  }
-  sku: {
-    name: 'Standard_MeteredData'
-    family: 'MeteredData'
-    tier: 'Standard'
-  }
-}
-```
-
-Create ExpressRouteCircuit on ExpressRoutePort
-```bicep
-resource exampleResource 'Microsoft.Network/expressRouteCircuits@2019-04-01' = {
-  name: 'example'
-  location: 'westus'
-  properties: {
-    bandwidthInGbps: 10
-    expressRoutePort: {
-      id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/expressRoutePorts/portName'
-    }
-  }
-  sku: {
-    name: 'Premium_MeteredData'
-    family: 'MeteredData'
-    tier: 'Premium'
   }
 }
 ```
@@ -982,124 +1131,6 @@ resource exampleResource 'Microsoft.Network/ExpressRoutePorts@2019-04-01' = {
 }
 ```
 
-## microsoft.network/privateendpoints
-
-Create private endpoint
-```bicep
-resource exampleResource 'Microsoft.Network/privateEndpoints@2019-04-01' = {
-  name: 'example'
-  properties: {
-    privateLinkServiceConnections: [
-      {
-        name: 'testPlc'
-        properties: {
-          groupIds: [
-            'groupIdFromResource'
-          ]
-          privateLinkServiceId: '/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPls'
-          requestMessage: 'Please approve my connection.'
-        }
-      }
-    ]
-    subnet: {
-      id: '/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet'
-    }
-  }
-}
-```
-
-Create private endpoint with manual approval connection
-```bicep
-resource exampleResource 'Microsoft.Network/privateEndpoints@2019-04-01' = {
-  name: 'example'
-  location: 'eastus2euap'
-  properties: {
-    manualPrivateLinkServiceConnections: [
-      {
-        properties: {
-          groupIds: [
-            'groupIdFromResource'
-          ]
-          privateLinkServiceId: '/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPls'
-          requestMessage: 'Please manually approve my connection.'
-        }
-      }
-    ]
-    subnet: {
-      id: '/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet'
-    }
-  }
-}
-```
-
-## microsoft.network/privatelinkservices
-
-Create private link service
-```bicep
-resource exampleResource 'Microsoft.Network/privateLinkServices@2019-04-01' = {
-  name: 'example'
-  location: 'eastus2euap'
-  properties: {
-    autoApproval: {
-      subscriptions: [
-        'subscription1'
-        'subscription2'
-      ]
-    }
-    fqdns: [
-      'fqdn1'
-      'fqdn2'
-      'fqdn3'
-    ]
-    ipConfigurations: [
-      {
-        name: 'fe-lb'
-        properties: {
-          privateIPAddress: '10.0.1.4'
-          privateIPAddressVersion: 'IPv4'
-          privateIPAllocationMethod: 'Static'
-          subnet: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb'
-          }
-        }
-      }
-    ]
-    loadBalancerFrontendIpConfigurations: [
-      {
-        id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb'
-      }
-    ]
-    visibility: {
-      subscriptions: [
-        'subscription1'
-        'subscription2'
-        'subscription3'
-      ]
-    }
-  }
-}
-```
-
-## microsoft.network/privatelinkservices/privateendpointconnections
-
-approve or reject private end point connection for a private link service
-```bicep
-resource exampleResource 'Microsoft.Network/privateLinkServices/privateEndpointConnections@2019-04-01' = {
-  parent: parentResource 
-  name: 'example'
-  name: 'testPlePeConnection'
-  properties: {
-    privateEndpoint: {
-      id: '/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateEndpoints/testPe'
-    }
-    privateLinkServiceConnectionState: {
-      description: 'approved it for some reason.'
-      status: 'Approved'
-    }
-  }
-}
-```
-
 ## microsoft.network/loadbalancers
 
 Create load balancer
@@ -1206,89 +1237,6 @@ resource exampleResource 'Microsoft.Network/loadBalancers@2019-04-01' = {
         zones: [
           '1'
         ]
-      }
-    ]
-    inboundNatPools: [
-    ]
-    inboundNatRules: [
-      {
-        name: 'in-nat-rule'
-        properties: {
-          backendPort: 3389
-          enableFloatingIP: true
-          frontendIPConfiguration: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb'
-          }
-          frontendPort: 3389
-          idleTimeoutInMinutes: 15
-          protocol: 'Tcp'
-        }
-      }
-    ]
-    loadBalancingRules: [
-      {
-        name: 'rulelb'
-        properties: {
-          backendAddressPool: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/be-lb'
-          }
-          backendPort: 80
-          enableFloatingIP: true
-          frontendIPConfiguration: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb'
-          }
-          frontendPort: 80
-          idleTimeoutInMinutes: 15
-          loadDistribution: 'Default'
-          probe: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/probes/probe-lb'
-          }
-          protocol: 'Tcp'
-        }
-      }
-    ]
-    outboundRules: [
-    ]
-    probes: [
-      {
-        name: 'probe-lb'
-        properties: {
-          intervalInSeconds: 15
-          numberOfProbes: 2
-          port: 80
-          requestPath: 'healthcheck.aspx'
-          protocol: 'Http'
-        }
-      }
-    ]
-  }
-  sku: {
-    name: 'Standard'
-  }
-}
-```
-
-Create load balancer with Standard SKU
-```bicep
-resource exampleResource 'Microsoft.Network/loadBalancers@2019-04-01' = {
-  name: 'example'
-  location: 'eastus'
-  properties: {
-    backendAddressPools: [
-      {
-        name: 'be-lb'
-        properties: {
-        }
-      }
-    ]
-    frontendIPConfigurations: [
-      {
-        name: 'fe-lb'
-        properties: {
-          subnet: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb'
-          }
-        }
       }
     ]
     inboundNatPools: [
@@ -1510,6 +1458,89 @@ resource exampleResource 'Microsoft.Network/loadBalancers@2019-04-01' = {
 }
 ```
 
+Create load balancer with Standard SKU
+```bicep
+resource exampleResource 'Microsoft.Network/loadBalancers@2019-04-01' = {
+  name: 'example'
+  location: 'eastus'
+  properties: {
+    backendAddressPools: [
+      {
+        name: 'be-lb'
+        properties: {
+        }
+      }
+    ]
+    frontendIPConfigurations: [
+      {
+        name: 'fe-lb'
+        properties: {
+          subnet: {
+            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb'
+          }
+        }
+      }
+    ]
+    inboundNatPools: [
+    ]
+    inboundNatRules: [
+      {
+        name: 'in-nat-rule'
+        properties: {
+          backendPort: 3389
+          enableFloatingIP: true
+          frontendIPConfiguration: {
+            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb'
+          }
+          frontendPort: 3389
+          idleTimeoutInMinutes: 15
+          protocol: 'Tcp'
+        }
+      }
+    ]
+    loadBalancingRules: [
+      {
+        name: 'rulelb'
+        properties: {
+          backendAddressPool: {
+            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/be-lb'
+          }
+          backendPort: 80
+          enableFloatingIP: true
+          frontendIPConfiguration: {
+            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb'
+          }
+          frontendPort: 80
+          idleTimeoutInMinutes: 15
+          loadDistribution: 'Default'
+          probe: {
+            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/probes/probe-lb'
+          }
+          protocol: 'Tcp'
+        }
+      }
+    ]
+    outboundRules: [
+    ]
+    probes: [
+      {
+        name: 'probe-lb'
+        properties: {
+          intervalInSeconds: 15
+          numberOfProbes: 2
+          port: 80
+          requestPath: 'healthcheck.aspx'
+          protocol: 'Http'
+        }
+      }
+    ]
+  }
+  sku: {
+    name: 'Standard'
+  }
+}
+```
+
 ## microsoft.network/loadbalancers/inboundnatrules
 
 InboundNatRuleCreate
@@ -1527,6 +1558,24 @@ resource exampleResource 'Microsoft.Network/loadBalancers/inboundNatRules@2019-0
     frontendPort: 3390
     idleTimeoutInMinutes: 4
     protocol: 'Tcp'
+  }
+}
+```
+
+## microsoft.network/localnetworkgateways
+
+CreateLocalNetworkGateway
+```bicep
+resource exampleResource 'Microsoft.Network/localNetworkGateways@2019-04-01' = {
+  name: 'example'
+  location: 'Central US'
+  properties: {
+    gatewayIpAddress: 'x.x.x.x'
+    localNetworkAddressSpace: {
+      addressPrefixes: [
+        '10.1.0.0/16'
+      ]
+    }
   }
 }
 ```
@@ -1688,6 +1737,26 @@ resource exampleResource 'Microsoft.Network/networkWatchers@2019-04-01' = {
 }
 ```
 
+## microsoft.network/networkwatchers/connectionmonitors
+
+Create connection monitor
+```bicep
+resource exampleResource 'Microsoft.Network/networkWatchers/connectionMonitors@2019-04-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    destination: {
+      address: 'bing.com'
+      port: 80
+    }
+    monitoringIntervalInSeconds: 60
+    source: {
+      resourceId: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Compute/virtualMachines/vm1'
+    }
+  }
+}
+```
+
 ## microsoft.network/networkwatchers/packetcaptures
 
 Create packet capture
@@ -1716,40 +1785,157 @@ resource exampleResource 'Microsoft.Network/networkWatchers/packetCaptures@2019-
 }
 ```
 
-## microsoft.network/networkwatchers/connectionmonitors
+## microsoft.network/p2svpngateways
 
-Create connection monitor
+P2SVpnGatewayPut
 ```bicep
-resource exampleResource 'Microsoft.Network/networkWatchers/connectionMonitors@2019-04-01' = {
-  parent: parentResource 
+resource exampleResource 'Microsoft.Network/p2svpnGateways@2019-04-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    customRoutes: {
+      addressPrefixes: [
+        '101.168.0.6/32'
+      ]
+    }
+    p2SVpnServerConfiguration: {
+      id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualWans/virtualWan1/p2sVpnServerConfigurations/p2sVpnServerConfiguration1'
+    }
+    virtualHub: {
+      id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1'
+    }
+    vpnClientAddressPool: {
+      addressPrefixes: [
+        '101.3.0.0/16'
+      ]
+    }
+    vpnGatewayScaleUnit: 1
+  }
+  tags: {
+    key1: 'value1'
+  }
+}
+```
+
+## microsoft.network/privateendpoints
+
+Create private endpoint
+```bicep
+resource exampleResource 'Microsoft.Network/privateEndpoints@2019-04-01' = {
   name: 'example'
   properties: {
-    destination: {
-      address: 'bing.com'
-      port: 80
+    privateLinkServiceConnections: [
+      {
+        name: 'testPlc'
+        properties: {
+          groupIds: [
+            'groupIdFromResource'
+          ]
+          privateLinkServiceId: '/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPls'
+          requestMessage: 'Please approve my connection.'
+        }
+      }
+    ]
+    subnet: {
+      id: '/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet'
     }
-    monitoringIntervalInSeconds: 60
-    source: {
-      resourceId: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Compute/virtualMachines/vm1'
+  }
+}
+```
+
+Create private endpoint with manual approval connection
+```bicep
+resource exampleResource 'Microsoft.Network/privateEndpoints@2019-04-01' = {
+  name: 'example'
+  location: 'eastus2euap'
+  properties: {
+    manualPrivateLinkServiceConnections: [
+      {
+        properties: {
+          groupIds: [
+            'groupIdFromResource'
+          ]
+          privateLinkServiceId: '/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPls'
+          requestMessage: 'Please manually approve my connection.'
+        }
+      }
+    ]
+    subnet: {
+      id: '/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet'
+    }
+  }
+}
+```
+
+## microsoft.network/privatelinkservices
+
+Create private link service
+```bicep
+resource exampleResource 'Microsoft.Network/privateLinkServices@2019-04-01' = {
+  name: 'example'
+  location: 'eastus2euap'
+  properties: {
+    autoApproval: {
+      subscriptions: [
+        'subscription1'
+        'subscription2'
+      ]
+    }
+    fqdns: [
+      'fqdn1'
+      'fqdn2'
+      'fqdn3'
+    ]
+    ipConfigurations: [
+      {
+        name: 'fe-lb'
+        properties: {
+          privateIPAddress: '10.0.1.4'
+          privateIPAddressVersion: 'IPv4'
+          privateIPAllocationMethod: 'Static'
+          subnet: {
+            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb'
+          }
+        }
+      }
+    ]
+    loadBalancerFrontendIpConfigurations: [
+      {
+        id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb'
+      }
+    ]
+    visibility: {
+      subscriptions: [
+        'subscription1'
+        'subscription2'
+        'subscription3'
+      ]
+    }
+  }
+}
+```
+
+## microsoft.network/privatelinkservices/privateendpointconnections
+
+approve or reject private end point connection for a private link service
+```bicep
+resource exampleResource 'Microsoft.Network/privateLinkServices/privateEndpointConnections@2019-04-01' = {
+  parent: parentResource 
+  name: 'example'
+  name: 'testPlePeConnection'
+  properties: {
+    privateEndpoint: {
+      id: '/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateEndpoints/testPe'
+    }
+    privateLinkServiceConnectionState: {
+      description: 'approved it for some reason.'
+      status: 'Approved'
     }
   }
 }
 ```
 
 ## microsoft.network/publicipaddresses
-
-Create public IP address DNS
-```bicep
-resource exampleResource 'Microsoft.Network/publicIPAddresses@2019-04-01' = {
-  name: 'example'
-  location: 'eastus'
-  properties: {
-    dnsSettings: {
-      domainNameLabel: 'dnslbl'
-    }
-  }
-}
-```
 
 Create public IP address allocation method
 ```bicep
@@ -1772,6 +1958,19 @@ Create public IP address defaults
 resource exampleResource 'Microsoft.Network/publicIPAddresses@2019-04-01' = {
   name: 'example'
   location: 'eastus'
+}
+```
+
+Create public IP address DNS
+```bicep
+resource exampleResource 'Microsoft.Network/publicIPAddresses@2019-04-01' = {
+  name: 'example'
+  location: 'eastus'
+  properties: {
+    dnsSettings: {
+      domainNameLabel: 'dnslbl'
+    }
+  }
 }
 ```
 
@@ -1926,6 +2125,69 @@ resource exampleResource 'Microsoft.Network/serviceEndpointPolicies@2019-04-01' 
         }
       }
     ]
+  }
+}
+```
+
+## microsoft.network/virtualhubs
+
+VirtualHubPut
+```bicep
+resource exampleResource 'Microsoft.Network/virtualHubs@2019-04-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    addressPrefix: '10.168.0.0/24'
+    virtualWan: {
+      id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualWans/virtualWan1'
+    }
+  }
+  tags: {
+    key1: 'value1'
+  }
+}
+```
+
+## microsoft.network/virtualnetworkgateways
+
+UpdateVirtualNetworkGateway
+```bicep
+resource exampleResource 'Microsoft.Network/virtualNetworkGateways@2019-04-01' = {
+  name: 'example'
+  location: 'centralus'
+  properties: {
+    activeActive: false
+    bgpSettings: {
+      asn: 65515
+      bgpPeeringAddress: '10.0.1.30'
+      peerWeight: 0
+    }
+    customRoutes: {
+      addressPrefixes: [
+        '101.168.0.6/32'
+      ]
+    }
+    enableBgp: false
+    gatewayType: 'Vpn'
+    ipConfigurations: [
+      {
+        name: 'gwipconfig1'
+        properties: {
+          privateIPAllocationMethod: 'Dynamic'
+          publicIPAddress: {
+            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/gwpip'
+          }
+          subnet: {
+            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/GatewaySubnet'
+          }
+        }
+      }
+    ]
+    sku: {
+      name: 'VpnGw1'
+      tier: 'VpnGw1'
+    }
+    vpnType: 'RouteBased'
   }
 }
 ```
@@ -2128,144 +2390,6 @@ resource exampleResource 'Microsoft.Network/virtualNetworks/subnets@2019-04-01' 
 }
 ```
 
-## microsoft.network/virtualnetworkgateways
-
-UpdateVirtualNetworkGateway
-```bicep
-resource exampleResource 'Microsoft.Network/virtualNetworkGateways@2019-04-01' = {
-  name: 'example'
-  location: 'centralus'
-  properties: {
-    activeActive: false
-    bgpSettings: {
-      asn: 65515
-      bgpPeeringAddress: '10.0.1.30'
-      peerWeight: 0
-    }
-    customRoutes: {
-      addressPrefixes: [
-        '101.168.0.6/32'
-      ]
-    }
-    enableBgp: false
-    gatewayType: 'Vpn'
-    ipConfigurations: [
-      {
-        name: 'gwipconfig1'
-        properties: {
-          privateIPAllocationMethod: 'Dynamic'
-          publicIPAddress: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/gwpip'
-          }
-          subnet: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/GatewaySubnet'
-          }
-        }
-      }
-    ]
-    sku: {
-      name: 'VpnGw1'
-      tier: 'VpnGw1'
-    }
-    vpnType: 'RouteBased'
-  }
-}
-```
-
-## microsoft.network/connections
-
-CreateVirtualNetworkGatewayConnection_S2S
-```bicep
-resource exampleResource 'Microsoft.Network/connections@2019-04-01' = {
-  name: 'example'
-  location: 'centralus'
-  properties: {
-    connectionProtocol: 'IKEv2'
-    connectionType: 'IPsec'
-    enableBgp: false
-    ipsecPolicies: [
-    ]
-    localNetworkGateway2: {
-      etag: 'W/"00000000-0000-0000-0000-000000000000"'
-      id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/localNetworkGateways/localgw'
-      location: 'centralus'
-      properties: {
-        gatewayIpAddress: 'x.x.x.x'
-        localNetworkAddressSpace: {
-          addressPrefixes: [
-            '10.1.0.0/16'
-          ]
-        }
-        resourceGuid: '00000000-0000-0000-0000-000000000000'
-      }
-      tags: {
-      }
-    }
-    routingWeight: 0
-    sharedKey: 'Abc123'
-    usePolicyBasedTrafficSelectors: false
-    virtualNetworkGateway1: {
-      etag: 'W/"00000000-0000-0000-0000-000000000000"'
-      id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vpngw'
-      location: 'centralus'
-      properties: {
-        activeActive: false
-        bgpSettings: {
-          asn: 65514
-          bgpPeeringAddress: '10.0.1.30'
-          peerWeight: 0
-        }
-        enableBgp: false
-        gatewayType: 'Vpn'
-        ipConfigurations: [
-          {
-            name: 'gwipconfig1'
-            etag: 'W/"00000000-0000-0000-0000-000000000000"'
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vpngw/ipConfigurations/gwipconfig1'
-            properties: {
-              privateIPAllocationMethod: 'Dynamic'
-              publicIPAddress: {
-                id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/gwpip'
-              }
-              subnet: {
-                id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/GatewaySubnet'
-              }
-            }
-          }
-        ]
-        resourceGuid: '00000000-0000-0000-0000-000000000000'
-        sku: {
-          name: 'VpnGw1'
-          capacity: 2
-          tier: 'VpnGw1'
-        }
-        vpnType: 'RouteBased'
-      }
-      tags: {
-      }
-    }
-  }
-}
-```
-
-## microsoft.network/localnetworkgateways
-
-CreateLocalNetworkGateway
-```bicep
-resource exampleResource 'Microsoft.Network/localNetworkGateways@2019-04-01' = {
-  name: 'example'
-  location: 'Central US'
-  properties: {
-    gatewayIpAddress: 'x.x.x.x'
-    localNetworkAddressSpace: {
-      addressPrefixes: [
-        '10.1.0.0/16'
-      ]
-    }
-  }
-}
-```
-
 ## microsoft.network/virtualnetworktaps
 
 Create Virtual Network Tap
@@ -2290,59 +2414,6 @@ resource exampleResource 'Microsoft.Network/virtualWans@2019-04-01' = {
   location: 'West US'
   properties: {
     disableVpnEncryption: false
-  }
-  tags: {
-    key1: 'value1'
-  }
-}
-```
-
-## microsoft.network/virtualhubs
-
-VirtualHubPut
-```bicep
-resource exampleResource 'Microsoft.Network/virtualHubs@2019-04-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    addressPrefix: '10.168.0.0/24'
-    virtualWan: {
-      id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualWans/virtualWan1'
-    }
-  }
-  tags: {
-    key1: 'value1'
-  }
-}
-```
-
-## microsoft.network/vpngateways
-
-VpnGatewayPut
-```bicep
-resource exampleResource 'Microsoft.Network/vpnGateways@2019-04-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    bgpSettings: {
-      asn: 65515
-      bgpPeeringAddress: '10.0.1.30'
-      peerWeight: 0
-    }
-    connections: [
-      {
-        name: 'vpnConnection1'
-        properties: {
-          remoteVpnSite: {
-            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnSites/vpnSite1'
-          }
-          sharedKey: 'key'
-        }
-      }
-    ]
-    virtualHub: {
-      id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1'
-    }
   }
   tags: {
     key1: 'value1'
@@ -2387,103 +2458,36 @@ resource exampleResource 'Microsoft.Network/virtualWans/p2sVpnServerConfiguratio
 }
 ```
 
-## microsoft.network/p2svpngateways
+## microsoft.network/vpngateways
 
-P2SVpnGatewayPut
+VpnGatewayPut
 ```bicep
-resource exampleResource 'Microsoft.Network/p2svpnGateways@2019-04-01' = {
+resource exampleResource 'Microsoft.Network/vpnGateways@2019-04-01' = {
   name: 'example'
   location: 'West US'
   properties: {
-    customRoutes: {
-      addressPrefixes: [
-        '101.168.0.6/32'
-      ]
+    bgpSettings: {
+      asn: 65515
+      bgpPeeringAddress: '10.0.1.30'
+      peerWeight: 0
     }
-    p2SVpnServerConfiguration: {
-      id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualWans/virtualWan1/p2sVpnServerConfigurations/p2sVpnServerConfiguration1'
-    }
+    connections: [
+      {
+        name: 'vpnConnection1'
+        properties: {
+          remoteVpnSite: {
+            id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnSites/vpnSite1'
+          }
+          sharedKey: 'key'
+        }
+      }
+    ]
     virtualHub: {
       id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1'
     }
-    vpnClientAddressPool: {
-      addressPrefixes: [
-        '101.3.0.0/16'
-      ]
-    }
-    vpnGatewayScaleUnit: 1
   }
   tags: {
     key1: 'value1'
-  }
-}
-```
-
-## microsoft.network/applicationgatewaywebapplicationfirewallpolicies
-
-Creates or updates a WAF policy within a resource group
-```bicep
-resource exampleResource 'Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies@2019-04-01' = {
-  name: 'example'
-  location: 'WestUs'
-  properties: {
-    customRules: [
-      {
-        name: 'Rule1'
-        action: 'Block'
-        matchConditions: [
-          {
-            matchValues: [
-              '192.168.1.0/24'
-              '10.0.0.0/24'
-            ]
-            matchVariables: [
-              {
-                selector: {
-                }
-                variableName: 'RemoteAddr'
-              }
-            ]
-            operator: 'IPMatch'
-          }
-        ]
-        priority: 1
-        ruleType: 'MatchRule'
-      }
-      {
-        name: 'Rule2'
-        action: 'Block'
-        matchConditions: [
-          {
-            matchValues: [
-              '192.168.1.0/24'
-            ]
-            matchVariables: [
-              {
-                selector: {
-                }
-                variableName: 'RemoteAddr'
-              }
-            ]
-            operator: 'IPMatch'
-          }
-          {
-            matchValues: [
-              'Windows'
-            ]
-            matchVariables: [
-              {
-                selector: 'UserAgent'
-                variableName: 'RequestHeader'
-              }
-            ]
-            operator: 'Contains'
-          }
-        ]
-        priority: 2
-        ruleType: 'MatchRule'
-      }
-    ]
   }
 }
 ```

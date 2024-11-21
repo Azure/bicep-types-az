@@ -1,4 +1,8 @@
 # Microsoft.Communication
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.communication/communicationservices
 
@@ -27,6 +31,19 @@ resource exampleResource 'Microsoft.Communication/communicationServices@2023-04-
 }
 ```
 
+## microsoft.communication/emailservices
+
+Create or update EmailService resource
+```bicep
+resource exampleResource 'Microsoft.Communication/emailServices@2023-04-01' = {
+  name: 'example'
+  location: 'Global'
+  properties: {
+    dataLocation: 'United States'
+  }
+}
+```
+
 ## microsoft.communication/emailservices/domains
 
 Create or update Domains resource
@@ -37,19 +54,6 @@ resource exampleResource 'Microsoft.Communication/emailServices/domains@2023-04-
   location: 'Global'
   properties: {
     domainManagement: 'CustomerManaged'
-  }
-}
-```
-
-## microsoft.communication/emailservices
-
-Create or update EmailService resource
-```bicep
-resource exampleResource 'Microsoft.Communication/emailServices@2023-04-01' = {
-  name: 'example'
-  location: 'Global'
-  properties: {
-    dataLocation: 'United States'
   }
 }
 ```

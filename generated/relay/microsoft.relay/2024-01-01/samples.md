@@ -1,4 +1,26 @@
 # Microsoft.Relay
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
+
+## microsoft.relay/namespaces
+
+RelayNamespaceCreate
+```bicep
+resource exampleResource 'Microsoft.Relay/namespaces@2024-01-01' = {
+  name: 'example'
+  location: 'South Central US'
+  sku: {
+    name: 'Standard'
+    tier: 'Standard'
+  }
+  tags: {
+    tag1: 'value1'
+    tag2: 'value2'
+  }
+}
+```
 
 ## microsoft.relay/namespaces/authorizationrules
 
@@ -16,20 +38,31 @@ resource exampleResource 'Microsoft.Relay/namespaces/authorizationRules@2024-01-
 }
 ```
 
-## microsoft.relay/namespaces
+## microsoft.relay/namespaces/hybridconnections
 
-RelayNamespaceCreate
+RelayHybridConnectionCreate
 ```bicep
-resource exampleResource 'Microsoft.Relay/namespaces@2024-01-01' = {
+resource exampleResource 'Microsoft.Relay/namespaces/hybridConnections@2024-01-01' = {
+  parent: parentResource 
   name: 'example'
-  location: 'South Central US'
-  sku: {
-    name: 'Standard'
-    tier: 'Standard'
+  properties: {
+    requiresClientAuthorization: true
   }
-  tags: {
-    tag1: 'value1'
-    tag2: 'value2'
+}
+```
+
+## microsoft.relay/namespaces/hybridconnections/authorizationrules
+
+RelayHybridConnectionAuthorizationRuleCreate
+```bicep
+resource exampleResource 'Microsoft.Relay/namespaces/hybridConnections/authorizationRules@2024-01-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    rights: [
+      'Listen'
+      'Send'
+    ]
   }
 }
 ```
@@ -70,47 +103,21 @@ resource exampleResource 'Microsoft.Relay/namespaces/networkRuleSets@2024-01-01'
 }
 ```
 
-## microsoft.relay/namespaces/hybridconnections/authorizationrules
+## microsoft.relay/namespaces/privateendpointconnections
 
-RelayHybridConnectionAuthorizationRuleCreate
+NameSpacePrivateEndPointConnectionCreate
 ```bicep
-resource exampleResource 'Microsoft.Relay/namespaces/hybridConnections/authorizationRules@2024-01-01' = {
+resource exampleResource 'Microsoft.Relay/namespaces/privateEndpointConnections@2024-01-01' = {
   parent: parentResource 
   name: 'example'
   properties: {
-    rights: [
-      'Listen'
-      'Send'
-    ]
-  }
-}
-```
-
-## microsoft.relay/namespaces/hybridconnections
-
-RelayHybridConnectionCreate
-```bicep
-resource exampleResource 'Microsoft.Relay/namespaces/hybridConnections@2024-01-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    requiresClientAuthorization: true
-  }
-}
-```
-
-## microsoft.relay/namespaces/wcfrelays/authorizationrules
-
-RelayAuthorizationRuleCreate
-```bicep
-resource exampleResource 'Microsoft.Relay/namespaces/wcfRelays/authorizationRules@2024-01-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    rights: [
-      'Listen'
-      'Send'
-    ]
+    privateEndpoint: {
+      id: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/resourcegroup/providers/Microsoft.Network/privateEndpoints/ali-relay-pve-1'
+    }
+    privateLinkServiceConnectionState: {
+      description: 'You may pass'
+      status: 'Approved'
+    }
   }
 }
 ```
@@ -130,21 +137,18 @@ resource exampleResource 'Microsoft.Relay/namespaces/wcfRelays@2024-01-01' = {
 }
 ```
 
-## microsoft.relay/namespaces/privateendpointconnections
+## microsoft.relay/namespaces/wcfrelays/authorizationrules
 
-NameSpacePrivateEndPointConnectionCreate
+RelayAuthorizationRuleCreate
 ```bicep
-resource exampleResource 'Microsoft.Relay/namespaces/privateEndpointConnections@2024-01-01' = {
+resource exampleResource 'Microsoft.Relay/namespaces/wcfRelays/authorizationRules@2024-01-01' = {
   parent: parentResource 
   name: 'example'
   properties: {
-    privateEndpoint: {
-      id: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/resourcegroup/providers/Microsoft.Network/privateEndpoints/ali-relay-pve-1'
-    }
-    privateLinkServiceConnectionState: {
-      description: 'You may pass'
-      status: 'Approved'
-    }
+    rights: [
+      'Listen'
+      'Send'
+    ]
   }
 }
 ```

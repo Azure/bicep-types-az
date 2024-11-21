@@ -1,4 +1,36 @@
 # Microsoft.ProviderHub
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
+
+## microsoft.providerhub/providerregistrations
+
+ProviderRegistrations_CreateOrUpdate
+```bicep
+resource exampleResource 'Microsoft.ProviderHub/providerRegistrations@2020-11-20' = {
+  name: 'example'
+  properties: {
+    capabilities: [
+      {
+        effect: 'Allow'
+        quotaId: 'CSP_2015-05-01'
+      }
+      {
+        effect: 'Allow'
+        quotaId: 'CSP_MG_2017-12-01'
+      }
+    ]
+    management: {
+      incidentContactEmail: 'helpme@contoso.com'
+      incidentRoutingService: 'Contoso Resource Provider'
+      incidentRoutingTeam: 'Contoso Triage'
+    }
+    providerType: 'Internal'
+    providerVersion: '2.0'
+  }
+}
+```
 
 ## microsoft.providerhub/providerregistrations/customrollouts
 
@@ -74,34 +106,6 @@ resource exampleResource 'Microsoft.ProviderHub/providerRegistrations/notificati
 }
 ```
 
-## microsoft.providerhub/providerregistrations
-
-ProviderRegistrations_CreateOrUpdate
-```bicep
-resource exampleResource 'Microsoft.ProviderHub/providerRegistrations@2020-11-20' = {
-  name: 'example'
-  properties: {
-    capabilities: [
-      {
-        effect: 'Allow'
-        quotaId: 'CSP_2015-05-01'
-      }
-      {
-        effect: 'Allow'
-        quotaId: 'CSP_MG_2017-12-01'
-      }
-    ]
-    management: {
-      incidentContactEmail: 'helpme@contoso.com'
-      incidentRoutingService: 'Contoso Resource Provider'
-      incidentRoutingTeam: 'Contoso Triage'
-    }
-    providerType: 'Internal'
-    providerVersion: '2.0'
-  }
-}
-```
-
 ## microsoft.providerhub/providerregistrations/resourcetyperegistrations
 
 ResourceTypeRegistrations_CreateOrUpdate
@@ -139,40 +143,11 @@ resource exampleResource 'Microsoft.ProviderHub/providerRegistrations/resourcety
 }
 ```
 
-## microsoft.providerhub/providerregistrations/resourcetyperegistrations/skus
+## microsoft.providerhub/providerregistrations/resourcetyperegistrations/resourcetyperegistrations/resourcetyperegistrations/resourcetyperegistrations/skus
 
-Skus_CreateOrUpdate
+Skus_CreateOrUpdateNestedResourceTypeThird
 ```bicep
-resource exampleResource 'Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/skus@2020-11-20' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    skuSettings: [
-      {
-        name: 'freeSku'
-        kind: 'Standard'
-        tier: 'Tier1'
-      }
-      {
-        name: 'premiumSku'
-        costs: [
-          {
-            meterId: 'xxx'
-          }
-        ]
-        kind: 'Premium'
-        tier: 'Tier2'
-      }
-    ]
-  }
-}
-```
-
-## microsoft.providerhub/providerregistrations/resourcetyperegistrations/resourcetyperegistrations/skus
-
-Skus_CreateOrUpdateNestedResourceTypeFirst
-```bicep
-resource exampleResource 'Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/skus@2020-11-20' = {
+resource exampleResource 'Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/skus@2020-11-20' = {
   parent: parentResource 
   name: 'example'
   properties: {
@@ -226,11 +201,40 @@ resource exampleResource 'Microsoft.ProviderHub/providerRegistrations/resourcety
 }
 ```
 
-## microsoft.providerhub/providerregistrations/resourcetyperegistrations/resourcetyperegistrations/resourcetyperegistrations/resourcetyperegistrations/skus
+## microsoft.providerhub/providerregistrations/resourcetyperegistrations/resourcetyperegistrations/skus
 
-Skus_CreateOrUpdateNestedResourceTypeThird
+Skus_CreateOrUpdateNestedResourceTypeFirst
 ```bicep
-resource exampleResource 'Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/skus@2020-11-20' = {
+resource exampleResource 'Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/resourcetypeRegistrations/skus@2020-11-20' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    skuSettings: [
+      {
+        name: 'freeSku'
+        kind: 'Standard'
+        tier: 'Tier1'
+      }
+      {
+        name: 'premiumSku'
+        costs: [
+          {
+            meterId: 'xxx'
+          }
+        ]
+        kind: 'Premium'
+        tier: 'Tier2'
+      }
+    ]
+  }
+}
+```
+
+## microsoft.providerhub/providerregistrations/resourcetyperegistrations/skus
+
+Skus_CreateOrUpdate
+```bicep
+resource exampleResource 'Microsoft.ProviderHub/providerRegistrations/resourcetypeRegistrations/skus@2020-11-20' = {
   parent: parentResource 
   name: 'example'
   properties: {

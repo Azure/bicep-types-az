@@ -1,65 +1,8 @@
 # Microsoft.Network
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
 
-## microsoft.network/dnsresolvers
-
-Upsert DNS resolver
-```bicep
-resource exampleResource 'Microsoft.Network/dnsResolvers@2022-07-01' = {
-  name: 'example'
-  location: 'westus2'
-  properties: {
-    virtualNetwork: {
-      id: '/subscriptions/cbb1387e-4b03-44f2-ad41-58d4677b9873/resourceGroups/virtualNetworkResourceGroup/providers/Microsoft.Network/virtualNetworks/sampleVirtualNetwork'
-    }
-  }
-  tags: {
-    key1: 'value1'
-  }
-}
-```
-
-## microsoft.network/dnsresolvers/inboundendpoints
-
-Upsert inbound endpoint for DNS resolver
-```bicep
-resource exampleResource 'Microsoft.Network/dnsResolvers/inboundEndpoints@2022-07-01' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'westus2'
-  properties: {
-    ipConfigurations: [
-      {
-        privateIpAllocationMethod: 'Dynamic'
-        subnet: {
-          id: '/subscriptions/0403cfa9-9659-4f33-9f30-1f191c51d111/resourceGroups/sampleVnetResourceGroupName/providers/Microsoft.Network/virtualNetworks/sampleVirtualNetwork/subnets/sampleSubnet'
-        }
-      }
-    ]
-  }
-  tags: {
-    key1: 'value1'
-  }
-}
-```
-
-## microsoft.network/dnsresolvers/outboundendpoints
-
-Upsert outbound endpoint for DNS resolver
-```bicep
-resource exampleResource 'Microsoft.Network/dnsResolvers/outboundEndpoints@2022-07-01' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'westus2'
-  properties: {
-    subnet: {
-      id: '/subscriptions/0403cfa9-9659-4f33-9f30-1f191c51d111/resourceGroups/sampleVnetResourceGroupName/providers/Microsoft.Network/virtualNetworks/sampleVirtualNetwork/subnets/sampleSubnet'
-    }
-  }
-  tags: {
-    key1: 'value1'
-  }
-}
-```
 
 ## microsoft.network/dnsforwardingrulesets
 
@@ -125,6 +68,67 @@ resource exampleResource 'Microsoft.Network/dnsForwardingRulesets/virtualNetwork
     virtualNetwork: {
       id: '/subscriptions/0403cfa9-9659-4f33-9f30-1f191c51d111/resourceGroups/sampleVnetResourceGroupName/providers/Microsoft.Network/virtualNetworks/sampleVirtualNetwork'
     }
+  }
+}
+```
+
+## microsoft.network/dnsresolvers
+
+Upsert DNS resolver
+```bicep
+resource exampleResource 'Microsoft.Network/dnsResolvers@2022-07-01' = {
+  name: 'example'
+  location: 'westus2'
+  properties: {
+    virtualNetwork: {
+      id: '/subscriptions/cbb1387e-4b03-44f2-ad41-58d4677b9873/resourceGroups/virtualNetworkResourceGroup/providers/Microsoft.Network/virtualNetworks/sampleVirtualNetwork'
+    }
+  }
+  tags: {
+    key1: 'value1'
+  }
+}
+```
+
+## microsoft.network/dnsresolvers/inboundendpoints
+
+Upsert inbound endpoint for DNS resolver
+```bicep
+resource exampleResource 'Microsoft.Network/dnsResolvers/inboundEndpoints@2022-07-01' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'westus2'
+  properties: {
+    ipConfigurations: [
+      {
+        privateIpAllocationMethod: 'Dynamic'
+        subnet: {
+          id: '/subscriptions/0403cfa9-9659-4f33-9f30-1f191c51d111/resourceGroups/sampleVnetResourceGroupName/providers/Microsoft.Network/virtualNetworks/sampleVirtualNetwork/subnets/sampleSubnet'
+        }
+      }
+    ]
+  }
+  tags: {
+    key1: 'value1'
+  }
+}
+```
+
+## microsoft.network/dnsresolvers/outboundendpoints
+
+Upsert outbound endpoint for DNS resolver
+```bicep
+resource exampleResource 'Microsoft.Network/dnsResolvers/outboundEndpoints@2022-07-01' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'westus2'
+  properties: {
+    subnet: {
+      id: '/subscriptions/0403cfa9-9659-4f33-9f30-1f191c51d111/resourceGroups/sampleVnetResourceGroupName/providers/Microsoft.Network/virtualNetworks/sampleVirtualNetwork/subnets/sampleSubnet'
+    }
+  }
+  tags: {
+    key1: 'value1'
   }
 }
 ```

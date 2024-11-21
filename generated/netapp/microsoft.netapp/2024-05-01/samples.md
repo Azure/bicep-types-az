@@ -1,4 +1,8 @@
 # Microsoft.NetApp
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.netapp/netappaccounts
 
@@ -32,6 +36,48 @@ resource exampleResource 'Microsoft.NetApp/netAppAccounts@2024-05-01' = {
         username: 'ad_user_name'
       }
     ]
+  }
+}
+```
+
+## microsoft.netapp/netappaccounts/backuppolicies
+
+BackupPolicies_Create
+```bicep
+resource exampleResource 'Microsoft.NetApp/netAppAccounts/backupPolicies@2024-05-01' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'westus'
+  properties: {
+    dailyBackupsToKeep: 10
+    enabled: true
+    monthlyBackupsToKeep: 10
+    weeklyBackupsToKeep: 10
+  }
+}
+```
+
+## microsoft.netapp/netappaccounts/backupvaults
+
+BackupVault_CreateOrUpdate
+```bicep
+resource exampleResource 'Microsoft.NetApp/netAppAccounts/backupVaults@2024-05-01' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'eastus'
+}
+```
+
+## microsoft.netapp/netappaccounts/backupvaults/backups
+
+BackupsUnderBackupVault_Create
+```bicep
+resource exampleResource 'Microsoft.NetApp/netAppAccounts/backupVaults/backups@2024-05-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    label: 'myLabel'
+    volumeResourceId: '/subscriptions/D633CC2E-722B-4AE1-B636-BBD9E4C60ED9/resourceGroups/myRG/providers/Microsoft.NetApp/netAppAccounts/account1/capacityPool/pool1/volumes/volume1'
   }
 }
 ```
@@ -80,6 +126,35 @@ resource exampleResource 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/
 }
 ```
 
+## microsoft.netapp/netappaccounts/capacitypools/volumes/subvolumes
+
+Subvolumes_Create
+```bicep
+resource exampleResource 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/subvolumes@2024-05-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    path: '/subvolumePath'
+  }
+}
+```
+
+## microsoft.netapp/netappaccounts/capacitypools/volumes/volumequotarules
+
+VolumeQuotaRules_Create
+```bicep
+resource exampleResource 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/volumeQuotaRules@2024-05-01' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'westus'
+  properties: {
+    quotaSizeInKiBs: 100005
+    quotaTarget: '1821'
+    quotaType: 'IndividualUserQuota'
+  }
+}
+```
+
 ## microsoft.netapp/netappaccounts/snapshotpolicies
 
 SnapshotPolicies_Create
@@ -111,39 +186,6 @@ resource exampleResource 'Microsoft.NetApp/netAppAccounts/snapshotPolicies@2024-
       minute: 45
       snapshotsToKeep: 3
     }
-  }
-}
-```
-
-## microsoft.netapp/netappaccounts/backuppolicies
-
-BackupPolicies_Create
-```bicep
-resource exampleResource 'Microsoft.NetApp/netAppAccounts/backupPolicies@2024-05-01' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'westus'
-  properties: {
-    dailyBackupsToKeep: 10
-    enabled: true
-    monthlyBackupsToKeep: 10
-    weeklyBackupsToKeep: 10
-  }
-}
-```
-
-## microsoft.netapp/netappaccounts/capacitypools/volumes/volumequotarules
-
-VolumeQuotaRules_Create
-```bicep
-resource exampleResource 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/volumeQuotaRules@2024-05-01' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'westus'
-  properties: {
-    quotaSizeInKiBs: 100005
-    quotaTarget: '1821'
-    quotaType: 'IndividualUserQuota'
   }
 }
 ```
@@ -819,43 +861,5 @@ resource exampleResource 'Microsoft.NetApp/netAppAccounts/volumeGroups@2024-05-0
       }
     ]
   }
-}
-```
-
-## microsoft.netapp/netappaccounts/capacitypools/volumes/subvolumes
-
-Subvolumes_Create
-```bicep
-resource exampleResource 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/subvolumes@2024-05-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    path: '/subvolumePath'
-  }
-}
-```
-
-## microsoft.netapp/netappaccounts/backupvaults/backups
-
-BackupsUnderBackupVault_Create
-```bicep
-resource exampleResource 'Microsoft.NetApp/netAppAccounts/backupVaults/backups@2024-05-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    label: 'myLabel'
-    volumeResourceId: '/subscriptions/D633CC2E-722B-4AE1-B636-BBD9E4C60ED9/resourceGroups/myRG/providers/Microsoft.NetApp/netAppAccounts/account1/capacityPool/pool1/volumes/volume1'
-  }
-}
-```
-
-## microsoft.netapp/netappaccounts/backupvaults
-
-BackupVault_CreateOrUpdate
-```bicep
-resource exampleResource 'Microsoft.NetApp/netAppAccounts/backupVaults@2024-05-01' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'eastus'
 }
 ```

@@ -1,31 +1,8 @@
 # Microsoft.Migrate
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
 
-## microsoft.migrate/modernizeprojects/migrateagents
-
-MigrateAgent_Create_MaximumSet_Gen
-```bicep
-resource exampleResource 'Microsoft.Migrate/modernizeProjects/migrateAgents@2022-05-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    authenticationIdentity: {
-      aadAuthority: 'isbicanvfefdaci'
-      applicationId: 'dibfqwjrnzikktkwe'
-      audience: 'yrfxszjhkczoyfi'
-      objectId: 'xfhhdosr'
-      tenantId: 'uwceuawplakwjswbvllffbsz'
-    }
-    customProperties: {
-      instanceType: 'IISWorkload'
-    }
-    machineId: 'sihoniqzqfz'
-    machineName: 'glhejppirkiamgxxro'
-  }
-  tags: {
-    key5560: 'jgffrfcgjrm'
-  }
-}
-```
 
 ## microsoft.migrate/modernizeprojects
 
@@ -54,6 +31,33 @@ resource exampleResource 'Microsoft.Migrate/modernizeProjects@2022-05-01-preview
   }
   tags: {
     key8644: 'wfyi'
+  }
+}
+```
+
+## microsoft.migrate/modernizeprojects/migrateagents
+
+MigrateAgent_Create_MaximumSet_Gen
+```bicep
+resource exampleResource 'Microsoft.Migrate/modernizeProjects/migrateAgents@2022-05-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    authenticationIdentity: {
+      aadAuthority: 'isbicanvfefdaci'
+      applicationId: 'dibfqwjrnzikktkwe'
+      audience: 'yrfxszjhkczoyfi'
+      objectId: 'xfhhdosr'
+      tenantId: 'uwceuawplakwjswbvllffbsz'
+    }
+    customProperties: {
+      instanceType: 'IISWorkload'
+    }
+    machineId: 'sihoniqzqfz'
+    machineName: 'glhejppirkiamgxxro'
+  }
+  tags: {
+    key5560: 'jgffrfcgjrm'
   }
 }
 ```

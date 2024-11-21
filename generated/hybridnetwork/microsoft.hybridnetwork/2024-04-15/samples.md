@@ -1,19 +1,8 @@
 # Microsoft.HybridNetwork
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
 
-## microsoft.hybridnetwork/publishers/configurationgroupschemas
-
-Create or update the network function definition group
-```bicep
-resource exampleResource 'Microsoft.HybridNetwork/publishers/configurationGroupSchemas@2024-04-15' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'westUs2'
-  properties: {
-    description: 'Schema with no secrets'
-    schemaDefinition: '{"type":"object","properties":{"interconnect-groups":{"type":"object","properties":{"type":"object","properties":{"name":{"type":"string"},"international-interconnects":{"type":"array","item":{"type":"string"}},"domestic-interconnects":{"type":"array","item":{"type":"string"}}}}},"interconnect-group-assignments":{"type":"object","properties":{"type":"object","properties":{"ssc":{"type":"string"},"interconnects-interconnects":{"type":"string"}}}}},"required":["interconnect-groups","interconnect-group-assignments"]}'
-  }
-}
-```
 
 ## microsoft.hybridnetwork/configurationgroupvalues
 
@@ -170,6 +159,114 @@ resource exampleResource 'Microsoft.HybridNetwork/networkFunctions@2024-04-15' =
     }
     nfviId: '/subscriptions/subid/resourceGroups/testResourceGroup/providers/Microsoft.ExtendedLocation/customLocations/testCustomLocation'
     nfviType: 'AzureOperatorNexus'
+  }
+}
+```
+
+## microsoft.hybridnetwork/publishers
+
+Create or update a publisher resource
+```bicep
+resource exampleResource 'Microsoft.HybridNetwork/publishers@2024-04-15' = {
+  name: 'example'
+  location: 'eastus'
+  properties: {
+    scope: 'Public'
+  }
+}
+```
+
+## microsoft.hybridnetwork/publishers/artifactstores
+
+Create or update an artifact store of publisher resource
+```bicep
+resource exampleResource 'Microsoft.HybridNetwork/publishers/artifactStores@2024-04-15' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'eastus'
+  properties: {
+    managedResourceGroupConfiguration: {
+      name: 'testRg'
+      location: 'eastus'
+    }
+    replicationStrategy: 'SingleReplication'
+    storeType: 'AzureContainerRegistry'
+  }
+}
+```
+
+Create or update an artifact store of publisher resource with container registry
+```bicep
+resource exampleResource 'Microsoft.HybridNetwork/publishers/artifactStores@2024-04-15' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'eastus'
+  properties: {
+    backingResourcePublicNetworkAccess: 'Disabled'
+    managedResourceGroupConfiguration: {
+      name: 'testRg'
+      location: 'eastus'
+    }
+    replicationStrategy: 'SingleReplication'
+    storeType: 'AzureContainerRegistry'
+  }
+}
+```
+
+Create or update an artifact store of publisher resource with storage
+```bicep
+resource exampleResource 'Microsoft.HybridNetwork/publishers/artifactStores@2024-04-15' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'eastus'
+  properties: {
+    backingResourcePublicNetworkAccess: 'Enabled'
+    managedResourceGroupConfiguration: {
+      name: 'testRg'
+      location: 'eastus'
+    }
+    replicationStrategy: 'SingleReplication'
+    storeType: 'AzureStorageAccount'
+  }
+}
+```
+
+## microsoft.hybridnetwork/publishers/artifactstores/artifactmanifests
+
+Create or update the artifact manifest resource
+```bicep
+resource exampleResource 'Microsoft.HybridNetwork/publishers/artifactStores/artifactManifests@2024-04-15' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'eastus'
+  properties: {
+    artifacts: [
+      {
+        artifactName: 'fed-rbac'
+        artifactType: 'OCIArtifact'
+        artifactVersion: '1.0.0'
+      }
+      {
+        artifactName: 'nginx'
+        artifactType: 'OCIArtifact'
+        artifactVersion: 'v1'
+      }
+    ]
+  }
+}
+```
+
+## microsoft.hybridnetwork/publishers/configurationgroupschemas
+
+Create or update the network function definition group
+```bicep
+resource exampleResource 'Microsoft.HybridNetwork/publishers/configurationGroupSchemas@2024-04-15' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'westUs2'
+  properties: {
+    description: 'Schema with no secrets'
+    schemaDefinition: '{"type":"object","properties":{"interconnect-groups":{"type":"object","properties":{"type":"object","properties":{"name":{"type":"string"},"international-interconnects":{"type":"array","item":{"type":"string"}},"domestic-interconnects":{"type":"array","item":{"type":"string"}}}}},"interconnect-group-assignments":{"type":"object","properties":{"type":"object","properties":{"ssc":{"type":"string"},"interconnects-interconnects":{"type":"string"}}}}},"required":["interconnect-groups","interconnect-group-assignments"]}'
   }
 }
 ```
@@ -459,132 +556,6 @@ resource exampleResource 'Microsoft.HybridNetwork/publishers/networkServiceDesig
 }
 ```
 
-## microsoft.hybridnetwork/publishers
-
-Create or update a publisher resource
-```bicep
-resource exampleResource 'Microsoft.HybridNetwork/publishers@2024-04-15' = {
-  name: 'example'
-  location: 'eastus'
-  properties: {
-    scope: 'Public'
-  }
-}
-```
-
-## microsoft.hybridnetwork/publishers/artifactstores
-
-Create or update an artifact store of publisher resource
-```bicep
-resource exampleResource 'Microsoft.HybridNetwork/publishers/artifactStores@2024-04-15' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'eastus'
-  properties: {
-    managedResourceGroupConfiguration: {
-      name: 'testRg'
-      location: 'eastus'
-    }
-    replicationStrategy: 'SingleReplication'
-    storeType: 'AzureContainerRegistry'
-  }
-}
-```
-
-Create or update an artifact store of publisher resource with container registry
-```bicep
-resource exampleResource 'Microsoft.HybridNetwork/publishers/artifactStores@2024-04-15' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'eastus'
-  properties: {
-    backingResourcePublicNetworkAccess: 'Disabled'
-    managedResourceGroupConfiguration: {
-      name: 'testRg'
-      location: 'eastus'
-    }
-    replicationStrategy: 'SingleReplication'
-    storeType: 'AzureContainerRegistry'
-  }
-}
-```
-
-Create or update an artifact store of publisher resource with storage
-```bicep
-resource exampleResource 'Microsoft.HybridNetwork/publishers/artifactStores@2024-04-15' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'eastus'
-  properties: {
-    backingResourcePublicNetworkAccess: 'Enabled'
-    managedResourceGroupConfiguration: {
-      name: 'testRg'
-      location: 'eastus'
-    }
-    replicationStrategy: 'SingleReplication'
-    storeType: 'AzureStorageAccount'
-  }
-}
-```
-
-## microsoft.hybridnetwork/publishers/artifactstores/artifactmanifests
-
-Create or update the artifact manifest resource
-```bicep
-resource exampleResource 'Microsoft.HybridNetwork/publishers/artifactStores/artifactManifests@2024-04-15' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'eastus'
-  properties: {
-    artifacts: [
-      {
-        artifactName: 'fed-rbac'
-        artifactType: 'OCIArtifact'
-        artifactVersion: '1.0.0'
-      }
-      {
-        artifactName: 'nginx'
-        artifactType: 'OCIArtifact'
-        artifactVersion: 'v1'
-      }
-    ]
-  }
-}
-```
-
-## microsoft.hybridnetwork/sites
-
-Create network site
-```bicep
-resource exampleResource 'Microsoft.HybridNetwork/sites@2024-04-15' = {
-  name: 'example'
-  location: 'westUs2'
-  properties: {
-    nfvis: [
-      {
-        name: 'nfvi1'
-        location: 'westUs2'
-        nfviType: 'AzureCore'
-      }
-      {
-        name: 'nfvi2'
-        customLocationReference: {
-          id: '/subscriptions/subid/resourceGroups/testResourceGroup/providers/Microsoft.ExtendedLocation/customLocations/testCustomLocation1'
-        }
-        nfviType: 'AzureArcKubernetes'
-      }
-      {
-        name: 'nfvi3'
-        customLocationReference: {
-          id: '/subscriptions/subid/resourceGroups/testResourceGroup/providers/Microsoft.ExtendedLocation/customLocations/testCustomLocation2'
-        }
-        nfviType: 'AzureOperatorNexus'
-      }
-    ]
-  }
-}
-```
-
 ## microsoft.hybridnetwork/sitenetworkservices
 
 Create first party site network service
@@ -633,6 +604,39 @@ resource exampleResource 'Microsoft.HybridNetwork/siteNetworkServices@2024-04-15
   }
   sku: {
     name: 'Standard'
+  }
+}
+```
+
+## microsoft.hybridnetwork/sites
+
+Create network site
+```bicep
+resource exampleResource 'Microsoft.HybridNetwork/sites@2024-04-15' = {
+  name: 'example'
+  location: 'westUs2'
+  properties: {
+    nfvis: [
+      {
+        name: 'nfvi1'
+        location: 'westUs2'
+        nfviType: 'AzureCore'
+      }
+      {
+        name: 'nfvi2'
+        customLocationReference: {
+          id: '/subscriptions/subid/resourceGroups/testResourceGroup/providers/Microsoft.ExtendedLocation/customLocations/testCustomLocation1'
+        }
+        nfviType: 'AzureArcKubernetes'
+      }
+      {
+        name: 'nfvi3'
+        customLocationReference: {
+          id: '/subscriptions/subid/resourceGroups/testResourceGroup/providers/Microsoft.ExtendedLocation/customLocations/testCustomLocation2'
+        }
+        nfviType: 'AzureOperatorNexus'
+      }
+    ]
   }
 }
 ```

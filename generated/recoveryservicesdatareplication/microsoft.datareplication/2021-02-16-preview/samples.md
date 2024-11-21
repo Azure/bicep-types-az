@@ -1,4 +1,26 @@
 # Microsoft.DataReplication
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
+
+## microsoft.datareplication/replicationfabrics
+
+Fabric_Create
+```bicep
+resource exampleResource 'Microsoft.DataReplication/replicationFabrics@2021-02-16-preview' = {
+  name: 'example'
+  location: 'tqygutlpob'
+  properties: {
+    customProperties: {
+      instanceType: 'FabricModelCustomProperties'
+    }
+  }
+  tags: {
+    key3917: 'vgralu'
+  }
+}
+```
 
 ## microsoft.datareplication/replicationfabrics/fabricagents
 
@@ -31,6 +53,22 @@ resource exampleResource 'Microsoft.DataReplication/replicationFabrics/fabricAge
 }
 ```
 
+## microsoft.datareplication/replicationvaults
+
+Vault_Create
+```bicep
+resource exampleResource 'Microsoft.DataReplication/replicationVaults@2021-02-16-preview' = {
+  name: 'example'
+  location: 'eck'
+  properties: {
+    vaultType: 'DisasterRecovery'
+  }
+  tags: {
+    key5359: 'ljfilxolxzuxrauopwtyxghrp'
+  }
+}
+```
+
 ## microsoft.datareplication/replicationvaults/alertsettings
 
 EmailConfiguration_Create
@@ -44,39 +82,6 @@ resource exampleResource 'Microsoft.DataReplication/replicationVaults/alertSetti
     ]
     locale: 'vpnjxjvdqtebnucyxiyrjiko'
     sendToOwners: true
-  }
-}
-```
-
-## microsoft.datareplication/replicationfabrics
-
-Fabric_Create
-```bicep
-resource exampleResource 'Microsoft.DataReplication/replicationFabrics@2021-02-16-preview' = {
-  name: 'example'
-  location: 'tqygutlpob'
-  properties: {
-    customProperties: {
-      instanceType: 'FabricModelCustomProperties'
-    }
-  }
-  tags: {
-    key3917: 'vgralu'
-  }
-}
-```
-
-## microsoft.datareplication/replicationvaults/replicationpolicies
-
-Policy_Create
-```bicep
-resource exampleResource 'Microsoft.DataReplication/replicationVaults/replicationPolicies@2021-02-16-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    customProperties: {
-      instanceType: 'PolicyModelCustomProperties'
-    }
   }
 }
 ```
@@ -113,18 +118,17 @@ resource exampleResource 'Microsoft.DataReplication/replicationVaults/replicatio
 }
 ```
 
-## microsoft.datareplication/replicationvaults
+## microsoft.datareplication/replicationvaults/replicationpolicies
 
-Vault_Create
+Policy_Create
 ```bicep
-resource exampleResource 'Microsoft.DataReplication/replicationVaults@2021-02-16-preview' = {
+resource exampleResource 'Microsoft.DataReplication/replicationVaults/replicationPolicies@2021-02-16-preview' = {
+  parent: parentResource 
   name: 'example'
-  location: 'eck'
   properties: {
-    vaultType: 'DisasterRecovery'
-  }
-  tags: {
-    key5359: 'ljfilxolxzuxrauopwtyxghrp'
+    customProperties: {
+      instanceType: 'PolicyModelCustomProperties'
+    }
   }
 }
 ```

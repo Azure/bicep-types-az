@@ -1,4 +1,24 @@
 # Microsoft.HybridCompute
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
+
+## microsoft.hybridcompute/gateways
+
+Create or Update a Gateway
+```bicep
+resource exampleResource 'Microsoft.HybridCompute/gateways@2024-07-31-preview' = {
+  name: 'example'
+  location: 'eastus2euap'
+  properties: {
+    allowedFeatures: [
+      '*'
+    ]
+    gatewayType: 'Public'
+  }
+}
+```
 
 ## microsoft.hybridcompute/licenses
 
@@ -49,6 +69,25 @@ resource exampleResource 'Microsoft.HybridCompute/machines@2024-07-31-preview' =
 }
 ```
 
+## microsoft.hybridcompute/machines/extensions
+
+Create or Update a Machine Extension
+```bicep
+resource exampleResource 'Microsoft.HybridCompute/machines/extensions@2024-07-31-preview' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'eastus2euap'
+  properties: {
+    type: 'CustomScriptExtension'
+    publisher: 'Microsoft.Compute'
+    settings: {
+      commandToExecute: 'powershell.exe -c "Get-Process | Where-Object { $_.CPU -gt 10000 }"'
+    }
+    typeHandlerVersion: '1.10'
+  }
+}
+```
+
 ## microsoft.hybridcompute/machines/licenseprofiles
 
 Create or Update a License Profile
@@ -74,25 +113,6 @@ resource exampleResource 'Microsoft.HybridCompute/machines/licenseProfiles@2024-
     softwareAssurance: {
       softwareAssuranceCustomer: true
     }
-  }
-}
-```
-
-## microsoft.hybridcompute/machines/extensions
-
-Create or Update a Machine Extension
-```bicep
-resource exampleResource 'Microsoft.HybridCompute/machines/extensions@2024-07-31-preview' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'eastus2euap'
-  properties: {
-    type: 'CustomScriptExtension'
-    publisher: 'Microsoft.Compute'
-    settings: {
-      commandToExecute: 'powershell.exe -c "Get-Process | Where-Object { $_.CPU -gt 10000 }"'
-    }
-    typeHandlerVersion: '1.10'
   }
 }
 ```
@@ -129,36 +149,6 @@ resource exampleResource 'Microsoft.HybridCompute/machines/runCommands@2024-07-3
 }
 ```
 
-## microsoft.hybridcompute/gateways
-
-Create or Update a Gateway
-```bicep
-resource exampleResource 'Microsoft.HybridCompute/gateways@2024-07-31-preview' = {
-  name: 'example'
-  location: 'eastus2euap'
-  properties: {
-    allowedFeatures: [
-      '*'
-    ]
-    gatewayType: 'Public'
-  }
-}
-```
-
-## microsoft.hybridcompute/settings
-
-SettingsUpdate
-```bicep
-resource exampleResource 'Microsoft.HybridCompute/settings@2024-07-31-preview' = {
-  name: 'example'
-  properties: {
-    gatewayProperties: {
-      gatewayResourceId: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/hybridRG/providers/Microsoft.HybridCompute/gateways/newGateway'
-    }
-  }
-}
-```
-
 ## microsoft.hybridcompute/privatelinkscopes
 
 PrivateLinkScopeCreate
@@ -191,6 +181,20 @@ resource exampleResource 'Microsoft.HybridCompute/privateLinkScopes/privateEndpo
     privateLinkServiceConnectionState: {
       description: 'Approved by johndoe@contoso.com'
       status: 'Approved'
+    }
+  }
+}
+```
+
+## microsoft.hybridcompute/settings
+
+SettingsUpdate
+```bicep
+resource exampleResource 'Microsoft.HybridCompute/settings@2024-07-31-preview' = {
+  name: 'example'
+  properties: {
+    gatewayProperties: {
+      gatewayResourceId: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/hybridRG/providers/Microsoft.HybridCompute/gateways/newGateway'
     }
   }
 }

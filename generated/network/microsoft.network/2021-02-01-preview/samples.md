@@ -1,4 +1,8 @@
 # Microsoft.Network
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.network/networkmanagers
 
@@ -72,85 +76,6 @@ resource exampleResource 'Microsoft.Network/networkManagers/networkGroups@2021-0
       }
     ]
     memberType: 'VirtualNetwork'
-  }
-}
-```
-
-## microsoft.network/networkmanagers/securityuserconfigurations
-
-Create network manager security user configuration
-```bicep
-resource exampleResource 'Microsoft.Network/networkManagers/securityUserConfigurations@2021-02-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    description: 'A sample policy'
-    deleteExistingNSGs: 'True'
-    securityType: 'UserPolicy'
-  }
-}
-```
-
-## microsoft.network/networkmanagers/securityuserconfigurations/rulecollections
-
-Create or Update a User Rule Collection
-```bicep
-resource exampleResource 'Microsoft.Network/networkManagers/securityUserConfigurations/ruleCollections@2021-02-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    description: 'A sample policy'
-    appliesToGroups: [
-      {
-        networkGroupId: '/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/networkManagers/testNetworkManager/networkGroups/testGroup'
-      }
-    ]
-  }
-}
-```
-
-## microsoft.network/networkmanagers/securityuserconfigurations/rulecollections/rules
-
-Create a default user rule
-```bicep
-resource exampleResource 'Microsoft.Network/networkManagers/securityUserConfigurations/ruleCollections/rules@2021-02-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  kind: 'Default'
-  properties: {
-    flag: 'AllowVnetInbound'
-  }
-}
-```
-
-Create a user rule
-```bicep
-resource exampleResource 'Microsoft.Network/networkManagers/securityUserConfigurations/ruleCollections/rules@2021-02-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  kind: 'Custom'
-  properties: {
-    description: 'Sample User Rule'
-    destinationPortRanges: [
-      '22'
-    ]
-    destinations: [
-      {
-        addressPrefix: '*'
-        addressPrefixType: 'IPPrefix'
-      }
-    ]
-    direction: 'Inbound'
-    sourcePortRanges: [
-      '0-65535'
-    ]
-    sources: [
-      {
-        addressPrefix: '*'
-        addressPrefixType: 'IPPrefix'
-      }
-    ]
-    protocol: 'Tcp'
   }
 }
 ```
@@ -236,6 +161,85 @@ resource exampleResource 'Microsoft.Network/networkManagers/securityAdminConfigu
 }
 ```
 
+## microsoft.network/networkmanagers/securityuserconfigurations
+
+Create network manager security user configuration
+```bicep
+resource exampleResource 'Microsoft.Network/networkManagers/securityUserConfigurations@2021-02-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    description: 'A sample policy'
+    deleteExistingNSGs: 'True'
+    securityType: 'UserPolicy'
+  }
+}
+```
+
+## microsoft.network/networkmanagers/securityuserconfigurations/rulecollections
+
+Create or Update a User Rule Collection
+```bicep
+resource exampleResource 'Microsoft.Network/networkManagers/securityUserConfigurations/ruleCollections@2021-02-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    description: 'A sample policy'
+    appliesToGroups: [
+      {
+        networkGroupId: '/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/networkManagers/testNetworkManager/networkGroups/testGroup'
+      }
+    ]
+  }
+}
+```
+
+## microsoft.network/networkmanagers/securityuserconfigurations/rulecollections/rules
+
+Create a default user rule
+```bicep
+resource exampleResource 'Microsoft.Network/networkManagers/securityUserConfigurations/ruleCollections/rules@2021-02-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  kind: 'Default'
+  properties: {
+    flag: 'AllowVnetInbound'
+  }
+}
+```
+
+Create a user rule
+```bicep
+resource exampleResource 'Microsoft.Network/networkManagers/securityUserConfigurations/ruleCollections/rules@2021-02-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  kind: 'Custom'
+  properties: {
+    description: 'Sample User Rule'
+    destinationPortRanges: [
+      '22'
+    ]
+    destinations: [
+      {
+        addressPrefix: '*'
+        addressPrefixType: 'IPPrefix'
+      }
+    ]
+    direction: 'Inbound'
+    sourcePortRanges: [
+      '0-65535'
+    ]
+    sources: [
+      {
+        addressPrefix: '*'
+        addressPrefixType: 'IPPrefix'
+      }
+    ]
+    protocol: 'Tcp'
+  }
+}
+```
+
 ## microsoft.network/networksecurityperimeters
 
 Put Network Security Perimeter
@@ -243,6 +247,19 @@ Put Network Security Perimeter
 resource exampleResource 'Microsoft.Network/networkSecurityPerimeters@2021-02-01-preview' = {
   name: 'example'
   properties: {
+  }
+}
+```
+
+## microsoft.network/networksecurityperimeters/links
+
+NspLinksPut
+```bicep
+resource exampleResource 'Microsoft.Network/networkSecurityPerimeters/links@2021-02-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    autoApprovedRemotePerimeterResourceId: '/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/networkSecurityPerimeters/nsp2'
   }
 }
 ```
@@ -291,19 +308,6 @@ resource exampleResource 'Microsoft.Network/networkSecurityPerimeters/resourceAs
     profile: {
       id: '/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/networkSecurityPerimeters/nsp1/profiles/{profileName}'
     }
-  }
-}
-```
-
-## microsoft.network/networksecurityperimeters/links
-
-NspLinksPut
-```bicep
-resource exampleResource 'Microsoft.Network/networkSecurityPerimeters/links@2021-02-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    autoApprovedRemotePerimeterResourceId: '/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/networkSecurityPerimeters/nsp2'
   }
 }
 ```

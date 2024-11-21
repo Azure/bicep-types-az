@@ -1,4 +1,8 @@
 # Microsoft.SecurityInsights
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.securityinsights/alertrules
 
@@ -130,30 +134,6 @@ resource exampleResource 'Microsoft.SecurityInsights/alertRules/actions@2024-03-
   properties: {
     logicAppResourceId: '/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.Logic/workflows/MyAlerts'
     triggerUri: 'https://prod-31.northcentralus.logic.azure.com:443/workflows/cd3765391efd48549fd7681ded1d48d7/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=signature'
-  }
-}
-```
-
-## microsoft.securityinsights/incidents
-
-Creates or updates an incident.
-```bicep
-resource exampleResource 'Microsoft.SecurityInsights/incidents@2024-03-01' = {
-  name: 'example'
-  etag: '"0300bf09-0000-0000-0000-5c37296e0000"'
-  properties: {
-    description: 'This is a demo incident'
-    classification: 'FalsePositive'
-    classificationComment: 'Not a malicious activity'
-    classificationReason: 'IncorrectAlertLogic'
-    firstActivityTimeUtc: '2019-01-01T13:00:30Z'
-    lastActivityTimeUtc: '2019-01-01T13:05:30Z'
-    owner: {
-      objectId: '2046feea-040d-4a46-9e2b-91c2941bfa70'
-    }
-    severity: 'High'
-    status: 'Closed'
-    title: 'My incident'
   }
 }
 ```
@@ -335,6 +315,30 @@ resource exampleResource 'Microsoft.SecurityInsights/dataConnectors@2024-03-01' 
     }
     tenantId: '06b3ccb8-1384-4bcc-aec7-852f6d57161b'
     tipLookbackPeriod: '2020-01-01T13:00:30.123Z'
+  }
+}
+```
+
+## microsoft.securityinsights/incidents
+
+Creates or updates an incident.
+```bicep
+resource exampleResource 'Microsoft.SecurityInsights/incidents@2024-03-01' = {
+  name: 'example'
+  etag: '"0300bf09-0000-0000-0000-5c37296e0000"'
+  properties: {
+    description: 'This is a demo incident'
+    classification: 'FalsePositive'
+    classificationComment: 'Not a malicious activity'
+    classificationReason: 'IncorrectAlertLogic'
+    firstActivityTimeUtc: '2019-01-01T13:00:30Z'
+    lastActivityTimeUtc: '2019-01-01T13:05:30Z'
+    owner: {
+      objectId: '2046feea-040d-4a46-9e2b-91c2941bfa70'
+    }
+    severity: 'High'
+    status: 'Closed'
+    title: 'My incident'
   }
 }
 ```

@@ -1,4 +1,93 @@
 # Microsoft.HybridNetwork
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
+
+## microsoft.hybridnetwork/devices
+
+Create or update device
+```bicep
+resource exampleResource 'Microsoft.HybridNetwork/devices@2021-05-01' = {
+  name: 'example'
+  location: 'eastus'
+  properties: {
+    azureStackEdge: {
+      id: '/subscriptions/subid1/resourcegroups/rg2/providers/Microsoft.DataboxEdge/DataboxEdgeDevices/TestDataboxEdgeDeviceName'
+    }
+    deviceType: 'AzureStackEdge'
+  }
+}
+```
+
+## microsoft.hybridnetwork/locations/vendors/networkfunctions
+
+Create or update vendor network function sub resource
+```bicep
+resource exampleResource 'Microsoft.HybridNetwork/locations/vendors/networkFunctions@2021-05-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    networkFunctionVendorConfigurations: [
+      {
+        networkInterfaces: [
+          {
+            ipConfigurations: [
+              {
+                dnsServers: {
+                }
+                gateway: ''
+                ipAddress: ''
+                ipAllocationMethod: 'Dynamic'
+                ipVersion: 'IPv4'
+                subnet: ''
+              }
+            ]
+            macAddress: ''
+            networkInterfaceName: 'nic1'
+            vmSwitchType: 'Management'
+          }
+          {
+            ipConfigurations: [
+              {
+                dnsServers: {
+                }
+                gateway: ''
+                ipAddress: ''
+                ipAllocationMethod: 'Dynamic'
+                ipVersion: 'IPv4'
+                subnet: ''
+              }
+            ]
+            macAddress: 'DC-97-F8-79-16-7D'
+            networkInterfaceName: 'nic2'
+            vmSwitchType: 'Wan'
+          }
+        ]
+        osProfile: {
+          adminUsername: 'dummyuser'
+          customData: 'base-64 encoded string of custom data'
+          linuxConfiguration: {
+            ssh: {
+              publicKeys: [
+                {
+                  path: 'home/user/.ssh/authorized_keys'
+                  keyData: 'ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAgEAwrr66r8n6B8Y0zMF3dOpXEapIQD9DiYQ6D6/zwor9o39jSkHNiMMER/GETBbzP83LOcekm02aRjo55ArO7gPPVvCXbrirJu9pkm4AC4BBre5xSLS= user@constoso-DSH'
+                }
+              ]
+            }
+          }
+        }
+        roleName: 'testRole'
+        userDataParameters: {
+        }
+      }
+    ]
+    skuType: 'SDWAN'
+    vendorProvisioningState: 'Provisioning'
+  }
+}
+```
 
 ## microsoft.hybridnetwork/networkfunctions
 
@@ -57,22 +146,6 @@ resource exampleResource 'Microsoft.HybridNetwork/networkFunctions@2021-05-01' =
     skuName: 'testSku'
     skuType: 'SDWAN'
     vendorName: 'testVendor'
-  }
-}
-```
-
-## microsoft.hybridnetwork/devices
-
-Create or update device
-```bicep
-resource exampleResource 'Microsoft.HybridNetwork/devices@2021-05-01' = {
-  name: 'example'
-  location: 'eastus'
-  properties: {
-    azureStackEdge: {
-      id: '/subscriptions/subid1/resourcegroups/rg2/providers/Microsoft.DataboxEdge/DataboxEdgeDevices/TestDataboxEdgeDeviceName'
-    }
-    deviceType: 'AzureStackEdge'
   }
 }
 ```
@@ -192,74 +265,5 @@ Create or update preview subscription of vendor sku sub resource
 resource exampleResource 'Microsoft.HybridNetwork/vendors/vendorSkus/previewSubscriptions@2021-05-01' = {
   parent: parentResource 
   name: 'example'
-}
-```
-
-## microsoft.hybridnetwork/locations/vendors/networkfunctions
-
-Create or update vendor network function sub resource
-```bicep
-resource exampleResource 'Microsoft.HybridNetwork/locations/vendors/networkFunctions@2021-05-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    networkFunctionVendorConfigurations: [
-      {
-        networkInterfaces: [
-          {
-            ipConfigurations: [
-              {
-                dnsServers: {
-                }
-                gateway: ''
-                ipAddress: ''
-                ipAllocationMethod: 'Dynamic'
-                ipVersion: 'IPv4'
-                subnet: ''
-              }
-            ]
-            macAddress: ''
-            networkInterfaceName: 'nic1'
-            vmSwitchType: 'Management'
-          }
-          {
-            ipConfigurations: [
-              {
-                dnsServers: {
-                }
-                gateway: ''
-                ipAddress: ''
-                ipAllocationMethod: 'Dynamic'
-                ipVersion: 'IPv4'
-                subnet: ''
-              }
-            ]
-            macAddress: 'DC-97-F8-79-16-7D'
-            networkInterfaceName: 'nic2'
-            vmSwitchType: 'Wan'
-          }
-        ]
-        osProfile: {
-          adminUsername: 'dummyuser'
-          customData: 'base-64 encoded string of custom data'
-          linuxConfiguration: {
-            ssh: {
-              publicKeys: [
-                {
-                  path: 'home/user/.ssh/authorized_keys'
-                  keyData: 'ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAgEAwrr66r8n6B8Y0zMF3dOpXEapIQD9DiYQ6D6/zwor9o39jSkHNiMMER/GETBbzP83LOcekm02aRjo55ArO7gPPVvCXbrirJu9pkm4AC4BBre5xSLS= user@constoso-DSH'
-                }
-              ]
-            }
-          }
-        }
-        roleName: 'testRole'
-        userDataParameters: {
-        }
-      }
-    ]
-    skuType: 'SDWAN'
-    vendorProvisioningState: 'Provisioning'
-  }
 }
 ```

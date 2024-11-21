@@ -1,4 +1,8 @@
 # Microsoft.EventHub
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.eventhub/clusters
 
@@ -48,6 +52,137 @@ resource exampleResource 'Microsoft.EventHub/namespaces@2024-01-01' = {
         }
       ]
     }
+  }
+}
+```
+
+## microsoft.eventhub/namespaces/applicationgroups
+
+ApplicationGroupCreate
+```bicep
+resource exampleResource 'Microsoft.EventHub/namespaces/applicationGroups@2024-01-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    clientAppGroupIdentifier: 'SASKeyName=KeyName'
+    isEnabled: true
+    policies: [
+      {
+        name: 'ThrottlingPolicy1'
+        type: 'ThrottlingPolicy'
+        metricId: 'IncomingMessages'
+        rateLimitThreshold: 7912
+      }
+      {
+        name: 'ThrottlingPolicy2'
+        type: 'ThrottlingPolicy'
+        metricId: 'IncomingBytes'
+        rateLimitThreshold: 3951729
+      }
+      {
+        name: 'ThrottlingPolicy3'
+        type: 'ThrottlingPolicy'
+        metricId: 'OutgoingBytes'
+        rateLimitThreshold: 245175
+      }
+    ]
+  }
+}
+```
+
+## microsoft.eventhub/namespaces/authorizationrules
+
+NameSpaceAuthorizationRuleCreate
+```bicep
+resource exampleResource 'Microsoft.EventHub/namespaces/authorizationRules@2024-01-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    rights: [
+      'Listen'
+      'Send'
+    ]
+  }
+}
+```
+
+## microsoft.eventhub/namespaces/disasterrecoveryconfigs
+
+EHAliasCreate
+```bicep
+resource exampleResource 'Microsoft.EventHub/namespaces/disasterRecoveryConfigs@2024-01-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    partnerNamespace: 'sdk-Namespace-37'
+  }
+}
+```
+
+## microsoft.eventhub/namespaces/eventhubs
+
+EventHubCreate
+```bicep
+resource exampleResource 'Microsoft.EventHub/namespaces/eventhubs@2024-01-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    captureDescription: {
+      destination: {
+        name: 'EventHubArchive.AzureBlockBlob'
+        identity: {
+          type: 'UserAssigned'
+          userAssignedIdentity: '/subscriptions/SampleSubscription/resourceGroups/ResurceGroupSample/providers/Microsoft.ManagedIdentity/userAssignedIdentities/ud2'
+        }
+        properties: {
+          archiveNameFormat: '{Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}'
+          blobContainer: 'container'
+          storageAccountResourceId: '/subscriptions/e2f361f0-3b27-4503-a9cc-21cfba380093/resourceGroups/Default-Storage-SouthCentralUS/providers/Microsoft.ClassicStorage/storageAccounts/arjunteststorage'
+        }
+      }
+      enabled: true
+      encoding: 'Avro'
+      intervalInSeconds: 120
+      sizeLimitInBytes: 10485763
+    }
+    messageRetentionInDays: 4
+    partitionCount: 4
+    retentionDescription: {
+      cleanupPolicy: 'Compact'
+      retentionTimeInHours: 96
+      tombstoneRetentionTimeInHours: 1
+    }
+    status: 'Active'
+    userMetadata: 'key'
+  }
+}
+```
+
+## microsoft.eventhub/namespaces/eventhubs/authorizationrules
+
+EventHubAuthorizationRuleCreate
+```bicep
+resource exampleResource 'Microsoft.EventHub/namespaces/eventhubs/authorizationRules@2024-01-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    rights: [
+      'Listen'
+      'Send'
+    ]
+  }
+}
+```
+
+## microsoft.eventhub/namespaces/eventhubs/consumergroups
+
+ConsumerGroupCreate
+```bicep
+resource exampleResource 'Microsoft.EventHub/namespaces/eventhubs/consumergroups@2024-01-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    userMetadata: 'New consumergroup'
   }
 }
 ```
@@ -107,22 +242,6 @@ resource exampleResource 'Microsoft.EventHub/namespaces/networkRuleSets@2024-01-
 }
 ```
 
-## microsoft.eventhub/namespaces/authorizationrules
-
-NameSpaceAuthorizationRuleCreate
-```bicep
-resource exampleResource 'Microsoft.EventHub/namespaces/authorizationRules@2024-01-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    rights: [
-      'Listen'
-      'Send'
-    ]
-  }
-}
-```
-
 ## microsoft.eventhub/namespaces/privateendpointconnections
 
 NameSpacePrivateEndPointConnectionCreate
@@ -143,87 +262,6 @@ resource exampleResource 'Microsoft.EventHub/namespaces/privateEndpointConnectio
 }
 ```
 
-## microsoft.eventhub/namespaces/disasterrecoveryconfigs
-
-EHAliasCreate
-```bicep
-resource exampleResource 'Microsoft.EventHub/namespaces/disasterRecoveryConfigs@2024-01-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    partnerNamespace: 'sdk-Namespace-37'
-  }
-}
-```
-
-## microsoft.eventhub/namespaces/eventhubs/authorizationrules
-
-EventHubAuthorizationRuleCreate
-```bicep
-resource exampleResource 'Microsoft.EventHub/namespaces/eventhubs/authorizationRules@2024-01-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    rights: [
-      'Listen'
-      'Send'
-    ]
-  }
-}
-```
-
-## microsoft.eventhub/namespaces/eventhubs
-
-EventHubCreate
-```bicep
-resource exampleResource 'Microsoft.EventHub/namespaces/eventhubs@2024-01-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    captureDescription: {
-      destination: {
-        name: 'EventHubArchive.AzureBlockBlob'
-        identity: {
-          type: 'UserAssigned'
-          userAssignedIdentity: '/subscriptions/SampleSubscription/resourceGroups/ResurceGroupSample/providers/Microsoft.ManagedIdentity/userAssignedIdentities/ud2'
-        }
-        properties: {
-          archiveNameFormat: '{Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}'
-          blobContainer: 'container'
-          storageAccountResourceId: '/subscriptions/e2f361f0-3b27-4503-a9cc-21cfba380093/resourceGroups/Default-Storage-SouthCentralUS/providers/Microsoft.ClassicStorage/storageAccounts/arjunteststorage'
-        }
-      }
-      enabled: true
-      encoding: 'Avro'
-      intervalInSeconds: 120
-      sizeLimitInBytes: 10485763
-    }
-    messageRetentionInDays: 4
-    partitionCount: 4
-    retentionDescription: {
-      cleanupPolicy: 'Compact'
-      retentionTimeInHours: 96
-      tombstoneRetentionTimeInHours: 1
-    }
-    status: 'Active'
-    userMetadata: 'key'
-  }
-}
-```
-
-## microsoft.eventhub/namespaces/eventhubs/consumergroups
-
-ConsumerGroupCreate
-```bicep
-resource exampleResource 'Microsoft.EventHub/namespaces/eventhubs/consumergroups@2024-01-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    userMetadata: 'New consumergroup'
-  }
-}
-```
-
 ## microsoft.eventhub/namespaces/schemagroups
 
 SchemaRegistryCreate
@@ -236,40 +274,6 @@ resource exampleResource 'Microsoft.EventHub/namespaces/schemagroups@2024-01-01'
     }
     schemaCompatibility: 'Forward'
     schemaType: 'Avro'
-  }
-}
-```
-
-## microsoft.eventhub/namespaces/applicationgroups
-
-ApplicationGroupCreate
-```bicep
-resource exampleResource 'Microsoft.EventHub/namespaces/applicationGroups@2024-01-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    clientAppGroupIdentifier: 'SASKeyName=KeyName'
-    isEnabled: true
-    policies: [
-      {
-        name: 'ThrottlingPolicy1'
-        type: 'ThrottlingPolicy'
-        metricId: 'IncomingMessages'
-        rateLimitThreshold: 7912
-      }
-      {
-        name: 'ThrottlingPolicy2'
-        type: 'ThrottlingPolicy'
-        metricId: 'IncomingBytes'
-        rateLimitThreshold: 3951729
-      }
-      {
-        name: 'ThrottlingPolicy3'
-        type: 'ThrottlingPolicy'
-        metricId: 'OutgoingBytes'
-        rateLimitThreshold: 245175
-      }
-    ]
   }
 }
 ```

@@ -1,20 +1,8 @@
 # Microsoft.DeviceUpdate
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
 
-## microsoft.deviceupdate/accounts/privateendpointconnections
-
-PrivateEndpointConnectionCreateOrUpdate
-```bicep
-resource exampleResource 'Microsoft.DeviceUpdate/accounts/privateEndpointConnections@2022-12-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    privateLinkServiceConnectionState: {
-      description: 'Auto-Approved'
-      status: 'Approved'
-    }
-  }
-}
-```
 
 ## microsoft.deviceupdate/accounts/privateendpointconnectionproxies
 
@@ -44,6 +32,22 @@ resource exampleResource 'Microsoft.DeviceUpdate/accounts/privateEndpointConnect
         id: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test-rg/providers/Microsoft.Network/privateEndpoints/{privateEndpointConnectionProxyId}/privateLinkServiceProxies/{privateEndpointConnectionProxyId}'
       }
     ]
+  }
+}
+```
+
+## microsoft.deviceupdate/accounts/privateendpointconnections
+
+PrivateEndpointConnectionCreateOrUpdate
+```bicep
+resource exampleResource 'Microsoft.DeviceUpdate/accounts/privateEndpointConnections@2022-12-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    privateLinkServiceConnectionState: {
+      description: 'Auto-Approved'
+      status: 'Approved'
+    }
   }
 }
 ```

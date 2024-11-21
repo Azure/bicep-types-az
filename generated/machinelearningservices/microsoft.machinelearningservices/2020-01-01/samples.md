@@ -1,4 +1,8 @@
 # Microsoft.MachineLearningServices
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.machinelearningservices/workspaces
 
@@ -36,18 +40,6 @@ resource exampleResource 'Microsoft.MachineLearningServices/workspaces@2020-01-0
 
 ## microsoft.machinelearningservices/workspaces/computes
 
-Create AKS Compute
-```bicep
-resource exampleResource 'Microsoft.MachineLearningServices/workspaces/computes@2020-01-01' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'eastus'
-  properties: {
-    computeType: 'AKS'
-  }
-}
-```
-
 Create a AML Compute
 ```bicep
 resource exampleResource 'Microsoft.MachineLearningServices/workspaces/computes@2020-01-01' = {
@@ -78,6 +70,18 @@ resource exampleResource 'Microsoft.MachineLearningServices/workspaces/computes@
   location: 'eastus'
   properties: {
     computeType: 'DataFactory'
+  }
+}
+```
+
+Create AKS Compute
+```bicep
+resource exampleResource 'Microsoft.MachineLearningServices/workspaces/computes@2020-01-01' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'eastus'
+  properties: {
+    computeType: 'AKS'
   }
 }
 ```

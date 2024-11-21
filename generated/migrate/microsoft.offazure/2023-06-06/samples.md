@@ -1,135 +1,8 @@
 # Microsoft.OffAzure
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
 
-## microsoft.offazure/importsites
-
-ImportSitesController_Create_MaximumSet_Gen
-```bicep
-resource exampleResource 'Microsoft.OffAzure/importSites@2023-06-06' = {
-  name: 'example'
-  location: 'woctgvdufvkzvjcirjpf'
-  properties: {
-    discoverySolutionId: 'lfaswhiwdttdpkrvnrpriauexdjs'
-    provisioningState: 'Created'
-  }
-  tags: {
-    key2067: 'taqzca'
-  }
-}
-```
-
-ImportSitesController_Create_MinimumSet_Gen
-```bicep
-resource exampleResource 'Microsoft.OffAzure/importSites@2023-06-06' = {
-  name: 'example'
-  location: 'woctgvdufvkzvjcirjpf'
-}
-```
-
-## microsoft.offazure/mastersites
-
-MasterSitesController_Create_MaximumSet_Gen
-```bicep
-resource exampleResource 'Microsoft.OffAzure/masterSites@2023-06-06' = {
-  name: 'example'
-  location: 'plyak'
-  properties: {
-    allowMultipleSites: true
-    customerStorageAccountArmId: 'cdxrihtiskkn'
-    provisioningState: 'Created'
-    publicNetworkAccess: 'NotSpecified'
-    sites: [
-      'zxupfq'
-    ]
-  }
-  tags: {
-    key7125: 'jbhnzfuxjovyamasouyfhhzhevagvw'
-  }
-}
-```
-
-MasterSitesController_Create_MinimumSet_Gen
-```bicep
-resource exampleResource 'Microsoft.OffAzure/masterSites@2023-06-06' = {
-  name: 'example'
-  location: 'plyak'
-}
-```
-
-## microsoft.offazure/serversites
-
-ServerSitesController_Create_MaximumSet_Gen
-```bicep
-resource exampleResource 'Microsoft.OffAzure/serverSites@2023-06-06' = {
-  name: 'example'
-  location: 'iipybgplhzhpcfv'
-  properties: {
-    agentDetails: {
-      keyVaultId: 'awxurtbjmofxuciewsqfgpkccpzw'
-      keyVaultUri: 'qizphgqwage'
-    }
-    applianceName: 'zkzibwptff'
-    discoverySolutionId: 'lvskpghpphpfumbzxroakznqplomiy'
-    provisioningState: 'Created'
-    servicePrincipalIdentityDetails: {
-      aadAuthority: 'yanzipdww'
-      applicationId: 'tspgrujepxyxuprkqvfuqbbjrweeqa'
-      audience: 'oepwfaozztzvegmzvswafvotj'
-      objectId: 'tqrjngpgxnnto'
-      rawCertData: 'dotvgkslkmsgvtekgojnhcdrryk'
-      tenantId: 'vesmyhu'
-    }
-  }
-  tags: {
-    key4244: 'yryvgpkoefkjkhlcahntgfz'
-  }
-}
-```
-
-ServerSitesController_Create_MinimumSet_Gen
-```bicep
-resource exampleResource 'Microsoft.OffAzure/serverSites@2023-06-06' = {
-  name: 'example'
-  location: 'iipybgplhzhpcfv'
-}
-```
-
-## microsoft.offazure/vmwaresites
-
-SitesController_Create_MaximumSet_Gen
-```bicep
-resource exampleResource 'Microsoft.OffAzure/vmwareSites@2023-06-06' = {
-  name: 'example'
-  location: 'mh'
-  properties: {
-    agentDetails: {
-      keyVaultId: 'awxurtbjmofxuciewsqfgpkccpzw'
-      keyVaultUri: 'qizphgqwage'
-    }
-    applianceName: 'zkzibwptff'
-    discoverySolutionId: 'lvskpghpphpfumbzxroakznqplomiy'
-    provisioningState: 'Created'
-    servicePrincipalIdentityDetails: {
-      aadAuthority: 'yanzipdww'
-      applicationId: 'tspgrujepxyxuprkqvfuqbbjrweeqa'
-      audience: 'oepwfaozztzvegmzvswafvotj'
-      objectId: 'tqrjngpgxnnto'
-      rawCertData: 'dotvgkslkmsgvtekgojnhcdrryk'
-      tenantId: 'vesmyhu'
-    }
-  }
-  tags: {
-    key7046: 'qywdefracwwzlugbwgqbt'
-  }
-}
-```
-
-SitesController_Create_MinimumSet_Gen
-```bicep
-resource exampleResource 'Microsoft.OffAzure/vmwareSites@2023-06-06' = {
-  name: 'example'
-  location: 'mh'
-}
-```
 
 ## microsoft.offazure/hypervsites
 
@@ -215,6 +88,61 @@ HypervHostController_Create_MinimumSet_Gen
 resource exampleResource 'Microsoft.OffAzure/hypervSites/hosts@2023-06-06' = {
   parent: parentResource 
   name: 'example'
+}
+```
+
+## microsoft.offazure/importsites
+
+ImportSitesController_Create_MaximumSet_Gen
+```bicep
+resource exampleResource 'Microsoft.OffAzure/importSites@2023-06-06' = {
+  name: 'example'
+  location: 'woctgvdufvkzvjcirjpf'
+  properties: {
+    discoverySolutionId: 'lfaswhiwdttdpkrvnrpriauexdjs'
+    provisioningState: 'Created'
+  }
+  tags: {
+    key2067: 'taqzca'
+  }
+}
+```
+
+ImportSitesController_Create_MinimumSet_Gen
+```bicep
+resource exampleResource 'Microsoft.OffAzure/importSites@2023-06-06' = {
+  name: 'example'
+  location: 'woctgvdufvkzvjcirjpf'
+}
+```
+
+## microsoft.offazure/mastersites
+
+MasterSitesController_Create_MaximumSet_Gen
+```bicep
+resource exampleResource 'Microsoft.OffAzure/masterSites@2023-06-06' = {
+  name: 'example'
+  location: 'plyak'
+  properties: {
+    allowMultipleSites: true
+    customerStorageAccountArmId: 'cdxrihtiskkn'
+    provisioningState: 'Created'
+    publicNetworkAccess: 'NotSpecified'
+    sites: [
+      'zxupfq'
+    ]
+  }
+  tags: {
+    key7125: 'jbhnzfuxjovyamasouyfhhzhevagvw'
+  }
+}
+```
+
+MasterSitesController_Create_MinimumSet_Gen
+```bicep
+resource exampleResource 'Microsoft.OffAzure/masterSites@2023-06-06' = {
+  name: 'example'
+  location: 'plyak'
 }
 ```
 
@@ -365,6 +293,82 @@ WebAppDiscoverySiteDataSourcesController_Create_MinimumSet_Gen
 resource exampleResource 'Microsoft.OffAzure/masterSites/webAppSites/discoverySiteDataSources@2023-06-06' = {
   parent: parentResource 
   name: 'example'
+}
+```
+
+## microsoft.offazure/serversites
+
+ServerSitesController_Create_MaximumSet_Gen
+```bicep
+resource exampleResource 'Microsoft.OffAzure/serverSites@2023-06-06' = {
+  name: 'example'
+  location: 'iipybgplhzhpcfv'
+  properties: {
+    agentDetails: {
+      keyVaultId: 'awxurtbjmofxuciewsqfgpkccpzw'
+      keyVaultUri: 'qizphgqwage'
+    }
+    applianceName: 'zkzibwptff'
+    discoverySolutionId: 'lvskpghpphpfumbzxroakznqplomiy'
+    provisioningState: 'Created'
+    servicePrincipalIdentityDetails: {
+      aadAuthority: 'yanzipdww'
+      applicationId: 'tspgrujepxyxuprkqvfuqbbjrweeqa'
+      audience: 'oepwfaozztzvegmzvswafvotj'
+      objectId: 'tqrjngpgxnnto'
+      rawCertData: 'dotvgkslkmsgvtekgojnhcdrryk'
+      tenantId: 'vesmyhu'
+    }
+  }
+  tags: {
+    key4244: 'yryvgpkoefkjkhlcahntgfz'
+  }
+}
+```
+
+ServerSitesController_Create_MinimumSet_Gen
+```bicep
+resource exampleResource 'Microsoft.OffAzure/serverSites@2023-06-06' = {
+  name: 'example'
+  location: 'iipybgplhzhpcfv'
+}
+```
+
+## microsoft.offazure/vmwaresites
+
+SitesController_Create_MaximumSet_Gen
+```bicep
+resource exampleResource 'Microsoft.OffAzure/vmwareSites@2023-06-06' = {
+  name: 'example'
+  location: 'mh'
+  properties: {
+    agentDetails: {
+      keyVaultId: 'awxurtbjmofxuciewsqfgpkccpzw'
+      keyVaultUri: 'qizphgqwage'
+    }
+    applianceName: 'zkzibwptff'
+    discoverySolutionId: 'lvskpghpphpfumbzxroakznqplomiy'
+    provisioningState: 'Created'
+    servicePrincipalIdentityDetails: {
+      aadAuthority: 'yanzipdww'
+      applicationId: 'tspgrujepxyxuprkqvfuqbbjrweeqa'
+      audience: 'oepwfaozztzvegmzvswafvotj'
+      objectId: 'tqrjngpgxnnto'
+      rawCertData: 'dotvgkslkmsgvtekgojnhcdrryk'
+      tenantId: 'vesmyhu'
+    }
+  }
+  tags: {
+    key7046: 'qywdefracwwzlugbwgqbt'
+  }
+}
+```
+
+SitesController_Create_MinimumSet_Gen
+```bicep
+resource exampleResource 'Microsoft.OffAzure/vmwareSites@2023-06-06' = {
+  name: 'example'
+  location: 'mh'
 }
 ```
 

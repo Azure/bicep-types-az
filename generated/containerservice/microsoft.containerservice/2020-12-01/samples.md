@@ -1,4 +1,8 @@
 # Microsoft.ContainerService
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.containerservice/managedclusters
 
@@ -378,33 +382,6 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2020-12-01'
 }
 ```
 
-## microsoft.containerservice/managedclusters/maintenanceconfigurations
-
-Create/Update Maintenance Configuration
-```bicep
-resource exampleResource 'Microsoft.ContainerService/managedClusters/maintenanceConfigurations@2020-12-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    notAllowedTime: [
-      {
-        end: '2020-11-30T12:00:00Z'
-        start: '2020-11-26T03:00:00Z'
-      }
-    ]
-    timeInWeek: [
-      {
-        day: 'Monday'
-        hourSlots: [
-          1
-          2
-        ]
-      }
-    ]
-  }
-}
-```
-
 ## microsoft.containerservice/managedclusters/agentpools
 
 Create Agent Pool with EncryptionAtHost enabled
@@ -560,6 +537,33 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters/agentPools@
     scaleSetEvictionPolicy: 'Delete'
     scaleSetPriority: 'Spot'
     vmSize: 'Standard_DS1_v2'
+  }
+}
+```
+
+## microsoft.containerservice/managedclusters/maintenanceconfigurations
+
+Create/Update Maintenance Configuration
+```bicep
+resource exampleResource 'Microsoft.ContainerService/managedClusters/maintenanceConfigurations@2020-12-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    notAllowedTime: [
+      {
+        end: '2020-11-30T12:00:00Z'
+        start: '2020-11-26T03:00:00Z'
+      }
+    ]
+    timeInWeek: [
+      {
+        day: 'Monday'
+        hourSlots: [
+          1
+          2
+        ]
+      }
+    ]
   }
 }
 ```

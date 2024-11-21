@@ -1,4 +1,8 @@
 # Microsoft.TestBase
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.testbase/testbaseaccounts
 
@@ -12,6 +16,42 @@ resource exampleResource 'Microsoft.TestBase/testBaseAccounts@2020-12-16-preview
       name: 'S0'
       tier: 'Standard'
     }
+  }
+}
+```
+
+## microsoft.testbase/testbaseaccounts/customerevents
+
+CustomerEventCreate
+```bicep
+resource exampleResource 'Microsoft.TestBase/testBaseAccounts/customerEvents@2020-12-16-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    eventName: 'WeeklySummary'
+    receivers: [
+      {
+        receiverType: 'UserObjects'
+        receiverValue: {
+          userObjectReceiverValue: {
+            userObjectIds: [
+              '245245245245325'
+              '365365365363565'
+            ]
+          }
+        }
+      }
+      {
+        receiverType: 'DistributionGroup'
+        receiverValue: {
+          distributionGroupListReceiverValue: {
+            distributionGroups: [
+              'test@microsoft.com'
+            ]
+          }
+        }
+      }
+    ]
   }
 }
 ```
@@ -109,42 +149,6 @@ resource exampleResource 'Microsoft.TestBase/testBaseAccounts/packages/favoriteP
   name: 'example'
   properties: {
     actualProcessName: 'testApp&.exe'
-  }
-}
-```
-
-## microsoft.testbase/testbaseaccounts/customerevents
-
-CustomerEventCreate
-```bicep
-resource exampleResource 'Microsoft.TestBase/testBaseAccounts/customerEvents@2020-12-16-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    eventName: 'WeeklySummary'
-    receivers: [
-      {
-        receiverType: 'UserObjects'
-        receiverValue: {
-          userObjectReceiverValue: {
-            userObjectIds: [
-              '245245245245325'
-              '365365365363565'
-            ]
-          }
-        }
-      }
-      {
-        receiverType: 'DistributionGroup'
-        receiverValue: {
-          distributionGroupListReceiverValue: {
-            distributionGroups: [
-              'test@microsoft.com'
-            ]
-          }
-        }
-      }
-    ]
   }
 }
 ```

@@ -1,30 +1,8 @@
 # Microsoft.App
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
 
-## microsoft.app/containerapps/authconfigs
-
-Create or Update Container App AuthConfig
-```bicep
-resource exampleResource 'Microsoft.App/containerApps/authConfigs@2023-04-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    globalValidation: {
-      unauthenticatedClientAction: 'AllowAnonymous'
-    }
-    identityProviders: {
-      facebook: {
-        registration: {
-          appId: '123'
-          appSecretSettingName: 'facebook-secret'
-        }
-      }
-    }
-    platform: {
-      enabled: true
-    }
-  }
-}
-```
 
 ## microsoft.app/connectedenvironments
 
@@ -390,6 +368,62 @@ resource exampleResource 'Microsoft.App/containerApps@2023-04-01-preview' = {
 }
 ```
 
+## microsoft.app/containerapps/authconfigs
+
+Create or Update Container App AuthConfig
+```bicep
+resource exampleResource 'Microsoft.App/containerApps/authConfigs@2023-04-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    globalValidation: {
+      unauthenticatedClientAction: 'AllowAnonymous'
+    }
+    identityProviders: {
+      facebook: {
+        registration: {
+          appId: '123'
+          appSecretSettingName: 'facebook-secret'
+        }
+      }
+    }
+    platform: {
+      enabled: true
+    }
+  }
+}
+```
+
+## microsoft.app/containerapps/sourcecontrols
+
+Create or Update Container App SourceControl
+```bicep
+resource exampleResource 'Microsoft.App/containerApps/sourcecontrols@2023-04-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    branch: 'master'
+    githubActionConfiguration: {
+      azureCredentials: {
+        clientId: '<clientid>'
+        clientSecret: '<clientsecret>'
+        kind: 'feaderated'
+        tenantId: '<tenantid>'
+      }
+      contextPath: './'
+      githubPersonalAccessToken: 'test'
+      image: 'image/tag'
+      registryInfo: {
+        registryPassword: '<registrypassword>'
+        registryUrl: 'test-registry.azurecr.io'
+        registryUserName: 'test-registry'
+      }
+    }
+    repoUrl: 'https://github.com/xwang971/ghatest'
+  }
+}
+```
+
 ## microsoft.app/managedenvironments
 
 Create environment with custom infrastructureResourceGroup
@@ -513,21 +547,6 @@ resource exampleResource 'Microsoft.App/managedEnvironments/certificates@2023-04
 }
 ```
 
-## microsoft.app/managedenvironments/managedcertificates
-
-Create or Update Certificate
-```bicep
-resource exampleResource 'Microsoft.App/managedEnvironments/managedCertificates@2023-04-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'East US'
-  properties: {
-    domainControlValidation: 'CNAME'
-    subjectName: 'my-subject-name.company.country.net'
-  }
-}
-```
-
 ## microsoft.app/managedenvironments/daprcomponents
 
 Create or update dapr component with secret store component
@@ -609,6 +628,21 @@ resource exampleResource 'Microsoft.App/managedEnvironments/daprComponents@2023-
 }
 ```
 
+## microsoft.app/managedenvironments/managedcertificates
+
+Create or Update Certificate
+```bicep
+resource exampleResource 'Microsoft.App/managedEnvironments/managedCertificates@2023-04-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'East US'
+  properties: {
+    domainControlValidation: 'CNAME'
+    subjectName: 'my-subject-name.company.country.net'
+  }
+}
+```
+
 ## microsoft.app/managedenvironments/storages
 
 Create or update environments storage
@@ -623,36 +657,6 @@ resource exampleResource 'Microsoft.App/managedEnvironments/storages@2023-04-01-
       accountName: 'account1'
       shareName: 'share1'
     }
-  }
-}
-```
-
-## microsoft.app/containerapps/sourcecontrols
-
-Create or Update Container App SourceControl
-```bicep
-resource exampleResource 'Microsoft.App/containerApps/sourcecontrols@2023-04-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    branch: 'master'
-    githubActionConfiguration: {
-      azureCredentials: {
-        clientId: '<clientid>'
-        clientSecret: '<clientsecret>'
-        kind: 'feaderated'
-        tenantId: '<tenantid>'
-      }
-      contextPath: './'
-      githubPersonalAccessToken: 'test'
-      image: 'image/tag'
-      registryInfo: {
-        registryPassword: '<registrypassword>'
-        registryUrl: 'test-registry.azurecr.io'
-        registryUserName: 'test-registry'
-      }
-    }
-    repoUrl: 'https://github.com/xwang971/ghatest'
   }
 }
 ```

@@ -1,33 +1,14 @@
 # Microsoft.ConnectedVMwarevSphere
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
 
-## microsoft.connectedvmwarevsphere/virtualmachines
 
-CreateVirtualMachine
+## microsoft.connectedvmwarevsphere/clusters
+
+CreateCluster
 ```bicep
-resource exampleResource 'Microsoft.ConnectedVMwarevSphere/virtualMachines@2022-07-15-preview' = {
-  name: 'example'
-  extendedLocation: {
-    name: '/subscriptions/a5015e1c-867f-4533-8541-85cd470d0cfb/resourceGroups/demoRG/providers/Microsoft.ExtendedLocation/customLocations/contoso'
-    type: 'customLocation'
-  }
-  location: 'East US'
-  properties: {
-    hardwareProfile: {
-      memorySizeMB: 4196
-      numCPUs: 4
-    }
-    resourcePoolId: '/subscriptions/fd3c3665-1729-4b7b-9a38-238e83b0f98b/resourceGroups/testrg/providers/Microsoft.ConnectedVMwarevSphere/ResourcePools/HRPool'
-    templateId: '/subscriptions/fd3c3665-1729-4b7b-9a38-238e83b0f98b/resourceGroups/testrg/providers/Microsoft.ConnectedVMwarevSphere/VirtualMachineTemplates/WebFrontEndTemplate'
-    vCenterId: '/subscriptions/fd3c3665-1729-4b7b-9a38-238e83b0f98b/resourceGroups/testrg/providers/Microsoft.ConnectedVMwarevSphere/VCenters/ContosoVCenter'
-  }
-}
-```
-
-## microsoft.connectedvmwarevsphere/resourcepools
-
-CreateResourcePool
-```bicep
-resource exampleResource 'Microsoft.ConnectedVMwarevSphere/resourcePools@2022-07-15-preview' = {
+resource exampleResource 'Microsoft.ConnectedVMwarevSphere/clusters@2022-07-15-preview' = {
   name: 'example'
   extendedLocation: {
     name: '/subscriptions/a5015e1c-867f-4533-8541-85cd470d0cfb/resourceGroups/demoRG/providers/Microsoft.ExtendedLocation/customLocations/contoso'
@@ -41,11 +22,11 @@ resource exampleResource 'Microsoft.ConnectedVMwarevSphere/resourcePools@2022-07
 }
 ```
 
-## microsoft.connectedvmwarevsphere/clusters
+## microsoft.connectedvmwarevsphere/datastores
 
-CreateCluster
+CreateDatastore
 ```bicep
-resource exampleResource 'Microsoft.ConnectedVMwarevSphere/clusters@2022-07-15-preview' = {
+resource exampleResource 'Microsoft.ConnectedVMwarevSphere/datastores@2022-07-15-preview' = {
   name: 'example'
   extendedLocation: {
     name: '/subscriptions/a5015e1c-867f-4533-8541-85cd470d0cfb/resourceGroups/demoRG/providers/Microsoft.ExtendedLocation/customLocations/contoso'
@@ -77,11 +58,11 @@ resource exampleResource 'Microsoft.ConnectedVMwarevSphere/hosts@2022-07-15-prev
 }
 ```
 
-## microsoft.connectedvmwarevsphere/datastores
+## microsoft.connectedvmwarevsphere/resourcepools
 
-CreateDatastore
+CreateResourcePool
 ```bicep
-resource exampleResource 'Microsoft.ConnectedVMwarevSphere/datastores@2022-07-15-preview' = {
+resource exampleResource 'Microsoft.ConnectedVMwarevSphere/resourcePools@2022-07-15-preview' = {
   name: 'example'
   extendedLocation: {
     name: '/subscriptions/a5015e1c-867f-4533-8541-85cd470d0cfb/resourceGroups/demoRG/providers/Microsoft.ExtendedLocation/customLocations/contoso'
@@ -117,42 +98,6 @@ resource exampleResource 'Microsoft.ConnectedVMwarevSphere/vcenters@2022-07-15-p
 }
 ```
 
-## microsoft.connectedvmwarevsphere/virtualmachinetemplates
-
-CreateVirtualMachineTemplate
-```bicep
-resource exampleResource 'Microsoft.ConnectedVMwarevSphere/virtualMachineTemplates@2022-07-15-preview' = {
-  name: 'example'
-  extendedLocation: {
-    name: '/subscriptions/a5015e1c-867f-4533-8541-85cd470d0cfb/resourceGroups/demoRG/providers/Microsoft.ExtendedLocation/customLocations/contoso'
-    type: 'customLocation'
-  }
-  location: 'East US'
-  properties: {
-    moRefId: 'aaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee'
-    vCenterId: '/subscriptions/fd3c3665-1729-4b7b-9a38-238e83b0f98b/resourceGroups/testrg/providers/Microsoft.ConnectedVMwarevSphere/VCenters/ContosoVCenter'
-  }
-}
-```
-
-## microsoft.connectedvmwarevsphere/virtualnetworks
-
-CreateVirtualNetwork
-```bicep
-resource exampleResource 'Microsoft.ConnectedVMwarevSphere/virtualNetworks@2022-07-15-preview' = {
-  name: 'example'
-  extendedLocation: {
-    name: '/subscriptions/a5015e1c-867f-4533-8541-85cd470d0cfb/resourceGroups/demoRG/providers/Microsoft.ExtendedLocation/customLocations/contoso'
-    type: 'customLocation'
-  }
-  location: 'East US'
-  properties: {
-    moRefId: 'aaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee'
-    vCenterId: '/subscriptions/fd3c3665-1729-4b7b-9a38-238e83b0f98b/resourceGroups/testrg/providers/Microsoft.ConnectedVMwarevSphere/VCenters/ContosoVCenter'
-  }
-}
-```
-
 ## microsoft.connectedvmwarevsphere/vcenters/inventoryitems
 
 CreateInventoryItem
@@ -166,16 +111,25 @@ resource exampleResource 'Microsoft.ConnectedVMwarevSphere/vcenters/inventoryIte
 }
 ```
 
-## microsoft.connectedvmwarevsphere/virtualmachines/hybrididentitymetadata
+## microsoft.connectedvmwarevsphere/virtualmachines
 
-CreateHybridIdentityMetadata
+CreateVirtualMachine
 ```bicep
-resource exampleResource 'Microsoft.ConnectedVMwarevSphere/virtualMachines/hybridIdentityMetadata@2022-07-15-preview' = {
-  parent: parentResource 
+resource exampleResource 'Microsoft.ConnectedVMwarevSphere/virtualMachines@2022-07-15-preview' = {
   name: 'example'
+  extendedLocation: {
+    name: '/subscriptions/a5015e1c-867f-4533-8541-85cd470d0cfb/resourceGroups/demoRG/providers/Microsoft.ExtendedLocation/customLocations/contoso'
+    type: 'customLocation'
+  }
+  location: 'East US'
   properties: {
-    publicKey: '8ec7d60c-9700-40b1-8e6e-e5b2f6f477f2'
-    vmId: 'f8b82dff-38ef-4220-99ef-d3a3f86ddc6c'
+    hardwareProfile: {
+      memorySizeMB: 4196
+      numCPUs: 4
+    }
+    resourcePoolId: '/subscriptions/fd3c3665-1729-4b7b-9a38-238e83b0f98b/resourceGroups/testrg/providers/Microsoft.ConnectedVMwarevSphere/ResourcePools/HRPool'
+    templateId: '/subscriptions/fd3c3665-1729-4b7b-9a38-238e83b0f98b/resourceGroups/testrg/providers/Microsoft.ConnectedVMwarevSphere/VirtualMachineTemplates/WebFrontEndTemplate'
+    vCenterId: '/subscriptions/fd3c3665-1729-4b7b-9a38-238e83b0f98b/resourceGroups/testrg/providers/Microsoft.ConnectedVMwarevSphere/VCenters/ContosoVCenter'
   }
 }
 ```
@@ -215,6 +169,56 @@ resource exampleResource 'Microsoft.ConnectedVMwarevSphere/virtualMachines/guest
       httpsProxy: 'http://192.1.2.3:8080'
     }
     provisioningAction: 'install'
+  }
+}
+```
+
+## microsoft.connectedvmwarevsphere/virtualmachines/hybrididentitymetadata
+
+CreateHybridIdentityMetadata
+```bicep
+resource exampleResource 'Microsoft.ConnectedVMwarevSphere/virtualMachines/hybridIdentityMetadata@2022-07-15-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    publicKey: '8ec7d60c-9700-40b1-8e6e-e5b2f6f477f2'
+    vmId: 'f8b82dff-38ef-4220-99ef-d3a3f86ddc6c'
+  }
+}
+```
+
+## microsoft.connectedvmwarevsphere/virtualmachinetemplates
+
+CreateVirtualMachineTemplate
+```bicep
+resource exampleResource 'Microsoft.ConnectedVMwarevSphere/virtualMachineTemplates@2022-07-15-preview' = {
+  name: 'example'
+  extendedLocation: {
+    name: '/subscriptions/a5015e1c-867f-4533-8541-85cd470d0cfb/resourceGroups/demoRG/providers/Microsoft.ExtendedLocation/customLocations/contoso'
+    type: 'customLocation'
+  }
+  location: 'East US'
+  properties: {
+    moRefId: 'aaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee'
+    vCenterId: '/subscriptions/fd3c3665-1729-4b7b-9a38-238e83b0f98b/resourceGroups/testrg/providers/Microsoft.ConnectedVMwarevSphere/VCenters/ContosoVCenter'
+  }
+}
+```
+
+## microsoft.connectedvmwarevsphere/virtualnetworks
+
+CreateVirtualNetwork
+```bicep
+resource exampleResource 'Microsoft.ConnectedVMwarevSphere/virtualNetworks@2022-07-15-preview' = {
+  name: 'example'
+  extendedLocation: {
+    name: '/subscriptions/a5015e1c-867f-4533-8541-85cd470d0cfb/resourceGroups/demoRG/providers/Microsoft.ExtendedLocation/customLocations/contoso'
+    type: 'customLocation'
+  }
+  location: 'East US'
+  properties: {
+    moRefId: 'aaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee'
+    vCenterId: '/subscriptions/fd3c3665-1729-4b7b-9a38-238e83b0f98b/resourceGroups/testrg/providers/Microsoft.ConnectedVMwarevSphere/VCenters/ContosoVCenter'
   }
 }
 ```

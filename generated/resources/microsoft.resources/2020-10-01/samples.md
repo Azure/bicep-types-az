@@ -1,4 +1,30 @@
 # Microsoft.Resources
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
+
+## microsoft.resources/deployments
+
+Create deployment at a given scope.
+```bicep
+resource exampleResource 'Microsoft.Resources/deployments@2020-10-01' = {
+  name: 'example'
+  location: 'eastus'
+  properties: {
+    mode: 'Incremental'
+    parameters: {
+    }
+    templateLink: {
+      uri: 'https://example.com/exampleTemplate.json'
+    }
+  }
+  tags: {
+    tagKey1: 'tag-value-1'
+    tagKey2: 'tag-value-2'
+  }
+}
+```
 
 ## microsoft.resources/deploymentscripts
 
@@ -13,27 +39,6 @@ resource exampleResource 'Microsoft.Resources/deploymentScripts@2020-10-01' = {
       }
     }
   }
-  kind: 'AzurePowerShell'
-  location: 'westus'
-  properties: {
-    arguments: '-Location \'westus\' -Name "*rg2"'
-    azPowerShellVersion: '1.7.0'
-    cleanupPreference: 'Always'
-    retentionInterval: 'PT7D'
-    scriptContent: 'Param([string]$Location,[string]$Name) $deploymentScriptOutputs[\'test\'] = \'value\' Get-AzResourceGroup -Location $Location -Name $Name'
-    supportingScriptUris: [
-      'https://uri1.to.supporting.script'
-      'https://uri2.to.supporting.script'
-    ]
-    timeout: 'PT1H'
-  }
-}
-```
-
-DeploymentScriptsCreateNoUserManagedIdentity
-```bicep
-resource exampleResource 'Microsoft.Resources/deploymentScripts@2020-10-01' = {
-  name: 'example'
   kind: 'AzurePowerShell'
   location: 'westus'
   properties: {
@@ -136,24 +141,23 @@ resource exampleResource 'Microsoft.Resources/deploymentScripts@2020-10-01' = {
 }
 ```
 
-## microsoft.resources/deployments
-
-Create deployment at a given scope.
+DeploymentScriptsCreateNoUserManagedIdentity
 ```bicep
-resource exampleResource 'Microsoft.Resources/deployments@2020-10-01' = {
+resource exampleResource 'Microsoft.Resources/deploymentScripts@2020-10-01' = {
   name: 'example'
-  location: 'eastus'
+  kind: 'AzurePowerShell'
+  location: 'westus'
   properties: {
-    mode: 'Incremental'
-    parameters: {
-    }
-    templateLink: {
-      uri: 'https://example.com/exampleTemplate.json'
-    }
-  }
-  tags: {
-    tagKey1: 'tag-value-1'
-    tagKey2: 'tag-value-2'
+    arguments: '-Location \'westus\' -Name "*rg2"'
+    azPowerShellVersion: '1.7.0'
+    cleanupPreference: 'Always'
+    retentionInterval: 'PT7D'
+    scriptContent: 'Param([string]$Location,[string]$Name) $deploymentScriptOutputs[\'test\'] = \'value\' Get-AzResourceGroup -Location $Location -Name $Name'
+    supportingScriptUris: [
+      'https://uri1.to.supporting.script'
+      'https://uri2.to.supporting.script'
+    ]
+    timeout: 'PT1H'
   }
 }
 ```

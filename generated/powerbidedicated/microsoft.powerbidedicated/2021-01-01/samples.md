@@ -1,4 +1,30 @@
 # Microsoft.PowerBIDedicated
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
+
+## microsoft.powerbidedicated/autoscalevcores
+
+Create auto scale v-core
+```bicep
+resource exampleResource 'Microsoft.PowerBIDedicated/autoScaleVCores@2021-01-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    capacityLimit: 10
+    capacityObjectId: 'a28f00bd-5330-4572-88f1-fa883e074785'
+  }
+  sku: {
+    name: 'AutoScale'
+    capacity: 0
+    tier: 'AutoScale'
+  }
+  tags: {
+    testKey: 'testValue'
+  }
+}
+```
 
 ## microsoft.powerbidedicated/capacities
 
@@ -18,28 +44,6 @@ resource exampleResource 'Microsoft.PowerBIDedicated/capacities@2021-01-01' = {
   sku: {
     name: 'A1'
     tier: 'PBIE_Azure'
-  }
-  tags: {
-    testKey: 'testValue'
-  }
-}
-```
-
-## microsoft.powerbidedicated/autoscalevcores
-
-Create auto scale v-core
-```bicep
-resource exampleResource 'Microsoft.PowerBIDedicated/autoScaleVCores@2021-01-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    capacityLimit: 10
-    capacityObjectId: 'a28f00bd-5330-4572-88f1-fa883e074785'
-  }
-  sku: {
-    name: 'AutoScale'
-    capacity: 0
-    tier: 'AutoScale'
   }
   tags: {
     testKey: 'testValue'

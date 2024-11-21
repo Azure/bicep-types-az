@@ -1,4 +1,117 @@
 # Microsoft.StreamAnalytics
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
+
+## microsoft.streamanalytics/streamingjobs
+
+Create a complete streaming job (a streaming job with a transformation, at least 1 input and at least 1 output)
+```bicep
+resource exampleResource 'Microsoft.StreamAnalytics/streamingjobs@2017-04-01-preview' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    compatibilityLevel: '1.0'
+    dataLocale: 'en-US'
+    eventsLateArrivalMaxDelayInSeconds: 5
+    eventsOutOfOrderMaxDelayInSeconds: 0
+    eventsOutOfOrderPolicy: 'Drop'
+    functions: [
+    ]
+    inputs: [
+      {
+        name: 'inputtest'
+        properties: {
+          type: 'Stream'
+          datasource: {
+            type: 'Microsoft.Storage/Blob'
+            properties: {
+              container: 'containerName'
+              pathPattern: ''
+              storageAccounts: [
+                {
+                  accountKey: 'yourAccountKey=='
+                  accountName: 'yourAccountName'
+                }
+              ]
+            }
+          }
+          serialization: {
+            type: 'Json'
+            properties: {
+              encoding: 'UTF8'
+            }
+          }
+        }
+      }
+    ]
+    outputErrorPolicy: 'Drop'
+    outputs: [
+      {
+        name: 'outputtest'
+        properties: {
+          datasource: {
+            type: 'Microsoft.Sql/Server/Database'
+            properties: {
+              database: 'databaseName'
+              password: 'userPassword'
+              server: 'serverName'
+              table: 'tableName'
+              user: '<user>'
+            }
+          }
+        }
+      }
+    ]
+    sku: {
+      name: 'Standard'
+    }
+    transformation: {
+      name: 'transformationtest'
+      properties: {
+        query: 'Select Id, Name from inputtest'
+        streamingUnits: 1
+      }
+    }
+  }
+  tags: {
+    key1: 'value1'
+    key3: 'value3'
+    randomKey: 'randomValue'
+  }
+}
+```
+
+Create a streaming job shell (a streaming job with no inputs, outputs, transformation, or functions)
+```bicep
+resource exampleResource 'Microsoft.StreamAnalytics/streamingjobs@2017-04-01-preview' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    compatibilityLevel: '1.0'
+    dataLocale: 'en-US'
+    eventsLateArrivalMaxDelayInSeconds: 16
+    eventsOutOfOrderMaxDelayInSeconds: 5
+    eventsOutOfOrderPolicy: 'Drop'
+    functions: [
+    ]
+    inputs: [
+    ]
+    outputErrorPolicy: 'Drop'
+    outputs: [
+    ]
+    sku: {
+      name: 'Standard'
+    }
+  }
+  tags: {
+    key1: 'value1'
+    key3: 'value3'
+    randomKey: 'randomValue'
+  }
+}
+```
 
 ## microsoft.streamanalytics/streamingjobs/functions
 
@@ -58,49 +171,6 @@ resource exampleResource 'Microsoft.StreamAnalytics/streamingjobs/functions@2017
 }
 ```
 
-Create an Azure ML Service function
-```bicep
-resource exampleResource 'Microsoft.StreamAnalytics/streamingjobs/functions@2017-04-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    type: 'Scalar'
-    properties: {
-      binding: {
-        type: 'Microsoft.MachineLearningServices'
-        properties: {
-          apiKey: 'someApiKey=='
-          batchSize: 1000
-          endpoint: 'someAzureMLEndpointURL'
-          inputs: [
-            {
-              name: 'data'
-              dataType: 'array'
-              mapTo: 0
-            }
-          ]
-          numberOfParallelRequests: 1
-          outputs: [
-            {
-              name: 'Sentiment'
-              dataType: 'string'
-            }
-          ]
-        }
-      }
-      inputs: [
-        {
-          dataType: 'nvarchar(max)'
-        }
-      ]
-      output: {
-        dataType: 'nvarchar(max)'
-      }
-    }
-  }
-}
-```
-
 Create an Azure ML function
 ```bicep
 resource exampleResource 'Microsoft.StreamAnalytics/streamingjobs/functions@2017-04-01-preview' = {
@@ -146,6 +216,49 @@ resource exampleResource 'Microsoft.StreamAnalytics/streamingjobs/functions@2017
 }
 ```
 
+Create an Azure ML Service function
+```bicep
+resource exampleResource 'Microsoft.StreamAnalytics/streamingjobs/functions@2017-04-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    type: 'Scalar'
+    properties: {
+      binding: {
+        type: 'Microsoft.MachineLearningServices'
+        properties: {
+          apiKey: 'someApiKey=='
+          batchSize: 1000
+          endpoint: 'someAzureMLEndpointURL'
+          inputs: [
+            {
+              name: 'data'
+              dataType: 'array'
+              mapTo: 0
+            }
+          ]
+          numberOfParallelRequests: 1
+          outputs: [
+            {
+              name: 'Sentiment'
+              dataType: 'string'
+            }
+          ]
+        }
+      }
+      inputs: [
+        {
+          dataType: 'nvarchar(max)'
+        }
+      ]
+      output: {
+        dataType: 'nvarchar(max)'
+      }
+    }
+  }
+}
+```
+
 ## microsoft.streamanalytics/streamingjobs/inputs
 
 Create a reference blob input with CSV serialization
@@ -161,6 +274,40 @@ resource exampleResource 'Microsoft.StreamAnalytics/streamingjobs/inputs@2017-04
         container: 'state'
         dateFormat: 'yyyy/MM/dd'
         pathPattern: '{date}/{time}'
+        storageAccounts: [
+          {
+            accountKey: 'someAccountKey=='
+            accountName: 'someAccountName'
+          }
+        ]
+        timeFormat: 'HH'
+      }
+    }
+    serialization: {
+      type: 'Csv'
+      properties: {
+        encoding: 'UTF8'
+        fieldDelimiter: ','
+      }
+    }
+  }
+}
+```
+
+Create a stream blob input with CSV serialization
+```bicep
+resource exampleResource 'Microsoft.StreamAnalytics/streamingjobs/inputs@2017-04-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    type: 'Stream'
+    datasource: {
+      type: 'Microsoft.Storage/Blob'
+      properties: {
+        container: 'state'
+        dateFormat: 'yyyy/MM/dd'
+        pathPattern: '{date}/{time}'
+        sourcePartitionCount: 16
         storageAccounts: [
           {
             accountKey: 'someAccountKey=='
@@ -232,23 +379,23 @@ resource exampleResource 'Microsoft.StreamAnalytics/streamingjobs/inputs@2017-04
 }
 ```
 
-Create a stream blob input with CSV serialization
+## microsoft.streamanalytics/streamingjobs/outputs
+
+Create a blob output with CSV serialization
 ```bicep
-resource exampleResource 'Microsoft.StreamAnalytics/streamingjobs/inputs@2017-04-01-preview' = {
+resource exampleResource 'Microsoft.StreamAnalytics/streamingjobs/outputs@2017-04-01-preview' = {
   parent: parentResource 
   name: 'example'
   properties: {
-    type: 'Stream'
     datasource: {
       type: 'Microsoft.Storage/Blob'
       properties: {
         container: 'state'
         dateFormat: 'yyyy/MM/dd'
         pathPattern: '{date}/{time}'
-        sourcePartitionCount: 16
         storageAccounts: [
           {
-            accountKey: 'someAccountKey=='
+            accountKey: 'accountKey=='
             accountName: 'someAccountName'
           }
         ]
@@ -265,8 +412,6 @@ resource exampleResource 'Microsoft.StreamAnalytics/streamingjobs/inputs@2017-04
   }
 }
 ```
-
-## microsoft.streamanalytics/streamingjobs/outputs
 
 Create a Delta Lake output
 ```bicep
@@ -392,38 +537,6 @@ resource exampleResource 'Microsoft.StreamAnalytics/streamingjobs/outputs@2017-0
         sharedAccessPolicyKey: 'sharedAccessPolicyKey='
         sharedAccessPolicyName: 'RootManageSharedAccessKey'
         topicName: 'sdktopic'
-      }
-    }
-    serialization: {
-      type: 'Csv'
-      properties: {
-        encoding: 'UTF8'
-        fieldDelimiter: ','
-      }
-    }
-  }
-}
-```
-
-Create a blob output with CSV serialization
-```bicep
-resource exampleResource 'Microsoft.StreamAnalytics/streamingjobs/outputs@2017-04-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    datasource: {
-      type: 'Microsoft.Storage/Blob'
-      properties: {
-        container: 'state'
-        dateFormat: 'yyyy/MM/dd'
-        pathPattern: '{date}/{time}'
-        storageAccounts: [
-          {
-            accountKey: 'accountKey=='
-            accountName: 'someAccountName'
-          }
-        ]
-        timeFormat: 'HH'
       }
     }
     serialization: {
@@ -576,115 +689,6 @@ resource exampleResource 'Microsoft.StreamAnalytics/streamingjobs/outputs@2017-0
         encoding: 'UTF8'
       }
     }
-  }
-}
-```
-
-## microsoft.streamanalytics/streamingjobs
-
-Create a complete streaming job (a streaming job with a transformation, at least 1 input and at least 1 output)
-```bicep
-resource exampleResource 'Microsoft.StreamAnalytics/streamingjobs@2017-04-01-preview' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    compatibilityLevel: '1.0'
-    dataLocale: 'en-US'
-    eventsLateArrivalMaxDelayInSeconds: 5
-    eventsOutOfOrderMaxDelayInSeconds: 0
-    eventsOutOfOrderPolicy: 'Drop'
-    functions: [
-    ]
-    inputs: [
-      {
-        name: 'inputtest'
-        properties: {
-          type: 'Stream'
-          datasource: {
-            type: 'Microsoft.Storage/Blob'
-            properties: {
-              container: 'containerName'
-              pathPattern: ''
-              storageAccounts: [
-                {
-                  accountKey: 'yourAccountKey=='
-                  accountName: 'yourAccountName'
-                }
-              ]
-            }
-          }
-          serialization: {
-            type: 'Json'
-            properties: {
-              encoding: 'UTF8'
-            }
-          }
-        }
-      }
-    ]
-    outputErrorPolicy: 'Drop'
-    outputs: [
-      {
-        name: 'outputtest'
-        properties: {
-          datasource: {
-            type: 'Microsoft.Sql/Server/Database'
-            properties: {
-              database: 'databaseName'
-              password: 'userPassword'
-              server: 'serverName'
-              table: 'tableName'
-              user: '<user>'
-            }
-          }
-        }
-      }
-    ]
-    sku: {
-      name: 'Standard'
-    }
-    transformation: {
-      name: 'transformationtest'
-      properties: {
-        query: 'Select Id, Name from inputtest'
-        streamingUnits: 1
-      }
-    }
-  }
-  tags: {
-    key1: 'value1'
-    key3: 'value3'
-    randomKey: 'randomValue'
-  }
-}
-```
-
-Create a streaming job shell (a streaming job with no inputs, outputs, transformation, or functions)
-```bicep
-resource exampleResource 'Microsoft.StreamAnalytics/streamingjobs@2017-04-01-preview' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    compatibilityLevel: '1.0'
-    dataLocale: 'en-US'
-    eventsLateArrivalMaxDelayInSeconds: 16
-    eventsOutOfOrderMaxDelayInSeconds: 5
-    eventsOutOfOrderPolicy: 'Drop'
-    functions: [
-    ]
-    inputs: [
-    ]
-    outputErrorPolicy: 'Drop'
-    outputs: [
-    ]
-    sku: {
-      name: 'Standard'
-    }
-  }
-  tags: {
-    key1: 'value1'
-    key3: 'value3'
-    randomKey: 'randomValue'
   }
 }
 ```

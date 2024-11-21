@@ -1,77 +1,8 @@
 # Microsoft.DesktopVirtualization
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
 
-## microsoft.desktopvirtualization/workspaces
-
-Workspace_Create
-```bicep
-resource exampleResource 'Microsoft.DesktopVirtualization/workspaces@2021-02-01-preview' = {
-  name: 'example'
-  location: 'centralus'
-  properties: {
-    description: 'des1'
-    friendlyName: 'friendly'
-  }
-  tags: {
-    tag1: 'value1'
-    tag2: 'value2'
-  }
-}
-```
-
-## microsoft.desktopvirtualization/scalingplans
-
-ScalingPlans_Create
-```bicep
-resource exampleResource 'Microsoft.DesktopVirtualization/scalingPlans@2021-02-01-preview' = {
-  name: 'example'
-  location: 'centralus'
-  properties: {
-    description: 'des1'
-    exclusionTag: 'value'
-    friendlyName: 'friendly'
-    hostPoolReferences: [
-      {
-        hostPoolArmPath: '/subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourceGroups/resourceGroup1/providers/Microsoft.DesktopVirtualization/hostPools/hostPool1'
-        scalingPlanEnabled: true
-      }
-    ]
-    hostPoolType: 'Personal'
-    ring: 1
-    schedules: [
-      {
-        name: 'schedule1'
-        daysOfWeek: [
-          'Monday'
-          'Tuesday'
-          'Wednesday'
-          'Thursday'
-          'Friday'
-        ]
-        offPeakLoadBalancingAlgorithm: 'DepthFirst'
-        offPeakStartTime: '2020-11-10T20:00:00.000Z'
-        peakLoadBalancingAlgorithm: 'BreadthFirst'
-        peakStartTime: '2020-11-10T08:00:00.000Z'
-        rampDownCapacityThresholdPct: 50
-        rampDownForceLogoffUsers: true
-        rampDownLoadBalancingAlgorithm: 'DepthFirst'
-        rampDownMinimumHostsPct: 20
-        rampDownNotificationMessage: 'message'
-        rampDownStartTime: '2020-11-10T18:00:00.000Z'
-        rampDownWaitTimeMinutes: 30
-        rampUpCapacityThresholdPct: 80
-        rampUpLoadBalancingAlgorithm: 'DepthFirst'
-        rampUpMinimumHostsPct: 20
-        rampUpStartTime: '2020-11-10T06:00:00.000Z'
-      }
-    ]
-    timeZone: ''
-  }
-  tags: {
-    tag1: 'value1'
-    tag2: 'value2'
-  }
-}
-```
 
 ## microsoft.desktopvirtualization/applicationgroups
 
@@ -191,6 +122,79 @@ resource exampleResource 'Microsoft.DesktopVirtualization/hostPools/msixPackages
     packageName: 'MsixPackage_name'
     packageRelativePath: 'packagerelativepath'
     version: 'version'
+  }
+}
+```
+
+## microsoft.desktopvirtualization/scalingplans
+
+ScalingPlans_Create
+```bicep
+resource exampleResource 'Microsoft.DesktopVirtualization/scalingPlans@2021-02-01-preview' = {
+  name: 'example'
+  location: 'centralus'
+  properties: {
+    description: 'des1'
+    exclusionTag: 'value'
+    friendlyName: 'friendly'
+    hostPoolReferences: [
+      {
+        hostPoolArmPath: '/subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourceGroups/resourceGroup1/providers/Microsoft.DesktopVirtualization/hostPools/hostPool1'
+        scalingPlanEnabled: true
+      }
+    ]
+    hostPoolType: 'Personal'
+    ring: 1
+    schedules: [
+      {
+        name: 'schedule1'
+        daysOfWeek: [
+          'Monday'
+          'Tuesday'
+          'Wednesday'
+          'Thursday'
+          'Friday'
+        ]
+        offPeakLoadBalancingAlgorithm: 'DepthFirst'
+        offPeakStartTime: '2020-11-10T20:00:00.000Z'
+        peakLoadBalancingAlgorithm: 'BreadthFirst'
+        peakStartTime: '2020-11-10T08:00:00.000Z'
+        rampDownCapacityThresholdPct: 50
+        rampDownForceLogoffUsers: true
+        rampDownLoadBalancingAlgorithm: 'DepthFirst'
+        rampDownMinimumHostsPct: 20
+        rampDownNotificationMessage: 'message'
+        rampDownStartTime: '2020-11-10T18:00:00.000Z'
+        rampDownWaitTimeMinutes: 30
+        rampUpCapacityThresholdPct: 80
+        rampUpLoadBalancingAlgorithm: 'DepthFirst'
+        rampUpMinimumHostsPct: 20
+        rampUpStartTime: '2020-11-10T06:00:00.000Z'
+      }
+    ]
+    timeZone: ''
+  }
+  tags: {
+    tag1: 'value1'
+    tag2: 'value2'
+  }
+}
+```
+
+## microsoft.desktopvirtualization/workspaces
+
+Workspace_Create
+```bicep
+resource exampleResource 'Microsoft.DesktopVirtualization/workspaces@2021-02-01-preview' = {
+  name: 'example'
+  location: 'centralus'
+  properties: {
+    description: 'des1'
+    friendlyName: 'friendly'
+  }
+  tags: {
+    tag1: 'value1'
+    tag2: 'value2'
   }
 }
 ```

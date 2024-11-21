@@ -1,4 +1,8 @@
 # Microsoft.MachineLearningServices
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.machinelearningservices/workspaces
 
@@ -219,22 +223,6 @@ resource exampleResource 'Microsoft.MachineLearningServices/workspaces/computes@
 }
 ```
 
-## microsoft.machinelearningservices/workspaces/privateendpointconnections
-
-WorkspacePutPrivateEndpointConnection
-```bicep
-resource exampleResource 'Microsoft.MachineLearningServices/workspaces/privateEndpointConnections@2021-07-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    privateLinkServiceConnectionState: {
-      description: 'Auto-Approved'
-      status: 'Approved'
-    }
-  }
-}
-```
-
 ## microsoft.machinelearningservices/workspaces/connections
 
 CreateWorkspaceConnection
@@ -247,6 +235,22 @@ resource exampleResource 'Microsoft.MachineLearningServices/workspaces/connectio
     category: 'ACR'
     target: 'www.facebook.com'
     value: 'secrets'
+  }
+}
+```
+
+## microsoft.machinelearningservices/workspaces/privateendpointconnections
+
+WorkspacePutPrivateEndpointConnection
+```bicep
+resource exampleResource 'Microsoft.MachineLearningServices/workspaces/privateEndpointConnections@2021-07-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    privateLinkServiceConnectionState: {
+      description: 'Auto-Approved'
+      status: 'Approved'
+    }
   }
 }
 ```

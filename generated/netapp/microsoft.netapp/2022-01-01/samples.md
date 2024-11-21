@@ -1,4 +1,8 @@
 # Microsoft.NetApp
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.netapp/netappaccounts
 
@@ -22,6 +26,23 @@ resource exampleResource 'Microsoft.NetApp/netAppAccounts@2022-01-01' = {
         username: 'ad_user_name'
       }
     ]
+  }
+}
+```
+
+## microsoft.netapp/netappaccounts/backuppolicies
+
+BackupPolicies_Create
+```bicep
+resource exampleResource 'Microsoft.NetApp/netAppAccounts/backupPolicies@2022-01-01' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'westus'
+  properties: {
+    dailyBackupsToKeep: 10
+    enabled: true
+    monthlyBackupsToKeep: 10
+    weeklyBackupsToKeep: 10
   }
 }
 ```
@@ -59,6 +80,20 @@ resource exampleResource 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes@
 }
 ```
 
+## microsoft.netapp/netappaccounts/capacitypools/volumes/backups
+
+Backups_Create
+```bicep
+resource exampleResource 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/backups@2022-01-01' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'eastus'
+  properties: {
+    label: 'myLabel'
+  }
+}
+```
+
 ## microsoft.netapp/netappaccounts/capacitypools/volumes/snapshots
 
 Snapshots_Create
@@ -67,6 +102,35 @@ resource exampleResource 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/
   parent: parentResource 
   name: 'example'
   location: 'eastus'
+}
+```
+
+## microsoft.netapp/netappaccounts/capacitypools/volumes/subvolumes
+
+Subvolumes_Create
+```bicep
+resource exampleResource 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/subvolumes@2022-01-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    path: '/subvolumePath'
+  }
+}
+```
+
+## microsoft.netapp/netappaccounts/capacitypools/volumes/volumequotarules
+
+VolumeQuotaRules_Create
+```bicep
+resource exampleResource 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/volumeQuotaRules@2022-01-01' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'westus'
+  properties: {
+    quotaSizeInKiBs: 100005
+    quotaTarget: '1821'
+    quotaType: 'IndividualUserQuota'
+  }
 }
 ```
 
@@ -101,53 +165,6 @@ resource exampleResource 'Microsoft.NetApp/netAppAccounts/snapshotPolicies@2022-
       minute: 45
       snapshotsToKeep: 3
     }
-  }
-}
-```
-
-## microsoft.netapp/netappaccounts/capacitypools/volumes/backups
-
-Backups_Create
-```bicep
-resource exampleResource 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/backups@2022-01-01' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'eastus'
-  properties: {
-    label: 'myLabel'
-  }
-}
-```
-
-## microsoft.netapp/netappaccounts/backuppolicies
-
-BackupPolicies_Create
-```bicep
-resource exampleResource 'Microsoft.NetApp/netAppAccounts/backupPolicies@2022-01-01' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'westus'
-  properties: {
-    dailyBackupsToKeep: 10
-    enabled: true
-    monthlyBackupsToKeep: 10
-    weeklyBackupsToKeep: 10
-  }
-}
-```
-
-## microsoft.netapp/netappaccounts/capacitypools/volumes/volumequotarules
-
-VolumeQuotaRules_Create
-```bicep
-resource exampleResource 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/volumeQuotaRules@2022-01-01' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'westus'
-  properties: {
-    quotaSizeInKiBs: 100005
-    quotaTarget: '1821'
-    quotaType: 'IndividualUserQuota'
   }
 }
 ```
@@ -208,19 +225,6 @@ resource exampleResource 'Microsoft.NetApp/netAppAccounts/volumeGroups@2022-01-0
         }
       }
     ]
-  }
-}
-```
-
-## microsoft.netapp/netappaccounts/capacitypools/volumes/subvolumes
-
-Subvolumes_Create
-```bicep
-resource exampleResource 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/subvolumes@2022-01-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    path: '/subvolumePath'
   }
 }
 ```

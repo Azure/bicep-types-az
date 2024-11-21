@@ -1,4 +1,8 @@
 # Microsoft.ManagedNetworkFabric
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.managednetworkfabric/accesscontrollists
 
@@ -141,6 +145,40 @@ resource exampleResource 'Microsoft.ManagedNetworkFabric/l3IsolationDomains@2023
 }
 ```
 
+## microsoft.managednetworkfabric/l3isolationdomains/externalnetworks
+
+ExternalNetworks_Create_MaximumSet_Gen
+```bicep
+resource exampleResource 'Microsoft.ManagedNetworkFabric/l3IsolationDomains/externalNetworks@2023-02-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    exportRoutePolicyId: '/subscriptions/subscriptionId/resourceGroups/resourceGroupName/providers/Microsoft.ManagedNetworkFabric/routePolicies/routePolicyName'
+    importRoutePolicyId: '/subscriptions/subscriptionId/resourceGroups/resourceGroupName/providers/Microsoft.ManagedNetworkFabric/routePolicies/routePolicyName'
+    optionAProperties: {
+      bfdConfiguration: {
+      }
+      mtu: 1500
+      peerASN: 65047
+      primaryIpv4Prefix: '10.1.1.0/30'
+      primaryIpv6Prefix: '3FFE:FFFF:0:CD30::a0/126'
+      secondaryIpv4Prefix: '10.1.1.4/30'
+      secondaryIpv6Prefix: '3FFE:FFFF:0:CD30::a4/126'
+      vlanId: 1001
+    }
+    optionBProperties: {
+      exportRouteTargets: [
+        '65046:10039'
+      ]
+      importRouteTargets: [
+        '65046:10039'
+      ]
+    }
+    peeringOption: 'OptionA'
+  }
+}
+```
+
 ## microsoft.managednetworkfabric/l3isolationdomains/internalnetworks
 
 InternalNetworks_Create_MaximumSet_Gen
@@ -207,40 +245,6 @@ resource exampleResource 'Microsoft.ManagedNetworkFabric/l3IsolationDomains/inte
       ]
     }
     vlanId: 501
-  }
-}
-```
-
-## microsoft.managednetworkfabric/l3isolationdomains/externalnetworks
-
-ExternalNetworks_Create_MaximumSet_Gen
-```bicep
-resource exampleResource 'Microsoft.ManagedNetworkFabric/l3IsolationDomains/externalNetworks@2023-02-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    exportRoutePolicyId: '/subscriptions/subscriptionId/resourceGroups/resourceGroupName/providers/Microsoft.ManagedNetworkFabric/routePolicies/routePolicyName'
-    importRoutePolicyId: '/subscriptions/subscriptionId/resourceGroups/resourceGroupName/providers/Microsoft.ManagedNetworkFabric/routePolicies/routePolicyName'
-    optionAProperties: {
-      bfdConfiguration: {
-      }
-      mtu: 1500
-      peerASN: 65047
-      primaryIpv4Prefix: '10.1.1.0/30'
-      primaryIpv6Prefix: '3FFE:FFFF:0:CD30::a0/126'
-      secondaryIpv4Prefix: '10.1.1.4/30'
-      secondaryIpv6Prefix: '3FFE:FFFF:0:CD30::a4/126'
-      vlanId: 1001
-    }
-    optionBProperties: {
-      exportRouteTargets: [
-        '65046:10039'
-      ]
-      importRouteTargets: [
-        '65046:10039'
-      ]
-    }
-    peeringOption: 'OptionA'
   }
 }
 ```

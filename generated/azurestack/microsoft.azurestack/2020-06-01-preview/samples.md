@@ -1,14 +1,19 @@
 # Microsoft.AzureStack
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
 
-## microsoft.azurestack/registrations/customersubscriptions
 
-Creates a new customer subscription under a registration.
+## microsoft.azurestack/linkedsubscriptions
+
+Create or update a Linked Subscription.
 ```bicep
-resource exampleResource 'Microsoft.AzureStack/registrations/customerSubscriptions@2020-06-01-preview' = {
-  parent: parentResource 
+resource exampleResource 'Microsoft.AzureStack/linkedSubscriptions@2020-06-01-preview' = {
   name: 'example'
+  location: 'eastus'
   properties: {
-    tenantId: 'dbab3982-796f-4d03-9908-044c08aef8a2'
+    linkedSubscriptionId: '104fbb77-2b0e-476a-83de-65ad8acd1f0b'
+    registrationResourceId: '/subscriptions/dd8597b4-8739-4467-8b10-f8679f62bfbf/resourceGroups/azurestack/providers/Microsoft.AzureStack/registrations/testRegistration'
   }
 }
 ```
@@ -26,16 +31,15 @@ resource exampleResource 'Microsoft.AzureStack/registrations@2020-06-01-preview'
 }
 ```
 
-## microsoft.azurestack/linkedsubscriptions
+## microsoft.azurestack/registrations/customersubscriptions
 
-Create or update a Linked Subscription.
+Creates a new customer subscription under a registration.
 ```bicep
-resource exampleResource 'Microsoft.AzureStack/linkedSubscriptions@2020-06-01-preview' = {
+resource exampleResource 'Microsoft.AzureStack/registrations/customerSubscriptions@2020-06-01-preview' = {
+  parent: parentResource 
   name: 'example'
-  location: 'eastus'
   properties: {
-    linkedSubscriptionId: '104fbb77-2b0e-476a-83de-65ad8acd1f0b'
-    registrationResourceId: '/subscriptions/dd8597b4-8739-4467-8b10-f8679f62bfbf/resourceGroups/azurestack/providers/Microsoft.AzureStack/registrations/testRegistration'
+    tenantId: 'dbab3982-796f-4d03-9908-044c08aef8a2'
   }
 }
 ```

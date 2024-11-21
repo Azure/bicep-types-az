@@ -1,18 +1,8 @@
 # Microsoft.Authorization
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
 
-## microsoft.authorization/rolemanagementpolicyassignments
-
-PutRoleManagementPolicyAssignment
-```bicep
-resource exampleResource 'Microsoft.Authorization/roleManagementPolicyAssignments@2020-10-01-preview' = {
-  name: 'example'
-  properties: {
-    policyId: '/providers/Microsoft.Subscription/subscriptions/129ff972-28f8-46b8-a726-e497be039368/providers/Microsoft.Authorization/roleManagementPolicies/b959d571-f0b5-4042-88a7-01be6cb22db9'
-    roleDefinitionId: '/subscriptions/129ff972-28f8-46b8-a726-e497be039368/providers/Microsoft.Authorization/roleDefinitions/a1705bd2-3a8f-45a5-8683-466fcfd5cc24'
-    scope: '/subscriptions/129ff972-28f8-46b8-a726-e497be039368'
-  }
-}
-```
 
 ## microsoft.authorization/roleassignments
 
@@ -99,6 +89,20 @@ resource exampleResource 'Microsoft.Authorization/roleEligibilityScheduleRequest
       }
       startDateTime: '2020-09-09T21:31:27.91Z'
     }
+  }
+}
+```
+
+## microsoft.authorization/rolemanagementpolicyassignments
+
+PutRoleManagementPolicyAssignment
+```bicep
+resource exampleResource 'Microsoft.Authorization/roleManagementPolicyAssignments@2020-10-01-preview' = {
+  name: 'example'
+  properties: {
+    policyId: '/providers/Microsoft.Subscription/subscriptions/129ff972-28f8-46b8-a726-e497be039368/providers/Microsoft.Authorization/roleManagementPolicies/b959d571-f0b5-4042-88a7-01be6cb22db9'
+    roleDefinitionId: '/subscriptions/129ff972-28f8-46b8-a726-e497be039368/providers/Microsoft.Authorization/roleDefinitions/a1705bd2-3a8f-45a5-8683-466fcfd5cc24'
+    scope: '/subscriptions/129ff972-28f8-46b8-a726-e497be039368'
   }
 }
 ```

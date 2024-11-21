@@ -1,4 +1,8 @@
 # Microsoft.TimeSeriesInsights
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.timeseriesinsights/environments
 
@@ -20,6 +24,23 @@ resource exampleResource 'Microsoft.TimeSeriesInsights/environments@2021-03-31-p
   sku: {
     name: 'S1'
     capacity: 1
+  }
+}
+```
+
+## microsoft.timeseriesinsights/environments/accesspolicies
+
+AccessPoliciesCreate
+```bicep
+resource exampleResource 'Microsoft.TimeSeriesInsights/environments/accessPolicies@2021-03-31-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    description: 'some description'
+    principalObjectId: 'aGuid'
+    roles: [
+      'Reader'
+    ]
   }
 }
 ```
@@ -77,6 +98,22 @@ resource exampleResource 'Microsoft.TimeSeriesInsights/environments/eventSources
 }
 ```
 
+## microsoft.timeseriesinsights/environments/privateendpointconnections
+
+PrivateEndpointConnectionUpdate
+```bicep
+resource exampleResource 'Microsoft.TimeSeriesInsights/environments/privateEndpointConnections@2021-03-31-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    privateLinkServiceConnectionState: {
+      description: 'Rejected for some reason'
+      status: 'Rejected'
+    }
+  }
+}
+```
+
 ## microsoft.timeseriesinsights/environments/referencedatasets
 
 ReferenceDataSetsCreate
@@ -96,39 +133,6 @@ resource exampleResource 'Microsoft.TimeSeriesInsights/environments/referenceDat
         type: 'Double'
       }
     ]
-  }
-}
-```
-
-## microsoft.timeseriesinsights/environments/accesspolicies
-
-AccessPoliciesCreate
-```bicep
-resource exampleResource 'Microsoft.TimeSeriesInsights/environments/accessPolicies@2021-03-31-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    description: 'some description'
-    principalObjectId: 'aGuid'
-    roles: [
-      'Reader'
-    ]
-  }
-}
-```
-
-## microsoft.timeseriesinsights/environments/privateendpointconnections
-
-PrivateEndpointConnectionUpdate
-```bicep
-resource exampleResource 'Microsoft.TimeSeriesInsights/environments/privateEndpointConnections@2021-03-31-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    privateLinkServiceConnectionState: {
-      description: 'Rejected for some reason'
-      status: 'Rejected'
-    }
   }
 }
 ```

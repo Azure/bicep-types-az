@@ -1,4 +1,8 @@
 # Microsoft.Kusto
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.kusto/clusters
 
@@ -24,50 +28,6 @@ resource exampleResource 'Microsoft.Kusto/clusters@2021-08-27' = {
     name: 'Standard_L8s'
     capacity: 2
     tier: 'Standard'
-  }
-}
-```
-
-## microsoft.kusto/clusters/principalassignments
-
-KustoClusterPrincipalAssignmentsCreateOrUpdate
-```bicep
-resource exampleResource 'Microsoft.Kusto/clusters/principalAssignments@2021-08-27' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    principalId: '87654321-1234-1234-1234-123456789123'
-    principalType: 'App'
-    role: 'AllDatabasesAdmin'
-    tenantId: '12345678-1234-1234-1234-123456789123'
-  }
-}
-```
-
-## microsoft.kusto/clusters/databases
-
-Kusto ReadOnly database update
-```bicep
-resource exampleResource 'Microsoft.Kusto/clusters/databases@2021-08-27' = {
-  parent: parentResource 
-  name: 'example'
-  kind: 'ReadOnlyFollowing'
-  location: 'westus'
-  properties: {
-    hotCachePeriod: 'P1D'
-  }
-}
-```
-
-Kusto ReadWrite database create or update
-```bicep
-resource exampleResource 'Microsoft.Kusto/clusters/databases@2021-08-27' = {
-  parent: parentResource 
-  name: 'example'
-  kind: 'ReadWrite'
-  location: 'westus'
-  properties: {
-    softDeletePeriod: 'P1D'
   }
 }
 ```
@@ -108,17 +68,47 @@ resource exampleResource 'Microsoft.Kusto/clusters/attachedDatabaseConfiguration
 }
 ```
 
-## microsoft.kusto/clusters/managedprivateendpoints
+## microsoft.kusto/clusters/databases
 
-KustoManagedPrivateEndpointsCreateOrUpdate
+Kusto ReadOnly database update
 ```bicep
-resource exampleResource 'Microsoft.Kusto/clusters/managedPrivateEndpoints@2021-08-27' = {
+resource exampleResource 'Microsoft.Kusto/clusters/databases@2021-08-27' = {
   parent: parentResource 
   name: 'example'
+  kind: 'ReadOnlyFollowing'
+  location: 'westus'
   properties: {
-    groupId: 'blob'
-    privateLinkResourceId: '/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Storage/storageAccounts/storageAccountTest'
-    requestMessage: 'Please Approve.'
+    hotCachePeriod: 'P1D'
+  }
+}
+```
+
+Kusto ReadWrite database create or update
+```bicep
+resource exampleResource 'Microsoft.Kusto/clusters/databases@2021-08-27' = {
+  parent: parentResource 
+  name: 'example'
+  kind: 'ReadWrite'
+  location: 'westus'
+  properties: {
+    softDeletePeriod: 'P1D'
+  }
+}
+```
+
+## microsoft.kusto/clusters/databases/dataconnections
+
+KustoDataConnectionsCreateOrUpdate
+```bicep
+resource exampleResource 'Microsoft.Kusto/clusters/databases/dataConnections@2021-08-27' = {
+  parent: parentResource 
+  name: 'example'
+  kind: 'EventHub'
+  location: 'westus'
+  properties: {
+    consumerGroup: 'testConsumerGroup1'
+    eventHubResourceId: '/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.EventHub/namespaces/eventhubTestns1/eventhubs/eventhubTest1'
+    managedIdentityResourceId: '/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.ManagedIdentity/userAssignedIdentities/managedidentityTest1'
   }
 }
 ```
@@ -155,6 +145,37 @@ resource exampleResource 'Microsoft.Kusto/clusters/databases/scripts@2021-08-27'
 }
 ```
 
+## microsoft.kusto/clusters/managedprivateendpoints
+
+KustoManagedPrivateEndpointsCreateOrUpdate
+```bicep
+resource exampleResource 'Microsoft.Kusto/clusters/managedPrivateEndpoints@2021-08-27' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    groupId: 'blob'
+    privateLinkResourceId: '/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Storage/storageAccounts/storageAccountTest'
+    requestMessage: 'Please Approve.'
+  }
+}
+```
+
+## microsoft.kusto/clusters/principalassignments
+
+KustoClusterPrincipalAssignmentsCreateOrUpdate
+```bicep
+resource exampleResource 'Microsoft.Kusto/clusters/principalAssignments@2021-08-27' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    principalId: '87654321-1234-1234-1234-123456789123'
+    principalType: 'App'
+    role: 'AllDatabasesAdmin'
+    tenantId: '12345678-1234-1234-1234-123456789123'
+  }
+}
+```
+
 ## microsoft.kusto/clusters/privateendpointconnections
 
 Approve or reject a private endpoint connection with a given name.
@@ -167,23 +188,6 @@ resource exampleResource 'Microsoft.Kusto/clusters/privateEndpointConnections@20
       description: 'Approved by johndoe@contoso.com'
       status: 'Approved'
     }
-  }
-}
-```
-
-## microsoft.kusto/clusters/databases/dataconnections
-
-KustoDataConnectionsCreateOrUpdate
-```bicep
-resource exampleResource 'Microsoft.Kusto/clusters/databases/dataConnections@2021-08-27' = {
-  parent: parentResource 
-  name: 'example'
-  kind: 'EventHub'
-  location: 'westus'
-  properties: {
-    consumerGroup: 'testConsumerGroup1'
-    eventHubResourceId: '/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.EventHub/namespaces/eventhubTestns1/eventhubs/eventhubTest1'
-    managedIdentityResourceId: '/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.ManagedIdentity/userAssignedIdentities/managedidentityTest1'
   }
 }
 ```

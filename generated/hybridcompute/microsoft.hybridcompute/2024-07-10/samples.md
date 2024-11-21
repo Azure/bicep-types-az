@@ -1,4 +1,8 @@
 # Microsoft.HybridCompute
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.hybridcompute/licenses
 
@@ -49,6 +53,25 @@ resource exampleResource 'Microsoft.HybridCompute/machines@2024-07-10' = {
 }
 ```
 
+## microsoft.hybridcompute/machines/extensions
+
+Create or Update a Machine Extension
+```bicep
+resource exampleResource 'Microsoft.HybridCompute/machines/extensions@2024-07-10' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'eastus2euap'
+  properties: {
+    type: 'CustomScriptExtension'
+    publisher: 'Microsoft.Compute'
+    settings: {
+      commandToExecute: 'powershell.exe -c "Get-Process | Where-Object { $_.CPU -gt 10000 }"'
+    }
+    typeHandlerVersion: '1.10'
+  }
+}
+```
+
 ## microsoft.hybridcompute/machines/licenseprofiles
 
 Create or Update a License Profile
@@ -74,25 +97,6 @@ resource exampleResource 'Microsoft.HybridCompute/machines/licenseProfiles@2024-
     softwareAssurance: {
       softwareAssuranceCustomer: true
     }
-  }
-}
-```
-
-## microsoft.hybridcompute/machines/extensions
-
-Create or Update a Machine Extension
-```bicep
-resource exampleResource 'Microsoft.HybridCompute/machines/extensions@2024-07-10' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'eastus2euap'
-  properties: {
-    type: 'CustomScriptExtension'
-    publisher: 'Microsoft.Compute'
-    settings: {
-      commandToExecute: 'powershell.exe -c "Get-Process | Where-Object { $_.CPU -gt 10000 }"'
-    }
-    typeHandlerVersion: '1.10'
   }
 }
 ```

@@ -1,4 +1,31 @@
 # Microsoft.OperationsManagement
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
+
+## microsoft.operationsmanagement/managementassociations
+
+SolutionCreate
+```bicep
+resource exampleResource 'Microsoft.OperationsManagement/ManagementAssociations@2015-11-01-preview' = {
+  name: 'example'
+  location: 'East US'
+  properties: {
+    applicationId: '/subscriptions/sub1/resourcegroups/rg1/providers/Microsoft.Appliance/Appliances/appliance1'
+  }
+}
+```
+
+## microsoft.operationsmanagement/managementconfigurations
+
+ManagementConfigurationCreate
+```bicep
+resource exampleResource 'Microsoft.OperationsManagement/ManagementConfigurations@2015-11-01-preview' = {
+  name: 'example'
+  location: 'East US'
+}
+```
 
 ## microsoft.operationsmanagement/solutions
 
@@ -24,28 +51,5 @@ resource exampleResource 'Microsoft.OperationsManagement/solutions@2015-11-01-pr
     ]
     workspaceResourceId: '/subscriptions/sub2/resourceGroups/rg2/providers/Microsoft.OperationalInsights/workspaces/ws1'
   }
-}
-```
-
-## microsoft.operationsmanagement/managementassociations
-
-SolutionCreate
-```bicep
-resource exampleResource 'Microsoft.OperationsManagement/ManagementAssociations@2015-11-01-preview' = {
-  name: 'example'
-  location: 'East US'
-  properties: {
-    applicationId: '/subscriptions/sub1/resourcegroups/rg1/providers/Microsoft.Appliance/Appliances/appliance1'
-  }
-}
-```
-
-## microsoft.operationsmanagement/managementconfigurations
-
-ManagementConfigurationCreate
-```bicep
-resource exampleResource 'Microsoft.OperationsManagement/ManagementConfigurations@2015-11-01-preview' = {
-  name: 'example'
-  location: 'East US'
 }
 ```

@@ -1,221 +1,54 @@
 # Microsoft.DesktopVirtualization
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
 
-## microsoft.desktopvirtualization/workspaces
 
-Workspace_Create
+## microsoft.desktopvirtualization/appattachpackages
+
+AppAttachPackage_Create
 ```bicep
-resource exampleResource 'Microsoft.DesktopVirtualization/workspaces@2024-04-03' = {
+resource exampleResource 'Microsoft.DesktopVirtualization/appAttachPackages@2024-04-03' = {
   name: 'example'
-  location: 'centralus'
+  location: 'southcentralus'
   properties: {
-    description: 'des1'
-    friendlyName: 'friendly'
-  }
-  tags: {
-    tag1: 'value1'
-    tag2: 'value2'
-  }
-}
-```
-
-## microsoft.desktopvirtualization/workspaces/privateendpointconnections
-
-PrivateEndpointConnection_UpdateByWorkspace
-```bicep
-resource exampleResource 'Microsoft.DesktopVirtualization/workspaces/privateEndpointConnections@2024-04-03' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    privateLinkServiceConnectionState: {
-      description: 'Approved by admin@consoto.com'
-      actionsRequired: 'None'
-      status: 'Approved'
-    }
-  }
-}
-```
-
-## microsoft.desktopvirtualization/hostpools/privateendpointconnections
-
-PrivateEndpointConnection_UpdateByHostPool
-```bicep
-resource exampleResource 'Microsoft.DesktopVirtualization/hostPools/privateEndpointConnections@2024-04-03' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    privateLinkServiceConnectionState: {
-      description: 'Approved by admin@consoto.com'
-      actionsRequired: 'None'
-      status: 'Approved'
-    }
-  }
-}
-```
-
-## microsoft.desktopvirtualization/scalingplans
-
-ScalingPlans_Create
-```bicep
-resource exampleResource 'Microsoft.DesktopVirtualization/scalingPlans@2024-04-03' = {
-  name: 'example'
-  location: 'centralus'
-  properties: {
-    description: 'Description of Scaling Plan'
-    exclusionTag: 'value'
-    friendlyName: 'Scaling Plan 1'
+    failHealthCheckOnStagingFailure: 'NeedsAssistance'
     hostPoolReferences: [
-      {
-        hostPoolArmPath: '/subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourceGroups/resourceGroup1/providers/Microsoft.DesktopVirtualization/hostPools/hostPool1'
-        scalingPlanEnabled: true
-      }
     ]
-    hostPoolType: 'Pooled'
-    schedules: [
-      {
-        name: 'schedule1'
-        daysOfWeek: [
-          'Monday'
-          'Tuesday'
-          'Wednesday'
-          'Thursday'
-          'Friday'
-        ]
-        offPeakLoadBalancingAlgorithm: 'DepthFirst'
-        offPeakStartTime: {
-          hour: 20
-          minute: 0
+    image: {
+      certificateExpiry: '2023-01-02T17:18:19.1234567Z'
+      certificateName: 'certName'
+      displayName: 'displayname'
+      imagePath: 'imagepath'
+      isActive: false
+      isRegularRegistration: false
+      lastUpdated: '2008-09-22T14:01:54.9571247Z'
+      packageAlias: 'msixpackagealias'
+      packageApplications: [
+        {
+          description: 'PackageApplicationDescription'
+          appId: 'AppId'
+          appUserModelID: 'AppUserModelId'
+          friendlyName: 'FriendlyName'
+          iconImageName: 'Iconimagename'
+          rawIcon: 'VGhpcyBpcyBhIHN0cmluZyB0byBoYXNo'
+          rawPng: 'VGhpcyBpcyBhIHN0cmluZyB0byBoYXNo'
         }
-        peakLoadBalancingAlgorithm: 'BreadthFirst'
-        peakStartTime: {
-          hour: 8
-          minute: 0
+      ]
+      packageDependencies: [
+        {
+          dependencyName: 'MsixPackage_Dependency_Name'
+          minVersion: 'packageDep_version'
+          publisher: 'MsixPackage_Dependency_Publisher'
         }
-        rampDownCapacityThresholdPct: 50
-        rampDownForceLogoffUsers: true
-        rampDownLoadBalancingAlgorithm: 'DepthFirst'
-        rampDownMinimumHostsPct: 20
-        rampDownNotificationMessage: 'message'
-        rampDownStartTime: {
-          hour: 18
-          minute: 0
-        }
-        rampDownWaitTimeMinutes: 30
-        rampUpCapacityThresholdPct: 80
-        rampUpLoadBalancingAlgorithm: 'DepthFirst'
-        rampUpMinimumHostsPct: 20
-        rampUpStartTime: {
-          hour: 6
-          minute: 0
-        }
-      }
-    ]
-    timeZone: 'Central Standard Time'
-  }
-  tags: {
-    tag1: 'value1'
-    tag2: 'value2'
-  }
-}
-```
-
-## microsoft.desktopvirtualization/scalingplans/pooledschedules
-
-ScalingPlanPooledSchedules_Create
-```bicep
-resource exampleResource 'Microsoft.DesktopVirtualization/scalingPlans/pooledSchedules@2024-04-03' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    daysOfWeek: [
-      'Monday'
-      'Tuesday'
-      'Wednesday'
-      'Thursday'
-      'Friday'
-    ]
-    offPeakLoadBalancingAlgorithm: 'DepthFirst'
-    offPeakStartTime: {
-      hour: 20
-      minute: 0
+      ]
+      packageFamilyName: 'MsixPackage_FamilyName'
+      packageFullName: 'MsixPackage_FullName'
+      packageName: 'MsixPackageName'
+      packageRelativePath: 'packagerelativepath'
+      version: 'packageversion'
     }
-    peakLoadBalancingAlgorithm: 'BreadthFirst'
-    peakStartTime: {
-      hour: 8
-      minute: 0
-    }
-    rampDownCapacityThresholdPct: 50
-    rampDownForceLogoffUsers: true
-    rampDownLoadBalancingAlgorithm: 'DepthFirst'
-    rampDownMinimumHostsPct: 20
-    rampDownNotificationMessage: 'message'
-    rampDownStartTime: {
-      hour: 18
-      minute: 0
-    }
-    rampDownWaitTimeMinutes: 30
-    rampUpCapacityThresholdPct: 80
-    rampUpLoadBalancingAlgorithm: 'DepthFirst'
-    rampUpMinimumHostsPct: 20
-    rampUpStartTime: {
-      hour: 6
-      minute: 0
-    }
-  }
-}
-```
-
-## microsoft.desktopvirtualization/scalingplans/personalschedules
-
-ScalingPlanPersonalSchedules_Create
-```bicep
-resource exampleResource 'Microsoft.DesktopVirtualization/scalingPlans/personalSchedules@2024-04-03' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    daysOfWeek: [
-      'Monday'
-      'Tuesday'
-      'Wednesday'
-      'Thursday'
-      'Friday'
-    ]
-    offPeakActionOnDisconnect: 'None'
-    offPeakActionOnLogoff: 'Deallocate'
-    offPeakMinutesToWaitOnDisconnect: 10
-    offPeakMinutesToWaitOnLogoff: 10
-    offPeakStartTime: {
-      hour: 20
-      minute: 0
-    }
-    offPeakStartVMOnConnect: 'Enable'
-    peakActionOnDisconnect: 'None'
-    peakActionOnLogoff: 'Deallocate'
-    peakMinutesToWaitOnDisconnect: 10
-    peakMinutesToWaitOnLogoff: 10
-    peakStartTime: {
-      hour: 8
-      minute: 0
-    }
-    peakStartVMOnConnect: 'Enable'
-    rampDownActionOnDisconnect: 'None'
-    rampDownActionOnLogoff: 'Deallocate'
-    rampDownMinutesToWaitOnDisconnect: 10
-    rampDownMinutesToWaitOnLogoff: 10
-    rampDownStartTime: {
-      hour: 18
-      minute: 0
-    }
-    rampDownStartVMOnConnect: 'Enable'
-    rampUpActionOnDisconnect: 'None'
-    rampUpActionOnLogoff: 'None'
-    rampUpAutoStartHosts: 'All'
-    rampUpMinutesToWaitOnDisconnect: 10
-    rampUpMinutesToWaitOnLogoff: 10
-    rampUpStartTime: {
-      hour: 6
-      minute: 0
-    }
-    rampUpStartVMOnConnect: 'Enable'
+    keyVaultURL: ''
   }
 }
 ```
@@ -350,51 +183,222 @@ resource exampleResource 'Microsoft.DesktopVirtualization/hostPools/msixPackages
 }
 ```
 
-## microsoft.desktopvirtualization/appattachpackages
+## microsoft.desktopvirtualization/hostpools/privateendpointconnections
 
-AppAttachPackage_Create
+PrivateEndpointConnection_UpdateByHostPool
 ```bicep
-resource exampleResource 'Microsoft.DesktopVirtualization/appAttachPackages@2024-04-03' = {
+resource exampleResource 'Microsoft.DesktopVirtualization/hostPools/privateEndpointConnections@2024-04-03' = {
+  parent: parentResource 
   name: 'example'
-  location: 'southcentralus'
   properties: {
-    failHealthCheckOnStagingFailure: 'NeedsAssistance'
-    hostPoolReferences: [
-    ]
-    image: {
-      certificateExpiry: '2023-01-02T17:18:19.1234567Z'
-      certificateName: 'certName'
-      displayName: 'displayname'
-      imagePath: 'imagepath'
-      isActive: false
-      isRegularRegistration: false
-      lastUpdated: '2008-09-22T14:01:54.9571247Z'
-      packageAlias: 'msixpackagealias'
-      packageApplications: [
-        {
-          description: 'PackageApplicationDescription'
-          appId: 'AppId'
-          appUserModelID: 'AppUserModelId'
-          friendlyName: 'FriendlyName'
-          iconImageName: 'Iconimagename'
-          rawIcon: 'VGhpcyBpcyBhIHN0cmluZyB0byBoYXNo'
-          rawPng: 'VGhpcyBpcyBhIHN0cmluZyB0byBoYXNo'
-        }
-      ]
-      packageDependencies: [
-        {
-          dependencyName: 'MsixPackage_Dependency_Name'
-          minVersion: 'packageDep_version'
-          publisher: 'MsixPackage_Dependency_Publisher'
-        }
-      ]
-      packageFamilyName: 'MsixPackage_FamilyName'
-      packageFullName: 'MsixPackage_FullName'
-      packageName: 'MsixPackageName'
-      packageRelativePath: 'packagerelativepath'
-      version: 'packageversion'
+    privateLinkServiceConnectionState: {
+      description: 'Approved by admin@consoto.com'
+      actionsRequired: 'None'
+      status: 'Approved'
     }
-    keyVaultURL: ''
+  }
+}
+```
+
+## microsoft.desktopvirtualization/scalingplans
+
+ScalingPlans_Create
+```bicep
+resource exampleResource 'Microsoft.DesktopVirtualization/scalingPlans@2024-04-03' = {
+  name: 'example'
+  location: 'centralus'
+  properties: {
+    description: 'Description of Scaling Plan'
+    exclusionTag: 'value'
+    friendlyName: 'Scaling Plan 1'
+    hostPoolReferences: [
+      {
+        hostPoolArmPath: '/subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourceGroups/resourceGroup1/providers/Microsoft.DesktopVirtualization/hostPools/hostPool1'
+        scalingPlanEnabled: true
+      }
+    ]
+    hostPoolType: 'Pooled'
+    schedules: [
+      {
+        name: 'schedule1'
+        daysOfWeek: [
+          'Monday'
+          'Tuesday'
+          'Wednesday'
+          'Thursday'
+          'Friday'
+        ]
+        offPeakLoadBalancingAlgorithm: 'DepthFirst'
+        offPeakStartTime: {
+          hour: 20
+          minute: 0
+        }
+        peakLoadBalancingAlgorithm: 'BreadthFirst'
+        peakStartTime: {
+          hour: 8
+          minute: 0
+        }
+        rampDownCapacityThresholdPct: 50
+        rampDownForceLogoffUsers: true
+        rampDownLoadBalancingAlgorithm: 'DepthFirst'
+        rampDownMinimumHostsPct: 20
+        rampDownNotificationMessage: 'message'
+        rampDownStartTime: {
+          hour: 18
+          minute: 0
+        }
+        rampDownWaitTimeMinutes: 30
+        rampUpCapacityThresholdPct: 80
+        rampUpLoadBalancingAlgorithm: 'DepthFirst'
+        rampUpMinimumHostsPct: 20
+        rampUpStartTime: {
+          hour: 6
+          minute: 0
+        }
+      }
+    ]
+    timeZone: 'Central Standard Time'
+  }
+  tags: {
+    tag1: 'value1'
+    tag2: 'value2'
+  }
+}
+```
+
+## microsoft.desktopvirtualization/scalingplans/personalschedules
+
+ScalingPlanPersonalSchedules_Create
+```bicep
+resource exampleResource 'Microsoft.DesktopVirtualization/scalingPlans/personalSchedules@2024-04-03' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    daysOfWeek: [
+      'Monday'
+      'Tuesday'
+      'Wednesday'
+      'Thursday'
+      'Friday'
+    ]
+    offPeakActionOnDisconnect: 'None'
+    offPeakActionOnLogoff: 'Deallocate'
+    offPeakMinutesToWaitOnDisconnect: 10
+    offPeakMinutesToWaitOnLogoff: 10
+    offPeakStartTime: {
+      hour: 20
+      minute: 0
+    }
+    offPeakStartVMOnConnect: 'Enable'
+    peakActionOnDisconnect: 'None'
+    peakActionOnLogoff: 'Deallocate'
+    peakMinutesToWaitOnDisconnect: 10
+    peakMinutesToWaitOnLogoff: 10
+    peakStartTime: {
+      hour: 8
+      minute: 0
+    }
+    peakStartVMOnConnect: 'Enable'
+    rampDownActionOnDisconnect: 'None'
+    rampDownActionOnLogoff: 'Deallocate'
+    rampDownMinutesToWaitOnDisconnect: 10
+    rampDownMinutesToWaitOnLogoff: 10
+    rampDownStartTime: {
+      hour: 18
+      minute: 0
+    }
+    rampDownStartVMOnConnect: 'Enable'
+    rampUpActionOnDisconnect: 'None'
+    rampUpActionOnLogoff: 'None'
+    rampUpAutoStartHosts: 'All'
+    rampUpMinutesToWaitOnDisconnect: 10
+    rampUpMinutesToWaitOnLogoff: 10
+    rampUpStartTime: {
+      hour: 6
+      minute: 0
+    }
+    rampUpStartVMOnConnect: 'Enable'
+  }
+}
+```
+
+## microsoft.desktopvirtualization/scalingplans/pooledschedules
+
+ScalingPlanPooledSchedules_Create
+```bicep
+resource exampleResource 'Microsoft.DesktopVirtualization/scalingPlans/pooledSchedules@2024-04-03' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    daysOfWeek: [
+      'Monday'
+      'Tuesday'
+      'Wednesday'
+      'Thursday'
+      'Friday'
+    ]
+    offPeakLoadBalancingAlgorithm: 'DepthFirst'
+    offPeakStartTime: {
+      hour: 20
+      minute: 0
+    }
+    peakLoadBalancingAlgorithm: 'BreadthFirst'
+    peakStartTime: {
+      hour: 8
+      minute: 0
+    }
+    rampDownCapacityThresholdPct: 50
+    rampDownForceLogoffUsers: true
+    rampDownLoadBalancingAlgorithm: 'DepthFirst'
+    rampDownMinimumHostsPct: 20
+    rampDownNotificationMessage: 'message'
+    rampDownStartTime: {
+      hour: 18
+      minute: 0
+    }
+    rampDownWaitTimeMinutes: 30
+    rampUpCapacityThresholdPct: 80
+    rampUpLoadBalancingAlgorithm: 'DepthFirst'
+    rampUpMinimumHostsPct: 20
+    rampUpStartTime: {
+      hour: 6
+      minute: 0
+    }
+  }
+}
+```
+
+## microsoft.desktopvirtualization/workspaces
+
+Workspace_Create
+```bicep
+resource exampleResource 'Microsoft.DesktopVirtualization/workspaces@2024-04-03' = {
+  name: 'example'
+  location: 'centralus'
+  properties: {
+    description: 'des1'
+    friendlyName: 'friendly'
+  }
+  tags: {
+    tag1: 'value1'
+    tag2: 'value2'
+  }
+}
+```
+
+## microsoft.desktopvirtualization/workspaces/privateendpointconnections
+
+PrivateEndpointConnection_UpdateByWorkspace
+```bicep
+resource exampleResource 'Microsoft.DesktopVirtualization/workspaces/privateEndpointConnections@2024-04-03' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    privateLinkServiceConnectionState: {
+      description: 'Approved by admin@consoto.com'
+      actionsRequired: 'None'
+      status: 'Approved'
+    }
   }
 }
 ```

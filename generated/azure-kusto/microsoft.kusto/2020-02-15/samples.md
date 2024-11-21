@@ -1,4 +1,8 @@
 # Microsoft.Kusto
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.kusto/clusters
 
@@ -27,18 +31,18 @@ resource exampleResource 'Microsoft.Kusto/clusters@2020-02-15' = {
 }
 ```
 
-## microsoft.kusto/clusters/principalassignments
+## microsoft.kusto/clusters/attacheddatabaseconfigurations
 
-KustoClusterPrincipalAssignmentsCreateOrUpdate
+AttachedDatabaseConfigurationsCreateOrUpdate
 ```bicep
-resource exampleResource 'Microsoft.Kusto/clusters/principalAssignments@2020-02-15' = {
+resource exampleResource 'Microsoft.Kusto/clusters/attachedDatabaseConfigurations@2020-02-15' = {
   parent: parentResource 
   name: 'example'
+  location: 'westus'
   properties: {
-    principalId: '87654321-1234-1234-1234-123456789123'
-    principalType: 'App'
-    role: 'Admin'
-    tenantId: '12345678-1234-1234-1234-123456789123'
+    clusterResourceId: '/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/Clusters/KustoClusterLeader'
+    databaseName: 'db1'
+    defaultPrincipalsModificationKind: 'Union'
   }
 }
 ```
@@ -54,6 +58,22 @@ resource exampleResource 'Microsoft.Kusto/clusters/databases@2020-02-15' = {
   location: 'westus'
   properties: {
     softDeletePeriod: 'P1D'
+  }
+}
+```
+
+## microsoft.kusto/clusters/databases/dataconnections
+
+KustoDataConnectionsCreateOrUpdate
+```bicep
+resource exampleResource 'Microsoft.Kusto/clusters/databases/dataConnections@2020-02-15' = {
+  parent: parentResource 
+  name: 'example'
+  kind: 'EventHub'
+  location: 'westus'
+  properties: {
+    consumerGroup: 'testConsumerGroup1'
+    eventHubResourceId: '/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.EventHub/namespaces/eventhubTestns1/eventhubs/eventhubTest1'
   }
 }
 ```
@@ -74,34 +94,18 @@ resource exampleResource 'Microsoft.Kusto/clusters/databases/principalAssignment
 }
 ```
 
-## microsoft.kusto/clusters/attacheddatabaseconfigurations
+## microsoft.kusto/clusters/principalassignments
 
-AttachedDatabaseConfigurationsCreateOrUpdate
+KustoClusterPrincipalAssignmentsCreateOrUpdate
 ```bicep
-resource exampleResource 'Microsoft.Kusto/clusters/attachedDatabaseConfigurations@2020-02-15' = {
+resource exampleResource 'Microsoft.Kusto/clusters/principalAssignments@2020-02-15' = {
   parent: parentResource 
   name: 'example'
-  location: 'westus'
   properties: {
-    clusterResourceId: '/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/Clusters/KustoClusterLeader'
-    databaseName: 'db1'
-    defaultPrincipalsModificationKind: 'Union'
-  }
-}
-```
-
-## microsoft.kusto/clusters/databases/dataconnections
-
-KustoDataConnectionsCreateOrUpdate
-```bicep
-resource exampleResource 'Microsoft.Kusto/clusters/databases/dataConnections@2020-02-15' = {
-  parent: parentResource 
-  name: 'example'
-  kind: 'EventHub'
-  location: 'westus'
-  properties: {
-    consumerGroup: 'testConsumerGroup1'
-    eventHubResourceId: '/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.EventHub/namespaces/eventhubTestns1/eventhubs/eventhubTest1'
+    principalId: '87654321-1234-1234-1234-123456789123'
+    principalType: 'App'
+    role: 'Admin'
+    tenantId: '12345678-1234-1234-1234-123456789123'
   }
 }
 ```

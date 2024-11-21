@@ -1,4 +1,8 @@
 # Microsoft.RecoveryServices
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.recoveryservices/vaults/replicationalertsettings
 
@@ -128,27 +132,6 @@ resource exampleResource 'Microsoft.RecoveryServices/vaults/replicationFabrics/r
 }
 ```
 
-## microsoft.recoveryservices/vaults/replicationprotectionintents
-
-Create protection intent Resource.
-```bicep
-resource exampleResource 'Microsoft.RecoveryServices/vaults/replicationProtectionIntents@2021-03-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    providerSpecificDetails: {
-      fabricObjectId: '/subscriptions/509099b2-9d2c-4636-b43e-bd5cafb6be69/resourceGroups/removeOne/providers/Microsoft.Compute/virtualMachines/vmPpgAv5'
-      instanceType: 'A2A'
-      primaryLocation: 'eastUs2'
-      recoveryAvailabilityType: 'Single'
-      recoveryLocation: 'westus2'
-      recoveryResourceGroupId: '/subscriptions/509099b2-9d2c-4636-b43e-bd5cafb6be69/resourceGroups/removeOne-asr'
-      recoverySubscriptionId: 'ed5bcdf6-d61e-47bd-8ea9-f2bd379a2640'
-    }
-  }
-}
-```
-
 ## microsoft.recoveryservices/vaults/replicationfabrics/replicationrecoveryservicesproviders
 
 Adds a recovery services provider.
@@ -216,6 +199,27 @@ resource exampleResource 'Microsoft.RecoveryServices/vaults/replicationPolicies@
   properties: {
     providerSpecificInput: {
       instanceType: 'HyperVReplicaAzure'
+    }
+  }
+}
+```
+
+## microsoft.recoveryservices/vaults/replicationprotectionintents
+
+Create protection intent Resource.
+```bicep
+resource exampleResource 'Microsoft.RecoveryServices/vaults/replicationProtectionIntents@2021-03-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    providerSpecificDetails: {
+      fabricObjectId: '/subscriptions/509099b2-9d2c-4636-b43e-bd5cafb6be69/resourceGroups/removeOne/providers/Microsoft.Compute/virtualMachines/vmPpgAv5'
+      instanceType: 'A2A'
+      primaryLocation: 'eastUs2'
+      recoveryAvailabilityType: 'Single'
+      recoveryLocation: 'westus2'
+      recoveryResourceGroupId: '/subscriptions/509099b2-9d2c-4636-b43e-bd5cafb6be69/resourceGroups/removeOne-asr'
+      recoverySubscriptionId: 'ed5bcdf6-d61e-47bd-8ea9-f2bd379a2640'
     }
   }
 }

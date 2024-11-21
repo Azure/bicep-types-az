@@ -1,4 +1,8 @@
 # Oracle.Database
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## oracle.database/autonomousdatabases
 
@@ -100,6 +104,34 @@ resource exampleResource 'Oracle.Database/autonomousDatabases@2024-06-01' = {
 }
 ```
 
+## oracle.database/autonomousdatabases/autonomousdatabasebackups
+
+AutonomousDatabaseBackups_CreateOrUpdate
+```bicep
+resource exampleResource 'Oracle.Database/autonomousDatabases/autonomousDatabaseBackups@2024-06-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    autonomousDatabaseOcid: 'ocid1.autonomousdatabase.oc1..aaaaa3klq'
+    displayName: 'Nightly Backup'
+    retentionPeriodInDays: 365
+  }
+}
+```
+
+Create Autonomous Database Backup.
+```bicep
+resource exampleResource 'Oracle.Database/autonomousDatabases/autonomousDatabaseBackups@2024-06-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    autonomousDatabaseOcid: 'ocid1.autonomousdatabase.oc1..aaaaa3klq'
+    displayName: 'Nightly Backup'
+    retentionPeriodInDays: 365
+  }
+}
+```
+
 ## oracle.database/cloudexadatainfrastructures
 
 Create Exadata Infrastructure
@@ -181,6 +213,20 @@ resource exampleResource 'Oracle.Database/cloudVmClusters@2024-06-01' = {
 }
 ```
 
+## oracle.database/cloudvmclusters/virtualnetworkaddresses
+
+Create Virtual Network Address
+```bicep
+resource exampleResource 'Oracle.Database/cloudVmClusters/virtualNetworkAddresses@2024-06-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    ipAddress: '192.168.0.1'
+    vmOcid: 'ocid1..aaaa'
+  }
+}
+```
+
 ## oracle.database/oraclesubscriptions
 
 Create or Update Oracle Subscription
@@ -195,48 +241,6 @@ resource exampleResource 'Oracle.Database/oracleSubscriptions@2024-06-01' = {
     version: 'alpha'
   }
   properties: {
-  }
-}
-```
-
-## oracle.database/autonomousdatabases/autonomousdatabasebackups
-
-AutonomousDatabaseBackups_CreateOrUpdate
-```bicep
-resource exampleResource 'Oracle.Database/autonomousDatabases/autonomousDatabaseBackups@2024-06-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    autonomousDatabaseOcid: 'ocid1.autonomousdatabase.oc1..aaaaa3klq'
-    displayName: 'Nightly Backup'
-    retentionPeriodInDays: 365
-  }
-}
-```
-
-Create Autonomous Database Backup.
-```bicep
-resource exampleResource 'Oracle.Database/autonomousDatabases/autonomousDatabaseBackups@2024-06-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    autonomousDatabaseOcid: 'ocid1.autonomousdatabase.oc1..aaaaa3klq'
-    displayName: 'Nightly Backup'
-    retentionPeriodInDays: 365
-  }
-}
-```
-
-## oracle.database/cloudvmclusters/virtualnetworkaddresses
-
-Create Virtual Network Address
-```bicep
-resource exampleResource 'Oracle.Database/cloudVmClusters/virtualNetworkAddresses@2024-06-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    ipAddress: '192.168.0.1'
-    vmOcid: 'ocid1..aaaa'
   }
 }
 ```

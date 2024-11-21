@@ -1,14 +1,8 @@
 # Microsoft.AzureStackHCI
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
 
-## microsoft.azurestackhci/clusters/arcsettings
-
-Create ArcSetting
-```bicep
-resource exampleResource 'Microsoft.AzureStackHCI/clusters/arcSettings@2021-09-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-}
-```
 
 ## microsoft.azurestackhci/clusters
 
@@ -22,6 +16,16 @@ resource exampleResource 'Microsoft.AzureStackHCI/clusters@2021-09-01-preview' =
     aadTenantId: '7e589cc1-a8b6-4dff-91bd-5ec0fa18db94'
     cloudManagementEndpoint: 'https://98294836-31be-4668-aeae-698667faf99b.waconazure.com'
   }
+}
+```
+
+## microsoft.azurestackhci/clusters/arcsettings
+
+Create ArcSetting
+```bicep
+resource exampleResource 'Microsoft.AzureStackHCI/clusters/arcSettings@2021-09-01-preview' = {
+  parent: parentResource 
+  name: 'example'
 }
 ```
 
@@ -274,20 +278,6 @@ resource exampleResource 'Microsoft.AzureStackHCI/virtualmachines@2021-09-01-pre
 }
 ```
 
-## microsoft.azurestackhci/virtualmachines/hybrididentitymetadata
-
-CreateHybridIdentityMetadata
-```bicep
-resource exampleResource 'Microsoft.AzureStackHCI/virtualMachines/hybridIdentityMetadata@2021-09-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    publicKey: '8ec7d60c-9700-40b1-8e6e-e5b2f6f477f2'
-    resourceUid: 'f8b82dff-38ef-4220-99ef-d3a3f86ddc6c'
-  }
-}
-```
-
 ## microsoft.azurestackhci/virtualmachines/extensions
 
 Create or Update a Machine Extension (PUT)
@@ -320,6 +310,20 @@ resource exampleResource 'Microsoft.AzureStackHCI/virtualMachines/guestAgents@20
       username: 'tempuser'
     }
     provisioningAction: 'install'
+  }
+}
+```
+
+## microsoft.azurestackhci/virtualmachines/hybrididentitymetadata
+
+CreateHybridIdentityMetadata
+```bicep
+resource exampleResource 'Microsoft.AzureStackHCI/virtualMachines/hybridIdentityMetadata@2021-09-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    publicKey: '8ec7d60c-9700-40b1-8e6e-e5b2f6f477f2'
+    resourceUid: 'f8b82dff-38ef-4220-99ef-d3a3f86ddc6c'
   }
 }
 ```

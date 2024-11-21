@@ -1,4 +1,8 @@
 # Microsoft.Network
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.network/networksecurityperimeters
 
@@ -7,6 +11,25 @@ Put Network Security Perimeter
 resource exampleResource 'Microsoft.Network/networkSecurityPerimeters@2023-07-01-preview' = {
   name: 'example'
   properties: {
+  }
+}
+```
+
+## microsoft.network/networksecurityperimeters/links
+
+NspLinksPut
+```bicep
+resource exampleResource 'Microsoft.Network/networkSecurityPerimeters/links@2023-07-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    autoApprovedRemotePerimeterResourceId: '/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/networkSecurityPerimeters/nsp2'
+    localInboundProfiles: [
+      '*'
+    ]
+    remoteInboundProfiles: [
+      '*'
+    ]
   }
 }
 ```
@@ -55,25 +78,6 @@ resource exampleResource 'Microsoft.Network/networkSecurityPerimeters/resourceAs
     profile: {
       id: '/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/networkSecurityPerimeters/nsp1/profiles/{profileName}'
     }
-  }
-}
-```
-
-## microsoft.network/networksecurityperimeters/links
-
-NspLinksPut
-```bicep
-resource exampleResource 'Microsoft.Network/networkSecurityPerimeters/links@2023-07-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    autoApprovedRemotePerimeterResourceId: '/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/networkSecurityPerimeters/nsp2'
-    localInboundProfiles: [
-      '*'
-    ]
-    remoteInboundProfiles: [
-      '*'
-    ]
   }
 }
 ```

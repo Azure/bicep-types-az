@@ -1,93 +1,8 @@
 # Microsoft.App
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
 
-## microsoft.app/containerapps/resiliencypolicies
-
-Create or Update App Resiliency
-```bicep
-resource exampleResource 'Microsoft.App/containerApps/resiliencyPolicies@2024-02-02-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    circuitBreakerPolicy: {
-      consecutiveErrors: 5
-      intervalInSeconds: 10
-      maxEjectionPercent: 50
-    }
-    httpConnectionPool: {
-      http1MaxPendingRequests: 1024
-      http2MaxRequests: 1024
-    }
-    httpRetryPolicy: {
-      matches: {
-        errors: [
-          '5xx'
-          'connect-failure'
-          'reset'
-          'retriable-headers'
-          'retriable-status-codes'
-        ]
-        headers: [
-          {
-            header: 'X-Content-Type'
-            match: {
-              prefixMatch: 'GOATS'
-            }
-          }
-        ]
-        httpStatusCodes: [
-          502
-          503
-        ]
-      }
-      maxRetries: 5
-      retryBackOff: {
-        initialDelayInMilliseconds: 1000
-        maxIntervalInMilliseconds: 10000
-      }
-    }
-    tcpConnectionPool: {
-      maxConnections: 100
-    }
-    tcpRetryPolicy: {
-      maxConnectAttempts: 3
-    }
-    timeoutPolicy: {
-      connectionTimeoutInSeconds: 5
-      responseTimeoutInSeconds: 15
-    }
-  }
-}
-```
-
-## microsoft.app/containerapps/authconfigs
-
-Create or Update Container App AuthConfig
-```bicep
-resource exampleResource 'Microsoft.App/containerApps/authConfigs@2024-02-02-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    encryptionSettings: {
-      containerAppAuthEncryptionSecretName: 'testEncryptionSecretName'
-      containerAppAuthSigningSecretName: 'testSigningSecretName'
-    }
-    globalValidation: {
-      unauthenticatedClientAction: 'AllowAnonymous'
-    }
-    identityProviders: {
-      facebook: {
-        registration: {
-          appId: '123'
-          appSecretSettingName: 'facebook-secret'
-        }
-      }
-    }
-    platform: {
-      enabled: true
-    }
-  }
-}
-```
 
 ## microsoft.app/builders
 
@@ -1068,94 +983,142 @@ resource exampleResource 'Microsoft.App/containerApps@2024-02-02-preview' = {
 }
 ```
 
-## microsoft.app/managedenvironments/dotnetcomponents
+## microsoft.app/containerapps/authconfigs
 
-Create or Update .NET Component
+Create or Update Container App AuthConfig
 ```bicep
-resource exampleResource 'Microsoft.App/managedEnvironments/dotNetComponents@2024-02-02-preview' = {
+resource exampleResource 'Microsoft.App/containerApps/authConfigs@2024-02-02-preview' = {
   parent: parentResource 
   name: 'example'
   properties: {
-    componentType: 'AspireDashboard'
-    configurations: [
-      {
-        propertyName: 'dashboard-theme'
-        value: 'dark'
+    encryptionSettings: {
+      containerAppAuthEncryptionSecretName: 'testEncryptionSecretName'
+      containerAppAuthSigningSecretName: 'testSigningSecretName'
+    }
+    globalValidation: {
+      unauthenticatedClientAction: 'AllowAnonymous'
+    }
+    identityProviders: {
+      facebook: {
+        registration: {
+          appId: '123'
+          appSecretSettingName: 'facebook-secret'
+        }
       }
-    ]
+    }
+    platform: {
+      enabled: true
+    }
   }
 }
 ```
 
-Create or Update .NET Component with ServiceBinds
+## microsoft.app/containerapps/resiliencypolicies
+
+Create or Update App Resiliency
 ```bicep
-resource exampleResource 'Microsoft.App/managedEnvironments/dotNetComponents@2024-02-02-preview' = {
+resource exampleResource 'Microsoft.App/containerApps/resiliencyPolicies@2024-02-02-preview' = {
   parent: parentResource 
   name: 'example'
   properties: {
-    componentType: 'AspireDashboard'
-    configurations: [
-      {
-        propertyName: 'dashboard-theme'
-        value: 'dark'
+    circuitBreakerPolicy: {
+      consecutiveErrors: 5
+      intervalInSeconds: 10
+      maxEjectionPercent: 50
+    }
+    httpConnectionPool: {
+      http1MaxPendingRequests: 1024
+      http2MaxRequests: 1024
+    }
+    httpRetryPolicy: {
+      matches: {
+        errors: [
+          '5xx'
+          'connect-failure'
+          'reset'
+          'retriable-headers'
+          'retriable-status-codes'
+        ]
+        headers: [
+          {
+            header: 'X-Content-Type'
+            match: {
+              prefixMatch: 'GOATS'
+            }
+          }
+        ]
+        httpStatusCodes: [
+          502
+          503
+        ]
       }
-    ]
-    serviceBinds: [
-      {
-        name: 'yellowcat'
-        serviceId: '/subscriptions/8efdecc5-919e-44eb-b179-915dca89ebf9/resourceGroups/examplerg/providers/Microsoft.App/managedEnvironments/myenvironment/dotNetComponents/yellowcat'
+      maxRetries: 5
+      retryBackOff: {
+        initialDelayInMilliseconds: 1000
+        maxIntervalInMilliseconds: 10000
       }
-    ]
+    }
+    tcpConnectionPool: {
+      maxConnections: 100
+    }
+    tcpRetryPolicy: {
+      maxConnectAttempts: 3
+    }
+    timeoutPolicy: {
+      connectionTimeoutInSeconds: 5
+      responseTimeoutInSeconds: 15
+    }
   }
 }
 ```
 
-## microsoft.app/managedenvironments/javacomponents
+## microsoft.app/containerapps/sourcecontrols
 
-Create or Update Java Component
+Create or Update Container App SourceControl
 ```bicep
-resource exampleResource 'Microsoft.App/managedEnvironments/javaComponents@2024-02-02-preview' = {
+resource exampleResource 'Microsoft.App/containerApps/sourcecontrols@2024-02-02-preview' = {
   parent: parentResource 
   name: 'example'
   properties: {
-    componentType: 'SpringBootAdmin'
-    configurations: [
-      {
-        propertyName: 'spring.boot.admin.ui.enable-toasts'
-        value: 'true'
+    branch: 'master'
+    githubActionConfiguration: {
+      azureCredentials: {
+        clientId: '<clientid>'
+        clientSecret: '<clientsecret>'
+        kind: 'feaderated'
+        tenantId: '<tenantid>'
       }
-      {
-        propertyName: 'spring.boot.admin.monitor.status-interval'
-        value: '10000ms'
+      buildEnvironmentVariables: [
+        {
+          name: 'foo1'
+          value: 'bar1'
+        }
+        {
+          name: 'foo2'
+          value: 'bar2'
+        }
+      ]
+      contextPath: './'
+      githubPersonalAccessToken: 'test'
+      image: 'image/tag'
+      registryInfo: {
+        registryPassword: '<registrypassword>'
+        registryUrl: 'test-registry.azurecr.io'
+        registryUserName: 'test-registry'
       }
-    ]
+    }
+    repoUrl: 'https://github.com/xwang971/ghatest'
   }
 }
 ```
 
-Create or Update Java Component with ServiceBinds
+## microsoft.app/logicapps
+
+Create logic app extension
 ```bicep
-resource exampleResource 'Microsoft.App/managedEnvironments/javaComponents@2024-02-02-preview' = {
-  parent: parentResource 
+resource exampleResource 'Microsoft.App/logicApps@2024-02-02-preview' = {
   name: 'example'
   properties: {
-    componentType: 'SpringBootAdmin'
-    configurations: [
-      {
-        propertyName: 'spring.boot.admin.ui.enable-toasts'
-        value: 'true'
-      }
-      {
-        propertyName: 'spring.boot.admin.monitor.status-interval'
-        value: '10000ms'
-      }
-    ]
-    serviceBinds: [
-      {
-        name: 'yellowcat'
-        serviceId: '/subscriptions/8efdecc5-919e-44eb-b179-915dca89ebf9/resourceGroups/examplerg/providers/Microsoft.App/managedEnvironments/myenvironment/javaComponents/yellowcat'
-      }
-    ]
   }
 }
 ```
@@ -1352,33 +1315,103 @@ resource exampleResource 'Microsoft.App/managedEnvironments/certificates@2024-02
 }
 ```
 
-## microsoft.app/managedenvironments/managedcertificates
+## microsoft.app/managedenvironments/daprcomponents
 
-Create or Update Certificate
+Create or update dapr component with secret store component
 ```bicep
-resource exampleResource 'Microsoft.App/managedEnvironments/managedCertificates@2024-02-02-preview' = {
+resource exampleResource 'Microsoft.App/managedEnvironments/daprComponents@2024-02-02-preview' = {
   parent: parentResource 
   name: 'example'
-  location: 'East US'
   properties: {
-    domainControlValidation: 'CNAME'
-    subjectName: 'my-subject-name.company.country.net'
+    componentType: 'state.azure.cosmosdb'
+    ignoreErrors: false
+    initTimeout: '50s'
+    metadata: [
+      {
+        name: 'url'
+        value: '<COSMOS-URL>'
+      }
+      {
+        name: 'database'
+        value: 'itemsDB'
+      }
+      {
+        name: 'collection'
+        value: 'items'
+      }
+      {
+        name: 'masterkey'
+        secretRef: 'masterkey'
+      }
+    ]
+    scopes: [
+      'container-app-1'
+      'container-app-2'
+    ]
+    secretStoreComponent: 'my-secret-store'
+    serviceComponentBind: [
+      {
+        name: 'statestore'
+        metadata: {
+          name: 'daprcomponentBind'
+          value: 'redis-bind'
+        }
+        serviceId: '/subscriptions/9f7371f1-b593-4c3c-84e2-9167806ad358/resourceGroups/ca-syn2-group/providers/Microsoft.App/containerapps/cappredis'
+      }
+    ]
+    version: 'v1'
   }
 }
 ```
 
-## microsoft.app/managedenvironments/privateendpointconnections
-
-Update a Private Endpoint Connection by Managed Environment
+Create or update dapr component with secrets
 ```bicep
-resource exampleResource 'Microsoft.App/managedEnvironments/privateEndpointConnections@2024-02-02-preview' = {
+resource exampleResource 'Microsoft.App/managedEnvironments/daprComponents@2024-02-02-preview' = {
   parent: parentResource 
   name: 'example'
   properties: {
-    privateLinkServiceConnectionState: {
-      actionsRequired: 'None'
-      status: 'Approved'
-    }
+    componentType: 'state.azure.cosmosdb'
+    ignoreErrors: false
+    initTimeout: '50s'
+    metadata: [
+      {
+        name: 'url'
+        value: '<COSMOS-URL>'
+      }
+      {
+        name: 'database'
+        value: 'itemsDB'
+      }
+      {
+        name: 'collection'
+        value: 'items'
+      }
+      {
+        name: 'masterkey'
+        secretRef: 'masterkey'
+      }
+    ]
+    scopes: [
+      'container-app-1'
+      'container-app-2'
+    ]
+    secrets: [
+      {
+        name: 'masterkey'
+        value: 'keyvalue'
+      }
+    ]
+    serviceComponentBind: [
+      {
+        name: 'statestore'
+        metadata: {
+          name: 'daprcomponentBind'
+          value: 'redis-bind'
+        }
+        serviceId: '/subscriptions/9f7371f1-b593-4c3c-84e2-9167806ad358/resourceGroups/ca-syn2-group/providers/Microsoft.App/containerapps/cappredis'
+      }
+    ]
+    version: 'v1'
   }
 }
 ```
@@ -1484,107 +1517,6 @@ resource exampleResource 'Microsoft.App/managedEnvironments/daprComponents/resil
 }
 ```
 
-## microsoft.app/managedenvironments/daprcomponents
-
-Create or update dapr component with secret store component
-```bicep
-resource exampleResource 'Microsoft.App/managedEnvironments/daprComponents@2024-02-02-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    componentType: 'state.azure.cosmosdb'
-    ignoreErrors: false
-    initTimeout: '50s'
-    metadata: [
-      {
-        name: 'url'
-        value: '<COSMOS-URL>'
-      }
-      {
-        name: 'database'
-        value: 'itemsDB'
-      }
-      {
-        name: 'collection'
-        value: 'items'
-      }
-      {
-        name: 'masterkey'
-        secretRef: 'masterkey'
-      }
-    ]
-    scopes: [
-      'container-app-1'
-      'container-app-2'
-    ]
-    secretStoreComponent: 'my-secret-store'
-    serviceComponentBind: [
-      {
-        name: 'statestore'
-        metadata: {
-          name: 'daprcomponentBind'
-          value: 'redis-bind'
-        }
-        serviceId: '/subscriptions/9f7371f1-b593-4c3c-84e2-9167806ad358/resourceGroups/ca-syn2-group/providers/Microsoft.App/containerapps/cappredis'
-      }
-    ]
-    version: 'v1'
-  }
-}
-```
-
-Create or update dapr component with secrets
-```bicep
-resource exampleResource 'Microsoft.App/managedEnvironments/daprComponents@2024-02-02-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    componentType: 'state.azure.cosmosdb'
-    ignoreErrors: false
-    initTimeout: '50s'
-    metadata: [
-      {
-        name: 'url'
-        value: '<COSMOS-URL>'
-      }
-      {
-        name: 'database'
-        value: 'itemsDB'
-      }
-      {
-        name: 'collection'
-        value: 'items'
-      }
-      {
-        name: 'masterkey'
-        secretRef: 'masterkey'
-      }
-    ]
-    scopes: [
-      'container-app-1'
-      'container-app-2'
-    ]
-    secrets: [
-      {
-        name: 'masterkey'
-        value: 'keyvalue'
-      }
-    ]
-    serviceComponentBind: [
-      {
-        name: 'statestore'
-        metadata: {
-          name: 'daprcomponentBind'
-          value: 'redis-bind'
-        }
-        serviceId: '/subscriptions/9f7371f1-b593-4c3c-84e2-9167806ad358/resourceGroups/ca-syn2-group/providers/Microsoft.App/containerapps/cappredis'
-      }
-    ]
-    version: 'v1'
-  }
-}
-```
-
 ## microsoft.app/managedenvironments/daprsubscriptions
 
 Create or update dapr subscription with bulk subscribe configuration and scopes
@@ -1655,6 +1587,129 @@ resource exampleResource 'Microsoft.App/managedEnvironments/daprSubscriptions@20
 }
 ```
 
+## microsoft.app/managedenvironments/dotnetcomponents
+
+Create or Update .NET Component
+```bicep
+resource exampleResource 'Microsoft.App/managedEnvironments/dotNetComponents@2024-02-02-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    componentType: 'AspireDashboard'
+    configurations: [
+      {
+        propertyName: 'dashboard-theme'
+        value: 'dark'
+      }
+    ]
+  }
+}
+```
+
+Create or Update .NET Component with ServiceBinds
+```bicep
+resource exampleResource 'Microsoft.App/managedEnvironments/dotNetComponents@2024-02-02-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    componentType: 'AspireDashboard'
+    configurations: [
+      {
+        propertyName: 'dashboard-theme'
+        value: 'dark'
+      }
+    ]
+    serviceBinds: [
+      {
+        name: 'yellowcat'
+        serviceId: '/subscriptions/8efdecc5-919e-44eb-b179-915dca89ebf9/resourceGroups/examplerg/providers/Microsoft.App/managedEnvironments/myenvironment/dotNetComponents/yellowcat'
+      }
+    ]
+  }
+}
+```
+
+## microsoft.app/managedenvironments/javacomponents
+
+Create or Update Java Component
+```bicep
+resource exampleResource 'Microsoft.App/managedEnvironments/javaComponents@2024-02-02-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    componentType: 'SpringBootAdmin'
+    configurations: [
+      {
+        propertyName: 'spring.boot.admin.ui.enable-toasts'
+        value: 'true'
+      }
+      {
+        propertyName: 'spring.boot.admin.monitor.status-interval'
+        value: '10000ms'
+      }
+    ]
+  }
+}
+```
+
+Create or Update Java Component with ServiceBinds
+```bicep
+resource exampleResource 'Microsoft.App/managedEnvironments/javaComponents@2024-02-02-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    componentType: 'SpringBootAdmin'
+    configurations: [
+      {
+        propertyName: 'spring.boot.admin.ui.enable-toasts'
+        value: 'true'
+      }
+      {
+        propertyName: 'spring.boot.admin.monitor.status-interval'
+        value: '10000ms'
+      }
+    ]
+    serviceBinds: [
+      {
+        name: 'yellowcat'
+        serviceId: '/subscriptions/8efdecc5-919e-44eb-b179-915dca89ebf9/resourceGroups/examplerg/providers/Microsoft.App/managedEnvironments/myenvironment/javaComponents/yellowcat'
+      }
+    ]
+  }
+}
+```
+
+## microsoft.app/managedenvironments/managedcertificates
+
+Create or Update Certificate
+```bicep
+resource exampleResource 'Microsoft.App/managedEnvironments/managedCertificates@2024-02-02-preview' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'East US'
+  properties: {
+    domainControlValidation: 'CNAME'
+    subjectName: 'my-subject-name.company.country.net'
+  }
+}
+```
+
+## microsoft.app/managedenvironments/privateendpointconnections
+
+Update a Private Endpoint Connection by Managed Environment
+```bicep
+resource exampleResource 'Microsoft.App/managedEnvironments/privateEndpointConnections@2024-02-02-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    privateLinkServiceConnectionState: {
+      actionsRequired: 'None'
+      status: 'Approved'
+    }
+  }
+}
+```
+
 ## microsoft.app/managedenvironments/storages
 
 Create or update environments storage
@@ -1684,57 +1739,6 @@ resource exampleResource 'Microsoft.App/managedEnvironments/storages@2024-02-02-
       server: 'server1'
       shareName: 'share1'
     }
-  }
-}
-```
-
-## microsoft.app/containerapps/sourcecontrols
-
-Create or Update Container App SourceControl
-```bicep
-resource exampleResource 'Microsoft.App/containerApps/sourcecontrols@2024-02-02-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    branch: 'master'
-    githubActionConfiguration: {
-      azureCredentials: {
-        clientId: '<clientid>'
-        clientSecret: '<clientsecret>'
-        kind: 'feaderated'
-        tenantId: '<tenantid>'
-      }
-      buildEnvironmentVariables: [
-        {
-          name: 'foo1'
-          value: 'bar1'
-        }
-        {
-          name: 'foo2'
-          value: 'bar2'
-        }
-      ]
-      contextPath: './'
-      githubPersonalAccessToken: 'test'
-      image: 'image/tag'
-      registryInfo: {
-        registryPassword: '<registrypassword>'
-        registryUrl: 'test-registry.azurecr.io'
-        registryUserName: 'test-registry'
-      }
-    }
-    repoUrl: 'https://github.com/xwang971/ghatest'
-  }
-}
-```
-
-## microsoft.app/logicapps
-
-Create logic app extension
-```bicep
-resource exampleResource 'Microsoft.App/logicApps@2024-02-02-preview' = {
-  name: 'example'
-  properties: {
   }
 }
 ```

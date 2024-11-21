@@ -1,4 +1,8 @@
 # Microsoft.DBforPostgreSQL
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.dbforpostgresql/servergroupsv2
 
@@ -67,6 +71,31 @@ resource exampleResource 'Microsoft.DBforPostgreSQL/serverGroupsv2@2023-03-02-pr
 }
 ```
 
+Create a new cluster with custom database name
+```bicep
+resource exampleResource 'Microsoft.DBforPostgreSQL/serverGroupsv2@2023-03-02-preview' = {
+  name: 'example'
+  location: 'westus'
+  properties: {
+    administratorLoginPassword: 'password'
+    citusVersion: '11.3'
+    coordinatorEnablePublicIpAccess: true
+    coordinatorServerEdition: 'GeneralPurpose'
+    coordinatorStorageQuotaInMb: 131072
+    coordinatorVCores: 8
+    databaseName: 'testdbname'
+    enableHa: true
+    enableShardsOnCoordinator: true
+    nodeCount: 0
+    postgresqlVersion: '15'
+    preferredPrimaryZone: '1'
+  }
+  tags: {
+    owner: 'JohnDoe'
+  }
+}
+```
+
 Create a new cluster with Customer Managed Key - CMK data encryption.
 ```bicep
 resource exampleResource 'Microsoft.DBforPostgreSQL/serverGroupsv2@2023-03-02-preview' = {
@@ -103,31 +132,6 @@ resource exampleResource 'Microsoft.DBforPostgreSQL/serverGroupsv2@2023-03-02-pr
     preferredPrimaryZone: '1'
   }
   tags: {
-  }
-}
-```
-
-Create a new cluster with custom database name
-```bicep
-resource exampleResource 'Microsoft.DBforPostgreSQL/serverGroupsv2@2023-03-02-preview' = {
-  name: 'example'
-  location: 'westus'
-  properties: {
-    administratorLoginPassword: 'password'
-    citusVersion: '11.3'
-    coordinatorEnablePublicIpAccess: true
-    coordinatorServerEdition: 'GeneralPurpose'
-    coordinatorStorageQuotaInMb: 131072
-    coordinatorVCores: 8
-    databaseName: 'testdbname'
-    enableHa: true
-    enableShardsOnCoordinator: true
-    nodeCount: 0
-    postgresqlVersion: '15'
-    preferredPrimaryZone: '1'
-  }
-  tags: {
-    owner: 'JohnDoe'
   }
 }
 ```
@@ -244,19 +248,6 @@ resource exampleResource 'Microsoft.DBforPostgreSQL/serverGroupsv2/coordinatorCo
 }
 ```
 
-## microsoft.dbforpostgresql/servergroupsv2/nodeconfigurations
-
-Update single configuration of nodes
-```bicep
-resource exampleResource 'Microsoft.DBforPostgreSQL/serverGroupsv2/nodeConfigurations@2023-03-02-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    value: 'off'
-  }
-}
-```
-
 ## microsoft.dbforpostgresql/servergroupsv2/firewallrules
 
 Create a firewall rule of the cluster
@@ -271,15 +262,15 @@ resource exampleResource 'Microsoft.DBforPostgreSQL/serverGroupsv2/firewallRules
 }
 ```
 
-## microsoft.dbforpostgresql/servergroupsv2/roles
+## microsoft.dbforpostgresql/servergroupsv2/nodeconfigurations
 
-RoleCreate
+Update single configuration of nodes
 ```bicep
-resource exampleResource 'Microsoft.DBforPostgreSQL/serverGroupsv2/roles@2023-03-02-preview' = {
+resource exampleResource 'Microsoft.DBforPostgreSQL/serverGroupsv2/nodeConfigurations@2023-03-02-preview' = {
   parent: parentResource 
   name: 'example'
   properties: {
-    password: 'password'
+    value: 'off'
   }
 }
 ```
@@ -296,6 +287,19 @@ resource exampleResource 'Microsoft.DBforPostgreSQL/serverGroupsv2/privateEndpoi
       description: 'Approved by johndoe@contoso.com'
       status: 'Approved'
     }
+  }
+}
+```
+
+## microsoft.dbforpostgresql/servergroupsv2/roles
+
+RoleCreate
+```bicep
+resource exampleResource 'Microsoft.DBforPostgreSQL/serverGroupsv2/roles@2023-03-02-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    password: 'password'
   }
 }
 ```

@@ -1,4 +1,8 @@
 # Microsoft.Cache
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.cache/redis
 
@@ -85,6 +89,34 @@ resource exampleResource 'Microsoft.Cache/redis@2023-08-01' = {
 }
 ```
 
+## microsoft.cache/redis/accesspolicies
+
+RedisCacheAccessPolicyCreateUpdate
+```bicep
+resource exampleResource 'Microsoft.Cache/redis/accessPolicies@2023-08-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    permissions: '+get +hget'
+  }
+}
+```
+
+## microsoft.cache/redis/accesspolicyassignments
+
+RedisCacheAccessPolicyAssignmentCreateUpdate
+```bicep
+resource exampleResource 'Microsoft.Cache/redis/accessPolicyAssignments@2023-08-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    accessPolicyName: 'accessPolicy1'
+    objectId: '6497c918-11ad-41e7-1b0f-7c518a87d0b0'
+    objectIdAlias: 'TestAADAppRedis'
+  }
+}
+```
+
 ## microsoft.cache/redis/firewallrules
 
 RedisCacheFirewallRuleCreate
@@ -95,6 +127,21 @@ resource exampleResource 'Microsoft.Cache/redis/firewallRules@2023-08-01' = {
   properties: {
     endIP: '192.168.1.4'
     startIP: '192.168.1.1'
+  }
+}
+```
+
+## microsoft.cache/redis/linkedservers
+
+LinkedServer_Create
+```bicep
+resource exampleResource 'Microsoft.Cache/redis/linkedServers@2023-08-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    linkedRedisCacheId: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/Redis/cache2'
+    linkedRedisCacheLocation: 'West US'
+    serverRole: 'Secondary'
   }
 }
 ```
@@ -122,21 +169,6 @@ resource exampleResource 'Microsoft.Cache/redis/patchSchedules@2023-08-01' = {
 }
 ```
 
-## microsoft.cache/redis/linkedservers
-
-LinkedServer_Create
-```bicep
-resource exampleResource 'Microsoft.Cache/redis/linkedServers@2023-08-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    linkedRedisCacheId: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/Redis/cache2'
-    linkedRedisCacheLocation: 'West US'
-    serverRole: 'Secondary'
-  }
-}
-```
-
 ## microsoft.cache/redis/privateendpointconnections
 
 RedisCachePutPrivateEndpointConnection
@@ -149,34 +181,6 @@ resource exampleResource 'Microsoft.Cache/redis/privateEndpointConnections@2023-
       description: 'Auto-Approved'
       status: 'Approved'
     }
-  }
-}
-```
-
-## microsoft.cache/redis/accesspolicies
-
-RedisCacheAccessPolicyCreateUpdate
-```bicep
-resource exampleResource 'Microsoft.Cache/redis/accessPolicies@2023-08-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    permissions: '+get +hget'
-  }
-}
-```
-
-## microsoft.cache/redis/accesspolicyassignments
-
-RedisCacheAccessPolicyAssignmentCreateUpdate
-```bicep
-resource exampleResource 'Microsoft.Cache/redis/accessPolicyAssignments@2023-08-01' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    accessPolicyName: 'accessPolicy1'
-    objectId: '6497c918-11ad-41e7-1b0f-7c518a87d0b0'
-    objectIdAlias: 'TestAADAppRedis'
   }
 }
 ```

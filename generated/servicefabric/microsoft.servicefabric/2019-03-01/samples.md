@@ -1,4 +1,8 @@
 # Microsoft.ServiceFabric
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.servicefabric/clusters
 
@@ -191,35 +195,6 @@ resource exampleResource 'Microsoft.ServiceFabric/clusters@2019-03-01' = {
 }
 ```
 
-## microsoft.servicefabric/clusters/applicationtypes
-
-Put an application type
-```bicep
-resource exampleResource 'Microsoft.ServiceFabric/clusters/applicationTypes@2019-03-01' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'eastus'
-  tags: {
-  }
-}
-```
-
-## microsoft.servicefabric/clusters/applicationtypes/versions
-
-Put an application type version
-```bicep
-resource exampleResource 'Microsoft.ServiceFabric/clusters/applicationTypes/versions@2019-03-01' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'eastus'
-  properties: {
-    appPackageUrl: 'http://fakelink.test.com/MyAppType'
-  }
-  tags: {
-  }
-}
-```
-
 ## microsoft.servicefabric/clusters/applications
 
 Put an application with maximum parameters
@@ -339,6 +314,35 @@ resource exampleResource 'Microsoft.ServiceFabric/clusters/applications/services
     }
     serviceKind: 'Stateless'
     serviceTypeName: 'myServiceType'
+  }
+  tags: {
+  }
+}
+```
+
+## microsoft.servicefabric/clusters/applicationtypes
+
+Put an application type
+```bicep
+resource exampleResource 'Microsoft.ServiceFabric/clusters/applicationTypes@2019-03-01' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'eastus'
+  tags: {
+  }
+}
+```
+
+## microsoft.servicefabric/clusters/applicationtypes/versions
+
+Put an application type version
+```bicep
+resource exampleResource 'Microsoft.ServiceFabric/clusters/applicationTypes/versions@2019-03-01' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'eastus'
+  properties: {
+    appPackageUrl: 'http://fakelink.test.com/MyAppType'
   }
   tags: {
   }

@@ -1,4 +1,8 @@
 # Microsoft.Compute
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.compute/availabilitysets
 
@@ -10,19 +14,6 @@ resource exampleResource 'Microsoft.Compute/availabilitySets@2020-06-01' = {
   properties: {
     platformFaultDomainCount: 2
     platformUpdateDomainCount: 20
-  }
-}
-```
-
-## microsoft.compute/proximityplacementgroups
-
-Create or Update a proximity placement group.
-```bicep
-resource exampleResource 'Microsoft.Compute/proximityPlacementGroups@2020-06-01' = {
-  name: 'example'
-  location: 'westus'
-  properties: {
-    proximityPlacementGroupType: 'Standard'
   }
 }
 ```
@@ -63,6 +54,236 @@ resource exampleResource 'Microsoft.Compute/hostGroups/hosts@2020-06-01' = {
   }
   tags: {
     department: 'HR'
+  }
+}
+```
+
+## microsoft.compute/images
+
+Create a virtual machine image from a blob with DiskEncryptionSet resource.
+```bicep
+resource exampleResource 'Microsoft.Compute/images@2020-06-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    storageProfile: {
+      osDisk: {
+        blobUri: 'https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd'
+        diskEncryptionSet: {
+          id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}'
+        }
+        osState: 'Generalized'
+        osType: 'Linux'
+      }
+    }
+  }
+}
+```
+
+Create a virtual machine image from a blob.
+```bicep
+resource exampleResource 'Microsoft.Compute/images@2020-06-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    storageProfile: {
+      osDisk: {
+        blobUri: 'https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd'
+        osState: 'Generalized'
+        osType: 'Linux'
+      }
+      zoneResilient: true
+    }
+  }
+}
+```
+
+Create a virtual machine image from a managed disk with DiskEncryptionSet resource.
+```bicep
+resource exampleResource 'Microsoft.Compute/images@2020-06-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    storageProfile: {
+      osDisk: {
+        diskEncryptionSet: {
+          id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}'
+        }
+        managedDisk: {
+          id: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk'
+        }
+        osState: 'Generalized'
+        osType: 'Linux'
+      }
+    }
+  }
+}
+```
+
+Create a virtual machine image from a managed disk.
+```bicep
+resource exampleResource 'Microsoft.Compute/images@2020-06-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    storageProfile: {
+      osDisk: {
+        managedDisk: {
+          id: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk'
+        }
+        osState: 'Generalized'
+        osType: 'Linux'
+      }
+      zoneResilient: true
+    }
+  }
+}
+```
+
+Create a virtual machine image from a snapshot with DiskEncryptionSet resource.
+```bicep
+resource exampleResource 'Microsoft.Compute/images@2020-06-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    storageProfile: {
+      osDisk: {
+        diskEncryptionSet: {
+          id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}'
+        }
+        osState: 'Generalized'
+        osType: 'Linux'
+        snapshot: {
+          id: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot'
+        }
+      }
+    }
+  }
+}
+```
+
+Create a virtual machine image from a snapshot.
+```bicep
+resource exampleResource 'Microsoft.Compute/images@2020-06-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    storageProfile: {
+      osDisk: {
+        osState: 'Generalized'
+        osType: 'Linux'
+        snapshot: {
+          id: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot'
+        }
+      }
+      zoneResilient: false
+    }
+  }
+}
+```
+
+Create a virtual machine image from an existing virtual machine.
+```bicep
+resource exampleResource 'Microsoft.Compute/images@2020-06-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    sourceVirtualMachine: {
+      id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVM'
+    }
+  }
+}
+```
+
+Create a virtual machine image that includes a data disk from a blob.
+```bicep
+resource exampleResource 'Microsoft.Compute/images@2020-06-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    storageProfile: {
+      dataDisks: [
+        {
+          blobUri: 'https://mystorageaccount.blob.core.windows.net/dataimages/dataimage.vhd'
+          lun: 1
+        }
+      ]
+      osDisk: {
+        blobUri: 'https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd'
+        osState: 'Generalized'
+        osType: 'Linux'
+      }
+      zoneResilient: false
+    }
+  }
+}
+```
+
+Create a virtual machine image that includes a data disk from a managed disk.
+```bicep
+resource exampleResource 'Microsoft.Compute/images@2020-06-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    storageProfile: {
+      dataDisks: [
+        {
+          lun: 1
+          managedDisk: {
+            id: 'subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk2'
+          }
+        }
+      ]
+      osDisk: {
+        managedDisk: {
+          id: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk'
+        }
+        osState: 'Generalized'
+        osType: 'Linux'
+      }
+      zoneResilient: false
+    }
+  }
+}
+```
+
+Create a virtual machine image that includes a data disk from a snapshot.
+```bicep
+resource exampleResource 'Microsoft.Compute/images@2020-06-01' = {
+  name: 'example'
+  location: 'West US'
+  properties: {
+    storageProfile: {
+      dataDisks: [
+        {
+          lun: 1
+          snapshot: {
+            id: 'subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot2'
+          }
+        }
+      ]
+      osDisk: {
+        osState: 'Generalized'
+        osType: 'Linux'
+        snapshot: {
+          id: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot'
+        }
+      }
+      zoneResilient: true
+    }
+  }
+}
+```
+
+## microsoft.compute/proximityplacementgroups
+
+Create or Update a proximity placement group.
+```bicep
+resource exampleResource 'Microsoft.Compute/proximityPlacementGroups@2020-06-01' = {
+  name: 'example'
+  location: 'westus'
+  properties: {
+    proximityPlacementGroupType: 'Standard'
   }
 }
 ```
@@ -264,129 +485,6 @@ resource exampleResource 'Microsoft.Compute/virtualMachines@2020-06-01' = {
       osDisk: {
         name: 'myVMosdisk'
         caching: 'ReadWrite'
-        createOption: 'FromImage'
-        managedDisk: {
-          storageAccountType: 'Standard_LRS'
-        }
-      }
-    }
-  }
-}
-```
-
-Create a vm with DiskEncryptionSet resource id in the os disk and data disk.
-```bicep
-resource exampleResource 'Microsoft.Compute/virtualMachines@2020-06-01' = {
-  name: 'example'
-  location: 'westus'
-  properties: {
-    hardwareProfile: {
-      vmSize: 'Standard_D1_v2'
-    }
-    networkProfile: {
-      networkInterfaces: [
-        {
-          id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}'
-          properties: {
-            primary: true
-          }
-        }
-      ]
-    }
-    osProfile: {
-      adminPassword: '{your-password}'
-      adminUsername: '{your-username}'
-      computerName: 'myVM'
-    }
-    storageProfile: {
-      dataDisks: [
-        {
-          caching: 'ReadWrite'
-          createOption: 'Empty'
-          diskSizeGB: 1023
-          lun: 0
-          managedDisk: {
-            diskEncryptionSet: {
-              id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}'
-            }
-            storageAccountType: 'Standard_LRS'
-          }
-        }
-        {
-          caching: 'ReadWrite'
-          createOption: 'Attach'
-          diskSizeGB: 1023
-          lun: 1
-          managedDisk: {
-            diskEncryptionSet: {
-              id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}'
-            }
-            id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/{existing-managed-disk-name}'
-            storageAccountType: 'Standard_LRS'
-          }
-        }
-      ]
-      imageReference: {
-        id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}'
-      }
-      osDisk: {
-        name: 'myVMosdisk'
-        caching: 'ReadWrite'
-        createOption: 'FromImage'
-        managedDisk: {
-          diskEncryptionSet: {
-            id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}'
-          }
-          storageAccountType: 'Standard_LRS'
-        }
-      }
-    }
-  }
-}
-```
-
-Create a vm with Host Encryption using encryptionAtHost property.
-```bicep
-resource exampleResource 'Microsoft.Compute/virtualMachines@2020-06-01' = {
-  name: 'example'
-  location: 'westus'
-  plan: {
-    name: 'windows2016'
-    product: 'windows-data-science-vm'
-    publisher: 'microsoft-ads'
-  }
-  properties: {
-    hardwareProfile: {
-      vmSize: 'Standard_DS1_v2'
-    }
-    networkProfile: {
-      networkInterfaces: [
-        {
-          id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}'
-          properties: {
-            primary: true
-          }
-        }
-      ]
-    }
-    osProfile: {
-      adminPassword: '{your-password}'
-      adminUsername: '{your-username}'
-      computerName: 'myVM'
-    }
-    securityProfile: {
-      encryptionAtHost: true
-    }
-    storageProfile: {
-      imageReference: {
-        offer: 'windows-data-science-vm'
-        publisher: 'microsoft-ads'
-        sku: 'windows2016'
-        version: 'latest'
-      }
-      osDisk: {
-        name: 'myVMosdisk'
-        caching: 'ReadOnly'
         createOption: 'FromImage'
         managedDisk: {
           storageAccountType: 'Standard_LRS'
@@ -700,6 +798,77 @@ resource exampleResource 'Microsoft.Compute/virtualMachines@2020-06-01' = {
 }
 ```
 
+Create a vm with DiskEncryptionSet resource id in the os disk and data disk.
+```bicep
+resource exampleResource 'Microsoft.Compute/virtualMachines@2020-06-01' = {
+  name: 'example'
+  location: 'westus'
+  properties: {
+    hardwareProfile: {
+      vmSize: 'Standard_D1_v2'
+    }
+    networkProfile: {
+      networkInterfaces: [
+        {
+          id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}'
+          properties: {
+            primary: true
+          }
+        }
+      ]
+    }
+    osProfile: {
+      adminPassword: '{your-password}'
+      adminUsername: '{your-username}'
+      computerName: 'myVM'
+    }
+    storageProfile: {
+      dataDisks: [
+        {
+          caching: 'ReadWrite'
+          createOption: 'Empty'
+          diskSizeGB: 1023
+          lun: 0
+          managedDisk: {
+            diskEncryptionSet: {
+              id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}'
+            }
+            storageAccountType: 'Standard_LRS'
+          }
+        }
+        {
+          caching: 'ReadWrite'
+          createOption: 'Attach'
+          diskSizeGB: 1023
+          lun: 1
+          managedDisk: {
+            diskEncryptionSet: {
+              id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}'
+            }
+            id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/{existing-managed-disk-name}'
+            storageAccountType: 'Standard_LRS'
+          }
+        }
+      ]
+      imageReference: {
+        id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}'
+      }
+      osDisk: {
+        name: 'myVMosdisk'
+        caching: 'ReadWrite'
+        createOption: 'FromImage'
+        managedDisk: {
+          diskEncryptionSet: {
+            id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}'
+          }
+          storageAccountType: 'Standard_LRS'
+        }
+      }
+    }
+  }
+}
+```
+
 Create a vm with empty data disks.
 ```bicep
 resource exampleResource 'Microsoft.Compute/virtualMachines@2020-06-01' = {
@@ -914,6 +1083,58 @@ resource exampleResource 'Microsoft.Compute/virtualMachines@2020-06-01' = {
 }
 ```
 
+Create a vm with Host Encryption using encryptionAtHost property.
+```bicep
+resource exampleResource 'Microsoft.Compute/virtualMachines@2020-06-01' = {
+  name: 'example'
+  location: 'westus'
+  plan: {
+    name: 'windows2016'
+    product: 'windows-data-science-vm'
+    publisher: 'microsoft-ads'
+  }
+  properties: {
+    hardwareProfile: {
+      vmSize: 'Standard_DS1_v2'
+    }
+    networkProfile: {
+      networkInterfaces: [
+        {
+          id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}'
+          properties: {
+            primary: true
+          }
+        }
+      ]
+    }
+    osProfile: {
+      adminPassword: '{your-password}'
+      adminUsername: '{your-username}'
+      computerName: 'myVM'
+    }
+    securityProfile: {
+      encryptionAtHost: true
+    }
+    storageProfile: {
+      imageReference: {
+        offer: 'windows-data-science-vm'
+        publisher: 'microsoft-ads'
+        sku: 'windows2016'
+        version: 'latest'
+      }
+      osDisk: {
+        name: 'myVMosdisk'
+        caching: 'ReadOnly'
+        createOption: 'FromImage'
+        managedDisk: {
+          storageAccountType: 'Standard_LRS'
+        }
+      }
+    }
+  }
+}
+```
+
 Create a vm with managed boot diagnostics.
 ```bicep
 resource exampleResource 'Microsoft.Compute/virtualMachines@2020-06-01' = {
@@ -1105,219 +1326,32 @@ resource exampleResource 'Microsoft.Compute/virtualMachines@2020-06-01' = {
 }
 ```
 
-## microsoft.compute/images
+## microsoft.compute/virtualmachines/runcommands
 
-Create a virtual machine image from a blob with DiskEncryptionSet resource.
+Create or update a run command.
 ```bicep
-resource exampleResource 'Microsoft.Compute/images@2020-06-01' = {
+resource exampleResource 'Microsoft.Compute/virtualMachines/runCommands@2020-06-01' = {
+  parent: parentResource 
   name: 'example'
   location: 'West US'
   properties: {
-    storageProfile: {
-      osDisk: {
-        blobUri: 'https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd'
-        diskEncryptionSet: {
-          id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}'
-        }
-        osState: 'Generalized'
-        osType: 'Linux'
+    asyncExecution: false
+    parameters: [
+      {
+        name: 'param1'
+        value: 'value1'
       }
-    }
-  }
-}
-```
-
-Create a virtual machine image from a blob.
-```bicep
-resource exampleResource 'Microsoft.Compute/images@2020-06-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    storageProfile: {
-      osDisk: {
-        blobUri: 'https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd'
-        osState: 'Generalized'
-        osType: 'Linux'
+      {
+        name: 'param2'
+        value: 'value2'
       }
-      zoneResilient: true
+    ]
+    runAsPassword: '<runAsPassword>'
+    runAsUser: 'user1'
+    source: {
+      script: 'Write-Host Hello World!'
     }
-  }
-}
-```
-
-Create a virtual machine image from a managed disk with DiskEncryptionSet resource.
-```bicep
-resource exampleResource 'Microsoft.Compute/images@2020-06-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    storageProfile: {
-      osDisk: {
-        diskEncryptionSet: {
-          id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}'
-        }
-        managedDisk: {
-          id: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk'
-        }
-        osState: 'Generalized'
-        osType: 'Linux'
-      }
-    }
-  }
-}
-```
-
-Create a virtual machine image from a managed disk.
-```bicep
-resource exampleResource 'Microsoft.Compute/images@2020-06-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    storageProfile: {
-      osDisk: {
-        managedDisk: {
-          id: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk'
-        }
-        osState: 'Generalized'
-        osType: 'Linux'
-      }
-      zoneResilient: true
-    }
-  }
-}
-```
-
-Create a virtual machine image from a snapshot with DiskEncryptionSet resource.
-```bicep
-resource exampleResource 'Microsoft.Compute/images@2020-06-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    storageProfile: {
-      osDisk: {
-        diskEncryptionSet: {
-          id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}'
-        }
-        osState: 'Generalized'
-        osType: 'Linux'
-        snapshot: {
-          id: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot'
-        }
-      }
-    }
-  }
-}
-```
-
-Create a virtual machine image from a snapshot.
-```bicep
-resource exampleResource 'Microsoft.Compute/images@2020-06-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    storageProfile: {
-      osDisk: {
-        osState: 'Generalized'
-        osType: 'Linux'
-        snapshot: {
-          id: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot'
-        }
-      }
-      zoneResilient: false
-    }
-  }
-}
-```
-
-Create a virtual machine image from an existing virtual machine.
-```bicep
-resource exampleResource 'Microsoft.Compute/images@2020-06-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    sourceVirtualMachine: {
-      id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVM'
-    }
-  }
-}
-```
-
-Create a virtual machine image that includes a data disk from a blob.
-```bicep
-resource exampleResource 'Microsoft.Compute/images@2020-06-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    storageProfile: {
-      dataDisks: [
-        {
-          blobUri: 'https://mystorageaccount.blob.core.windows.net/dataimages/dataimage.vhd'
-          lun: 1
-        }
-      ]
-      osDisk: {
-        blobUri: 'https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd'
-        osState: 'Generalized'
-        osType: 'Linux'
-      }
-      zoneResilient: false
-    }
-  }
-}
-```
-
-Create a virtual machine image that includes a data disk from a managed disk.
-```bicep
-resource exampleResource 'Microsoft.Compute/images@2020-06-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    storageProfile: {
-      dataDisks: [
-        {
-          lun: 1
-          managedDisk: {
-            id: 'subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk2'
-          }
-        }
-      ]
-      osDisk: {
-        managedDisk: {
-          id: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk'
-        }
-        osState: 'Generalized'
-        osType: 'Linux'
-      }
-      zoneResilient: false
-    }
-  }
-}
-```
-
-Create a virtual machine image that includes a data disk from a snapshot.
-```bicep
-resource exampleResource 'Microsoft.Compute/images@2020-06-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    storageProfile: {
-      dataDisks: [
-        {
-          lun: 1
-          snapshot: {
-            id: 'subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot2'
-          }
-        }
-      ]
-      osDisk: {
-        osState: 'Generalized'
-        osType: 'Linux'
-        snapshot: {
-          id: 'subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot'
-        }
-      }
-      zoneResilient: true
-    }
+    timeoutInSeconds: 3600
   }
 }
 ```
@@ -1501,232 +1535,6 @@ resource exampleResource 'Microsoft.Compute/virtualMachineScaleSets@2020-06-01' 
   }
   sku: {
     name: 'Standard_D1_v2'
-    capacity: 3
-    tier: 'Standard'
-  }
-}
-```
-
-Create a scale set with DiskEncryptionSet resource in os disk and data disk.
-```bicep
-resource exampleResource 'Microsoft.Compute/virtualMachineScaleSets@2020-06-01' = {
-  name: 'example'
-  location: 'westus'
-  properties: {
-    overprovision: true
-    upgradePolicy: {
-      mode: 'Manual'
-    }
-    virtualMachineProfile: {
-      networkProfile: {
-        networkInterfaceConfigurations: [
-          {
-            name: '{vmss-name}'
-            properties: {
-              enableIPForwarding: true
-              ipConfigurations: [
-                {
-                  name: '{vmss-name}'
-                  properties: {
-                    subnet: {
-                      id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}'
-                    }
-                  }
-                }
-              ]
-              primary: true
-            }
-          }
-        ]
-      }
-      osProfile: {
-        adminPassword: '{your-password}'
-        adminUsername: '{your-username}'
-        computerNamePrefix: '{vmss-name}'
-      }
-      storageProfile: {
-        dataDisks: [
-          {
-            caching: 'ReadWrite'
-            createOption: 'Empty'
-            diskSizeGB: 1023
-            lun: 0
-            managedDisk: {
-              diskEncryptionSet: {
-                id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}'
-              }
-              storageAccountType: 'Standard_LRS'
-            }
-          }
-        ]
-        imageReference: {
-          id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}'
-        }
-        osDisk: {
-          caching: 'ReadWrite'
-          createOption: 'FromImage'
-          managedDisk: {
-            diskEncryptionSet: {
-              id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}'
-            }
-            storageAccountType: 'Standard_LRS'
-          }
-        }
-      }
-    }
-  }
-  sku: {
-    name: 'Standard_DS1_v2'
-    capacity: 3
-    tier: 'Standard'
-  }
-}
-```
-
-Create a scale set with Fpga Network Interfaces.
-```bicep
-resource exampleResource 'Microsoft.Compute/virtualMachineScaleSets@2020-06-01' = {
-  name: 'example'
-  location: 'westus'
-  properties: {
-    overprovision: true
-    upgradePolicy: {
-      mode: 'Manual'
-    }
-    virtualMachineProfile: {
-      networkProfile: {
-        networkInterfaceConfigurations: [
-          {
-            name: '{vmss-name}'
-            properties: {
-              enableIPForwarding: true
-              ipConfigurations: [
-                {
-                  name: '{vmss-name}'
-                  properties: {
-                    subnet: {
-                      id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}'
-                    }
-                  }
-                }
-              ]
-              primary: true
-            }
-          }
-          {
-            name: '{fpgaNic-Name}'
-            properties: {
-              enableAcceleratedNetworking: false
-              enableFpga: true
-              enableIPForwarding: false
-              ipConfigurations: [
-                {
-                  name: '{fpgaNic-Name}'
-                  properties: {
-                    primary: true
-                    privateIPAddressVersion: 'IPv4'
-                    subnet: {
-                      id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-fpga-subnet-name}'
-                    }
-                  }
-                }
-              ]
-              primary: false
-            }
-          }
-        ]
-      }
-      osProfile: {
-        adminPassword: '{your-password}'
-        adminUsername: '{your-username}'
-        computerNamePrefix: '{vmss-name}'
-      }
-      storageProfile: {
-        imageReference: {
-          id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}'
-        }
-        osDisk: {
-          caching: 'ReadWrite'
-          createOption: 'FromImage'
-          managedDisk: {
-            storageAccountType: 'Standard_LRS'
-          }
-        }
-      }
-    }
-  }
-  sku: {
-    name: 'Standard_D1_v2'
-    capacity: 3
-    tier: 'Standard'
-  }
-}
-```
-
-Create a scale set with Host Encryption using encryptionAtHost property.
-```bicep
-resource exampleResource 'Microsoft.Compute/virtualMachineScaleSets@2020-06-01' = {
-  name: 'example'
-  location: 'westus'
-  plan: {
-    name: 'windows2016'
-    product: 'windows-data-science-vm'
-    publisher: 'microsoft-ads'
-  }
-  properties: {
-    overprovision: true
-    upgradePolicy: {
-      mode: 'Manual'
-    }
-    virtualMachineProfile: {
-      networkProfile: {
-        networkInterfaceConfigurations: [
-          {
-            name: '{vmss-name}'
-            properties: {
-              enableIPForwarding: true
-              ipConfigurations: [
-                {
-                  name: '{vmss-name}'
-                  properties: {
-                    subnet: {
-                      id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}'
-                    }
-                  }
-                }
-              ]
-              primary: true
-            }
-          }
-        ]
-      }
-      osProfile: {
-        adminPassword: '{your-password}'
-        adminUsername: '{your-username}'
-        computerNamePrefix: '{vmss-name}'
-      }
-      securityProfile: {
-        encryptionAtHost: true
-      }
-      storageProfile: {
-        imageReference: {
-          offer: 'windows-data-science-vm'
-          publisher: 'microsoft-ads'
-          sku: 'windows2016'
-          version: 'latest'
-        }
-        osDisk: {
-          caching: 'ReadOnly'
-          createOption: 'FromImage'
-          managedDisk: {
-            storageAccountType: 'Standard_LRS'
-          }
-        }
-      }
-    }
-  }
-  sku: {
-    name: 'Standard_DS1_v2'
     capacity: 3
     tier: 'Standard'
   }
@@ -2079,6 +1887,82 @@ resource exampleResource 'Microsoft.Compute/virtualMachineScaleSets@2020-06-01' 
 }
 ```
 
+Create a scale set with DiskEncryptionSet resource in os disk and data disk.
+```bicep
+resource exampleResource 'Microsoft.Compute/virtualMachineScaleSets@2020-06-01' = {
+  name: 'example'
+  location: 'westus'
+  properties: {
+    overprovision: true
+    upgradePolicy: {
+      mode: 'Manual'
+    }
+    virtualMachineProfile: {
+      networkProfile: {
+        networkInterfaceConfigurations: [
+          {
+            name: '{vmss-name}'
+            properties: {
+              enableIPForwarding: true
+              ipConfigurations: [
+                {
+                  name: '{vmss-name}'
+                  properties: {
+                    subnet: {
+                      id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}'
+                    }
+                  }
+                }
+              ]
+              primary: true
+            }
+          }
+        ]
+      }
+      osProfile: {
+        adminPassword: '{your-password}'
+        adminUsername: '{your-username}'
+        computerNamePrefix: '{vmss-name}'
+      }
+      storageProfile: {
+        dataDisks: [
+          {
+            caching: 'ReadWrite'
+            createOption: 'Empty'
+            diskSizeGB: 1023
+            lun: 0
+            managedDisk: {
+              diskEncryptionSet: {
+                id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}'
+              }
+              storageAccountType: 'Standard_LRS'
+            }
+          }
+        ]
+        imageReference: {
+          id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}'
+        }
+        osDisk: {
+          caching: 'ReadWrite'
+          createOption: 'FromImage'
+          managedDisk: {
+            diskEncryptionSet: {
+              id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}'
+            }
+            storageAccountType: 'Standard_LRS'
+          }
+        }
+      }
+    }
+  }
+  sku: {
+    name: 'Standard_DS1_v2'
+    capacity: 3
+    tier: 'Standard'
+  }
+}
+```
+
 Create a scale set with empty data disks on each vm.
 ```bicep
 resource exampleResource 'Microsoft.Compute/virtualMachineScaleSets@2020-06-01' = {
@@ -2373,6 +2257,156 @@ resource exampleResource 'Microsoft.Compute/virtualMachineScaleSets@2020-06-01' 
   }
   sku: {
     name: 'Standard_D1_v2'
+    capacity: 3
+    tier: 'Standard'
+  }
+}
+```
+
+Create a scale set with Fpga Network Interfaces.
+```bicep
+resource exampleResource 'Microsoft.Compute/virtualMachineScaleSets@2020-06-01' = {
+  name: 'example'
+  location: 'westus'
+  properties: {
+    overprovision: true
+    upgradePolicy: {
+      mode: 'Manual'
+    }
+    virtualMachineProfile: {
+      networkProfile: {
+        networkInterfaceConfigurations: [
+          {
+            name: '{vmss-name}'
+            properties: {
+              enableIPForwarding: true
+              ipConfigurations: [
+                {
+                  name: '{vmss-name}'
+                  properties: {
+                    subnet: {
+                      id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}'
+                    }
+                  }
+                }
+              ]
+              primary: true
+            }
+          }
+          {
+            name: '{fpgaNic-Name}'
+            properties: {
+              enableAcceleratedNetworking: false
+              enableFpga: true
+              enableIPForwarding: false
+              ipConfigurations: [
+                {
+                  name: '{fpgaNic-Name}'
+                  properties: {
+                    primary: true
+                    privateIPAddressVersion: 'IPv4'
+                    subnet: {
+                      id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-fpga-subnet-name}'
+                    }
+                  }
+                }
+              ]
+              primary: false
+            }
+          }
+        ]
+      }
+      osProfile: {
+        adminPassword: '{your-password}'
+        adminUsername: '{your-username}'
+        computerNamePrefix: '{vmss-name}'
+      }
+      storageProfile: {
+        imageReference: {
+          id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}'
+        }
+        osDisk: {
+          caching: 'ReadWrite'
+          createOption: 'FromImage'
+          managedDisk: {
+            storageAccountType: 'Standard_LRS'
+          }
+        }
+      }
+    }
+  }
+  sku: {
+    name: 'Standard_D1_v2'
+    capacity: 3
+    tier: 'Standard'
+  }
+}
+```
+
+Create a scale set with Host Encryption using encryptionAtHost property.
+```bicep
+resource exampleResource 'Microsoft.Compute/virtualMachineScaleSets@2020-06-01' = {
+  name: 'example'
+  location: 'westus'
+  plan: {
+    name: 'windows2016'
+    product: 'windows-data-science-vm'
+    publisher: 'microsoft-ads'
+  }
+  properties: {
+    overprovision: true
+    upgradePolicy: {
+      mode: 'Manual'
+    }
+    virtualMachineProfile: {
+      networkProfile: {
+        networkInterfaceConfigurations: [
+          {
+            name: '{vmss-name}'
+            properties: {
+              enableIPForwarding: true
+              ipConfigurations: [
+                {
+                  name: '{vmss-name}'
+                  properties: {
+                    subnet: {
+                      id: '/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}'
+                    }
+                  }
+                }
+              ]
+              primary: true
+            }
+          }
+        ]
+      }
+      osProfile: {
+        adminPassword: '{your-password}'
+        adminUsername: '{your-username}'
+        computerNamePrefix: '{vmss-name}'
+      }
+      securityProfile: {
+        encryptionAtHost: true
+      }
+      storageProfile: {
+        imageReference: {
+          offer: 'windows-data-science-vm'
+          publisher: 'microsoft-ads'
+          sku: 'windows2016'
+          version: 'latest'
+        }
+        osDisk: {
+          caching: 'ReadOnly'
+          createOption: 'FromImage'
+          managedDisk: {
+            storageAccountType: 'Standard_LRS'
+          }
+        }
+      }
+    }
+  }
+  sku: {
+    name: 'Standard_DS1_v2'
     capacity: 3
     tier: 'Standard'
   }
@@ -2804,36 +2838,6 @@ resource exampleResource 'Microsoft.Compute/virtualMachineScaleSets/virtualMachi
       UserName: 'xyz@microsoft.com'
     }
     typeHandlerVersion: '1.2'
-  }
-}
-```
-
-## microsoft.compute/virtualmachines/runcommands
-
-Create or update a run command.
-```bicep
-resource exampleResource 'Microsoft.Compute/virtualMachines/runCommands@2020-06-01' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'West US'
-  properties: {
-    asyncExecution: false
-    parameters: [
-      {
-        name: 'param1'
-        value: 'value1'
-      }
-      {
-        name: 'param2'
-        value: 'value2'
-      }
-    ]
-    runAsPassword: '<runAsPassword>'
-    runAsUser: 'user1'
-    source: {
-      script: 'Write-Host Hello World!'
-    }
-    timeoutInSeconds: 3600
   }
 }
 ```

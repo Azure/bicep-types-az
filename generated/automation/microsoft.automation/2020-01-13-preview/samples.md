@@ -1,119 +1,8 @@
 # Microsoft.Automation
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
 
-## microsoft.automation/automationaccounts/privateendpointconnections
-
-Approve or reject a private endpoint connection with a given name.
-```bicep
-resource exampleResource 'Microsoft.Automation/automationAccounts/privateEndpointConnections@2020-01-13-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    privateLinkServiceConnectionState: {
-      description: 'Approved by johndoe@contoso.com'
-      status: 'Approved'
-    }
-  }
-}
-```
-
-## microsoft.automation/automationaccounts/python2packages
-
-Create or update a python 2 package
-```bicep
-resource exampleResource 'Microsoft.Automation/automationAccounts/python2Packages@2020-01-13-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    contentLink: {
-      contentHash: {
-        algorithm: 'sha265'
-        value: '07E108A962B81DD9C9BAA89BB47C0F6EE52B29E83758B07795E408D258B2B87A'
-      }
-      uri: 'https://teststorage.blob.core.windows.net/dsccomposite/OmsCompositeResources.zip'
-      version: '1.0.0.0'
-    }
-  }
-  tags: {
-  }
-}
-```
-
-## microsoft.automation/automationaccounts/nodeconfigurations
-
-Create node configuration
-```bicep
-resource exampleResource 'Microsoft.Automation/automationAccounts/nodeConfigurations@2020-01-13-preview' = {
-  parent: parentResource 
-  name: 'example'
-  name: 'configName.nodeConfigName'
-  properties: {
-    configuration: {
-      name: 'configName'
-    }
-    incrementNodeConfigurationBuild: true
-    source: {
-      type: 'embeddedContent'
-      hash: {
-        algorithm: 'sha256'
-        value: '6DE256A57F01BFA29B88696D5E77A383D6E61484C7686E8DB955FA10ACE9FFE5'
-      }
-      value: '\r\ninstance of MSFT_RoleResource as $MSFT_RoleResource1ref\r\n{\r\nResourceID = "[WindowsFeature]IIS";\r\n Ensure = "Present";\r\n SourceInfo = "::3::32::WindowsFeature";\r\n Name = "Web-Server";\r\n ModuleName = "PsDesiredStateConfiguration";\r\n\r\nModuleVersion = "1.0";\r\r\n ConfigurationName = "configName";\r\r\n};\r\ninstance of OMI_ConfigurationDocument\r\n\r\r\n                    {\r\n Version="2.0.0";\r\n \r\r\n                        MinimumCompatibleVersion = "1.0.0";\r\n \r\r\n                        CompatibleVersionAdditionalProperties= {"Omi_BaseResource:ConfigurationName"};\r\n \r\r\n                        Author="weijiel";\r\n \r\r\n                        GenerationDate="03/30/2017 13:40:25";\r\n \r\r\n                        GenerationHost="TEST-BACKEND";\r\n \r\r\n                        Name="configName";\r\n\r\r\n                    };\r\n'
-      version: '1.0'
-    }
-  }
-}
-```
-
-## microsoft.automation/automationaccounts/compilationjobs
-
-Create or update a DSC Compilation job
-```bicep
-resource exampleResource 'Microsoft.Automation/automationAccounts/compilationjobs@2020-01-13-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    configuration: {
-      name: 'SetupServer'
-    }
-  }
-}
-```
-
-## microsoft.automation/automationaccounts/sourcecontrols
-
-Create or update a source control
-```bicep
-resource exampleResource 'Microsoft.Automation/automationAccounts/sourceControls@2020-01-13-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    description: 'my description'
-    autoSync: true
-    branch: 'master'
-    folderPath: '/folderOne/folderTwo'
-    publishRunbook: true
-    repoUrl: 'https://sampleUser.visualstudio.com/myProject/_git/myRepository'
-    securityToken: {
-      accessToken: '******'
-      tokenType: 'PersonalAccessToken'
-    }
-    sourceType: 'VsoGit'
-  }
-}
-```
-
-## microsoft.automation/automationaccounts/sourcecontrols/sourcecontrolsyncjobs
-
-Create or update a source control sync job
-```bicep
-resource exampleResource 'Microsoft.Automation/automationAccounts/sourceControls/sourceControlSyncJobs@2020-01-13-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    commitId: '9de0980bfb45026a3d97a1b0522d98a9f604226e'
-  }
-}
-```
 
 ## microsoft.automation/automationaccounts
 
@@ -144,6 +33,21 @@ resource exampleResource 'Microsoft.Automation/automationAccounts/certificates@2
     base64Value: 'base 64 value of cert'
     isExportable: false
     thumbprint: 'thumbprint of cert'
+  }
+}
+```
+
+## microsoft.automation/automationaccounts/compilationjobs
+
+Create or update a DSC Compilation job
+```bicep
+resource exampleResource 'Microsoft.Automation/automationAccounts/compilationjobs@2020-01-13-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    configuration: {
+      name: 'SetupServer'
+    }
   }
 }
 ```
@@ -258,6 +162,70 @@ resource exampleResource 'Microsoft.Automation/automationAccounts/modules@2020-0
 }
 ```
 
+## microsoft.automation/automationaccounts/nodeconfigurations
+
+Create node configuration
+```bicep
+resource exampleResource 'Microsoft.Automation/automationAccounts/nodeConfigurations@2020-01-13-preview' = {
+  parent: parentResource 
+  name: 'example'
+  name: 'configName.nodeConfigName'
+  properties: {
+    configuration: {
+      name: 'configName'
+    }
+    incrementNodeConfigurationBuild: true
+    source: {
+      type: 'embeddedContent'
+      hash: {
+        algorithm: 'sha256'
+        value: '6DE256A57F01BFA29B88696D5E77A383D6E61484C7686E8DB955FA10ACE9FFE5'
+      }
+      value: '\r\ninstance of MSFT_RoleResource as $MSFT_RoleResource1ref\r\n{\r\nResourceID = "[WindowsFeature]IIS";\r\n Ensure = "Present";\r\n SourceInfo = "::3::32::WindowsFeature";\r\n Name = "Web-Server";\r\n ModuleName = "PsDesiredStateConfiguration";\r\n\r\nModuleVersion = "1.0";\r\r\n ConfigurationName = "configName";\r\r\n};\r\ninstance of OMI_ConfigurationDocument\r\n\r\r\n                    {\r\n Version="2.0.0";\r\n \r\r\n                        MinimumCompatibleVersion = "1.0.0";\r\n \r\r\n                        CompatibleVersionAdditionalProperties= {"Omi_BaseResource:ConfigurationName"};\r\n \r\r\n                        Author="weijiel";\r\n \r\r\n                        GenerationDate="03/30/2017 13:40:25";\r\n \r\r\n                        GenerationHost="TEST-BACKEND";\r\n \r\r\n                        Name="configName";\r\n\r\r\n                    };\r\n'
+      version: '1.0'
+    }
+  }
+}
+```
+
+## microsoft.automation/automationaccounts/privateendpointconnections
+
+Approve or reject a private endpoint connection with a given name.
+```bicep
+resource exampleResource 'Microsoft.Automation/automationAccounts/privateEndpointConnections@2020-01-13-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    privateLinkServiceConnectionState: {
+      description: 'Approved by johndoe@contoso.com'
+      status: 'Approved'
+    }
+  }
+}
+```
+
+## microsoft.automation/automationaccounts/python2packages
+
+Create or update a python 2 package
+```bicep
+resource exampleResource 'Microsoft.Automation/automationAccounts/python2Packages@2020-01-13-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    contentLink: {
+      contentHash: {
+        algorithm: 'sha265'
+        value: '07E108A962B81DD9C9BAA89BB47C0F6EE52B29E83758B07795E408D258B2B87A'
+      }
+      uri: 'https://teststorage.blob.core.windows.net/dsccomposite/OmsCompositeResources.zip'
+      version: '1.0.0.0'
+    }
+  }
+  tags: {
+  }
+}
+```
+
 ## microsoft.automation/automationaccounts/schedules
 
 Create or update a schedule
@@ -274,6 +242,42 @@ resource exampleResource 'Microsoft.Automation/automationAccounts/schedules@2020
     frequency: 'Hour'
     interval: 1
     startTime: '2017-03-27T17:28:57.2494819Z'
+  }
+}
+```
+
+## microsoft.automation/automationaccounts/sourcecontrols
+
+Create or update a source control
+```bicep
+resource exampleResource 'Microsoft.Automation/automationAccounts/sourceControls@2020-01-13-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    description: 'my description'
+    autoSync: true
+    branch: 'master'
+    folderPath: '/folderOne/folderTwo'
+    publishRunbook: true
+    repoUrl: 'https://sampleUser.visualstudio.com/myProject/_git/myRepository'
+    securityToken: {
+      accessToken: '******'
+      tokenType: 'PersonalAccessToken'
+    }
+    sourceType: 'VsoGit'
+  }
+}
+```
+
+## microsoft.automation/automationaccounts/sourcecontrols/sourcecontrolsyncjobs
+
+Create or update a source control sync job
+```bicep
+resource exampleResource 'Microsoft.Automation/automationAccounts/sourceControls/sourceControlSyncJobs@2020-01-13-preview' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    commitId: '9de0980bfb45026a3d97a1b0522d98a9f604226e'
   }
 }
 ```

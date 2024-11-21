@@ -1,96 +1,8 @@
 # Microsoft.AzureArcData
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
 
-## microsoft.azurearcdata/sqlmanagedinstances
-
-Create or update a SQL Managed Instance
-```bicep
-resource exampleResource 'Microsoft.AzureArcData/sqlManagedInstances@2022-03-01-preview' = {
-  name: 'example'
-  extendedLocation: {
-    name: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.ExtendedLocation/customLocations/arclocation'
-    type: 'CustomLocation'
-  }
-  location: 'northeurope'
-  properties: {
-    activeDirectoryInformation: {
-      keytabInformation: {
-        keytab: '********'
-      }
-    }
-    admin: 'Admin user'
-    basicLoginInformation: {
-      password: '********'
-      username: 'username'
-    }
-    clusterId: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Kubernetes/connectedClusters/connectedk8s'
-    endTime: 'Instance end time'
-    extensionId: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Kubernetes/connectedClusters/connectedk8s/providers/Microsoft.KubernetesConfiguration/extensions/extension'
-    k8sRaw: {
-      additionalProperty: 1234
-      spec: {
-        replicas: 1
-        scheduling: {
-          default: {
-            resources: {
-              limits: {
-                additionalProperty: 'additionalValue'
-                cpu: '1'
-                memory: '8Gi'
-              }
-              requests: {
-                additionalProperty: 'additionalValue'
-                cpu: '1'
-                memory: '8Gi'
-              }
-            }
-          }
-        }
-      }
-    }
-    licenseType: 'LicenseIncluded'
-    startTime: 'Instance start time'
-  }
-  sku: {
-    name: 'vCore'
-    dev: true
-    tier: 'GeneralPurpose'
-  }
-  tags: {
-    mytag: 'myval'
-  }
-}
-```
-
-## microsoft.azurearcdata/sqlserverinstances
-
-Updates a SQL Server Instance tags.
-```bicep
-resource exampleResource 'Microsoft.AzureArcData/sqlServerInstances@2022-03-01-preview' = {
-  name: 'example'
-  location: 'northeurope'
-  properties: {
-    azureDefenderStatus: 'Protected'
-    azureDefenderStatusLastUpdated: '2020-01-02T17:18:19.1234567Z'
-    collation: 'collation'
-    containerResourceId: 'Resource id of hosting Arc Machine'
-    currentVersion: '2012'
-    edition: 'Developer'
-    hostType: 'Physical Server'
-    instanceName: 'name of instance'
-    licenseType: 'Free'
-    patchLevel: 'patchlevel'
-    productId: 'sql id'
-    status: 'Registered'
-    tcpDynamicPorts: '1433'
-    tcpStaticPorts: '1433'
-    vCore: '4'
-    version: 'SQL Server 2012'
-  }
-  tags: {
-    mytag: 'myval'
-  }
-}
-```
 
 ## microsoft.azurearcdata/datacontrollers
 
@@ -280,6 +192,98 @@ resource exampleResource 'Microsoft.AzureArcData/postgresInstances@2022-03-01-pr
     name: 'default'
     dev: true
     tier: 'Hyperscale'
+  }
+}
+```
+
+## microsoft.azurearcdata/sqlmanagedinstances
+
+Create or update a SQL Managed Instance
+```bicep
+resource exampleResource 'Microsoft.AzureArcData/sqlManagedInstances@2022-03-01-preview' = {
+  name: 'example'
+  extendedLocation: {
+    name: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.ExtendedLocation/customLocations/arclocation'
+    type: 'CustomLocation'
+  }
+  location: 'northeurope'
+  properties: {
+    activeDirectoryInformation: {
+      keytabInformation: {
+        keytab: '********'
+      }
+    }
+    admin: 'Admin user'
+    basicLoginInformation: {
+      password: '********'
+      username: 'username'
+    }
+    clusterId: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Kubernetes/connectedClusters/connectedk8s'
+    endTime: 'Instance end time'
+    extensionId: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Kubernetes/connectedClusters/connectedk8s/providers/Microsoft.KubernetesConfiguration/extensions/extension'
+    k8sRaw: {
+      additionalProperty: 1234
+      spec: {
+        replicas: 1
+        scheduling: {
+          default: {
+            resources: {
+              limits: {
+                additionalProperty: 'additionalValue'
+                cpu: '1'
+                memory: '8Gi'
+              }
+              requests: {
+                additionalProperty: 'additionalValue'
+                cpu: '1'
+                memory: '8Gi'
+              }
+            }
+          }
+        }
+      }
+    }
+    licenseType: 'LicenseIncluded'
+    startTime: 'Instance start time'
+  }
+  sku: {
+    name: 'vCore'
+    dev: true
+    tier: 'GeneralPurpose'
+  }
+  tags: {
+    mytag: 'myval'
+  }
+}
+```
+
+## microsoft.azurearcdata/sqlserverinstances
+
+Updates a SQL Server Instance tags.
+```bicep
+resource exampleResource 'Microsoft.AzureArcData/sqlServerInstances@2022-03-01-preview' = {
+  name: 'example'
+  location: 'northeurope'
+  properties: {
+    azureDefenderStatus: 'Protected'
+    azureDefenderStatusLastUpdated: '2020-01-02T17:18:19.1234567Z'
+    collation: 'collation'
+    containerResourceId: 'Resource id of hosting Arc Machine'
+    currentVersion: '2012'
+    edition: 'Developer'
+    hostType: 'Physical Server'
+    instanceName: 'name of instance'
+    licenseType: 'Free'
+    patchLevel: 'patchlevel'
+    productId: 'sql id'
+    status: 'Registered'
+    tcpDynamicPorts: '1433'
+    tcpStaticPorts: '1433'
+    vCore: '4'
+    version: 'SQL Server 2012'
+  }
+  tags: {
+    mytag: 'myval'
   }
 }
 ```

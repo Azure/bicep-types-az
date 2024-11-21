@@ -1,4 +1,8 @@
 # Microsoft.CognitiveServices
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.cognitiveservices/accounts
 
@@ -49,18 +53,20 @@ resource exampleResource 'Microsoft.CognitiveServices/accounts@2022-10-01' = {
 }
 ```
 
-## microsoft.cognitiveservices/accounts/privateendpointconnections
+## microsoft.cognitiveservices/accounts/commitmentplans
 
-PutPrivateEndpointConnection
+PutCommitmentPlan
 ```bicep
-resource exampleResource 'Microsoft.CognitiveServices/accounts/privateEndpointConnections@2022-10-01' = {
+resource exampleResource 'Microsoft.CognitiveServices/accounts/commitmentPlans@2022-10-01' = {
   parent: parentResource 
   name: 'example'
   properties: {
-    privateLinkServiceConnectionState: {
-      description: 'Auto-Approved'
-      status: 'Approved'
+    autoRenew: true
+    current: {
+      tier: 'T1'
     }
+    hostingModel: 'Web'
+    planType: 'Speech2Text'
   }
 }
 ```
@@ -86,20 +92,18 @@ resource exampleResource 'Microsoft.CognitiveServices/accounts/deployments@2022-
 }
 ```
 
-## microsoft.cognitiveservices/accounts/commitmentplans
+## microsoft.cognitiveservices/accounts/privateendpointconnections
 
-PutCommitmentPlan
+PutPrivateEndpointConnection
 ```bicep
-resource exampleResource 'Microsoft.CognitiveServices/accounts/commitmentPlans@2022-10-01' = {
+resource exampleResource 'Microsoft.CognitiveServices/accounts/privateEndpointConnections@2022-10-01' = {
   parent: parentResource 
   name: 'example'
   properties: {
-    autoRenew: true
-    current: {
-      tier: 'T1'
+    privateLinkServiceConnectionState: {
+      description: 'Auto-Approved'
+      status: 'Approved'
     }
-    hostingModel: 'Web'
-    planType: 'Speech2Text'
   }
 }
 ```

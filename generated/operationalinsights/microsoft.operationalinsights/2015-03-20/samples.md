@@ -1,4 +1,30 @@
 # Microsoft.OperationalInsights
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
+
+## microsoft.operationalinsights/workspaces/savedsearches
+
+SavedSearchCreateOrUpdate
+```bicep
+resource exampleResource 'Microsoft.OperationalInsights/workspaces/savedSearches@2015-03-20' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    category: 'Saved Search Test Category'
+    displayName: 'Create or Update Saved Search Test'
+    query: 'Heartbeat | summarize Count() by Computer'
+    tags: [
+      {
+        name: 'Group'
+        value: 'Computer'
+      }
+    ]
+    version: 2
+  }
+}
+```
 
 ## microsoft.operationalinsights/workspaces/storageinsightconfigs
 
@@ -19,28 +45,6 @@ resource exampleResource 'Microsoft.OperationalInsights/workspaces/storageInsigh
       'WADWindowsEventLogsTable'
       'LinuxSyslogVer2v0'
     ]
-  }
-}
-```
-
-## microsoft.operationalinsights/workspaces/savedsearches
-
-SavedSearchCreateOrUpdate
-```bicep
-resource exampleResource 'Microsoft.OperationalInsights/workspaces/savedSearches@2015-03-20' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    category: 'Saved Search Test Category'
-    displayName: 'Create or Update Saved Search Test'
-    query: 'Heartbeat | summarize Count() by Computer'
-    tags: [
-      {
-        name: 'Group'
-        value: 'Computer'
-      }
-    ]
-    version: 2
   }
 }
 ```

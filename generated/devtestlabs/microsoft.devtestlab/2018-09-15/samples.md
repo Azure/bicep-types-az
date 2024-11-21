@@ -1,4 +1,8 @@
 # Microsoft.DevTestLab
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.devtestlab/labs
 
@@ -12,31 +16,6 @@ resource exampleResource 'Microsoft.DevTestLab/labs@2018-09-15' = {
   }
   tags: {
     tagName1: 'tagValue1'
-  }
-}
-```
-
-## microsoft.devtestlab/schedules
-
-GlobalSchedules_CreateOrUpdate
-```bicep
-resource exampleResource 'Microsoft.DevTestLab/schedules@2018-09-15' = {
-  name: 'example'
-  properties: {
-    status: 'Enabled'
-    taskType: 'LabVmsStartupTask'
-    timeZoneId: 'Hawaiian Standard Time'
-    weeklyRecurrence: {
-      time: '0700'
-      weekdays: [
-        'Monday'
-        'Tuesday'
-        'Wednesday'
-        'Thursday'
-        'Friday'
-        'Saturday'
-      ]
-    }
   }
 }
 ```
@@ -523,6 +502,31 @@ resource exampleResource 'Microsoft.DevTestLab/labs/virtualnetworks@2018-09-15' 
   location: '{location}'
   tags: {
     tagName1: 'tagValue1'
+  }
+}
+```
+
+## microsoft.devtestlab/schedules
+
+GlobalSchedules_CreateOrUpdate
+```bicep
+resource exampleResource 'Microsoft.DevTestLab/schedules@2018-09-15' = {
+  name: 'example'
+  properties: {
+    status: 'Enabled'
+    taskType: 'LabVmsStartupTask'
+    timeZoneId: 'Hawaiian Standard Time'
+    weeklyRecurrence: {
+      time: '0700'
+      weekdays: [
+        'Monday'
+        'Tuesday'
+        'Wednesday'
+        'Thursday'
+        'Friday'
+        'Saturday'
+      ]
+    }
   }
 }
 ```

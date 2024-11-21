@@ -1,13 +1,19 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
+import { keys, orderBy } from "lodash";
 import { getFullyQualifiedType, ProviderDefinition, PutExample, ResourceDescriptor } from "./resources";
 
 export function getSampleMarkdown(definition: ProviderDefinition) {
   let hasSamples = false;
-  let mdSamples = `# ${definition.namespace}\n`;
+  let mdSamples = `# ${definition.namespace}
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
 
-  for (const resourceType in definition.resourcesByType) {
+`;
+
+  for (const resourceType of orderBy(keys(definition.resourcesByType), x => x.toLowerCase())) {
     const descriptor = definition.resourcesByType[resourceType][0].descriptor;
     const putExamples = definition.resourcesByType[resourceType].flatMap(x => x.putExamples ?? []);
     if (putExamples.length === 0) {
@@ -18,7 +24,7 @@ export function getSampleMarkdown(definition: ProviderDefinition) {
 ## ${resourceType}
 `;
     
-    for (const example of putExamples) {
+    for (const example of orderBy(putExamples, x => x.description.toLowerCase())) {
       const bicepContent = generateBicepSample(definition, descriptor, example);
       if (!bicepContent) {
         continue;

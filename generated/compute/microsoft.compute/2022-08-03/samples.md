@@ -1,4 +1,8 @@
 # Microsoft.Compute
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
 
 ## microsoft.compute/galleries
 
@@ -61,6 +65,92 @@ resource exampleResource 'Microsoft.Compute/galleries@2022-08-03' = {
 }
 ```
 
+## microsoft.compute/galleries/applications
+
+Create or update a simple gallery Application.
+```bicep
+resource exampleResource 'Microsoft.Compute/galleries/applications@2022-08-03' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'West US'
+  properties: {
+    description: 'This is the gallery application description.'
+    customActions: [
+      {
+        name: 'myCustomAction'
+        description: 'This is the custom action description.'
+        parameters: [
+          {
+            name: 'myCustomActionParameter'
+            type: 'String'
+            description: 'This is the description of the parameter'
+            defaultValue: 'default value of parameter.'
+            required: false
+          }
+        ]
+        script: 'myCustomActionScript'
+      }
+    ]
+    eula: 'This is the gallery application EULA.'
+    privacyStatementUri: 'myPrivacyStatementUri}'
+    releaseNoteUri: 'myReleaseNoteUri'
+    supportedOSType: 'Windows'
+  }
+}
+```
+
+## microsoft.compute/galleries/applications/versions
+
+Create or update a simple gallery Application Version.
+```bicep
+resource exampleResource 'Microsoft.Compute/galleries/applications/versions@2022-08-03' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'West US'
+  properties: {
+    publishingProfile: {
+      customActions: [
+        {
+          name: 'myCustomAction'
+          description: 'This is the custom action description.'
+          parameters: [
+            {
+              name: 'myCustomActionParameter'
+              type: 'String'
+              description: 'This is the description of the parameter'
+              defaultValue: 'default value of parameter.'
+              required: false
+            }
+          ]
+          script: 'myCustomActionScript'
+        }
+      ]
+      endOfLifeDate: '2019-07-01T07:00:00Z'
+      manageActions: {
+        install: 'powershell -command "Expand-Archive -Path package.zip -DestinationPath C:\\package"'
+        remove: 'del C:\\package '
+      }
+      replicaCount: 1
+      source: {
+        mediaLink: 'https://mystorageaccount.blob.core.windows.net/mycontainer/package.zip?{sasKey}'
+      }
+      storageAccountType: 'Standard_LRS'
+      targetRegions: [
+        {
+          name: 'West US'
+          excludeFromLatest: false
+          regionalReplicaCount: 1
+          storageAccountType: 'Standard_LRS'
+        }
+      ]
+    }
+    safetyProfile: {
+      allowDeletionOfReplicatedLocations: false
+    }
+  }
+}
+```
+
 ## microsoft.compute/galleries/images
 
 Create or update a simple gallery image.
@@ -83,70 +173,6 @@ resource exampleResource 'Microsoft.Compute/galleries/images@2022-08-03' = {
 ```
 
 ## microsoft.compute/galleries/images/versions
-
-Create or update a simple Gallery Image Version using VM as source.
-```bicep
-resource exampleResource 'Microsoft.Compute/galleries/images/versions@2022-08-03' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'West US'
-  properties: {
-    publishingProfile: {
-      targetRegions: [
-        {
-          name: 'West US'
-          encryption: {
-            dataDiskImages: [
-              {
-                diskEncryptionSetId: '/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherWestUSDiskEncryptionSet'
-                lun: 0
-              }
-              {
-                diskEncryptionSetId: '/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet'
-                lun: 1
-              }
-            ]
-            osDiskImage: {
-              diskEncryptionSetId: '/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet'
-            }
-          }
-          excludeFromLatest: false
-          regionalReplicaCount: 2
-        }
-        {
-          name: 'East US'
-          encryption: {
-            dataDiskImages: [
-              {
-                diskEncryptionSetId: '/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherEastUSDiskEncryptionSet'
-                lun: 0
-              }
-              {
-                diskEncryptionSetId: '/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet'
-                lun: 1
-              }
-            ]
-            osDiskImage: {
-              diskEncryptionSetId: '/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet'
-            }
-          }
-          excludeFromLatest: false
-          regionalReplicaCount: 2
-          storageAccountType: 'Standard_ZRS'
-        }
-      ]
-    }
-    safetyProfile: {
-      allowDeletionOfReplicatedLocations: false
-    }
-    storageProfile: {
-      source: {
-        id: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/virtualMachines/{vmName}'
-      }
-    }
-  }
-}
-```
 
 Create or update a simple Gallery Image Version using community gallery image as source.
 ```bicep
@@ -656,6 +682,70 @@ resource exampleResource 'Microsoft.Compute/galleries/images/versions@2022-08-03
 }
 ```
 
+Create or update a simple Gallery Image Version using VM as source.
+```bicep
+resource exampleResource 'Microsoft.Compute/galleries/images/versions@2022-08-03' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'West US'
+  properties: {
+    publishingProfile: {
+      targetRegions: [
+        {
+          name: 'West US'
+          encryption: {
+            dataDiskImages: [
+              {
+                diskEncryptionSetId: '/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherWestUSDiskEncryptionSet'
+                lun: 0
+              }
+              {
+                diskEncryptionSetId: '/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet'
+                lun: 1
+              }
+            ]
+            osDiskImage: {
+              diskEncryptionSetId: '/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet'
+            }
+          }
+          excludeFromLatest: false
+          regionalReplicaCount: 2
+        }
+        {
+          name: 'East US'
+          encryption: {
+            dataDiskImages: [
+              {
+                diskEncryptionSetId: '/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherEastUSDiskEncryptionSet'
+                lun: 0
+              }
+              {
+                diskEncryptionSetId: '/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet'
+                lun: 1
+              }
+            ]
+            osDiskImage: {
+              diskEncryptionSetId: '/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet'
+            }
+          }
+          excludeFromLatest: false
+          regionalReplicaCount: 2
+          storageAccountType: 'Standard_ZRS'
+        }
+      ]
+    }
+    safetyProfile: {
+      allowDeletionOfReplicatedLocations: false
+    }
+    storageProfile: {
+      source: {
+        id: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/virtualMachines/{vmName}'
+      }
+    }
+  }
+}
+```
+
 Create or update a simple gallery image version with target extended locations specified.
 ```bicep
 resource exampleResource 'Microsoft.Compute/galleries/images/versions@2022-08-03' = {
@@ -715,92 +805,6 @@ resource exampleResource 'Microsoft.Compute/galleries/images/versions@2022-08-03
       source: {
         id: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/images/{imageName}'
       }
-    }
-  }
-}
-```
-
-## microsoft.compute/galleries/applications
-
-Create or update a simple gallery Application.
-```bicep
-resource exampleResource 'Microsoft.Compute/galleries/applications@2022-08-03' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'West US'
-  properties: {
-    description: 'This is the gallery application description.'
-    customActions: [
-      {
-        name: 'myCustomAction'
-        description: 'This is the custom action description.'
-        parameters: [
-          {
-            name: 'myCustomActionParameter'
-            type: 'String'
-            description: 'This is the description of the parameter'
-            defaultValue: 'default value of parameter.'
-            required: false
-          }
-        ]
-        script: 'myCustomActionScript'
-      }
-    ]
-    eula: 'This is the gallery application EULA.'
-    privacyStatementUri: 'myPrivacyStatementUri}'
-    releaseNoteUri: 'myReleaseNoteUri'
-    supportedOSType: 'Windows'
-  }
-}
-```
-
-## microsoft.compute/galleries/applications/versions
-
-Create or update a simple gallery Application Version.
-```bicep
-resource exampleResource 'Microsoft.Compute/galleries/applications/versions@2022-08-03' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'West US'
-  properties: {
-    publishingProfile: {
-      customActions: [
-        {
-          name: 'myCustomAction'
-          description: 'This is the custom action description.'
-          parameters: [
-            {
-              name: 'myCustomActionParameter'
-              type: 'String'
-              description: 'This is the description of the parameter'
-              defaultValue: 'default value of parameter.'
-              required: false
-            }
-          ]
-          script: 'myCustomActionScript'
-        }
-      ]
-      endOfLifeDate: '2019-07-01T07:00:00Z'
-      manageActions: {
-        install: 'powershell -command "Expand-Archive -Path package.zip -DestinationPath C:\\package"'
-        remove: 'del C:\\package '
-      }
-      replicaCount: 1
-      source: {
-        mediaLink: 'https://mystorageaccount.blob.core.windows.net/mycontainer/package.zip?{sasKey}'
-      }
-      storageAccountType: 'Standard_LRS'
-      targetRegions: [
-        {
-          name: 'West US'
-          excludeFromLatest: false
-          regionalReplicaCount: 1
-          storageAccountType: 'Standard_LRS'
-        }
-      ]
-    }
-    safetyProfile: {
-      allowDeletionOfReplicatedLocations: false
     }
   }
 }

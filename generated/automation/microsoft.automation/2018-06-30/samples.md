@@ -1,17 +1,28 @@
 # Microsoft.Automation
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
 
-## microsoft.automation/automationaccounts/runbooks/draft
 
-Create test job
+## microsoft.automation/automationaccounts/python2packages
+
+Create or update a python 2 package
 ```bicep
-resource exampleResource 'Microsoft.Automation/automationAccounts/runbooks/draft@2018-06-30' = {
+resource exampleResource 'Microsoft.Automation/automationAccounts/python2Packages@2018-06-30' = {
   parent: parentResource 
   name: 'example'
-  parameters: {
-    key01: 'value01'
-    key02: 'value02'
+  properties: {
+    contentLink: {
+      contentHash: {
+        algorithm: 'sha265'
+        value: '07E108A962B81DD9C9BAA89BB47C0F6EE52B29E83758B07795E408D258B2B87A'
+      }
+      uri: 'https://teststorage.blob.core.windows.net/dsccomposite/OmsCompositeResources.zip'
+      version: '1.0.0.0'
+    }
   }
-  runOn: ''
+  tags: {
+  }
 }
 ```
 
@@ -67,24 +78,17 @@ resource exampleResource 'Microsoft.Automation/automationAccounts/runbooks@2018-
 }
 ```
 
-## microsoft.automation/automationaccounts/python2packages
+## microsoft.automation/automationaccounts/runbooks/draft
 
-Create or update a python 2 package
+Create test job
 ```bicep
-resource exampleResource 'Microsoft.Automation/automationAccounts/python2Packages@2018-06-30' = {
+resource exampleResource 'Microsoft.Automation/automationAccounts/runbooks/draft@2018-06-30' = {
   parent: parentResource 
   name: 'example'
-  properties: {
-    contentLink: {
-      contentHash: {
-        algorithm: 'sha265'
-        value: '07E108A962B81DD9C9BAA89BB47C0F6EE52B29E83758B07795E408D258B2B87A'
-      }
-      uri: 'https://teststorage.blob.core.windows.net/dsccomposite/OmsCompositeResources.zip'
-      version: '1.0.0.0'
-    }
+  parameters: {
+    key01: 'value01'
+    key02: 'value02'
   }
-  tags: {
-  }
+  runOn: ''
 }
 ```
