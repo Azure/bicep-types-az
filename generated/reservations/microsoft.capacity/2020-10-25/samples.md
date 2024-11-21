@@ -1,0 +1,50 @@
+# Microsoft.Capacity
+
+## microsoft.capacity/resourceproviders/locations/servicelimits
+
+Quotas_Request_PutForCompute
+```bicep
+resource exampleResource 'Microsoft.Capacity/resourceProviders/locations/serviceLimits@2020-10-25' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    name: {
+      value: 'standardFSv2Family'
+    }
+    limit: 200
+    unit: 'Count'
+  }
+}
+```
+
+Quotas_Request_PutForMachineLearningServices_DedicatedResource
+```bicep
+resource exampleResource 'Microsoft.Capacity/resourceProviders/locations/serviceLimits@2020-10-25' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    name: {
+      value: 'StandardDv2Family'
+    }
+    limit: 200
+    resourceType: 'dedicated'
+    unit: 'Count'
+  }
+}
+```
+
+Quotas_Request_PutForMachineLearningServices_LowPriorityResource
+```bicep
+resource exampleResource 'Microsoft.Capacity/resourceProviders/locations/serviceLimits@2020-10-25' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    name: {
+      value: 'TotalLowPriorityCores'
+    }
+    limit: 200
+    resourceType: 'lowPriority'
+    unit: 'Count'
+  }
+}
+```

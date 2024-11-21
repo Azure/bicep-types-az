@@ -1,0 +1,96 @@
+# Microsoft.AppConfiguration
+
+## microsoft.appconfiguration/configurationstores
+
+ConfigurationStores_Create
+```bicep
+resource exampleResource 'Microsoft.AppConfiguration/configurationStores@2023-03-01' = {
+  name: 'example'
+  location: 'westus'
+  sku: {
+    name: 'Standard'
+  }
+  tags: {
+    myTag: 'myTagValue'
+  }
+}
+```
+
+ConfigurationStores_Create_With_Identity
+```bicep
+resource exampleResource 'Microsoft.AppConfiguration/configurationStores@2023-03-01' = {
+  name: 'example'
+  identity: {
+    type: 'SystemAssigned, UserAssigned'
+    userAssignedIdentities: {
+      /subscriptions/c80fb759-c965-4c6a-9110-9b2b2d038882/resourcegroups/myResourceGroup1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2: {
+      }
+    }
+  }
+  location: 'westus'
+  sku: {
+    name: 'Standard'
+  }
+  tags: {
+    myTag: 'myTagValue'
+  }
+}
+```
+
+ConfigurationStores_Create_With_Local_Auth_Disabled
+```bicep
+resource exampleResource 'Microsoft.AppConfiguration/configurationStores@2023-03-01' = {
+  name: 'example'
+  location: 'westus'
+  properties: {
+    disableLocalAuth: true
+  }
+  sku: {
+    name: 'Standard'
+  }
+}
+```
+
+## microsoft.appconfiguration/configurationstores/privateendpointconnections
+
+PrivateEndpointConnection_Update
+```bicep
+resource exampleResource 'Microsoft.AppConfiguration/configurationStores/privateEndpointConnections@2023-03-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    privateLinkServiceConnectionState: {
+      description: 'Auto-Approved'
+      status: 'Approved'
+    }
+  }
+}
+```
+
+## microsoft.appconfiguration/configurationstores/keyvalues
+
+KeyValues_CreateOrUpdate
+```bicep
+resource exampleResource 'Microsoft.AppConfiguration/configurationStores/keyValues@2023-03-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    tags: {
+      tag1: 'tagValue1'
+      tag2: 'tagValue2'
+    }
+    value: 'myValue'
+  }
+}
+```
+
+## microsoft.appconfiguration/configurationstores/replicas
+
+Replicas_Create
+```bicep
+resource exampleResource 'Microsoft.AppConfiguration/configurationStores/replicas@2023-03-01' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'eastus'
+}
+```

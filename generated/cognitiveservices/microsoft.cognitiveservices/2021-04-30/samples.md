@@ -1,0 +1,66 @@
+# Microsoft.CognitiveServices
+
+## microsoft.cognitiveservices/accounts
+
+Create Account
+```bicep
+resource exampleResource 'Microsoft.CognitiveServices/accounts@2021-04-30' = {
+  name: 'example'
+  identity: {
+    type: 'SystemAssigned'
+  }
+  kind: 'Emotion'
+  location: 'West US'
+  properties: {
+    encryption: {
+      keySource: 'Microsoft.KeyVault'
+      keyVaultProperties: {
+        keyName: 'KeyName'
+        keyVaultUri: 'https://pltfrmscrts-use-pc-dev.vault.azure.net/'
+        keyVersion: '891CF236-D241-4738-9462-D506AF493DFA'
+      }
+    }
+    userOwnedStorage: [
+      {
+        resourceId: '/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount'
+      }
+    ]
+  }
+  sku: {
+    name: 'S0'
+  }
+}
+```
+
+Create Account Min
+```bicep
+resource exampleResource 'Microsoft.CognitiveServices/accounts@2021-04-30' = {
+  name: 'example'
+  identity: {
+    type: 'SystemAssigned'
+  }
+  kind: 'CognitiveServices'
+  location: 'West US'
+  properties: {
+  }
+  sku: {
+    name: 'S0'
+  }
+}
+```
+
+## microsoft.cognitiveservices/accounts/privateendpointconnections
+
+PutPrivateEndpointConnection
+```bicep
+resource exampleResource 'Microsoft.CognitiveServices/accounts/privateEndpointConnections@2021-04-30' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    privateLinkServiceConnectionState: {
+      description: 'Auto-Approved'
+      status: 'Approved'
+    }
+  }
+}
+```
