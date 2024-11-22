@@ -56,8 +56,7 @@ jobs:
         run: npm ci
         working-directory: src/generator
 
-      - id: generate
-        name: Run generator
+      - name: Run generator
         run: |
           if [ -z "${{ github.event.inputs.single_path }}" ]
           then
@@ -65,14 +64,11 @@ jobs:
           else
             npm run generate -- --specs-dir ../../workflow-temp/azure-rest-api-specs --single-path ${{ github.event.inputs.single_path }}
           fi
-
-          summary="$(<../../generated/summary.log)"
-          summary="${summary//'%'/'%25'}"
-          summary="${summary//$'\n'/'%0A'}"
-          summary="${summary//$'\r'/'%0D'}"
-
-          echo "summary=$summary" >> $GITHUB_OUTPUT
         working-directory: src/generator
+
+      - name: Write summary
+        if: ${{ always() }}
+        run: cat generated/summary.log >> $GITHUB_STEP_SUMMARY
 
       - id: get_swagger_gh_uri
         name: Get GitHub URI for azure-rest-api-specs
