@@ -157,6 +157,7 @@
 * **password**: string {sensitive, pattern: "^[a-zA-Z0-9\.]$"}
 * **percentageProperty**: int {minValue: 0, maxValue: 100} (ReadOnly)
 * **skuTier**: 'Basic' | 'Free' | 'Premium' | 'Standard': This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.
+* **special.char-property**: string
 * **stringEnum**: 'Bar' | 'Foo' | string: Description for a basic enum property.
 * **subnetId**: string (ReadOnly): A fully-qualified resource ID
 * **uuidProperty**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}
@@ -173,6 +174,7 @@
 * **password**: string {sensitive, pattern: "^[a-zA-Z0-9\.]$"}
 * **percentageProperty**: int {minValue: 0, maxValue: 100}
 * **skuTier**: 'Basic' | 'Free' | 'Premium' | 'Standard': This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.
+* **special.char-property**: string
 * **stringEnum**: 'Bar' | 'Foo' | string: Description for a basic enum property.
 * **subnetId**: string: A fully-qualified resource ID
 * **uuidProperty**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}

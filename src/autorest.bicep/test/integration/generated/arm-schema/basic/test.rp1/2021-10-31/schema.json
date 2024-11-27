@@ -516,6 +516,9 @@
             }
           ]
         },
+        "special.char-property": {
+          "type": "string"
+        },
         "stringEnum": {
           "description": "Description for a basic enum property.",
           "oneOf": [
@@ -631,6 +634,9 @@
               "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
             }
           ]
+        },
+        "special.char-property": {
+          "type": "string"
         },
         "stringEnum": {
           "description": "Description for a basic enum property.",
