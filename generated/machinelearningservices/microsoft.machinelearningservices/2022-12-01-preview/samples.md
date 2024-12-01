@@ -67,63 +67,6 @@ resource exampleResource 'Microsoft.MachineLearningServices/registries@2022-12-0
 }
 ```
 
-CreateOrUpdate Registry with user created accounts.
-```bicep
-resource exampleResource 'Microsoft.MachineLearningServices/registries@2022-12-01-preview' = {
-  name: 'example'
-  identity: {
-    type: 'None'
-    userAssignedIdentities: {
-      string: {
-      }
-    }
-  }
-  kind: 'string'
-  location: 'string'
-  properties: {
-    description: 'string'
-    properties: {
-      string: 'string'
-    }
-    regionDetails: [
-      {
-        acrDetails: [
-          {
-            userCreatedAcrAccount: {
-              armResourceId: {
-                resourceId: 'string'
-              }
-            }
-          }
-        ]
-        location: 'string'
-        storageAccountDetails: [
-          {
-            userCreatedStorageAccount: {
-              armResourceId: {
-                resourceId: 'string'
-              }
-            }
-          }
-        ]
-      }
-    ]
-    tags: {
-      string: 'string'
-    }
-  }
-  sku: {
-    name: 'string'
-    capacity: 1
-    family: 'string'
-    size: 'string'
-    tier: 'Basic'
-  }
-  tags: {
-  }
-}
-```
-
 ## microsoft.machinelearningservices/registries/codes
 
 CreateOrUpdate Registry Code Container.

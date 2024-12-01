@@ -400,7 +400,6 @@
 ## AcrDetails
 ### Properties
 * **systemCreatedAcrAccount**: [SystemCreatedAcrAccount](#systemcreatedacraccount)
-* **userCreatedAcrAccount**: [UserCreatedAcrAccount](#usercreatedacraccount)
 
 ## AksNetworkingConfiguration
 ### Properties
@@ -2921,7 +2920,6 @@ Configure this parameter with a higher value than 300 secs, if more time is need
 ## StorageAccountDetails
 ### Properties
 * **systemCreatedStorageAccount**: [SystemCreatedStorageAccount](#systemcreatedstorageaccount)
-* **userCreatedStorageAccount**: [UserCreatedStorageAccount](#usercreatedstorageaccount)
 
 ## SweepJobInputs
 ### Properties
@@ -3185,14 +3183,6 @@ The expression should follow NCronTab format.
 ### Properties
 * **clientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The client ID of the assigned identity.
 * **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The principal ID of the assigned identity.
-
-## UserCreatedAcrAccount
-### Properties
-* **armResourceId**: [ArmResourceId](#armresourceid): ARM ResourceId of a resource
-
-## UserCreatedStorageAccount
-### Properties
-* **armResourceId**: [ArmResourceId](#armresourceid): ARM ResourceId of a resource
 
 ## VirtualMachineImage
 ### Properties

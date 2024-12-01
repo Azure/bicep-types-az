@@ -20389,7 +20389,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/1468"
+          "$ref": "#/1466"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -20453,7 +20453,7 @@
       },
       "regionDetails": {
         "type": {
-          "$ref": "#/1465"
+          "$ref": "#/1463"
         },
         "flags": 0,
         "description": "Details of each region the registry is in"
@@ -20467,14 +20467,14 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/1466"
+          "$ref": "#/1464"
         },
         "flags": 0,
         "description": "The asset property dictionary."
       },
       "tags": {
         "type": {
-          "$ref": "#/1467"
+          "$ref": "#/1465"
         },
         "flags": 0,
         "description": "Tag dictionary. Tags can be added, removed, and updated."
@@ -20500,7 +20500,7 @@
     "properties": {
       "acrDetails": {
         "type": {
-          "$ref": "#/1460"
+          "$ref": "#/1459"
         },
         "flags": 0,
         "description": "List of ACR accounts"
@@ -20514,7 +20514,7 @@
       },
       "storageAccountDetails": {
         "type": {
-          "$ref": "#/1464"
+          "$ref": "#/1462"
         },
         "flags": 0,
         "description": "List of storage accounts"
@@ -20528,12 +20528,6 @@
       "systemCreatedAcrAccount": {
         "type": {
           "$ref": "#/1458"
-        },
-        "flags": 0
-      },
-      "userCreatedAcrAccount": {
-        "type": {
-          "$ref": "#/1459"
         },
         "flags": 0
       }
@@ -20559,19 +20553,6 @@
     }
   },
   {
-    "$type": "ObjectType",
-    "name": "UserCreatedAcrAccount",
-    "properties": {
-      "armResourceId": {
-        "type": {
-          "$ref": "#/1455"
-        },
-        "flags": 0,
-        "description": "ARM ResourceId of a resource"
-      }
-    }
-  },
-  {
     "$type": "ArrayType",
     "itemType": {
       "$ref": "#/1457"
@@ -20583,13 +20564,7 @@
     "properties": {
       "systemCreatedStorageAccount": {
         "type": {
-          "$ref": "#/1462"
-        },
-        "flags": 0
-      },
-      "userCreatedStorageAccount": {
-        "type": {
-          "$ref": "#/1463"
+          "$ref": "#/1461"
         },
         "flags": 0
       }
@@ -20622,22 +20597,9 @@
     }
   },
   {
-    "$type": "ObjectType",
-    "name": "UserCreatedStorageAccount",
-    "properties": {
-      "armResourceId": {
-        "type": {
-          "$ref": "#/1455"
-        },
-        "flags": 0,
-        "description": "ARM ResourceId of a resource"
-      }
-    }
-  },
-  {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1461"
+      "$ref": "#/1460"
     }
   },
   {
@@ -20703,13 +20665,13 @@
       },
       "containerRegistryCredentials": {
         "type": {
-          "$ref": "#/1471"
+          "$ref": "#/1469"
         },
         "flags": 2
       },
       "notebookAccessKeys": {
         "type": {
-          "$ref": "#/1474"
+          "$ref": "#/1472"
         },
         "flags": 2
       }
@@ -20733,7 +20695,7 @@
       },
       "passwords": {
         "type": {
-          "$ref": "#/1473"
+          "$ref": "#/1471"
         },
         "flags": 0
       }
@@ -20760,7 +20722,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1472"
+      "$ref": "#/1470"
     }
   },
   {
@@ -20787,7 +20749,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces",
     "apiVersion": "2022-10-01-preview",
     "output": {
-      "$ref": "#/1470"
+      "$ref": "#/1468"
     }
   },
   {
@@ -20850,7 +20812,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces",
     "apiVersion": "2022-10-01-preview",
     "output": {
-      "$ref": "#/1476"
+      "$ref": "#/1474"
     }
   },
   {
@@ -20871,7 +20833,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces",
     "apiVersion": "2022-10-01-preview",
     "output": {
-      "$ref": "#/1478"
+      "$ref": "#/1476"
     }
   },
   {
@@ -20880,7 +20842,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces",
     "apiVersion": "2022-10-01-preview",
     "output": {
-      "$ref": "#/1474"
+      "$ref": "#/1472"
     }
   },
   {
@@ -20889,7 +20851,7 @@
     "properties": {
       "nodes": {
         "type": {
-          "$ref": "#/1490"
+          "$ref": "#/1488"
         },
         "flags": 2,
         "description": "The collection of returned AmlCompute nodes details."
@@ -20937,7 +20899,7 @@
       },
       "nodeState": {
         "type": {
-          "$ref": "#/1489"
+          "$ref": "#/1487"
         },
         "flags": 2,
         "description": "State of the compute node. Values are idle, running, preparing, unusable, leaving and preempted."
@@ -20979,6 +20941,12 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/1481"
+      },
+      {
+        "$ref": "#/1482"
+      },
+      {
         "$ref": "#/1483"
       },
       {
@@ -20991,12 +20959,6 @@
         "$ref": "#/1486"
       },
       {
-        "$ref": "#/1487"
-      },
-      {
-        "$ref": "#/1488"
-      },
-      {
         "$ref": "#/0"
       }
     ]
@@ -21004,7 +20966,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1482"
+      "$ref": "#/1480"
     }
   },
   {
@@ -21013,7 +20975,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces/computes",
     "apiVersion": "2022-10-01-preview",
     "output": {
-      "$ref": "#/1481"
+      "$ref": "#/1479"
     }
   },
   {
@@ -21023,13 +20985,13 @@
     "baseProperties": {},
     "elements": {
       "AKS": {
-        "$ref": "#/1493"
+        "$ref": "#/1491"
       },
       "Databricks": {
-        "$ref": "#/1495"
+        "$ref": "#/1493"
       },
       "VirtualMachine": {
-        "$ref": "#/1497"
+        "$ref": "#/1495"
       }
     }
   },
@@ -21060,7 +21022,7 @@
       },
       "computeType": {
         "type": {
-          "$ref": "#/1494"
+          "$ref": "#/1492"
         },
         "flags": 1,
         "description": "The type of compute"
@@ -21084,7 +21046,7 @@
       },
       "computeType": {
         "type": {
-          "$ref": "#/1496"
+          "$ref": "#/1494"
         },
         "flags": 1,
         "description": "The type of compute"
@@ -21108,7 +21070,7 @@
       },
       "computeType": {
         "type": {
-          "$ref": "#/1498"
+          "$ref": "#/1496"
         },
         "flags": 1,
         "description": "The type of compute"
@@ -21125,7 +21087,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces/computes",
     "apiVersion": "2022-10-01-preview",
     "output": {
-      "$ref": "#/1492"
+      "$ref": "#/1490"
     }
   },
   {
@@ -21144,22 +21106,22 @@
     "baseProperties": {},
     "elements": {
       "AccountKey": {
-        "$ref": "#/1502"
+        "$ref": "#/1500"
       },
       "Certificate": {
-        "$ref": "#/1504"
+        "$ref": "#/1502"
       },
       "KerberosKeytab": {
-        "$ref": "#/1506"
+        "$ref": "#/1504"
       },
       "KerberosPassword": {
-        "$ref": "#/1508"
+        "$ref": "#/1506"
       },
       "Sas": {
-        "$ref": "#/1510"
+        "$ref": "#/1508"
       },
       "ServicePrincipal": {
-        "$ref": "#/1512"
+        "$ref": "#/1510"
       }
     }
   },
@@ -21176,7 +21138,7 @@
       },
       "secretsType": {
         "type": {
-          "$ref": "#/1503"
+          "$ref": "#/1501"
         },
         "flags": 1,
         "description": "[Required] Credential type used to authentication with storage."
@@ -21200,7 +21162,7 @@
       },
       "secretsType": {
         "type": {
-          "$ref": "#/1505"
+          "$ref": "#/1503"
         },
         "flags": 1,
         "description": "[Required] Credential type used to authentication with storage."
@@ -21224,7 +21186,7 @@
       },
       "secretsType": {
         "type": {
-          "$ref": "#/1507"
+          "$ref": "#/1505"
         },
         "flags": 1,
         "description": "[Required] Credential type used to authentication with storage."
@@ -21248,7 +21210,7 @@
       },
       "secretsType": {
         "type": {
-          "$ref": "#/1509"
+          "$ref": "#/1507"
         },
         "flags": 1,
         "description": "[Required] Credential type used to authentication with storage."
@@ -21272,7 +21234,7 @@
       },
       "secretsType": {
         "type": {
-          "$ref": "#/1511"
+          "$ref": "#/1509"
         },
         "flags": 1,
         "description": "[Required] Credential type used to authentication with storage."
@@ -21296,7 +21258,7 @@
       },
       "secretsType": {
         "type": {
-          "$ref": "#/1513"
+          "$ref": "#/1511"
         },
         "flags": 1,
         "description": "[Required] Credential type used to authentication with storage."
@@ -21313,7 +21275,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces/datastores",
     "apiVersion": "2022-10-01-preview",
     "output": {
-      "$ref": "#/1501"
+      "$ref": "#/1499"
     }
   },
   {

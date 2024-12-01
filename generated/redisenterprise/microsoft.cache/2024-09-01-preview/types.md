@@ -6,6 +6,7 @@
 * **apiVersion**: '2024-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): The identity of the resource.
+* **kind**: 'v1' | 'v2' | string (ReadOnly): Distinguishes the kind of cluster. Read-only.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {pattern: "^[A-Za-z0-9]{1,60}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ClusterProperties](#clusterproperties): Other properties of the cluster.

@@ -870,9 +870,20 @@
 
 ## AzurePostgreSqlLinkedServiceTypeProperties
 ### Properties
+* **commandTimeout**: any: The time to wait (in seconds) while trying to execute a command before terminating the attempt and generating an error. Set to zero for infinity. Type: integer.
 * **connectionString**: any: An ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **database**: any: Database name for connection. Type: string.
+* **encoding**: any: Gets or sets the .NET encoding that will be used to encode/decode PostgreSQL string data. Type: string
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **password**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of password in connection string.
+* **port**: any: The port for the connection. Type: integer.
+* **readBufferSize**: any: Determines the size of the internal buffer uses when reading. Increasing may improve performance if transferring large values from the database. Type: integer.
+* **server**: any: Server name for connection. Type: string.
+* **sslMode**: any: SSL mode for connection. Type: integer. 0: disable, 1:allow, 2: prefer, 3: require, 4: verify-ca, 5: verify-full. Type: integer.
+* **timeout**: any: The time to wait (in seconds) while trying to establish a connection before terminating the attempt and generating an error. Type: integer.
+* **timezone**: any: Gets or sets the session timezone. Type: string.
+* **trustServerCertificate**: any: Whether to trust the server certificate without validating it. Type: boolean.
+* **username**: any: Username for authentication. Type: string.
 
 ## AzurePostgreSqlTableDatasetTypeProperties
 ### Properties
@@ -5091,14 +5102,21 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## MySqlLinkedServiceTypeProperties
 ### Properties
+* **allowZeroDateTime**: any: This allows the special “zero” date value 0000-00-00 to be retrieved from the database. Type: boolean.
 * **connectionString**: any: The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **connectionTimeout**: any: The length of time (in seconds) to wait for a connection to the server before terminating the attempt and generating an error. Type: integer.
+* **convertZeroDateTime**: any: True to return DateTime.MinValue for date or datetime columns that have disallowed values. Type: boolean.
 * **database**: any: Database name for connection. Type: string.
 * **driverVersion**: any: The version of the MySQL driver. Type: string. V1 or empty for legacy driver, V2 for new driver. V1 can support connection string and property bag, V2 can only support connection string.
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
+* **guidFormat**: any: Determines which column type (if any) should be read as a GUID. Type: string. None: No column types are automatically read as a Guid; Char36: All CHAR(36) columns are read/written as a Guid using lowercase hex with hyphens, which matches UUID.
 * **password**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of password in connection string.
 * **port**: any: The port for the connection. Type: integer.
 * **server**: any: Server name for connection. Type: string.
+* **sslCert**: any: The path to the client’s SSL certificate file in PEM format. SslKey must also be specified. Type: string.
+* **sslKey**: any: The path to the client’s SSL private key in PEM format. SslCert must also be specified. Type: string.
 * **sslMode**: any: SSL mode for connection. Type: integer. 0: disable, 1: prefer, 2: require, 3: verify-ca, 4: verify-full.
+* **treatTinyAsBoolean**: any: When set to true, TINYINT(1) values are returned as booleans. Type: bool.
 * **username**: any: Username for authentication. Type: string.
 * **useSystemTrustStore**: any: Use system trust store for connection. Type: integer. 0: enable, 1: disable.
 
