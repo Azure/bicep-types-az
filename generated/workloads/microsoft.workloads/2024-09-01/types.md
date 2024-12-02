@@ -5,7 +5,7 @@
 ### Properties
 * **apiVersion**: '2024-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The managed service identities assigned to this resource.
+* **identity**: [SAPVirtualInstanceIdentity](#sapvirtualinstanceidentity): The managed service identities assigned to this resource.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {pattern: "^[a-zA-Z][a-zA-Z0-9]{2}$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [SAPVirtualInstanceProperties](#sapvirtualinstanceproperties): The resource-specific properties for this resource.
@@ -83,6 +83,11 @@
 * **storageDetails**: [StorageInformation](#storageinformation)[] (ReadOnly): Storage details of all the Storage Accounts attached to the ASCS Virtual Machine. For e.g. NFS on AFS Shared Storage.
 * **type**: 'ASCS' | 'ERS' | 'ERSInactive' | 'Primary' | 'Secondary' | 'Standby' | 'Unknown' | string (ReadOnly): Defines the type of central server VM.
 * **virtualMachineId**: string (ReadOnly): The virtual machine id.
+
+## Components1IrwhnvSchemasSapvirtualinstanceidentityPropertiesUserassignedidentitiesAdditionalproperties
+### Properties
+* **clientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The client ID of the assigned identity.
+* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The principal ID of the assigned identity.
 
 ## DatabaseConfiguration
 ### Properties
@@ -238,13 +243,6 @@
 ### Properties
 * **name**: string: Managed resource group name
 
-## ManagedServiceIdentity
-### Properties
-* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
-* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
-* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' | string (Required): Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed).
-* **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.
-
 ## MessageServerProperties
 ### Properties
 * **health**: 'Degraded' | 'Healthy' | 'Unhealthy' | 'Unknown' | string (ReadOnly): Defines the health of SAP Instances.
@@ -371,6 +369,16 @@
 ### Properties
 * **properties**: [ErrorDefinition](#errordefinition): The Virtual Instance for SAP error body.
 
+## SAPVirtualInstanceIdentity
+### Properties
+* **type**: 'None' | 'UserAssigned' | string (Required): The type of managed identity assigned to this resource.
+* **userAssignedIdentities**: [SAPVirtualInstanceIdentityUserAssignedIdentities](#sapvirtualinstanceidentityuserassignedidentities): The identities assigned to this resource by the user.
+
+## SAPVirtualInstanceIdentityUserAssignedIdentities
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [Components1IrwhnvSchemasSapvirtualinstanceidentityPropertiesUserassignedidentitiesAdditionalproperties](#components1irwhnvschemassapvirtualinstanceidentitypropertiesuserassignedidentitiesadditionalproperties)
+
 ## SAPVirtualInstanceProperties
 ### Properties
 * **configuration**: [SAPConfiguration](#sapconfiguration) (Required): Defines if the SAP system is being created using Azure Center for SAP solutions (ACSS) or if an existing SAP system is being registered with ACSS
@@ -492,16 +500,6 @@
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## UserAssignedIdentities
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
-
-## UserAssignedIdentity
-### Properties
-* **clientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The client ID of the assigned identity.
-* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The principal ID of the assigned identity.
 
 ## VirtualMachineConfiguration
 ### Properties

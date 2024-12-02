@@ -93,9 +93,9 @@
 * **isConfigPendingRestart**: bool (ReadOnly): Configuration is pending restart or not.
 * **isDynamicConfig**: bool (ReadOnly): Configuration dynamic or static.
 * **isReadOnly**: bool (ReadOnly): Configuration read-only or not.
-* **source**: string: Source of the configuration.
+* **source**: string: Source of the configuration. Required to update the configuration.
 * **unit**: string (ReadOnly): Configuration unit.
-* **value**: string: Value of the configuration.
+* **value**: string: Value of the configuration. Required to update the configuration.
 
 ## DatabaseProperties
 ### Properties

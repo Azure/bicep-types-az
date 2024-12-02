@@ -218,7 +218,7 @@
 * **lifecycleState**: 'Active' | 'Creating' | 'Deleting' | 'Failed' | 'Updating' | string (ReadOnly): The current state of the backup.
 * **ocid**: string {minLength: 1, maxLength: 255} (ReadOnly): The OCID of the Autonomous Database backup.
 * **provisioningState**: 'Canceled' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): Azure resource provisioning state.
-* **retentionPeriodInDays**: int {minValue: 60, maxValue: 3650}: Retention period, in days, for long-term backups.
+* **retentionPeriodInDays**: int: Retention period, in days
 * **sizeInTbs**: int (ReadOnly): The backup size in terabytes (TB).
 * **timeAvailableTil**: string (ReadOnly): Timestamp until when the backup will be available.
 * **timeEnded**: string (ReadOnly): The date and time the backup completed.
@@ -273,8 +273,8 @@
 * **ociUrl**: string (ReadOnly): HTTPS link to OCI resources exposed to Azure Customer via Azure Interface.
 * **openMode**: 'ReadOnly' | 'ReadWrite' | string: Indicates the Autonomous Database mode.
 * **operationsInsightsStatus**: 'Disabling' | 'Enabled' | 'Enabling' | 'FailedDisabling' | 'FailedEnabling' | 'NotEnabled' | string (ReadOnly): Status of Operations Insights for this Autonomous Database.
-* **peerDbId**: string {minLength: 1, maxLength: 255} (WriteOnly): The database OCID of the Disaster Recovery peer database, which is located in a different region from the current peer database.
-* **peerDbIds**: string[] (ReadOnly): The list of [OCIDs](https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of standby databases located in Autonomous Data Guard remote regions that are associated with the source database. Note that for Autonomous Database Serverless instances, standby databases located in the same region as the source primary database do not have OCIDs.
+* **peerDbId**: string {minLength: 1, maxLength: 255} (WriteOnly): The Azure resource ID of the Disaster Recovery peer database, which is located in a different region from the current peer database.
+* **peerDbIds**: string[] (ReadOnly): The list of Azure resource IDs of standby databases located in Autonomous Data Guard remote regions that are associated with the source database. Note that for Autonomous Database Serverless instances, standby databases located in the same region as the source primary database do not have Azure IDs.
 * **permissionLevel**: 'Restricted' | 'Unrestricted' | string: The Autonomous Database permission level.
 * **privateEndpoint**: string (ReadOnly): The private endpoint for the resource.
 * **privateEndpointIp**: string: The private endpoint Ip address for the resource.
@@ -312,7 +312,7 @@
 * **refreshableModel**: 'Automatic' | 'Manual' | string (WriteOnly): The refresh mode of the clone.
 * **refreshableStatus**: 'NotRefreshing' | 'Refreshing' | string (ReadOnly): The refresh status of the clone.
 * **source**: 'BackupFromId' | 'BackupFromTimestamp' | 'CloneToRefreshable' | 'CrossRegionDataguard' | 'CrossRegionDisasterRecovery' | 'Database' | 'None' | string (WriteOnly): The source of the database.
-* **sourceId**: string (Required): The Azure ID of the Autonomous Database that was cloned to create the current Autonomous Database.
+* **sourceId**: string (Required): The Azure resource ID of the Autonomous Database that was cloned to create the current Autonomous Database.
 * **timeUntilReconnectCloneEnabled**: string: The time and date as an RFC3339 formatted string, e.g., 2022-01-01T12:00:00.000Z, to set the limit for a refreshable clone to be reconnected to its source database.
 
 ### AutonomousDatabaseProperties

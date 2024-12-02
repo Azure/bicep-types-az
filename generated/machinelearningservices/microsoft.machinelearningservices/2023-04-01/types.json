@@ -17966,7 +17966,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/1322"
+          "$ref": "#/1320"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -18035,7 +18035,7 @@
       },
       "regionDetails": {
         "type": {
-          "$ref": "#/1321"
+          "$ref": "#/1319"
         },
         "flags": 0,
         "description": "Details of each region the registry is in"
@@ -18217,7 +18217,7 @@
     "properties": {
       "acrDetails": {
         "type": {
-          "$ref": "#/1316"
+          "$ref": "#/1315"
         },
         "flags": 0,
         "description": "List of ACR accounts"
@@ -18231,7 +18231,7 @@
       },
       "storageAccountDetails": {
         "type": {
-          "$ref": "#/1320"
+          "$ref": "#/1318"
         },
         "flags": 0,
         "description": "List of storage accounts"
@@ -18248,13 +18248,6 @@
         },
         "flags": 0,
         "description": "Details of system created ACR account to be used for the Registry"
-      },
-      "userCreatedAcrAccount": {
-        "type": {
-          "$ref": "#/1315"
-        },
-        "flags": 0,
-        "description": "Details of user created ACR account to be used for the Registry"
       }
     }
   },
@@ -18286,19 +18279,6 @@
     }
   },
   {
-    "$type": "ObjectType",
-    "name": "UserCreatedAcrAccount",
-    "properties": {
-      "armResourceId": {
-        "type": {
-          "$ref": "#/1300"
-        },
-        "flags": 0,
-        "description": "ARM ResourceId of a resource"
-      }
-    }
-  },
-  {
     "$type": "ArrayType",
     "itemType": {
       "$ref": "#/1313"
@@ -18310,17 +18290,10 @@
     "properties": {
       "systemCreatedStorageAccount": {
         "type": {
-          "$ref": "#/1318"
+          "$ref": "#/1317"
         },
         "flags": 0,
         "description": "Details of system created storage account to be used for the registry"
-      },
-      "userCreatedStorageAccount": {
-        "type": {
-          "$ref": "#/1319"
-        },
-        "flags": 0,
-        "description": "Details of user created storage account to be used for the registry"
       }
     }
   },
@@ -18366,22 +18339,9 @@
     }
   },
   {
-    "$type": "ObjectType",
-    "name": "UserCreatedStorageAccount",
-    "properties": {
-      "armResourceId": {
-        "type": {
-          "$ref": "#/1300"
-        },
-        "flags": 0,
-        "description": "ARM ResourceId of a resource"
-      }
-    }
-  },
-  {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1317"
+      "$ref": "#/1316"
     }
   },
   {
@@ -18431,13 +18391,13 @@
       },
       "containerRegistryCredentials": {
         "type": {
-          "$ref": "#/1325"
+          "$ref": "#/1323"
         },
         "flags": 2
       },
       "notebookAccessKeys": {
         "type": {
-          "$ref": "#/1328"
+          "$ref": "#/1326"
         },
         "flags": 2
       }
@@ -18461,7 +18421,7 @@
       },
       "passwords": {
         "type": {
-          "$ref": "#/1327"
+          "$ref": "#/1325"
         },
         "flags": 0
       }
@@ -18488,7 +18448,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1326"
+      "$ref": "#/1324"
     }
   },
   {
@@ -18515,7 +18475,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces",
     "apiVersion": "2023-04-01",
     "output": {
-      "$ref": "#/1324"
+      "$ref": "#/1322"
     }
   },
   {
@@ -18578,7 +18538,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces",
     "apiVersion": "2023-04-01",
     "output": {
-      "$ref": "#/1330"
+      "$ref": "#/1328"
     }
   },
   {
@@ -18599,7 +18559,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces",
     "apiVersion": "2023-04-01",
     "output": {
-      "$ref": "#/1332"
+      "$ref": "#/1330"
     }
   },
   {
@@ -18608,7 +18568,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces",
     "apiVersion": "2023-04-01",
     "output": {
-      "$ref": "#/1328"
+      "$ref": "#/1326"
     }
   },
   {
@@ -18617,7 +18577,7 @@
     "properties": {
       "nodes": {
         "type": {
-          "$ref": "#/1344"
+          "$ref": "#/1342"
         },
         "flags": 2,
         "description": "The collection of returned AmlCompute nodes details."
@@ -18665,7 +18625,7 @@
       },
       "nodeState": {
         "type": {
-          "$ref": "#/1343"
+          "$ref": "#/1341"
         },
         "flags": 2,
         "description": "State of the compute node. Values are idle, running, preparing, unusable, leaving and preempted."
@@ -18707,6 +18667,12 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/1335"
+      },
+      {
+        "$ref": "#/1336"
+      },
+      {
         "$ref": "#/1337"
       },
       {
@@ -18719,12 +18685,6 @@
         "$ref": "#/1340"
       },
       {
-        "$ref": "#/1341"
-      },
-      {
-        "$ref": "#/1342"
-      },
-      {
         "$ref": "#/2"
       }
     ]
@@ -18732,7 +18692,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1336"
+      "$ref": "#/1334"
     }
   },
   {
@@ -18741,7 +18701,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces/computes",
     "apiVersion": "2023-04-01",
     "output": {
-      "$ref": "#/1335"
+      "$ref": "#/1333"
     }
   },
   {
@@ -18751,13 +18711,13 @@
     "baseProperties": {},
     "elements": {
       "AKS": {
-        "$ref": "#/1347"
+        "$ref": "#/1345"
       },
       "Databricks": {
-        "$ref": "#/1349"
+        "$ref": "#/1347"
       },
       "VirtualMachine": {
-        "$ref": "#/1351"
+        "$ref": "#/1349"
       }
     }
   },
@@ -18788,7 +18748,7 @@
       },
       "computeType": {
         "type": {
-          "$ref": "#/1348"
+          "$ref": "#/1346"
         },
         "flags": 1,
         "description": "The type of compute"
@@ -18812,7 +18772,7 @@
       },
       "computeType": {
         "type": {
-          "$ref": "#/1350"
+          "$ref": "#/1348"
         },
         "flags": 1,
         "description": "The type of compute"
@@ -18836,7 +18796,7 @@
       },
       "computeType": {
         "type": {
-          "$ref": "#/1352"
+          "$ref": "#/1350"
         },
         "flags": 1,
         "description": "The type of compute"
@@ -18853,7 +18813,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces/computes",
     "apiVersion": "2023-04-01",
     "output": {
-      "$ref": "#/1346"
+      "$ref": "#/1344"
     }
   },
   {
@@ -18872,16 +18832,16 @@
     "baseProperties": {},
     "elements": {
       "AccountKey": {
-        "$ref": "#/1356"
+        "$ref": "#/1354"
       },
       "Certificate": {
-        "$ref": "#/1358"
+        "$ref": "#/1356"
       },
       "Sas": {
-        "$ref": "#/1360"
+        "$ref": "#/1358"
       },
       "ServicePrincipal": {
-        "$ref": "#/1362"
+        "$ref": "#/1360"
       }
     }
   },
@@ -18898,7 +18858,7 @@
       },
       "secretsType": {
         "type": {
-          "$ref": "#/1357"
+          "$ref": "#/1355"
         },
         "flags": 1,
         "description": "[Required] Credential type used to authentication with storage."
@@ -18922,7 +18882,7 @@
       },
       "secretsType": {
         "type": {
-          "$ref": "#/1359"
+          "$ref": "#/1357"
         },
         "flags": 1,
         "description": "[Required] Credential type used to authentication with storage."
@@ -18946,7 +18906,7 @@
       },
       "secretsType": {
         "type": {
-          "$ref": "#/1361"
+          "$ref": "#/1359"
         },
         "flags": 1,
         "description": "[Required] Credential type used to authentication with storage."
@@ -18970,7 +18930,7 @@
       },
       "secretsType": {
         "type": {
-          "$ref": "#/1363"
+          "$ref": "#/1361"
         },
         "flags": 1,
         "description": "[Required] Credential type used to authentication with storage."
@@ -18987,7 +18947,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces/datastores",
     "apiVersion": "2023-04-01",
     "output": {
-      "$ref": "#/1355"
+      "$ref": "#/1353"
     }
   },
   {
