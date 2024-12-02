@@ -5040,7 +5040,7 @@ resource exampleResource 'Microsoft.Compute/virtualMachineScaleSets@2024-07-01' 
         adminUsername: '{your-username}'
         computerNamePrefix: '{vmss-name}'
       }
-      priority: 'spot'
+      priority: 'Spot'
       storageProfile: {
         imageReference: {
           offer: '0001-com-ubuntu-server-focal'
@@ -5050,7 +5050,7 @@ resource exampleResource 'Microsoft.Compute/virtualMachineScaleSets@2024-07-01' 
         }
         osDisk: {
           caching: 'ReadWrite'
-          createOption: 'fromImage'
+          createOption: 'FromImage'
           managedDisk: {
             storageAccountType: 'Standard_LRS'
           }

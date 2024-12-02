@@ -179,81 +179,81 @@ resource exampleResource 'Microsoft.CognitiveServices/accounts/raiPolicies@2024-
     basePolicyName: 'Microsoft.Default'
     contentFilters: [
       {
-        name: 'hate'
+        name: 'Hate'
         blocking: false
         enabled: false
         severityThreshold: 'High'
         source: 'Prompt'
       }
       {
-        name: 'hate'
+        name: 'Hate'
         blocking: true
         enabled: true
         severityThreshold: 'Medium'
         source: 'Completion'
       }
       {
-        name: 'sexual'
+        name: 'Sexual'
         blocking: true
         enabled: true
         severityThreshold: 'High'
         source: 'Prompt'
       }
       {
-        name: 'sexual'
+        name: 'Sexual'
         blocking: true
         enabled: true
         severityThreshold: 'Medium'
         source: 'Completion'
       }
       {
-        name: 'selfharm'
+        name: 'Selfharm'
         blocking: true
         enabled: true
         severityThreshold: 'High'
         source: 'Prompt'
       }
       {
-        name: 'selfharm'
+        name: 'Selfharm'
         blocking: true
         enabled: true
         severityThreshold: 'Medium'
         source: 'Completion'
       }
       {
-        name: 'violence'
+        name: 'Violence'
         blocking: true
         enabled: true
         severityThreshold: 'Medium'
         source: 'Prompt'
       }
       {
-        name: 'violence'
+        name: 'Violence'
         blocking: true
         enabled: true
         severityThreshold: 'Medium'
         source: 'Completion'
       }
       {
-        name: 'jailbreak'
+        name: 'Jailbreak'
         blocking: true
         enabled: true
         source: 'Prompt'
       }
       {
-        name: 'protected_material_text'
+        name: 'Protected Material Text'
         blocking: true
         enabled: true
         source: 'Completion'
       }
       {
-        name: 'protected_material_code'
+        name: 'Protected Material Code'
         blocking: true
         enabled: true
         source: 'Completion'
       }
       {
-        name: 'profanity'
+        name: 'Profanity'
         blocking: true
         enabled: true
         source: 'Prompt'

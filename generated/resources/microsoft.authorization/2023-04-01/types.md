@@ -131,7 +131,9 @@
 * **definitionVersion**: string: The version of the policy definition to use.
 * **description**: string: This message will be part of response in case of policy violation.
 * **displayName**: string: The display name of the policy assignment.
+* **effectiveDefinitionVersion**: string (ReadOnly): The effective version of the policy definition in use. This is only present if requested via the $expand query parameter.
 * **enforcementMode**: 'Default' | 'DoNotEnforce' | string: The policy assignment enforcement mode. Possible values are Default and DoNotEnforce.
+* **latestDefinitionVersion**: string (ReadOnly): The latest version of the policy definition available. This is only present if requested via the $expand query parameter.
 * **metadata**: any: The policy assignment metadata. Metadata is an open ended object and is typically a collection of key value pairs.
 * **nonComplianceMessages**: [NonComplianceMessage](#noncompliancemessage)[]: The messages that describe why a resource is non-compliant with the policy.
 * **notScopes**: string[]: The policy's excluded scopes.
@@ -164,7 +166,9 @@
 ## PolicyDefinitionReference
 ### Properties
 * **definitionVersion**: string: The version of the policy definition to use.
+* **effectiveDefinitionVersion**: string (ReadOnly): The effective version of the policy definition in use. This is only present if requested via the $expand query parameter.
 * **groupNames**: string[]: The name of the groups that this policy definition reference belongs to.
+* **latestDefinitionVersion**: string (ReadOnly): The latest version of the policy definition available. This is only present if requested via the $expand query parameter.
 * **parameters**: [ParameterValues](#parametervalues): The parameter values for the referenced policy rule. The keys are the parameter names.
 * **policyDefinitionId**: string (Required): The ID of the policy definition or policy set definition.
 * **policyDefinitionReferenceId**: string: A unique id (within the policy set definition) for this policy definition reference.
