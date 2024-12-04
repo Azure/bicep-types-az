@@ -14,6 +14,7 @@ resource exampleResource 'Test.Rp1/testType1@2021-10-31' = {
   properties: {
     basicString: 'I\'m a string!'
     intWithDefaultValue: 2
+    'special.char-property': 'hello!'
     stringEnum: 'Foo'
   }
 }

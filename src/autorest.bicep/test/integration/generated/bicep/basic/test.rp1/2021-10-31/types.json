@@ -135,6 +135,12 @@
         },
         "flags": 0
       },
+      "special.char-property": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      },
       "locationData": {
         "type": {
           "$ref": "#/22"
@@ -747,6 +753,12 @@
       "intWithDefaultValue": {
         "type": {
           "$ref": "#/21"
+        },
+        "flags": 0
+      },
+      "special.char-property": {
+        "type": {
+          "$ref": "#/2"
         },
         "flags": 0
       }

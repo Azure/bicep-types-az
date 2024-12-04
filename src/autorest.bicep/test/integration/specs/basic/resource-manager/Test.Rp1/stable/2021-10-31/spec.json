@@ -114,6 +114,9 @@
           "format": "int32",
           "default": 7,
           "type": "integer"
+        },
+        "special.char-property": {
+          "type": "string"
         }
       }
     },
