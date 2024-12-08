@@ -314,12 +314,12 @@ resource exampleResource 'Microsoft.Insights/metricAlerts@2018-03-01' = {
       odata.type: 'Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria'
     }
     enabled: true
-    evaluationFrequency: 'Pt1m'
+    evaluationFrequency: 'PT1M'
     scopes: [
       '/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourceGroups/gigtest/providers/Microsoft.Compute/virtualMachines/gigwadme'
     ]
     severity: 3
-    windowSize: 'Pt15m'
+    windowSize: 'PT15M'
   }
   tags: {
   }
