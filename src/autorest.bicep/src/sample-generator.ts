@@ -94,7 +94,8 @@ function getBicep(value: any, indent: number) {
   if (typeof value === 'object') {
     let result = `{`;
     for (const key in value) {
-      result += `\n${getIndent(indent + 1)}${key}: ${getBicep(value[key], indent + 1)}`;
+      const escapedKey = isBicepIdentifier(key) ? key : getBicepString(key);
+      result += `\n${getIndent(indent + 1)}${escapedKey}: ${getBicep(value[key], indent + 1)}`;
     }
     result += `\n${getIndent(indent)}}`;
 
@@ -102,6 +103,10 @@ function getBicep(value: any, indent: number) {
   }
 
   throw new Error(`Unsupported type: ${typeof value}`);
+}
+
+function isBicepIdentifier(value: string) {
+  return /^[a-zA-Z_][a-zA-Z0-9_]*$/.test(value);
 }
 
 function getBicepString(value: string) {
