@@ -135,7 +135,7 @@ resource exampleResource 'Microsoft.StreamAnalytics/streamingjobs@2021-10-01-pre
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/akvenkat/providers/Microsoft.ManagedIdentity/userAssignedIdentities/sdkIdentity: {
+      '/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/akvenkat/providers/Microsoft.ManagedIdentity/userAssignedIdentities/sdkIdentity': {
       }
     }
   }

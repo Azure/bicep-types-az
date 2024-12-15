@@ -34746,6 +34746,13 @@
         },
         "flags": 0,
         "description": "Log settings of script activity."
+      },
+      "returnMultistatementResult": {
+        "type": {
+          "$ref": "#/11"
+        },
+        "flags": 0,
+        "description": "Enable to retrieve result sets from multiple SQL statements and the number of rows affected by the DML statement. Supported connector: SnowflakeV2. Type: boolean (or Expression with resultType boolean)."
       }
     }
   },

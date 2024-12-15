@@ -72,7 +72,7 @@ resource exampleResource 'Microsoft.MobileNetwork/mobileNetworks/services@2024-0
         ruleName: 'default-rule'
         rulePrecedence: 255
         ruleQosPolicy: {
-          5qi: 9
+          '5qi': 9
           allocationAndRetentionPriorityLevel: 9
           maximumBitRate: {
             downlink: '1 Gbps'
@@ -100,7 +100,7 @@ resource exampleResource 'Microsoft.MobileNetwork/mobileNetworks/services@2024-0
     ]
     servicePrecedence: 255
     serviceQosPolicy: {
-      5qi: 9
+      '5qi': 9
       allocationAndRetentionPriorityLevel: 9
       maximumBitRate: {
         downlink: '1 Gbps'
@@ -130,7 +130,7 @@ resource exampleResource 'Microsoft.MobileNetwork/mobileNetworks/simPolicies@202
       {
         dataNetworkConfigurations: [
           {
-            5qi: 9
+            '5qi': 9
             additionalAllowedSessionTypes: [
             ]
             allocationAndRetentionPriorityLevel: 9
@@ -345,7 +345,7 @@ resource exampleResource 'Microsoft.MobileNetwork/simGroups@2024-04-01' = {
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/testUserAssignedManagedIdentity: {
+      '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/testUserAssignedManagedIdentity': {
       }
     }
   }

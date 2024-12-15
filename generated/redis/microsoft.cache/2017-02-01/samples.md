@@ -14,7 +14,7 @@ resource exampleResource 'Microsoft.Cache/Redis@2017-02-01' = {
   properties: {
     enableNonSslPort: true
     redisConfiguration: {
-      maxmemory-policy: 'allkeys-lru'
+      'maxmemory-policy': 'allkeys-lru'
     }
     shardCount: 2
     sku: {

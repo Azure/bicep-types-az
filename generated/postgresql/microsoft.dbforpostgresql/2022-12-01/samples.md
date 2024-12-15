@@ -132,7 +132,7 @@ resource exampleResource 'Microsoft.DBforPostgreSQL/flexibleServers@2022-12-01' 
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testresourcegroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/test-usermanagedidentity: {
+      '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testresourcegroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/test-usermanagedidentity': {
       }
     }
   }

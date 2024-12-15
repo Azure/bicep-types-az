@@ -22,7 +22,7 @@ resource exampleResource 'Microsoft.SecretSyncController/azureKeyVaultSecretProv
     objects: 'array: |\n  - |\n    objectName: my-secret-object\n    objectType: secret\n    objectVersionHistory: 1'
   }
   tags: {
-    example-tag: 'example-tag-value'
+    'example-tag': 'example-tag-value'
   }
 }
 ```
@@ -50,7 +50,7 @@ resource exampleResource 'Microsoft.SecretSyncController/secretSyncs@2024-08-21-
     serviceAccountName: 'example-k8s-sa-name'
   }
   tags: {
-    example-tag: 'example-tag-value'
+    'example-tag': 'example-tag-value'
   }
 }
 ```

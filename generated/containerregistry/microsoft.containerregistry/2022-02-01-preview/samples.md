@@ -102,7 +102,7 @@ resource exampleResource 'Microsoft.ContainerRegistry/registries/importPipelines
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2: {
+      '/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2': {
       }
     }
   }

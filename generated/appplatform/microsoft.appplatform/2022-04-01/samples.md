@@ -229,11 +229,11 @@ resource exampleResource 'Microsoft.AppPlatform/Spring/buildServices/builders/bu
     launchProperties: {
       properties: {
         abc: 'def'
-        any-string: 'any-string'
-        sampling-rate: '12.0'
+        'any-string': 'any-string'
+        'sampling-rate': '12.0'
       }
       secrets: {
-        connection-string: 'XXXXXXXXXXXXXXXXX=XXXXXXXXXXXXX-XXXXXXXXXXXXXXXXXXX;XXXXXXXXXXXXXXXXX=XXXXXXXXXXXXXXXXXXX'
+        'connection-string': 'XXXXXXXXXXXXXXXXX=XXXXXXXXXXXXX-XXXXXXXXXXXXXXXXXXX;XXXXXXXXXXXXXXXXX=XXXXXXXXXXXXXXXXXXX'
       }
     }
   }

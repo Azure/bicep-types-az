@@ -13,9 +13,9 @@ resource exampleResource 'Microsoft.Insights/actionGroups@2024-10-01-preview' = 
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/AzSecPackAutoConfigRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/ThomasTestManagedIdentity_123: {
+      '/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/AzSecPackAutoConfigRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/ThomasTestManagedIdentity_123': {
       }
-      /subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/AzSecPackAutoConfigRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/ThomasTestManagedIdentity_456: {
+      '/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/AzSecPackAutoConfigRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/ThomasTestManagedIdentity_456': {
       }
     }
   }
@@ -89,13 +89,13 @@ resource exampleResource 'Microsoft.Insights/actionGroups@2024-10-01-preview' = 
         }
         incidentManagementService: 'Icm'
         mappings: {
-          icm.automitigationenabled: 'true'
-          icm.correlationid: '\${data.essentials.signalType}://\${data.essentials.originAlertId}'
-          icm.monitorid: '\${data.essentials.alertRule}'
-          icm.occurringlocation.environment: 'PROD'
-          icm.routingid: '\${data.essentials.monitoringService}://\${data.essentials.signalType}'
-          icm.title: '\${data.essentials.severity}:\${data.essentials.monitorCondition} \${data.essentials.monitoringService}:\${data.essentials.signalType} \${data.essentials.alertTargetIds}'
-          icm.tsgid: 'https://microsoft.com'
+          'icm.automitigationenabled': 'true'
+          'icm.correlationid': '\${data.essentials.signalType}://\${data.essentials.originAlertId}'
+          'icm.monitorid': '\${data.essentials.alertRule}'
+          'icm.occurringlocation.environment': 'PROD'
+          'icm.routingid': '\${data.essentials.monitoringService}://\${data.essentials.signalType}'
+          'icm.title': '\${data.essentials.severity}:\${data.essentials.monitorCondition} \${data.essentials.monitoringService}:\${data.essentials.signalType} \${data.essentials.alertTargetIds}'
+          'icm.tsgid': 'https://microsoft.com'
         }
       }
     ]

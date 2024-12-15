@@ -13,7 +13,7 @@ resource exampleResource 'Microsoft.Cache/redisEnterprise@2023-11-01' = {
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/your-subscription/resourceGroups/your-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/your-identity: {
+      '/subscriptions/your-subscription/resourceGroups/your-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/your-identity': {
       }
     }
   }

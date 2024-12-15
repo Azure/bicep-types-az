@@ -53,14 +53,14 @@ resource exampleResource 'Microsoft.Media/mediaServices/contentKeyPolicies@2018-
       {
         name: 'ClearKeyOption'
         configuration: {
-          @odata.type: '#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration'
+          '@odata.type': '#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration'
         }
         restriction: {
-          @odata.type: '#Microsoft.Media.ContentKeyPolicyTokenRestriction'
+          '@odata.type': '#Microsoft.Media.ContentKeyPolicyTokenRestriction'
           audience: 'urn:audience'
           issuer: 'urn:issuer'
           primaryVerificationKey: {
-            @odata.type: '#Microsoft.Media.ContentKeyPolicySymmetricTokenKey'
+            '@odata.type': '#Microsoft.Media.ContentKeyPolicySymmetricTokenKey'
             keyValue: 'AAAAAAAAAAAAAAAAAAAAAA=='
           }
           restrictionTokenType: 'Swt'
@@ -82,14 +82,14 @@ resource exampleResource 'Microsoft.Media/mediaServices/contentKeyPolicies@2018-
       {
         name: 'ClearKeyOption'
         configuration: {
-          @odata.type: '#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration'
+          '@odata.type': '#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration'
         }
         restriction: {
-          @odata.type: '#Microsoft.Media.ContentKeyPolicyTokenRestriction'
+          '@odata.type': '#Microsoft.Media.ContentKeyPolicyTokenRestriction'
           audience: 'urn:audience'
           issuer: 'urn:issuer'
           primaryVerificationKey: {
-            @odata.type: '#Microsoft.Media.ContentKeyPolicySymmetricTokenKey'
+            '@odata.type': '#Microsoft.Media.ContentKeyPolicySymmetricTokenKey'
             keyValue: 'AAAAAAAAAAAAAAAAAAAAAA=='
           }
           restrictionTokenType: 'Swt'
@@ -98,11 +98,11 @@ resource exampleResource 'Microsoft.Media/mediaServices/contentKeyPolicies@2018-
       {
         name: 'widevineoption'
         configuration: {
-          @odata.type: '#Microsoft.Media.ContentKeyPolicyWidevineConfiguration'
+          '@odata.type': '#Microsoft.Media.ContentKeyPolicyWidevineConfiguration'
           widevineTemplate: '{"allowed_track_types":"SD_HD","content_key_specs":[{"track_type":"SD","security_level":1,"required_output_protection":{"hdcp":"HDCP_V2"}}],"policy_overrides":{"can_play":true,"can_persist":true,"can_renew":false}}'
         }
         restriction: {
-          @odata.type: '#Microsoft.Media.ContentKeyPolicyOpenRestriction'
+          '@odata.type': '#Microsoft.Media.ContentKeyPolicyOpenRestriction'
         }
       }
     ]
@@ -121,13 +121,13 @@ resource exampleResource 'Microsoft.Media/mediaServices/contentKeyPolicies@2018-
       {
         name: 'ArmPolicyOptionName'
         configuration: {
-          @odata.type: '#Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration'
+          '@odata.type': '#Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration'
           licenses: [
             {
               allowTestDevices: true
               beginDate: '2017-10-16T18:22:53.46Z'
               contentKeyLocation: {
-                @odata.type: '#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeader'
+                '@odata.type': '#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeader'
               }
               contentType: 'UltraVioletDownload'
               licenseType: 'Persistent'
@@ -141,7 +141,7 @@ resource exampleResource 'Microsoft.Media/mediaServices/contentKeyPolicies@2018-
         }
         policyOptionId: '00000000-0000-0000-0000-000000000000'
         restriction: {
-          @odata.type: '#Microsoft.Media.ContentKeyPolicyOpenRestriction'
+          '@odata.type': '#Microsoft.Media.ContentKeyPolicyOpenRestriction'
         }
       }
     ]
@@ -161,21 +161,21 @@ resource exampleResource 'Microsoft.Media/mediaServices/contentKeyPolicies@2018-
       {
         name: 'widevineoption'
         configuration: {
-          @odata.type: '#Microsoft.Media.ContentKeyPolicyWidevineConfiguration'
+          '@odata.type': '#Microsoft.Media.ContentKeyPolicyWidevineConfiguration'
           widevineTemplate: '{"allowed_track_types":"SD_HD","content_key_specs":[{"track_type":"SD","security_level":1,"required_output_protection":{"hdcp":"HDCP_V2"}}],"policy_overrides":{"can_play":true,"can_persist":true,"can_renew":false}}'
         }
         restriction: {
-          @odata.type: '#Microsoft.Media.ContentKeyPolicyTokenRestriction'
+          '@odata.type': '#Microsoft.Media.ContentKeyPolicyTokenRestriction'
           alternateVerificationKeys: [
             {
-              @odata.type: '#Microsoft.Media.ContentKeyPolicySymmetricTokenKey'
+              '@odata.type': '#Microsoft.Media.ContentKeyPolicySymmetricTokenKey'
               keyValue: 'AAAAAAAAAAAAAAAAAAAAAA=='
             }
           ]
           audience: 'urn:audience'
           issuer: 'urn:issuer'
           primaryVerificationKey: {
-            @odata.type: '#Microsoft.Media.ContentKeyPolicyRsaTokenKey'
+            '@odata.type': '#Microsoft.Media.ContentKeyPolicyRsaTokenKey'
             exponent: 'AQAB'
             modulus: 'AQAD'
           }
@@ -561,7 +561,7 @@ resource exampleResource 'Microsoft.Media/mediaServices/transforms@2018-06-01-pr
         onError: {
         }
         preset: {
-          @odata.type: '#Microsoft.Media.BuiltInStandardEncoderPreset'
+          '@odata.type': '#Microsoft.Media.BuiltInStandardEncoderPreset'
           presetName: 'AdaptiveStreaming'
         }
         relativePriority: {
@@ -581,12 +581,12 @@ resource exampleResource 'Microsoft.Media/mediaServices/transforms/jobs@2018-06-
   name: 'example'
   properties: {
     input: {
-      @odata.type: '#Microsoft.Media.JobInputAsset'
+      '@odata.type': '#Microsoft.Media.JobInputAsset'
       assetName: 'job1-InputAsset'
     }
     outputs: [
       {
-        @odata.type: '#Microsoft.Media.JobOutputAsset'
+        '@odata.type': '#Microsoft.Media.JobOutputAsset'
         assetName: 'job1-OutputAsset'
       }
     ]

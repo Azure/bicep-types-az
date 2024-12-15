@@ -13,7 +13,7 @@ resource exampleResource 'Microsoft.HardwareSecurityModules/cloudHsmClusters@202
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contoso-resources/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity-1: {
+      '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contoso-resources/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity-1': {
       }
     }
   }

@@ -222,7 +222,7 @@ resource exampleResource 'Microsoft.MachineLearningServices/workspaces/labelingJ
           testClass1: {
             displayName: 'testClass1'
             subclasses: {
-              testclass1-1: {
+              'testclass1-1': {
                 displayName: 'testClass1-1'
               }
             }

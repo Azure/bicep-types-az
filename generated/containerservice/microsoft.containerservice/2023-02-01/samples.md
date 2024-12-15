@@ -30,8 +30,8 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2023-02-01'
       }
     ]
     autoScalerProfile: {
-      scale-down-delay-after-add: '15m'
-      scan-interval: '20s'
+      'scale-down-delay-after-add': '15m'
+      'scan-interval': '20s'
     }
     diskEncryptionSetID: '/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
     dnsPrefix: 'dnsprefix1'
@@ -97,8 +97,8 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2023-02-01'
       }
     ]
     autoScalerProfile: {
-      scale-down-delay-after-add: '15m'
-      scan-interval: '20s'
+      'scale-down-delay-after-add': '15m'
+      'scan-interval': '20s'
     }
     diskEncryptionSetID: '/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
     dnsPrefix: 'dnsprefix1'
@@ -171,8 +171,8 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2023-02-01'
       }
     ]
     autoScalerProfile: {
-      scale-down-delay-after-add: '15m'
-      scan-interval: '20s'
+      'scale-down-delay-after-add': '15m'
+      'scan-interval': '20s'
     }
     diskEncryptionSetID: '/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
     dnsPrefix: 'dnsprefix1'
@@ -238,8 +238,8 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2023-02-01'
       }
     ]
     autoScalerProfile: {
-      scale-down-delay-after-add: '15m'
-      scan-interval: '20s'
+      'scale-down-delay-after-add': '15m'
+      'scan-interval': '20s'
     }
     diskEncryptionSetID: '/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
     dnsPrefix: 'dnsprefix1'
@@ -306,8 +306,8 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2023-02-01'
       }
     ]
     autoScalerProfile: {
-      scale-down-delay-after-add: '15m'
-      scan-interval: '20s'
+      'scale-down-delay-after-add': '15m'
+      'scan-interval': '20s'
     }
     diskEncryptionSetID: '/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
     dnsPrefix: 'dnsprefix1'
@@ -374,8 +374,8 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2023-02-01'
       }
     ]
     autoScalerProfile: {
-      scale-down-delay-after-add: '15m'
-      scan-interval: '20s'
+      'scale-down-delay-after-add': '15m'
+      'scan-interval': '20s'
     }
     diskEncryptionSetID: '/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
     dnsPrefix: 'dnsprefix1'
@@ -442,8 +442,8 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2023-02-01'
       }
     ]
     autoScalerProfile: {
-      scale-down-delay-after-add: '15m'
-      scan-interval: '20s'
+      'scale-down-delay-after-add': '15m'
+      'scan-interval': '20s'
     }
     diskEncryptionSetID: '/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
     dnsPrefix: 'dnsprefix1'
@@ -518,8 +518,8 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2023-02-01'
       }
     ]
     autoScalerProfile: {
-      scale-down-delay-after-add: '15m'
-      scan-interval: '20s'
+      'scale-down-delay-after-add': '15m'
+      'scan-interval': '20s'
     }
     diskEncryptionSetID: '/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
     dnsPrefix: 'dnsprefix1'
@@ -595,8 +595,8 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2023-02-01'
       }
     ]
     autoScalerProfile: {
-      scale-down-delay-after-add: '15m'
-      scan-interval: '20s'
+      'scale-down-delay-after-add': '15m'
+      'scan-interval': '20s'
     }
     diskEncryptionSetID: '/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
     dnsPrefix: 'dnsprefix1'
@@ -663,8 +663,8 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2023-02-01'
       }
     ]
     autoScalerProfile: {
-      scale-down-delay-after-add: '15m'
-      scan-interval: '20s'
+      'scale-down-delay-after-add': '15m'
+      'scan-interval': '20s'
     }
     diskEncryptionSetID: '/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
     dnsPrefix: 'dnsprefix1'
@@ -739,8 +739,8 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2023-02-01'
       }
     ]
     autoScalerProfile: {
-      scale-down-delay-after-add: '15m'
-      scan-interval: '20s'
+      'scale-down-delay-after-add': '15m'
+      'scan-interval': '20s'
     }
     diskEncryptionSetID: '/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
     dnsPrefix: 'dnsprefix1'
@@ -811,8 +811,8 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2023-02-01'
       }
     ]
     autoScalerProfile: {
-      scale-down-delay-after-add: '15m'
-      scan-interval: '20s'
+      'scale-down-delay-after-add': '15m'
+      'scan-interval': '20s'
     }
     diskEncryptionSetID: '/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
     dnsPrefix: 'dnsprefix1'
@@ -882,8 +882,8 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2023-02-01'
       disableRunCommand: true
     }
     autoScalerProfile: {
-      scale-down-delay-after-add: '15m'
-      scan-interval: '20s'
+      'scale-down-delay-after-add': '15m'
+      'scan-interval': '20s'
     }
     dnsPrefix: 'dnsprefix1'
     enablePodSecurityPolicy: true
@@ -1010,8 +1010,8 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2023-02-01'
       }
     ]
     autoScalerProfile: {
-      scale-down-delay-after-add: '15m'
-      scan-interval: '20s'
+      'scale-down-delay-after-add': '15m'
+      'scan-interval': '20s'
     }
     diskEncryptionSetID: '/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
     dnsPrefix: 'dnsprefix1'
@@ -1077,8 +1077,8 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2023-02-01'
       }
     ]
     autoScalerProfile: {
-      scale-down-delay-after-add: '15m'
-      scan-interval: '20s'
+      'scale-down-delay-after-add': '15m'
+      'scan-interval': '20s'
     }
     diskEncryptionSetID: '/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
     dnsPrefix: 'dnsprefix1'
@@ -1144,8 +1144,8 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2023-02-01'
       privateDNSZone: '/subscriptions/subid1/resourcegroups/rg1/providers/Microsoft.Network/privateDnsZones/privatelink.location1.azmk8s.io'
     }
     autoScalerProfile: {
-      scale-down-delay-after-add: '15m'
-      scan-interval: '20s'
+      'scale-down-delay-after-add': '15m'
+      'scan-interval': '20s'
     }
     enablePodSecurityPolicy: true
     enableRBAC: true
@@ -1215,8 +1215,8 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2023-02-01'
       enablePrivateClusterPublicFQDN: true
     }
     autoScalerProfile: {
-      scale-down-delay-after-add: '15m'
-      scan-interval: '20s'
+      'scale-down-delay-after-add': '15m'
+      'scan-interval': '20s'
     }
     dnsPrefix: 'dnsprefix1'
     enablePodSecurityPolicy: true
@@ -1290,8 +1290,8 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2023-02-01'
       }
     ]
     autoScalerProfile: {
-      scale-down-delay-after-add: '15m'
-      scan-interval: '20s'
+      'scale-down-delay-after-add': '15m'
+      'scan-interval': '20s'
     }
     diskEncryptionSetID: '/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
     dnsPrefix: 'dnsprefix1'
@@ -1344,7 +1344,7 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2023-02-01'
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/subid1/resourceGroups/rgName1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1: {
+      '/subscriptions/subid1/resourceGroups/rgName1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1': {
       }
     }
   }
@@ -1370,13 +1370,13 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2023-02-01'
       }
     ]
     autoScalerProfile: {
-      balance-similar-node-groups: 'true'
+      'balance-similar-node-groups': 'true'
       expander: 'priority'
-      max-node-provision-time: '15m'
-      new-pod-scale-up-delay: '1m'
-      scale-down-delay-after-add: '15m'
-      scan-interval: '20s'
-      skip-nodes-with-system-pods: 'false'
+      'max-node-provision-time': '15m'
+      'new-pod-scale-up-delay': '1m'
+      'scale-down-delay-after-add': '15m'
+      'scan-interval': '20s'
+      'skip-nodes-with-system-pods': 'false'
     }
     diskEncryptionSetID: '/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
     dnsPrefix: 'dnsprefix1'
@@ -1429,7 +1429,7 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2023-02-01'
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/subid1/resourceGroups/rgName1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1: {
+      '/subscriptions/subid1/resourceGroups/rgName1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1': {
       }
     }
   }
@@ -1455,13 +1455,13 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2023-02-01'
       }
     ]
     autoScalerProfile: {
-      balance-similar-node-groups: 'true'
+      'balance-similar-node-groups': 'true'
       expander: 'priority'
-      max-node-provision-time: '15m'
-      new-pod-scale-up-delay: '1m'
-      scale-down-delay-after-add: '15m'
-      scan-interval: '20s'
-      skip-nodes-with-system-pods: 'false'
+      'max-node-provision-time': '15m'
+      'new-pod-scale-up-delay': '1m'
+      'scale-down-delay-after-add': '15m'
+      'scan-interval': '20s'
+      'skip-nodes-with-system-pods': 'false'
     }
     diskEncryptionSetID: '/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
     dnsPrefix: 'dnsprefix1'
@@ -1518,7 +1518,7 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2023-02-01'
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/subid1/resourceGroups/rgName1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1: {
+      '/subscriptions/subid1/resourceGroups/rgName1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1': {
       }
     }
   }
@@ -1543,8 +1543,8 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2023-02-01'
       }
     ]
     autoScalerProfile: {
-      scale-down-delay-after-add: '15m'
-      scan-interval: '20s'
+      'scale-down-delay-after-add': '15m'
+      'scan-interval': '20s'
     }
     diskEncryptionSetID: '/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
     dnsPrefix: 'dnsprefix1'
@@ -1598,7 +1598,7 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2023-02-01'
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/subid1/resourceGroups/rgName1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1: {
+      '/subscriptions/subid1/resourceGroups/rgName1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1': {
       }
     }
   }
@@ -1623,8 +1623,8 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2023-02-01'
       }
     ]
     autoScalerProfile: {
-      scale-down-delay-after-add: '15m'
-      scan-interval: '20s'
+      'scale-down-delay-after-add': '15m'
+      'scan-interval': '20s'
     }
     diskEncryptionSetID: '/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
     dnsPrefix: 'dnsprefix1'

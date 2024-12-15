@@ -13,7 +13,7 @@ resource exampleResource 'Microsoft.NetworkAnalytics/dataProducts@2023-11-15' = 
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/subid/resourceGroups/resourceGroupName/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1: {
+      '/subscriptions/subid/resourceGroups/resourceGroupName/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1': {
       }
     }
   }

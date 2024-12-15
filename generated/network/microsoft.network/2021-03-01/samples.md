@@ -13,7 +13,7 @@ resource exampleResource 'Microsoft.Network/applicationGateways@2021-03-01' = {
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1: {
+      '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1': {
       }
     }
   }
@@ -3027,7 +3027,7 @@ resource exampleResource 'Microsoft.Network/networkVirtualAppliances@2021-03-01'
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/subid/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1: {
+      '/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1': {
       }
     }
   }

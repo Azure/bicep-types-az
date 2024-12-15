@@ -51,7 +51,7 @@ resource exampleResource 'Microsoft.Dashboard/grafana@2023-10-01-preview' = {
     }
     grafanaMajorVersion: '9'
     grafanaPlugins: {
-      sample-plugin-id: {
+      'sample-plugin-id': {
       }
     }
     publicNetworkAccess: 'Enabled'

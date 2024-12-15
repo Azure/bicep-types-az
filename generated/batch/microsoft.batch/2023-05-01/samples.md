@@ -60,7 +60,7 @@ resource exampleResource 'Microsoft.Batch/batchAccounts@2023-05-01' = {
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1: {
+      '/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1': {
       }
     }
   }
@@ -508,9 +508,9 @@ resource exampleResource 'Microsoft.Batch/batchAccounts/pools@2023-05-01' = {
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1: {
+      '/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1': {
       }
-      /subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id2: {
+      '/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id2': {
       }
     }
   }

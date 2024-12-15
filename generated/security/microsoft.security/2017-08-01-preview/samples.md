@@ -62,7 +62,7 @@ resource exampleResource 'Microsoft.Security/informationProtectionPolicies@2017-
   name: 'example'
   properties: {
     informationTypes: {
-      3bf35491-99b8-41f2-86d5-c1200a7df658: {
+      '3bf35491-99b8-41f2-86d5-c1200a7df658': {
         custom: true
         displayName: 'Custom'
         enabled: true
@@ -76,7 +76,7 @@ resource exampleResource 'Microsoft.Security/informationProtectionPolicies@2017-
         order: 1400
         recommendedLabelId: '7aa516c7-5a53-4857-bc6e-6808c6acd542'
       }
-      7fb9419d-2473-4ad8-8e11-b25cc8cf6a07: {
+      '7fb9419d-2473-4ad8-8e11-b25cc8cf6a07': {
         custom: false
         displayName: 'Networking'
         enabled: true
@@ -92,17 +92,17 @@ resource exampleResource 'Microsoft.Security/informationProtectionPolicies@2017-
       }
     }
     labels: {
-      1345da73-bc5a-4a8f-b7dd-3820eb713da8: {
+      '1345da73-bc5a-4a8f-b7dd-3820eb713da8': {
         displayName: 'Public'
         enabled: true
         order: 100
       }
-      575739d2-3d53-4df0-9042-4c7772d5c7b1: {
+      '575739d2-3d53-4df0-9042-4c7772d5c7b1': {
         displayName: 'Confidential'
         enabled: true
         order: 300
       }
-      7aa516c7-5a53-4857-bc6e-6808c6acd542: {
+      '7aa516c7-5a53-4857-bc6e-6808c6acd542': {
         displayName: 'General'
         enabled: true
         order: 200

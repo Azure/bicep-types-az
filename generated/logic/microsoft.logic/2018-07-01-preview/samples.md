@@ -340,7 +340,7 @@ resource exampleResource 'Microsoft.Logic/workflows@2018-07-01-preview' = {
   location: 'brazilsouth'
   properties: {
     definition: {
-      $schema: 'https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#'
+      '$schema': 'https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#'
       actions: {
         Find_pet_by_ID: {
           type: 'ApiConnection'
@@ -361,7 +361,7 @@ resource exampleResource 'Microsoft.Logic/workflows@2018-07-01-preview' = {
       outputs: {
       }
       parameters: {
-        $connections: {
+        '$connections': {
           type: 'Object'
           defaultValue: {
           }
@@ -384,9 +384,9 @@ resource exampleResource 'Microsoft.Logic/workflows@2018-07-01-preview' = {
       id: '/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/test-resource-group/providers/Microsoft.Logic/integrationAccounts/test-integration-account'
     }
     parameters: {
-      $connections: {
+      '$connections': {
         value: {
-          test-custom-connector: {
+          'test-custom-connector': {
             connectionId: '/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/test-resource-group/providers/Microsoft.Web/connections/test-custom-connector'
             connectionName: 'test-custom-connector'
             id: '/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/providers/Microsoft.Web/locations/brazilsouth/managedApis/test-custom-connector'

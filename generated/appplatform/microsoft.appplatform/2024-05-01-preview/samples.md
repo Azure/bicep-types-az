@@ -158,11 +158,11 @@ resource exampleResource 'Microsoft.AppPlatform/Spring/apms@2024-05-01-preview' 
   properties: {
     type: 'ApplicationInsights'
     properties: {
-      any-string: 'any-string'
-      sampling-rate: '12.0'
+      'any-string': 'any-string'
+      'sampling-rate': '12.0'
     }
     secrets: {
-      connection-string: 'XXXXXXXXXXXXXXXXX=XXXXXXXXXXXXX-XXXXXXXXXXXXXXXXXXX;XXXXXXXXXXXXXXXXX=XXXXXXXXXXXXXXXXXXX'
+      'connection-string': 'XXXXXXXXXXXXXXXXX=XXXXXXXXXXXXX-XXXXXXXXXXXXXXXXXXX;XXXXXXXXXXXXXXXXX=XXXXXXXXXXXXXXXXXXX'
     }
   }
 }
@@ -248,13 +248,13 @@ resource exampleResource 'Microsoft.AppPlatform/Spring/apps@2024-05-01-preview' 
     tenantId: {
     }
     userAssignedIdentities: {
-      /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/samplegroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1: {
+      '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/samplegroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1': {
         clientId: {
         }
         principalId: {
         }
       }
-      /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/samplegroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id2: {
+      '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/samplegroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id2': {
         clientId: {
         }
         principalId: {
@@ -328,13 +328,13 @@ resource exampleResource 'Microsoft.AppPlatform/Spring/apps@2024-05-01-preview' 
     tenantId: {
     }
     userAssignedIdentities: {
-      /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/samplegroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1: {
+      '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/samplegroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1': {
         clientId: {
         }
         principalId: {
         }
       }
-      /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/samplegroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id2: {
+      '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/samplegroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id2': {
         clientId: {
         }
         principalId: {
@@ -637,11 +637,11 @@ resource exampleResource 'Microsoft.AppPlatform/Spring/buildServices/builders/bu
     launchProperties: {
       properties: {
         abc: 'def'
-        any-string: 'any-string'
-        sampling-rate: '12.0'
+        'any-string': 'any-string'
+        'sampling-rate': '12.0'
       }
       secrets: {
-        connection-string: 'XXXXXXXXXXXXXXXXX=XXXXXXXXXXXXX-XXXXXXXXXXXXXXXXXXX;XXXXXXXXXXXXXXXXX=XXXXXXXXXXXXXXXXXXX'
+        'connection-string': 'XXXXXXXXXXXXXXXXX=XXXXXXXXXXXXX-XXXXXXXXXXXXXXXXXXX;XXXXXXXXXXXXXXXXX=XXXXXXXXXXXXXXXXXXX'
       }
     }
   }

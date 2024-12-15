@@ -4,37 +4,6 @@
 > The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
 
 
-## microsoft.insights/alertrules
-
-Create or update an alert rule
-```bicep
-resource exampleResource 'Microsoft.Insights/alertrules@2016-03-01' = {
-  name: 'example'
-  location: 'West US'
-  properties: {
-    name: 'chiricutin'
-    description: 'Pura Vida'
-    actions: [
-    ]
-    condition: {
-      dataSource: {
-        metricName: 'Requests'
-        odata.type: 'Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource'
-        resourceUri: '/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.Web/sites/leoalerttest'
-      }
-      odata.type: 'Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition'
-      operator: 'GreaterThan'
-      threshold: 3
-      timeAggregation: 'Total'
-      windowSize: 'PT5M'
-    }
-    isEnabled: true
-  }
-  tags: {
-  }
-}
-```
-
 ## microsoft.insights/logprofiles
 
 Create or update a log profile

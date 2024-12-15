@@ -168,7 +168,7 @@ resource exampleResource 'Microsoft.ApiManagement/service@2021-12-01-preview' = 
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1: {
+      '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1': {
       }
     }
   }
@@ -249,7 +249,7 @@ resource exampleResource 'Microsoft.ApiManagement/service@2021-12-01-preview' = 
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/subid/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/apimService1: {
+      '/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/apimService1': {
       }
     }
   }
@@ -827,7 +827,7 @@ resource exampleResource 'Microsoft.ApiManagement/service/backends@2021-12-01-pr
         scheme: 'Basic'
       }
       header: {
-        x-my-1: [
+        'x-my-1': [
           'val1'
           'val2'
         ]
@@ -1432,8 +1432,8 @@ resource exampleResource 'Microsoft.ApiManagement/service/schemas@2021-12-01-pre
     description: 'sample schema description'
     document: {
       type: 'object'
-      $id: 'https://example.com/person.schema.json'
-      $schema: 'https://json-schema.org/draft/2020-12/schema'
+      '$id': 'https://example.com/person.schema.json'
+      '$schema': 'https://json-schema.org/draft/2020-12/schema'
       properties: {
         age: {
           type: 'integer'

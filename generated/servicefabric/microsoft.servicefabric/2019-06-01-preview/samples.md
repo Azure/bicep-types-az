@@ -97,7 +97,7 @@ resource exampleResource 'Microsoft.ServiceFabric/clusters@2019-06-01-preview' =
     upgradeDescription: {
       deltaHealthPolicy: {
         applicationDeltaHealthPolicies: {
-          fabric:/myApp1: {
+          'fabric:/myApp1': {
             defaultServiceTypeDeltaHealthPolicy: {
               maxPercentDeltaUnhealthyServices: 0
             }
@@ -118,7 +118,7 @@ resource exampleResource 'Microsoft.ServiceFabric/clusters@2019-06-01-preview' =
       healthCheckWaitDuration: '00:00:30'
       healthPolicy: {
         applicationHealthPolicies: {
-          fabric:/myApp1: {
+          'fabric:/myApp1': {
             defaultServiceTypeHealthPolicy: {
               maxPercentUnhealthyServices: 0
             }

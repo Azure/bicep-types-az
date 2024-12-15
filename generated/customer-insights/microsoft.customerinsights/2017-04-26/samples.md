@@ -149,7 +149,7 @@ resource exampleResource 'Microsoft.CustomerInsights/hubs/kpi@2017-04-26' = {
   name: 'example'
   properties: {
     description: {
-      en-us: 'Kpi Description'
+      'en-us': 'Kpi Description'
     }
     aliases: [
       {
@@ -159,7 +159,7 @@ resource exampleResource 'Microsoft.CustomerInsights/hubs/kpi@2017-04-26' = {
     ]
     calculationWindow: 'Day'
     displayName: {
-      en-us: 'Kpi DisplayName'
+      'en-us': 'Kpi DisplayName'
     }
     entityType: 'Profile'
     entityTypeName: 'testProfile2327128'
@@ -187,10 +187,10 @@ resource exampleResource 'Microsoft.CustomerInsights/hubs/links@2017-04-26' = {
   name: 'example'
   properties: {
     description: {
-      en-us: 'Link Description'
+      'en-us': 'Link Description'
     }
     displayName: {
-      en-us: 'Link DisplayName'
+      'en-us': 'Link DisplayName'
     }
     linkName: 'linkTest4806'
     mappings: [
@@ -223,11 +223,11 @@ resource exampleResource 'Microsoft.CustomerInsights/hubs/predictions@2017-04-26
   name: 'example'
   properties: {
     description: {
-      en-us: 'sdktest'
+      'en-us': 'sdktest'
     }
     autoAnalyze: true
     displayName: {
-      en-us: 'sdktest'
+      'en-us': 'sdktest'
     }
     grades: [
     ]
@@ -326,10 +326,10 @@ resource exampleResource 'Microsoft.CustomerInsights/hubs/relationshipLinks@2017
   name: 'example'
   properties: {
     description: {
-      en-us: 'Link Description'
+      'en-us': 'Link Description'
     }
     displayName: {
-      en-us: 'Link DisplayName'
+      'en-us': 'Link DisplayName'
     }
     interactionType: 'testInteraction4332'
     linkName: 'Somelink'
@@ -359,11 +359,11 @@ resource exampleResource 'Microsoft.CustomerInsights/hubs/relationships@2017-04-
   name: 'example'
   properties: {
     description: {
-      en-us: 'Relationship Description'
+      'en-us': 'Relationship Description'
     }
     cardinality: 'OneToOne'
     displayName: {
-      en-us: 'Relationship DisplayName'
+      'en-us': 'Relationship DisplayName'
     }
     fields: [
     ]

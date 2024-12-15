@@ -56,7 +56,7 @@ resource exampleResource 'Microsoft.Compute/diskEncryptionSets@2024-03-02' = {
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}: {
+      '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}': {
       }
     }
   }

@@ -21,7 +21,7 @@ resource exampleResource 'Microsoft.DigitalTwins/digitalTwinsInstances@2022-10-3
   identity: {
     type: 'SystemAssigned,UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/50016170-c839-41ba-a724-51e9df440b9e/resourceGroups/testrg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/testidentity: {
+      '/subscriptions/50016170-c839-41ba-a724-51e9df440b9e/resourceGroups/testrg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/testidentity': {
       }
     }
   }

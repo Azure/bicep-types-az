@@ -5865,6 +5865,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## ScriptActivityTypeProperties
 ### Properties
 * **logSettings**: [ScriptActivityTypePropertiesLogSettings](#scriptactivitytypepropertieslogsettings): Log settings of script activity.
+* **returnMultistatementResult**: any: Enable to retrieve result sets from multiple SQL statements and the number of rows affected by the DML statement. Supported connector: SnowflakeV2. Type: boolean (or Expression with resultType boolean).
 * **scriptBlockExecutionTimeout**: any: ScriptBlock execution timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
 * **scripts**: [ScriptActivityScriptBlock](#scriptactivityscriptblock)[]: Array of script blocks. Type: array.
 

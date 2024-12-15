@@ -110,7 +110,7 @@ resource exampleResource 'Microsoft.Network/frontDoors@2019-04-01' = {
             '/*'
           ]
           routeConfiguration: {
-            @odata.type: '#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration'
+            '@odata.type': '#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration'
             backendPool: {
               id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/backendPools/backendPool1'
             }

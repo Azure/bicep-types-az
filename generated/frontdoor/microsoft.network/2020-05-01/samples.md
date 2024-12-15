@@ -118,7 +118,7 @@ resource exampleResource 'Microsoft.Network/frontDoors@2020-05-01' = {
             '/*'
           ]
           routeConfiguration: {
-            @odata.type: '#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration'
+            '@odata.type': '#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration'
             backendPool: {
               id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/backendPools/backendPool1'
             }
@@ -153,7 +153,7 @@ resource exampleResource 'Microsoft.Network/frontDoors/rulesEngines@2020-05-01' 
         name: 'Rule1'
         action: {
           routeConfigurationOverride: {
-            @odata.type: '#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration'
+            '@odata.type': '#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration'
             customFragment: 'fragment'
             customHost: 'www.bing.com'
             customPath: '/api'
@@ -203,7 +203,7 @@ resource exampleResource 'Microsoft.Network/frontDoors/rulesEngines@2020-05-01' 
         name: 'Rule3'
         action: {
           routeConfigurationOverride: {
-            @odata.type: '#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration'
+            '@odata.type': '#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration'
             backendPool: {
               id: '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/backendPools/backendPool1'
             }

@@ -16,7 +16,7 @@ warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this 
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'AdvisorProperties' (1 differences):
   - properties.recommendedActions.$ref: "#/components/schemas/schemas:121" => "#/components/schemas/schemas:2708"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'RecommendedAction' (4 differences):
-  - allOf: [{"$ref":"#/components/schemas/schemas:3568"}] => <none>
+  - allOf: [{"$ref":"#/components/schemas/schemas:3576"}] => <none>
   - properties.id: <none> => {"$ref":"#/components/schemas/schemas:2712","description":"Resource ID.","readOnly":true}
   - properties.name: <none> => {"$ref":"#/components/schemas/schemas:2713","description":"Resource name.","readOnly":true}
   - properties.type: <none> => {"$ref":"#/components/schemas/schemas:2714","description":"Resource type.","readOnly":true}

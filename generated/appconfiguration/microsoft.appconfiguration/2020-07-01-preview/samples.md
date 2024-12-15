@@ -27,7 +27,7 @@ resource exampleResource 'Microsoft.AppConfiguration/configurationStores@2020-07
   identity: {
     type: 'SystemAssigned, UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/c80fb759-c965-4c6a-9110-9b2b2d038882/resourcegroups/myResourceGroup1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2: {
+      '/subscriptions/c80fb759-c965-4c6a-9110-9b2b2d038882/resourcegroups/myResourceGroup1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2': {
       }
     }
   }

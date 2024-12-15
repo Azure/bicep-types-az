@@ -96,7 +96,7 @@ resource exampleResource 'Microsoft.Devices/IotHubs@2023-06-30' = {
       ]
     }
     storageEndpoints: {
-      $default: {
+      '$default': {
         connectionString: ''
         containerName: ''
         sasTtlAsIso8601: 'PT1H'
@@ -187,7 +187,7 @@ resource exampleResource 'Microsoft.Devices/IotHubs@2023-06-30' = {
       ]
     }
     storageEndpoints: {
-      $default: {
+      '$default': {
         connectionString: ''
         containerName: ''
         sasTtlAsIso8601: 'PT1H'

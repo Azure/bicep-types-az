@@ -27,8 +27,8 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2020-07-01'
       }
     ]
     autoScalerProfile: {
-      scale-down-delay-after-add: '15m'
-      scan-interval: '20s'
+      'scale-down-delay-after-add': '15m'
+      'scan-interval': '20s'
     }
     diskEncryptionSetID: '/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
     dnsPrefix: 'dnsprefix1'
@@ -103,8 +103,8 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2020-07-01'
       }
     ]
     autoScalerProfile: {
-      scale-down-delay-after-add: '15m'
-      scan-interval: '20s'
+      'scale-down-delay-after-add': '15m'
+      'scan-interval': '20s'
     }
     diskEncryptionSetID: '/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
     dnsPrefix: 'dnsprefix1'
@@ -157,7 +157,7 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2020-07-01'
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/subid1/resourceGroups/rgName1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1: {
+      '/subscriptions/subid1/resourceGroups/rgName1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1': {
       }
     }
   }
@@ -182,8 +182,8 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2020-07-01'
       }
     ]
     autoScalerProfile: {
-      scale-down-delay-after-add: '15m'
-      scan-interval: '20s'
+      'scale-down-delay-after-add': '15m'
+      'scan-interval': '20s'
     }
     diskEncryptionSetID: '/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
     dnsPrefix: 'dnsprefix1'
@@ -236,7 +236,7 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2020-07-01'
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/subid1/resourceGroups/rgName1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1: {
+      '/subscriptions/subid1/resourceGroups/rgName1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1': {
       }
     }
   }
@@ -261,8 +261,8 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2020-07-01'
       }
     ]
     autoScalerProfile: {
-      scale-down-delay-after-add: '15m'
-      scan-interval: '20s'
+      'scale-down-delay-after-add': '15m'
+      'scan-interval': '20s'
     }
     diskEncryptionSetID: '/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
     dnsPrefix: 'dnsprefix1'

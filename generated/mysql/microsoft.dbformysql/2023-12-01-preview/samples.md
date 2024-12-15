@@ -81,7 +81,7 @@ resource exampleResource 'Microsoft.DBforMySQL/flexibleServers@2023-12-01-previe
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testrg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/test-identity: {
+      '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testrg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/test-identity': {
       }
     }
   }

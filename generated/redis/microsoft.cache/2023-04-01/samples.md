@@ -15,7 +15,7 @@ resource exampleResource 'Microsoft.Cache/redis@2023-04-01' = {
     enableNonSslPort: true
     minimumTlsVersion: '1.2'
     redisConfiguration: {
-      maxmemory-policy: 'allkeys-lru'
+      'maxmemory-policy': 'allkeys-lru'
     }
     redisVersion: '4'
     replicasPerPrimary: 2
@@ -43,7 +43,7 @@ resource exampleResource 'Microsoft.Cache/redis@2023-04-01' = {
     enableNonSslPort: true
     minimumTlsVersion: '1.2'
     redisConfiguration: {
-      maxmemory-policy: 'allkeys-lru'
+      'maxmemory-policy': 'allkeys-lru'
     }
     replicasPerPrimary: 2
     shardCount: 2
@@ -70,7 +70,7 @@ resource exampleResource 'Microsoft.Cache/redis@2023-04-01' = {
     enableNonSslPort: true
     minimumTlsVersion: '1.2'
     redisConfiguration: {
-      maxmemory-policy: 'allkeys-lru'
+      'maxmemory-policy': 'allkeys-lru'
     }
     redisVersion: 'Latest'
     replicasPerPrimary: 2

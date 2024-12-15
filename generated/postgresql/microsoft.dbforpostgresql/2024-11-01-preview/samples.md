@@ -49,9 +49,9 @@ resource exampleResource 'Microsoft.DBforPostgreSQL/flexibleServers@2024-11-01-p
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testresourcegroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/test-geo-usermanagedidentity: {
+      '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testresourcegroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/test-geo-usermanagedidentity': {
       }
-      /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testresourcegroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/test-usermanagedidentity: {
+      '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testresourcegroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/test-usermanagedidentity': {
       }
     }
   }
@@ -175,7 +175,7 @@ resource exampleResource 'Microsoft.DBforPostgreSQL/flexibleServers@2024-11-01-p
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testresourcegroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/test-usermanagedidentity: {
+      '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testresourcegroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/test-usermanagedidentity': {
       }
     }
   }
@@ -215,7 +215,7 @@ resource exampleResource 'Microsoft.DBforPostgreSQL/flexibleServers@2024-11-01-p
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testresourcegroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/test-usermanagedidentity: {
+      '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testresourcegroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/test-usermanagedidentity': {
       }
     }
   }

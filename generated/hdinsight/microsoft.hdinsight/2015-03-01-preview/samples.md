@@ -14,9 +14,9 @@ resource exampleResource 'Microsoft.HDInsight/clusters@2015-03-01-preview' = {
     clusterDefinition: {
       configurations: {
         gateway: {
-          restAuthCredential.isEnabled: true
-          restAuthCredential.password: '**********'
-          restAuthCredential.username: 'admin'
+          'restAuthCredential.isEnabled': true
+          'restAuthCredential.password': '**********'
+          'restAuthCredential.username': 'admin'
         }
       }
       kind: 'hadoop'
@@ -94,9 +94,9 @@ resource exampleResource 'Microsoft.HDInsight/clusters@2015-03-01-preview' = {
     clusterDefinition: {
       configurations: {
         gateway: {
-          restAuthCredential.isEnabled: true
-          restAuthCredential.password: '**********'
-          restAuthCredential.username: 'admin'
+          'restAuthCredential.isEnabled': true
+          'restAuthCredential.password': '**********'
+          'restAuthCredential.username': 'admin'
         }
       }
       kind: 'Hadoop'
@@ -172,9 +172,9 @@ resource exampleResource 'Microsoft.HDInsight/clusters@2015-03-01-preview' = {
     clusterDefinition: {
       configurations: {
         gateway: {
-          restAuthCredential.isEnabled: true
-          restAuthCredential.password: '**********'
-          restAuthCredential.username: 'admin'
+          'restAuthCredential.isEnabled': true
+          'restAuthCredential.password': '**********'
+          'restAuthCredential.username': 'admin'
         }
       }
       kind: 'Hadoop'
@@ -250,9 +250,9 @@ resource exampleResource 'Microsoft.HDInsight/clusters@2015-03-01-preview' = {
     clusterDefinition: {
       configurations: {
         gateway: {
-          restAuthCredential.isEnabled: true
-          restAuthCredential.password: '**********'
-          restAuthCredential.username: 'admin'
+          'restAuthCredential.isEnabled': true
+          'restAuthCredential.password': '**********'
+          'restAuthCredential.username': 'admin'
         }
       }
       kind: 'hadoop'
@@ -337,9 +337,9 @@ resource exampleResource 'Microsoft.HDInsight/clusters@2015-03-01-preview' = {
     clusterDefinition: {
       configurations: {
         gateway: {
-          restAuthCredential.isEnabled: true
-          restAuthCredential.password: '**********'
-          restAuthCredential.username: 'admin'
+          'restAuthCredential.isEnabled': true
+          'restAuthCredential.password': '**********'
+          'restAuthCredential.username': 'admin'
         }
       }
       kind: 'Hadoop'
@@ -413,9 +413,9 @@ resource exampleResource 'Microsoft.HDInsight/clusters@2015-03-01-preview' = {
     clusterDefinition: {
       configurations: {
         gateway: {
-          restAuthCredential.isEnabled: 'true'
-          restAuthCredential.password: '**********'
-          restAuthCredential.username: 'admin'
+          'restAuthCredential.isEnabled': 'true'
+          'restAuthCredential.password': '**********'
+          'restAuthCredential.username': 'admin'
         }
       }
       kind: 'Hadoop'
@@ -494,9 +494,9 @@ resource exampleResource 'Microsoft.HDInsight/clusters@2015-03-01-preview' = {
     clusterDefinition: {
       configurations: {
         gateway: {
-          restAuthCredential.isEnabled: 'true'
-          restAuthCredential.password: '**********'
-          restAuthCredential.username: 'admin'
+          'restAuthCredential.isEnabled': 'true'
+          'restAuthCredential.password': '**********'
+          'restAuthCredential.username': 'admin'
         }
       }
       kind: 'Hadoop'
@@ -575,9 +575,9 @@ resource exampleResource 'Microsoft.HDInsight/clusters@2015-03-01-preview' = {
     clusterDefinition: {
       configurations: {
         gateway: {
-          restAuthCredential.isEnabled: true
-          restAuthCredential.password: '**********'
-          restAuthCredential.username: 'admin'
+          'restAuthCredential.isEnabled': true
+          'restAuthCredential.password': '**********'
+          'restAuthCredential.username': 'admin'
         }
       }
       kind: 'Hadoop'
@@ -665,9 +665,9 @@ resource exampleResource 'Microsoft.HDInsight/clusters@2015-03-01-preview' = {
       }
       configurations: {
         gateway: {
-          restAuthCredential.isEnabled: true
-          restAuthCredential.password: '**********'
-          restAuthCredential.username: 'admin'
+          'restAuthCredential.isEnabled': true
+          'restAuthCredential.password': '**********'
+          'restAuthCredential.username': 'admin'
         }
       }
       kind: 'hadoop'
@@ -782,9 +782,9 @@ resource exampleResource 'Microsoft.HDInsight/clusters@2015-03-01-preview' = {
       }
       configurations: {
         gateway: {
-          restAuthCredential.isEnabled: true
-          restAuthCredential.password: '**********'
-          restAuthCredential.username: 'admin'
+          'restAuthCredential.isEnabled': true
+          'restAuthCredential.password': '**********'
+          'restAuthCredential.username': 'admin'
         }
       }
       kind: 'kafka'
@@ -881,9 +881,9 @@ resource exampleResource 'Microsoft.HDInsight/clusters@2015-03-01-preview' = {
     clusterDefinition: {
       configurations: {
         gateway: {
-          restAuthCredential.isEnabled: true
-          restAuthCredential.password: '**********'
-          restAuthCredential.username: 'admin'
+          'restAuthCredential.isEnabled': true
+          'restAuthCredential.password': '**********'
+          'restAuthCredential.username': 'admin'
         }
       }
       kind: 'Hadoop'
@@ -1017,9 +1017,9 @@ resource exampleResource 'Microsoft.HDInsight/clusters@2015-03-01-preview' = {
       }
       configurations: {
         gateway: {
-          restAuthCredential.isEnabled: true
-          restAuthCredential.password: '**********'
-          restAuthCredential.username: 'admin'
+          'restAuthCredential.isEnabled': true
+          'restAuthCredential.password': '**********'
+          'restAuthCredential.username': 'admin'
         }
       }
       kind: 'Spark'

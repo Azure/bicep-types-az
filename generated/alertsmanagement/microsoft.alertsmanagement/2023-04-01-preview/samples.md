@@ -18,7 +18,7 @@ resource exampleResource 'Microsoft.AlertsManagement/tenantActivityLogAlerts@202
         {
           actionGroupId: '/providers/Microsoft.Management/ManagementGroups/72f988bf-86f1-41af-91ab-2d7cd011db47/providers/Microsoft.Insights/actionGroups/SampleActionGroup'
           actionProperties: {
-            Email.Title: 'my email title'
+            'Email.Title': 'my email title'
           }
           webhookProperties: {
             sampleWebhookProperty: 'SamplePropertyValue'
