@@ -33,9 +33,9 @@ resource exampleResource 'Microsoft.Media/mediaservices@2021-11-01' = {
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contosorg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1: {
+      '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contosorg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1': {
       }
-      /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contosorg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id2: {
+      '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contosorg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id2': {
       }
     }
   }
@@ -212,7 +212,7 @@ resource exampleResource 'Microsoft.Media/mediaServices/assets/tracks@2021-11-01
   name: 'example'
   properties: {
     track: {
-      @odata.type: '#Microsoft.Media.TextTrack'
+      '@odata.type': '#Microsoft.Media.TextTrack'
       displayName: 'A new track'
       fileName: 'text3.ttml'
       playerVisibility: 'Visible'
@@ -234,14 +234,14 @@ resource exampleResource 'Microsoft.Media/mediaServices/contentKeyPolicies@2021-
       {
         name: 'ClearKeyOption'
         configuration: {
-          @odata.type: '#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration'
+          '@odata.type': '#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration'
         }
         restriction: {
-          @odata.type: '#Microsoft.Media.ContentKeyPolicyTokenRestriction'
+          '@odata.type': '#Microsoft.Media.ContentKeyPolicyTokenRestriction'
           audience: 'urn:audience'
           issuer: 'urn:issuer'
           primaryVerificationKey: {
-            @odata.type: '#Microsoft.Media.ContentKeyPolicySymmetricTokenKey'
+            '@odata.type': '#Microsoft.Media.ContentKeyPolicySymmetricTokenKey'
             keyValue: 'AAAAAAAAAAAAAAAAAAAAAA=='
           }
           restrictionTokenType: 'Swt'
@@ -263,14 +263,14 @@ resource exampleResource 'Microsoft.Media/mediaServices/contentKeyPolicies@2021-
       {
         name: 'ClearKeyOption'
         configuration: {
-          @odata.type: '#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration'
+          '@odata.type': '#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration'
         }
         restriction: {
-          @odata.type: '#Microsoft.Media.ContentKeyPolicyTokenRestriction'
+          '@odata.type': '#Microsoft.Media.ContentKeyPolicyTokenRestriction'
           audience: 'urn:audience'
           issuer: 'urn:issuer'
           primaryVerificationKey: {
-            @odata.type: '#Microsoft.Media.ContentKeyPolicySymmetricTokenKey'
+            '@odata.type': '#Microsoft.Media.ContentKeyPolicySymmetricTokenKey'
             keyValue: 'AAAAAAAAAAAAAAAAAAAAAA=='
           }
           restrictionTokenType: 'Swt'
@@ -279,11 +279,11 @@ resource exampleResource 'Microsoft.Media/mediaServices/contentKeyPolicies@2021-
       {
         name: 'widevineoption'
         configuration: {
-          @odata.type: '#Microsoft.Media.ContentKeyPolicyWidevineConfiguration'
+          '@odata.type': '#Microsoft.Media.ContentKeyPolicyWidevineConfiguration'
           widevineTemplate: '{"allowed_track_types":"SD_HD","content_key_specs":[{"track_type":"SD","security_level":1,"required_output_protection":{"hdcp":"HDCP_V2"}}],"policy_overrides":{"can_play":true,"can_persist":true,"can_renew":false}}'
         }
         restriction: {
-          @odata.type: '#Microsoft.Media.ContentKeyPolicyOpenRestriction'
+          '@odata.type': '#Microsoft.Media.ContentKeyPolicyOpenRestriction'
         }
       }
     ]
@@ -302,13 +302,13 @@ resource exampleResource 'Microsoft.Media/mediaServices/contentKeyPolicies@2021-
       {
         name: 'ArmPolicyOptionName'
         configuration: {
-          @odata.type: '#Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration'
+          '@odata.type': '#Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration'
           licenses: [
             {
               allowTestDevices: true
               beginDate: '2017-10-16T18:22:53.46Z'
               contentKeyLocation: {
-                @odata.type: '#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeader'
+                '@odata.type': '#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeader'
               }
               contentType: 'UltraVioletDownload'
               licenseType: 'Persistent'
@@ -323,7 +323,7 @@ resource exampleResource 'Microsoft.Media/mediaServices/contentKeyPolicies@2021-
           ]
         }
         restriction: {
-          @odata.type: '#Microsoft.Media.ContentKeyPolicyOpenRestriction'
+          '@odata.type': '#Microsoft.Media.ContentKeyPolicyOpenRestriction'
         }
       }
     ]
@@ -342,21 +342,21 @@ resource exampleResource 'Microsoft.Media/mediaServices/contentKeyPolicies@2021-
       {
         name: 'widevineoption'
         configuration: {
-          @odata.type: '#Microsoft.Media.ContentKeyPolicyWidevineConfiguration'
+          '@odata.type': '#Microsoft.Media.ContentKeyPolicyWidevineConfiguration'
           widevineTemplate: '{"allowed_track_types":"SD_HD","content_key_specs":[{"track_type":"SD","security_level":1,"required_output_protection":{"hdcp":"HDCP_V2"}}],"policy_overrides":{"can_play":true,"can_persist":true,"can_renew":false}}'
         }
         restriction: {
-          @odata.type: '#Microsoft.Media.ContentKeyPolicyTokenRestriction'
+          '@odata.type': '#Microsoft.Media.ContentKeyPolicyTokenRestriction'
           alternateVerificationKeys: [
             {
-              @odata.type: '#Microsoft.Media.ContentKeyPolicySymmetricTokenKey'
+              '@odata.type': '#Microsoft.Media.ContentKeyPolicySymmetricTokenKey'
               keyValue: 'AAAAAAAAAAAAAAAAAAAAAA=='
             }
           ]
           audience: 'urn:audience'
           issuer: 'urn:issuer'
           primaryVerificationKey: {
-            @odata.type: '#Microsoft.Media.ContentKeyPolicyRsaTokenKey'
+            '@odata.type': '#Microsoft.Media.ContentKeyPolicyRsaTokenKey'
             exponent: 'AQAB'
             modulus: 'AQAD'
           }
@@ -760,7 +760,7 @@ resource exampleResource 'Microsoft.Media/mediaServices/transforms@2021-11-01' =
     outputs: [
       {
         preset: {
-          @odata.type: '#Microsoft.Media.BuiltInStandardEncoderPreset'
+          '@odata.type': '#Microsoft.Media.BuiltInStandardEncoderPreset'
           presetName: 'AdaptiveStreaming'
         }
       }
@@ -778,16 +778,16 @@ resource exampleResource 'Microsoft.Media/mediaServices/transforms/jobs@2021-11-
   name: 'example'
   properties: {
     correlationData: {
-      Key 2: 'Value 2'
+      'Key 2': 'Value 2'
       key1: 'value1'
     }
     input: {
-      @odata.type: '#Microsoft.Media.JobInputAsset'
+      '@odata.type': '#Microsoft.Media.JobInputAsset'
       assetName: 'job1-InputAsset'
     }
     outputs: [
       {
-        @odata.type: '#Microsoft.Media.JobOutputAsset'
+        '@odata.type': '#Microsoft.Media.JobOutputAsset'
         assetName: 'job1-OutputAsset'
       }
     ]

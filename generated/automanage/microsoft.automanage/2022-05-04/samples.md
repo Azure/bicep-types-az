@@ -25,15 +25,15 @@ resource exampleResource 'Microsoft.Automanage/configurationProfiles@2022-05-04'
   location: 'East US'
   properties: {
     configuration: {
-      Antimalware/Enable: false
-      AzureSecurityCenter/Enable: true
-      Backup/Enable: false
-      BootDiagnostics/Enable: true
-      ChangeTrackingAndInventory/Enable: true
-      GuestConfiguration/Enable: true
-      LogAnalytics/Enable: true
-      UpdateManagement/Enable: true
-      VMInsights/Enable: true
+      'Antimalware/Enable': false
+      'AzureSecurityCenter/Enable': true
+      'Backup/Enable': false
+      'BootDiagnostics/Enable': true
+      'ChangeTrackingAndInventory/Enable': true
+      'GuestConfiguration/Enable': true
+      'LogAnalytics/Enable': true
+      'UpdateManagement/Enable': true
+      'VMInsights/Enable': true
     }
   }
   tags: {
@@ -52,15 +52,15 @@ resource exampleResource 'Microsoft.Automanage/configurationProfiles/versions@20
   location: 'East US'
   properties: {
     configuration: {
-      Antimalware/Enable: false
-      AzureSecurityCenter/Enable: true
-      Backup/Enable: false
-      BootDiagnostics/Enable: true
-      ChangeTrackingAndInventory/Enable: true
-      GuestConfiguration/Enable: true
-      LogAnalytics/Enable: true
-      UpdateManagement/Enable: true
-      VMInsights/Enable: true
+      'Antimalware/Enable': false
+      'AzureSecurityCenter/Enable': true
+      'Backup/Enable': false
+      'BootDiagnostics/Enable': true
+      'ChangeTrackingAndInventory/Enable': true
+      'GuestConfiguration/Enable': true
+      'LogAnalytics/Enable': true
+      'UpdateManagement/Enable': true
+      'VMInsights/Enable': true
     }
   }
   tags: {

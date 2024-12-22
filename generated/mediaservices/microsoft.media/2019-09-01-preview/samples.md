@@ -16,7 +16,7 @@ resource exampleResource 'Microsoft.Media/mediaServices/mediaGraphs@2019-09-01-p
     sinks: [
       {
         name: 'AssetSink'
-        @odata.type: '#Microsoft.Media.MediaGraphAssetSink'
+        '@odata.type': '#Microsoft.Media.MediaGraphAssetSink'
         assetName: 'SampleAsset'
         inputs: [
           'rtspSource'
@@ -26,7 +26,7 @@ resource exampleResource 'Microsoft.Media/mediaServices/mediaGraphs@2019-09-01-p
     sources: [
       {
         name: 'rtspSource'
-        @odata.type: '#Microsoft.Media.MediaGraphRtspSource'
+        '@odata.type': '#Microsoft.Media.MediaGraphRtspSource'
         credentials: {
           password: 'examplepassword'
           username: 'exampleusername'

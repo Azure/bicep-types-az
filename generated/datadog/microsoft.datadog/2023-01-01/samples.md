@@ -22,7 +22,6 @@ Monitors_Create
 ```bicep
 resource exampleResource 'Microsoft.Datadog/monitors@2023-01-01' = {
   name: 'example'
-  name: 'myMonitor'
   location: 'West US'
   properties: {
     datadogOrganizationProperties: {
@@ -32,7 +31,6 @@ resource exampleResource 'Microsoft.Datadog/monitors@2023-01-01' = {
       id: 'myOrg123'
       linkingAuthCode: 'someAuthCode'
       linkingClientId: '00000000-0000-0000-0000-000000000000'
-      subscription: 'pro'
     }
     monitoringStatus: 'Enabled'
     userInfo: {

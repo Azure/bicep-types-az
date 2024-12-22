@@ -1599,21 +1599,21 @@ resource exampleResource 'Microsoft.Workloads/sapVirtualInstances@2024-09-01' = 
                   name: 'StandardSSD_LRS'
                 }
               }
-              hana/data: {
+              'hana/data': {
                 count: 4
                 sizeGB: 128
                 sku: {
                   name: 'Premium_LRS'
                 }
               }
-              hana/log: {
+              'hana/log': {
                 count: 3
                 sizeGB: 128
                 sku: {
                   name: 'Premium_LRS'
                 }
               }
-              hana/shared: {
+              'hana/shared': {
                 count: 1
                 sizeGB: 256
                 sku: {
@@ -1627,7 +1627,7 @@ resource exampleResource 'Microsoft.Workloads/sapVirtualInstances@2024-09-01' = 
                   name: 'StandardSSD_LRS'
                 }
               }
-              usr/sap: {
+              'usr/sap': {
                 count: 1
                 sizeGB: 128
                 sku: {
@@ -1743,21 +1743,21 @@ resource exampleResource 'Microsoft.Workloads/sapVirtualInstances@2024-09-01' = 
                   name: 'StandardSSD_LRS'
                 }
               }
-              hana/data: {
+              'hana/data': {
                 count: 4
                 sizeGB: 128
                 sku: {
                   name: 'Premium_LRS'
                 }
               }
-              hana/log: {
+              'hana/log': {
                 count: 3
                 sizeGB: 128
                 sku: {
                   name: 'Premium_LRS'
                 }
               }
-              hana/shared: {
+              'hana/shared': {
                 count: 1
                 sizeGB: 256
                 sku: {
@@ -1771,7 +1771,7 @@ resource exampleResource 'Microsoft.Workloads/sapVirtualInstances@2024-09-01' = 
                   name: 'StandardSSD_LRS'
                 }
               }
-              usr/sap: {
+              'usr/sap': {
                 count: 1
                 sizeGB: 128
                 sku: {
@@ -1890,21 +1890,21 @@ resource exampleResource 'Microsoft.Workloads/sapVirtualInstances@2024-09-01' = 
                   name: 'StandardSSD_LRS'
                 }
               }
-              hana/data: {
+              'hana/data': {
                 count: 4
                 sizeGB: 128
                 sku: {
                   name: 'Premium_LRS'
                 }
               }
-              hana/log: {
+              'hana/log': {
                 count: 3
                 sizeGB: 128
                 sku: {
                   name: 'Premium_LRS'
                 }
               }
-              hana/shared: {
+              'hana/shared': {
                 count: 1
                 sizeGB: 256
                 sku: {
@@ -1918,7 +1918,7 @@ resource exampleResource 'Microsoft.Workloads/sapVirtualInstances@2024-09-01' = 
                   name: 'StandardSSD_LRS'
                 }
               }
-              usr/sap: {
+              'usr/sap': {
                 count: 1
                 sizeGB: 128
                 sku: {
@@ -1988,21 +1988,21 @@ resource exampleResource 'Microsoft.Workloads/sapVirtualInstances@2024-09-01' = 
                 name: 'StandardSSD_LRS'
               }
             }
-            hana/data: {
+            'hana/data': {
               count: 4
               sizeGB: 128
               sku: {
                 name: 'Premium_LRS'
               }
             }
-            hana/log: {
+            'hana/log': {
               count: 3
               sizeGB: 128
               sku: {
                 name: 'Premium_LRS'
               }
             }
-            hana/shared: {
+            'hana/shared': {
               count: 1
               sizeGB: 256
               sku: {
@@ -2016,7 +2016,7 @@ resource exampleResource 'Microsoft.Workloads/sapVirtualInstances@2024-09-01' = 
                 name: 'StandardSSD_LRS'
               }
             }
-            usr/sap: {
+            'usr/sap': {
               count: 1
               sizeGB: 128
               sku: {
@@ -2616,7 +2616,7 @@ resource exampleResource 'Microsoft.Workloads/sapVirtualInstances@2024-09-01' = 
     sapProduct: 'S4HANA'
   }
   tags: {
-    created by: 'azureuser'
+    'created by': 'azureuser'
   }
 }
 ```
@@ -2987,7 +2987,7 @@ resource exampleResource 'Microsoft.Workloads/sapVirtualInstances@2024-09-01' = 
     sapProduct: 'S4HANA'
   }
   tags: {
-    created by: 'azureuser'
+    'created by': 'azureuser'
   }
 }
 ```

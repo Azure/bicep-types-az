@@ -219,7 +219,7 @@
 
 ## ResourceSku
 ### Properties
-* **name**: string (Required): Name of the SKU in {PlanId} format. For Terraform, the only allowed value is 'linking'.
+* **name**: string (Required): Name of the SKU in {PlanId} format. For Terraform, the only allowed value is 'Linked'.
 
 ## SubscriptionList
 ### Properties

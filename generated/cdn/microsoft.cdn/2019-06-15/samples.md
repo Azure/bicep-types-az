@@ -159,7 +159,7 @@ resource exampleResource 'Microsoft.Cdn/profiles/endpoints@2019-06-15' = {
             {
               name: 'CacheExpiration'
               parameters: {
-                @odata.type: '#Microsoft.Azure.Cdn.Models.DeliveryRuleCacheExpirationActionParameters'
+                '@odata.type': '#Microsoft.Azure.Cdn.Models.DeliveryRuleCacheExpirationActionParameters'
                 cacheBehavior: 'Override'
                 cacheDuration: '10:10:09'
                 cacheType: 'All'
@@ -168,7 +168,7 @@ resource exampleResource 'Microsoft.Cdn/profiles/endpoints@2019-06-15' = {
             {
               name: 'ModifyResponseHeader'
               parameters: {
-                @odata.type: '#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters'
+                '@odata.type': '#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters'
                 headerAction: 'Overwrite'
                 headerName: 'Access-Control-Allow-Origin'
                 value: '*'
@@ -177,7 +177,7 @@ resource exampleResource 'Microsoft.Cdn/profiles/endpoints@2019-06-15' = {
             {
               name: 'ModifyRequestHeader'
               parameters: {
-                @odata.type: '#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters'
+                '@odata.type': '#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters'
                 headerAction: 'Overwrite'
                 headerName: 'Accept-Encoding'
                 value: 'gzip'
@@ -188,7 +188,7 @@ resource exampleResource 'Microsoft.Cdn/profiles/endpoints@2019-06-15' = {
             {
               name: 'RemoteAddress'
               parameters: {
-                @odata.type: '#Microsoft.Azure.Cdn.Models.DeliveryRuleRemoteAddressConditionParameters'
+                '@odata.type': '#Microsoft.Azure.Cdn.Models.DeliveryRuleRemoteAddressConditionParameters'
                 matchValues: [
                   '192.168.1.0/24'
                   '10.0.0.0/24'

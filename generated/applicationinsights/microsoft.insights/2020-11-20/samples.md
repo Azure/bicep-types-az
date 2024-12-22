@@ -24,7 +24,7 @@ resource exampleResource 'Microsoft.Insights/workbooktemplates@2020-11-20' = {
     ]
     priority: 1
     templateData: {
-      $schema: 'https://github.com/Microsoft/Application-Insights-Workbooks/blob/master/schema/workbook.json'
+      '$schema': 'https://github.com/Microsoft/Application-Insights-Workbooks/blob/master/schema/workbook.json'
       items: [
         {
           name: 'text - 2'

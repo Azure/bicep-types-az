@@ -28,7 +28,7 @@ resource exampleResource 'Microsoft.Resources/templateSpecs/versions@2019-06-01-
   properties: {
     description: 'This is version v1.0 of our template content'
     template: {
-      $schema: 'http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#'
+      '$schema': 'http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#'
       contentVersion: '1.0.0.0'
       parameters: {
       }

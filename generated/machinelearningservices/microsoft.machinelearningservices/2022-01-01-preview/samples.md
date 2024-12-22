@@ -13,7 +13,7 @@ resource exampleResource 'Microsoft.MachineLearningServices/workspaces@2022-01-0
   identity: {
     type: 'SystemAssigned,UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/testuai: {
+      '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/testuai': {
       }
     }
   }
@@ -77,13 +77,13 @@ resource exampleResource 'Microsoft.MachineLearningServices/workspaces/computes@
             limits: {
               cpu: '1'
               memory: '4Gi'
-              nvidia.com/gpu: {
+              'nvidia.com/gpu': {
               }
             }
             requests: {
               cpu: '1'
               memory: '4Gi'
-              nvidia.com/gpu: {
+              'nvidia.com/gpu': {
               }
             }
           }

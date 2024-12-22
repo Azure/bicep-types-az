@@ -134,7 +134,7 @@ resource exampleResource 'Microsoft.MachineLearningServices/registries/component
   properties: {
     description: 'string'
     componentSpec: {
-      8ced901b-d826-477d-bfef-329da9672513: {
+      '8ced901b-d826-477d-bfef-329da9672513': {
       }
     }
     isAnonymous: false
@@ -266,7 +266,7 @@ resource exampleResource 'Microsoft.MachineLearningServices/workspaces@2022-12-0
   identity: {
     type: 'SystemAssigned,UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/testuai: {
+      '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/testuai': {
       }
     }
   }
@@ -388,7 +388,7 @@ resource exampleResource 'Microsoft.MachineLearningServices/workspaces/batchEndp
       instanceType: 'string'
       properties: {
         string: {
-          cd3c37dc-2876-4ca4-8a54-21bd7619724a: {
+          'cd3c37dc-2876-4ca4-8a54-21bd7619724a': {
           }
         }
       }
@@ -477,7 +477,7 @@ resource exampleResource 'Microsoft.MachineLearningServices/workspaces/component
   properties: {
     description: 'string'
     componentSpec: {
-      8ced901b-d826-477d-bfef-329da9672513: {
+      '8ced901b-d826-477d-bfef-329da9672513': {
       }
     }
     isAnonymous: false
@@ -512,13 +512,13 @@ resource exampleResource 'Microsoft.MachineLearningServices/workspaces/computes@
             limits: {
               cpu: '1'
               memory: '4Gi'
-              nvidia.com/gpu: {
+              'nvidia.com/gpu': {
               }
             }
             requests: {
               cpu: '1'
               memory: '4Gi'
-              nvidia.com/gpu: {
+              'nvidia.com/gpu': {
               }
             }
           }
@@ -1022,7 +1022,7 @@ resource exampleResource 'Microsoft.MachineLearningServices/workspaces/jobs@2022
       instanceType: 'string'
       properties: {
         string: {
-          9bec0ab0-c62f-4fa9-a97c-7b24bbcc90ad: {
+          '9bec0ab0-c62f-4fa9-a97c-7b24bbcc90ad': {
           }
         }
       }
@@ -1118,7 +1118,7 @@ resource exampleResource 'Microsoft.MachineLearningServices/workspaces/jobs@2022
       instanceType: 'string'
       properties: {
         string: {
-          e6b6493e-7d5e-4db3-be1e-306ec641327e: {
+          'e6b6493e-7d5e-4db3-be1e-306ec641327e': {
           }
         }
       }
@@ -1253,7 +1253,7 @@ resource exampleResource 'Microsoft.MachineLearningServices/workspaces/jobs@2022
         instanceType: 'string'
         properties: {
           string: {
-            e6b6493e-7d5e-4db3-be1e-306ec641327e: {
+            'e6b6493e-7d5e-4db3-be1e-306ec641327e': {
             }
           }
         }
@@ -1586,7 +1586,7 @@ resource exampleResource 'Microsoft.MachineLearningServices/workspaces/schedules
     action: {
       actionType: 'InvokeBatchEndpoint'
       endpointInvocationDefinition: {
-        9965593e-526f-4b89-bb36-761138cf2794: {
+        '9965593e-526f-4b89-bb36-761138cf2794': {
         }
       }
     }

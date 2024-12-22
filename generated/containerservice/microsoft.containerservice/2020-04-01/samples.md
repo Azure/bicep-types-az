@@ -32,8 +32,8 @@ resource exampleResource 'Microsoft.ContainerService/managedClusters@2020-04-01'
       }
     ]
     autoScalerProfile: {
-      scale-down-delay-after-add: '15m'
-      scan-interval: '20s'
+      'scale-down-delay-after-add': '15m'
+      'scan-interval': '20s'
     }
     diskEncryptionSetID: '/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des'
     dnsPrefix: 'dnsprefix1'

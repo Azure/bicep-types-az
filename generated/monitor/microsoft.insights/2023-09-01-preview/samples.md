@@ -77,13 +77,13 @@ resource exampleResource 'Microsoft.Insights/actionGroups@2023-09-01-preview' = 
         }
         incidentManagementService: 'Icm'
         mappings: {
-          icm.automitigationenabled: 'true'
-          icm.correlationid: '\${data.essentials.signalType}://\${data.essentials.originAlertId}'
-          icm.monitorid: '\${data.essentials.alertRule}'
-          icm.occurringlocation.environment: 'PROD'
-          icm.routingid: '\${data.essentials.monitoringService}://\${data.essentials.signalType}'
-          icm.title: '\${data.essentials.severity}:\${data.essentials.monitorCondition} \${data.essentials.monitoringService}:\${data.essentials.signalType} \${data.essentials.alertTargetIds}'
-          icm.tsgid: 'https://microsoft.com'
+          'icm.automitigationenabled': 'true'
+          'icm.correlationid': '\${data.essentials.signalType}://\${data.essentials.originAlertId}'
+          'icm.monitorid': '\${data.essentials.alertRule}'
+          'icm.occurringlocation.environment': 'PROD'
+          'icm.routingid': '\${data.essentials.monitoringService}://\${data.essentials.signalType}'
+          'icm.title': '\${data.essentials.severity}:\${data.essentials.monitorCondition} \${data.essentials.monitoringService}:\${data.essentials.signalType} \${data.essentials.alertTargetIds}'
+          'icm.tsgid': 'https://microsoft.com'
         }
       }
     ]

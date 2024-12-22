@@ -132,7 +132,7 @@ resource exampleResource 'Microsoft.Insights/metricAlerts@2018-03-01' = {
           timeAggregation: 'Average'
         }
       ]
-      odata.type: 'Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria'
+      'odata.type': 'Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria'
     }
     enabled: true
     evaluationFrequency: 'PT1M'
@@ -186,7 +186,7 @@ resource exampleResource 'Microsoft.Insights/metricAlerts@2018-03-01' = {
           timeAggregation: 'Average'
         }
       ]
-      odata.type: 'Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria'
+      'odata.type': 'Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria'
     }
     enabled: true
     evaluationFrequency: 'PT1M'
@@ -213,7 +213,7 @@ resource exampleResource 'Microsoft.Insights/metricAlerts@2018-03-01' = {
     criteria: {
       componentId: '/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/components/webtest-name-example'
       failedLocationCount: 2
-      odata.type: 'Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria'
+      'odata.type': 'Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria'
       webTestId: '/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/webtests/component-example'
     }
     enabled: true
@@ -226,8 +226,8 @@ resource exampleResource 'Microsoft.Insights/metricAlerts@2018-03-01' = {
     windowSize: 'PT15M'
   }
   tags: {
-    hidden-link:/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/components/webtest-name-example: 'Resource'
-    hidden-link:/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/webtests/component-example: 'Resource'
+    'hidden-link:/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/components/webtest-name-example': 'Resource'
+    'hidden-link:/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/webtests/component-example': 'Resource'
   }
 }
 ```
@@ -263,7 +263,7 @@ resource exampleResource 'Microsoft.Insights/metricAlerts@2018-03-01' = {
           timeAggregation: 'Average'
         }
       ]
-      odata.type: 'Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria'
+      'odata.type': 'Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria'
     }
     enabled: true
     evaluationFrequency: 'PT1M'
@@ -311,15 +311,15 @@ resource exampleResource 'Microsoft.Insights/metricAlerts@2018-03-01' = {
           timeAggregation: 'Average'
         }
       ]
-      odata.type: 'Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria'
+      'odata.type': 'Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria'
     }
     enabled: true
-    evaluationFrequency: 'Pt1m'
+    evaluationFrequency: 'PT1M'
     scopes: [
       '/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourceGroups/gigtest/providers/Microsoft.Compute/virtualMachines/gigwadme'
     ]
     severity: 3
-    windowSize: 'Pt15m'
+    windowSize: 'PT15M'
   }
   tags: {
   }
@@ -357,7 +357,7 @@ resource exampleResource 'Microsoft.Insights/metricAlerts@2018-03-01' = {
           timeAggregation: 'Average'
         }
       ]
-      odata.type: 'Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria'
+      'odata.type': 'Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria'
     }
     enabled: true
     evaluationFrequency: 'PT1M'
@@ -406,7 +406,7 @@ resource exampleResource 'Microsoft.Insights/metricAlerts@2018-03-01' = {
           timeAggregation: 'Average'
         }
       ]
-      odata.type: 'Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria'
+      'odata.type': 'Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria'
     }
     enabled: true
     evaluationFrequency: 'PT1M'
@@ -468,7 +468,7 @@ resource exampleResource 'Microsoft.Insights/metricAlerts@2018-03-01' = {
           timeAggregation: 'Average'
         }
       ]
-      odata.type: 'Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria'
+      'odata.type': 'Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria'
     }
     enabled: true
     evaluationFrequency: 'PT1H'

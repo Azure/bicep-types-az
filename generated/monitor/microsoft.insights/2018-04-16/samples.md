@@ -20,7 +20,7 @@ resource exampleResource 'Microsoft.Insights/scheduledQueryRules@2018-04-16' = {
         customWebhookPayload: '{}'
         emailSubject: 'Email Header'
       }
-      odata.type: 'Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction'
+      'odata.type': 'Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction'
       severity: '1'
       trigger: {
         metricTrigger: {
@@ -63,7 +63,7 @@ resource exampleResource 'Microsoft.Insights/scheduledQueryRules@2018-04-16' = {
         ]
         emailSubject: 'Cross Resource Mail!!'
       }
-      odata.type: 'Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction'
+      'odata.type': 'Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction'
       severity: '3'
       trigger: {
         threshold: 5000
@@ -105,7 +105,7 @@ resource exampleResource 'Microsoft.Insights/scheduledQueryRules@2018-04-16' = {
           metricName: 'Average_% Idle Time'
         }
       ]
-      odata.type: 'Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction'
+      'odata.type': 'Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction'
     }
     enabled: 'true'
     source: {

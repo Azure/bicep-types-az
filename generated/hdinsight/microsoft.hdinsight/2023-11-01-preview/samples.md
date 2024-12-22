@@ -200,7 +200,7 @@ resource exampleResource 'Microsoft.HDInsight/clusterpools/clusters@2023-11-01-p
                 {
                   fileName: 'spark-defaults.conf'
                   values: {
-                    spark.eventLog.enabled: 'true'
+                    'spark.eventLog.enabled': 'true'
                   }
                 }
               ]
@@ -216,17 +216,17 @@ resource exampleResource 'Microsoft.HDInsight/clusterpools/clusters@2023-11-01-p
                 {
                   fileName: 'core-site.xml'
                   values: {
-                    fs.defaultFS: 'wasb://testcontainer@teststorage.dfs.core.windows.net/'
-                    storage.container: 'testcontainer'
-                    storage.key: 'test key'
-                    storage.name: 'teststorage'
-                    storage.protocol: 'wasb'
+                    'fs.defaultFS': 'wasb://testcontainer@teststorage.dfs.core.windows.net/'
+                    'storage.container': 'testcontainer'
+                    'storage.key': 'test key'
+                    'storage.name': 'teststorage'
+                    'storage.protocol': 'wasb'
                   }
                 }
                 {
                   fileName: 'yarn-site.xml'
                   values: {
-                    yarn.webapp.ui2.enable: 'false'
+                    'yarn.webapp.ui2.enable': 'false'
                   }
                 }
               ]
@@ -288,7 +288,7 @@ resource exampleResource 'Microsoft.HDInsight/clusterpools/clusters@2023-11-01-p
                 {
                   fileName: 'spark-defaults.conf'
                   values: {
-                    spark.eventLog.enabled: 'true'
+                    'spark.eventLog.enabled': 'true'
                   }
                 }
               ]
@@ -304,17 +304,17 @@ resource exampleResource 'Microsoft.HDInsight/clusterpools/clusters@2023-11-01-p
                 {
                   fileName: 'core-site.xml'
                   values: {
-                    fs.defaultFS: 'wasb://testcontainer@teststorage.dfs.core.windows.net/'
-                    storage.container: 'testcontainer'
-                    storage.key: 'test key'
-                    storage.name: 'teststorage'
-                    storage.protocol: 'wasb'
+                    'fs.defaultFS': 'wasb://testcontainer@teststorage.dfs.core.windows.net/'
+                    'storage.container': 'testcontainer'
+                    'storage.key': 'test key'
+                    'storage.name': 'teststorage'
+                    'storage.protocol': 'wasb'
                   }
                 }
                 {
                   fileName: 'yarn-site.xml'
                   values: {
-                    yarn.webapp.ui2.enable: 'false'
+                    'yarn.webapp.ui2.enable': 'false'
                   }
                 }
               ]

@@ -16,7 +16,7 @@ resource exampleResource 'Microsoft.Media/mediaServices/transforms@2022-07-01' =
     outputs: [
       {
         preset: {
-          @odata.type: '#Microsoft.Media.BuiltInStandardEncoderPreset'
+          '@odata.type': '#Microsoft.Media.BuiltInStandardEncoderPreset'
           presetName: 'AdaptiveStreaming'
         }
       }
@@ -34,16 +34,16 @@ resource exampleResource 'Microsoft.Media/mediaServices/transforms/jobs@2022-07-
   name: 'example'
   properties: {
     correlationData: {
-      Key 2: 'Value 2'
+      'Key 2': 'Value 2'
       key1: 'value1'
     }
     input: {
-      @odata.type: '#Microsoft.Media.JobInputAsset'
+      '@odata.type': '#Microsoft.Media.JobInputAsset'
       assetName: 'job1-InputAsset'
     }
     outputs: [
       {
-        @odata.type: '#Microsoft.Media.JobOutputAsset'
+        '@odata.type': '#Microsoft.Media.JobOutputAsset'
         assetName: 'job1-OutputAsset'
       }
     ]

@@ -21,7 +21,7 @@ resource exampleResource 'Microsoft.KubernetesConfiguration/fluxConfigurations@2
       url: 'https://github.com/Azure/arc-k8s-demo'
     }
     kustomizations: {
-      srs-kustomization1: {
+      'srs-kustomization1': {
         path: './test/path'
         dependsOn: [
         ]
@@ -42,7 +42,7 @@ resource exampleResource 'Microsoft.KubernetesConfiguration/fluxConfigurations@2
         timeoutInSeconds: 600
         wait: true
       }
-      srs-kustomization2: {
+      'srs-kustomization2': {
         path: './other/test/path'
         dependsOn: [
           'srs-kustomization1'
@@ -91,14 +91,14 @@ resource exampleResource 'Microsoft.KubernetesConfiguration/fluxConfigurations@2
       url: 'https://fluxminiotest.az.minio.io'
     }
     kustomizations: {
-      srs-kustomization1: {
+      'srs-kustomization1': {
         path: './test/path'
         dependsOn: [
         ]
         syncIntervalInSeconds: 600
         timeoutInSeconds: 600
       }
-      srs-kustomization2: {
+      'srs-kustomization2': {
         path: './other/test/path'
         dependsOn: [
           'srs-kustomization1'
