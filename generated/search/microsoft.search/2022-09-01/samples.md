@@ -20,7 +20,7 @@ resource exampleResource 'Microsoft.Search/searchServices@2022-09-01' = {
     name: 'standard'
   }
   tags: {
-    app-name: 'My e-commerce app'
+    'app-name': 'My e-commerce app'
   }
 }
 ```
@@ -44,7 +44,7 @@ resource exampleResource 'Microsoft.Search/searchServices@2022-09-01' = {
     name: 'standard'
   }
   tags: {
-    app-name: 'My e-commerce app'
+    'app-name': 'My e-commerce app'
   }
 }
 ```
@@ -64,7 +64,7 @@ resource exampleResource 'Microsoft.Search/searchServices@2022-09-01' = {
     name: 'standard'
   }
   tags: {
-    app-name: 'My e-commerce app'
+    'app-name': 'My e-commerce app'
   }
 }
 ```
@@ -84,7 +84,7 @@ resource exampleResource 'Microsoft.Search/searchServices@2022-09-01' = {
     name: 'standard'
   }
   tags: {
-    app-name: 'My e-commerce app'
+    'app-name': 'My e-commerce app'
   }
 }
 ```
@@ -113,7 +113,7 @@ resource exampleResource 'Microsoft.Search/searchServices@2022-09-01' = {
     name: 'standard'
   }
   tags: {
-    app-name: 'My e-commerce app'
+    'app-name': 'My e-commerce app'
   }
 }
 ```
@@ -135,7 +135,7 @@ resource exampleResource 'Microsoft.Search/searchServices@2022-09-01' = {
     name: 'standard'
   }
   tags: {
-    app-name: 'My e-commerce app'
+    'app-name': 'My e-commerce app'
   }
 }
 ```
@@ -157,7 +157,7 @@ resource exampleResource 'Microsoft.Search/searchServices@2022-09-01' = {
     name: 'standard'
   }
   tags: {
-    app-name: 'My e-commerce app'
+    'app-name': 'My e-commerce app'
   }
 }
 ```

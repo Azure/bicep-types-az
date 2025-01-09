@@ -208,13 +208,13 @@ resource exampleResource 'Microsoft.AppPlatform/Spring/apps@2023-03-01-preview' 
     tenantId: {
     }
     userAssignedIdentities: {
-      /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/samplegroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1: {
+      '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/samplegroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1': {
         clientId: {
         }
         principalId: {
         }
       }
-      /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/samplegroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id2: {
+      '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/samplegroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id2': {
         clientId: {
         }
         principalId: {
@@ -286,13 +286,13 @@ resource exampleResource 'Microsoft.AppPlatform/Spring/apps@2023-03-01-preview' 
     tenantId: {
     }
     userAssignedIdentities: {
-      /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/samplegroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1: {
+      '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/samplegroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1': {
         clientId: {
         }
         principalId: {
         }
       }
-      /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/samplegroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id2: {
+      '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/samplegroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id2': {
         clientId: {
         }
         principalId: {
@@ -589,11 +589,11 @@ resource exampleResource 'Microsoft.AppPlatform/Spring/buildServices/builders/bu
     launchProperties: {
       properties: {
         abc: 'def'
-        any-string: 'any-string'
-        sampling-rate: '12.0'
+        'any-string': 'any-string'
+        'sampling-rate': '12.0'
       }
       secrets: {
-        connection-string: 'XXXXXXXXXXXXXXXXX=XXXXXXXXXXXXX-XXXXXXXXXXXXXXXXXXX;XXXXXXXXXXXXXXXXX=XXXXXXXXXXXXXXXXXXX'
+        'connection-string': 'XXXXXXXXXXXXXXXXX=XXXXXXXXXXXXX-XXXXXXXXXXXXXXXXXXX;XXXXXXXXXXXXXXXXX=XXXXXXXXXXXXXXXXXXX'
       }
     }
   }

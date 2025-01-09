@@ -1,16 +1,5 @@
 # Microsoft.Insights @ 2014-04-01
 
-## Resource Microsoft.Insights/alertrules@2014-04-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2014-04-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (Required): Resource location
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AlertRule](#alertrule) (Required): The alert rule properties of the resource.
-* **tags**: [ResourceTags](#resourcetags): Resource tags
-* **type**: 'Microsoft.Insights/alertrules' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.Insights/autoscalesettings@2014-04-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -21,17 +10,6 @@
 * **properties**: [AutoscaleSetting](#autoscalesetting) (Required): The autoscale setting of the resource.
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: 'Microsoft.Insights/autoscalesettings' (ReadOnly, DeployTimeConstant): The resource type
-
-## AlertRule
-### Properties
-* **action**: [RuleAction](#ruleaction): action that is performed when the alert rule becomes active, and when an alert condition is resolved.
-* **actions**: [RuleAction](#ruleaction)[]: the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
-* **condition**: [RuleCondition](#rulecondition) (Required): the condition that results in the alert rule being activated.
-* **description**: string: the description of the alert rule that will be included in the alert email.
-* **isEnabled**: bool (Required): the flag that indicates whether the alert rule is enabled.
-* **lastUpdatedTime**: string (ReadOnly): Last time the rule was updated in ISO8601 format.
-* **name**: string (Required): the name of the alert rule.
-* **provisioningState**: string: the provisioning state.
 
 ## AutoscaleNotification
 ### Properties
@@ -62,12 +40,6 @@
 * **sendToSubscriptionAdministrator**: bool: a value indicating whether to send email to subscription administrator.
 * **sendToSubscriptionCoAdministrators**: bool: a value indicating whether to send email to subscription co-administrators.
 
-## ManagementEventAggregationCondition
-### Properties
-* **operator**: 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual': the condition operator.
-* **threshold**: int: The threshold value that activates the alert.
-* **windowSize**: string: the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
-
 ## MetricTrigger
 ### Properties
 * **dimensions**: [ScaleRuleMetricDimension](#scalerulemetricdimension)[]: List of dimension conditions. For example: [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].
@@ -96,92 +68,6 @@
 * **timeZone**: string (Required): the timezone for the hours of the profile. Some examples of valid time zones are: Dateline Standard Time, UTC-11, Hawaiian Standard Time, Alaskan Standard Time, Pacific Standard Time (Mexico), Pacific Standard Time, US Mountain Standard Time, Mountain Standard Time (Mexico), Mountain Standard Time, Central America Standard Time, Central Standard Time, Central Standard Time (Mexico), Canada Central Standard Time, SA Pacific Standard Time, Eastern Standard Time, US Eastern Standard Time, Venezuela Standard Time, Paraguay Standard Time, Atlantic Standard Time, Central Brazilian Standard Time, SA Western Standard Time, Pacific SA Standard Time, Newfoundland Standard Time, E. South America Standard Time, Argentina Standard Time, SA Eastern Standard Time, Greenland Standard Time, Montevideo Standard Time, Bahia Standard Time, UTC-02, Mid-Atlantic Standard Time, Azores Standard Time, Cape Verde Standard Time, Morocco Standard Time, UTC, GMT Standard Time, Greenwich Standard Time, W. Europe Standard Time, Central Europe Standard Time, Romance Standard Time, Central European Standard Time, W. Central Africa Standard Time, Namibia Standard Time, Jordan Standard Time, GTB Standard Time, Middle East Standard Time, Egypt Standard Time, Syria Standard Time, E. Europe Standard Time, South Africa Standard Time, FLE Standard Time, Turkey Standard Time, Israel Standard Time, Kaliningrad Standard Time, Libya Standard Time, Arabic Standard Time, Arab Standard Time, Belarus Standard Time, Russian Standard Time, E. Africa Standard Time, Iran Standard Time, Arabian Standard Time, Azerbaijan Standard Time, Russia Time Zone 3, Mauritius Standard Time, Georgian Standard Time, Caucasus Standard Time, Afghanistan Standard Time, West Asia Standard Time, Ekaterinburg Standard Time, Pakistan Standard Time, India Standard Time, Sri Lanka Standard Time, Nepal Standard Time, Central Asia Standard Time, Bangladesh Standard Time, N. Central Asia Standard Time, Myanmar Standard Time, SE Asia Standard Time, North Asia Standard Time, China Standard Time, North Asia East Standard Time, Singapore Standard Time, W. Australia Standard Time, Taipei Standard Time, Ulaanbaatar Standard Time, Tokyo Standard Time, Korea Standard Time, Yakutsk Standard Time, Cen. Australia Standard Time, AUS Central Standard Time, E. Australia Standard Time, AUS Eastern Standard Time, West Pacific Standard Time, Tasmania Standard Time, Magadan Standard Time, Vladivostok Standard Time, Russia Time Zone 10, Central Pacific Standard Time, Russia Time Zone 11, New Zealand Standard Time, UTC+12, Fiji Standard Time, Kamchatka Standard Time, Tonga Standard Time, Samoa Standard Time, Line Islands Standard Time
 
 ## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## RuleAction
-* **Discriminator**: odata.type
-
-### Base Properties
-
-### RuleEmailAction
-#### Properties
-* **customEmails**: string[]: the list of administrator's custom email addresses to notify of the activation of the alert.
-* **odata.type**: 'Microsoft.Azure.Management.Insights.Models.RuleEmailAction' (Required): specifies the type of the action. There are two types of actions: RuleEmailAction and RuleWebhookAction.
-* **sendToServiceOwners**: bool: Whether the administrators (service and co-administrators) of the service should be notified when the alert is activated.
-
-### RuleWebhookAction
-#### Properties
-* **odata.type**: 'Microsoft.Azure.Management.Insights.Models.RuleWebhookAction' (Required): specifies the type of the action. There are two types of actions: RuleEmailAction and RuleWebhookAction.
-* **properties**: [RuleWebhookActionProperties](#rulewebhookactionproperties): the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.
-* **serviceUri**: string: the service uri to Post the notification when the alert activates or resolves.
-
-
-## RuleCondition
-* **Discriminator**: odata.type
-
-### Base Properties
-* **dataSource**: [RuleDataSource](#ruledatasource): the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.
-
-### LocationThresholdRuleCondition
-#### Properties
-* **failedLocationCount**: int {minValue: 0} (Required): the number of locations that must fail to activate the alert.
-* **odata.type**: 'Microsoft.Azure.Management.Insights.Models.LocationThresholdRuleCondition' (Required): specifies the type of condition. This can be one of three types: ManagementEventRuleCondition (occurrences of management events), LocationThresholdRuleCondition (based on the number of failures of a web test), and ThresholdRuleCondition (based on the threshold of a metric).
-* **windowSize**: string: the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
-
-### ManagementEventRuleCondition
-#### Properties
-* **aggregation**: [ManagementEventAggregationCondition](#managementeventaggregationcondition): How the data that is collected should be combined over time and when the alert is activated. Note that for management event alerts aggregation is optional – if it is not provided then any event will cause the alert to activate.
-* **odata.type**: 'Microsoft.Azure.Management.Insights.Models.ManagementEventRuleCondition' (Required): specifies the type of condition. This can be one of three types: ManagementEventRuleCondition (occurrences of management events), LocationThresholdRuleCondition (based on the number of failures of a web test), and ThresholdRuleCondition (based on the threshold of a metric).
-
-### ThresholdRuleCondition
-#### Properties
-* **odata.type**: 'Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition' (Required): specifies the type of condition. This can be one of three types: ManagementEventRuleCondition (occurrences of management events), LocationThresholdRuleCondition (based on the number of failures of a web test), and ThresholdRuleCondition (based on the threshold of a metric).
-* **operator**: 'GreaterThan' | 'GreaterThanOrEqual' | 'LessThan' | 'LessThanOrEqual' (Required): the operator used to compare the data and the threshold.
-* **threshold**: int (Required): the threshold value that activates the alert.
-* **timeAggregation**: 'Average' | 'Last' | 'Maximum' | 'Minimum' | 'Total': the time aggregation operator. How the data that are collected should be combined over time. The default value is the PrimaryAggregationType of the Metric.
-* **windowSize**: string: the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
-
-
-## RuleDataSource
-* **Discriminator**: odata.type
-
-### Base Properties
-* **legacyResourceId**: string: the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
-* **metricNamespace**: string: the namespace of the metric.
-* **resourceLocation**: string: the location of the resource.
-* **resourceUri**: string: the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
-
-### RuleManagementEventDataSource
-#### Properties
-* **claims**: [RuleManagementEventClaimsDataSource](#rulemanagementeventclaimsdatasource): the claims.
-* **eventName**: string: the event name.
-* **eventSource**: string: the event source.
-* **level**: string: the level.
-* **odata.type**: 'Microsoft.Azure.Management.Insights.Models.RuleManagementEventDataSource' (Required): specifies the type of data source. There are two types of rule data sources: RuleMetricDataSource and RuleManagementEventDataSource
-* **operationName**: string: The name of the operation that should be checked for. If no name is provided, any operation will match.
-* **resourceGroupName**: string: the resource group name.
-* **resourceProviderName**: string: the resource provider name.
-* **status**: string: The status of the operation that should be checked for. If no status is provided, any status will match.
-* **subStatus**: string: the substatus.
-
-### RuleMetricDataSource
-#### Properties
-* **metricName**: string: the name of the metric that defines what the rule monitors.
-* **odata.type**: 'Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource' (Required): specifies the type of data source. There are two types of rule data sources: RuleMetricDataSource and RuleManagementEventDataSource
-
-
-## RuleManagementEventClaimsDataSource
-### Properties
-* **emailAddress**: string: the email address.
-
-## RuleWebhookActionProperties
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string

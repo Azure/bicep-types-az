@@ -190,7 +190,7 @@ resource exampleResource 'Microsoft.HealthcareApis/workspaces/fhirservices@2023-
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/subid/resourcegroups/testRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/test-mi: {
+      '/subscriptions/subid/resourcegroups/testRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/test-mi': {
       }
     }
   }

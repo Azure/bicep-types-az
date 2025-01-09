@@ -13,11 +13,11 @@ resource exampleResource 'Microsoft.Media/videoAnalyzers@2021-05-01-preview' = {
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1: {
+      '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1': {
       }
-      /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id2: {
+      '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id2': {
       }
-      /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id3: {
+      '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id3': {
       }
     }
   }
@@ -51,7 +51,7 @@ resource exampleResource 'Microsoft.Media/videoAnalyzers/accessPolicies@2021-05-
   name: 'example'
   properties: {
     authentication: {
-      @type: '#Microsoft.VideoAnalyzer.JwtAuthentication'
+      '@type': '#Microsoft.VideoAnalyzer.JwtAuthentication'
       audiences: [
         'audience1'
       ]
@@ -71,14 +71,14 @@ resource exampleResource 'Microsoft.Media/videoAnalyzers/accessPolicies@2021-05-
       ]
       keys: [
         {
-          @type: '#Microsoft.VideoAnalyzer.RsaTokenKey'
+          '@type': '#Microsoft.VideoAnalyzer.RsaTokenKey'
           alg: 'RS256'
           e: 'ZLFzZTY0IQ=='
           kid: '123'
           n: 'YmFzZTY0IQ=='
         }
         {
-          @type: '#Microsoft.VideoAnalyzer.EccTokenKey'
+          '@type': '#Microsoft.VideoAnalyzer.EccTokenKey'
           alg: 'ES256'
           kid: '124'
           x: 'XX=='

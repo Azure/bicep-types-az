@@ -13,11 +13,11 @@ resource exampleResource 'Microsoft.KubernetesConfiguration/extensions@2022-01-0
   properties: {
     autoUpgradeMinorVersion: true
     configurationProtectedSettings: {
-      omsagent.secret.key: 'secretKeyValue01'
+      'omsagent.secret.key': 'secretKeyValue01'
     }
     configurationSettings: {
-      omsagent.env.clusterName: 'clusterName1'
-      omsagent.secret.wsid: 'fakeTokenPlaceholder'
+      'omsagent.env.clusterName': 'clusterName1'
+      'omsagent.secret.wsid': 'fakeTokenPlaceholder'
     }
     extensionType: 'azuremonitor-containers'
     releaseTrain: 'Preview'
@@ -47,14 +47,14 @@ resource exampleResource 'Microsoft.KubernetesConfiguration/fluxConfigurations@2
       url: 'https://github.com/Azure/arc-k8s-demo'
     }
     kustomizations: {
-      srs-kustomization1: {
+      'srs-kustomization1': {
         path: './test/path'
         dependsOn: [
         ]
         syncIntervalInSeconds: 600
         timeoutInSeconds: 600
       }
-      srs-kustomization2: {
+      'srs-kustomization2': {
         path: './other/test/path'
         dependsOn: [
           {
@@ -88,14 +88,14 @@ resource exampleResource 'Microsoft.KubernetesConfiguration/fluxConfigurations@2
       url: 'https://fluxminiotest.az.minio.io'
     }
     kustomizations: {
-      srs-kustomization1: {
+      'srs-kustomization1': {
         path: './test/path'
         dependsOn: [
         ]
         syncIntervalInSeconds: 600
         timeoutInSeconds: 600
       }
-      srs-kustomization2: {
+      'srs-kustomization2': {
         path: './other/test/path'
         dependsOn: [
           {

@@ -67,7 +67,7 @@
 
 ## InputLinuxParameters
 ### Properties
-* **classificationsToInclude**: string[]: Classification category of patches to be patched
+* **classificationsToInclude**: string[]: Classification category of patches to be patched. Allowed values are 'Critical', 'Security', and 'Other'.
 * **packageNameMasksToExclude**: string[]: Package names to be excluded for patching.
 * **packageNameMasksToInclude**: string[]: Package names to be included for patching.
 
@@ -79,7 +79,7 @@
 
 ## InputWindowsParameters
 ### Properties
-* **classificationsToInclude**: string[]: Classification category of patches to be patched
+* **classificationsToInclude**: string[]: Classification category of patches to be patched. Allowed values are 'Critical', 'Security', 'UpdateRollup', 'FeaturePack', 'ServicePack', 'Definition', 'Tools', and 'Updates'.
 * **excludeKbsRequiringReboot**: bool: Exclude patches which need reboot
 * **kbNumbersToExclude**: string[]: Windows KBID to be excluded for patching.
 * **kbNumbersToInclude**: string[]: Windows KBID to be included for patching.

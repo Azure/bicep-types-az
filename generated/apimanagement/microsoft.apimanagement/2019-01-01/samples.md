@@ -633,7 +633,7 @@ resource exampleResource 'Microsoft.ApiManagement/service/backends@2019-01-01' =
         scheme: 'Basic'
       }
       header: {
-        x-my-1: [
+        'x-my-1': [
           'val1'
           'val2'
         ]

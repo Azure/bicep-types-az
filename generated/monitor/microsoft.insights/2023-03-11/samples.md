@@ -219,7 +219,7 @@ resource exampleResource 'Microsoft.Insights/dataCollectionRules@2023-03-11' = {
       ]
     }
     streamDeclarations: {
-      Custom-LOGS1_CL: {
+      'Custom-LOGS1_CL': {
         columns: [
           {
             name: 'Time'
@@ -308,7 +308,7 @@ resource exampleResource 'Microsoft.Insights/dataCollectionRules@2023-03-11' = {
       }
     }
     streamDeclarations: {
-      Custom-TabularDataABC: {
+      'Custom-TabularDataABC': {
         columns: [
           {
             name: 'TimeGenerated'

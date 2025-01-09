@@ -647,7 +647,6 @@
 ## AcrDetails
 ### Properties
 * **systemCreatedAcrAccount**: [SystemCreatedAcrAccount](#systemcreatedacraccount): Details of system created ACR account to be used for the Registry
-* **userCreatedAcrAccount**: [UserCreatedAcrAccount](#usercreatedacraccount): Details of user created ACR account to be used for the Registry
 
 ## AksNetworkingConfiguration
 ### Properties
@@ -3525,12 +3524,18 @@ Full resource id: /subscriptions/{subId}/resourceGroups/{rgName}/providers/Micro
 Possible values: "Enabled" or "Disabled"
 * **regionDetails**: [RegistryRegionArmDetails](#registryregionarmdetails)[]: Details of each region the registry is in
 * **registryPrivateEndpointConnections**: [RegistryPrivateEndpointConnection](#registryprivateendpointconnection)[]: Private endpoint connections info used for pending connections in private link portal
+* **syndicatedRegistries**: [RegistrySyndicatedRegistriesItem](#registrysyndicatedregistriesitem)[]: List of tuples containing Guid and SyndicatedRegistry
 
 ## RegistryRegionArmDetails
 ### Properties
 * **acrDetails**: [AcrDetails](#acrdetails)[]: List of ACR accounts
 * **location**: string: The location where the registry exists
 * **storageAccountDetails**: [StorageAccountDetails](#storageaccountdetails)[]: List of storage accounts
+
+## RegistrySyndicatedRegistriesItem
+### Properties
+* **syndicatedRegistry**: [SyndicatedRegistry](#syndicatedregistry): A registry that is syndicated
+* **syndicatedRegistryGuid**: string: The Guid of the syndicated registry
 
 ## RegressionTrainingSettings
 ### Properties
@@ -4024,7 +4029,6 @@ Defaults to 5000ms.
 ## StorageAccountDetails
 ### Properties
 * **systemCreatedStorageAccount**: [SystemCreatedStorageAccount](#systemcreatedstorageaccount): Details of system created storage account to be used for the registry
-* **userCreatedStorageAccount**: [UserCreatedStorageAccount](#usercreatedstorageaccount): Details of user created storage account to be used for the registry
 
 ## StringKeyValuePair
 ### Properties
@@ -4061,6 +4065,10 @@ Defaults to 5000ms.
 * **sparkVersion**: string: Spark version.
 * **subscriptionId**: string: Azure subscription identifier.
 * **workspaceName**: string: Name of Azure Machine Learning workspace.
+
+## SyndicatedRegistry
+### Properties
+* **registryId**: string: The Registry Id of the syndicated Registry
 
 ## SystemCreatedAcrAccount
 ### Properties
@@ -4263,14 +4271,6 @@ The expression should follow NCronTab format.
 ### Properties
 * **clientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The client ID of the assigned identity.
 * **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The principal ID of the assigned identity.
-
-## UserCreatedAcrAccount
-### Properties
-* **armResourceId**: [ArmResourceId](#armresourceid): ARM ResourceId of a resource
-
-## UserCreatedStorageAccount
-### Properties
-* **armResourceId**: [ArmResourceId](#armresourceid): ARM ResourceId of a resource
 
 ## VirtualMachineImage
 ### Properties

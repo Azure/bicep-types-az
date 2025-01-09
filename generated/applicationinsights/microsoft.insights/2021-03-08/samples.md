@@ -60,7 +60,7 @@ resource exampleResource 'Microsoft.Insights/workbooks@2021-03-08' = {
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/00000000-0000-0000-0000-00000000/resourceGroups/eu2cgroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1: {
+      '/subscriptions/00000000-0000-0000-0000-00000000/resourceGroups/eu2cgroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1': {
       }
     }
   }
@@ -77,7 +77,7 @@ resource exampleResource 'Microsoft.Insights/workbooks@2021-03-08' = {
     version: 'Notebook/1.0'
   }
   tags: {
-    hidden-title: 'tttt'
+    'hidden-title': 'tttt'
   }
 }
 ```

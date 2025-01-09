@@ -1149,7 +1149,7 @@ resource exampleResource 'Microsoft.Sql/servers/databases@2023-02-01-preview' = 
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/00000000-1111-2222-3333-444444444444/resourcegroups/Default-SQL-SouthEastAsia/providers/Microsoft.ManagedIdentity/userAssignedIdentities/umi: {
+      '/subscriptions/00000000-1111-2222-3333-444444444444/resourcegroups/Default-SQL-SouthEastAsia/providers/Microsoft.ManagedIdentity/userAssignedIdentities/umi': {
       }
     }
   }
@@ -1159,9 +1159,9 @@ resource exampleResource 'Microsoft.Sql/servers/databases@2023-02-01-preview' = 
     createMode: 'Default'
     encryptionProtector: 'https://your-key-vault-name.vault.azure.net/yourKey/yourKeyVersion'
     keys: {
-      https://your-key-vault-name.vault.azure.net/yourKey/yourKeyVersion: {
+      'https://your-key-vault-name.vault.azure.net/yourKey/yourKeyVersion': {
       }
-      https://your-key-vault-name.vault.azure.net/yourKey2/yourKey2Version: {
+      'https://your-key-vault-name.vault.azure.net/yourKey2/yourKey2Version': {
       }
     }
     maxSizeBytes: 1073741824
@@ -1302,9 +1302,9 @@ resource exampleResource 'Microsoft.Sql/servers/databases@2023-02-01-preview' = 
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/00000000-1111-2222-3333-444444444444/resourcegroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/userAssignedIdentities/umi: {
+      '/subscriptions/00000000-1111-2222-3333-444444444444/resourcegroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/userAssignedIdentities/umi': {
       }
-      /subscriptions/00000000-1111-2222-3333-444444444444/resourcegroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/userAssignedIdentities/umiToDelete: {
+      '/subscriptions/00000000-1111-2222-3333-444444444444/resourcegroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/userAssignedIdentities/umiToDelete': {
       }
     }
   }
@@ -1327,9 +1327,9 @@ resource exampleResource 'Microsoft.Sql/servers/databases@2023-02-01-preview' = 
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/00000000-1111-2222-3333-444444444444/resourcegroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/userAssignedIdentities/umi: {
+      '/subscriptions/00000000-1111-2222-3333-444444444444/resourcegroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/userAssignedIdentities/umi': {
       }
-      /subscriptions/00000000-1111-2222-3333-444444444444/resourcegroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/userAssignedIdentities/umiToDelete: {
+      '/subscriptions/00000000-1111-2222-3333-444444444444/resourcegroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/userAssignedIdentities/umiToDelete': {
       }
     }
   }

@@ -31,9 +31,9 @@ resource exampleResource 'Microsoft.EventHub/namespaces@2023-01-01-preview' = {
   identity: {
     type: 'SystemAssigned, UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/SampleSubscription/resourceGroups/ResurceGroupSample/providers/Microsoft.ManagedIdentity/userAssignedIdentities/ud1: {
+      '/subscriptions/SampleSubscription/resourceGroups/ResurceGroupSample/providers/Microsoft.ManagedIdentity/userAssignedIdentities/ud1': {
       }
-      /subscriptions/SampleSubscription/resourceGroups/ResurceGroupSample/providers/Microsoft.ManagedIdentity/userAssignedIdentities/ud2: {
+      '/subscriptions/SampleSubscription/resourceGroups/ResurceGroupSample/providers/Microsoft.ManagedIdentity/userAssignedIdentities/ud2': {
       }
     }
   }

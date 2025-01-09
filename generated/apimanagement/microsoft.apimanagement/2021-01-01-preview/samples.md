@@ -168,7 +168,7 @@ resource exampleResource 'Microsoft.ApiManagement/service@2021-01-01-preview' = 
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1: {
+      '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1': {
       }
     }
   }
@@ -249,7 +249,7 @@ resource exampleResource 'Microsoft.ApiManagement/service@2021-01-01-preview' = 
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/subid/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/apimService1: {
+      '/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/apimService1': {
       }
     }
   }
@@ -808,7 +808,7 @@ resource exampleResource 'Microsoft.ApiManagement/service/backends@2021-01-01-pr
         scheme: 'Basic'
       }
       header: {
-        x-my-1: [
+        'x-my-1': [
           'val1'
           'val2'
         ]

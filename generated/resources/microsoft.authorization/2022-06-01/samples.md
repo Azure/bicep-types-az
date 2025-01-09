@@ -69,7 +69,7 @@ resource exampleResource 'Microsoft.Authorization/policyAssignments@2022-06-01' 
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/resourceGroups/testResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/test-identity: {
+      '/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/resourceGroups/testResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/test-identity': {
       }
     }
   }

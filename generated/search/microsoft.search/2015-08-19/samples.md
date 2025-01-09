@@ -20,7 +20,7 @@ resource exampleResource 'Microsoft.Search/searchServices@2015-08-19' = {
     name: 'standard'
   }
   tags: {
-    app-name: 'My e-commerce app'
+    'app-name': 'My e-commerce app'
   }
 }
 ```
@@ -42,7 +42,7 @@ resource exampleResource 'Microsoft.Search/searchServices@2015-08-19' = {
     name: 'standard'
   }
   tags: {
-    app-name: 'My e-commerce app'
+    'app-name': 'My e-commerce app'
   }
 }
 ```

@@ -59,7 +59,7 @@ resource exampleResource 'Microsoft.ContainerInstance/containerGroups@2018-09-01
       logAnalytics: {
         logType: 'ContainerInsights'
         metadata: {
-          test-key: 'test-metadata-value'
+          'test-key': 'test-metadata-value'
         }
         workspaceId: 'workspaceid'
         workspaceKey: 'workspaceKey'

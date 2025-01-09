@@ -13,7 +13,7 @@ resource exampleResource 'Microsoft.MachineLearningServices/workspaces@2021-01-0
   identity: {
     type: 'SystemAssigned,UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/testuai: {
+      '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/testuai': {
       }
     }
   }

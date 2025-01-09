@@ -51,9 +51,9 @@ Windows_Client <br><br> Windows_Server <br><br> Possible values for Linux
 Server operating system are: <br><br> RHEL_BYOS (for RHEL) <br><br> SLES_BYOS
 (for SUSE) <br><br> For more information, see [Azure Hybrid Use Benefit for
 Windows
-Server](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing)
+Server](https://learn.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing)
 <br><br> [Azure Hybrid Use Benefit for Linux
-Server](https://docs.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux)
+Server](https://learn.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux)
 <br><br> Minimum api-version: 2015-06-15
 * **networkProfile**: [VirtualMachineScaleSetNetworkProfile](#virtualmachinescalesetnetworkprofile): Specifies properties of the network interfaces of the virtual machines in the
 scale set.
@@ -111,8 +111,8 @@ Azure also enables you to see a screenshot of the VM from the hypervisor.
 values are: **CacheDisk,** **ResourceDisk.** The defaulting behavior is:
 **CacheDisk** if one is configured for the VM size otherwise **ResourceDisk**
 is used. Refer to the VM size documentation for Windows VM at
-https://docs.microsoft.com/azure/virtual-machines/windows/sizes and Linux VM at
-https://docs.microsoft.com/azure/virtual-machines/linux/sizes to check which VM
+https://learn.microsoft.com/azure/virtual-machines/windows/sizes and Linux VM at
+https://learn.microsoft.com/azure/virtual-machines/linux/sizes to check which VM
 sizes exposes a cache disk.
 
 ## DiskEncryptionSetParameters
@@ -318,7 +318,7 @@ the virtual machine. Minimum api-version: 2020-12-01.
 * **keyData**: string: SSH public key certificate used to authenticate with the VM through ssh. The
 key needs to be at least 2048-bit and in ssh-rsa format. For creating ssh keys,
 see [Create SSH keys on Linux and Mac for Linux VMs in
-Azure]https://docs.microsoft.com/azure/virtual-machines/linux/create-ssh-keys-detailed).
+Azure]https://learn.microsoft.com/azure/virtual-machines/linux/create-ssh-keys-detailed).
 * **path**: string: Specifies the full path on the created VM where ssh public key is stored. If
 the file already exists, the specified key is appended to the file. Example:
 /home/user/.ssh/authorized_keys
@@ -378,16 +378,16 @@ formatted.
 * **certificateUrl**: string: This is the URL of a certificate that has been uploaded to Key Vault as a
 secret. For adding a secret to the Key Vault, see [Add a key or secret to the
 key
-vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started/#add).
+vault](https://learn.microsoft.com/azure/key-vault/key-vault-get-started/#add).
 In this case, your certificate needs to be It is the Base64 encoding of the
 following JSON Object which is encoded in UTF-8: <br><br> {<br>
 "data":"<Base64-encoded-certificate>",<br>  "dataType":"pfx",<br>
 "password":"<pfx-file-password>"<br>} <br> To install certificates on a virtual
 machine it is recommended to use the [Azure Key Vault virtual machine extension
 for
-Linux](https://docs.microsoft.com/azure/virtual-machines/extensions/key-vault-linux)
+Linux](https://learn.microsoft.com/azure/virtual-machines/extensions/key-vault-linux)
 or the [Azure Key Vault virtual machine extension for
-Windows](https://docs.microsoft.com/azure/virtual-machines/extensions/key-vault-windows).
+Windows](https://learn.microsoft.com/azure/virtual-machines/extensions/key-vault-windows).
 
 ## VaultSecretGroup
 ### Properties
@@ -606,10 +606,10 @@ characters <br> Has a digit <br> Has a special character (Regex match [\W_])
 "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1",
 "Password22", "iloveyou!" <br><br> For resetting the password, see [How to
 reset the Remote Desktop service or its login password in a Windows
-VM](https://docs.microsoft.com/troubleshoot/azure/virtual-machines/reset-rdp)
+VM](https://learn.microsoft.com/troubleshoot/azure/virtual-machines/reset-rdp)
 <br><br> For resetting root password, see [Manage users, SSH, and check or
 repair disks on Azure Linux VMs using the VMAccess
-Extension](https://docs.microsoft.com/troubleshoot/azure/virtual-machines/troubleshoot-ssh-connection)
+Extension](https://learn.microsoft.com/troubleshoot/azure/virtual-machines/troubleshoot-ssh-connection)
 * **adminUsername**: string: Specifies the name of the administrator account. <br><br> **Windows-only
 restriction:** Cannot end in "." <br><br> **Disallowed values:**
 "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3",
@@ -627,17 +627,17 @@ set. Computer name prefixes must be 1 to 15 characters long.
 is decoded to a binary array that is saved as a file on the Virtual Machine.
 The maximum length of the binary array is 65535 bytes. For using cloud-init for
 your VM, see [Using cloud-init to customize a Linux VM during
-creation](https://docs.microsoft.com/azure/virtual-machines/linux/using-cloud-init)
+creation](https://learn.microsoft.com/azure/virtual-machines/linux/using-cloud-init)
 * **linuxConfiguration**: [LinuxConfiguration](#linuxconfiguration): Specifies the Linux operating system settings on the virtual machine. For a
 list of supported Linux distributions, see [Linux on Azure-Endorsed
-Distributions](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros).
+Distributions](https://learn.microsoft.com/azure/virtual-machines/linux/endorsed-distros).
 * **requireGuestProvisionSignal**: bool: Optional property which must either be set to True or omitted.
 * **secrets**: [VaultSecretGroup](#vaultsecretgroup)[]: Specifies set of certificates that should be installed onto the virtual
 machines in the scale set. To install certificates on a virtual machine it is
 recommended to use the [Azure Key Vault virtual machine extension for
-Linux](https://docs.microsoft.com/azure/virtual-machines/extensions/key-vault-linux)
+Linux](https://learn.microsoft.com/azure/virtual-machines/extensions/key-vault-linux)
 or the [Azure Key Vault virtual machine extension for
-Windows](https://docs.microsoft.com/azure/virtual-machines/extensions/key-vault-windows).
+Windows](https://learn.microsoft.com/azure/virtual-machines/extensions/key-vault-windows).
 * **windowsConfiguration**: [WindowsConfiguration](#windowsconfiguration): Specifies Windows operating system settings on the virtual machine.
 
 ## VirtualMachineScaleSetPublicIPAddressConfiguration
@@ -674,7 +674,7 @@ values are: 'IPv4' and 'IPv6'.
 * **dataDisks**: [VirtualMachineScaleSetDataDisk](#virtualmachinescalesetdatadisk)[]: Specifies the parameters that are used to add data disks to the virtual
 machines in the scale set. For more information about disks, see [About disks
 and VHDs for Azure virtual
-machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
+machines](https://learn.microsoft.com/azure/virtual-machines/managed-disks-overview).
 * **diskControllerType**: 'NVMe' | 'SCSI' | string: Specifies the disk controller type configured for the virtual machines in the scale set. Minimum api-version: 2022-08-01
 * **imageReference**: [ImageReference](#imagereference): Specifies information about the image to use. You can specify information about
 platform images, marketplace images, or virtual machine images. This element is
@@ -683,7 +683,7 @@ machine image, but is not used in other creation operations.
 * **osDisk**: [VirtualMachineScaleSetOSDisk](#virtualmachinescalesetosdisk): Specifies information about the operating system disk used by the virtual
 machines in the scale set. For more information about disks, see [About disks
 and VHDs for Azure virtual
-machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
+machines](https://learn.microsoft.com/azure/virtual-machines/managed-disks-overview).
 
 ## VMDiskSecurityProfile
 ### Properties
@@ -719,12 +719,12 @@ the deployment
 specified in the request body the default behavior is to set it to the value of
 vCPUs available for that VM size exposed in api response of [List all available
 virtual machine sizes in a
-region](https://docs.microsoft.com/en-us/rest/api/compute/resource-skus/list).
+region](https://learn.microsoft.com/en-us/rest/api/compute/resource-skus/list).
 * **vCPUsPerCore**: int: Specifies the vCPU to physical core ratio. When this property is not specified
 in the request body the default behavior is set to the value of vCPUsPerCore
 for the VM Size exposed in api response of [List all available virtual machine
 sizes in a
-region](https://docs.microsoft.com/en-us/rest/api/compute/resource-skus/list).
+region](https://learn.microsoft.com/en-us/rest/api/compute/resource-skus/list).
 **Setting this property to 1 also means that hyper-threading is disabled.**
 
 ## WindowsConfiguration
@@ -743,9 +743,9 @@ true by default. This will ensure that VM Agent is installed on the VM so that
 extensions can be added to the VM later.
 * **timeZone**: string: Specifies the time zone of the virtual machine. e.g. "Pacific Standard Time".
 Possible values can be
-[TimeZoneInfo.Id](https://docs.microsoft.com/dotnet/api/system.timezoneinfo.id?#System_TimeZoneInfo_Id)
+[TimeZoneInfo.Id](https://learn.microsoft.com/dotnet/api/system.timezoneinfo.id?#System_TimeZoneInfo_Id)
 value from time zones returned by
-[TimeZoneInfo.GetSystemTimeZones](https://docs.microsoft.com/dotnet/api/system.timezoneinfo.getsystemtimezones).
+[TimeZoneInfo.GetSystemTimeZones](https://learn.microsoft.com/dotnet/api/system.timezoneinfo.getsystemtimezones).
 * **winRM**: [WinRMConfiguration](#winrmconfiguration): Specifies the Windows Remote Management listeners. This enables remote Windows
 PowerShell.
 
@@ -764,16 +764,16 @@ operations.
 * **certificateUrl**: string: This is the URL of a certificate that has been uploaded to Key Vault as a
 secret. For adding a secret to the Key Vault, see [Add a key or secret to the
 key
-vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started/#add).
+vault](https://learn.microsoft.com/azure/key-vault/key-vault-get-started/#add).
 In this case, your certificate needs to be the Base64 encoding of the following
 JSON Object which is encoded in UTF-8: <br><br> {<br>
 "data":"<Base64-encoded-certificate>",<br>  "dataType":"pfx",<br>
 "password":"<pfx-file-password>"<br>} <br> To install certificates on a virtual
 machine it is recommended to use the [Azure Key Vault virtual machine extension
 for
-Linux](https://docs.microsoft.com/azure/virtual-machines/extensions/key-vault-linux)
+Linux](https://learn.microsoft.com/azure/virtual-machines/extensions/key-vault-linux)
 or the [Azure Key Vault virtual machine extension for
-Windows](https://docs.microsoft.com/azure/virtual-machines/extensions/key-vault-windows).
+Windows](https://learn.microsoft.com/azure/virtual-machines/extensions/key-vault-windows).
 * **protocol**: 'Http' | 'Https' | string: Specifies the protocol of WinRM listener. Possible values are: **http,**
 **https.**
 

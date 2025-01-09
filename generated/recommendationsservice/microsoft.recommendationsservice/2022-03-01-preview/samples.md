@@ -34,7 +34,7 @@ resource exampleResource 'Microsoft.RecommendationsService/accounts@2022-03-01-p
   identity: {
     type: 'SystemAssigned,UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/userAssignedIdentity: {
+      '/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/userAssignedIdentity': {
       }
     }
   }

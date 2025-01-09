@@ -18,8 +18,8 @@ resource exampleResource 'Microsoft.Insights/scheduledQueryRules@2023-12-01' = {
         '/subscriptions/1cf177ed-1330-4692-80ea-fd3d7783b147/resourcegroups/sqrapi/providers/microsoft.insights/actiongroups/myactiongroup'
       ]
       actionProperties: {
-        Icm.Title: 'Custom title in ICM'
-        Icm.TsgId: 'https://tsg.url'
+        'Icm.Title': 'Custom title in ICM'
+        'Icm.TsgId': 'https://tsg.url'
       }
       customProperties: {
         key11: 'value11'
@@ -88,8 +88,8 @@ resource exampleResource 'Microsoft.Insights/scheduledQueryRules@2023-12-01' = {
         '/subscriptions/1cf177ed-1330-4692-80ea-fd3d7783b147/resourcegroups/sqrapi/providers/microsoft.insights/actiongroups/myactiongroup'
       ]
       actionProperties: {
-        Icm.Title: 'Custom title in ICM'
-        Icm.TsgId: 'https://tsg.url'
+        'Icm.Title': 'Custom title in ICM'
+        'Icm.TsgId': 'https://tsg.url'
       }
       customProperties: {
         key11: 'value11'
@@ -145,8 +145,8 @@ resource exampleResource 'Microsoft.Insights/scheduledQueryRules@2023-12-01' = {
         '/subscriptions/1cf177ed-1330-4692-80ea-fd3d7783b147/resourcegroups/sqrapi/providers/microsoft.insights/actiongroups/myactiongroup'
       ]
       actionProperties: {
-        Icm.Title: 'Custom title in ICM'
-        Icm.TsgId: 'https://tsg.url'
+        'Icm.Title': 'Custom title in ICM'
+        'Icm.TsgId': 'https://tsg.url'
       }
       customProperties: {
         key11: 'value11'

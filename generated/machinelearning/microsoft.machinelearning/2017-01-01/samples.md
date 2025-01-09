@@ -71,7 +71,7 @@ resource exampleResource 'Microsoft.MachineLearning/webServices@2017-01-01' = {
           properties: {
             column_name: {
               type: 'String'
-              x-ms-isnullable: false
+              'x-ms-isnullable': false
             }
           }
           title: ''
@@ -93,11 +93,11 @@ resource exampleResource 'Microsoft.MachineLearning/webServices@2017-01-01' = {
             age: {
               type: 'Integer'
               format: 'Int32'
-              x-ms-isnullable: true
+              'x-ms-isnullable': true
             }
             workclass: {
               type: 'String'
-              x-ms-isnullable: false
+              'x-ms-isnullable': false
             }
           }
           title: ''
@@ -130,11 +130,11 @@ resource exampleResource 'Microsoft.MachineLearning/webServices@2017-01-01' = {
         node1: {
           assetId: 'asset1'
           parameters: {
-            R Script: {
+            'R Script': {
               certificateThumbprint: ''
               value: 'The R Script'
             }
-            R Version: {
+            'R Version': {
               certificateThumbprint: ''
               value: 'CRAN R 3.1.0'
             }
@@ -143,19 +143,19 @@ resource exampleResource 'Microsoft.MachineLearning/webServices@2017-01-01' = {
         node2: {
           assetId: 'asset2'
           parameters: {
-            Account Key: {
+            'Account Key': {
               certificateThumbprint: 'TheThumbprint'
               value: 'Encrypted Key'
             }
-            Account Name: {
+            'Account Name': {
               certificateThumbprint: ''
               value: 'accountName'
             }
-            Please Specify Authentication Type: {
+            'Please Specify Authentication Type': {
               certificateThumbprint: ''
               value: 'Account'
             }
-            Please Specify Data Source: {
+            'Please Specify Data Source': {
               certificateThumbprint: ''
               value: 'AzureBlobStorage'
             }

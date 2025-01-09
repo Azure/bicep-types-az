@@ -23,7 +23,7 @@ resource exampleResource 'Microsoft.Migrate/assessmentProjects@2023-05-01-previe
     publicNetworkAccess: 'Disabled'
   }
   tags: {
-    Migrate Project: 'sakanwar-PE-SEA'
+    'Migrate Project': 'sakanwar-PE-SEA'
   }
 }
 ```

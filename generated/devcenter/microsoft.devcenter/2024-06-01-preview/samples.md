@@ -33,7 +33,7 @@ resource exampleResource 'Microsoft.DevCenter/devcenters@2024-06-01-preview' = {
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/identityGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/testidentity1: {
+      '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/identityGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/testidentity1': {
       }
     }
   }
@@ -57,7 +57,7 @@ resource exampleResource 'Microsoft.DevCenter/devcenters@2024-06-01-preview' = {
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/identityGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/testidentity1: {
+      '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/identityGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/testidentity1': {
       }
     }
   }
@@ -102,7 +102,7 @@ resource exampleResource 'Microsoft.DevCenter/devcenters@2024-06-01-preview' = {
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/identityGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/testidentity1: {
+      '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/identityGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/testidentity1': {
       }
     }
   }
@@ -195,7 +195,7 @@ resource exampleResource 'Microsoft.DevCenter/devcenters/encryptionSets@2024-06-
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/identityGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/testidentity1: {
+      '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/identityGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/testidentity1': {
       }
     }
   }
@@ -367,23 +367,23 @@ resource exampleResource 'Microsoft.DevCenter/projects/environmentTypes@2024-06-
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/identityGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/testidentity1: {
+      '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/identityGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/testidentity1': {
       }
     }
   }
   properties: {
     creatorRoleAssignment: {
       roles: {
-        4cbf0b6c-e750-441c-98a7-10da8387e4d6: {
+        '4cbf0b6c-e750-441c-98a7-10da8387e4d6': {
         }
       }
     }
     deploymentTargetId: '/subscriptions/00000000-0000-0000-0000-000000000000'
     status: 'Enabled'
     userRoleAssignments: {
-      e45e3m7c-176e-416a-b466-0c5ec8298f8a: {
+      'e45e3m7c-176e-416a-b466-0c5ec8298f8a': {
         roles: {
-          4cbf0b6c-e750-441c-98a7-10da8387e4d6: {
+          '4cbf0b6c-e750-441c-98a7-10da8387e4d6': {
           }
         }
       }

@@ -165,6 +165,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -329,6 +330,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/{policyAssignmentId}': Unable to locate "/providers/" segment
@@ -514,6 +516,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/{policyAssignmentId}': Unable to locate "/providers/" segment
@@ -699,6 +702,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/{policyAssignmentId}': Unable to locate "/providers/" segment
@@ -868,6 +872,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -1034,6 +1039,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/stable/2020-09-01/dataPolicyManifests.json:123:5
@@ -1266,6 +1272,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/{policyAssignmentId}': Unable to locate "/providers/" segment
@@ -1451,6 +1458,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
@@ -1618,6 +1626,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
@@ -1785,6 +1794,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
@@ -1954,6 +1964,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2023-07-01/resources.json:4532:5
@@ -2269,6 +2280,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-03-01/resources.json:4535:5
@@ -2601,6 +2613,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:4560:5
@@ -2916,6 +2929,321 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4530:5
+warning | PreCheck/SchemaMissingType | The schema 'GenericResourceFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4539:5
+warning | PreCheck/SchemaMissingType | The schema 'ResourceGroupFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4556:5
+warning | PreCheck/SchemaMissingType | The schema 'TemplateLink' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4569:5
+warning | PreCheck/SchemaMissingType | The schema 'ParametersLink' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4594:5
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4610:5
+warning | PreCheck/SchemaMissingType | The schema 'DebugSetting' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4713:5
+warning | PreCheck/SchemaMissingType | The schema 'Deployment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4722:5
+warning | PreCheck/SchemaMissingType | The schema 'ScopedDeployment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4745:5
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentExportResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4769:5
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentWhatIf' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4778:5
+warning | PreCheck/SchemaMissingType | The schema 'ScopedDeploymentWhatIf' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4794:5
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentWhatIfProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4811:5
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentWhatIfSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4825:5
+warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4842:5
+warning | PreCheck/SchemaMissingType | The schema 'ApiProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4851:5
+warning | PreCheck/SchemaMissingType | The schema 'AliasPathMetadata' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4865:5
+warning | PreCheck/SchemaMissingType | The schema 'AliasPath' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4945:5
+warning | PreCheck/SchemaMissingType | The schema 'AliasPattern' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4970:5
+warning | PreCheck/SchemaMissingType | The schema 'Alias' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5005:5
+warning | PreCheck/SchemaMissingType | The schema 'ProviderExtendedLocation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5062:5
+warning | PreCheck/SchemaMissingType | The schema 'ProviderResourceType' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5082:5
+warning | PreCheck/SchemaMissingType | The schema 'Provider' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5164:5
+warning | PreCheck/SchemaMissingType | The schema 'BasicDependency' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5213:5
+warning | PreCheck/SchemaMissingType | The schema 'Dependency' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5230:5
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentPropertiesExtended' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5302:5
+warning | PreCheck/SchemaMissingType | The schema 'ResourceReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5445:5
+warning | PreCheck/SchemaMissingType | The schema 'OnErrorDeployment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5455:5
+warning | PreCheck/SchemaMissingType | The schema 'OnErrorDeploymentExtended' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5476:5
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtended' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5502:5
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5538:5
+warning | PreCheck/SchemaMissingType | The schema 'ProviderListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5555:5
+warning | PreCheck/SchemaMissingType | The schema 'ProviderResourceTypeListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5572:5
+warning | PreCheck/SchemaMissingType | The schema 'GenericResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5592:5
+warning | PreCheck/SchemaMissingType | The schema 'ExtendedLocation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5627:5
+warning | PreCheck/SchemaMissingType | The schema 'GenericResourceExpanded' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5647:5
+warning | PreCheck/SchemaMissingType | The schema 'Plan' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5674:5
+warning | PreCheck/SchemaMissingType | The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5699:5
+warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5729:5
+warning | PreCheck/SchemaMissingType | The schema 'ResourceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5778:5
+warning | PreCheck/SchemaMissingType | The schema 'ResourceGroup' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5795:5
+warning | PreCheck/SchemaMissingType | The schema 'ResourceGroupPatchable' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5839:5
+warning | PreCheck/SchemaMissingType | The schema 'ResourceGroupProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5864:5
+warning | PreCheck/SchemaMissingType | The schema 'ResourceGroupListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5874:5
+warning | PreCheck/SchemaMissingType | The schema 'ResourcesMoveInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5891:5
+warning | PreCheck/SchemaMissingType | The schema 'ExportTemplateRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5907:5
+warning | PreCheck/SchemaMissingType | The schema 'TagCount' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5935:5
+warning | PreCheck/SchemaMissingType | The schema 'TagValue' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5948:5
+warning | PreCheck/SchemaMissingType | The schema 'TagDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5967:5
+warning | PreCheck/SchemaMissingType | The schema 'TagsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5993:5
+warning | PreCheck/SchemaMissingType | The schema 'TargetResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6010:5
+warning | PreCheck/SchemaMissingType | The schema 'HttpMessage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6027:5
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentOperationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6036:5
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentOperation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6150:5
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentOperationsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6169:5
+warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperationDisplayProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6186:5
+warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6211:5
+warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6251:5
+warning | PreCheck/SchemaMissingType | The schema 'ResourceGroupExportResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6261:5
+warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6286:9
+warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6309:5
+warning | PreCheck/SchemaMissingType | The schema 'TemplateHashResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6328:5
+warning | PreCheck/SchemaMissingType | The schema 'WhatIfPropertyChange' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6341:5
+warning | PreCheck/SchemaMissingType | The schema 'WhatIfChange' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6409:5
+warning | PreCheck/SchemaMissingType | The schema 'WhatIfOperationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6503:5
+warning | PreCheck/SchemaMissingType | The schema 'WhatIfOperationResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6538:5
+warning | PreCheck/SchemaMissingType | The schema 'Tags' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6556:5
+warning | PreCheck/SchemaMissingType | The schema 'ProviderPermissionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6734:5
+warning | PreCheck/SchemaMissingType | The schema 'ExpressionEvaluationOptions' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6786:5
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Modeler/MissingType | The schema 'DeploymentParameter-value' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json#/components/schemas/DeploymentParameter-value
+warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace "{resourceProviderNamespace}"
+warning | Skipping path '/{resourceId}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}/tagValues/{tagValue}': Unable to locate "/providers/" segment
+warning | Skipping path '/subscriptions/{subscriptionId}/tagNames/{tagName}': Unable to locate "/providers/" segment
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.29.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.30.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.31.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.35.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.36.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.37.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.38.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.39.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.48.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.49.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.50.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.51.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.52.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.53.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.54.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.55.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.56.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.57.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.58.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.59.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.60.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.61.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.62.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.63.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.64.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.65.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.66.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.67.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.68.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.69.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.70.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.71.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.72.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.73.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.74.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.75.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.76.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.77.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.78.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.79.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.80.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.81.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.82.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.83.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.84.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.85.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.86.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.87.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.88.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.89.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.90.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.91.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.92.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.93.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.94.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.95.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.96.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.97.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.98.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.99.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.100.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.101.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.102.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.103.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.104.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.105.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.106.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.107.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.108.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.109.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.110.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.111.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.112.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.113.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.114.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.115.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.116.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.117.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.118.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.119.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.120.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.121.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.122.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.123.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.124.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.125.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.126.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.127.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.128.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.129.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.130.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.131.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.132.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.133.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.134.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.135.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.136.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.137.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.138.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.139.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.140.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.141.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.142.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.143.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.144.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.145.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.146.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.147.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.148.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.149.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.150.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.151.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.152.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.153.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.154.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.155.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.156.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.157.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.158.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.159.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.160.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Operation' (4 differences):
@@ -3117,6 +3445,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Skipping path '/{policyAssignmentId}': Unable to locate "/providers/" segment
@@ -3286,6 +3615,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/stable/2021-06-01/policyDefinitions.json:492:5
@@ -3497,6 +3827,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -3663,6 +3994,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -3829,6 +4161,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -3995,6 +4328,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'components·dz7j2·schemas·snapshotproperties·properties·content·additionalproperties' has no type or format information whatsoever. Location:
@@ -4163,6 +4497,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -4329,6 +4664,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -4495,6 +4831,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -4661,6 +4998,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/preview/2020-07-01-preview/policyExemptions.json:378:5
@@ -4836,6 +5174,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/stable/2020-05-01/privateLinks.json:596:5
@@ -5025,6 +5364,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2022-09-01/resources.json:4526:5
@@ -5340,6 +5680,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ManagementLockOwner' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/stable/2017-04-01/locks.json:1045:5
@@ -5518,6 +5859,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Application' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Solutions/preview/2020-08-21-preview/managedapplications.json:1300:5
@@ -5767,6 +6109,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'PairedRegion' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2021-01-01/subscriptions.json:283:5
@@ -6122,6 +6465,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentScriptListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2020-10-01/deploymentScripts.json:814:5
@@ -6442,6 +6786,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentScriptListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/preview/2019-10-01-preview/deploymentScripts.json:810:5
@@ -6617,6 +6962,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -6783,6 +7129,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'FeatureProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Features/stable/2015-12-01/features.json:276:5
@@ -6959,6 +7306,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ManagementLockOwner' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/stable/2016-09-01/locks.json:943:5
@@ -7137,6 +7485,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ManagementLockProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/stable/2015-01-01/locks.json:597:5
@@ -7309,6 +7658,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/stable/2020-03-01/policyAssignments.json:580:5
@@ -7520,6 +7870,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/stable/2019-09-01/policyAssignments.json:586:5
@@ -7732,6 +8083,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'PolicyAssignmentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/stable/2019-06-01/policyAssignments.json:538:5
@@ -7931,6 +8283,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'PolicyAssignmentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/stable/2019-01-01/policyAssignments.json:535:5
@@ -8130,6 +8483,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'PolicyAssignmentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/stable/2018-05-01/policyAssignments.json:535:5
@@ -8329,6 +8683,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'PolicyAssignmentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/stable/2018-03-01/policyAssignments.json:523:5
@@ -8526,6 +8881,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'PolicyAssignmentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/preview/2017-06-01-preview/policyAssignments.json:487:5
@@ -8714,6 +9070,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'PolicyDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/stable/2016-12-01/policyDefinitions.json:353:5
@@ -8897,6 +9254,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
@@ -9068,6 +9426,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'TemplateSpecsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2021-05-01/templateSpecs.json:618:5
@@ -9245,6 +9604,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'TemplateSpecsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/preview/2021-03-01-preview/templateSpecs.json:618:5
@@ -9422,6 +9782,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'TemplateSpecsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/preview/2019-06-01-preview/templateSpecs.json:614:5
@@ -9596,6 +9957,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
@@ -9766,6 +10128,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'PolicyDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/stable/2016-04-01/policy.json:551:5
@@ -9946,6 +10309,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'PolicyDefinitionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Authorization/preview/2015-10-01-preview/policy.json:551:5
@@ -10126,6 +10490,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2021-04-01/resources.json:4480:5
@@ -10440,6 +10805,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2020-08-01/resources.json:4367:5
@@ -10750,6 +11116,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2020-06-01/resources.json:4357:5
@@ -11058,6 +11425,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2019-10-01/resources.json:4318:5
@@ -11360,6 +11728,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2019-08-01/resources.json:4019:5
@@ -11654,6 +12023,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2019-07-01/resources.json:4019:5
@@ -11946,6 +12316,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2019-05-10/resources.json:2724:5
@@ -12226,6 +12597,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2019-05-01/resources.json:2648:5
@@ -12506,6 +12878,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2019-03-01/resources.json:2429:5
@@ -12786,6 +13159,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2018-05-01/resources.json:2421:5
@@ -13066,6 +13440,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2018-02-01/resources.json:1988:5
@@ -13342,6 +13717,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2017-05-10/resources.json:1980:5
@@ -13616,6 +13992,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2016-09-01/resources.json:1931:5
@@ -13901,6 +14278,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2016-07-01/resources.json:1682:5
@@ -14172,6 +14550,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2016-02-01/resources.json:1683:5
@@ -14441,6 +14820,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'PolicyAssignmentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2015-11-01/resources.json:2128:5
@@ -14746,6 +15126,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'PairedRegion' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2020-01-01/subscriptions.json:273:5
@@ -14949,6 +15330,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'PairedRegion' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2019-11-01/subscriptions.json:268:5
@@ -15152,6 +15534,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Location' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2019-06-01/subscriptions.json:263:5
@@ -15351,6 +15734,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Location' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2018-06-01/subscriptions.json:253:5
@@ -15548,6 +15932,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Location' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2016-06-01/subscriptions.json:253:5
@@ -15745,6 +16130,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Application' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Solutions/stable/2019-07-01/managedapplications.json:1291:5
@@ -16013,6 +16399,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Application' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Solutions/stable/2018-06-01/managedapplications.json:1004:5
@@ -16220,6 +16607,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Application' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Solutions/stable/2017-09-01/managedapplications.json:875:5
@@ -16424,6 +16812,7 @@ warning | DeprecatedConfig | Using directive.160.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Appliance' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Solutions/preview/2016-09-01-preview/managedapplications.json:900:5

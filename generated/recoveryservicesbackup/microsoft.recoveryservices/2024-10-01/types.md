@@ -1021,7 +1021,7 @@ Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is Sto
 Backup is VMAppContainer
 * **extendedInfo**: [AzureWorkloadContainerExtendedInfo](#azureworkloadcontainerextendedinfo): Additional details of a workload container.
 * **lastUpdatedTime**: string: Time stamp when this container was updated.
-* **operationType**: 'Invalid' | 'Register' | 'Reregister' | string: Re-Do Operation
+* **operationType**: 'Invalid' | 'Register' | 'Rehydrate' | 'Reregister' | string: Re-Do Operation
 * **sourceResourceId**: string: ARM ID of the virtual machine represented by this Azure Workload Container
 * **workloadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDBInstance' | 'SAPHanaDatabase' | 'SQLDB' | 'SQLDataBase' | 'Sharepoint' | 'SystemState' | 'VM' | 'VMwareVM' | string: Workload type for which registration was sent.
 
@@ -1032,6 +1032,7 @@ Backup is VMAppContainer
 Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
 Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
 Backup is VMAppContainer
+* **operationType**: 'Invalid' | 'Register' | 'Rehydrate' | 'Reregister' | string: Re-Do Operation
 * **protectedItemCount**: int: Number of items backed up in this container.
 * **resourceGroup**: string: Resource group name of Recovery Services Vault.
 * **sourceResourceId**: string: Fully qualified ARM url.
@@ -1045,7 +1046,7 @@ Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is Sto
 Backup is VMAppContainer
 * **extendedInfo**: [AzureWorkloadContainerExtendedInfo](#azureworkloadcontainerextendedinfo): Additional details of a workload container.
 * **lastUpdatedTime**: string: Time stamp when this container was updated.
-* **operationType**: 'Invalid' | 'Register' | 'Reregister' | string: Re-Do Operation
+* **operationType**: 'Invalid' | 'Register' | 'Rehydrate' | 'Reregister' | string: Re-Do Operation
 * **sourceResourceId**: string: ARM ID of the virtual machine represented by this Azure Workload Container
 * **workloadType**: 'AzureFileShare' | 'AzureSqlDb' | 'Client' | 'Exchange' | 'FileFolder' | 'GenericDataSource' | 'Invalid' | 'SAPAseDatabase' | 'SAPHanaDBInstance' | 'SAPHanaDatabase' | 'SQLDB' | 'SQLDataBase' | 'Sharepoint' | 'SystemState' | 'VM' | 'VMwareVM' | string: Workload type for which registration was sent.
 

@@ -13,7 +13,7 @@ resource exampleResource 'Microsoft.App/builders@2024-02-02-preview' = {
   identity: {
     type: 'SystemAssigned,UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1: {
+      '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1': {
       }
     }
   }
@@ -434,7 +434,7 @@ resource exampleResource 'Microsoft.App/containerApps@2024-02-02-preview' = {
   identity: {
     type: 'SystemAssigned,UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourcegroups/rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myidentity: {
+      '/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourcegroups/rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myidentity': {
       }
     }
   }
@@ -1183,7 +1183,7 @@ resource exampleResource 'Microsoft.App/managedEnvironments@2024-02-02-preview' 
   identity: {
     type: 'SystemAssigned, UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contoso-resources/providers/Microsoft.ManagedIdentity/userAssignedIdentities/contoso-identity: {
+      '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contoso-resources/providers/Microsoft.ManagedIdentity/userAssignedIdentities/contoso-identity': {
       }
     }
   }
