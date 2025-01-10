@@ -380,7 +380,7 @@ resource exampleResource 'Microsoft.IoTOperations/instances/brokers/authenticati
               }
               subject: 'CN = Contoso Root CA Cert, OU = Engineering, C = US'
             }
-            smart-fan: {
+            'smart-fan': {
               attributes: {
                 building: '17'
               }

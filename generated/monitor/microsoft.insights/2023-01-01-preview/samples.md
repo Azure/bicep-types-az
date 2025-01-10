@@ -18,7 +18,7 @@ resource exampleResource 'Microsoft.Insights/activityLogAlerts@2023-01-01-previe
         {
           actionGroupId: '/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/MyResourceGroup/providers/Microsoft.Insights/actionGroups/SampleActionGroup'
           actionProperties: {
-            Email.Title: 'my email title'
+            'Email.Title': 'my email title'
           }
           webhookProperties: {
             sampleWebhookProperty: 'SamplePropertyValue'
@@ -60,7 +60,7 @@ resource exampleResource 'Microsoft.Insights/activityLogAlerts@2023-01-01-previe
         {
           actionGroupId: '/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/MyResourceGroup/providers/Microsoft.Insights/actionGroups/SampleActionGroup'
           actionProperties: {
-            Email.Title: 'my email title'
+            'Email.Title': 'my email title'
           }
           webhookProperties: {
             sampleWebhookProperty: 'SamplePropertyValue'
@@ -96,7 +96,7 @@ resource exampleResource 'Microsoft.Insights/activityLogAlerts@2023-01-01-previe
         {
           actionGroupId: '/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/MyResourceGroup/providers/Microsoft.Insights/actionGroups/SampleActionGroup'
           actionProperties: {
-            Email.Title: 'my email title'
+            'Email.Title': 'my email title'
           }
           webhookProperties: {
             sampleWebhookProperty: 'SamplePropertyValue'
@@ -146,7 +146,7 @@ resource exampleResource 'Microsoft.Insights/activityLogAlerts@2023-01-01-previe
         {
           actionGroupId: '/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/MyResourceGroup/providers/Microsoft.Insights/actionGroups/SampleActionGroup'
           actionProperties: {
-            Email.Title: 'my email title'
+            'Email.Title': 'my email title'
           }
           webhookProperties: {
             sampleWebhookProperty: 'SamplePropertyValue'

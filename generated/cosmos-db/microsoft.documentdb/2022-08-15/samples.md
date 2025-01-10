@@ -70,7 +70,7 @@ resource exampleResource 'Microsoft.DocumentDB/databaseAccounts@2022-08-15' = {
   identity: {
     type: 'SystemAssigned,UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/fa5fc227-a624-475e-b696-cdd604c735bc/resourceGroups/eu2cgroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1: {
+      '/subscriptions/fa5fc227-a624-475e-b696-cdd604c735bc/resourceGroups/eu2cgroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1': {
       }
     }
   }

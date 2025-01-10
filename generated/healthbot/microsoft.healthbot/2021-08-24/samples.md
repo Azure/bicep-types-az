@@ -13,9 +13,9 @@ resource exampleResource 'Microsoft.HealthBot/healthBots@2021-08-24' = {
   identity: {
     type: 'SystemAssigned, UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/subscription-id/resourcegroups/myrg/providers/microsoft.managedidentity/userassignedidentities/my-mi: {
+      '/subscriptions/subscription-id/resourcegroups/myrg/providers/microsoft.managedidentity/userassignedidentities/my-mi': {
       }
-      /subscriptions/subscription-id/resourcegroups/myrg/providers/microsoft.managedidentity/userassignedidentities/my-mi2: {
+      '/subscriptions/subscription-id/resourcegroups/myrg/providers/microsoft.managedidentity/userassignedidentities/my-mi2': {
       }
     }
   }

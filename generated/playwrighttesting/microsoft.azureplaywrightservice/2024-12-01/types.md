@@ -43,7 +43,7 @@
 ## AccountProperties
 ### Properties
 * **dashboardUri**: string (ReadOnly): The Playwright testing dashboard URI for the account resource.
-* **localAuth**: 'Disabled' | 'Enabled' | string: When enabled, this feature allows the workspace to use local auth(through access key) for authentication of test runs.
+* **localAuth**: 'Disabled' | 'Enabled' | string: When enabled, this feature allows the workspace to use local auth (through service access token) for executing operations.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): The status of the last operation.
 * **regionalAffinity**: 'Disabled' | 'Enabled' | string: This property sets the connection region for Playwright client workers to cloud-hosted browsers. If enabled, workers connect to browsers in the closest Azure region, ensuring lower latency. If disabled, workers connect to browsers in the Azure region in which the workspace was initially created.
 * **reporting**: 'Disabled' | 'Enabled' | string: When enabled, this feature allows the workspace to upload and display test results, including artifacts like traces and screenshots, in the Playwright portal. This enables faster and more efficient troubleshooting.

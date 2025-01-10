@@ -643,6 +643,11 @@
 * **targetName**: any (Required): The server name of data source access.
 * **userName**: any (Required): The user name of data source access.
 
+## CopyComputeScaleProperties
+### Properties
+* **dataIntegrationUnit**: int {minValue: 4}: DIU number setting reserved for copy activity execution. Supported values are multiples of 4 in range 4-256.
+* **timeToLive**: int {minValue: 5}: Time to live (in minutes) setting of integration runtime which will execute copy activity.
+
 ## CspWorkspaceAdminProperties
 ### Properties
 * **initialWorkspaceAdminObjectId**: string: AAD object ID of initial workspace admin
@@ -990,11 +995,13 @@ For more information, see [Auditing to storage using Managed Identity authentica
 
 ## IntegrationRuntimeComputeProperties
 ### Properties
+* **copyComputeScaleProperties**: [CopyComputeScaleProperties](#copycomputescaleproperties): CopyComputeScale properties for managed integration runtime.
 * **dataFlowProperties**: [IntegrationRuntimeDataFlowProperties](#integrationruntimedataflowproperties): Data flow properties for managed integration runtime.
 * **location**: string: The location for managed integration runtime. The supported regions could be found on https://docs.microsoft.com/en-us/azure/data-factory/data-factory-data-movement-activities
 * **maxParallelExecutionsPerNode**: int {minValue: 1}: Maximum parallel executions count per node for managed integration runtime.
 * **nodeSize**: string: The node size requirement to managed integration runtime.
 * **numberOfNodes**: int {minValue: 1}: The required number of nodes for managed integration runtime.
+* **pipelineExternalComputeScaleProperties**: [PipelineExternalComputeScaleProperties](#pipelineexternalcomputescaleproperties): PipelineExternalComputeScale properties for managed integration runtime.
 * **vNetProperties**: [IntegrationRuntimeVNetProperties](#integrationruntimevnetproperties): VNet properties for managed integration runtime.
 ### Additional Properties
 * **Additional Properties Type**: any
@@ -1182,6 +1189,12 @@ For more information, see [Auditing to storage using Managed Identity authentica
 * **minimum**: int (Required): Minimum allowed instances count.
 * **version**: int (Required): The version of the template defined, for instance 1.
 
+## PipelineExternalComputeScaleProperties
+### Properties
+* **numberOfExternalNodes**: int {minValue: 1, maxValue: 10}: Number of the the external nodes, which should be greater than 0 and less than 11.
+* **numberOfPipelineNodes**: int {minValue: 1, maxValue: 10}: Number of the pipeline nodes, which should be greater than 0 and less than 11.
+* **timeToLive**: int {minValue: 5}: Time to live (in minutes) setting of integration runtime which will execute pipeline and external activity.
+
 ## PrivateEndpoint
 ### Properties
 * **id**: string (ReadOnly): Resource id of the private endpoint.
@@ -1311,6 +1324,7 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ## SelfHostedIntegrationRuntimeTypeProperties
 ### Properties
 * **linkedInfo**: [LinkedIntegrationRuntimeType](#linkedintegrationruntimetype): Linked integration runtime type from data factory
+* **selfContainedInteractiveAuthoringEnabled**: bool: An alternative option to ensure interactive authoring function when your self-hosted integration runtime is unable to establish a connection with Azure Relay.
 
 ## SensitivityLabelProperties
 ### Properties

@@ -20,7 +20,7 @@ resource exampleResource 'Microsoft.Search/searchServices@2024-03-01-preview' = 
     name: 'standard'
   }
   tags: {
-    app-name: 'My e-commerce app'
+    'app-name': 'My e-commerce app'
   }
 }
 ```
@@ -44,7 +44,7 @@ resource exampleResource 'Microsoft.Search/searchServices@2024-03-01-preview' = 
     name: 'standard'
   }
   tags: {
-    app-name: 'My e-commerce app'
+    'app-name': 'My e-commerce app'
   }
 }
 ```
@@ -64,7 +64,7 @@ resource exampleResource 'Microsoft.Search/searchServices@2024-03-01-preview' = 
     name: 'standard'
   }
   tags: {
-    app-name: 'My e-commerce app'
+    'app-name': 'My e-commerce app'
   }
 }
 ```
@@ -84,7 +84,7 @@ resource exampleResource 'Microsoft.Search/searchServices@2024-03-01-preview' = 
     name: 'standard'
   }
   tags: {
-    app-name: 'My e-commerce app'
+    'app-name': 'My e-commerce app'
   }
 }
 ```
@@ -113,7 +113,7 @@ resource exampleResource 'Microsoft.Search/searchServices@2024-03-01-preview' = 
     name: 'standard'
   }
   tags: {
-    app-name: 'My e-commerce app'
+    'app-name': 'My e-commerce app'
   }
 }
 ```
@@ -143,7 +143,7 @@ resource exampleResource 'Microsoft.Search/searchServices@2024-03-01-preview' = 
     name: 'standard'
   }
   tags: {
-    app-name: 'My e-commerce app'
+    'app-name': 'My e-commerce app'
   }
 }
 ```
@@ -165,7 +165,7 @@ resource exampleResource 'Microsoft.Search/searchServices@2024-03-01-preview' = 
     name: 'standard'
   }
   tags: {
-    app-name: 'My e-commerce app'
+    'app-name': 'My e-commerce app'
   }
 }
 ```
@@ -187,7 +187,7 @@ resource exampleResource 'Microsoft.Search/searchServices@2024-03-01-preview' = 
     name: 'standard'
   }
   tags: {
-    app-name: 'My e-commerce app'
+    'app-name': 'My e-commerce app'
   }
 }
 ```
@@ -199,7 +199,7 @@ resource exampleResource 'Microsoft.Search/searchServices@2024-03-01-preview' = 
   identity: {
     type: 'SystemAssigned, UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/user-mi: {
+      '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/user-mi': {
       }
     }
   }
@@ -213,7 +213,7 @@ resource exampleResource 'Microsoft.Search/searchServices@2024-03-01-preview' = 
     name: 'standard'
   }
   tags: {
-    app-name: 'My e-commerce app'
+    'app-name': 'My e-commerce app'
   }
 }
 ```
@@ -233,7 +233,7 @@ resource exampleResource 'Microsoft.Search/searchServices@2024-03-01-preview' = 
     name: 'standard'
   }
   tags: {
-    app-name: 'My e-commerce app'
+    'app-name': 'My e-commerce app'
   }
 }
 ```

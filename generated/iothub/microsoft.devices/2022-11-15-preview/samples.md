@@ -85,7 +85,7 @@ resource exampleResource 'Microsoft.Devices/IotHubs@2022-11-15-preview' = {
       ]
     }
     storageEndpoints: {
-      $default: {
+      '$default': {
         connectionString: ''
         containerName: ''
         sasTtlAsIso8601: 'PT1H'

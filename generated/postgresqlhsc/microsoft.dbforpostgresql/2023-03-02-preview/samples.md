@@ -38,7 +38,7 @@ resource exampleResource 'Microsoft.DBforPostgreSQL/serverGroupsv2@2023-03-02-pr
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/test-usermanagedidentity: {
+      '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/test-usermanagedidentity': {
       }
     }
   }
@@ -103,7 +103,7 @@ resource exampleResource 'Microsoft.DBforPostgreSQL/serverGroupsv2@2023-03-02-pr
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/test-usermanagedidentity: {
+      '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/test-usermanagedidentity': {
       }
     }
   }

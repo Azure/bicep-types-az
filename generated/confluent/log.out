@@ -3,6 +3,9 @@ AutoRest code generation utility [cli version: 3.7.1; node: v16.20.2]
 https://aka.ms/autorest
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'ConnectorResource' has a property 'name' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from ConnectorResource
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | SkippedSemanticValidation | Semantic validation was skipped.

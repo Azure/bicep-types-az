@@ -13,18 +13,18 @@ resource exampleResource 'Microsoft.HDInsight/clusters@2021-06-01' = {
   properties: {
     clusterDefinition: {
       configurations: {
-        ambari-conf: {
-          database-name: '{ambari database name}'
-          database-server: '{sql server name}.database.windows.net'
-          database-user-name: '**********'
-          database-user-password: '**********'
+        'ambari-conf': {
+          'database-name': '{ambari database name}'
+          'database-server': '{sql server name}.database.windows.net'
+          'database-user-name': '**********'
+          'database-user-password': '**********'
         }
         gateway: {
-          restAuthCredential.isEnabled: true
-          restAuthCredential.password: '**********'
-          restAuthCredential.username: 'admin'
+          'restAuthCredential.isEnabled': true
+          'restAuthCredential.password': '**********'
+          'restAuthCredential.username': 'admin'
         }
-        hive-env: {
+        'hive-env': {
           hive_database: 'Existing MSSQL Server database with SQL authentication'
           hive_database_name: '{hive metastore name}'
           hive_database_type: 'mssql'
@@ -32,13 +32,13 @@ resource exampleResource 'Microsoft.HDInsight/clusters@2021-06-01' = {
           hive_existing_mssql_server_host: '{sql server name}.database.windows.net'
           hive_hostname: '{sql server name}.database.windows.net'
         }
-        hive-site: {
-          javax.jdo.option.ConnectionDriverName: 'com.microsoft.sqlserver.jdbc.SQLServerDriver'
-          javax.jdo.option.ConnectionPassword: '**********!'
-          javax.jdo.option.ConnectionURL: 'jdbc:sqlserver://{sql server name}.database.windows.net;database={hive metastore name};encrypt=true;trustServerCertificate=true;create=false;loginTimeout=300;sendStringParametersAsUnicode=true;prepareSQL=0'
-          javax.jdo.option.ConnectionUserName: '**********'
+        'hive-site': {
+          'javax.jdo.option.ConnectionDriverName': 'com.microsoft.sqlserver.jdbc.SQLServerDriver'
+          'javax.jdo.option.ConnectionPassword': '**********!'
+          'javax.jdo.option.ConnectionURL': 'jdbc:sqlserver://{sql server name}.database.windows.net;database={hive metastore name};encrypt=true;trustServerCertificate=true;create=false;loginTimeout=300;sendStringParametersAsUnicode=true;prepareSQL=0'
+          'javax.jdo.option.ConnectionUserName': '**********'
         }
-        oozie-env: {
+        'oozie-env': {
           oozie_database: 'Existing MSSQL Server database with SQL authentication'
           oozie_database_name: '{oozie metastore name}'
           oozie_database_type: 'mssql'
@@ -46,12 +46,12 @@ resource exampleResource 'Microsoft.HDInsight/clusters@2021-06-01' = {
           oozie_existing_mssql_server_host: '{sql server name}.database.windows.net'
           oozie_hostname: '{sql server name}.database.windows.net'
         }
-        oozie-site: {
-          oozie.db.schema.name: 'oozie'
-          oozie.service.JPAService.jdbc.driver: 'com.microsoft.sqlserver.jdbc.SQLServerDriver'
-          oozie.service.JPAService.jdbc.password: '**********'
-          oozie.service.JPAService.jdbc.url: 'jdbc:sqlserver://{sql server name}.database.windows.net;database={oozie metastore name};encrypt=true;trustServerCertificate=true;create=false;loginTimeout=300;sendStringParametersAsUnicode=true;prepareSQL=0'
-          oozie.service.JPAService.jdbc.username: '**********'
+        'oozie-site': {
+          'oozie.db.schema.name': 'oozie'
+          'oozie.service.JPAService.jdbc.driver': 'com.microsoft.sqlserver.jdbc.SQLServerDriver'
+          'oozie.service.JPAService.jdbc.password': '**********'
+          'oozie.service.JPAService.jdbc.url': 'jdbc:sqlserver://{sql server name}.database.windows.net;database={oozie metastore name};encrypt=true;trustServerCertificate=true;create=false;loginTimeout=300;sendStringParametersAsUnicode=true;prepareSQL=0'
+          'oozie.service.JPAService.jdbc.username': '**********'
         }
       }
       kind: 'hadoop'
@@ -135,9 +135,9 @@ resource exampleResource 'Microsoft.HDInsight/clusters@2021-06-01' = {
     clusterDefinition: {
       configurations: {
         gateway: {
-          restAuthCredential.isEnabled: true
-          restAuthCredential.password: '**********'
-          restAuthCredential.username: 'admin'
+          'restAuthCredential.isEnabled': true
+          'restAuthCredential.password': '**********'
+          'restAuthCredential.username': 'admin'
         }
       }
       kind: 'hadoop'
@@ -215,9 +215,9 @@ resource exampleResource 'Microsoft.HDInsight/clusters@2021-06-01' = {
     clusterDefinition: {
       configurations: {
         gateway: {
-          restAuthCredential.isEnabled: true
-          restAuthCredential.password: '**********'
-          restAuthCredential.username: 'admin'
+          'restAuthCredential.isEnabled': true
+          'restAuthCredential.password': '**********'
+          'restAuthCredential.username': 'admin'
         }
       }
       kind: 'Hadoop'
@@ -293,9 +293,9 @@ resource exampleResource 'Microsoft.HDInsight/clusters@2021-06-01' = {
     clusterDefinition: {
       configurations: {
         gateway: {
-          restAuthCredential.isEnabled: true
-          restAuthCredential.password: '**********'
-          restAuthCredential.username: 'admin'
+          'restAuthCredential.isEnabled': true
+          'restAuthCredential.password': '**********'
+          'restAuthCredential.username': 'admin'
         }
       }
       kind: 'Hadoop'
@@ -371,9 +371,9 @@ resource exampleResource 'Microsoft.HDInsight/clusters@2021-06-01' = {
     clusterDefinition: {
       configurations: {
         gateway: {
-          restAuthCredential.isEnabled: true
-          restAuthCredential.password: '**********'
-          restAuthCredential.username: 'admin'
+          'restAuthCredential.isEnabled': true
+          'restAuthCredential.password': '**********'
+          'restAuthCredential.username': 'admin'
         }
       }
       kind: 'hadoop'
@@ -458,9 +458,9 @@ resource exampleResource 'Microsoft.HDInsight/clusters@2021-06-01' = {
     clusterDefinition: {
       configurations: {
         gateway: {
-          restAuthCredential.isEnabled: true
-          restAuthCredential.password: '**********'
-          restAuthCredential.username: 'admin'
+          'restAuthCredential.isEnabled': true
+          'restAuthCredential.password': '**********'
+          'restAuthCredential.username': 'admin'
         }
       }
       kind: 'Hadoop'
@@ -534,9 +534,9 @@ resource exampleResource 'Microsoft.HDInsight/clusters@2021-06-01' = {
     clusterDefinition: {
       configurations: {
         gateway: {
-          restAuthCredential.isEnabled: 'true'
-          restAuthCredential.password: '**********'
-          restAuthCredential.username: 'admin'
+          'restAuthCredential.isEnabled': 'true'
+          'restAuthCredential.password': '**********'
+          'restAuthCredential.username': 'admin'
         }
       }
       kind: 'Hadoop'
@@ -615,9 +615,9 @@ resource exampleResource 'Microsoft.HDInsight/clusters@2021-06-01' = {
     clusterDefinition: {
       configurations: {
         gateway: {
-          restAuthCredential.isEnabled: 'true'
-          restAuthCredential.password: '**********'
-          restAuthCredential.username: 'admin'
+          'restAuthCredential.isEnabled': 'true'
+          'restAuthCredential.password': '**********'
+          'restAuthCredential.username': 'admin'
         }
       }
       kind: 'Hadoop'
@@ -696,9 +696,9 @@ resource exampleResource 'Microsoft.HDInsight/clusters@2021-06-01' = {
     clusterDefinition: {
       configurations: {
         gateway: {
-          restAuthCredential.isEnabled: true
-          restAuthCredential.password: '**********'
-          restAuthCredential.username: 'admin'
+          'restAuthCredential.isEnabled': true
+          'restAuthCredential.password': '**********'
+          'restAuthCredential.username': 'admin'
         }
       }
       kind: 'Hadoop'
@@ -786,9 +786,9 @@ resource exampleResource 'Microsoft.HDInsight/clusters@2021-06-01' = {
       }
       configurations: {
         gateway: {
-          restAuthCredential.isEnabled: true
-          restAuthCredential.password: '**********'
-          restAuthCredential.username: 'admin'
+          'restAuthCredential.isEnabled': true
+          'restAuthCredential.password': '**********'
+          'restAuthCredential.username': 'admin'
         }
       }
       kind: 'hadoop'
@@ -903,9 +903,9 @@ resource exampleResource 'Microsoft.HDInsight/clusters@2021-06-01' = {
       }
       configurations: {
         gateway: {
-          restAuthCredential.isEnabled: true
-          restAuthCredential.password: '**********'
-          restAuthCredential.username: 'admin'
+          'restAuthCredential.isEnabled': true
+          'restAuthCredential.password': '**********'
+          'restAuthCredential.username': 'admin'
         }
       }
       kind: 'kafka'
@@ -1002,9 +1002,9 @@ resource exampleResource 'Microsoft.HDInsight/clusters@2021-06-01' = {
     clusterDefinition: {
       configurations: {
         gateway: {
-          restAuthCredential.isEnabled: true
-          restAuthCredential.password: '**********'
-          restAuthCredential.username: 'admin'
+          'restAuthCredential.isEnabled': true
+          'restAuthCredential.password': '**********'
+          'restAuthCredential.username': 'admin'
         }
       }
       kind: 'Hadoop'
@@ -1138,9 +1138,9 @@ resource exampleResource 'Microsoft.HDInsight/clusters@2021-06-01' = {
       }
       configurations: {
         gateway: {
-          restAuthCredential.isEnabled: true
-          restAuthCredential.password: '**********'
-          restAuthCredential.username: 'admin'
+          'restAuthCredential.isEnabled': true
+          'restAuthCredential.password': '**********'
+          'restAuthCredential.username': 'admin'
         }
       }
       kind: 'Spark'

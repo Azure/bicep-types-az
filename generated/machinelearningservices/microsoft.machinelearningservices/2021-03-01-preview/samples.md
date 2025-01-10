@@ -13,7 +13,7 @@ resource exampleResource 'Microsoft.MachineLearningServices/workspaces@2021-03-0
   identity: {
     type: 'SystemAssigned,UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/testuai: {
+      '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/testuai': {
       }
     }
   }
@@ -62,7 +62,7 @@ resource exampleResource 'Microsoft.MachineLearningServices/workspaces/batchEndp
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myuseridentity: {
+      '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myuseridentity': {
         clientId: 'string'
         principalId: 'string'
       }
@@ -105,7 +105,7 @@ resource exampleResource 'Microsoft.MachineLearningServices/workspaces/batchEndp
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myuseridentity: {
+      '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myuseridentity': {
         clientId: 'string'
         principalId: 'string'
       }
@@ -1018,7 +1018,7 @@ resource exampleResource 'Microsoft.MachineLearningServices/workspaces/onlineEnd
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myuseridentity: {
+      '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myuseridentity': {
         clientId: 'string'
         principalId: 'string'
       }
@@ -1062,7 +1062,7 @@ resource exampleResource 'Microsoft.MachineLearningServices/workspaces/onlineEnd
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myuseridentity: {
+      '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myuseridentity': {
         clientId: 'string'
         principalId: 'string'
       }
@@ -1129,7 +1129,7 @@ resource exampleResource 'Microsoft.MachineLearningServices/workspaces/onlineEnd
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myuseridentity: {
+      '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myuseridentity': {
         clientId: 'string'
         principalId: 'string'
       }

@@ -13,7 +13,7 @@ resource exampleResource 'Microsoft.ContainerInstance/containerGroups@2021-09-01
   identity: {
     type: 'SystemAssigned, UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity-name: {
+      '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity-name': {
       }
     }
   }
@@ -67,7 +67,7 @@ resource exampleResource 'Microsoft.ContainerInstance/containerGroups@2021-09-01
       logAnalytics: {
         logType: 'ContainerInsights'
         metadata: {
-          test-key: 'test-metadata-value'
+          'test-key': 'test-metadata-value'
         }
         workspaceId: 'workspaceid'
         workspaceKey: 'workspaceKey'

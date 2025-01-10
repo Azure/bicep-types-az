@@ -15,7 +15,7 @@ resource exampleResource 'Microsoft.Cache/redis@2020-06-01' = {
     enableNonSslPort: true
     minimumTlsVersion: '1.2'
     redisConfiguration: {
-      maxmemory-policy: 'allkeys-lru'
+      'maxmemory-policy': 'allkeys-lru'
     }
     replicasPerMaster: 2
     shardCount: 2

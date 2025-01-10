@@ -42,7 +42,7 @@ resource exampleResource 'Microsoft.Dashboard/grafana@2022-10-01-preview' = {
     }
     grafanaMajorVersion: '9'
     grafanaPlugins: {
-      sample-plugin-id: {
+      'sample-plugin-id': {
       }
     }
     publicNetworkAccess: 'Enabled'

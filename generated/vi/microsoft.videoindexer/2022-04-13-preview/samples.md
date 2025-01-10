@@ -13,7 +13,7 @@ resource exampleResource 'Microsoft.VideoIndexer/accounts@2022-04-13-preview' = 
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/xxx/resourceGroups/contoso-videoanalyzer-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/contoso-videoanalyzer-mi: {
+      '/subscriptions/xxx/resourceGroups/contoso-videoanalyzer-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/contoso-videoanalyzer-mi': {
       }
     }
   }
@@ -53,7 +53,7 @@ resource exampleResource 'Microsoft.VideoIndexer/accounts@2022-04-13-preview' = 
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/xxx/resourceGroups/contoso-videoanalyzer-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/contoso-videoanalyzer-mi: {
+      '/subscriptions/xxx/resourceGroups/contoso-videoanalyzer-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/contoso-videoanalyzer-mi': {
       }
     }
   }
@@ -74,7 +74,7 @@ resource exampleResource 'Microsoft.VideoIndexer/accounts@2022-04-13-preview' = 
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/xxx/resourceGroups/contoso-videoanalyzer-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/contoso-videoanalyzer-mi: {
+      '/subscriptions/xxx/resourceGroups/contoso-videoanalyzer-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/contoso-videoanalyzer-mi': {
       }
     }
   }
@@ -95,7 +95,7 @@ resource exampleResource 'Microsoft.VideoIndexer/accounts@2022-04-13-preview' = 
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/xxx/resourceGroups/contoso-videoanalyzer-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/contoso-videoanalyzer-mi: {
+      '/subscriptions/xxx/resourceGroups/contoso-videoanalyzer-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/contoso-videoanalyzer-mi': {
       }
     }
   }
@@ -116,7 +116,7 @@ resource exampleResource 'Microsoft.VideoIndexer/accounts@2022-04-13-preview' = 
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/xxx/resourceGroups/contoso-videoanalyzer-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/contoso-videoanalyzer-mi: {
+      '/subscriptions/xxx/resourceGroups/contoso-videoanalyzer-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/contoso-videoanalyzer-mi': {
       }
     }
   }
@@ -137,7 +137,7 @@ resource exampleResource 'Microsoft.VideoIndexer/accounts@2022-04-13-preview' = 
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/xxx/resourceGroups/contoso-videoanalyzer-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/contoso-videoanalyzer-mi: {
+      '/subscriptions/xxx/resourceGroups/contoso-videoanalyzer-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/contoso-videoanalyzer-mi': {
       }
     }
   }
@@ -158,7 +158,7 @@ resource exampleResource 'Microsoft.VideoIndexer/accounts@2022-04-13-preview' = 
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/xxx/resourceGroups/contoso-videoanalyzer-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/contoso-videoanalyzer-mi: {
+      '/subscriptions/xxx/resourceGroups/contoso-videoanalyzer-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/contoso-videoanalyzer-mi': {
       }
     }
   }
@@ -179,7 +179,7 @@ resource exampleResource 'Microsoft.VideoIndexer/accounts@2022-04-13-preview' = 
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      subscriptions/24237b72-8546-4da5-b204-8c3cb76dd930/resourceGroups/uratzmon-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/talshoham: {
+      'subscriptions/24237b72-8546-4da5-b204-8c3cb76dd930/resourceGroups/uratzmon-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/talshoham': {
       }
     }
   }

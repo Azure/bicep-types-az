@@ -13,7 +13,7 @@ resource exampleResource 'Microsoft.Network/applicationGateways@2023-09-01' = {
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1: {
+      '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1': {
       }
     }
   }
@@ -2265,8 +2265,8 @@ resource exampleResource 'Microsoft.Network/firewallPolicies/signatureOverrides@
   id: '/subscriptions/e747cc13-97d4-4a79-b463-42d7f4e558f2/resourceGroups/rg1/providers/Microsoft.Network/firewallPolicies/firewallPolicy/signatureOverrides/default'
   properties: {
     signatures: {
-      2000105: 'Off'
-      2000106: 'Deny'
+      '2000105': 'Off'
+      '2000106': 'Deny'
     }
   }
 }
@@ -3581,7 +3581,7 @@ resource exampleResource 'Microsoft.Network/networkVirtualAppliances@2023-09-01'
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/subid/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1: {
+      '/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1': {
       }
     }
   }

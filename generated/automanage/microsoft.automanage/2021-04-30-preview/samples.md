@@ -25,15 +25,15 @@ resource exampleResource 'Microsoft.Automanage/configurationProfiles@2021-04-30-
   location: 'East US'
   properties: {
     configuration: {
-      Antimalware/Enable: false
-      AzureSecurityCenter/Enable: true
-      Backup/Enable: false
-      BootDiagnostics/Enable: true
-      ChangeTrackingAndInventory/Enable: true
-      GuestConfiguration/Enable: true
-      LogAnalytics/Enable: true
-      UpdateManagement/Enable: true
-      VMInsights/Enable: true
+      'Antimalware/Enable': false
+      'AzureSecurityCenter/Enable': true
+      'Backup/Enable': false
+      'BootDiagnostics/Enable': true
+      'ChangeTrackingAndInventory/Enable': true
+      'GuestConfiguration/Enable': true
+      'LogAnalytics/Enable': true
+      'UpdateManagement/Enable': true
+      'VMInsights/Enable': true
     }
     overrides: [
       {
@@ -43,9 +43,9 @@ resource exampleResource 'Microsoft.Automanage/configurationProfiles@2021-04-30-
         }
         priority: 100
         then: {
-          LogAnalytics/Enable: true
-          LogAnalytics/Reprovision: true
-          LogAnalytics/Workspace: '/subscriptions/abc/resourceGroups/xyz/providers/Microsoft.La/Workspaces/eastus'
+          'LogAnalytics/Enable': true
+          'LogAnalytics/Reprovision': true
+          'LogAnalytics/Workspace': '/subscriptions/abc/resourceGroups/xyz/providers/Microsoft.La/Workspaces/eastus'
         }
       }
       {
@@ -55,9 +55,9 @@ resource exampleResource 'Microsoft.Automanage/configurationProfiles@2021-04-30-
         }
         priority: 200
         then: {
-          LogAnalytics/Enable: true
-          LogAnalytics/Reprovision: true
-          LogAnalytics/Workspace: '/subscriptions/abc/resourceGroups/xyz/providers/Microsoft.La/Workspaces/centralcanada'
+          'LogAnalytics/Enable': true
+          'LogAnalytics/Reprovision': true
+          'LogAnalytics/Workspace': '/subscriptions/abc/resourceGroups/xyz/providers/Microsoft.La/Workspaces/centralcanada'
         }
       }
     ]
@@ -78,15 +78,15 @@ resource exampleResource 'Microsoft.Automanage/configurationProfiles/versions@20
   location: 'East US'
   properties: {
     configuration: {
-      Antimalware/Enable: false
-      AzureSecurityCenter/Enable: true
-      Backup/Enable: false
-      BootDiagnostics/Enable: true
-      ChangeTrackingAndInventory/Enable: true
-      GuestConfiguration/Enable: true
-      LogAnalytics/Enable: true
-      UpdateManagement/Enable: true
-      VMInsights/Enable: true
+      'Antimalware/Enable': false
+      'AzureSecurityCenter/Enable': true
+      'Backup/Enable': false
+      'BootDiagnostics/Enable': true
+      'ChangeTrackingAndInventory/Enable': true
+      'GuestConfiguration/Enable': true
+      'LogAnalytics/Enable': true
+      'UpdateManagement/Enable': true
+      'VMInsights/Enable': true
     }
     overrides: [
       {
@@ -96,9 +96,9 @@ resource exampleResource 'Microsoft.Automanage/configurationProfiles/versions@20
         }
         priority: 100
         then: {
-          LogAnalytics/Enable: true
-          LogAnalytics/Reprovision: true
-          LogAnalytics/Workspace: '/subscriptions/abc/resourceGroups/xyz/providers/Microsoft.La/Workspaces/eastus'
+          'LogAnalytics/Enable': true
+          'LogAnalytics/Reprovision': true
+          'LogAnalytics/Workspace': '/subscriptions/abc/resourceGroups/xyz/providers/Microsoft.La/Workspaces/eastus'
         }
       }
       {
@@ -108,9 +108,9 @@ resource exampleResource 'Microsoft.Automanage/configurationProfiles/versions@20
         }
         priority: 200
         then: {
-          LogAnalytics/Enable: true
-          LogAnalytics/Reprovision: true
-          LogAnalytics/Workspace: '/subscriptions/abc/resourceGroups/xyz/providers/Microsoft.La/Workspaces/centralcanada'
+          'LogAnalytics/Enable': true
+          'LogAnalytics/Reprovision': true
+          'LogAnalytics/Workspace': '/subscriptions/abc/resourceGroups/xyz/providers/Microsoft.La/Workspaces/centralcanada'
         }
       }
     ]

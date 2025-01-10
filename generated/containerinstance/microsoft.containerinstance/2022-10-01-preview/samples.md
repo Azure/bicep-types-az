@@ -135,7 +135,7 @@ resource exampleResource 'Microsoft.ContainerInstance/containerGroups@2022-10-01
   identity: {
     type: 'SystemAssigned, UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity-name: {
+      '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity-name': {
       }
     }
   }
@@ -189,7 +189,7 @@ resource exampleResource 'Microsoft.ContainerInstance/containerGroups@2022-10-01
       logAnalytics: {
         logType: 'ContainerInsights'
         metadata: {
-          test-key: 'test-metadata-value'
+          'test-key': 'test-metadata-value'
         }
         workspaceId: 'workspaceid'
         workspaceKey: 'workspaceKey'
@@ -288,7 +288,7 @@ resource exampleResource 'Microsoft.ContainerInstance/containerGroups@2022-10-01
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/test-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/container-group-identity: {
+      '/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/test-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/container-group-identity': {
       }
     }
   }
