@@ -7652,23 +7652,28 @@
 * **Link**: [2023-09-01-preview](databasewatcher/microsoft.databasewatcher/2023-09-01-preview/types.md#resource-microsoftdatabasewatcherwatchers2023-09-01-preview)
 * **Link**: [2024-07-19-preview](databasewatcher/microsoft.databasewatcher/2024-07-19-preview/types.md#resource-microsoftdatabasewatcherwatchers2024-07-19-preview)
 * **Link**: [2024-10-01-preview](databasewatcher/microsoft.databasewatcher/2024-10-01-preview/types.md#resource-microsoftdatabasewatcherwatchers2024-10-01-preview)
+* **Link**: [2025-01-02](databasewatcher/microsoft.databasewatcher/2025-01-02/types.md#resource-microsoftdatabasewatcherwatchers2025-01-02)
 
 ### microsoft.databasewatcher/watchers/alertruleresources
 * **Link**: [2024-07-19-preview](databasewatcher/microsoft.databasewatcher/2024-07-19-preview/types.md#resource-microsoftdatabasewatcherwatchersalertruleresources2024-07-19-preview)
 * **Link**: [2024-10-01-preview](databasewatcher/microsoft.databasewatcher/2024-10-01-preview/types.md#resource-microsoftdatabasewatcherwatchersalertruleresources2024-10-01-preview)
+* **Link**: [2025-01-02](databasewatcher/microsoft.databasewatcher/2025-01-02/types.md#resource-microsoftdatabasewatcherwatchersalertruleresources2025-01-02)
 
 ### microsoft.databasewatcher/watchers/healthvalidations
 * **Link**: [2024-10-01-preview](databasewatcher/microsoft.databasewatcher/2024-10-01-preview/types.md#resource-microsoftdatabasewatcherwatchershealthvalidations2024-10-01-preview)
+* **Link**: [2025-01-02](databasewatcher/microsoft.databasewatcher/2025-01-02/types.md#resource-microsoftdatabasewatcherwatchershealthvalidations2025-01-02)
 
 ### microsoft.databasewatcher/watchers/sharedprivatelinkresources
 * **Link**: [2023-09-01-preview](databasewatcher/microsoft.databasewatcher/2023-09-01-preview/types.md#resource-microsoftdatabasewatcherwatcherssharedprivatelinkresources2023-09-01-preview)
 * **Link**: [2024-07-19-preview](databasewatcher/microsoft.databasewatcher/2024-07-19-preview/types.md#resource-microsoftdatabasewatcherwatcherssharedprivatelinkresources2024-07-19-preview)
 * **Link**: [2024-10-01-preview](databasewatcher/microsoft.databasewatcher/2024-10-01-preview/types.md#resource-microsoftdatabasewatcherwatcherssharedprivatelinkresources2024-10-01-preview)
+* **Link**: [2025-01-02](databasewatcher/microsoft.databasewatcher/2025-01-02/types.md#resource-microsoftdatabasewatcherwatcherssharedprivatelinkresources2025-01-02)
 
 ### microsoft.databasewatcher/watchers/targets
 * **Link**: [2023-09-01-preview](databasewatcher/microsoft.databasewatcher/2023-09-01-preview/types.md#resource-microsoftdatabasewatcherwatcherstargets2023-09-01-preview)
 * **Link**: [2024-07-19-preview](databasewatcher/microsoft.databasewatcher/2024-07-19-preview/types.md#resource-microsoftdatabasewatcherwatcherstargets2024-07-19-preview)
 * **Link**: [2024-10-01-preview](databasewatcher/microsoft.databasewatcher/2024-10-01-preview/types.md#resource-microsoftdatabasewatcherwatcherstargets2024-10-01-preview)
+* **Link**: [2025-01-02](databasewatcher/microsoft.databasewatcher/2025-01-02/types.md#resource-microsoftdatabasewatcherwatcherstargets2025-01-02)
 
 ## microsoft.databox
 ### microsoft.databox/jobs
