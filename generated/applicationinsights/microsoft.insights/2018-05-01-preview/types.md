@@ -36,12 +36,12 @@
 
 ## ApplicationInsightsComponentProactiveDetectionConfigurationProperties
 ### Properties
-* **CustomEmails**: string[]: Custom email addresses for this rule notifications
-* **Enabled**: bool: A flag that indicates whether this rule is enabled by the user
-* **LastUpdatedTime**: string (ReadOnly): The last time this rule was updated
-* **Name**: string (ReadOnly): The rule name
-* **RuleDefinitions**: [ApplicationInsightsComponentProactiveDetectionConfigurationPropertiesRuleDefinitions](#applicationinsightscomponentproactivedetectionconfigurationpropertiesruledefinitions): Static definitions of the ProactiveDetection configuration rule (same values for all components).
-* **SendEmailsToSubscriptionOwners**: bool: A flag that indicated whether notifications on this rule should be sent to subscription owners
+* **customEmails**: string[]: Custom email addresses for this rule notifications
+* **enabled**: bool: A flag that indicates whether this rule is enabled by the user
+* **lastUpdatedTime**: string (ReadOnly): The last time this rule was updated
+* **name**: string (ReadOnly): The rule name
+* **ruleDefinitions**: [ApplicationInsightsComponentProactiveDetectionConfigurationPropertiesRuleDefinitions](#applicationinsightscomponentproactivedetectionconfigurationpropertiesruledefinitions): Static definitions of the ProactiveDetection configuration rule (same values for all components).
+* **sendEmailsToSubscriptionOwners**: bool: A flag that indicated whether notifications on this rule should be sent to subscription owners
 
 ## ApplicationInsightsComponentProactiveDetectionConfigurationPropertiesRuleDefinitions
 ### Properties

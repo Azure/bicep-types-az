@@ -126,7 +126,7 @@
           "$ref": "#/2"
         },
         "flags": 0,
-        "description": "The Azure ResourceId of an Azure Data Explorer cluster."
+        "description": "The Azure resource ID of an Azure Data Explorer cluster."
       },
       "kustoClusterDisplayName": {
         "type": {
@@ -747,7 +747,7 @@
           "$ref": "#/2"
         },
         "flags": 1,
-        "description": "The resource id of the resource the shared private link resource is for."
+        "description": "The resource ID of the resource the shared private link resource is for."
       },
       "groupId": {
         "type": {
@@ -996,7 +996,7 @@
           "$ref": "#/2"
         },
         "flags": 0,
-        "description": "The Azure ResourceId of the Key Vault instance storing database authentication secrets."
+        "description": "The Azure resource ID of the Key Vault instance storing database authentication secrets."
       },
       "akvTargetUser": {
         "type": {
@@ -1060,7 +1060,7 @@
           "$ref": "#/2"
         },
         "flags": 1,
-        "description": "The Azure ResourceId of an Azure SQL DB single database target."
+        "description": "The Azure resource ID of an Azure SQL DB single database target."
       },
       "readIntent": {
         "type": {
@@ -1094,14 +1094,14 @@
           "$ref": "#/2"
         },
         "flags": 1,
-        "description": "The Azure ResourceId of an Azure SQL DB elastic pool target."
+        "description": "The Azure resource ID of an Azure SQL DB elastic pool target."
       },
       "anchorDatabaseResourceId": {
         "type": {
           "$ref": "#/2"
         },
         "flags": 1,
-        "description": "The Azure ResourceId of the anchor database used to connect to an elastic pool."
+        "description": "The Azure resource ID of the anchor database used to connect to an elastic pool."
       },
       "readIntent": {
         "type": {
@@ -1132,7 +1132,7 @@
           "$ref": "#/2"
         },
         "flags": 1,
-        "description": "The Azure ResourceId of an Azure SQL Managed Instance target."
+        "description": "The Azure resource ID of an Azure SQL Managed Instance target."
       },
       "connectionTcpPort": {
         "type": {
@@ -1173,7 +1173,7 @@
           "$ref": "#/2"
         },
         "flags": 1,
-        "description": "The Azure ResourceId of an Azure SQL VM target."
+        "description": "The Azure resource ID of an Azure SQL VM target."
       },
       "connectionTcpPort": {
         "type": {

@@ -103,10 +103,7 @@
 
 ## StandbyVirtualMachinePoolRuntimeViewResourceProperties
 ### Properties
-* **instanceCountSummary**: [VirtualMachineInstanceCountSummary](#virtualmachineinstancecountsummary)[] (Required, ReadOnly): A list containing the counts of virtual machines in each possible power state for each zone if enabled, as known by the StandbyPool resource provider.
-If zones are not enabled on the attached VMSS, the list will contain a single entry with null zone values.
-Note: any updates to pool resources outside of StandbyPoolRP (i.e deleting a VM through portal) are not reflected here.
-Note: any resources in the Running state may still be installing extensions / not fully provisioned.
+* **instanceCountSummary**: [VirtualMachineInstanceCountSummary](#virtualmachineinstancecountsummary)[] (Required, ReadOnly): A list containing the counts of virtual machines in each possible power state for each zone if enabled, as known by the StandbyPool resource provider. If zones are not enabled on the attached VMSS, the list will contain a single entry without zone values. Note: any resources in the Running state may still be installing extensions / not fully provisioned.
 * **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'Succeeded' | string (ReadOnly): Displays the provisioning state of the standby pool
 
 ## StandbyVirtualMachineResourceProperties

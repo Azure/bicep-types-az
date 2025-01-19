@@ -99,14 +99,13 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-05-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **CustomEmails**: string[]: Custom email addresses for this rule notifications
-* **Enabled**: bool: A flag that indicates whether this rule is enabled by the user
+* **customEmails**: string[]: Custom email addresses for this rule notifications
+* **enabled**: bool: A flag that indicates whether this rule is enabled by the user
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **LastUpdatedTime**: string: The last time this rule was updated
+* **lastUpdatedTime**: string: The last time this rule was updated
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **Name**: string: The rule name
-* **RuleDefinitions**: [ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitions](#applicationinsightscomponentproactivedetectionconfigurationruledefinitions): Static definitions of the ProactiveDetection configuration rule (same values for all components).
-* **SendEmailsToSubscriptionOwners**: bool: A flag that indicated whether notifications on this rule should be sent to subscription owners
+* **ruleDefinitions**: [ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitions](#applicationinsightscomponentproactivedetectionconfigurationruledefinitions): Static definitions of the ProactiveDetection configuration rule (same values for all components).
+* **sendEmailsToSubscriptionOwners**: bool: A flag that indicated whether notifications on this rule should be sent to subscription owners
 * **type**: 'Microsoft.Insights/components/ProactiveDetectionConfigs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Insights/myWorkbooks@2015-05-01
