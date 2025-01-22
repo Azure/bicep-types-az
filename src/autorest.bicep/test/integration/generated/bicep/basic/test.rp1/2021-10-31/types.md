@@ -108,10 +108,6 @@
 ### Properties
 * **someString**: string: The foo response string
 
-## FoosResponse
-### Properties
-* **someString**: string: The foo response string
-
 ## KeyVaultProperties
 ### Properties
 * **identity**: string: The client ID of the identity which will be used to access key vault.
