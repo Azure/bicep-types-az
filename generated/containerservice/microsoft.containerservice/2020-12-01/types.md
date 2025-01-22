@@ -126,14 +126,6 @@
 ### Properties
 * **kubeconfigs**: [CredentialResult](#credentialresult)[] (ReadOnly): Base64-encoded Kubernetes configuration file.
 
-## CredentialResults
-### Properties
-* **kubeconfigs**: [CredentialResult](#credentialresult)[] (ReadOnly): Base64-encoded Kubernetes configuration file.
-
-## CredentialResults
-### Properties
-* **kubeconfigs**: [CredentialResult](#credentialresult)[] (ReadOnly): Base64-encoded Kubernetes configuration file.
-
 ## KubeletConfig
 ### Properties
 * **allowedUnsafeSysctls**: string[]: Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).

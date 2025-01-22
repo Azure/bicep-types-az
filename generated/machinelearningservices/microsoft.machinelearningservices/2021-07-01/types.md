@@ -391,11 +391,6 @@
 * **primaryAccessKey**: string {sensitive} (ReadOnly)
 * **secondaryAccessKey**: string {sensitive} (ReadOnly)
 
-## ListNotebookKeysResult
-### Properties
-* **primaryAccessKey**: string {sensitive} (ReadOnly)
-* **secondaryAccessKey**: string {sensitive} (ReadOnly)
-
 ## ListStorageAccountKeysResult
 ### Properties
 * **userStorageKey**: string {sensitive} (ReadOnly)

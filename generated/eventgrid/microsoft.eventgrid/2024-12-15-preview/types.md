@@ -1326,11 +1326,6 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 * **key1**: string: Shared access key1 for the topic.
 * **key2**: string: Shared access key2 for the topic.
 
-## TopicSharedAccessKeys
-### Properties
-* **key1**: string: Shared access key1 for the topic.
-* **key2**: string: Shared access key2 for the topic.
-
 ## TopicSpaceProperties
 ### Properties
 * **description**: string: Description for the Topic Space resource.

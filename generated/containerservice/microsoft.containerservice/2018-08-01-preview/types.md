@@ -61,10 +61,6 @@
 ### Properties
 * **kubeconfigs**: [CredentialResult](#credentialresult)[] (ReadOnly): Base64-encoded Kubernetes configuration file.
 
-## CredentialResults
-### Properties
-* **kubeconfigs**: [CredentialResult](#credentialresult)[] (ReadOnly): Base64-encoded Kubernetes configuration file.
-
 ## ManagedClusterAADProfile
 ### Properties
 * **clientAppID**: string (Required): The client AAD application ID.

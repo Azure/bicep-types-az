@@ -54,7 +54,7 @@
 
 ## Datastore
 ### Properties
-* **adxClusterResourceId**: string: The Azure ResourceId of an Azure Data Explorer cluster.
+* **adxClusterResourceId**: string: The Azure resource ID of an Azure Data Explorer cluster.
 * **kustoClusterDisplayName**: string: The Kusto cluster display name.
 * **kustoClusterUri**: string (Required): The Kusto cluster URI.
 * **kustoDatabaseName**: string (Required): The name of a Kusto database.
@@ -73,7 +73,7 @@
 ### Properties
 * **dnsZone**: string: The DNS zone to be included in the DNS name of the shared private link. Value is required for Azure Data Explorer clusters and SQL managed instances. The value to use is the second segment of the host FQDN name of the resource that the shared private link resource is for.
 * **groupId**: string (Required): The group id from the provider of resource the shared private link resource is for.
-* **privateLinkResourceId**: string (Required): The resource id of the resource the shared private link resource is for.
+* **privateLinkResourceId**: string (Required): The resource ID of the resource the shared private link resource is for.
 * **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): The provisioning state of the resource.
 * **requestMessage**: string (Required): The request message for requesting approval of the shared private link resource.
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string (ReadOnly): Status of the shared private link resource. Can be Pending, Approved, Rejected or Disconnected.
@@ -99,28 +99,28 @@
 ### SqlDbSingleDatabaseTargetProperties
 #### Properties
 * **readIntent**: bool: Set to true to monitor a high availability replica of specified target, if any.
-* **sqlDbResourceId**: string (Required): The Azure ResourceId of an Azure SQL DB single database target.
+* **sqlDbResourceId**: string (Required): The Azure resource ID of an Azure SQL DB single database target.
 * **targetType**: 'SqlDb' (Required): Discriminator property for TargetProperties.
 
 ### SqlDbElasticPoolTargetProperties
 #### Properties
-* **anchorDatabaseResourceId**: string (Required): The Azure ResourceId of the anchor database used to connect to an elastic pool.
+* **anchorDatabaseResourceId**: string (Required): The Azure resource ID of the anchor database used to connect to an elastic pool.
 * **readIntent**: bool: Set to true to monitor a high availability replica of specified target, if any.
-* **sqlEpResourceId**: string (Required): The Azure ResourceId of an Azure SQL DB elastic pool target.
+* **sqlEpResourceId**: string (Required): The Azure resource ID of an Azure SQL DB elastic pool target.
 * **targetType**: 'SqlEp' (Required): Discriminator property for TargetProperties.
 
 ### SqlMiTargetProperties
 #### Properties
 * **connectionTcpPort**: int: The TCP port number to optionally use in the connection string when connecting to an Azure SQL Managed Instance target.
 * **readIntent**: bool: Set to true to monitor a high availability replica of specified target, if any.
-* **sqlMiResourceId**: string (Required): The Azure ResourceId of an Azure SQL Managed Instance target.
+* **sqlMiResourceId**: string (Required): The Azure resource ID of an Azure SQL Managed Instance target.
 * **targetType**: 'SqlMi' (Required): Discriminator property for TargetProperties.
 
 ### SqlVmTargetProperties
 #### Properties
 * **connectionTcpPort**: int: The TCP port number to optionally use in the connection string when connecting to an Azure SQL VM target.
 * **sqlNamedInstanceName**: string: The SQL instance name to optionally use in the connection string when connecting to an Azure SQL VM target.
-* **sqlVmResourceId**: string (Required): The Azure ResourceId of an Azure SQL VM target.
+* **sqlVmResourceId**: string (Required): The Azure resource ID of an Azure SQL VM target.
 * **targetType**: 'SqlVm' (Required): Discriminator property for TargetProperties.
 
 
@@ -141,7 +141,7 @@
 
 ## VaultSecret
 ### Properties
-* **akvResourceId**: string: The Azure ResourceId of the Key Vault instance storing database authentication secrets.
+* **akvResourceId**: string: The Azure resource ID of the Key Vault instance storing database authentication secrets.
 * **akvTargetPassword**: string {pattern: "^[a-zA-Z0-9-]{1,127}$"}: The path to the Key Vault secret storing the password for authentication to a target.
 * **akvTargetUser**: string {pattern: "^[a-zA-Z0-9-]{1,127}$"}: The path to the Key Vault secret storing the login name (aka user name, aka account name) for authentication to a target.
 

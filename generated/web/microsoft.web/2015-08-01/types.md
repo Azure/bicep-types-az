@@ -838,16 +838,6 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags
 * **type**: string: Resource type
 
-## BackupItem
-### Properties
-* **id**: string: Resource Id
-* **kind**: string: Kind of resource
-* **location**: string (Required): Resource Location
-* **name**: string: Resource Name
-* **properties**: [BackupItemProperties](#backupitemproperties)
-* **tags**: [ResourceTags](#resourcetags): Resource tags
-* **type**: string: Resource type
-
 ## BackupItemProperties
 ### Properties
 * **blobName**: string: Name of the blob which contains data for this backup
@@ -864,16 +854,6 @@
 * **status**: 'Created' | 'DeleteFailed' | 'DeleteInProgress' | 'Deleted' | 'Failed' | 'InProgress' | 'PartiallySucceeded' | 'Skipped' | 'Succeeded' | 'TimedOut' (Required): Backup status
 * **storageAccountUrl**: string: SAS URL for the storage account container which contains this backup
 * **websiteSizeInBytes**: int: Size of the original web app which has been backed up
-
-## BackupRequest
-### Properties
-* **id**: string: Resource Id
-* **kind**: string: Kind of resource
-* **location**: string (Required): Resource Location
-* **name**: string: Resource Name
-* **properties**: [BackupRequestProperties](#backuprequestproperties)
-* **tags**: [ResourceTags](#resourcetags): Resource tags
-* **type**: string: Resource type
 
 ## BackupRequest
 ### Properties
@@ -1687,16 +1667,6 @@
 * **subStatus**: int: SubStatus
 * **timeInterval**: string: TimeInterval
 * **win32Status**: int: Win32 error code
-
-## StringDictionary
-### Properties
-* **id**: string: Resource Id
-* **kind**: string: Kind of resource
-* **location**: string (Required): Resource Location
-* **name**: string: Resource Name
-* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings
-* **tags**: [ResourceTags](#resourcetags): Resource tags
-* **type**: string: Resource type
 
 ## StringDictionary
 ### Properties

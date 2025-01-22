@@ -214,11 +214,6 @@
 * **nextLink**: string: next link
 * **value**: [Country](#country)[] (Required): List of countries
 
-## CountriesResponse
-### Properties
-* **nextLink**: string: next link
-* **value**: [Country](#country)[] (Required): List of countries
-
 ## Country
 ### Properties
 * **code**: string (Required): country code
@@ -294,16 +289,6 @@
 * **nextLink**: string: next Link
 * **value**: string[] (Required): List of AppIds
 
-## ListAppIdResponse
-### Properties
-* **nextLink**: string: next Link
-* **value**: string[] (Required): List of AppIds
-
-## ListFirewallsResponse
-### Properties
-* **nextLink**: string: next link
-* **value**: string[] (Required): firewalls list
-
 ## ListFirewallsResponse
 ### Properties
 * **nextLink**: string: next link
@@ -349,11 +334,6 @@
 * **effectiveDate**: string (ReadOnly): date when plan was applied
 * **planId**: string {maxLength: 50} (Required): plan id as published by Liftr.PAN
 * **usageType**: 'COMMITTED' | 'PAYG' | string: different usage type like PAYG/COMMITTED
-
-## PredefinedUrlCategoriesResponse
-### Properties
-* **nextLink**: string: next link
-* **value**: [PredefinedUrlCategory](#predefinedurlcategory)[] (Required): predefined url categories
 
 ## PredefinedUrlCategoriesResponse
 ### Properties

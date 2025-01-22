@@ -272,16 +272,6 @@
 * **regions**: string[]: List of regions.
 * **skipToken**: string: When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
 
-## ActiveConfigurationParameter
-### Properties
-* **regions**: string[]: List of regions.
-* **skipToken**: string: When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
-
-## ActiveConfigurationParameter
-### Properties
-* **regions**: string[]: List of regions.
-* **skipToken**: string: When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
-
 ## ActiveConnectivityConfiguration
 ### Properties
 * **commitTime**: string: Deployment time string.
@@ -421,11 +411,6 @@
 * **skipToken**: string: When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
 * **value**: [EffectiveVirtualNetwork](#effectivevirtualnetwork)[]: Gets a page of EffectiveVirtualNetwork
 
-## EffectiveVirtualNetworksListResult
-### Properties
-* **skipToken**: string: When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
-* **value**: [EffectiveVirtualNetwork](#effectivevirtualnetwork)[]: Gets a page of EffectiveVirtualNetwork
-
 ## EffectiveVirtualNetworksParameter
 ### Properties
 * **conditionalMembers**: string: Conditional Members.
@@ -496,14 +481,6 @@
 ## NetworkManagerSecurityGroupItem
 ### Properties
 * **networkGroupId**: string (Required): Network manager group Id.
-
-## QueryRequestOptions
-### Properties
-* **skipToken**: string: When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
-
-## QueryRequestOptions
-### Properties
-* **skipToken**: string: When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
 
 ## QueryRequestOptions
 ### Properties

@@ -260,24 +260,6 @@
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: string (ReadOnly): The type of the resource.
 
-## ApplicableSchedule
-### Properties
-* **id**: string (ReadOnly): The identifier of the resource.
-* **location**: string: The location of the resource.
-* **name**: string (ReadOnly): The name of the resource.
-* **properties**: [ApplicableScheduleProperties](#applicablescheduleproperties) (Required): The properties of the resource.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
-* **type**: string (ReadOnly): The type of the resource.
-
-## ApplicableSchedule
-### Properties
-* **id**: string (ReadOnly): The identifier of the resource.
-* **location**: string: The location of the resource.
-* **name**: string (ReadOnly): The name of the resource.
-* **properties**: [ApplicableScheduleProperties](#applicablescheduleproperties) (Required): The properties of the resource.
-* **tags**: [ResourceTags](#resourcetags): The tags of the resource.
-* **type**: string (ReadOnly): The type of the resource.
-
 ## ApplicableScheduleProperties
 ### Properties
 * **labVmsShutdown**: [Schedule](#schedule): The auto-shutdown schedule, if one has been set at the lab or lab resource level.

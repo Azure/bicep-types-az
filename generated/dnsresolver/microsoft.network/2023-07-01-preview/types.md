@@ -223,11 +223,6 @@
 * **nextLink**: string (ReadOnly): The continuation token for the next page of results.
 * **value**: [SubResource](#subresource)[]: Enumeration of the sub-resources.
 
-## SubResourceListResult
-### Properties
-* **nextLink**: string (ReadOnly): The continuation token for the next page of results.
-* **value**: [SubResource](#subresource)[]: Enumeration of the sub-resources.
-
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).

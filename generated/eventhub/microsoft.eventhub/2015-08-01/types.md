@@ -101,14 +101,6 @@
 * **secondaryConnectionString**: string (ReadOnly): Secondary connection string of the created Namespace AuthorizationRule.
 * **secondaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
 
-## ResourceListKeys
-### Properties
-* **keyName**: string (ReadOnly): A string that describes the AuthorizationRule.
-* **primaryConnectionString**: string (ReadOnly): Primary connection string of the created Namespace AuthorizationRule.
-* **primaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
-* **secondaryConnectionString**: string (ReadOnly): Secondary connection string of the created Namespace AuthorizationRule.
-* **secondaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
-
 ## SharedAccessAuthorizationRuleProperties
 ### Properties
 * **rights**: ('Listen' | 'Manage' | 'Send')[] (Required): The rights associated with the rule.

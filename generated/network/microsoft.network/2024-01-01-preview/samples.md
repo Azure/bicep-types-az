@@ -27,6 +27,24 @@ resource exampleResource 'Microsoft.Network/networkManagers@2024-01-01-preview' 
 }
 ```
 
+## microsoft.network/networkmanagers/ipampools
+
+IpamPools_Create
+```bicep
+resource exampleResource 'Microsoft.Network/networkManagers/ipamPools@2024-01-01-preview' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'eastus'
+  properties: {
+    description: 'Test description.'
+    addressPrefixes: [
+      '10.0.0.0/24'
+    ]
+    parentPoolName: ''
+  }
+}
+```
+
 ## microsoft.network/networkmanagers/securityadminconfigurations
 
 Create manual-mode security admin configuration

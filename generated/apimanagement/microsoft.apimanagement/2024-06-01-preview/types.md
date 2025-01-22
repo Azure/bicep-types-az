@@ -1476,10 +1476,6 @@ dictionary key references will be ARM resource ids in the form:
 ### Properties
 * **clientSecret**: string {sensitive}: Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
 
-## ClientSecretContract
-### Properties
-* **clientSecret**: string {sensitive}: Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
-
 ## ConfigurationApi
 ### Properties
 * **legacyApi**: 'Disabled' | 'Enabled' | string: Indication whether or not the legacy Configuration API (v1) should be exposed on the API Management service. Value is optional but must be 'Enabled' or 'Disabled'. If 'Disabled', legacy Configuration API (v1) will not be available for self-hosted gateways. Default value is 'Enabled'
@@ -1739,10 +1735,6 @@ Instrumentation key for applicationInsights logger.
 ### Properties
 * **value**: string: This is secret value of the NamedValue entity.
 
-## NamedValueSecretContract
-### Properties
-* **value**: string: This is secret value of the NamedValue entity.
-
 ## NotificationContractProperties
 ### Properties
 * **description**: string: Description of the Notification.
@@ -1990,12 +1982,6 @@ Instrumentation key for applicationInsights logger.
 * **nextLink**: string: Next page link if any.
 * **value**: [ResourceCollectionValueItem](#resourcecollectionvalueitem)[]: A collection of resources.
 
-## ResourceCollection
-### Properties
-* **count**: int: Total record count number.
-* **nextLink**: string: Next page link if any.
-* **value**: [ResourceCollectionValueItem](#resourcecollectionvalueitem)[]: A collection of resources.
-
 ## ResourceCollectionValueItem
 ### Properties
 * **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
@@ -2069,11 +2055,6 @@ Instrumentation key for applicationInsights logger.
 ### Properties
 * **header**: string: Subscription key header name.
 * **query**: string: Subscription key query string parameter name.
-
-## SubscriptionKeysContract
-### Properties
-* **primaryKey**: string {minLength: 1, maxLength: 256}: Subscription primary key.
-* **secondaryKey**: string {minLength: 1, maxLength: 256}: Subscription secondary key.
 
 ## SubscriptionKeysContract
 ### Properties

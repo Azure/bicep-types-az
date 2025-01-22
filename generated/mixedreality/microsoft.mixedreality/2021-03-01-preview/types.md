@@ -68,16 +68,6 @@
 * **primaryKey**: string {sensitive} (ReadOnly): value of primary key.
 * **secondaryKey**: string {sensitive} (ReadOnly): value of secondary key.
 
-## AccountKeys
-### Properties
-* **primaryKey**: string {sensitive} (ReadOnly): value of primary key.
-* **secondaryKey**: string {sensitive} (ReadOnly): value of secondary key.
-
-## AccountKeys
-### Properties
-* **primaryKey**: string {sensitive} (ReadOnly): value of primary key.
-* **secondaryKey**: string {sensitive} (ReadOnly): value of secondary key.
-
 ## Identity
 ### Properties
 * **principalId**: string (ReadOnly): The principal ID of resource identity.

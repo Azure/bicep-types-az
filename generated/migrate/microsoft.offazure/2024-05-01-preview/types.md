@@ -1068,16 +1068,6 @@ machine.
 * **nextLink**: string (ReadOnly): Gets the value of next link.
 * **value**: [SiteHealthSummary](#sitehealthsummary)[] (Required): Gets the list of SiteHealthSummary.
 
-## SiteHealthSummaryCollection
-### Properties
-* **nextLink**: string (ReadOnly): Gets the value of next link.
-* **value**: [SiteHealthSummary](#sitehealthsummary)[] (Required): Gets the list of SiteHealthSummary.
-
-## SiteHealthSummaryCollection
-### Properties
-* **nextLink**: string (ReadOnly): Gets the value of next link.
-* **value**: [SiteHealthSummary](#sitehealthsummary)[] (Required): Gets the list of SiteHealthSummary.
-
 ## SiteProperties
 ### Properties
 * **agentDetails**: [SiteAgentProperties](#siteagentproperties): Gets or sets the on-premises agent details.

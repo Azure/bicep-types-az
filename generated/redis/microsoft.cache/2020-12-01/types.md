@@ -82,11 +82,6 @@
 * **primaryKey**: string (ReadOnly): The current primary key that clients can use to authenticate with Redis cache.
 * **secondaryKey**: string (ReadOnly): The current secondary key that clients can use to authenticate with Redis cache.
 
-## RedisAccessKeys
-### Properties
-* **primaryKey**: string (ReadOnly): The current primary key that clients can use to authenticate with Redis cache.
-* **secondaryKey**: string (ReadOnly): The current secondary key that clients can use to authenticate with Redis cache.
-
 ## RedisCommonPropertiesRedisConfiguration
 ### Properties
 * **aof-backup-enabled**: string: Specifies whether the aof backup is enabled

@@ -1796,21 +1796,6 @@ with encryption
 * **primaryKey**: string: The primary key.
 * **secondaryKey**: string: The secondary key.
 
-## EndpointAuthKeys
-### Properties
-* **primaryKey**: string: The primary key.
-* **secondaryKey**: string: The secondary key.
-
-## EndpointAuthKeys
-### Properties
-* **primaryKey**: string: The primary key.
-* **secondaryKey**: string: The secondary key.
-
-## EndpointAuthKeys
-### Properties
-* **primaryKey**: string: The primary key.
-* **secondaryKey**: string: The secondary key.
-
 ## EndpointDeploymentModel
 ### Properties
 * **format**: string: Model format
@@ -2926,11 +2911,6 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
 * **status**: 'CancelRequested' | 'Canceled' | 'Completed' | 'Failed' | 'Finalizing' | 'NotResponding' | 'NotStarted' | 'Paused' | 'Preparing' | 'Provisioning' | 'Queued' | 'Running' | 'Scheduled' | 'Starting' | 'Unknown' | string (ReadOnly): Status of the job.
 * **statusMessages**: [StatusMessage](#statusmessage)[] (ReadOnly): Status messages of the job.
 * **tags**: [ResourceBaseTags](#resourcebasetags): Tag dictionary. Tags can be added, removed, and updated.
-
-## ListNotebookKeysResult
-### Properties
-* **primaryAccessKey**: string {sensitive} (ReadOnly): The primary access key of the Notebook
-* **secondaryAccessKey**: string {sensitive} (ReadOnly): The secondary access key of the Notebook
 
 ## ListNotebookKeysResult
 ### Properties

@@ -306,10 +306,6 @@
 ### Properties
 * **value**: [LanguageExtension](#languageextension)[]: The list of language extensions.
 
-## LanguageExtensionsList
-### Properties
-* **value**: [LanguageExtension](#languageextension)[]: The list of language extensions.
-
 ## ManagedPrivateEndpointProperties
 ### Properties
 * **groupId**: string (Required): The groupId in which the managed private endpoint is created.

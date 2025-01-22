@@ -768,10 +768,6 @@ eg: azure-servicebus, redis etc.
 ### Properties
 * **value**: [DaprSecret](#daprsecret)[] (Required): Collection of secrets used by a Dapr component
 
-## DaprSecretsCollection
-### Properties
-* **value**: [DaprSecret](#daprsecret)[] (Required): Collection of secrets used by a Dapr component
-
 ## DaprServiceBindMetadata
 ### Properties
 * **name**: string: Service bind metadata property name.

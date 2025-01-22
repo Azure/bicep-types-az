@@ -1083,16 +1083,6 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 * **primaryKey**: string: The primary key.
 * **secondaryKey**: string: The secondary key.
 
-## EndpointAuthKeys
-### Properties
-* **primaryKey**: string: The primary key.
-* **secondaryKey**: string: The secondary key.
-
-## EndpointAuthKeys
-### Properties
-* **primaryKey**: string: The primary key.
-* **secondaryKey**: string: The secondary key.
-
 ## EndpointDeploymentPropertiesBaseEnvironmentVariables
 ### Properties
 ### Additional Properties
@@ -1758,11 +1748,6 @@ This is optional value to provide, if not provided, AutoML will default this to 
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [InstanceTypeSchema](#instancetypeschema)
-
-## ListNotebookKeysResult
-### Properties
-* **primaryAccessKey**: string {sensitive} (ReadOnly)
-* **secondaryAccessKey**: string {sensitive} (ReadOnly)
 
 ## ListNotebookKeysResult
 ### Properties

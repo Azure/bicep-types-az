@@ -140,13 +140,6 @@ Indicates if the DPS instance has Data Residency enabled, removing the cross geo
 * **rights**: 'DeviceConnect' | 'EnrollmentRead' | 'EnrollmentWrite' | 'RegistrationStatusRead' | 'RegistrationStatusWrite' | 'ServiceConfig' | string (Required): Rights that this key has.
 * **secondaryKey**: string: Secondary SAS key value.
 
-## SharedAccessSignatureAuthorizationRuleAccessRightsDescription
-### Properties
-* **keyName**: string (Required): Name of the key.
-* **primaryKey**: string: Primary SAS key value.
-* **rights**: 'DeviceConnect' | 'EnrollmentRead' | 'EnrollmentWrite' | 'RegistrationStatusRead' | 'RegistrationStatusWrite' | 'ServiceConfig' | string (Required): Rights that this key has.
-* **secondaryKey**: string: Secondary SAS key value.
-
 ## SharedAccessSignatureAuthorizationRuleListResult
 ### Properties
 * **nextLink**: string (ReadOnly): The next link.

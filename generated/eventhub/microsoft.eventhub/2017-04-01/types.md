@@ -100,26 +100,6 @@
 * **secondaryConnectionString**: string (ReadOnly): Secondary connection string of the created namespace AuthorizationRule.
 * **secondaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
 
-## AccessKeys
-### Properties
-* **aliasPrimaryConnectionString**: string (ReadOnly): Primary connection string of the alias if GEO DR is enabled
-* **aliasSecondaryConnectionString**: string (ReadOnly): Secondary  connection string of the alias if GEO DR is enabled
-* **keyName**: string (ReadOnly): A string that describes the AuthorizationRule.
-* **primaryConnectionString**: string (ReadOnly): Primary connection string of the created namespace AuthorizationRule.
-* **primaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
-* **secondaryConnectionString**: string (ReadOnly): Secondary connection string of the created namespace AuthorizationRule.
-* **secondaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
-
-## AccessKeys
-### Properties
-* **aliasPrimaryConnectionString**: string (ReadOnly): Primary connection string of the alias if GEO DR is enabled
-* **aliasSecondaryConnectionString**: string (ReadOnly): Secondary  connection string of the alias if GEO DR is enabled
-* **keyName**: string (ReadOnly): A string that describes the AuthorizationRule.
-* **primaryConnectionString**: string (ReadOnly): Primary connection string of the created namespace AuthorizationRule.
-* **primaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
-* **secondaryConnectionString**: string (ReadOnly): Secondary connection string of the created namespace AuthorizationRule.
-* **secondaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
-
 ## ArmDisasterRecoveryProperties
 ### Properties
 * **alternateName**: string: Alternate name specified when alias and namespace names are same.

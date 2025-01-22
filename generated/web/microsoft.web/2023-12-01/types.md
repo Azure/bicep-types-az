@@ -2042,19 +2042,6 @@ Remove blobs older than X days.
 * **properties**: [BackupItemProperties](#backupitemproperties): BackupItem resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
-## BackupItem
-### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [BackupItemProperties](#backupitemproperties): BackupItem resource specific properties
-* **type**: string (ReadOnly): Resource type.
-
-## BackupItemCollection
-### Properties
-* **nextLink**: string (ReadOnly): Link to next page of resources.
-* **value**: [BackupItem](#backupitem)[] (Required): Collection of resources.
-
 ## BackupItemCollection
 ### Properties
 * **nextLink**: string (ReadOnly): Link to next page of resources.
@@ -2076,14 +2063,6 @@ Remove blobs older than X days.
 * **status**: 'Created' | 'DeleteFailed' | 'DeleteInProgress' | 'Deleted' | 'Failed' | 'InProgress' | 'PartiallySucceeded' | 'Skipped' | 'Succeeded' | 'TimedOut' (ReadOnly): Backup status.
 * **storageAccountUrl**: string (ReadOnly): SAS URL for the storage account container which contains this backup.
 * **websiteSizeInBytes**: int (ReadOnly): Size of the original web app which has been backed up.
-
-## BackupRequest
-### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [BackupRequestProperties](#backuprequestproperties): BackupRequest resource specific properties
-* **type**: string (ReadOnly): Resource type.
 
 ## BackupRequest
 ### Properties
@@ -2578,12 +2557,6 @@ This is used during restore with overwrite connection strings options.
 * **nextLink**: string: The link used to get the next page of recommendations.
 * **value**: any: Anything
 
-## ExpressionTraces
-### Properties
-* **inputs**: [ExpressionRoot](#expressionroot)[]
-* **nextLink**: string: The link used to get the next page of recommendations.
-* **value**: any: Anything
-
 ## ExtendedLocation
 ### Properties
 * **name**: string: Name of extended location.
@@ -2699,21 +2672,6 @@ Value can range between 25 and 100.
 * **key**: string: Secret key.
 * **trigger_url**: string: Trigger URL.
 
-## FunctionSecrets
-### Properties
-* **key**: string: Secret key.
-* **trigger_url**: string: Trigger URL.
-
-## FunctionSecrets
-### Properties
-* **key**: string: Secret key.
-* **trigger_url**: string: Trigger URL.
-
-## FunctionSecrets
-### Properties
-* **key**: string: Secret key.
-* **trigger_url**: string: Trigger URL.
-
 ## FunctionsRuntime
 ### Properties
 * **name**: 'custom' | 'dotnet-isolated' | 'java' | 'node' | 'powershell' | 'python' | string: Function app runtime name. Available options: dotnet-isolated, node, java, powershell, python, custom
@@ -2786,12 +2744,6 @@ action is set to "RedirectToLoginPage".
 * **id**: string: Resource ID of the App Service Environment.
 * **name**: string (ReadOnly): Name of the App Service Environment.
 * **type**: string (ReadOnly): Resource type of the App Service Environment.
-
-## HostKeys
-### Properties
-* **functionKeys**: [HostKeysFunctionKeys](#hostkeysfunctionkeys): Host level function keys.
-* **masterKey**: string: Secret key.
-* **systemKeys**: [HostKeysSystemKeys](#hostkeyssystemkeys): System keys.
 
 ## HostKeys
 ### Properties
@@ -4108,70 +4060,6 @@ This must be of the form /subscriptions/{subscriptionName}/resourceGroups/{resou
 * **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
 * **type**: string (ReadOnly): Resource type.
 
-## StringDictionary
-### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
-* **type**: string (ReadOnly): Resource type.
-
-## StringDictionary
-### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
-* **type**: string (ReadOnly): Resource type.
-
-## StringDictionary
-### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
-* **type**: string (ReadOnly): Resource type.
-
-## StringDictionary
-### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
-* **type**: string (ReadOnly): Resource type.
-
-## StringDictionary
-### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
-* **type**: string (ReadOnly): Resource type.
-
-## StringDictionary
-### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
-* **type**: string (ReadOnly): Resource type.
-
-## StringDictionary
-### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
-* **type**: string (ReadOnly): Resource type.
-
-## StringDictionary
-### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
-* **type**: string (ReadOnly): Resource type.
-
 ## StringDictionaryProperties
 ### Properties
 ### Additional Properties
@@ -4426,15 +4314,6 @@ These values will be used for syncing an app's routes with those from a Virtual 
 * **workerCount**: int: Number of instances in the worker pool.
 * **workerSize**: string: VM size of the worker pool instances.
 * **workerSizeId**: int: Worker size ID for referencing this worker pool.
-
-## WorkflowEnvelope
-### Properties
-* **id**: string (ReadOnly): The resource id.
-* **kind**: string: The resource kind.
-* **location**: string: The resource location.
-* **name**: string (ReadOnly): Gets the resource name.
-* **properties**: [WorkflowEnvelopeProperties](#workflowenvelopeproperties): Additional workflow properties.
-* **type**: string (ReadOnly): Gets the resource type.
 
 ## WorkflowEnvelope
 ### Properties

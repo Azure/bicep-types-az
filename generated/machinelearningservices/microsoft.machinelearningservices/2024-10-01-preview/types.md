@@ -1721,21 +1721,6 @@ with encryption
 * **primaryKey**: string: The primary key.
 * **secondaryKey**: string: The secondary key.
 
-## EndpointAuthKeys
-### Properties
-* **primaryKey**: string: The primary key.
-* **secondaryKey**: string: The secondary key.
-
-## EndpointAuthKeys
-### Properties
-* **primaryKey**: string: The primary key.
-* **secondaryKey**: string: The secondary key.
-
-## EndpointAuthKeys
-### Properties
-* **primaryKey**: string: The primary key.
-* **secondaryKey**: string: The secondary key.
-
 ## EndpointDeploymentModel
 ### Properties
 * **format**: string: Model format
@@ -2791,11 +2776,6 @@ We need this when we support UserAssignedIdentities
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [InstanceTypeSchema](#instancetypeschema)
-
-## ListNotebookKeysResult
-### Properties
-* **primaryAccessKey**: string {sensitive} (ReadOnly): The primary access key of the Notebook
-* **secondaryAccessKey**: string {sensitive} (ReadOnly): The secondary access key of the Notebook
 
 ## ListNotebookKeysResult
 ### Properties

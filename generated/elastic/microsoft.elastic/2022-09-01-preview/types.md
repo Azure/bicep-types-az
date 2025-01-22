@@ -110,10 +110,6 @@
 ### Properties
 * **rulesets**: [ElasticTrafficFilter](#elastictrafficfilter)[]: List of elastic traffic filters in the account
 
-## ElasticTrafficFilterResponse
-### Properties
-* **rulesets**: [ElasticTrafficFilter](#elastictrafficfilter)[]: List of elastic traffic filters in the account
-
 ## ElasticTrafficFilterRule
 ### Properties
 * **azureEndpointGuid**: string: Guid of Private Endpoint in the elastic filter rule
