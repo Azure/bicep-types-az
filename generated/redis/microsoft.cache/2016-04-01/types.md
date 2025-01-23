@@ -40,11 +40,6 @@
 * **primaryKey**: string (ReadOnly): The current primary key that clients can use to authenticate with Redis cache.
 * **secondaryKey**: string (ReadOnly): The current secondary key that clients can use to authenticate with Redis cache.
 
-## RedisAccessKeys
-### Properties
-* **primaryKey**: string (ReadOnly): The current primary key that clients can use to authenticate with Redis cache.
-* **secondaryKey**: string (ReadOnly): The current secondary key that clients can use to authenticate with Redis cache.
-
 ## RedisCreatePropertiesOrRedisResourceProperties
 ### Properties
 * **accessKeys**: [RedisAccessKeys](#redisaccesskeys) (ReadOnly): The keys of the Redis cache - not set if this object is not the response to Create or Update redis cache

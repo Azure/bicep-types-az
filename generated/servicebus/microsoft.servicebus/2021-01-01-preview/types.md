@@ -164,36 +164,6 @@
 * **secondaryConnectionString**: string (ReadOnly): Secondary connection string of the created namespace authorization rule.
 * **secondaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
 
-## AccessKeys
-### Properties
-* **aliasPrimaryConnectionString**: string (ReadOnly): Primary connection string of the alias if GEO DR is enabled
-* **aliasSecondaryConnectionString**: string (ReadOnly): Secondary  connection string of the alias if GEO DR is enabled
-* **keyName**: string (ReadOnly): A string that describes the authorization rule.
-* **primaryConnectionString**: string (ReadOnly): Primary connection string of the created namespace authorization rule.
-* **primaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
-* **secondaryConnectionString**: string (ReadOnly): Secondary connection string of the created namespace authorization rule.
-* **secondaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
-
-## AccessKeys
-### Properties
-* **aliasPrimaryConnectionString**: string (ReadOnly): Primary connection string of the alias if GEO DR is enabled
-* **aliasSecondaryConnectionString**: string (ReadOnly): Secondary  connection string of the alias if GEO DR is enabled
-* **keyName**: string (ReadOnly): A string that describes the authorization rule.
-* **primaryConnectionString**: string (ReadOnly): Primary connection string of the created namespace authorization rule.
-* **primaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
-* **secondaryConnectionString**: string (ReadOnly): Secondary connection string of the created namespace authorization rule.
-* **secondaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
-
-## AccessKeys
-### Properties
-* **aliasPrimaryConnectionString**: string (ReadOnly): Primary connection string of the alias if GEO DR is enabled
-* **aliasSecondaryConnectionString**: string (ReadOnly): Secondary  connection string of the alias if GEO DR is enabled
-* **keyName**: string (ReadOnly): A string that describes the authorization rule.
-* **primaryConnectionString**: string (ReadOnly): Primary connection string of the created namespace authorization rule.
-* **primaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
-* **secondaryConnectionString**: string (ReadOnly): Secondary connection string of the created namespace authorization rule.
-* **secondaryKey**: string (ReadOnly): A base64-encoded 256-bit primary key for signing and validating the SAS token.
-
 ## Action
 ### Properties
 * **compatibilityLevel**: int: This property is reserved for future use. An integer value showing the compatibility level, currently hard-coded to 20.

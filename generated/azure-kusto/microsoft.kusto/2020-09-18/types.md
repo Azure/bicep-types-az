@@ -252,10 +252,6 @@
 ### Properties
 * **value**: [LanguageExtension](#languageextension)[]: The list of language extensions.
 
-## LanguageExtensionsList
-### Properties
-* **value**: [LanguageExtension](#languageextension)[]: The list of language extensions.
-
 ## OptimizedAutoscale
 ### Properties
 * **isEnabled**: bool (Required): A boolean value that indicate if the optimized autoscale feature is enabled or not.

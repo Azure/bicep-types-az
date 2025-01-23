@@ -646,40 +646,6 @@
 ### Properties
 * **inputs**: [ExpressionRoot](#expressionroot)[]
 
-## ExpressionTraces
-### Properties
-* **inputs**: [ExpressionRoot](#expressionroot)[]
-
-## GetCallbackUrlParameters
-### Properties
-* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string: The key type.
-* **notAfter**: string: The expiry time.
-
-## GetCallbackUrlParameters
-### Properties
-* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string: The key type.
-* **notAfter**: string: The expiry time.
-
-## GetCallbackUrlParameters
-### Properties
-* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string: The key type.
-* **notAfter**: string: The expiry time.
-
-## GetCallbackUrlParameters
-### Properties
-* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string: The key type.
-* **notAfter**: string: The expiry time.
-
-## GetCallbackUrlParameters
-### Properties
-* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string: The key type.
-* **notAfter**: string: The expiry time.
-
-## GetCallbackUrlParameters
-### Properties
-* **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string: The key type.
-* **notAfter**: string: The expiry time.
-
 ## GetCallbackUrlParameters
 ### Properties
 * **keyType**: 'NotSpecified' | 'Primary' | 'Secondary' | string: The key type.
@@ -1033,69 +999,6 @@
 * **status**: 'Aborted' | 'Cancelled' | 'Failed' | 'Faulted' | 'Ignored' | 'NotSpecified' | 'Paused' | 'Running' | 'Skipped' | 'Succeeded' | 'Suspended' | 'TimedOut' | 'Waiting' | string (ReadOnly): Gets the status.
 * **trackedProperties**: any (ReadOnly): Gets the tracked properties.
 * **trackingId**: string (ReadOnly): Gets the tracking id.
-
-## WorkflowTriggerCallbackUrl
-### Properties
-* **basePath**: string (ReadOnly): Gets the workflow trigger callback URL base path.
-* **method**: string (ReadOnly): Gets the workflow trigger callback URL HTTP method.
-* **queries**: [WorkflowTriggerListCallbackUrlQueries](#workflowtriggerlistcallbackurlqueries): Gets the workflow trigger callback URL query parameters.
-* **relativePath**: string (ReadOnly): Gets the workflow trigger callback URL relative path.
-* **relativePathParameters**: string[]: Gets the workflow trigger callback URL relative path parameters.
-* **value**: string (ReadOnly): Gets the workflow trigger callback URL.
-
-## WorkflowTriggerCallbackUrl
-### Properties
-* **basePath**: string (ReadOnly): Gets the workflow trigger callback URL base path.
-* **method**: string (ReadOnly): Gets the workflow trigger callback URL HTTP method.
-* **queries**: [WorkflowTriggerListCallbackUrlQueries](#workflowtriggerlistcallbackurlqueries): Gets the workflow trigger callback URL query parameters.
-* **relativePath**: string (ReadOnly): Gets the workflow trigger callback URL relative path.
-* **relativePathParameters**: string[]: Gets the workflow trigger callback URL relative path parameters.
-* **value**: string (ReadOnly): Gets the workflow trigger callback URL.
-
-## WorkflowTriggerCallbackUrl
-### Properties
-* **basePath**: string (ReadOnly): Gets the workflow trigger callback URL base path.
-* **method**: string (ReadOnly): Gets the workflow trigger callback URL HTTP method.
-* **queries**: [WorkflowTriggerListCallbackUrlQueries](#workflowtriggerlistcallbackurlqueries): Gets the workflow trigger callback URL query parameters.
-* **relativePath**: string (ReadOnly): Gets the workflow trigger callback URL relative path.
-* **relativePathParameters**: string[]: Gets the workflow trigger callback URL relative path parameters.
-* **value**: string (ReadOnly): Gets the workflow trigger callback URL.
-
-## WorkflowTriggerCallbackUrl
-### Properties
-* **basePath**: string (ReadOnly): Gets the workflow trigger callback URL base path.
-* **method**: string (ReadOnly): Gets the workflow trigger callback URL HTTP method.
-* **queries**: [WorkflowTriggerListCallbackUrlQueries](#workflowtriggerlistcallbackurlqueries): Gets the workflow trigger callback URL query parameters.
-* **relativePath**: string (ReadOnly): Gets the workflow trigger callback URL relative path.
-* **relativePathParameters**: string[]: Gets the workflow trigger callback URL relative path parameters.
-* **value**: string (ReadOnly): Gets the workflow trigger callback URL.
-
-## WorkflowTriggerCallbackUrl
-### Properties
-* **basePath**: string (ReadOnly): Gets the workflow trigger callback URL base path.
-* **method**: string (ReadOnly): Gets the workflow trigger callback URL HTTP method.
-* **queries**: [WorkflowTriggerListCallbackUrlQueries](#workflowtriggerlistcallbackurlqueries): Gets the workflow trigger callback URL query parameters.
-* **relativePath**: string (ReadOnly): Gets the workflow trigger callback URL relative path.
-* **relativePathParameters**: string[]: Gets the workflow trigger callback URL relative path parameters.
-* **value**: string (ReadOnly): Gets the workflow trigger callback URL.
-
-## WorkflowTriggerCallbackUrl
-### Properties
-* **basePath**: string (ReadOnly): Gets the workflow trigger callback URL base path.
-* **method**: string (ReadOnly): Gets the workflow trigger callback URL HTTP method.
-* **queries**: [WorkflowTriggerListCallbackUrlQueries](#workflowtriggerlistcallbackurlqueries): Gets the workflow trigger callback URL query parameters.
-* **relativePath**: string (ReadOnly): Gets the workflow trigger callback URL relative path.
-* **relativePathParameters**: string[]: Gets the workflow trigger callback URL relative path parameters.
-* **value**: string (ReadOnly): Gets the workflow trigger callback URL.
-
-## WorkflowTriggerCallbackUrl
-### Properties
-* **basePath**: string (ReadOnly): Gets the workflow trigger callback URL base path.
-* **method**: string (ReadOnly): Gets the workflow trigger callback URL HTTP method.
-* **queries**: [WorkflowTriggerListCallbackUrlQueries](#workflowtriggerlistcallbackurlqueries): Gets the workflow trigger callback URL query parameters.
-* **relativePath**: string (ReadOnly): Gets the workflow trigger callback URL relative path.
-* **relativePathParameters**: string[]: Gets the workflow trigger callback URL relative path parameters.
-* **value**: string (ReadOnly): Gets the workflow trigger callback URL.
 
 ## WorkflowTriggerCallbackUrl
 ### Properties

@@ -100,11 +100,6 @@
 * **nextLink**: string (ReadOnly): The URL to get the next set of results.
 * **value**: [ResourceIdListResultValueItem](#resourceidlistresultvalueitem)[]: A list of Azure Resource IDs.
 
-## ResourceIdListResult
-### Properties
-* **nextLink**: string (ReadOnly): The URL to get the next set of results.
-* **value**: [ResourceIdListResultValueItem](#resourceidlistresultvalueitem)[]: A list of Azure Resource IDs.
-
 ## ResourceIdListResultValueItem
 ### Properties
 * **id**: string: The Azure Resource ID.

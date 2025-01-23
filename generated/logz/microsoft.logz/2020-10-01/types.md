@@ -139,11 +139,6 @@
 * **nextLink**: string: Link to the next set of results, if any.
 * **value**: [MonitoredResource](#monitoredresource)[]: Results of a list operation.
 
-## MonitoredResourceListResponse
-### Properties
-* **nextLink**: string: Link to the next set of results, if any.
-* **value**: [MonitoredResource](#monitoredresource)[]: Results of a list operation.
-
 ## MonitoringTagRulesProperties
 ### Properties
 * **logRules**: [LogRules](#logrules): Set of rules for sending logs for the Monitor resource.
@@ -201,11 +196,6 @@
 ### Properties
 * **agentVersion**: string: Version of the Logz agent installed on the VM.
 * **id**: string: Request of a list vm host update operation.
-
-## VMResourcesListResponse
-### Properties
-* **nextLink**: string: Link to the next set of results, if any.
-* **value**: [VMResources](#vmresources)[]: Response of a list vm host update operation.
 
 ## VMResourcesListResponse
 ### Properties

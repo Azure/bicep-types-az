@@ -711,14 +711,6 @@ dictionary key references will be ARM resource ids in the form:
 ### Properties
 * **clientSecret**: string: Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
 
-## ClientSecretContract
-### Properties
-* **clientSecret**: string: Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
-
-## ClientSecretContract
-### Properties
-* **clientSecret**: string: Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
-
 ## DiagnosticContractProperties
 ### Properties
 * **alwaysLog**: 'allErrors' | string: Specifies for what type of messages sampling settings should not apply.

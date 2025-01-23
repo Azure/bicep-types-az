@@ -1103,10 +1103,6 @@ For more information, see [Auditing to storage using Managed Identity authentica
 ### Properties
 * **value**: [LanguageExtension](#languageextension)[]: The list of language extensions.
 
-## LanguageExtensionsList
-### Properties
-* **value**: [LanguageExtension](#languageextension)[]: The list of language extensions.
-
 ## LibraryInfo
 ### Properties
 * **containerName**: string: Storage blob container name.

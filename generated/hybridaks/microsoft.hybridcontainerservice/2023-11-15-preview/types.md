@@ -229,15 +229,6 @@
 * **resourceId**: string (ReadOnly): ARM Resource Id of the provisioned cluster instance
 * **status**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' | 'Updating' | 'Upgrading' | string (ReadOnly): Provisioning state of the resource
 
-## ListCredentialResponse
-### Properties
-* **error**: [ListCredentialResponseError](#listcredentialresponseerror)
-* **id**: string (ReadOnly): Operation Id
-* **name**: string (ReadOnly): Operation Name
-* **properties**: [ListCredentialResponseProperties](#listcredentialresponseproperties)
-* **resourceId**: string (ReadOnly): ARM Resource Id of the provisioned cluster instance
-* **status**: 'Accepted' | 'Canceled' | 'Created' | 'Creating' | 'Deleting' | 'Failed' | 'InProgress' | 'Succeeded' | 'Updating' | 'Upgrading' | string (ReadOnly): Provisioning state of the resource
-
 ## ListCredentialResponseError
 ### Properties
 * **code**: string

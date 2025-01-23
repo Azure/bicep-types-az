@@ -149,14 +149,6 @@
 * **secondaryConnectionString**: string: SecondaryConnectionString of the created AuthorizationRule
 * **secondaryKey**: string: SecondaryKey of the created AuthorizationRule
 
-## ResourceListKeys
-### Properties
-* **keyName**: string: KeyName of the created AuthorizationRule
-* **primaryConnectionString**: string: PrimaryConnectionString of the AuthorizationRule.
-* **primaryKey**: string: PrimaryKey of the created AuthorizationRule.
-* **secondaryConnectionString**: string: SecondaryConnectionString of the created AuthorizationRule
-* **secondaryKey**: string: SecondaryKey of the created AuthorizationRule
-
 ## ResourceTags
 ### Properties
 ### Additional Properties

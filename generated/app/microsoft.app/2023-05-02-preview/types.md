@@ -595,10 +595,6 @@ eg: azure-servicebus, redis etc.
 ### Properties
 * **value**: [DaprSecret](#daprsecret)[] (Required): Collection of secrets used by a Dapr component
 
-## DaprSecretsCollection
-### Properties
-* **value**: [DaprSecret](#daprsecret)[] (Required): Collection of secrets used by a Dapr component
-
 ## DefaultAuthorizationPolicy
 ### Properties
 * **allowedApplications**: string[]: The configuration settings of the Azure Active Directory allowed applications.

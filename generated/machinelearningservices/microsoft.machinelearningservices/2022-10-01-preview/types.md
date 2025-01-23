@@ -1354,16 +1354,6 @@ TimeZone should follow Windows time zone format. Refer: https://docs.microsoft.c
 * **primaryKey**: string: The primary key.
 * **secondaryKey**: string: The secondary key.
 
-## EndpointAuthKeys
-### Properties
-* **primaryKey**: string: The primary key.
-* **secondaryKey**: string: The secondary key.
-
-## EndpointAuthKeys
-### Properties
-* **primaryKey**: string: The primary key.
-* **secondaryKey**: string: The secondary key.
-
 ## EndpointDeploymentPropertiesBaseEnvironmentVariables
 ### Properties
 ### Additional Properties
@@ -2158,11 +2148,6 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
 * **status**: 'CancelRequested' | 'Canceled' | 'Completed' | 'Failed' | 'Finalizing' | 'NotResponding' | 'NotStarted' | 'Paused' | 'Preparing' | 'Provisioning' | 'Queued' | 'Running' | 'Scheduled' | 'Starting' | 'Unknown' | string (ReadOnly): Status of the job.
 * **statusMessages**: [StatusMessage](#statusmessage)[] (ReadOnly): Status messages of the job.
 * **tags**: [ResourceBaseTags](#resourcebasetags): Tag dictionary. Tags can be added, removed, and updated.
-
-## ListNotebookKeysResult
-### Properties
-* **primaryAccessKey**: string {sensitive} (ReadOnly)
-* **secondaryAccessKey**: string {sensitive} (ReadOnly)
 
 ## ListNotebookKeysResult
 ### Properties

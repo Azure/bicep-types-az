@@ -106,14 +106,6 @@
 ### Properties
 * **features**: string[]: Set of features
 
-## BatchFeatureRequest
-### Properties
-* **features**: string[]: Set of features
-
-## BatchFeatureStatus
-### Properties
-* **features**: [BatchFeatureStatusFeatures](#batchfeaturestatusfeatures) (ReadOnly): Features with enabled status
-
 ## BatchFeatureStatus
 ### Properties
 * **features**: [BatchFeatureStatusFeatures](#batchfeaturestatusfeatures) (ReadOnly): Features with enabled status

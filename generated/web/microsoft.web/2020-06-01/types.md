@@ -1557,19 +1557,6 @@ Remove blobs older than X days.
 * **properties**: [BackupItemProperties](#backupitemproperties): BackupItem resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
-## BackupItem
-### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [BackupItemProperties](#backupitemproperties): BackupItem resource specific properties
-* **type**: string (ReadOnly): Resource type.
-
-## BackupItemCollection
-### Properties
-* **nextLink**: string (ReadOnly): Link to next page of resources.
-* **value**: [BackupItem](#backupitem)[] (Required): Collection of resources.
-
 ## BackupItemCollection
 ### Properties
 * **nextLink**: string (ReadOnly): Link to next page of resources.
@@ -1591,14 +1578,6 @@ Remove blobs older than X days.
 * **status**: 'Created' | 'DeleteFailed' | 'DeleteInProgress' | 'Deleted' | 'Failed' | 'InProgress' | 'PartiallySucceeded' | 'Skipped' | 'Succeeded' | 'TimedOut' (ReadOnly): Backup status.
 * **storageAccountUrl**: string (ReadOnly): SAS URL for the storage account container which contains this backup.
 * **websiteSizeInBytes**: int (ReadOnly): Size of the original web app which has been backed up.
-
-## BackupRequest
-### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [BackupRequestProperties](#backuprequestproperties): BackupRequest resource specific properties
-* **type**: string (ReadOnly): Resource type.
 
 ## BackupRequest
 ### Properties
@@ -1994,21 +1973,6 @@ Value can range between 25 and 100.
 * **key**: string: Secret key.
 * **trigger_url**: string: Trigger URL.
 
-## FunctionSecrets
-### Properties
-* **key**: string: Secret key.
-* **trigger_url**: string: Trigger URL.
-
-## FunctionSecrets
-### Properties
-* **key**: string: Secret key.
-* **trigger_url**: string: Trigger URL.
-
-## FunctionSecrets
-### Properties
-* **key**: string: Secret key.
-* **trigger_url**: string: Trigger URL.
-
 ## GitHub
 ### Properties
 * **id**: string (ReadOnly): Resource Id.
@@ -2064,12 +2028,6 @@ Value can range between 25 and 100.
 * **id**: string: Resource ID of the App Service Environment.
 * **name**: string (ReadOnly): Name of the App Service Environment.
 * **type**: string (ReadOnly): Resource type of the App Service Environment.
-
-## HostKeys
-### Properties
-* **functionKeys**: [HostKeysFunctionKeys](#hostkeysfunctionkeys): Host level function keys.
-* **masterKey**: string: Secret key.
-* **systemKeys**: [HostKeysSystemKeys](#hostkeyssystemkeys): System keys.
 
 ## HostKeys
 ### Properties
@@ -3055,54 +3013,6 @@ Basic apps are not used for capacity allocation.
 * **subStatus**: int: Request Sub Status.
 * **timeInterval**: string: Time interval.
 * **win32Status**: int: Win32 error code.
-
-## StringDictionary
-### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
-* **type**: string (ReadOnly): Resource type.
-
-## StringDictionary
-### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
-* **type**: string (ReadOnly): Resource type.
-
-## StringDictionary
-### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
-* **type**: string (ReadOnly): Resource type.
-
-## StringDictionary
-### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
-* **type**: string (ReadOnly): Resource type.
-
-## StringDictionary
-### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
-* **type**: string (ReadOnly): Resource type.
-
-## StringDictionary
-### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
-* **type**: string (ReadOnly): Resource type.
 
 ## StringDictionary
 ### Properties

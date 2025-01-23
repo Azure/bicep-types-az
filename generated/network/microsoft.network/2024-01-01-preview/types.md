@@ -20,7 +20,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {pattern: "^[a-zA-Z0-9-]*$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [IpamPoolProperties](#ipampoolproperties): Properties of IpamPool resource properties which are specific to the Pool resource.
+* **properties**: [IpamPoolProperties](#ipampoolproperties) (Required): Properties of IpamPool resource properties which are specific to the Pool resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [CommonTrackedResourceTags](#commontrackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Network/networkManagers/ipamPools' (ReadOnly, DeployTimeConstant): The resource type

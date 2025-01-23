@@ -273,15 +273,6 @@ operations.
 AuthorizationRule
 * **secondaryKey**: string {sensitive} (ReadOnly): Gets or sets secondaryKey of the created AuthorizationRule
 
-## ResourceListKeys
-### Properties
-* **keyName**: string (ReadOnly): Gets or sets keyName of the created AuthorizationRule
-* **primaryConnectionString**: string {sensitive} (ReadOnly): Gets or sets primaryConnectionString of the AuthorizationRule.
-* **primaryKey**: string {sensitive} (ReadOnly): Gets or sets primaryKey of the created AuthorizationRule.
-* **secondaryConnectionString**: string {sensitive} (ReadOnly): Gets or sets secondaryConnectionString of the created
-AuthorizationRule
-* **secondaryKey**: string {sensitive} (ReadOnly): Gets or sets secondaryKey of the created AuthorizationRule
-
 ## SharedAccessAuthorizationRuleProperties
 ### Properties
 * **claimType**: string (ReadOnly): Gets a string that describes the claim type

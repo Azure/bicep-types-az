@@ -108,11 +108,6 @@
 * **primaryKey**: string (ReadOnly): The current primary key that clients can use to authenticate with Redis cache.
 * **secondaryKey**: string (ReadOnly): The current secondary key that clients can use to authenticate with Redis cache.
 
-## RedisAccessKeys
-### Properties
-* **primaryKey**: string (ReadOnly): The current primary key that clients can use to authenticate with Redis cache.
-* **secondaryKey**: string (ReadOnly): The current secondary key that clients can use to authenticate with Redis cache.
-
 ## RedisCacheAccessPolicyAssignmentProperties
 ### Properties
 * **accessPolicyName**: string {pattern: "^([a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]|[a-zA-Z0-9])$"} (Required): The name of the access policy that is being assigned

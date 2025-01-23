@@ -694,11 +694,6 @@ invitations to specific users or applications in an AD tenant.
 * **nextLink**: string: The Url of next result page.
 * **value**: [SynchronizationDetails](#synchronizationdetails)[] (Required): Collection of items of type DataTransferObjects.
 
-## SynchronizationDetailsList
-### Properties
-* **nextLink**: string: The Url of next result page.
-* **value**: [SynchronizationDetails](#synchronizationdetails)[] (Required): Collection of items of type DataTransferObjects.
-
 ## SystemData
 ### Properties
 * **createdAt**: string: The timestamp of resource creation (UTC).

@@ -1434,16 +1434,6 @@ TimeZone should follow Windows time zone format. Refer: https://docs.microsoft.c
 * **primaryKey**: string: The primary key.
 * **secondaryKey**: string: The secondary key.
 
-## EndpointAuthKeys
-### Properties
-* **primaryKey**: string: The primary key.
-* **secondaryKey**: string: The secondary key.
-
-## EndpointAuthKeys
-### Properties
-* **primaryKey**: string: The primary key.
-* **secondaryKey**: string: The secondary key.
-
 ## EndpointDeploymentPropertiesBaseEnvironmentVariables
 ### Properties
 ### Additional Properties
@@ -2196,11 +2186,6 @@ If Nodes is not set or set to null, the service will only be started on leader n
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [InstanceTypeSchema](#instancetypeschema)
-
-## ListNotebookKeysResult
-### Properties
-* **primaryAccessKey**: string {sensitive} (ReadOnly)
-* **secondaryAccessKey**: string {sensitive} (ReadOnly)
 
 ## ListNotebookKeysResult
 ### Properties

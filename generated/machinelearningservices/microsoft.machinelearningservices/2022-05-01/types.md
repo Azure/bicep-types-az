@@ -922,16 +922,6 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 * **primaryKey**: string: The primary key.
 * **secondaryKey**: string: The secondary key.
 
-## EndpointAuthKeys
-### Properties
-* **primaryKey**: string: The primary key.
-* **secondaryKey**: string: The secondary key.
-
-## EndpointAuthKeys
-### Properties
-* **primaryKey**: string: The primary key.
-* **secondaryKey**: string: The secondary key.
-
 ## EndpointDeploymentPropertiesBaseEnvironmentVariables
 ### Properties
 ### Additional Properties
@@ -1253,11 +1243,6 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [InstanceTypeSchema](#instancetypeschema)
-
-## ListNotebookKeysResult
-### Properties
-* **primaryAccessKey**: string {sensitive} (ReadOnly)
-* **secondaryAccessKey**: string {sensitive} (ReadOnly)
 
 ## ListNotebookKeysResult
 ### Properties

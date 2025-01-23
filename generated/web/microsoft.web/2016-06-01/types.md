@@ -325,13 +325,6 @@
 * **service**: [WsdlService](#wsdlservice): The service with name and endpoint names
 * **url**: string: The WSDL URL
 
-## WsdlDefinition
-### Properties
-* **content**: string: The WSDL content
-* **importMethod**: 'NotSpecified' | 'SoapPassThrough' | 'SoapToRest' | string: The WSDL import method
-* **service**: [WsdlService](#wsdlservice): The service with name and endpoint names
-* **url**: string: The WSDL URL
-
 ## WsdlService
 ### Properties
 * **endpointQualifiedNames**: string[]: List of the endpoints' qualified names

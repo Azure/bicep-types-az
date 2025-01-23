@@ -169,14 +169,6 @@
 ### Properties
 * **kubeconfigs**: [CredentialResult](#credentialresult)[] (ReadOnly): Base64-encoded Kubernetes configuration file.
 
-## CredentialResults
-### Properties
-* **kubeconfigs**: [CredentialResult](#credentialresult)[] (ReadOnly): Base64-encoded Kubernetes configuration file.
-
-## CredentialResults
-### Properties
-* **kubeconfigs**: [CredentialResult](#credentialresult)[] (ReadOnly): Base64-encoded Kubernetes configuration file.
-
 ## DailySchedule
 ### Properties
 * **intervalDays**: int {minValue: 1, maxValue: 7} (Required): Specifies the number of days between each set of occurrences.

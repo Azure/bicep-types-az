@@ -221,14 +221,6 @@
 * **name**: string: Name of the schema
 * **status**: 'Approved' | 'New' | string: Status of the schema
 
-## Schema
-### Properties
-* **connectionId**: string: Connection ID associated with this schema
-* **content**: string: Content of the schema
-* **id**: string: ID associated with this schema
-* **name**: string: Name of the schema
-* **status**: 'Approved' | 'New' | string: Status of the schema
-
 ## SchemasListResult
 ### Properties
 * **value**: [Schema](#schema)[]: Schemas array.

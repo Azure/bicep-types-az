@@ -958,10 +958,6 @@ eg: azure-servicebus, redis etc.
 ### Properties
 * **value**: [Secret](#secret)[] (Required): Collection of resources.
 
-## EnvSecretsCollection
-### Properties
-* **value**: [Secret](#secret)[] (Required): Collection of resources.
-
 ## EnvVar
 ### Properties
 * **name**: string: Environment variable name.

@@ -1285,11 +1285,6 @@
 * **regions**: string[]: List of regions.
 * **skipToken**: string: When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
 
-## ActiveConfigurationParameter
-### Properties
-* **regions**: string[]: List of regions.
-* **skipToken**: string: When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
-
 ## ActiveConnectivityConfiguration
 ### Properties
 * **commitTime**: string: Deployment time string.
@@ -4017,10 +4012,6 @@
 ### Properties
 * **end**: int: Qos Port Range end.
 * **start**: int: Qos Port Range start.
-
-## QueryRequestOptions
-### Properties
-* **skipToken**: string: When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
 
 ## QueryRequestOptions
 ### Properties

@@ -729,14 +729,6 @@ dictionary key references will be ARM resource ids in the form:
 ### Properties
 * **clientSecret**: string: Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
 
-## ClientSecretContract
-### Properties
-* **clientSecret**: string: Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
-
-## ClientSecretContract
-### Properties
-* **clientSecret**: string: Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
-
 ## ContentItemContractProperties
 ### Properties
 ### Additional Properties

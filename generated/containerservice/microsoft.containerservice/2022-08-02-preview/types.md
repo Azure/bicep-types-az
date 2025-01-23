@@ -174,14 +174,6 @@
 ### Properties
 * **kubeconfigs**: [CredentialResult](#credentialresult)[] (ReadOnly): Base64-encoded Kubernetes configuration file.
 
-## CredentialResults
-### Properties
-* **kubeconfigs**: [CredentialResult](#credentialresult)[] (ReadOnly): Base64-encoded Kubernetes configuration file.
-
-## CredentialResults
-### Properties
-* **kubeconfigs**: [CredentialResult](#credentialresult)[] (ReadOnly): Base64-encoded Kubernetes configuration file.
-
 ## ExtendedLocation
 ### Properties
 * **name**: string: The name of the extended location.

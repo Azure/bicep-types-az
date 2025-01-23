@@ -961,14 +961,6 @@ Remove blobs older than X days.
 * **properties**: [BackupItemProperties](#backupitemproperties): BackupItem resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
-## BackupItem
-### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [BackupItemProperties](#backupitemproperties): BackupItem resource specific properties
-* **type**: string (ReadOnly): Resource type.
-
 ## BackupItemProperties
 ### Properties
 * **blobName**: string (ReadOnly): Name of the blob which contains data for this backup.
@@ -985,14 +977,6 @@ Remove blobs older than X days.
 * **status**: 'Created' | 'DeleteFailed' | 'DeleteInProgress' | 'Deleted' | 'Failed' | 'InProgress' | 'PartiallySucceeded' | 'Skipped' | 'Succeeded' | 'TimedOut' (ReadOnly): Backup status.
 * **storageAccountUrl**: string (ReadOnly): SAS URL for the storage account container which contains this backup.
 * **websiteSizeInBytes**: int (ReadOnly): Size of the original web app which has been backed up.
-
-## BackupRequest
-### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [BackupRequestProperties](#backuprequestproperties): BackupRequest resource specific properties
-* **type**: string (ReadOnly): Resource type.
 
 ## BackupRequest
 ### Properties
@@ -1184,30 +1168,6 @@ Value can range between 25 and 100.
 * **properties**: [FunctionSecretsProperties](#functionsecretsproperties): FunctionSecrets resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
-## FunctionSecrets
-### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [FunctionSecretsProperties](#functionsecretsproperties): FunctionSecrets resource specific properties
-* **type**: string (ReadOnly): Resource type.
-
-## FunctionSecrets
-### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [FunctionSecretsProperties](#functionsecretsproperties): FunctionSecrets resource specific properties
-* **type**: string (ReadOnly): Resource type.
-
-## FunctionSecrets
-### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [FunctionSecretsProperties](#functionsecretsproperties): FunctionSecrets resource specific properties
-* **type**: string (ReadOnly): Resource type.
-
 ## FunctionSecretsProperties
 ### Properties
 * **key**: string: Secret key.
@@ -1262,14 +1222,6 @@ Value can range between 25 and 100.
 * **kind**: string: Kind of resource.
 * **name**: string (ReadOnly): Resource Name.
 * **properties**: [HybridConnectionProperties](#hybridconnectionproperties): HybridConnection resource specific properties
-* **type**: string (ReadOnly): Resource type.
-
-## HybridConnectionKey
-### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [HybridConnectionKeyProperties](#hybridconnectionkeyproperties): HybridConnectionKey resource specific properties
 * **type**: string (ReadOnly): Resource type.
 
 ## HybridConnectionKey
@@ -1824,14 +1776,6 @@ This only applies to Functions container.
 * **subStatus**: int: Request Sub Status.
 * **timeInterval**: string: Time interval.
 * **win32Status**: int: Win32 error code.
-
-## StringDictionary
-### Properties
-* **id**: string (ReadOnly): Resource Id.
-* **kind**: string: Kind of resource.
-* **name**: string (ReadOnly): Resource Name.
-* **properties**: [StringDictionaryProperties](#stringdictionaryproperties): Settings.
-* **type**: string (ReadOnly): Resource type.
 
 ## StringDictionary
 ### Properties

@@ -316,11 +316,6 @@ Eg: "new-repo-1".
 * **nextLink**: string: Gets or sets next link to scroll over the results.
 * **value**: [GitLabGroup](#gitlabgroup)[]: Gets or sets list of resources.
 
-## GitLabGroupListResponse
-### Properties
-* **nextLink**: string: Gets or sets next link to scroll over the results.
-* **value**: [GitLabGroup](#gitlabgroup)[]: Gets or sets list of resources.
-
 ## GitLabGroupProperties
 ### Properties
 * **fullyQualifiedFriendlyName**: string (ReadOnly): Gets or sets the human readable fully-qualified name of the Group object.

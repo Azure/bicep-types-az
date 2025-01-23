@@ -94,14 +94,6 @@
 ### Properties
 * **kubeconfigs**: [CredentialResult](#credentialresult)[] (ReadOnly): Base64-encoded Kubernetes configuration file.
 
-## CredentialResults
-### Properties
-* **kubeconfigs**: [CredentialResult](#credentialresult)[] (ReadOnly): Base64-encoded Kubernetes configuration file.
-
-## CredentialResults
-### Properties
-* **kubeconfigs**: [CredentialResult](#credentialresult)[] (ReadOnly): Base64-encoded Kubernetes configuration file.
-
 ## ManagedClusterAADProfile
 ### Properties
 * **adminGroupObjectIDs**: string[]: AAD group object IDs that will have admin role of the cluster.

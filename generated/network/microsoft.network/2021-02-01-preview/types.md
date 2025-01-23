@@ -292,16 +292,6 @@
 * **regions**: string[]: List of regions.
 * **skipToken**: string: When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
 
-## ActiveConfigurationParameter
-### Properties
-* **regions**: string[]: List of regions.
-* **skipToken**: string: When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
-
-## ActiveConfigurationParameter
-### Properties
-* **regions**: string[]: List of regions.
-* **skipToken**: string: When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
-
 ## ActiveConnectivityConfiguration
 ### Properties
 * **commitTime**: string: Deployment time string.
@@ -429,11 +419,6 @@
 * **id**: string: Effective vnet Id.
 * **location**: string: Location of vnet.
 * **membershipType**: 'Dynamic' | 'Static' | string: Membership Type.
-
-## EffectiveVirtualNetworksListResult
-### Properties
-* **skipToken**: string: When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
-* **value**: [EffectiveVirtualNetwork](#effectivevirtualnetwork)[]: Gets a page of EffectiveVirtualNetwork
 
 ## EffectiveVirtualNetworksListResult
 ### Properties
@@ -570,14 +555,6 @@
 * **id**: string (ReadOnly): NSP id in the ARM id format.
 * **location**: string (ReadOnly): Location of the NSP supplied.
 * **perimeterGuid**: string (ReadOnly): Resource guid of the NSP supplied.
-
-## QueryRequestOptions
-### Properties
-* **skipToken**: string: When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
-
-## QueryRequestOptions
-### Properties
-* **skipToken**: string: When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
 
 ## QueryRequestOptions
 ### Properties

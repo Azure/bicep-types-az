@@ -964,16 +964,6 @@ The path is relative to the asset path which must contain a single Blob URI valu
 * **primaryKey**: string: The primary key.
 * **secondaryKey**: string: The secondary key.
 
-## EndpointAuthKeys
-### Properties
-* **primaryKey**: string: The primary key.
-* **secondaryKey**: string: The secondary key.
-
-## EndpointAuthKeys
-### Properties
-* **primaryKey**: string: The primary key.
-* **secondaryKey**: string: The secondary key.
-
 ## EnvironmentContainer
 ### Properties
 * **description**: string: The asset description text.
@@ -1268,11 +1258,6 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
 * **linkedId**: string: Linked service ID.
 * **linkedResourceName**: string: Linked service resource name.
 * **origin**: 'Synapse' | string: Type of the linked service.
-
-## ListNotebookKeysResult
-### Properties
-* **primaryAccessKey**: string {sensitive} (ReadOnly)
-* **secondaryAccessKey**: string {sensitive} (ReadOnly)
 
 ## ListNotebookKeysResult
 ### Properties
