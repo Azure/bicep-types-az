@@ -18,7 +18,7 @@ jobs:
     name: Update Types
     permissions:
       contents: write
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04 # Pinning to work around https://github.com/actions/runner-images/issues/10989
 
     steps:
       - uses: actions/checkout@v4
