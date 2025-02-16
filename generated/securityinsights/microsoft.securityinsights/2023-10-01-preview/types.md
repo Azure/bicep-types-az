@@ -2551,7 +2551,7 @@ Foe Example: instruction step 1 might contain inner instruction steps: [instruct
 
 ## SourceControlProperties
 ### Properties
-* **contentTypes**: ('AnalyticRule' | 'AutomationRule' | 'HuntingQuery' | 'Parser' | 'Playbook' | 'Workbook' | string)[] (Required): Array of source control content types.
+* **contentTypes**: ('AnalyticsRule' | 'AutomationRule' | 'HuntingQuery' | 'Parser' | 'Playbook' | 'Workbook' | string)[] (Required): Array of source control content types.
 * **description**: string: A description of the source control
 * **displayName**: string (Required): The display name of the source control
 * **id**: string (ReadOnly): The id (a Guid) of the source control

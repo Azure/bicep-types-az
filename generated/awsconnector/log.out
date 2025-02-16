@@ -161,7 +161,7 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'IamInstanceProfile'
   - properties.arn: {"$ref":"#/components/schemas/schemas:1768","description":"<p>The Amazon Resource Name (ARN) of the instance profile.</p>"} => <none>
   - properties.id: {"$ref":"#/components/schemas/schemas:1769","description":"<p>The ID of the instance profile.</p>"} => <none>
   - properties.properties: <none> => {"$ref":"#/components/schemas/schemas:3858","description":"The resource-specific properties for this resource."}
-  - allOf: <none> => [{"$ref":"#/components/schemas/schemas:6629"}]
+  - allOf: <none> => [{"$ref":"#/components/schemas/schemas:6693"}]
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'InstanceIpv6Address' (2 differences):
   - properties.ipv6Address.description: "<p>The IPv6 address.</p>" => "Property ipv6Address"
   - properties.isPrimaryIpv6: {"type":"boolean","description":"<p>Determines if an IPv6 address associated with a network interface is the primary IPv6 address. When you enable an IPv6 GUA address to be a primary IPv6, the first IPv6 GUA will be made the primary IPv6 address until the instance is terminated or the network interface is detached. For more information, see <a href='https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html'>RunInstances</a>.</p>"} => <none>
@@ -226,11 +226,11 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorDetail' (8 dif
   - properties.errorCode: {"$ref":"#/components/schemas/schemas:3663","description":"<p>The name or code associated with the error.</p>"} => <none>
   - properties.errorData: {"x-ms-identifiers":[],"$ref":"#/components/schemas/schemas:3664","description":"<p>A list of key value pairs that provides contextual information about why an error occured.</p>"} => <none>
   - properties.errorMessage: {"$ref":"#/components/schemas/schemas:3665","description":"<p>A message that describes the error.</p>"} => <none>
-  - properties.code: <none> => {"$ref":"#/components/schemas/schemas:6658","description":"The error code.","readOnly":true}
-  - properties.message: <none> => {"$ref":"#/components/schemas/schemas:6659","description":"The error message.","readOnly":true}
-  - properties.target: <none> => {"$ref":"#/components/schemas/schemas:6660","description":"The error target.","readOnly":true}
-  - properties.details: <none> => {"x-ms-identifiers":["message","target"],"$ref":"#/components/schemas/schemas:6661","description":"The error details.","readOnly":true}
-  - properties.additionalInfo: <none> => {"x-ms-identifiers":[],"$ref":"#/components/schemas/schemas:6662","description":"The error additional info.","readOnly":true}
+  - properties.code: <none> => {"$ref":"#/components/schemas/schemas:6635","description":"The error code.","readOnly":true}
+  - properties.message: <none> => {"$ref":"#/components/schemas/schemas:6636","description":"The error message.","readOnly":true}
+  - properties.target: <none> => {"$ref":"#/components/schemas/schemas:6637","description":"The error target.","readOnly":true}
+  - properties.details: <none> => {"x-ms-identifiers":["message","target"],"$ref":"#/components/schemas/schemas:6638","description":"The error details.","readOnly":true}
+  - properties.additionalInfo: <none> => {"x-ms-identifiers":[],"$ref":"#/components/schemas/schemas:6639","description":"The error additional info.","readOnly":true}
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Policy' (1 differences):
   - properties.policyDocument.description: "The policy document." => "The entire contents of the policy that defines permissions. For more information, see [Overview of JSON policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/accesspolicies.html#accesspolicies-json)."
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'LoggingConfig' (8 differences):
