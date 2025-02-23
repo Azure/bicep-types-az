@@ -5,7 +5,7 @@
 ### Properties
 * **apiVersion**: '2023-11-13-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [QuantumWorkspaceIdentity](#quantumworkspaceidentity): Managed Identity information.
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The managed service identities assigned to this resource.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {pattern: "^[a-zA-Z0-9]+(-*[a-zA-Z0-9])*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [WorkspaceResourceProperties](#workspaceresourceproperties): Gets or sets the properties. Define quantum workspace's specific properties.
@@ -21,15 +21,22 @@
 ## ApiKey
 ### Properties
 * **createdAt**: string: The creation time of the api key.
-* **key**: string {sensitive} (ReadOnly): The Api key.
+* **key**: string (ReadOnly): The Api key.
 
 ## ListKeysResult
 ### Properties
 * **apiKeyEnabled**: bool: Indicator of enablement of the Quantum workspace Api keys.
-* **primaryConnectionString**: string {sensitive} (ReadOnly): The connection string of the primary api key.
+* **primaryConnectionString**: string (ReadOnly): The connection string of the primary api key.
 * **primaryKey**: [ApiKey](#apikey): The quantum workspace primary api key.
-* **secondaryConnectionString**: string {sensitive} (ReadOnly): The connection string of the secondary api key.
+* **secondaryConnectionString**: string (ReadOnly): The connection string of the secondary api key.
 * **secondaryKey**: [ApiKey](#apikey): The quantum workspace secondary api key.
+
+## ManagedServiceIdentity
+### Properties
+* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' | string (Required): Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed).
+* **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.
 
 ## Provider
 ### Properties
@@ -39,12 +46,6 @@
 * **providerSku**: string: The sku associated with pricing information for this provider.
 * **provisioningState**: 'Deleted' | 'Deleting' | 'Failed' | 'Launching' | 'Succeeded' | 'Updating' | string: Provisioning status field
 * **resourceUsageId**: string: Id to track resource usage for the provider.
-
-## QuantumWorkspaceIdentity
-### Properties
-* **principalId**: string (ReadOnly): The principal ID of resource identity.
-* **tenantId**: string (ReadOnly): The tenant ID of resource.
-* **type**: 'None' | 'SystemAssigned' | string: The identity type.
 
 ## SystemData
 ### Properties
@@ -60,12 +61,22 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## UserAssignedIdentities
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
+
+## UserAssignedIdentity
+### Properties
+* **clientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The client ID of the assigned identity.
+* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The principal ID of the assigned identity.
+
 ## WorkspaceResourceProperties
 ### Properties
 * **apiKeyEnabled**: bool: Indicator of enablement of the Quantum workspace Api keys.
 * **endpointUri**: string (ReadOnly): The URI of the workspace endpoint.
 * **providers**: [Provider](#provider)[]: List of Providers selected for this Workspace
-* **provisioningState**: 'Failed' | 'ProviderDeleting' | 'ProviderLaunching' | 'ProviderProvisioning' | 'ProviderUpdating' | 'Succeeded' | string (ReadOnly): Provisioning status field
+* **provisioningState**: 'Canceled' | 'Failed' | 'ProviderDeleting' | 'ProviderLaunching' | 'ProviderProvisioning' | 'ProviderUpdating' | 'Succeeded' | string (ReadOnly): Provisioning status field
 * **storageAccount**: string: ARM Resource Id of the storage account associated with this workspace.
 * **usable**: 'No' | 'Partial' | 'Yes' | string (ReadOnly): Whether the current workspace is ready to accept Jobs.
 

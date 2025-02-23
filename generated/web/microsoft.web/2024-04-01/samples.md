@@ -20,53 +20,6 @@ resource exampleResource 'Microsoft.Web/certificates@2024-04-01' = {
 }
 ```
 
-## microsoft.web/containerapps
-
-Create or Update Container App
-```bicep
-resource exampleResource 'Microsoft.Web/containerApps@2024-04-01' = {
-  name: 'example'
-  kind: 'containerApp'
-  location: 'East US'
-  properties: {
-    configuration: {
-      ingress: {
-        external: true
-        targetPort: 3000
-      }
-    }
-    kubeEnvironmentId: '/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/rg/providers/Microsoft.Web/kubeEnvironments/demokube'
-    template: {
-      containers: [
-        {
-          name: 'testcontainerApp0'
-          image: 'repo/testcontainerApp0:v1'
-        }
-      ]
-      dapr: {
-        appPort: 3000
-        enabled: true
-      }
-      scale: {
-        maxReplicas: 5
-        minReplicas: 1
-        rules: [
-          {
-            name: 'httpscalingrule'
-            custom: {
-              type: 'http'
-              metadata: {
-                concurrentRequests: '50'
-              }
-            }
-          }
-        ]
-      }
-    }
-  }
-}
-```
-
 ## microsoft.web/hostingenvironments
 
 Create or update an App Service Environment.
