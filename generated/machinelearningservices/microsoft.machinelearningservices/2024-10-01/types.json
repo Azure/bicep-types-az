@@ -18025,6 +18025,13 @@
         "flags": 0,
         "description": "Readiness probe validates if the container is ready to serve traffic. The properties and defaults are the same as liveness probe."
       },
+      "startupProbe": {
+        "type": {
+          "$ref": "#/1346"
+        },
+        "flags": 0,
+        "description": "This verifies whether the application within a container is started. Startup probes run before any other probe, and, unless it finishes successfully, disables other probes."
+      },
       "requestSettings": {
         "type": {
           "$ref": "#/1355"

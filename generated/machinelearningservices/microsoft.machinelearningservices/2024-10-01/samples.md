@@ -1683,6 +1683,13 @@ resource exampleResource 'Microsoft.MachineLearningServices/workspaces/onlineEnd
     scaleSettings: {
       scaleType: 'Default'
     }
+    startupProbe: {
+      failureThreshold: 3
+      initialDelay: 'PT30S'
+      period: 'PT10S'
+      successThreshold: 1
+      timeout: 'PT2S'
+    }
   }
   sku: {
     name: 'string'

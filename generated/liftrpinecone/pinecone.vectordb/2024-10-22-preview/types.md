@@ -16,7 +16,7 @@
 ## LiftrBaseMarketplaceDetails
 ### Properties
 * **offerDetails**: [LiftrBaseOfferDetails](#liftrbaseofferdetails) (Required): Offer details for the marketplace that is selected by the user
-* **subscriptionId**: string (Required): Azure subscription id for the the marketplace offer is purchased from
+* **subscriptionId**: string: Azure subscription id for the the marketplace offer is purchased from
 * **subscriptionStatus**: 'PendingFulfillmentStart' | 'Subscribed' | 'Suspended' | 'Unsubscribed' | string (ReadOnly): Marketplace subscription status
 
 ## LiftrBaseOfferDetails
@@ -38,9 +38,9 @@
 
 ## LiftrBaseUserDetails
 ### Properties
-* **emailAddress**: string {pattern: "^[A-Za-z0-9._%+-]+@(?:[A-Za-z0-9-]+\.)+[A-Za-z]{2,}$"} (Required): Email address of the user
-* **firstName**: string (Required): First name of the user
-* **lastName**: string (Required): Last name of the user
+* **emailAddress**: string {pattern: "^[A-Za-z0-9._%+-]+@(?:[A-Za-z0-9-]+\.)+[A-Za-z]{2,}$"}: Email address of the user
+* **firstName**: string: First name of the user
+* **lastName**: string: Last name of the user
 * **phoneNumber**: string: User's phone number
 * **upn**: string: User's principal name
 

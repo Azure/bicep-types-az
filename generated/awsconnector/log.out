@@ -16,10 +16,10 @@ warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and 
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Filter' (8 differences):
-  - properties.contains: {"x-ms-identifiers":[],"$ref":"#/components/schemas/schemas:26","description":"Property contains"} => <none>
-  - properties.eq: {"x-ms-identifiers":[],"$ref":"#/components/schemas/schemas:28","description":"Property eq"} => <none>
+  - properties.contains: {"$ref":"#/components/schemas/schemas:26","description":"Property contains"} => <none>
+  - properties.eq: {"$ref":"#/components/schemas/schemas:28","description":"Property eq"} => <none>
   - properties.exists: {"type":"boolean","description":"Property exists"} => <none>
-  - properties.neq: {"x-ms-identifiers":[],"$ref":"#/components/schemas/schemas:30","description":"Property neq"} => <none>
+  - properties.neq: {"$ref":"#/components/schemas/schemas:30","description":"Property neq"} => <none>
   - properties.property: {"$ref":"#/components/schemas/schemas:32","description":"Property property"} => <none>
   - properties.behavior: <none> => {"$ref":"#/components/schemas/FilterBehavior","description":"How to handle logs that satisfy the filter's conditions and requirement."}
   - properties.conditions: <none> => {"x-ms-identifiers":[],"$ref":"#/components/schemas/schemas:6557","description":"Match conditions for the filter."}
@@ -103,12 +103,12 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'LaunchTemplateSpeci
   - properties.id: <none> => {"$ref":"#/components/schemas/schemas:3170","description":"Property id"}
   - properties.name: <none> => {"$ref":"#/components/schemas/schemas:3171","description":"Property name"}
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'NotificationConfiguration' (4 differences):
-  - properties.notificationTypes: {"x-ms-identifiers":[],"$ref":"#/components/schemas/schemas:421","description":"A list of event types that send a notification. Event types can include any of the following types.  *Allowed values*:  +   `autoscaling:EC2INSTANCE_LAUNCH   +   autoscaling:EC2_INSTANCE_LAUNCH_ERROR   +   autoscaling:EC2_INSTANCE_TERMINATE   +   autoscaling:EC2_INSTANCE_TERMINATE_ERROR   +   autoscaling:TESTNOTIFICATION`"} => <none>
+  - properties.notificationTypes: {"$ref":"#/components/schemas/schemas:421","description":"A list of event types that send a notification. Event types can include any of the following types.  *Allowed values*:  +   `autoscaling:EC2INSTANCE_LAUNCH   +   autoscaling:EC2_INSTANCE_LAUNCH_ERROR   +   autoscaling:EC2_INSTANCE_TERMINATE   +   autoscaling:EC2_INSTANCE_TERMINATE_ERROR   +   autoscaling:TESTNOTIFICATION`"} => <none>
   - properties.topicARN: {"$ref":"#/components/schemas/schemas:423","description":"The Amazon Resource Name (ARN) of the Amazon SNS topic."} => <none>
   - properties.topicArn: <none> => {"$ref":"#/components/schemas/schemas:1312","description":"<p>The Amazon Resource Name (ARN) that identifies the topic. </p>"}
   - properties.topicStatus: <none> => {"$ref":"#/components/schemas/schemas:1313","description":"<p>The current state of the topic. A value of “active” means that notifications will be sent to the topic. A value of “inactive” means that notifications will not be sent to the topic.</p>"}
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'NotificationConfiguration' (6 differences):
-  - properties.notificationTypes: {"x-ms-identifiers":[],"$ref":"#/components/schemas/schemas:421","description":"A list of event types that send a notification. Event types can include any of the following types.  *Allowed values*:  +   `autoscaling:EC2INSTANCE_LAUNCH   +   autoscaling:EC2_INSTANCE_LAUNCH_ERROR   +   autoscaling:EC2_INSTANCE_TERMINATE   +   autoscaling:EC2_INSTANCE_TERMINATE_ERROR   +   autoscaling:TESTNOTIFICATION`"} => <none>
+  - properties.notificationTypes: {"$ref":"#/components/schemas/schemas:421","description":"A list of event types that send a notification. Event types can include any of the following types.  *Allowed values*:  +   `autoscaling:EC2INSTANCE_LAUNCH   +   autoscaling:EC2_INSTANCE_LAUNCH_ERROR   +   autoscaling:EC2_INSTANCE_TERMINATE   +   autoscaling:EC2_INSTANCE_TERMINATE_ERROR   +   autoscaling:TESTNOTIFICATION`"} => <none>
   - properties.topicARN: {"$ref":"#/components/schemas/schemas:423","description":"The Amazon Resource Name (ARN) of the Amazon SNS topic."} => <none>
   - properties.eventBridgeConfiguration: <none> => {"$ref":"#/components/schemas/schemas:5883","description":"Enables delivery of events to Amazon EventBridge. Amazon S3 can send events to Amazon EventBridge whenever certain events happen in your bucket, see [Using EventBridge](https://docs.aws.amazon.com/AmazonS3/latest/userguide/EventBridge.html) in the *Amazon S3 User Guide*. Unlike other destinations, delivery of events to EventBridge can be either enabled or disabled for a bucket. If enabled, all events will be sent to EventBridge and you can use EventBridge rules to route events to additional targets. For more information, see [What Is Amazon EventBridge](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-what-is.html) in the *Amazon EventBridge User Guide*"}
   - properties.lambdaConfigurations: <none> => {"x-ms-identifiers":[],"$ref":"#/components/schemas/schemas:5923","description":"Describes the LAMlong functions to invoke and the events for which to invoke them."}
@@ -137,10 +137,10 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Dimension' (2 diffe
   - properties.value.description: "The value for the dimension, from 1–255 characters in length." => "Property value"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'VpcConfig' (5 differences):
   - properties.securityGroupIds.description: "<p>A list of one or more security groups IDs in your Amazon VPC.</p>" => "A list of VPC security group IDs."
-  - properties.subnets: {"x-ms-identifiers":[],"$ref":"#/components/schemas/schemas:1018","description":"<p>A list of one or more subnet IDs in your Amazon VPC.</p>"} => <none>
+  - properties.subnets: {"$ref":"#/components/schemas/schemas:1018","description":"<p>A list of one or more subnet IDs in your Amazon VPC.</p>"} => <none>
   - properties.vpcId: {"$ref":"#/components/schemas/schemas:1020","description":"<p>The ID of the Amazon VPC.</p>"} => <none>
   - properties.ipv6AllowedForDualStack: <none> => {"type":"boolean","description":"Allows outbound IPv6 traffic on VPC functions that are connected to dual-stack subnets."}
-  - properties.subnetIds: <none> => {"x-ms-identifiers":[],"$ref":"#/components/schemas/schemas:4251","description":"A list of VPC subnet IDs."}
+  - properties.subnetIds: <none> => {"$ref":"#/components/schemas/schemas:4251","description":"A list of VPC subnet IDs."}
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Endpoint' (4 differences):
   - properties.address.description: "<p>The DNS hostname of the endpoint.</p>" => "The connection endpoint for the DB cluster."
   - properties.port.$ref: "#/components/schemas/schemas:1303" => "#/components/schemas/schemas:5152"
@@ -161,7 +161,7 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'IamInstanceProfile'
   - properties.arn: {"$ref":"#/components/schemas/schemas:1768","description":"<p>The Amazon Resource Name (ARN) of the instance profile.</p>"} => <none>
   - properties.id: {"$ref":"#/components/schemas/schemas:1769","description":"<p>The ID of the instance profile.</p>"} => <none>
   - properties.properties: <none> => {"$ref":"#/components/schemas/schemas:3858","description":"The resource-specific properties for this resource."}
-  - allOf: <none> => [{"$ref":"#/components/schemas/schemas:6629"}]
+  - allOf: <none> => [{"$ref":"#/components/schemas/schemas:6693"}]
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'InstanceIpv6Address' (2 differences):
   - properties.ipv6Address.description: "<p>The IPv6 address.</p>" => "Property ipv6Address"
   - properties.isPrimaryIpv6: {"type":"boolean","description":"<p>Determines if an IPv6 address associated with a network interface is the primary IPv6 address. When you enable an IPv6 GUA address to be a primary IPv6, the first IPv6 GUA will be made the primary IPv6 address until the instance is terminated or the network interface is detached. For more information, see <a href='https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html'>RunInstances</a>.</p>"} => <none>
@@ -171,7 +171,7 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'EncryptionConfigura
   - properties.replicaKmsKeyID: <none> => {"$ref":"#/components/schemas/schemas:5882","description":"Specifies the ID (Key ARN or Alias ARN) of the customer managed AWS KMS key stored in AWS Key Management Service (KMS) for the destination bucket. Amazon S3 uses this key to encrypt replica objects. Amazon S3 only supports symmetric encryption KMS keys. For more information, see [Asymmetric keys in KMS](https://docs.aws.amazon.com//kms/latest/developerguide/symmetric-asymmetric.html) in the *Key Management Service Developer Guide*."}
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'LifecyclePolicy' (5 differences):
   - properties.lifecyclePolicyText: {"$ref":"#/components/schemas/schemas:2561","description":"The JSON repository policy text to apply to the repository. The JSON repository policy text to apply to the repository."} => <none>
-  - properties.registryId: {"$ref":"#/components/schemas/schemas:2562","description":"The AWS account ID associated with the registry that contains the repository. If you do  not specify a registry, the default registry is assumed. The AWS account ID associated with the registry that contains the repository. If you do not specify a registry, the default registry is assumed."} => <none>
+  - properties.registryId: {"$ref":"#/components/schemas/schemas:2562","description":"The AWS account ID associated with the registry that contains the repository. If you do not specify a registry, the default registry is assumed. The AWS account ID associated with the registry that contains the repository. If you do not specify a registry, the default registry is assumed."} => <none>
   - properties.transitionToArchive: <none> => {"$ref":"#/components/schemas/schemas:2991","description":"The number of days after files were last accessed in primary storage (the Standard storage class) at which to move them to Archive storage. Metadata operations such as listing the contents of a directory don't count as file access events."}
   - properties.transitionToIA: <none> => {"$ref":"#/components/schemas/schemas:2992","description":"The number of days after files were last accessed in primary storage (the Standard storage class) at which to move them to Infrequent Access (IA) storage. Metadata operations such as listing the contents of a directory don't count as file access events."}
   - properties.transitionToPrimaryStorageClass: <none> => {"$ref":"#/components/schemas/schemas:2993","description":"Whether to move files back to primary (Standard) storage after they are accessed in IA or Archive storage. Metadata operations such as listing the contents of a directory don't count as file access events."}
@@ -226,11 +226,11 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorDetail' (8 dif
   - properties.errorCode: {"$ref":"#/components/schemas/schemas:3663","description":"<p>The name or code associated with the error.</p>"} => <none>
   - properties.errorData: {"x-ms-identifiers":[],"$ref":"#/components/schemas/schemas:3664","description":"<p>A list of key value pairs that provides contextual information about why an error occured.</p>"} => <none>
   - properties.errorMessage: {"$ref":"#/components/schemas/schemas:3665","description":"<p>A message that describes the error.</p>"} => <none>
-  - properties.code: <none> => {"$ref":"#/components/schemas/schemas:6658","description":"The error code.","readOnly":true}
-  - properties.message: <none> => {"$ref":"#/components/schemas/schemas:6659","description":"The error message.","readOnly":true}
-  - properties.target: <none> => {"$ref":"#/components/schemas/schemas:6660","description":"The error target.","readOnly":true}
-  - properties.details: <none> => {"x-ms-identifiers":["message","target"],"$ref":"#/components/schemas/schemas:6661","description":"The error details.","readOnly":true}
-  - properties.additionalInfo: <none> => {"x-ms-identifiers":[],"$ref":"#/components/schemas/schemas:6662","description":"The error additional info.","readOnly":true}
+  - properties.code: <none> => {"$ref":"#/components/schemas/schemas:6635","description":"The error code.","readOnly":true}
+  - properties.message: <none> => {"$ref":"#/components/schemas/schemas:6636","description":"The error message.","readOnly":true}
+  - properties.target: <none> => {"$ref":"#/components/schemas/schemas:6637","description":"The error target.","readOnly":true}
+  - properties.details: <none> => {"x-ms-identifiers":["message","target"],"$ref":"#/components/schemas/schemas:6638","description":"The error details.","readOnly":true}
+  - properties.additionalInfo: <none> => {"x-ms-identifiers":[],"$ref":"#/components/schemas/schemas:6639","description":"The error additional info.","readOnly":true}
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Policy' (1 differences):
   - properties.policyDocument.description: "The policy document." => "The entire contents of the policy that defines permissions. For more information, see [Overview of JSON policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/accesspolicies.html#accesspolicies-json)."
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'LoggingConfig' (8 differences):

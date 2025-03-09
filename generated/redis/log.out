@@ -424,7 +424,7 @@ warning | PreCheck/SchemaMissingType | The schema 'NotificationListResponse' wit
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/preview/2023-05-01-preview/redis.json:3234:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorDetail' (1 differences):
-  - properties.details.$ref: "#/components/schemas/schemas:233" => "#/components/schemas/schemas:331"
+  - properties.details.$ref: "#/components/schemas/schemas:210" => "#/components/schemas/schemas:331"
 warning | Modeler/MissingType | The schema 'components·jb1v7t·schemas·rediscommonproperties·properties·redisconfiguration·additionalproperties' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/preview/2023-05-01-preview/redis.json#/components/schemas/components·jb1v7t·schemas·rediscommonproperties·properties·redisconfiguration·additionalproperties
 warning | Modeler/MissingType | The schema 'components·pgz285·schemas·operationstatus·properties·properties·additionalproperties' has no type or format information whatsoever. Location:
@@ -511,7 +511,7 @@ warning | PreCheck/SchemaMissingType | The schema 'NotificationListResponse' wit
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2023-04-01/redis.json:2831:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorDetail' (1 differences):
-  - properties.details.$ref: "#/components/schemas/schemas:254" => "#/components/schemas/schemas:460"
+  - properties.details.$ref: "#/components/schemas/schemas:254" => "#/components/schemas/schemas:437"
 warning | Modeler/MissingType | The schema 'components·jb1v7t·schemas·rediscommonproperties·properties·redisconfiguration·additionalproperties' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2023-04-01/redis.json#/components/schemas/components·jb1v7t·schemas·rediscommonproperties·properties·redisconfiguration·additionalproperties
 warning | Modeler/MissingType | The schema 'components·pgz285·schemas·operationstatus·properties·properties·additionalproperties' has no type or format information whatsoever. Location:
@@ -598,7 +598,7 @@ warning | PreCheck/SchemaMissingType | The schema 'NotificationListResponse' wit
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2022-06-01/redis.json:2796:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorDetail' (1 differences):
-  - properties.details.$ref: "#/components/schemas/schemas:252" => "#/components/schemas/schemas:458"
+  - properties.details.$ref: "#/components/schemas/schemas:252" => "#/components/schemas/schemas:435"
 warning | Modeler/MissingType | The schema 'components·jb1v7t·schemas·rediscommonproperties·properties·redisconfiguration·additionalproperties' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2022-06-01/redis.json#/components/schemas/components·jb1v7t·schemas·rediscommonproperties·properties·redisconfiguration·additionalproperties
 warning | Modeler/MissingType | The schema 'components·pgz285·schemas·operationstatus·properties·properties·additionalproperties' has no type or format information whatsoever. Location:
@@ -685,7 +685,7 @@ warning | PreCheck/SchemaMissingType | The schema 'NotificationListResponse' wit
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2022-05-01/redis.json:2786:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorDetail' (1 differences):
-  - properties.details.$ref: "#/components/schemas/schemas:250" => "#/components/schemas/schemas:456"
+  - properties.details.$ref: "#/components/schemas/schemas:250" => "#/components/schemas/schemas:433"
 warning | Modeler/MissingType | The schema 'components·jb1v7t·schemas·rediscommonproperties·properties·redisconfiguration·additionalproperties' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2022-05-01/redis.json#/components/schemas/components·jb1v7t·schemas·rediscommonproperties·properties·redisconfiguration·additionalproperties
 warning | Modeler/MissingType | The schema 'components·pgz285·schemas·operationstatus·properties·properties·additionalproperties' has no type or format information whatsoever. Location:
@@ -772,7 +772,7 @@ warning | PreCheck/SchemaMissingType | The schema 'NotificationListResponse' wit
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json:2784:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorDetail' (1 differences):
-  - properties.details.$ref: "#/components/schemas/schemas:248" => "#/components/schemas/schemas:454"
+  - properties.details.$ref: "#/components/schemas/schemas:248" => "#/components/schemas/schemas:431"
 warning | Modeler/MissingType | The schema 'components·jb1v7t·schemas·rediscommonproperties·properties·redisconfiguration·additionalproperties' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/redis/resource-manager/Microsoft.Cache/stable/2021-06-01/redis.json#/components/schemas/components·jb1v7t·schemas·rediscommonproperties·properties·redisconfiguration·additionalproperties
 warning | Modeler/MissingType | The schema 'components·pgz285·schemas·operationstatus·properties·properties·additionalproperties' has no type or format information whatsoever. Location:

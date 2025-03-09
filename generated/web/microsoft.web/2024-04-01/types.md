@@ -12,30 +12,6 @@
 * **tags**: [ResourceTags](#resourcetags): Resource tags.
 * **type**: 'Microsoft.Web/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Web/containerApps@2024-04-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string: Kind of resource. If the resource is an app, you can refer to https://github.com/Azure/app-service-linux-docs/blob/master/Things_You_Should_Know/kind_property.md#app-service-resource-kind-reference for details supported values for kind.
-* **location**: string (Required): Resource Location.
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ContainerAppProperties](#containerappproperties): ContainerApp resource specific properties
-* **tags**: [ResourceTags](#resourcetags): Resource tags.
-* **type**: 'Microsoft.Web/containerApps' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.Web/containerApps/revisions@2024-04-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **kind**: string (ReadOnly): Kind of resource. If the resource is an app, you can refer to https://github.com/Azure/app-service-linux-docs/blob/master/Things_You_Should_Know/kind_property.md#app-service-resource-kind-reference for details supported values for kind.
-* **location**: string (ReadOnly): Resource Location.
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [RevisionProperties](#revisionproperties) (ReadOnly): Revision resource specific properties
-* **tags**: [ResourceTags](#resourcetags) (ReadOnly): Resource tags.
-* **type**: 'Microsoft.Web/containerApps/revisions' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.Web/deletedSites@2024-04-01 (ReadOnly)
 * **Valid Scope(s)**: Subscription
 ### Properties
@@ -1699,11 +1675,6 @@
 * **ApiVersion**: 2024-04-01
 * **Output**: [HostKeys](#hostkeys)
 
-## Function listSecrets (Microsoft.Web/containerApps@2024-04-01)
-* **Resource**: Microsoft.Web/containerApps
-* **ApiVersion**: 2024-04-01
-* **Output**: [SecretsCollection](#secretscollection)
-
 ## Function listSecrets (Microsoft.Web/staticSites@2024-04-01)
 * **Resource**: Microsoft.Web/staticSites
 * **ApiVersion**: 2024-04-01
@@ -1968,7 +1939,7 @@ a replacement for the Client Secret Certificate Thumbprint. It is also optional.
 a replacement for the Client Secret. It is also optional.
 * **clientSecretSettingName**: string: The app setting name that contains the client secret of the relying party application.
 * **openIdIssuer**: string: The OpenID Connect Issuer URI that represents the entity which issues access tokens for this application.
-When using Azure Active Directory, this value is the URI of the directory tenant, e.g. https://login.microsoftonline.com/v2.0/{tenant-guid}/.
+When using Azure Active Directory, this value is the URI of the directory tenant, e.g. `https://login.microsoftonline.com/v2.0/{tenant-guid}/`.
 This URI is a case-sensitive identifier for the token issuer.
 More information on OpenID Connect Discovery: http://openid.net/specs/openid-connect-discovery-1_0.html
 
@@ -2152,14 +2123,6 @@ together to use the same snapshot.
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## Configuration
-### Properties
-* **activeRevisionsMode**: 'multiple' | 'single' | string: ActiveRevisionsMode controls how active revisions are handled for the Container app:
-<list><item>Multiple: multiple revisions can be active. If no value if provided, this is the default</item><item>Single: Only one revision can be active at a time. Revision weights can not be used in this mode</item></list>
-* **ingress**: [Ingress](#ingress): Ingress configurations.
-* **registries**: [RegistryCredentials](#registrycredentials)[]: Collection of private container registry credentials for containers used by the Container app
-* **secrets**: [Secret](#secret)[]: Collection of secrets used by a Container app
-
 ## ConnectionStringDictionaryProperties
 ### Properties
 ### Additional Properties
@@ -2181,24 +2144,6 @@ together to use the same snapshot.
 * **type**: 'ApiHub' | 'Custom' | 'DocDb' | 'EventHub' | 'MySql' | 'NotificationHub' | 'PostgreSQL' | 'RedisCache' | 'SQLAzure' | 'SQLServer' | 'ServiceBus' (Required): Type of database.
 * **value**: string (Required): Value of pair.
 
-## Container
-### Properties
-* **args**: string[]: Container start command arguments.
-* **command**: string[]: Container start command.
-* **env**: [EnvironmentVar](#environmentvar)[]: Container environment variables.
-* **image**: string: Container image tag.
-* **name**: string: Custom container name.
-* **resources**: [ContainerResources](#containerresources): Container resource requirements.
-
-## ContainerAppProperties
-### Properties
-* **configuration**: [Configuration](#configuration): Non versioned Container App configuration properties.
-* **kubeEnvironmentId**: string: Resource ID of the Container App's KubeEnvironment.
-* **latestRevisionFqdn**: string (ReadOnly): Fully Qualified Domain Name of the latest revision of the Container App.
-* **latestRevisionName**: string (ReadOnly): Name of the latest revision of the Container App.
-* **provisioningState**: 'Canceled' | 'Failed' | 'InProgress' | 'Succeeded' | string (ReadOnly): Provisioning state of the Container App.
-* **template**: [Template](#template): Container App versioned application definition.
-
 ## ContainerAppsConfiguration
 ### Properties
 * **appSubnetResourceId**: string: Resource ID of a subnet for control plane infrastructure components. This subnet must be in the same VNET as the subnet defined in appSubnetResourceId. Must not overlap with the IP range defined in platformReservedCidr, if defined.
@@ -2207,11 +2152,6 @@ together to use the same snapshot.
 * **dockerBridgeCidr**: string: CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the IP range defined in platformReservedCidr, if defined.
 * **platformReservedCidr**: string: IP range in CIDR notation that can be reserved for environment infrastructure IP addresses. It must not overlap with any other Subnet IP ranges.
 * **platformReservedDnsIP**: string: An IP address from the IP range defined by platformReservedCidr that will be reserved for the internal DNS server
-
-## ContainerAppSecret
-### Properties
-* **name**: string (ReadOnly): Secret Name.
-* **value**: string (ReadOnly): Secret Value.
 
 ## ContainerCpuStatistics
 ### Properties
@@ -2254,11 +2194,6 @@ together to use the same snapshot.
 * **txDropped**: int
 * **txErrors**: int
 * **txPackets**: int
-
-## ContainerResources
-### Properties
-* **cpu**: int: Required CPU in cores, e.g. 0.5
-* **memory**: string: Required memory, e.g. "250Mb"
 
 ## ContainerThrottlingData
 ### Properties
@@ -2350,32 +2285,6 @@ for more details.
 * **login**: [OpenIdConnectLogin](#openidconnectlogin): The configuration settings of the login flow of the custom Open ID Connect provider.
 * **registration**: [OpenIdConnectRegistration](#openidconnectregistration): The configuration settings of the app registration for the custom Open ID Connect provider.
 
-## CustomScaleRule
-### Properties
-* **auth**: [ScaleRuleAuth](#scaleruleauth)[]: Authentication secrets for the custom scale rule.
-* **metadata**: [CustomScaleRuleMetadata](#customscalerulemetadata): Metadata properties to describe custom scale rule.
-* **type**: string: Type of the custom scale rule
-eg: azure-servicebus, redis etc.
-
-## CustomScaleRuleMetadata
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## Dapr
-### Properties
-* **appId**: string: Dapr application identifier
-* **appPort**: int: Port on which the Dapr side car
-* **components**: [DaprComponent](#daprcomponent)[]: Collection of Dapr components
-* **enabled**: bool: Boolean indicating if the Dapr side car is enabled
-
-## DaprComponent
-### Properties
-* **metadata**: [DaprMetadata](#daprmetadata)[]: Component metadata
-* **name**: string: Component name
-* **type**: string: Component type
-* **version**: string: Component version
-
 ## DaprConfig
 ### Properties
 * **appId**: string: Dapr application identifier
@@ -2385,12 +2294,6 @@ eg: azure-servicebus, redis etc.
 * **httpMaxRequestSize**: int: Increasing max size of request body http servers parameter in MB to handle uploading of big files. Default is 4 MB.
 * **httpReadBufferSize**: int: Dapr max size of http header read buffer in KB to handle when sending multi-KB headers. Default is 65KB.
 * **logLevel**: 'debug' | 'error' | 'info' | 'warn' | string: Sets the log level for the Dapr sidecar. Allowed values are debug, info, warn, error. Default is info.
-
-## DaprMetadata
-### Properties
-* **name**: string: Metadata property name.
-* **secretRef**: string: Name of the Container App secret from which to pull the metadata property value.
-* **value**: string: Metadata property value.
 
 ## DatabaseBackupSetting
 ### Properties
@@ -2500,12 +2403,6 @@ This is used during restore with overwrite connection strings options.
 ## EnabledConfig
 ### Properties
 * **enabled**: bool: True if configuration is enabled, false if it is disabled and null if configuration is not set.
-
-## EnvironmentVar
-### Properties
-* **name**: string: Environment variable name.
-* **secretRef**: string: Name of the Container App secret from which to pull the environment variable value.
-* **value**: string: Non-secret environment variable value.
 
 ## EnvironmentVariable
 ### Properties
@@ -2787,16 +2684,6 @@ action is set to "RedirectToLoginPage".
 * **azureBlobStorage**: [AzureBlobStorageHttpLogsConfig](#azureblobstoragehttplogsconfig): Http logs to azure blob storage configuration.
 * **fileSystem**: [FileSystemHttpLogsConfig](#filesystemhttplogsconfig): Http logs to file system configuration.
 
-## HttpScaleRule
-### Properties
-* **auth**: [ScaleRuleAuth](#scaleruleauth)[]: Authentication secrets for the custom scale rule.
-* **metadata**: [HttpScaleRuleMetadata](#httpscalerulemetadata): Metadata properties to describe http scale rule.
-
-## HttpScaleRuleMetadata
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## HttpSettings
 ### Properties
 * **forwardProxy**: [ForwardProxy](#forwardproxy): The configuration settings of a forward proxy used to make the requests.
@@ -2866,15 +2753,6 @@ configuration settings of the custom Open ID Connect provider.
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: [CustomOpenIdConnectProvider](#customopenidconnectprovider)
-
-## Ingress
-### Properties
-* **allowInsecure**: bool: Bool indicating if HTTP connections to is allowed. If set to false HTTP connections are automatically redirected to HTTPS connections
-* **external**: bool: Bool indicating if app exposes an external http endpoint
-* **fqdn**: string (ReadOnly): Hostname.
-* **targetPort**: int: Target Port in containers for traffic from ingress
-* **traffic**: [TrafficWeight](#trafficweight)[]
-* **transport**: 'auto' | 'http' | 'http2' | string: Ingress transport protocol
 
 ## IpAddress
 ### Properties
@@ -3241,17 +3119,10 @@ Validation should be performed at the PushRequestHandler.
 * **query**: string: Search Query.
 * **results**: [QueryUtterancesResult](#queryutterancesresult)[]: Array of utterance results for search query.
 
-## QueueScaleRule
-### Properties
-* **auth**: [ScaleRuleAuth](#scaleruleauth)[]: Authentication secrets for the queue scale rule.
-* **queueLength**: int: Queue length.
-* **queueName**: string: Queue name.
-
 ## RampUpRule
 ### Properties
 * **actionHostName**: string: Hostname of a slot to which the traffic will be redirected if decided to. E.g. myapp-stage.azurewebsites.net.
-* **changeDecisionCallbackUrl**: string: Custom decision algorithm can be provided in TiPCallback site extension which URL can be specified. See TiPCallback site extension for the scaffold and contracts.
-https://www.siteextensions.net/packages/TiPCallback/
+* **changeDecisionCallbackUrl**: string: Custom decision algorithm can be provided in TiPCallback site extension which URL can be specified.
 * **changeIntervalInMinutes**: int: Specifies interval in minutes to reevaluate ReroutePercentage.
 * **changeStep**: int: In auto ramp up scenario this is the step to add/remove from <code>ReroutePercentage</code> until it reaches \n<code>MinReroutePercentage</code> or 
 <code>MaxReroutePercentage</code>. Site metrics are checked every N minutes specified in <code>ChangeIntervalInMinutes</code>.\nCustom decision algorithm 
@@ -3290,12 +3161,6 @@ If such an object doesn't exist, it is set to null.
 ### Properties
 * **day**: 'Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday': The day of the week.
 * **occurrence**: int: The occurrence.
-
-## RegistryCredentials
-### Properties
-* **passwordSecretRef**: string: The name of the Secret that contains the registry login password
-* **server**: string: Container Registry Server
-* **username**: string: Container Registry Username
 
 ## RelayServiceConnectionEntity
 ### Properties
@@ -3427,16 +3292,6 @@ If such an object doesn't exist, it is set to null.
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## Response
 ### Properties
 * **bodyLink**: [ContentLink](#contentlink): Details on the location of the body content.
@@ -3474,21 +3329,6 @@ For example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupId}/pr
 * **serviceRequestId**: string: Gets the service request Id.
 * **startTime**: string: Gets the start time.
 
-## RevisionProperties
-### Properties
-* **active**: bool (ReadOnly): Boolean describing if the Revision is Active
-* **createdTime**: string (ReadOnly): Timestamp describing when the revision was created
-by controller
-* **fqdn**: string (ReadOnly): Fully qualified domain name of the revision
-* **healthState**: 'Healthy' | 'None' | 'Unhealthy' | string (ReadOnly): Current health State of the revision
-* **provisioningError**: string (ReadOnly): Optional Field - Platform Error Message
-* **provisioningState**: 'Deprovisioned' | 'Deprovisioning' | 'Failed' | 'Provisioned' | 'Provisioning' | string (ReadOnly): Current provisioning State of the revision
-* **replicas**: int (ReadOnly): Number of pods currently running for this revision
-* **template**: [Template](#template) (ReadOnly): Container App Revision Template with all possible settings and the
-defaults if user did not provide them. The defaults are populated
-as they were at the creation time
-* **trafficWeight**: int (ReadOnly): Traffic weight assigned to this revision
-
 ## RunActionCorrelation
 ### Properties
 * **actionTrackingId**: string: The action tracking identifier.
@@ -3500,33 +3340,6 @@ as they were at the creation time
 * **links**: string[]: Links attribute of sample utterance.
 * **qid**: string: Question id of sample utterance (for stackoverflow questions titles).
 * **text**: string: Text attribute of sample utterance.
-
-## Scale
-### Properties
-* **maxReplicas**: int: Optional. Maximum number of container replicas. Defaults to 10 if not set.
-* **minReplicas**: int: Optional. Minimum number of container replicas.
-* **rules**: [ScaleRule](#scalerule)[]: Scaling rules.
-
-## ScaleRule
-### Properties
-* **azureQueue**: [QueueScaleRule](#queuescalerule): Azure Queue based scaling.
-* **custom**: [CustomScaleRule](#customscalerule): Custom scale rule.
-* **http**: [HttpScaleRule](#httpscalerule): HTTP requests based scaling.
-* **name**: string: Scale Rule Name
-
-## ScaleRuleAuth
-### Properties
-* **secretRef**: string: Name of the Container App secret from which to pull the auth params.
-* **triggerParameter**: string: Trigger Parameter that uses the secret
-
-## Secret
-### Properties
-* **name**: string: Secret Name.
-* **value**: string {sensitive} (WriteOnly): Secret Value.
-
-## SecretsCollection
-### Properties
-* **value**: [ContainerAppSecret](#containerappsecret)[] (Required): Collection of resources.
 
 ## SiteAuthSettingsProperties
 ### Properties
@@ -3590,7 +3403,7 @@ Google Sign-In documentation: https://developers.google.com/identity/sign-in/web
 * **isAuthFromFile**: string: "true" if the auth config settings should be read from a file,
 "false" otherwise
 * **issuer**: string: The OpenID Connect Issuer URI that represents the entity which issues access tokens for this application.
-When using Azure Active Directory, this value is the URI of the directory tenant, e.g. https://sts.windows.net/{tenant-guid}/.
+When using Azure Active Directory, this value is the URI of the directory tenant, e.g. `https://sts.windows.net/{tenant-guid}/`.
 This URI is a case-sensitive identifier for the token issuer.
 More information on OpenID Connect Discovery: http://openid.net/specs/openid-connect-discovery-1_0.html
 * **microsoftAccountClientId**: string: The OAuth 2.0 client ID that was created for the app used for authentication.
@@ -4126,13 +3939,6 @@ This must be of the form /subscriptions/{subscriptionName}/resourceGroups/{resou
 * **subnetResourceId**: string: The Virtual Network subnet's resource ID. This is the subnet that this Web App will join. This subnet must have a delegation to Microsoft.Web/serverFarms defined first.
 * **swiftSupported**: bool: A flag that specifies if the scale unit this Web App is on supports Swift integration.
 
-## Template
-### Properties
-* **containers**: [Container](#container)[]: List of container definitions for the Container App.
-* **dapr**: [Dapr](#dapr): Dapr configuration for the Container App.
-* **revisionSuffix**: string: User friendly suffix that is appended to the revision name
-* **scale**: [Scale](#scale): Scaling properties for the Container App.
-
 ## TokenStore
 ### Properties
 * **azureBlobStorage**: [BlobStorageTokenStore](#blobstoragetokenstore): The configuration settings of the storage of the tokens if blob storage is used.
@@ -4141,12 +3947,6 @@ This must be of the form /subscriptions/{subscriptionName}/resourceGroups/{resou
 * **fileSystem**: [FileSystemTokenStore](#filesystemtokenstore): The configuration settings of the storage of the tokens if a file system is used.
 * **tokenRefreshExtensionHours**: int: The number of hours after session token expiration that a session token can be used to
 call the token refresh API. The default is 72 hours.
-
-## TrafficWeight
-### Properties
-* **latestRevision**: bool: Indicates that the traffic weight belongs to a latest stable revision
-* **revisionName**: string: Name of a revision
-* **weight**: int: Traffic weight assigned to a revision
 
 ## TriggeredJobHistoryProperties
 ### Properties

@@ -2718,6 +2718,7 @@ If Nodes is not set or set to null, the service will only be started on leader n
 If it is null or not provided,
 it defaults to TargetUtilizationScaleSettings for KubernetesOnlineDeployment
 and to DefaultScaleSettings for ManagedOnlineDeployment.
+* **startupProbe**: [ProbeSettings](#probesettings): This verifies whether the application within a container is started. Startup probes run before any other probe, and, unless it finishes successfully, disables other probes.
 
 ### KubernetesOnlineDeployment
 #### Properties

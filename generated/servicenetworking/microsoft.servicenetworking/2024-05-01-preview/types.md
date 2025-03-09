@@ -69,13 +69,13 @@
 
 ## SecurityPolicyConfigurations
 ### Properties
-* **wafSecurityPolicy**: [WafSecurityPolicy](#wafsecuritypolicy): Contains reference to a WAF-type security policy that is applied at the Traffic Controller level.
+* **wafSecurityPolicy**: [WafSecurityPolicy](#wafsecuritypolicy): Contains reference to a WAF-type security policy.
 
 ## SecurityPolicyProperties
 ### Properties
 * **policyType**: 'waf' | string (ReadOnly): Type of the Traffic Controller Security Policy
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning State of Traffic Controller SecurityPolicy Resource
-* **wafPolicy**: [WafPolicy](#wafpolicy): Web Application Firewall Policy of the Traffic Controller Security Policy
+* **wafPolicy**: [WafPolicy](#wafpolicy): Web Application Firewall Policy of the Traffic Controller Security Policy. Single Security Policy can have only one policy type set.
 
 ## SystemData
 ### Properties

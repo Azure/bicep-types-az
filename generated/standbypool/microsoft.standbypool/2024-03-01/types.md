@@ -137,5 +137,5 @@
 ## VirtualMachineInstanceCountSummary
 ### Properties
 * **instanceCountsByState**: [PoolResourceStateCount](#poolresourcestatecount)[] (Required): The count of pooled resources in each state for the given zone.
-* **zone**: int: The zone that the provided counts are in. This is null if zones are not enabled on the attached VMSS.
+* **zone**: int: The zone that the provided counts are in. It will not have a value if zones are not enabled on the attached VMSS.
 
