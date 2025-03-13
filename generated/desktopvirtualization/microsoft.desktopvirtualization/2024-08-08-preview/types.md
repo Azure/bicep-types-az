@@ -16,16 +16,16 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-08-08-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
+* **etag**: string (ReadOnly): If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Managed service identity (system assigned and/or user assigned identities)
-* **kind**: string {pattern: "^[-\w\._,\(\)]+$"}: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type. E.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The managed service identities assigned to this resource.
+* **kind**: string {pattern: "^[-\w\._,\(\)]+$"}: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **location**: string (Required): The geo-location where the resource lives
 * **managedBy**: string: The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
-* **name**: string {minLength: 1, maxLength: 255, pattern: "^[A-Za-z0-9@.\-_ ]*$"} (Required, DeployTimeConstant): The resource name
-* **plan**: [Plan](#plan): Plan for the resource.
+* **name**: string {minLength: 3, maxLength: 64, pattern: "^[A-Za-z0-9@.\-_ ]*$"} (Required, DeployTimeConstant): The resource name
+* **plan**: [Plan](#plan): Details of the resource plan.
 * **properties**: [ApplicationGroupProperties](#applicationgroupproperties) (Required): Detailed properties for ApplicationGroup
-* **sku**: [Sku](#sku): The resource model definition representing SKU
+* **sku**: [Sku](#sku): The SKU (Stock Keeping Unit) assigned to this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DesktopVirtualization/applicationGroups' (ReadOnly, DeployTimeConstant): The resource type
@@ -54,16 +54,16 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-08-08-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
+* **etag**: string (ReadOnly): If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Managed service identity (system assigned and/or user assigned identities)
-* **kind**: string {pattern: "^[-\w\._,\(\)]+$"}: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type. E.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The managed service identities assigned to this resource.
+* **kind**: string {pattern: "^[-\w\._,\(\)]+$"}: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **location**: string (Required): The geo-location where the resource lives
 * **managedBy**: string: The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
-* **name**: string {minLength: 1, maxLength: 255, pattern: "^[A-Za-z0-9@.\-_ ]*$"} (Required, DeployTimeConstant): The resource name
-* **plan**: [Plan](#plan): Plan for the resource.
+* **name**: string {minLength: 3, maxLength: 64, pattern: "^[A-Za-z0-9@.\-_ ]*$"} (Required, DeployTimeConstant): The resource name
+* **plan**: [Plan](#plan): Details of the resource plan.
 * **properties**: [HostPoolProperties](#hostpoolproperties) (Required): Detailed properties for HostPool
-* **sku**: [Sku](#sku): The resource model definition representing SKU
+* **sku**: [Sku](#sku): The SKU (Stock Keeping Unit) assigned to this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DesktopVirtualization/hostPools' (ReadOnly, DeployTimeConstant): The resource type
@@ -74,7 +74,7 @@
 * **apiVersion**: '2024-08-08-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **properties**: [ActiveSessionHostConfigurationProperties](#activesessionhostconfigurationproperties) (ReadOnly): Detailed properties for SessionHostConfiguration
+* **properties**: [ActiveSessionHostConfigurationProperties](#activesessionhostconfigurationproperties) (ReadOnly): Detailed properties for ActiveSessionHostConfiguration
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DesktopVirtualization/hostPools/activeSessionHostConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -94,7 +94,7 @@
 * **apiVersion**: '2024-08-08-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DesktopVirtualization/hostPools/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -142,16 +142,16 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-08-08-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
+* **etag**: string (ReadOnly): If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Managed service identity (system assigned and/or user assigned identities)
-* **kind**: string {pattern: "^[-\w\._,\(\)]+$"}: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type. E.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The managed service identities assigned to this resource.
+* **kind**: string {pattern: "^[-\w\._,\(\)]+$"}: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **location**: string (Required): The geo-location where the resource lives
 * **managedBy**: string: The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
-* **name**: string {minLength: 1, maxLength: 255, pattern: "^[A-Za-z0-9@.\-_ ]*$"} (Required, DeployTimeConstant): The resource name
-* **plan**: [Plan](#plan): Plan for the resource.
+* **name**: string {minLength: 3, maxLength: 64, pattern: "^[A-Za-z0-9@.\-_ ]*$"} (Required, DeployTimeConstant): The resource name
+* **plan**: [Plan](#plan): Details of the resource plan.
 * **properties**: [ScalingPlanProperties](#scalingplanproperties) (Required): Detailed properties for scaling plan.
-* **sku**: [Sku](#sku): The resource model definition representing SKU
+* **sku**: [Sku](#sku): The SKU (Stock Keeping Unit) assigned to this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DesktopVirtualization/scalingPlans' (ReadOnly, DeployTimeConstant): The resource type
@@ -180,16 +180,16 @@
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-08-08-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
+* **etag**: string (ReadOnly): If etag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): Managed service identity (system assigned and/or user assigned identities)
-* **kind**: string {pattern: "^[-\w\._,\(\)]+$"}: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type. E.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The managed service identities assigned to this resource.
+* **kind**: string {pattern: "^[-\w\._,\(\)]+$"}: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
 * **location**: string (Required): The geo-location where the resource lives
 * **managedBy**: string: The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
-* **name**: string {minLength: 1, maxLength: 255, pattern: "^[A-Za-z0-9@.\-_ ]*$"} (Required, DeployTimeConstant): The resource name
-* **plan**: [Plan](#plan): Plan for the resource.
+* **name**: string {minLength: 3, maxLength: 64, pattern: "^[A-Za-z0-9@.\-_ ]*$"} (Required, DeployTimeConstant): The resource name
+* **plan**: [Plan](#plan): Details of the resource plan.
 * **properties**: [WorkspaceProperties](#workspaceproperties): Detailed properties for Workspace
-* **sku**: [Sku](#sku): The resource model definition representing SKU
+* **sku**: [Sku](#sku): The SKU (Stock Keeping Unit) assigned to this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DesktopVirtualization/workspaces' (ReadOnly, DeployTimeConstant): The resource type
@@ -200,7 +200,7 @@
 * **apiVersion**: '2024-08-08-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
+* **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DesktopVirtualization/workspaces/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -222,8 +222,8 @@
 * **customConfigurationScriptUrl**: string: The uri to the storage blob containing the arm template to be run on the virtual machine after provisioning.
 * **diskInfo**: [DiskInfoProperties](#diskinfoproperties) (Required): Disk information.
 * **domainInfo**: [DomainInfoProperties](#domaininfoproperties) (Required): Domain configurations of session hosts.
-* **friendlyName**: string {maxLength: 260}: Friendly name to describe this version of the SessionHostConfiguration.
-* **imageInfo**: [ImageInfoProperties](#imageinfoproperties) (Required): Image configurations of HostPool.
+* **friendlyName**: string {maxLength: 260}: Friendly name to describe this version of the SessionHostConfiguration
+* **imageInfo**: [ImageInfoProperties](#imageinfoproperties) (Required): Image configurations of the HostPool.
 * **networkInfo**: [NetworkInfoProperties](#networkinfoproperties) (Required): Network information.
 * **securityInfo**: [SecurityInfoProperties](#securityinfoproperties): Security information.
 * **version**: string (ReadOnly): The timestamp of the last update.
@@ -251,19 +251,19 @@
 * **certificateExpiry**: string: Date certificate expires, found in the appxmanifest.xml.
 * **certificateName**: string: Certificate name found in the appxmanifest.xml.
 * **displayName**: string: User friendly Name to be displayed in the portal.
-* **imagePath**: string: VHD/CIM/APP-V image path on Network Share.
+* **imagePath**: string: VHD/CIM image path on Network Share.
 * **isActive**: bool: Make this version of the package the active one across the hostpool.
 * **isPackageTimestamped**: 'NotTimestamped' | 'Timestamped' | string: Is package timestamped so it can ignore the certificate expiry date
 * **isRegularRegistration**: bool: Specifies how to register Package in feed.
-* **lastUpdated**: string: Date the package source was last updated, for Msix packages this is found in the appxmanifest.xml.
+* **lastUpdated**: string: Date Package was last updated, found in the appxmanifest.xml.
 * **packageAlias**: string: Alias of App Attach Package. Assigned at import time
 * **packageApplications**: [MsixPackageApplications](#msixpackageapplications)[]: List of package applications.
 * **packageDependencies**: [MsixPackageDependencies](#msixpackagedependencies)[]: List of package dependencies.
-* **packageFamilyName**: string: Identifier not including the package version, for Msix packages it is the family name from the appxmanifest.xml.
-* **packageFullName**: string: Identifier including the package version, for Msix packages it is the full name from the appxmanifest.xml.
+* **packageFamilyName**: string: Package Family Name from appxmanifest.xml. Contains Package Name and Publisher name.
+* **packageFullName**: string: Package Full Name from appxmanifest.xml.
 * **packageName**: string: Package Name from appxmanifest.xml.
 * **packageRelativePath**: string: Relative Path to the package inside the image.
-* **version**: string: Package Version found in the appxmanifest.xml.
+* **version**: string: Package version found in the appxmanifest.xml.
 
 ## AppAttachPackageProperties
 ### Properties
@@ -271,7 +271,7 @@
 * **failHealthCheckOnStagingFailure**: 'DoNotFail' | 'NeedsAssistance' | 'Unhealthy' | string: Parameter indicating how the health check should behave if this package fails staging
 * **hostPoolReferences**: string[]: List of Hostpool resource Ids.
 * **image**: [AppAttachPackageInfoProperties](#appattachpackageinfoproperties): Detailed properties for App Attach Package
-* **keyVaultURL**: string: URL of keyvault location to store certificate
+* **keyVaultURL**: string: URL path to certificate name located in keyVault
 * **packageLookbackUrl**: string: Lookback url to third party control plane, is null for native app attach packages
 * **packageOwnerName**: string: Specific name of package owner, is "AppAttach" for native app attach packages
 * **provisioningState**: 'Canceled' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): The provisioning state of the App Attach Package.
@@ -315,7 +315,7 @@
 
 ## CustomInfoProperties
 ### Properties
-* **resourceId**: string (Required): The resource id of the custom image.
+* **resourceId**: string (Required): The resource ID of the image.
 
 ## DesktopProperties
 ### Properties
@@ -356,7 +356,7 @@
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): List of private endpoint connection associated with the specified resource
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' | 'EnabledForClientsOnly' | 'EnabledForSessionHostsOnly' | string: Enabled allows this resource to be accessed from both public and private networks, Disabled allows this resource to only be accessed via private endpoints
 * **publicUDP**: 'Default' | 'Disabled' | 'Enabled' | string: Default: AVD-wide settings are used to determine connection availability, Enabled: UDP will attempt this connection type when making connections. This means that this connection is possible, but is not guaranteed, as there are other factors that may prevent this connection type, Disabled: UDP will not attempt this connection type when making connections
-* **registrationInfo**: [RegistrationInfo](#registrationinfo): The registration info of HostPool. This is not returned on GET. In order to get the registration token use the retrieveRegistrationToken or listRegistrationTokens POST calls.
+* **registrationInfo**: [RegistrationInfo](#registrationinfo): The registration info of HostPool.
 * **relayUDP**: 'Default' | 'Disabled' | 'Enabled' | string: Default: AVD-wide settings are used to determine connection availability, Enabled: UDP will attempt this connection type when making connections. This means that this connection is possible, but is not guaranteed, as there are other factors that may prevent this connection type, Disabled: UDP will not attempt this connection type when making connections
 * **ring**: int: The ring number of HostPool.
 * **ssoadfsAuthority**: string: URL to customer ADFS server for signing WVD SSO certificates.
@@ -404,10 +404,10 @@
 
 ## MarketplaceInfoProperties
 ### Properties
-* **exactVersion**: string (Required): The exact version of the image.
+* **exactVersion**: string (Required): The version of the image.
 * **offer**: string (Required): The offer of the image.
 * **publisher**: string (Required): The publisher of the image.
-* **sku**: string (Required): The sku of the image.
+* **sku**: string (Required): The SKU of the image.
 
 ## MsixPackageApplications
 ### Properties
@@ -421,7 +421,7 @@
 
 ## MsixPackageDependencies
 ### Properties
-* **dependencyName**: string: Name of the package dependency. For Msix packages, this is the other packages this package depends upon, for APP-V packages this is the locations of the user and deployment config files
+* **dependencyName**: string: Name of package dependency.
 * **minVersion**: string: Dependency version required.
 * **publisher**: string: Name of dependency publisher.
 
@@ -437,7 +437,7 @@
 * **packageFamilyName**: string: Package Family Name from appxmanifest.xml. Contains Package Name and Publisher name.
 * **packageName**: string: Package Name from appxmanifest.xml.
 * **packageRelativePath**: string: Relative Path to the package inside the image.
-* **version**: string: Package Version found in the appxmanifest.xml.
+* **version**: string: Package version found in the appxmanifest.xml.
 
 ## NetworkInfoProperties
 ### Properties
@@ -491,7 +491,7 @@
 ## RegistrationTokenMinimal
 ### Properties
 * **expirationTime**: string: Expiration time of registration token.
-* **token**: string {sensitive}: The registration token base64 encoded string.
+* **token**: string: The registration token base64 encoded string.
 
 ## ScalingHostPoolReference
 ### Properties
@@ -530,7 +530,7 @@
 ## ScalingPlanPooledScheduleProperties
 ### Properties
 * **daysOfWeek**: ('Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday')[] (Required): Set of days of the week on which this schedule is active.
-* **name**: string (ReadOnly): Name of the ScalingPlanPooledSchedule.
+* **name**: string: Name of the ScalingPlanPooledSchedule
 * **offPeakLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst' | string: Load balancing algorithm for off-peak period.
 * **offPeakStartTime**: [Time](#time) (Required): Starting time for off-peak period.
 * **peakLoadBalancingAlgorithm**: 'BreadthFirst' | 'DepthFirst' | string: Load balancing algorithm for peak period.
@@ -556,7 +556,7 @@
 * **hostPoolReferences**: [ScalingHostPoolReference](#scalinghostpoolreference)[]: List of ScalingHostPoolReference definitions.
 * **hostPoolType**: 'Personal' | 'Pooled' | string: HostPool type for desktop.
 * **objectId**: string (ReadOnly): ObjectId of scaling plan. (internal use)
-* **schedules**: [ScalingSchedule](#scalingschedule)[]: List of Pooled ScalingSchedule definitions.
+* **schedules**: [ScalingSchedule](#scalingschedule)[]: List of ScalingPlanPooledSchedule definitions.
 * **timeZone**: string (Required): Timezone of the scaling plan.
 
 ## ScalingSchedule
@@ -584,23 +584,23 @@
 ### Properties
 * **secureBootEnabled**: bool: Whether to use secureBoot on the virtual machine.
 * **type**: 'ConfidentialVM' | 'Standard' | 'TrustedLaunch' | string: The security type used by virtual machine in hostpool session host. Default is Standard.
-* **vTpmEnabled**: bool: Whether to use vTPM on the virtual machine.
+* **vTpmEnabled**: bool: Whether to use vTpm on the virtual machine.
 
 ## SessionHostConfigurationProperties
 ### Properties
 * **availabilityZones**: int[]: Value for availability zones to be used by the session host. Should be from [1,2,3].
-* **bootDiagnosticsInfo**: [BootDiagnosticsInfoProperties](#bootdiagnosticsinfoproperties): Boot Diagnostics information.
+* **bootDiagnosticsInfo**: [BootDiagnosticsInfoProperties](#bootdiagnosticsinfoproperties): Boot Diagnostics Information
 * **customConfigurationScriptUrl**: string: The uri to the storage blob containing the arm template to be run on the virtual machine after provisioning.
-* **diskInfo**: [DiskInfoProperties](#diskinfoproperties) (Required): Disk information.
+* **diskInfo**: [DiskInfoProperties](#diskinfoproperties) (Required): Disk Information
 * **domainInfo**: [DomainInfoProperties](#domaininfoproperties) (Required): Domain configurations of session hosts.
 * **friendlyName**: string {maxLength: 260}: Friendly name to describe this version of the SessionHostConfiguration.
 * **imageInfo**: [ImageInfoProperties](#imageinfoproperties) (Required): Image configurations of HostPool.
 * **networkInfo**: [NetworkInfoProperties](#networkinfoproperties) (Required): Network information.
 * **provisioningState**: 'Canceled' | 'Failed' | 'Provisioning' | 'Succeeded' | string (ReadOnly): Provisioning state of the Session Host Configuration.
-* **securityInfo**: [SecurityInfoProperties](#securityinfoproperties): Security information.
+* **securityInfo**: [SecurityInfoProperties](#securityinfoproperties): Security Information
 * **version**: string (ReadOnly): The timestamp of the last update.
-* **vmAdminCredentials**: [KeyVaultCredentialsProperties](#keyvaultcredentialsproperties) (Required): Local Admin credentials for session hosts.
-* **vmLocation**: string: The Location for the session host to be created in. It will default to the location of the hostpool if not provided.
+* **vmAdminCredentials**: [KeyVaultCredentialsProperties](#keyvaultcredentialsproperties) (Required): Local Admin credentials for session hosts."
+* **vmLocation**: string: The Location for the session host to be created in. It will default to the location of the hostpool if not provided
 * **vmNamePrefix**: string {maxLength: 11} (Required): The prefix that should be associated with session host names
 * **vmResourceGroup**: string: The ResourceGroup for the session hosts to be created in. It will default to the ResourceGroup of the hostpool if not provided.
 * **vmSizeId**: string (Required): The id of the size of a virtual machine connected to a hostpool. Example: Standard_D2as_v6
@@ -647,7 +647,7 @@
 * **statusTimestamp**: string (ReadOnly): The timestamp of the status.
 * **sxSStackVersion**: string: The version of the side by side stack on the session host.
 * **updateErrorMessage**: string: The error message.
-* **updateState**: 'Failed' | 'Initial' | 'Pending' | 'Started' | 'Succeeded' | string: Update state of a SessionHost.
+* **updateState**: 'Failed' | 'Initial' | 'Pending' | 'Started' | 'Succeeded' | string (ReadOnly): Update state of a SessionHost.
 * **virtualMachineId**: string (ReadOnly): Virtual Machine Id of SessionHost's underlying virtual machine.
 
 ## Sku

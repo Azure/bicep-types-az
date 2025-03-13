@@ -55,14 +55,14 @@
       },
       "identity": {
         "type": {
-          "$ref": "#/27"
+          "$ref": "#/28"
         },
         "flags": 0,
-        "description": "Managed Identity information."
+        "description": "The managed service identities assigned to this resource."
       },
       "tags": {
         "type": {
-          "$ref": "#/31"
+          "$ref": "#/37"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -76,7 +76,7 @@
       },
       "systemData": {
         "type": {
-          "$ref": "#/32"
+          "$ref": "#/38"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -103,7 +103,7 @@
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/25"
+          "$ref": "#/26"
         },
         "flags": 2,
         "description": "Provisioning status field"
@@ -124,7 +124,7 @@
       },
       "apiKeyEnabled": {
         "type": {
-          "$ref": "#/26"
+          "$ref": "#/27"
         },
         "flags": 0,
         "description": "Indicator of enablement of the Quantum workspace Api keys."
@@ -270,6 +270,14 @@
   },
   {
     "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
     "value": "ProviderLaunching"
   },
   {
@@ -283,10 +291,6 @@
   {
     "$type": "StringLiteralType",
     "value": "ProviderProvisioning"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Failed"
   },
   {
     "$type": "UnionType",
@@ -310,6 +314,9 @@
         "$ref": "#/24"
       },
       {
+        "$ref": "#/25"
+      },
+      {
         "$ref": "#/2"
       }
     ]
@@ -319,30 +326,47 @@
   },
   {
     "$type": "ObjectType",
-    "name": "QuantumWorkspaceIdentity",
+    "name": "ManagedServiceIdentity",
     "properties": {
       "principalId": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/29"
         },
         "flags": 2,
-        "description": "The principal ID of resource identity."
+        "description": "The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity."
       },
       "tenantId": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/29"
         },
         "flags": 2,
-        "description": "The tenant ID of resource."
+        "description": "The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity."
       },
       "type": {
         "type": {
-          "$ref": "#/30"
+          "$ref": "#/34"
+        },
+        "flags": 1,
+        "description": "Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed)."
+      },
+      "userAssignedIdentities": {
+        "type": {
+          "$ref": "#/36"
         },
         "flags": 0,
-        "description": "The identity type."
+        "description": "The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests."
       }
     }
+  },
+  {
+    "$type": "StringType",
+    "minLength": 36,
+    "maxLength": 36,
+    "pattern": "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
   },
   {
     "$type": "StringLiteralType",
@@ -350,21 +374,59 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "None"
+    "value": "UserAssigned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SystemAssigned,UserAssigned"
   },
   {
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/28"
+        "$ref": "#/30"
       },
       {
-        "$ref": "#/29"
+        "$ref": "#/31"
+      },
+      {
+        "$ref": "#/32"
+      },
+      {
+        "$ref": "#/33"
       },
       {
         "$ref": "#/2"
       }
     ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UserAssignedIdentity",
+    "properties": {
+      "principalId": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 2,
+        "description": "The principal ID of the assigned identity."
+      },
+      "clientId": {
+        "type": {
+          "$ref": "#/29"
+        },
+        "flags": 2,
+        "description": "The client ID of the assigned identity."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UserAssignedIdentities",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/35"
+    }
   },
   {
     "$type": "ObjectType",
@@ -387,7 +449,7 @@
       },
       "createdByType": {
         "type": {
-          "$ref": "#/37"
+          "$ref": "#/43"
         },
         "flags": 0,
         "description": "The type of identity that created the resource."
@@ -408,7 +470,7 @@
       },
       "lastModifiedByType": {
         "type": {
-          "$ref": "#/42"
+          "$ref": "#/48"
         },
         "flags": 0,
         "description": "The type of identity that last modified the resource."
@@ -442,16 +504,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/33"
+        "$ref": "#/39"
       },
       {
-        "$ref": "#/34"
+        "$ref": "#/40"
       },
       {
-        "$ref": "#/35"
+        "$ref": "#/41"
       },
       {
-        "$ref": "#/36"
+        "$ref": "#/42"
       },
       {
         "$ref": "#/2"
@@ -478,16 +540,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/38"
+        "$ref": "#/44"
       },
       {
-        "$ref": "#/39"
+        "$ref": "#/45"
       },
       {
-        "$ref": "#/40"
+        "$ref": "#/46"
       },
       {
-        "$ref": "#/41"
+        "$ref": "#/47"
       },
       {
         "$ref": "#/2"
@@ -509,35 +571,35 @@
     "properties": {
       "apiKeyEnabled": {
         "type": {
-          "$ref": "#/26"
+          "$ref": "#/27"
         },
         "flags": 0,
         "description": "Indicator of enablement of the Quantum workspace Api keys."
       },
       "primaryKey": {
         "type": {
-          "$ref": "#/45"
+          "$ref": "#/51"
         },
         "flags": 0,
         "description": "The quantum workspace primary api key."
       },
       "secondaryKey": {
         "type": {
-          "$ref": "#/45"
+          "$ref": "#/51"
         },
         "flags": 0,
         "description": "The quantum workspace secondary api key."
       },
       "primaryConnectionString": {
         "type": {
-          "$ref": "#/46"
+          "$ref": "#/2"
         },
         "flags": 2,
         "description": "The connection string of the primary api key."
       },
       "secondaryConnectionString": {
         "type": {
-          "$ref": "#/46"
+          "$ref": "#/2"
         },
         "flags": 2,
         "description": "The connection string of the secondary api key."
@@ -557,7 +619,7 @@
       },
       "key": {
         "type": {
-          "$ref": "#/46"
+          "$ref": "#/2"
         },
         "flags": 2,
         "description": "The Api key."
@@ -565,16 +627,12 @@
     }
   },
   {
-    "$type": "StringType",
-    "sensitive": true
-  },
-  {
     "$type": "ResourceFunctionType",
     "name": "listKeys",
     "resourceType": "Microsoft.Quantum/workspaces",
     "apiVersion": "2023-11-13-preview",
     "output": {
-      "$ref": "#/44"
+      "$ref": "#/50"
     }
   }
 ]

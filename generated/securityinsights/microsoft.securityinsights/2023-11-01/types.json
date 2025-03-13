@@ -6994,7 +6994,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "Microsoft.SecurityInsights/sourcecontrols"
+    "value": "Microsoft.SecurityInsights/threatIntelligence/indicators"
   },
   {
     "$type": "StringLiteralType",
@@ -7002,7 +7002,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "Microsoft.SecurityInsights/sourcecontrols",
+    "name": "Microsoft.SecurityInsights/threatIntelligence/indicators",
     "properties": {
       "id": {
         "type": {
@@ -7036,715 +7036,6 @@
         "type": {
           "$ref": "#/604"
         },
-        "flags": 1,
-        "description": "source control properties"
-      },
-      "etag": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "Etag of the azure resource"
-      },
-      "systemData": {
-        "type": {
-          "$ref": "#/4"
-        },
-        "flags": 2,
-        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "SourceControlProperties",
-    "properties": {
-      "id": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "The id (a Guid) of the source control"
-      },
-      "version": {
-        "type": {
-          "$ref": "#/607"
-        },
-        "flags": 2,
-        "description": "The version number associated with the source control"
-      },
-      "displayName": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "The display name of the source control"
-      },
-      "description": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "A description of the source control"
-      },
-      "repoType": {
-        "type": {
-          "$ref": "#/610"
-        },
-        "flags": 1,
-        "description": "The repository type of the source control"
-      },
-      "contentTypes": {
-        "type": {
-          "$ref": "#/618"
-        },
-        "flags": 1,
-        "description": "Array of source control content types."
-      },
-      "repository": {
-        "type": {
-          "$ref": "#/619"
-        },
-        "flags": 1,
-        "description": "Repository metadata."
-      },
-      "servicePrincipal": {
-        "type": {
-          "$ref": "#/620"
-        },
-        "flags": 0,
-        "description": "Service principal metadata."
-      },
-      "repositoryAccess": {
-        "type": {
-          "$ref": "#/621"
-        },
-        "flags": 4,
-        "description": "Repository access credentials. This is write-only object and it never returns back to a user."
-      },
-      "repositoryResourceInfo": {
-        "type": {
-          "$ref": "#/627"
-        },
-        "flags": 0,
-        "description": "Information regarding the resources created in user's repository."
-      },
-      "lastDeploymentInfo": {
-        "type": {
-          "$ref": "#/631"
-        },
-        "flags": 2,
-        "description": "Information regarding the latest deployment for the source control."
-      },
-      "pullRequest": {
-        "type": {
-          "$ref": "#/646"
-        },
-        "flags": 2,
-        "description": "Information regarding the pull request of the source control."
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "V1"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "V2"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/605"
-      },
-      {
-        "$ref": "#/606"
-      },
-      {
-        "$ref": "#/0"
-      }
-    ]
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Github"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "AzureDevOps"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/608"
-      },
-      {
-        "$ref": "#/609"
-      },
-      {
-        "$ref": "#/0"
-      }
-    ]
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "AnalyticRule"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "AutomationRule"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "HuntingQuery"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Parser"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Playbook"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Workbook"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/611"
-      },
-      {
-        "$ref": "#/612"
-      },
-      {
-        "$ref": "#/613"
-      },
-      {
-        "$ref": "#/614"
-      },
-      {
-        "$ref": "#/615"
-      },
-      {
-        "$ref": "#/616"
-      },
-      {
-        "$ref": "#/0"
-      }
-    ]
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/617"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "Repository",
-    "properties": {
-      "url": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "Url of repository."
-      },
-      "branch": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "Branch name of repository."
-      },
-      "displayUrl": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "Display url of repository."
-      },
-      "deploymentLogsUrl": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "Url to access repository action logs."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "ServicePrincipal",
-    "properties": {
-      "id": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "Id of service principal."
-      },
-      "tenantId": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "Tenant id of service principal."
-      },
-      "appId": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "App id of service principal."
-      },
-      "credentialsExpireOn": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "Expiration time of service principal credentials."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "RepositoryAccess",
-    "properties": {
-      "kind": {
-        "type": {
-          "$ref": "#/625"
-        },
-        "flags": 1,
-        "description": "The kind of repository access credentials"
-      },
-      "code": {
-        "type": {
-          "$ref": "#/626"
-        },
-        "flags": 0,
-        "description": "OAuth Code. Required when `kind` is `OAuth`"
-      },
-      "state": {
-        "type": {
-          "$ref": "#/626"
-        },
-        "flags": 0,
-        "description": "OAuth State. Required when `kind` is `OAuth`"
-      },
-      "clientId": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "OAuth ClientId. Required when `kind` is `OAuth`"
-      },
-      "token": {
-        "type": {
-          "$ref": "#/626"
-        },
-        "flags": 0,
-        "description": "Personal Access Token. Required when `kind` is `PAT`"
-      },
-      "installationId": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "Application installation ID. Required when `kind` is `App`. Supported by `GitHub` only."
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "OAuth"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "PAT"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "App"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/622"
-      },
-      {
-        "$ref": "#/623"
-      },
-      {
-        "$ref": "#/624"
-      },
-      {
-        "$ref": "#/0"
-      }
-    ]
-  },
-  {
-    "$type": "StringType",
-    "sensitive": true
-  },
-  {
-    "$type": "ObjectType",
-    "name": "RepositoryResourceInfo",
-    "properties": {
-      "webhook": {
-        "type": {
-          "$ref": "#/628"
-        },
-        "flags": 0,
-        "description": "The webhook object created for the source-control."
-      },
-      "gitHubResourceInfo": {
-        "type": {
-          "$ref": "#/629"
-        },
-        "flags": 2,
-        "description": "Resources created in GitHub for this source-control."
-      },
-      "azureDevOpsResourceInfo": {
-        "type": {
-          "$ref": "#/630"
-        },
-        "flags": 2,
-        "description": "Resources created in Azure DevOps for this source-control."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "Webhook",
-    "properties": {
-      "webhookId": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "Unique identifier for the webhook."
-      },
-      "webhookUrl": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "URL that gets invoked by the webhook."
-      },
-      "webhookSecretUpdateTime": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "Time when the webhook secret was updated."
-      },
-      "rotateWebhookSecret": {
-        "type": {
-          "$ref": "#/17"
-        },
-        "flags": 0,
-        "description": "A flag to instruct the backend service to rotate webhook secret."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "GitHubResourceInfo",
-    "properties": {
-      "appInstallationId": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "GitHub application installation id."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "AzureDevOpsResourceInfo",
-    "properties": {
-      "pipelineId": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "Id of the pipeline created for the source-control."
-      },
-      "serviceConnectionId": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "Id of the service-connection created for the source-control."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "DeploymentInfo",
-    "properties": {
-      "deploymentFetchStatus": {
-        "type": {
-          "$ref": "#/635"
-        },
-        "flags": 0,
-        "description": "Status while fetching the last deployment."
-      },
-      "deployment": {
-        "type": {
-          "$ref": "#/636"
-        },
-        "flags": 0,
-        "description": "Deployment information."
-      },
-      "message": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "Additional details about the deployment that can be shown to the user."
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Success"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Unauthorized"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "NotFound"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/632"
-      },
-      {
-        "$ref": "#/633"
-      },
-      {
-        "$ref": "#/634"
-      },
-      {
-        "$ref": "#/0"
-      }
-    ]
-  },
-  {
-    "$type": "ObjectType",
-    "name": "Deployment",
-    "properties": {
-      "deploymentId": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "Deployment identifier."
-      },
-      "deploymentState": {
-        "type": {
-          "$ref": "#/641"
-        },
-        "flags": 0,
-        "description": "Current status of the deployment."
-      },
-      "deploymentResult": {
-        "type": {
-          "$ref": "#/645"
-        },
-        "flags": 0,
-        "description": "The outcome of the deployment."
-      },
-      "deploymentTime": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The time when the deployment finished."
-      },
-      "deploymentLogsUrl": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "Url to access repository action logs."
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "In_Progress"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Completed"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Queued"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Canceling"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/637"
-      },
-      {
-        "$ref": "#/638"
-      },
-      {
-        "$ref": "#/639"
-      },
-      {
-        "$ref": "#/640"
-      },
-      {
-        "$ref": "#/0"
-      }
-    ]
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Success"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Canceled"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Failed"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/642"
-      },
-      {
-        "$ref": "#/643"
-      },
-      {
-        "$ref": "#/644"
-      },
-      {
-        "$ref": "#/0"
-      }
-    ]
-  },
-  {
-    "$type": "ObjectType",
-    "name": "PullRequest",
-    "properties": {
-      "url": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "URL of pull request"
-      },
-      "state": {
-        "type": {
-          "$ref": "#/649"
-        },
-        "flags": 2,
-        "description": "State of the pull request"
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Open"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Closed"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/647"
-      },
-      {
-        "$ref": "#/648"
-      },
-      {
-        "$ref": "#/0"
-      }
-    ]
-  },
-  {
-    "$type": "ResourceType",
-    "name": "Microsoft.SecurityInsights/sourcecontrols@2023-11-01",
-    "scopeType": 16,
-    "body": {
-      "$ref": "#/603"
-    },
-    "flags": 0
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Microsoft.SecurityInsights/threatIntelligence/indicators"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "2023-11-01"
-  },
-  {
-    "$type": "ObjectType",
-    "name": "Microsoft.SecurityInsights/threatIntelligence/indicators",
-    "properties": {
-      "id": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 10,
-        "description": "The resource id"
-      },
-      "name": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 9,
-        "description": "The resource name"
-      },
-      "type": {
-        "type": {
-          "$ref": "#/651"
-        },
-        "flags": 10,
-        "description": "The resource type"
-      },
-      "apiVersion": {
-        "type": {
-          "$ref": "#/652"
-        },
-        "flags": 10,
-        "description": "The resource api version"
-      },
-      "properties": {
-        "type": {
-          "$ref": "#/654"
-        },
         "flags": 4,
         "description": "Threat Intelligence Entity properties"
       },
@@ -7770,7 +7061,7 @@
     "properties": {
       "threatIntelligenceTags": {
         "type": {
-          "$ref": "#/655"
+          "$ref": "#/605"
         },
         "flags": 0,
         "description": "List of tags"
@@ -7805,7 +7096,7 @@
       },
       "indicatorTypes": {
         "type": {
-          "$ref": "#/656"
+          "$ref": "#/606"
         },
         "flags": 0,
         "description": "Indicator types of threat intelligence entities"
@@ -7833,14 +7124,14 @@
       },
       "killChainPhases": {
         "type": {
-          "$ref": "#/658"
+          "$ref": "#/608"
         },
         "flags": 0,
         "description": "Kill chain phases"
       },
       "parsedPattern": {
         "type": {
-          "$ref": "#/662"
+          "$ref": "#/612"
         },
         "flags": 0,
         "description": "Parsed patterns"
@@ -7875,21 +7166,21 @@
       },
       "externalReferences": {
         "type": {
-          "$ref": "#/665"
+          "$ref": "#/615"
         },
         "flags": 0,
         "description": "External References"
       },
       "granularMarkings": {
         "type": {
-          "$ref": "#/668"
+          "$ref": "#/618"
         },
         "flags": 0,
         "description": "Granular Markings"
       },
       "labels": {
         "type": {
-          "$ref": "#/669"
+          "$ref": "#/619"
         },
         "flags": 0,
         "description": "Labels  of threat intelligence entity"
@@ -7910,7 +7201,7 @@
       },
       "objectMarkingRefs": {
         "type": {
-          "$ref": "#/670"
+          "$ref": "#/620"
         },
         "flags": 0,
         "description": "Threat intelligence entity object marking references"
@@ -7924,7 +7215,7 @@
       },
       "threatTypes": {
         "type": {
-          "$ref": "#/671"
+          "$ref": "#/621"
         },
         "flags": 0,
         "description": "Threat types"
@@ -7959,14 +7250,14 @@
       },
       "extensions": {
         "type": {
-          "$ref": "#/672"
+          "$ref": "#/622"
         },
         "flags": 0,
         "description": "Extensions map"
       },
       "additionalData": {
         "type": {
-          "$ref": "#/673"
+          "$ref": "#/623"
         },
         "flags": 2,
         "description": "A bag of custom fields that should be part of the entity and will be presented to the user."
@@ -8015,7 +7306,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/657"
+      "$ref": "#/607"
     }
   },
   {
@@ -8031,7 +7322,7 @@
       },
       "patternTypeValues": {
         "type": {
-          "$ref": "#/661"
+          "$ref": "#/611"
         },
         "flags": 0,
         "description": "Pattern type keys"
@@ -8061,13 +7352,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/660"
+      "$ref": "#/610"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/659"
+      "$ref": "#/609"
     }
   },
   {
@@ -8104,7 +7395,7 @@
       },
       "hashes": {
         "type": {
-          "$ref": "#/664"
+          "$ref": "#/614"
         },
         "flags": 0,
         "description": "External reference hashes"
@@ -8122,7 +7413,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/663"
+      "$ref": "#/613"
     }
   },
   {
@@ -8145,7 +7436,7 @@
       },
       "selectors": {
         "type": {
-          "$ref": "#/667"
+          "$ref": "#/617"
         },
         "flags": 0,
         "description": "granular marking model selectors"
@@ -8161,7 +7452,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/666"
+      "$ref": "#/616"
     }
   },
   {
@@ -8203,7 +7494,7 @@
     "name": "Microsoft.SecurityInsights/threatIntelligence/indicators@2023-11-01",
     "scopeType": 16,
     "body": {
-      "$ref": "#/653"
+      "$ref": "#/603"
     },
     "flags": 0
   },
@@ -8235,21 +7526,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/675"
+          "$ref": "#/625"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/676"
+          "$ref": "#/626"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/678"
+          "$ref": "#/628"
         },
         "flags": 0,
         "description": "Watchlist properties"
@@ -8360,7 +7651,7 @@
       },
       "labels": {
         "type": {
-          "$ref": "#/679"
+          "$ref": "#/629"
         },
         "flags": 0,
         "description": "List of labels relevant to this watchlist"
@@ -8427,7 +7718,7 @@
     "name": "Microsoft.SecurityInsights/watchlists@2023-11-01",
     "scopeType": 16,
     "body": {
-      "$ref": "#/677"
+      "$ref": "#/627"
     },
     "flags": 0
   },
@@ -8459,21 +7750,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/681"
+          "$ref": "#/631"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/682"
+          "$ref": "#/632"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/684"
+          "$ref": "#/634"
         },
         "flags": 0,
         "description": "Watchlist Item properties"
@@ -8575,7 +7866,7 @@
     "name": "Microsoft.SecurityInsights/watchlists/watchlistItems@2023-11-01",
     "scopeType": 16,
     "body": {
-      "$ref": "#/683"
+      "$ref": "#/633"
     },
     "flags": 0
   },
@@ -8608,14 +7899,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/686"
+          "$ref": "#/636"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/687"
+          "$ref": "#/637"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -8630,13 +7921,13 @@
     },
     "elements": {
       "Fusion": {
-        "$ref": "#/689"
+        "$ref": "#/639"
       },
       "MicrosoftSecurityIncidentCreation": {
-        "$ref": "#/724"
+        "$ref": "#/674"
       },
       "Scheduled": {
-        "$ref": "#/746"
+        "$ref": "#/696"
       }
     }
   },
@@ -8646,14 +7937,14 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/690"
+          "$ref": "#/640"
         },
         "flags": 2,
         "description": "Fusion alert rule template properties"
       },
       "kind": {
         "type": {
-          "$ref": "#/723"
+          "$ref": "#/673"
         },
         "flags": 1,
         "description": "The alert rule kind"
@@ -8701,35 +7992,35 @@
       },
       "requiredDataConnectors": {
         "type": {
-          "$ref": "#/693"
+          "$ref": "#/643"
         },
         "flags": 0,
         "description": "The required data connectors for this template"
       },
       "status": {
         "type": {
-          "$ref": "#/697"
+          "$ref": "#/647"
         },
         "flags": 0,
         "description": "The alert rule template status."
       },
       "severity": {
         "type": {
-          "$ref": "#/702"
+          "$ref": "#/652"
         },
         "flags": 0,
         "description": "The severity for alerts created by this alert rule."
       },
       "tactics": {
         "type": {
-          "$ref": "#/721"
+          "$ref": "#/671"
         },
         "flags": 0,
         "description": "The tactics of the alert rule template"
       },
       "techniques": {
         "type": {
-          "$ref": "#/722"
+          "$ref": "#/672"
         },
         "flags": 0,
         "description": "The techniques of the alert rule template"
@@ -8749,7 +8040,7 @@
       },
       "dataTypes": {
         "type": {
-          "$ref": "#/692"
+          "$ref": "#/642"
         },
         "flags": 0,
         "description": "The data types used by the alert rule template"
@@ -8765,7 +8056,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/691"
+      "$ref": "#/641"
     }
   },
   {
@@ -8784,13 +8075,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/694"
+        "$ref": "#/644"
       },
       {
-        "$ref": "#/695"
+        "$ref": "#/645"
       },
       {
-        "$ref": "#/696"
+        "$ref": "#/646"
       },
       {
         "$ref": "#/0"
@@ -8817,16 +8108,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/698"
+        "$ref": "#/648"
       },
       {
-        "$ref": "#/699"
+        "$ref": "#/649"
       },
       {
-        "$ref": "#/700"
+        "$ref": "#/650"
       },
       {
-        "$ref": "#/701"
+        "$ref": "#/651"
       },
       {
         "$ref": "#/0"
@@ -8905,55 +8196,55 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/703"
+        "$ref": "#/653"
       },
       {
-        "$ref": "#/704"
+        "$ref": "#/654"
       },
       {
-        "$ref": "#/705"
+        "$ref": "#/655"
       },
       {
-        "$ref": "#/706"
+        "$ref": "#/656"
       },
       {
-        "$ref": "#/707"
+        "$ref": "#/657"
       },
       {
-        "$ref": "#/708"
+        "$ref": "#/658"
       },
       {
-        "$ref": "#/709"
+        "$ref": "#/659"
       },
       {
-        "$ref": "#/710"
+        "$ref": "#/660"
       },
       {
-        "$ref": "#/711"
+        "$ref": "#/661"
       },
       {
-        "$ref": "#/712"
+        "$ref": "#/662"
       },
       {
-        "$ref": "#/713"
+        "$ref": "#/663"
       },
       {
-        "$ref": "#/714"
+        "$ref": "#/664"
       },
       {
-        "$ref": "#/715"
+        "$ref": "#/665"
       },
       {
-        "$ref": "#/716"
+        "$ref": "#/666"
       },
       {
-        "$ref": "#/717"
+        "$ref": "#/667"
       },
       {
-        "$ref": "#/718"
+        "$ref": "#/668"
       },
       {
-        "$ref": "#/719"
+        "$ref": "#/669"
       },
       {
         "$ref": "#/0"
@@ -8963,7 +8254,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/720"
+      "$ref": "#/670"
     }
   },
   {
@@ -8982,14 +8273,14 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/725"
+          "$ref": "#/675"
         },
         "flags": 2,
         "description": "MicrosoftSecurityIncidentCreation rule template properties"
       },
       "kind": {
         "type": {
-          "$ref": "#/745"
+          "$ref": "#/695"
         },
         "flags": 1,
         "description": "The alert rule kind"
@@ -9037,42 +8328,42 @@
       },
       "requiredDataConnectors": {
         "type": {
-          "$ref": "#/726"
+          "$ref": "#/676"
         },
         "flags": 0,
         "description": "The required data connectors for this template"
       },
       "status": {
         "type": {
-          "$ref": "#/730"
+          "$ref": "#/680"
         },
         "flags": 0,
         "description": "The alert rule template status."
       },
       "displayNamesFilter": {
         "type": {
-          "$ref": "#/731"
+          "$ref": "#/681"
         },
         "flags": 0,
         "description": "the alerts' displayNames on which the cases will be generated"
       },
       "displayNamesExcludeFilter": {
         "type": {
-          "$ref": "#/732"
+          "$ref": "#/682"
         },
         "flags": 0,
         "description": "the alerts' displayNames on which the cases will not be generated"
       },
       "productFilter": {
         "type": {
-          "$ref": "#/738"
+          "$ref": "#/688"
         },
         "flags": 0,
         "description": "The alerts' productName on which the cases will be generated"
       },
       "severitiesFilter": {
         "type": {
-          "$ref": "#/744"
+          "$ref": "#/694"
         },
         "flags": 0,
         "description": "the alerts' severities on which the cases will be generated"
@@ -9082,7 +8373,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/691"
+      "$ref": "#/641"
     }
   },
   {
@@ -9101,13 +8392,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/727"
+        "$ref": "#/677"
       },
       {
-        "$ref": "#/728"
+        "$ref": "#/678"
       },
       {
-        "$ref": "#/729"
+        "$ref": "#/679"
       },
       {
         "$ref": "#/0"
@@ -9150,19 +8441,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/733"
+        "$ref": "#/683"
       },
       {
-        "$ref": "#/734"
+        "$ref": "#/684"
       },
       {
-        "$ref": "#/735"
+        "$ref": "#/685"
       },
       {
-        "$ref": "#/736"
+        "$ref": "#/686"
       },
       {
-        "$ref": "#/737"
+        "$ref": "#/687"
       },
       {
         "$ref": "#/0"
@@ -9189,16 +8480,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/739"
+        "$ref": "#/689"
       },
       {
-        "$ref": "#/740"
+        "$ref": "#/690"
       },
       {
-        "$ref": "#/741"
+        "$ref": "#/691"
       },
       {
-        "$ref": "#/742"
+        "$ref": "#/692"
       },
       {
         "$ref": "#/0"
@@ -9208,7 +8499,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/743"
+      "$ref": "#/693"
     }
   },
   {
@@ -9221,14 +8512,14 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/747"
+          "$ref": "#/697"
         },
         "flags": 2,
         "description": "Scheduled alert rule template properties"
       },
       "kind": {
         "type": {
-          "$ref": "#/785"
+          "$ref": "#/735"
         },
         "flags": 1,
         "description": "The alert rule kind"
@@ -9276,14 +8567,14 @@
       },
       "requiredDataConnectors": {
         "type": {
-          "$ref": "#/748"
+          "$ref": "#/698"
         },
         "flags": 0,
         "description": "The required data connectors for this template"
       },
       "status": {
         "type": {
-          "$ref": "#/752"
+          "$ref": "#/702"
         },
         "flags": 0,
         "description": "The alert rule template status."
@@ -9311,14 +8602,14 @@
       },
       "severity": {
         "type": {
-          "$ref": "#/757"
+          "$ref": "#/707"
         },
         "flags": 0,
         "description": "The severity for alerts created by this alert rule."
       },
       "triggerOperator": {
         "type": {
-          "$ref": "#/762"
+          "$ref": "#/712"
         },
         "flags": 0,
         "description": "The operation against the threshold that triggers alert rule."
@@ -9332,14 +8623,14 @@
       },
       "tactics": {
         "type": {
-          "$ref": "#/781"
+          "$ref": "#/731"
         },
         "flags": 0,
         "description": "The tactics of the alert rule template"
       },
       "techniques": {
         "type": {
-          "$ref": "#/782"
+          "$ref": "#/732"
         },
         "flags": 0,
         "description": "The techniques of the alert rule template"
@@ -9360,14 +8651,14 @@
       },
       "customDetails": {
         "type": {
-          "$ref": "#/783"
+          "$ref": "#/733"
         },
         "flags": 0,
         "description": "Dictionary of string key-value pairs of columns to be attached to the alert"
       },
       "entityMappings": {
         "type": {
-          "$ref": "#/784"
+          "$ref": "#/734"
         },
         "flags": 0,
         "description": "Array of the entity mappings of the alert rule"
@@ -9384,7 +8675,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/691"
+      "$ref": "#/641"
     }
   },
   {
@@ -9403,13 +8694,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/749"
+        "$ref": "#/699"
       },
       {
-        "$ref": "#/750"
+        "$ref": "#/700"
       },
       {
-        "$ref": "#/751"
+        "$ref": "#/701"
       },
       {
         "$ref": "#/0"
@@ -9436,16 +8727,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/753"
+        "$ref": "#/703"
       },
       {
-        "$ref": "#/754"
+        "$ref": "#/704"
       },
       {
-        "$ref": "#/755"
+        "$ref": "#/705"
       },
       {
-        "$ref": "#/756"
+        "$ref": "#/706"
       },
       {
         "$ref": "#/0"
@@ -9472,16 +8763,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/758"
+        "$ref": "#/708"
       },
       {
-        "$ref": "#/759"
+        "$ref": "#/709"
       },
       {
-        "$ref": "#/760"
+        "$ref": "#/710"
       },
       {
-        "$ref": "#/761"
+        "$ref": "#/711"
       }
     ]
   },
@@ -9557,55 +8848,55 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/763"
+        "$ref": "#/713"
       },
       {
-        "$ref": "#/764"
+        "$ref": "#/714"
       },
       {
-        "$ref": "#/765"
+        "$ref": "#/715"
       },
       {
-        "$ref": "#/766"
+        "$ref": "#/716"
       },
       {
-        "$ref": "#/767"
+        "$ref": "#/717"
       },
       {
-        "$ref": "#/768"
+        "$ref": "#/718"
       },
       {
-        "$ref": "#/769"
+        "$ref": "#/719"
       },
       {
-        "$ref": "#/770"
+        "$ref": "#/720"
       },
       {
-        "$ref": "#/771"
+        "$ref": "#/721"
       },
       {
-        "$ref": "#/772"
+        "$ref": "#/722"
       },
       {
-        "$ref": "#/773"
+        "$ref": "#/723"
       },
       {
-        "$ref": "#/774"
+        "$ref": "#/724"
       },
       {
-        "$ref": "#/775"
+        "$ref": "#/725"
       },
       {
-        "$ref": "#/776"
+        "$ref": "#/726"
       },
       {
-        "$ref": "#/777"
+        "$ref": "#/727"
       },
       {
-        "$ref": "#/778"
+        "$ref": "#/728"
       },
       {
-        "$ref": "#/779"
+        "$ref": "#/729"
       },
       {
         "$ref": "#/0"
@@ -9615,7 +8906,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/780"
+      "$ref": "#/730"
     }
   },
   {
@@ -9647,7 +8938,7 @@
     "name": "Microsoft.SecurityInsights/alertRuleTemplates@2023-11-01",
     "scopeType": 16,
     "body": {
-      "$ref": "#/688"
+      "$ref": "#/638"
     },
     "flags": 1
   },
@@ -9679,21 +8970,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/787"
+          "$ref": "#/737"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/788"
+          "$ref": "#/738"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/790"
+          "$ref": "#/740"
         },
         "flags": 2,
         "description": "package properties"
@@ -9734,7 +9025,7 @@
       },
       "contentKind": {
         "type": {
-          "$ref": "#/793"
+          "$ref": "#/743"
         },
         "flags": 0,
         "description": "The package kind"
@@ -9748,28 +9039,28 @@
       },
       "isNew": {
         "type": {
-          "$ref": "#/796"
+          "$ref": "#/746"
         },
         "flags": 0,
         "description": "Flag indicates if this is a newly published package."
       },
       "isPreview": {
         "type": {
-          "$ref": "#/799"
+          "$ref": "#/749"
         },
         "flags": 0,
         "description": "Flag indicates if this package is in preview."
       },
       "isFeatured": {
         "type": {
-          "$ref": "#/802"
+          "$ref": "#/752"
         },
         "flags": 0,
         "description": "Flag indicates if this package is among the featured list."
       },
       "isDeprecated": {
         "type": {
-          "$ref": "#/805"
+          "$ref": "#/755"
         },
         "flags": 0,
         "description": "Flag indicates if this template is deprecated"
@@ -9832,7 +9123,7 @@
       },
       "providers": {
         "type": {
-          "$ref": "#/806"
+          "$ref": "#/756"
         },
         "flags": 0,
         "description": "Providers for the package item"
@@ -9860,14 +9151,14 @@
       },
       "threatAnalysisTactics": {
         "type": {
-          "$ref": "#/807"
+          "$ref": "#/757"
         },
         "flags": 0,
         "description": "the tactics the resource covers"
       },
       "threatAnalysisTechniques": {
         "type": {
-          "$ref": "#/808"
+          "$ref": "#/758"
         },
         "flags": 0,
         "description": "the techniques the resource covers, these have to be aligned with the tactics being used"
@@ -9914,32 +9205,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/791"
+        "$ref": "#/741"
       },
       {
-        "$ref": "#/792"
-      },
-      {
-        "$ref": "#/0"
-      }
-    ]
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "true"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "false"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/794"
-      },
-      {
-        "$ref": "#/795"
+        "$ref": "#/742"
       },
       {
         "$ref": "#/0"
@@ -9958,32 +9227,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/797"
+        "$ref": "#/744"
       },
       {
-        "$ref": "#/798"
-      },
-      {
-        "$ref": "#/0"
-      }
-    ]
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "true"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "false"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/800"
-      },
-      {
-        "$ref": "#/801"
+        "$ref": "#/745"
       },
       {
         "$ref": "#/0"
@@ -10002,10 +9249,54 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/803"
+        "$ref": "#/747"
       },
       {
-        "$ref": "#/804"
+        "$ref": "#/748"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "true"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "false"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/750"
+      },
+      {
+        "$ref": "#/751"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "true"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "false"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/753"
+      },
+      {
+        "$ref": "#/754"
       },
       {
         "$ref": "#/0"
@@ -10035,7 +9326,7 @@
     "name": "Microsoft.SecurityInsights/contentProductPackages@2023-11-01",
     "scopeType": 16,
     "body": {
-      "$ref": "#/789"
+      "$ref": "#/739"
     },
     "flags": 1
   },
@@ -10067,21 +9358,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/810"
+          "$ref": "#/760"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/811"
+          "$ref": "#/761"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/813"
+          "$ref": "#/763"
         },
         "flags": 2,
         "description": "template properties"
@@ -10143,7 +9434,7 @@
       },
       "contentKind": {
         "type": {
-          "$ref": "#/831"
+          "$ref": "#/781"
         },
         "flags": 0,
         "description": "The kind of content the template is for."
@@ -10185,7 +9476,7 @@
       },
       "providers": {
         "type": {
-          "$ref": "#/832"
+          "$ref": "#/782"
         },
         "flags": 0,
         "description": "Providers for the content item"
@@ -10227,28 +9518,28 @@
       },
       "threatAnalysisTactics": {
         "type": {
-          "$ref": "#/833"
+          "$ref": "#/783"
         },
         "flags": 0,
         "description": "the tactics the resource covers"
       },
       "threatAnalysisTechniques": {
         "type": {
-          "$ref": "#/834"
+          "$ref": "#/784"
         },
         "flags": 0,
         "description": "the techniques the resource covers, these have to be aligned with the tactics being used"
       },
       "previewImages": {
         "type": {
-          "$ref": "#/835"
+          "$ref": "#/785"
         },
         "flags": 0,
         "description": "preview image file names. These will be taken from the solution artifacts"
       },
       "previewImagesDark": {
         "type": {
-          "$ref": "#/836"
+          "$ref": "#/786"
         },
         "flags": 0,
         "description": "preview image file names. These will be taken from the solution artifacts. used for dark theme support"
@@ -10262,7 +9553,7 @@
       },
       "packageKind": {
         "type": {
-          "$ref": "#/839"
+          "$ref": "#/789"
         },
         "flags": 0,
         "description": "the packageKind of the package contains this template"
@@ -10276,7 +9567,7 @@
       },
       "isDeprecated": {
         "type": {
-          "$ref": "#/842"
+          "$ref": "#/792"
         },
         "flags": 2,
         "description": "Flag indicates if this template is deprecated"
@@ -10362,55 +9653,55 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/814"
+        "$ref": "#/764"
       },
       {
-        "$ref": "#/815"
+        "$ref": "#/765"
       },
       {
-        "$ref": "#/816"
+        "$ref": "#/766"
       },
       {
-        "$ref": "#/817"
+        "$ref": "#/767"
       },
       {
-        "$ref": "#/818"
+        "$ref": "#/768"
       },
       {
-        "$ref": "#/819"
+        "$ref": "#/769"
       },
       {
-        "$ref": "#/820"
+        "$ref": "#/770"
       },
       {
-        "$ref": "#/821"
+        "$ref": "#/771"
       },
       {
-        "$ref": "#/822"
+        "$ref": "#/772"
       },
       {
-        "$ref": "#/823"
+        "$ref": "#/773"
       },
       {
-        "$ref": "#/824"
+        "$ref": "#/774"
       },
       {
-        "$ref": "#/825"
+        "$ref": "#/775"
       },
       {
-        "$ref": "#/826"
+        "$ref": "#/776"
       },
       {
-        "$ref": "#/827"
+        "$ref": "#/777"
       },
       {
-        "$ref": "#/828"
+        "$ref": "#/778"
       },
       {
-        "$ref": "#/829"
+        "$ref": "#/779"
       },
       {
-        "$ref": "#/830"
+        "$ref": "#/780"
       },
       {
         "$ref": "#/0"
@@ -10459,10 +9750,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/837"
+        "$ref": "#/787"
       },
       {
-        "$ref": "#/838"
+        "$ref": "#/788"
       },
       {
         "$ref": "#/0"
@@ -10481,10 +9772,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/840"
+        "$ref": "#/790"
       },
       {
-        "$ref": "#/841"
+        "$ref": "#/791"
       },
       {
         "$ref": "#/0"
@@ -10496,7 +9787,7 @@
     "name": "Microsoft.SecurityInsights/contentproducttemplates@2023-11-01",
     "scopeType": 16,
     "body": {
-      "$ref": "#/812"
+      "$ref": "#/762"
     },
     "flags": 1
   }

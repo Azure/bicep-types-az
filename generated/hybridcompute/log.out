@@ -3,12 +3,12 @@ AutoRest code generation utility [cli version: 3.7.1; node: v16.20.2]
 https://aka.ms/autorest
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProxyResource' (1 differences):
+  - allOf.0.$ref: "#/components/schemas/schemas:642" => "#/components/schemas/schemas:816"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (3 differences):
-  - properties.id.$ref: "#/components/schemas/schemas:591" => "#/components/schemas/schemas:764"
+  - properties.id.$ref: "#/components/schemas/schemas:643" => "#/components/schemas/schemas:817"
   - properties.id.description: "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}" => "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
   - properties.systemData.type: "object" => <none>
-warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProxyResource' (1 differences):
-  - allOf.0.$ref: "#/components/schemas/schemas:590" => "#/components/schemas/schemas:763"
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'HybridIdentityMetadata' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from HybridIdentityMetadata
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PrivateLinkResource' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from PrivateLinkResource
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PrivateEndpointConnection' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from PrivateEndpointConnection
@@ -39,18 +39,18 @@ warning | Modeler/MissingType | The schema 'components·1a7hg8v·schemas·machin
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorDetail' (1 differences):
+  - properties.details.$ref: "#/components/schemas/schemas:570" => "#/components/schemas/schemas:743"
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorResponse' (1 differences):
+  - properties.error.$ref: "#/components/schemas/schemas:566" => "#/components/schemas/schemas:739"
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProxyResource' (1 differences):
+  - allOf.0.$ref: "#/components/schemas/schemas:607" => "#/components/schemas/schemas:781"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (3 differences):
-  - properties.id.$ref: "#/components/schemas/schemas:556" => "#/components/schemas/schemas:729"
+  - properties.id.$ref: "#/components/schemas/schemas:608" => "#/components/schemas/schemas:782"
   - properties.id.description: "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}" => "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
   - properties.systemData.type: "object" => <none>
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'TrackedResource' (1 differences):
-  - allOf.0.$ref: "#/components/schemas/schemas:555" => "#/components/schemas/schemas:728"
-warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProxyResource' (1 differences):
-  - allOf.0.$ref: "#/components/schemas/schemas:555" => "#/components/schemas/schemas:728"
-warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorDetail' (1 differences):
-  - properties.details.$ref: "#/components/schemas/schemas:593" => "#/components/schemas/schemas:766"
-warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorResponse' (1 differences):
-  - properties.error.$ref: "#/components/schemas/schemas:589" => "#/components/schemas/schemas:762"
+  - allOf.0.$ref: "#/components/schemas/schemas:607" => "#/components/schemas/schemas:781"
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'HybridIdentityMetadata' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from HybridIdentityMetadata
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PrivateLinkResource' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from PrivateLinkResource
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PrivateEndpointConnection' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from PrivateEndpointConnection
@@ -70,12 +70,12 @@ warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ProxyResource' 
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProxyResource' (1 differences):
+  - allOf.0.$ref: "#/components/schemas/schemas:496" => "#/components/schemas/schemas:670"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (3 differences):
-  - properties.id.$ref: "#/components/schemas/schemas:445" => "#/components/schemas/schemas:618"
+  - properties.id.$ref: "#/components/schemas/schemas:497" => "#/components/schemas/schemas:671"
   - properties.id.description: "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}" => "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
   - properties.systemData.type: "object" => <none>
-warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProxyResource' (1 differences):
-  - allOf.0.$ref: "#/components/schemas/schemas:444" => "#/components/schemas/schemas:617"
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PrivateLinkResource' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from PrivateLinkResource
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PrivateEndpointConnection' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from PrivateEndpointConnection
 warning | Modeler/MissingType | The schema 'components·1pl4ixg·schemas·machineextensionproperties·properties·settings·additionalproperties' has no type or format information whatsoever. Location:
@@ -91,18 +91,18 @@ warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ProxyResource' 
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorDetail' (1 differences):
+  - properties.details.$ref: "#/components/schemas/schemas:547" => "#/components/schemas/schemas:720"
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorResponse' (1 differences):
+  - properties.error.$ref: "#/components/schemas/schemas:543" => "#/components/schemas/schemas:716"
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProxyResource' (1 differences):
+  - allOf.0.$ref: "#/components/schemas/schemas:584" => "#/components/schemas/schemas:758"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (3 differences):
-  - properties.id.$ref: "#/components/schemas/schemas:533" => "#/components/schemas/schemas:706"
+  - properties.id.$ref: "#/components/schemas/schemas:585" => "#/components/schemas/schemas:759"
   - properties.id.description: "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}" => "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
   - properties.systemData.type: "object" => <none>
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'TrackedResource' (1 differences):
-  - allOf.0.$ref: "#/components/schemas/schemas:532" => "#/components/schemas/schemas:705"
-warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProxyResource' (1 differences):
-  - allOf.0.$ref: "#/components/schemas/schemas:532" => "#/components/schemas/schemas:705"
-warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorDetail' (1 differences):
-  - properties.details.$ref: "#/components/schemas/schemas:570" => "#/components/schemas/schemas:743"
-warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorResponse' (1 differences):
-  - properties.error.$ref: "#/components/schemas/schemas:566" => "#/components/schemas/schemas:739"
+  - allOf.0.$ref: "#/components/schemas/schemas:584" => "#/components/schemas/schemas:758"
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'HybridIdentityMetadata' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from HybridIdentityMetadata
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PrivateLinkResource' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from PrivateLinkResource
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PrivateEndpointConnection' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from PrivateEndpointConnection
@@ -122,18 +122,18 @@ warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ProxyResource' 
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorDetail' (1 differences):
+  - properties.details.$ref: "#/components/schemas/schemas:541" => "#/components/schemas/schemas:714"
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorResponse' (1 differences):
+  - properties.error.$ref: "#/components/schemas/schemas:537" => "#/components/schemas/schemas:710"
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProxyResource' (1 differences):
+  - allOf.0.$ref: "#/components/schemas/schemas:578" => "#/components/schemas/schemas:752"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (3 differences):
-  - properties.id.$ref: "#/components/schemas/schemas:527" => "#/components/schemas/schemas:700"
+  - properties.id.$ref: "#/components/schemas/schemas:579" => "#/components/schemas/schemas:753"
   - properties.id.description: "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}" => "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
   - properties.systemData.type: "object" => <none>
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'TrackedResource' (1 differences):
-  - allOf.0.$ref: "#/components/schemas/schemas:526" => "#/components/schemas/schemas:699"
-warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProxyResource' (1 differences):
-  - allOf.0.$ref: "#/components/schemas/schemas:526" => "#/components/schemas/schemas:699"
-warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorDetail' (1 differences):
-  - properties.details.$ref: "#/components/schemas/schemas:564" => "#/components/schemas/schemas:737"
-warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorResponse' (1 differences):
-  - properties.error.$ref: "#/components/schemas/schemas:560" => "#/components/schemas/schemas:733"
+  - allOf.0.$ref: "#/components/schemas/schemas:578" => "#/components/schemas/schemas:752"
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'HybridIdentityMetadata' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from HybridIdentityMetadata
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PrivateLinkResource' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from PrivateLinkResource
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PrivateEndpointConnection' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from PrivateEndpointConnection
@@ -196,9 +196,9 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorDetail' (1 differences):
-  - properties.details.$ref: "#/components/schemas/schemas:330" => "#/components/schemas/schemas:509"
+  - properties.details.$ref: "#/components/schemas/schemas:307" => "#/components/schemas/schemas:509"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorResponse' (1 differences):
-  - properties.error.$ref: "#/components/schemas/schemas:326" => "#/components/schemas/schemas:505"
+  - properties.error.$ref: "#/components/schemas/schemas:303" => "#/components/schemas/schemas:505"
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PrivateLinkResource' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from PrivateLinkResource
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PrivateEndpointConnection' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from PrivateEndpointConnection
 warning | Modeler/MissingType | The schema 'components·1pl4ixg·schemas·machineextensionproperties·properties·settings·additionalproperties' has no type or format information whatsoever. Location:
@@ -215,9 +215,9 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorDetail' (1 differences):
-  - properties.details.$ref: "#/components/schemas/schemas:274" => "#/components/schemas/schemas:372"
+  - properties.details.$ref: "#/components/schemas/schemas:251" => "#/components/schemas/schemas:372"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorResponse' (1 differences):
-  - properties.error.$ref: "#/components/schemas/schemas:270" => "#/components/schemas/schemas:368"
+  - properties.error.$ref: "#/components/schemas/schemas:247" => "#/components/schemas/schemas:368"
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PrivateLinkResource' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from PrivateLinkResource
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PrivateEndpointConnection' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from PrivateEndpointConnection
 warning | Modeler/MissingType | The schema 'components·1pl4ixg·schemas·machineextensionproperties·properties·settings·additionalproperties' has no type or format information whatsoever. Location:
@@ -247,9 +247,9 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorDetail' (1 differences):
-  - properties.details.$ref: "#/components/schemas/schemas:242" => "#/components/schemas/schemas:340"
+  - properties.details.$ref: "#/components/schemas/schemas:219" => "#/components/schemas/schemas:340"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorResponse' (1 differences):
-  - properties.error.$ref: "#/components/schemas/schemas:238" => "#/components/schemas/schemas:336"
+  - properties.error.$ref: "#/components/schemas/schemas:215" => "#/components/schemas/schemas:336"
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PrivateLinkResource' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from PrivateLinkResource
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PrivateEndpointConnection' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from PrivateEndpointConnection
 warning | Modeler/MissingType | The schema 'components·1pl4ixg·schemas·machineextensionproperties·properties·settings·additionalproperties' has no type or format information whatsoever. Location:

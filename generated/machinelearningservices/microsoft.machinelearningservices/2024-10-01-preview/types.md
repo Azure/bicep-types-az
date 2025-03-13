@@ -3504,7 +3504,7 @@ Full resource id: /subscriptions/{subId}/resourceGroups/{rgName}/providers/Micro
 Possible values: "Enabled" or "Disabled"
 * **regionDetails**: [RegistryRegionArmDetails](#registryregionarmdetails)[]: Details of each region the registry is in
 * **registryPrivateEndpointConnections**: [RegistryPrivateEndpointConnection](#registryprivateendpointconnection)[]: Private endpoint connections info used for pending connections in private link portal
-* **syndicatedRegistries**: [RegistrySyndicatedRegistriesItem](#registrysyndicatedregistriesitem)[]: List of tuples containing Guid and SyndicatedRegistry
+* **syndicatedRegistries**: [RegistrySyndicatedRegistriesItem](#registrysyndicatedregistriesitem)[]
 
 ## RegistryRegionArmDetails
 ### Properties
@@ -3514,8 +3514,7 @@ Possible values: "Enabled" or "Disabled"
 
 ## RegistrySyndicatedRegistriesItem
 ### Properties
-* **syndicatedRegistry**: [SyndicatedRegistry](#syndicatedregistry): A registry that is syndicated
-* **syndicatedRegistryGuid**: string: The Guid of the syndicated registry
+* **registryId**: string: Registry id guid of a destination registry that this registry can syndicate to
 
 ## RegressionTrainingSettings
 ### Properties
@@ -4045,10 +4044,6 @@ Defaults to 5000ms.
 * **sparkVersion**: string: Spark version.
 * **subscriptionId**: string: Azure subscription identifier.
 * **workspaceName**: string: Name of Azure Machine Learning workspace.
-
-## SyndicatedRegistry
-### Properties
-* **registryId**: string: The Registry Id of the syndicated Registry
 
 ## SystemCreatedAcrAccount
 ### Properties

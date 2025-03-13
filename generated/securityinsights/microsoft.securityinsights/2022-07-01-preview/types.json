@@ -8108,7 +8108,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "AnalyticRule"
+    "value": "AnalyticsRule"
   },
   {
     "$type": "StringLiteralType",
@@ -8197,7 +8197,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "AnalyticRule"
+    "value": "AnalyticsRule"
   },
   {
     "$type": "StringLiteralType",
@@ -9212,11 +9212,11 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "Local file"
+    "value": "Local"
   },
   {
     "$type": "StringLiteralType",
-    "value": "Remote storage"
+    "value": "AzureStorage"
   },
   {
     "$type": "UnionType",

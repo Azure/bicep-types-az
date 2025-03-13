@@ -870,8 +870,10 @@
 
 ## AzurePostgreSqlLinkedServiceTypeProperties
 ### Properties
+* **azureCloudType**: any: Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
 * **commandTimeout**: any: The time to wait (in seconds) while trying to execute a command before terminating the attempt and generating an error. Set to zero for infinity. Type: integer.
 * **connectionString**: any: An ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
 * **database**: any: Database name for connection. Type: string.
 * **encoding**: any: Gets or sets the .NET encoding that will be used to encode/decode PostgreSQL string data. Type: string
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
@@ -879,11 +881,21 @@
 * **port**: any: The port for the connection. Type: integer.
 * **readBufferSize**: any: Determines the size of the internal buffer uses when reading. Increasing may improve performance if transferring large values from the database. Type: integer.
 * **server**: any: Server name for connection. Type: string.
+* **servicePrincipalCredentialType**: any: The service principal credential type to use in Server-To-Server authentication. 'ServicePrincipalKey' for key/secret, 'ServicePrincipalCert' for certificate. Type: string (or Expression with resultType string).
+* **servicePrincipalEmbeddedCert**: [SecretBase](#secretbase): Specify the base64 encoded certificate of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).
+* **servicePrincipalEmbeddedCertPassword**: [SecretBase](#secretbase): Specify the password of your certificate if your certificate has a password and you are using AadServicePrincipal authentication. Type: string (or Expression with resultType string).
+* **servicePrincipalId**: any: The ID of the service principal used to authenticate against Azure Database for PostgreSQL Flexible server. Type: string (or Expression with resultType string).
+* **servicePrincipalKey**: [SecretBase](#secretbase): The key of the service principal used to authenticate against Azure Database for PostgreSQL Flexible server.
 * **sslMode**: any: SSL mode for connection. Type: integer. 0: disable, 1:allow, 2: prefer, 3: require, 4: verify-ca, 5: verify-full. Type: integer.
+* **tenant**: any: The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
 * **timeout**: any: The time to wait (in seconds) while trying to establish a connection before terminating the attempt and generating an error. Type: integer.
 * **timezone**: any: Gets or sets the session timezone. Type: string.
 * **trustServerCertificate**: any: Whether to trust the server certificate without validating it. Type: boolean.
 * **username**: any: Username for authentication. Type: string.
+
+## AzurePostgreSqlSinkUpsertSettings
+### Properties
+* **keys**: any: Key column names for unique row identification. Type: array of strings (or Expression with resultType array of strings).
 
 ## AzurePostgreSqlTableDatasetTypeProperties
 ### Properties
@@ -1270,6 +1282,8 @@
 #### Properties
 * **preCopyScript**: any: A query to execute before starting the copy. Type: string (or Expression with resultType string).
 * **type**: 'AzurePostgreSqlSink' (Required): Copy sink type.
+* **upsertSettings**: [AzurePostgreSqlSinkUpsertSettings](#azurepostgresqlsinkupsertsettings): Azure Database for PostgreSQL upsert option settings
+* **writeMethod**: 'BulkInsert' | 'CopyCommand' | 'Upsert' | string: The write behavior for the operation. Default is Bulk Insert.
 
 ### AzureQueueSink
 #### Properties
@@ -1318,6 +1332,8 @@
 ### CommonDataServiceForAppsSink
 #### Properties
 * **alternateKeyName**: any: The logical name of the alternate key which will be used when upserting records. Type: string (or Expression with resultType string).
+* **bypassBusinessLogicExecution**: any: Controls the bypass of Dataverse custom business logic. Type: string (or Expression with resultType string). Type: string (or Expression with resultType string).
+* **bypassPowerAutomateFlows**: any: Controls the bypass of Power Automate flows. Default is false. Type: boolean (or Expression with resultType boolean).
 * **ignoreNullValues**: any: The flag indicating whether to ignore null values from input dataset (except key fields) during write operation. Default is false. Type: boolean (or Expression with resultType boolean).
 * **type**: 'CommonDataServiceForAppsSink' (Required): Copy sink type.
 * **writeBehavior**: 'Upsert' | string (Required): The write behavior for the operation.
@@ -1347,6 +1363,8 @@
 ### DynamicsCrmSink
 #### Properties
 * **alternateKeyName**: any: The logical name of the alternate key which will be used when upserting records. Type: string (or Expression with resultType string).
+* **bypassBusinessLogicExecution**: any: Controls the bypass of Dataverse custom business logic. Type: string (or Expression with resultType string). Type: string (or Expression with resultType string).
+* **bypassPowerAutomateFlows**: any: Controls the bypass of Power Automate flows. Default is false. Type: boolean (or Expression with resultType boolean).
 * **ignoreNullValues**: any: The flag indicating whether to ignore null values from input dataset (except key fields) during write operation. Default is false. Type: boolean (or Expression with resultType boolean).
 * **type**: 'DynamicsCrmSink' (Required): Copy sink type.
 * **writeBehavior**: 'Upsert' | string (Required): The write behavior for the operation.
@@ -1354,6 +1372,8 @@
 ### DynamicsSink
 #### Properties
 * **alternateKeyName**: any: The logical name of the alternate key which will be used when upserting records. Type: string (or Expression with resultType string).
+* **bypassBusinessLogicExecution**: any: Controls the bypass of Dataverse custom business logic. Type: string (or Expression with resultType string). Type: string (or Expression with resultType string).
+* **bypassPowerAutomateFlows**: any: Controls the bypass of Power Automate flows. Default is false. Type: boolean (or Expression with resultType boolean).
 * **ignoreNullValues**: any: The flag indicating whether ignore null values from input dataset (except key fields) during write operation. Default is false. Type: boolean (or Expression with resultType boolean).
 * **type**: 'DynamicsSink' (Required): Copy sink type.
 * **writeBehavior**: 'Upsert' | string (Required): The write behavior for the operation.
@@ -1384,7 +1404,7 @@
 #### Properties
 * **partitionNameList**: any: Specify the partition column names from sink columns. Type: array of objects (or Expression with resultType array of objects).
 * **partitionOption**: any: Create partitions in folder structure based on one or multiple columns. Each distinct column value (pair) will be a new partition. Possible values include: "None", "PartitionByKey".
-* **tableActionOption**: any: The type of table action for LakeHouse Table sink. Possible values include: "None", "Append", "Overwrite".
+* **tableActionOption**: any: The type of table action for Lakehouse Table sink. Possible values include: "None", "Append", "Overwrite".
 * **type**: 'LakeHouseTableSink' (Required): Copy sink type.
 
 ### MicrosoftAccessSink
@@ -1530,6 +1550,11 @@
 * **type**: 'SqlSink' (Required): Copy sink type.
 * **upsertSettings**: [SqlUpsertSettings](#sqlupsertsettings): SQL upsert settings.
 * **writeBehavior**: any: Write behavior when copying data into sql. Type: string (or Expression with resultType string).
+
+### TeradataSink
+#### Properties
+* **importSettings**: [TeradataImportCommand](#teradataimportcommand): Teradata import settings.
+* **type**: 'TeradataSink' (Required): Copy sink type.
 
 ### WarehouseSink
 #### Properties
@@ -2842,8 +2867,8 @@
 
 ### LakeHouseTableDataset
 #### Properties
-* **type**: 'LakeHouseTable' (Required): Type of dataset.
-* **typeProperties**: [LakeHouseTableDatasetTypeProperties](#lakehousetabledatasettypeproperties): Microsoft Fabric LakeHouse Table dataset properties.
+* **type**: 'LakehouseTable' (Required): Type of dataset.
+* **typeProperties**: [LakeHouseTableDatasetTypeProperties](#lakehousetabledatasettypeproperties): Microsoft Fabric Lakehouse Table dataset properties.
 
 ### MagentoObjectDataset
 #### Properties
@@ -3037,7 +3062,7 @@
 ### ServiceNowV2ObjectDataset
 #### Properties
 * **type**: 'ServiceNowV2Object' (Required): Type of dataset.
-* **typeProperties**: [GenericDatasetTypeProperties](#genericdatasettypeproperties): Properties specific to this dataset type.
+* **typeProperties**: [ServiceNowV2DatasetTypeProperties](#servicenowv2datasettypeproperties): Properties specific to this dataset type.
 
 ### SharePointOnlineListResourceDataset
 #### Properties
@@ -3805,7 +3830,6 @@
 * **database**: any: Database name for connection. Type: string. Only used for V2.
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **host**: any: Host name for connection. Type: string. Only used for V2.
-* **password**: [SecretBase](#secretbase): The Azure key vault secret reference of password in connection string. Type: string. Only used for V2.
 * **port**: any: The port for the connection. Type: integer. Only used for V2.
 * **pwd**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of password in connection string.
 * **sslMode**: any: SSL mode for connection. Type: integer. 0: disable, 1:allow, 2: prefer, 3: require, 4: verify-ca, 5: verify-full. Type: integer. Only used for V2.
@@ -4215,19 +4239,19 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## LakeHouseLinkedServiceTypeProperties
 ### Properties
-* **artifactId**: any: The ID of Microsoft Fabric LakeHouse artifact. Type: string (or Expression with resultType string).
+* **artifactId**: any: The ID of Microsoft Fabric Lakehouse artifact. Type: string (or Expression with resultType string).
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **servicePrincipalCredential**: [SecretBase](#secretbase): The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.
 * **servicePrincipalCredentialType**: any: The service principal credential type to use in Server-To-Server authentication. 'ServicePrincipalKey' for key/secret, 'ServicePrincipalCert' for certificate. Type: string (or Expression with resultType string).
-* **servicePrincipalId**: any: The ID of the application used to authenticate against Microsoft Fabric LakeHouse. Type: string (or Expression with resultType string).
-* **servicePrincipalKey**: [SecretBase](#secretbase): The Key of the application used to authenticate against Microsoft Fabric LakeHouse.
+* **servicePrincipalId**: any: The ID of the application used to authenticate against Microsoft Fabric Lakehouse. Type: string (or Expression with resultType string).
+* **servicePrincipalKey**: [SecretBase](#secretbase): The Key of the application used to authenticate against Microsoft Fabric Lakehouse.
 * **tenant**: any: The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
 * **workspaceId**: any: The ID of Microsoft Fabric workspace. Type: string (or Expression with resultType string).
 
 ## LakeHouseTableDatasetTypeProperties
 ### Properties
-* **schema**: any: The schema name of Microsoft Fabric LakeHouse Table. Type: string (or Expression with resultType string).
-* **table**: any: The name of Microsoft Fabric LakeHouse Table. Type: string (or Expression with resultType string).
+* **schema**: any: The schema name of Microsoft Fabric Lakehouse Table. Type: string (or Expression with resultType string).
+* **table**: any: The name of Microsoft Fabric Lakehouse Table. Type: string (or Expression with resultType string).
 
 ## LicensedComponentSetupTypeProperties
 ### Properties
@@ -4578,8 +4602,8 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ### LakeHouseLinkedService
 #### Properties
-* **type**: 'LakeHouse' (Required): Type of linked service.
-* **typeProperties**: [LakeHouseLinkedServiceTypeProperties](#lakehouselinkedservicetypeproperties) (Required): Microsoft Fabric LakeHouse linked service properties.
+* **type**: 'Lakehouse' (Required): Type of linked service.
+* **typeProperties**: [LakeHouseLinkedServiceTypeProperties](#lakehouselinkedservicetypeproperties) (Required): Microsoft Fabric Lakehouse linked service properties.
 
 ### MagentoLinkedService
 #### Properties
@@ -5212,9 +5236,23 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## OracleLinkedServiceTypeProperties
 ### Properties
-* **connectionString**: any (Required): The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **authenticationType**: 'Basic' | string: Authentication type for connecting to the Oracle database. Only used for Version 2.0.
+* **connectionString**: any: The connection string. Type: string, SecureString or AzureKeyVaultSecretReference. Only used for Version 1.0.
+* **cryptoChecksumClient**: any: Specifies the desired data integrity behavior when this client connects to a server. Supported values are accepted, rejected, requested or required, default value is required. Type: string. Only used for Version 2.0.
+* **cryptoChecksumTypesClient**: any: Specifies the crypto-checksum algorithms that client can use. Supported values are SHA1, SHA256, SHA384, SHA512, default value is (SHA512). Type: string. Only used for Version 2.0.
+* **enableBulkLoad**: any: Specifies whether to use bulk copy or batch insert when loading data into the database, default value is true. Type: boolean. Only used for Version 2.0.
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
+* **encryptionClient**: any: Specifies the encryption client behavior. Supported values are accepted, rejected, requested or required, default value is required. Type: string. Only used for Version 2.0.
+* **encryptionTypesClient**: any: Specifies the encryption algorithms that client can use. Supported values are AES128, AES192, AES256, 3DES112, 3DES168, default value is (AES256). Type: string. Only used for Version 2.0.
+* **fetchSize**: any: Specifies the number of bytes that the driver allocates to fetch the data in one database round-trip, default value is 10485760. Type: integer. Only used for Version 2.0.
+* **fetchTswtzAsTimestamp**: any: Specifies whether the driver returns column value with the TIMESTAMP WITH TIME ZONE data type as DateTime or string. This setting is ignored if supportV1DataTypes is not true, default value is true. Type: boolean. Only used for Version 2.0.
+* **initializationString**: any: Specifies a command that is issued immediately after connecting to the database to manage session settings. Type: string. Only used for Version 2.0.
+* **initialLobFetchSize**: any: Specifies the amount that the source initially fetches for LOB columns, default value is 0. Type: integer. Only used for Version 2.0.
 * **password**: [AzureKeyVaultSecretReference](#azurekeyvaultsecretreference): The Azure key vault secret reference of password in connection string.
+* **server**: any: The location of Oracle database you want to connect to, the supported forms include connector descriptor, Easy Connect (Plus) Naming and Oracle Net Services Name (Only self-hosted IR). Type: string. Only used for Version 2.0.
+* **statementCacheSize**: any: Specifies the number of cursors or statements to be cached for each database connection, default value is 0. Type: integer. Only used for Version 2.0.
+* **supportV1DataTypes**: any: Specifies whether to use the Version 1.0 data type mappings. Do not set this to true unless you want to keep backward compatibility with Version 1.0's data type mappings, default value is false. Type: boolean. Only used for Version 2.0.
+* **username**: any: The Oracle database username. Type: string. Only used for Version 2.0.
 
 ## OraclePartitionSettings
 ### Properties
@@ -5490,20 +5528,21 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## PrestoLinkedServiceTypeProperties
 ### Properties
-* **allowHostNameCNMismatch**: any: Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false.
-* **allowSelfSignedServerCert**: any: Specifies whether to allow self-signed certificates from the server. The default value is false.
+* **allowHostNameCNMismatch**: any: Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false. Only used for Version 1.0.
+* **allowSelfSignedServerCert**: any: Specifies whether to allow self-signed certificates from the server. The default value is false. Only used for Version 1.0.
 * **authenticationType**: 'Anonymous' | 'LDAP' | string (Required): The authentication mechanism used to connect to the Presto server.
 * **catalog**: any (Required): The catalog context for all request against the server.
-* **enableSsl**: any: Specifies whether the connections to the server are encrypted using SSL. The default value is false.
+* **enableServerCertificateValidation**: any: Specifies whether the connections to the server will validate server certificate, the default value is True. Only used for Version 2.0
+* **enableSsl**: any: Specifies whether the connections to the server are encrypted using SSL. The default value for legacy version is False. The default value for version 2.0 is True.
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **host**: any (Required): The IP address or host name of the Presto server. (i.e. 192.168.222.160)
 * **password**: [SecretBase](#secretbase): The password corresponding to the user name.
-* **port**: any: The TCP port that the Presto server uses to listen for client connections. The default value is 8080.
-* **serverVersion**: any (Required): The version of the Presto server. (i.e. 0.148-t)
-* **timeZoneID**: any: The local time zone used by the connection. Valid values for this option are specified in the IANA Time Zone Database. The default value is the system time zone.
-* **trustedCertPath**: any: The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.
+* **port**: any: The TCP port that the Presto server uses to listen for client connections. The default value is 8080 when disable SSL, default value is 443 when enable SSL.
+* **serverVersion**: any: The version of the Presto server. (i.e. 0.148-t) Only used for Version 1.0.
+* **timeZoneID**: any: The local time zone used by the connection. Valid values for this option are specified in the IANA Time Zone Database. The default value for Version 1.0 is the client system time zone. The default value for Version 2.0 is server system timeZone
+* **trustedCertPath**: any: The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR. Only used for Version 1.0.
 * **username**: any: The user name used to connect to the Presto server.
-* **useSystemTrustStore**: any: Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.
+* **useSystemTrustStore**: any: Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false. Only used for Version 1.0.
 
 ## PrivateEndpointOrArmIdWrapper
 ### Properties
@@ -5928,6 +5967,11 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **useHostVerification**: any: Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
 * **usePeerVerification**: any: Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
 * **username**: any: The user name used to connect to the ServiceNow server for Basic and OAuth2 authentication.
+
+## ServiceNowV2DatasetTypeProperties
+### Properties
+* **tableName**: any: The table name. Type: string (or Expression with resultType string).
+* **valueType**: 'actual' | 'display' | string: Type of value copied from source.
 
 ## ServiceNowV2LinkedServiceTypeProperties
 ### Properties
@@ -6409,8 +6453,8 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **partitionRootPath**: any: Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
 * **recursive**: any: If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
 * **type**: 'LakeHouseReadSettings' (Required): The read setting type.
-* **wildcardFileName**: any: Microsoft Fabric LakeHouse Files wildcardFileName. Type: string (or Expression with resultType string).
-* **wildcardFolderPath**: any: Microsoft Fabric LakeHouse Files wildcardFolderPath. Type: string (or Expression with resultType string).
+* **wildcardFileName**: any: Microsoft Fabric Lakehouse Files wildcardFileName. Type: string (or Expression with resultType string).
+* **wildcardFolderPath**: any: Microsoft Fabric Lakehouse Files wildcardFolderPath. Type: string (or Expression with resultType string).
 
 ### OracleCloudStorageReadSettings
 #### Properties
@@ -6575,13 +6619,26 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **url**: any (Required): The url to connect TeamDesk source. Type: string (or Expression with resultType string).
 * **userName**: any: The username of the TeamDesk source. Type: string (or Expression with resultType string).
 
+## TeradataImportCommand
+### Properties
+* **additionalFormatOptions**: any: Additional format options for Teradata Copy Command. The format options only applies to direct copy from CSV source. Type: key value pairs (value should be string type) (or Expression with resultType object). Example: "additionalFormatOptions": { "timeFormat": "HHhMImSSs" }
+* **type**: string (Required): The import setting type.
+### Additional Properties
+* **Additional Properties Type**: any
+
 ## TeradataLinkedServiceTypeProperties
 ### Properties
 * **authenticationType**: 'Basic' | 'Windows' | string: AuthenticationType to be used for connection.
-* **connectionString**: any: Teradata ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **characterSet**: any: The character set to use for the connection. Type: string (or Expression with resultType string). Only applied for version 2.0.
+* **connectionString**: any: Teradata ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference. Only applied for version 1.0.
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
+* **httpsPortNumber**: any: The port numbers when connecting to server through HTTPS/TLS connections. Type: integer (or Expression with resultType integer). Only applied for version 2.0.
+* **maxRespSize**: any: The maximum size of the response buffer for SQL requests, in bytes. Type: integer. Only applied for version 2.0.
 * **password**: [SecretBase](#secretbase): Password for authentication.
+* **portNumber**: any: The port numbers when connecting to server through non HTTPS/TLS connections. Type: integer (or Expression with resultType integer). Only used for V2. Only applied for version 2.0.
 * **server**: any: Server name for connection. Type: string (or Expression with resultType string).
+* **sslMode**: any: SSL mode for connection. Valid values including: “Disable”, “Allow”, “Prefer”, “Require”, “Verify-CA”, “Verify-Full”. Default value is “Verify-Full”. Type: string (or Expression with resultType string). Only applied for version 2.0.
+* **useDataEncryption**: any: Specifies whether to encrypt all communication with the Teradata database. Allowed values are 0 or 1. This setting will be ignored for HTTPS/TLS connections. Type: integer (or Expression with resultType integer). Only applied for version 2.0.
 * **username**: any: Username for authentication. Type: string (or Expression with resultType string).
 
 ## TeradataPartitionSettings

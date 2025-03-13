@@ -71,7 +71,7 @@
 
 ## SharedPrivateLinkResourceProperties
 ### Properties
-* **dnsZone**: string: The DNS zone to be included in the DNS name of the shared private link. Value is required for Azure Data Explorer clusters and SQL managed instances. The value to use is the second segment of the host FQDN name of the resource that the shared private link resource is for.
+* **dnsZone**: string: The DNS zone segment to be included in the DNS name of the shared private link. Value is required for Azure Data Explorer clusters and SQL managed instances, and must be omitted for SQL logical servers and key vaults. The value is the second segment of the host FQDN name of the resource that the shared private link resource is for. For example: if the host name is 'adx-cluster-21187695.eastus.kusto.windows.net', then the value is 'eastus'; if the host name is 'sql-mi-23961134.767d5869f605.database.windows.net', then the value is '767d5869f605'.
 * **groupId**: string (Required): The group id from the provider of resource the shared private link resource is for.
 * **privateLinkResourceId**: string (Required): The resource ID of the resource the shared private link resource is for.
 * **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): The provisioning state of the resource.
@@ -91,7 +91,7 @@
 * **Discriminator**: targetType
 
 ### Base Properties
-* **connectionServerName**: string {maxLength: 200} (Required): The server name to use in the connection string when connecting to a target. Port number and instance name must be specified separately.
+* **connectionServerName**: string {maxLength: 200} (Required): The FQDN host name of the server to use in the connection string when connecting to a target. For example, for an Azure SQL logical server in the Azure commercial cloud, the value might be 'sql-logical-server-22092780.database.windows.net'; for an Azure SQL managed instance in the Azure commercial cloud, the value might be 'sql-mi-39441134.767d5869f605.database.windows.net'. Port number and instance name must be specified separately.
 * **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): The provisioning state of the resource.
 * **targetAuthenticationType**: 'Aad' | 'Sql' | string (Required): The type of authentication to use when connecting to a target.
 * **targetVault**: [VaultSecret](#vaultsecret): To use SQL authentication when connecting to targets, specify the vault where the login name and password secrets are stored.
@@ -99,7 +99,7 @@
 ### SqlDbSingleDatabaseTargetProperties
 #### Properties
 * **readIntent**: bool: Set to true to monitor a high availability replica of specified target, if any.
-* **sqlDbResourceId**: string (Required): The Azure resource ID of an Azure SQL DB single database target.
+* **sqlDbResourceId**: string (Required): The Azure resource ID of an Azure SQL DB database target.
 * **targetType**: 'SqlDb' (Required): Discriminator property for TargetProperties.
 
 ### SqlDbElasticPoolTargetProperties

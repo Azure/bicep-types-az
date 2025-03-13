@@ -2066,6 +2066,7 @@ Note: This settings is not supported for the 'yolov5' algorithm.
 * **livenessRoute**: [Route](#route): The route to check the liveness of the inference server container.
 * **readinessRoute**: [Route](#route): The route to check the readiness of the inference server container.
 * **scoringRoute**: [Route](#route): The port to send the scoring requests to, within the inference server container.
+* **startupRoute**: [Route](#route): The route to check the startup of the application in the container.
 
 ## InstanceResourceSchema
 ### Properties
@@ -2718,6 +2719,7 @@ If Nodes is not set or set to null, the service will only be started on leader n
 If it is null or not provided,
 it defaults to TargetUtilizationScaleSettings for KubernetesOnlineDeployment
 and to DefaultScaleSettings for ManagedOnlineDeployment.
+* **startupProbe**: [ProbeSettings](#probesettings): Startup probe verify whether an application within a container has started successfully.
 
 ### KubernetesOnlineDeployment
 #### Properties

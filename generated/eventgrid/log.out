@@ -11,6 +11,15 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'StaticStringRoutingEnrichment' has a property 'key' that is already declared the parent schema 'StaticRoutingEnrichment' but isn't significantly different. The property has been removed from StaticStringRoutingEnrichment
+warning | Modeler/MissingType | The schema 'components·12hvnbi·schemas·clientproperties·properties·attributes·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventgrid/resource-manager/Microsoft.EventGrid/stable/2025-02-15/EventGrid.json#/components/schemas/components·12hvnbi·schemas·clientproperties·properties·attributes·additionalproperties
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'WebhookPartnerDestinationInfo' has a property 'resourceMoveChangeHistory' that is already declared the parent schema 'PartnerDestinationInfo' but isn't significantly different. The property has been removed from WebhookPartnerDestinationInfo
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'StaticStringRoutingEnrichment' has a property 'key' that is already declared the parent schema 'StaticRoutingEnrichment' but isn't significantly different. The property has been removed from StaticStringRoutingEnrichment
 warning | Modeler/MissingType | The schema 'components·12hvnbi·schemas·clientproperties·properties·attributes·additionalproperties' has no type or format information whatsoever. Location:

@@ -590,36 +590,6 @@ resource exampleResource 'Microsoft.SecurityInsights/securityMLAnalyticsSettings
 }
 ```
 
-## microsoft.securityinsights/sourcecontrols
-
-Creates or updates a source control.
-```bicep
-resource exampleResource 'Microsoft.SecurityInsights/sourcecontrols@2024-03-01' = {
-  name: 'example'
-  etag: '"0300bf09-0000-0000-0000-5c37296e0000"'
-  properties: {
-    description: 'This is a source control'
-    contentTypes: [
-      'AnalyticRules'
-      'Workbook'
-    ]
-    displayName: 'My Source Control'
-    repoType: 'Github'
-    repository: {
-      branch: 'master'
-      displayUrl: 'https://github.com/user/repo'
-      url: 'https://github.com/user/repo'
-    }
-    repositoryAccess: {
-      clientId: '54b3c2c0-1f48-4a1c-af9f-6399c3240b73'
-      code: '939fd7c6caf754f4f41f'
-      kind: 'OAuth'
-      state: 'state'
-    }
-  }
-}
-```
-
 ## microsoft.securityinsights/watchlists
 
 Create or update a watchlist and bulk creates watchlist items.
