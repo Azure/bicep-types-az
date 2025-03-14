@@ -14,6 +14,12 @@ warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Unrecognized property type: byte-array. Returning 'any'.
+warning | Unrecognized property type: byte-array. Returning 'any'.
+warning | Unrecognized property type: byte-array. Returning 'any'.
+warning | Unrecognized property type: byte-array. Returning 'any'.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'ResourceModelWithAllowedPropertySet-identity' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'ResourceModelWithAllowedPropertySet-sku' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
 warning | PreCheck/SchemaMissingType | The schema 'ResourceModelWithAllowedPropertySet-plan' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -30,15 +36,6 @@ warning | PreCheck/PropertyRedeclarationWarning | Schema 'ScalingPlan' has a pro
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'ScalingPlanPooledSchedule' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from ScalingPlanPooledSchedule
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'PrivateEndpointConnectionWithSystemData' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from PrivateEndpointConnectionWithSystemData
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'ScalingPlanPersonalSchedule' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from ScalingPlanPersonalSchedule
-warning | Unrecognized property type: byte-array. Returning 'any'.
-warning | Unrecognized property type: byte-array. Returning 'any'.
-warning | Unrecognized property type: byte-array. Returning 'any'.
-warning | Unrecognized property type: byte-array. Returning 'any'.
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/SchemaMissingType | The schema 'ResourceModelWithAllowedPropertySet-identity' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ResourceModelWithAllowedPropertySet-sku' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/SchemaMissingType | The schema 'ResourceModelWithAllowedPropertySet-plan' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.
 warning | Unrecognized property type: byte-array. Returning 'any'.

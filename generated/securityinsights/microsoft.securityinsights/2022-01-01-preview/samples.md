@@ -1417,7 +1417,7 @@ resource exampleResource 'Microsoft.SecurityInsights/watchlists@2022-01-01-previ
     provider: 'Microsoft'
     rawContent: 'This line will be skipped\nheader1,header2\nvalue1,value2'
     source: 'watchlist.csv'
-    sourceType: 'Local file'
+    sourceType: 'Local'
   }
 }
 ```
@@ -1433,7 +1433,7 @@ resource exampleResource 'Microsoft.SecurityInsights/watchlists@2022-01-01-previ
     itemsSearchKey: 'header1'
     provider: 'Microsoft'
     source: 'watchlist.csv'
-    sourceType: 'Local file'
+    sourceType: 'Local'
   }
 }
 ```

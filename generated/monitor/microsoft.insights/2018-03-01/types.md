@@ -125,7 +125,7 @@
 * **evaluationFrequency**: string (Required): how often the metric alert is evaluated represented in ISO 8601 duration format.
 * **isMigrated**: bool (ReadOnly): the value indicating whether this alert rule is migrated.
 * **lastUpdatedTime**: string (ReadOnly): Last time the rule was updated in ISO8601 format.
-* **scopes**: string[] (Required): the list of resource id's that this metric alert is scoped to.
+* **scopes**: string[] (Required): the list of resource id's that this metric alert is scoped to. You cannot change the scope of a metric rule based on logs.
 * **severity**: int (Required): Alert severity {0, 1, 2, 3, 4}
 * **targetResourceRegion**: string: the region of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.
 * **targetResourceType**: string: the resource type of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.

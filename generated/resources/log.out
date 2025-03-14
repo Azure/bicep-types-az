@@ -352,6 +352,193 @@ warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.29.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.30.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.31.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.35.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.36.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.37.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.38.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.39.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.40.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.41.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.42.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.43.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.44.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.45.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.46.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.47.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.48.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.49.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.50.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.51.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.52.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.53.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.54.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.55.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.56.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.57.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.58.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.59.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.60.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.61.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.62.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.63.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.64.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.65.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.66.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.67.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.68.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.69.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.70.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.71.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.72.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.73.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.74.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.75.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.76.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.77.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.78.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.79.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.80.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.81.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.82.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.83.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.84.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.85.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.86.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.87.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.88.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.89.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.90.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.91.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.92.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.93.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.94.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.95.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.96.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.97.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.98.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.99.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.100.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.101.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.102.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.103.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.104.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.105.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.106.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.107.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.108.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.109.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.110.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.111.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.112.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.113.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.114.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.115.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.116.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.117.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.118.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.119.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.120.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.121.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.122.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.123.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.124.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.125.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.126.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.127.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.128.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.129.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.130.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.131.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.132.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.133.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.134.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.135.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.136.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.137.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.138.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.139.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.140.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.141.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.142.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.143.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.144.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.145.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.146.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.147.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.148.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.149.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.150.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.151.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.152.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.153.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.154.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.155.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.156.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.157.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.158.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.159.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.160.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.161.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.162.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.163.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Skipping path '/{policyAssignmentId}': Unable to locate "/providers/" segment
+warning | Skipping resource POST action path '/providers/Microsoft.Authorization/listPolicyDefinitionVersions': Unable to find type segments
+warning | Skipping resource POST action path '/providers/Microsoft.Management/managementGroups/{managementGroupName}/providers/Microsoft.Authorization/listPolicyDefinitionVersions': Unable to find type segments
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Authorization/listPolicyDefinitionVersions': Unable to find type segments
+warning | Skipping resource POST action path '/providers/Microsoft.Authorization/listPolicySetDefinitionVersions': Unable to find type segments
+warning | Skipping resource POST action path '/providers/Microsoft.Management/managementGroups/{managementGroupName}/providers/Microsoft.Authorization/listPolicySetDefinitionVersions': Unable to find type segments
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/providers/Microsoft.Authorization/listPolicySetDefinitionVersions': Unable to find type segments
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -2673,88 +2860,88 @@ warning | PreCheck/SchemaMissingType | The schema 'OnErrorDeployment' with an un
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:5477:5
 warning | PreCheck/SchemaMissingType | The schema 'OnErrorDeploymentExtended' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:5498:5
-warning | PreCheck/SchemaMissingType | The schema 'DeploymentValidationError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentValidateResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:5524:5
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtended' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:5532:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:5553:5
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:5568:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:5589:5
 warning | PreCheck/SchemaMissingType | The schema 'ProviderListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:5585:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:5606:5
 warning | PreCheck/SchemaMissingType | The schema 'ProviderResourceTypeListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:5602:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:5623:5
 warning | PreCheck/SchemaMissingType | The schema 'GenericResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:5622:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:5643:5
 warning | PreCheck/SchemaMissingType | The schema 'ExtendedLocation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:5657:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:5678:5
 warning | PreCheck/SchemaMissingType | The schema 'GenericResourceExpanded' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:5677:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:5698:5
 warning | PreCheck/SchemaMissingType | The schema 'Plan' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:5704:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:5725:5
 warning | PreCheck/SchemaMissingType | The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:5729:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:5750:5
 warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:5759:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:5780:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:5808:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:5829:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceGroup' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:5825:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:5846:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceGroupPatchable' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:5869:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:5890:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceGroupProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:5894:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:5915:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceGroupListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:5904:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:5925:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourcesMoveInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:5921:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:5942:5
 warning | PreCheck/SchemaMissingType | The schema 'ExportTemplateRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:5937:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:5958:5
 warning | PreCheck/SchemaMissingType | The schema 'TagCount' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:5965:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:5986:5
 warning | PreCheck/SchemaMissingType | The schema 'TagValue' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:5978:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:5999:5
 warning | PreCheck/SchemaMissingType | The schema 'TagDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:5997:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:6018:5
 warning | PreCheck/SchemaMissingType | The schema 'TagsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:6023:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:6044:5
 warning | PreCheck/SchemaMissingType | The schema 'TargetResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:6040:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:6061:5
 warning | PreCheck/SchemaMissingType | The schema 'HttpMessage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:6057:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:6078:5
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentOperationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:6066:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:6087:5
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentOperation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:6180:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:6201:5
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentOperationsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:6199:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:6220:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperationDisplayProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:6216:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:6237:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:6241:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:6262:5
 warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:6281:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:6302:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceGroupExportResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:6291:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:6312:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:6316:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:6337:9
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:6339:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:6360:5
 warning | PreCheck/SchemaMissingType | The schema 'TemplateHashResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:6358:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:6379:5
 warning | PreCheck/SchemaMissingType | The schema 'WhatIfPropertyChange' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:6371:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:6392:5
 warning | PreCheck/SchemaMissingType | The schema 'WhatIfChange' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:6439:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:6460:5
 warning | PreCheck/SchemaMissingType | The schema 'WhatIfOperationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:6521:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:6542:5
 warning | PreCheck/SchemaMissingType | The schema 'WhatIfOperationResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:6556:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:6577:5
 warning | PreCheck/SchemaMissingType | The schema 'Tags' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:6574:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:6595:5
 warning | PreCheck/SchemaMissingType | The schema 'ProviderPermissionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:6752:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:6773:5
 warning | PreCheck/SchemaMissingType | The schema 'ExpressionEvaluationOptions' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:6804:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json:6825:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'DeploymentParameter-value' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-07-01/resources.json#/components/schemas/DeploymentParameter-value
@@ -2932,143 +3119,145 @@ warning | DeprecatedConfig | Using directive.163.suppress which is deprecated an
 warning | DeprecatedConfig | Using directive.164.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtendedFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4530:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4560:5
 warning | PreCheck/SchemaMissingType | The schema 'GenericResourceFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4539:5
-warning | PreCheck/SchemaMissingType | The schema 'ResourceGroupFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4556:5
-warning | PreCheck/SchemaMissingType | The schema 'TemplateLink' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4569:5
+warning | PreCheck/SchemaMissingType | The schema 'ResourceGroupFilter' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4586:5
+warning | PreCheck/SchemaMissingType | The schema 'TemplateLink' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4599:5
 warning | PreCheck/SchemaMissingType | The schema 'ParametersLink' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4594:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4624:5
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4610:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4640:5
 warning | PreCheck/SchemaMissingType | The schema 'DebugSetting' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4713:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4743:5
 warning | PreCheck/SchemaMissingType | The schema 'Deployment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4722:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4752:5
 warning | PreCheck/SchemaMissingType | The schema 'ScopedDeployment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4745:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4775:5
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExportResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4769:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4799:5
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentWhatIf' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4778:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4808:5
 warning | PreCheck/SchemaMissingType | The schema 'ScopedDeploymentWhatIf' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4794:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4824:5
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentWhatIfProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4811:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4841:5
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentWhatIfSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4825:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4855:5
 warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4842:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4872:5
 warning | PreCheck/SchemaMissingType | The schema 'ApiProfile' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4851:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4881:5
 warning | PreCheck/SchemaMissingType | The schema 'AliasPathMetadata' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4865:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4895:5
 warning | PreCheck/SchemaMissingType | The schema 'AliasPath' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4945:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4975:5
 warning | PreCheck/SchemaMissingType | The schema 'AliasPattern' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:4970:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5000:5
 warning | PreCheck/SchemaMissingType | The schema 'Alias' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5005:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5035:5
 warning | PreCheck/SchemaMissingType | The schema 'ProviderExtendedLocation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5062:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5092:5
 warning | PreCheck/SchemaMissingType | The schema 'ProviderResourceType' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5082:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5112:5
 warning | PreCheck/SchemaMissingType | The schema 'Provider' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5164:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5194:5
 warning | PreCheck/SchemaMissingType | The schema 'BasicDependency' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5213:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5243:5
 warning | PreCheck/SchemaMissingType | The schema 'Dependency' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5230:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5260:5
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentPropertiesExtended' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5302:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5332:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceReference' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5445:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5475:5
 warning | PreCheck/SchemaMissingType | The schema 'OnErrorDeployment' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5455:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5485:5
 warning | PreCheck/SchemaMissingType | The schema 'OnErrorDeploymentExtended' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5476:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5506:5
+warning | PreCheck/SchemaMissingType | The schema 'DeploymentValidateResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5532:5
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentExtended' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5502:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5561:5
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5538:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5597:5
 warning | PreCheck/SchemaMissingType | The schema 'ProviderListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5555:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5614:5
 warning | PreCheck/SchemaMissingType | The schema 'ProviderResourceTypeListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5572:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5631:5
 warning | PreCheck/SchemaMissingType | The schema 'GenericResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5592:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5651:5
 warning | PreCheck/SchemaMissingType | The schema 'ExtendedLocation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5627:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5686:5
 warning | PreCheck/SchemaMissingType | The schema 'GenericResourceExpanded' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5647:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5706:5
 warning | PreCheck/SchemaMissingType | The schema 'Plan' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5674:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5733:5
 warning | PreCheck/SchemaMissingType | The schema 'Sku' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5699:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5758:5
 warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5729:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5788:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5778:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5837:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceGroup' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5795:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5854:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceGroupPatchable' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5839:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5898:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceGroupProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5864:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5923:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceGroupListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5874:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5933:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourcesMoveInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5891:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5950:5
 warning | PreCheck/SchemaMissingType | The schema 'ExportTemplateRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5907:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5966:5
 warning | PreCheck/SchemaMissingType | The schema 'TagCount' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5935:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5994:5
 warning | PreCheck/SchemaMissingType | The schema 'TagValue' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5948:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6007:5
 warning | PreCheck/SchemaMissingType | The schema 'TagDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5967:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6026:5
 warning | PreCheck/SchemaMissingType | The schema 'TagsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:5993:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6052:5
 warning | PreCheck/SchemaMissingType | The schema 'TargetResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6010:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6069:5
 warning | PreCheck/SchemaMissingType | The schema 'HttpMessage' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6027:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6086:5
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentOperationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6036:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6095:5
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentOperation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6150:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6209:5
 warning | PreCheck/SchemaMissingType | The schema 'DeploymentOperationsListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6169:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6228:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderOperationDisplayProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6186:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6245:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6211:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6270:5
 warning | PreCheck/SchemaMissingType | The schema 'SubResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6251:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6310:5
 warning | PreCheck/SchemaMissingType | The schema 'ResourceGroupExportResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6261:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6320:5
 warning | PreCheck/SchemaMissingType | The schema 'Operation-display' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6286:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6345:9
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6309:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6368:5
 warning | PreCheck/SchemaMissingType | The schema 'TemplateHashResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6328:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6387:5
 warning | PreCheck/SchemaMissingType | The schema 'WhatIfPropertyChange' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6341:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6400:5
 warning | PreCheck/SchemaMissingType | The schema 'WhatIfChange' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6409:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6468:5
 warning | PreCheck/SchemaMissingType | The schema 'WhatIfOperationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6503:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6561:5
 warning | PreCheck/SchemaMissingType | The schema 'WhatIfOperationResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6538:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6588:5
 warning | PreCheck/SchemaMissingType | The schema 'Tags' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6556:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6606:5
 warning | PreCheck/SchemaMissingType | The schema 'ProviderPermissionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6734:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6784:5
 warning | PreCheck/SchemaMissingType | The schema 'ExpressionEvaluationOptions' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6786:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json:6836:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Modeler/MissingType | The schema 'DeploymentParameter-value' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/resources/resource-manager/Microsoft.Resources/stable/2024-11-01/resources.json#/components/schemas/DeploymentParameter-value
@@ -3247,27 +3436,27 @@ warning | DeprecatedConfig | Using directive.164.suppress which is deprecated an
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Operation' (4 differences):
-  - properties.name.$ref: "#/components/schemas/schemas:70" => "#/components/schemas/schemas:142"
+  - properties.name.$ref: "#/components/schemas/schemas:70" => "#/components/schemas/schemas:123"
   - properties.name.description: "Operation name: {provider}/{resource}/{operation}" => "The name of the operation, as per Resource-Based Access Control (RBAC). Examples: \"Microsoft.Compute/virtualMachines/write\", \"Microsoft.Compute/virtualMachines/capture/action\""
   - properties.name.readOnly: <none> => true
-  - properties.display.$ref: "#/components/schemas/schemas:71" => "#/components/schemas/schemas:143"
+  - properties.display.$ref: "#/components/schemas/schemas:71" => "#/components/schemas/schemas:124"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Operation-display' (12 differences):
-  - properties.provider.$ref: "#/components/schemas/schemas:72" => "#/components/schemas/schemas:144"
+  - properties.provider.$ref: "#/components/schemas/schemas:72" => "#/components/schemas/schemas:125"
   - properties.provider.description: "Service provider: Microsoft.Resources" => "The localized friendly form of the resource provider name, e.g. \"Microsoft Monitoring Insights\" or \"Microsoft Compute\"."
   - properties.provider.readOnly: <none> => true
-  - properties.resource.$ref: "#/components/schemas/schemas:73" => "#/components/schemas/schemas:145"
+  - properties.resource.$ref: "#/components/schemas/schemas:73" => "#/components/schemas/schemas:126"
   - properties.resource.description: "Resource on which the operation is performed: Profile, endpoint, etc." => "The localized friendly name of the resource type related to this operation. E.g. \"Virtual Machines\" or \"Job Schedule Collections\"."
   - properties.resource.readOnly: <none> => true
-  - properties.operation.$ref: "#/components/schemas/schemas:74" => "#/components/schemas/schemas:146"
+  - properties.operation.$ref: "#/components/schemas/schemas:74" => "#/components/schemas/schemas:127"
   - properties.operation.description: "Operation type: Read, write, delete, etc." => "The concise, localized friendly name for the operation; suitable for dropdowns. E.g. \"Create or Update Virtual Machine\", \"Restart Virtual Machine\"."
   - properties.operation.readOnly: <none> => true
-  - properties.description.$ref: "#/components/schemas/schemas:75" => "#/components/schemas/schemas:147"
+  - properties.description.$ref: "#/components/schemas/schemas:75" => "#/components/schemas/schemas:128"
   - properties.description.description: "Description of the operation." => "The short, localized friendly description of the operation; suitable for tool tips and detailed views."
   - properties.description.readOnly: <none> => true
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'OperationListResult' (4 differences):
-  - properties.value.$ref: "#/components/schemas/schemas:79" => "#/components/schemas/schemas:151"
+  - properties.value.$ref: "#/components/schemas/schemas:79" => "#/components/schemas/schemas:132"
   - properties.value.readOnly: <none> => true
-  - properties.nextLink.$ref: "#/components/schemas/schemas:80" => "#/components/schemas/schemas:152"
+  - properties.nextLink.$ref: "#/components/schemas/schemas:80" => "#/components/schemas/schemas:133"
   - properties.nextLink.readOnly: <none> => true
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorResponse' (7 differences):
   - title: "Error response" => "Error Response"
@@ -6284,13 +6473,13 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'OperationListResult
   - properties.value.x-ms-identifiers: ["name"] => <none>
   - properties.value.$ref: "#/components/schemas/schemas:72" => "#/components/schemas/schemas:343"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorResponse' (7 differences):
-  - title: "Error response" => "Error Response"
-  - properties.error: {"description":"The error object.","$ref":"#/components/schemas/schemas:543"} => <none>
-  - properties.code: <none> => {"$ref":"#/components/schemas/schemas:642","description":"The error code.","readOnly":true}
-  - properties.message: <none> => {"$ref":"#/components/schemas/schemas:643","description":"The error message.","readOnly":true}
-  - properties.target: <none> => {"$ref":"#/components/schemas/schemas:644","description":"The error target.","readOnly":true}
-  - properties.details: <none> => {"x-ms-identifiers":["message","target"],"$ref":"#/components/schemas/schemas:645","description":"The error details.","readOnly":true}
-  - properties.additionalInfo: <none> => {"x-ms-identifiers":[],"$ref":"#/components/schemas/schemas:646","description":"The error additional info.","readOnly":true}
+  - title: "Error Response" => "Error response"
+  - properties.code: {"$ref":"#/components/schemas/schemas:544","description":"The error code.","readOnly":true} => <none>
+  - properties.message: {"$ref":"#/components/schemas/schemas:545","description":"The error message.","readOnly":true} => <none>
+  - properties.target: {"$ref":"#/components/schemas/schemas:546","description":"The error target.","readOnly":true} => <none>
+  - properties.details: {"x-ms-identifiers":["message","target"],"$ref":"#/components/schemas/schemas:547","description":"The error details.","readOnly":true} => <none>
+  - properties.additionalInfo: {"x-ms-identifiers":[],"$ref":"#/components/schemas/schemas:548","description":"The error additional info.","readOnly":true} => <none>
+  - properties.error: <none> => {"description":"The error object.","$ref":"#/components/schemas/schemas:624"}
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorResponse' -> 'ErrorResponseAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'OperationListResult' -> 'OperationListResultAutoGenerated'
 warning | Skipping path '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName}': Unable to process parameterized provider namespace "{resourceProviderNamespace}"

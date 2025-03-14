@@ -892,7 +892,7 @@
 
 ## ContentPathMap
 ### Properties
-* **contentType**: 'AnalyticRule' | 'Workbook' | string: Content type.
+* **contentType**: 'AnalyticsRule' | 'Workbook' | string: Content type.
 * **path**: string: The path to the content.
 
 ## DataConnectorDataTypeCommon
@@ -1824,7 +1824,7 @@
 
 ## SourceControlProperties
 ### Properties
-* **contentTypes**: ('AnalyticRule' | 'Workbook' | string)[] (Required): Array of source control content types.
+* **contentTypes**: ('AnalyticsRule' | 'Workbook' | string)[] (Required): Array of source control content types.
 * **description**: string: A description of the source control
 * **displayName**: string (Required): The display name of the source control
 * **id**: string: The id (a Guid) of the source control

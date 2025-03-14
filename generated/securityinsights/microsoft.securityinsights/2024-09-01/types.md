@@ -302,17 +302,6 @@
 * **properties**: [AnomalySecurityMLAnalyticsSettingsProperties](#anomalysecuritymlanalyticssettingsproperties): Anomaly Security ML Analytics Settings properties
 
 
-## Resource Microsoft.SecurityInsights/sourcecontrols@2024-09-01
-* **Valid Scope(s)**: Extension
-### Properties
-* **apiVersion**: '2024-09-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string: Etag of the azure resource
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [SourceControlProperties](#sourcecontrolproperties) (Required): source control properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **type**: 'Microsoft.SecurityInsights/sourcecontrols' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.SecurityInsights/threatIntelligence/indicators@2024-09-01
 * **Valid Scope(s)**: Extension
 ### Properties
@@ -525,11 +514,6 @@
 * **awsRoleArn**: string: The Aws Role Arn (with CloudTrailReadOnly policy) that is used to access the Aws account.
 * **dataTypes**: [AwsCloudTrailDataConnectorDataTypes](#awscloudtraildataconnectordatatypes): The available data types for the connector.
 
-## AzureDevOpsResourceInfo
-### Properties
-* **pipelineId**: string: Id of the pipeline created for the source-control.
-* **serviceConnectionId**: string: Id of the service-connection created for the source-control.
-
 ## BookmarkProperties
 ### Properties
 * **created**: string: The time the bookmark was created
@@ -740,20 +724,6 @@ The logo value should be in SVG format.
 * **dataCollectionRuleImmutableId**: string (Required): The data collection rule immutable id, the rule defines the transformation and data destination.
 * **streamName**: string (Required): The stream we are sending the data to.
 
-## Deployment
-### Properties
-* **deploymentId**: string: Deployment identifier.
-* **deploymentLogsUrl**: string: Url to access repository action logs.
-* **deploymentResult**: 'Canceled' | 'Failed' | 'Success' | string: The outcome of the deployment.
-* **deploymentState**: 'Canceling' | 'Completed' | 'In_Progress' | 'Queued' | string: Current status of the deployment.
-* **deploymentTime**: string: The time when the deployment finished.
-
-## DeploymentInfo
-### Properties
-* **deployment**: [Deployment](#deployment): Deployment information.
-* **deploymentFetchStatus**: 'NotFound' | 'Success' | 'Unauthorized' | string: Status while fetching the last deployment.
-* **message**: string: Additional details about the deployment that can be shown to the user.
-
 ## EntityCommonPropertiesAdditionalData
 ### Properties
 ### Additional Properties
@@ -806,10 +776,6 @@ The logo value should be in SVG format.
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## GitHubResourceInfo
-### Properties
-* **appInstallationId**: string: GitHub application installation id.
 
 ## GraphQuery
 ### Properties
@@ -1201,39 +1167,12 @@ For Example: instruction step 1 might contain inner instruction steps: [instruct
 * **threatAnalysisTechniques**: string[]: the techniques the resource covers, these have to be aligned with the tactics being used
 * **version**: string: Version of the content.  Default and recommended format is numeric (e.g. 1, 1.0, 1.0.0, 1.0.0.0), following ARM metadata best practices.  Can also be any string, but then we cannot guarantee any version checks
 
-## PullRequest
-### Properties
-* **state**: 'Closed' | 'Open' | string (ReadOnly): State of the pull request
-* **url**: string (ReadOnly): URL of pull request
-
 ## RelationProperties
 ### Properties
 * **relatedResourceId**: string (Required): The resource ID of the related resource
 * **relatedResourceKind**: string (ReadOnly): The resource kind of the related resource
 * **relatedResourceName**: string (ReadOnly): The name of the related resource
 * **relatedResourceType**: string (ReadOnly): The resource type of the related resource
-
-## Repository
-### Properties
-* **branch**: string (Required): Branch name of repository.
-* **deploymentLogsUrl**: string (ReadOnly): Url to access repository action logs.
-* **displayUrl**: string: Display url of repository.
-* **url**: string (Required): Url of repository.
-
-## RepositoryAccess
-### Properties
-* **clientId**: string: OAuth ClientId. Required when `kind` is `OAuth`
-* **code**: string {sensitive}: OAuth Code. Required when `kind` is `OAuth`
-* **installationId**: string: Application installation ID. Required when `kind` is `App`. Supported by `GitHub` only.
-* **kind**: 'App' | 'OAuth' | 'PAT' | string (Required): The kind of repository access credentials
-* **state**: string {sensitive}: OAuth State. Required when `kind` is `OAuth`
-* **token**: string {sensitive}: Personal Access Token. Required when `kind` is `PAT`
-
-## RepositoryResourceInfo
-### Properties
-* **azureDevOpsResourceInfo**: [AzureDevOpsResourceInfo](#azuredevopsresourceinfo) (ReadOnly): Resources created in Azure DevOps for this source-control.
-* **gitHubResourceInfo**: [GitHubResourceInfo](#githubresourceinfo) (ReadOnly): Resources created in GitHub for this source-control.
-* **webhook**: [Webhook](#webhook): The webhook object created for the source-control.
 
 ## ResourceProviderRequiredPermissions
 ### Properties
@@ -1360,13 +1299,6 @@ For Example: instruction step 1 might contain inner instruction steps: [instruct
 ### Properties
 * **customerManagedKey**: bool: Flag that indicates the status of the CMK setting
 
-## ServicePrincipal
-### Properties
-* **appId**: string (ReadOnly): App id of service principal.
-* **credentialsExpireOn**: string: Expiration time of service principal credentials.
-* **id**: string (ReadOnly): Id of service principal.
-* **tenantId**: string (ReadOnly): Tenant id of service principal.
-
 ## SessionAuthModelHeaders
 ### Properties
 ### Additional Properties
@@ -1386,21 +1318,6 @@ For Example: instruction step 1 might contain inner instruction steps: [instruct
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
-
-## SourceControlProperties
-### Properties
-* **contentTypes**: ('AnalyticRule' | 'AutomationRule' | 'HuntingQuery' | 'Parser' | 'Playbook' | 'Workbook' | string)[] (Required): Array of source control content types.
-* **description**: string: A description of the source control
-* **displayName**: string (Required): The display name of the source control
-* **id**: string (ReadOnly): The id (a Guid) of the source control
-* **lastDeploymentInfo**: [DeploymentInfo](#deploymentinfo) (ReadOnly): Information regarding the latest deployment for the source control.
-* **pullRequest**: [PullRequest](#pullrequest) (ReadOnly): Information regarding the pull request of the source control.
-* **repository**: [Repository](#repository) (Required): Repository metadata.
-* **repositoryAccess**: [RepositoryAccess](#repositoryaccess) (WriteOnly): Repository access credentials. This is write-only object and it never returns back to a user.
-* **repositoryResourceInfo**: [RepositoryResourceInfo](#repositoryresourceinfo): Information regarding the resources created in user's repository.
-* **repoType**: 'AzureDevOps' | 'Github' | string (Required): The repository type of the source control
-* **servicePrincipal**: [ServicePrincipal](#serviceprincipal): Service principal metadata.
-* **version**: 'V1' | 'V2' | string (ReadOnly): The version number associated with the source control
 
 ## SystemData
 ### Properties
@@ -1562,7 +1479,7 @@ For Example: instruction step 1 might contain inner instruction steps: [instruct
 * **provisioningState**: 'Canceled' | 'Deleting' | 'Failed' | 'InProgress' | 'New' | 'Succeeded' | 'Uploading' | string (ReadOnly): Describes provisioning state
 * **rawContent**: string: The raw content that represents to watchlist items to create. In case of csv/tsv content type, it's the content of the file that will parsed by the endpoint
 * **source**: string: The filename of the watchlist, called 'source'
-* **sourceType**: 'Local file' | 'Remote storage' | string: The sourceType of the watchlist
+* **sourceType**: 'AzureStorage' | 'Local' | string: The sourceType of the watchlist
 * **tenantId**: string: The tenantId where the watchlist belongs to
 * **updated**: string: The last time the watchlist was updated
 * **updatedBy**: [UserInfo](#userinfo): Describes a user that updated the watchlist
@@ -1570,11 +1487,4 @@ For Example: instruction step 1 might contain inner instruction steps: [instruct
 * **watchlistAlias**: string: The alias of the watchlist
 * **watchlistId**: string: The id (a Guid) of the watchlist
 * **watchlistType**: string: The type of the watchlist
-
-## Webhook
-### Properties
-* **rotateWebhookSecret**: bool: A flag to instruct the backend service to rotate webhook secret.
-* **webhookId**: string (ReadOnly): Unique identifier for the webhook.
-* **webhookSecretUpdateTime**: string (ReadOnly): Time when the webhook secret was updated.
-* **webhookUrl**: string (ReadOnly): URL that gets invoked by the webhook.
 

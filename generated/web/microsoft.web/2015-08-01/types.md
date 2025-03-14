@@ -248,7 +248,7 @@
             Changing this value is not recommended except for compatibility reasons.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **issuer**: string: Gets or sets the OpenID Connect Issuer URI that represents the entity which issues access tokens for this application.
-            When using Azure Active Directory, this value is the URI of the directory tenant, e.g. https://sts.windows.net/{tenant-guid}/.
+            When using Azure Active Directory, this value is the URI of the directory tenant, e.g. `https://sts.windows.net/{tenant-guid}/`.
             This URI is a case-sensitive identifier for the token issuer.
             More information on OpenID Connect Discovery: http://openid.net/specs/openid-connect-discovery-1_0.html
 * **microsoftAccountClientId**: string: Gets or sets the OAuth 2.0 client ID that was created for the app used for authentication.
@@ -503,7 +503,7 @@
             Changing this value is not recommended except for compatibility reasons.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **issuer**: string: Gets or sets the OpenID Connect Issuer URI that represents the entity which issues access tokens for this application.
-            When using Azure Active Directory, this value is the URI of the directory tenant, e.g. https://sts.windows.net/{tenant-guid}/.
+            When using Azure Active Directory, this value is the URI of the directory tenant, e.g. `https://sts.windows.net/{tenant-guid}/`.
             This URI is a case-sensitive identifier for the token issuer.
             More information on OpenID Connect Discovery: http://openid.net/specs/openid-connect-discovery-1_0.html
 * **microsoftAccountClientId**: string: Gets or sets the OAuth 2.0 client ID that was created for the app used for authentication.
@@ -1151,8 +1151,7 @@
 ## RampUpRule
 ### Properties
 * **actionHostName**: string: Hostname of a slot to which the traffic will be redirected if decided to. E.g. mysite-stage.azurewebsites.net
-* **changeDecisionCallbackUrl**: string: Custom decision algorithm can be provided in TiPCallback site extension which Url can be specified. See TiPCallback site extension for the scaffold and contracts.
-            https://www.siteextensions.net/packages/TiPCallback/
+* **changeDecisionCallbackUrl**: string: Custom decision algorithm can be provided in TiPCallback site extension which Url can be specified.
 * **changeIntervalInMinutes**: int: [Optional] Specifies interval in minutes to reevaluate ReroutePercentage
 * **changeStep**: int: [Optional] In auto ramp up scenario this is the step to add/remove from {Microsoft.Web.Hosting.Administration.RampUpRule.ReroutePercentage} until it reaches 
             {Microsoft.Web.Hosting.Administration.RampUpRule.MinReroutePercentage} or {Microsoft.Web.Hosting.Administration.RampUpRule.MaxReroutePercentage}. Site metrics are checked every N minutes specified in {Microsoft.Web.Hosting.Administration.RampUpRule.ChangeIntervalInMinutes}.

@@ -1022,7 +1022,7 @@
 
 ## ContentPathMap
 ### Properties
-* **contentType**: 'AnalyticRule' | 'Workbook' | string: Content type.
+* **contentType**: 'AnalyticsRule' | 'Workbook' | string: Content type.
 * **path**: string: The path to the content.
 
 ## DataConnectorDataTypeCommon
@@ -2063,7 +2063,7 @@
 
 ## SourceControlProperties
 ### Properties
-* **contentTypes**: ('AnalyticRule' | 'Workbook' | string)[] (Required): Array of source control content types.
+* **contentTypes**: ('AnalyticsRule' | 'Workbook' | string)[] (Required): Array of source control content types.
 * **description**: string: A description of the source control
 * **displayName**: string (Required): The display name of the source control
 * **id**: string: The id (a Guid) of the source control
@@ -2304,7 +2304,7 @@
 * **provider**: string (Required): The provider of the watchlist
 * **rawContent**: string: The raw content that represents to watchlist items to create. In case of csv/tsv content type, it's the content of the file that will parsed by the endpoint
 * **source**: string: The filename of the watchlist, called 'source'
-* **sourceType**: 'Local file' | 'Remote storage' | string: The sourceType of the watchlist
+* **sourceType**: 'AzureStorage' | 'Local' | string: The sourceType of the watchlist
 * **tenantId**: string: The tenantId where the watchlist belongs to
 * **updated**: string: The last time the watchlist was updated
 * **updatedBy**: [UserInfo](#userinfo): Describes a user that updated the watchlist

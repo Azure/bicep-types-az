@@ -22606,7 +22606,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/1714"
+          "$ref": "#/1713"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -22661,10 +22661,9 @@
       },
       "syndicatedRegistries": {
         "type": {
-          "$ref": "#/1693"
+          "$ref": "#/1692"
         },
-        "flags": 0,
-        "description": "List of tuples containing Guid and SyndicatedRegistry"
+        "flags": 0
       },
       "mlFlowRegistryUri": {
         "type": {
@@ -22675,7 +22674,7 @@
       },
       "registryPrivateEndpointConnections": {
         "type": {
-          "$ref": "#/1705"
+          "$ref": "#/1704"
         },
         "flags": 0,
         "description": "Private endpoint connections info used for pending connections in private link portal"
@@ -22689,7 +22688,7 @@
       },
       "regionDetails": {
         "type": {
-          "$ref": "#/1713"
+          "$ref": "#/1712"
         },
         "flags": 0,
         "description": "Details of each region the registry is in"
@@ -22745,32 +22744,12 @@
     "$type": "ObjectType",
     "name": "RegistrySyndicatedRegistriesItem",
     "properties": {
-      "syndicatedRegistryGuid": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The Guid of the syndicated registry"
-      },
-      "syndicatedRegistry": {
-        "type": {
-          "$ref": "#/1692"
-        },
-        "flags": 0,
-        "description": "A registry that is syndicated"
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "SyndicatedRegistry",
-    "properties": {
       "registryId": {
         "type": {
           "$ref": "#/2"
         },
         "flags": 0,
-        "description": "The Registry Id of the syndicated Registry"
+        "description": "Registry id guid of a destination registry that this registry can syndicate to"
       }
     }
   },
@@ -22800,7 +22779,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/1695"
+          "$ref": "#/1694"
         },
         "flags": 0,
         "description": "Properties of the Private Endpoint Connection"
@@ -22813,21 +22792,21 @@
     "properties": {
       "groupIds": {
         "type": {
-          "$ref": "#/1696"
+          "$ref": "#/1695"
         },
         "flags": 0,
         "description": "The group ids"
       },
       "privateEndpoint": {
         "type": {
-          "$ref": "#/1697"
+          "$ref": "#/1696"
         },
         "flags": 0,
         "description": "The PE network resource that is linked to this PE connection."
       },
       "registryPrivateLinkServiceConnectionState": {
         "type": {
-          "$ref": "#/1698"
+          "$ref": "#/1697"
         },
         "flags": 0,
         "description": "The connection state."
@@ -22887,7 +22866,7 @@
       },
       "status": {
         "type": {
-          "$ref": "#/1704"
+          "$ref": "#/1703"
         },
         "flags": 0,
         "description": "Connection status of the service consumer with the service provider"
@@ -22918,6 +22897,9 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/1698"
+      },
+      {
         "$ref": "#/1699"
       },
       {
@@ -22930,9 +22912,6 @@
         "$ref": "#/1702"
       },
       {
-        "$ref": "#/1703"
-      },
-      {
         "$ref": "#/2"
       }
     ]
@@ -22940,7 +22919,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1694"
+      "$ref": "#/1693"
     }
   },
   {
@@ -22949,7 +22928,7 @@
     "properties": {
       "acrDetails": {
         "type": {
-          "$ref": "#/1709"
+          "$ref": "#/1708"
         },
         "flags": 0,
         "description": "List of ACR accounts"
@@ -22963,7 +22942,7 @@
       },
       "storageAccountDetails": {
         "type": {
-          "$ref": "#/1712"
+          "$ref": "#/1711"
         },
         "flags": 0,
         "description": "List of storage accounts"
@@ -22976,7 +22955,7 @@
     "properties": {
       "systemCreatedAcrAccount": {
         "type": {
-          "$ref": "#/1708"
+          "$ref": "#/1707"
         },
         "flags": 0,
         "description": "Details of system created ACR account to be used for the Registry"
@@ -23013,7 +22992,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1707"
+      "$ref": "#/1706"
     }
   },
   {
@@ -23022,7 +23001,7 @@
     "properties": {
       "systemCreatedStorageAccount": {
         "type": {
-          "$ref": "#/1711"
+          "$ref": "#/1710"
         },
         "flags": 0,
         "description": "Details of system created storage account to be used for the registry"
@@ -23073,13 +23052,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1710"
+      "$ref": "#/1709"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1706"
+      "$ref": "#/1705"
     }
   },
   {
@@ -23124,21 +23103,21 @@
       },
       "name": {
         "type": {
-          "$ref": "#/1716"
+          "$ref": "#/1715"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/1717"
+          "$ref": "#/1716"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1718"
+          "$ref": "#/1717"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -23164,7 +23143,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/1720"
+          "$ref": "#/1719"
         },
         "flags": 1,
         "description": "Additional attributes of the entity."
@@ -23178,7 +23157,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/1833"
+          "$ref": "#/1832"
         },
         "flags": 0,
         "description": "Dictionary of <string>"
@@ -23226,13 +23205,13 @@
       },
       "associatedWorkspaces": {
         "type": {
-          "$ref": "#/1721"
+          "$ref": "#/1720"
         },
         "flags": 0
       },
       "containerRegistries": {
         "type": {
-          "$ref": "#/1722"
+          "$ref": "#/1721"
         },
         "flags": 0
       },
@@ -23285,19 +23264,19 @@
       },
       "encryption": {
         "type": {
-          "$ref": "#/1723"
+          "$ref": "#/1722"
         },
         "flags": 0
       },
       "existingWorkspaces": {
         "type": {
-          "$ref": "#/1729"
+          "$ref": "#/1728"
         },
         "flags": 0
       },
       "featureStoreSettings": {
         "type": {
-          "$ref": "#/1730"
+          "$ref": "#/1729"
         },
         "flags": 0,
         "description": "Settings for feature store type workspace."
@@ -23331,7 +23310,7 @@
       },
       "ipAllowlist": {
         "type": {
-          "$ref": "#/1732"
+          "$ref": "#/1731"
         },
         "flags": 0,
         "description": "The list of IPv4  addresses that are allowed to access the workspace."
@@ -23345,13 +23324,13 @@
       },
       "keyVaults": {
         "type": {
-          "$ref": "#/1733"
+          "$ref": "#/1732"
         },
         "flags": 0
       },
       "managedNetwork": {
         "type": {
-          "$ref": "#/1734"
+          "$ref": "#/1733"
         },
         "flags": 0,
         "description": "Managed Network settings for a machine learning workspace."
@@ -23365,14 +23344,14 @@
       },
       "networkAcls": {
         "type": {
-          "$ref": "#/1778"
+          "$ref": "#/1777"
         },
         "flags": 0,
         "description": "A set of rules governing the network accessibility of the workspace."
       },
       "notebookInfo": {
         "type": {
-          "$ref": "#/1784"
+          "$ref": "#/1783"
         },
         "flags": 2,
         "description": "The notebook info of Azure ML workspace."
@@ -23386,7 +23365,7 @@
       },
       "privateEndpointConnections": {
         "type": {
-          "$ref": "#/1802"
+          "$ref": "#/1801"
         },
         "flags": 2,
         "description": "The list of private endpoint connections in the workspace."
@@ -23407,28 +23386,28 @@
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/1810"
+          "$ref": "#/1809"
         },
         "flags": 2,
         "description": "The current deployment state of workspace resource. The provisioningState is to indicate states for resource provisioning."
       },
       "publicNetworkAccess": {
         "type": {
-          "$ref": "#/1813"
+          "$ref": "#/1812"
         },
         "flags": 0,
         "description": "Whether requests from Public Network are allowed."
       },
       "serverlessComputeSettings": {
         "type": {
-          "$ref": "#/1814"
+          "$ref": "#/1813"
         },
         "flags": 0,
         "description": "Settings for serverless compute in a workspace"
       },
       "serviceManagedResourcesSettings": {
         "type": {
-          "$ref": "#/1815"
+          "$ref": "#/1814"
         },
         "flags": 0,
         "description": "The service managed resource settings."
@@ -23442,7 +23421,7 @@
       },
       "sharedPrivateLinkResources": {
         "type": {
-          "$ref": "#/1825"
+          "$ref": "#/1824"
         },
         "flags": 0,
         "description": "The list of shared private link resources in this workspace."
@@ -23463,7 +23442,7 @@
       },
       "storageAccounts": {
         "type": {
-          "$ref": "#/1826"
+          "$ref": "#/1825"
         },
         "flags": 0
       },
@@ -23476,7 +23455,7 @@
       },
       "systemDatastoresAuthMode": {
         "type": {
-          "$ref": "#/1830"
+          "$ref": "#/1829"
         },
         "flags": 0,
         "description": "The auth mode used for accessing the system datastores of the workspace."
@@ -23497,7 +23476,7 @@
       },
       "workspaceHubConfig": {
         "type": {
-          "$ref": "#/1831"
+          "$ref": "#/1830"
         },
         "flags": 0,
         "description": "WorkspaceHub's configuration object."
@@ -23536,14 +23515,14 @@
       },
       "identity": {
         "type": {
-          "$ref": "#/1724"
+          "$ref": "#/1723"
         },
         "flags": 0,
         "description": "Identity to be used with the keyVault"
       },
       "keyVaultProperties": {
         "type": {
-          "$ref": "#/1725"
+          "$ref": "#/1724"
         },
         "flags": 1,
         "description": "KeyVault details to do the encryption"
@@ -23557,7 +23536,7 @@
       },
       "status": {
         "type": {
-          "$ref": "#/1728"
+          "$ref": "#/1727"
         },
         "flags": 1,
         "description": "Indicates whether or not the encryption is enabled for the workspace."
@@ -23623,10 +23602,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1726"
+        "$ref": "#/1725"
       },
       {
-        "$ref": "#/1727"
+        "$ref": "#/1726"
       },
       {
         "$ref": "#/2"
@@ -23645,7 +23624,7 @@
     "properties": {
       "computeRuntime": {
         "type": {
-          "$ref": "#/1731"
+          "$ref": "#/1730"
         },
         "flags": 0
       },
@@ -23693,14 +23672,14 @@
     "properties": {
       "firewallSku": {
         "type": {
-          "$ref": "#/1737"
+          "$ref": "#/1736"
         },
         "flags": 0,
         "description": "Firewall Sku used for FQDN Rules"
       },
       "isolationMode": {
         "type": {
-          "$ref": "#/1741"
+          "$ref": "#/1740"
         },
         "flags": 0,
         "description": "Isolation mode for the managed network of a machine learning workspace."
@@ -23713,21 +23692,21 @@
       },
       "outboundRules": {
         "type": {
-          "$ref": "#/1768"
+          "$ref": "#/1767"
         },
         "flags": 0,
         "description": "Dictionary of <OutboundRule>"
       },
       "status": {
         "type": {
-          "$ref": "#/1769"
+          "$ref": "#/1768"
         },
         "flags": 0,
         "description": "Status of the Provisioning for the managed network of a machine learning workspace."
       },
       "changeableIsolationModes": {
         "type": {
-          "$ref": "#/1777"
+          "$ref": "#/1776"
         },
         "flags": 2
       }
@@ -23745,10 +23724,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1735"
+        "$ref": "#/1734"
       },
       {
-        "$ref": "#/1736"
+        "$ref": "#/1735"
       },
       {
         "$ref": "#/2"
@@ -23771,13 +23750,13 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/1737"
+      },
+      {
         "$ref": "#/1738"
       },
       {
         "$ref": "#/1739"
-      },
-      {
-        "$ref": "#/1740"
       },
       {
         "$ref": "#/2"
@@ -23791,20 +23770,20 @@
     "baseProperties": {
       "category": {
         "type": {
-          "$ref": "#/1747"
+          "$ref": "#/1746"
         },
         "flags": 0,
         "description": "Category of a managed network Outbound Rule of a machine learning workspace."
       },
       "parentRuleNames": {
         "type": {
-          "$ref": "#/1748"
+          "$ref": "#/1747"
         },
         "flags": 2
       },
       "status": {
         "type": {
-          "$ref": "#/1751"
+          "$ref": "#/1750"
         },
         "flags": 0,
         "description": "Type of a managed network Outbound Rule of a machine learning workspace."
@@ -23812,13 +23791,13 @@
     },
     "elements": {
       "FQDN": {
-        "$ref": "#/1752"
+        "$ref": "#/1751"
       },
       "PrivateEndpoint": {
-        "$ref": "#/1754"
+        "$ref": "#/1753"
       },
       "ServiceTag": {
-        "$ref": "#/1761"
+        "$ref": "#/1760"
       }
     }
   },
@@ -23842,6 +23821,9 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/1742"
+      },
+      {
         "$ref": "#/1743"
       },
       {
@@ -23849,9 +23831,6 @@
       },
       {
         "$ref": "#/1745"
-      },
-      {
-        "$ref": "#/1746"
       },
       {
         "$ref": "#/2"
@@ -23876,10 +23855,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1749"
+        "$ref": "#/1748"
       },
       {
-        "$ref": "#/1750"
+        "$ref": "#/1749"
       },
       {
         "$ref": "#/2"
@@ -23898,7 +23877,7 @@
       },
       "type": {
         "type": {
-          "$ref": "#/1753"
+          "$ref": "#/1752"
         },
         "flags": 1,
         "description": "Type of a managed network Outbound Rule of a machine learning workspace."
@@ -23915,20 +23894,20 @@
     "properties": {
       "destination": {
         "type": {
-          "$ref": "#/1755"
+          "$ref": "#/1754"
         },
         "flags": 0,
         "description": "Private Endpoint destination for a Private Endpoint Outbound Rule for the managed network of a machine learning workspace."
       },
       "fqdns": {
         "type": {
-          "$ref": "#/1759"
+          "$ref": "#/1758"
         },
         "flags": 0
       },
       "type": {
         "type": {
-          "$ref": "#/1760"
+          "$ref": "#/1759"
         },
         "flags": 1,
         "description": "Type of a managed network Outbound Rule of a machine learning workspace."
@@ -23953,7 +23932,7 @@
       },
       "sparkStatus": {
         "type": {
-          "$ref": "#/1758"
+          "$ref": "#/1757"
         },
         "flags": 0,
         "description": "Type of a managed network Outbound Rule of a machine learning workspace."
@@ -23978,10 +23957,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1756"
+        "$ref": "#/1755"
       },
       {
-        "$ref": "#/1757"
+        "$ref": "#/1756"
       },
       {
         "$ref": "#/2"
@@ -24004,14 +23983,14 @@
     "properties": {
       "destination": {
         "type": {
-          "$ref": "#/1762"
+          "$ref": "#/1761"
         },
         "flags": 0,
         "description": "Service Tag destination for a Service Tag Outbound Rule for the managed network of a machine learning workspace."
       },
       "type": {
         "type": {
-          "$ref": "#/1767"
+          "$ref": "#/1766"
         },
         "flags": 1,
         "description": "Type of a managed network Outbound Rule of a machine learning workspace."
@@ -24024,14 +24003,14 @@
     "properties": {
       "action": {
         "type": {
-          "$ref": "#/1765"
+          "$ref": "#/1764"
         },
         "flags": 0,
         "description": "The action enum for networking rule."
       },
       "addressPrefixes": {
         "type": {
-          "$ref": "#/1766"
+          "$ref": "#/1765"
         },
         "flags": 0,
         "description": "Optional, if provided, the ServiceTag property will be ignored."
@@ -24068,10 +24047,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1763"
+        "$ref": "#/1762"
       },
       {
-        "$ref": "#/1764"
+        "$ref": "#/1763"
       },
       {
         "$ref": "#/2"
@@ -24093,7 +24072,7 @@
     "name": "ManagedNetworkSettingsOutboundRules",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/1742"
+      "$ref": "#/1741"
     }
   },
   {
@@ -24108,7 +24087,7 @@
       },
       "status": {
         "type": {
-          "$ref": "#/1772"
+          "$ref": "#/1771"
         },
         "flags": 0,
         "description": "Status for the managed network of a machine learning workspace."
@@ -24127,10 +24106,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1770"
+        "$ref": "#/1769"
       },
       {
-        "$ref": "#/1771"
+        "$ref": "#/1770"
       },
       {
         "$ref": "#/2"
@@ -24153,13 +24132,13 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/1772"
+      },
+      {
         "$ref": "#/1773"
       },
       {
         "$ref": "#/1774"
-      },
-      {
-        "$ref": "#/1775"
       },
       {
         "$ref": "#/2"
@@ -24169,7 +24148,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1776"
+      "$ref": "#/1775"
     }
   },
   {
@@ -24178,14 +24157,14 @@
     "properties": {
       "defaultAction": {
         "type": {
-          "$ref": "#/1781"
+          "$ref": "#/1780"
         },
         "flags": 0,
         "description": "The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated."
       },
       "ipRules": {
         "type": {
-          "$ref": "#/1783"
+          "$ref": "#/1782"
         },
         "flags": 0,
         "description": "Rules governing the accessibility of a resource from a specific ip address or ip range."
@@ -24204,10 +24183,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1779"
+        "$ref": "#/1778"
       },
       {
-        "$ref": "#/1780"
+        "$ref": "#/1779"
       },
       {
         "$ref": "#/2"
@@ -24230,7 +24209,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1782"
+      "$ref": "#/1781"
     }
   },
   {
@@ -24251,7 +24230,7 @@
       },
       "notebookPreparationError": {
         "type": {
-          "$ref": "#/1785"
+          "$ref": "#/1784"
         },
         "flags": 0,
         "description": "The error that occurs when preparing notebook."
@@ -24303,7 +24282,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/1787"
+          "$ref": "#/1786"
         },
         "flags": 0,
         "description": "Private endpoint connection properties."
@@ -24317,7 +24296,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/1801"
+          "$ref": "#/1800"
         },
         "flags": 0,
         "description": "Dictionary of <string>"
@@ -24358,21 +24337,21 @@
     "properties": {
       "privateEndpoint": {
         "type": {
-          "$ref": "#/1788"
+          "$ref": "#/1787"
         },
         "flags": 0,
         "description": "The Private Endpoint resource."
       },
       "privateLinkServiceConnectionState": {
         "type": {
-          "$ref": "#/1789"
+          "$ref": "#/1788"
         },
         "flags": 0,
         "description": "The connection state."
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/1800"
+          "$ref": "#/1799"
         },
         "flags": 0,
         "description": "The current provisioning state."
@@ -24419,7 +24398,7 @@
       },
       "status": {
         "type": {
-          "$ref": "#/1795"
+          "$ref": "#/1794"
         },
         "flags": 0,
         "description": "Connection status of the service consumer with the service provider"
@@ -24450,6 +24429,9 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/1789"
+      },
+      {
         "$ref": "#/1790"
       },
       {
@@ -24460,9 +24442,6 @@
       },
       {
         "$ref": "#/1793"
-      },
-      {
-        "$ref": "#/1794"
       },
       {
         "$ref": "#/2"
@@ -24489,6 +24468,9 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/1795"
+      },
+      {
         "$ref": "#/1796"
       },
       {
@@ -24496,9 +24478,6 @@
       },
       {
         "$ref": "#/1798"
-      },
-      {
-        "$ref": "#/1799"
       },
       {
         "$ref": "#/2"
@@ -24516,7 +24495,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1786"
+      "$ref": "#/1785"
     }
   },
   {
@@ -24551,6 +24530,9 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/1802"
+      },
+      {
         "$ref": "#/1803"
       },
       {
@@ -24569,9 +24551,6 @@
         "$ref": "#/1808"
       },
       {
-        "$ref": "#/1809"
-      },
-      {
         "$ref": "#/2"
       }
     ]
@@ -24588,10 +24567,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/1811"
+        "$ref": "#/1810"
       },
       {
-        "$ref": "#/1812"
+        "$ref": "#/1811"
       },
       {
         "$ref": "#/2"
@@ -24624,7 +24603,7 @@
     "properties": {
       "cosmosDb": {
         "type": {
-          "$ref": "#/1816"
+          "$ref": "#/1815"
         },
         "flags": 0
       }
@@ -24655,7 +24634,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/1818"
+          "$ref": "#/1817"
         },
         "flags": 0,
         "description": "Properties of a shared private link resource."
@@ -24689,7 +24668,7 @@
       },
       "status": {
         "type": {
-          "$ref": "#/1824"
+          "$ref": "#/1823"
         },
         "flags": 0,
         "description": "Connection status of the service consumer with the service provider"
@@ -24720,6 +24699,9 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/1818"
+      },
+      {
         "$ref": "#/1819"
       },
       {
@@ -24732,9 +24714,6 @@
         "$ref": "#/1822"
       },
       {
-        "$ref": "#/1823"
-      },
-      {
         "$ref": "#/2"
       }
     ]
@@ -24742,7 +24721,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/1817"
+      "$ref": "#/1816"
     }
   },
   {
@@ -24767,13 +24746,13 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/1826"
+      },
+      {
         "$ref": "#/1827"
       },
       {
         "$ref": "#/1828"
-      },
-      {
-        "$ref": "#/1829"
       },
       {
         "$ref": "#/2"
@@ -24786,7 +24765,7 @@
     "properties": {
       "additionalWorkspaceStorageAccounts": {
         "type": {
-          "$ref": "#/1832"
+          "$ref": "#/1831"
         },
         "flags": 0
       },
@@ -24817,7 +24796,7 @@
     "name": "Microsoft.MachineLearningServices/workspaces@2024-10-01-preview",
     "scopeType": 8,
     "body": {
-      "$ref": "#/1719"
+      "$ref": "#/1718"
     },
     "flags": 0
   },
@@ -24842,28 +24821,28 @@
       },
       "name": {
         "type": {
-          "$ref": "#/1716"
+          "$ref": "#/1715"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/1835"
+          "$ref": "#/1834"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/1836"
+          "$ref": "#/1835"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1838"
+          "$ref": "#/1837"
         },
         "flags": 1
       },
@@ -24883,7 +24862,7 @@
     "baseProperties": {
       "category": {
         "type": {
-          "$ref": "#/1944"
+          "$ref": "#/1943"
         },
         "flags": 0,
         "description": "Category of the connection"
@@ -24908,7 +24887,7 @@
       },
       "group": {
         "type": {
-          "$ref": "#/1952"
+          "$ref": "#/1951"
         },
         "flags": 2,
         "description": "Group based on connection category"
@@ -24921,26 +24900,26 @@
       },
       "metadata": {
         "type": {
-          "$ref": "#/1953"
+          "$ref": "#/1952"
         },
         "flags": 0,
         "description": "Store user metadata for this connection"
       },
       "peRequirement": {
         "type": {
-          "$ref": "#/1957"
+          "$ref": "#/1956"
         },
         "flags": 0
       },
       "peStatus": {
         "type": {
-          "$ref": "#/1961"
+          "$ref": "#/1960"
         },
         "flags": 0
       },
       "sharedUserList": {
         "type": {
-          "$ref": "#/1962"
+          "$ref": "#/1961"
         },
         "flags": 0
       },
@@ -24959,40 +24938,40 @@
     },
     "elements": {
       "AAD": {
-        "$ref": "#/1963"
+        "$ref": "#/1962"
       },
       "AccessKey": {
-        "$ref": "#/1965"
+        "$ref": "#/1964"
       },
       "AccountKey": {
-        "$ref": "#/1968"
+        "$ref": "#/1967"
       },
       "ApiKey": {
-        "$ref": "#/1971"
+        "$ref": "#/1970"
       },
       "CustomKeys": {
-        "$ref": "#/1974"
+        "$ref": "#/1973"
       },
       "ManagedIdentity": {
-        "$ref": "#/1978"
+        "$ref": "#/1977"
       },
       "None": {
-        "$ref": "#/1981"
+        "$ref": "#/1980"
       },
       "OAuth2": {
-        "$ref": "#/1983"
+        "$ref": "#/1982"
       },
       "PAT": {
-        "$ref": "#/1986"
+        "$ref": "#/1985"
       },
       "SAS": {
-        "$ref": "#/1989"
+        "$ref": "#/1988"
       },
       "ServicePrincipal": {
-        "$ref": "#/1992"
+        "$ref": "#/1991"
       },
       "UsernamePassword": {
-        "$ref": "#/1995"
+        "$ref": "#/1994"
       }
     }
   },
@@ -25420,6 +25399,9 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/1838"
+      },
+      {
         "$ref": "#/1839"
       },
       {
@@ -25732,9 +25714,6 @@
         "$ref": "#/1942"
       },
       {
-        "$ref": "#/1943"
-      },
-      {
         "$ref": "#/2"
       }
     ]
@@ -25771,6 +25750,9 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/1944"
+      },
+      {
         "$ref": "#/1945"
       },
       {
@@ -25787,9 +25769,6 @@
       },
       {
         "$ref": "#/1950"
-      },
-      {
-        "$ref": "#/1951"
       },
       {
         "$ref": "#/2"
@@ -25820,13 +25799,13 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/1953"
+      },
+      {
         "$ref": "#/1954"
       },
       {
         "$ref": "#/1955"
-      },
-      {
-        "$ref": "#/1956"
       },
       {
         "$ref": "#/2"
@@ -25849,13 +25828,13 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/1957"
+      },
+      {
         "$ref": "#/1958"
       },
       {
         "$ref": "#/1959"
-      },
-      {
-        "$ref": "#/1960"
       },
       {
         "$ref": "#/2"
@@ -25874,7 +25853,7 @@
     "properties": {
       "authType": {
         "type": {
-          "$ref": "#/1964"
+          "$ref": "#/1963"
         },
         "flags": 1,
         "description": "Authentication type of the connection target"
@@ -25891,13 +25870,13 @@
     "properties": {
       "credentials": {
         "type": {
-          "$ref": "#/1966"
+          "$ref": "#/1965"
         },
         "flags": 0
       },
       "authType": {
         "type": {
-          "$ref": "#/1967"
+          "$ref": "#/1966"
         },
         "flags": 1,
         "description": "Authentication type of the connection target"
@@ -25932,14 +25911,14 @@
     "properties": {
       "credentials": {
         "type": {
-          "$ref": "#/1969"
+          "$ref": "#/1968"
         },
         "flags": 0,
         "description": "Account key object for workspace connection credential."
       },
       "authType": {
         "type": {
-          "$ref": "#/1970"
+          "$ref": "#/1969"
         },
         "flags": 1,
         "description": "Authentication type of the connection target"
@@ -25968,14 +25947,14 @@
     "properties": {
       "credentials": {
         "type": {
-          "$ref": "#/1972"
+          "$ref": "#/1971"
         },
         "flags": 0,
         "description": "Api key object for workspace connection credential."
       },
       "authType": {
         "type": {
-          "$ref": "#/1973"
+          "$ref": "#/1972"
         },
         "flags": 1,
         "description": "Authentication type of the connection target"
@@ -26004,14 +25983,14 @@
     "properties": {
       "credentials": {
         "type": {
-          "$ref": "#/1975"
+          "$ref": "#/1974"
         },
         "flags": 0,
         "description": "Custom Keys credential object"
       },
       "authType": {
         "type": {
-          "$ref": "#/1977"
+          "$ref": "#/1976"
         },
         "flags": 1,
         "description": "Authentication type of the connection target"
@@ -26024,7 +26003,7 @@
     "properties": {
       "keys": {
         "type": {
-          "$ref": "#/1976"
+          "$ref": "#/1975"
         },
         "flags": 0,
         "description": "Dictionary of <string>"
@@ -26049,13 +26028,13 @@
     "properties": {
       "credentials": {
         "type": {
-          "$ref": "#/1979"
+          "$ref": "#/1978"
         },
         "flags": 0
       },
       "authType": {
         "type": {
-          "$ref": "#/1980"
+          "$ref": "#/1979"
         },
         "flags": 1,
         "description": "Authentication type of the connection target"
@@ -26090,7 +26069,7 @@
     "properties": {
       "authType": {
         "type": {
-          "$ref": "#/1982"
+          "$ref": "#/1981"
         },
         "flags": 1,
         "description": "Authentication type of the connection target"
@@ -26107,14 +26086,14 @@
     "properties": {
       "credentials": {
         "type": {
-          "$ref": "#/1984"
+          "$ref": "#/1983"
         },
         "flags": 0,
         "description": "ClientId and ClientSecret are required. Other properties are optional\r\ndepending on each OAuth2 provider's implementation."
       },
       "authType": {
         "type": {
-          "$ref": "#/1985"
+          "$ref": "#/1984"
         },
         "flags": 1,
         "description": "Authentication type of the connection target"
@@ -26191,13 +26170,13 @@
     "properties": {
       "credentials": {
         "type": {
-          "$ref": "#/1987"
+          "$ref": "#/1986"
         },
         "flags": 0
       },
       "authType": {
         "type": {
-          "$ref": "#/1988"
+          "$ref": "#/1987"
         },
         "flags": 1,
         "description": "Authentication type of the connection target"
@@ -26226,13 +26205,13 @@
     "properties": {
       "credentials": {
         "type": {
-          "$ref": "#/1990"
+          "$ref": "#/1989"
         },
         "flags": 0
       },
       "authType": {
         "type": {
-          "$ref": "#/1991"
+          "$ref": "#/1990"
         },
         "flags": 1,
         "description": "Authentication type of the connection target"
@@ -26261,13 +26240,13 @@
     "properties": {
       "credentials": {
         "type": {
-          "$ref": "#/1993"
+          "$ref": "#/1992"
         },
         "flags": 0
       },
       "authType": {
         "type": {
-          "$ref": "#/1994"
+          "$ref": "#/1993"
         },
         "flags": 1,
         "description": "Authentication type of the connection target"
@@ -26308,13 +26287,13 @@
     "properties": {
       "credentials": {
         "type": {
-          "$ref": "#/1996"
+          "$ref": "#/1995"
         },
         "flags": 0
       },
       "authType": {
         "type": {
-          "$ref": "#/1997"
+          "$ref": "#/1996"
         },
         "flags": 1,
         "description": "Authentication type of the connection target"
@@ -26355,7 +26334,7 @@
     "name": "Microsoft.MachineLearningServices/workspaces/connections@2024-10-01-preview",
     "scopeType": 8,
     "body": {
-      "$ref": "#/1837"
+      "$ref": "#/1836"
     },
     "flags": 0
   },
@@ -26380,28 +26359,28 @@
       },
       "name": {
         "type": {
-          "$ref": "#/1716"
+          "$ref": "#/1715"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/1999"
+          "$ref": "#/1998"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/2000"
+          "$ref": "#/1999"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/2002"
+          "$ref": "#/2001"
         },
         "flags": 1
       },
@@ -26428,7 +26407,7 @@
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/2013"
+          "$ref": "#/2012"
         },
         "flags": 2,
         "description": "Read-only provision state status property."
@@ -26436,16 +26415,16 @@
     },
     "elements": {
       "Azure.ContentSafety": {
-        "$ref": "#/2014"
+        "$ref": "#/2013"
       },
       "Azure.OpenAI": {
-        "$ref": "#/2022"
+        "$ref": "#/2021"
       },
       "Azure.Speech": {
-        "$ref": "#/2028"
+        "$ref": "#/2027"
       },
       "managedOnlineEndpoint": {
-        "$ref": "#/2034"
+        "$ref": "#/2033"
       }
     }
   },
@@ -26493,6 +26472,9 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/2002"
+      },
+      {
         "$ref": "#/2003"
       },
       {
@@ -26520,9 +26502,6 @@
         "$ref": "#/2011"
       },
       {
-        "$ref": "#/2012"
-      },
-      {
         "$ref": "#/2"
       }
     ]
@@ -26533,7 +26512,7 @@
     "properties": {
       "model": {
         "type": {
-          "$ref": "#/2015"
+          "$ref": "#/2014"
         },
         "flags": 1,
         "description": "Model used for the endpoint deployment."
@@ -26547,20 +26526,20 @@
       },
       "sku": {
         "type": {
-          "$ref": "#/2016"
+          "$ref": "#/2015"
         },
         "flags": 0
       },
       "versionUpgradeOption": {
         "type": {
-          "$ref": "#/2020"
+          "$ref": "#/2019"
         },
         "flags": 0,
         "description": "Deployment model version upgrade option."
       },
       "type": {
         "type": {
-          "$ref": "#/2021"
+          "$ref": "#/2020"
         },
         "flags": 1,
         "description": "Kind of the deployment."
@@ -26653,13 +26632,13 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/2016"
+      },
+      {
         "$ref": "#/2017"
       },
       {
         "$ref": "#/2018"
-      },
-      {
-        "$ref": "#/2019"
       },
       {
         "$ref": "#/2"
@@ -26676,7 +26655,7 @@
     "properties": {
       "model": {
         "type": {
-          "$ref": "#/2015"
+          "$ref": "#/2014"
         },
         "flags": 1,
         "description": "Model used for the endpoint deployment."
@@ -26690,20 +26669,20 @@
       },
       "sku": {
         "type": {
-          "$ref": "#/2016"
+          "$ref": "#/2015"
         },
         "flags": 0
       },
       "versionUpgradeOption": {
         "type": {
-          "$ref": "#/2026"
+          "$ref": "#/2025"
         },
         "flags": 0,
         "description": "Deployment model version upgrade option."
       },
       "type": {
         "type": {
-          "$ref": "#/2027"
+          "$ref": "#/2026"
         },
         "flags": 1,
         "description": "Kind of the deployment."
@@ -26726,13 +26705,13 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/2022"
+      },
+      {
         "$ref": "#/2023"
       },
       {
         "$ref": "#/2024"
-      },
-      {
-        "$ref": "#/2025"
       },
       {
         "$ref": "#/2"
@@ -26749,7 +26728,7 @@
     "properties": {
       "model": {
         "type": {
-          "$ref": "#/2015"
+          "$ref": "#/2014"
         },
         "flags": 1,
         "description": "Model used for the endpoint deployment."
@@ -26763,20 +26742,20 @@
       },
       "sku": {
         "type": {
-          "$ref": "#/2016"
+          "$ref": "#/2015"
         },
         "flags": 0
       },
       "versionUpgradeOption": {
         "type": {
-          "$ref": "#/2032"
+          "$ref": "#/2031"
         },
         "flags": 0,
         "description": "Deployment model version upgrade option."
       },
       "type": {
         "type": {
-          "$ref": "#/2033"
+          "$ref": "#/2032"
         },
         "flags": 1,
         "description": "Kind of the deployment."
@@ -26799,13 +26778,13 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/2028"
+      },
+      {
         "$ref": "#/2029"
       },
       {
         "$ref": "#/2030"
-      },
-      {
-        "$ref": "#/2031"
       },
       {
         "$ref": "#/2"
@@ -26822,7 +26801,7 @@
     "properties": {
       "endpointComputeType": {
         "type": {
-          "$ref": "#/2038"
+          "$ref": "#/2037"
         },
         "flags": 0,
         "description": "Enum to determine endpoint compute type."
@@ -26835,7 +26814,7 @@
       },
       "type": {
         "type": {
-          "$ref": "#/2039"
+          "$ref": "#/2038"
         },
         "flags": 1,
         "description": "Kind of the deployment."
@@ -26858,13 +26837,13 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/2034"
+      },
+      {
         "$ref": "#/2035"
       },
       {
         "$ref": "#/2036"
-      },
-      {
-        "$ref": "#/2037"
       },
       {
         "$ref": "#/2"
@@ -26880,7 +26859,7 @@
     "name": "Microsoft.MachineLearningServices/workspaces/connections/deployments@2024-10-01-preview",
     "scopeType": 8,
     "body": {
-      "$ref": "#/2001"
+      "$ref": "#/2000"
     },
     "flags": 0
   },
@@ -26909,28 +26888,28 @@
       },
       "name": {
         "type": {
-          "$ref": "#/2041"
+          "$ref": "#/2040"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/2042"
+          "$ref": "#/2041"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/2043"
+          "$ref": "#/2042"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/2045"
+          "$ref": "#/2044"
         },
         "flags": 1,
         "description": "RAI Custom Blocklist properties."
@@ -26962,7 +26941,7 @@
     "name": "Microsoft.MachineLearningServices/workspaces/connections/raiBlocklists@2024-10-01-preview",
     "scopeType": 8,
     "body": {
-      "$ref": "#/2044"
+      "$ref": "#/2043"
     },
     "flags": 0
   },
@@ -26987,28 +26966,28 @@
       },
       "name": {
         "type": {
-          "$ref": "#/2041"
+          "$ref": "#/2040"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/2047"
+          "$ref": "#/2046"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/2048"
+          "$ref": "#/2047"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/2050"
+          "$ref": "#/2049"
         },
         "flags": 1,
         "description": "RAI Custom Blocklist Item properties."
@@ -27047,7 +27026,7 @@
     "name": "Microsoft.MachineLearningServices/workspaces/connections/raiBlocklists/raiBlocklistItems@2024-10-01-preview",
     "scopeType": 8,
     "body": {
-      "$ref": "#/2049"
+      "$ref": "#/2048"
     },
     "flags": 0
   },
@@ -27072,28 +27051,28 @@
       },
       "name": {
         "type": {
-          "$ref": "#/2041"
+          "$ref": "#/2040"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/2052"
+          "$ref": "#/2051"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/2053"
+          "$ref": "#/2052"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/2055"
+          "$ref": "#/2054"
         },
         "flags": 1,
         "description": "Azure OpenAI Content Filters properties."
@@ -27120,32 +27099,32 @@
       },
       "completionBlocklists": {
         "type": {
-          "$ref": "#/2057"
+          "$ref": "#/2056"
         },
         "flags": 0
       },
       "contentFilters": {
         "type": {
-          "$ref": "#/2066"
+          "$ref": "#/2065"
         },
         "flags": 0
       },
       "mode": {
         "type": {
-          "$ref": "#/2070"
+          "$ref": "#/2069"
         },
         "flags": 0,
         "description": "Content Filters mode."
       },
       "promptBlocklists": {
         "type": {
-          "$ref": "#/2071"
+          "$ref": "#/2070"
         },
         "flags": 0
       },
       "type": {
         "type": {
-          "$ref": "#/2074"
+          "$ref": "#/2073"
         },
         "flags": 0,
         "description": "Content Filters policy type."
@@ -27175,7 +27154,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2056"
+      "$ref": "#/2055"
     }
   },
   {
@@ -27184,7 +27163,7 @@
     "properties": {
       "allowedContentLevel": {
         "type": {
-          "$ref": "#/2062"
+          "$ref": "#/2061"
         },
         "flags": 0,
         "description": "Level at which content is filtered."
@@ -27212,7 +27191,7 @@
       },
       "source": {
         "type": {
-          "$ref": "#/2065"
+          "$ref": "#/2064"
         },
         "flags": 0,
         "description": "Content source to apply the Content Filters."
@@ -27235,13 +27214,13 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/2058"
+      },
+      {
         "$ref": "#/2059"
       },
       {
         "$ref": "#/2060"
-      },
-      {
-        "$ref": "#/2061"
       },
       {
         "$ref": "#/2"
@@ -27260,10 +27239,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/2063"
+        "$ref": "#/2062"
       },
       {
-        "$ref": "#/2064"
+        "$ref": "#/2063"
       },
       {
         "$ref": "#/2"
@@ -27273,7 +27252,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2058"
+      "$ref": "#/2057"
     }
   },
   {
@@ -27292,13 +27271,13 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/2066"
+      },
+      {
         "$ref": "#/2067"
       },
       {
         "$ref": "#/2068"
-      },
-      {
-        "$ref": "#/2069"
       },
       {
         "$ref": "#/2"
@@ -27308,7 +27287,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2056"
+      "$ref": "#/2055"
     }
   },
   {
@@ -27323,10 +27302,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/2072"
+        "$ref": "#/2071"
       },
       {
-        "$ref": "#/2073"
+        "$ref": "#/2072"
       },
       {
         "$ref": "#/2"
@@ -27338,7 +27317,7 @@
     "name": "Microsoft.MachineLearningServices/workspaces/connections/raiPolicies@2024-10-01-preview",
     "scopeType": 8,
     "body": {
-      "$ref": "#/2054"
+      "$ref": "#/2053"
     },
     "flags": 0
   },
@@ -27363,28 +27342,28 @@
       },
       "name": {
         "type": {
-          "$ref": "#/1716"
+          "$ref": "#/1715"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/2076"
+          "$ref": "#/2075"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/2077"
+          "$ref": "#/2076"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/2002"
+          "$ref": "#/2001"
         },
         "flags": 1
       },
@@ -27402,7 +27381,7 @@
     "name": "Microsoft.MachineLearningServices/workspaces/endpoints/deployments@2024-10-01-preview",
     "scopeType": 8,
     "body": {
-      "$ref": "#/2078"
+      "$ref": "#/2077"
     },
     "flags": 0
   },
@@ -27431,28 +27410,28 @@
       },
       "name": {
         "type": {
-          "$ref": "#/2080"
+          "$ref": "#/2079"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/2081"
+          "$ref": "#/2080"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/2082"
+          "$ref": "#/2081"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/2084"
+          "$ref": "#/2083"
         },
         "flags": 1
       },
@@ -27479,7 +27458,7 @@
       },
       "deployments": {
         "type": {
-          "$ref": "#/2086"
+          "$ref": "#/2085"
         },
         "flags": 0,
         "description": "Deployments info."
@@ -27514,7 +27493,7 @@
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/2097"
+          "$ref": "#/2096"
         },
         "flags": 2,
         "description": "Read-only provision state status property."
@@ -27529,19 +27508,19 @@
     },
     "elements": {
       "Azure.ContentSafety": {
-        "$ref": "#/2098"
+        "$ref": "#/2097"
       },
       "Azure.OpenAI": {
-        "$ref": "#/2100"
+        "$ref": "#/2099"
       },
       "Azure.Speech": {
-        "$ref": "#/2102"
+        "$ref": "#/2101"
       },
       "managedOnlineEndpoint": {
-        "$ref": "#/2104"
+        "$ref": "#/2103"
       },
       "serverlessEndpoint": {
-        "$ref": "#/2112"
+        "$ref": "#/2111"
       }
     }
   },
@@ -27551,7 +27530,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/2002"
+          "$ref": "#/2001"
         },
         "flags": 1
       },
@@ -27588,7 +27567,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2085"
+      "$ref": "#/2084"
     }
   },
   {
@@ -27635,6 +27614,9 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/2086"
+      },
+      {
         "$ref": "#/2087"
       },
       {
@@ -27662,9 +27644,6 @@
         "$ref": "#/2095"
       },
       {
-        "$ref": "#/2096"
-      },
-      {
         "$ref": "#/2"
       }
     ]
@@ -27675,7 +27654,7 @@
     "properties": {
       "endpointType": {
         "type": {
-          "$ref": "#/2099"
+          "$ref": "#/2098"
         },
         "flags": 1,
         "description": "Type of the endpoint."
@@ -27692,7 +27671,7 @@
     "properties": {
       "endpointType": {
         "type": {
-          "$ref": "#/2101"
+          "$ref": "#/2100"
         },
         "flags": 1,
         "description": "Type of the endpoint."
@@ -27709,7 +27688,7 @@
     "properties": {
       "endpointType": {
         "type": {
-          "$ref": "#/2103"
+          "$ref": "#/2102"
         },
         "flags": 1,
         "description": "Type of the endpoint."
@@ -27726,7 +27705,7 @@
     "properties": {
       "authMode": {
         "type": {
-          "$ref": "#/2108"
+          "$ref": "#/2107"
         },
         "flags": 0,
         "description": "Enum to determine endpoint authentication mode."
@@ -27745,7 +27724,7 @@
       },
       "mirrorTraffic": {
         "type": {
-          "$ref": "#/2109"
+          "$ref": "#/2108"
         },
         "flags": 0,
         "description": "Dictionary of <integer>"
@@ -27758,14 +27737,14 @@
       },
       "traffic": {
         "type": {
-          "$ref": "#/2110"
+          "$ref": "#/2109"
         },
         "flags": 0,
         "description": "Dictionary of <integer>"
       },
       "endpointType": {
         "type": {
-          "$ref": "#/2111"
+          "$ref": "#/2110"
         },
         "flags": 1,
         "description": "Type of the endpoint."
@@ -27788,13 +27767,13 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/2104"
+      },
+      {
         "$ref": "#/2105"
       },
       {
         "$ref": "#/2106"
-      },
-      {
-        "$ref": "#/2107"
       },
       {
         "$ref": "#/2"
@@ -27827,32 +27806,32 @@
     "properties": {
       "authMode": {
         "type": {
-          "$ref": "#/2114"
+          "$ref": "#/2113"
         },
         "flags": 0
       },
       "capacityReservation": {
         "type": {
-          "$ref": "#/2115"
+          "$ref": "#/2114"
         },
         "flags": 0
       },
       "contentSafety": {
         "type": {
-          "$ref": "#/2116"
+          "$ref": "#/2115"
         },
         "flags": 0
       },
       "endpointState": {
         "type": {
-          "$ref": "#/2129"
+          "$ref": "#/2128"
         },
         "flags": 0,
         "description": "State of the Serverless Endpoint."
       },
       "inferenceEndpoint": {
         "type": {
-          "$ref": "#/2130"
+          "$ref": "#/2129"
         },
         "flags": 0
       },
@@ -27871,19 +27850,19 @@
       },
       "modelSettings": {
         "type": {
-          "$ref": "#/2132"
+          "$ref": "#/2131"
         },
         "flags": 0
       },
       "offer": {
         "type": {
-          "$ref": "#/2133"
+          "$ref": "#/2132"
         },
         "flags": 0
       },
       "endpointType": {
         "type": {
-          "$ref": "#/2134"
+          "$ref": "#/2133"
         },
         "flags": 1,
         "description": "Type of the endpoint."
@@ -27898,7 +27877,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/2113"
+        "$ref": "#/2112"
       },
       {
         "$ref": "#/2"
@@ -27929,7 +27908,7 @@
     "properties": {
       "contentSafetyStatus": {
         "type": {
-          "$ref": "#/2119"
+          "$ref": "#/2118"
         },
         "flags": 1,
         "description": "Specifies the status of content safety."
@@ -27948,10 +27927,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/2117"
+        "$ref": "#/2116"
       },
       {
-        "$ref": "#/2118"
+        "$ref": "#/2117"
       },
       {
         "$ref": "#/2"
@@ -27998,6 +27977,9 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/2119"
+      },
+      {
         "$ref": "#/2120"
       },
       {
@@ -28022,9 +28004,6 @@
         "$ref": "#/2127"
       },
       {
-        "$ref": "#/2128"
-      },
-      {
         "$ref": "#/2"
       }
     ]
@@ -28035,7 +28014,7 @@
     "properties": {
       "headers": {
         "type": {
-          "$ref": "#/2131"
+          "$ref": "#/2130"
         },
         "flags": 2,
         "description": "Dictionary of <string>"
@@ -28095,7 +28074,7 @@
     "name": "Microsoft.MachineLearningServices/workspaces/endpoints@2024-10-01-preview",
     "scopeType": 8,
     "body": {
-      "$ref": "#/2083"
+      "$ref": "#/2082"
     },
     "flags": 0
   },
@@ -28120,28 +28099,28 @@
       },
       "name": {
         "type": {
-          "$ref": "#/2041"
+          "$ref": "#/2040"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/2136"
+          "$ref": "#/2135"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/2137"
+          "$ref": "#/2136"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/2055"
+          "$ref": "#/2054"
         },
         "flags": 1,
         "description": "Azure OpenAI Content Filters properties."
@@ -28160,7 +28139,7 @@
     "name": "Microsoft.MachineLearningServices/workspaces/endpoints/raiPolicies@2024-10-01-preview",
     "scopeType": 8,
     "body": {
-      "$ref": "#/2138"
+      "$ref": "#/2137"
     },
     "flags": 0
   },
@@ -28185,28 +28164,28 @@
       },
       "name": {
         "type": {
-          "$ref": "#/1716"
+          "$ref": "#/1715"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/2140"
+          "$ref": "#/2139"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/2141"
+          "$ref": "#/2140"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/1742"
+          "$ref": "#/1741"
         },
         "flags": 1,
         "description": "Outbound Rule for the managed network of a machine learning workspace."
@@ -28225,7 +28204,7 @@
     "name": "Microsoft.MachineLearningServices/workspaces/outboundRules@2024-10-01-preview",
     "scopeType": 8,
     "body": {
-      "$ref": "#/2142"
+      "$ref": "#/2141"
     },
     "flags": 0
   },
@@ -28257,14 +28236,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/2144"
+          "$ref": "#/2143"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/2145"
+          "$ref": "#/2144"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -28285,7 +28264,7 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/1787"
+          "$ref": "#/1786"
         },
         "flags": 0,
         "description": "Private endpoint connection properties."
@@ -28299,7 +28278,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/2147"
+          "$ref": "#/2146"
         },
         "flags": 0,
         "description": "Dictionary of <string>"
@@ -28326,7 +28305,7 @@
     "name": "Microsoft.MachineLearningServices/workspaces/privateEndpointConnections@2024-10-01-preview",
     "scopeType": 8,
     "body": {
-      "$ref": "#/2146"
+      "$ref": "#/2145"
     },
     "flags": 0
   },
@@ -28358,21 +28337,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/2149"
+          "$ref": "#/2148"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/2150"
+          "$ref": "#/2149"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/2152"
+          "$ref": "#/2151"
         },
         "flags": 2,
         "description": "[Required] Additional attributes of the entity."
@@ -28392,7 +28371,7 @@
     "properties": {
       "dataType": {
         "type": {
-          "$ref": "#/2161"
+          "$ref": "#/2160"
         },
         "flags": 0,
         "description": "Specifies type"
@@ -28413,14 +28392,14 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/2162"
+          "$ref": "#/2161"
         },
         "flags": 0,
         "description": "The asset property dictionary."
       },
       "tags": {
         "type": {
-          "$ref": "#/2163"
+          "$ref": "#/2162"
         },
         "flags": 0,
         "description": "Tag dictionary. Tags can be added, removed, and updated."
@@ -28463,6 +28442,9 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/2152"
+      },
+      {
         "$ref": "#/2153"
       },
       {
@@ -28482,9 +28464,6 @@
       },
       {
         "$ref": "#/2159"
-      },
-      {
-        "$ref": "#/2160"
       },
       {
         "$ref": "#/2"
@@ -28512,7 +28491,7 @@
     "name": "Microsoft.MachineLearningServices/workspaces/featuresets/versions/features@2024-10-01-preview",
     "scopeType": 8,
     "body": {
-      "$ref": "#/2151"
+      "$ref": "#/2150"
     },
     "flags": 1
   },
@@ -28522,7 +28501,7 @@
     "properties": {
       "nodes": {
         "type": {
-          "$ref": "#/2174"
+          "$ref": "#/2173"
         },
         "flags": 2,
         "description": "The collection of returned AmlCompute nodes details."
@@ -28570,7 +28549,7 @@
       },
       "nodeState": {
         "type": {
-          "$ref": "#/2173"
+          "$ref": "#/2172"
         },
         "flags": 2,
         "description": "State of the compute node. Values are idle, running, preparing, unusable, leaving and preempted."
@@ -28612,6 +28591,9 @@
     "$type": "UnionType",
     "elements": [
       {
+        "$ref": "#/2166"
+      },
+      {
         "$ref": "#/2167"
       },
       {
@@ -28627,9 +28609,6 @@
         "$ref": "#/2171"
       },
       {
-        "$ref": "#/2172"
-      },
-      {
         "$ref": "#/2"
       }
     ]
@@ -28637,7 +28616,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2166"
+      "$ref": "#/2165"
     }
   },
   {
@@ -28646,7 +28625,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces/computes",
     "apiVersion": "2024-10-01-preview",
     "output": {
-      "$ref": "#/2165"
+      "$ref": "#/2164"
     }
   },
   {
@@ -28656,13 +28635,13 @@
     "baseProperties": {},
     "elements": {
       "AKS": {
-        "$ref": "#/2177"
+        "$ref": "#/2176"
       },
       "Databricks": {
-        "$ref": "#/2179"
+        "$ref": "#/2178"
       },
       "VirtualMachine": {
-        "$ref": "#/2181"
+        "$ref": "#/2180"
       }
     }
   },
@@ -28693,7 +28672,7 @@
       },
       "computeType": {
         "type": {
-          "$ref": "#/2178"
+          "$ref": "#/2177"
         },
         "flags": 1,
         "description": "The type of compute"
@@ -28717,7 +28696,7 @@
       },
       "computeType": {
         "type": {
-          "$ref": "#/2180"
+          "$ref": "#/2179"
         },
         "flags": 1,
         "description": "The type of compute"
@@ -28741,7 +28720,7 @@
       },
       "computeType": {
         "type": {
-          "$ref": "#/2182"
+          "$ref": "#/2181"
         },
         "flags": 1,
         "description": "The type of compute"
@@ -28758,7 +28737,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces/computes",
     "apiVersion": "2024-10-01-preview",
     "output": {
-      "$ref": "#/2176"
+      "$ref": "#/2175"
     }
   },
   {
@@ -28797,16 +28776,16 @@
     "baseProperties": {},
     "elements": {
       "AccountKey": {
-        "$ref": "#/2187"
+        "$ref": "#/2186"
       },
       "Certificate": {
-        "$ref": "#/2189"
+        "$ref": "#/2188"
       },
       "Sas": {
-        "$ref": "#/2191"
+        "$ref": "#/2190"
       },
       "ServicePrincipal": {
-        "$ref": "#/2193"
+        "$ref": "#/2192"
       }
     }
   },
@@ -28823,7 +28802,7 @@
       },
       "secretsType": {
         "type": {
-          "$ref": "#/2188"
+          "$ref": "#/2187"
         },
         "flags": 1,
         "description": "[Required] Credential type used to authentication with storage."
@@ -28847,7 +28826,7 @@
       },
       "secretsType": {
         "type": {
-          "$ref": "#/2190"
+          "$ref": "#/2189"
         },
         "flags": 1,
         "description": "[Required] Credential type used to authentication with storage."
@@ -28871,7 +28850,7 @@
       },
       "secretsType": {
         "type": {
-          "$ref": "#/2192"
+          "$ref": "#/2191"
         },
         "flags": 1,
         "description": "[Required] Credential type used to authentication with storage."
@@ -28895,7 +28874,7 @@
       },
       "secretsType": {
         "type": {
-          "$ref": "#/2194"
+          "$ref": "#/2193"
         },
         "flags": 1,
         "description": "[Required] Credential type used to authentication with storage."
@@ -28912,10 +28891,10 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces/datastores",
     "apiVersion": "2024-10-01-preview",
     "output": {
-      "$ref": "#/2186"
+      "$ref": "#/2185"
     },
     "input": {
-      "$ref": "#/2185"
+      "$ref": "#/2184"
     }
   },
   {
@@ -28949,13 +28928,13 @@
       },
       "containerRegistryCredentials": {
         "type": {
-          "$ref": "#/2199"
+          "$ref": "#/2198"
         },
         "flags": 0
       },
       "notebookAccessKeys": {
         "type": {
-          "$ref": "#/2202"
+          "$ref": "#/2201"
         },
         "flags": 0
       },
@@ -28988,7 +28967,7 @@
       },
       "passwords": {
         "type": {
-          "$ref": "#/2201"
+          "$ref": "#/2200"
         },
         "flags": 0
       },
@@ -29022,7 +29001,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2200"
+      "$ref": "#/2199"
     }
   },
   {
@@ -29051,7 +29030,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces",
     "apiVersion": "2024-10-01-preview",
     "output": {
-      "$ref": "#/2198"
+      "$ref": "#/2197"
     }
   },
   {
@@ -29114,7 +29093,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces",
     "apiVersion": "2024-10-01-preview",
     "output": {
-      "$ref": "#/2204"
+      "$ref": "#/2203"
     }
   },
   {
@@ -29123,7 +29102,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces",
     "apiVersion": "2024-10-01-preview",
     "output": {
-      "$ref": "#/2202"
+      "$ref": "#/2201"
     }
   },
   {
@@ -29145,7 +29124,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces",
     "apiVersion": "2024-10-01-preview",
     "output": {
-      "$ref": "#/2207"
+      "$ref": "#/2206"
     }
   },
   {
@@ -29161,7 +29140,7 @@
       },
       "value": {
         "type": {
-          "$ref": "#/2227"
+          "$ref": "#/2226"
         },
         "flags": 0,
         "description": "List of models."
@@ -29174,20 +29153,20 @@
     "properties": {
       "capabilities": {
         "type": {
-          "$ref": "#/2211"
+          "$ref": "#/2210"
         },
         "flags": 0,
         "description": "The capabilities."
       },
       "deprecation": {
         "type": {
-          "$ref": "#/2212"
+          "$ref": "#/2211"
         },
         "flags": 0
       },
       "finetuneCapabilities": {
         "type": {
-          "$ref": "#/2213"
+          "$ref": "#/2212"
         },
         "flags": 0,
         "description": "The capabilities for finetune models."
@@ -29208,7 +29187,7 @@
       },
       "lifecycleStatus": {
         "type": {
-          "$ref": "#/2216"
+          "$ref": "#/2215"
         },
         "flags": 0,
         "description": "Model lifecycle status."
@@ -29229,7 +29208,7 @@
       },
       "skus": {
         "type": {
-          "$ref": "#/2226"
+          "$ref": "#/2225"
         },
         "flags": 0,
         "description": "The list of Model Sku."
@@ -29298,10 +29277,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/2214"
+        "$ref": "#/2213"
       },
       {
-        "$ref": "#/2215"
+        "$ref": "#/2214"
       },
       {
         "$ref": "#/2"
@@ -29314,13 +29293,13 @@
     "properties": {
       "capacity": {
         "type": {
-          "$ref": "#/2218"
+          "$ref": "#/2217"
         },
         "flags": 0
       },
       "connectionIds": {
         "type": {
-          "$ref": "#/2219"
+          "$ref": "#/2218"
         },
         "flags": 0,
         "description": "The list of ARM id for the connection support this SKU."
@@ -29341,7 +29320,7 @@
       },
       "rateLimits": {
         "type": {
-          "$ref": "#/2225"
+          "$ref": "#/2224"
         },
         "flags": 0
       },
@@ -29400,7 +29379,7 @@
       },
       "rules": {
         "type": {
-          "$ref": "#/2224"
+          "$ref": "#/2223"
         },
         "flags": 0,
         "description": "The call rate limit for the model."
@@ -29432,7 +29411,7 @@
       },
       "matchPatterns": {
         "type": {
-          "$ref": "#/2223"
+          "$ref": "#/2222"
         },
         "flags": 0
       },
@@ -29471,12 +29450,6 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2222"
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
       "$ref": "#/2221"
     }
   },
@@ -29489,13 +29462,19 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2217"
+      "$ref": "#/2219"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2210"
+      "$ref": "#/2216"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2209"
     }
   },
   {
@@ -29504,7 +29483,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces",
     "apiVersion": "2024-10-01-preview",
     "output": {
-      "$ref": "#/2209"
+      "$ref": "#/2208"
     }
   },
   {
@@ -29513,7 +29492,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/1838"
+          "$ref": "#/1837"
         },
         "flags": 1
       },
@@ -29553,7 +29532,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces/connections",
     "apiVersion": "2024-10-01-preview",
     "output": {
-      "$ref": "#/2229"
+      "$ref": "#/2228"
     }
   },
   {
@@ -29562,7 +29541,7 @@
     "properties": {
       "keys": {
         "type": {
-          "$ref": "#/2232"
+          "$ref": "#/2231"
         },
         "flags": 0,
         "description": "Dictionary of Keys for the endpoint."
@@ -29593,7 +29572,7 @@
     "resourceType": "Microsoft.MachineLearningServices/workspaces/endpoints",
     "apiVersion": "2024-10-01-preview",
     "output": {
-      "$ref": "#/2231"
+      "$ref": "#/2230"
     }
   }
 ]

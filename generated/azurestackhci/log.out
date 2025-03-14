@@ -73,18 +73,18 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'VirtualSwitchConfig
   - properties.loadBalancingAlgorithm.readOnly: <none> => true
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorDetail' (6 differences):
   - properties.exception: {"$ref":"#/components/schemas/schemas:285","description":"Exception details while installing extension.","readOnly":true} => <none>
-  - properties.code: <none> => {"$ref":"#/components/schemas/schemas:664","description":"The error code.","readOnly":true}
-  - properties.message: <none> => {"$ref":"#/components/schemas/schemas:665","description":"The error message.","readOnly":true}
-  - properties.target: <none> => {"$ref":"#/components/schemas/schemas:666","description":"The error target.","readOnly":true}
-  - properties.details: <none> => {"x-ms-identifiers":["message","target"],"$ref":"#/components/schemas/schemas:667","description":"The error details.","readOnly":true}
-  - properties.additionalInfo: <none> => {"x-ms-identifiers":[],"$ref":"#/components/schemas/schemas:668","description":"The error additional info.","readOnly":true}
+  - properties.code: <none> => {"$ref":"#/components/schemas/schemas:641","description":"The error code.","readOnly":true}
+  - properties.message: <none> => {"$ref":"#/components/schemas/schemas:642","description":"The error message.","readOnly":true}
+  - properties.target: <none> => {"$ref":"#/components/schemas/schemas:643","description":"The error target.","readOnly":true}
+  - properties.details: <none> => {"x-ms-identifiers":["message","target"],"$ref":"#/components/schemas/schemas:644","description":"The error details.","readOnly":true}
+  - properties.additionalInfo: <none> => {"x-ms-identifiers":[],"$ref":"#/components/schemas/schemas:645","description":"The error additional info.","readOnly":true}
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorDetail' (6 differences):
   - properties.exception: {"$ref":"#/components/schemas/schemas:285","description":"Exception details while installing extension.","readOnly":true} => <none>
-  - properties.code: <none> => {"$ref":"#/components/schemas/schemas:664","description":"The error code.","readOnly":true}
-  - properties.message: <none> => {"$ref":"#/components/schemas/schemas:665","description":"The error message.","readOnly":true}
-  - properties.target: <none> => {"$ref":"#/components/schemas/schemas:666","description":"The error target.","readOnly":true}
-  - properties.details: <none> => {"x-ms-identifiers":["message","target"],"$ref":"#/components/schemas/schemas:759","description":"The error details.","readOnly":true}
-  - properties.additionalInfo: <none> => {"x-ms-identifiers":[],"$ref":"#/components/schemas/schemas:668","description":"The error additional info.","readOnly":true}
+  - properties.code: <none> => {"$ref":"#/components/schemas/schemas:641","description":"The error code.","readOnly":true}
+  - properties.message: <none> => {"$ref":"#/components/schemas/schemas:642","description":"The error message.","readOnly":true}
+  - properties.target: <none> => {"$ref":"#/components/schemas/schemas:643","description":"The error target.","readOnly":true}
+  - properties.details: <none> => {"x-ms-identifiers":["message","target"],"$ref":"#/components/schemas/schemas:736","description":"The error details.","readOnly":true}
+  - properties.additionalInfo: <none> => {"x-ms-identifiers":[],"$ref":"#/components/schemas/schemas:645","description":"The error additional info.","readOnly":true}
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Extension' (8 differences):
   - properties.extensionName: {"$ref":"#/components/schemas/schemas:287","description":"Arc extension name installed on edge device.","readOnly":true} => <none>
   - properties.state: {"$ref":"#/components/schemas/ArcExtensionState","description":"Arc extension state from arc machine extension.","readOnly":true} => <none>
@@ -93,15 +93,15 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Extension' (8 diffe
   - properties.typeHandlerVersion: {"$ref":"#/components/schemas/schemas:290","description":"Extension version installed.","readOnly":true} => <none>
   - properties.managedBy: {"x-ms-enum":{"name":"ExtensionManagedBy","modelAsString":true},"$ref":"#/components/schemas/ExtensionManagedBy","description":"Extension managed by user or Azure.","readOnly":true} => <none>
   - properties.properties: <none> => {"description":"Describes Machine Extension Properties.","$ref":"#/components/schemas/schemas:382","x-ms-client-flatten":true}
-  - allOf: <none> => [{"$ref":"#/components/schemas/schemas:639"}]
+  - allOf: <none> => [{"$ref":"#/components/schemas/schemas:680"}]
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorResponse' (1 differences):
+  - properties.error.$ref: "#/components/schemas/schemas:640" => "#/components/schemas/schemas:732"
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProxyResource' (1 differences):
+  - allOf.0.$ref: "#/components/schemas/schemas:681" => "#/components/schemas/schemas:774"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (3 differences):
-  - properties.id.$ref: "#/components/schemas/schemas:630" => "#/components/schemas/schemas:722"
+  - properties.id.$ref: "#/components/schemas/schemas:682" => "#/components/schemas/schemas:775"
   - properties.id.description: "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}" => "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
   - properties.systemData.type: "object" => <none>
-warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ProxyResource' (1 differences):
-  - allOf.0.$ref: "#/components/schemas/schemas:629" => "#/components/schemas/schemas:721"
-warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorResponse' (1 differences):
-  - properties.error.$ref: "#/components/schemas/schemas:663" => "#/components/schemas/schemas:755"
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ProxyResource' -> 'ProxyResourceAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'Resource' -> 'ResourceAutoGenerated'
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorResponse' -> 'ErrorResponseAutoGenerated'
@@ -154,8 +154,8 @@ warning | PreCheck/SchemaMissingType | The schema 'PrecheckResult' with an undef
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/preview/2023-08-01-preview/updates.json:553:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Cluster' (8 differences):
-  - allOf: [{"$ref":"#/components/schemas/schemas:469"}] => <none>
-  - properties.identity: {"description":"Identity of Cluster resource","$ref":"#/components/schemas/schemas:560","x-ms-client-flatten":true} => <none>
+  - allOf: [{"$ref":"#/components/schemas/schemas:532"}] => <none>
+  - properties.identity: {"description":"Identity of Cluster resource","$ref":"#/components/schemas/schemas:555","x-ms-client-flatten":true} => <none>
   - properties.properties: {"description":"Cluster properties.","$ref":"#/components/schemas/schemas:53","x-ms-client-flatten":true} => <none>
   - properties.name: <none> => {"$ref":"#/components/schemas/schemas:340","description":"The cluster name provided when preparing Active Directory."}
   - properties.witnessType: <none> => {"$ref":"#/components/schemas/schemas:341","description":"Use a cloud witness if you have internet access and if you use an Azure Storage account to provide a vote on cluster quorum. A cloud witness uses Azure Blob Storage to read or write a blob file and then uses it to arbitrate in split-brain resolution. Only allowed values are 'Cloud', 'FileShare'. "}

@@ -414,8 +414,9 @@
 
 ## UserAssignedIdentity
 ### Properties
+* **principalId**: string: the identity principal Id of the server.
 * **tenantId**: string (ReadOnly): Tenant id of the server.
-* **type**: 'None' | 'SystemAssigned' | 'UserAssigned' | string (Required): the types of identities associated with this resource; currently restricted to 'None and UserAssigned'
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' | string (Required): the types of identities associated with this resource
 * **userAssignedIdentities**: [UserAssignedIdentityMap](#userassignedidentitymap): represents user assigned identities map.
 
 ## UserAssignedIdentityMap

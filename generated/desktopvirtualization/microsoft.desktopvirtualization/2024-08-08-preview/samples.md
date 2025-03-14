@@ -12,7 +12,6 @@ resource exampleResource 'Microsoft.DesktopVirtualization/appAttachPackages@2024
   name: 'example'
   location: 'southcentralus'
   properties: {
-    customData: ''
     failHealthCheckOnStagingFailure: 'NeedsAssistance'
     hostPoolReferences: [
     ]
@@ -50,7 +49,6 @@ resource exampleResource 'Microsoft.DesktopVirtualization/appAttachPackages@2024
       version: 'packageversion'
     }
     keyVaultURL: ''
-    packageOwnerName: 'App Attach'
   }
 }
 ```
@@ -78,7 +76,7 @@ resource exampleResource 'Microsoft.DesktopVirtualization/applicationGroups@2024
 
 ## microsoft.desktopvirtualization/applicationgroups/applications
 
-Application_Create
+Applications_CreateOrUpdate
 ```bicep
 resource exampleResource 'Microsoft.DesktopVirtualization/applicationGroups/applications@2024-08-08-preview' = {
   parent: parentResource 
@@ -98,7 +96,7 @@ resource exampleResource 'Microsoft.DesktopVirtualization/applicationGroups/appl
 
 ## microsoft.desktopvirtualization/hostpools
 
-HostPool_Create
+HostPools_CreateOrUpdate
 ```bicep
 resource exampleResource 'Microsoft.DesktopVirtualization/hostPools@2024-08-08-preview' = {
   name: 'example'
@@ -153,7 +151,7 @@ resource exampleResource 'Microsoft.DesktopVirtualization/hostPools@2024-08-08-p
 
 ## microsoft.desktopvirtualization/hostpools/msixpackages
 
-MSIXPackage_Create
+MSIXPackages_Create
 ```bicep
 resource exampleResource 'Microsoft.DesktopVirtualization/hostPools/msixPackages@2024-08-08-preview' = {
   parent: parentResource 
@@ -192,7 +190,7 @@ resource exampleResource 'Microsoft.DesktopVirtualization/hostPools/msixPackages
 
 ## microsoft.desktopvirtualization/hostpools/privateendpointconnections
 
-PrivateEndpointConnection_UpdateByHostPool
+PrivateEndpointConnections_UpdateByHostPool
 ```bicep
 resource exampleResource 'Microsoft.DesktopVirtualization/hostPools/privateEndpointConnections@2024-08-08-preview' = {
   parent: parentResource 
@@ -486,7 +484,7 @@ resource exampleResource 'Microsoft.DesktopVirtualization/workspaces@2024-08-08-
 
 ## microsoft.desktopvirtualization/workspaces/privateendpointconnections
 
-PrivateEndpointConnection_UpdateByWorkspace
+PrivateEndpointConnections_UpdateByWorkspace
 ```bicep
 resource exampleResource 'Microsoft.DesktopVirtualization/workspaces/privateEndpointConnections@2024-08-08-preview' = {
   parent: parentResource 

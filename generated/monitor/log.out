@@ -238,21 +238,61 @@ warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.35.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.36.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.29.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.30.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.31.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.35.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.36.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'MetricNamespaceName' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2024-02-01/metricNamespaces_API.json:80:5
 warning | PreCheck/SchemaMissingType | The schema 'MetricNamespaceCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2024-02-01/metricNamespaces_API.json:128:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorResponse' (10 differences):
-  - properties.code.$ref: "#/components/schemas/schemas:10" => "#/components/schemas/schemas:207"
+  - properties.code.$ref: "#/components/schemas/schemas:10" => "#/components/schemas/schemas:238"
   - properties.code.description: "Error code" => "The error code."
   - properties.code.readOnly: <none> => true
-  - properties.message.$ref: "#/components/schemas/schemas:11" => "#/components/schemas/schemas:208"
+  - properties.message.$ref: "#/components/schemas/schemas:11" => "#/components/schemas/schemas:239"
   - properties.message.description: "Error message indicating why the operation failed." => "The error message."
   - properties.message.readOnly: <none> => true
-  - properties.target: <none> => {"$ref":"#/components/schemas/schemas:209","description":"The error target.","readOnly":true}
-  - properties.details: <none> => {"x-ms-identifiers":["message","target"],"$ref":"#/components/schemas/schemas:210","description":"The error details.","readOnly":true}
-  - properties.additionalInfo: <none> => {"x-ms-identifiers":[],"$ref":"#/components/schemas/schemas:211","description":"The error additional info.","readOnly":true}
+  - properties.target: <none> => {"$ref":"#/components/schemas/schemas:240","description":"The error target.","readOnly":true}
+  - properties.details: <none> => {"x-ms-identifiers":["message","target"],"$ref":"#/components/schemas/schemas:241","description":"The error details.","readOnly":true}
+  - properties.additionalInfo: <none> => {"x-ms-identifiers":[],"$ref":"#/components/schemas/schemas:242","description":"The error additional info.","readOnly":true}
   - title: <none> => "Error Response"
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorResponse' -> 'ErrorResponseAutoGenerated'
 warning | Skipping MetricDefinitions_ListAtSubscriptionScope due to required query parameter "region"
@@ -304,7 +344,7 @@ warning | PreCheck/SchemaMissingType | The schema 'AzureMonitorWorkspaceResource
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Monitor/stable/2023-04-03/monitoringAccounts_API.json:492:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (2 differences):
-  - properties.id.$ref: "#/components/schemas/schemas:26" => "#/components/schemas/schemas:118"
+  - properties.id.$ref: "#/components/schemas/schemas:78" => "#/components/schemas/schemas:170"
   - properties.id.description: "Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}" => "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
 warning | PreNamer/DeduplicateName | Deduplicating schema name: 'Resource' -> 'ResourceAutoGenerated'
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -1113,46 +1153,6 @@ warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.35.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.36.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.29.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.30.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.31.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.35.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.36.suppress which is deprecated and will be removed in the future.
-warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'DataCollectionEndpoint-configurationAccess' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2022-06-01/dataCollectionEndpoints_API.json:476:9
 warning | PreCheck/SchemaMissingType | The schema 'DataCollectionEndpoint-logsIngestion' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -1205,6 +1205,534 @@ warning | PreCheck/SchemaMissingType | The schema 'ResourceForUpdate-identity' w
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2022-06-01/dataCollectionRules_API.json:1401:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | Unrecognized property type: any-object. Returning 'any'.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.29.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.30.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.31.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.35.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.36.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/activityLogAlerts_API.json:290:5
+warning | PreCheck/SchemaMissingType | The schema 'Resource-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/activityLogAlerts_API.json:315:9
+warning | PreCheck/SchemaMissingType | The schema 'ActivityLogAlertResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/activityLogAlerts_API.json:328:5
+warning | PreCheck/SchemaMissingType | The schema 'ActivityLogAlertList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/activityLogAlerts_API.json:343:5
+warning | PreCheck/SchemaMissingType | The schema 'ActivityLogAlert' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/activityLogAlerts_API.json:359:5
+warning | PreCheck/SchemaMissingType | The schema 'ActivityLogAlertAllOfCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/activityLogAlerts_API.json:393:5
+warning | PreCheck/SchemaMissingType | The schema 'ActivityLogAlertLeafCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/activityLogAlerts_API.json:408:5
+warning | PreCheck/SchemaMissingType | The schema 'ActivityLogAlertActionList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/activityLogAlerts_API.json:425:5
+warning | PreCheck/SchemaMissingType | The schema 'ActivityLogAlertActionGroup' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/activityLogAlerts_API.json:437:5
+warning | PreCheck/SchemaMissingType | The schema 'ActivityLogAlertActionGroup-webhookProperties' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/activityLogAlerts_API.json:444:9
+warning | PreCheck/SchemaMissingType | The schema 'ActivityLogAlertPatchBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/activityLogAlerts_API.json:469:5
+warning | PreCheck/SchemaMissingType | The schema 'ActivityLogAlertPatchBody-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/activityLogAlerts_API.json:472:9
+warning | PreCheck/SchemaMissingType | The schema 'ActivityLogAlertPatch' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/activityLogAlerts_API.json:485:5
+warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/actionGroups_API.json:338:5
+warning | PreCheck/SchemaMissingType | The schema 'Resource-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/actionGroups_API.json:363:9
+warning | PreCheck/SchemaMissingType | The schema 'ActionGroupResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/actionGroups_API.json:376:5
+warning | PreCheck/SchemaMissingType | The schema 'ActionGroupList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/actionGroups_API.json:391:5
+warning | PreCheck/SchemaMissingType | The schema 'ActionGroup' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/actionGroups_API.json:407:5
+warning | PreCheck/SchemaMissingType | The schema 'EmailReceiver' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/actionGroups_API.json:468:5
+warning | PreCheck/SchemaMissingType | The schema 'SmsReceiver' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/actionGroups_API.json:490:5
+warning | PreCheck/SchemaMissingType | The schema 'WebhookReceiver' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/actionGroups_API.json:517:5
+warning | PreCheck/SchemaMissingType | The schema 'ItsmReceiver' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/actionGroups_API.json:534:5
+warning | PreCheck/SchemaMissingType | The schema 'AzureAppPushReceiver' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/actionGroups_API.json:566:5
+warning | PreCheck/SchemaMissingType | The schema 'AutomationRunbookReceiver' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/actionGroups_API.json:583:5
+warning | PreCheck/SchemaMissingType | The schema 'EnableRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/actionGroups_API.json:631:5
+warning | PreCheck/SchemaMissingType | The schema 'ActionGroupPatchBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/actionGroups_API.json:657:5
+warning | PreCheck/SchemaMissingType | The schema 'ActionGroupPatchBody-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/actionGroups_API.json:660:9
+warning | PreCheck/SchemaMissingType | The schema 'ActionGroupPatch' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/actionGroups_API.json:673:5
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.29.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.30.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.31.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.35.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.36.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'ProxyOnlyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-05-01-preview/diagnosticsSettingsCategories_API.json:116:5
+warning | PreCheck/SchemaMissingType | The schema 'DiagnosticSettingsCategory' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-05-01-preview/diagnosticsSettingsCategories_API.json:137:5
+warning | PreCheck/SchemaMissingType | The schema 'DiagnosticSettingsCategoryResourceCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-05-01-preview/diagnosticsSettingsCategories_API.json:170:5
+warning | PreCheck/SchemaMissingType | The schema 'SubscriptionProxyOnlyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-05-01-preview/subscriptionDiagnosticsSettings_API.json:199:5
+warning | PreCheck/SchemaMissingType | The schema 'SubscriptionLogSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-05-01-preview/subscriptionDiagnosticsSettings_API.json:224:5
+warning | PreCheck/SchemaMissingType | The schema 'SubscriptionDiagnosticSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-05-01-preview/subscriptionDiagnosticsSettings_API.json:240:5
+warning | PreCheck/SchemaMissingType | The schema 'SubscriptionDiagnosticSettingsResourceCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-05-01-preview/subscriptionDiagnosticsSettings_API.json:288:5
+warning | PreCheck/SchemaMissingType | The schema 'ProxyOnlyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-05-01-preview/diagnosticsSettings_API.json:199:5
+warning | PreCheck/SchemaMissingType | The schema 'RetentionPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-05-01-preview/diagnosticsSettings_API.json:220:5
+warning | PreCheck/SchemaMissingType | The schema 'MetricSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-05-01-preview/diagnosticsSettings_API.json:239:5
+warning | PreCheck/SchemaMissingType | The schema 'LogSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-05-01-preview/diagnosticsSettings_API.json:264:5
+warning | PreCheck/SchemaMissingType | The schema 'DiagnosticSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-05-01-preview/diagnosticsSettings_API.json:284:5
+warning | PreCheck/SchemaMissingType | The schema 'DiagnosticSettingsResourceCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-05-01-preview/diagnosticsSettings_API.json:349:5
+warning | PreCheck/SchemaMissingType | The schema 'LocalizableString' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-05-01-preview/metricDefinitions_API.json:167:5
+warning | PreCheck/SchemaMissingType | The schema 'MetricAvailability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-05-01-preview/metricDefinitions_API.json:183:5
+warning | PreCheck/SchemaMissingType | The schema 'MetricDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-05-01-preview/metricDefinitions_API.json:221:5
+warning | PreCheck/SchemaMissingType | The schema 'MetricDefinitionCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-05-01-preview/metricDefinitions_API.json:284:5
+warning | PreCheck/SchemaMissingType | The schema 'LocalizableString' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-05-01-preview/metrics_API.json:163:5
+warning | PreCheck/SchemaMissingType | The schema 'MetricValue' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-05-01-preview/metrics_API.json:202:5
+warning | PreCheck/SchemaMissingType | The schema 'MetadataValue' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-05-01-preview/metrics_API.json:240:5
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.29.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.30.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.31.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.35.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.36.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'GuestDiagnosticSettingsList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2018-06-01-preview/guestDiagnosticSettings_API.json:295:5
+warning | PreCheck/SchemaMissingType | The schema 'GuestDiagnosticSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2018-06-01-preview/guestDiagnosticSettings_API.json:330:5
+warning | PreCheck/SchemaMissingType | The schema 'GuestDiagnosticSettingsPatchResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2018-06-01-preview/guestDiagnosticSettings_API.json:353:5
+warning | PreCheck/SchemaMissingType | The schema 'GuestDiagnosticSettingsPatchResource-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2018-06-01-preview/guestDiagnosticSettings_API.json:356:9
+warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2018-06-01-preview/guestDiagnosticSettings_API.json:509:5
+warning | PreCheck/SchemaMissingType | The schema 'Resource-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2018-06-01-preview/guestDiagnosticSettings_API.json:534:9
+warning | PreCheck/SchemaMissingType | The schema 'GuestDiagnosticSettingsAssociationList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2018-06-01-preview/guestDiagnosticSettingsAssociation_API.json:312:5
+warning | PreCheck/SchemaMissingType | The schema 'GuestDiagnosticSettingsAssociationResourcePatch' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2018-06-01-preview/guestDiagnosticSettingsAssociation_API.json:328:5
+warning | PreCheck/SchemaMissingType | The schema 'GuestDiagnosticSettingsAssociationResourcePatch-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2018-06-01-preview/guestDiagnosticSettingsAssociation_API.json:331:9
+warning | PreCheck/SchemaMissingType | The schema 'GuestDiagnosticSettingsAssociation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2018-06-01-preview/guestDiagnosticSettingsAssociation_API.json:344:5
+warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2018-06-01-preview/guestDiagnosticSettingsAssociation_API.json:375:5
+warning | PreCheck/SchemaMissingType | The schema 'Resource-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2018-06-01-preview/guestDiagnosticSettingsAssociation_API.json:400:9
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.29.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.30.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.31.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.35.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.36.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.29.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.30.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.31.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.35.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.36.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'MetricNamespaceName' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-12-01-preview/metricNamespaces_API.json:80:5
+warning | PreCheck/SchemaMissingType | The schema 'MetricNamespaceCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-12-01-preview/metricNamespaces_API.json:128:5
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.29.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.30.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.31.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.35.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.36.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.29.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.30.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.31.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.35.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.36.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2016-09-01/serviceDiagnosticsSettings_API.json:220:5
+warning | PreCheck/SchemaMissingType | The schema 'Resource-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2016-09-01/serviceDiagnosticsSettings_API.json:245:9
+warning | PreCheck/SchemaMissingType | The schema 'RetentionPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2016-09-01/serviceDiagnosticsSettings_API.json:258:5
+warning | PreCheck/SchemaMissingType | The schema 'MetricSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2016-09-01/serviceDiagnosticsSettings_API.json:277:5
+warning | PreCheck/SchemaMissingType | The schema 'LogSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2016-09-01/serviceDiagnosticsSettings_API.json:299:5
+warning | PreCheck/SchemaMissingType | The schema 'ServiceDiagnosticSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2016-09-01/serviceDiagnosticsSettings_API.json:319:5
+warning | PreCheck/SchemaMissingType | The schema 'ServiceDiagnosticSettingsResourcePatch' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2016-09-01/serviceDiagnosticsSettings_API.json:370:5
+warning | PreCheck/SchemaMissingType | The schema 'ServiceDiagnosticSettingsResourcePatch-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2016-09-01/serviceDiagnosticsSettings_API.json:373:9
+warning | PreCheck/SchemaMissingType | The schema 'LocalizableString' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2016-09-01/metrics_API.json:141:5
+warning | PreCheck/SchemaMissingType | The schema 'MetricValue' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2016-09-01/metrics_API.json:180:5
+warning | PreCheck/SchemaMissingType | The schema 'Metric' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2016-09-01/metrics_API.json:218:5
+warning | PreCheck/SchemaMissingType | The schema 'MetricCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2016-09-01/metrics_API.json:251:5
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.29.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.30.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.31.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.35.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.36.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkScopesResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2019-10-17-preview/privateLinkScopes_API.json:782:5
+warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkScopesResource-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2019-10-17-preview/privateLinkScopes_API.json:807:9
+warning | PreCheck/SchemaMissingType | The schema 'TagsResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2019-10-17-preview/privateLinkScopes_API.json:820:5
+warning | PreCheck/SchemaMissingType | The schema 'TagsResource-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2019-10-17-preview/privateLinkScopes_API.json:822:9
+warning | PreCheck/SchemaMissingType | The schema 'AzureMonitorPrivateLinkScope' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2019-10-17-preview/privateLinkScopes_API.json:831:5
+warning | PreCheck/SchemaMissingType | The schema 'AzureMonitorPrivateLinkScopeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2019-10-17-preview/privateLinkScopes_API.json:849:5
+warning | PreCheck/SchemaMissingType | The schema 'AzureMonitorPrivateLinkScopeListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2019-10-17-preview/privateLinkScopes_API.json:867:5
+warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2019-10-17-preview/privateLinkScopes_API.json:1077:5
+warning | PreCheck/SchemaMissingType | The schema 'ErrorResponseCommon' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2019-10-17-preview/privateLinkScopes_API.json:1112:5
+warning | PreCheck/SchemaMissingType | The schema 'ErrorAdditionalInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2019-10-17-preview/privateLinkScopes_API.json:1142:5
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.29.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.30.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.31.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.35.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.36.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -1326,50 +1854,6 @@ warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.35.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.36.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.29.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.30.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.31.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.35.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.36.suppress which is deprecated and will be removed in the future.
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/SchemaMissingType | The schema 'MetricNamespaceName' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-12-01-preview/metricNamespaces_API.json:80:5
-warning | PreCheck/SchemaMissingType | The schema 'MetricNamespaceCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-12-01-preview/metricNamespaces_API.json:128:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -1734,226 +2218,6 @@ warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.35.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.36.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/SchemaMissingType | The schema 'ProxyOnlyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-05-01-preview/diagnosticsSettings_API.json:199:5
-warning | PreCheck/SchemaMissingType | The schema 'RetentionPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-05-01-preview/diagnosticsSettings_API.json:220:5
-warning | PreCheck/SchemaMissingType | The schema 'MetricSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-05-01-preview/diagnosticsSettings_API.json:239:5
-warning | PreCheck/SchemaMissingType | The schema 'LogSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-05-01-preview/diagnosticsSettings_API.json:264:5
-warning | PreCheck/SchemaMissingType | The schema 'DiagnosticSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-05-01-preview/diagnosticsSettings_API.json:284:5
-warning | PreCheck/SchemaMissingType | The schema 'DiagnosticSettingsResourceCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-05-01-preview/diagnosticsSettings_API.json:349:5
-warning | PreCheck/SchemaMissingType | The schema 'ProxyOnlyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-05-01-preview/diagnosticsSettingsCategories_API.json:116:5
-warning | PreCheck/SchemaMissingType | The schema 'DiagnosticSettingsCategory' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-05-01-preview/diagnosticsSettingsCategories_API.json:137:5
-warning | PreCheck/SchemaMissingType | The schema 'DiagnosticSettingsCategoryResourceCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-05-01-preview/diagnosticsSettingsCategories_API.json:170:5
-warning | PreCheck/SchemaMissingType | The schema 'SubscriptionProxyOnlyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-05-01-preview/subscriptionDiagnosticsSettings_API.json:199:5
-warning | PreCheck/SchemaMissingType | The schema 'SubscriptionLogSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-05-01-preview/subscriptionDiagnosticsSettings_API.json:224:5
-warning | PreCheck/SchemaMissingType | The schema 'SubscriptionDiagnosticSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-05-01-preview/subscriptionDiagnosticsSettings_API.json:240:5
-warning | PreCheck/SchemaMissingType | The schema 'SubscriptionDiagnosticSettingsResourceCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-05-01-preview/subscriptionDiagnosticsSettings_API.json:288:5
-warning | PreCheck/SchemaMissingType | The schema 'LocalizableString' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-05-01-preview/metricDefinitions_API.json:167:5
-warning | PreCheck/SchemaMissingType | The schema 'MetricAvailability' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-05-01-preview/metricDefinitions_API.json:183:5
-warning | PreCheck/SchemaMissingType | The schema 'MetricDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-05-01-preview/metricDefinitions_API.json:221:5
-warning | PreCheck/SchemaMissingType | The schema 'MetricDefinitionCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-05-01-preview/metricDefinitions_API.json:284:5
-warning | PreCheck/SchemaMissingType | The schema 'LocalizableString' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-05-01-preview/metrics_API.json:163:5
-warning | PreCheck/SchemaMissingType | The schema 'MetricValue' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-05-01-preview/metrics_API.json:202:5
-warning | PreCheck/SchemaMissingType | The schema 'MetadataValue' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-05-01-preview/metrics_API.json:240:5
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.29.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.30.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.31.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.35.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.36.suppress which is deprecated and will be removed in the future.
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.29.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.30.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.31.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.35.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.36.suppress which is deprecated and will be removed in the future.
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkScopesResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2019-10-17-preview/privateLinkScopes_API.json:782:5
-warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkScopesResource-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2019-10-17-preview/privateLinkScopes_API.json:807:9
-warning | PreCheck/SchemaMissingType | The schema 'TagsResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2019-10-17-preview/privateLinkScopes_API.json:820:5
-warning | PreCheck/SchemaMissingType | The schema 'TagsResource-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2019-10-17-preview/privateLinkScopes_API.json:822:9
-warning | PreCheck/SchemaMissingType | The schema 'AzureMonitorPrivateLinkScope' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2019-10-17-preview/privateLinkScopes_API.json:831:5
-warning | PreCheck/SchemaMissingType | The schema 'AzureMonitorPrivateLinkScopeProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2019-10-17-preview/privateLinkScopes_API.json:849:5
-warning | PreCheck/SchemaMissingType | The schema 'AzureMonitorPrivateLinkScopeListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2019-10-17-preview/privateLinkScopes_API.json:867:5
-warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2019-10-17-preview/privateLinkScopes_API.json:1077:5
-warning | PreCheck/SchemaMissingType | The schema 'ErrorResponseCommon' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2019-10-17-preview/privateLinkScopes_API.json:1112:5
-warning | PreCheck/SchemaMissingType | The schema 'ErrorAdditionalInfo' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2019-10-17-preview/privateLinkScopes_API.json:1142:5
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.29.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.30.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.31.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.35.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.36.suppress which is deprecated and will be removed in the future.
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.29.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.30.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.31.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.35.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.36.suppress which is deprecated and will be removed in the future.
-warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -2177,102 +2441,6 @@ warning | PreCheck/SchemaMissingType | The schema 'ActionGroupPatchBody-tags' wi
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2019-06-01/actionGroups_API.json:823:9
 warning | PreCheck/SchemaMissingType | The schema 'ActionGroupPatch' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2019-06-01/actionGroups_API.json:836:5
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.29.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.30.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.31.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.35.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.36.suppress which is deprecated and will be removed in the future.
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/activityLogAlerts_API.json:290:5
-warning | PreCheck/SchemaMissingType | The schema 'Resource-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/activityLogAlerts_API.json:315:9
-warning | PreCheck/SchemaMissingType | The schema 'ActivityLogAlertResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/activityLogAlerts_API.json:328:5
-warning | PreCheck/SchemaMissingType | The schema 'ActivityLogAlertList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/activityLogAlerts_API.json:343:5
-warning | PreCheck/SchemaMissingType | The schema 'ActivityLogAlert' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/activityLogAlerts_API.json:359:5
-warning | PreCheck/SchemaMissingType | The schema 'ActivityLogAlertAllOfCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/activityLogAlerts_API.json:393:5
-warning | PreCheck/SchemaMissingType | The schema 'ActivityLogAlertLeafCondition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/activityLogAlerts_API.json:408:5
-warning | PreCheck/SchemaMissingType | The schema 'ActivityLogAlertActionList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/activityLogAlerts_API.json:425:5
-warning | PreCheck/SchemaMissingType | The schema 'ActivityLogAlertActionGroup' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/activityLogAlerts_API.json:437:5
-warning | PreCheck/SchemaMissingType | The schema 'ActivityLogAlertActionGroup-webhookProperties' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/activityLogAlerts_API.json:444:9
-warning | PreCheck/SchemaMissingType | The schema 'ActivityLogAlertPatchBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/activityLogAlerts_API.json:469:5
-warning | PreCheck/SchemaMissingType | The schema 'ActivityLogAlertPatchBody-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/activityLogAlerts_API.json:472:9
-warning | PreCheck/SchemaMissingType | The schema 'ActivityLogAlertPatch' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/activityLogAlerts_API.json:485:5
-warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/actionGroups_API.json:338:5
-warning | PreCheck/SchemaMissingType | The schema 'Resource-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/actionGroups_API.json:363:9
-warning | PreCheck/SchemaMissingType | The schema 'ActionGroupResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/actionGroups_API.json:376:5
-warning | PreCheck/SchemaMissingType | The schema 'ActionGroupList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/actionGroups_API.json:391:5
-warning | PreCheck/SchemaMissingType | The schema 'ActionGroup' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/actionGroups_API.json:407:5
-warning | PreCheck/SchemaMissingType | The schema 'EmailReceiver' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/actionGroups_API.json:468:5
-warning | PreCheck/SchemaMissingType | The schema 'SmsReceiver' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/actionGroups_API.json:490:5
-warning | PreCheck/SchemaMissingType | The schema 'WebhookReceiver' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/actionGroups_API.json:517:5
-warning | PreCheck/SchemaMissingType | The schema 'ItsmReceiver' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/actionGroups_API.json:534:5
-warning | PreCheck/SchemaMissingType | The schema 'AzureAppPushReceiver' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/actionGroups_API.json:566:5
-warning | PreCheck/SchemaMissingType | The schema 'AutomationRunbookReceiver' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/actionGroups_API.json:583:5
-warning | PreCheck/SchemaMissingType | The schema 'EnableRequest' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/actionGroups_API.json:631:5
-warning | PreCheck/SchemaMissingType | The schema 'ActionGroupPatchBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/actionGroups_API.json:657:5
-warning | PreCheck/SchemaMissingType | The schema 'ActionGroupPatchBody-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/actionGroups_API.json:660:9
-warning | PreCheck/SchemaMissingType | The schema 'ActionGroupPatch' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2017-04-01/actionGroups_API.json:673:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -2656,70 +2824,6 @@ warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.35.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.36.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/SchemaMissingType | The schema 'GuestDiagnosticSettingsAssociationList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2018-06-01-preview/guestDiagnosticSettingsAssociation_API.json:312:5
-warning | PreCheck/SchemaMissingType | The schema 'GuestDiagnosticSettingsAssociationResourcePatch' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2018-06-01-preview/guestDiagnosticSettingsAssociation_API.json:328:5
-warning | PreCheck/SchemaMissingType | The schema 'GuestDiagnosticSettingsAssociationResourcePatch-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2018-06-01-preview/guestDiagnosticSettingsAssociation_API.json:331:9
-warning | PreCheck/SchemaMissingType | The schema 'GuestDiagnosticSettingsAssociation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2018-06-01-preview/guestDiagnosticSettingsAssociation_API.json:344:5
-warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2018-06-01-preview/guestDiagnosticSettingsAssociation_API.json:375:5
-warning | PreCheck/SchemaMissingType | The schema 'Resource-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2018-06-01-preview/guestDiagnosticSettingsAssociation_API.json:400:9
-warning | PreCheck/SchemaMissingType | The schema 'GuestDiagnosticSettingsList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2018-06-01-preview/guestDiagnosticSettings_API.json:295:5
-warning | PreCheck/SchemaMissingType | The schema 'GuestDiagnosticSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2018-06-01-preview/guestDiagnosticSettings_API.json:330:5
-warning | PreCheck/SchemaMissingType | The schema 'GuestDiagnosticSettingsPatchResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2018-06-01-preview/guestDiagnosticSettings_API.json:353:5
-warning | PreCheck/SchemaMissingType | The schema 'GuestDiagnosticSettingsPatchResource-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2018-06-01-preview/guestDiagnosticSettings_API.json:356:9
-warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2018-06-01-preview/guestDiagnosticSettings_API.json:509:5
-warning | PreCheck/SchemaMissingType | The schema 'Resource-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2018-06-01-preview/guestDiagnosticSettings_API.json:534:9
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.29.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.30.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.31.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.35.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.36.suppress which is deprecated and will be removed in the future.
-warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-03-01-preview/activityLogAlerts_API.json:296:5
 warning | PreCheck/SchemaMissingType | The schema 'Resource-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -2744,70 +2848,6 @@ warning | PreCheck/SchemaMissingType | The schema 'ActivityLogAlertResourcePatch
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-03-01-preview/activityLogAlerts_API.json:470:5
 warning | PreCheck/SchemaMissingType | The schema 'ActivityLogAlertPatch' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/preview/2017-03-01-preview/activityLogAlerts_API.json:484:5
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.14.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.15.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.16.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.17.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.18.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.19.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.20.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.21.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.22.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.23.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.24.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.25.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.26.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.27.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.28.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.29.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.30.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.31.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.32.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.33.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.34.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.35.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.36.suppress which is deprecated and will be removed in the future.
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/SchemaMissingType | The schema 'LocalizableString' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2016-09-01/metrics_API.json:141:5
-warning | PreCheck/SchemaMissingType | The schema 'MetricValue' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2016-09-01/metrics_API.json:180:5
-warning | PreCheck/SchemaMissingType | The schema 'Metric' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2016-09-01/metrics_API.json:218:5
-warning | PreCheck/SchemaMissingType | The schema 'MetricCollection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2016-09-01/metrics_API.json:251:5
-warning | PreCheck/SchemaMissingType | The schema 'Resource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2016-09-01/serviceDiagnosticsSettings_API.json:220:5
-warning | PreCheck/SchemaMissingType | The schema 'Resource-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2016-09-01/serviceDiagnosticsSettings_API.json:245:9
-warning | PreCheck/SchemaMissingType | The schema 'RetentionPolicy' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2016-09-01/serviceDiagnosticsSettings_API.json:258:5
-warning | PreCheck/SchemaMissingType | The schema 'MetricSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2016-09-01/serviceDiagnosticsSettings_API.json:277:5
-warning | PreCheck/SchemaMissingType | The schema 'LogSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2016-09-01/serviceDiagnosticsSettings_API.json:299:5
-warning | PreCheck/SchemaMissingType | The schema 'ServiceDiagnosticSettings' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2016-09-01/serviceDiagnosticsSettings_API.json:319:5
-warning | PreCheck/SchemaMissingType | The schema 'ServiceDiagnosticSettingsResourcePatch' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2016-09-01/serviceDiagnosticsSettings_API.json:370:5
-warning | PreCheck/SchemaMissingType | The schema 'ServiceDiagnosticSettingsResourcePatch-tags' with an undefined type and additionalProperties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/monitor/resource-manager/Microsoft.Insights/stable/2016-09-01/serviceDiagnosticsSettings_API.json:373:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
