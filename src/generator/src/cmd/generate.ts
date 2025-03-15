@@ -52,25 +52,39 @@ executeSynchronous(async () => {
   await mkdir(outputBaseDir, { recursive: true });
   const subdirsCreated = new Set<string>();
   const summaryLogger = await getLogger(`${outputBaseDir}/summary.log`);
+  const getBasePath = (readmePath: string) => path.relative(specsPath, readmePath).split(path.sep)[0].toLowerCase();
 
-  // use consistent sorting to make log changes easier to review
-  for (const readmePath of readmePaths.sort(lowerCaseCompare)) {
-    const bicepReadmePath = `${path.dirname(readmePath)}/readme.bicep.md`;
-    const basePath = path.relative(specsPath, readmePath).split(path.sep)[0].toLowerCase();
-    const tmpOutputDir = `${tmpOutputPath}/${basePath}`;
-    const outputDir = `${outputBaseDir}/${basePath}`;
+  const basePathData = readmePaths
+    // use sorting to ensure determinism
+    .sort(lowerCaseCompare)
+    .map(readmePath => ({ readmePath, basePath: getBasePath(readmePath) }))
+    .filter(x => !singlePath || lowerCaseCompare(singlePath, x.basePath) === 0);
 
-    if (singlePath && lowerCaseCompare(singlePath, basePath) !== 0) {
-      continue;
-    }
+  const pathData = basePathData.map(entry => {
+    const { readmePath, basePath } = entry;
+    const readmesInBasePath = basePathData.filter(x => x.basePath === basePath);
+    const outputBasePath = readmesInBasePath.length > 0 ? `${basePath}_${readmesInBasePath.indexOf(entry)}` : basePath;
 
+    return {
+      readmePath,
+      relativeReadmePath: path.relative(inputBaseDir, readmePath),
+      bicepReadmePath: `${path.dirname(readmePath)}/readme.bicep.md`,
+      config: getConfig(basePath),
+      tmpOutputDir: `${tmpOutputPath}/${outputBasePath}`,
+      outputDir: `${outputBaseDir}/${outputBasePath}`,  
+    };
+  });
+
+  for (const entry of pathData) {
+    const { readmePath, relativeReadmePath, bicepReadmePath, config, tmpOutputDir, outputDir } = entry;
     // prepare temp dir for output
     await rm(tmpOutputDir, { recursive: true, force: true, });
     await mkdir(tmpOutputDir, { recursive: true });
     const logger = await getLogger(`${tmpOutputDir}/log.out`);
-    const config = getConfig(basePath);
 
     try {
+      logger.out(`Generating types for '${relativeReadmePath}'\n`);
+
       // autorest readme.bicep.md files are not checked in, so we must generate them before invoking autorest
       await generateAutorestConfig(logger, readmePath, bicepReadmePath, config);
       await runAutorest(logger, readmePath, tmpOutputDir, logLevel, waitForDebugger);
@@ -88,7 +102,7 @@ executeSynchronous(async () => {
       // Use markdown formatting as this summary will be included in the PR description
       logOut(summaryLogger,
 `<details>
-  <summary>Failed to generate types for path '${basePath}'</summary>
+  <summary>Failed to generate types for '${relativeReadmePath}'</summary>
 
 \`\`\`
 ${err}
