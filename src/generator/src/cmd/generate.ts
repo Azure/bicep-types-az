@@ -63,7 +63,7 @@ executeSynchronous(async () => {
   const pathData = basePathData.map(entry => {
     const { readmePath, basePath } = entry;
     const readmesInBasePath = basePathData.filter(x => x.basePath === basePath);
-    const outputBasePath = readmesInBasePath.length > 0 ? `${basePath}_${readmesInBasePath.indexOf(entry)}` : basePath;
+    const outputBasePath = readmesInBasePath.length > 1 ? `${basePath}_${readmesInBasePath.indexOf(entry)}` : basePath;
 
     return {
       readmePath,
@@ -124,7 +124,7 @@ ${err}
   // we only want to clear stale type folders if re-generating the full directory
   if (!singlePath) {
     // log if there are any type dirs with no corresponding readme (e.g. if a swagger directory has been removed).
-    const shouldRebuildTypeIndex = await clearStaleTypeFolders(defaultLogger, outputBaseDir, specsPath, readmePaths);
+    const shouldRebuildTypeIndex = await clearStaleTypeFolders(defaultLogger, outputBaseDir, pathData.map(x => x.outputDir));
     
     if (shouldRebuildTypeIndex) {
       await buildTypeIndex(defaultLogger, outputBaseDir);
@@ -264,16 +264,16 @@ async function findReadmePaths(specsPath: string) {
   });
 }
 
-async function clearStaleTypeFolders(logger: ILogger, outputBaseDir: string, specsPath: string, readmePaths: string[]) {
+async function clearStaleTypeFolders(logger: ILogger, outputBaseDir: string, outputDirs: string[]) {
   const typesPaths = await findRecursive(outputBaseDir, filePath => {
     return path.basename(filePath) === 'types.json';
   });
 
   const typesBasePaths = typesPaths.map(p => path.relative(outputBaseDir, p).split(path.sep)[0].toLowerCase());
-  const readmeBasePaths = readmePaths.map(p => path.relative(specsPath, p).split(path.sep)[0].toLowerCase());
+  const generatedBasePaths = outputDirs.map(p => path.relative(outputBaseDir, p).split(path.sep)[0].toLowerCase());
 
   const staleBasePaths = typesBasePaths
-    .filter(p => !readmeBasePaths.includes(p))
+    .filter(p => !generatedBasePaths.includes(p))
     .filter((value, index, array) => array.indexOf(value) === index);
 
   if (staleBasePaths.length > 0) {
