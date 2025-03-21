@@ -1,3 +1,4 @@
+Generating types for 'specification/securityinsights/resource-manager/readme.md'
 AutoRest code generation utility [cli version: 3.7.1; node: v16.20.2]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
@@ -616,7 +617,7 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'metadataDependencie
   - properties.criteria.$ref: "#/components/schemas/schemas:337" => "#/components/schemas/schemas:777"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'metadataDependencies' (2 differences):
   - properties.criteria.x-ms-identifiers.0: <none> => "contentId"
-  - properties.criteria.$ref: "#/components/schemas/schemas:337" => "#/components/schemas/schemas:1594"
+  - properties.criteria.$ref: "#/components/schemas/schemas:337" => "#/components/schemas/schemas:1596"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'templateList' (1 differences):
   - properties.value.$ref: "#/components/schemas/schemas:348" => "#/components/schemas/schemas:355"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'templateModel' (1 differences):
@@ -701,7 +702,7 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'metadataDependencie
   - properties.criteria.$ref: "#/components/schemas/schemas:337" => "#/components/schemas/schemas:777"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'metadataDependencies' (2 differences):
   - properties.criteria.x-ms-identifiers.0: <none> => "contentId"
-  - properties.criteria.$ref: "#/components/schemas/schemas:337" => "#/components/schemas/schemas:1577"
+  - properties.criteria.$ref: "#/components/schemas/schemas:337" => "#/components/schemas/schemas:1579"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'templateList' (1 differences):
   - properties.value.$ref: "#/components/schemas/schemas:348" => "#/components/schemas/schemas:355"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'templateModel' (1 differences):

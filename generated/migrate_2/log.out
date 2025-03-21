@@ -1,0 +1,37 @@
+Generating types for 'specification/migrate/resource-manager/Microsoft.Migrate/MordernizeProjects/readme.md'
+AutoRest code generation utility [cli version: 3.7.1; node: v16.20.2]
+(C) 2018 Microsoft Corporation.
+https://aka.ms/autorest
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'BuildContainerImageWorkflowModelCustomProperties-containerImageProperties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/migrate/resource-manager/Microsoft.Migrate/MordernizeProjects/preview/2022-05-01-preview/migrateEngine.json:2863:9
+warning | PreCheck/SchemaMissingType | The schema 'DeployedResourceModel-systemData' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/migrate/resource-manager/Microsoft.Migrate/MordernizeProjects/preview/2022-05-01-preview/migrateEngine.json:2962:9
+warning | PreCheck/SchemaMissingType | The schema 'EnableReplicationWorkflowModelCustomProperties-workloadInstanceProperties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/migrate/resource-manager/Microsoft.Migrate/MordernizeProjects/preview/2022-05-01-preview/migrateEngine.json:3151:9
+warning | PreCheck/SchemaMissingType | The schema 'MigrateAgentModel-systemData' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/migrate/resource-manager/Microsoft.Migrate/MordernizeProjects/preview/2022-05-01-preview/migrateEngine.json:3849:9
+warning | PreCheck/SchemaMissingType | The schema 'MigrateWorkflowModelCustomProperties-deployedResourcesProperties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/migrate/resource-manager/Microsoft.Migrate/MordernizeProjects/preview/2022-05-01-preview/migrateEngine.json:3975:9
+warning | PreCheck/SchemaMissingType | The schema 'ModernizeProjectModel-systemData' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/migrate/resource-manager/Microsoft.Migrate/MordernizeProjects/preview/2022-05-01-preview/migrateEngine.json:4032:9
+warning | PreCheck/SchemaMissingType | The schema 'ModernizeProjectStatisticsModelProperties-workloadDeploymentStatistics' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/migrate/resource-manager/Microsoft.Migrate/MordernizeProjects/preview/2022-05-01-preview/migrateEngine.json:4117:9
+warning | PreCheck/SchemaMissingType | The schema 'ModernizeProjectStatisticsModelProperties-jobStatistics' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/migrate/resource-manager/Microsoft.Migrate/MordernizeProjects/preview/2022-05-01-preview/migrateEngine.json:4125:9
+warning | PreCheck/SchemaMissingType | The schema 'ModernizeProjectStatisticsModelProperties-workloadInstanceStatistics' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/migrate/resource-manager/Microsoft.Migrate/MordernizeProjects/preview/2022-05-01-preview/migrateEngine.json:4133:9
+warning | PreCheck/SchemaMissingType | The schema 'TestMigrateWorkflowModelCustomProperties-deployedResourcesProperties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/migrate/resource-manager/Microsoft.Migrate/MordernizeProjects/preview/2022-05-01-preview/migrateEngine.json:4488:9
+warning | PreCheck/SchemaMissingType | The schema 'WorkflowModel-systemData' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/migrate/resource-manager/Microsoft.Migrate/MordernizeProjects/preview/2022-05-01-preview/migrateEngine.json:4674:9
+warning | PreCheck/SchemaMissingType | The schema 'WorkloadDeploymentModel-systemData' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/migrate/resource-manager/Microsoft.Migrate/MordernizeProjects/preview/2022-05-01-preview/migrateEngine.json:4911:9
+warning | PreCheck/SchemaMissingType | The schema 'WorkloadDeploymentModelProperties-currentJob' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/migrate/resource-manager/Microsoft.Migrate/MordernizeProjects/preview/2022-05-01-preview/migrateEngine.json:5111:9
+warning | PreCheck/SchemaMissingType | The schema 'WorkloadInstanceModel-systemData' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/migrate/resource-manager/Microsoft.Migrate/MordernizeProjects/preview/2022-05-01-preview/migrateEngine.json:5205:9
+warning | PreCheck/SchemaMissingType | The schema 'WorkloadInstanceModelProperties-currentJob' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/migrate/resource-manager/Microsoft.Migrate/MordernizeProjects/preview/2022-05-01-preview/migrateEngine.json:5362:9
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Unrecognized property type: byte-array. Returning 'any'.
