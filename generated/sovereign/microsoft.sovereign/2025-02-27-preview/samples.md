@@ -11,11 +11,15 @@ LandingZoneAccountOperations_Create
 resource exampleResource 'Microsoft.Sovereign/landingZoneAccounts@2025-02-27-preview' = {
   name: 'example'
   identity: {
-    type: 'SystemAssigned'
+    type: 'SystemAssigned, UserAssigned'
+    userAssignedIdentities: {
+      '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-RemApiExample/providers/Microsoft.ManagedIdentity/userAssignedIdentities/mi-RemApiExample': {
+      }
+    }
   }
   location: 'northeurope'
   properties: {
-    storageAccount: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/TestStorageAccount/providers/Microsoft.Storage/storageAccounts/teststorageaccount'
+    storageAccount: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-RemApiExample/providers/Microsoft.Storage/storageAccounts/saremapiexample'
   }
   tags: {
     tag1: 'MCFS'
@@ -31,102 +35,195 @@ resource exampleResource 'Microsoft.Sovereign/landingZoneAccounts/landingZoneCon
   parent: parentResource 
   name: 'example'
   properties: {
-    azureBastionCreationOption: 'Yes'
-    azureBastionSubnetCidrBlock: '10.20.255.0/24'
+    azureBastionCreationOption: 'UseExisting'
     customNamingConvention: [
       {
-        formula: '{DeploymentSuffix}'
-        resourceType: 'azureFirewalls'
+        formula: '{ResourceTypeAbbreviation}-{DeploymentPrefix}-Contoso-{DeploymentSuffix}'
+        resourceType: 'ddosProtectionPlans'
       }
     ]
-    ddosProtectionCreationOption: 'Yes'
+    ddosProtectionCreationOption: 'UseExisting'
     decommissionedMgMetadata: {
-      create: false
+      create: true
       policyInitiativesAssignmentProperties: [
+        {
+          assignmentParameters: {
+            listOfAllowedLocations: [
+              'swedencentral'
+            ]
+          }
+          policyInitiativeId: '/providers/Microsoft.Authorization/policySetDefinitions/c1cbff38-87c0-4b9f-9f70-035c7a3b5523'
+        }
       ]
     }
-    existingAzureBastionId: {
-    }
-    existingDdosProtectionId: {
-    }
-    existingLogAnalyticsWorkspaceId: {
-    }
-    firewallCreationOption: 'Standard'
-    firewallSubnetCidrBlock: '10.20.255.0/24'
-    gatewaySubnetCidrBlock: '10.20.255.0/24'
-    hubNetworkCidrBlock: '10.20.255.0/24'
+    existingAzureBastionId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-RemApiExample/providers/Microsoft.Network/bastionHosts/bas-RemApiExample'
+    existingDdosProtectionId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-RemApiExample/providers/Microsoft.Network/ddosProtectionPlans/ddos-RemApiExample'
+    existingLogAnalyticsWorkspaceId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-RemApiExample/providers/Microsoft.OperationalInsights/workspaces/log-RemApiExample'
+    firewallCreationOption: 'Premium'
+    firewallSubnetCidrBlock: '10.20.254.0/24'
+    gatewaySubnetCidrBlock: '10.20.252.0/24'
+    hubNetworkCidrBlock: '10.20.0.0/16'
     landingZonesMgChildren: [
       {
         name: 'Corp'
         policyInitiativesAssignmentProperties: [
+        ]
+      }
+      {
+        name: 'Online'
+        policyInitiativesAssignmentProperties: [
+        ]
+      }
+      {
+        name: 'Confidential Corp'
+        policyInitiativesAssignmentProperties: [
           {
             assignmentParameters: {
             }
-            policyInitiativeId: 'c138fd1a-e08f-4318-9490-d11ef2c2f9c1'
+            policyInitiativeId: '/providers/Microsoft.Authorization/policySetDefinitions/03de05a4-c324-4ccd-882f-a814ea8ab9ea'
+          }
+        ]
+      }
+      {
+        name: 'Confidential Online'
+        policyInitiativesAssignmentProperties: [
+          {
+            assignmentParameters: {
+            }
+            policyInitiativeId: '/providers/Microsoft.Authorization/policySetDefinitions/03de05a4-c324-4ccd-882f-a814ea8ab9ea'
           }
         ]
       }
     ]
     landingZonesMgMetadata: {
       policyInitiativesAssignmentProperties: [
+        {
+          assignmentParameters: {
+            listOfAllowedLocations: [
+              'swedencentral'
+            ]
+          }
+          policyInitiativeId: '/providers/Microsoft.Authorization/policySetDefinitions/c1cbff38-87c0-4b9f-9f70-035c7a3b5523'
+        }
       ]
     }
-    logAnalyticsWorkspaceCreationOption: 'No'
+    logAnalyticsWorkspaceCreationOption: 'UseExisting'
     logRetentionInDays: 540
     managedIdentity: {
-      type: 'SystemAssigned'
+      type: 'UserAssigned'
+      userAssignedIdentityResourceId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-RemApiExample/providers/Microsoft.ManagedIdentity/userAssignedIdentities/mi-RemApiExample'
     }
-    namingConventionFormula: '{ResourceTypeAbbreviation}'
+    namingConventionFormula: '{ResourceTypeAbbreviation}-{DeploymentPrefix}-Contoso-{DeploymentSuffix}-{Environment}'
     platformConnectivityMgMetadata: {
       policyInitiativesAssignmentProperties: [
+        {
+          assignmentParameters: {
+            listOfAllowedLocations: [
+              'swedencentral'
+            ]
+          }
+          policyInitiativeId: '/providers/Microsoft.Authorization/policySetDefinitions/c1cbff38-87c0-4b9f-9f70-035c7a3b5523'
+        }
       ]
     }
     platformIdentityMgMetadata: {
       policyInitiativesAssignmentProperties: [
+        {
+          assignmentParameters: {
+            listOfAllowedLocations: [
+              'swedencentral'
+            ]
+          }
+          policyInitiativeId: '/providers/Microsoft.Authorization/policySetDefinitions/c1cbff38-87c0-4b9f-9f70-035c7a3b5523'
+        }
       ]
     }
     platformManagementMgMetadata: {
       policyInitiativesAssignmentProperties: [
+        {
+          assignmentParameters: {
+            listOfAllowedLocations: [
+              'swedencentral'
+            ]
+          }
+          policyInitiativeId: '/providers/Microsoft.Authorization/policySetDefinitions/c1cbff38-87c0-4b9f-9f70-035c7a3b5523'
+        }
       ]
     }
     platformMgChildren: [
       {
-        name: 'childmg1'
+        name: 'Telemetry'
         policyInitiativesAssignmentProperties: [
+          {
+            assignmentParameters: {
+              listOfAllowedLocations: [
+                'swedencentral'
+              ]
+            }
+            policyInitiativeId: '/providers/Microsoft.Authorization/policySetDefinitions/c1cbff38-87c0-4b9f-9f70-035c7a3b5523'
+          }
         ]
       }
       {
-        name: 'childmg2'
+        name: 'Security'
         policyInitiativesAssignmentProperties: [
+          {
+            assignmentParameters: {
+              listOfAllowedLocations: [
+                'swedencentral'
+              ]
+            }
+            policyInitiativeId: '/providers/Microsoft.Authorization/policySetDefinitions/c1cbff38-87c0-4b9f-9f70-035c7a3b5523'
+          }
         ]
       }
     ]
     platformMgMetadata: {
       policyInitiativesAssignmentProperties: [
+        {
+          assignmentParameters: {
+            listOfAllowedLocations: [
+              'swedencentral'
+            ]
+          }
+          policyInitiativeId: '/providers/Microsoft.Authorization/policySetDefinitions/c1cbff38-87c0-4b9f-9f70-035c7a3b5523'
+        }
       ]
     }
     sandboxMgMetadata: {
       create: true
       policyInitiativesAssignmentProperties: [
+        {
+          assignmentParameters: {
+            listOfAllowedLocations: [
+              'swedencentral'
+            ]
+          }
+          policyInitiativeId: '/providers/Microsoft.Authorization/policySetDefinitions/c1cbff38-87c0-4b9f-9f70-035c7a3b5523'
+        }
       ]
     }
     tags: [
       {
         name: 'tag1'
-        value: 'do'
+        value: 'Lorem'
       }
       {
         name: 'tag2'
-        value: 'do'
+        value: 'Ipsum'
       }
     ]
     topLevelMgMetadata: {
       policyInitiativesAssignmentProperties: [
         {
           assignmentParameters: {
-            Effect: 'Audit'
+            listOfAllowedLocations: [
+              'swedencentral'
+              'eastus2'
+              'uksouth'
+            ]
           }
-          policyInitiativeId: '/providers/Microsoft.Authorization/policySetDefinitions/0a2ebd47-3fb9-4735-a006-b7f31ddadd9f'
+          policyInitiativeId: '/providers/Microsoft.Authorization/policySetDefinitions/c1cbff38-87c0-4b9f-9f70-035c7a3b5523'
         }
       ]
     }
@@ -142,10 +239,11 @@ resource exampleResource 'Microsoft.Sovereign/landingZoneAccounts/landingZoneReg
   parent: parentResource 
   name: 'example'
   properties: {
-    existingLandingZoneConfigurationId: '/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/TestResourceGroup/providers/Microsoft.Sovereign/landingZoneAccounts/ExampleLZA/landingZoneConfigurations/ExampleLZC'
-    existingTopLevelMgId: '/providers/Microsoft.Management/managementGroups/mcfs'
+    existingLandingZoneConfigurationId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-RemApiExample/providers/Microsoft.Sovereign/landingZoneAccounts/lza-RemApiExample/landingZoneConfigurations/lzc-RemApiExample'
+    existingTopLevelMgId: '/providers/Microsoft.Management/managementGroups/mg-example'
     managedIdentity: {
-      type: 'SystemAssigned'
+      type: 'UserAssigned'
+      userAssignedIdentityResourceId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-RemApiExample/providers/Microsoft.ManagedIdentity/userAssignedIdentities/mi-RemApiExample'
     }
   }
 }

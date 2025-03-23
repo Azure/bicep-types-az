@@ -6101,10 +6101,12 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **clientSecret**: [SecretBase](#secretbase): The Azure key vault secret reference of client secret for AADServicePrincipal authentication.
 * **database**: any (Required): The name of the Snowflake database.
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
-* **host**: any: The host name of the Snowflake account.
+* **host**: any: The host name of the Snowflake account. Type: string (or Expression with resultType string).
 * **password**: [SecretBase](#secretbase): The Azure key vault secret reference of password in connection string.
 * **privateKey**: [SecretBase](#secretbase): The Azure key vault secret reference of privateKey for KeyPair auth.
 * **privateKeyPassphrase**: [SecretBase](#secretbase): The Azure key vault secret reference of private key password for KeyPair auth with encrypted private key.
+* **role**: any: The default access control role to use in the Snowflake session. Type: string (or Expression with resultType string).
+* **schema**: any: Schema name for connection. Type: string (or Expression with resultType string).
 * **scope**: any: The scope of the application registered in Azure Active Directory for AADServicePrincipal authentication.
 * **tenantId**: any: The tenant ID of the application registered in Azure Active Directory for AADServicePrincipal authentication.
 * **user**: any: The name of the Snowflake user.

@@ -1158,6 +1158,7 @@ Tiering policy specifies the criteria to move RP to the target tier.
 * **objectType**: 'AzureFileShareRecoveryPoint' (Required): This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
 * **recoveryPointProperties**: [RecoveryPointProperties](#recoverypointproperties): Properties of Recovery Point
 * **recoveryPointSizeInGB**: int: Contains recovery point size
+* **recoveryPointTierDetails**: [RecoveryPointTierInformation](#recoverypointtierinformation)[]: Recovery point tier information.
 * **recoveryPointTime**: string: Time at which this backup copy was created.
 * **recoveryPointType**: string: Type of the backup copy. Specifies whether it is a crash consistent backup or app consistent.
 
@@ -1244,6 +1245,17 @@ should be null if VM is in public cloud
 * **expiryTime**: string: Expiry time of Recovery Point in UTC.
 * **isSoftDeleted**: bool: Bool to indicate whether RP is in soft delete state or not
 * **ruleName**: string: Rule name tagged on Recovery Point that governs life cycle
+
+## RecoveryPointTierInformation
+### Properties
+* **extendedInfo**: [RecoveryPointTierInformationExtendedInfo](#recoverypointtierinformationextendedinfo): Recovery point tier status.
+* **status**: 'Deleted' | 'Disabled' | 'Invalid' | 'Rehydrated' | 'Valid': Recovery point tier status.
+* **type**: 'ArchivedRP' | 'HardenedRP' | 'InstantRP' | 'Invalid': Recovery point tier type.
+
+## RecoveryPointTierInformationExtendedInfo
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## RecoveryPointTierInformationExtendedInfo
 ### Properties
