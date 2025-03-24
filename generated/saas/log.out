@@ -1,3 +1,4 @@
+Generating types for 'specification/saas/resource-manager/readme.md'
 WARNING: Unable to parse swagger path "Microsoft.SaaS/preview/2018-03-01-beta/saas.json"
 AutoRest code generation utility [cli version: 3.7.1; node: v16.20.2]
 (C) 2018 Microsoft Corporation.
