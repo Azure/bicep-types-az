@@ -1,3 +1,4 @@
+Generating types for 'specification/azure-kusto/resource-manager/readme.md'
 WARNING: Unable to parse swagger path "Microsoft.Kusto/preview/2017-09-07-privatepreview/kusto.json"
 AutoRest code generation utility [cli version: 3.7.1; node: v16.20.2]
 (C) 2018 Microsoft Corporation.

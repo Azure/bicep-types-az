@@ -1,0 +1,153 @@
+Generating types for 'specification/azsadmin/resource-manager/compute/readme.md'
+AutoRest code generation utility [cli version: 3.7.1; node: v16.20.2]
+(C) 2018 Microsoft Corporation.
+https://aka.ms/autorest
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'ErrorResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azsadmin/resource-manager/compute/Microsoft.Compute.Admin/stable/2021-09-01/Disks.json:129:5
+warning | PreCheck/SchemaMissingType | The schema 'ErrorDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azsadmin/resource-manager/compute/Microsoft.Compute.Admin/stable/2021-09-01/Disks.json:138:5
+warning | PreCheck/SchemaMissingType | The schema 'ErrorResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azsadmin/resource-manager/compute/Microsoft.Compute.Admin/stable/2021-09-01/DiskMigrationJobs.json:202:5
+warning | PreCheck/SchemaMissingType | The schema 'ErrorDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azsadmin/resource-manager/compute/Microsoft.Compute.Admin/stable/2021-09-01/DiskMigrationJobs.json:211:5
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'ErrorResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azsadmin/resource-manager/compute/Microsoft.Compute.Admin/stable/2021-09-01/Disks.json:129:5
+warning | PreCheck/SchemaMissingType | The schema 'ErrorDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azsadmin/resource-manager/compute/Microsoft.Compute.Admin/stable/2021-09-01/Disks.json:138:5
+warning | PreCheck/SchemaMissingType | The schema 'ErrorResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azsadmin/resource-manager/compute/Microsoft.Compute.Admin/stable/2021-09-01/DiskMigrationJobs.json:202:5
+warning | PreCheck/SchemaMissingType | The schema 'ErrorDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azsadmin/resource-manager/compute/Microsoft.Compute.Admin/stable/2021-09-01/DiskMigrationJobs.json:211:5
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'ErrorResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azsadmin/resource-manager/compute/Microsoft.Compute.Admin/stable/2021-09-01/Disks.json:129:5
+warning | PreCheck/SchemaMissingType | The schema 'ErrorDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azsadmin/resource-manager/compute/Microsoft.Compute.Admin/stable/2021-09-01/Disks.json:138:5
+warning | PreCheck/SchemaMissingType | The schema 'ErrorResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azsadmin/resource-manager/compute/Microsoft.Compute.Admin/stable/2021-09-01/DiskMigrationJobs.json:202:5
+warning | PreCheck/SchemaMissingType | The schema 'ErrorDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azsadmin/resource-manager/compute/Microsoft.Compute.Admin/stable/2021-09-01/DiskMigrationJobs.json:211:5
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'ErrorResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azsadmin/resource-manager/compute/Microsoft.Compute.Admin/stable/2021-09-01/Disks.json:129:5
+warning | PreCheck/SchemaMissingType | The schema 'ErrorDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azsadmin/resource-manager/compute/Microsoft.Compute.Admin/stable/2021-09-01/Disks.json:138:5
+warning | PreCheck/SchemaMissingType | The schema 'ErrorResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azsadmin/resource-manager/compute/Microsoft.Compute.Admin/stable/2021-09-01/DiskMigrationJobs.json:202:5
+warning | PreCheck/SchemaMissingType | The schema 'ErrorDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azsadmin/resource-manager/compute/Microsoft.Compute.Admin/stable/2021-09-01/DiskMigrationJobs.json:211:5
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'ErrorResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azsadmin/resource-manager/compute/Microsoft.Compute.Admin/stable/2021-09-01/Disks.json:129:5
+warning | PreCheck/SchemaMissingType | The schema 'ErrorDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azsadmin/resource-manager/compute/Microsoft.Compute.Admin/stable/2021-09-01/Disks.json:138:5
+warning | PreCheck/SchemaMissingType | The schema 'ErrorResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azsadmin/resource-manager/compute/Microsoft.Compute.Admin/stable/2021-09-01/DiskMigrationJobs.json:202:5
+warning | PreCheck/SchemaMissingType | The schema 'ErrorDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azsadmin/resource-manager/compute/Microsoft.Compute.Admin/stable/2021-09-01/DiskMigrationJobs.json:211:5
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'ErrorResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azsadmin/resource-manager/compute/Microsoft.Compute.Admin/stable/2021-09-01/Disks.json:129:5
+warning | PreCheck/SchemaMissingType | The schema 'ErrorDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azsadmin/resource-manager/compute/Microsoft.Compute.Admin/stable/2021-09-01/Disks.json:138:5
+warning | PreCheck/SchemaMissingType | The schema 'ErrorResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azsadmin/resource-manager/compute/Microsoft.Compute.Admin/stable/2021-09-01/DiskMigrationJobs.json:202:5
+warning | PreCheck/SchemaMissingType | The schema 'ErrorDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azsadmin/resource-manager/compute/Microsoft.Compute.Admin/stable/2021-09-01/DiskMigrationJobs.json:211:5
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Quota' (2 differences):
+  - properties.properties.$ref: "#/components/schemas/schemas:1" => "#/components/schemas/schemas:83"
+  - allOf.0.$ref: "#/components/schemas/schemas:12" => "#/components/schemas/schemas:17"
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'QuotaProperties' (2 differences):
+  - properties.ddagpuCount: <none> => {"$ref":"#/components/schemas/schemas:90","description":"Maximum number of dda gpus allowed."}
+  - properties.partitionedGpuCount: <none> => {"$ref":"#/components/schemas/schemas:91","description":"Maximum number of partitioned gpus allowed."}
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'QuotaList' (1 differences):
+  - properties.value.$ref: "#/components/schemas/schemas:10" => "#/components/schemas/schemas:94"
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'Quota' -> 'QuotaAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'QuotaProperties' -> 'QuotaPropertiesAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'QuotaList' -> 'QuotaListAutoGenerated'
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'ErrorResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azsadmin/resource-manager/compute/Microsoft.Compute.Admin/stable/2021-09-01/Disks.json:129:5
+warning | PreCheck/SchemaMissingType | The schema 'ErrorDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azsadmin/resource-manager/compute/Microsoft.Compute.Admin/stable/2021-09-01/Disks.json:138:5
+warning | PreCheck/SchemaMissingType | The schema 'ErrorResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azsadmin/resource-manager/compute/Microsoft.Compute.Admin/stable/2021-09-01/DiskMigrationJobs.json:202:5
+warning | PreCheck/SchemaMissingType | The schema 'ErrorDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azsadmin/resource-manager/compute/Microsoft.Compute.Admin/stable/2021-09-01/DiskMigrationJobs.json:211:5
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'DiskProperties' (3 differences):
+  - properties.creationSourceUri: <none> => {"$ref":"#/components/schemas/schemas:166","description":"The disk creation source uri.","readOnly":true}
+  - properties.creationOption: <none> => {"description":"The disk creation option.","$ref":"#/components/schemas/DiskCreationOption","readOnly":true}
+  - properties.exclusiveAllocatedSize: <none> => {"$ref":"#/components/schemas/schemas:167","description":"The exclusive allocated size for the disk.","readOnly":true}
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Disk' (1 differences):
+  - properties.properties.$ref: "#/components/schemas/schemas:0" => "#/components/schemas/schemas:159"
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'DiskList' (1 differences):
+  - properties.value.$ref: "#/components/schemas/schemas:9" => "#/components/schemas/schemas:170"
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'MigrationSubTaskProperties' (1 differences):
+  - properties.progress: <none> => {"$ref":"#/components/schemas/schemas:198","description":"The progress of migration sub task which measures the percent of content migrated.","readOnly":true}
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'MigrationSubTask' (1 differences):
+  - properties.properties.$ref: "#/components/schemas/schemas:24" => "#/components/schemas/schemas:191"
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'DiskMigrationJobProperties' (1 differences):
+  - properties.subtasks.$ref: "#/components/schemas/schemas:31" => "#/components/schemas/schemas:199"
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'DiskMigrationJob' (1 differences):
+  - properties.properties.$ref: "#/components/schemas/schemas:34" => "#/components/schemas/schemas:202"
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'DiskMigrationJobList' (1 differences):
+  - properties.value.$ref: "#/components/schemas/schemas:42" => "#/components/schemas/schemas:210"
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'DiskList' -> 'DiskListAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'Disk' -> 'DiskAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'DiskProperties' -> 'DiskPropertiesAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'DiskMigrationJobList' -> 'DiskMigrationJobListAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'DiskMigrationJob' -> 'DiskMigrationJobAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'DiskMigrationJobProperties' -> 'DiskMigrationJobPropertiesAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'MigrationSubTask' -> 'MigrationSubTaskAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'MigrationSubTaskProperties' -> 'MigrationSubTaskPropertiesAutoGenerated'
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'ErrorResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azsadmin/resource-manager/compute/Microsoft.Compute.Admin/stable/2021-04-01/Disks.json:129:5
+warning | PreCheck/SchemaMissingType | The schema 'ErrorDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azsadmin/resource-manager/compute/Microsoft.Compute.Admin/stable/2021-04-01/Disks.json:138:5
+warning | PreCheck/SchemaMissingType | The schema 'ErrorResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azsadmin/resource-manager/compute/Microsoft.Compute.Admin/stable/2021-04-01/DiskMigrationJobs.json:202:5
+warning | PreCheck/SchemaMissingType | The schema 'ErrorDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azsadmin/resource-manager/compute/Microsoft.Compute.Admin/stable/2021-04-01/DiskMigrationJobs.json:211:5
+warning | PreCheck/SchemaMissingType | The schema 'ErrorResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azsadmin/resource-manager/compute/Microsoft.Compute.Admin/stable/2021-09-01/Disks.json:129:5
+warning | PreCheck/SchemaMissingType | The schema 'ErrorDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azsadmin/resource-manager/compute/Microsoft.Compute.Admin/stable/2021-09-01/Disks.json:138:5
+warning | PreCheck/SchemaMissingType | The schema 'ErrorResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azsadmin/resource-manager/compute/Microsoft.Compute.Admin/stable/2021-09-01/DiskMigrationJobs.json:202:5
+warning | PreCheck/SchemaMissingType | The schema 'ErrorDefinition' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azsadmin/resource-manager/compute/Microsoft.Compute.Admin/stable/2021-09-01/DiskMigrationJobs.json:211:5
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'MigrationSubTaskProperties' (1 differences):
+  - properties.progress: <none> => {"$ref":"#/components/schemas/schemas:210","description":"The progress of migration sub task which measures the percent of content migrated.","readOnly":true}
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'MigrationSubTask' (1 differences):
+  - properties.properties.$ref: "#/components/schemas/schemas:36" => "#/components/schemas/schemas:203"
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'DiskMigrationJobProperties' (1 differences):
+  - properties.subtasks.$ref: "#/components/schemas/schemas:43" => "#/components/schemas/schemas:211"
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'DiskMigrationJob' (1 differences):
+  - properties.properties.$ref: "#/components/schemas/schemas:46" => "#/components/schemas/schemas:214"
+warning | PreCheck/DuplicateSchema | Duplicate Schema named 'DiskMigrationJobList' (1 differences):
+  - properties.value.$ref: "#/components/schemas/schemas:54" => "#/components/schemas/schemas:222"
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'DiskMigrationJobList' -> 'DiskMigrationJobListAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'DiskMigrationJob' -> 'DiskMigrationJobAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'DiskMigrationJobProperties' -> 'DiskMigrationJobPropertiesAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'MigrationSubTask' -> 'MigrationSubTaskAutoGenerated'
+warning | PreNamer/DeduplicateName | Deduplicating schema name: 'MigrationSubTaskProperties' -> 'MigrationSubTaskPropertiesAutoGenerated'
