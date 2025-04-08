@@ -1,3 +1,4 @@
+Generating types for 'specification/sql/resource-manager/readme.md'
 WARNING: Unable to parse swagger path "Microsoft.Sql/stable/2014-04-01-legacy/sql.core_legacy.json"
 WARNING: Unable to parse swagger path "Microsoft.Sql/stable/2014-04-01-legacy/usages_legacy.json"
 AutoRest code generation utility [cli version: 3.7.1; node: v16.20.2]

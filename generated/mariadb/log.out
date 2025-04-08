@@ -1,3 +1,4 @@
+Generating types for 'specification/mariadb/resource-manager/readme.md'
 WARNING: Unable to parse swagger path "Microsoft.DBforMariaDB/preview/2018-06-01-privatepreview/mariadb.json"
 WARNING: Unable to parse swagger path "Microsoft.DBforMariaDB/preview/2018-06-01-privatepreview/PrivateEndpointConnections.json"
 WARNING: Unable to parse swagger path "Microsoft.DBforMariaDB/preview/2018-06-01-privatepreview/PrivateLinkResources.json"
