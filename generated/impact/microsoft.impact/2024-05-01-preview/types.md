@@ -136,7 +136,7 @@
 
 ## WorkloadImpactProperties
 ### Properties
-* **additionalProperties**: any: Additional fields related to impact, applicable fields per resource type are list under /impactCategories API
+* **additionalProperties**: [WorkloadImpactPropertiesAdditionalProperties](#workloadimpactpropertiesadditionalproperties): Additional fields related to impact, applicable fields per resource type are list under /impactCategories API
 * **armCorrelationIds**: string[]: The ARM correlation ids, this is important field for control plane related impacts
 * **clientIncidentDetails**: [ClientIncidentDetails](#clientincidentdetails): Client incident details ex: incidentId , incident source
 * **confidenceLevel**: 'High' | 'Low' | 'Medium' | string: Degree of confidence on the impact being a platform issue
@@ -153,4 +153,9 @@
 * **reportedTimeUtc**: string (ReadOnly): Time at which impact is reported
 * **startDateTime**: string (Required): Time at which impact was observed
 * **workload**: [Workload](#workload): Information about the impacted workload
+
+## WorkloadImpactPropertiesAdditionalProperties
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
 

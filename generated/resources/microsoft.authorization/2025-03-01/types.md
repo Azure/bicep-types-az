@@ -60,8 +60,8 @@
 ## ExternalEvaluationEnforcementSettings
 ### Properties
 * **endpointSettings**: [ExternalEvaluationEndpointSettings](#externalevaluationendpointsettings): The settings of an external endpoint providing evaluation results.
-* **missingTokenAction**: string: What to do when evaluating an enforcement policy that requires an external evaluation and the token is missing. Possible values are Audit and Deny.
-* **resultLifespan**: string {pattern: "^P(\d+Y)?(\d+M)?(\d+D)?(T(\d+H)?(\d+M)?(\d+(\.\d+)?S)?)?$"}: The lifespan of the endpoint invocation result after which it's no longer valid. Value is expected to follow the ISO 8601 duration format.
+* **missingTokenAction**: string: What to do when evaluating an enforcement policy that requires an external evaluation and the token is missing. Possible values are Audit and Deny and language expressions are supported.
+* **resultLifespan**: string: The lifespan of the endpoint invocation result after which it's no longer valid. Value is expected to follow the ISO 8601 duration format and language expressions are supported.
 * **roleDefinitionIds**: string[]: An array of the role definition Ids the assignment's MSI will need in order to invoke the endpoint.
 
 ## Identity

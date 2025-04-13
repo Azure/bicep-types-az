@@ -14,6 +14,162 @@ warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'BackupResourceEncryptionConfigResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2025-02-01/bms.json:4886:5
+warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2025-02-01/bms.json:4954:5
+warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2025-02-01/bms.json:4996:5
+warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2025-02-01/bms.json:5007:5
+warning | PreCheck/SchemaMissingType | The schema 'NewErrorResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2025-02-01/bms.json:5048:5
+warning | PreCheck/SchemaMissingType | The schema 'BackupResourceConfigResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2025-02-01/bms.json:7079:5
+warning | PreCheck/SchemaMissingType | The schema 'JobResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2025-02-01/bms.json:8063:5
+warning | PreCheck/SchemaMissingType | The schema 'OperationResultInfoBaseResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2025-02-01/bms.json:8676:5
+warning | PreCheck/SchemaMissingType | The schema 'ProtectedItemResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2025-02-01/bms.json:9009:5
+warning | PreCheck/SchemaMissingType | The schema 'ProtectionPolicyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2025-02-01/bms.json:9122:5
+warning | PreCheck/SchemaMissingType | The schema 'RecoveryPointResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2025-02-01/bms.json:9200:5
+warning | PreCheck/SchemaMissingType | The schema 'RestoreRequestResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2025-02-01/bms.json:9400:5
+warning | PreCheck/SchemaMissingType | The schema 'BackupResourceVaultConfigResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2025-02-01/bms.json:9989:5
+warning | PreCheck/SchemaMissingType | The schema 'ProtectionIntentResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2025-02-01/bms.json:11322:5
+warning | PreCheck/SchemaMissingType | The schema 'BackupEngineBaseResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2025-02-01/bms.json:11527:5
+warning | PreCheck/SchemaMissingType | The schema 'BackupRequestResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2025-02-01/bms.json:11618:5
+warning | PreCheck/SchemaMissingType | The schema 'ILRRequestResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2025-02-01/bms.json:12255:5
+warning | PreCheck/SchemaMissingType | The schema 'ProtectableContainerResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2025-02-01/bms.json:12701:5
+warning | PreCheck/SchemaMissingType | The schema 'ProtectionContainerResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2025-02-01/bms.json:12806:5
+warning | PreCheck/SchemaMissingType | The schema 'WorkloadItemResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2025-02-01/bms.json:12930:5
+warning | PreCheck/SchemaMissingType | The schema 'WorkloadProtectableItemResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2025-02-01/bms.json:13003:5
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'RecoveryPointTierInformationV2' has a property 'type' that is already declared the parent schema 'RecoveryPointTierInformation' but isn't significantly different. The property has been removed from RecoveryPointTierInformationV2
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'RecoveryPointTierInformationV2' has a property 'status' that is already declared the parent schema 'RecoveryPointTierInformation' but isn't significantly different. The property has been removed from RecoveryPointTierInformationV2
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'BackupResourceEncryptionConfigResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2025-01-01/bms.json:4886:5
+warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2025-01-01/bms.json:4954:5
+warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2025-01-01/bms.json:4996:5
+warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2025-01-01/bms.json:5007:5
+warning | PreCheck/SchemaMissingType | The schema 'NewErrorResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2025-01-01/bms.json:5048:5
+warning | PreCheck/SchemaMissingType | The schema 'BackupResourceConfigResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2025-01-01/bms.json:7032:5
+warning | PreCheck/SchemaMissingType | The schema 'JobResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2025-01-01/bms.json:8016:5
+warning | PreCheck/SchemaMissingType | The schema 'OperationResultInfoBaseResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2025-01-01/bms.json:8629:5
+warning | PreCheck/SchemaMissingType | The schema 'ProtectedItemResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2025-01-01/bms.json:8962:5
+warning | PreCheck/SchemaMissingType | The schema 'ProtectionPolicyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2025-01-01/bms.json:9075:5
+warning | PreCheck/SchemaMissingType | The schema 'RecoveryPointResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2025-01-01/bms.json:9153:5
+warning | PreCheck/SchemaMissingType | The schema 'RestoreRequestResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2025-01-01/bms.json:9353:5
+warning | PreCheck/SchemaMissingType | The schema 'BackupResourceVaultConfigResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2025-01-01/bms.json:9942:5
+warning | PreCheck/SchemaMissingType | The schema 'ProtectionIntentResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2025-01-01/bms.json:11265:5
+warning | PreCheck/SchemaMissingType | The schema 'BackupEngineBaseResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2025-01-01/bms.json:11470:5
+warning | PreCheck/SchemaMissingType | The schema 'BackupRequestResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2025-01-01/bms.json:11561:5
+warning | PreCheck/SchemaMissingType | The schema 'ILRRequestResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2025-01-01/bms.json:12198:5
+warning | PreCheck/SchemaMissingType | The schema 'ProtectableContainerResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2025-01-01/bms.json:12644:5
+warning | PreCheck/SchemaMissingType | The schema 'ProtectionContainerResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2025-01-01/bms.json:12749:5
+warning | PreCheck/SchemaMissingType | The schema 'WorkloadItemResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2025-01-01/bms.json:12873:5
+warning | PreCheck/SchemaMissingType | The schema 'WorkloadProtectableItemResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2025-01-01/bms.json:12946:5
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'RecoveryPointTierInformationV2' has a property 'type' that is already declared the parent schema 'RecoveryPointTierInformation' but isn't significantly different. The property has been removed from RecoveryPointTierInformationV2
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'RecoveryPointTierInformationV2' has a property 'status' that is already declared the parent schema 'RecoveryPointTierInformation' but isn't significantly different. The property has been removed from RecoveryPointTierInformationV2
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'BackupResourceEncryptionConfigResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/preview/2024-11-01-preview/bms.json:4892:5
+warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/preview/2024-11-01-preview/bms.json:4960:5
+warning | PreCheck/SchemaMissingType | The schema 'CloudError' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/preview/2024-11-01-preview/bms.json:5002:5
+warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/preview/2024-11-01-preview/bms.json:5013:5
+warning | PreCheck/SchemaMissingType | The schema 'NewErrorResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/preview/2024-11-01-preview/bms.json:5054:5
+warning | PreCheck/SchemaMissingType | The schema 'BackupResourceConfigResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/preview/2024-11-01-preview/bms.json:7047:5
+warning | PreCheck/SchemaMissingType | The schema 'JobResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/preview/2024-11-01-preview/bms.json:8031:5
+warning | PreCheck/SchemaMissingType | The schema 'OperationResultInfoBaseResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/preview/2024-11-01-preview/bms.json:8644:5
+warning | PreCheck/SchemaMissingType | The schema 'ProtectedItemResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/preview/2024-11-01-preview/bms.json:8977:5
+warning | PreCheck/SchemaMissingType | The schema 'ProtectionPolicyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/preview/2024-11-01-preview/bms.json:9090:5
+warning | PreCheck/SchemaMissingType | The schema 'RecoveryPointResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/preview/2024-11-01-preview/bms.json:9168:5
+warning | PreCheck/SchemaMissingType | The schema 'RestoreRequestResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/preview/2024-11-01-preview/bms.json:9368:5
+warning | PreCheck/SchemaMissingType | The schema 'BackupResourceVaultConfigResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/preview/2024-11-01-preview/bms.json:9957:5
+warning | PreCheck/SchemaMissingType | The schema 'ProtectionIntentResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/preview/2024-11-01-preview/bms.json:11280:5
+warning | PreCheck/SchemaMissingType | The schema 'BackupEngineBaseResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/preview/2024-11-01-preview/bms.json:11485:5
+warning | PreCheck/SchemaMissingType | The schema 'BackupRequestResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/preview/2024-11-01-preview/bms.json:11576:5
+warning | PreCheck/SchemaMissingType | The schema 'ILRRequestResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/preview/2024-11-01-preview/bms.json:12213:5
+warning | PreCheck/SchemaMissingType | The schema 'ProtectableContainerResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/preview/2024-11-01-preview/bms.json:12659:5
+warning | PreCheck/SchemaMissingType | The schema 'ProtectionContainerResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/preview/2024-11-01-preview/bms.json:12764:5
+warning | PreCheck/SchemaMissingType | The schema 'WorkloadItemResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/preview/2024-11-01-preview/bms.json:12888:5
+warning | PreCheck/SchemaMissingType | The schema 'WorkloadProtectableItemResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/preview/2024-11-01-preview/bms.json:12961:5
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'RecoveryPointTierInformationV2' has a property 'type' that is already declared the parent schema 'RecoveryPointTierInformation' but isn't significantly different. The property has been removed from RecoveryPointTierInformationV2
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'RecoveryPointTierInformationV2' has a property 'status' that is already declared the parent schema 'RecoveryPointTierInformation' but isn't significantly different. The property has been removed from RecoveryPointTierInformationV2
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'BackupResourceEncryptionConfigResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2024-10-01/bms.json:4883:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2024-10-01/bms.json:4951:5
@@ -24,37 +180,37 @@ warning | PreCheck/SchemaMissingType | The schema 'CloudErrorBody' with an undef
 warning | PreCheck/SchemaMissingType | The schema 'NewErrorResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2024-10-01/bms.json:5045:5
 warning | PreCheck/SchemaMissingType | The schema 'BackupResourceConfigResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2024-10-01/bms.json:7016:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2024-10-01/bms.json:7024:5
 warning | PreCheck/SchemaMissingType | The schema 'JobResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2024-10-01/bms.json:8000:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2024-10-01/bms.json:8008:5
 warning | PreCheck/SchemaMissingType | The schema 'OperationResultInfoBaseResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2024-10-01/bms.json:8613:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2024-10-01/bms.json:8621:5
 warning | PreCheck/SchemaMissingType | The schema 'ProtectedItemResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2024-10-01/bms.json:8946:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2024-10-01/bms.json:8954:5
 warning | PreCheck/SchemaMissingType | The schema 'ProtectionPolicyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2024-10-01/bms.json:9059:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2024-10-01/bms.json:9067:5
 warning | PreCheck/SchemaMissingType | The schema 'RecoveryPointResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2024-10-01/bms.json:9137:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2024-10-01/bms.json:9145:5
 warning | PreCheck/SchemaMissingType | The schema 'RestoreRequestResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2024-10-01/bms.json:9337:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2024-10-01/bms.json:9345:5
 warning | PreCheck/SchemaMissingType | The schema 'BackupResourceVaultConfigResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2024-10-01/bms.json:9926:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2024-10-01/bms.json:9934:5
 warning | PreCheck/SchemaMissingType | The schema 'ProtectionIntentResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2024-10-01/bms.json:11249:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2024-10-01/bms.json:11257:5
 warning | PreCheck/SchemaMissingType | The schema 'BackupEngineBaseResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2024-10-01/bms.json:11454:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2024-10-01/bms.json:11462:5
 warning | PreCheck/SchemaMissingType | The schema 'BackupRequestResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2024-10-01/bms.json:11545:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2024-10-01/bms.json:11553:5
 warning | PreCheck/SchemaMissingType | The schema 'ILRRequestResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2024-10-01/bms.json:12182:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2024-10-01/bms.json:12190:5
 warning | PreCheck/SchemaMissingType | The schema 'ProtectableContainerResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2024-10-01/bms.json:12628:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2024-10-01/bms.json:12636:5
 warning | PreCheck/SchemaMissingType | The schema 'ProtectionContainerResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2024-10-01/bms.json:12733:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2024-10-01/bms.json:12741:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadItemResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2024-10-01/bms.json:12857:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2024-10-01/bms.json:12865:5
 warning | PreCheck/SchemaMissingType | The schema 'WorkloadProtectableItemResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2024-10-01/bms.json:12930:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2024-10-01/bms.json:12938:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'RecoveryPointTierInformationV2' has a property 'type' that is already declared the parent schema 'RecoveryPointTierInformation' but isn't significantly different. The property has been removed from RecoveryPointTierInformationV2
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'RecoveryPointTierInformationV2' has a property 'status' that is already declared the parent schema 'RecoveryPointTierInformation' but isn't significantly different. The property has been removed from RecoveryPointTierInformationV2

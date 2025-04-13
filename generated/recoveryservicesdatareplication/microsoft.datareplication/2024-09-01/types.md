@@ -246,28 +246,28 @@
 ### AzStackHCIFabricModelCustomProperties
 #### Properties
 * **applianceName**: string[] (ReadOnly): Gets or sets the Appliance name.
-* **azStackHciSiteId**: string {minLength: 1} (Required): Gets or sets the ARM Id of the AzStackHCI site.
+* **azStackHciSiteId**: string (Required): Gets or sets the ARM Id of the AzStackHCI site.
 * **cluster**: [AzStackHCIClusterProperties](#azstackhciclusterproperties) (Required): AzStackHCI cluster properties.
 * **fabricContainerId**: string (ReadOnly): Gets or sets the fabric container Id.
 * **fabricResourceId**: string (ReadOnly): Gets or sets the fabric resource Id.
 * **instanceType**: 'AzStackHCI' (Required): Discriminator property for FabricModelCustomProperties.
 * **migrationHubUri**: string (ReadOnly): Gets or sets the migration hub Uri.
-* **migrationSolutionId**: string {minLength: 1} (Required): Gets or sets the Migration solution ARM Id.
+* **migrationSolutionId**: string (Required): Gets or sets the Migration solution ARM Id.
 
 ### HyperVMigrateFabricModelCustomProperties
 #### Properties
 * **fabricContainerId**: string (ReadOnly): Gets or sets the fabric container Id.
 * **fabricResourceId**: string (ReadOnly): Gets or sets the fabric resource Id.
-* **hyperVSiteId**: string {minLength: 1} (Required): Gets or sets the ARM Id of the HyperV site.
+* **hyperVSiteId**: string (Required): Gets or sets the ARM Id of the HyperV site.
 * **instanceType**: 'HyperVMigrate' (Required): Discriminator property for FabricModelCustomProperties.
 * **migrationHubUri**: string (ReadOnly): Gets or sets the migration hub Uri.
-* **migrationSolutionId**: string {minLength: 1} (Required): Gets or sets the migration solution ARM Id.
+* **migrationSolutionId**: string (Required): Gets or sets the migration solution ARM Id.
 
 ### VMwareMigrateFabricModelCustomProperties
 #### Properties
 * **instanceType**: 'VMwareMigrate' (Required): Discriminator property for FabricModelCustomProperties.
-* **migrationSolutionId**: string {minLength: 1} (Required): Gets or sets the ARM Id of the migration solution.
-* **vmwareSiteId**: string {minLength: 1} (Required): Gets or sets the ARM Id of the VMware site.
+* **migrationSolutionId**: string (Required): Gets or sets the ARM Id of the migration solution.
+* **vmwareSiteId**: string (Required): Gets or sets the ARM Id of the VMware site.
 
 
 ## FabricModelProperties
@@ -548,7 +548,7 @@
 * **customLocationRegion**: string {minLength: 1} (Required): Gets or sets the location of Azure Arc HCI custom location resource.
 * **disksToInclude**: [HyperVToAzStackHCIDiskInput](#hypervtoazstackhcidiskinput)[] (Required): Gets or sets the list of disks to replicate.
 * **dynamicMemoryConfig**: [ProtectedItemDynamicMemoryConfig](#protecteditemdynamicmemoryconfig): Protected item dynamic memory config.
-* **fabricDiscoveryMachineId**: string {minLength: 1} (Required): Gets or sets the ARM Id of the discovered machine.
+* **fabricDiscoveryMachineId**: string (Required): Gets or sets the ARM Id of the discovered machine.
 * **failoverRecoveryPointId**: string (ReadOnly): Gets or sets the recovery point Id to which the VM was failed over.
 * **firmwareType**: string (ReadOnly): Gets or sets the firmware type.
 * **hyperVGeneration**: string {minLength: 1} (Required): Gets or sets the hypervisor generation of the virtual machine.
@@ -570,17 +570,17 @@
 * **sourceFabricAgentName**: string {minLength: 1} (Required): Gets or sets the source fabric agent name.
 * **sourceMemoryInMegaBytes**: int (ReadOnly): Gets or sets the source VM ram memory size in megabytes.
 * **sourceVmName**: string (ReadOnly): Gets or sets the source VM display name.
-* **storageContainerId**: string {minLength: 1} (Required): Gets or sets the target storage container ARM Id.
+* **storageContainerId**: string (Required): Gets or sets the target storage container ARM Id.
 * **targetApplianceName**: string (ReadOnly): Gets or sets the target appliance name.
-* **targetArcClusterCustomLocationId**: string {minLength: 1} (Required): Gets or sets the Target Arc Cluster Custom Location ARM Id.
+* **targetArcClusterCustomLocationId**: string (Required): Gets or sets the Target Arc Cluster Custom Location ARM Id.
 * **targetAzStackHciClusterName**: string (ReadOnly): Gets or sets the Target AzStackHCI cluster name.
 * **targetCpuCores**: int: Gets or sets the target CPU cores.
 * **targetFabricAgentName**: string {minLength: 1} (Required): Gets or sets the target fabric agent name.
-* **targetHciClusterId**: string {minLength: 1} (Required): Gets or sets the Target HCI Cluster ARM Id.
+* **targetHciClusterId**: string (Required): Gets or sets the Target HCI Cluster ARM Id.
 * **targetLocation**: string (ReadOnly): Gets or sets the target location.
 * **targetMemoryInMegaBytes**: int: Gets or sets the target memory in mega-bytes.
 * **targetNetworkId**: string: Gets or sets the target network Id within AzStackHCI Cluster.
-* **targetResourceGroupId**: string {minLength: 1} (Required): Gets or sets the target resource group ARM Id.
+* **targetResourceGroupId**: string (Required): Gets or sets the target resource group ARM Id.
 * **targetVmBiosId**: string (ReadOnly): Gets or sets the BIOS Id of the target AzStackHCI VM.
 * **targetVmName**: string: Gets or sets the target VM display name.
 * **testNetworkId**: string: Gets or sets the target test network Id within AzStackHCI Cluster.
@@ -591,7 +591,7 @@
 * **customLocationRegion**: string {minLength: 1} (Required): Gets or sets the location of Azure Arc HCI custom location resource.
 * **disksToInclude**: [VMwareToAzStackHCIDiskInput](#vmwaretoazstackhcidiskinput)[] (Required): Gets or sets the list of disks to replicate.
 * **dynamicMemoryConfig**: [ProtectedItemDynamicMemoryConfig](#protecteditemdynamicmemoryconfig): Protected item dynamic memory config.
-* **fabricDiscoveryMachineId**: string {minLength: 1} (Required): Gets or sets the ARM Id of the discovered machine.
+* **fabricDiscoveryMachineId**: string (Required): Gets or sets the ARM Id of the discovered machine.
 * **failoverRecoveryPointId**: string (ReadOnly): Gets or sets the recovery point Id to which the VM was failed over.
 * **firmwareType**: string (ReadOnly): Gets or sets the firmware type.
 * **hyperVGeneration**: string {minLength: 1} (Required): Gets or sets the hypervisor generation of the virtual machine possible values are 1,2.
@@ -620,17 +620,17 @@
 * **sourceFabricAgentName**: string {minLength: 1} (Required): Gets or sets the source fabric agent name.
 * **sourceMemoryInMegaBytes**: int (ReadOnly): Gets or sets the source VM ram memory size in megabytes.
 * **sourceVmName**: string (ReadOnly): Gets or sets the source VM display name.
-* **storageContainerId**: string {minLength: 1} (Required): Gets or sets the target storage container ARM Id.
+* **storageContainerId**: string (Required): Gets or sets the target storage container ARM Id.
 * **targetApplianceName**: string (ReadOnly): Gets or sets the target appliance name.
-* **targetArcClusterCustomLocationId**: string {minLength: 1} (Required): Gets or sets the Target Arc Cluster Custom Location ARM Id.
+* **targetArcClusterCustomLocationId**: string (Required): Gets or sets the Target Arc Cluster Custom Location ARM Id.
 * **targetAzStackHciClusterName**: string (ReadOnly): Gets or sets the Target AzStackHCI cluster name.
 * **targetCpuCores**: int: Gets or sets the target CPU cores.
 * **targetFabricAgentName**: string {minLength: 1} (Required): Gets or sets the target fabric agent name.
-* **targetHciClusterId**: string {minLength: 1} (Required): Gets or sets the Target HCI Cluster ARM Id.
+* **targetHciClusterId**: string (Required): Gets or sets the Target HCI Cluster ARM Id.
 * **targetLocation**: string (ReadOnly): Gets or sets the target location.
 * **targetMemoryInMegaBytes**: int: Gets or sets the target memory in mega-bytes.
 * **targetNetworkId**: string: Gets or sets the target network Id within AzStackHCI Cluster.
-* **targetResourceGroupId**: string {minLength: 1} (Required): Gets or sets the target resource group ARM Id.
+* **targetResourceGroupId**: string (Required): Gets or sets the target resource group ARM Id.
 * **targetVmBiosId**: string (ReadOnly): Gets or sets the BIOS Id of the target AzStackHCI VM.
 * **targetVmName**: string: Gets or sets the target VM display name.
 * **testNetworkId**: string: Gets or sets the target test network Id within AzStackHCI Cluster.
@@ -711,10 +711,10 @@
 ### HyperVToAzStackHCIReplicationExtensionModelCustomProperties
 #### Properties
 * **asrServiceUri**: string (ReadOnly): Gets or sets the Uri of ASR.
-* **azStackHciFabricArmId**: string {minLength: 1} (Required): Gets or sets the ARM Id of the target AzStackHCI fabric.
+* **azStackHciFabricArmId**: string (Required): Gets or sets the ARM Id of the target AzStackHCI fabric.
 * **azStackHciSiteId**: string (ReadOnly): Gets or sets the ARM Id of the AzStackHCI site.
 * **gatewayServiceUri**: string (ReadOnly): Gets or sets the Uri of Gateway.
-* **hyperVFabricArmId**: string {minLength: 1} (Required): Gets or sets the ARM Id of the source HyperV fabric.
+* **hyperVFabricArmId**: string (Required): Gets or sets the ARM Id of the source HyperV fabric.
 * **hyperVSiteId**: string (ReadOnly): Gets or sets the ARM Id of the HyperV site.
 * **instanceType**: 'HyperVToAzStackHCI' (Required): Discriminator property for ReplicationExtensionModelCustomProperties.
 * **rcmServiceUri**: string (ReadOnly): Gets or sets the Uri of Rcm.
@@ -731,7 +731,7 @@
 ### VMwareToAzStackHCIReplicationExtensionModelCustomProperties
 #### Properties
 * **asrServiceUri**: string (ReadOnly): Gets or sets the Uri of ASR.
-* **azStackHciFabricArmId**: string {minLength: 1} (Required): Gets or sets the ARM Id of the target AzStackHCI fabric.
+* **azStackHciFabricArmId**: string (Required): Gets or sets the ARM Id of the target AzStackHCI fabric.
 * **azStackHciSiteId**: string (ReadOnly): Gets or sets the ARM Id of the AzStackHCI site.
 * **gatewayServiceUri**: string (ReadOnly): Gets or sets the Uri of Gateway.
 * **instanceType**: 'VMwareToAzStackHCI' (Required): Discriminator property for ReplicationExtensionModelCustomProperties.
@@ -745,7 +745,7 @@
 * **subscriptionId**: string (ReadOnly): Gets or sets the subscription.
 * **targetGatewayServiceId**: string (ReadOnly): Gets or sets the gateway service Id of target.
 * **targetStorageContainerName**: string (ReadOnly): Gets or sets the target storage container name.
-* **vmwareFabricArmId**: string {minLength: 1} (Required): Gets or sets the ARM Id of the source VMware fabric.
+* **vmwareFabricArmId**: string (Required): Gets or sets the ARM Id of the source VMware fabric.
 * **vmwareSiteId**: string (ReadOnly): Gets or sets the ARM Id of the VMware site.
 
 

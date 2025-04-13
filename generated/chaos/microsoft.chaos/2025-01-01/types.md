@@ -50,7 +50,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: Azure resource location.
 * **name**: string {pattern: "^[a-zA-Z0-9_\-\.]+$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [TargetProperties](#targetproperties): The properties of the target resource.
+* **properties**: [TargetProperties](#targetproperties) (Required): The properties of the target resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Chaos/targets' (ReadOnly, DeployTimeConstant): The resource type
 

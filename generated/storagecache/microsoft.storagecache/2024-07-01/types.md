@@ -148,7 +148,7 @@
 
 ## AutoExportJobProperties
 ### Properties
-* **adminStatus**: 'Active' | 'Cancel' | string: The administrative status of the auto export job. Possible values: 'Enable', 'Disable'. Passing in a value of 'Disable' will disable the current active auto export job. By default it is set to 'Enable'.
+* **adminStatus**: 'Disable' | 'Enable' | string: The administrative status of the auto export job. Possible values: 'Enable', 'Disable'. Passing in a value of 'Disable' will disable the current active auto export job. By default it is set to 'Enable'.
 * **autoExportPrefixes**: string[]: An array of blob paths/prefixes that get auto exported to the cluster namespace. It has '/' as the default value. Number of maximum allowed paths for now is 1.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): ARM provisioning state.
 * **status**: [AutoExportJobPropertiesStatus](#autoexportjobpropertiesstatus) (ReadOnly): The status of the auto export
@@ -303,7 +303,7 @@
 
 ## ImportJobProperties
 ### Properties
-* **adminStatus**: 'Active' | 'Cancel' | string: The administrative status of the import job. Possible values: 'Enable', 'Disable'. Passing in a value of 'Disable' will cancel the current active import job. By default it is set to 'Enable'.
+* **adminStatus**: 'Active' | 'Cancel' | string: The administrative status of the import job. Possible values: 'Active', 'Cancel'. Passing in a value of 'Cancel' will cancel the current active import job. By default it is set to 'Active'.
 * **conflictResolutionMode**: 'Fail' | 'OverwriteAlways' | 'OverwriteIfDirty' | 'Skip' | string: How the import job will handle conflicts. For example, if the import job is trying to bring in a directory, but a file is at that path, how it handles it. Fail indicates that the import job should stop immediately and not do anything with the conflict. Skip indicates that it should pass over the conflict. OverwriteIfDirty causes the import job to delete and re-import the file or directory if it is a conflicting type, is dirty, or was not previously imported. OverwriteAlways extends OverwriteIfDirty to include releasing files that had been restored but were not dirty. Please reference https://learn.microsoft.com/en-us/azure/azure-managed-lustre/ for a thorough explanation of these resolution modes.
 * **importPrefixes**: string[]: An array of blob paths/prefixes that get imported into the cluster namespace. It has '/' as the default value.
 * **maximumErrors**: int: Total non-conflict oriented errors the import job will tolerate before exiting with failure. -1 means infinite. 0 means exit immediately and is the default.

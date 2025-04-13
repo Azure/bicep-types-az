@@ -929,7 +929,7 @@
 * **primaryEndpoints**: [Endpoints](#endpoints) (ReadOnly): Gets the URLs that are used to perform a retrieval of a public blob, queue, or table object. Note that Standard_ZRS and Premium_LRS accounts only return the blob endpoint.
 * **primaryLocation**: string (ReadOnly): Gets the location of the primary data center for the storage account.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): List of private endpoint connection associated with the specified storage account
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ResolvingDNS' | 'Succeeded' | 'ValidateSubscriptionQuotaBegin' | 'ValidateSubscriptionQuotaEnd' (ReadOnly): Gets the status of the storage account at the time the operation was called.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ResolvingDNS' | 'Succeeded' | 'ValidateSubscriptionQuotaBegin' | 'ValidateSubscriptionQuotaEnd' (ReadOnly): Gets the status of the storage account at the time the operation was called.
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' | 'SecuredByPerimeter' | string: Allow, disallow, or let Network Security Perimeter configuration to evaluate public network access to Storage Account. Value is optional but if passed in, must be 'Enabled', 'Disabled' or 'SecuredByPerimeter'.
 * **routingPreference**: [RoutingPreference](#routingpreference): Maintains information about the network routing choice opted by the user for data transfer
 * **sasPolicy**: [SasPolicy](#saspolicy): SasPolicy assigned to the storage account.
@@ -957,7 +957,7 @@
 * **description**: string (Required): Text that describes the purpose of the storage task assignment
 * **enabled**: bool (Required): Whether the storage task assignment is enabled or not
 * **executionContext**: [StorageTaskAssignmentExecutionContext](#storagetaskassignmentexecutioncontext) (Required): The storage task assignment execution context
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ResolvingDNS' | 'Succeeded' | 'ValidateSubscriptionQuotaBegin' | 'ValidateSubscriptionQuotaEnd' (ReadOnly): Represents the provisioning state of the storage task assignment.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'ResolvingDNS' | 'Succeeded' | 'ValidateSubscriptionQuotaBegin' | 'ValidateSubscriptionQuotaEnd' (ReadOnly): Represents the provisioning state of the storage task assignment.
 * **report**: [StorageTaskAssignmentReport](#storagetaskassignmentreport) (Required): The storage task assignment report
 * **runStatus**: [StorageTaskReportProperties](#storagetaskreportproperties): Run status of storage task assignment
 * **taskId**: string (Required): Id of the corresponding storage task

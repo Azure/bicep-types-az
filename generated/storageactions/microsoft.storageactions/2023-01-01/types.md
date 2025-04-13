@@ -37,8 +37,8 @@
 ## StorageTaskOperation
 ### Properties
 * **name**: 'DeleteBlob' | 'SetBlobExpiry' | 'SetBlobImmutabilityPolicy' | 'SetBlobLegalHold' | 'SetBlobTags' | 'SetBlobTier' | 'UndeleteBlob' | string (Required): The operation to be performed on the object.
-* **onFailure**: 'break': Action to be taken when the operation fails for a object.
-* **onSuccess**: 'continue': Action to be taken when the operation is successful for a object.
+* **onFailure**: 'break' | string: Action to be taken when the operation fails for a object.
+* **onSuccess**: 'continue' | string: Action to be taken when the operation is successful for a object.
 * **parameters**: [StorageTaskOperationParameters](#storagetaskoperationparameters): Key-value parameters for the operation.
 
 ## StorageTaskOperationParameters
@@ -52,7 +52,7 @@
 * **creationTimeInUtc**: string (ReadOnly): The creation date and time of the storage task in UTC.
 * **description**: string (Required): Text that describes the purpose of the storage task
 * **enabled**: bool (Required): Storage Task is enabled when set to true and disabled when set to false
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'ValidateSubscriptionQuotaBegin' | 'ValidateSubscriptionQuotaEnd' (ReadOnly): Represents the provisioning state of the storage task.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'ValidateSubscriptionQuotaBegin' | 'ValidateSubscriptionQuotaEnd' | string (ReadOnly): Represents the provisioning state of the storage task.
 * **taskVersion**: int {minValue: 1, maxValue: 1} (ReadOnly): Storage task version.
 
 ## SystemData

@@ -163,6 +163,10 @@ resource exampleResource 'Microsoft.DataProtection/backupVaults/backupInstances@
       }
     }
     friendlyName: 'harshitbi2'
+    identityDetails: {
+      useSystemAssignedIdentity: false
+      userAssignedIdentityArmUrl: '/subscriptions/f75d8d8b-6735-4697-82e1-1a7a3ff0d5d4/resourcegroups/rg-name/providers/Microsoft.ManagedIdentity/userAssignedIdentities/testUami'
+    }
     objectType: 'BackupInstance'
     policyInfo: {
       policyId: '/subscriptions/04cf684a-d41f-4550-9f70-7708a3a2283b/resourceGroups/000pikumar/providers/Microsoft.DataProtection/Backupvaults/PratikPrivatePreviewVault1/backupPolicies/PratikPolicy1'

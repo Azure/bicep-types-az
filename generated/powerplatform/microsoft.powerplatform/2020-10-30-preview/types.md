@@ -107,7 +107,7 @@
 
 ## PropertiesNetworkInjection
 ### Properties
-* **virtualNetworks**: [VirtualNetworkPropertiesList](#virtualnetworkpropertieslist): Network injection configuration
+* **virtualNetworks**: [VirtualNetworkProperties](#virtualnetworkproperties)[]: Network injection configuration
 
 ## SubnetProperties
 ### Properties
@@ -136,9 +136,4 @@
 ### Properties
 * **id**: string: Uri of the virtual network.
 * **subnet**: [SubnetProperties](#subnetproperties): Properties of a subnet.
-
-## VirtualNetworkPropertiesList
-### Properties
-* **nextLink**: string: Next page link if any.
-* **value**: [VirtualNetworkProperties](#virtualnetworkproperties)[]: Array of virtual networks.
 
