@@ -1,3 +1,4 @@
+Generating types for 'specification/servicefabricmanagedclusters/resource-manager/readme.md'
 WARNING: Unable to parse swagger path "Microsoft.ServiceFabric/preview/2021-09-01-privatepreview/managedapplication.json"
 WARNING: Unable to parse swagger path "Microsoft.ServiceFabric/preview/2021-09-01-privatepreview/managedcluster.json"
 WARNING: Unable to parse swagger path "Microsoft.ServiceFabric/preview/2021-09-01-privatepreview/nodetype.json"
@@ -16,8 +17,6 @@ warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -30,8 +29,38 @@ warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.7.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/EmptyParentSchemaWarning | Schema 'AddRemoveIncrementalNamedPartitionScalingMechanism' has an allOf list with an empty object schema as a parent, removing it.
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/preview/2024-09-01-preview/managedapplication.json:1413:9
@@ -70,8 +99,6 @@ warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/EmptyParentSchemaWarning | Schema 'AddRemoveIncrementalNamedPartitionScalingMechanism' has an allOf list with an empty object schema as a parent, removing it.
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/preview/2024-06-01-preview/managedapplication.json:1413:9
@@ -110,8 +137,6 @@ warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/EmptyParentSchemaWarning | Schema 'AddRemoveIncrementalNamedPartitionScalingMechanism' has an allOf list with an empty object schema as a parent, removing it.
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/stable/2024-04-01/managedapplication.json:1413:9
@@ -150,8 +175,6 @@ warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/EmptyParentSchemaWarning | Schema 'AddRemoveIncrementalNamedPartitionScalingMechanism' has an allOf list with an empty object schema as a parent, removing it.
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/preview/2024-02-01-preview/managedapplication.json:1413:9
@@ -190,8 +213,6 @@ warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/EmptyParentSchemaWarning | Schema 'AddRemoveIncrementalNamedPartitionScalingMechanism' has an allOf list with an empty object schema as a parent, removing it.
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/preview/2023-12-01-preview/managedapplication.json:1413:9
@@ -230,8 +251,6 @@ warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/EmptyParentSchemaWarning | Schema 'AddRemoveIncrementalNamedPartitionScalingMechanism' has an allOf list with an empty object schema as a parent, removing it.
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/preview/2023-11-01-preview/managedapplication.json:1413:9
@@ -270,8 +289,6 @@ warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/EmptyParentSchemaWarning | Schema 'AddRemoveIncrementalNamedPartitionScalingMechanism' has an allOf list with an empty object schema as a parent, removing it.
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/preview/2023-09-01-preview/managedapplication.json:1172:9
@@ -310,8 +327,6 @@ warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/EmptyParentSchemaWarning | Schema 'AddRemoveIncrementalNamedPartitionScalingMechanism' has an allOf list with an empty object schema as a parent, removing it.
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/preview/2023-07-01-preview/managedapplication.json:1172:9
@@ -350,8 +365,6 @@ warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/EmptyParentSchemaWarning | Schema 'AddRemoveIncrementalNamedPartitionScalingMechanism' has an allOf list with an empty object schema as a parent, removing it.
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/preview/2023-03-01-preview/managedapplication.json:1112:9
@@ -390,8 +403,6 @@ warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/EmptyParentSchemaWarning | Schema 'AddRemoveIncrementalNamedPartitionScalingMechanism' has an allOf list with an empty object schema as a parent, removing it.
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/preview/2023-02-01-preview/managedapplication.json:1112:9
@@ -430,8 +441,6 @@ warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/EmptyParentSchemaWarning | Schema 'AddRemoveIncrementalNamedPartitionScalingMechanism' has an allOf list with an empty object schema as a parent, removing it.
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/preview/2022-10-01-preview/managedapplication.json:1112:9
@@ -470,8 +479,6 @@ warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/EmptyParentSchemaWarning | Schema 'AddRemoveIncrementalNamedPartitionScalingMechanism' has an allOf list with an empty object schema as a parent, removing it.
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/preview/2022-08-01-preview/managedapplication.json:1112:9
@@ -510,8 +517,6 @@ warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/EmptyParentSchemaWarning | Schema 'AddRemoveIncrementalNamedPartitionScalingMechanism' has an allOf list with an empty object schema as a parent, removing it.
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/preview/2022-06-01-preview/managedapplication.json:1112:9
@@ -550,8 +555,6 @@ warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/EmptyParentSchemaWarning | Schema 'AddRemoveIncrementalNamedPartitionScalingMechanism' has an allOf list with an empty object schema as a parent, removing it.
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/preview/2022-02-01-preview/managedapplication.json:1112:9
@@ -590,8 +593,6 @@ warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/EmptyParentSchemaWarning | Schema 'AddRemoveIncrementalNamedPartitionScalingMechanism' has an allOf list with an empty object schema as a parent, removing it.
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/stable/2022-01-01/managedapplication.json:1112:9
@@ -630,8 +631,6 @@ warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/EmptyParentSchemaWarning | Schema 'AddRemoveIncrementalNamedPartitionScalingMechanism' has an allOf list with an empty object schema as a parent, removing it.
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/preview/2021-11-01-preview/managedapplication.json:1112:9
@@ -670,8 +669,6 @@ warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/EmptyParentSchemaWarning | Schema 'AddRemoveIncrementalNamedPartitionScalingMechanism' has an allOf list with an empty object schema as a parent, removing it.
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/preview/2021-07-01-preview/managedapplication.json:1112:9
@@ -710,8 +707,6 @@ warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'AddRemoveIncrementalNamedPartitionScalingMechanism' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/stable/2021-05-01/managedapplication.json:1105:5
@@ -900,8 +895,6 @@ warning | DeprecatedConfig | Using directive.8.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.9.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.12.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.13.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'AddRemoveIncrementalNamedPartitionScalingMechanism' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/preview/2021-01-01-preview/managedapplication.json:1105:5
