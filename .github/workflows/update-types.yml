@@ -5,6 +5,10 @@ on:
     - cron: '45 5 * * SUN'
   workflow_dispatch:
     inputs:
+      api_specs_owner:
+        description: 'Owner of azure-rest-api-specs fork.'
+        required: true
+        default: 'Azure'
       api_specs_ref:
         description: 'Git ref or full SHA for https://github.com/Azure/azure-rest-api-specs.'
         required: true
@@ -34,9 +38,9 @@ jobs:
       - name: Clone azure-rest-api-specs
         uses: actions/checkout@v4
         with:
-          repository: Azure/azure-rest-api-specs
+          repository: ${{ github.event.inputs.api_specs_owner }}/azure-rest-api-specs
           path: workflow-temp/azure-rest-api-specs
-          ref: ${{ github.event.inputs.api_specs_ref || 'main' }}
+          ref: ${{ github.event.inputs.api_specs_ref }}
 
       - name: Build bicep-types dependency
         run: |
