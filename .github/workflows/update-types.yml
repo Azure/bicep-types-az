@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       api_specs_owner:
-        description: 'Owner of azure-rest-api-specs fork.'
+        description: 'GitHub Owner for azure-rest-api-specs repo (only needed if generating types from a fork).'
         required: true
         default: 'Azure'
       api_specs_ref:
@@ -78,7 +78,7 @@ jobs:
         name: Get GitHub URI for azure-rest-api-specs
         run: |
           git_sha=`git rev-parse --short HEAD`
-          echo "gh_uri=https://github.com/Azure/azure-rest-api-specs/tree/$git_sha" >> $GITHUB_OUTPUT
+          echo "gh_uri=https://github.com/${{ github.event.inputs.api_specs_owner }}/azure-rest-api-specs/tree/$git_sha" >> $GITHUB_OUTPUT
         working-directory: workflow-temp/azure-rest-api-specs
 
       - name: Commit and push
