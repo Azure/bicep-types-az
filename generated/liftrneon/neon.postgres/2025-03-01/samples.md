@@ -1,0 +1,457 @@
+# Neon.Postgres
+  
+> [!NOTE]
+> The code samples in this document are generated from API usage examples contributed by Resource Providers in their [Azure Rest API specifications](https://github.com/Azure/azure-rest-api-specs). Any issues should be reported and addressed in the source.
+
+
+## neon.postgres/organizations
+
+Organizations_CreateOrUpdate_MaximumSet
+```bicep
+resource exampleResource 'Neon.Postgres/organizations@2025-03-01' = {
+  name: 'example'
+  location: 'kcdph'
+  properties: {
+    companyDetails: {
+      businessPhone: 'hucxvzcvpaupqjkgb'
+      companyName: 'xtul'
+      country: 'ycmyjdcpyjieemfrthfyxdlvn'
+      domain: 'snoshqumfsthyofpnrsgyjhszvgtj'
+      numberOfEmployees: 12
+      officeAddress: 'icirtoqmmozijk'
+    }
+    marketplaceDetails: {
+      offerDetails: {
+        offerId: 'qscggwfdnippiwrrnmuscg'
+        planId: 'sveqoxtdwxutxmtniuufyrdu'
+        planName: 't'
+        publisherId: 'eibghzuyqsksouwlgqphhmuxeqeigf'
+        termId: 'uptombvymytfonj'
+        termUnit: 'jnxhyql'
+      }
+      subscriptionId: 'xfahbbbzwlcwhhjbxarnwfcy'
+      subscriptionStatus: 'PendingFulfillmentStart'
+    }
+    partnerOrganizationProperties: {
+      organizationId: 'hzejhmftwsruhwspvtwoy'
+      organizationName: 'entity-name'
+      singleSignOnProperties: {
+        aadDomains: [
+          'mdzbelaiphukhe'
+        ]
+        enterpriseAppId: 'urtjzjfr'
+        singleSignOnState: 'Initial'
+        singleSignOnUrl: 'gcmlwvtxcsjozitm'
+      }
+    }
+    projectProperties: {
+      attributes: [
+        {
+          name: 'trhvzyvaqy'
+          value: 'evpkgsskyavybxwwssm'
+        }
+      ]
+      branch: {
+        attributes: [
+          {
+            name: 'trhvzyvaqy'
+            value: 'evpkgsskyavybxwwssm'
+          }
+        ]
+        databaseName: 'duhxebzhd'
+        databases: [
+          {
+            attributes: [
+              {
+                name: 'trhvzyvaqy'
+                value: 'evpkgsskyavybxwwssm'
+              }
+            ]
+            branchId: 'orfdwdmzvfvlnrgussvcvoek'
+            entityName: 'entity-name'
+            ownerName: 'odmbeg'
+          }
+        ]
+        endpoints: [
+          {
+            attributes: [
+              {
+                name: 'trhvzyvaqy'
+                value: 'evpkgsskyavybxwwssm'
+              }
+            ]
+            branchId: 'rzsyrhpfbydxtfkpaa'
+            endpointType: 'read_only'
+            entityName: 'entity-name'
+            projectId: 'rtvdeeflqzlrpfzhjqhcsfbldw'
+          }
+        ]
+        entityName: 'entity-name'
+        parentId: 'entity-id'
+        projectId: 'oik'
+        roleName: 'qrrairsupyosxnqotdwhbpc'
+        roles: [
+          {
+            attributes: [
+              {
+                name: 'trhvzyvaqy'
+                value: 'evpkgsskyavybxwwssm'
+              }
+            ]
+            branchId: 'wxbojkmdgaggkfiwqfakdkbyztm'
+            entityName: 'entity-name'
+            isSuperUser: true
+            permissions: [
+              'myucqecpjriewzohxvadgkhiudnyx'
+            ]
+          }
+        ]
+      }
+      databases: [
+        {
+          attributes: [
+            {
+              name: 'trhvzyvaqy'
+              value: 'evpkgsskyavybxwwssm'
+            }
+          ]
+          branchId: 'orfdwdmzvfvlnrgussvcvoek'
+          entityName: 'entity-name'
+          ownerName: 'odmbeg'
+        }
+      ]
+      defaultEndpointSettings: {
+        autoscalingLimitMaxCu: 20
+        autoscalingLimitMinCu: 26
+      }
+      endpoints: [
+        {
+          attributes: [
+            {
+              name: 'trhvzyvaqy'
+              value: 'evpkgsskyavybxwwssm'
+            }
+          ]
+          branchId: 'rzsyrhpfbydxtfkpaa'
+          endpointType: 'read_only'
+          entityName: 'entity-name'
+          projectId: 'rtvdeeflqzlrpfzhjqhcsfbldw'
+        }
+      ]
+      entityName: 'entity-name'
+      historyRetention: 7
+      pgVersion: 10
+      regionId: 'tlcltldfrnxh'
+      roles: [
+        {
+          attributes: [
+            {
+              name: 'trhvzyvaqy'
+              value: 'evpkgsskyavybxwwssm'
+            }
+          ]
+          branchId: 'wxbojkmdgaggkfiwqfakdkbyztm'
+          entityName: 'entity-name'
+          isSuperUser: true
+          permissions: [
+            'myucqecpjriewzohxvadgkhiudnyx'
+          ]
+        }
+      ]
+      storage: 7
+    }
+    userDetails: {
+      emailAddress: 'test@contoso.com'
+      firstName: 'zhelh'
+      lastName: 'zbdhouyeozylnerrc'
+      phoneNumber: 'zmejenytglrmjnt'
+      upn: 'mixcikvxlnhkfugetqlngz'
+    }
+  }
+  tags: {
+    key8832: 'rvukepuxkykdtqjtwk'
+  }
+}
+```
+
+## neon.postgres/organizations/projects
+
+Projects_CreateOrUpdate_MaximumSet
+```bicep
+resource exampleResource 'Neon.Postgres/organizations/projects@2025-03-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    attributes: [
+      {
+        name: 'trhvzyvaqy'
+        value: 'evpkgsskyavybxwwssm'
+      }
+    ]
+    branch: {
+      attributes: [
+        {
+          name: 'trhvzyvaqy'
+          value: 'evpkgsskyavybxwwssm'
+        }
+      ]
+      databaseName: 'duhxebzhd'
+      databases: [
+        {
+          attributes: [
+            {
+              name: 'trhvzyvaqy'
+              value: 'evpkgsskyavybxwwssm'
+            }
+          ]
+          branchId: 'orfdwdmzvfvlnrgussvcvoek'
+          entityName: 'entity-name'
+          ownerName: 'odmbeg'
+        }
+      ]
+      endpoints: [
+        {
+          attributes: [
+            {
+              name: 'trhvzyvaqy'
+              value: 'evpkgsskyavybxwwssm'
+            }
+          ]
+          branchId: 'rzsyrhpfbydxtfkpaa'
+          endpointType: 'read_only'
+          entityName: 'entity-name'
+          projectId: 'rtvdeeflqzlrpfzhjqhcsfbldw'
+        }
+      ]
+      entityName: 'entity-name'
+      parentId: 'entity-id'
+      projectId: 'oik'
+      roleName: 'qrrairsupyosxnqotdwhbpc'
+      roles: [
+        {
+          attributes: [
+            {
+              name: 'trhvzyvaqy'
+              value: 'evpkgsskyavybxwwssm'
+            }
+          ]
+          branchId: 'wxbojkmdgaggkfiwqfakdkbyztm'
+          entityName: 'entity-name'
+          isSuperUser: true
+          permissions: [
+            'myucqecpjriewzohxvadgkhiudnyx'
+          ]
+        }
+      ]
+    }
+    databases: [
+      {
+        attributes: [
+          {
+            name: 'trhvzyvaqy'
+            value: 'evpkgsskyavybxwwssm'
+          }
+        ]
+        branchId: 'orfdwdmzvfvlnrgussvcvoek'
+        entityName: 'entity-name'
+        ownerName: 'odmbeg'
+      }
+    ]
+    defaultEndpointSettings: {
+      autoscalingLimitMaxCu: 20
+      autoscalingLimitMinCu: 26
+    }
+    endpoints: [
+      {
+        attributes: [
+          {
+            name: 'trhvzyvaqy'
+            value: 'evpkgsskyavybxwwssm'
+          }
+        ]
+        branchId: 'rzsyrhpfbydxtfkpaa'
+        endpointType: 'read_only'
+        entityName: 'entity-name'
+        projectId: 'rtvdeeflqzlrpfzhjqhcsfbldw'
+      }
+    ]
+    entityName: 'entity-name'
+    historyRetention: 7
+    pgVersion: 10
+    regionId: 'tlcltldfrnxh'
+    roles: [
+      {
+        attributes: [
+          {
+            name: 'trhvzyvaqy'
+            value: 'evpkgsskyavybxwwssm'
+          }
+        ]
+        branchId: 'wxbojkmdgaggkfiwqfakdkbyztm'
+        entityName: 'entity-name'
+        isSuperUser: true
+        permissions: [
+          'myucqecpjriewzohxvadgkhiudnyx'
+        ]
+      }
+    ]
+    storage: 7
+  }
+}
+```
+
+## neon.postgres/organizations/projects/branches
+
+Branches_CreateOrUpdate_MaximumSet
+```bicep
+resource exampleResource 'Neon.Postgres/organizations/projects/branches@2025-03-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    attributes: [
+      {
+        name: 'trhvzyvaqy'
+        value: 'evpkgsskyavybxwwssm'
+      }
+    ]
+    databaseName: 'duhxebzhd'
+    databases: [
+      {
+        attributes: [
+          {
+            name: 'trhvzyvaqy'
+            value: 'evpkgsskyavybxwwssm'
+          }
+        ]
+        branchId: 'orfdwdmzvfvlnrgussvcvoek'
+        entityName: 'entity-name'
+        ownerName: 'odmbeg'
+      }
+    ]
+    endpoints: [
+      {
+        attributes: [
+          {
+            name: 'trhvzyvaqy'
+            value: 'evpkgsskyavybxwwssm'
+          }
+        ]
+        branchId: 'rzsyrhpfbydxtfkpaa'
+        endpointType: 'read_only'
+        entityName: 'entity-name'
+        projectId: 'rtvdeeflqzlrpfzhjqhcsfbldw'
+      }
+    ]
+    entityName: 'entity-name'
+    parentId: 'entity-id'
+    projectId: 'oik'
+    roleName: 'qrrairsupyosxnqotdwhbpc'
+    roles: [
+      {
+        attributes: [
+          {
+            name: 'trhvzyvaqy'
+            value: 'evpkgsskyavybxwwssm'
+          }
+        ]
+        branchId: 'wxbojkmdgaggkfiwqfakdkbyztm'
+        entityName: 'entity-name'
+        isSuperUser: true
+        permissions: [
+          'myucqecpjriewzohxvadgkhiudnyx'
+        ]
+      }
+    ]
+  }
+}
+```
+
+## neon.postgres/organizations/projects/branches/computes
+
+Computes_CreateOrUpdate_MaximumSet
+```bicep
+resource exampleResource 'Neon.Postgres/organizations/projects/branches/computes@2025-03-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    attributes: [
+      {
+        name: 'trhvzyvaqy'
+        value: 'evpkgsskyavybxwwssm'
+      }
+    ]
+    cpuCores: 29
+    entityName: 'entity-name'
+    memory: 2
+    region: 'mcfyojzptdliawyuxyxzqxif'
+    status: 'upwdpznysuwt'
+  }
+}
+```
+
+## neon.postgres/organizations/projects/branches/endpoints
+
+Endpoints_CreateOrUpdate_MaximumSet
+```bicep
+resource exampleResource 'Neon.Postgres/organizations/projects/branches/endpoints@2025-03-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    attributes: [
+      {
+        name: 'trhvzyvaqy'
+        value: 'evpkgsskyavybxwwssm'
+      }
+    ]
+    branchId: 'rzsyrhpfbydxtfkpaa'
+    endpointType: 'read_only'
+    entityName: 'entity-name'
+    projectId: 'rtvdeeflqzlrpfzhjqhcsfbldw'
+  }
+}
+```
+
+## neon.postgres/organizations/projects/branches/neondatabases
+
+NeonDatabases_CreateOrUpdate_MaximumSet
+```bicep
+resource exampleResource 'Neon.Postgres/organizations/projects/branches/neonDatabases@2025-03-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    attributes: [
+      {
+        name: 'trhvzyvaqy'
+        value: 'evpkgsskyavybxwwssm'
+      }
+    ]
+    branchId: 'orfdwdmzvfvlnrgussvcvoek'
+    entityName: 'entity-name'
+    ownerName: 'odmbeg'
+  }
+}
+```
+
+## neon.postgres/organizations/projects/branches/neonroles
+
+NeonRoles_CreateOrUpdate_MaximumSet
+```bicep
+resource exampleResource 'Neon.Postgres/organizations/projects/branches/neonRoles@2025-03-01' = {
+  parent: parentResource 
+  name: 'example'
+  properties: {
+    attributes: [
+      {
+        name: 'trhvzyvaqy'
+        value: 'evpkgsskyavybxwwssm'
+      }
+    ]
+    branchId: 'wxbojkmdgaggkfiwqfakdkbyztm'
+    entityName: 'entity-name'
+    isSuperUser: true
+    permissions: [
+      'myucqecpjriewzohxvadgkhiudnyx'
+    ]
+  }
+}
+```

@@ -332,7 +332,7 @@
 * **isReplicateAutomaticBackups**: bool: If true, 7 days worth of backups are replicated across regions for Cross-Region ADB or Backup-Based DR between Primary and Standby. If false, the backups taken on the Primary are not replicated to the Standby database.
 * **remoteDisasterRecoveryType**: 'Adg' | 'BackupBased' | string (Required): Indicates the cross-region disaster recovery (DR) type of the standby Autonomous Database Serverless instance. Autonomous Data Guard (ADG) DR type provides business critical DR with a faster recovery time objective (RTO) during failover or switchover. Backup-based DR type provides lower cost DR with a slower RTO during failover or switchover.
 * **source**: 'CrossRegionDisasterRecovery' (Required, WriteOnly): The source of the database.
-* **sourceId**: string (Required): The Azure resource ID of the source Autonomous Database that will be used to create a new peer database for the DR association.
+* **sourceId**: string (Required): The Azure ID of the source Autonomous Database that will be used to create a new peer database for the DR association.
 * **sourceLocation**: string (WriteOnly): The name of the region where source Autonomous Database exists.
 * **sourceOcid**: string {minLength: 1, maxLength: 255} (WriteOnly): The source database ocid
 
@@ -590,7 +590,7 @@
 * **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): Azure resource provisioning state.
 * **self**: string (Required): The canonical absolute URL of the resource.
 * **timeCreated**: string (Required): views timeCreated
-* **timeUpdated**: string (Required): views timeUpdated
+* **timeUpdated**: string (Required): views timeCreated
 
 ## DnsPrivateZoneProperties
 ### Properties
@@ -655,7 +655,7 @@
 ## OracleSubscriptionProperties
 ### Properties
 * **addSubscriptionOperationState**: 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): State of the add Azure subscription operation on Oracle subscription
-* **azureSubscriptionIds**: string[] (ReadOnly): Azure subscriptions associated with this OracleSubscription
+* **azureSubscriptionIds**: string[] (ReadOnly): Azure subscriptions to be added
 * **cloudAccountId**: string {minLength: 1, maxLength: 255} (ReadOnly): Cloud Account Id
 * **cloudAccountState**: 'Available' | 'Pending' | 'Provisioning' | string (ReadOnly): Cloud Account provisioning state.
 * **intent**: 'Reset' | 'Retain' | string (WriteOnly): Intent for the update operation

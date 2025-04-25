@@ -562,7 +562,7 @@
 * **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): Azure resource provisioning state.
 * **self**: string (Required): The canonical absolute URL of the resource.
 * **timeCreated**: string (Required): views timeCreated
-* **timeUpdated**: string (Required): views timeUpdated
+* **timeUpdated**: string (Required): views timeCreated
 
 ## DnsPrivateZoneProperties
 ### Properties
@@ -627,7 +627,7 @@
 ## OracleSubscriptionProperties
 ### Properties
 * **addSubscriptionOperationState**: 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): State of the add Azure subscription operation on Oracle subscription
-* **azureSubscriptionIds**: string[] (ReadOnly): Azure subscriptions associated with this OracleSubscription
+* **azureSubscriptionIds**: string[] (ReadOnly): Azure subscriptions to be added
 * **cloudAccountId**: string {minLength: 1, maxLength: 255} (ReadOnly): Cloud Account Id
 * **cloudAccountState**: 'Available' | 'Pending' | 'Provisioning' | string (ReadOnly): Cloud Account provisioning state.
 * **intent**: 'Reset' | 'Retain' | string (WriteOnly): Intent for the update operation

@@ -8548,7 +8548,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/807"
+          "$ref": "#/821"
         },
         "flags": 2,
         "description": "Resource tags."
@@ -8572,19 +8572,19 @@
         "$ref": "#/729"
       },
       "AzureWorkloadSAPHanaPointInTimeRecoveryPoint": {
-        "$ref": "#/732"
+        "$ref": "#/746"
       },
       "AzureWorkloadSAPHanaRecoveryPoint": {
-        "$ref": "#/760"
+        "$ref": "#/774"
       },
       "AzureWorkloadSQLPointInTimeRecoveryPoint": {
-        "$ref": "#/772"
+        "$ref": "#/786"
       },
       "GenericRecoveryPoint": {
-        "$ref": "#/792"
+        "$ref": "#/806"
       },
       "IaasVMRecoveryPoint": {
-        "$ref": "#/794"
+        "$ref": "#/808"
       }
     }
   },
@@ -8627,9 +8627,16 @@
         "flags": 0,
         "description": "Properties of Recovery Point"
       },
+      "recoveryPointTierDetails": {
+        "type": {
+          "$ref": "#/744"
+        },
+        "flags": 0,
+        "description": "Recovery point tier information."
+      },
       "objectType": {
         "type": {
-          "$ref": "#/731"
+          "$ref": "#/745"
         },
         "flags": 1,
         "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
@@ -8664,6 +8671,120 @@
     }
   },
   {
+    "$type": "ObjectType",
+    "name": "RecoveryPointTierInformation",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/736"
+        },
+        "flags": 0,
+        "description": "Recovery point tier type."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/742"
+        },
+        "flags": 0,
+        "description": "Recovery point tier status."
+      },
+      "extendedInfo": {
+        "type": {
+          "$ref": "#/743"
+        },
+        "flags": 0,
+        "description": "Recovery point tier status."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InstantRP"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "HardenedRP"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ArchivedRP"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/732"
+      },
+      {
+        "$ref": "#/733"
+      },
+      {
+        "$ref": "#/734"
+      },
+      {
+        "$ref": "#/735"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Valid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Rehydrated"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/737"
+      },
+      {
+        "$ref": "#/738"
+      },
+      {
+        "$ref": "#/739"
+      },
+      {
+        "$ref": "#/740"
+      },
+      {
+        "$ref": "#/741"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RecoveryPointTierInformationExtendedInfo",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/731"
+    }
+  },
+  {
     "$type": "StringLiteralType",
     "value": "AzureFileShareRecoveryPoint"
   },
@@ -8673,7 +8794,7 @@
     "properties": {
       "timeRanges": {
         "type": {
-          "$ref": "#/734"
+          "$ref": "#/748"
         },
         "flags": 0,
         "description": "List of log ranges"
@@ -8687,21 +8808,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/742"
+          "$ref": "#/756"
         },
         "flags": 0,
         "description": "Type of restore point"
       },
       "recoveryPointTierDetails": {
         "type": {
-          "$ref": "#/756"
+          "$ref": "#/770"
         },
         "flags": 0,
         "description": "Recovery point tier information."
       },
       "recoveryPointMoveReadinessInfo": {
         "type": {
-          "$ref": "#/758"
+          "$ref": "#/772"
         },
         "flags": 0,
         "description": "Eligibility of RP to be moved to another tier"
@@ -8715,7 +8836,7 @@
       },
       "objectType": {
         "type": {
-          "$ref": "#/759"
+          "$ref": "#/773"
         },
         "flags": 1,
         "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
@@ -8745,7 +8866,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/733"
+      "$ref": "#/747"
     }
   },
   {
@@ -8780,25 +8901,25 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/735"
+        "$ref": "#/749"
       },
       {
-        "$ref": "#/736"
+        "$ref": "#/750"
       },
       {
-        "$ref": "#/737"
+        "$ref": "#/751"
       },
       {
-        "$ref": "#/738"
+        "$ref": "#/752"
       },
       {
-        "$ref": "#/739"
+        "$ref": "#/753"
       },
       {
-        "$ref": "#/740"
+        "$ref": "#/754"
       },
       {
-        "$ref": "#/741"
+        "$ref": "#/755"
       },
       {
         "$ref": "#/2"
@@ -8811,21 +8932,21 @@
     "properties": {
       "type": {
         "type": {
-          "$ref": "#/748"
+          "$ref": "#/762"
         },
         "flags": 0,
         "description": "Recovery point tier type."
       },
       "status": {
         "type": {
-          "$ref": "#/754"
+          "$ref": "#/768"
         },
         "flags": 0,
         "description": "Recovery point tier status."
       },
       "extendedInfo": {
         "type": {
-          "$ref": "#/755"
+          "$ref": "#/769"
         },
         "flags": 0,
         "description": "Recovery point tier status."
@@ -8852,16 +8973,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/744"
+        "$ref": "#/758"
       },
       {
-        "$ref": "#/745"
+        "$ref": "#/759"
       },
       {
-        "$ref": "#/746"
+        "$ref": "#/760"
       },
       {
-        "$ref": "#/747"
+        "$ref": "#/761"
       }
     ]
   },
@@ -8889,19 +9010,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/749"
+        "$ref": "#/763"
       },
       {
-        "$ref": "#/750"
+        "$ref": "#/764"
       },
       {
-        "$ref": "#/751"
+        "$ref": "#/765"
       },
       {
-        "$ref": "#/752"
+        "$ref": "#/766"
       },
       {
-        "$ref": "#/753"
+        "$ref": "#/767"
       }
     ]
   },
@@ -8916,7 +9037,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/743"
+      "$ref": "#/757"
     }
   },
   {
@@ -8942,7 +9063,7 @@
     "name": "AzureWorkloadRecoveryPointMoveReadinessInfo",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/757"
+      "$ref": "#/771"
     }
   },
   {
@@ -8962,21 +9083,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/768"
+          "$ref": "#/782"
         },
         "flags": 0,
         "description": "Type of restore point"
       },
       "recoveryPointTierDetails": {
         "type": {
-          "$ref": "#/769"
+          "$ref": "#/783"
         },
         "flags": 0,
         "description": "Recovery point tier information."
       },
       "recoveryPointMoveReadinessInfo": {
         "type": {
-          "$ref": "#/770"
+          "$ref": "#/784"
         },
         "flags": 0,
         "description": "Eligibility of RP to be moved to another tier"
@@ -8990,7 +9111,7 @@
       },
       "objectType": {
         "type": {
-          "$ref": "#/771"
+          "$ref": "#/785"
         },
         "flags": 1,
         "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
@@ -9029,25 +9150,25 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/761"
+        "$ref": "#/775"
       },
       {
-        "$ref": "#/762"
+        "$ref": "#/776"
       },
       {
-        "$ref": "#/763"
+        "$ref": "#/777"
       },
       {
-        "$ref": "#/764"
+        "$ref": "#/778"
       },
       {
-        "$ref": "#/765"
+        "$ref": "#/779"
       },
       {
-        "$ref": "#/766"
+        "$ref": "#/780"
       },
       {
-        "$ref": "#/767"
+        "$ref": "#/781"
       },
       {
         "$ref": "#/2"
@@ -9057,7 +9178,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/743"
+      "$ref": "#/757"
     }
   },
   {
@@ -9065,7 +9186,7 @@
     "name": "AzureWorkloadRecoveryPointMoveReadinessInfo",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/757"
+      "$ref": "#/771"
     }
   },
   {
@@ -9078,14 +9199,14 @@
     "properties": {
       "timeRanges": {
         "type": {
-          "$ref": "#/773"
+          "$ref": "#/787"
         },
         "flags": 0,
         "description": "List of log ranges"
       },
       "extendedInfo": {
         "type": {
-          "$ref": "#/774"
+          "$ref": "#/788"
         },
         "flags": 0,
         "description": "Extended Info that provides data directory details. Will be populated in two cases:\r\nWhen a specific recovery point is accessed using GetRecoveryPoint\r\nOr when ListRecoveryPoints is called for Log RP only with ExtendedInfo query filter"
@@ -9099,21 +9220,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/788"
+          "$ref": "#/802"
         },
         "flags": 0,
         "description": "Type of restore point"
       },
       "recoveryPointTierDetails": {
         "type": {
-          "$ref": "#/789"
+          "$ref": "#/803"
         },
         "flags": 0,
         "description": "Recovery point tier information."
       },
       "recoveryPointMoveReadinessInfo": {
         "type": {
-          "$ref": "#/790"
+          "$ref": "#/804"
         },
         "flags": 0,
         "description": "Eligibility of RP to be moved to another tier"
@@ -9127,7 +9248,7 @@
       },
       "objectType": {
         "type": {
-          "$ref": "#/791"
+          "$ref": "#/805"
         },
         "flags": 1,
         "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
@@ -9137,7 +9258,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/733"
+      "$ref": "#/747"
     }
   },
   {
@@ -9153,7 +9274,7 @@
       },
       "dataDirectoryPaths": {
         "type": {
-          "$ref": "#/780"
+          "$ref": "#/794"
         },
         "flags": 0,
         "description": "List of data directory paths during restore operation."
@@ -9166,7 +9287,7 @@
     "properties": {
       "type": {
         "type": {
-          "$ref": "#/779"
+          "$ref": "#/793"
         },
         "flags": 0,
         "description": "Type of data directory mapping"
@@ -9203,13 +9324,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/776"
+        "$ref": "#/790"
       },
       {
-        "$ref": "#/777"
+        "$ref": "#/791"
       },
       {
-        "$ref": "#/778"
+        "$ref": "#/792"
       },
       {
         "$ref": "#/2"
@@ -9219,7 +9340,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/775"
+      "$ref": "#/789"
     }
   },
   {
@@ -9254,25 +9375,25 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/781"
+        "$ref": "#/795"
       },
       {
-        "$ref": "#/782"
+        "$ref": "#/796"
       },
       {
-        "$ref": "#/783"
+        "$ref": "#/797"
       },
       {
-        "$ref": "#/784"
+        "$ref": "#/798"
       },
       {
-        "$ref": "#/785"
+        "$ref": "#/799"
       },
       {
-        "$ref": "#/786"
+        "$ref": "#/800"
       },
       {
-        "$ref": "#/787"
+        "$ref": "#/801"
       },
       {
         "$ref": "#/2"
@@ -9282,7 +9403,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/743"
+      "$ref": "#/757"
     }
   },
   {
@@ -9290,7 +9411,7 @@
     "name": "AzureWorkloadRecoveryPointMoveReadinessInfo",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/757"
+      "$ref": "#/771"
     }
   },
   {
@@ -9338,7 +9459,7 @@
       },
       "objectType": {
         "type": {
-          "$ref": "#/793"
+          "$ref": "#/807"
         },
         "flags": 1,
         "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
@@ -9390,7 +9511,7 @@
       },
       "keyAndSecret": {
         "type": {
-          "$ref": "#/795"
+          "$ref": "#/809"
         },
         "flags": 0,
         "description": "Required details for recovering an encrypted VM. Applicable only when IsSourceVMEncrypted is true."
@@ -9404,7 +9525,7 @@
       },
       "recoveryPointTierDetails": {
         "type": {
-          "$ref": "#/798"
+          "$ref": "#/812"
         },
         "flags": 0,
         "description": "Recovery point tier information."
@@ -9439,21 +9560,21 @@
       },
       "recoveryPointDiskConfiguration": {
         "type": {
-          "$ref": "#/799"
+          "$ref": "#/813"
         },
         "flags": 0,
         "description": "Disk configuration"
       },
       "zones": {
         "type": {
-          "$ref": "#/803"
+          "$ref": "#/817"
         },
         "flags": 0,
         "description": "Identifies the zone of the VM at the time of backup. Applicable only for zone-pinned Vms"
       },
       "recoveryPointMoveReadinessInfo": {
         "type": {
-          "$ref": "#/804"
+          "$ref": "#/818"
         },
         "flags": 0,
         "description": "Eligibility of RP to be moved to another tier"
@@ -9481,14 +9602,14 @@
       },
       "extendedLocation": {
         "type": {
-          "$ref": "#/805"
+          "$ref": "#/819"
         },
         "flags": 0,
         "description": "Extended location of the VM recovery point,\r\nshould be null if VM is in public cloud"
       },
       "objectType": {
         "type": {
-          "$ref": "#/806"
+          "$ref": "#/820"
         },
         "flags": 1,
         "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
@@ -9501,14 +9622,14 @@
     "properties": {
       "kekDetails": {
         "type": {
-          "$ref": "#/796"
+          "$ref": "#/810"
         },
         "flags": 0,
         "description": "KEK is encryption key for BEK."
       },
       "bekDetails": {
         "type": {
-          "$ref": "#/797"
+          "$ref": "#/811"
         },
         "flags": 0,
         "description": "BEK is bitlocker encryption key."
@@ -9579,7 +9700,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/743"
+      "$ref": "#/757"
     }
   },
   {
@@ -9602,14 +9723,14 @@
       },
       "includedDiskList": {
         "type": {
-          "$ref": "#/801"
+          "$ref": "#/815"
         },
         "flags": 0,
         "description": "Information of disks included in backup"
       },
       "excludedDiskList": {
         "type": {
-          "$ref": "#/802"
+          "$ref": "#/816"
         },
         "flags": 0,
         "description": "Information of disks excluded from backup"
@@ -9637,13 +9758,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/800"
+      "$ref": "#/814"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/800"
+      "$ref": "#/814"
     }
   },
   {
@@ -9657,7 +9778,7 @@
     "name": "IaasVMRecoveryPointMoveReadinessInfo",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/757"
+      "$ref": "#/771"
     }
   },
   {
@@ -9729,14 +9850,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/809"
+          "$ref": "#/823"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/810"
+          "$ref": "#/824"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -9757,7 +9878,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/812"
+          "$ref": "#/826"
         },
         "flags": 2,
         "description": "Resource tags."
@@ -9784,7 +9905,7 @@
     "name": "Microsoft.RecoveryServices/vaults/backupPolicies/operationResults@2024-10-01",
     "scopeType": 8,
     "body": {
-      "$ref": "#/811"
+      "$ref": "#/825"
     },
     "flags": 1
   },
@@ -9816,21 +9937,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/814"
+          "$ref": "#/828"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/815"
+          "$ref": "#/829"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/817"
+          "$ref": "#/831"
         },
         "flags": 2,
         "description": "JobResource properties"
@@ -9844,7 +9965,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/952"
+          "$ref": "#/966"
         },
         "flags": 2,
         "description": "Resource tags."
@@ -9872,7 +9993,7 @@
       },
       "backupManagementType": {
         "type": {
-          "$ref": "#/827"
+          "$ref": "#/841"
         },
         "flags": 0,
         "description": "Backup management type to execute the current job."
@@ -9915,25 +10036,25 @@
     },
     "elements": {
       "AzureIaaSVMJob": {
-        "$ref": "#/828"
+        "$ref": "#/842"
       },
       "AzureIaaSVMJobV2": {
-        "$ref": "#/843"
+        "$ref": "#/857"
       },
       "AzureStorageJob": {
-        "$ref": "#/851"
-      },
-      "AzureWorkloadJob": {
         "$ref": "#/865"
       },
-      "DpmJob": {
+      "AzureWorkloadJob": {
         "$ref": "#/879"
       },
-      "MabJob": {
+      "DpmJob": {
         "$ref": "#/893"
       },
+      "MabJob": {
+        "$ref": "#/907"
+      },
       "VaultJob": {
-        "$ref": "#/940"
+        "$ref": "#/954"
       }
     }
   },
@@ -9977,31 +10098,31 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/818"
+        "$ref": "#/832"
       },
       {
-        "$ref": "#/819"
+        "$ref": "#/833"
       },
       {
-        "$ref": "#/820"
+        "$ref": "#/834"
       },
       {
-        "$ref": "#/821"
+        "$ref": "#/835"
       },
       {
-        "$ref": "#/822"
+        "$ref": "#/836"
       },
       {
-        "$ref": "#/823"
+        "$ref": "#/837"
       },
       {
-        "$ref": "#/824"
+        "$ref": "#/838"
       },
       {
-        "$ref": "#/825"
+        "$ref": "#/839"
       },
       {
-        "$ref": "#/826"
+        "$ref": "#/840"
       },
       {
         "$ref": "#/2"
@@ -10021,14 +10142,14 @@
       },
       "actionsInfo": {
         "type": {
-          "$ref": "#/833"
+          "$ref": "#/847"
         },
         "flags": 0,
         "description": "Gets or sets the state/actions applicable on this job like cancel/retry."
       },
       "errorDetails": {
         "type": {
-          "$ref": "#/836"
+          "$ref": "#/850"
         },
         "flags": 0,
         "description": "Error details on execution of this job."
@@ -10042,7 +10163,7 @@
       },
       "extendedInfo": {
         "type": {
-          "$ref": "#/837"
+          "$ref": "#/851"
         },
         "flags": 0,
         "description": "Additional information for this job."
@@ -10063,7 +10184,7 @@
       },
       "jobType": {
         "type": {
-          "$ref": "#/842"
+          "$ref": "#/856"
         },
         "flags": 1,
         "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
@@ -10086,20 +10207,20 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/829"
+        "$ref": "#/843"
       },
       {
-        "$ref": "#/830"
+        "$ref": "#/844"
       },
       {
-        "$ref": "#/831"
+        "$ref": "#/845"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/832"
+      "$ref": "#/846"
     }
   },
   {
@@ -10129,7 +10250,7 @@
       },
       "recommendations": {
         "type": {
-          "$ref": "#/835"
+          "$ref": "#/849"
         },
         "flags": 2,
         "description": "List of localized recommendations for above error code."
@@ -10145,7 +10266,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/834"
+      "$ref": "#/848"
     }
   },
   {
@@ -10154,21 +10275,21 @@
     "properties": {
       "tasksList": {
         "type": {
-          "$ref": "#/839"
+          "$ref": "#/853"
         },
         "flags": 0,
         "description": "List of tasks associated with this job."
       },
       "propertyBag": {
         "type": {
-          "$ref": "#/840"
+          "$ref": "#/854"
         },
         "flags": 0,
         "description": "Job properties."
       },
       "internalPropertyBag": {
         "type": {
-          "$ref": "#/841"
+          "$ref": "#/855"
         },
         "flags": 0,
         "description": "Job internal properties."
@@ -10261,7 +10382,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/838"
+      "$ref": "#/852"
     }
   },
   {
@@ -10290,7 +10411,7 @@
     "properties": {
       "actionsInfo": {
         "type": {
-          "$ref": "#/848"
+          "$ref": "#/862"
         },
         "flags": 0,
         "description": "Gets or sets the state/actions applicable on this job like cancel/retry."
@@ -10311,7 +10432,7 @@
       },
       "errorDetails": {
         "type": {
-          "$ref": "#/849"
+          "$ref": "#/863"
         },
         "flags": 0,
         "description": "Error details on execution of this job."
@@ -10325,114 +10446,10 @@
       },
       "extendedInfo": {
         "type": {
-          "$ref": "#/837"
+          "$ref": "#/851"
         },
         "flags": 0,
         "description": "Additional information for this job."
-      },
-      "jobType": {
-        "type": {
-          "$ref": "#/850"
-        },
-        "flags": 1,
-        "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Invalid"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Cancellable"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Retriable"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/844"
-      },
-      {
-        "$ref": "#/845"
-      },
-      {
-        "$ref": "#/846"
-      }
-    ]
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/847"
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/834"
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "AzureIaaSVMJobV2"
-  },
-  {
-    "$type": "ObjectType",
-    "name": "AzureStorageJob",
-    "properties": {
-      "duration": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Time elapsed during the execution of this job."
-      },
-      "actionsInfo": {
-        "type": {
-          "$ref": "#/856"
-        },
-        "flags": 0,
-        "description": "Gets or sets the state/actions applicable on this job like cancel/retry."
-      },
-      "errorDetails": {
-        "type": {
-          "$ref": "#/859"
-        },
-        "flags": 0,
-        "description": "Error details on execution of this job."
-      },
-      "storageAccountName": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Specifies friendly name of the storage account."
-      },
-      "storageAccountVersion": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Specifies whether the Storage account is a Classic or an Azure Resource Manager Storage account."
-      },
-      "extendedInfo": {
-        "type": {
-          "$ref": "#/860"
-        },
-        "flags": 0,
-        "description": "Additional information about the job."
-      },
-      "isUserTriggered": {
-        "type": {
-          "$ref": "#/22"
-        },
-        "flags": 0,
-        "description": "Indicated that whether the job is adhoc(true) or scheduled(false)"
       },
       "jobType": {
         "type": {
@@ -10459,107 +10476,15 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/852"
+        "$ref": "#/858"
       },
       {
-        "$ref": "#/853"
+        "$ref": "#/859"
       },
       {
-        "$ref": "#/854"
+        "$ref": "#/860"
       }
     ]
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/855"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "AzureStorageErrorInfo",
-    "properties": {
-      "errorCode": {
-        "type": {
-          "$ref": "#/100"
-        },
-        "flags": 0,
-        "description": "Error code."
-      },
-      "errorString": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Localized error string."
-      },
-      "recommendations": {
-        "type": {
-          "$ref": "#/858"
-        },
-        "flags": 0,
-        "description": "List of localized recommendations for above error code."
-      }
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/2"
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/857"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "AzureStorageJobExtendedInfo",
-    "properties": {
-      "tasksList": {
-        "type": {
-          "$ref": "#/862"
-        },
-        "flags": 0,
-        "description": "List of tasks for this job"
-      },
-      "propertyBag": {
-        "type": {
-          "$ref": "#/863"
-        },
-        "flags": 0,
-        "description": "Job properties."
-      },
-      "dynamicErrorMessage": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Non localized error message on job execution."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "AzureStorageJobTaskDetails",
-    "properties": {
-      "taskId": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The task display name."
-      },
-      "status": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The status."
-      }
-    }
   },
   {
     "$type": "ArrayType",
@@ -10568,28 +10493,19 @@
     }
   },
   {
-    "$type": "ObjectType",
-    "name": "AzureStorageJobExtendedInfoPropertyBag",
-    "properties": {},
-    "additionalProperties": {
-      "$ref": "#/2"
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/848"
     }
   },
   {
     "$type": "StringLiteralType",
-    "value": "AzureStorageJob"
+    "value": "AzureIaaSVMJobV2"
   },
   {
     "$type": "ObjectType",
-    "name": "AzureWorkloadJob",
+    "name": "AzureStorageJob",
     "properties": {
-      "workloadType": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Workload type of the job"
-      },
       "duration": {
         "type": {
           "$ref": "#/2"
@@ -10611,12 +10527,33 @@
         "flags": 0,
         "description": "Error details on execution of this job."
       },
+      "storageAccountName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Specifies friendly name of the storage account."
+      },
+      "storageAccountVersion": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Specifies whether the Storage account is a Classic or an Azure Resource Manager Storage account."
+      },
       "extendedInfo": {
         "type": {
           "$ref": "#/874"
         },
         "flags": 0,
         "description": "Additional information about the job."
+      },
+      "isUserTriggered": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 0,
+        "description": "Indicated that whether the job is adhoc(true) or scheduled(false)"
       },
       "jobType": {
         "type": {
@@ -10661,6 +10598,190 @@
   },
   {
     "$type": "ObjectType",
+    "name": "AzureStorageErrorInfo",
+    "properties": {
+      "errorCode": {
+        "type": {
+          "$ref": "#/100"
+        },
+        "flags": 0,
+        "description": "Error code."
+      },
+      "errorString": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Localized error string."
+      },
+      "recommendations": {
+        "type": {
+          "$ref": "#/872"
+        },
+        "flags": 0,
+        "description": "List of localized recommendations for above error code."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/871"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureStorageJobExtendedInfo",
+    "properties": {
+      "tasksList": {
+        "type": {
+          "$ref": "#/876"
+        },
+        "flags": 0,
+        "description": "List of tasks for this job"
+      },
+      "propertyBag": {
+        "type": {
+          "$ref": "#/877"
+        },
+        "flags": 0,
+        "description": "Job properties."
+      },
+      "dynamicErrorMessage": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Non localized error message on job execution."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureStorageJobTaskDetails",
+    "properties": {
+      "taskId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The task display name."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The status."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/875"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureStorageJobExtendedInfoPropertyBag",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AzureStorageJob"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureWorkloadJob",
+    "properties": {
+      "workloadType": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Workload type of the job"
+      },
+      "duration": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Time elapsed during the execution of this job."
+      },
+      "actionsInfo": {
+        "type": {
+          "$ref": "#/884"
+        },
+        "flags": 0,
+        "description": "Gets or sets the state/actions applicable on this job like cancel/retry."
+      },
+      "errorDetails": {
+        "type": {
+          "$ref": "#/887"
+        },
+        "flags": 0,
+        "description": "Error details on execution of this job."
+      },
+      "extendedInfo": {
+        "type": {
+          "$ref": "#/888"
+        },
+        "flags": 0,
+        "description": "Additional information about the job."
+      },
+      "jobType": {
+        "type": {
+          "$ref": "#/892"
+        },
+        "flags": 1,
+        "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Invalid"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cancellable"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Retriable"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/880"
+      },
+      {
+        "$ref": "#/881"
+      },
+      {
+        "$ref": "#/882"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/883"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "AzureWorkloadErrorInfo",
     "properties": {
       "errorCode": {
@@ -10686,7 +10807,7 @@
       },
       "recommendations": {
         "type": {
-          "$ref": "#/872"
+          "$ref": "#/886"
         },
         "flags": 0,
         "description": "List of localized recommendations for above error code."
@@ -10709,7 +10830,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/871"
+      "$ref": "#/885"
     }
   },
   {
@@ -10718,14 +10839,14 @@
     "properties": {
       "tasksList": {
         "type": {
-          "$ref": "#/876"
+          "$ref": "#/890"
         },
         "flags": 0,
         "description": "List of tasks for this job"
       },
       "propertyBag": {
         "type": {
-          "$ref": "#/877"
+          "$ref": "#/891"
         },
         "flags": 0,
         "description": "Job properties."
@@ -10762,7 +10883,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/875"
+      "$ref": "#/889"
     }
   },
   {
@@ -10818,28 +10939,28 @@
       },
       "actionsInfo": {
         "type": {
-          "$ref": "#/884"
+          "$ref": "#/898"
         },
         "flags": 0,
         "description": "The state/actions applicable on this job like cancel/retry."
       },
       "errorDetails": {
         "type": {
-          "$ref": "#/887"
+          "$ref": "#/901"
         },
         "flags": 0,
         "description": "The errors."
       },
       "extendedInfo": {
         "type": {
-          "$ref": "#/888"
+          "$ref": "#/902"
         },
         "flags": 0,
         "description": "Additional information for this job."
       },
       "jobType": {
         "type": {
-          "$ref": "#/892"
+          "$ref": "#/906"
         },
         "flags": 1,
         "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
@@ -10862,20 +10983,20 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/880"
+        "$ref": "#/894"
       },
       {
-        "$ref": "#/881"
+        "$ref": "#/895"
       },
       {
-        "$ref": "#/882"
+        "$ref": "#/896"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/883"
+      "$ref": "#/897"
     }
   },
   {
@@ -10891,7 +11012,7 @@
       },
       "recommendations": {
         "type": {
-          "$ref": "#/886"
+          "$ref": "#/900"
         },
         "flags": 0,
         "description": "List of localized recommendations for above error code."
@@ -10907,7 +11028,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/885"
+      "$ref": "#/899"
     }
   },
   {
@@ -10916,14 +11037,14 @@
     "properties": {
       "tasksList": {
         "type": {
-          "$ref": "#/890"
+          "$ref": "#/904"
         },
         "flags": 0,
         "description": "List of tasks associated with this job."
       },
       "propertyBag": {
         "type": {
-          "$ref": "#/891"
+          "$ref": "#/905"
         },
         "flags": 0,
         "description": "The job properties."
@@ -10981,7 +11102,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/889"
+      "$ref": "#/903"
     }
   },
   {
@@ -11009,7 +11130,7 @@
       },
       "actionsInfo": {
         "type": {
-          "$ref": "#/898"
+          "$ref": "#/912"
         },
         "flags": 0,
         "description": "The state/actions applicable on jobs like cancel/retry."
@@ -11023,35 +11144,35 @@
       },
       "mabServerType": {
         "type": {
-          "$ref": "#/914"
+          "$ref": "#/928"
         },
         "flags": 0,
         "description": "Server type of MAB container."
       },
       "workloadType": {
         "type": {
-          "$ref": "#/931"
+          "$ref": "#/945"
         },
         "flags": 0,
         "description": "Workload type of backup item."
       },
       "errorDetails": {
         "type": {
-          "$ref": "#/934"
+          "$ref": "#/948"
         },
         "flags": 0,
         "description": "The errors."
       },
       "extendedInfo": {
         "type": {
-          "$ref": "#/935"
+          "$ref": "#/949"
         },
         "flags": 0,
         "description": "Additional information on the job."
       },
       "jobType": {
         "type": {
-          "$ref": "#/939"
+          "$ref": "#/953"
         },
         "flags": 1,
         "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
@@ -11074,20 +11195,20 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/894"
+        "$ref": "#/908"
       },
       {
-        "$ref": "#/895"
+        "$ref": "#/909"
       },
       {
-        "$ref": "#/896"
+        "$ref": "#/910"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/897"
+      "$ref": "#/911"
     }
   },
   {
@@ -11154,49 +11275,49 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/899"
-      },
-      {
-        "$ref": "#/900"
-      },
-      {
-        "$ref": "#/901"
-      },
-      {
-        "$ref": "#/902"
-      },
-      {
-        "$ref": "#/903"
-      },
-      {
-        "$ref": "#/904"
-      },
-      {
-        "$ref": "#/905"
-      },
-      {
-        "$ref": "#/906"
-      },
-      {
-        "$ref": "#/907"
-      },
-      {
-        "$ref": "#/908"
-      },
-      {
-        "$ref": "#/909"
-      },
-      {
-        "$ref": "#/910"
-      },
-      {
-        "$ref": "#/911"
-      },
-      {
-        "$ref": "#/912"
-      },
-      {
         "$ref": "#/913"
+      },
+      {
+        "$ref": "#/914"
+      },
+      {
+        "$ref": "#/915"
+      },
+      {
+        "$ref": "#/916"
+      },
+      {
+        "$ref": "#/917"
+      },
+      {
+        "$ref": "#/918"
+      },
+      {
+        "$ref": "#/919"
+      },
+      {
+        "$ref": "#/920"
+      },
+      {
+        "$ref": "#/921"
+      },
+      {
+        "$ref": "#/922"
+      },
+      {
+        "$ref": "#/923"
+      },
+      {
+        "$ref": "#/924"
+      },
+      {
+        "$ref": "#/925"
+      },
+      {
+        "$ref": "#/926"
+      },
+      {
+        "$ref": "#/927"
       },
       {
         "$ref": "#/2"
@@ -11271,52 +11392,52 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/915"
-      },
-      {
-        "$ref": "#/916"
-      },
-      {
-        "$ref": "#/917"
-      },
-      {
-        "$ref": "#/918"
-      },
-      {
-        "$ref": "#/919"
-      },
-      {
-        "$ref": "#/920"
-      },
-      {
-        "$ref": "#/921"
-      },
-      {
-        "$ref": "#/922"
-      },
-      {
-        "$ref": "#/923"
-      },
-      {
-        "$ref": "#/924"
-      },
-      {
-        "$ref": "#/925"
-      },
-      {
-        "$ref": "#/926"
-      },
-      {
-        "$ref": "#/927"
-      },
-      {
-        "$ref": "#/928"
-      },
-      {
         "$ref": "#/929"
       },
       {
         "$ref": "#/930"
+      },
+      {
+        "$ref": "#/931"
+      },
+      {
+        "$ref": "#/932"
+      },
+      {
+        "$ref": "#/933"
+      },
+      {
+        "$ref": "#/934"
+      },
+      {
+        "$ref": "#/935"
+      },
+      {
+        "$ref": "#/936"
+      },
+      {
+        "$ref": "#/937"
+      },
+      {
+        "$ref": "#/938"
+      },
+      {
+        "$ref": "#/939"
+      },
+      {
+        "$ref": "#/940"
+      },
+      {
+        "$ref": "#/941"
+      },
+      {
+        "$ref": "#/942"
+      },
+      {
+        "$ref": "#/943"
+      },
+      {
+        "$ref": "#/944"
       },
       {
         "$ref": "#/2"
@@ -11336,7 +11457,7 @@
       },
       "recommendations": {
         "type": {
-          "$ref": "#/933"
+          "$ref": "#/947"
         },
         "flags": 2,
         "description": "List of localized recommendations."
@@ -11352,7 +11473,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/932"
+      "$ref": "#/946"
     }
   },
   {
@@ -11361,14 +11482,14 @@
     "properties": {
       "tasksList": {
         "type": {
-          "$ref": "#/937"
+          "$ref": "#/951"
         },
         "flags": 0,
         "description": "List of tasks for this job."
       },
       "propertyBag": {
         "type": {
-          "$ref": "#/938"
+          "$ref": "#/952"
         },
         "flags": 0,
         "description": "The job properties."
@@ -11426,7 +11547,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/936"
+      "$ref": "#/950"
     }
   },
   {
@@ -11454,28 +11575,28 @@
       },
       "actionsInfo": {
         "type": {
-          "$ref": "#/945"
+          "$ref": "#/959"
         },
         "flags": 0,
         "description": "Gets or sets the state/actions applicable on this job like cancel/retry."
       },
       "errorDetails": {
         "type": {
-          "$ref": "#/948"
+          "$ref": "#/962"
         },
         "flags": 0,
         "description": "Error details on execution of this job."
       },
       "extendedInfo": {
         "type": {
-          "$ref": "#/949"
+          "$ref": "#/963"
         },
         "flags": 0,
         "description": "Additional information about the job."
       },
       "jobType": {
         "type": {
-          "$ref": "#/951"
+          "$ref": "#/965"
         },
         "flags": 1,
         "description": "This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types."
@@ -11498,20 +11619,20 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/941"
+        "$ref": "#/955"
       },
       {
-        "$ref": "#/942"
+        "$ref": "#/956"
       },
       {
-        "$ref": "#/943"
+        "$ref": "#/957"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/944"
+      "$ref": "#/958"
     }
   },
   {
@@ -11534,7 +11655,7 @@
       },
       "recommendations": {
         "type": {
-          "$ref": "#/947"
+          "$ref": "#/961"
         },
         "flags": 0,
         "description": "List of localized recommendations for above error code."
@@ -11550,7 +11671,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/946"
+      "$ref": "#/960"
     }
   },
   {
@@ -11559,7 +11680,7 @@
     "properties": {
       "propertyBag": {
         "type": {
-          "$ref": "#/950"
+          "$ref": "#/964"
         },
         "flags": 0,
         "description": "Job properties."
@@ -11591,7 +11712,7 @@
     "name": "Microsoft.RecoveryServices/vaults/backupJobs@2024-10-01",
     "scopeType": 8,
     "body": {
-      "$ref": "#/816"
+      "$ref": "#/830"
     },
     "flags": 1
   },
@@ -11623,21 +11744,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/954"
+          "$ref": "#/968"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/955"
+          "$ref": "#/969"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/957"
+          "$ref": "#/971"
         },
         "flags": 2,
         "description": "BackupEngineBaseResource properties"
@@ -11651,7 +11772,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/973"
+          "$ref": "#/987"
         },
         "flags": 2,
         "description": "Resource tags."
@@ -11679,7 +11800,7 @@
       },
       "backupManagementType": {
         "type": {
-          "$ref": "#/967"
+          "$ref": "#/981"
         },
         "flags": 0,
         "description": "Type of backup management for the backup engine."
@@ -11749,7 +11870,7 @@
       },
       "extendedInfo": {
         "type": {
-          "$ref": "#/968"
+          "$ref": "#/982"
         },
         "flags": 0,
         "description": "Extended info of the backupengine"
@@ -11757,10 +11878,10 @@
     },
     "elements": {
       "AzureBackupServerEngine": {
-        "$ref": "#/969"
+        "$ref": "#/983"
       },
       "DpmBackupEngine": {
-        "$ref": "#/971"
+        "$ref": "#/985"
       }
     }
   },
@@ -11804,31 +11925,31 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/958"
+        "$ref": "#/972"
       },
       {
-        "$ref": "#/959"
+        "$ref": "#/973"
       },
       {
-        "$ref": "#/960"
+        "$ref": "#/974"
       },
       {
-        "$ref": "#/961"
+        "$ref": "#/975"
       },
       {
-        "$ref": "#/962"
+        "$ref": "#/976"
       },
       {
-        "$ref": "#/963"
+        "$ref": "#/977"
       },
       {
-        "$ref": "#/964"
+        "$ref": "#/978"
       },
       {
-        "$ref": "#/965"
+        "$ref": "#/979"
       },
       {
-        "$ref": "#/966"
+        "$ref": "#/980"
       },
       {
         "$ref": "#/2"
@@ -11903,7 +12024,7 @@
     "properties": {
       "backupEngineType": {
         "type": {
-          "$ref": "#/970"
+          "$ref": "#/984"
         },
         "flags": 1,
         "description": "Type of the backup engine."
@@ -11920,7 +12041,7 @@
     "properties": {
       "backupEngineType": {
         "type": {
-          "$ref": "#/972"
+          "$ref": "#/986"
         },
         "flags": 1,
         "description": "Type of the backup engine."
@@ -11944,7 +12065,7 @@
     "name": "Microsoft.RecoveryServices/vaults/backupEngines@2024-10-01",
     "scopeType": 8,
     "body": {
-      "$ref": "#/956"
+      "$ref": "#/970"
     },
     "flags": 1
   },
@@ -11976,14 +12097,14 @@
       },
       "type": {
         "type": {
-          "$ref": "#/975"
+          "$ref": "#/989"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/976"
+          "$ref": "#/990"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -12004,7 +12125,7 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/978"
+          "$ref": "#/992"
         },
         "flags": 2,
         "description": "Resource tags."
@@ -12031,7 +12152,7 @@
     "name": "Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/operationResults@2024-10-01",
     "scopeType": 8,
     "body": {
-      "$ref": "#/977"
+      "$ref": "#/991"
     },
     "flags": 1
   }

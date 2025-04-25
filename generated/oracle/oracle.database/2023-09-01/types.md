@@ -562,7 +562,7 @@
 * **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): Azure resource provisioning state.
 * **self**: string (Required): The canonical absolute URL of the resource.
 * **timeCreated**: string (Required): views timeCreated
-* **timeUpdated**: string (Required): views timeUpdated
+* **timeUpdated**: string (Required): views timeCreated
 
 ## DnsPrivateZoneProperties
 ### Properties

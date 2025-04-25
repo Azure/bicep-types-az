@@ -1,0 +1,77 @@
+# Microsoft.OnlineExperimentation @ 2025-05-31-preview
+
+## Resource Microsoft.OnlineExperimentation/workspaces@2025-05-31-preview
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2025-05-31-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The managed service identities assigned to this resource.
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string {pattern: "^[a-z0-9](?!.*---)[a-z0-9-]{1,53}[a-z0-9]"} (Required, DeployTimeConstant): The resource name
+* **properties**: [OnlineExperimentWorkspaceProperties](#onlineexperimentworkspaceproperties): The resource-specific properties for this resource.
+* **sku**: [OnlineExperimentationWorkspaceSku](#onlineexperimentationworkspacesku): The SKU (Stock Keeping Unit) assigned to this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: 'Microsoft.OnlineExperimentation/workspaces' (ReadOnly, DeployTimeConstant): The resource type
+
+## CustomerManagedKeyEncryption
+### Properties
+* **keyEncryptionKeyIdentity**: [KeyEncryptionKeyIdentity](#keyencryptionkeyidentity): All identity configuration for Customer-managed key settings defining which identity should be used to auth to Key Vault.
+* **keyEncryptionKeyUrl**: string: key encryption key Url, versioned or non-versioned. Ex: https://contosovault.vault.azure.net/keys/contosokek/562a4bb76b524a1493a6afe8e536ee78 or https://contosovault.vault.azure.net/keys/contosokek.
+
+## KeyEncryptionKeyIdentity
+### Properties
+* **federatedClientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}: application client identity to use for accessing key encryption key Url in a different tenant. Ex: f83c6b1b-4d34-47e4-bb34-9d83df58b540
+* **identityType**: 'SystemAssignedIdentity' | 'UserAssignedIdentity' | string: The type of identity to use. Values can be systemAssignedIdentity, userAssignedIdentity, or delegatedResourceIdentity.
+* **userAssignedIdentityResourceId**: string: User assigned identity to use for accessing key encryption key Url. Ex: /subscriptions/fa5fc227-a624-475e-b696-cdd604c735bc/resourceGroups/<resource group>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myId. Mutually exclusive with identityType systemAssignedIdentity.
+
+## ManagedServiceIdentity
+### Properties
+* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
+* **tenantId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' | string (Required): Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed).
+* **userAssignedIdentities**: [ManagedServiceIdentityUserAssignedIdentities](#managedserviceidentityuserassignedidentities): The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.
+
+## ManagedServiceIdentityUserAssignedIdentities
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
+
+## OnlineExperimentationWorkspaceSku
+### Properties
+* **name**: 'D0' | 'F0' | 'P0' | 'S0' | string (Required): The name of the SKU. Ex - F0, P0. It is typically a letter+number code
+* **tier**: 'Developer' | 'Free' | 'Premium' | 'Standard' | string (ReadOnly): The name of the SKU tier
+
+## OnlineExperimentWorkspaceProperties
+### Properties
+* **appConfigurationResourceId**: string (Required): The resource identifier of App Configuration with which this online experiment workspace is tied for experimentation. This is a required field for creating an online experiment workspace.
+* **encryption**: [ResourceEncryptionConfiguration](#resourceencryptionconfiguration): The encryption configuration for the online experiment workspace resource.
+* **endpoint**: string (ReadOnly): The data plane endpoint for the online experiment workspace resource.
+* **logAnalyticsWorkspaceResourceId**: string (Required): The resource identifier of the Log Analytics workspace which online experiment workspace uses for generating experiment analysis results.
+* **logsExporterStorageAccountResourceId**: string (Required): The resource identifier of storage account where logs are exported from Log Analytics workspace. Online Experiment workspace uses it generating experiment analysis results.
+* **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): The provisioning state for the resource
+* **workspaceId**: string (ReadOnly): The Id of the workspace.
+
+## ResourceEncryptionConfiguration
+### Properties
+* **customerManagedKeyEncryption**: [CustomerManagedKeyEncryption](#customermanagedkeyencryption): All Customer-managed key encryption properties for the resource.
+
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## UserAssignedIdentity
+### Properties
+* **clientId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The client ID of the assigned identity.
+* **principalId**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"} (ReadOnly): The principal ID of the assigned identity.
+
