@@ -5,15 +5,17 @@ on:
     - cron: '45 5 * * SUN'
   workflow_dispatch:
     inputs:
-      api_specs_owner:
-        description: 'GitHub Owner for azure-rest-api-specs repo. Defaults to "Azure".'
-        required: false
       api_specs_ref:
-        description: 'Git ref or full SHA for https://github.com/Azure/azure-rest-api-specs. Defaults to "main".'
-        required: false
+        description: 'Git ref or full SHA for https://github.com/Azure/azure-rest-api-specs (e.g. "my_branch" or "17365a7eb28d3ee578e5307f6091ee172bdfbfa3").'
+        default: main
+        required: true
       single_path:
         description: 'A folder name under https://github.com/Azure/azure-rest-api-specs/tree/main/specification (e.g. "compute", or "keyvault"). Leave blank to generate types for all folders.'
         required: false
+      api_specs_owner:
+        description: 'GitHub Owner for azure-rest-api-specs repo, if running against a fork (e.g. "anthony-c-martin").'
+        default: Azure
+        required: true
 
 jobs:
   update-types:
