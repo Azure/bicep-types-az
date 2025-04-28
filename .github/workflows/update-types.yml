@@ -16,6 +16,10 @@ on:
         description: 'GitHub Owner for azure-rest-api-specs repo, if running against a fork (e.g. "anthony-c-martin").'
         default: Azure
         required: true
+env:
+  AZURE_SPECS_REPO: ${{ github.event.inputs.api_specs_owner || 'Azure' }}/azure-rest-api-specs
+  AZURE_SPECS_GIT_REF: ${{ github.event.inputs.api_specs_ref || 'main' }}
+  SINGLE_PATH: ${{ github.event.inputs.single_path }}
 
 jobs:
   update-types:
@@ -38,9 +42,9 @@ jobs:
       - name: Clone azure-rest-api-specs
         uses: actions/checkout@v4
         with:
-          repository: ${{ github.event.inputs.api_specs_owner }}/azure-rest-api-specs
+          repository: ${{ env.AZURE_SPECS_REPO }}
           path: workflow-temp/azure-rest-api-specs
-          ref: ${{ github.event.inputs.api_specs_ref || 'main' }}
+          ref: ${{ env.AZURE_SPECS_GIT_REF }}
 
       - name: Build bicep-types dependency
         run: |
@@ -62,11 +66,11 @@ jobs:
 
       - name: Run generator
         run: |
-          if [ -z "${{ github.event.inputs.single_path }}" ]
+          if [ -z "${{ env.SINGLE_PATH }}" ]
           then
             npm run generate -- --specs-dir ../../workflow-temp/azure-rest-api-specs
           else
-            npm run generate -- --specs-dir ../../workflow-temp/azure-rest-api-specs --single-path ${{ github.event.inputs.single_path }}
+            npm run generate -- --specs-dir ../../workflow-temp/azure-rest-api-specs --single-path ${{ env.SINGLE_PATH }}
           fi
         working-directory: src/generator
 
@@ -78,14 +82,14 @@ jobs:
         name: Get GitHub URI for azure-rest-api-specs
         run: |
           git_sha=`git rev-parse --short HEAD`
-          echo "gh_uri=https://github.com/${{ github.event.inputs.api_specs_owner || 'Azure' }}/azure-rest-api-specs/tree/$git_sha" >> $GITHUB_OUTPUT
+          echo "gh_uri=https://github.com/${{ env.AZURE_SPECS_REPO }}/tree/$git_sha" >> $GITHUB_OUTPUT
         working-directory: workflow-temp/azure-rest-api-specs
 
       - name: Commit and push
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: |
-            Update types from ${{ steps.get_swagger_gh_uri.outputs.gh_uri }} ${{ github.event.inputs.single_path && format('(single path: {0})', github.event.inputs.single_path) || '' }}
-          branch: ${{ github.event.inputs.single_path && format('autogenerate-{0}', github.event.inputs.single_path) || 'autogenerate' }}
+            Update types from ${{ steps.get_swagger_gh_uri.outputs.gh_uri }} ${{ env.SINGLE_PATH && format('(single path: {0})', env.SINGLE_PATH) || '' }}
+          branch: ${{ env.SINGLE_PATH && format('autogenerate-{0}', env.SINGLE_PATH) || 'autogenerate' }}
           push_options: '--force'
           create_branch: true
