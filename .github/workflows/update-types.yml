@@ -6,15 +6,13 @@ on:
   workflow_dispatch:
     inputs:
       api_specs_owner:
-        description: 'GitHub Owner for azure-rest-api-specs repo (only needed if generating types from a fork).'
-        required: true
-        default: 'Azure'
+        description: 'GitHub Owner for azure-rest-api-specs repo. Defaults to "Azure".'
+        required: false
       api_specs_ref:
-        description: 'Git ref or full SHA for https://github.com/Azure/azure-rest-api-specs.'
-        required: true
-        default: 'main'
+        description: 'Git ref or full SHA for https://github.com/Azure/azure-rest-api-specs. Defaults to "main".'
+        required: false
       single_path:
-        description: 'The path to generate types for (e.g. "compute", or "keyvault"). Leave blank to generate all types.'
+        description: 'A folder name under https://github.com/Azure/azure-rest-api-specs/tree/main/specification (e.g. "compute", or "keyvault"). Leave blank to generate types for all folders.'
         required: false
 
 jobs:
@@ -40,7 +38,7 @@ jobs:
         with:
           repository: ${{ github.event.inputs.api_specs_owner }}/azure-rest-api-specs
           path: workflow-temp/azure-rest-api-specs
-          ref: ${{ github.event.inputs.api_specs_ref }}
+          ref: ${{ github.event.inputs.api_specs_ref || 'main' }}
 
       - name: Build bicep-types dependency
         run: |
@@ -78,7 +76,7 @@ jobs:
         name: Get GitHub URI for azure-rest-api-specs
         run: |
           git_sha=`git rev-parse --short HEAD`
-          echo "gh_uri=https://github.com/${{ github.event.inputs.api_specs_owner }}/azure-rest-api-specs/tree/$git_sha" >> $GITHUB_OUTPUT
+          echo "gh_uri=https://github.com/${{ github.event.inputs.api_specs_owner || 'Azure' }}/azure-rest-api-specs/tree/$git_sha" >> $GITHUB_OUTPUT
         working-directory: workflow-temp/azure-rest-api-specs
 
       - name: Commit and push
