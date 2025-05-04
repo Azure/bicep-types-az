@@ -399,7 +399,7 @@ connection
 * **alias**: string: The domain's NetBIOS name
 * **baseGroupDN**: string: The base distinguished name for groups
 * **baseUserDN**: string: The base distinguished name for users
-* **domain**: string: The domain's dns name
+* **domain**: string: The domain's DNS name
 * **name**: string: The name of the identity source
 * **password**: string {sensitive}: The password of the Active Directory user with a minimum of read-only access to
 Base DN for users and groups.
@@ -588,7 +588,7 @@ when executing
 ### Properties
 * **displayName**: string (ReadOnly): Display name of the VM.
 * **folderPath**: string (ReadOnly): Path to virtual machine's folder starting from datacenter virtual machine folder
-* **moRefId**: string (ReadOnly): Virtual machine managed object reference id
+* **moRefId**: string (ReadOnly): vCenter managed object reference ID of the virtual machine
 * **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): The provisioning state of the resource.
 * **restrictMovement**: 'Disabled' | 'Enabled' | string (ReadOnly): Whether VM DRS-driven movement is restricted (enabled) or not (disabled)
 

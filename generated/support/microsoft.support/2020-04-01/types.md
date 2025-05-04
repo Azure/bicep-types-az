@@ -33,7 +33,7 @@
 * **country**: string (Required): Country of the user. This is the ISO 3166-1 alpha-3 code.
 * **firstName**: string (Required): First name.
 * **lastName**: string (Required): Last name.
-* **phoneNumber**: string: Phone number. This is required if preferred contact method is phone.
+* **phoneNumber**: string: Phone number. This is required if preferred contact method is phone. It is also required when submitting 'critical' or 'highestcriticalimpact' severity cases.
 * **preferredContactMethod**: 'email' | 'phone' | string (Required): Preferred contact method.
 * **preferredSupportLanguage**: string (Required): Preferred language of support from Azure. Support languages vary based on the severity you choose for your support ticket. Learn more at [Azure Severity and responsiveness](https://azure.microsoft.com/support/plans/response). Use the standard language-country code. Valid values are 'en-us' for English, 'zh-hans' for Chinese, 'es-es' for Spanish, 'fr-fr' for French, 'ja-jp' for Japanese, 'ko-kr' for Korean, 'ru-ru' for Russian, 'pt-br' for Portuguese, 'it-it' for Italian, 'zh-tw' for Chinese and 'de-de' for German.
 * **preferredTimeZone**: string (Required): Time zone of the user. This is the name of the time zone from [Microsoft Time Zone Index Values](https://support.microsoft.com/help/973627/microsoft-time-zone-index-values).
