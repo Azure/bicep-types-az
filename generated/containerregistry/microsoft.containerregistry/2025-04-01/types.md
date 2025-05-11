@@ -30,7 +30,7 @@
 * **apiVersion**: '2025-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {minLength: 5, maxLength: 50, pattern: "^[a-zA-Z0-9]*$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [ConnectedRegistryProperties](#connectedregistryproperties)
+* **properties**: [ConnectedRegistryProperties](#connectedregistryproperties): The properties of the connected registry.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.ContainerRegistry/registries/connectedRegistries' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -109,6 +109,10 @@
 * **ApiVersion**: 2025-04-01
 * **Output**: [EventListResult](#eventlistresult)
 
+## ActivationProperties
+### Properties
+* **status**: 'Active' | 'Inactive' | string (ReadOnly): The activation status of the connected registry.
+
 ## Actor
 ### Properties
 * **name**: string: The subject or username associated with the request context that generated the event.
@@ -135,7 +139,7 @@ Eg: docker pull myregistry.azurecr.io/{targetRepository}:{tag}
 
 ## ConnectedRegistryProperties
 ### Properties
-* **activation**: [ConnectedRegistryPropertiesActivation](#connectedregistrypropertiesactivation) (ReadOnly)
+* **activation**: [ActivationProperties](#activationproperties) (ReadOnly): The activation properties of the connected registry.
 * **clientTokenIds**: string[]: The list of the ACR token resource IDs used to authenticate clients to the connected registry.
 * **connectionState**: 'Offline' | 'Online' | 'Syncing' | 'Unhealthy' | string (ReadOnly): The current connection state of the connected registry.
 * **garbageCollection**: [GarbageCollectionProperties](#garbagecollectionproperties): The garbage collection properties of the connected registry.
@@ -144,14 +148,10 @@ Eg: docker pull myregistry.azurecr.io/{targetRepository}:{tag}
 * **loginServer**: [LoginServerProperties](#loginserverproperties): The login server properties of the connected registry.
 * **mode**: 'Mirror' | 'ReadOnly' | 'ReadWrite' | 'Registry' | string (Required): The mode of the connected registry resource that indicates the permissions of the registry.
 * **notificationsList**: string[]: The list of notifications subscription information for the connected registry.
-* **parent**: [ParentProperties](#parentproperties) (Required): The properties of the connected registry parent.
+* **parent**: [ParentProperties](#parentproperties) (Required): The parent of the connected registry.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the resource.
 * **statusDetails**: [StatusDetailProperties](#statusdetailproperties)[] (ReadOnly): The list of current statuses of the connected registry.
 * **version**: string (ReadOnly): The current version of ACR runtime on the connected registry.
-
-## ConnectedRegistryPropertiesActivation
-### Properties
-* **status**: 'Active' | 'Inactive' | string (ReadOnly): The activation status of the connected registry.
 
 ## CredentialHealth
 ### Properties
@@ -264,12 +264,7 @@ dictionary key references will be ARM resource ids in the form:
 ## LoginServerProperties
 ### Properties
 * **host**: string (ReadOnly): The host of the connected registry. Can be FQDN or IP.
-* **tls**: [LoginServerPropertiesTls](#loginserverpropertiestls) (ReadOnly)
-
-## LoginServerPropertiesTls
-### Properties
-* **certificate**: [TlsPropertiesCertificate](#tlspropertiescertificate) (ReadOnly)
-* **status**: 'Disabled' | 'Enabled' | string (ReadOnly): Indicates whether HTTPS is enabled for the login server.
+* **tls**: [TlsProperties](#tlsproperties) (ReadOnly): The TLS properties of the connected registry login server.
 
 ## NetworkRuleSet
 ### Properties
@@ -440,10 +435,15 @@ repositories/repository-name/metadata/write
 * **url**: string: The direct URL to the content.
 * **version**: string: The version of the artifact.
 
-## TlsPropertiesCertificate
+## TlsCertificateProperties
 ### Properties
 * **location**: string (ReadOnly): Indicates the location of the certificates.
 * **type**: 'LocalDirectory' | string (ReadOnly): The type of certificate location.
+
+## TlsProperties
+### Properties
+* **certificate**: [TlsCertificateProperties](#tlscertificateproperties) (ReadOnly): The certificate used to configure HTTPS for the login server.
+* **status**: 'Disabled' | 'Enabled' | string (ReadOnly): Indicates whether HTTPS is enabled for the login server.
 
 ## TokenCertificate
 ### Properties

@@ -417,8 +417,9 @@ This value must be between 00:00:00 and 49710.06:28:15 (unsigned 32 bit integer 
 * **networkSecurityRules**: [NetworkSecurityRule](#networksecurityrule)[]: The Network Security Rules for this node type. This setting can only be specified for node types that are configured with frontend configurations.
 * **placementProperties**: [NodeTypePropertiesPlacementProperties](#nodetypepropertiesplacementproperties): The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run.
 * **provisioningState**: 'Canceled' | 'Created' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'None' | 'Other' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the node type resource.
-* **secureBootEnabled**: bool: Specifies whether secure boot should be enabled on the nodeType. Can only be used with TrustedLaunch SecurityType
-* **securityType**: 'Standard' | 'TrustedLaunch' | string: Specifies the security type of the nodeType. Only Standard and TrustedLaunch are currently supported
+* **secureBootEnabled**: bool: Specifies whether secure boot should be enabled on the nodeType. Can only be used with TrustedLaunch and ConfidentialVM SecurityType.
+* **securityEncryptionType**: 'DiskWithVMGuestState' | 'VMGuestStateOnly' | string: Specifies the EncryptionType of the managed disk. It is set to DiskWithVMGuestState for encryption of the managed disk along with VMGuestState blob and VMGuestStateOnly for encryption of just the VMGuestState blob. Note: It can be set for only Confidential VMs.
+* **securityType**: 'ConfidentialVM' | 'Standard' | 'TrustedLaunch' | string: Specifies the security type of the nodeType. Supported values include Standard, TrustedLaunch and ConfidentialVM.
 * **serviceArtifactReferenceId**: string: Specifies the service artifact reference id used to set same image version for all virtual machines in the scale set when using 'latest' image version.
 * **spotRestoreTimeout**: string: Indicates the time duration after which the platform will not try to restore the VMSS SPOT instances specified as ISO 8601.
 * **subnetId**: string: Indicates the resource id of the subnet for the node type.

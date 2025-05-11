@@ -515,7 +515,8 @@ resource exampleResource 'Microsoft.ServiceFabric/managedClusters/nodeTypes@2025
       SomeProperty: '5'
     }
     secureBootEnabled: true
-    securityType: 'TrustedLaunch'
+    securityEncryptionType: 'DiskWithVMGuestState'
+    securityType: 'ConfidentialVM'
     serviceArtifactReferenceId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resRg/providers/Microsoft.Compute/galleries/myGallery/serviceArtifacts/myServiceArtifact/vmArtifactsProfiles/myVmArtifactProfile'
     spotRestoreTimeout: 'PT30M'
     subnetId: '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resRg/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1'
