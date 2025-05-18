@@ -435,9 +435,23 @@
 
 ## AmazonRdsForLinkedServiceTypeProperties
 ### Properties
-* **connectionString**: any (Required): The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+* **authenticationType**: 'Basic' | string: Authentication type for connecting to the AmazonRdsForOracle database. Only used for Version 2.0.
+* **connectionString**: any: The connection string. Type: string, SecureString or AzureKeyVaultSecretReference. Only used for Version 1.0.
+* **cryptoChecksumClient**: any: Specifies the desired data integrity behavior when this client connects to a server. Supported values are accepted, rejected, requested or required, default value is required. Type: string. Only used for Version 2.0.
+* **cryptoChecksumTypesClient**: any: Specifies the crypto-checksum algorithms that client can use. Supported values are SHA1, SHA256, SHA384, SHA512, default value is (SHA512). Type: string. Only used for Version 2.0.
+* **enableBulkLoad**: any: Specifies whether to use bulk copy or batch insert when loading data into the database, default value is true. Type: boolean. Only used for Version 2.0.
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
+* **encryptionClient**: any: Specifies the encryption client behavior. Supported values are accepted, rejected, requested or required, default value is required. Type: string. Only used for Version 2.0.
+* **encryptionTypesClient**: any: Specifies the encryption algorithms that client can use. Supported values are AES128, AES192, AES256, 3DES112, 3DES168, default value is (AES256). Type: string. Only used for Version 2.0.
+* **fetchSize**: any: Specifies the number of bytes that the driver allocates to fetch the data in one database round-trip, default value is 10485760. Type: integer. Only used for Version 2.0.
+* **fetchTswtzAsTimestamp**: any: Specifies whether the driver returns column value with the TIMESTAMP WITH TIME ZONE data type as DateTime or string. This setting is ignored if supportV1DataTypes is not true, default value is true. Type: boolean. Only used for Version 2.0.
+* **initializationString**: any: Specifies a command that is issued immediately after connecting to the database to manage session settings. Type: string. Only used for Version 2.0.
+* **initialLobFetchSize**: any: Specifies the amount that the source initially fetches for LOB columns, default value is 0. Type: integer. Only used for Version 2.0.
 * **password**: [SecretBase](#secretbase): The Azure key vault secret reference of password in connection string.
+* **server**: any: The location of AmazonRdsForOracle database you want to connect to, the supported forms include connector descriptor, Easy Connect (Plus) Naming and Oracle Net Services Name (Only self-hosted IR). Type: string. Only used for Version 2.0.
+* **statementCacheSize**: any: Specifies the number of cursors or statements to be cached for each database connection, default value is 0. Type: integer. Only used for Version 2.0.
+* **supportV1DataTypes**: any: Specifies whether to use the Version 1.0 data type mappings. Do not set this to true unless you want to keep backward compatibility with Version 1.0's data type mappings, default value is false. Type: boolean. Only used for Version 2.0.
+* **username**: any: The AmazonRdsForOracle database username. Type: string. Only used for Version 2.0.
 
 ## AmazonRdsForOraclePartitionSettings
 ### Properties
@@ -657,6 +671,7 @@
 * **accessToken**: [SecretBase](#secretbase): Access token for databricks REST API. Refer to https://docs.azuredatabricks.net/api/latest/authentication.html. Type: string (or Expression with resultType string).
 * **authentication**: any: Required to specify MSI, if using Workspace resource id for databricks REST API. Type: string (or Expression with resultType string).
 * **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
+* **dataSecurityMode**: any: The data security mode for the Databricks Cluster. Type: string (or Expression with resultType string).
 * **domain**: any (Required): <REGION>.azuredatabricks.net, domain name of your Databricks deployment. Type: string (or Expression with resultType string).
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **existingClusterId**: any: The id of an existing interactive cluster that will be used for all runs of this activity. Type: string (or Expression with resultType string).
@@ -4003,6 +4018,7 @@
 * **allowHostNameCNMismatch**: any: Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false.
 * **allowSelfSignedServerCert**: any: Specifies whether to allow self-signed certificates from the server. The default value is false.
 * **authenticationType**: 'Anonymous' | 'Username' | 'UsernameAndPassword' | 'WindowsAzureHDInsightService' | string (Required): The authentication method used to access the Hive server.
+* **enableServerCertificateValidation**: any: Specifies whether the connections to the server will validate server certificate, the default value is True. Only used for Version 2.0
 * **enableSsl**: any: Specifies whether the connections to the server are encrypted using SSL. The default value is false.
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **host**: any (Required): IP address or host name of the Hive server, separated by ';' for multiple hosts (only when serviceDiscoveryMode is enable).
@@ -4079,11 +4095,13 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **allowHostNameCNMismatch**: any: Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false.
 * **allowSelfSignedServerCert**: any: Specifies whether to allow self-signed certificates from the server. The default value is false.
 * **authenticationType**: 'Anonymous' | 'SASLUsername' | 'UsernameAndPassword' | string (Required): The authentication type to use.
+* **enableServerCertificateValidation**: any: Specify whether to enable server SSL certificate validation when you connect.Always use System Trust Store (for V2 only). The default value is true.
 * **enableSsl**: any: Specifies whether the connections to the server are encrypted using SSL. The default value is false.
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **host**: any (Required): The IP address or host name of the Impala server. (i.e. 192.168.222.160)
 * **password**: [SecretBase](#secretbase): The password corresponding to the user name when using UsernameAndPassword.
 * **port**: any: The TCP port that the Impala server uses to listen for client connections. The default value is 21050.
+* **thriftTransportProtocol**: 'Binary' | 'HTTP': The transport protocol to use in the Thrift layer (for V2 only). Default value is Binary.
 * **trustedCertPath**: any: The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.
 * **username**: any: The user name used to access the Impala server. The default value is anonymous when using SASLUsername.
 * **useSystemTrustStore**: any: Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.
@@ -6131,6 +6149,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 * **allowHostNameCNMismatch**: any: Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false.
 * **allowSelfSignedServerCert**: any: Specifies whether to allow self-signed certificates from the server. The default value is false.
 * **authenticationType**: 'Anonymous' | 'Username' | 'UsernameAndPassword' | 'WindowsAzureHDInsightService' | string (Required): The authentication method used to access the Spark server.
+* **enableServerCertificateValidation**: any: Specifies whether the connections to the server will validate server certificate, the default value is True. Only used for Version 2.0
 * **enableSsl**: any: Specifies whether the connections to the server are encrypted using SSL. The default value is false.
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **host**: any (Required): IP address or host name of the Spark server

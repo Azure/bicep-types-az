@@ -8,7 +8,7 @@
 * **identity**: [ManagedServiceIdentity](#managedserviceidentity): The managed service identities assigned to this resource.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {pattern: "^[a-z0-9](?!.*---)[a-z0-9-]{1,53}[a-z0-9]"} (Required, DeployTimeConstant): The resource name
-* **properties**: [OnlineExperimentWorkspaceProperties](#onlineexperimentworkspaceproperties): The resource-specific properties for this resource.
+* **properties**: [OnlineExperimentationWorkspaceProperties](#onlineexperimentationworkspaceproperties): The resource-specific properties for this resource.
 * **sku**: [OnlineExperimentationWorkspaceSku](#onlineexperimentationworkspacesku): The SKU (Stock Keeping Unit) assigned to this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
@@ -37,20 +37,20 @@
 ### Additional Properties
 * **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
 
+## OnlineExperimentationWorkspaceProperties
+### Properties
+* **appConfigurationResourceId**: string (Required): The resource identifier of App Configuration with which this online experimentation workspace is tied for experimentation. This is a required field for creating an online experimentation workspace.
+* **encryption**: [ResourceEncryptionConfiguration](#resourceencryptionconfiguration): The encryption configuration for the online experimentation workspace resource.
+* **endpoint**: string (ReadOnly): The data plane endpoint for the online experimentation workspace resource.
+* **logAnalyticsWorkspaceResourceId**: string (Required): The resource identifier of the Log Analytics workspace which online experimentation workspace uses for generating experiment analysis results.
+* **logsExporterStorageAccountResourceId**: string (Required): The resource identifier of storage account where logs are exported from Log Analytics workspace. online experimentation workspace uses it generating experiment analysis results.
+* **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): The provisioning state for the resource
+* **workspaceId**: string (ReadOnly): The Id of the workspace.
+
 ## OnlineExperimentationWorkspaceSku
 ### Properties
 * **name**: 'D0' | 'F0' | 'P0' | 'S0' | string (Required): The name of the SKU. Ex - F0, P0. It is typically a letter+number code
 * **tier**: 'Developer' | 'Free' | 'Premium' | 'Standard' | string (ReadOnly): The name of the SKU tier
-
-## OnlineExperimentWorkspaceProperties
-### Properties
-* **appConfigurationResourceId**: string (Required): The resource identifier of App Configuration with which this online experiment workspace is tied for experimentation. This is a required field for creating an online experiment workspace.
-* **encryption**: [ResourceEncryptionConfiguration](#resourceencryptionconfiguration): The encryption configuration for the online experiment workspace resource.
-* **endpoint**: string (ReadOnly): The data plane endpoint for the online experiment workspace resource.
-* **logAnalyticsWorkspaceResourceId**: string (Required): The resource identifier of the Log Analytics workspace which online experiment workspace uses for generating experiment analysis results.
-* **logsExporterStorageAccountResourceId**: string (Required): The resource identifier of storage account where logs are exported from Log Analytics workspace. Online Experiment workspace uses it generating experiment analysis results.
-* **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): The provisioning state for the resource
-* **workspaceId**: string (ReadOnly): The Id of the workspace.
 
 ## ResourceEncryptionConfiguration
 ### Properties

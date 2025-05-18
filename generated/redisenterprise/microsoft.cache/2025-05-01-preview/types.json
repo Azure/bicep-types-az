@@ -2266,7 +2266,7 @@
         "flags": 2,
         "description": "The name of the SKU."
       },
-      "customerFacingSizeInGB": {
+      "sizeInGB": {
         "type": {
           "$ref": "#/65"
         },

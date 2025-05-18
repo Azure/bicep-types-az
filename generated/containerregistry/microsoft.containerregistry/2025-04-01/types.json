@@ -334,7 +334,8 @@
         "type": {
           "$ref": "#/29"
         },
-        "flags": 0
+        "flags": 0,
+        "description": "The properties of the connected registry."
       },
       "systemData": {
         "type": {
@@ -388,14 +389,15 @@
         "type": {
           "$ref": "#/47"
         },
-        "flags": 2
+        "flags": 2,
+        "description": "The activation properties of the connected registry."
       },
       "parent": {
         "type": {
           "$ref": "#/51"
         },
         "flags": 1,
-        "description": "The properties of the connected registry parent."
+        "description": "The parent of the connected registry."
       },
       "clientTokenIds": {
         "type": {
@@ -565,7 +567,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ConnectedRegistryPropertiesActivation",
+    "name": "ActivationProperties",
     "properties": {
       "status": {
         "type": {
@@ -687,13 +689,14 @@
         "type": {
           "$ref": "#/55"
         },
-        "flags": 2
+        "flags": 2,
+        "description": "The TLS properties of the connected registry login server."
       }
     }
   },
   {
     "$type": "ObjectType",
-    "name": "LoginServerPropertiesTls",
+    "name": "TlsProperties",
     "properties": {
       "status": {
         "type": {
@@ -706,7 +709,8 @@
         "type": {
           "$ref": "#/59"
         },
-        "flags": 2
+        "flags": 2,
+        "description": "The certificate used to configure HTTPS for the login server."
       }
     }
   },
@@ -734,7 +738,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "TlsPropertiesCertificate",
+    "name": "TlsCertificateProperties",
     "properties": {
       "type": {
         "type": {

@@ -466,7 +466,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ModelsProjectProperties",
+    "name": "ProjectProperties",
     "properties": {
       "entityId": {
         "type": {
@@ -607,7 +607,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ModelsAttributes",
+    "name": "Attributes",
     "properties": {
       "name": {
         "type": {
@@ -633,7 +633,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ModelsDefaultEndpointSettings",
+    "name": "DefaultEndpointSettings",
     "properties": {
       "autoscalingLimitMinCu": {
         "type": {
@@ -653,7 +653,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ModelsBranchProperties",
+    "name": "BranchProperties",
     "properties": {
       "entityId": {
         "type": {
@@ -778,7 +778,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ModelsNeonRoleProperties",
+    "name": "NeonRoleProperties",
     "properties": {
       "entityId": {
         "type": {
@@ -890,7 +890,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ModelsNeonDatabaseProperties",
+    "name": "NeonDatabaseProperties",
     "properties": {
       "entityId": {
         "type": {
@@ -986,7 +986,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ModelsEndpointProperties",
+    "name": "EndpointProperties",
     "properties": {
       "entityId": {
         "type": {
@@ -1265,10 +1265,6 @@
     "flags": 0
   },
   {
-    "$type": "StringType",
-    "pattern": "^[a-zA-Z0-9-]{3,24}$"
-  },
-  {
     "$type": "StringLiteralType",
     "value": "Neon.Postgres/organizations/projects"
   },
@@ -1289,21 +1285,21 @@
       },
       "name": {
         "type": {
-          "$ref": "#/87"
+          "$ref": "#/31"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/88"
+          "$ref": "#/87"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/89"
+          "$ref": "#/88"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -1329,7 +1325,7 @@
     "name": "Neon.Postgres/organizations/projects@2025-03-01-preview",
     "scopeType": 8,
     "body": {
-      "$ref": "#/90"
+      "$ref": "#/89"
     },
     "flags": 0
   },
@@ -1354,21 +1350,21 @@
       },
       "name": {
         "type": {
-          "$ref": "#/87"
+          "$ref": "#/31"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/92"
+          "$ref": "#/91"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/93"
+          "$ref": "#/92"
         },
         "flags": 10,
         "description": "The resource api version"
@@ -1394,371 +1390,7 @@
     "name": "Neon.Postgres/organizations/projects/branches@2025-03-01-preview",
     "scopeType": 8,
     "body": {
-      "$ref": "#/94"
-    },
-    "flags": 0
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Neon.Postgres/organizations/projects/branches/computes"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "2025-03-01-preview"
-  },
-  {
-    "$type": "ObjectType",
-    "name": "Neon.Postgres/organizations/projects/branches/computes",
-    "properties": {
-      "id": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 10,
-        "description": "The resource id"
-      },
-      "name": {
-        "type": {
-          "$ref": "#/87"
-        },
-        "flags": 9,
-        "description": "The resource name"
-      },
-      "type": {
-        "type": {
-          "$ref": "#/96"
-        },
-        "flags": 10,
-        "description": "The resource type"
-      },
-      "apiVersion": {
-        "type": {
-          "$ref": "#/97"
-        },
-        "flags": 10,
-        "description": "The resource api version"
-      },
-      "properties": {
-        "type": {
-          "$ref": "#/99"
-        },
-        "flags": 0,
-        "description": "The resource-specific properties for this resource."
-      },
-      "systemData": {
-        "type": {
-          "$ref": "#/75"
-        },
-        "flags": 2,
-        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "ModelsComputeProperties",
-    "properties": {
-      "entityId": {
-        "type": {
-          "$ref": "#/30"
-        },
-        "flags": 2,
-        "description": "Unique identifier for the entity"
-      },
-      "entityName": {
-        "type": {
-          "$ref": "#/31"
-        },
-        "flags": 0,
-        "description": "Name of the resource"
-      },
-      "createdAt": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 2,
-        "description": "Timestamp indicating when the entity was created"
-      },
-      "provisioningState": {
-        "type": {
-          "$ref": "#/103"
-        },
-        "flags": 2,
-        "description": "Provisioning state of the resource."
-      },
-      "attributes": {
-        "type": {
-          "$ref": "#/104"
-        },
-        "flags": 0,
-        "description": "Additional attributes for the entity"
-      },
-      "region": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Region where the compute instance is located"
-      },
-      "cpuCores": {
-        "type": {
-          "$ref": "#/16"
-        },
-        "flags": 0,
-        "description": "Number of allocated CPU cores"
-      },
-      "memory": {
-        "type": {
-          "$ref": "#/16"
-        },
-        "flags": 0,
-        "description": "Memory allocated in GB"
-      },
-      "status": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Current status of the compute instance"
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Succeeded"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Failed"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Canceled"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/100"
-      },
-      {
-        "$ref": "#/101"
-      },
-      {
-        "$ref": "#/102"
-      },
-      {
-        "$ref": "#/2"
-      }
-    ]
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/36"
-    }
-  },
-  {
-    "$type": "ResourceType",
-    "name": "Neon.Postgres/organizations/projects/branches/computes@2025-03-01-preview",
-    "scopeType": 8,
-    "body": {
-      "$ref": "#/98"
-    },
-    "flags": 0
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Neon.Postgres/organizations/projects/branches/endpoints"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "2025-03-01-preview"
-  },
-  {
-    "$type": "ObjectType",
-    "name": "Neon.Postgres/organizations/projects/branches/endpoints",
-    "properties": {
-      "id": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 10,
-        "description": "The resource id"
-      },
-      "name": {
-        "type": {
-          "$ref": "#/87"
-        },
-        "flags": 9,
-        "description": "The resource name"
-      },
-      "type": {
-        "type": {
-          "$ref": "#/106"
-        },
-        "flags": 10,
-        "description": "The resource type"
-      },
-      "apiVersion": {
-        "type": {
-          "$ref": "#/107"
-        },
-        "flags": 10,
-        "description": "The resource api version"
-      },
-      "properties": {
-        "type": {
-          "$ref": "#/61"
-        },
-        "flags": 0,
-        "description": "The resource-specific properties for this resource."
-      },
-      "systemData": {
-        "type": {
-          "$ref": "#/75"
-        },
-        "flags": 2,
-        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
-      }
-    }
-  },
-  {
-    "$type": "ResourceType",
-    "name": "Neon.Postgres/organizations/projects/branches/endpoints@2025-03-01-preview",
-    "scopeType": 8,
-    "body": {
-      "$ref": "#/108"
-    },
-    "flags": 0
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Neon.Postgres/organizations/projects/branches/neonDatabases"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "2025-03-01-preview"
-  },
-  {
-    "$type": "ObjectType",
-    "name": "Neon.Postgres/organizations/projects/branches/neonDatabases",
-    "properties": {
-      "id": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 10,
-        "description": "The resource id"
-      },
-      "name": {
-        "type": {
-          "$ref": "#/87"
-        },
-        "flags": 9,
-        "description": "The resource name"
-      },
-      "type": {
-        "type": {
-          "$ref": "#/110"
-        },
-        "flags": 10,
-        "description": "The resource type"
-      },
-      "apiVersion": {
-        "type": {
-          "$ref": "#/111"
-        },
-        "flags": 10,
-        "description": "The resource api version"
-      },
-      "properties": {
-        "type": {
-          "$ref": "#/54"
-        },
-        "flags": 0,
-        "description": "The resource-specific properties for this resource."
-      },
-      "systemData": {
-        "type": {
-          "$ref": "#/75"
-        },
-        "flags": 2,
-        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
-      }
-    }
-  },
-  {
-    "$type": "ResourceType",
-    "name": "Neon.Postgres/organizations/projects/branches/neonDatabases@2025-03-01-preview",
-    "scopeType": 8,
-    "body": {
-      "$ref": "#/112"
-    },
-    "flags": 0
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Neon.Postgres/organizations/projects/branches/neonRoles"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "2025-03-01-preview"
-  },
-  {
-    "$type": "ObjectType",
-    "name": "Neon.Postgres/organizations/projects/branches/neonRoles",
-    "properties": {
-      "id": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 10,
-        "description": "The resource id"
-      },
-      "name": {
-        "type": {
-          "$ref": "#/87"
-        },
-        "flags": 9,
-        "description": "The resource name"
-      },
-      "type": {
-        "type": {
-          "$ref": "#/114"
-        },
-        "flags": 10,
-        "description": "The resource type"
-      },
-      "apiVersion": {
-        "type": {
-          "$ref": "#/115"
-        },
-        "flags": 10,
-        "description": "The resource api version"
-      },
-      "properties": {
-        "type": {
-          "$ref": "#/45"
-        },
-        "flags": 0,
-        "description": "The resource-specific properties for this resource."
-      },
-      "systemData": {
-        "type": {
-          "$ref": "#/75"
-        },
-        "flags": 2,
-        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
-      }
-    }
-  },
-  {
-    "$type": "ResourceType",
-    "name": "Neon.Postgres/organizations/projects/branches/neonRoles@2025-03-01-preview",
-    "scopeType": 8,
-    "body": {
-      "$ref": "#/116"
+      "$ref": "#/93"
     },
     "flags": 0
   }

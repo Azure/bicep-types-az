@@ -562,6 +562,7 @@ depending on each OAuth2 provider's implementation.
 * **raiPolicyName**: string: The name of RAI policy.
 * **rateLimits**: [ThrottlingRule](#throttlingrule)[] (ReadOnly)
 * **scaleSettings**: [DeploymentScaleSettings](#deploymentscalesettings): Properties of Cognitive Services account deployment model. (Deprecated, please use Deployment.sku instead.)
+* **spilloverDeploymentName**: string: Specifies the deployment name that should serve requests when the request would have otherwise been throttled due to reaching current deployment throughput limit.
 * **versionUpgradeOption**: 'NoAutoUpgrade' | 'OnceCurrentVersionExpired' | 'OnceNewDefaultVersionAvailable' | string: Deployment model version upgrade option.
 
 ## DeploymentPropertiesCapabilities

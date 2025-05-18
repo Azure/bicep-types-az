@@ -6,7 +6,7 @@
 * **apiVersion**: '2024-09-19-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
-* **name**: string {pattern: "^[a-zA-Z0-9]"} (Required, DeployTimeConstant): The resource name
+* **name**: string {pattern: "^[^-0-9][A-Za-z0-9-]{1,33}[A-Za-z0-9]$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [LedgerProperties](#ledgerproperties): Properties of Confidential Ledger Resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
