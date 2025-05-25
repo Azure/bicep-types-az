@@ -1903,6 +1903,13 @@
     "$type": "ObjectType",
     "name": "ApplicationResourceProperties",
     "properties": {
+      "managedIdentities": {
+        "type": {
+          "$ref": "#/139"
+        },
+        "flags": 0,
+        "description": "List of user assigned identities for the application, each mapped to a friendly name."
+      },
       "provisioningState": {
         "type": {
           "$ref": "#/0"
@@ -1919,25 +1926,44 @@
       },
       "parameters": {
         "type": {
-          "$ref": "#/138"
+          "$ref": "#/140"
         },
         "flags": 0,
         "description": "List of application parameters with overridden values from their default values specified in the application manifest."
       },
       "upgradePolicy": {
         "type": {
-          "$ref": "#/139"
+          "$ref": "#/141"
         },
         "flags": 0,
         "description": "Describes the policy for a monitored application upgrade."
-      },
-      "managedIdentities": {
-        "type": {
-          "$ref": "#/151"
-        },
-        "flags": 0,
-        "description": "List of user assigned identities for the application, each mapped to a friendly name."
       }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ApplicationUserAssignedIdentity",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The friendly name of user assigned identity."
+      },
+      "principalId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The principal id of user assigned identity."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/138"
     }
   },
   {
@@ -1954,7 +1980,7 @@
     "properties": {
       "applicationHealthPolicy": {
         "type": {
-          "$ref": "#/140"
+          "$ref": "#/142"
         },
         "flags": 0,
         "description": "Defines a health policy used to evaluate the health of an application or one of its children entities."
@@ -1968,7 +1994,7 @@
       },
       "rollingUpgradeMonitoringPolicy": {
         "type": {
-          "$ref": "#/143"
+          "$ref": "#/145"
         },
         "flags": 0,
         "description": "The policy used for monitoring the application upgrade"
@@ -1982,7 +2008,7 @@
       },
       "upgradeMode": {
         "type": {
-          "$ref": "#/149"
+          "$ref": "#/151"
         },
         "flags": 0,
         "description": "The mode used to monitor health during a rolling upgrade. The values are Monitored, and UnmonitoredAuto."
@@ -2023,14 +2049,14 @@
       },
       "defaultServiceTypeHealthPolicy": {
         "type": {
-          "$ref": "#/141"
+          "$ref": "#/143"
         },
         "flags": 0,
         "description": "The health policy used by default to evaluate the health of a service type."
       },
       "serviceTypeHealthPolicyMap": {
         "type": {
-          "$ref": "#/142"
+          "$ref": "#/144"
         },
         "flags": 0,
         "description": "The map with service type health policy per service type name. The map is empty by default."
@@ -2069,7 +2095,7 @@
     "name": "ApplicationHealthPolicyServiceTypeHealthPolicyMap",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/141"
+      "$ref": "#/143"
     }
   },
   {
@@ -2078,7 +2104,7 @@
     "properties": {
       "failureAction": {
         "type": {
-          "$ref": "#/146"
+          "$ref": "#/148"
         },
         "flags": 1,
         "description": "The compensating action to perform when a Monitored upgrade encounters monitoring policy or health policy violations. Invalid indicates the failure action is invalid. Rollback specifies that the upgrade will start rolling back automatically. Manual indicates that the upgrade will switch to UnmonitoredManual upgrade mode."
@@ -2132,10 +2158,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/144"
+        "$ref": "#/146"
       },
       {
-        "$ref": "#/145"
+        "$ref": "#/147"
       },
       {
         "$ref": "#/0"
@@ -2154,41 +2180,15 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/147"
+        "$ref": "#/149"
       },
       {
-        "$ref": "#/148"
+        "$ref": "#/150"
       },
       {
         "$ref": "#/0"
       }
     ]
-  },
-  {
-    "$type": "ObjectType",
-    "name": "ApplicationUserAssignedIdentity",
-    "properties": {
-      "name": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "The friendly name of user assigned identity."
-      },
-      "principalId": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "The principal id of user assigned identity."
-      }
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/150"
-    }
   },
   {
     "$type": "ObjectType",
@@ -3302,14 +3302,14 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/315"
+          "$ref": "#/319"
         },
         "flags": 0,
         "description": "Resource tags."
       },
       "sku": {
         "type": {
-          "$ref": "#/316"
+          "$ref": "#/320"
         },
         "flags": 0,
         "description": "The node type sku."
@@ -3588,17 +3588,24 @@
       },
       "securityType": {
         "type": {
-          "$ref": "#/293"
+          "$ref": "#/294"
         },
         "flags": 0,
-        "description": "Specifies the security type of the nodeType. Only Standard and TrustedLaunch are currently supported"
+        "description": "Specifies the security type of the nodeType. Supported values include Standard, TrustedLaunch and ConfidentialVM."
+      },
+      "securityEncryptionType": {
+        "type": {
+          "$ref": "#/297"
+        },
+        "flags": 0,
+        "description": "Specifies the EncryptionType of the managed disk. It is set to DiskWithVMGuestState for encryption of the managed disk along with VMGuestState blob and VMGuestStateOnly for encryption of just the VMGuestState blob. Note: It can be set for only Confidential VMs."
       },
       "secureBootEnabled": {
         "type": {
           "$ref": "#/25"
         },
         "flags": 0,
-        "description": "Specifies whether secure boot should be enabled on the nodeType. Can only be used with TrustedLaunch SecurityType"
+        "description": "Specifies whether secure boot should be enabled on the nodeType. Can only be used with TrustedLaunch and ConfidentialVM SecurityType."
       },
       "enableNodePublicIP": {
         "type": {
@@ -3630,14 +3637,14 @@
       },
       "natConfigurations": {
         "type": {
-          "$ref": "#/296"
+          "$ref": "#/300"
         },
         "flags": 0,
         "description": "Specifies the NAT configuration on default public Load Balancer for the node type. This is only supported for node types use the default public Load Balancer."
       },
       "vmImagePlan": {
         "type": {
-          "$ref": "#/297"
+          "$ref": "#/301"
         },
         "flags": 0,
         "description": "Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use. In the Azure portal, find the marketplace image that you want to use and then click Want to deploy programmatically, Get Started ->. Enter any required information and then click Save."
@@ -3658,7 +3665,7 @@
       },
       "additionalNetworkInterfaceConfigurations": {
         "type": {
-          "$ref": "#/312"
+          "$ref": "#/316"
         },
         "flags": 0,
         "description": "Specifies the settings for any additional secondary network interfaces to attach to the node type."
@@ -3672,7 +3679,7 @@
       },
       "vmApplications": {
         "type": {
-          "$ref": "#/314"
+          "$ref": "#/318"
         },
         "flags": 0,
         "description": "Specifies the gallery applications that should be made available to the underlying VMSS."
@@ -4298,6 +4305,10 @@
     "value": "Standard"
   },
   {
+    "$type": "StringLiteralType",
+    "value": "ConfidentialVM"
+  },
+  {
     "$type": "UnionType",
     "elements": [
       {
@@ -4305,6 +4316,31 @@
       },
       {
         "$ref": "#/292"
+      },
+      {
+        "$ref": "#/293"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "DiskWithVMGuestState"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VMGuestStateOnly"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/295"
+      },
+      {
+        "$ref": "#/296"
       },
       {
         "$ref": "#/0"
@@ -4317,7 +4353,7 @@
     "properties": {
       "backendPort": {
         "type": {
-          "$ref": "#/295"
+          "$ref": "#/299"
         },
         "flags": 0,
         "description": "The internal port for the NAT configuration."
@@ -4346,7 +4382,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/294"
+      "$ref": "#/298"
     }
   },
   {
@@ -4410,7 +4446,7 @@
       },
       "ipConfigurations": {
         "type": {
-          "$ref": "#/311"
+          "$ref": "#/315"
         },
         "flags": 1,
         "description": "Specifies the IP configurations of the network interface."
@@ -4430,21 +4466,21 @@
       },
       "applicationGatewayBackendAddressPools": {
         "type": {
-          "$ref": "#/300"
+          "$ref": "#/304"
         },
         "flags": 0,
         "description": "Specifies an array of references to backend address pools of application gateways. A node type can reference backend address pools of multiple application gateways. Multiple node types cannot use the same application gateway."
       },
       "loadBalancerBackendAddressPools": {
         "type": {
-          "$ref": "#/301"
+          "$ref": "#/305"
         },
         "flags": 0,
         "description": "Specifies an array of references to backend address pools of load balancers. A node type can reference backend address pools of one public and one internal load balancer. Multiple node types cannot use the same basic sku load balancer."
       },
       "loadBalancerInboundNatPools": {
         "type": {
-          "$ref": "#/302"
+          "$ref": "#/306"
         },
         "flags": 0,
         "description": "Specifies an array of references to inbound Nat pools of the load balancers. A node type can reference inbound nat pools of one public and one internal load balancer. Multiple node types cannot use the same basic sku load balancer."
@@ -4458,14 +4494,14 @@
       },
       "privateIPAddressVersion": {
         "type": {
-          "$ref": "#/305"
+          "$ref": "#/309"
         },
         "flags": 0,
         "description": "Specifies whether the IP configuration's private IP is IPv4 or IPv6. Default is IPv4."
       },
       "publicIPAddressConfiguration": {
         "type": {
-          "$ref": "#/306"
+          "$ref": "#/310"
         },
         "flags": 0,
         "description": "The public IP address configuration of the network interface."
@@ -4502,10 +4538,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/303"
+        "$ref": "#/307"
       },
       {
-        "$ref": "#/304"
+        "$ref": "#/308"
       },
       {
         "$ref": "#/0"
@@ -4525,14 +4561,14 @@
       },
       "ipTags": {
         "type": {
-          "$ref": "#/307"
+          "$ref": "#/311"
         },
         "flags": 0,
         "description": "Specifies the list of IP tags associated with the public IP address."
       },
       "publicIPAddressVersion": {
         "type": {
-          "$ref": "#/310"
+          "$ref": "#/314"
         },
         "flags": 0,
         "description": "Specifies whether the IP configuration's public IP is IPv4 or IPv6. Default is IPv4."
@@ -4557,10 +4593,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/308"
+        "$ref": "#/312"
       },
       {
-        "$ref": "#/309"
+        "$ref": "#/313"
       },
       {
         "$ref": "#/0"
@@ -4570,13 +4606,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/299"
+      "$ref": "#/303"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/298"
+      "$ref": "#/302"
     }
   },
   {
@@ -4630,7 +4666,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/313"
+      "$ref": "#/317"
     }
   },
   {
@@ -4661,7 +4697,7 @@
       },
       "capacity": {
         "type": {
-          "$ref": "#/317"
+          "$ref": "#/321"
         },
         "flags": 1,
         "description": "The number of nodes in the node type. If present in request it will override properties.vmInstanceCount."
@@ -4688,7 +4724,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/350"
+          "$ref": "#/354"
         },
         "flags": 1,
         "description": "The FaultSimulation items on this page"
@@ -4715,7 +4751,7 @@
       },
       "status": {
         "type": {
-          "$ref": "#/327"
+          "$ref": "#/331"
         },
         "flags": 0,
         "description": "Fault simulation status"
@@ -4736,7 +4772,7 @@
       },
       "details": {
         "type": {
-          "$ref": "#/328"
+          "$ref": "#/332"
         },
         "flags": 0,
         "description": "Fault simulation details"
@@ -4771,22 +4807,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/321"
-      },
-      {
-        "$ref": "#/322"
-      },
-      {
-        "$ref": "#/323"
-      },
-      {
-        "$ref": "#/324"
-      },
-      {
         "$ref": "#/325"
       },
       {
         "$ref": "#/326"
+      },
+      {
+        "$ref": "#/327"
+      },
+      {
+        "$ref": "#/328"
+      },
+      {
+        "$ref": "#/329"
+      },
+      {
+        "$ref": "#/330"
       },
       {
         "$ref": "#/0"
@@ -4813,14 +4849,14 @@
       },
       "nodeTypeFaultSimulation": {
         "type": {
-          "$ref": "#/344"
+          "$ref": "#/348"
         },
         "flags": 0,
         "description": "List of node type simulations associated with the cluster fault simulation."
       },
       "parameters": {
         "type": {
-          "$ref": "#/345"
+          "$ref": "#/349"
         },
         "flags": 0,
         "description": "Fault simulation parameters."
@@ -4840,7 +4876,7 @@
       },
       "status": {
         "type": {
-          "$ref": "#/336"
+          "$ref": "#/340"
         },
         "flags": 0,
         "description": "Fault simulation status"
@@ -4854,7 +4890,7 @@
       },
       "operationStatus": {
         "type": {
-          "$ref": "#/343"
+          "$ref": "#/347"
         },
         "flags": 2,
         "description": "Current or latest asynchronous operation status on the node type"
@@ -4889,22 +4925,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/330"
-      },
-      {
-        "$ref": "#/331"
-      },
-      {
-        "$ref": "#/332"
-      },
-      {
-        "$ref": "#/333"
-      },
-      {
         "$ref": "#/334"
       },
       {
         "$ref": "#/335"
+      },
+      {
+        "$ref": "#/336"
+      },
+      {
+        "$ref": "#/337"
+      },
+      {
+        "$ref": "#/338"
+      },
+      {
+        "$ref": "#/339"
       },
       {
         "$ref": "#/0"
@@ -4939,22 +4975,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/337"
-      },
-      {
-        "$ref": "#/338"
-      },
-      {
-        "$ref": "#/339"
-      },
-      {
-        "$ref": "#/340"
-      },
-      {
         "$ref": "#/341"
       },
       {
         "$ref": "#/342"
+      },
+      {
+        "$ref": "#/343"
+      },
+      {
+        "$ref": "#/344"
+      },
+      {
+        "$ref": "#/345"
+      },
+      {
+        "$ref": "#/346"
       },
       {
         "$ref": "#/0"
@@ -4964,7 +5000,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/329"
+      "$ref": "#/333"
     }
   },
   {
@@ -4981,7 +5017,7 @@
       },
       "constraints": {
         "type": {
-          "$ref": "#/346"
+          "$ref": "#/350"
         },
         "flags": 0,
         "description": "Constraints for Fault Simulation action."
@@ -4989,7 +5025,7 @@
     },
     "elements": {
       "Zone": {
-        "$ref": "#/347"
+        "$ref": "#/351"
       }
     }
   },
@@ -5012,14 +5048,14 @@
     "properties": {
       "zones": {
         "type": {
-          "$ref": "#/348"
+          "$ref": "#/352"
         },
         "flags": 0,
         "description": "Indicates the zones of the fault simulation."
       },
       "faultKind": {
         "type": {
-          "$ref": "#/349"
+          "$ref": "#/353"
         },
         "flags": 1,
         "description": "The kind of fault to be simulated."
@@ -5039,7 +5075,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/320"
+      "$ref": "#/324"
     }
   },
   {
@@ -5048,7 +5084,7 @@
     "resourceType": "Microsoft.ServiceFabric/managedClusters",
     "apiVersion": "2024-11-01-preview",
     "output": {
-      "$ref": "#/319"
+      "$ref": "#/323"
     }
   },
   {
@@ -5057,7 +5093,7 @@
     "resourceType": "Microsoft.ServiceFabric/managedClusters/nodeTypes",
     "apiVersion": "2024-11-01-preview",
     "output": {
-      "$ref": "#/319"
+      "$ref": "#/323"
     }
   }
 ]

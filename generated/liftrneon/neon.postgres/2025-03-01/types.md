@@ -17,8 +17,8 @@
 ### Properties
 * **apiVersion**: '2025-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {pattern: "^[a-zA-Z0-9-]{3,24}$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [ModelsProjectProperties](#modelsprojectproperties): The resource-specific properties for this resource.
+* **name**: string {pattern: "^\S.{0,62}\S$|^\S$"} (Required, DeployTimeConstant): The resource name
+* **properties**: [ProjectProperties](#projectproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Neon.Postgres/organizations/projects' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -27,50 +27,46 @@
 ### Properties
 * **apiVersion**: '2025-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {pattern: "^[a-zA-Z0-9-]{3,24}$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [ModelsBranchProperties](#modelsbranchproperties): The resource-specific properties for this resource.
+* **name**: string {pattern: "^\S.{0,62}\S$|^\S$"} (Required, DeployTimeConstant): The resource name
+* **properties**: [BranchProperties](#branchproperties): The resource-specific properties for this resource.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Neon.Postgres/organizations/projects/branches' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Neon.Postgres/organizations/projects/branches/computes@2025-03-01
-* **Valid Scope(s)**: ResourceGroup
+## Attributes
 ### Properties
-* **apiVersion**: '2025-03-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {pattern: "^[a-zA-Z0-9-]{3,24}$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [ModelsComputeProperties](#modelscomputeproperties): The resource-specific properties for this resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **type**: 'Neon.Postgres/organizations/projects/branches/computes' (ReadOnly, DeployTimeConstant): The resource type
+* **name**: string (Required): Name of the attribute
+* **value**: string (Required): Value of the attribute
 
-## Resource Neon.Postgres/organizations/projects/branches/endpoints@2025-03-01
-* **Valid Scope(s)**: ResourceGroup
+## BranchProperties
 ### Properties
-* **apiVersion**: '2025-03-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {pattern: "^[a-zA-Z0-9-]{3,24}$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [ModelsEndpointProperties](#modelsendpointproperties): The resource-specific properties for this resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **type**: 'Neon.Postgres/organizations/projects/branches/endpoints' (ReadOnly, DeployTimeConstant): The resource type
+* **attributes**: [Attributes](#attributes)[]: Additional attributes for the entity
+* **createdAt**: string (ReadOnly): Timestamp indicating when the entity was created
+* **databaseName**: string: Database name associated with the branch
+* **databases**: [NeonDatabaseProperties](#neondatabaseproperties)[]: Neon Databases associated with the branch
+* **endpoints**: [EndpointProperties](#endpointproperties)[]: Endpoints associated with the branch
+* **entityId**: string {pattern: "^[a-z0-9-]{1,60}$"} (ReadOnly): Unique identifier for the entity
+* **entityName**: string {pattern: "^\S.{0,62}\S$|^\S$"}: Name of the resource
+* **parentId**: string {pattern: "^[a-z0-9-]{1,60}$"}: The ID of the parent branch
+* **projectId**: string: The ID of the project this branch belongs to
+* **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): Provisioning state of the resource.
+* **roleName**: string: Role name associated with the branch
+* **roles**: [NeonRoleProperties](#neonroleproperties)[]: Roles associated with the branch
 
-## Resource Neon.Postgres/organizations/projects/branches/neonDatabases@2025-03-01
-* **Valid Scope(s)**: ResourceGroup
+## DefaultEndpointSettings
 ### Properties
-* **apiVersion**: '2025-03-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {pattern: "^[a-zA-Z0-9-]{3,24}$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [ModelsNeonDatabaseProperties](#modelsneondatabaseproperties): The resource-specific properties for this resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **type**: 'Neon.Postgres/organizations/projects/branches/neonDatabases' (ReadOnly, DeployTimeConstant): The resource type
+* **autoscalingLimitMaxCu**: int (Required): Maximum compute units for autoscaling.
+* **autoscalingLimitMinCu**: int (Required): Minimum compute units for autoscaling.
 
-## Resource Neon.Postgres/organizations/projects/branches/neonRoles@2025-03-01
-* **Valid Scope(s)**: ResourceGroup
+## EndpointProperties
 ### Properties
-* **apiVersion**: '2025-03-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {pattern: "^[a-zA-Z0-9-]{3,24}$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [ModelsNeonRoleProperties](#modelsneonroleproperties): The resource-specific properties for this resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **type**: 'Neon.Postgres/organizations/projects/branches/neonRoles' (ReadOnly, DeployTimeConstant): The resource type
+* **attributes**: [Attributes](#attributes)[]: Additional attributes for the entity
+* **branchId**: string: The ID of the branch this endpoint belongs to
+* **createdAt**: string (ReadOnly): Timestamp indicating when the entity was created
+* **endpointType**: 'read_only' | 'read_write' | string: The type of the endpoint
+* **entityId**: string {pattern: "^[a-z0-9-]{1,60}$"} (ReadOnly): Unique identifier for the entity
+* **entityName**: string {pattern: "^\S.{0,62}\S$|^\S$"}: Name of the resource
+* **projectId**: string: The ID of the project this endpoint belongs to
+* **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): Provisioning state of the resource.
 
 ## LiftrBaseCompanyDetails
 ### Properties
@@ -86,7 +82,7 @@
 * **companyDetails**: [LiftrBaseCompanyDetails](#liftrbasecompanydetails) (Required): Details of the company.
 * **marketplaceDetails**: [LiftrBaseMarketplaceDetails](#liftrbasemarketplacedetails) (Required): Marketplace details of the resource.
 * **partnerOrganizationProperties**: [LiftrBaseDataPartnerOrganizationProperties](#liftrbasedatapartnerorganizationproperties): Neon Organization properties
-* **projectProperties**: [ModelsProjectProperties](#modelsprojectproperties): Neon Project Properties
+* **projectProperties**: [ProjectProperties](#projectproperties): Neon Project Properties
 * **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): Provisioning state of the resource.
 * **userDetails**: [LiftrBaseUserDetails](#liftrbaseuserdetails) (Required): Details of the user.
 
@@ -126,57 +122,9 @@
 * **phoneNumber**: string: User's phone number
 * **upn**: string: User's principal name
 
-## ModelsAttributes
+## NeonDatabaseProperties
 ### Properties
-* **name**: string (Required): Name of the attribute
-* **value**: string (Required): Value of the attribute
-
-## ModelsBranchProperties
-### Properties
-* **attributes**: [ModelsAttributes](#modelsattributes)[]: Additional attributes for the entity
-* **createdAt**: string (ReadOnly): Timestamp indicating when the entity was created
-* **databaseName**: string: Database name associated with the branch
-* **databases**: [ModelsNeonDatabaseProperties](#modelsneondatabaseproperties)[]: Neon Databases associated with the branch
-* **endpoints**: [ModelsEndpointProperties](#modelsendpointproperties)[]: Endpoints associated with the branch
-* **entityId**: string {pattern: "^[a-z0-9-]{1,60}$"} (ReadOnly): Unique identifier for the entity
-* **entityName**: string {pattern: "^\S.{0,62}\S$|^\S$"}: Name of the resource
-* **parentId**: string {pattern: "^[a-z0-9-]{1,60}$"}: The ID of the parent branch
-* **projectId**: string: The ID of the project this branch belongs to
-* **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): Provisioning state of the resource.
-* **roleName**: string: Role name associated with the branch
-* **roles**: [ModelsNeonRoleProperties](#modelsneonroleproperties)[]: Roles associated with the branch
-
-## ModelsComputeProperties
-### Properties
-* **attributes**: [ModelsAttributes](#modelsattributes)[]: Additional attributes for the entity
-* **cpuCores**: int: Number of allocated CPU cores
-* **createdAt**: string (ReadOnly): Timestamp indicating when the entity was created
-* **entityId**: string {pattern: "^[a-z0-9-]{1,60}$"} (ReadOnly): Unique identifier for the entity
-* **entityName**: string {pattern: "^\S.{0,62}\S$|^\S$"}: Name of the resource
-* **memory**: int: Memory allocated in GB
-* **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): Provisioning state of the resource.
-* **region**: string: Region where the compute instance is located
-* **status**: string: Current status of the compute instance
-
-## ModelsDefaultEndpointSettings
-### Properties
-* **autoscalingLimitMaxCu**: int (Required): Maximum compute units for autoscaling.
-* **autoscalingLimitMinCu**: int (Required): Minimum compute units for autoscaling.
-
-## ModelsEndpointProperties
-### Properties
-* **attributes**: [ModelsAttributes](#modelsattributes)[]: Additional attributes for the entity
-* **branchId**: string: The ID of the branch this endpoint belongs to
-* **createdAt**: string (ReadOnly): Timestamp indicating when the entity was created
-* **endpointType**: 'read_only' | 'read_write' | string: The type of the endpoint
-* **entityId**: string {pattern: "^[a-z0-9-]{1,60}$"} (ReadOnly): Unique identifier for the entity
-* **entityName**: string {pattern: "^\S.{0,62}\S$|^\S$"}: Name of the resource
-* **projectId**: string: The ID of the project this endpoint belongs to
-* **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): Provisioning state of the resource.
-
-## ModelsNeonDatabaseProperties
-### Properties
-* **attributes**: [ModelsAttributes](#modelsattributes)[]: Additional attributes for the entity
+* **attributes**: [Attributes](#attributes)[]: Additional attributes for the entity
 * **branchId**: string: The ID of the branch this database belongs to
 * **createdAt**: string (ReadOnly): Timestamp indicating when the entity was created
 * **entityId**: string {pattern: "^[a-z0-9-]{1,60}$"} (ReadOnly): Unique identifier for the entity
@@ -184,9 +132,9 @@
 * **ownerName**: string: The name of the role that owns the database
 * **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): Provisioning state of the resource.
 
-## ModelsNeonRoleProperties
+## NeonRoleProperties
 ### Properties
-* **attributes**: [ModelsAttributes](#modelsattributes)[]: Additional attributes for the entity
+* **attributes**: [Attributes](#attributes)[]: Additional attributes for the entity
 * **branchId**: string: The ID of the branch this role belongs to
 * **createdAt**: string (ReadOnly): Timestamp indicating when the entity was created
 * **entityId**: string {pattern: "^[a-z0-9-]{1,60}$"} (ReadOnly): Unique identifier for the entity
@@ -195,21 +143,21 @@
 * **permissions**: string[]: Permissions assigned to the role
 * **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): Provisioning state of the resource.
 
-## ModelsProjectProperties
+## ProjectProperties
 ### Properties
-* **attributes**: [ModelsAttributes](#modelsattributes)[]: Additional attributes for the entity
-* **branch**: [ModelsBranchProperties](#modelsbranchproperties): The Branch properties of the project. This is optional
+* **attributes**: [Attributes](#attributes)[]: Additional attributes for the entity
+* **branch**: [BranchProperties](#branchproperties): The Branch properties of the project. This is optional
 * **createdAt**: string (ReadOnly): Timestamp indicating when the entity was created
-* **databases**: [ModelsNeonDatabaseProperties](#modelsneondatabaseproperties)[]: Neon Databases associated with the project
-* **defaultEndpointSettings**: [ModelsDefaultEndpointSettings](#modelsdefaultendpointsettings): Default endpoint settings for the project.
-* **endpoints**: [ModelsEndpointProperties](#modelsendpointproperties)[]: Endpoints associated with the project
+* **databases**: [NeonDatabaseProperties](#neondatabaseproperties)[]: Neon Databases associated with the project
+* **defaultEndpointSettings**: [DefaultEndpointSettings](#defaultendpointsettings): Default endpoint settings for the project.
+* **endpoints**: [EndpointProperties](#endpointproperties)[]: Endpoints associated with the project
 * **entityId**: string {pattern: "^[a-z0-9-]{1,60}$"} (ReadOnly): Unique identifier for the entity
 * **entityName**: string {pattern: "^\S.{0,62}\S$|^\S$"}: Name of the resource
 * **historyRetention**: int: The retention period for project history in seconds.
 * **pgVersion**: int: Postgres version for the project
 * **provisioningState**: 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): Provisioning state of the resource.
 * **regionId**: string: Region where the project is created
-* **roles**: [ModelsNeonRoleProperties](#modelsneonroleproperties)[]: Roles associated with the project
+* **roles**: [NeonRoleProperties](#neonroleproperties)[]: Roles associated with the project
 * **storage**: int: Data Storage bytes per hour for the project
 
 ## SystemData

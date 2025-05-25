@@ -27,7 +27,7 @@ resource exampleResource 'Dell.Storage/filesystems@2025-03-21-preview' = {
         identityResourceId: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'
         identityType: 'UserAssigned'
       }
-      encryptionType: 'ENCRYPTION_AT_REST_WITH_CUSTOMER_KEY'
+      encryptionType: 'Customer-managed keys (CMK)'
       keyUrl: 'https://contoso.com/keyurl/keyVersion'
     }
     marketplace: {
@@ -39,6 +39,7 @@ resource exampleResource 'Dell.Storage/filesystems@2025-03-21-preview' = {
       privateOfferId: 'privateOfferId'
       publisherId: 'trdzykoeskmcwpo'
     }
+    oneFsUrl: 'oneFsUrl'
     smartConnectFqdn: 'fqdn'
     user: {
       email: 'jwogfgznmjabdbcjcljjlkxdpc'
@@ -60,7 +61,7 @@ resource exampleResource 'Dell.Storage/filesystems@2025-03-21-preview' = {
     delegatedSubnetId: 'yp'
     dellReferenceNumber: 'fhewkj'
     encryption: {
-      encryptionType: 'ENCRYPTION_AT_REST_WITH_MICROSOFT_KEY'
+      encryptionType: 'Microsoft-managed keys (MMK)'
     }
     marketplace: {
       offerId: 'pzhjvibxqgeqkndqnjlduwnxqbr'

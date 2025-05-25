@@ -6,7 +6,7 @@
 
 ## microsoft.onlineexperimentation/workspaces
 
-Create or update an OnlineExperimentWorkspace with Free sku and customer managed key.
+Create or update an OnlineExperimentationWorkspace with Free sku and customer managed key.
 ```bicep
 resource exampleResource 'Microsoft.OnlineExperimentation/workspaces@2025-05-31-preview' = {
   name: 'example'
@@ -43,7 +43,7 @@ resource exampleResource 'Microsoft.OnlineExperimentation/workspaces@2025-05-31-
 }
 ```
 
-Create or update an OnlineExperimentWorkspace with Free sku.
+Create or update an OnlineExperimentationWorkspace with Free sku.
 ```bicep
 resource exampleResource 'Microsoft.OnlineExperimentation/workspaces@2025-05-31-preview' = {
   name: 'example'

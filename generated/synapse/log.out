@@ -120,11 +120,11 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'PrivateEndpointConn
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'ErrorResponse' (7 differences):
   - title: "Error response" => "Error Response"
   - properties.error: {"description":"The error object.","$ref":"#/components/schemas/schemas:1394"} => <none>
-  - properties.code: <none> => {"$ref":"#/components/schemas/schemas:1493","description":"The error code.","readOnly":true}
-  - properties.message: <none> => {"$ref":"#/components/schemas/schemas:1494","description":"The error message.","readOnly":true}
-  - properties.target: <none> => {"$ref":"#/components/schemas/schemas:1495","description":"The error target.","readOnly":true}
-  - properties.details: <none> => {"x-ms-identifiers":["message","target"],"$ref":"#/components/schemas/schemas:1496","description":"The error details.","readOnly":true}
-  - properties.additionalInfo: <none> => {"x-ms-identifiers":[],"$ref":"#/components/schemas/schemas:1497","description":"The error additional info.","readOnly":true}
+  - properties.code: <none> => {"$ref":"#/components/schemas/schemas:1540","description":"The error code.","readOnly":true}
+  - properties.message: <none> => {"$ref":"#/components/schemas/schemas:1541","description":"The error message.","readOnly":true}
+  - properties.target: <none> => {"$ref":"#/components/schemas/schemas:1542","description":"The error target.","readOnly":true}
+  - properties.details: <none> => {"x-ms-identifiers":["message","target"],"$ref":"#/components/schemas/schemas:1543","description":"The error details.","readOnly":true}
+  - properties.additionalInfo: <none> => {"x-ms-identifiers":[],"$ref":"#/components/schemas/schemas:1544","description":"The error additional info.","readOnly":true}
 warning | PreCheck/PropertyRedeclarationWarning | Schema 'ReplicationLink' has a property 'type' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from ReplicationLink
 warning | Modeler/MissingType | The schema 'KekIdentityProperties-useSystemAssignedIdentity' has no type or format information whatsoever. Location:
    file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/synapse/resource-manager/Microsoft.Synapse/preview/2021-06-01-preview/workspace.json#/components/schemas/KekIdentityProperties-useSystemAssignedIdentity

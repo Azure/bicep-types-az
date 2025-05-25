@@ -143,6 +143,13 @@
         "flags": 0,
         "description": "Smart Connect FQDN of the resource"
       },
+      "oneFsUrl": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "OneFS url"
+      },
       "dellReferenceNumber": {
         "type": {
           "$ref": "#/2"
@@ -252,6 +259,13 @@
         },
         "flags": 0,
         "description": "End Date of the subscription"
+      },
+      "termUnit": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Term Unit"
       }
     }
   },
@@ -412,11 +426,11 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "ENCRYPTION_AT_REST_WITH_MICROSOFT_KEY"
+    "value": "Microsoft-managed keys (MMK)"
   },
   {
     "$type": "StringLiteralType",
-    "value": "ENCRYPTION_AT_REST_WITH_CUSTOMER_KEY"
+    "value": "Customer-managed keys (CMK)"
   },
   {
     "$type": "UnionType",

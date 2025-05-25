@@ -367,6 +367,87 @@ resource exampleResource 'Microsoft.HDInsight/clusters@2025-01-15-preview' = {
 }
 ```
 
+Create cluster with Entra User
+```bicep
+resource exampleResource 'Microsoft.HDInsight/clusters@2025-01-15-preview' = {
+  name: 'example'
+  properties: {
+    clusterDefinition: {
+      configurations: {
+        gateway: {
+          'restAuthCredential.isEnabled': false
+          restAuthEntraUsers: [
+            {
+              displayName: 'displayName'
+              objectId: '00000000-0000-0000-0000-000000000000'
+              upn: 'user@microsoft.com'
+            }
+          ]
+        }
+      }
+      kind: 'Hadoop'
+    }
+    clusterVersion: '5.1'
+    computeProfile: {
+      roles: [
+        {
+          name: 'headnode'
+          hardwareProfile: {
+            vmSize: 'Standard_E8_V3'
+          }
+          osProfile: {
+            linuxOperatingSystemProfile: {
+              password: '**********'
+              username: 'sshuser'
+            }
+          }
+          targetInstanceCount: 2
+        }
+        {
+          name: 'workernode'
+          hardwareProfile: {
+            vmSize: 'Standard_E8_V3'
+          }
+          osProfile: {
+            linuxOperatingSystemProfile: {
+              password: '**********'
+              username: 'sshuser'
+            }
+          }
+          targetInstanceCount: 3
+        }
+        {
+          name: 'zookeepernode'
+          hardwareProfile: {
+            vmSize: 'Standard_E8_V3'
+          }
+          osProfile: {
+            linuxOperatingSystemProfile: {
+              password: '**********'
+              username: 'sshuser'
+            }
+          }
+          targetInstanceCount: 3
+        }
+      ]
+    }
+    osType: 'Linux'
+    storageProfile: {
+      storageaccounts: [
+        {
+          name: 'mystorage.blob.core.windows.net'
+          container: 'containername'
+          enableSecureChannel: true
+          isDefault: true
+          key: 'storagekey'
+        }
+      ]
+    }
+    tier: 'Standard'
+  }
+}
+```
+
 Create cluster with network properties
 ```bicep
 resource exampleResource 'Microsoft.HDInsight/clusters@2025-01-15-preview' = {
@@ -455,6 +536,220 @@ resource exampleResource 'Microsoft.HDInsight/clusters@2025-01-15-preview' = {
         }
       ]
     }
+  }
+}
+```
+
+Create cluster with storage ADLSGen2 + MSI
+```bicep
+resource exampleResource 'Microsoft.HDInsight/clusters@2025-01-15-preview' = {
+  name: 'example'
+  identity: {
+    type: 'UserAssigned'
+    userAssignedIdentities: {
+      '/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/msi': {
+      }
+    }
+  }
+  properties: {
+    clusterDefinition: {
+      configurations: {
+        gateway: {
+          'restAuthCredential.isEnabled': true
+          'restAuthCredential.password': '**********'
+          'restAuthCredential.username': 'admin'
+        }
+      }
+      kind: 'Hadoop'
+    }
+    clusterVersion: '5.1'
+    computeProfile: {
+      roles: [
+        {
+          name: 'headnode'
+          hardwareProfile: {
+            vmSize: 'Standard_E8_V3'
+          }
+          minInstanceCount: 1
+          osProfile: {
+            linuxOperatingSystemProfile: {
+              password: '**********'
+              username: 'sshuser'
+            }
+          }
+          scriptActions: [
+          ]
+          targetInstanceCount: 2
+          virtualNetworkProfile: {
+            id: '/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetname'
+            subnet: '/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetname/subnets/vnetsubnet'
+          }
+        }
+        {
+          name: 'workernode'
+          hardwareProfile: {
+            vmSize: 'Standard_E8_V3'
+          }
+          minInstanceCount: 1
+          osProfile: {
+            linuxOperatingSystemProfile: {
+              password: '**********'
+              username: 'sshuser'
+            }
+          }
+          scriptActions: [
+          ]
+          targetInstanceCount: 3
+          virtualNetworkProfile: {
+            id: '/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetname'
+            subnet: '/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetname/subnets/vnetsubnet'
+          }
+        }
+        {
+          name: 'zookeepernode'
+          hardwareProfile: {
+            vmSize: 'Standard_E8_V3'
+          }
+          minInstanceCount: 1
+          osProfile: {
+            linuxOperatingSystemProfile: {
+              password: '**********'
+              username: 'sshuser'
+            }
+          }
+          scriptActions: [
+          ]
+          targetInstanceCount: 3
+          virtualNetworkProfile: {
+            id: '/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetname'
+            subnet: '/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetname/subnets/vnetsubnet'
+          }
+        }
+      ]
+    }
+    osType: 'Linux'
+    storageProfile: {
+      storageaccounts: [
+        {
+          name: 'mystorage.blob.core.windows.net'
+          fileSystem: 'default'
+          isDefault: true
+          msiResourceId: '/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/msi'
+          resourceId: '/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Storage/storageAccounts/mystorage'
+        }
+      ]
+    }
+    tier: 'Standard'
+  }
+  tags: {
+    key1: 'val1'
+  }
+}
+```
+
+Create cluster with storage WASB + MSI
+```bicep
+resource exampleResource 'Microsoft.HDInsight/clusters@2025-01-15-preview' = {
+  name: 'example'
+  identity: {
+    type: 'UserAssigned'
+    userAssignedIdentities: {
+      '/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/msi': {
+      }
+    }
+  }
+  properties: {
+    clusterDefinition: {
+      configurations: {
+        gateway: {
+          'restAuthCredential.isEnabled': true
+          'restAuthCredential.password': '**********'
+          'restAuthCredential.username': 'admin'
+        }
+      }
+      kind: 'Hadoop'
+    }
+    clusterVersion: '5.1'
+    computeProfile: {
+      roles: [
+        {
+          name: 'headnode'
+          hardwareProfile: {
+            vmSize: 'Standard_E8_V3'
+          }
+          minInstanceCount: 1
+          osProfile: {
+            linuxOperatingSystemProfile: {
+              password: '**********'
+              username: 'sshuser'
+            }
+          }
+          scriptActions: [
+          ]
+          targetInstanceCount: 2
+          virtualNetworkProfile: {
+            id: '/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetname'
+            subnet: '/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetname/subnets/vnetsubnet'
+          }
+        }
+        {
+          name: 'workernode'
+          hardwareProfile: {
+            vmSize: 'Standard_E8_V3'
+          }
+          minInstanceCount: 1
+          osProfile: {
+            linuxOperatingSystemProfile: {
+              password: '**********'
+              username: 'sshuser'
+            }
+          }
+          scriptActions: [
+          ]
+          targetInstanceCount: 3
+          virtualNetworkProfile: {
+            id: '/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetname'
+            subnet: '/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetname/subnets/vnetsubnet'
+          }
+        }
+        {
+          name: 'zookeepernode'
+          hardwareProfile: {
+            vmSize: 'Standard_E8_V3'
+          }
+          minInstanceCount: 1
+          osProfile: {
+            linuxOperatingSystemProfile: {
+              password: '**********'
+              username: 'sshuser'
+            }
+          }
+          scriptActions: [
+          ]
+          targetInstanceCount: 3
+          virtualNetworkProfile: {
+            id: '/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetname'
+            subnet: '/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetname/subnets/vnetsubnet'
+          }
+        }
+      ]
+    }
+    osType: 'Linux'
+    storageProfile: {
+      storageaccounts: [
+        {
+          name: 'mystorage.blob.core.windows.net'
+          container: 'containername'
+          isDefault: true
+          msiResourceId: '/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/msi'
+          resourceId: '/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Storage/storageAccounts/mystorage'
+        }
+      ]
+    }
+    tier: 'Standard'
+  }
+  tags: {
+    key1: 'val1'
   }
 }
 ```
