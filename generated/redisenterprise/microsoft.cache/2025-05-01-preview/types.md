@@ -169,8 +169,8 @@
 
 ## SkuDetails
 ### Properties
-* **customerFacingSizeInGB**: int (ReadOnly): The cache size in GB.
 * **name**: string (ReadOnly): The name of the SKU.
+* **sizeInGB**: int (ReadOnly): The cache size in GB.
 
 ## SkuDetailsList
 ### Properties

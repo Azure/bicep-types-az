@@ -1981,6 +1981,13 @@
         },
         "flags": 0,
         "description": "The name of parent deployment."
+      },
+      "spilloverDeploymentName": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Specifies the deployment name that should serve requests when the request would have otherwise been throttled due to reaching current deployment throughput limit."
       }
     }
   },

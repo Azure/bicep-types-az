@@ -66,6 +66,11 @@ warning | DeprecatedConfig | Using directive.60.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.61.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.62.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.63.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.64.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.65.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.66.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.67.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.68.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -130,6 +135,11 @@ warning | DeprecatedConfig | Using directive.60.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.61.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.62.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.63.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.64.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.65.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.66.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.67.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.68.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'AuthorizationRuleListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/stable/2017-04-01/AuthorizationRules.json:769:5
@@ -273,6 +283,11 @@ warning | DeprecatedConfig | Using directive.60.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.61.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.62.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.63.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.64.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.65.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.66.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.67.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.68.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/stable/2015-08-01/EventHub.json:1292:5
@@ -390,6 +405,11 @@ warning | DeprecatedConfig | Using directive.60.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.61.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.62.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.63.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.64.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.65.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.66.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.67.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.68.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'OperationListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/stable/2014-09-01/EventHub.json:1079:5
@@ -507,6 +527,11 @@ warning | DeprecatedConfig | Using directive.60.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.61.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.62.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.63.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.64.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.65.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.66.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.67.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.68.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'EHNamespaceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2021-01-01-preview/namespaces-preview.json:578:5
@@ -661,6 +686,11 @@ warning | DeprecatedConfig | Using directive.60.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.61.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.62.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.63.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.64.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.65.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.66.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.67.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.68.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'EHNamespaceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2021-06-01-preview/namespaces-preview.json:578:5
@@ -813,6 +843,11 @@ warning | DeprecatedConfig | Using directive.60.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.61.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.62.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.63.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.64.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.65.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.66.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.67.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.68.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'AvailableClustersList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2018-01-01-preview/AvailableClusterRegions-preview.json:75:5
@@ -997,6 +1032,11 @@ warning | DeprecatedConfig | Using directive.60.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.61.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.62.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.63.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.64.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.65.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.66.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.67.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.68.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'EHNamespaceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/stable/2021-11-01/namespaces-preview.json:578:5
@@ -1147,6 +1187,11 @@ warning | DeprecatedConfig | Using directive.60.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.61.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.62.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.63.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.64.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.65.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.66.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.67.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.68.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'EHNamespaceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2022-01-01-preview/namespaces-preview.json:672:5
@@ -1297,6 +1342,11 @@ warning | DeprecatedConfig | Using directive.60.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.61.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.62.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.63.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.64.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.65.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.66.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.67.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.68.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'EHNamespaceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2022-10-01-preview/namespaces-preview.json:672:5
@@ -1447,6 +1497,11 @@ warning | DeprecatedConfig | Using directive.60.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.61.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.62.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.63.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.64.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.65.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.66.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.67.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.68.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'EHNamespaceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2023-01-01-preview/namespaces-preview.json:734:5
@@ -1607,35 +1662,40 @@ warning | DeprecatedConfig | Using directive.60.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.61.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.62.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.63.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.64.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.65.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.66.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.67.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.68.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'EHNamespaceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/stable/2024-01-01/namespaces.json:672:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/stable/2024-01-01/namespaces.json:717:5
 warning | PreCheck/SchemaMissingType | The schema 'EHNamespace' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/stable/2024-01-01/namespaces.json:688:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/stable/2024-01-01/namespaces.json:733:5
 warning | PreCheck/SchemaMissingType | The schema 'EHNamespace-properties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/stable/2024-01-01/namespaces.json:703:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/stable/2024-01-01/namespaces.json:748:9
 warning | PreCheck/SchemaMissingType | The schema 'Identity' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/stable/2024-01-01/namespaces.json:858:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/stable/2024-01-01/namespaces.json:903:5
 warning | PreCheck/SchemaMissingType | The schema 'Encryption' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/stable/2024-01-01/namespaces.json:913:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/stable/2024-01-01/namespaces.json:958:5
 warning | PreCheck/SchemaMissingType | The schema 'KeyVaultProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/stable/2024-01-01/namespaces.json:943:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/stable/2024-01-01/namespaces.json:988:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnection' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/stable/2024-01-01/namespaces.json:966:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/stable/2024-01-01/namespaces.json:1011:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/stable/2024-01-01/namespaces.json:986:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/stable/2024-01-01/namespaces.json:1031:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpoint' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/stable/2024-01-01/namespaces.json:1015:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/stable/2024-01-01/namespaces.json:1060:5
 warning | PreCheck/SchemaMissingType | The schema 'ConnectionState' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/stable/2024-01-01/namespaces.json:1024:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/stable/2024-01-01/namespaces.json:1069:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateEndpointConnectionListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/stable/2024-01-01/namespaces.json:1047:5
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/stable/2024-01-01/namespaces.json:1092:5
 warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/stable/2024-01-01/namespaces.json:1063:5
-warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/stable/2024-01-01/namespaces.json:1085:5
-warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourcesListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/stable/2024-01-01/namespaces.json:1108:5
+warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourceProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/stable/2024-01-01/namespaces.json:1130:5
+warning | PreCheck/SchemaMissingType | The schema 'PrivateLinkResourcesListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/stable/2024-01-01/namespaces.json:1153:5
 warning | PreCheck/SchemaMissingType | The schema 'Subnet' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/stable/2024-01-01/networkrulessets.json:172:5
 warning | PreCheck/SchemaMissingType | The schema 'NWRuleSetIpRules' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
@@ -1757,6 +1817,11 @@ warning | DeprecatedConfig | Using directive.60.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.61.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.62.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.63.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.64.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.65.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.66.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.67.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.68.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'EHNamespaceListResult' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/eventhub/resource-manager/Microsoft.EventHub/preview/2024-05-01-preview/namespaces.json:750:5

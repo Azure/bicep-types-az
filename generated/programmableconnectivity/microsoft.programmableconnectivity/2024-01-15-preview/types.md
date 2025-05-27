@@ -39,15 +39,15 @@
 * **applicationDescription**: string: Description of the application.
 * **applicationType**: string: The category that describes the application.
 * **legalName**: string: Legal name of the organization owning the application.
-* **name**: string: Name of the application. Example: Contoso App.
+* **name**: string: Name of the application.
 * **organizationDescription**: string: A description of the organization owning the application.
 * **privacyContactEmailAddress**: string: Email address of the Privacy contact or Data Protection officer of the organization.
 * **taxNumber**: string: Unique Tax Number for the user's organization in the country/region the APC Gateway is being purchased.
 
 ## GatewayProperties
 ### Properties
-* **gatewayBaseUrl**: string (ReadOnly): Base URL of the Gateway resource. This is the URL that the users would use to make Open API Gateway requests to the Operators via Azure.
-* **operatorApiConnections**: string[] (ReadOnly): List of Operator API Connections selected by the user
+* **gatewayBaseUrl**: string (ReadOnly): Base URL of the Gateway resource. This is the URL that the users would use to make Network API requests to the Operators via Azure.
+* **operatorApiConnections**: string[] (ReadOnly): List of Operator API Connections selected by the user.
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): The status of the last operation on the Gateway resource.
 
 ## MarketplaceProperties

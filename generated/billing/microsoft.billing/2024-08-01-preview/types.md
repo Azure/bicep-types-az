@@ -4,33 +4,18 @@
 * **Valid Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2024-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **destinationBillingScope**: string (WriteOnly): Destination billing scope to be mapped.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **locale**: string (WriteOnly): Locale for notifications. Optional property, used only for migrate enrollment
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
-* **products**: [Products](#products)[] (WriteOnly)
-* **properties**: [Migration](#migration) (ReadOnly): Migration Details.
-* **status**: 'Completed' | 'CompletedWithErrors' | 'Draft' | 'Failed' | 'InProgress' | string (WriteOnly): Migration Status
+* **properties**: [Migration](#migration): Migration Details.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [ProxyResourceWithTags](#proxyresourcewithtags) (ReadOnly): Dictionary of metadata associated with the resource. It may not be populated for all resource types. Maximum key/value length supported of 256 characters. Keys/value should not empty value nor null. Keys can not contain < > % & \ ? /
-* **transferId**: string (ReadOnly, WriteOnly): Transfer Id
+* **tags**: [ProxyResourceWithTags](#proxyresourcewithtags): Dictionary of metadata associated with the resource. It may not be populated for all resource types. Maximum key/value length supported of 256 characters. Keys/value should not empty value nor null. Keys can not contain < > % & \ ? /
 * **type**: 'Microsoft.Billing/billingAccounts/migrations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Migration
 ### Properties
 * **destinationBillingScope**: string: Destination billing scope to be mapped.
-* **locale**: string: Locale for notifications. Optional property, used only for migrate enrollment
-* **products**: [Products](#products)[]
 * **status**: 'Completed' | 'CompletedWithErrors' | 'Draft' | 'Failed' | 'InProgress' | string: Migration Status
 * **transferId**: string (ReadOnly): Transfer Id
-
-## Products
-### Properties
-* **name**: string (ReadOnly): product name
-* **productId**: string (ReadOnly): product Id
-* **productType**: string (ReadOnly): product type
-* **skuDescription**: string (ReadOnly): product sku description
-* **status**: 'Completed' | 'Failed' | 'InProgress' | 'NotStarted' | string (ReadOnly): product transfer status
 
 ## ProxyResourceWithTags
 ### Properties

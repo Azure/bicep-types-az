@@ -21,7 +21,7 @@
 ## LiftrBaseEncryptionProperties
 ### Properties
 * **encryptionIdentityProperties**: [LiftrBaseEncryptionIdentityProperties](#liftrbaseencryptionidentityproperties): Identity configuration for Customer-managed key settings defining which identity should be used to auth to Key Vault - Only when user opts for CMK and hence optional
-* **encryptionType**: 'ENCRYPTION_AT_REST_WITH_CUSTOMER_KEY' | 'ENCRYPTION_AT_REST_WITH_MICROSOFT_KEY' | string (Required): Encryption Type - MMK/CMK
+* **encryptionType**: 'Customer-managed keys (CMK)' | 'Microsoft-managed keys (MMK)' | string (Required): Encryption Type - MMK/CMK
 * **keyUrl**: string: Versioned Encryption Key Url - Only when user opts for CMK and hence optional
 
 ## LiftrBaseMarketplaceDetails
@@ -34,6 +34,7 @@
 * **planName**: string (Required): Plan Name
 * **privateOfferId**: string: Private Offer Id
 * **publisherId**: string: Publisher Id
+* **termUnit**: string: Term Unit
 
 ## LiftrBaseStorageCapacity
 ### Properties
@@ -51,6 +52,7 @@
 * **encryption**: [LiftrBaseEncryptionProperties](#liftrbaseencryptionproperties) (Required): EncryptionProperties of the resource
 * **fileSystemId**: string: File system Id of the resource
 * **marketplace**: [LiftrBaseMarketplaceDetails](#liftrbasemarketplacedetails) (Required): Marketplace details
+* **oneFsUrl**: string: OneFS url
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'NotSpecified' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning State of the resource
 * **smartConnectFqdn**: string: Smart Connect FQDN of the resource
 * **user**: [LiftrBaseUserDetails](#liftrbaseuserdetails) (Required): User Details

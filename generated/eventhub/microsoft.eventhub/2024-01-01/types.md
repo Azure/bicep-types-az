@@ -115,6 +115,16 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this resource.
 * **type**: 'Microsoft.EventHub/namespaces/networkRuleSets' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Microsoft.EventHub/namespaces/networkSecurityPerimeterConfigurations@2024-01-01 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2024-01-01' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (ReadOnly): The geo-location where the resource lives
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [NetworkSecurityPerimeterConfigurationProperties](#networksecurityperimeterconfigurationproperties) (ReadOnly): Properties of the Network Security Perimeter Configuration
+* **type**: 'Microsoft.EventHub/namespaces/networkSecurityPerimeterConfigurations' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Microsoft.EventHub/namespaces/privateEndpointConnections@2024-01-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -312,6 +322,54 @@
 * **trustedServiceAccessEnabled**: bool: Value that indicates whether Trusted Service Access is Enabled or not.
 * **virtualNetworkRules**: [NWRuleSetVirtualNetworkRules](#nwrulesetvirtualnetworkrules)[]: List VirtualNetwork Rules
 
+## NetworkSecurityPerimeter
+### Properties
+* **id**: string: Fully qualified identifier of the resource
+* **location**: string: Location of the resource
+* **perimeterGuid**: string: Guid of the resource
+
+## NetworkSecurityPerimeterConfigurationProperties
+### Properties
+* **applicableFeatures**: string[] (ReadOnly): Indicates that the NSP controls related to backing association are only applicable to a specific feature in backing resource's data plane.
+* **isBackingResource**: bool (ReadOnly): True if the EventHub namespace is backed by another Azure resource and not visible to end users.
+* **networkSecurityPerimeter**: [NetworkSecurityPerimeter](#networksecurityperimeter) (ReadOnly): NetworkSecurityPerimeter related information
+* **parentAssociationName**: string (ReadOnly): Source Resource Association name
+* **profile**: [NetworkSecurityPerimeterConfigurationPropertiesProfile](#networksecurityperimeterconfigurationpropertiesprofile) (ReadOnly): Information about current network profile
+* **provisioningIssues**: [ProvisioningIssue](#provisioningissue)[]: List of Provisioning Issues if any
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'InvalidResponse' | 'Succeeded' | 'SucceededWithIssues' | 'Unknown' | 'Updating' | string: Provisioning state of NetworkSecurityPerimeter configuration propagation
+* **resourceAssociation**: [NetworkSecurityPerimeterConfigurationPropertiesResourceAssociation](#networksecurityperimeterconfigurationpropertiesresourceassociation) (ReadOnly): Information about resource association
+* **sourceResourceId**: string (ReadOnly): ARM Id of source resource
+
+## NetworkSecurityPerimeterConfigurationPropertiesProfile
+### Properties
+* **accessRules**: [NspAccessRule](#nspaccessrule)[]: List of Access Rules
+* **accessRulesVersion**: string: Current access rules version
+* **name**: string: Name of the resource
+
+## NetworkSecurityPerimeterConfigurationPropertiesResourceAssociation
+### Properties
+* **accessMode**: 'AuditMode' | 'EnforcedMode' | 'LearningMode' | 'NoAssociationMode' | 'UnspecifiedMode' | string: Access Mode of the resource association
+* **name**: string: Name of the resource association
+
+## NspAccessRule
+### Properties
+* **id**: string: Fully qualified identifier of the resource
+* **name**: string: Name of the resource
+* **properties**: [NspAccessRuleProperties](#nspaccessruleproperties) (ReadOnly): Properties of Access Rule
+* **type**: string: Type of the resource
+
+## NspAccessRuleProperties
+### Properties
+* **addressPrefixes**: string[]: Address prefixes in the CIDR format for inbound rules
+* **direction**: 'Inbound' | 'Outbound' | string: Direction of Access Rule
+* **fullyQualifiedDomainNames**: string[] (ReadOnly): FQDN for outbound rules
+* **networkSecurityPerimeters**: [NetworkSecurityPerimeter](#networksecurityperimeter)[] (ReadOnly): NetworkSecurityPerimeters for inbound rules
+* **subscriptions**: [NspAccessRulePropertiesSubscriptionsItem](#nspaccessrulepropertiessubscriptionsitem)[]: Subscriptions for inbound rules
+
+## NspAccessRulePropertiesSubscriptionsItem
+### Properties
+* **id**: string: Fully qualified identifier of subscription
+
 ## NWRuleSetIpRules
 ### Properties
 * **action**: 'Allow' | string: The IP Filter Action
@@ -340,6 +398,16 @@
 * **privateEndpoint**: [PrivateEndpoint](#privateendpoint): The Private Endpoint resource for this Connection.
 * **privateLinkServiceConnectionState**: [ConnectionState](#connectionstate): Details about the state of the connection.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string: Provisioning state of the Private Endpoint Connection.
+
+## ProvisioningIssue
+### Properties
+* **name**: string: Name of the issue
+* **properties**: [ProvisioningIssueProperties](#provisioningissueproperties) (ReadOnly): Properties of Provisioning Issue
+
+## ProvisioningIssueProperties
+### Properties
+* **description**: string: Description of the issue
+* **issueType**: string: Type of Issue
 
 ## RetentionDescription
 ### Properties
