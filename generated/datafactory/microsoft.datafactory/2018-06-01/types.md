@@ -205,6 +205,13 @@
 * **type**: 'Custom' (Required): Type of activity.
 * **typeProperties**: [CustomActivityTypeProperties](#customactivitytypeproperties) (Required): Custom activity properties.
 
+### DatabricksJobActivity
+#### Properties
+* **linkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
+* **policy**: [ActivityPolicy](#activitypolicy): Activity policy.
+* **type**: 'DatabricksJob' (Required): Type of activity.
+* **typeProperties**: [DatabricksJobActivityTypeProperties](#databricksjobactivitytypeproperties) (Required): Databricks Job activity properties.
+
 ### DatabricksNotebookActivity
 #### Properties
 * **linkedServiceName**: [LinkedServiceReference](#linkedservicereference): Linked service reference.
@@ -2496,6 +2503,16 @@
 * **typeProperties**: [EnvironmentVariableSetupTypeProperties](#environmentvariablesetuptypeproperties) (Required): Add environment variable type properties.
 
 
+## DatabricksJobActivityTypeProperties
+### Properties
+* **jobId**: any (Required): The Id of the Databricks Job to be executed. Type: string (or Expression with resultType string).
+* **jobParameters**: [DatabricksJobActivityTypePropertiesJobParameters](#databricksjobactivitytypepropertiesjobparameters): Job parameters to be used for each run of this job. If the job takes a parameter that is not specified, the default value from the job will be used.
+
+## DatabricksJobActivityTypePropertiesJobParameters
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
+
 ## DatabricksNotebookActivityTypeProperties
 ### Properties
 * **baseParameters**: [DatabricksNotebookActivityTypePropertiesBaseParameters](#databricksnotebookactivitytypepropertiesbaseparameters): Base parameters to be used for each run of this job.If the notebook takes a parameter that is not specified, the default value from the notebook will be used.
@@ -3598,7 +3615,7 @@
 * **operands**: [ExpressionV2](#expressionv2)[]: List of nested expressions.
 * **operators**: string[]: Expression operator value Type: list of strings.
 * **type**: 'Binary' | 'Constant' | 'Field' | 'NAry' | 'Unary' | string: Type of expressions supported by the system. Type: string.
-* **value**: string: Value for Constant/Field Type: string.
+* **value**: any: Value for Constant/Field Type: object.
 
 ## FactoryIdentity
 ### Properties
@@ -5593,15 +5610,16 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 
 ## QuickBooksLinkedServiceTypeProperties
 ### Properties
-* **accessToken**: [SecretBase](#secretbase): The access token for OAuth 1.0 authentication.
-* **accessTokenSecret**: [SecretBase](#secretbase): The access token secret for OAuth 1.0 authentication.
+* **accessToken**: [SecretBase](#secretbase): The access token for OAuth 2.0 authentication.
+* **accessTokenSecret**: [SecretBase](#secretbase): The access token secret is deprecated for OAuth 1.0 authentication. Only used for version 1.0.
 * **companyId**: any: The company ID of the QuickBooks company to authorize.
 * **connectionProperties**: any: Properties used to connect to QuickBooks. It is mutually exclusive with any other properties in the linked service. Type: object.
-* **consumerKey**: any: The consumer key for OAuth 1.0 authentication.
-* **consumerSecret**: [SecretBase](#secretbase): The consumer secret for OAuth 1.0 authentication.
+* **consumerKey**: any: The consumer key for OAuth 2.0 authentication.
+* **consumerSecret**: [SecretBase](#secretbase): The consumer secret for OAuth 2.0 authentication.
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **endpoint**: any: The endpoint of the QuickBooks server. (i.e. quickbooks.api.intuit.com)
-* **useEncryptedEndpoints**: any: Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
+* **refreshToken**: [SecretBase](#secretbase): The refresh token for OAuth 2.0 authentication.
+* **useEncryptedEndpoints**: any: Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true. Only used for version 1.0.
 
 ## RecurrenceSchedule
 ### Properties
