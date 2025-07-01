@@ -82,11 +82,11 @@ jobs:
         uses: github/codeql-action/init@v3
         with:
           languages: javascript
-  
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 16.x
+          node-version: 22.x
 
       - name: Build bicep-types dependency
         run: |
@@ -131,7 +131,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 16.x
+          node-version: 22.x
 
       - name: Build bicep-types dependency
         run: |

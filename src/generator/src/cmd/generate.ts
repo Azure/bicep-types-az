@@ -5,6 +5,7 @@ import path from 'path';
 import { existsSync } from 'fs';
 import { mkdir, rm, writeFile, readFile } from 'fs/promises';
 import yargs from 'yargs';
+import { hideBin } from 'yargs/helpers'
 import { TypeFile, buildIndex, writeIndexJson, writeIndexMarkdown, readTypesJson } from "bicep-types";
 import { GeneratorConfig, getConfig } from '../config';
 import * as markdown from '@ts-common/commonmark-to-markdown'
@@ -17,7 +18,7 @@ const extensionDir = path.resolve(`${rootDir}/src/autorest.bicep/`);
 const autorestBinary = os.platform() === 'win32' ? 'autorest.cmd' : 'autorest';
 const defaultOutDir = path.resolve(`${rootDir}/generated`);
 
-const argsConfig = yargs
+const argsConfig = yargs(hideBin(process.argv))
   .strict()
   .option('specs-dir', { type: 'string', demandOption: true, desc: 'Path to the specs dir' })
   .option('out-dir', { type: 'string', default: defaultOutDir, desc: 'Output path for generated files' })
@@ -71,7 +72,7 @@ executeSynchronous(async () => {
       bicepReadmePath: `${path.dirname(readmePath)}/readme.bicep.md`,
       config: getConfig(basePath),
       tmpOutputDir: `${tmpOutputPath}/${outputBasePath}`,
-      outputDir: `${outputBaseDir}/${outputBasePath}`,  
+      outputDir: `${outputBaseDir}/${outputBasePath}`,
     };
   });
 
@@ -125,7 +126,7 @@ ${err}
   if (!singlePath) {
     // log if there are any type dirs with no corresponding readme (e.g. if a swagger directory has been removed).
     const shouldRebuildTypeIndex = await clearStaleTypeFolders(defaultLogger, outputBaseDir, pathData.map(x => x.outputDir));
-    
+
     if (shouldRebuildTypeIndex) {
       await buildTypeIndex(defaultLogger, outputBaseDir);
     }
@@ -283,7 +284,7 @@ async function clearStaleTypeFolders(logger: ILogger, outputBaseDir: string, out
   for (const basePath of staleBasePaths) {
     await rm(`${outputBaseDir}/${basePath}`, { recursive: true, force: true, });
   }
-  
+
   return staleBasePaths.length > 0;
 }
 
