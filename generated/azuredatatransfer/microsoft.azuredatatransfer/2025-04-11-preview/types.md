@@ -143,6 +143,13 @@
 * **streamLatency**: int: The latency of the stream in milliseconds
 * **streamProtocol**: 'RTP' | 'SRT' | 'UDP' | string: The protocol of the stream
 
+## InternalMetadataProperties
+### Properties
+* **operationStatus**: [OperationStatusProperties](#operationstatusproperties) (ReadOnly): Operation status associated with the last patch request
+* **statusSetBy**: string (ReadOnly): User that last set the approved status for this connection
+### Additional Properties
+* **Additional Properties Type**: any
+
 ## ListFlowsByPipelineConnection
 ### Properties
 * **flows**: [Flow](#flow)[]: List of flows associated with the connection.
@@ -162,6 +169,12 @@
 ## MessagingOptions
 ### Properties
 * **billingTier**: 'BlobTransport' | 'Premium' | 'Standard' | string: Billing tier for this messaging flow
+
+## OperationStatusProperties
+### Properties
+* **id**: string (ReadOnly): Operation status ID of the last patch request for this connection.
+* **message**: string (ReadOnly): Message for the operation for the last patch request for this connection.
+* **status**: 'Failed' | 'Succeeded' | string (ReadOnly): Operation status for the last patch request for this connection.
 
 ## PendingConnection
 ### Properties
@@ -253,6 +266,12 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
+## PipelineConnectionProperties
+### Properties
+* **internalMetadata**: [InternalMetadataProperties](#internalmetadataproperties) (ReadOnly): Internal metadata of the connection inside pipeline.
+### Additional Properties
+* **Additional Properties Type**: any
+
 ## PipelineProperties
 ### Properties
 * **connections**: [ReadPipelineConnection](#readpipelineconnection)[] (ReadOnly): Connections associated with pipeline
@@ -275,34 +294,15 @@
 * **publisher**: string (Required): The publisher of the 3rd Party Artifact that is being bought. E.g. NewRelic
 * **version**: string: The version of the desired product/artifact.
 
-## ReadInternalMetadataProperties
-### Properties
-* **operationStatus**: [ReadOperationStatusProperties](#readoperationstatusproperties): Operation status associated with the last patch request
-* **statusSetBy**: string: User that last set the approved status for this connection
-### Additional Properties
-* **Additional Properties Type**: any
-
-## ReadOperationStatusProperties
-### Properties
-* **id**: string: Operation status ID of the last patch request for this connection.
-* **message**: string: Message for the operation for the last patch request for this connection.
-* **status**: 'Failed' | 'Succeeded' | string (ReadOnly): Operation status for the last patch request for this connection.
-
 ## ReadPipelineConnection
 ### Properties
 * **etag**: string: Connection etag inside pipeline
 * **id**: string (Required): Connection id inside pipeline
 * **location**: string: Connection location inside pipeline
 * **name**: string: Connection name inside pipeline
-* **properties**: [ReadPipelineConnectionProperties](#readpipelineconnectionproperties): Connection properties inside pipeline
+* **properties**: [PipelineConnectionProperties](#pipelineconnectionproperties): Connection properties inside pipeline
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: string: Connection type inside pipeline
-### Additional Properties
-* **Additional Properties Type**: any
-
-## ReadPipelineConnectionProperties
-### Properties
-* **internalMetadata**: [ReadInternalMetadataProperties](#readinternalmetadataproperties): Internal metadata of the connection inside pipeline.
 ### Additional Properties
 * **Additional Properties Type**: any
 

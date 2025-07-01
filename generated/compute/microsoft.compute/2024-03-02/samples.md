@@ -6,7 +6,7 @@
 
 ## microsoft.compute/diskaccesses
 
-Create a disk access resource.
+create a disk access resource.
 ```bicep
 resource exampleResource 'Microsoft.Compute/diskAccesses@2024-03-02' = {
   name: 'example'
@@ -16,7 +16,7 @@ resource exampleResource 'Microsoft.Compute/diskAccesses@2024-03-02' = {
 
 ## microsoft.compute/diskaccesses/privateendpointconnections
 
-Approve a Private Endpoint Connection under a disk access resource.
+approve a Private Endpoint Connection under a disk access resource.
 ```bicep
 resource exampleResource 'Microsoft.Compute/diskAccesses/privateEndpointConnections@2024-03-02' = {
   parent: parentResource 
@@ -32,7 +32,7 @@ resource exampleResource 'Microsoft.Compute/diskAccesses/privateEndpointConnecti
 
 ## microsoft.compute/diskencryptionsets
 
-Create a disk encryption set with key vault from a different subscription.
+create a disk encryption set with key vault from a different subscription.
 ```bicep
 resource exampleResource 'Microsoft.Compute/diskEncryptionSets@2024-03-02' = {
   name: 'example'
@@ -49,7 +49,7 @@ resource exampleResource 'Microsoft.Compute/diskEncryptionSets@2024-03-02' = {
 }
 ```
 
-Create a disk encryption set with key vault from a different tenant.
+create a disk encryption set with key vault from a different tenant.
 ```bicep
 resource exampleResource 'Microsoft.Compute/diskEncryptionSets@2024-03-02' = {
   name: 'example'
@@ -71,7 +71,7 @@ resource exampleResource 'Microsoft.Compute/diskEncryptionSets@2024-03-02' = {
 }
 ```
 
-Create a disk encryption set.
+create a disk encryption set.
 ```bicep
 resource exampleResource 'Microsoft.Compute/diskEncryptionSets@2024-03-02' = {
   name: 'example'
@@ -93,7 +93,7 @@ resource exampleResource 'Microsoft.Compute/diskEncryptionSets@2024-03-02' = {
 
 ## microsoft.compute/disks
 
-Create a confidential VM supported disk encrypted with customer managed key
+create a confidential VM supported disk encrypted with customer managed key
 ```bicep
 resource exampleResource 'Microsoft.Compute/disks@2024-03-02' = {
   name: 'example'
@@ -114,7 +114,7 @@ resource exampleResource 'Microsoft.Compute/disks@2024-03-02' = {
 }
 ```
 
-Create a managed disk and associate with disk access resource.
+create a managed disk and associate with disk access resource.
 ```bicep
 resource exampleResource 'Microsoft.Compute/disks@2024-03-02' = {
   name: 'example'
@@ -130,7 +130,7 @@ resource exampleResource 'Microsoft.Compute/disks@2024-03-02' = {
 }
 ```
 
-Create a managed disk and associate with disk encryption set.
+create a managed disk and associate with disk encryption set.
 ```bicep
 resource exampleResource 'Microsoft.Compute/disks@2024-03-02' = {
   name: 'example'
@@ -147,7 +147,7 @@ resource exampleResource 'Microsoft.Compute/disks@2024-03-02' = {
 }
 ```
 
-Create a managed disk by copying a snapshot.
+create a managed disk by copying a snapshot.
 ```bicep
 resource exampleResource 'Microsoft.Compute/disks@2024-03-02' = {
   name: 'example'
@@ -161,7 +161,7 @@ resource exampleResource 'Microsoft.Compute/disks@2024-03-02' = {
 }
 ```
 
-Create a managed disk by importing an unmanaged blob from a different subscription.
+create a managed disk by importing an unmanaged blob from a different subscription.
 ```bicep
 resource exampleResource 'Microsoft.Compute/disks@2024-03-02' = {
   name: 'example'
@@ -176,7 +176,7 @@ resource exampleResource 'Microsoft.Compute/disks@2024-03-02' = {
 }
 ```
 
-Create a managed disk by importing an unmanaged blob from the same subscription.
+create a managed disk by importing an unmanaged blob from the same subscription.
 ```bicep
 resource exampleResource 'Microsoft.Compute/disks@2024-03-02' = {
   name: 'example'
@@ -190,7 +190,7 @@ resource exampleResource 'Microsoft.Compute/disks@2024-03-02' = {
 }
 ```
 
-Create a managed disk from a platform image.
+create a managed disk from a platform image.
 ```bicep
 resource exampleResource 'Microsoft.Compute/disks@2024-03-02' = {
   name: 'example'
@@ -207,7 +207,7 @@ resource exampleResource 'Microsoft.Compute/disks@2024-03-02' = {
 }
 ```
 
-Create a managed disk from an Azure Compute Gallery community image.
+create a managed disk from an Azure Compute Gallery community image.
 ```bicep
 resource exampleResource 'Microsoft.Compute/disks@2024-03-02' = {
   name: 'example'
@@ -224,7 +224,7 @@ resource exampleResource 'Microsoft.Compute/disks@2024-03-02' = {
 }
 ```
 
-Create a managed disk from an Azure Compute Gallery direct shared image.
+create a managed disk from an Azure Compute Gallery direct shared image.
 ```bicep
 resource exampleResource 'Microsoft.Compute/disks@2024-03-02' = {
   name: 'example'
@@ -241,7 +241,7 @@ resource exampleResource 'Microsoft.Compute/disks@2024-03-02' = {
 }
 ```
 
-Create a managed disk from an Azure Compute Gallery image.
+create a managed disk from an Azure Compute Gallery image.
 ```bicep
 resource exampleResource 'Microsoft.Compute/disks@2024-03-02' = {
   name: 'example'
@@ -258,7 +258,7 @@ resource exampleResource 'Microsoft.Compute/disks@2024-03-02' = {
 }
 ```
 
-Create a managed disk from an existing managed disk in the same or different subscription.
+create a managed disk from an existing managed disk in the same or different subscription.
 ```bicep
 resource exampleResource 'Microsoft.Compute/disks@2024-03-02' = {
   name: 'example'
@@ -272,7 +272,7 @@ resource exampleResource 'Microsoft.Compute/disks@2024-03-02' = {
 }
 ```
 
-Create a managed disk from elastic san volume snapshot.
+create a managed disk from elastic san volume snapshot.
 ```bicep
 resource exampleResource 'Microsoft.Compute/disks@2024-03-02' = {
   name: 'example'
@@ -286,7 +286,7 @@ resource exampleResource 'Microsoft.Compute/disks@2024-03-02' = {
 }
 ```
 
-Create a managed disk from ImportSecure create option
+create a managed disk from ImportSecure create option
 ```bicep
 resource exampleResource 'Microsoft.Compute/disks@2024-03-02' = {
   name: 'example'
@@ -306,7 +306,7 @@ resource exampleResource 'Microsoft.Compute/disks@2024-03-02' = {
 }
 ```
 
-Create a managed disk from UploadPreparedSecure create option
+create a managed disk from UploadPreparedSecure create option
 ```bicep
 resource exampleResource 'Microsoft.Compute/disks@2024-03-02' = {
   name: 'example'
@@ -324,7 +324,7 @@ resource exampleResource 'Microsoft.Compute/disks@2024-03-02' = {
 }
 ```
 
-Create a managed disk with dataAccessAuthMode
+create a managed disk with dataAccessAuthMode
 ```bicep
 resource exampleResource 'Microsoft.Compute/disks@2024-03-02' = {
   name: 'example'
@@ -339,7 +339,7 @@ resource exampleResource 'Microsoft.Compute/disks@2024-03-02' = {
 }
 ```
 
-Create a managed disk with optimizedForFrequentAttach.
+create a managed disk with optimizedForFrequentAttach.
 ```bicep
 resource exampleResource 'Microsoft.Compute/disks@2024-03-02' = {
   name: 'example'
@@ -354,7 +354,7 @@ resource exampleResource 'Microsoft.Compute/disks@2024-03-02' = {
 }
 ```
 
-Create a managed disk with performancePlus.
+create a managed disk with performancePlus.
 ```bicep
 resource exampleResource 'Microsoft.Compute/disks@2024-03-02' = {
   name: 'example'
@@ -368,7 +368,7 @@ resource exampleResource 'Microsoft.Compute/disks@2024-03-02' = {
 }
 ```
 
-Create a managed disk with premium v2 account type.
+create a managed disk with premium v2 account type.
 ```bicep
 resource exampleResource 'Microsoft.Compute/disks@2024-03-02' = {
   name: 'example'
@@ -387,7 +387,7 @@ resource exampleResource 'Microsoft.Compute/disks@2024-03-02' = {
 }
 ```
 
-Create a managed disk with security profile
+create a managed disk with security profile
 ```bicep
 resource exampleResource 'Microsoft.Compute/disks@2024-03-02' = {
   name: 'example'
@@ -407,7 +407,7 @@ resource exampleResource 'Microsoft.Compute/disks@2024-03-02' = {
 }
 ```
 
-Create a managed disk with ssd zrs account type.
+create a managed disk with ssd zrs account type.
 ```bicep
 resource exampleResource 'Microsoft.Compute/disks@2024-03-02' = {
   name: 'example'
@@ -424,7 +424,7 @@ resource exampleResource 'Microsoft.Compute/disks@2024-03-02' = {
 }
 ```
 
-Create a managed disk with ultra account type with readOnly property set.
+create a managed disk with ultra account type with readOnly property set.
 ```bicep
 resource exampleResource 'Microsoft.Compute/disks@2024-03-02' = {
   name: 'example'
@@ -447,7 +447,7 @@ resource exampleResource 'Microsoft.Compute/disks@2024-03-02' = {
 }
 ```
 
-Create a managed upload disk.
+create a managed upload disk.
 ```bicep
 resource exampleResource 'Microsoft.Compute/disks@2024-03-02' = {
   name: 'example'
@@ -461,7 +461,7 @@ resource exampleResource 'Microsoft.Compute/disks@2024-03-02' = {
 }
 ```
 
-Create an empty managed disk in extended location.
+create an empty managed disk in extended location.
 ```bicep
 resource exampleResource 'Microsoft.Compute/disks@2024-03-02' = {
   name: 'example'
@@ -479,7 +479,7 @@ resource exampleResource 'Microsoft.Compute/disks@2024-03-02' = {
 }
 ```
 
-Create an empty managed disk.
+create an empty managed disk.
 ```bicep
 resource exampleResource 'Microsoft.Compute/disks@2024-03-02' = {
   name: 'example'
@@ -493,7 +493,7 @@ resource exampleResource 'Microsoft.Compute/disks@2024-03-02' = {
 }
 ```
 
-Create an ultra managed disk with logicalSectorSize 512E
+create an ultra managed disk with logicalSectorSize 512E
 ```bicep
 resource exampleResource 'Microsoft.Compute/disks@2024-03-02' = {
   name: 'example'

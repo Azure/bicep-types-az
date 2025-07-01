@@ -688,7 +688,7 @@ resource exampleResource 'Microsoft.ApiManagement/service/openidConnectProviders
   properties: {
     clientId: 'oidprovidertemplate3'
     displayName: 'templateoidprovider3'
-    metadataEndpoint: 'https://oidprovider-template3.net'
+    metadataEndpoint: 'https://example.com'
   }
 }
 ```

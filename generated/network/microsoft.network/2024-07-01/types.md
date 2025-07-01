@@ -608,39 +608,6 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata related to this resource.
 * **type**: 'Microsoft.Network/networkManagers/networkGroups/staticMembers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/networkManagers/routingConfigurations@2024-07-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2024-07-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {pattern: "^[a-zA-Z0-9_.-]*$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [NetworkManagerRoutingConfigurationPropertiesFormat](#networkmanagerroutingconfigurationpropertiesformat): Indicates the properties for the network manager routing configuration.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata related to this resource.
-* **type**: 'Microsoft.Network/networkManagers/routingConfigurations' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.Network/networkManagers/routingConfigurations/ruleCollections@2024-07-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2024-07-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {pattern: "^[a-zA-Z0-9_.-]*$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [RoutingRuleCollectionPropertiesFormat](#routingrulecollectionpropertiesformat): Indicates the properties for the network manager routing rule collection.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata related to this resource.
-* **type**: 'Microsoft.Network/networkManagers/routingConfigurations/ruleCollections' (ReadOnly, DeployTimeConstant): The resource type
-
-## Resource Microsoft.Network/networkManagers/routingConfigurations/ruleCollections/rules@2024-07-01
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2024-07-01' (ReadOnly, DeployTimeConstant): The resource api version
-* **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {pattern: "^[a-zA-Z0-9_.-]*$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [RoutingRulePropertiesFormat](#routingrulepropertiesformat): Indicates the properties of the routing rule
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system metadata related to this resource.
-* **type**: 'Microsoft.Network/networkManagers/routingConfigurations/ruleCollections/rules' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.Network/networkManagers/scopeConnections@2024-07-01
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -3909,16 +3876,6 @@
 * **managementGroups**: string[]: List of management groups.
 * **subscriptions**: string[]: List of subscriptions.
 
-## NetworkManagerRoutingConfigurationPropertiesFormat
-### Properties
-* **description**: string: A description of the routing configuration.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the resource.
-* **resourceGuid**: string (ReadOnly): Unique identifier for this resource.
-
-## NetworkManagerRoutingGroupItem
-### Properties
-* **networkGroupId**: string (Required): Network manager group Id.
-
 ## NetworkManagerSecurityGroupItem
 ### Properties
 * **networkGroupId**: string (Required): Network manager group Id.
@@ -4974,32 +4931,6 @@
 * **destinations**: string[] (Required): List of all destinations which this routing policy is applicable to (for example: Internet, PrivateTraffic).
 * **name**: string (Required): The unique name for the routing policy.
 * **nextHop**: string (Required): The next hop resource id on which this routing policy is applicable to.
-
-## RoutingRuleCollectionPropertiesFormat
-### Properties
-* **appliesTo**: [NetworkManagerRoutingGroupItem](#networkmanagerroutinggroupitem)[] (Required): Groups for configuration
-* **description**: string: A description of the routing rule collection.
-* **disableBgpRoutePropagation**: 'False' | 'True' | string: Determines whether BGP route propagation is enabled. Defaults to true.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the resource.
-* **resourceGuid**: string (ReadOnly): Unique identifier for this resource.
-
-## RoutingRuleNextHop
-### Properties
-* **nextHopAddress**: string: Next hop address. Only required if the next hop type is VirtualAppliance.
-* **nextHopType**: 'Internet' | 'NoNextHop' | 'VirtualAppliance' | 'VirtualNetworkGateway' | 'VnetLocal' | string (Required): Next hop type.
-
-## RoutingRulePropertiesFormat
-### Properties
-* **description**: string: A description for this rule.
-* **destination**: [RoutingRuleRouteDestination](#routingruleroutedestination) (Required): Indicates the destination for this particular rule.
-* **nextHop**: [RoutingRuleNextHop](#routingrulenexthop) (Required): Indicates the next hop for this particular rule.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the resource.
-* **resourceGuid**: string (ReadOnly): Unique identifier for this resource.
-
-## RoutingRuleRouteDestination
-### Properties
-* **destinationAddress**: string (Required): Destination address.
-* **type**: 'AddressPrefix' | 'ServiceTag' | string (Required): Destination type.
 
 ## ScopeConnectionProperties
 ### Properties

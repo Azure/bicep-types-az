@@ -154,9 +154,9 @@
 ## CacheNodeEntity
 ### Properties
 * **addressSpace**: int (ReadOnly): Cache node resource total addressable space defined by the Cidr Csv block.
-* **autoUpdateRequestedDay**: int {minValue: 1, maxValue: 7}: Customer requested day of week for mcc install of auto update cycle
+* **autoUpdateRequestedDay**: int {minValue: 0, maxValue: 7}: Customer requested day of week for mcc install of auto update cycle. 0 is default no selection. 1-7 are days of week, 1 is Sunday, 2 is Monday, etc.
 * **autoUpdateRequestedTime**: string {pattern: "^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$"}: Customer requested time of the day for mcc install of auto update cycle, should be hh:mm
-* **autoUpdateRequestedWeek**: int {minValue: 1, maxValue: 5}: Customer requested week of month for mcc install of auto update cycle
+* **autoUpdateRequestedWeek**: int {minValue: 0, maxValue: 5}: Customer requested week of month for mcc install of auto update cycle. 0 is default no selection. 1-5 are valid weeks of month, 1 is first week, 2 is second week, etc.
 * **autoUpdateRingType**: 'Fast' | 'Preview' | 'Slow' | string: Auto Update Ring Type which is slow or fast etc.
 * **bgpAddressSpace**: int (ReadOnly): Cache node resource total addressable space defined by Bgp and Cidr Csv blocks.
 * **bgpCidrBlocksCount**: int (ReadOnly): Cache node resource Bgp block count.

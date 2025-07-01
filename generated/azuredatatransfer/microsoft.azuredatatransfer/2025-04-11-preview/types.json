@@ -1103,13 +1103,13 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ReadPipelineConnectionProperties",
+    "name": "PipelineConnectionProperties",
     "properties": {
       "internalMetadata": {
         "type": {
           "$ref": "#/85"
         },
-        "flags": 0,
+        "flags": 2,
         "description": "Internal metadata of the connection inside pipeline."
       }
     },
@@ -1119,20 +1119,20 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ReadInternalMetadataProperties",
+    "name": "InternalMetadataProperties",
     "properties": {
       "operationStatus": {
         "type": {
           "$ref": "#/86"
         },
-        "flags": 0,
+        "flags": 2,
         "description": "Operation status associated with the last patch request"
       },
       "statusSetBy": {
         "type": {
           "$ref": "#/2"
         },
-        "flags": 0,
+        "flags": 2,
         "description": "User that last set the approved status for this connection"
       }
     },
@@ -1142,7 +1142,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ReadOperationStatusProperties",
+    "name": "OperationStatusProperties",
     "properties": {
       "status": {
         "type": {
@@ -1155,14 +1155,14 @@
         "type": {
           "$ref": "#/2"
         },
-        "flags": 0,
+        "flags": 2,
         "description": "Operation status ID of the last patch request for this connection."
       },
       "message": {
         "type": {
           "$ref": "#/2"
         },
-        "flags": 0,
+        "flags": 2,
         "description": "Message for the operation for the last patch request for this connection."
       }
     }

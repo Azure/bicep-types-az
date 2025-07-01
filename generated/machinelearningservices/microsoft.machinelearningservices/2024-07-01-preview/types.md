@@ -3369,8 +3369,9 @@ Full resource id: /subscriptions/{subId}/resourceGroups/{rgName}/providers/Micro
 * **publicNetworkAccess**: string: Is the Registry accessible from the internet?
 Possible values: "Enabled" or "Disabled"
 * **regionDetails**: [RegistryRegionArmDetails](#registryregionarmdetails)[]: Details of each region the registry is in
+* **registryId**: string: RegistryId for this registry
 * **registryPrivateEndpointConnections**: [RegistryPrivateEndpointConnection](#registryprivateendpointconnection)[]: Private endpoint connections info used for pending connections in private link portal
-* **syndicatedRegistries**: [RegistrySyndicatedRegistries](#registrysyndicatedregistries): Dictionary of syndicated registries. Key is Guid and value is a SyndicatedRegistry
+* **syndicatedRegistries**: [RegistrySyndicatedRegistries](#registrysyndicatedregistries): Dictionary of syndicated/destination registries for this source registry. For each destination registry, the Key is the RegistryId Guid and the value is a SyndicatedRegistry object
 
 ## RegistryRegionArmDetails
 ### Properties
@@ -3888,7 +3889,7 @@ Configure this parameter with a higher value than 300 secs, if more time is need
 
 ## SyndicatedRegistry
 ### Properties
-* **registryId**: string: The Registry Id of the syndicated Registry
+* **registryId**: string: The Registry Id Guid of the syndicated Registry
 
 ## SystemCreatedAcrAccount
 ### Properties

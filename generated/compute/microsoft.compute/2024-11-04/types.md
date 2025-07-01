@@ -8,7 +8,7 @@
 * **location**: string (Required): Resource location.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [CloudServiceProperties](#cloudserviceproperties): Cloud service properties
-* **systemData**: [SystemData](#systemdata): The system meta data relating to this resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **tags**: [CloudServiceTags](#cloudservicetags): Resource tags.
 * **type**: 'Microsoft.Compute/cloudServices' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: List of logical availability zone of the resource. List should contain only 1 zone where cloud service should be provisioned. This field is optional.
@@ -142,6 +142,10 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 
 ## SystemData
 ### Properties
-* **createdAt**: string (ReadOnly): Specifies the time in UTC at which the Cloud Service (extended support) resource was created. <br />Minimum api-version: 2022-04-04.
-* **lastModifiedAt**: string (ReadOnly): Specifies the time in UTC at which the Cloud Service (extended support) resource was last modified. <br />Minimum api-version: 2022-04-04.
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 

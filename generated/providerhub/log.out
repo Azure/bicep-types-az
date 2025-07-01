@@ -1,5 +1,5 @@
 Generating types for 'specification/providerhub/resource-manager/readme.md'
-AutoRest code generation utility [cli version: 3.7.1; node: v16.20.2]
+AutoRest code generation utility [cli version: 3.7.2; node: v22.16.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -7,9 +7,209 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'CustomRolloutSpecification-canary' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:3044:9
+warning | PreCheck/SchemaMissingType | The schema 'CustomRolloutSpecification-providerRegistration' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:3067:9
+warning | PreCheck/SchemaMissingType | The schema 'CustomRolloutProperties-specification' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:3186:9
+warning | PreCheck/SchemaMissingType | The schema 'CustomRolloutProperties-status' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:3194:9
+warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutSpecification-expeditedRollout' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:3268:9
+warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutSpecification-canary' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:3276:9
+warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutSpecification-lowTraffic' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:3284:9
+warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutSpecification-mediumTraffic' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:3292:9
+warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutSpecification-highTraffic' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:3300:9
+warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutSpecification-restOfTheWorldGroupOne' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:3308:9
+warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutSpecification-restOfTheWorldGroupTwo' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:3316:9
+warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutSpecification-providerRegistration' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:3324:9
+warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutStatus-manifestCheckinStatus' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:3400:9
+warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutProperties-specification' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:3417:9
+warning | PreCheck/SchemaMissingType | The schema 'DefaultRolloutProperties-status' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:3425:9
+warning | PreCheck/SchemaMissingType | The schema 'LoggingRule-hiddenPropertyPaths' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:3809:9
+warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderEndpoint-featuresRule' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:3918:9
+warning | PreCheck/SchemaMissingType | The schema 'CustomRolloutStatus-manifestCheckinStatus' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:4056:9
+warning | PreCheck/SchemaMissingType | The schema 'ResourceType-identityManagement' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:4463:9
+warning | PreCheck/SchemaMissingType | The schema 'ResourceType-featuresRule' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:4482:9
+warning | PreCheck/SchemaMissingType | The schema 'ResourceType-requestHeaderOptions' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:4506:9
+warning | PreCheck/SchemaMissingType | The schema 'ResourceType-templateDeploymentPolicy' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:4525:9
+warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifest-providerAuthentication' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:4767:9
+warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifest-featuresRule' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:4828:9
+warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifest-requestHeaderOptions' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:4836:9
+warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifest-management' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:4854:9
+warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifest-reRegisterSubscriptionMetadata' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:4896:9
+warning | PreCheck/SchemaMissingType | The schema 'OperationsDefinition-display' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:5107:9
+warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-default' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:5152:9
+warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-en' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:5160:9
+warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-cs' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:5168:9
+warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-de' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:5176:9
+warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-es' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:5184:9
+warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-fr' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:5192:9
+warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-hu' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:5200:9
+warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-it' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:5208:9
+warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-ja' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:5216:9
+warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-ko' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:5224:9
+warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-nl' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:5232:9
+warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-pl' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:5240:9
+warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-ptBR' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:5248:9
+warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-ptPT' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:5256:9
+warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-ru' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:5264:9
+warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-sv' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:5272:9
+warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-zhHans' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:5280:9
+warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDisplayDefinition-zhHant' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:5288:9
+warning | PreCheck/SchemaMissingType | The schema 'LocalizedOperationDefinition-display' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:5325:9
+warning | PreCheck/SchemaMissingType | The schema 'ProviderHubMetadata-providerAuthentication' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:5449:9
+warning | PreCheck/SchemaMissingType | The schema 'ProviderHubMetadata-thirdPartyProviderAuthorization' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:5457:9
+warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifestProperties-providerAuthentication' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:5573:9
+warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifestProperties-featuresRule' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:5634:9
+warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifestProperties-requestHeaderOptions' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:5642:9
+warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifestProperties-management' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:5650:9
+warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifestProperties-templateDeploymentOptions' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:5684:9
+warning | PreCheck/SchemaMissingType | The schema 'ResourceProviderManifestProperties-dstsConfiguration' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:5721:9
+warning | PreCheck/SchemaMissingType | The schema 'ProviderRegistrationProperties-providerHubMetadata' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:5858:9
+warning | PreCheck/SchemaMissingType | The schema 'ProviderRegistrationProperties-subscriptionLifecycleNotificationSpecifications' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:5870:9
+warning | PreCheck/SchemaMissingType | The schema 'ProviderRegistrationProperties-privateResourceProviderConfiguration' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:5878:9
+warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeEndpoint-featuresRule' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:6088:9
+warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeEndpoint-dstsConfiguration' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:6148:9
+warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeExtensionOptions-resourceCreationBegin' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:6245:9
+warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-extensionOptions' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:6386:9
+warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-featuresRule' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:6476:9
+warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-subscriptionLifecycleNotificationSpecifications' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:6496:9
+warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-identityManagement' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:6508:9
+warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-checkNameAvailabilitySpecifications' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:6516:9
+warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-requestHeaderOptions' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:6539:9
+warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-templateDeploymentOptions' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:6555:9
+warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-resourceMovePolicy' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:6571:9
+warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-resourceGraphConfiguration' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:6599:9
+warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-management' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:6607:9
+warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-templateDeploymentPolicy' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:6693:9
+warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeRegistrationProperties-dstsConfiguration' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:6737:9
+warning | PreCheck/SchemaMissingType | The schema 'FanoutLinkedNotificationRule-dstsConfiguration' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:7188:9
+warning | PreCheck/SchemaMissingType | The schema 'SkuSetting-capacity' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:7497:9
+warning | PreCheck/SchemaMissingType | The schema 'SkuResource-properties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:7555:9
+warning | PreCheck/SchemaMissingType | The schema 'FrontloadPayloadProperties-overrideManifestLevelFields' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:8002:9
+warning | PreCheck/SchemaMissingType | The schema 'FrontloadPayloadProperties-overrideEndpointLevelFields' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:8010:9
+warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeEndpointBase-featuresRule' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:8088:9
+warning | PreCheck/SchemaMissingType | The schema 'ResourceTypeEndpointBase-dstsConfiguration' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json:8115:9
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'CustomRollout' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from CustomRollout
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'DefaultRollout' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from DefaultRollout
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'NotificationRegistration' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from NotificationRegistration
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'OperationsPutContent' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from OperationsPutContent
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'ProviderRegistration' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from ProviderRegistration
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'ResourceTypeRegistration' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from ResourceTypeRegistration
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'SkuResource' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from SkuResource
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'ProviderMonitorSetting' has a property 'systemData' that is already declared the parent schema 'Resource' but isn't significantly different. The property has been removed from ProviderMonitorSetting
+warning | Modeler/MissingType | The schema 'OperationsDefinition-properties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2024-09-01/providerhub.json#/components/schemas/OperationsDefinition-properties
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CustomRolloutSpecification-canary' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/preview/2021-09-01-preview/providerhub.json:2238:9
@@ -184,6 +384,13 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CustomRolloutSpecification-canary' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/preview/2021-06-01-preview/providerhub.json:2238:9
@@ -358,6 +565,13 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CustomRolloutSpecification-canary' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/preview/2021-05-01-preview/providerhub.json:2180:9
@@ -488,6 +702,13 @@ warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.5.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.6.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'CustomRolloutSpecification-canary' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/providerhub/resource-manager/Microsoft.ProviderHub/stable/2020-11-20/providerhub.json:2158:9

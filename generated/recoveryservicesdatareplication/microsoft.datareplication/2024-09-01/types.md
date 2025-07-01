@@ -136,6 +136,11 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DataReplication/replicationVaults/replicationPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
+## AffectedObjectDetails
+### Properties
+* **description**: string: Description of the affected object details.
+* **type**: 'object': Type of the affected object details.
+
 ## AzStackHCIClusterProperties
 ### Properties
 * **clusterName**: string {minLength: 1} (Required): Gets or sets the AzStackHCICluster FQDN name.
@@ -399,7 +404,7 @@
 * **Discriminator**: instanceType
 
 ### Base Properties
-* **affectedObjectDetails**: [JobModelCustomPropertiesAffectedObjectDetails](#jobmodelcustompropertiesaffectedobjectdetails) (ReadOnly): Gets or sets any custom properties of the affected object.
+* **affectedObjectDetails**: [AffectedObjectDetails](#affectedobjectdetails) (ReadOnly): Gets or sets any custom properties of the affected object.
 
 ### FailoverJobModelCustomProperties
 #### Properties
@@ -416,11 +421,6 @@
 * **instanceType**: 'TestFailoverJobDetails' (Required): Discriminator property for JobModelCustomProperties.
 * **protectedItemDetails**: [FailoverProtectedItemProperties](#failoverprotecteditemproperties)[] (ReadOnly): Gets or sets the test VM details.
 
-
-## JobModelCustomPropertiesAffectedObjectDetails
-### Properties
-* **description**: string
-* **type**: 'object'
 
 ## JobModelProperties
 ### Properties

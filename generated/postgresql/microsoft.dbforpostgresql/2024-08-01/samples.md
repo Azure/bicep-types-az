@@ -6,94 +6,118 @@
 
 ## microsoft.dbforpostgresql/flexibleservers
 
-Create a database as a geo-restore in geo-paired location
+Create a new flexible server using a backup of a flexible server that was deleted or dropped recently.
 ```bicep
 resource exampleResource 'Microsoft.DBforPostgreSQL/flexibleServers@2024-08-01' = {
   name: 'example'
-  identity: {
-    type: 'UserAssigned'
-    userAssignedIdentities: {
-      '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testresourcegroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/test-geo-usermanagedidentity': {
-      }
-      '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testresourcegroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/test-usermanagedidentity': {
-      }
-    }
-  }
-  location: 'eastus'
+  location: 'westus'
   properties: {
-    createMode: 'GeoRestore'
-    dataEncryption: {
-      type: 'AzureKeyVault'
-      geoBackupKeyURI: 'https://test-geo-kv.vault.azure.net/keys/test-key1/66f57315bab34b0189daa113fbc78787'
-      geoBackupUserAssignedIdentityId: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testresourcegroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/test-geo-usermanagedidentity'
-      primaryKeyURI: 'https://test-kv.vault.azure.net/keys/test-key1/77f57315bab34b0189daa113fbc78787'
-      primaryUserAssignedIdentityId: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testresourcegroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/test-usermanagedidentity'
-    }
-    pointInTimeUTC: '2021-06-27T00:04:59.4078005+00:00'
-    sourceServerResourceId: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testrg/providers/Microsoft.DBforPostgreSQL/flexibleServers/sourcepgservername'
+    createMode: 'ReviveDropped'
+    pointInTimeUTC: '2024-08-01T18:30:22.123456Z'
+    sourceServerResourceId: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/exampleresourcegroup/providers/Microsoft.DBforPostgreSQL/flexibleServers/exampledeletedserver'
   }
 }
 ```
 
-Create a database as a point in time restore
+Create a new flexible server using a point in time restore of a backup of an existing flexible server.
 ```bicep
 resource exampleResource 'Microsoft.DBforPostgreSQL/flexibleServers@2024-08-01' = {
   name: 'example'
   location: 'westus'
   properties: {
     createMode: 'PointInTimeRestore'
-    pointInTimeUTC: '2021-06-27T00:04:59.4078005+00:00'
-    sourceServerResourceId: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testrg/providers/Microsoft.DBforPostgreSQL/flexibleServers/sourcepgservername'
+    pointInTimeUTC: '2024-08-01T18:35:22.123456Z'
+    sourceServerResourceId: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/exampleresourcegroup/providers/Microsoft.DBforPostgreSQL/flexibleServers/examplesourceserver'
   }
 }
 ```
 
-Create a new server
+Create a new flexible server using a restore of a geographically redundant backup of an existing flexible server, with data encryption based on customer managed key.
 ```bicep
 resource exampleResource 'Microsoft.DBforPostgreSQL/flexibleServers@2024-08-01' = {
   name: 'example'
+  identity: {
+    type: 'UserAssigned'
+    userAssignedIdentities: {
+      '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/exampleresourcegroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/examplegeoredundantidentity': {
+      }
+      '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/exampleresourcegroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/exampleprimaryidentity': {
+      }
+    }
+  }
   location: 'westus'
   properties: {
-    administratorLogin: 'cloudsa'
-    administratorLoginPassword: 'password'
+    createMode: 'GeoRestore'
+    dataEncryption: {
+      type: 'AzureKeyVault'
+      geoBackupKeyURI: 'https://examplegeoredundantkeyvault.vault.azure.net/keys/examplekey/yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy'
+      geoBackupUserAssignedIdentityId: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/exampleresourcegroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/examplegeoredundantidentity'
+      primaryKeyURI: 'https://exampleprimarykeyvault.vault.azure.net/keys/examplekey/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+      primaryUserAssignedIdentityId: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/exampleresourcegroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/exampleprimaryidentity'
+    }
+    pointInTimeUTC: '2024-08-01T18:35:22.123456Z'
+    sourceServerResourceId: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/exampleresourcegroup/providers/Microsoft.DBforPostgreSQL/flexibleServers/examplesourceserver'
+  }
+}
+```
+
+Create a new flexible server with data encryption based on customer managed key.
+```bicep
+resource exampleResource 'Microsoft.DBforPostgreSQL/flexibleServers@2024-08-01' = {
+  name: 'example'
+  identity: {
+    type: 'UserAssigned'
+    userAssignedIdentities: {
+      '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/exampleresourcegroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/exampleprimaryidentity': {
+      }
+    }
+  }
+  location: 'westus'
+  properties: {
+    administratorLogin: 'administratorlogin'
+    administratorLoginPassword: 'examplepassword'
     availabilityZone: '1'
     backup: {
       backupRetentionDays: 7
       geoRedundantBackup: 'Disabled'
     }
     createMode: 'Create'
+    dataEncryption: {
+      type: 'AzureKeyVault'
+      geoBackupKeyURI: ''
+      geoBackupUserAssignedIdentityId: ''
+      primaryKeyURI: 'https://exampleprimarykeyvault.vault.azure.net/keys/examplekey/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+      primaryUserAssignedIdentityId: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/exampleresourcegroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/exampleprimaryidentity'
+    }
     highAvailability: {
       mode: 'ZoneRedundant'
     }
     network: {
-      delegatedSubnetResourceId: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testrg/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/test-vnet-subnet'
-      privateDnsZoneArmResourceId: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourcegroups/testrg/providers/Microsoft.Network/privateDnsZones/test-private-dns-zone.postgres.database.azure.com'
+      delegatedSubnetResourceId: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/exampleresourcegroup/providers/Microsoft.Network/virtualNetworks/examplevirtualnetwork/subnets/examplesubnet'
+      privateDnsZoneArmResourceId: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourcegroups/exampleresourcegroup/providers/Microsoft.Network/privateDnsZones/exampleprivatednszone.postgres.database.azure.com'
     }
     storage: {
       autoGrow: 'Disabled'
       storageSizeGB: 512
       tier: 'P20'
     }
-    version: '12'
+    version: '16'
   }
   sku: {
-    name: 'Standard_D4s_v3'
+    name: 'Standard_D4ds_v5'
     tier: 'GeneralPurpose'
-  }
-  tags: {
-    ElasticServer: '1'
   }
 }
 ```
 
-Create a new server with active directory authentication enabled
+Create a new flexible server with Microsoft Entra authentication enabled.
 ```bicep
 resource exampleResource 'Microsoft.DBforPostgreSQL/flexibleServers@2024-08-01' = {
   name: 'example'
   location: 'westus'
   properties: {
-    administratorLogin: 'cloudsa'
-    administratorLoginPassword: 'password'
+    administratorLogin: 'administratorlogin'
+    administratorLoginPassword: 'examplepassword'
     authConfig: {
       activeDirectoryAuth: 'Enabled'
       passwordAuth: 'Enabled'
@@ -112,34 +136,69 @@ resource exampleResource 'Microsoft.DBforPostgreSQL/flexibleServers@2024-08-01' 
       mode: 'ZoneRedundant'
     }
     network: {
-      delegatedSubnetResourceId: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testrg/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/test-vnet-subnet'
-      privateDnsZoneArmResourceId: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourcegroups/testrg/providers/Microsoft.Network/privateDnsZones/test-private-dns-zone.postgres.database.azure.com'
+      delegatedSubnetResourceId: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/exampleresourcegroup/providers/Microsoft.Network/virtualNetworks/examplevirtualnetwork/subnets/examplesubnet'
+      privateDnsZoneArmResourceId: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourcegroups/exampleresourcegroup/providers/Microsoft.Network/privateDnsZones/exampleprivatednszone.postgres.database.azure.com'
     }
     storage: {
       autoGrow: 'Disabled'
       storageSizeGB: 512
       tier: 'P20'
     }
-    version: '12'
+    version: '16'
   }
   sku: {
-    name: 'Standard_D4s_v3'
+    name: 'Standard_D4ds_v5'
     tier: 'GeneralPurpose'
-  }
-  tags: {
-    ElasticServer: '1'
   }
 }
 ```
 
-ServerCreateReplica
+Create a new flexible server.
+```bicep
+resource exampleResource 'Microsoft.DBforPostgreSQL/flexibleServers@2024-08-01' = {
+  name: 'example'
+  location: 'westus'
+  properties: {
+    administratorLogin: 'administratorlogin'
+    administratorLoginPassword: 'examplepassword'
+    availabilityZone: '1'
+    backup: {
+      backupRetentionDays: 7
+      geoRedundantBackup: 'Enabled'
+    }
+    createMode: 'Create'
+    highAvailability: {
+      mode: 'ZoneRedundant'
+    }
+    network: {
+      delegatedSubnetResourceId: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/exampleresourcegroup/providers/Microsoft.Network/virtualNetworks/examplevirtualnetwork/subnets/examplesubnet'
+      privateDnsZoneArmResourceId: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/exampleresourcegroup/providers/Microsoft.Network/privateDnsZones/exampleprivatednszone.private.postgres.database'
+    }
+    storage: {
+      autoGrow: 'Disabled'
+      storageSizeGB: 512
+      tier: 'P20'
+    }
+    version: '16'
+  }
+  sku: {
+    name: 'Standard_D4ds_v5'
+    tier: 'GeneralPurpose'
+  }
+  tags: {
+    VNetServer: '1'
+  }
+}
+```
+
+Create a read replica of an existing flexible server.
 ```bicep
 resource exampleResource 'Microsoft.DBforPostgreSQL/flexibleServers@2024-08-01' = {
   name: 'example'
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testresourcegroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/test-usermanagedidentity': {
+      '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/exampleresourcegroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/exampleprimaryidentity': {
       }
     }
   }
@@ -150,88 +209,24 @@ resource exampleResource 'Microsoft.DBforPostgreSQL/flexibleServers@2024-08-01' 
       type: 'AzureKeyVault'
       geoBackupKeyURI: ''
       geoBackupUserAssignedIdentityId: ''
-      primaryKeyURI: 'https://test-kv.vault.azure.net/keys/test-key1/77f57315bab34b0189daa113fbc78787'
-      primaryUserAssignedIdentityId: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testresourcegroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/test-usermanagedidentity'
+      primaryKeyURI: 'https://exampleprimarykeyvault.vault.azure.net/keys/examplekey/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+      primaryUserAssignedIdentityId: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/exampleresourcegroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/exampleprimaryidentity'
     }
-    pointInTimeUTC: '2021-06-27T00:04:59.4078005+00:00'
-    sourceServerResourceId: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testrg/providers/Microsoft.DBforPostgreSQL/flexibleServers/sourcepgservername'
-  }
-}
-```
-
-ServerCreateReviveDropped
-```bicep
-resource exampleResource 'Microsoft.DBforPostgreSQL/flexibleServers@2024-08-01' = {
-  name: 'example'
-  location: 'westus'
-  properties: {
-    createMode: 'ReviveDropped'
-    pointInTimeUTC: '2023-04-27T00:04:59.4078005+00:00'
-    sourceServerResourceId: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testrg/providers/Microsoft.DBforPostgreSQL/flexibleServers/pgtestsvc5'
-  }
-}
-```
-
-ServerCreateWithDataEncryptionEnabled
-```bicep
-resource exampleResource 'Microsoft.DBforPostgreSQL/flexibleServers@2024-08-01' = {
-  name: 'example'
-  identity: {
-    type: 'UserAssigned'
-    userAssignedIdentities: {
-      '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testresourcegroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/test-usermanagedidentity': {
-      }
-    }
-  }
-  location: 'westus'
-  properties: {
-    administratorLogin: 'cloudsa'
-    administratorLoginPassword: 'password'
-    availabilityZone: '1'
-    backup: {
-      backupRetentionDays: 7
-      geoRedundantBackup: 'Disabled'
-    }
-    createMode: 'Create'
-    dataEncryption: {
-      type: 'AzureKeyVault'
-      geoBackupKeyURI: ''
-      geoBackupUserAssignedIdentityId: ''
-      primaryKeyURI: 'https://test-kv.vault.azure.net/keys/test-key1/77f57315bab34b0189daa113fbc78787'
-      primaryUserAssignedIdentityId: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testresourcegroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/test-usermanagedidentity'
-    }
-    highAvailability: {
-      mode: 'ZoneRedundant'
-    }
-    network: {
-      delegatedSubnetResourceId: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testrg/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/test-vnet-subnet'
-      privateDnsZoneArmResourceId: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourcegroups/testrg/providers/Microsoft.Network/privateDnsZones/test-private-dns-zone.postgres.database.azure.com'
-    }
-    storage: {
-      autoGrow: 'Disabled'
-      storageSizeGB: 512
-    }
-    version: '12'
-  }
-  sku: {
-    name: 'Standard_D4s_v3'
-    tier: 'GeneralPurpose'
-  }
-  tags: {
-    ElasticServer: '1'
+    pointInTimeUTC: '2024-08-01T18:35:22.123456Z'
+    sourceServerResourceId: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/exampleresourcegroup/providers/Microsoft.DBforPostgreSQL/flexibleServers/examplesourceserver'
   }
 }
 ```
 
 ## microsoft.dbforpostgresql/flexibleservers/administrators
 
-Adds an Active DIrectory Administrator for the server
+Add a server administrator associated to a Microsoft Entra principal.
 ```bicep
 resource exampleResource 'Microsoft.DBforPostgreSQL/flexibleServers/administrators@2024-08-01' = {
   parent: parentResource 
   name: 'example'
   properties: {
-    principalName: 'testuser1@microsoft.com'
+    principalName: 'exampleuser@contoso.com'
     principalType: 'User'
     tenantId: 'tttttttt-tttt-tttt-tttt-tttttttttttt'
   }
@@ -253,7 +248,7 @@ resource exampleResource 'Microsoft.DBforPostgreSQL/flexibleServers/advancedThre
 
 ## microsoft.dbforpostgresql/flexibleservers/configurations
 
-Update a user configuration
+Update, using Put verb, the value assigned to a specific modifiable server parameter of a flexible server.
 ```bicep
 resource exampleResource 'Microsoft.DBforPostgreSQL/flexibleServers/configurations@2024-08-01' = {
   parent: parentResource 
@@ -267,7 +262,7 @@ resource exampleResource 'Microsoft.DBforPostgreSQL/flexibleServers/configuratio
 
 ## microsoft.dbforpostgresql/flexibleservers/databases
 
-Create a database
+Create a database.
 ```bicep
 resource exampleResource 'Microsoft.DBforPostgreSQL/flexibleServers/databases@2024-08-01' = {
   parent: parentResource 
@@ -281,7 +276,7 @@ resource exampleResource 'Microsoft.DBforPostgreSQL/flexibleServers/databases@20
 
 ## microsoft.dbforpostgresql/flexibleservers/firewallrules
 
-FirewallRuleCreate
+Create a new firewall rule or update an existing firewall rule.
 ```bicep
 resource exampleResource 'Microsoft.DBforPostgreSQL/flexibleServers/firewallRules@2024-08-01' = {
   parent: parentResource 
@@ -295,7 +290,7 @@ resource exampleResource 'Microsoft.DBforPostgreSQL/flexibleServers/firewallRule
 
 ## microsoft.dbforpostgresql/flexibleservers/migrations
 
-Create Migration with other source types for Validate and Migrate
+Create a migration for validating only.
 ```bicep
 resource exampleResource 'Microsoft.DBforPostgreSQL/flexibleServers/migrations@2024-08-01' = {
   parent: parentResource 
@@ -303,55 +298,26 @@ resource exampleResource 'Microsoft.DBforPostgreSQL/flexibleServers/migrations@2
   location: 'westus'
   properties: {
     dbsToMigrate: [
-      'db1'
-      'db2'
-      'db3'
-      'db4'
-    ]
-    migrationMode: 'Offline'
-    migrationOption: 'ValidateAndMigrate'
-    overwriteDbsInTarget: 'True'
-    secretParameters: {
-      adminCredentials: {
-        sourceServerPassword: 'xxxxxxxx'
-        targetServerPassword: 'xxxxxxxx'
-      }
-    }
-    sourceDbServerResourceId: 'testsource:5432@pguser'
-    sourceType: 'OnPremises'
-    sslMode: 'Prefer'
-  }
-}
-```
-
-Create Pre-migration Validation
-```bicep
-resource exampleResource 'Microsoft.DBforPostgreSQL/flexibleServers/migrations@2024-08-01' = {
-  parent: parentResource 
-  name: 'example'
-  location: 'westus'
-  properties: {
-    dbsToMigrate: [
-      'db1'
-      'db2'
-      'db3'
-      'db4'
+      'exampledatabase1'
+      'exampledatabase2'
+      'exampledatabase3'
+      'exampledatabase4'
     ]
     migrationMode: 'Offline'
     migrationOption: 'Validate'
     overwriteDbsInTarget: 'True'
     secretParameters: {
       adminCredentials: {
-        sourceServerPassword: 'xxxxxxxx'
-        targetServerPassword: 'xxxxxxxx'
+        sourceServerPassword: 'examplesourcepassword'
+        targetServerPassword: 'exampletargetpassword'
       }
     }
-    sourceDbServerResourceId: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testrg/providers/Microsoft.DBForPostgreSql/servers/testsource'
+    sourceDbServerResourceId: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/exampleresourcegroup/providers/Microsoft.DBForPostgreSql/servers/examplesource'
   }
 }
 ```
 
-Migrations Create by passing user names
+Create a migration specifying user names.
 ```bicep
 resource exampleResource 'Microsoft.DBforPostgreSQL/flexibleServers/migrations@2024-08-01' = {
   parent: parentResource 
@@ -359,26 +325,26 @@ resource exampleResource 'Microsoft.DBforPostgreSQL/flexibleServers/migrations@2
   location: 'westus'
   properties: {
     dbsToMigrate: [
-      'db1'
-      'db2'
-      'db3'
-      'db4'
+      'exampledatabase1'
+      'exampledatabase2'
+      'exampledatabase3'
+      'exampledatabase4'
     ]
     migrationMode: 'Offline'
     secretParameters: {
       adminCredentials: {
-        sourceServerPassword: 'xxxxxxxx'
-        targetServerPassword: 'xxxxxxxx'
+        sourceServerPassword: 'examplesourcepassword'
+        targetServerPassword: 'exampletargetpassword'
       }
-      sourceServerUsername: 'newadmin@testsource'
+      sourceServerUsername: 'newadmin@examplesource'
       targetServerUsername: 'targetadmin'
     }
-    sourceDbServerResourceId: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testrg/providers/Microsoft.DBForPostgreSql/servers/testsource'
+    sourceDbServerResourceId: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/exampleresourcegroup/providers/Microsoft.DBForPostgreSql/servers/examplesource'
   }
 }
 ```
 
-Migrations Create with private endpoint
+Create a migration with other source type for validating and migrating.
 ```bicep
 resource exampleResource 'Microsoft.DBforPostgreSQL/flexibleServers/migrations@2024-08-01' = {
   parent: parentResource 
@@ -386,26 +352,55 @@ resource exampleResource 'Microsoft.DBforPostgreSQL/flexibleServers/migrations@2
   location: 'westus'
   properties: {
     dbsToMigrate: [
-      'db1'
-      'db2'
-      'db3'
-      'db4'
+      'exampledatabase1'
+      'exampledatabase2'
+      'exampledatabase3'
+      'exampledatabase4'
     ]
-    migrationInstanceResourceId: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testrg/providers/Microsoft.DBForPostgreSql/flexibleServers/testsourcemigration'
+    migrationMode: 'Offline'
+    migrationOption: 'ValidateAndMigrate'
+    overwriteDbsInTarget: 'True'
+    secretParameters: {
+      adminCredentials: {
+        sourceServerPassword: 'examplesourcepassword'
+        targetServerPassword: 'exampletargetpassword'
+      }
+    }
+    sourceDbServerResourceId: 'examplesource:5432@exampleuser'
+    sourceType: 'OnPremises'
+    sslMode: 'Prefer'
+  }
+}
+```
+
+Create a migration with private endpoint.
+```bicep
+resource exampleResource 'Microsoft.DBforPostgreSQL/flexibleServers/migrations@2024-08-01' = {
+  parent: parentResource 
+  name: 'example'
+  location: 'westus'
+  properties: {
+    dbsToMigrate: [
+      'exampledatabase1'
+      'exampledatabase2'
+      'exampledatabase3'
+      'exampledatabase4'
+    ]
+    migrationInstanceResourceId: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/exampleresourcegroup/providers/Microsoft.DBForPostgreSql/flexibleServers/examplesourcemigration'
     migrationMode: 'Offline'
     overwriteDbsInTarget: 'True'
     secretParameters: {
       adminCredentials: {
-        sourceServerPassword: 'xxxxxxxx'
-        targetServerPassword: 'xxxxxxxx'
+        sourceServerPassword: 'examplesourcepassword'
+        targetServerPassword: 'exampletargetpassword'
       }
     }
-    sourceDbServerResourceId: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testrg/providers/Microsoft.DBForPostgreSql/servers/testsource'
+    sourceDbServerResourceId: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/exampleresourcegroup/providers/Microsoft.DBForPostgreSql/servers/examplesource'
   }
 }
 ```
 
-Migrations Create with roles
+Create a migration with roles.
 ```bicep
 resource exampleResource 'Microsoft.DBforPostgreSQL/flexibleServers/migrations@2024-08-01' = {
   parent: parentResource 
@@ -413,26 +408,26 @@ resource exampleResource 'Microsoft.DBforPostgreSQL/flexibleServers/migrations@2
   location: 'westus'
   properties: {
     dbsToMigrate: [
-      'db1'
-      'db2'
-      'db3'
-      'db4'
+      'exampledatabase1'
+      'exampledatabase2'
+      'exampledatabase3'
+      'exampledatabase4'
     ]
     migrateRoles: 'True'
     migrationMode: 'Offline'
     overwriteDbsInTarget: 'True'
     secretParameters: {
       adminCredentials: {
-        sourceServerPassword: 'xxxxxxxx'
-        targetServerPassword: 'xxxxxxxx'
+        sourceServerPassword: 'examplesourcepassword'
+        targetServerPassword: 'exampletargetpassword'
       }
     }
-    sourceDbServerResourceId: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testrg/providers/Microsoft.DBForPostgreSql/servers/testsource'
+    sourceDbServerResourceId: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/exampleresourcegroup/providers/Microsoft.DBForPostgreSql/servers/examplesource'
   }
 }
 ```
 
-Migrations_Create
+Create a migration.
 ```bicep
 resource exampleResource 'Microsoft.DBforPostgreSQL/flexibleServers/migrations@2024-08-01' = {
   parent: parentResource 
@@ -440,35 +435,34 @@ resource exampleResource 'Microsoft.DBforPostgreSQL/flexibleServers/migrations@2
   location: 'westus'
   properties: {
     dbsToMigrate: [
-      'db1'
-      'db2'
-      'db3'
-      'db4'
+      'exampledatabase1'
+      'exampledatabase2'
+      'exampledatabase3'
+      'exampledatabase4'
     ]
-    migrationInstanceResourceId: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testrg/providers/Microsoft.DBForPostgreSql/flexibleServers/testsourcemigration'
     migrationMode: 'Offline'
     overwriteDbsInTarget: 'True'
     secretParameters: {
       adminCredentials: {
-        sourceServerPassword: 'xxxxxxxx'
-        targetServerPassword: 'xxxxxxxx'
+        sourceServerPassword: 'examplesourcepassword'
+        targetServerPassword: 'exampletargetpassword'
       }
     }
-    sourceDbServerResourceId: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testrg/providers/Microsoft.DBForPostgreSql/servers/testsource'
+    sourceDbServerResourceId: '/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/exampleresourcegroup/providers/Microsoft.DBForPostgreSql/servers/examplesource'
   }
 }
 ```
 
 ## microsoft.dbforpostgresql/flexibleservers/privateendpointconnections
 
-Approve or reject a private endpoint connection with a given name.
+Approve or reject a private endpoint connection.
 ```bicep
 resource exampleResource 'Microsoft.DBforPostgreSQL/flexibleServers/privateEndpointConnections@2024-08-01' = {
   parent: parentResource 
   name: 'example'
   properties: {
     privateLinkServiceConnectionState: {
-      description: 'Approved by johndoe@contoso.com'
+      description: 'Approved by exampleuser@contoso.com'
       status: 'Approved'
     }
   }
@@ -477,7 +471,7 @@ resource exampleResource 'Microsoft.DBforPostgreSQL/flexibleServers/privateEndpo
 
 ## microsoft.dbforpostgresql/flexibleservers/virtualendpoints
 
-Create a new virtual endpoint for a flexible server
+Create a pair of virtual endpoints for a flexible server.
 ```bicep
 resource exampleResource 'Microsoft.DBforPostgreSQL/flexibleServers/virtualendpoints@2024-08-01' = {
   parent: parentResource 
@@ -485,7 +479,7 @@ resource exampleResource 'Microsoft.DBforPostgreSQL/flexibleServers/virtualendpo
   properties: {
     endpointType: 'ReadWrite'
     members: [
-      'testPrimary1'
+      'exampleprimaryserver'
     ]
   }
 }

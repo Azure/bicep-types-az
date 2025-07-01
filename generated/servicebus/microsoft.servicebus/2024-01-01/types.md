@@ -323,7 +323,7 @@
 * **serviceBusEndpoint**: string (ReadOnly): Endpoint you can use to perform Service Bus operations.
 * **status**: string (ReadOnly): Status of the namespace.
 * **updatedAt**: string (ReadOnly): The time the namespace was updated.
-* **zoneRedundant**: bool: Enabling this property creates a Premium Service Bus Namespace in regions supported availability zones.
+* **zoneRedundant**: bool: This property reflects if zone redundancy has been enabled for namespaces in regions that support availability zones.
 
 ## SBQueueProperties
 ### Properties

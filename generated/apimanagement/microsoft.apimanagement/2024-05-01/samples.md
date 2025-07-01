@@ -1742,7 +1742,7 @@ resource exampleResource 'Microsoft.ApiManagement/service/openidConnectProviders
     clientId: 'oidprovidertemplate3'
     clientSecret: 'x'
     displayName: 'templateoidprovider3'
-    metadataEndpoint: 'https://oidprovider-template3.net'
+    metadataEndpoint: 'https://example.com'
     useInApiDocumentation: true
     useInTestConsole: false
   }

@@ -6,10 +6,11 @@
 * **apiVersion**: '2024-03-02' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): The extended location where the disk access will be created. Extended location cannot be changed.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (Required): Resource location
+* **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DiskAccessProperties](#diskaccessproperties)
-* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Compute/diskAccesses' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute/diskAccesses/privateEndpointConnections@2024-03-02
@@ -19,6 +20,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Compute/diskAccesses/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute/diskEncryptionSets@2024-03-02
@@ -27,10 +29,11 @@
 * **apiVersion**: '2024-03-02' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [EncryptionSetIdentity](#encryptionsetidentity): The managed identity for the disk encryption set. It should be given permission on the key vault before it can be used to encrypt disks.
-* **location**: string (Required): Resource location
+* **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [EncryptionSetProperties](#encryptionsetproperties)
-* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Compute/diskEncryptionSets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute/disks@2024-03-02
@@ -39,15 +42,26 @@
 * **apiVersion**: '2024-03-02' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): The extended location where the disk will be created. Extended location cannot be changed.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (Required): Resource location
+* **location**: string (Required): The geo-location where the resource lives
 * **managedBy**: string (ReadOnly): A relative URI containing the ID of the VM that has the disk attached.
 * **managedByExtended**: string[] (ReadOnly): List of relative URIs containing the IDs of the VMs that have the disk attached. maxShares should be set to a value greater than one for disks to allow attaching them to multiple VMs.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [DiskProperties](#diskproperties): Disk resource properties.
 * **sku**: [DiskSku](#disksku): The disks sku name. Can be Standard_LRS, Premium_LRS, StandardSSD_LRS, UltraSSD_LRS, Premium_ZRS, StandardSSD_ZRS, or PremiumV2_LRS.
-* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Compute/disks' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: The Logical zone list for Disk.
+
+## Resource Microsoft.Compute/restorePointCollections/restorePoints/diskRestorePoints@2024-03-02 (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2024-03-02' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [DiskRestorePointProperties](#diskrestorepointproperties) (ReadOnly): Properties of an incremental disk restore point
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.Compute/restorePointCollections/restorePoints/diskRestorePoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute/snapshots@2024-03-02
 * **Valid Scope(s)**: ResourceGroup
@@ -55,12 +69,13 @@
 * **apiVersion**: '2024-03-02' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): The extended location where the snapshot will be created. Extended location cannot be changed.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (Required): Resource location
+* **location**: string (Required): The geo-location where the resource lives
 * **managedBy**: string (ReadOnly): Unused. Always Null.
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [SnapshotProperties](#snapshotproperties): Snapshot resource properties.
 * **sku**: [SnapshotSku](#snapshotsku): The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS. This is an optional parameter for incremental snapshot and the default behavior is the SKU will be set to the same sku as the previous snapshot
-* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Compute/snapshots' (ReadOnly, DeployTimeConstant): The resource type
 
 ## ApiError
@@ -130,7 +145,7 @@
 * **propertyUpdatesInProgress**: [PropertyUpdatesInProgress](#propertyupdatesinprogress) (ReadOnly): Properties of the disk for which update is pending.
 * **provisioningState**: string (ReadOnly): The disk provisioning state.
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Policy for controlling export on the disk.
-* **purchasePlan**: [PurchasePlan](#purchaseplan): Purchase plan information for the the image from which the OS disk was created. E.g. - {name: 2019-Datacenter, publisher: MicrosoftWindowsServer, product: WindowsServer}
+* **purchasePlan**: [DiskPurchasePlan](#diskpurchaseplan): Purchase plan information for the the image from which the OS disk was created. E.g. - {name: 2019-Datacenter, publisher: MicrosoftWindowsServer, product: WindowsServer}
 * **securityProfile**: [DiskSecurityProfile](#disksecurityprofile): Contains the security related information for the resource.
 * **shareInfo**: [ShareInfoElement](#shareinfoelement)[] (ReadOnly): Details of the list of all VMs that have the disk attached. maxShares should be set to a value greater than one for disks to allow attaching them to multiple VMs.
 * **supportedCapabilities**: [SupportedCapabilities](#supportedcapabilities): List of supported capabilities for the image from which the OS disk was created.
@@ -138,6 +153,34 @@
 * **tier**: string: Performance tier of the disk (e.g, P4, S10) as described here: https://azure.microsoft.com/en-us/pricing/details/managed-disks/. Does not apply to Ultra disks.
 * **timeCreated**: string (ReadOnly): The time when the disk was created.
 * **uniqueId**: string (ReadOnly): Unique Guid identifying the resource.
+
+## DiskPurchasePlan
+### Properties
+* **name**: string (Required): The plan ID.
+* **product**: string (Required): Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.
+* **promotionCode**: string: The Offer Promotion Code.
+* **publisher**: string (Required): The publisher ID.
+
+## DiskRestorePointProperties
+### Properties
+* **completionPercent**: int: Percentage complete for the background copy of disk restore point when source resource is from a different region.
+* **diskAccessId**: string: ARM id of the DiskAccess resource for using private endpoints on disks.
+* **encryption**: [Encryption](#encryption) (ReadOnly): Encryption property can be used to encrypt data at rest with customer managed keys or platform managed keys.
+* **familyId**: string (ReadOnly): id of the backing snapshot's MIS family
+* **hyperVGeneration**: 'V1' | 'V2' | string: The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
+* **logicalSectorSize**: int (ReadOnly): Logical sector size in bytes for disk restore points of UltraSSD_LRS and PremiumV2_LRS disks. Supported values are 512 and 4096. 4096 is the default.
+* **networkAccessPolicy**: 'AllowAll' | 'AllowPrivate' | 'DenyAll' | string: Policy for accessing the disk via network.
+* **osType**: 'Linux' | 'Windows' (ReadOnly): The Operating System type.
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Policy for controlling export on the disk.
+* **purchasePlan**: [DiskPurchasePlan](#diskpurchaseplan): Purchase plan information for the the image from which the OS disk was created.
+* **replicationState**: string (ReadOnly): Replication state of disk restore point when source resource is from a different region.
+* **securityProfile**: [DiskSecurityProfile](#disksecurityprofile): Contains the security related information for the resource.
+* **sourceResourceId**: string (ReadOnly): arm id of source disk or source disk restore point.
+* **sourceResourceLocation**: string (ReadOnly): Location of source disk or source disk restore point when source resource is from a different region.
+* **sourceUniqueId**: string (ReadOnly): unique incarnation id of the source disk
+* **supportedCapabilities**: [SupportedCapabilities](#supportedcapabilities): List of supported capabilities for the image from which the OS disk was created.
+* **supportsHibernation**: bool: Indicates the OS on a disk supports hibernation.
+* **timeCreated**: string (ReadOnly): The timestamp of restorePoint creation
 
 ## DiskSecurityProfile
 ### Properties
@@ -159,7 +202,12 @@
 * **principalId**: string (ReadOnly): The object id of the Managed Identity Resource. This will be sent to the RP from ARM via the x-ms-identity-principal-id header in the PUT request if the resource has a systemAssigned(implicit) identity
 * **tenantId**: string (ReadOnly): The tenant id of the Managed Identity Resource. This will be sent to the RP from ARM via the x-ms-client-tenant-id header in the PUT request if the resource has a systemAssigned(implicit) identity
 * **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned' | string: The type of Managed Identity used by the DiskEncryptionSet. Only SystemAssigned is supported for new creations. Disk Encryption Sets can be updated with Identity type None during migration of subscription to a new Azure Active Directory tenant; it will cause the encrypted resources to lose access to the keys.
-* **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): The list of user identities associated with the disk encryption set. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+* **userAssignedIdentities**: [EncryptionSetIdentityUserAssignedIdentities](#encryptionsetidentityuserassignedidentities): The list of user identities associated with the disk encryption set. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+
+## EncryptionSetIdentityUserAssignedIdentities
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [UserAssignedIdentitiesValue](#userassignedidentitiesvalue)
 
 ## EncryptionSetProperties
 ### Properties
@@ -221,10 +269,11 @@
 
 ## PrivateEndpointConnection
 ### Properties
-* **id**: string (ReadOnly): private endpoint connection Id
-* **name**: string (ReadOnly): private endpoint connection name
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string (ReadOnly): The name of the resource
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
-* **type**: string (ReadOnly): private endpoint connection type
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## PrivateEndpointConnectionProperties
 ### Properties
@@ -241,33 +290,6 @@
 ## PropertyUpdatesInProgress
 ### Properties
 * **targetTier**: string: The target performance tier of the disk if a tier change operation is in progress.
-
-## PurchasePlan
-### Properties
-* **name**: string (Required): The plan ID.
-* **product**: string (Required): Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.
-* **promotionCode**: string: The Offer Promotion Code.
-* **publisher**: string (Required): The publisher ID.
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## ShareInfoElement
 ### Properties
@@ -292,7 +314,7 @@
 * **osType**: 'Linux' | 'Windows': The Operating System type.
 * **provisioningState**: string (ReadOnly): The disk provisioning state.
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Policy for controlling export on the disk.
-* **purchasePlan**: [PurchasePlan](#purchaseplan): Purchase plan information for the image from which the source disk for the snapshot was originally created.
+* **purchasePlan**: [DiskPurchasePlan](#diskpurchaseplan): Purchase plan information for the image from which the source disk for the snapshot was originally created.
 * **securityProfile**: [DiskSecurityProfile](#disksecurityprofile): Contains the security related information for the resource.
 * **supportedCapabilities**: [SupportedCapabilities](#supportedcapabilities): List of supported capabilities for the image from which the source disk from the snapshot was originally created.
 * **supportsHibernation**: bool: Indicates the OS on a snapshot supports hibernation.
@@ -314,10 +336,34 @@
 * **architecture**: 'Arm64' | 'x64' | string: CPU architecture supported by an OS disk.
 * **diskControllerTypes**: string: The disk controllers that an OS disk supports. If set it can be SCSI or SCSI, NVME or NVME, SCSI.
 
-## UserAssignedIdentities
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## TrackedResourceTags
 ### Properties
 ### Additional Properties
-* **Additional Properties Type**: [UserAssignedIdentitiesValue](#userassignedidentitiesvalue)
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## UserAssignedIdentitiesValue
 ### Properties
