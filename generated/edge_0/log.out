@@ -1,8 +1,41 @@
-Generating types for 'specification/edge/resource-manager/Microsoft.Edge/edge/readme.md'
-AutoRest code generation utility [cli version: 3.7.1; node: v16.20.2]
+Generating types for 'specification/edge/resource-manager/Microsoft.Edge/configurationmanager/readme.md'
+AutoRest code generation utility [cli version: 3.7.2; node: v22.16.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Modeler/MissingType | The schema 'components·1twwurt·schemas·targetproperties·properties·targetspecification·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/edge/resource-manager/Microsoft.Edge/configurationmanager/stable/2025-06-01/configurationmanager.json#/components/schemas/components·1twwurt·schemas·targetproperties·properties·targetspecification·additionalproperties
+warning | Modeler/MissingType | The schema 'components·n14wjj·schemas·stagespec·properties·specification·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/edge/resource-manager/Microsoft.Edge/configurationmanager/stable/2025-06-01/configurationmanager.json#/components/schemas/components·n14wjj·schemas·stagespec·properties·specification·additionalproperties
+warning | Modeler/MissingType | The schema 'components·1286d5s·schemas·taskspec·properties·specification·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/edge/resource-manager/Microsoft.Edge/configurationmanager/stable/2025-06-01/configurationmanager.json#/components/schemas/components·1286d5s·schemas·taskspec·properties·specification·additionalproperties
+warning | Modeler/MissingType | The schema 'components·k63tab·schemas·workflowversionproperties·properties·specification·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/edge/resource-manager/Microsoft.Edge/configurationmanager/stable/2025-06-01/configurationmanager.json#/components/schemas/components·k63tab·schemas·workflowversionproperties·properties·specification·additionalproperties
+warning | Modeler/MissingType | The schema 'components·dgtp5o·schemas·workflowversionpropertiesupdate·properties·specification·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/edge/resource-manager/Microsoft.Edge/configurationmanager/stable/2025-06-01/configurationmanager.json#/components/schemas/components·dgtp5o·schemas·workflowversionpropertiesupdate·properties·specification·additionalproperties
+warning | Modeler/MissingType | The schema 'components·krl57q·schemas·executionproperties·properties·specification·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/edge/resource-manager/Microsoft.Edge/configurationmanager/stable/2025-06-01/configurationmanager.json#/components/schemas/components·krl57q·schemas·executionproperties·properties·specification·additionalproperties
+warning | Modeler/MissingType | The schema 'components·d68kei·schemas·stagestatus·properties·inputs·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/edge/resource-manager/Microsoft.Edge/configurationmanager/stable/2025-06-01/configurationmanager.json#/components/schemas/components·d68kei·schemas·stagestatus·properties·inputs·additionalproperties
+warning | Modeler/MissingType | The schema 'components·we03j·schemas·stagestatus·properties·outputs·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/edge/resource-manager/Microsoft.Edge/configurationmanager/stable/2025-06-01/configurationmanager.json#/components/schemas/components·we03j·schemas·stagestatus·properties·outputs·additionalproperties
+warning | Modeler/MissingType | The schema 'components·6mez73·schemas·executionpropertiesupdate·properties·specification·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/edge/resource-manager/Microsoft.Edge/configurationmanager/stable/2025-06-01/configurationmanager.json#/components/schemas/components·6mez73·schemas·executionpropertiesupdate·properties·specification·additionalproperties
+warning | Modeler/MissingType | The schema 'components·1exa2hf·schemas·solutiontemplateversionproperties·properties·specification·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/edge/resource-manager/Microsoft.Edge/configurationmanager/stable/2025-06-01/configurationmanager.json#/components/schemas/components·1exa2hf·schemas·solutiontemplateversionproperties·properties·specification·additionalproperties
+warning | Modeler/MissingType | The schema 'components·6x07kb·schemas·targetpropertiesupdate·properties·targetspecification·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/edge/resource-manager/Microsoft.Edge/configurationmanager/stable/2025-06-01/configurationmanager.json#/components/schemas/components·6x07kb·schemas·targetpropertiesupdate·properties·targetspecification·additionalproperties
+warning | Modeler/MissingType | The schema 'components·v1sonx·schemas·solutionversionproperties·properties·specification·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/edge/resource-manager/Microsoft.Edge/configurationmanager/stable/2025-06-01/configurationmanager.json#/components/schemas/components·v1sonx·schemas·solutionversionproperties·properties·specification·additionalproperties
+warning | Modeler/MissingType | The schema 'components·sd1amd·schemas·solutionversionsnapshot·properties·specification·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/edge/resource-manager/Microsoft.Edge/configurationmanager/stable/2025-06-01/configurationmanager.json#/components/schemas/components·sd1amd·schemas·solutionversionsnapshot·properties·specification·additionalproperties
+warning | Modeler/MissingType | The schema 'components·1kddiuh·schemas·targetsnapshot·properties·targetspecification·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/edge/resource-manager/Microsoft.Edge/configurationmanager/stable/2025-06-01/configurationmanager.json#/components/schemas/components·1kddiuh·schemas·targetsnapshot·properties·targetspecification·additionalproperties
+warning | Modeler/MissingType | The schema 'components·lily74·schemas·solutionversionpropertiesupdate·properties·specification·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/edge/resource-manager/Microsoft.Edge/configurationmanager/stable/2025-06-01/configurationmanager.json#/components/schemas/components·lily74·schemas·solutionversionpropertiesupdate·properties·specification·additionalproperties
+warning | Unrecognized property type: any-object. Returning 'any'.

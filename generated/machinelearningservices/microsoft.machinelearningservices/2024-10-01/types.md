@@ -2979,6 +2979,7 @@ Full resource id: /subscriptions/{subId}/resourceGroups/{rgName}/providers/Micro
 * **publicNetworkAccess**: string: Is the Registry accessible from the internet?
 Possible values: "Enabled" or "Disabled"
 * **regionDetails**: [RegistryRegionArmDetails](#registryregionarmdetails)[]: Details of each region the registry is in
+* **registryId**: string: RegistryId Guid for this registry
 * **registryPrivateEndpointConnections**: [RegistryPrivateEndpointConnection](#registryprivateendpointconnection)[]: Private endpoint connections info used for pending connections in private link portal
 
 ## RegistryRegionArmDetails

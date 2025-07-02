@@ -28,7 +28,7 @@ resource exampleResource 'Microsoft.DependencyMap/maps/discoverySources@2025-01-
   location: 'y'
   properties: {
     sourceId: 'wzlrkzumplzjmixbqv'
-    sourceType: 'DiscoverySourceResourceProperties'
+    sourceType: 'OffAzure'
   }
   tags: {
   }

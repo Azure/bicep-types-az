@@ -6,10 +6,11 @@
 * **apiVersion**: '2024-03-03' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **identity**: [GalleryIdentity](#galleryidentity): The identity of the gallery, if configured.
-* **location**: string (Required): Resource location
+* **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [GalleryProperties](#galleryproperties): Describes the properties of a Shared Image Gallery.
-* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Compute/galleries' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute/galleries/applications@2024-03-03
@@ -17,10 +18,11 @@
 ### Properties
 * **apiVersion**: '2024-03-03' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (Required): Resource location
+* **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [GalleryApplicationProperties](#galleryapplicationproperties): Describes the properties of a gallery Application Definition.
-* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Compute/galleries/applications' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute/galleries/applications/versions@2024-03-03
@@ -28,10 +30,11 @@
 ### Properties
 * **apiVersion**: '2024-03-03' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (Required): Resource location
+* **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [GalleryApplicationVersionProperties](#galleryapplicationversionproperties): Describes the properties of a gallery image version.
-* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Compute/galleries/applications/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute/galleries/images@2024-03-03
@@ -39,10 +42,11 @@
 ### Properties
 * **apiVersion**: '2024-03-03' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (Required): Resource location
+* **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [GalleryImageProperties](#galleryimageproperties): Describes the properties of a gallery image definition.
-* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Compute/galleries/images' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute/galleries/images/versions@2024-03-03
@@ -50,10 +54,11 @@
 ### Properties
 * **apiVersion**: '2024-03-03' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (Required): Resource location
+* **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [GalleryImageVersionProperties](#galleryimageversionproperties): Describes the properties of a gallery image version.
-* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Compute/galleries/images/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute/galleries/inVMAccessControlProfiles@2024-03-03
@@ -61,10 +66,11 @@
 ### Properties
 * **apiVersion**: '2024-03-03' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (Required): Resource location
-* **name**: string {maxLength: 80, pattern: "^[a-zA-Z0-9]+([-._]?[a-zA-Z0-9]+)*$"} (Required, DeployTimeConstant): The resource name
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [GalleryInVMAccessControlProfileProperties](#galleryinvmaccesscontrolprofileproperties): Describes the properties of a gallery inVMAccessControlProfile.
-* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Compute/galleries/inVMAccessControlProfiles' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute/galleries/inVMAccessControlProfiles/versions@2024-03-03
@@ -72,10 +78,11 @@
 ### Properties
 * **apiVersion**: '2024-03-03' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (Required): Resource location
-* **name**: string {pattern: "^[0-9]+\.[0-9]+\.[0-9]+$"} (Required, DeployTimeConstant): The resource name
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [GalleryInVMAccessControlProfileVersionProperties](#galleryinvmaccesscontrolprofileversionproperties): Describes the properties of an inVMAccessControlProfile version.
-* **tags**: [ResourceTags](#resourcetags): Resource tags
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Compute/galleries/inVMAccessControlProfiles/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AccessControlRules
@@ -240,7 +247,12 @@
 * **principalId**: string (ReadOnly): The principal id of the gallery identity. This property will only be provided for a system assigned identity.
 * **tenantId**: string (ReadOnly): The AAD tenant id of the gallery identity. This property will only be provided for a system assigned identity.
 * **type**: 'None' | 'SystemAssigned' | 'SystemAssigned, UserAssigned' | 'UserAssigned': The type of identity used for the gallery. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove all identities from the gallery.
-* **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): The list of user identities associated with the gallery. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+* **userAssignedIdentities**: [GalleryIdentityUserAssignedIdentities](#galleryidentityuserassignedidentities): The list of user identities associated with the gallery. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+
+## GalleryIdentityUserAssignedIdentities
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [UserAssignedIdentitiesValue](#userassignedidentitiesvalue)
 
 ## GalleryImageFeature
 ### Properties
@@ -412,41 +424,6 @@
 * **max**: int: The maximum number of the resource.
 * **min**: int: The minimum number of the resource.
 
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## SharingProfile
 ### Properties
 * **communityGalleryInfo**: [CommunityGalleryInfo](#communitygalleryinfo): Information of community gallery if current gallery is shared to community.
@@ -467,6 +444,15 @@
 ### Properties
 * **isSoftDeleteEnabled**: bool: Enables soft-deletion for resources in this gallery, allowing them to be recovered within retention time.
 
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
 ## TargetRegion
 ### Properties
 * **additionalReplicaSets**: [AdditionalReplicaSet](#additionalreplicaset)[]: List of storage sku with replica count to create direct drive replicas.
@@ -475,6 +461,41 @@
 * **name**: string (Required): The name of the region.
 * **regionalReplicaCount**: int: The number of replicas of the Image Version to be created per region. This property is updatable.
 * **storageAccountType**: 'PremiumV2_LRS' | 'Premium_LRS' | 'Standard_LRS' | 'Standard_ZRS' | string: Specifies the storage account type to be used to store the image. This property is not updatable.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## UefiKey
 ### Properties
@@ -504,11 +525,6 @@
 ### Properties
 * **defaultConfigurationLink**: string: Optional. The defaultConfigurationLink of the artifact, must be a readable storage page blob.
 * **mediaLink**: string (Required): Required. The mediaLink of the artifact, must be a readable storage page blob.
-
-## UserAssignedIdentities
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [UserAssignedIdentitiesValue](#userassignedidentitiesvalue)
 
 ## UserAssignedIdentitiesValue
 ### Properties

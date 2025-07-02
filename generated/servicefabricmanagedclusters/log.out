@@ -2,7 +2,7 @@ Generating types for 'specification/servicefabricmanagedclusters/resource-manage
 WARNING: Unable to parse swagger path "Microsoft.ServiceFabric/preview/2021-09-01-privatepreview/managedapplication.json"
 WARNING: Unable to parse swagger path "Microsoft.ServiceFabric/preview/2021-09-01-privatepreview/managedcluster.json"
 WARNING: Unable to parse swagger path "Microsoft.ServiceFabric/preview/2021-09-01-privatepreview/nodetype.json"
-AutoRest code generation utility [cli version: 3.7.1; node: v16.20.2]
+AutoRest code generation utility [cli version: 3.7.2; node: v22.16.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -31,8 +31,10 @@ warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Modeler/MissingType | The schema 'VMSSExtensionProperties-settings' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/preview/2025-03-01-preview/servicefabricmanagedclusters.json#/components/schemas/VMSSExtensionProperties-settings
+warning | Modeler/MissingType | The schema 'VMSSExtensionProperties-protectedSettings' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/preview/2025-03-01-preview/servicefabricmanagedclusters.json#/components/schemas/VMSSExtensionProperties-protectedSettings
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
@@ -47,8 +49,10 @@ warning | DeprecatedConfig | Using directive.10.suppress which is deprecated and
 warning | DeprecatedConfig | Using directive.11.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Modeler/MissingType | The schema 'VMSSExtensionProperties-settings' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/preview/2024-11-01-preview/servicefabricmanagedclusters.json#/components/schemas/VMSSExtensionProperties-settings
+warning | Modeler/MissingType | The schema 'VMSSExtensionProperties-protectedSettings' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/preview/2024-11-01-preview/servicefabricmanagedclusters.json#/components/schemas/VMSSExtensionProperties-protectedSettings
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.

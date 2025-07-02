@@ -56,19 +56,26 @@
         "flags": 0,
         "description": "The identity of the gallery, if configured."
       },
-      "location": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "Resource location"
-      },
       "tags": {
         "type": {
           "$ref": "#/49"
         },
         "flags": 0,
-        "description": "Resource tags"
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       }
     }
   },
@@ -577,7 +584,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "UserAssignedIdentities",
+    "name": "GalleryIdentityUserAssignedIdentities",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/47"
@@ -585,11 +592,131 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "TrackedResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/0"
     }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SystemData",
+    "properties": {
+      "createdBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that created the resource."
+      },
+      "createdByType": {
+        "type": {
+          "$ref": "#/55"
+        },
+        "flags": 0,
+        "description": "The type of identity that created the resource."
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource creation (UTC)."
+      },
+      "lastModifiedBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that last modified the resource."
+      },
+      "lastModifiedByType": {
+        "type": {
+          "$ref": "#/60"
+        },
+        "flags": 0,
+        "description": "The type of identity that last modified the resource."
+      },
+      "lastModifiedAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource last modification (UTC)"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/51"
+      },
+      {
+        "$ref": "#/52"
+      },
+      {
+        "$ref": "#/53"
+      },
+      {
+        "$ref": "#/54"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/56"
+      },
+      {
+        "$ref": "#/57"
+      },
+      {
+        "$ref": "#/58"
+      },
+      {
+        "$ref": "#/59"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
   },
   {
     "$type": "ResourceType",
@@ -597,1912 +724,6 @@
     "scopeType": 8,
     "body": {
       "$ref": "#/3"
-    },
-    "flags": 0
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Microsoft.Compute/galleries/images"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "2024-03-03"
-  },
-  {
-    "$type": "ObjectType",
-    "name": "Microsoft.Compute/galleries/images",
-    "properties": {
-      "id": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 10,
-        "description": "The resource id"
-      },
-      "name": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 9,
-        "description": "The resource name"
-      },
-      "type": {
-        "type": {
-          "$ref": "#/51"
-        },
-        "flags": 10,
-        "description": "The resource type"
-      },
-      "apiVersion": {
-        "type": {
-          "$ref": "#/52"
-        },
-        "flags": 10,
-        "description": "The resource api version"
-      },
-      "properties": {
-        "type": {
-          "$ref": "#/54"
-        },
-        "flags": 0,
-        "description": "Describes the properties of a gallery image definition."
-      },
-      "location": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "Resource location"
-      },
-      "tags": {
-        "type": {
-          "$ref": "#/83"
-        },
-        "flags": 0,
-        "description": "Resource tags"
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "GalleryImageProperties",
-    "properties": {
-      "description": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The description of this gallery image definition resource. This property is updatable."
-      },
-      "eula": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The Eula agreement for the gallery image definition."
-      },
-      "privacyStatementUri": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The privacy statement uri."
-      },
-      "releaseNoteUri": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The release note uri."
-      },
-      "osType": {
-        "type": {
-          "$ref": "#/57"
-        },
-        "flags": 1,
-        "description": "This property allows you to specify the type of the OS that is included in the disk when creating a VM from a managed image. Possible values are: **Windows,** **Linux.**"
-      },
-      "osState": {
-        "type": {
-          "$ref": "#/60"
-        },
-        "flags": 1,
-        "description": "This property allows the user to specify whether the virtual machines created under this image are 'Generalized' or 'Specialized'."
-      },
-      "hyperVGeneration": {
-        "type": {
-          "$ref": "#/63"
-        },
-        "flags": 0,
-        "description": "The hypervisor generation of the Virtual Machine. Applicable to OS disks only."
-      },
-      "endOfLifeDate": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The end of life date of the gallery image definition. This property can be used for decommissioning purposes. This property is updatable."
-      },
-      "identifier": {
-        "type": {
-          "$ref": "#/64"
-        },
-        "flags": 1,
-        "description": "This is the gallery image definition identifier."
-      },
-      "recommended": {
-        "type": {
-          "$ref": "#/65"
-        },
-        "flags": 0,
-        "description": "The properties describe the recommended machine configuration for this Image Definition. These properties are updatable."
-      },
-      "disallowed": {
-        "type": {
-          "$ref": "#/68"
-        },
-        "flags": 0,
-        "description": "Describes the disallowed disk types."
-      },
-      "purchasePlan": {
-        "type": {
-          "$ref": "#/70"
-        },
-        "flags": 0,
-        "description": "Describes the gallery image definition purchase plan. This is used by marketplace images."
-      },
-      "provisioningState": {
-        "type": {
-          "$ref": "#/77"
-        },
-        "flags": 2,
-        "description": "The provisioning state, which only appears in the response."
-      },
-      "features": {
-        "type": {
-          "$ref": "#/79"
-        },
-        "flags": 0,
-        "description": "A list of gallery image features."
-      },
-      "architecture": {
-        "type": {
-          "$ref": "#/82"
-        },
-        "flags": 0,
-        "description": "The architecture of the image. Applicable to OS disks only."
-      },
-      "allowUpdateImage": {
-        "type": {
-          "$ref": "#/25"
-        },
-        "flags": 0,
-        "description": "Optional. Must be set to true if the gallery image features are being updated."
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Windows"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Linux"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/55"
-      },
-      {
-        "$ref": "#/56"
-      }
-    ]
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Generalized"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Specialized"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/58"
-      },
-      {
-        "$ref": "#/59"
-      }
-    ]
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "V1"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "V2"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/61"
-      },
-      {
-        "$ref": "#/62"
-      },
-      {
-        "$ref": "#/0"
-      }
-    ]
-  },
-  {
-    "$type": "ObjectType",
-    "name": "GalleryImageIdentifier",
-    "properties": {
-      "publisher": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "The name of the gallery image definition publisher."
-      },
-      "offer": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "The name of the gallery image definition offer."
-      },
-      "sku": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "The name of the gallery image definition SKU."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "RecommendedMachineConfiguration",
-    "properties": {
-      "vCPUs": {
-        "type": {
-          "$ref": "#/66"
-        },
-        "flags": 0,
-        "description": "Describes the resource range."
-      },
-      "memory": {
-        "type": {
-          "$ref": "#/66"
-        },
-        "flags": 0,
-        "description": "Describes the resource range."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "ResourceRange",
-    "properties": {
-      "min": {
-        "type": {
-          "$ref": "#/67"
-        },
-        "flags": 0,
-        "description": "The minimum number of the resource."
-      },
-      "max": {
-        "type": {
-          "$ref": "#/67"
-        },
-        "flags": 0,
-        "description": "The maximum number of the resource."
-      }
-    }
-  },
-  {
-    "$type": "IntegerType"
-  },
-  {
-    "$type": "ObjectType",
-    "name": "Disallowed",
-    "properties": {
-      "diskTypes": {
-        "type": {
-          "$ref": "#/69"
-        },
-        "flags": 0,
-        "description": "A list of disk types."
-      }
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/0"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "ImagePurchasePlan",
-    "properties": {
-      "name": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The plan ID."
-      },
-      "publisher": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The publisher ID."
-      },
-      "product": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The product ID."
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Creating"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Updating"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Failed"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Succeeded"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Deleting"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Migrating"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/71"
-      },
-      {
-        "$ref": "#/72"
-      },
-      {
-        "$ref": "#/73"
-      },
-      {
-        "$ref": "#/74"
-      },
-      {
-        "$ref": "#/75"
-      },
-      {
-        "$ref": "#/76"
-      },
-      {
-        "$ref": "#/0"
-      }
-    ]
-  },
-  {
-    "$type": "ObjectType",
-    "name": "GalleryImageFeature",
-    "properties": {
-      "name": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The name of the gallery image feature."
-      },
-      "value": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The value of the gallery image feature."
-      },
-      "startsAtVersion": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The minimum gallery image version which supports this feature."
-      }
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/78"
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "x64"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Arm64"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/80"
-      },
-      {
-        "$ref": "#/81"
-      },
-      {
-        "$ref": "#/0"
-      }
-    ]
-  },
-  {
-    "$type": "ObjectType",
-    "name": "ResourceTags",
-    "properties": {},
-    "additionalProperties": {
-      "$ref": "#/0"
-    }
-  },
-  {
-    "$type": "ResourceType",
-    "name": "Microsoft.Compute/galleries/images@2024-03-03",
-    "scopeType": 8,
-    "body": {
-      "$ref": "#/53"
-    },
-    "flags": 0
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Microsoft.Compute/galleries/images/versions"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "2024-03-03"
-  },
-  {
-    "$type": "ObjectType",
-    "name": "Microsoft.Compute/galleries/images/versions",
-    "properties": {
-      "id": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 10,
-        "description": "The resource id"
-      },
-      "name": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 9,
-        "description": "The resource name"
-      },
-      "type": {
-        "type": {
-          "$ref": "#/85"
-        },
-        "flags": 10,
-        "description": "The resource type"
-      },
-      "apiVersion": {
-        "type": {
-          "$ref": "#/86"
-        },
-        "flags": 10,
-        "description": "The resource api version"
-      },
-      "properties": {
-        "type": {
-          "$ref": "#/88"
-        },
-        "flags": 0,
-        "description": "Describes the properties of a gallery image version."
-      },
-      "location": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "Resource location"
-      },
-      "tags": {
-        "type": {
-          "$ref": "#/200"
-        },
-        "flags": 0,
-        "description": "Resource tags"
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "GalleryImageVersionProperties",
-    "properties": {
-      "publishingProfile": {
-        "type": {
-          "$ref": "#/89"
-        },
-        "flags": 0,
-        "description": "The publishing profile of a gallery image Version."
-      },
-      "provisioningState": {
-        "type": {
-          "$ref": "#/139"
-        },
-        "flags": 2,
-        "description": "The provisioning state, which only appears in the response."
-      },
-      "storageProfile": {
-        "type": {
-          "$ref": "#/140"
-        },
-        "flags": 1,
-        "description": "This is the storage profile of a Gallery Image Version."
-      },
-      "safetyProfile": {
-        "type": {
-          "$ref": "#/154"
-        },
-        "flags": 0,
-        "description": "This is the safety profile of the Gallery Image Version."
-      },
-      "replicationStatus": {
-        "type": {
-          "$ref": "#/162"
-        },
-        "flags": 2,
-        "description": "This is the replication status of the gallery image version."
-      },
-      "securityProfile": {
-        "type": {
-          "$ref": "#/175"
-        },
-        "flags": 0,
-        "description": "The security profile of a gallery image version"
-      },
-      "restore": {
-        "type": {
-          "$ref": "#/25"
-        },
-        "flags": 0,
-        "description": "Indicates if this is a soft-delete resource restoration request."
-      },
-      "validationsProfile": {
-        "type": {
-          "$ref": "#/191"
-        },
-        "flags": 2,
-        "description": "This is the validations profile of a Gallery Image Version."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "GalleryImageVersionPublishingProfile",
-    "properties": {
-      "targetRegions": {
-        "type": {
-          "$ref": "#/113"
-        },
-        "flags": 0,
-        "description": "The target regions where the Image Version is going to be replicated to. This property is updatable."
-      },
-      "replicaCount": {
-        "type": {
-          "$ref": "#/67"
-        },
-        "flags": 0,
-        "description": "The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable."
-      },
-      "excludeFromLatest": {
-        "type": {
-          "$ref": "#/25"
-        },
-        "flags": 0,
-        "description": "If set to true, Virtual Machines deployed from the latest version of the Image Definition won't use this Image Version."
-      },
-      "publishedDate": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "The timestamp for when the gallery image version is published."
-      },
-      "endOfLifeDate": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The end of life date of the gallery image version. This property can be used for decommissioning purposes. This property is updatable."
-      },
-      "storageAccountType": {
-        "type": {
-          "$ref": "#/118"
-        },
-        "flags": 0,
-        "description": "Specifies the storage account type to be used to store the image. This property is not updatable."
-      },
-      "replicationMode": {
-        "type": {
-          "$ref": "#/121"
-        },
-        "flags": 0,
-        "description": "Optional parameter which specifies the mode to be used for replication. This property is not updatable."
-      },
-      "targetExtendedLocations": {
-        "type": {
-          "$ref": "#/132"
-        },
-        "flags": 0,
-        "description": "The target extended locations where the Image Version is going to be replicated to. This property is updatable."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "TargetRegion",
-    "properties": {
-      "name": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "The name of the region."
-      },
-      "regionalReplicaCount": {
-        "type": {
-          "$ref": "#/67"
-        },
-        "flags": 0,
-        "description": "The number of replicas of the Image Version to be created per region. This property is updatable."
-      },
-      "storageAccountType": {
-        "type": {
-          "$ref": "#/95"
-        },
-        "flags": 0,
-        "description": "Specifies the storage account type to be used to store the image. This property is not updatable."
-      },
-      "encryption": {
-        "type": {
-          "$ref": "#/96"
-        },
-        "flags": 0,
-        "description": "Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact."
-      },
-      "excludeFromLatest": {
-        "type": {
-          "$ref": "#/25"
-        },
-        "flags": 0,
-        "description": "Contains the flag setting to hide an image when users specify version='latest'"
-      },
-      "additionalReplicaSets": {
-        "type": {
-          "$ref": "#/112"
-        },
-        "flags": 0,
-        "description": "List of storage sku with replica count to create direct drive replicas."
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Standard_LRS"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Standard_ZRS"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Premium_LRS"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "PremiumV2_LRS"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/91"
-      },
-      {
-        "$ref": "#/92"
-      },
-      {
-        "$ref": "#/93"
-      },
-      {
-        "$ref": "#/94"
-      },
-      {
-        "$ref": "#/0"
-      }
-    ]
-  },
-  {
-    "$type": "ObjectType",
-    "name": "EncryptionImages",
-    "properties": {
-      "osDiskImage": {
-        "type": {
-          "$ref": "#/97"
-        },
-        "flags": 0,
-        "description": "Contains encryption settings for an OS disk image."
-      },
-      "dataDiskImages": {
-        "type": {
-          "$ref": "#/105"
-        },
-        "flags": 0,
-        "description": "A list of encryption specifications for data disk images."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "OSDiskImageEncryption",
-    "properties": {
-      "securityProfile": {
-        "type": {
-          "$ref": "#/98"
-        },
-        "flags": 0,
-        "description": "This property specifies the security profile of an OS disk image."
-      },
-      "diskEncryptionSetId": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "A relative URI containing the resource ID of the disk encryption set."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "OSDiskImageSecurityProfile",
-    "properties": {
-      "confidentialVMEncryptionType": {
-        "type": {
-          "$ref": "#/103"
-        },
-        "flags": 0,
-        "description": "confidential VM encryption types"
-      },
-      "secureVMDiskEncryptionSetId": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "secure VM disk encryption set id"
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "EncryptedVMGuestStateOnlyWithPmk"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "EncryptedWithPmk"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "EncryptedWithCmk"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "NonPersistedTPM"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/99"
-      },
-      {
-        "$ref": "#/100"
-      },
-      {
-        "$ref": "#/101"
-      },
-      {
-        "$ref": "#/102"
-      },
-      {
-        "$ref": "#/0"
-      }
-    ]
-  },
-  {
-    "$type": "ObjectType",
-    "name": "DataDiskImageEncryption",
-    "properties": {
-      "lun": {
-        "type": {
-          "$ref": "#/67"
-        },
-        "flags": 1,
-        "description": "This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine."
-      },
-      "diskEncryptionSetId": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "A relative URI containing the resource ID of the disk encryption set."
-      }
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/104"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "AdditionalReplicaSet",
-    "properties": {
-      "storageAccountType": {
-        "type": {
-          "$ref": "#/111"
-        },
-        "flags": 0,
-        "description": "Specifies the storage account type to be used to create the direct drive replicas"
-      },
-      "regionalReplicaCount": {
-        "type": {
-          "$ref": "#/67"
-        },
-        "flags": 0,
-        "description": "The number of direct drive replicas of the Image Version to be created.This Property is updatable"
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Standard_LRS"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Standard_ZRS"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Premium_LRS"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "PremiumV2_LRS"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/107"
-      },
-      {
-        "$ref": "#/108"
-      },
-      {
-        "$ref": "#/109"
-      },
-      {
-        "$ref": "#/110"
-      },
-      {
-        "$ref": "#/0"
-      }
-    ]
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/106"
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/90"
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Standard_LRS"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Standard_ZRS"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Premium_LRS"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "PremiumV2_LRS"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/114"
-      },
-      {
-        "$ref": "#/115"
-      },
-      {
-        "$ref": "#/116"
-      },
-      {
-        "$ref": "#/117"
-      },
-      {
-        "$ref": "#/0"
-      }
-    ]
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Full"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Shallow"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/119"
-      },
-      {
-        "$ref": "#/120"
-      },
-      {
-        "$ref": "#/0"
-      }
-    ]
-  },
-  {
-    "$type": "ObjectType",
-    "name": "GalleryTargetExtendedLocation",
-    "properties": {
-      "name": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The name of the region."
-      },
-      "extendedLocation": {
-        "type": {
-          "$ref": "#/123"
-        },
-        "flags": 0,
-        "description": "The name of the extended location."
-      },
-      "extendedLocationReplicaCount": {
-        "type": {
-          "$ref": "#/67"
-        },
-        "flags": 0,
-        "description": "The number of replicas of the Image Version to be created per extended location. This property is updatable."
-      },
-      "storageAccountType": {
-        "type": {
-          "$ref": "#/131"
-        },
-        "flags": 0,
-        "description": "Specifies the storage account type to be used to store the image. This property is not updatable."
-      },
-      "encryption": {
-        "type": {
-          "$ref": "#/96"
-        },
-        "flags": 0,
-        "description": "Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "GalleryExtendedLocation",
-    "properties": {
-      "name": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0
-      },
-      "type": {
-        "type": {
-          "$ref": "#/126"
-        },
-        "flags": 0,
-        "description": "It is type of the extended location."
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "EdgeZone"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Unknown"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/124"
-      },
-      {
-        "$ref": "#/125"
-      },
-      {
-        "$ref": "#/0"
-      }
-    ]
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Standard_LRS"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Standard_ZRS"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "StandardSSD_LRS"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Premium_LRS"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/127"
-      },
-      {
-        "$ref": "#/128"
-      },
-      {
-        "$ref": "#/129"
-      },
-      {
-        "$ref": "#/130"
-      },
-      {
-        "$ref": "#/0"
-      }
-    ]
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/122"
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Creating"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Updating"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Failed"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Succeeded"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Deleting"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Migrating"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/133"
-      },
-      {
-        "$ref": "#/134"
-      },
-      {
-        "$ref": "#/135"
-      },
-      {
-        "$ref": "#/136"
-      },
-      {
-        "$ref": "#/137"
-      },
-      {
-        "$ref": "#/138"
-      },
-      {
-        "$ref": "#/0"
-      }
-    ]
-  },
-  {
-    "$type": "ObjectType",
-    "name": "GalleryImageVersionStorageProfile",
-    "properties": {
-      "source": {
-        "type": {
-          "$ref": "#/141"
-        },
-        "flags": 0,
-        "description": "The source of the gallery artifact version."
-      },
-      "osDiskImage": {
-        "type": {
-          "$ref": "#/142"
-        },
-        "flags": 0,
-        "description": "This is the OS disk image."
-      },
-      "dataDiskImages": {
-        "type": {
-          "$ref": "#/153"
-        },
-        "flags": 0,
-        "description": "A list of data disk images."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "GalleryArtifactVersionFullSource",
-    "properties": {
-      "communityGalleryImageId": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The resource Id of the source Community Gallery Image.  Only required when using Community Gallery Image as a source."
-      },
-      "virtualMachineId": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The resource Id of the source virtual machine.  Only required when capturing a virtual machine to source this Gallery Image Version."
-      },
-      "id": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The id of the gallery artifact version source."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "GalleryOSDiskImage",
-    "properties": {
-      "sizeInGB": {
-        "type": {
-          "$ref": "#/67"
-        },
-        "flags": 2,
-        "description": "This property indicates the size of the VHD to be created."
-      },
-      "hostCaching": {
-        "type": {
-          "$ref": "#/146"
-        },
-        "flags": 0,
-        "description": "The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'"
-      },
-      "source": {
-        "type": {
-          "$ref": "#/147"
-        },
-        "flags": 0,
-        "description": "The source for the disk image."
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "None"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "ReadOnly"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "ReadWrite"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/143"
-      },
-      {
-        "$ref": "#/144"
-      },
-      {
-        "$ref": "#/145"
-      }
-    ]
-  },
-  {
-    "$type": "ObjectType",
-    "name": "GalleryDiskImageSource",
-    "properties": {
-      "uri": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The uri of the gallery artifact version source. Currently used to specify vhd/blob source."
-      },
-      "storageAccountId": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The Storage Account Id that contains the vhd blob being used as a source for this artifact version."
-      },
-      "id": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The id of the gallery artifact version source."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "GalleryDataDiskImage",
-    "properties": {
-      "lun": {
-        "type": {
-          "$ref": "#/67"
-        },
-        "flags": 1,
-        "description": "This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine."
-      },
-      "sizeInGB": {
-        "type": {
-          "$ref": "#/67"
-        },
-        "flags": 2,
-        "description": "This property indicates the size of the VHD to be created."
-      },
-      "hostCaching": {
-        "type": {
-          "$ref": "#/152"
-        },
-        "flags": 0,
-        "description": "The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'"
-      },
-      "source": {
-        "type": {
-          "$ref": "#/147"
-        },
-        "flags": 0,
-        "description": "The source for the disk image."
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "None"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "ReadOnly"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "ReadWrite"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/149"
-      },
-      {
-        "$ref": "#/150"
-      },
-      {
-        "$ref": "#/151"
-      }
-    ]
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/148"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "GalleryImageVersionSafetyProfile",
-    "properties": {
-      "reportedForPolicyViolation": {
-        "type": {
-          "$ref": "#/25"
-        },
-        "flags": 2,
-        "description": "Indicates whether this image has been reported as violating Microsoft's policies."
-      },
-      "policyViolations": {
-        "type": {
-          "$ref": "#/161"
-        },
-        "flags": 2,
-        "description": "A list of Policy Violations that have been reported for this Gallery Image Version."
-      },
-      "blockDeletionBeforeEndOfLife": {
-        "type": {
-          "$ref": "#/25"
-        },
-        "flags": 0,
-        "description": "Indicates whether or not the deletion is blocked for this Gallery Image Version if its End Of Life has not expired."
-      },
-      "allowDeletionOfReplicatedLocations": {
-        "type": {
-          "$ref": "#/25"
-        },
-        "flags": 0,
-        "description": "Indicates whether or not removing this Gallery Image Version from replicated regions is allowed."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "PolicyViolation",
-    "properties": {
-      "category": {
-        "type": {
-          "$ref": "#/160"
-        },
-        "flags": 0,
-        "description": "Describes the nature of the policy violation."
-      },
-      "details": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "Describes specific details about why this policy violation was reported."
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Other"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "ImageFlaggedUnsafe"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "CopyrightValidation"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "IpTheft"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/156"
-      },
-      {
-        "$ref": "#/157"
-      },
-      {
-        "$ref": "#/158"
-      },
-      {
-        "$ref": "#/159"
-      },
-      {
-        "$ref": "#/0"
-      }
-    ]
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/155"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "ReplicationStatus",
-    "properties": {
-      "aggregatedState": {
-        "type": {
-          "$ref": "#/167"
-        },
-        "flags": 2,
-        "description": "This is the aggregated replication status based on all the regional replication status flags."
-      },
-      "summary": {
-        "type": {
-          "$ref": "#/174"
-        },
-        "flags": 2,
-        "description": "This is a summary of replication status for each region."
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Unknown"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "InProgress"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Completed"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Failed"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/163"
-      },
-      {
-        "$ref": "#/164"
-      },
-      {
-        "$ref": "#/165"
-      },
-      {
-        "$ref": "#/166"
-      },
-      {
-        "$ref": "#/0"
-      }
-    ]
-  },
-  {
-    "$type": "ObjectType",
-    "name": "RegionalReplicationStatus",
-    "properties": {
-      "region": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "The region to which the gallery image version is being replicated to."
-      },
-      "state": {
-        "type": {
-          "$ref": "#/173"
-        },
-        "flags": 2,
-        "description": "This is the regional replication state."
-      },
-      "details": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "The details of the replication status."
-      },
-      "progress": {
-        "type": {
-          "$ref": "#/67"
-        },
-        "flags": 2,
-        "description": "It indicates progress of the replication job."
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Unknown"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Replicating"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Completed"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Failed"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/169"
-      },
-      {
-        "$ref": "#/170"
-      },
-      {
-        "$ref": "#/171"
-      },
-      {
-        "$ref": "#/172"
-      },
-      {
-        "$ref": "#/0"
-      }
-    ]
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/168"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "ImageVersionSecurityProfile",
-    "properties": {
-      "uefiSettings": {
-        "type": {
-          "$ref": "#/176"
-        },
-        "flags": 0,
-        "description": "Contains UEFI settings for the image version."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "GalleryImageVersionUefiSettings",
-    "properties": {
-      "signatureTemplateNames": {
-        "type": {
-          "$ref": "#/181"
-        },
-        "flags": 0,
-        "description": "The name of the template(s) that contains default UEFI key signatures that will be added to the image."
-      },
-      "additionalSignatures": {
-        "type": {
-          "$ref": "#/182"
-        },
-        "flags": 0,
-        "description": "Additional UEFI key signatures that will be added to the image in addition to the signature templates"
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "NoSignatureTemplate"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "MicrosoftUefiCertificateAuthorityTemplate"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "MicrosoftWindowsTemplate"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/177"
-      },
-      {
-        "$ref": "#/178"
-      },
-      {
-        "$ref": "#/179"
-      },
-      {
-        "$ref": "#/0"
-      }
-    ]
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/180"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "UefiKeySignatures",
-    "properties": {
-      "pk": {
-        "type": {
-          "$ref": "#/183"
-        },
-        "flags": 0,
-        "description": "The Platform Key of this image version."
-      },
-      "kek": {
-        "type": {
-          "$ref": "#/188"
-        },
-        "flags": 0,
-        "description": "The Key Encryption Keys of this image version."
-      },
-      "db": {
-        "type": {
-          "$ref": "#/189"
-        },
-        "flags": 0,
-        "description": "The database of UEFI keys for this image version."
-      },
-      "dbx": {
-        "type": {
-          "$ref": "#/190"
-        },
-        "flags": 0,
-        "description": "The database of revoked UEFI keys for this image version."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "UefiKey",
-    "properties": {
-      "type": {
-        "type": {
-          "$ref": "#/186"
-        },
-        "flags": 0,
-        "description": "The type of key signature."
-      },
-      "value": {
-        "type": {
-          "$ref": "#/187"
-        },
-        "flags": 0,
-        "description": "The value of the key signature."
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "sha256"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "x509"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/184"
-      },
-      {
-        "$ref": "#/185"
-      },
-      {
-        "$ref": "#/0"
-      }
-    ]
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/0"
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/183"
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/183"
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/183"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "ValidationsProfile",
-    "properties": {
-      "validationEtag": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The published time of the image version"
-      },
-      "executedValidations": {
-        "type": {
-          "$ref": "#/197"
-        },
-        "flags": 0
-      },
-      "platformAttributes": {
-        "type": {
-          "$ref": "#/199"
-        },
-        "flags": 0,
-        "description": "This specifies the pub, offer, sku and version of the image version metadata"
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "ExecutedValidation",
-    "properties": {
-      "type": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "This property specifies the type of image version validation."
-      },
-      "status": {
-        "type": {
-          "$ref": "#/196"
-        },
-        "flags": 0,
-        "description": "This property specifies the status of the validationProfile of the image version."
-      },
-      "version": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "This property specifies the valid version of the validation."
-      },
-      "executionTime": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "This property specifies the starting timestamp."
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Unknown"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Failed"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Succeeded"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/193"
-      },
-      {
-        "$ref": "#/194"
-      },
-      {
-        "$ref": "#/195"
-      },
-      {
-        "$ref": "#/0"
-      }
-    ]
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/192"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "PlatformAttribute",
-    "properties": {
-      "name": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "This property specifies the name of the platformAttribute. It is read-only."
-      },
-      "value": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "This property specifies the value of the corresponding name property. It is read-only."
-      }
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/198"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "ResourceTags",
-    "properties": {},
-    "additionalProperties": {
-      "$ref": "#/0"
-    }
-  },
-  {
-    "$type": "ResourceType",
-    "name": "Microsoft.Compute/galleries/images/versions@2024-03-03",
-    "scopeType": 8,
-    "body": {
-      "$ref": "#/87"
     },
     "flags": 0
   },
@@ -2534,38 +755,45 @@
       },
       "type": {
         "type": {
-          "$ref": "#/202"
+          "$ref": "#/62"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/203"
+          "$ref": "#/63"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/205"
+          "$ref": "#/65"
         },
         "flags": 0,
         "description": "Describes the properties of a gallery Application Definition."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/77"
+        },
+        "flags": 0,
+        "description": "Resource tags."
       },
       "location": {
         "type": {
           "$ref": "#/0"
         },
         "flags": 1,
-        "description": "Resource location"
+        "description": "The geo-location where the resource lives"
       },
-      "tags": {
+      "systemData": {
         "type": {
-          "$ref": "#/217"
+          "$ref": "#/50"
         },
-        "flags": 0,
-        "description": "Resource tags"
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       }
     }
   },
@@ -2610,14 +838,14 @@
       },
       "supportedOSType": {
         "type": {
-          "$ref": "#/208"
+          "$ref": "#/68"
         },
         "flags": 1,
         "description": "This property allows you to specify the supported type of the OS that application is built for. Possible values are: **Windows,** **Linux.**"
       },
       "customActions": {
         "type": {
-          "$ref": "#/216"
+          "$ref": "#/76"
         },
         "flags": 0,
         "description": "A list of custom actions that can be performed with all of the Gallery Application Versions within this Gallery Application."
@@ -2636,10 +864,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/206"
+        "$ref": "#/66"
       },
       {
-        "$ref": "#/207"
+        "$ref": "#/67"
       }
     ]
   },
@@ -2670,7 +898,7 @@
       },
       "parameters": {
         "type": {
-          "$ref": "#/215"
+          "$ref": "#/75"
         },
         "flags": 0,
         "description": "The parameters that this custom action uses"
@@ -2697,7 +925,7 @@
       },
       "type": {
         "type": {
-          "$ref": "#/214"
+          "$ref": "#/74"
         },
         "flags": 0,
         "description": "Specifies the type of the custom action parameter. Possible values are: String, ConfigurationDataBlob or LogOutputBlob"
@@ -2734,31 +962,31 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/211"
+        "$ref": "#/71"
       },
       {
-        "$ref": "#/212"
+        "$ref": "#/72"
       },
       {
-        "$ref": "#/213"
+        "$ref": "#/73"
       }
     ]
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/210"
+      "$ref": "#/70"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/209"
+      "$ref": "#/69"
     }
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "TrackedResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/0"
@@ -2769,7 +997,7 @@
     "name": "Microsoft.Compute/galleries/applications@2024-03-03",
     "scopeType": 8,
     "body": {
-      "$ref": "#/204"
+      "$ref": "#/64"
     },
     "flags": 0
   },
@@ -2801,38 +1029,45 @@
       },
       "type": {
         "type": {
-          "$ref": "#/219"
+          "$ref": "#/79"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/220"
+          "$ref": "#/80"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/222"
+          "$ref": "#/82"
         },
         "flags": 0,
         "description": "Describes the properties of a gallery image version."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/157"
+        },
+        "flags": 0,
+        "description": "Resource tags."
       },
       "location": {
         "type": {
           "$ref": "#/0"
         },
         "flags": 1,
-        "description": "Resource location"
+        "description": "The geo-location where the resource lives"
       },
-      "tags": {
+      "systemData": {
         "type": {
-          "$ref": "#/250"
+          "$ref": "#/50"
         },
-        "flags": 0,
-        "description": "Resource tags"
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       }
     }
   },
@@ -2842,28 +1077,28 @@
     "properties": {
       "publishingProfile": {
         "type": {
-          "$ref": "#/223"
+          "$ref": "#/83"
         },
         "flags": 1,
         "description": "The publishing profile of a gallery image version."
       },
       "safetyProfile": {
         "type": {
-          "$ref": "#/242"
+          "$ref": "#/136"
         },
         "flags": 0,
         "description": "The safety profile of the Gallery Application Version."
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/249"
+          "$ref": "#/143"
         },
         "flags": 2,
         "description": "The provisioning state, which only appears in the response."
       },
       "replicationStatus": {
         "type": {
-          "$ref": "#/162"
+          "$ref": "#/144"
         },
         "flags": 2,
         "description": "This is the replication status of the gallery image version."
@@ -2876,27 +1111,27 @@
     "properties": {
       "source": {
         "type": {
-          "$ref": "#/224"
+          "$ref": "#/84"
         },
         "flags": 1,
         "description": "The source image from which the Image Version is going to be created."
       },
       "manageActions": {
         "type": {
-          "$ref": "#/225"
+          "$ref": "#/85"
         },
         "flags": 0
       },
       "settings": {
         "type": {
-          "$ref": "#/226"
+          "$ref": "#/86"
         },
         "flags": 0,
         "description": "Additional settings for the VM app that contains the target package and config file name when it is deployed to target VM or VM scale set."
       },
       "advancedSettings": {
         "type": {
-          "$ref": "#/230"
+          "$ref": "#/90"
         },
         "flags": 0,
         "description": "Optional. Additional settings to pass to the vm-application-manager extension. For advanced use only."
@@ -2910,21 +1145,21 @@
       },
       "customActions": {
         "type": {
-          "$ref": "#/231"
+          "$ref": "#/91"
         },
         "flags": 0,
         "description": "A list of custom actions that can be performed with this Gallery Application Version."
       },
       "targetRegions": {
         "type": {
-          "$ref": "#/232"
+          "$ref": "#/116"
         },
         "flags": 0,
         "description": "The target regions where the Image Version is going to be replicated to. This property is updatable."
       },
       "replicaCount": {
         "type": {
-          "$ref": "#/67"
+          "$ref": "#/93"
         },
         "flags": 0,
         "description": "The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable."
@@ -2952,21 +1187,21 @@
       },
       "storageAccountType": {
         "type": {
-          "$ref": "#/237"
+          "$ref": "#/121"
         },
         "flags": 0,
         "description": "Specifies the storage account type to be used to store the image. This property is not updatable."
       },
       "replicationMode": {
         "type": {
-          "$ref": "#/240"
+          "$ref": "#/124"
         },
         "flags": 0,
         "description": "Optional parameter which specifies the mode to be used for replication. This property is not updatable."
       },
       "targetExtendedLocations": {
         "type": {
-          "$ref": "#/241"
+          "$ref": "#/135"
         },
         "flags": 0,
         "description": "The target extended locations where the Image Version is going to be replicated to. This property is updatable."
@@ -3040,7 +1275,7 @@
       },
       "scriptBehaviorAfterReboot": {
         "type": {
-          "$ref": "#/229"
+          "$ref": "#/89"
         },
         "flags": 0,
         "description": "Optional. The action to be taken with regards to install/update/remove of the gallery application in the event of a reboot."
@@ -3059,10 +1294,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/227"
+        "$ref": "#/87"
       },
       {
-        "$ref": "#/228"
+        "$ref": "#/88"
       },
       {
         "$ref": "#/0"
@@ -3080,13 +1315,236 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/209"
+      "$ref": "#/69"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TargetRegion",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of the region."
+      },
+      "regionalReplicaCount": {
+        "type": {
+          "$ref": "#/93"
+        },
+        "flags": 0,
+        "description": "The number of replicas of the Image Version to be created per region. This property is updatable."
+      },
+      "storageAccountType": {
+        "type": {
+          "$ref": "#/98"
+        },
+        "flags": 0,
+        "description": "Specifies the storage account type to be used to store the image. This property is not updatable."
+      },
+      "encryption": {
+        "type": {
+          "$ref": "#/99"
+        },
+        "flags": 0,
+        "description": "Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact."
+      },
+      "excludeFromLatest": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 0,
+        "description": "Contains the flag setting to hide an image when users specify version='latest'"
+      },
+      "additionalReplicaSets": {
+        "type": {
+          "$ref": "#/115"
+        },
+        "flags": 0,
+        "description": "List of storage sku with replica count to create direct drive replicas."
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard_LRS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard_ZRS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Premium_LRS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PremiumV2_LRS"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/94"
+      },
+      {
+        "$ref": "#/95"
+      },
+      {
+        "$ref": "#/96"
+      },
+      {
+        "$ref": "#/97"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EncryptionImages",
+    "properties": {
+      "osDiskImage": {
+        "type": {
+          "$ref": "#/100"
+        },
+        "flags": 0,
+        "description": "Contains encryption settings for an OS disk image."
+      },
+      "dataDiskImages": {
+        "type": {
+          "$ref": "#/108"
+        },
+        "flags": 0,
+        "description": "A list of encryption specifications for data disk images."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OSDiskImageEncryption",
+    "properties": {
+      "securityProfile": {
+        "type": {
+          "$ref": "#/101"
+        },
+        "flags": 0,
+        "description": "This property specifies the security profile of an OS disk image."
+      },
+      "diskEncryptionSetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A relative URI containing the resource ID of the disk encryption set."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OSDiskImageSecurityProfile",
+    "properties": {
+      "confidentialVMEncryptionType": {
+        "type": {
+          "$ref": "#/106"
+        },
+        "flags": 0,
+        "description": "confidential VM encryption types"
+      },
+      "secureVMDiskEncryptionSetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "secure VM disk encryption set id"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "EncryptedVMGuestStateOnlyWithPmk"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "EncryptedWithPmk"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "EncryptedWithCmk"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NonPersistedTPM"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/102"
+      },
+      {
+        "$ref": "#/103"
+      },
+      {
+        "$ref": "#/104"
+      },
+      {
+        "$ref": "#/105"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataDiskImageEncryption",
+    "properties": {
+      "lun": {
+        "type": {
+          "$ref": "#/93"
+        },
+        "flags": 1,
+        "description": "This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine."
+      },
+      "diskEncryptionSetId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "A relative URI containing the resource ID of the disk encryption set."
+      }
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/90"
+      "$ref": "#/107"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AdditionalReplicaSet",
+    "properties": {
+      "storageAccountType": {
+        "type": {
+          "$ref": "#/114"
+        },
+        "flags": 0,
+        "description": "Specifies the storage account type to be used to create the direct drive replicas"
+      },
+      "regionalReplicaCount": {
+        "type": {
+          "$ref": "#/93"
+        },
+        "flags": 0,
+        "description": "The number of direct drive replicas of the Image Version to be created.This Property is updatable"
+      }
     }
   },
   {
@@ -3109,16 +1567,64 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/233"
+        "$ref": "#/110"
       },
       {
-        "$ref": "#/234"
+        "$ref": "#/111"
       },
       {
-        "$ref": "#/235"
+        "$ref": "#/112"
       },
       {
-        "$ref": "#/236"
+        "$ref": "#/113"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/109"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/92"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard_LRS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard_ZRS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Premium_LRS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PremiumV2_LRS"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/117"
+      },
+      {
+        "$ref": "#/118"
+      },
+      {
+        "$ref": "#/119"
+      },
+      {
+        "$ref": "#/120"
       },
       {
         "$ref": "#/0"
@@ -3137,10 +1643,128 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/238"
+        "$ref": "#/122"
       },
       {
-        "$ref": "#/239"
+        "$ref": "#/123"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GalleryTargetExtendedLocation",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the region."
+      },
+      "extendedLocation": {
+        "type": {
+          "$ref": "#/126"
+        },
+        "flags": 0,
+        "description": "The name of the extended location."
+      },
+      "extendedLocationReplicaCount": {
+        "type": {
+          "$ref": "#/93"
+        },
+        "flags": 0,
+        "description": "The number of replicas of the Image Version to be created per extended location. This property is updatable."
+      },
+      "storageAccountType": {
+        "type": {
+          "$ref": "#/134"
+        },
+        "flags": 0,
+        "description": "Specifies the storage account type to be used to store the image. This property is not updatable."
+      },
+      "encryption": {
+        "type": {
+          "$ref": "#/99"
+        },
+        "flags": 0,
+        "description": "Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GalleryExtendedLocation",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0
+      },
+      "type": {
+        "type": {
+          "$ref": "#/129"
+        },
+        "flags": 0,
+        "description": "It is type of the extended location."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "EdgeZone"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/127"
+      },
+      {
+        "$ref": "#/128"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard_LRS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard_ZRS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "StandardSSD_LRS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Premium_LRS"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/130"
+      },
+      {
+        "$ref": "#/131"
+      },
+      {
+        "$ref": "#/132"
+      },
+      {
+        "$ref": "#/133"
       },
       {
         "$ref": "#/0"
@@ -3150,7 +1774,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/122"
+      "$ref": "#/125"
     }
   },
   {
@@ -3194,22 +1818,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/243"
+        "$ref": "#/137"
       },
       {
-        "$ref": "#/244"
+        "$ref": "#/138"
       },
       {
-        "$ref": "#/245"
+        "$ref": "#/139"
       },
       {
-        "$ref": "#/246"
+        "$ref": "#/140"
       },
       {
-        "$ref": "#/247"
+        "$ref": "#/141"
       },
       {
-        "$ref": "#/248"
+        "$ref": "#/142"
       },
       {
         "$ref": "#/0"
@@ -3218,7 +1842,139 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "ReplicationStatus",
+    "properties": {
+      "aggregatedState": {
+        "type": {
+          "$ref": "#/149"
+        },
+        "flags": 2,
+        "description": "This is the aggregated replication status based on all the regional replication status flags."
+      },
+      "summary": {
+        "type": {
+          "$ref": "#/156"
+        },
+        "flags": 2,
+        "description": "This is a summary of replication status for each region."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InProgress"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Completed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/145"
+      },
+      {
+        "$ref": "#/146"
+      },
+      {
+        "$ref": "#/147"
+      },
+      {
+        "$ref": "#/148"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RegionalReplicationStatus",
+    "properties": {
+      "region": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The region to which the gallery image version is being replicated to."
+      },
+      "state": {
+        "type": {
+          "$ref": "#/155"
+        },
+        "flags": 2,
+        "description": "This is the regional replication state."
+      },
+      "details": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The details of the replication status."
+      },
+      "progress": {
+        "type": {
+          "$ref": "#/93"
+        },
+        "flags": 2,
+        "description": "It indicates progress of the replication job."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Replicating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Completed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/151"
+      },
+      {
+        "$ref": "#/152"
+      },
+      {
+        "$ref": "#/153"
+      },
+      {
+        "$ref": "#/154"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/150"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/0"
@@ -3229,14 +1985,1408 @@
     "name": "Microsoft.Compute/galleries/applications/versions@2024-03-03",
     "scopeType": 8,
     "body": {
-      "$ref": "#/221"
+      "$ref": "#/81"
     },
     "flags": 0
   },
   {
-    "$type": "StringType",
-    "maxLength": 80,
-    "pattern": "^[a-zA-Z0-9]+([-._]?[a-zA-Z0-9]+)*$"
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Compute/galleries/images"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2024-03-03"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Compute/galleries/images",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/159"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/160"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/162"
+        },
+        "flags": 0,
+        "description": "Describes the properties of a gallery image definition."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/190"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GalleryImageProperties",
+    "properties": {
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The description of this gallery image definition resource. This property is updatable."
+      },
+      "eula": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The Eula agreement for the gallery image definition."
+      },
+      "privacyStatementUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The privacy statement uri."
+      },
+      "releaseNoteUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The release note uri."
+      },
+      "osType": {
+        "type": {
+          "$ref": "#/165"
+        },
+        "flags": 1,
+        "description": "This property allows you to specify the type of the OS that is included in the disk when creating a VM from a managed image. Possible values are: **Windows,** **Linux.**"
+      },
+      "osState": {
+        "type": {
+          "$ref": "#/168"
+        },
+        "flags": 1,
+        "description": "This property allows the user to specify whether the virtual machines created under this image are 'Generalized' or 'Specialized'."
+      },
+      "hyperVGeneration": {
+        "type": {
+          "$ref": "#/171"
+        },
+        "flags": 0,
+        "description": "The hypervisor generation of the Virtual Machine. Applicable to OS disks only."
+      },
+      "endOfLifeDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The end of life date of the gallery image definition. This property can be used for decommissioning purposes. This property is updatable."
+      },
+      "identifier": {
+        "type": {
+          "$ref": "#/172"
+        },
+        "flags": 1,
+        "description": "This is the gallery image definition identifier."
+      },
+      "recommended": {
+        "type": {
+          "$ref": "#/173"
+        },
+        "flags": 0,
+        "description": "The properties describe the recommended machine configuration for this Image Definition. These properties are updatable."
+      },
+      "disallowed": {
+        "type": {
+          "$ref": "#/175"
+        },
+        "flags": 0,
+        "description": "Describes the disallowed disk types."
+      },
+      "purchasePlan": {
+        "type": {
+          "$ref": "#/177"
+        },
+        "flags": 0,
+        "description": "Describes the gallery image definition purchase plan. This is used by marketplace images."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/184"
+        },
+        "flags": 2,
+        "description": "The provisioning state, which only appears in the response."
+      },
+      "features": {
+        "type": {
+          "$ref": "#/186"
+        },
+        "flags": 0,
+        "description": "A list of gallery image features."
+      },
+      "architecture": {
+        "type": {
+          "$ref": "#/189"
+        },
+        "flags": 0,
+        "description": "The architecture of the image. Applicable to OS disks only."
+      },
+      "allowUpdateImage": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 0,
+        "description": "Optional. Must be set to true if the gallery image features are being updated."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Windows"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Linux"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/163"
+      },
+      {
+        "$ref": "#/164"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Generalized"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Specialized"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/166"
+      },
+      {
+        "$ref": "#/167"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "V1"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "V2"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/169"
+      },
+      {
+        "$ref": "#/170"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GalleryImageIdentifier",
+    "properties": {
+      "publisher": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of the gallery image definition publisher."
+      },
+      "offer": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of the gallery image definition offer."
+      },
+      "sku": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of the gallery image definition SKU."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RecommendedMachineConfiguration",
+    "properties": {
+      "vCPUs": {
+        "type": {
+          "$ref": "#/174"
+        },
+        "flags": 0,
+        "description": "Describes the resource range."
+      },
+      "memory": {
+        "type": {
+          "$ref": "#/174"
+        },
+        "flags": 0,
+        "description": "Describes the resource range."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceRange",
+    "properties": {
+      "min": {
+        "type": {
+          "$ref": "#/93"
+        },
+        "flags": 0,
+        "description": "The minimum number of the resource."
+      },
+      "max": {
+        "type": {
+          "$ref": "#/93"
+        },
+        "flags": 0,
+        "description": "The maximum number of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Disallowed",
+    "properties": {
+      "diskTypes": {
+        "type": {
+          "$ref": "#/176"
+        },
+        "flags": 0,
+        "description": "A list of disk types."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImagePurchasePlan",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The plan ID."
+      },
+      "publisher": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The publisher ID."
+      },
+      "product": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The product ID."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Migrating"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/178"
+      },
+      {
+        "$ref": "#/179"
+      },
+      {
+        "$ref": "#/180"
+      },
+      {
+        "$ref": "#/181"
+      },
+      {
+        "$ref": "#/182"
+      },
+      {
+        "$ref": "#/183"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GalleryImageFeature",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The name of the gallery image feature."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The value of the gallery image feature."
+      },
+      "startsAtVersion": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The minimum gallery image version which supports this feature."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/185"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "x64"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Arm64"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/187"
+      },
+      {
+        "$ref": "#/188"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Compute/galleries/images@2024-03-03",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/161"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Compute/galleries/images/versions"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2024-03-03"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Compute/galleries/images/versions",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/192"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/193"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/195"
+        },
+        "flags": 0,
+        "description": "Describes the properties of a gallery image version."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/261"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/50"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GalleryImageVersionProperties",
+    "properties": {
+      "publishingProfile": {
+        "type": {
+          "$ref": "#/196"
+        },
+        "flags": 0,
+        "description": "The publishing profile of a gallery image Version."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/213"
+        },
+        "flags": 2,
+        "description": "The provisioning state, which only appears in the response."
+      },
+      "storageProfile": {
+        "type": {
+          "$ref": "#/214"
+        },
+        "flags": 1,
+        "description": "This is the storage profile of a Gallery Image Version."
+      },
+      "safetyProfile": {
+        "type": {
+          "$ref": "#/228"
+        },
+        "flags": 0,
+        "description": "This is the safety profile of the Gallery Image Version."
+      },
+      "replicationStatus": {
+        "type": {
+          "$ref": "#/144"
+        },
+        "flags": 2,
+        "description": "This is the replication status of the gallery image version."
+      },
+      "securityProfile": {
+        "type": {
+          "$ref": "#/236"
+        },
+        "flags": 0,
+        "description": "The security profile of a gallery image version"
+      },
+      "restore": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 0,
+        "description": "Indicates if this is a soft-delete resource restoration request."
+      },
+      "validationsProfile": {
+        "type": {
+          "$ref": "#/252"
+        },
+        "flags": 2,
+        "description": "This is the validations profile of a Gallery Image Version."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GalleryImageVersionPublishingProfile",
+    "properties": {
+      "targetRegions": {
+        "type": {
+          "$ref": "#/197"
+        },
+        "flags": 0,
+        "description": "The target regions where the Image Version is going to be replicated to. This property is updatable."
+      },
+      "replicaCount": {
+        "type": {
+          "$ref": "#/93"
+        },
+        "flags": 0,
+        "description": "The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable."
+      },
+      "excludeFromLatest": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 0,
+        "description": "If set to true, Virtual Machines deployed from the latest version of the Image Definition won't use this Image Version."
+      },
+      "publishedDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "The timestamp for when the gallery image version is published."
+      },
+      "endOfLifeDate": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The end of life date of the gallery image version. This property can be used for decommissioning purposes. This property is updatable."
+      },
+      "storageAccountType": {
+        "type": {
+          "$ref": "#/202"
+        },
+        "flags": 0,
+        "description": "Specifies the storage account type to be used to store the image. This property is not updatable."
+      },
+      "replicationMode": {
+        "type": {
+          "$ref": "#/205"
+        },
+        "flags": 0,
+        "description": "Optional parameter which specifies the mode to be used for replication. This property is not updatable."
+      },
+      "targetExtendedLocations": {
+        "type": {
+          "$ref": "#/206"
+        },
+        "flags": 0,
+        "description": "The target extended locations where the Image Version is going to be replicated to. This property is updatable."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/92"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard_LRS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard_ZRS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Premium_LRS"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "PremiumV2_LRS"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/198"
+      },
+      {
+        "$ref": "#/199"
+      },
+      {
+        "$ref": "#/200"
+      },
+      {
+        "$ref": "#/201"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Full"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Shallow"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/203"
+      },
+      {
+        "$ref": "#/204"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/125"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Migrating"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/207"
+      },
+      {
+        "$ref": "#/208"
+      },
+      {
+        "$ref": "#/209"
+      },
+      {
+        "$ref": "#/210"
+      },
+      {
+        "$ref": "#/211"
+      },
+      {
+        "$ref": "#/212"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GalleryImageVersionStorageProfile",
+    "properties": {
+      "source": {
+        "type": {
+          "$ref": "#/215"
+        },
+        "flags": 0,
+        "description": "The source of the gallery artifact version."
+      },
+      "osDiskImage": {
+        "type": {
+          "$ref": "#/216"
+        },
+        "flags": 0,
+        "description": "This is the OS disk image."
+      },
+      "dataDiskImages": {
+        "type": {
+          "$ref": "#/227"
+        },
+        "flags": 0,
+        "description": "A list of data disk images."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GalleryArtifactVersionFullSource",
+    "properties": {
+      "communityGalleryImageId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The resource Id of the source Community Gallery Image.  Only required when using Community Gallery Image as a source."
+      },
+      "virtualMachineId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The resource Id of the source virtual machine.  Only required when capturing a virtual machine to source this Gallery Image Version."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The id of the gallery artifact version source."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GalleryOSDiskImage",
+    "properties": {
+      "sizeInGB": {
+        "type": {
+          "$ref": "#/93"
+        },
+        "flags": 2,
+        "description": "This property indicates the size of the VHD to be created."
+      },
+      "hostCaching": {
+        "type": {
+          "$ref": "#/220"
+        },
+        "flags": 0,
+        "description": "The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'"
+      },
+      "source": {
+        "type": {
+          "$ref": "#/221"
+        },
+        "flags": 0,
+        "description": "The source for the disk image."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ReadOnly"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ReadWrite"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/217"
+      },
+      {
+        "$ref": "#/218"
+      },
+      {
+        "$ref": "#/219"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GalleryDiskImageSource",
+    "properties": {
+      "uri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The uri of the gallery artifact version source. Currently used to specify vhd/blob source."
+      },
+      "storageAccountId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The Storage Account Id that contains the vhd blob being used as a source for this artifact version."
+      },
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The id of the gallery artifact version source."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GalleryDataDiskImage",
+    "properties": {
+      "lun": {
+        "type": {
+          "$ref": "#/93"
+        },
+        "flags": 1,
+        "description": "This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine."
+      },
+      "sizeInGB": {
+        "type": {
+          "$ref": "#/93"
+        },
+        "flags": 2,
+        "description": "This property indicates the size of the VHD to be created."
+      },
+      "hostCaching": {
+        "type": {
+          "$ref": "#/226"
+        },
+        "flags": 0,
+        "description": "The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'"
+      },
+      "source": {
+        "type": {
+          "$ref": "#/221"
+        },
+        "flags": 0,
+        "description": "The source for the disk image."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ReadOnly"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ReadWrite"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/223"
+      },
+      {
+        "$ref": "#/224"
+      },
+      {
+        "$ref": "#/225"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/222"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GalleryImageVersionSafetyProfile",
+    "properties": {
+      "reportedForPolicyViolation": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 2,
+        "description": "Indicates whether this image has been reported as violating Microsoft's policies."
+      },
+      "policyViolations": {
+        "type": {
+          "$ref": "#/235"
+        },
+        "flags": 2,
+        "description": "A list of Policy Violations that have been reported for this Gallery Image Version."
+      },
+      "blockDeletionBeforeEndOfLife": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 0,
+        "description": "Indicates whether or not the deletion is blocked for this Gallery Image Version if its End Of Life has not expired."
+      },
+      "allowDeletionOfReplicatedLocations": {
+        "type": {
+          "$ref": "#/25"
+        },
+        "flags": 0,
+        "description": "Indicates whether or not removing this Gallery Image Version from replicated regions is allowed."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PolicyViolation",
+    "properties": {
+      "category": {
+        "type": {
+          "$ref": "#/234"
+        },
+        "flags": 0,
+        "description": "Describes the nature of the policy violation."
+      },
+      "details": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Describes specific details about why this policy violation was reported."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Other"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ImageFlaggedUnsafe"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CopyrightValidation"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "IpTheft"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/230"
+      },
+      {
+        "$ref": "#/231"
+      },
+      {
+        "$ref": "#/232"
+      },
+      {
+        "$ref": "#/233"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/229"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ImageVersionSecurityProfile",
+    "properties": {
+      "uefiSettings": {
+        "type": {
+          "$ref": "#/237"
+        },
+        "flags": 0,
+        "description": "Contains UEFI settings for the image version."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "GalleryImageVersionUefiSettings",
+    "properties": {
+      "signatureTemplateNames": {
+        "type": {
+          "$ref": "#/242"
+        },
+        "flags": 0,
+        "description": "The name of the template(s) that contains default UEFI key signatures that will be added to the image."
+      },
+      "additionalSignatures": {
+        "type": {
+          "$ref": "#/243"
+        },
+        "flags": 0,
+        "description": "Additional UEFI key signatures that will be added to the image in addition to the signature templates"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NoSignatureTemplate"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MicrosoftUefiCertificateAuthorityTemplate"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "MicrosoftWindowsTemplate"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/238"
+      },
+      {
+        "$ref": "#/239"
+      },
+      {
+        "$ref": "#/240"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/241"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UefiKeySignatures",
+    "properties": {
+      "pk": {
+        "type": {
+          "$ref": "#/244"
+        },
+        "flags": 0,
+        "description": "The Platform Key of this image version."
+      },
+      "kek": {
+        "type": {
+          "$ref": "#/249"
+        },
+        "flags": 0,
+        "description": "The Key Encryption Keys of this image version."
+      },
+      "db": {
+        "type": {
+          "$ref": "#/250"
+        },
+        "flags": 0,
+        "description": "The database of UEFI keys for this image version."
+      },
+      "dbx": {
+        "type": {
+          "$ref": "#/251"
+        },
+        "flags": 0,
+        "description": "The database of revoked UEFI keys for this image version."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UefiKey",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/247"
+        },
+        "flags": 0,
+        "description": "The type of key signature."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/248"
+        },
+        "flags": 0,
+        "description": "The value of the key signature."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "sha256"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "x509"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/245"
+      },
+      {
+        "$ref": "#/246"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/244"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/244"
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/244"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ValidationsProfile",
+    "properties": {
+      "validationEtag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The published time of the image version"
+      },
+      "executedValidations": {
+        "type": {
+          "$ref": "#/258"
+        },
+        "flags": 0
+      },
+      "platformAttributes": {
+        "type": {
+          "$ref": "#/260"
+        },
+        "flags": 0,
+        "description": "This specifies the pub, offer, sku and version of the image version metadata"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExecutedValidation",
+    "properties": {
+      "type": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "This property specifies the type of image version validation."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/257"
+        },
+        "flags": 0,
+        "description": "This property specifies the status of the validationProfile of the image version."
+      },
+      "version": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "This property specifies the valid version of the validation."
+      },
+      "executionTime": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "This property specifies the starting timestamp."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/254"
+      },
+      {
+        "$ref": "#/255"
+      },
+      {
+        "$ref": "#/256"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/253"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PlatformAttribute",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "This property specifies the name of the platformAttribute. It is read-only."
+      },
+      "value": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "This property specifies the value of the corresponding name property. It is read-only."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/259"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Compute/galleries/images/versions@2024-03-03",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/194"
+    },
+    "flags": 0
   },
   {
     "$type": "StringLiteralType",
@@ -3259,45 +3409,52 @@
       },
       "name": {
         "type": {
-          "$ref": "#/252"
+          "$ref": "#/0"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/253"
+          "$ref": "#/263"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/254"
+          "$ref": "#/264"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/256"
+          "$ref": "#/266"
         },
         "flags": 0,
         "description": "Describes the properties of a gallery inVMAccessControlProfile."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/280"
+        },
+        "flags": 0,
+        "description": "Resource tags."
       },
       "location": {
         "type": {
           "$ref": "#/0"
         },
         "flags": 1,
-        "description": "Resource location"
+        "description": "The geo-location where the resource lives"
       },
-      "tags": {
+      "systemData": {
         "type": {
-          "$ref": "#/270"
+          "$ref": "#/50"
         },
-        "flags": 0,
-        "description": "Resource tags"
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       }
     }
   },
@@ -3314,21 +3471,21 @@
       },
       "osType": {
         "type": {
-          "$ref": "#/259"
+          "$ref": "#/269"
         },
         "flags": 1,
         "description": "This property allows you to specify the OS type of the VMs/VMSS for which this profile can be used against. Possible values are: 'Windows' or 'Linux'"
       },
       "applicableHostEndpoint": {
         "type": {
-          "$ref": "#/262"
+          "$ref": "#/272"
         },
         "flags": 1,
         "description": "This property allows you to specify the Endpoint type for which this profile is defining the access control for. Possible values are: 'WireServer' or 'IMDS'"
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/269"
+          "$ref": "#/279"
         },
         "flags": 2,
         "description": "The provisioning state, which only appears in the response."
@@ -3347,10 +3504,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/257"
+        "$ref": "#/267"
       },
       {
-        "$ref": "#/258"
+        "$ref": "#/268"
       }
     ]
   },
@@ -3366,10 +3523,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/260"
+        "$ref": "#/270"
       },
       {
-        "$ref": "#/261"
+        "$ref": "#/271"
       }
     ]
   },
@@ -3401,22 +3558,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/263"
+        "$ref": "#/273"
       },
       {
-        "$ref": "#/264"
+        "$ref": "#/274"
       },
       {
-        "$ref": "#/265"
+        "$ref": "#/275"
       },
       {
-        "$ref": "#/266"
+        "$ref": "#/276"
       },
       {
-        "$ref": "#/267"
+        "$ref": "#/277"
       },
       {
-        "$ref": "#/268"
+        "$ref": "#/278"
       },
       {
         "$ref": "#/0"
@@ -3425,7 +3582,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "TrackedResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/0"
@@ -3436,13 +3593,9 @@
     "name": "Microsoft.Compute/galleries/inVMAccessControlProfiles@2024-03-03",
     "scopeType": 8,
     "body": {
-      "$ref": "#/255"
+      "$ref": "#/265"
     },
     "flags": 0
-  },
-  {
-    "$type": "StringType",
-    "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
   },
   {
     "$type": "StringLiteralType",
@@ -3465,45 +3618,52 @@
       },
       "name": {
         "type": {
-          "$ref": "#/272"
+          "$ref": "#/0"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/273"
+          "$ref": "#/282"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/274"
+          "$ref": "#/283"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/276"
+          "$ref": "#/285"
         },
         "flags": 0,
         "description": "Describes the properties of an inVMAccessControlProfile version."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/313"
+        },
+        "flags": 0,
+        "description": "Resource tags."
       },
       "location": {
         "type": {
           "$ref": "#/0"
         },
         "flags": 1,
-        "description": "Resource location"
+        "description": "The geo-location where the resource lives"
       },
-      "tags": {
+      "systemData": {
         "type": {
-          "$ref": "#/304"
+          "$ref": "#/50"
         },
-        "flags": 0,
-        "description": "Resource tags"
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       }
     }
   },
@@ -3513,28 +3673,28 @@
     "properties": {
       "mode": {
         "type": {
-          "$ref": "#/280"
+          "$ref": "#/289"
         },
         "flags": 1,
         "description": "This property allows you to specify whether the access control rules are in Audit mode, in Enforce mode or Disabled. Possible values are: 'Audit', 'Enforce' or 'Disabled'."
       },
       "defaultAccess": {
         "type": {
-          "$ref": "#/283"
+          "$ref": "#/292"
         },
         "flags": 1,
         "description": "This property allows you to specify if the requests will be allowed to access the host endpoints. Possible values are: 'Allow', 'Deny'."
       },
       "rules": {
         "type": {
-          "$ref": "#/284"
+          "$ref": "#/293"
         },
         "flags": 0,
         "description": "This is the Access Control Rules specification for an inVMAccessControlProfile version."
       },
       "targetLocations": {
         "type": {
-          "$ref": "#/296"
+          "$ref": "#/305"
         },
         "flags": 0,
         "description": "The target regions where the Resource Profile version is going to be replicated to. This property is updatable."
@@ -3555,14 +3715,14 @@
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/303"
+          "$ref": "#/312"
         },
         "flags": 2,
         "description": "The provisioning state, which only appears in the response."
       },
       "replicationStatus": {
         "type": {
-          "$ref": "#/162"
+          "$ref": "#/144"
         },
         "flags": 2,
         "description": "This is the replication status of the gallery image version."
@@ -3585,13 +3745,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/277"
+        "$ref": "#/286"
       },
       {
-        "$ref": "#/278"
+        "$ref": "#/287"
       },
       {
-        "$ref": "#/279"
+        "$ref": "#/288"
       },
       {
         "$ref": "#/0"
@@ -3610,10 +3770,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/281"
+        "$ref": "#/290"
       },
       {
-        "$ref": "#/282"
+        "$ref": "#/291"
       },
       {
         "$ref": "#/0"
@@ -3626,28 +3786,28 @@
     "properties": {
       "privileges": {
         "type": {
-          "$ref": "#/287"
+          "$ref": "#/296"
         },
         "flags": 0,
         "description": "A list of privileges."
       },
       "roles": {
         "type": {
-          "$ref": "#/290"
+          "$ref": "#/299"
         },
         "flags": 0,
         "description": "A list of roles."
       },
       "identities": {
         "type": {
-          "$ref": "#/292"
+          "$ref": "#/301"
         },
         "flags": 0,
         "description": "A list of identities."
       },
       "roleAssignments": {
         "type": {
-          "$ref": "#/295"
+          "$ref": "#/304"
         },
         "flags": 0,
         "description": "A list of role assignments."
@@ -3674,7 +3834,7 @@
       },
       "queryParameters": {
         "type": {
-          "$ref": "#/286"
+          "$ref": "#/295"
         },
         "flags": 0,
         "description": "The query parameters to match in the path."
@@ -3692,7 +3852,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/285"
+      "$ref": "#/294"
     }
   },
   {
@@ -3708,7 +3868,7 @@
       },
       "privileges": {
         "type": {
-          "$ref": "#/289"
+          "$ref": "#/298"
         },
         "flags": 1,
         "description": "A list of privileges needed by this role."
@@ -3724,7 +3884,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/288"
+      "$ref": "#/297"
     }
   },
   {
@@ -3771,7 +3931,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/291"
+      "$ref": "#/300"
     }
   },
   {
@@ -3787,7 +3947,7 @@
       },
       "identities": {
         "type": {
-          "$ref": "#/294"
+          "$ref": "#/303"
         },
         "flags": 1,
         "description": "A list of identities that can access the privileges defined by the role."
@@ -3803,13 +3963,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/293"
+      "$ref": "#/302"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/90"
+      "$ref": "#/92"
     }
   },
   {
@@ -3840,22 +4000,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/297"
+        "$ref": "#/306"
       },
       {
-        "$ref": "#/298"
+        "$ref": "#/307"
       },
       {
-        "$ref": "#/299"
+        "$ref": "#/308"
       },
       {
-        "$ref": "#/300"
+        "$ref": "#/309"
       },
       {
-        "$ref": "#/301"
+        "$ref": "#/310"
       },
       {
-        "$ref": "#/302"
+        "$ref": "#/311"
       },
       {
         "$ref": "#/0"
@@ -3864,7 +4024,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ResourceTags",
+    "name": "TrackedResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/0"
@@ -3875,7 +4035,7 @@
     "name": "Microsoft.Compute/galleries/inVMAccessControlProfiles/versions@2024-03-03",
     "scopeType": 8,
     "body": {
-      "$ref": "#/275"
+      "$ref": "#/284"
     },
     "flags": 0
   }

@@ -5,11 +5,11 @@
 ### Properties
 * **apiVersion**: '2025-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [UserAssignedIdentity](#userassignedidentity): Describes the identity of the application.
+* **identity**: [UserAssignedIdentity](#userassignedidentity): User assigned managed identities assigned to the flexible server.
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {minLength: 3, maxLength: 63, pattern: "^[a-zA-Z0-9]+(-[a-zA-Z0-9]+)*"} (Required, DeployTimeConstant): The resource name
-* **properties**: [ServerProperties](#serverproperties): Properties of the server.
-* **sku**: [Sku](#sku): The SKU (pricing tier) of the server.
+* **properties**: [ServerProperties](#serverproperties): Properties of a flexible server.
+* **sku**: [Sku](#sku): Compute tier and size of a flexible server.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DBforPostgreSQL/flexibleServers' (ReadOnly, DeployTimeConstant): The resource type
@@ -20,7 +20,7 @@
 * **apiVersion**: '2025-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [AdministratorPropertiesForAddOrAdministratorProperties](#administratorpropertiesforaddoradministratorproperties): Properties of the Microsoft Entra Administrator.
+* **properties**: [AdministratorPropertiesForAddOrAdministratorProperties](#administratorpropertiesforaddoradministratorproperties): Properties of the server administrator associated to a Microsoft Entra principal.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DBforPostgreSQL/flexibleServers/administrators' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -30,7 +30,7 @@
 * **apiVersion**: '2025-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'Default' | string (Required, DeployTimeConstant): The resource name
-* **properties**: [ServerThreatProtectionProperties](#serverthreatprotectionproperties): Advanced Threat Protection properties.
+* **properties**: [ServerThreatProtectionProperties](#serverthreatprotectionproperties): Advanced threat protection properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DBforPostgreSQL/flexibleServers/advancedThreatProtectionSettings' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -40,7 +40,7 @@
 * **apiVersion**: '2025-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {minLength: 1, pattern: "^[-\w\._]+$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [ServerBackupProperties](#serverbackupproperties) (ReadOnly): The properties of a server backup.
+* **properties**: [ServerBackupProperties](#serverbackupproperties) (ReadOnly): Properties of a backup.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DBforPostgreSQL/flexibleServers/backups' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -50,7 +50,7 @@
 * **apiVersion**: '2025-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {minLength: 1, pattern: "^[-\w\._]+$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [ConfigurationProperties](#configurationproperties): The properties of a configuration.
+* **properties**: [ConfigurationProperties](#configurationproperties): Properties of a server parameter.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DBforPostgreSQL/flexibleServers/configurations' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -60,7 +60,7 @@
 * **apiVersion**: '2025-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {minLength: 1, pattern: "^[a-zA-Z_][a-zA-Z0-9_]{0,30}$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [DatabaseProperties](#databaseproperties): The properties of a database.
+* **properties**: [DatabaseProperties](#databaseproperties): Properties of a database.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DBforPostgreSQL/flexibleServers/databases' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -70,7 +70,7 @@
 * **apiVersion**: '2025-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {minLength: 1, pattern: "^[-\w\._]+$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [FirewallRuleProperties](#firewallruleproperties) (Required): The properties of a firewall rule.
+* **properties**: [FirewallRuleProperties](#firewallruleproperties) (Required): Properties of a firewall rule.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DBforPostgreSQL/flexibleServers/firewallRules' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -91,7 +91,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string (Required): The geo-location where the resource lives
 * **name**: string {pattern: "^[a-z][a-z0-9]*$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [MigrationResourceProperties](#migrationresourceproperties): Migration resource properties.
+* **properties**: [MigrationResourceProperties](#migrationresourceproperties): Migration properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DBforPostgreSQL/flexibleServers/migrations' (ReadOnly, DeployTimeConstant): The resource type
@@ -131,110 +131,110 @@
 * **apiVersion**: '2025-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string {minLength: 3, maxLength: 63, pattern: "^[A-Za-z0-9][A-Za-z0-9-]{0,62}(?<!-)$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [VirtualEndpointResourceProperties](#virtualendpointresourceproperties): Properties of the virtual endpoint resource.
+* **properties**: [VirtualEndpointResourceProperties](#virtualendpointresourceproperties): Properties of the pair of virtual endpoints.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DBforPostgreSQL/flexibleServers/virtualendpoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AdminCredentials
 ### Properties
-* **sourceServerPassword**: string {sensitive} (Required, WriteOnly): Password for source server.
-* **targetServerPassword**: string {sensitive} (Required, WriteOnly): Password for target server.
+* **sourceServerPassword**: string {sensitive} (Required, WriteOnly): Password for the user of the source server.
+* **targetServerPassword**: string {sensitive} (Required, WriteOnly): Password for the user of the target server.
 
 ## AdministratorPropertiesForAddOrAdministratorProperties
 ### Properties
-* **objectId**: string (ReadOnly): The objectId of the Microsoft Entra Administrator.
-* **principalName**: string: Microsoft Entra Administrator principal name.
-* **principalType**: 'Group' | 'ServicePrincipal' | 'Unknown' | 'User' | string: The principal type used to represent the type of Microsoft Entra Administrator.
-* **tenantId**: string (WriteOnly): The tenantId of the Microsoft Entra Administrator.
+* **objectId**: string (ReadOnly): Object identifier of the Microsoft Entra principal.
+* **principalName**: string: Name of the Microsoft Entra principal.
+* **principalType**: 'Group' | 'ServicePrincipal' | 'Unknown' | 'User' | string: The type of Microsoft Entra principal to which the server administrator is associated.
+* **tenantId**: string (WriteOnly): Identifier of the tenant in which the Microsoft Entra principal exists.
 
 ## AuthConfig
 ### Properties
-* **activeDirectoryAuth**: 'Disabled' | 'Enabled' | string: If Enabled, Microsoft Entra authentication is enabled.
-* **passwordAuth**: 'Disabled' | 'Enabled' | string: If Enabled, Password authentication is enabled.
-* **tenantId**: string: Tenant id of the server.
+* **activeDirectoryAuth**: 'Disabled' | 'Enabled' | string: Indicates if the server supports Microsoft Entra authentication.
+* **passwordAuth**: 'Disabled' | 'Enabled' | string: Indicates if the server supports password based authentication.
+* **tenantId**: string: Identifier of the tenant of the delegated resource.
 
 ## Backup
 ### Properties
-* **backupRetentionDays**: int: Backup retention days for the server.
-* **earliestRestoreDate**: string (ReadOnly): The earliest restore point time (ISO8601 format) for server.
-* **geoRedundantBackup**: 'Disabled' | 'Enabled' | string: A value indicating whether Geo-Redundant backup is enabled on the server.
+* **backupRetentionDays**: int: Backup retention days for the flexible server.
+* **earliestRestoreDate**: string (ReadOnly): Earliest restore point time (ISO8601 format) for a flexible server.
+* **geoRedundantBackup**: 'Disabled' | 'Enabled' | string: Indicates if the server is configured to create geographically redundant backups.
 
 ## Cluster
 ### Properties
-* **clusterSize**: int: The node count for the cluster.
+* **clusterSize**: int: Number of nodes assigned to the elastic cluster.
 
 ## ConfigurationProperties
 ### Properties
-* **allowedValues**: string (ReadOnly): Allowed values of the configuration.
-* **dataType**: 'Boolean' | 'Enumeration' | 'Integer' | 'Numeric' | string (ReadOnly): Data type of the configuration.
-* **defaultValue**: string (ReadOnly): Default value of the configuration.
-* **description**: string (ReadOnly): Description of the configuration.
-* **documentationLink**: string (ReadOnly): Configuration documentation link.
-* **isConfigPendingRestart**: bool (ReadOnly): Configuration is pending restart or not.
-* **isDynamicConfig**: bool (ReadOnly): Configuration dynamic or static.
-* **isReadOnly**: bool (ReadOnly): Configuration read-only or not.
-* **source**: string: Source of the configuration. Required to update the configuration.
-* **unit**: string (ReadOnly): Configuration unit.
-* **value**: string: Value of the configuration. Required to update the configuration.
+* **allowedValues**: string (ReadOnly): Allowed values of the server parameter.
+* **dataType**: 'Boolean' | 'Enumeration' | 'Integer' | 'Numeric' | string (ReadOnly): Data type of the server parameter.
+* **defaultValue**: string (ReadOnly): Value assigned by default to the server parameter.
+* **description**: string (ReadOnly): Description of the server parameter.
+* **documentationLink**: string (ReadOnly): Link pointing to the documentation of the server parameter.
+* **isConfigPendingRestart**: bool (ReadOnly): Indicates if the value assigned to the server parameter is pending a server restart for the value to take effect.
+* **isDynamicConfig**: bool (ReadOnly): Indicates if it's a dynamic (true) or static (false) server parameter. Static server parameters require a server restart after changing the value assigned to it, for the change to take effect. Dynamic server parameters do not require a server restart after changing the value assigned to it, for the change to take effect.
+* **isReadOnly**: bool (ReadOnly): Indicates if it's a read-only (true) or modifiable (false) server parameter.
+* **source**: string: Source of the value assigned to the server parameter. Required to update the value assigned to a specific modifiable server parameter.
+* **unit**: string (ReadOnly): Units in which the server parameter value is expressed.
+* **value**: string: Value of the server parameter (also known as configuration). Required to update the value assigned to a specific modifiable server parameter.
 
 ## DatabaseProperties
 ### Properties
-* **charset**: string {pattern: "^[a-zA-Z]+\w*$"}: The charset of the database.
-* **collation**: string {pattern: "^[a-zA-Z\-]+([. ]|\w)*$"}: The collation of the database.
+* **charset**: string {pattern: "^[a-zA-Z]+\w*$"}: Character set of the database.
+* **collation**: string {pattern: "^[a-zA-Z\-]+([. ]|\w)*$"}: Collation of the database.
 
 ## DataEncryption
 ### Properties
-* **geoBackupEncryptionKeyStatus**: 'Invalid' | 'Valid' | string (ReadOnly): Geo-backup encryption key status for Data encryption enabled server.
-* **geoBackupKeyURI**: string: URI for the key in keyvault for data encryption for geo-backup of server.
-* **geoBackupUserAssignedIdentityId**: string: Resource Id for the User assigned identity to be used for data encryption for geo-backup of server.
-* **primaryEncryptionKeyStatus**: 'Invalid' | 'Valid' | string (ReadOnly): Primary encryption key status for Data encryption enabled server.
-* **primaryKeyURI**: string: URI for the key in keyvault for data encryption of the primary server.
-* **primaryUserAssignedIdentityId**: string: Resource Id for the User assigned identity to be used for data encryption of the primary server.
-* **type**: 'AzureKeyVault' | 'SystemManaged' | string: Data encryption type to depict if it is System Managed vs Azure Key vault.
+* **geoBackupEncryptionKeyStatus**: 'Invalid' | 'Valid' | string (ReadOnly): Status of key used by a flexible server configured with data encryption based on customer managed key, to encrypt the geographically redundant storage associated to the server when it is configured to support geographically redundant backups.
+* **geoBackupKeyURI**: string: Identifier of the user assigned managed identity used to access the key in Azure Key Vault for data encryption of the geographically redundant storage associated to a flexible server that is configured to support geographically redundant backups.
+* **geoBackupUserAssignedIdentityId**: string: Identifier of the user assigned managed identity used to access the key in Azure Key Vault for data encryption of the geographically redundant storage associated to a flexible server that is configured to support geographically redundant backups.
+* **primaryEncryptionKeyStatus**: 'Invalid' | 'Valid' | string (ReadOnly): Status of key used by a flexible server configured with data encryption based on customer managed key, to encrypt the primary storage associated to the server.
+* **primaryKeyURI**: string: URI of the key in Azure Key Vault used for data encryption of the primary storage associated to a flexible server.
+* **primaryUserAssignedIdentityId**: string: Identifier of the user assigned managed identity used to access the key in Azure Key Vault for data encryption of the primary storage associated to a flexible server.
+* **type**: 'AzureKeyVault' | 'SystemManaged' | string: Data encryption type used by a flexible server.
 
 ## DbLevelValidationStatus
 ### Properties
-* **databaseName**: string: Name of the database
-* **endedOn**: string: End date-time of a database level validation
-* **startedOn**: string: Start date-time of a database level validation
-* **summary**: [ValidationSummaryItem](#validationsummaryitem)[]: Summary of database level validations
+* **databaseName**: string: Name of database.
+* **endedOn**: string: End time of a database level validation.
+* **startedOn**: string: Start time of a database level validation.
+* **summary**: [ValidationSummaryItem](#validationsummaryitem)[]: Summary of database level validations.
 
 ## DbMigrationStatus
 ### Properties
-* **appliedChanges**: int: CDC applied changes counter
-* **cdcDeleteCounter**: int: CDC delete counter
-* **cdcInsertCounter**: int: CDC insert counter
-* **cdcUpdateCounter**: int: CDC update counter
-* **databaseName**: string: Name of the database
-* **endedOn**: string: End date-time of a migration state
-* **fullLoadCompletedTables**: int: Number of tables loaded during the migration of a DB
-* **fullLoadErroredTables**: int: Number of tables errored out during the migration of a DB
-* **fullLoadLoadingTables**: int: Number of tables loading during the migration of a DB
-* **fullLoadQueuedTables**: int: Number of tables queued for the migration of a DB
-* **incomingChanges**: int: CDC incoming changes counter
-* **latency**: int: Lag in seconds between source and target during online phase
-* **message**: string: Error message, if any, for the migration state
-* **migrationOperation**: string: Migration operation of an individual database
-* **migrationState**: 'Canceled' | 'Canceling' | 'Failed' | 'InProgress' | 'Succeeded' | 'WaitingForCutoverTrigger' | string: Migration db state of an individual database
-* **startedOn**: string: Start date-time of a migration state
+* **appliedChanges**: int: Change Data Capture applied changes counter.
+* **cdcDeleteCounter**: int: Change Data Capture delete counter.
+* **cdcInsertCounter**: int: Change Data Capture insert counter.
+* **cdcUpdateCounter**: int: Change Data Capture update counter.
+* **databaseName**: string: Name of database.
+* **endedOn**: string: End time of a migration state.
+* **fullLoadCompletedTables**: int: Number of tables loaded during the migration of a database.
+* **fullLoadErroredTables**: int: Number of tables encountering errors during the migration of a database.
+* **fullLoadLoadingTables**: int: Number of tables loading during the migration of a database.
+* **fullLoadQueuedTables**: int: Number of tables queued for the migration of a database.
+* **incomingChanges**: int: Change Data Capture incoming changes counter.
+* **latency**: int: Lag in seconds between source and target during online phase.
+* **message**: string: Error message, if any, for the migration state.
+* **migrationOperation**: string: Migration operation of a database.
+* **migrationState**: 'Canceled' | 'Canceling' | 'Failed' | 'InProgress' | 'Succeeded' | 'WaitingForCutoverTrigger' | string: Migration state of a database.
+* **startedOn**: string: Start time of a migration state.
 
 ## DbServerMetadata
 ### Properties
-* **location**: string (ReadOnly): Location of database server
-* **sku**: [ServerSku](#serversku): SKU for the database server. This object is empty for PG single server
-* **storageMb**: int: Storage size in MB for database server
-* **version**: string: Version for database engine
+* **location**: string (ReadOnly): Location of database server.
+* **sku**: [ServerSku](#serversku): Compute tier and size of the database server. This object is empty for an Azure Database for PostgreSQL single server.
+* **storageMb**: int: Storage size (in MB) for database server.
+* **version**: string: Major version of PostgreSQL database engine.
 
 ## FirewallRuleProperties
 ### Properties
-* **endIpAddress**: string {pattern: "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"} (Required): The end IP address of the server firewall rule. Must be IPv4 format.
-* **startIpAddress**: string {pattern: "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"} (Required): The start IP address of the server firewall rule. Must be IPv4 format.
+* **endIpAddress**: string {pattern: "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"} (Required): IP address defining the end of the range of addresses of a firewall rule. Must be expressed in IPv4 format.
+* **startIpAddress**: string {pattern: "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"} (Required): IP address defining the start of the range of addresses of a firewall rule. Must be expressed in IPv4 format.
 
 ## HighAvailability
 ### Properties
-* **mode**: 'Disabled' | 'SameZone' | 'ZoneRedundant' | string: The HA mode for the server.
-* **standbyAvailabilityZone**: string: availability zone information of the standby.
-* **state**: 'CreatingStandby' | 'FailingOver' | 'Healthy' | 'NotEnabled' | 'RemovingStandby' | 'ReplicatingData' | string (ReadOnly): A state of a HA server that is visible to user.
+* **mode**: 'Disabled' | 'SameZone' | 'ZoneRedundant' | string: High availability mode for a flexible server.
+* **standbyAvailabilityZone**: string: Availability zone associated to the standby server created when high availability is set to SameZone or ZoneRedundant.
+* **state**: 'CreatingStandby' | 'FailingOver' | 'Healthy' | 'NotEnabled' | 'RemovingStandby' | 'ReplicatingData' | string (ReadOnly): Possible states of the standby server created when high availability is set to SameZone or ZoneRedundant.
 
 ## LtrBackupOperationResponseProperties
 ### Properties
@@ -251,56 +251,56 @@
 
 ## MaintenanceWindow
 ### Properties
-* **customWindow**: string: indicates whether custom window is enabled or disabled
-* **dayOfWeek**: int: day of week for maintenance window
-* **startHour**: int: start hour for maintenance window
-* **startMinute**: int: start minute for maintenance window
+* **customWindow**: string: Indicates whether custom window is enabled or disabled.
+* **dayOfWeek**: int: Day of the week to be used for maintenance window.
+* **startHour**: int: Start hour to be used for maintenance window.
+* **startMinute**: int: Start minute to be used for maintenance window.
 
 ## MigrationResourceProperties
 ### Properties
-* **cancel**: 'False' | 'True' | string: To trigger cancel for entire migration we need to send this flag as True
-* **currentStatus**: [MigrationStatus](#migrationstatus) (ReadOnly): Current status of migration
-* **dbsToCancelMigrationOn**: string[]: When you want to trigger cancel for specific databases send cancel flag as True and database names in this array
-* **dbsToMigrate**: string[] {maxLength: 50}: Number of databases to migrate
-* **dbsToTriggerCutoverOn**: string[]: When you want to trigger cutover for specific databases send triggerCutover flag as True and database names in this array
-* **migrateRoles**: 'False' | 'True' | string: To migrate roles and permissions we need to send this flag as True
-* **migrationId**: string (ReadOnly): ID for migration, a GUID.
-* **migrationInstanceResourceId**: string: ResourceId of the private endpoint migration instance
-* **migrationMode**: 'Offline' | 'Online' | string: There are two types of migration modes Online and Offline
-* **migrationOption**: 'Migrate' | 'Validate' | 'ValidateAndMigrate' | string: This indicates the supported Migration option for the migration
-* **migrationWindowEndTimeInUtc**: string: End time in UTC for migration window
-* **migrationWindowStartTimeInUtc**: string: Start time in UTC for migration window
-* **overwriteDbsInTarget**: 'False' | 'True' | string: Indicates whether the databases on the target server can be overwritten, if already present. If set to False, the migration workflow will wait for a confirmation, if it detects that the database already exists.
-* **secretParameters**: [MigrationSecretParameters](#migrationsecretparameters): Migration secret parameters
-* **setupLogicalReplicationOnSourceDbIfNeeded**: 'False' | 'True' | string: Indicates whether to setup LogicalReplicationOnSourceDb, if needed
-* **sourceDbServerFullyQualifiedDomainName**: string: Source server fully qualified domain name (FQDN) or IP address. It is a optional value, if customer provide it, migration service will always use it for connection
-* **sourceDbServerMetadata**: [DbServerMetadata](#dbservermetadata) (ReadOnly): Metadata of the source database server
-* **sourceDbServerResourceId**: string: ResourceId of the source database server in case the sourceType is PostgreSQLSingleServer. For other source types this should be ipaddress:port@username or hostname:port@username
-* **sourceType**: 'AWS' | 'AWS_AURORA' | 'AWS_EC2' | 'AWS_RDS' | 'ApsaraDB_RDS' | 'AzureVM' | 'Crunchy_PostgreSQL' | 'Digital_Ocean_Droplets' | 'Digital_Ocean_PostgreSQL' | 'EDB' | 'EDB_Oracle_Server' | 'EDB_PostgreSQL' | 'GCP' | 'GCP_AlloyDB' | 'GCP_CloudSQL' | 'GCP_Compute' | 'Heroku_PostgreSQL' | 'Huawei_Compute' | 'Huawei_RDS' | 'OnPremises' | 'PostgreSQLCosmosDB' | 'PostgreSQLFlexibleServer' | 'PostgreSQLSingleServer' | 'Supabase_PostgreSQL' | string: migration source server type : OnPremises, AWS, GCP, AzureVM, PostgreSQLSingleServer, AWS_RDS, AWS_AURORA, AWS_EC2, GCP_CloudSQL, GCP_AlloyDB, GCP_Compute, EDB, EDB_Oracle_Server, EDB_PostgreSQL, PostgreSQLFlexibleServer, PostgreSQLCosmosDB, Huawei_RDS, Huawei_Compute, Heroku_PostgreSQL, Crunchy_PostgreSQL, ApsaraDB_RDS, Digital_Ocean_Droplets, Digital_Ocean_PostgreSQL, or Supabase_PostgreSQL
-* **sslMode**: 'Prefer' | 'Require' | 'VerifyCA' | 'VerifyFull' | string: SSL modes for migration. Default SSL mode for PostgreSQLSingleServer is VerifyFull and Prefer for other source types
-* **startDataMigration**: 'False' | 'True' | string: Indicates whether the data migration should start right away
-* **targetDbServerFullyQualifiedDomainName**: string: Target server fully qualified domain name (FQDN) or IP address. It is a optional value, if customer provide it, migration service will always use it for connection
-* **targetDbServerMetadata**: [DbServerMetadata](#dbservermetadata) (ReadOnly): Metadata of the target database server
-* **targetDbServerResourceId**: string (ReadOnly): ResourceId of the source database server
-* **triggerCutover**: 'False' | 'True' | string: To trigger cutover for entire migration we need to send this flag as True
+* **cancel**: 'False' | 'True' | string: Indicates if cancel must be triggered for the entire migration.
+* **currentStatus**: [MigrationStatus](#migrationstatus) (ReadOnly): Current status of a migration.
+* **dbsToCancelMigrationOn**: string[]: When you want to trigger cancel for specific databases set 'triggerCutover' to 'True' and the names of the specific databases in this array.
+* **dbsToMigrate**: string[] {maxLength: 50}: Names of databases to migrate.
+* **dbsToTriggerCutoverOn**: string[]: When you want to trigger cutover for specific databases set 'triggerCutover' to 'True' and the names of the specific databases in this array.
+* **migrateRoles**: 'False' | 'True' | string: Indicates if roles and permissions must be migrated.
+* **migrationId**: string (ReadOnly): Identifier of a migration.
+* **migrationInstanceResourceId**: string: Identifier of the private endpoint migration instance.
+* **migrationMode**: 'Offline' | 'Online' | string: Mode used to perform the migration: Online or Offline.
+* **migrationOption**: 'Migrate' | 'Validate' | 'ValidateAndMigrate' | string: Supported option for a migration.
+* **migrationWindowEndTimeInUtc**: string: End time (UTC) for migration window.
+* **migrationWindowStartTimeInUtc**: string: Start time (UTC) for migration window.
+* **overwriteDbsInTarget**: 'False' | 'True' | string: Indicates if databases on the target server can be overwritten when already present. If set to 'False', when the migration workflow detects that the database already exists on the target server, it will wait for a confirmation.
+* **secretParameters**: [MigrationSecretParameters](#migrationsecretparameters): Migration secret parameters.
+* **setupLogicalReplicationOnSourceDbIfNeeded**: 'False' | 'True' | string: Indicates whether to setup LogicalReplicationOnSourceDb, if needed.
+* **sourceDbServerFullyQualifiedDomainName**: string: Fully qualified domain name (FQDN) or IP address of the source server. This property is optional. When provided, the migration service will always use it to connect to the source server.
+* **sourceDbServerMetadata**: [DbServerMetadata](#dbservermetadata) (ReadOnly): Metadata of source database server.
+* **sourceDbServerResourceId**: string: Identifier of the source database server resource, when 'sourceType' is 'PostgreSQLSingleServer'. For other source types this must be set to ipaddress:port@username or hostname:port@username.
+* **sourceType**: 'AWS' | 'AWS_AURORA' | 'AWS_EC2' | 'AWS_RDS' | 'ApsaraDB_RDS' | 'AzureVM' | 'Crunchy_PostgreSQL' | 'Digital_Ocean_Droplets' | 'Digital_Ocean_PostgreSQL' | 'EDB' | 'EDB_Oracle_Server' | 'EDB_PostgreSQL' | 'GCP' | 'GCP_AlloyDB' | 'GCP_CloudSQL' | 'GCP_Compute' | 'Heroku_PostgreSQL' | 'Huawei_Compute' | 'Huawei_RDS' | 'OnPremises' | 'PostgreSQLCosmosDB' | 'PostgreSQLFlexibleServer' | 'PostgreSQLSingleServer' | 'Supabase_PostgreSQL' | string: Source server type used for the migration: ApsaraDB_RDS, AWS, AWS_AURORA, AWS_EC2, AWS_RDS, AzureVM, Crunchy_PostgreSQL, Digital_Ocean_Droplets, Digital_Ocean_PostgreSQL, EDB, EDB_Oracle_Server, EDB_PostgreSQL, GCP, GCP_AlloyDB, GCP_CloudSQL, GCP_Compute, Heroku_PostgreSQL, Huawei_Compute, Huawei_RDS, OnPremises, PostgreSQLCosmosDB, PostgreSQLFlexibleServer, PostgreSQLSingleServer, or Supabase_PostgreSQL
+* **sslMode**: 'Prefer' | 'Require' | 'VerifyCA' | 'VerifyFull' | string: SSL mode used by a migration. Default SSL mode for 'PostgreSQLSingleServer' is 'VerifyFull'. Default SSL mode for other source types is 'Prefer'.
+* **startDataMigration**: 'False' | 'True' | string: Indicates if data migration must start right away.
+* **targetDbServerFullyQualifiedDomainName**: string: Fully qualified domain name (FQDN) or IP address of the target server. This property is optional. When provided, the migration service will always use it to connect to the target server.
+* **targetDbServerMetadata**: [DbServerMetadata](#dbservermetadata) (ReadOnly): Metadata of target database server.
+* **targetDbServerResourceId**: string (ReadOnly): Identifier of the target database server resource.
+* **triggerCutover**: 'False' | 'True' | string: Indicates if cutover must be triggered for the entire migration.
 
 ## MigrationSecretParameters
 ### Properties
-* **adminCredentials**: [AdminCredentials](#admincredentials) (Required): Admin credentials for source and target servers
-* **sourceServerUsername**: string (WriteOnly): Gets or sets the username for the source server. This user need not be an admin.
-* **targetServerUsername**: string (WriteOnly): Gets or sets the username for the target server. This user need not be an admin.
+* **adminCredentials**: [AdminCredentials](#admincredentials) (Required): Credentials of administrator users for source and target servers.
+* **sourceServerUsername**: string (WriteOnly): Gets or sets the name of the user for the source server. This user doesn't need to be an administrator.
+* **targetServerUsername**: string (WriteOnly): Gets or sets the name of the user for the target server. This user doesn't need to be an administrator.
 
 ## MigrationStatus
 ### Properties
-* **currentSubStateDetails**: [MigrationSubStateDetails](#migrationsubstatedetails) (ReadOnly): Current Migration sub state details.
-* **error**: string (ReadOnly): Error message, if any, for the migration state
-* **state**: 'Canceled' | 'CleaningUp' | 'Failed' | 'InProgress' | 'Succeeded' | 'ValidationFailed' | 'WaitingForUserAction' | string (ReadOnly): State of migration
+* **currentSubStateDetails**: [MigrationSubStateDetails](#migrationsubstatedetails) (ReadOnly): Current migration sub state details.
+* **error**: string (ReadOnly): Error message, if any, for the migration state.
+* **state**: 'Canceled' | 'CleaningUp' | 'Failed' | 'InProgress' | 'Succeeded' | 'ValidationFailed' | 'WaitingForUserAction' | string (ReadOnly): State of migration.
 
 ## MigrationSubStateDetails
 ### Properties
-* **currentSubState**: 'CancelingRequestedDBMigrations' | 'Completed' | 'CompletingMigration' | 'MigratingData' | 'PerformingPreRequisiteSteps' | 'ValidationInProgress' | 'WaitingForCutoverTrigger' | 'WaitingForDBsToMigrateSpecification' | 'WaitingForDataMigrationScheduling' | 'WaitingForDataMigrationWindow' | 'WaitingForLogicalReplicationSetupRequestOnSourceDB' | 'WaitingForTargetDBOverwriteConfirmation' | string (ReadOnly): Migration sub state.
+* **currentSubState**: 'CancelingRequestedDBMigrations' | 'Completed' | 'CompletingMigration' | 'MigratingData' | 'PerformingPreRequisiteSteps' | 'ValidationInProgress' | 'WaitingForCutoverTrigger' | 'WaitingForDBsToMigrateSpecification' | 'WaitingForDataMigrationScheduling' | 'WaitingForDataMigrationWindow' | 'WaitingForLogicalReplicationSetupRequestOnSourceDB' | 'WaitingForTargetDBOverwriteConfirmation' | string (ReadOnly): Substate of migration.
 * **dbDetails**: [MigrationSubStateDetailsDbDetails](#migrationsubstatedetailsdbdetails): Dictionary of <DbMigrationStatus>
-* **validationDetails**: [ValidationDetails](#validationdetails): Details for the validation for migration
+* **validationDetails**: [ValidationDetails](#validationdetails): Details for the validation for migration.
 
 ## MigrationSubStateDetailsDbDetails
 ### Properties
@@ -309,9 +309,9 @@
 
 ## Network
 ### Properties
-* **delegatedSubnetResourceId**: string: Delegated subnet arm resource id. This is required to be passed during create, in case we want the server to be VNET injected, i.e. Private access server. During update, pass this only if we want to update the value for Private DNS zone.
-* **privateDnsZoneArmResourceId**: string: Private dns zone arm resource id. This is required to be passed during create, in case we want the server to be VNET injected, i.e. Private access server. During update, pass this only if we want to update the value for Private DNS zone.
-* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: public network access is enabled or not
+* **delegatedSubnetResourceId**: string: Resource identifier of the delegated subnet. Required during creation of a new server, in case you want the server to be integrated into your own virtual network. For an update operation, you only have to provide this property if you want to change the value assigned for the private DNS zone.
+* **privateDnsZoneArmResourceId**: string: Identifier of the private DNS zone. Required during creation of a new server, in case you want the server to be integrated into your own virtual network. For an update operation, you only have to provide this property if you want to change the value assigned for the private DNS zone.
+* **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Indicates if public network access is enabled or not.
 
 ## PrivateEndpoint
 ### Properties
@@ -346,66 +346,66 @@
 
 ## Replica
 ### Properties
-* **capacity**: int (ReadOnly): Replicas allowed for a server.
-* **promoteMode**: 'standalone' | 'switchover' | string (WriteOnly): Sets the promote mode for a replica server. This is a write only property.
-* **promoteOption**: 'forced' | 'planned' | string (WriteOnly): Sets the promote options for a replica server. This is a write only property.
-* **replicationState**: 'Active' | 'Broken' | 'Catchup' | 'Provisioning' | 'Reconfiguring' | 'Updating' | string (ReadOnly): Gets the replication state of a replica server. This property is returned only for replicas api call. Supported values are Active, Catchup, Provisioning, Updating, Broken, Reconfiguring
-* **role**: 'AsyncReplica' | 'GeoAsyncReplica' | 'None' | 'Primary' | string: Used to indicate role of the server in replication set.
+* **capacity**: int (ReadOnly): Maximum number of read replicas allowed for a flexible server.
+* **promoteMode**: 'standalone' | 'switchover' | string (WriteOnly): Type of operation to apply on the read replica. This property is write only. Standalone means that the read replica will be promoted to a standalone server, and will become a completely independent entity from the replication set. Switchover means that the read replica will roles with the primary server.
+* **promoteOption**: 'forced' | 'planned' | string (WriteOnly): Data synchronization option to use when processing the operation specified in the promoteMode property This property is write only. Planned means that the operation will wait for data in the read replica to be fully synchronized with its source server before it initiates the operation. Forced means that the operation will not wait for data in the read replica to be synchronized with its source server before it initiates the operation.
+* **replicationState**: 'Active' | 'Broken' | 'Catchup' | 'Provisioning' | 'Reconfiguring' | 'Updating' | string (ReadOnly): Indicates the replication state of a read replica. This property is returned only when the target flexible server is a read replica. Possible  values are Active, Broken, Catchup, Provisioning, Reconfiguring, and Updating
+* **role**: 'AsyncReplica' | 'GeoAsyncReplica' | 'None' | 'Primary' | string: Role of the server in a replication set.
 
 ## ServerBackupProperties
 ### Properties
-* **backupType**: 'Customer On-Demand' | 'Full' | string: Backup type.
-* **completedTime**: string: Backup completed time (ISO8601 format).
-* **source**: string: Backup source
+* **backupType**: 'Customer On-Demand' | 'Full' | string: Type of backup.
+* **completedTime**: string: Time(ISO8601 format) at which the backup was completed.
+* **source**: string: Source of the backup.
 
 ## ServerProperties
 ### Properties
-* **administratorLogin**: string: The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).
-* **administratorLoginPassword**: string {sensitive} (WriteOnly): The administrator login password (required for server creation).
-* **authConfig**: [AuthConfig](#authconfig): AuthConfig properties of a server.
-* **availabilityZone**: string: availability zone information of the server.
-* **backup**: [Backup](#backup): Backup properties of a server.
-* **cluster**: [Cluster](#cluster): Cluster properties of a server.
-* **createMode**: 'Create' | 'Default' | 'GeoRestore' | 'PointInTimeRestore' | 'Replica' | 'ReviveDropped' | 'Update' | string (WriteOnly): The mode to create a new PostgreSQL server.
-* **dataEncryption**: [DataEncryption](#dataencryption): Data encryption properties of a server.
-* **fullyQualifiedDomainName**: string (ReadOnly): The fully qualified domain name of a server.
-* **highAvailability**: [HighAvailability](#highavailability): High availability properties of a server.
-* **maintenanceWindow**: [MaintenanceWindow](#maintenancewindow): Maintenance window properties of a server.
-* **minorVersion**: string (ReadOnly): The minor version of the server.
-* **network**: [Network](#network): Network properties of a server. This Network property is required to be passed only in case you want the server to be Private access server.
-* **pointInTimeUTC**: string (WriteOnly): Restore point creation time (ISO8601 format), specifying the time to restore from. It's required when 'createMode' is 'PointInTimeRestore' or 'GeoRestore' or 'ReviveDropped'.
-* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): List of private endpoint connections associated with the specified resource.
-* **replica**: [Replica](#replica): Replica properties of a server. These Replica properties are required to be passed only in case you want to Promote a server.
-* **replicaCapacity**: int (ReadOnly): Replicas allowed for a server.
-* **replicationRole**: 'AsyncReplica' | 'GeoAsyncReplica' | 'None' | 'Primary' | string: Replication role of the server
-* **sourceServerResourceId**: string: The source server resource ID to restore from. It's required when 'createMode' is 'PointInTimeRestore' or 'GeoRestore' or 'Replica' or 'ReviveDropped'. This property is returned only for Replica server
-* **state**: 'Disabled' | 'Dropping' | 'Inaccessible' | 'Provisioning' | 'Ready' | 'Restarting' | 'Starting' | 'Stopped' | 'Stopping' | 'Updating' | string (ReadOnly): A state of a server that is visible to user.
-* **storage**: [Storage](#storage): Storage properties of a server.
-* **version**: '11' | '12' | '13' | '14' | '15' | '16' | '17' | string: PostgreSQL Server version.
+* **administratorLogin**: string: Name of the login designated as the first password based administrator assigned to your instance of PostgreSQL. Must be specified the first time that you enable password based authentication on a server. Once set to a given value, it cannot be changed for the rest of the life of a server. If you disable password based authentication on a server which had it enabled, this password based role isn't deleted.
+* **administratorLoginPassword**: string {sensitive} (WriteOnly): Password assigned to the administrator login. As long as password authentication is enabled, this password can be changed at any time.
+* **authConfig**: [AuthConfig](#authconfig): Authentication configuration properties of a flexible server.
+* **availabilityZone**: string: Availability zone of a flexible server.
+* **backup**: [Backup](#backup): Backup properties of a flexible server.
+* **cluster**: [Cluster](#cluster): Cluster properties of a flexible server.
+* **createMode**: 'Create' | 'Default' | 'GeoRestore' | 'PointInTimeRestore' | 'Replica' | 'ReviveDropped' | 'Update' | string (WriteOnly): Creation mode of a new flexible server.
+* **dataEncryption**: [DataEncryption](#dataencryption): Data encryption properties of a flexible server.
+* **fullyQualifiedDomainName**: string (ReadOnly): Fully qualified domain name of a flexible server.
+* **highAvailability**: [HighAvailability](#highavailability): High availability properties of a flexible server.
+* **maintenanceWindow**: [MaintenanceWindow](#maintenancewindow): Maintenance window properties of a flexible server.
+* **minorVersion**: string (ReadOnly): Minor version of PostgreSQL database engine.
+* **network**: [Network](#network): Network properties of a flexible server. Only required if you want your server to be integrated into a virtual network provided by customer.
+* **pointInTimeUTC**: string (WriteOnly): Creation time (in ISO8601 format) of the backup which you want to restore in the new flexible server. It's required when 'createMode' is 'PointInTimeRestore', 'GeoRestore', or 'ReviveDropped'.
+* **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): List of private endpoint connections associated with the specified flexible server.
+* **replica**: [Replica](#replica): Read replica properties of a flexible server. Required only in case that you want to promote a server.
+* **replicaCapacity**: int (ReadOnly): Maximum number of read replicas allowed for a flexible server.
+* **replicationRole**: 'AsyncReplica' | 'GeoAsyncReplica' | 'None' | 'Primary' | string: Role of the server in a replication set.
+* **sourceServerResourceId**: string: Identifier of the flexible server to be used as the source of the new flexible server. Required when 'createMode' is 'PointInTimeRestore', 'GeoRestore', 'Replica', or 'ReviveDropped'. This property is returned only when the target flexible server is a read replica.
+* **state**: 'Disabled' | 'Dropping' | 'Inaccessible' | 'Provisioning' | 'Ready' | 'Restarting' | 'Starting' | 'Stopped' | 'Stopping' | 'Updating' | string (ReadOnly): Possible states of a flexible server.
+* **storage**: [Storage](#storage): Storage properties of a flexible server.
+* **version**: '11' | '12' | '13' | '14' | '15' | '16' | '17' | string: Major version of PostgreSQL database engine.
 
 ## ServerSku
 ### Properties
-* **name**: string: The name of the sku, typically, tier + family + cores, e.g. Standard_D4s_v3.
-* **tier**: 'Burstable' | 'GeneralPurpose' | 'MemoryOptimized' | string: The tier of the particular SKU, e.g. Burstable.
+* **name**: string: Compute tier and size of the database server. This object is empty for an Azure Database for PostgreSQL single server.
+* **tier**: 'Burstable' | 'GeneralPurpose' | 'MemoryOptimized' | string: Tier of the compute assigned to a flexible server.
 
 ## ServerThreatProtectionProperties
 ### Properties
-* **creationTime**: string (ReadOnly): Specifies the UTC creation time of the policy.
-* **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the Threat Protection, whether it is enabled or disabled or a state has not been applied yet on the specific server.
+* **creationTime**: string (ReadOnly): Specifies the creation time (UTC) of the policy.
+* **state**: 'Disabled' | 'Enabled' (Required): Specifies the state of the advanced threat protection, whether it is enabled, disabled, or a state has not been applied yet on the flexible server.
 
 ## Sku
 ### Properties
-* **name**: string (Required): The name of the sku, typically, tier + family + cores, e.g. Standard_D4s_v3.
-* **tier**: 'Burstable' | 'GeneralPurpose' | 'MemoryOptimized' | string (Required): The tier of the particular SKU, e.g. Burstable.
+* **name**: string (Required): Name by which is known a given compute size assigned to a flexible server.
+* **tier**: 'Burstable' | 'GeneralPurpose' | 'MemoryOptimized' | string (Required): Tier of the compute assigned to a flexible server.
 
 ## Storage
 ### Properties
-* **autoGrow**: 'Disabled' | 'Enabled' | string: Flag to enable / disable Storage Auto grow for flexible server.
-* **iops**: int: Storage IOPS quantity. This property is required to be set for storage Type PremiumV2_LRS and UltraSSD_LRS.
-* **storageSizeGB**: int: Max storage allowed for a server.
-* **throughput**: int: Storage throughput for the server. This is required to be set for storage Type PremiumV2_LRS and UltraSSD_LRS.
-* **tier**: 'P1' | 'P10' | 'P15' | 'P2' | 'P20' | 'P3' | 'P30' | 'P4' | 'P40' | 'P50' | 'P6' | 'P60' | 'P70' | 'P80' | string: Name of storage tier for IOPS.
-* **type**: 'PremiumV2_LRS' | 'Premium_LRS' | 'UltraSSD_LRS' | string: Storage type for the server. Allowed values are Premium_LRS, PremiumV2_LRS, and UltraSSD_LRS. Default is Premium_LRS if not specified
+* **autoGrow**: 'Disabled' | 'Enabled' | string: Flag to enable or disable the automatic growth of storage size of a flexible server when available space is nearing zero and conditions allow for automatically growing storage size.
+* **iops**: int: Maximum IOPS supported for storage. Required when type of storage is PremiumV2_LRS or UltraSSD_LRS.
+* **storageSizeGB**: int: Size of storage assigned to a flexible server.
+* **throughput**: int: Maximum throughput supported for storage. Required when type of storage is PremiumV2_LRS or UltraSSD_LRS.
+* **tier**: 'P1' | 'P10' | 'P15' | 'P2' | 'P20' | 'P3' | 'P30' | 'P4' | 'P40' | 'P50' | 'P6' | 'P60' | 'P70' | 'P80' | string: Storage tier of a flexible server.
+* **type**: 'PremiumV2_LRS' | 'Premium_LRS' | 'UltraSSD_LRS' | string: Type of storage assigned to a flexible server. Allowed values are Premium_LRS, PremiumV2_LRS, or UltraSSD_LRS. If not specified, it defaults to Premium_LRS.
 
 ## SystemData
 ### Properties
@@ -428,10 +428,10 @@
 
 ## UserAssignedIdentity
 ### Properties
-* **principalId**: string: the identity principal Id of the server.
-* **tenantId**: string (ReadOnly): Tenant id of the server.
-* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' | string (Required): the types of identities associated with this resource
-* **userAssignedIdentities**: [UserAssignedIdentityMap](#userassignedidentitymap): represents user assigned identities map.
+* **principalId**: string: Identifier of the object of the service principal associated to the user assigned managed identity.
+* **tenantId**: string (ReadOnly): Identifier of the tenant of a flexible server.
+* **type**: 'None' | 'SystemAssigned' | 'SystemAssigned,UserAssigned' | 'UserAssigned' | string (Required): Types of identities associated with a flexible server.
+* **userAssignedIdentities**: [UserAssignedIdentityMap](#userassignedidentitymap): Map of user assigned managed identities.
 
 ## UserAssignedIdentityMap
 ### Properties
@@ -440,31 +440,31 @@
 
 ## UserIdentity
 ### Properties
-* **clientId**: string: the client identifier of the Service Principal which this identity represents.
-* **principalId**: string: the object identifier of the Service Principal which this identity represents.
+* **clientId**: string: Identifier of the client of the service principal associated to the user assigned managed identity.
+* **principalId**: string: Identifier of the object of the service principal associated to the user assigned managed identity.
 
 ## ValidationDetails
 ### Properties
-* **dbLevelValidationDetails**: [DbLevelValidationStatus](#dblevelvalidationstatus)[]: Details of server level validations
-* **serverLevelValidationDetails**: [ValidationSummaryItem](#validationsummaryitem)[]: Details of server level validations
-* **status**: 'Failed' | 'Succeeded' | 'Warning' | string: Validation status for migration
-* **validationEndTimeInUtc**: string: Validation End date-time in UTC
-* **validationStartTimeInUtc**: string: Validation Start date-time in UTC
+* **dbLevelValidationDetails**: [DbLevelValidationStatus](#dblevelvalidationstatus)[]: Details of server level validations.
+* **serverLevelValidationDetails**: [ValidationSummaryItem](#validationsummaryitem)[]: Details of server level validations.
+* **status**: 'Failed' | 'Succeeded' | 'Warning' | string: Validation status for migration.
+* **validationEndTimeInUtc**: string: End time (UTC) for validation.
+* **validationStartTimeInUtc**: string: Start time (UTC) for validation.
 
 ## ValidationMessage
 ### Properties
-* **message**: string: Validation message string
-* **state**: 'Failed' | 'Succeeded' | 'Warning' | string: Severity of validation message
+* **message**: string: Validation message string.
+* **state**: 'Failed' | 'Succeeded' | 'Warning' | string: Severity of validation message.
 
 ## ValidationSummaryItem
 ### Properties
-* **messages**: [ValidationMessage](#validationmessage)[]: Validation messages
-* **state**: 'Failed' | 'Succeeded' | 'Warning' | string: Validation status for migration
-* **type**: string: Validation type
+* **messages**: [ValidationMessage](#validationmessage)[]: Validation messages.
+* **state**: 'Failed' | 'Succeeded' | 'Warning' | string: Validation status for migration.
+* **type**: string: Validation type.
 
 ## VirtualEndpointResourceProperties
 ### Properties
-* **endpointType**: 'ReadWrite' | string: The endpoint type for the virtual endpoint.
-* **members**: string[]: List of members for a virtual endpoint
-* **virtualEndpoints**: string[] (ReadOnly): List of virtual endpoints for a server
+* **endpointType**: 'ReadWrite' | string: Type of endpoint for the virtual endpoints.
+* **members**: string[]: List of flexible servers that one of the virtual endpoints can refer to.
+* **virtualEndpoints**: string[] (ReadOnly): List of virtual endpoints for a flexible server.
 

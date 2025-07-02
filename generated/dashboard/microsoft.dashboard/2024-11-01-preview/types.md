@@ -17,13 +17,13 @@
 ### Properties
 * **apiVersion**: '2024-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The managed identity of the grafana resource.
-* **location**: string: The geo-location where the grafana resource lives
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The managed service identities assigned to this resource.
+* **location**: string (Required): The geo-location where the resource lives
 * **name**: string {pattern: "^[a-zA-Z][a-z0-9A-Z-]{0,28}[a-z0-9A-Z]$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ManagedGrafanaProperties](#managedgrafanaproperties): Properties specific to the grafana resource.
 * **sku**: [ResourceSku](#resourcesku): The Sku of the grafana resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): The system meta data relating to this grafana resource.
-* **tags**: [ManagedGrafanaTags](#managedgrafanatags): The tags for grafana resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Dashboard/grafana' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Dashboard/grafana/integrationFabrics@2024-11-01-preview
@@ -130,11 +130,6 @@ https://grafana.com/docs/grafana/v9.0/setup-grafana/configure-grafana/#smtp
 ### Additional Properties
 * **Additional Properties Type**: [GrafanaPlugin](#grafanaplugin)
 
-## ManagedGrafanaTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## ManagedPrivateEndpointConnectionState
 ### Properties
 * **description**: string (ReadOnly): Gets or sets the reason for approval/rejection of the connection.
@@ -192,7 +187,7 @@ https://grafana.com/docs/grafana/v9.0/setup-grafana/configure-grafana/#smtp
 
 ## ResourceSku
 ### Properties
-* **name**: string (Required)
+* **name**: string (Required): The name of the SKU.
 
 ## Security
 ### Properties
@@ -225,6 +220,11 @@ https://pkg.go.dev/github.com/go-mail/mail#StartTLSPolicy
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TrackedResourceTags
 ### Properties

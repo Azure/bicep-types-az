@@ -65,28 +65,28 @@
           "$ref": "#/79"
         },
         "flags": 0,
-        "description": "The managed identity of the grafana resource."
-      },
-      "systemData": {
-        "type": {
-          "$ref": "#/44"
-        },
-        "flags": 2,
-        "description": "The system meta data relating to this grafana resource."
+        "description": "The managed service identities assigned to this resource."
       },
       "tags": {
         "type": {
           "$ref": "#/88"
         },
         "flags": 0,
-        "description": "The tags for grafana resource."
+        "description": "Resource tags."
       },
       "location": {
         "type": {
           "$ref": "#/2"
         },
-        "flags": 0,
-        "description": "The geo-location where the grafana resource lives"
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       }
     }
   },
@@ -98,7 +98,8 @@
         "type": {
           "$ref": "#/2"
         },
-        "flags": 1
+        "flags": 1,
+        "description": "The name of the SKU."
       }
     }
   },
@@ -787,7 +788,7 @@
           "$ref": "#/66"
         },
         "flags": 0,
-        "description": "Email server settings.\r\nhttps://grafana.com/docs/grafana/v9.0/setup-grafana/configure-grafana/#smtp"
+        "description": "Email server settings.\nhttps://grafana.com/docs/grafana/v9.0/setup-grafana/configure-grafana/#smtp"
       },
       "snapshots": {
         "type": {
@@ -856,28 +857,28 @@
           "$ref": "#/2"
         },
         "flags": 0,
-        "description": "Address used when sending out emails\r\nhttps://pkg.go.dev/net/mail#Address"
+        "description": "Address used when sending out emails\nhttps://pkg.go.dev/net/mail#Address"
       },
       "fromName": {
         "type": {
           "$ref": "#/2"
         },
         "flags": 0,
-        "description": "Name to be used when sending out emails. Default is \"Azure Managed Grafana Notification\"\r\nhttps://pkg.go.dev/net/mail#Address"
+        "description": "Name to be used when sending out emails. Default is \"Azure Managed Grafana Notification\"\nhttps://pkg.go.dev/net/mail#Address"
       },
       "startTLSPolicy": {
         "type": {
           "$ref": "#/72"
         },
         "flags": 0,
-        "description": "The StartTLSPolicy setting of the SMTP configuration\r\nhttps://pkg.go.dev/github.com/go-mail/mail#StartTLSPolicy"
+        "description": "The StartTLSPolicy setting of the SMTP configuration\nhttps://pkg.go.dev/github.com/go-mail/mail#StartTLSPolicy"
       },
       "skipVerify": {
         "type": {
           "$ref": "#/67"
         },
         "flags": 0,
-        "description": "Verify SSL for SMTP server. Default is false\r\nhttps://pkg.go.dev/crypto/tls#Config"
+        "description": "Verify SSL for SMTP server. Default is false\nhttps://pkg.go.dev/crypto/tls#Config"
       }
     }
   },
@@ -1103,7 +1104,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "ManagedGrafanaTags",
+    "name": "TrackedResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -1120,7 +1121,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "Microsoft.Dashboard/grafana/privateEndpointConnections"
+    "value": "Microsoft.Dashboard/dashboards"
   },
   {
     "$type": "StringLiteralType",
@@ -1128,7 +1129,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "Microsoft.Dashboard/grafana/privateEndpointConnections",
+    "name": "Microsoft.Dashboard/dashboards",
     "properties": {
       "id": {
         "type": {
@@ -1139,7 +1140,7 @@
       },
       "name": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 9,
         "description": "The resource name"
@@ -1160,10 +1161,24 @@
       },
       "properties": {
         "type": {
-          "$ref": "#/31"
+          "$ref": "#/93"
         },
         "flags": 0,
-        "description": "Resource properties."
+        "description": "Properties specific to the managed dashboard resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/104"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
       },
       "systemData": {
         "type": {
@@ -1175,11 +1190,304 @@
     }
   },
   {
+    "$type": "ObjectType",
+    "name": "ManagedDashboardProperties",
+    "properties": {
+      "provisioningState": {
+        "type": {
+          "$ref": "#/103"
+        },
+        "flags": 2,
+        "description": "Provisioning state of the resource."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/94"
+      },
+      {
+        "$ref": "#/95"
+      },
+      {
+        "$ref": "#/96"
+      },
+      {
+        "$ref": "#/97"
+      },
+      {
+        "$ref": "#/98"
+      },
+      {
+        "$ref": "#/99"
+      },
+      {
+        "$ref": "#/100"
+      },
+      {
+        "$ref": "#/101"
+      },
+      {
+        "$ref": "#/102"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
     "$type": "ResourceType",
-    "name": "Microsoft.Dashboard/grafana/privateEndpointConnections@2024-11-01-preview",
+    "name": "Microsoft.Dashboard/dashboards@2024-11-01-preview",
     "scopeType": 8,
     "body": {
       "$ref": "#/92"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringType",
+    "pattern": "^[a-zA-Z][a-z0-9A-Z-]{0,18}[a-z0-9A-Z]$"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Dashboard/grafana/integrationFabrics"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2024-11-01-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Dashboard/grafana/integrationFabrics",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/106"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/107"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/108"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/110"
+        },
+        "flags": 0
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/122"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/44"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "IntegrationFabricProperties",
+    "properties": {
+      "provisioningState": {
+        "type": {
+          "$ref": "#/120"
+        },
+        "flags": 2,
+        "description": "Provisioning state of the resource."
+      },
+      "targetResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource Id of the Azure resource being integrated with Azure Managed Grafana. E.g., an Azure Kubernetes Service cluster."
+      },
+      "dataSourceResourceId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The resource Id of the Azure resource which is used to configure Grafana data source. E.g., an Azure Monitor Workspace, an Azure Data Explorer cluster, etc."
+      },
+      "scenarios": {
+        "type": {
+          "$ref": "#/121"
+        },
+        "flags": 0,
+        "description": "A list of integration scenarios covered by this integration fabric"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Accepted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleted"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/111"
+      },
+      {
+        "$ref": "#/112"
+      },
+      {
+        "$ref": "#/113"
+      },
+      {
+        "$ref": "#/114"
+      },
+      {
+        "$ref": "#/115"
+      },
+      {
+        "$ref": "#/116"
+      },
+      {
+        "$ref": "#/117"
+      },
+      {
+        "$ref": "#/118"
+      },
+      {
+        "$ref": "#/119"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Dashboard/grafana/integrationFabrics@2024-11-01-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/109"
     },
     "flags": 0
   },
@@ -1211,28 +1519,28 @@
       },
       "type": {
         "type": {
-          "$ref": "#/94"
+          "$ref": "#/124"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/95"
+          "$ref": "#/125"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/97"
+          "$ref": "#/127"
         },
         "flags": 0,
         "description": "Resource properties."
       },
       "tags": {
         "type": {
-          "$ref": "#/115"
+          "$ref": "#/145"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -1259,7 +1567,7 @@
     "properties": {
       "provisioningState": {
         "type": {
-          "$ref": "#/107"
+          "$ref": "#/137"
         },
         "flags": 2,
         "description": "Provisioning state of the resource."
@@ -1280,7 +1588,7 @@
       },
       "groupIds": {
         "type": {
-          "$ref": "#/108"
+          "$ref": "#/138"
         },
         "flags": 0,
         "description": "The group Ids of the managed private endpoint."
@@ -1294,7 +1602,7 @@
       },
       "connectionState": {
         "type": {
-          "$ref": "#/109"
+          "$ref": "#/139"
         },
         "flags": 2,
         "description": "The state of managed private endpoint connection."
@@ -1355,31 +1663,31 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/98"
+        "$ref": "#/128"
       },
       {
-        "$ref": "#/99"
+        "$ref": "#/129"
       },
       {
-        "$ref": "#/100"
+        "$ref": "#/130"
       },
       {
-        "$ref": "#/101"
+        "$ref": "#/131"
       },
       {
-        "$ref": "#/102"
+        "$ref": "#/132"
       },
       {
-        "$ref": "#/103"
+        "$ref": "#/133"
       },
       {
-        "$ref": "#/104"
+        "$ref": "#/134"
       },
       {
-        "$ref": "#/105"
+        "$ref": "#/135"
       },
       {
-        "$ref": "#/106"
+        "$ref": "#/136"
       },
       {
         "$ref": "#/2"
@@ -1398,7 +1706,7 @@
     "properties": {
       "status": {
         "type": {
-          "$ref": "#/114"
+          "$ref": "#/144"
         },
         "flags": 2,
         "description": "The approval/rejection status of managed private endpoint connection."
@@ -1432,16 +1740,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/110"
+        "$ref": "#/140"
       },
       {
-        "$ref": "#/111"
+        "$ref": "#/141"
       },
       {
-        "$ref": "#/112"
+        "$ref": "#/142"
       },
       {
-        "$ref": "#/113"
+        "$ref": "#/143"
       },
       {
         "$ref": "#/2"
@@ -1461,17 +1769,13 @@
     "name": "Microsoft.Dashboard/grafana/managedPrivateEndpoints@2024-11-01-preview",
     "scopeType": 8,
     "body": {
-      "$ref": "#/96"
+      "$ref": "#/126"
     },
     "flags": 0
   },
   {
-    "$type": "StringType",
-    "pattern": "^[a-zA-Z][a-z0-9A-Z-]{0,18}[a-z0-9A-Z]$"
-  },
-  {
     "$type": "StringLiteralType",
-    "value": "Microsoft.Dashboard/grafana/integrationFabrics"
+    "value": "Microsoft.Dashboard/grafana/privateEndpointConnections"
   },
   {
     "$type": "StringLiteralType",
@@ -1479,7 +1783,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "Microsoft.Dashboard/grafana/integrationFabrics",
+    "name": "Microsoft.Dashboard/grafana/privateEndpointConnections",
     "properties": {
       "id": {
         "type": {
@@ -1490,350 +1794,47 @@
       },
       "name": {
         "type": {
-          "$ref": "#/117"
+          "$ref": "#/2"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/118"
+          "$ref": "#/147"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
-        "type": {
-          "$ref": "#/119"
-        },
-        "flags": 10,
-        "description": "The resource api version"
-      },
-      "properties": {
-        "type": {
-          "$ref": "#/121"
-        },
-        "flags": 0
-      },
-      "tags": {
-        "type": {
-          "$ref": "#/133"
-        },
-        "flags": 0,
-        "description": "Resource tags."
-      },
-      "location": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 1,
-        "description": "The geo-location where the resource lives"
-      },
-      "systemData": {
-        "type": {
-          "$ref": "#/44"
-        },
-        "flags": 2,
-        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "IntegrationFabricProperties",
-    "properties": {
-      "provisioningState": {
-        "type": {
-          "$ref": "#/131"
-        },
-        "flags": 2,
-        "description": "Provisioning state of the resource."
-      },
-      "targetResourceId": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The resource Id of the Azure resource being integrated with Azure Managed Grafana. E.g., an Azure Kubernetes Service cluster."
-      },
-      "dataSourceResourceId": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "The resource Id of the Azure resource which is used to configure Grafana data source. E.g., an Azure Monitor Workspace, an Azure Data Explorer cluster, etc."
-      },
-      "scenarios": {
-        "type": {
-          "$ref": "#/132"
-        },
-        "flags": 0,
-        "description": "A list of integration scenarios covered by this integration fabric"
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Accepted"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Creating"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Updating"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Deleting"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Succeeded"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Failed"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Canceled"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Deleted"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "NotSpecified"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/122"
-      },
-      {
-        "$ref": "#/123"
-      },
-      {
-        "$ref": "#/124"
-      },
-      {
-        "$ref": "#/125"
-      },
-      {
-        "$ref": "#/126"
-      },
-      {
-        "$ref": "#/127"
-      },
-      {
-        "$ref": "#/128"
-      },
-      {
-        "$ref": "#/129"
-      },
-      {
-        "$ref": "#/130"
-      },
-      {
-        "$ref": "#/2"
-      }
-    ]
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/2"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "TrackedResourceTags",
-    "properties": {},
-    "additionalProperties": {
-      "$ref": "#/2"
-    }
-  },
-  {
-    "$type": "ResourceType",
-    "name": "Microsoft.Dashboard/grafana/integrationFabrics@2024-11-01-preview",
-    "scopeType": 8,
-    "body": {
-      "$ref": "#/120"
-    },
-    "flags": 0
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Microsoft.Dashboard/dashboards"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "2024-11-01-preview"
-  },
-  {
-    "$type": "ObjectType",
-    "name": "Microsoft.Dashboard/dashboards",
-    "properties": {
-      "id": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 10,
-        "description": "The resource id"
-      },
-      "name": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 9,
-        "description": "The resource name"
-      },
-      "type": {
-        "type": {
-          "$ref": "#/135"
-        },
-        "flags": 10,
-        "description": "The resource type"
-      },
-      "apiVersion": {
-        "type": {
-          "$ref": "#/136"
-        },
-        "flags": 10,
-        "description": "The resource api version"
-      },
-      "properties": {
-        "type": {
-          "$ref": "#/138"
-        },
-        "flags": 0,
-        "description": "Properties specific to the managed dashboard resource."
-      },
-      "tags": {
-        "type": {
-          "$ref": "#/149"
-        },
-        "flags": 0,
-        "description": "Resource tags."
-      },
-      "location": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 1,
-        "description": "The geo-location where the resource lives"
-      },
-      "systemData": {
-        "type": {
-          "$ref": "#/44"
-        },
-        "flags": 2,
-        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "ManagedDashboardProperties",
-    "properties": {
-      "provisioningState": {
         "type": {
           "$ref": "#/148"
         },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/31"
+        },
+        "flags": 0,
+        "description": "Resource properties."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/44"
+        },
         "flags": 2,
-        "description": "Provisioning state of the resource."
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Accepted"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Creating"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Updating"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Deleting"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Succeeded"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Failed"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Canceled"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Deleted"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "NotSpecified"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/139"
-      },
-      {
-        "$ref": "#/140"
-      },
-      {
-        "$ref": "#/141"
-      },
-      {
-        "$ref": "#/142"
-      },
-      {
-        "$ref": "#/143"
-      },
-      {
-        "$ref": "#/144"
-      },
-      {
-        "$ref": "#/145"
-      },
-      {
-        "$ref": "#/146"
-      },
-      {
-        "$ref": "#/147"
-      },
-      {
-        "$ref": "#/2"
-      }
-    ]
-  },
-  {
-    "$type": "ObjectType",
-    "name": "TrackedResourceTags",
-    "properties": {},
-    "additionalProperties": {
-      "$ref": "#/2"
     }
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.Dashboard/dashboards@2024-11-01-preview",
+    "name": "Microsoft.Dashboard/grafana/privateEndpointConnections@2024-11-01-preview",
     "scopeType": 8,
     "body": {
-      "$ref": "#/137"
+      "$ref": "#/149"
     },
     "flags": 0
   },
