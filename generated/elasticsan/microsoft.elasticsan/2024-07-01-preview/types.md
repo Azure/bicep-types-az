@@ -218,6 +218,6 @@
 * **managedBy**: [ManagedByInfo](#managedbyinfo): Parent resource information.
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleted' | 'Deleting' | 'Failed' | 'Invalid' | 'Pending' | 'Restoring' | 'SoftDeleting' | 'Succeeded' | 'Updating' | string (ReadOnly): State of the operation on the resource.
 * **sizeGiB**: int (Required): Volume size.
-* **storageTarget**: [IscsiTargetInfo](#iscsitargetinfo) (ReadOnly): Storage target information
+* **storageTarget**: [IscsiTargetInfo](#iscsitargetinfo): Storage target information
 * **volumeId**: string (ReadOnly): Unique Id of the volume in GUID format
 
