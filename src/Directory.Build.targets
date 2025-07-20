@@ -17,7 +17,7 @@
   </PropertyGroup>
 
   <!-- Nuget Publishing related properties that are common to all packages -->
-  <PropertyGroup Condition="'$(EnableNuget)' == 'true'" >
+  <PropertyGroup Condition="'$(EnableNuget)' == 'true'">
     <!-- <GenerateNuspecDependsOn>$(GenerateNuspecDependsOn);</GenerateNuspecDependsOn> -->
     <PackageOutputPath>$(MSBuildThisFileDirectory)\..\out</PackageOutputPath>
     <Authors>Microsoft</Authors>
@@ -40,7 +40,7 @@
     <RepositoryUrl>https://github.com/Azure/bicep-types-az</RepositoryUrl>
   </PropertyGroup>
 
-  <ItemGroup Condition="'$(EnableNuget)' == 'true'" >
+  <ItemGroup Condition="'$(EnableNuget)' == 'true'">
     <None Include="$(MSBuildThisFileDirectory)\icons\bicep-logo-256.png" Pack="true" PackagePath="" Visible="false" />
   </ItemGroup>
 </Project>
