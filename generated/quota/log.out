@@ -1,8 +1,19 @@
 Generating types for 'specification/quota/resource-manager/readme.md'
-AutoRest code generation utility [cli version: 3.7.2; node: v22.16.0]
+AutoRest code generation utility [cli version: 3.7.2; node: v22.17.1]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'GroupQuotaLimit-properties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/quota/resource-manager/Microsoft.Quota/stable/2025-07-15/groupquota.json:1610:9
+warning | PreCheck/SchemaMissingType | The schema 'SubscriptionQuotaAllocations-properties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/quota/resource-manager/Microsoft.Quota/stable/2025-07-15/groupquota.json:1838:9
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | Skipping GroupQuotaLimitsRequest_List due to required query parameter "filter"
+warning | Skipping GroupQuotaSubscriptionAllocationRequest_List due to required query parameter "filter"
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/SchemaMissingType | The schema 'GroupQuotaLimit-properties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'

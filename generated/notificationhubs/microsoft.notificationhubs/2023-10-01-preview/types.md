@@ -18,11 +18,11 @@
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: Deprecated - only for compatibility.
+* **location**: string
 * **name**: string {minLength: 1, maxLength: 256, pattern: "^[a-zA-Z0-9!()*-._]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [SharedAccessAuthorizationRuleProperties](#sharedaccessauthorizationruleproperties): SharedAccessAuthorizationRule properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [SharedAccessAuthorizationRuleResourceTags](#sharedaccessauthorizationruleresourcetags): Deprecated - only for compatibility.
+* **tags**: [SharedAccessAuthorizationRuleResourceTags](#sharedaccessauthorizationruleresourcetags): Dictionary of <string>
 * **type**: 'Microsoft.NotificationHubs/namespaces/authorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NotificationHubs/namespaces/notificationHubs@2023-10-01-preview
@@ -43,11 +43,11 @@
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: Deprecated - only for compatibility.
+* **location**: string
 * **name**: string {minLength: 1, maxLength: 256, pattern: "^[a-zA-Z0-9!()*-._]+$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [SharedAccessAuthorizationRuleProperties](#sharedaccessauthorizationruleproperties): SharedAccessAuthorizationRule properties.
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **tags**: [SharedAccessAuthorizationRuleResourceTags](#sharedaccessauthorizationruleresourcetags): Deprecated - only for compatibility.
+* **tags**: [SharedAccessAuthorizationRuleResourceTags](#sharedaccessauthorizationruleresourcetags): Dictionary of <string>
 * **type**: 'Microsoft.NotificationHubs/namespaces/notificationHubs/authorizationRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NotificationHubs/namespaces/privateEndpointConnections@2023-10-01-preview
@@ -70,18 +70,17 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.NotificationHubs/namespaces/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
-## Function listKeys (Microsoft.NotificationHubs/namespaces/notificationHubs/authorizationRules@2023-10-01-preview)
-* **Resource**: Microsoft.NotificationHubs/namespaces/notificationHubs/authorizationRules
-* **ApiVersion**: 2023-10-01-preview
-* **Output**: [ResourceListKeys](#resourcelistkeys)
-
 ## Function listKeys (Microsoft.NotificationHubs/namespaces/authorizationRules@2023-10-01-preview)
 * **Resource**: Microsoft.NotificationHubs/namespaces/authorizationRules
 * **ApiVersion**: 2023-10-01-preview
 * **Output**: [ResourceListKeys](#resourcelistkeys)
 
+## Function listKeys (Microsoft.NotificationHubs/namespaces/notificationHubs/authorizationRules@2023-10-01-preview)
+* **Resource**: Microsoft.NotificationHubs/namespaces/notificationHubs/authorizationRules
+* **ApiVersion**: 2023-10-01-preview
+* **Output**: [ResourceListKeys](#resourcelistkeys)
+
 ## AdmCredential
-*Sensitive*
 ### Properties
 * **properties**: [AdmCredentialProperties](#admcredentialproperties) (Required): Description of a NotificationHub AdmCredential.
 
@@ -92,7 +91,6 @@
 * **clientSecret**: string {sensitive, minLength: 1} (Required): Gets or sets the credential secret access key.
 
 ## ApnsCredential
-*Sensitive*
 ### Properties
 * **properties**: [ApnsCredentialProperties](#apnscredentialproperties) (Required): Description of a NotificationHub ApnsCredential.
 
@@ -111,7 +109,6 @@ your developer account
 developer account
 
 ## BaiduCredential
-*Sensitive*
 ### Properties
 * **properties**: [BaiduCredentialProperties](#baiducredentialproperties) (Required): Description of a NotificationHub BaiduCredential.
 
@@ -122,7 +119,6 @@ developer account
 * **baiduSecretKey**: string {sensitive, minLength: 1} (Required): Gets or sets baidu Secret Key
 
 ## BrowserCredential
-*Sensitive*
 ### Properties
 * **properties**: [BrowserCredentialProperties](#browsercredentialproperties) (Required): Description of a NotificationHub BrowserCredential.
 
@@ -133,7 +129,6 @@ developer account
 * **vapidPublicKey**: string {sensitive, minLength: 1} (Required): Gets or sets VAPID public key.
 
 ## FcmV1Credential
-*Sensitive*
 ### Properties
 * **properties**: [FcmV1CredentialProperties](#fcmv1credentialproperties) (Required): Description of a NotificationHub FcmV1Credential.
 
@@ -144,7 +139,6 @@ developer account
 * **projectId**: string {sensitive, minLength: 1} (Required): Gets or sets project id.
 
 ## GcmCredential
-*Sensitive*
 ### Properties
 * **properties**: [GcmCredentialProperties](#gcmcredentialproperties) (Required): Description of a NotificationHub GcmCredential.
 
@@ -159,7 +153,6 @@ developer account
 * **rights**: ('Listen' | 'Manage' | 'Send' | string)[] (Required): List of access rights.
 
 ## MpnsCredential
-*Sensitive*
 ### Properties
 * **properties**: [MpnsCredentialProperties](#mpnscredentialproperties) (Required): Description of a NotificationHub MpnsCredential.
 
@@ -176,7 +169,7 @@ developer account
 * **dataCenter**: string: Deprecated.
 * **enabled**: bool (ReadOnly): Gets or sets whether or not the namespace is currently enabled.
 * **metricId**: string (ReadOnly): Azure Insights Metrics id.
-* **name**: string (ReadOnly): Name of the Notification Hubs namespace. This is immutable property, set automatically 
+* **name**: string (ReadOnly): Name of the Notification Hubs namespace. This is immutable property, set automatically
 by the service when the namespace is created.
 * **namespaceType**: 'Messaging' | 'NotificationHub' | string: Defines values for NamespaceType.
 * **networkAcls**: [NetworkAcls](#networkacls): A collection of network authorization rules.
@@ -217,7 +210,6 @@ operations.
 * **xiaomiCredential**: [XiaomiCredential](#xiaomicredential): Description of a NotificationHub XiaomiCredential.
 
 ## PnsCredentials
-*Sensitive*
 ### Properties
 * **admCredential**: [AdmCredential](#admcredential): Description of a NotificationHub AdmCredential.
 * **apnsCredential**: [ApnsCredential](#apnscredential): Description of a NotificationHub ApnsCredential.
@@ -325,7 +317,6 @@ validating the SAS token.
 * **Additional Properties Type**: string
 
 ## WnsCredential
-*Sensitive*
 ### Properties
 * **properties**: [WnsCredentialProperties](#wnscredentialproperties) (Required): Description of a NotificationHub WnsCredential.
 
@@ -338,7 +329,6 @@ validating the SAS token.
 * **wnsCertificate**: string {sensitive}: Gets or sets the WNS Certificate.
 
 ## XiaomiCredential
-*Sensitive*
 ### Properties
 * **properties**: [XiaomiCredentialProperties](#xiaomicredentialproperties) (Required): Description of a NotificationHub XiaomiCredentialProperties.
 

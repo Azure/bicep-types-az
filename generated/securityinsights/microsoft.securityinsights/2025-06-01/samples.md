@@ -716,7 +716,7 @@ resource exampleResource 'Microsoft.SecurityInsights/sourcecontrols@2025-06-01' 
   properties: {
     description: 'This is a source control'
     contentTypes: [
-      'AnalyticRules'
+      'AnalyticsRule'
       'Workbook'
     ]
     displayName: 'My Source Control'

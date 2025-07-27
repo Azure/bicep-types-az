@@ -95,19 +95,6 @@ resource exampleResource 'Microsoft.AppConfiguration/configurationStores@2025-02
 }
 ```
 
-## microsoft.appconfiguration/configurationstores/experimentation
-
-Experimentation_Create
-```bicep
-resource exampleResource 'Microsoft.AppConfiguration/configurationStores/experimentation@2025-02-01-preview' = {
-  parent: parentResource 
-  name: 'example'
-  properties: {
-    managedResourceGroupName: 'AAC_MRG_myResourceGroup_contoso_eastus2'
-  }
-}
-```
-
 ## microsoft.appconfiguration/configurationstores/keyvalues
 
 KeyValues_CreateOrUpdate

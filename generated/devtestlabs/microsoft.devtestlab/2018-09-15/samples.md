@@ -500,6 +500,15 @@ resource exampleResource 'Microsoft.DevTestLab/labs/virtualnetworks@2018-09-15' 
   parent: parentResource 
   name: 'example'
   location: '{location}'
+  properties: {
+    allowedSubnets: [
+      {
+        allowPublicIp: 'Allow'
+        labSubnetName: '{virtualNetworkName}Subnet'
+        resourceId: '/subscriptions/{subscriptionId}/resourceGroups/resourceGroupName/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{virtualNetworkName}Subnet'
+      }
+    ]
+  }
   tags: {
     tagName1: 'tagValue1'
   }

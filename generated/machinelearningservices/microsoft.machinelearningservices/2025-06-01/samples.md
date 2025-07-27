@@ -358,6 +358,7 @@ resource exampleResource 'Microsoft.MachineLearningServices/workspaces@2025-06-0
     friendlyName: 'HelloName'
     hbiWorkspace: false
     keyVault: '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.KeyVault/vaults/testkv'
+    provisionNetworkNow: false
     sharedPrivateLinkResources: [
       {
         name: 'testdbresource'

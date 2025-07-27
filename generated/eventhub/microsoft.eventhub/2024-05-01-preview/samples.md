@@ -223,7 +223,7 @@ resource exampleResource 'Microsoft.EventHub/namespaces/eventhubs@2024-05-01-pre
     partitionCount: 4
     retentionDescription: {
       cleanupPolicy: 'Compact'
-      minCompactionLagInMins: 10
+      minCompactionLagTimeInMinutes: 10
       tombstoneRetentionTimeInHours: 1
     }
     status: 'Active'

@@ -363,7 +363,7 @@
 ## RetentionDescription
 ### Properties
 * **cleanupPolicy**: 'Compact' | 'Delete' | 'DeleteOrCompact' | string: Enumerates the possible values for cleanup policy
-* **minCompactionLagInMins**: int: The minimum time a message will remain ineligible for compaction in the log. This value is used when cleanupPolicy is Compact or DeleteOrCompact.
+* **minCompactionLagTimeInMinutes**: int: The minimum time a message will remain ineligible for compaction in the log. This value is used when cleanupPolicy is Compact or DeleteOrCompact.
 * **retentionTimeInHours**: int: Number of hours to retain the events for this Event Hub. This should be positive value upto namespace SKU max. -1 is a special case where retention time is infinite, but the size of an entity is restricted and its size depends on namespace SKU type.
 * **tombstoneRetentionTimeInHours**: int: Number of hours to retain the tombstone markers of a compacted Event Hub. This value is used when cleanupPolicy is Compact or DeleteOrCompact. Consumer must complete reading the tombstone marker within this specified amount of time if consumer begins from starting offset to ensure they get a valid snapshot for the specific key described by the tombstone marker within the compacted Event Hub
 

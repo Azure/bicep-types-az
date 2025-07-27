@@ -260,7 +260,7 @@
 ### Properties
 * **fileSystemUser**: [FileSystemUser](#filesystemuser): File System user having access to volume data. For Unix, this is the user's uid and gid. For Windows, this is the user's username. Note that the Unix and Windows user details are mutually exclusive, meaning one or other must be supplied, but not both.
 * **path**: string: The volume path mounted inside the bucket. The default is the root path '/' if no value is provided when the bucket is created.
-* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the resource
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Moving' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the resource
 * **server**: [BucketServerProperties](#bucketserverproperties): Properties of the server managing the lifecycle of volume buckets
 * **status**: 'Active' | 'CredentialsExpired' | 'NoCredentialsSet' | string (ReadOnly): The bucket credentials status. There states:
 
@@ -652,7 +652,7 @@
 
 ## VolumeQuotaRulesProperties
 ### Properties
-* **provisioningState**: 'Accepted' | 'Creating' | 'Deleting' | 'Failed' | 'Moving' | 'Patching' | 'Succeeded' (ReadOnly): Gets the status of the VolumeQuotaRule at the time the operation was called.
+* **provisioningState**: 'Accepted' | 'Canceled' | 'Deleting' | 'Failed' | 'Moving' | 'Provisioning' | 'Succeeded' | 'Updating' | string (ReadOnly): Provisioning state of the resource
 * **quotaSizeInKiBs**: int: Size of quota
 * **quotaTarget**: string: UserID/GroupID/SID based on the quota target type. UserID and groupID can be found by running ‘id’ or ‘getent’ command for the user or group and SID can be found by running <wmic useraccount where name='user-name' get sid>
 * **quotaType**: 'DefaultGroupQuota' | 'DefaultUserQuota' | 'IndividualGroupQuota' | 'IndividualUserQuota' | string: Type of quota

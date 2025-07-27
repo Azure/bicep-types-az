@@ -296,13 +296,6 @@
         "flags": 10,
         "description": "The resource api version"
       },
-      "systemData": {
-        "type": {
-          "$ref": "#/5"
-        },
-        "flags": 2,
-        "description": "Metadata pertaining to creation and last modification of the resource"
-      },
       "properties": {
         "type": {
           "$ref": "#/22"
@@ -315,14 +308,21 @@
           "$ref": "#/54"
         },
         "flags": 0,
-        "description": "Organization resource tags"
+        "description": "Resource tags."
       },
       "location": {
         "type": {
           "$ref": "#/2"
         },
-        "flags": 0,
-        "description": "Location of Organization resource"
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       }
     }
   },
@@ -685,7 +685,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "OrganizationResourceTags",
+    "name": "TrackedResourceTags",
     "properties": {},
     "additionalProperties": {
       "$ref": "#/2"
@@ -753,6 +753,13 @@
         },
         "flags": 0,
         "description": "Environment properties"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       }
     }
   },
@@ -914,6 +921,13 @@
         },
         "flags": 0,
         "description": "Cluster Properties"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       }
     }
   },
@@ -2706,6 +2720,13 @@
         },
         "flags": 0,
         "description": "Topic Properties"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       }
     }
   },
@@ -2986,7 +3007,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "AccessListUsersSuccessResponse",
+    "name": "AccessListClusterSuccessResponse",
     "properties": {
       "kind": {
         "type": {
@@ -3004,10 +3025,10 @@
       },
       "data": {
         "type": {
-          "$ref": "#/219"
+          "$ref": "#/223"
         },
         "flags": 0,
-        "description": "Data of the users list"
+        "description": "List of clusters"
       }
     }
   },
@@ -3054,21 +3075,21 @@
   },
   {
     "$type": "ObjectType",
-    "name": "UserRecord",
+    "name": "ClusterRecord",
     "properties": {
       "kind": {
         "type": {
           "$ref": "#/2"
         },
         "flags": 0,
-        "description": "Type of account"
+        "description": "Type of cluster"
       },
       "id": {
         "type": {
           "$ref": "#/2"
         },
         "flags": 0,
-        "description": "Id of the user"
+        "description": "Id of the cluster"
       },
       "metadata": {
         "type": {
@@ -3077,26 +3098,26 @@
         "flags": 0,
         "description": "Metadata of the record"
       },
-      "email": {
+      "display_name": {
         "type": {
           "$ref": "#/2"
         },
         "flags": 0,
-        "description": "Email of the user"
+        "description": "Display name of the cluster"
       },
-      "full_name": {
+      "spec": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/219"
         },
         "flags": 0,
-        "description": "Name of the user"
+        "description": "Specification of the cluster"
       },
-      "auth_type": {
+      "status": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/77"
         },
         "flags": 0,
-        "description": "Auth type of the user"
+        "description": "Specification of the cluster"
       }
     }
   },
@@ -3138,371 +3159,6 @@
         },
         "flags": 0,
         "description": "Deleted Date time"
-      }
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/217"
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "listUsers",
-    "resourceType": "Microsoft.Confluent/organizations/access",
-    "apiVersion": "2024-07-01",
-    "output": {
-      "$ref": "#/215"
-    },
-    "input": {
-      "$ref": "#/206"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "AccessListServiceAccountsSuccessResponse",
-    "properties": {
-      "kind": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Type of response"
-      },
-      "metadata": {
-        "type": {
-          "$ref": "#/216"
-        },
-        "flags": 0,
-        "description": "Metadata of the list"
-      },
-      "data": {
-        "type": {
-          "$ref": "#/223"
-        },
-        "flags": 0,
-        "description": "Data of the service accounts list"
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "ServiceAccountRecord",
-    "properties": {
-      "kind": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Type of account"
-      },
-      "id": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Id of the service account"
-      },
-      "metadata": {
-        "type": {
-          "$ref": "#/218"
-        },
-        "flags": 0,
-        "description": "Metadata of the record"
-      },
-      "display_name": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Name of the service account"
-      },
-      "description": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Description of the service account"
-      }
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/222"
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "listServiceAccounts",
-    "resourceType": "Microsoft.Confluent/organizations/access",
-    "apiVersion": "2024-07-01",
-    "output": {
-      "$ref": "#/221"
-    },
-    "input": {
-      "$ref": "#/206"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "AccessListInvitationsSuccessResponse",
-    "properties": {
-      "kind": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Type of response"
-      },
-      "metadata": {
-        "type": {
-          "$ref": "#/216"
-        },
-        "flags": 0,
-        "description": "Metadata of the list"
-      },
-      "data": {
-        "type": {
-          "$ref": "#/227"
-        },
-        "flags": 0,
-        "description": "Data of the invitations list"
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "InvitationRecord",
-    "properties": {
-      "kind": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Type of account"
-      },
-      "id": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Id of the invitation"
-      },
-      "metadata": {
-        "type": {
-          "$ref": "#/218"
-        },
-        "flags": 0,
-        "description": "Metadata of the record"
-      },
-      "email": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Email of the user"
-      },
-      "auth_type": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Auth type of the user"
-      },
-      "status": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Status of the invitation"
-      },
-      "accepted_at": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Accepted date time of the invitation"
-      },
-      "expires_at": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Expiration date time of the invitation"
-      }
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/226"
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "listInvitations",
-    "resourceType": "Microsoft.Confluent/organizations/access",
-    "apiVersion": "2024-07-01",
-    "output": {
-      "$ref": "#/225"
-    },
-    "input": {
-      "$ref": "#/206"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "AccessListEnvironmentsSuccessResponse",
-    "properties": {
-      "kind": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Type of response"
-      },
-      "metadata": {
-        "type": {
-          "$ref": "#/216"
-        },
-        "flags": 0,
-        "description": "Metadata of the  environment list"
-      },
-      "data": {
-        "type": {
-          "$ref": "#/231"
-        },
-        "flags": 0,
-        "description": "Environment list data"
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "EnvironmentRecord",
-    "properties": {
-      "kind": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Type of environment"
-      },
-      "id": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Id of the environment"
-      },
-      "metadata": {
-        "type": {
-          "$ref": "#/218"
-        },
-        "flags": 0,
-        "description": "Metadata of the record"
-      },
-      "display_name": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Display name of the user"
-      }
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/230"
-    }
-  },
-  {
-    "$type": "ResourceFunctionType",
-    "name": "listEnvironments",
-    "resourceType": "Microsoft.Confluent/organizations/access",
-    "apiVersion": "2024-07-01",
-    "output": {
-      "$ref": "#/229"
-    },
-    "input": {
-      "$ref": "#/206"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "AccessListClusterSuccessResponse",
-    "properties": {
-      "kind": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Type of response"
-      },
-      "metadata": {
-        "type": {
-          "$ref": "#/216"
-        },
-        "flags": 0,
-        "description": "Metadata of the list"
-      },
-      "data": {
-        "type": {
-          "$ref": "#/239"
-        },
-        "flags": 0,
-        "description": "List of clusters"
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "ClusterRecord",
-    "properties": {
-      "kind": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Type of cluster"
-      },
-      "id": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Id of the cluster"
-      },
-      "metadata": {
-        "type": {
-          "$ref": "#/218"
-        },
-        "flags": 0,
-        "description": "Metadata of the record"
-      },
-      "display_name": {
-        "type": {
-          "$ref": "#/2"
-        },
-        "flags": 0,
-        "description": "Display name of the cluster"
-      },
-      "spec": {
-        "type": {
-          "$ref": "#/235"
-        },
-        "flags": 0,
-        "description": "Specification of the cluster"
-      },
-      "status": {
-        "type": {
-          "$ref": "#/77"
-        },
-        "flags": 0,
-        "description": "Specification of the cluster"
       }
     }
   },
@@ -3575,21 +3231,21 @@
       },
       "environment": {
         "type": {
-          "$ref": "#/236"
+          "$ref": "#/220"
         },
         "flags": 0,
         "description": "Specification of the cluster"
       },
       "network": {
         "type": {
-          "$ref": "#/237"
+          "$ref": "#/221"
         },
         "flags": 0,
         "description": "Specification of the cluster"
       },
       "byok": {
         "type": {
-          "$ref": "#/238"
+          "$ref": "#/222"
         },
         "flags": 0,
         "description": "Specification of the cluster"
@@ -3694,12 +3350,243 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/234"
+      "$ref": "#/217"
     }
   },
   {
     "$type": "ResourceFunctionType",
     "name": "listClusters",
+    "resourceType": "Microsoft.Confluent/organizations/access",
+    "apiVersion": "2024-07-01",
+    "output": {
+      "$ref": "#/215"
+    },
+    "input": {
+      "$ref": "#/206"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AccessListEnvironmentsSuccessResponse",
+    "properties": {
+      "kind": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Type of response"
+      },
+      "metadata": {
+        "type": {
+          "$ref": "#/216"
+        },
+        "flags": 0,
+        "description": "Metadata of the  environment list"
+      },
+      "data": {
+        "type": {
+          "$ref": "#/227"
+        },
+        "flags": 0,
+        "description": "Environment list data"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EnvironmentRecord",
+    "properties": {
+      "kind": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Type of environment"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Id of the environment"
+      },
+      "metadata": {
+        "type": {
+          "$ref": "#/218"
+        },
+        "flags": 0,
+        "description": "Metadata of the record"
+      },
+      "display_name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Display name of the user"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/226"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listEnvironments",
+    "resourceType": "Microsoft.Confluent/organizations/access",
+    "apiVersion": "2024-07-01",
+    "output": {
+      "$ref": "#/225"
+    },
+    "input": {
+      "$ref": "#/206"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AccessListInvitationsSuccessResponse",
+    "properties": {
+      "kind": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Type of response"
+      },
+      "metadata": {
+        "type": {
+          "$ref": "#/216"
+        },
+        "flags": 0,
+        "description": "Metadata of the list"
+      },
+      "data": {
+        "type": {
+          "$ref": "#/231"
+        },
+        "flags": 0,
+        "description": "Data of the invitations list"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "InvitationRecord",
+    "properties": {
+      "kind": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Type of account"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Id of the invitation"
+      },
+      "metadata": {
+        "type": {
+          "$ref": "#/218"
+        },
+        "flags": 0,
+        "description": "Metadata of the record"
+      },
+      "email": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Email of the user"
+      },
+      "auth_type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Auth type of the user"
+      },
+      "status": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Status of the invitation"
+      },
+      "accepted_at": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Accepted date time of the invitation"
+      },
+      "expires_at": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Expiration date time of the invitation"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/230"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listInvitations",
+    "resourceType": "Microsoft.Confluent/organizations/access",
+    "apiVersion": "2024-07-01",
+    "output": {
+      "$ref": "#/229"
+    },
+    "input": {
+      "$ref": "#/206"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AccessRoleBindingNameListSuccessResponse",
+    "properties": {
+      "kind": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Type of response"
+      },
+      "metadata": {
+        "type": {
+          "$ref": "#/216"
+        },
+        "flags": 0,
+        "description": "Metadata of the list"
+      },
+      "data": {
+        "type": {
+          "$ref": "#/234"
+        },
+        "flags": 0,
+        "description": "List of role binding names"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listRoleBindingNameList",
     "resourceType": "Microsoft.Confluent/organizations/access",
     "apiVersion": "2024-07-01",
     "output": {
@@ -3729,7 +3616,7 @@
       },
       "data": {
         "type": {
-          "$ref": "#/243"
+          "$ref": "#/238"
         },
         "flags": 0,
         "description": "List of role binding"
@@ -3787,7 +3674,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/242"
+      "$ref": "#/237"
     }
   },
   {
@@ -3796,7 +3683,7 @@
     "resourceType": "Microsoft.Confluent/organizations/access",
     "apiVersion": "2024-07-01",
     "output": {
-      "$ref": "#/241"
+      "$ref": "#/236"
     },
     "input": {
       "$ref": "#/206"
@@ -3804,7 +3691,93 @@
   },
   {
     "$type": "ObjectType",
-    "name": "AccessRoleBindingNameListSuccessResponse",
+    "name": "AccessListServiceAccountsSuccessResponse",
+    "properties": {
+      "kind": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Type of response"
+      },
+      "metadata": {
+        "type": {
+          "$ref": "#/216"
+        },
+        "flags": 0,
+        "description": "Metadata of the list"
+      },
+      "data": {
+        "type": {
+          "$ref": "#/242"
+        },
+        "flags": 0,
+        "description": "Data of the service accounts list"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ServiceAccountRecord",
+    "properties": {
+      "kind": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Type of account"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Id of the service account"
+      },
+      "metadata": {
+        "type": {
+          "$ref": "#/218"
+        },
+        "flags": 0,
+        "description": "Metadata of the record"
+      },
+      "display_name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of the service account"
+      },
+      "description": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Description of the service account"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/241"
+    }
+  },
+  {
+    "$type": "ResourceFunctionType",
+    "name": "listServiceAccounts",
+    "resourceType": "Microsoft.Confluent/organizations/access",
+    "apiVersion": "2024-07-01",
+    "output": {
+      "$ref": "#/240"
+    },
+    "input": {
+      "$ref": "#/206"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AccessListUsersSuccessResponse",
     "properties": {
       "kind": {
         "type": {
@@ -3825,23 +3798,71 @@
           "$ref": "#/246"
         },
         "flags": 0,
-        "description": "List of role binding names"
+        "description": "Data of the users list"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UserRecord",
+    "properties": {
+      "kind": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Type of account"
+      },
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Id of the user"
+      },
+      "metadata": {
+        "type": {
+          "$ref": "#/218"
+        },
+        "flags": 0,
+        "description": "Metadata of the record"
+      },
+      "email": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Email of the user"
+      },
+      "full_name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Name of the user"
+      },
+      "auth_type": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Auth type of the user"
       }
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/2"
+      "$ref": "#/245"
     }
   },
   {
     "$type": "ResourceFunctionType",
-    "name": "listRoleBindingNameList",
+    "name": "listUsers",
     "resourceType": "Microsoft.Confluent/organizations/access",
     "apiVersion": "2024-07-01",
     "output": {
-      "$ref": "#/245"
+      "$ref": "#/244"
     },
     "input": {
       "$ref": "#/206"

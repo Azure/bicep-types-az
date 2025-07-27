@@ -15,18 +15,18 @@ resource exampleResource 'ArizeAi.ObservabilityEval/organizations@2024-10-01-pre
     userAssignedIdentities: {
     }
   }
-  location: 'gigxuxdonjfmqnljxcgctfwqapllu'
+  location: 'East US'
   properties: {
     marketplace: {
       offerDetails: {
-        offerId: 'hwhtxmtmmlwsu'
-        planId: 'jozklohkdpng'
-        planName: 'clnynwt'
-        publisherId: 'flrya'
-        termId: 'iugvvvoggusxuz'
-        termUnit: 'cbfktammjyqewljjjaokakilog'
+        offerId: 'arize-liftr-0'
+        planId: 'liftr-test-0'
+        planName: 'Liftr Test 0'
+        publisherId: 'arizeai1657829589668'
+        termId: 'gmz7xq9ge3py'
+        termUnit: 'P1M'
       }
-      subscriptionId: 'meaowktoejxwfqomc'
+      subscriptionId: '61641157-140c-4b97-b365-30ff76d9f82e'
       subscriptionStatus: 'PendingFulfillmentStart'
     }
     partnerProperties: {
@@ -42,11 +42,11 @@ resource exampleResource 'ArizeAi.ObservabilityEval/organizations@2024-10-01-pre
       url: 'ihidsswbeahnsjjxxqntz'
     }
     user: {
-      emailAddress: 'btables@arize.com'
-      firstName: 'aorfffgdmglvzdvfvdyjohtnblzsfw'
-      lastName: 'tojbqzk'
+      emailAddress: 'yashikajain@microsoft.com'
+      firstName: ''
+      lastName: ''
       phoneNumber: 'akbqdbs'
-      upn: 'xzvwwbjpqakqqyfudyp'
+      upn: 'yashikajain@microsoft.com'
     }
   }
   tags: {

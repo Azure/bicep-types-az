@@ -25,12 +25,41 @@ resource exampleResource 'Microsoft.Maintenance/applyUpdates@2023-10-01-preview'
 
 ## microsoft.maintenance/configurationassignments
 
-ConfigurationAssignments_CreateOrUpdateParent
+ConfigurationAssignmentsForSubscriptions_CreateOrUpdate
 ```bicep
 resource exampleResource 'Microsoft.Maintenance/configurationAssignments@2023-10-01-preview' = {
   name: 'example'
   properties: {
-    maintenanceConfigurationId: '/subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourcegroups/examplerg/providers/Microsoft.Maintenance/maintenanceConfigurations/policy1'
+    filter: {
+      locations: [
+        'Japan East'
+        'UK South'
+      ]
+      resourceGroups: [
+        'RG1'
+        'RG2'
+      ]
+      resourceTypes: [
+        'Microsoft.HybridCompute/machines'
+        'Microsoft.Compute/virtualMachines'
+      ]
+      tagSettings: {
+        filterOperator: 'Any'
+        tags: {
+          tag1: [
+            'tag1Value1'
+            'tag1Value2'
+            'tag1Value3'
+          ]
+          tag2: [
+            'tag2Value1'
+            'tag2Value2'
+            'tag2Value3'
+          ]
+        }
+      }
+    }
+    maintenanceConfigurationId: '/subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourcegroups/examplerg/providers/Microsoft.Maintenance/maintenanceConfigurations/configuration1'
   }
 }
 ```

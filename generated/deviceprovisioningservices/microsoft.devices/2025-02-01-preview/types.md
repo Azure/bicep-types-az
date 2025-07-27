@@ -6,15 +6,15 @@
 * **apiVersion**: '2025-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The managed identities for a provisioning service.
-* **location**: string (Required): The resource location.
+* **identity**: [ManagedServiceIdentity](#managedserviceidentity): The managed service identities assigned to this resource.
+* **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [IotDpsPropertiesDescription](#iotdpspropertiesdescription) (Required): Service specific properties for a provisioning service
 * **resourcegroup**: string: The resource group of the resource.
 * **sku**: [IotDpsSkuInfo](#iotdpsskuinfo) (Required): Sku info for a provisioning Service.
 * **subscriptionid**: string: The subscription id of the resource.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [ResourceTags](#resourcetags): The resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Devices/provisioningServices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Devices/provisioningServices/certificates@2025-02-01-preview
@@ -23,9 +23,9 @@
 * **apiVersion**: '2025-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The entity tag.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {maxLength: 256} (Required, DeployTimeConstant): The resource name
+* **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [CertificateProperties](#certificateproperties): properties of a certificate
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Devices/provisioningServices/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Devices/provisioningServices/privateEndpointConnections@2025-02-01-preview
@@ -35,18 +35,28 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (Required): The properties of a private endpoint connection
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Devices/provisioningServices/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Function listkeys (Microsoft.Devices/provisioningServices@2025-02-01-preview)
-* **Resource**: Microsoft.Devices/provisioningServices
-* **ApiVersion**: 2025-02-01-preview
-* **Output**: [SharedAccessSignatureAuthorizationRuleListResult](#sharedaccesssignatureauthorizationrulelistresult)
+## Resource Microsoft.Devices/provisioningServices/privateLinkResources@2025-02-01-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2025-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [GroupIdInformationProperties](#groupidinformationproperties) (ReadOnly): The properties for a group information object
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.Devices/provisioningServices/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listkeys (Microsoft.Devices/provisioningServices/keys@2025-02-01-preview)
 * **Resource**: Microsoft.Devices/provisioningServices/keys
 * **ApiVersion**: 2025-02-01-preview
 * **Output**: [SharedAccessSignatureAuthorizationRuleAccessRightsDescription](#sharedaccesssignatureauthorizationruleaccessrightsdescription)
+
+## Function listkeys (Microsoft.Devices/provisioningServices@2025-02-01-preview)
+* **Resource**: Microsoft.Devices/provisioningServices
+* **ApiVersion**: 2025-02-01-preview
+* **Output**: [SharedAccessSignatureAuthorizationRuleListResult](#sharedaccesssignatureauthorizationrulelistresult)
 
 ## CertificateProperties
 ### Properties
@@ -58,11 +68,24 @@
 * **thumbprint**: string (ReadOnly): The certificate's thumbprint.
 * **updated**: string (ReadOnly): The certificate's last update date and time.
 
+## DeviceRegistryNamespaceDescription
+### Properties
+* **authenticationType**: 'SystemAssigned' | 'UserAssigned' | string (Required): Device Registry Namespace MI authentication type: UserAssigned, SystemAssigned.
+* **resourceId**: string (Required): The ARM resource ID of the Device Registry namespace.
+* **selectedUserAssignedIdentityResourceId**: string: The selected user-assigned identity resource Id associated with Device Registry namespace. This is required when authenticationType is UserAssigned.
+
+## GroupIdInformationProperties
+### Properties
+* **groupId**: string: The group id
+* **requiredMembers**: string[]: The required members for a specific group id
+* **requiredZoneNames**: string[]: The required DNS zones for a specific group id
+
 ## IotDpsPropertiesDescription
 ### Properties
 * **allocationPolicy**: 'GeoLatency' | 'Hashed' | 'Static' | string: Allocation policy to be used by this provisioning service.
 * **authorizationPolicies**: [SharedAccessSignatureAuthorizationRuleAccessRightsDescription](#sharedaccesssignatureauthorizationruleaccessrightsdescription)[]: List of authorization keys for a provisioning service.
 * **deviceProvisioningHostName**: string (ReadOnly): Device endpoint for this provisioning service.
+* **deviceRegistryNamespace**: [DeviceRegistryNamespaceDescription](#deviceregistrynamespacedescription): The Device Registry namespace that is linked to the provisioning service.
 * **enableDataResidency**: bool: Optional.
 Indicates if the DPS instance has Data Residency enabled, removing the cross geo-pair disaster recovery.
 * **idScope**: string (ReadOnly): Unique identifier of this provisioning service.
@@ -85,11 +108,9 @@ Indicates if the DPS instance has Data Residency enabled, removing the cross geo
 ### Properties
 * **allocationWeight**: int: weight to apply for a given iot h.
 * **applyAllocationPolicy**: bool: flag for applying allocationPolicy or not for a given iot hub.
-* **authenticationType**: 'KeyBased' | 'SystemAssigned' | 'UserAssigned' | string: IotHub MI authentication type: KeyBased, UserAssigned, SystemAssigned.
-* **connectionString**: string: Connection string of the IoT hub.
+* **connectionString**: string (Required): Connection string of the IoT hub.
 * **location**: string (Required): ARM region of the IoT hub.
 * **name**: string (ReadOnly): Host name of the IoT hub.
-* **selectedUserAssignedIdentityResourceId**: string: The selected user-assigned identity resource Id associated with IoT Hub. This is required when authenticationType is UserAssigned.
 
 ## IpFilterRule
 ### Properties
@@ -111,11 +132,11 @@ Indicates if the DPS instance has Data Residency enabled, removing the cross geo
 
 ## PrivateEndpointConnection
 ### Properties
-* **id**: string (ReadOnly): The resource identifier.
-* **name**: string {pattern: "^(?![0-9]+$)(?!-)[a-zA-Z0-9-]{2,49}[a-zA-Z0-9]$"} (ReadOnly): The resource name.
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string (ReadOnly): The name of the resource
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties) (Required): The properties of a private endpoint connection
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **type**: string (ReadOnly): The resource type.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## PrivateEndpointConnectionProperties
 ### Properties
@@ -128,11 +149,6 @@ Indicates if the DPS instance has Data Residency enabled, removing the cross geo
 * **description**: string (Required): The description for the current state of a private endpoint connection
 * **status**: 'Approved' | 'Disconnected' | 'Pending' | 'Rejected' | string (Required): The status of a private endpoint connection
 
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## SharedAccessSignatureAuthorizationRuleAccessRightsDescription
 ### Properties
 * **keyName**: string (Required): Name of the key.
@@ -142,8 +158,8 @@ Indicates if the DPS instance has Data Residency enabled, removing the cross geo
 
 ## SharedAccessSignatureAuthorizationRuleListResult
 ### Properties
-* **nextLink**: string (ReadOnly): The next link.
-* **value**: [SharedAccessSignatureAuthorizationRuleAccessRightsDescription](#sharedaccesssignatureauthorizationruleaccessrightsdescription)[]: The list of shared access policies.
+* **nextLink**: string: The link to the next page of items
+* **value**: [SharedAccessSignatureAuthorizationRuleAccessRightsDescription](#sharedaccesssignatureauthorizationruleaccessrightsdescription)[] (Required): The SharedAccessSignatureAuthorizationRuleAccessRightsDescription items on this page
 
 ## SystemData
 ### Properties
@@ -153,6 +169,11 @@ Indicates if the DPS instance has Data Residency enabled, removing the cross geo
 * **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## UserAssignedIdentities
 ### Properties
