@@ -11,7 +11,8 @@
 * **name**: string {minLength: 2, maxLength: 64, pattern: "^[a-zA-Z0-9][a-zA-Z0-9_.-]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [BotProperties](#botproperties): The set of properties specific to bot resource
 * **sku**: [Sku](#sku): Gets or sets the SKU of the resource.
-* **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [BotTags](#bottags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.BotService/botServices' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[] (ReadOnly): Entity zones
 
@@ -26,7 +27,8 @@
 * **name**: 'AcsChatChannel' | 'AlexaChannel' | 'DirectLineChannel' | 'DirectLineSpeechChannel' | 'EmailChannel' | 'FacebookChannel' | 'KikChannel' | 'LineChannel' | 'M365Extensions' | 'MsTeamsChannel' | 'Omnichannel' | 'OutlookChannel' | 'SearchAssistant' | 'SkypeChannel' | 'SlackChannel' | 'SmsChannel' | 'TelegramChannel' | 'TelephonyChannel' | 'WebChatChannel' | string {minLength: 2, maxLength: 64, pattern: "^[a-zA-Z0-9][a-zA-Z0-9_.-]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [Channel](#channel): The set of properties specific to bot channel resource
 * **sku**: [Sku](#sku): Gets or sets the SKU of the resource.
-* **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [BotChannelTags](#botchanneltags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.BotService/botServices/channels' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[] (ReadOnly): Entity zones
 
@@ -41,9 +43,20 @@
 * **name**: string {minLength: 2, maxLength: 64, pattern: "^[a-zA-Z0-9][\sa-zA-Z0-9_.-]*$"} (Required, DeployTimeConstant): The resource name
 * **properties**: [ConnectionSettingProperties](#connectionsettingproperties): The set of properties specific to bot channel resource
 * **sku**: [Sku](#sku): Gets or sets the SKU of the resource.
-* **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [ConnectionSettingTags](#connectionsettingtags): Contains resource tags defined as key/value pairs.
 * **type**: 'Microsoft.BotService/botServices/connections' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[] (ReadOnly): Entity zones
+
+## Resource Microsoft.BotService/botServices/networkSecurityPerimeterConfigurations@2023-09-15-preview (ReadOnly)
+* **Valid Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2023-09-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **name**: string {pattern: ".*"} (Required, DeployTimeConstant): The resource name
+* **properties**: [NetworkSecurityPerimeterConfigurationProperties](#networksecurityperimeterconfigurationproperties) (ReadOnly): Properties of the Network Security Perimeter configuration
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: 'Microsoft.BotService/botServices/networkSecurityPerimeterConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.BotService/botServices/privateEndpointConnections@2023-09-15-preview
 * **Valid Scope(s)**: ResourceGroup
@@ -52,6 +65,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.BotService/botServices/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listChannelWithKeys (Microsoft.BotService/botServices/channels@2023-09-15-preview)
@@ -70,6 +84,16 @@
 * **isEnabled**: bool (Required): Whether this channel is enabled for the bot
 * **serviceEndpointUri**: string (ReadOnly): Full Uri used to configured the skill in Alexa
 * **urlFragment**: string (ReadOnly): Url fragment used in part of the Uri configured in Alexa
+
+## BotChannelTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## BotChannelTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## BotProperties
 ### Properties
@@ -116,6 +140,11 @@
 * **Additional Properties Type**: string
 
 ## BotPropertiesParameters
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## BotTags
 ### Properties
 ### Additional Properties
 * **Additional Properties Type**: string
@@ -235,14 +264,15 @@
 ## ConnectionSetting
 ### Properties
 * **etag**: string: Entity Tag.
-* **id**: string (ReadOnly): Specifies the resource ID.
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
 * **kind**: 'azurebot' | 'bot' | 'designer' | 'function' | 'sdk' | string: Required. Gets or sets the Kind of the resource.
 * **location**: string: Specifies the location of the resource.
-* **name**: string (ReadOnly): Specifies the name of the resource.
+* **name**: string (ReadOnly): The name of the resource
 * **properties**: [ConnectionSettingProperties](#connectionsettingproperties): The set of properties specific to bot channel resource
 * **sku**: [Sku](#sku): Gets or sets the SKU of the resource.
-* **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
-* **type**: string (ReadOnly): Specifies the type of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [ConnectionSettingTags](#connectionsettingtags): Contains resource tags defined as key/value pairs.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 * **zones**: string[] (ReadOnly): Entity zones
 
 ## ConnectionSettingParameter
@@ -262,6 +292,16 @@
 * **serviceProviderDisplayName**: string: Service Provider Display Name associated with the Connection Setting
 * **serviceProviderId**: string: Service Provider Id associated with the Connection Setting
 * **settingId**: string (ReadOnly): Setting Id set by the service for the Connection Setting.
+
+## ConnectionSettingTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## ConnectionSettingTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## DirectLineChannelProperties
 ### Properties
@@ -348,17 +388,18 @@
 * **changedTime**: string: Changed time of the resource
 * **entityTag**: string: Entity tag of the resource
 * **etag**: string: Entity Tag.
-* **id**: string (ReadOnly): Specifies the resource ID.
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
 * **kind**: 'azurebot' | 'bot' | 'designer' | 'function' | 'sdk' | string: Required. Gets or sets the Kind of the resource.
 * **location**: string: Specifies the location of the resource.
-* **name**: string (ReadOnly): Specifies the name of the resource.
+* **name**: string (ReadOnly): The name of the resource
 * **properties**: [Channel](#channel): The set of properties specific to bot channel resource
 * **provisioningState**: string: Provisioning state of the resource
 * **resource**: [Channel](#channel): The set of properties specific to bot channel resource
 * **setting**: [ChannelSettings](#channelsettings): Channel settings
 * **sku**: [Sku](#sku): Gets or sets the SKU of the resource.
-* **tags**: [ResourceTags](#resourcetags): Contains resource tags defined as key/value pairs.
-* **type**: string (ReadOnly): Specifies the type of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [BotChannelTags](#botchanneltags): Contains resource tags defined as key/value pairs.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 * **zones**: string[] (ReadOnly): Entity zones
 
 ## MsTeamsChannelProperties
@@ -378,10 +419,11 @@
 
 ## NetworkSecurityPerimeterConfiguration
 ### Properties
-* **id**: string: Fully qualified identifier of the resource
-* **name**: string: Name of the resource
-* **properties**: [NetworkSecurityPerimeterConfigurationProperties](#networksecurityperimeterconfigurationproperties) (ReadOnly): Properties of the Network Security Perimeter configuration
-* **type**: string: Type of the resource
+* **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+* **name**: string (ReadOnly): The name of the resource
+* **properties**: [NetworkSecurityPerimeterConfigurationProperties](#networksecurityperimeterconfigurationproperties): Properties of the Network Security Perimeter configuration
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## NetworkSecurityPerimeterConfigurationProperties
 ### Properties
@@ -419,6 +461,7 @@
 * **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
 * **name**: string (ReadOnly): The name of the resource
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: string (ReadOnly): The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
 
 ## PrivateEndpointConnectionProperties
@@ -459,31 +502,6 @@
 ### Properties
 * **accessMode**: 'Audit' | 'Enforced' | 'Learning' | string: Access Mode of the resource association
 * **name**: string: Name of the resource association
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
 
 ## Site
 ### Properties
@@ -546,6 +564,15 @@
 * **isEnabled**: bool (Required): Whether this channel is enabled for the bot
 * **isValidated**: bool: Whether this channel is validated for the bot
 * **phone**: string (Required): The Sms phone
+
+## SystemData
+### Properties
+* **createdAt**: string: The timestamp of resource creation (UTC).
+* **createdBy**: string: The identity that created the resource.
+* **createdByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that created the resource.
+* **lastModifiedAt**: string: The timestamp of resource last modification (UTC)
+* **lastModifiedBy**: string: The identity that last modified the resource.
+* **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
 ## TelegramChannelProperties
 ### Properties

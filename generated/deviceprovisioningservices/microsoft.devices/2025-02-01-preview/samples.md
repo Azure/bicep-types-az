@@ -23,6 +23,23 @@ resource exampleResource 'Microsoft.Devices/provisioningServices@2025-02-01-prev
 }
 ```
 
+DPSCreateWithNamespace
+```bicep
+resource exampleResource 'Microsoft.Devices/provisioningServices@2025-02-01-preview' = {
+  name: 'example'
+  location: 'East US'
+  properties: {
+    enableDataResidency: false
+  }
+  sku: {
+    name: 'S1'
+    capacity: 1
+  }
+  tags: {
+  }
+}
+```
+
 DPSUpdate
 ```bicep
 resource exampleResource 'Microsoft.Devices/provisioningServices@2025-02-01-preview' = {

@@ -15,11 +15,11 @@
 ### Properties
 * **apiVersion**: '2024-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string: Location of Organization resource
+* **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [OrganizationResourceProperties](#organizationresourceproperties) (Required): Organization resource properties
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource
-* **tags**: [OrganizationResourceTags](#organizationresourcetags): Organization resource tags
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Confluent/organizations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Confluent/organizations/environments@2024-07-01
@@ -30,6 +30,7 @@
 * **kind**: string: Type of environment
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [EnvironmentProperties](#environmentproperties): Environment properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Confluent/organizations/environments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Confluent/organizations/environments/clusters@2024-07-01
@@ -40,6 +41,7 @@
 * **kind**: string: Type of cluster
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ClusterProperties](#clusterproperties): Cluster Properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Confluent/organizations/environments/clusters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Confluent/organizations/environments/clusters/connectors@2024-07-01
@@ -59,6 +61,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [TopicProperties](#topicproperties): Topic Properties
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Confluent/organizations/environments/clusters/topics' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listClusters (Microsoft.Confluent/organizations/access@2024-07-01)
@@ -360,11 +363,6 @@
 * **ssoUrl**: string (ReadOnly): SSO url for the Confluent organization.
 * **userDetail**: [UserDetail](#userdetail) (Required): Subscriber detail
 
-## OrganizationResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## PartnerInfoBase
 * **Discriminator**: partnerConnectorType
 
@@ -552,6 +550,11 @@
 ## TopicsRelatedLink
 ### Properties
 * **related**: string: Relationship of the topic
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## UserDetail
 ### Properties

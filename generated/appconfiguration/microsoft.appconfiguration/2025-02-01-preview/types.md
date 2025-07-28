@@ -14,15 +14,6 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.AppConfiguration/configurationStores' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AppConfiguration/configurationStores/experimentation@2025-02-01-preview
-* **Valid Scope(s)**: ResourceGroup
-### Properties
-* **apiVersion**: '2025-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string {pattern: "^default$"} (Required, DeployTimeConstant): The resource name
-* **properties**: [ExperimentationProperties](#experimentationproperties): All experimentation properties.
-* **type**: 'Microsoft.AppConfiguration/configurationStores/experimentation' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.AppConfiguration/configurationStores/keyValues@2025-02-01-preview
 * **Valid Scope(s)**: ResourceGroup
 ### Properties
@@ -105,13 +96,6 @@
 ## EncryptionProperties
 ### Properties
 * **keyVaultProperties**: [KeyVaultProperties](#keyvaultproperties): Key vault properties.
-
-## ExperimentationProperties
-### Properties
-* **managedResourceGroupName**: string: The name of the managed resource group.
-* **onlineExperimentationWorkspaceResourceId**: string (ReadOnly): The resource ID of the managed Microsoft.OnlineExperimentation/workspaces resource.
-* **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Updating' | string (ReadOnly): The provisioning state of the experimentation.
-* **storageAccountResourceId**: string (ReadOnly): The resource ID of the managed Microsoft.Storage/storageAccounts resource.
 
 ## KeyValueFilter
 ### Properties

@@ -1,10 +1,50 @@
 Generating types for 'specification/securityinsights/resource-manager/readme.md'
-AutoRest code generation utility [cli version: 3.7.2; node: v22.16.0]
+AutoRest code generation utility [cli version: 3.7.2; node: v22.17.1]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
+warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
+warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'productTemplateProperties' with an undefined type and 'allOf'/'anyOf'/'oneOf' is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/preview/2025-07-01-preview/ContentProductTemplates.json:187:5
+warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'SapAgentConfiguration' has a property 'type' that is already declared the parent schema 'AgentConfiguration' but isn't significantly different. The property has been removed from SapAgentConfiguration
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'RfcConnector' has a property 'type' that is already declared the parent schema 'SystemsConfigurationConnector' but isn't significantly different. The property has been removed from RfcConnector
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'SapControlConnector' has a property 'type' that is already declared the parent schema 'SystemsConfigurationConnector' but isn't significantly different. The property has been removed from SapControlConnector
+warning | PreCheck/PropertyRedeclarationWarning | Schema 'SapSystemsConfiguration' has a property 'type' that is already declared the parent schema 'SystemsConfiguration' but isn't significantly different. The property has been removed from SapSystemsConfiguration
+warning | Modeler/MissingType | The schema 'components·1qaufw0·schemas·threatintelligenceindicatorproperties·properties·extensions·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/preview/2025-07-01-preview/ThreatIntelligence.json#/components/schemas/components·1qaufw0·schemas·threatintelligenceindicatorproperties·properties·extensions·additionalproperties
+warning | Modeler/MissingType | The schema 'components·5nhrn8·schemas·tiobjectcommonproperties·properties·data·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/preview/2025-07-01-preview/ThreatIntelligenceQuery.json#/components/schemas/components·5nhrn8·schemas·tiobjectcommonproperties·properties·data·additionalproperties
+warning | Modeler/MissingType | The schema 'components·18aj315·schemas·triggeredanalyticsrulerunproperties·properties·rulerunadditionaldata·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/preview/2025-07-01-preview/TriggeredAnalyticsRuleRuns.json#/components/schemas/components·18aj315·schemas·triggeredanalyticsrulerunproperties·properties·rulerunadditionaldata·additionalproperties
+warning | Modeler/MissingType | The schema 'components·12h9143·schemas·restapipollerrequestconfig·properties·queryparameters·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/preview/2025-07-01-preview/dataConnectors.json#/components/schemas/components·12h9143·schemas·restapipollerrequestconfig·properties·queryparameters·additionalproperties
+warning | Modeler/MissingType | The schema 'components·q92l88·schemas·sessionauthmodel·properties·queryparameters·additionalproperties' has no type or format information whatsoever. Location:
+   file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/preview/2025-07-01-preview/dataConnectors.json#/components/schemas/components·q92l88·schemas·sessionauthmodel·properties·queryparameters·additionalproperties
+warning | Skipping Entities_Queries due to required query parameter "kind"
+warning | Skipping resource POST action path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/listRepositories': Unable to find type segments
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
+warning | Unrecognized property type: any-object. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.

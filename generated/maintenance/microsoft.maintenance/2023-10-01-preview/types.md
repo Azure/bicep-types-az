@@ -1,15 +1,5 @@
 # Microsoft.Maintenance @ 2023-10-01-preview
 
-## Resource Microsoft.Maintenance/applyUpdates@2023-10-01-preview
-* **Valid Scope(s)**: Extension
-### Properties
-* **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
-* **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [ApplyUpdateProperties](#applyupdateproperties): Properties of the apply update
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
-* **type**: 'Microsoft.Maintenance/applyUpdates' (ReadOnly, DeployTimeConstant): The resource type
-
 ## Resource Microsoft.Maintenance/configurationAssignments@2023-10-01-preview
 * **Valid Scope(s)**: Subscription, ResourceGroup, Extension
 ### Properties
@@ -44,12 +34,6 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [MaintenanceConfigurationTags](#maintenanceconfigurationtags) (ReadOnly): Gets or sets tags of the resource
 * **type**: 'Microsoft.Maintenance/publicMaintenanceConfigurations' (ReadOnly, DeployTimeConstant): The resource type
-
-## ApplyUpdateProperties
-### Properties
-* **lastUpdateTime**: string: Last Update time
-* **resourceId**: string: The resourceId
-* **status**: 'Cancel' | 'Cancelled' | 'Completed' | 'InProgress' | 'NoUpdatesPending' | 'Pending' | 'RetryLater' | 'RetryNow' | string: The status
 
 ## ConfigurationAssignmentFilterProperties
 ### Properties

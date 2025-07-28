@@ -1,0 +1,1060 @@
+[
+  {
+    "$type": "StringType",
+    "pattern": "^[a-zA-Z0-9-]{3,24}$"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.ComputeSchedule/scheduledActions"
+  },
+  {
+    "$type": "StringType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2025-04-15-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.ComputeSchedule/scheduledActions",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/1"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/3"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "The resource-specific properties for this resource."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/65"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/66"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ScheduledActionProperties",
+    "properties": {
+      "resourceType": {
+        "type": {
+          "$ref": "#/8"
+        },
+        "flags": 1,
+        "description": "The type of resource the scheduled action is targeting"
+      },
+      "actionType": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 1,
+        "description": "The action the scheduled action should perform in the resources"
+      },
+      "startTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The time which the scheduled action is supposed to start running"
+      },
+      "endTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The time when the scheduled action is supposed to stop scheduling"
+      },
+      "schedule": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 1,
+        "description": "The schedule the scheduled action is supposed to follow"
+      },
+      "notificationSettings": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 1,
+        "description": "The notification settings for the scheduled action"
+      },
+      "disabled": {
+        "type": {
+          "$ref": "#/58"
+        },
+        "flags": 0,
+        "description": "Tell if the scheduled action is disabled or not"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/64"
+        },
+        "flags": 2,
+        "description": "The status of the last provisioning operation performed on the resource."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VirtualMachine"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "VirtualMachineScaleSet"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/7"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Internal"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Start"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deallocate"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Hibernate"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/10"
+      },
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/12"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ScheduledActionsSchedule",
+    "properties": {
+      "scheduledTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The time the scheduled action is supposed to run on"
+      },
+      "timeZone": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The timezone the scheduled time is specified on"
+      },
+      "requestedWeekDays": {
+        "type": {
+          "$ref": "#/24"
+        },
+        "flags": 1,
+        "description": "The week days the scheduled action is supposed to run on"
+      },
+      "requestedMonths": {
+        "type": {
+          "$ref": "#/39"
+        },
+        "flags": 1,
+        "description": "The months the scheduled action is supposed to run on"
+      },
+      "requestedDaysOfTheMonth": {
+        "type": {
+          "$ref": "#/41"
+        },
+        "flags": 1,
+        "description": "The days of the month the scheduled action is supposed to run on. If empty, it means it will run on every day of the month."
+      },
+      "executionParameters": {
+        "type": {
+          "$ref": "#/42"
+        },
+        "flags": 0,
+        "description": "The execution parameters the scheduled action is supposed to follow"
+      },
+      "deadlineType": {
+        "type": {
+          "$ref": "#/52"
+        },
+        "flags": 0,
+        "description": "The type of deadline the scheduled action is supposed to follow for the schedule. If no value is passed, it will default to InitiateAt."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Monday"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Tuesday"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Wednesday"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Thursday"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Friday"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Saturday"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Sunday"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "All"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/15"
+      },
+      {
+        "$ref": "#/16"
+      },
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/18"
+      },
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/20"
+      },
+      {
+        "$ref": "#/21"
+      },
+      {
+        "$ref": "#/22"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/23"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "January"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "February"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "March"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "April"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "May"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "June"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "July"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "August"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "September"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "October"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "November"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "December"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "All"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/25"
+      },
+      {
+        "$ref": "#/26"
+      },
+      {
+        "$ref": "#/27"
+      },
+      {
+        "$ref": "#/28"
+      },
+      {
+        "$ref": "#/29"
+      },
+      {
+        "$ref": "#/30"
+      },
+      {
+        "$ref": "#/31"
+      },
+      {
+        "$ref": "#/32"
+      },
+      {
+        "$ref": "#/33"
+      },
+      {
+        "$ref": "#/34"
+      },
+      {
+        "$ref": "#/35"
+      },
+      {
+        "$ref": "#/36"
+      },
+      {
+        "$ref": "#/37"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/38"
+    }
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 1,
+    "maxValue": 31
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/40"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ExecutionParameters",
+    "properties": {
+      "optimizationPreference": {
+        "type": {
+          "$ref": "#/46"
+        },
+        "flags": 0,
+        "description": "Details that could optimize the user's request"
+      },
+      "retryPolicy": {
+        "type": {
+          "$ref": "#/47"
+        },
+        "flags": 0,
+        "description": "Retry policy the user can pass"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cost"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Availability"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CostAvailabilityBalanced"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/43"
+      },
+      {
+        "$ref": "#/44"
+      },
+      {
+        "$ref": "#/45"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "RetryPolicy",
+    "properties": {
+      "retryCount": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 0,
+        "description": "Retry count for user request"
+      },
+      "retryWindowInMinutes": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 0,
+        "description": "Retry window in minutes for user request"
+      }
+    }
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Unknown"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "InitiateAt"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "CompleteBy"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/49"
+      },
+      {
+        "$ref": "#/50"
+      },
+      {
+        "$ref": "#/51"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NotificationProperties",
+    "properties": {
+      "destination": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "Where the notification should be sent. For email, it should follow email format."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/55"
+        },
+        "flags": 1,
+        "description": "Type of notification to be sent."
+      },
+      "language": {
+        "type": {
+          "$ref": "#/57"
+        },
+        "flags": 1,
+        "description": "The language the notification should be sent on."
+      },
+      "disabled": {
+        "type": {
+          "$ref": "#/58"
+        },
+        "flags": 0,
+        "description": "Tells if the notification is enabled or not."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Email"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/54"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "en-us"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/56"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/53"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/60"
+      },
+      {
+        "$ref": "#/61"
+      },
+      {
+        "$ref": "#/62"
+      },
+      {
+        "$ref": "#/63"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SystemData",
+    "properties": {
+      "createdBy": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The identity that created the resource."
+      },
+      "createdByType": {
+        "type": {
+          "$ref": "#/71"
+        },
+        "flags": 0,
+        "description": "The type of identity that created the resource."
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource creation (UTC)."
+      },
+      "lastModifiedBy": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The identity that last modified the resource."
+      },
+      "lastModifiedByType": {
+        "type": {
+          "$ref": "#/76"
+        },
+        "flags": 0,
+        "description": "The type of identity that last modified the resource."
+      },
+      "lastModifiedAt": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource last modification (UTC)"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/67"
+      },
+      {
+        "$ref": "#/68"
+      },
+      {
+        "$ref": "#/69"
+      },
+      {
+        "$ref": "#/70"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/72"
+      },
+      {
+        "$ref": "#/73"
+      },
+      {
+        "$ref": "#/74"
+      },
+      {
+        "$ref": "#/75"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.ComputeSchedule/scheduledActions@2025-04-15-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/4"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringType",
+    "pattern": "[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.ComputeSchedule/scheduledActions/occurrences"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2025-04-15-preview"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.ComputeSchedule/scheduledActions/occurrences",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/78"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/79"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/80"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/82"
+        },
+        "flags": 2,
+        "description": "The resource-specific properties for this resource."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/66"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OccurrenceProperties",
+    "properties": {
+      "scheduledTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 3,
+        "description": "The time the occurrence is scheduled for. This value can be changed by calling the delay API"
+      },
+      "resultSummary": {
+        "type": {
+          "$ref": "#/83"
+        },
+        "flags": 3,
+        "description": "The result for occurrences that achieved a terminal state"
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 2,
+        "description": "The aggregated provisioning state of the occurrence"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "OccurrenceResultSummary",
+    "properties": {
+      "total": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 1,
+        "description": "The total number of resources that the occurrence was supposed to act on."
+      },
+      "statuses": {
+        "type": {
+          "$ref": "#/88"
+        },
+        "flags": 1,
+        "description": "The summarized status of the resources."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ResourceResultSummary",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The error code for those resources. In case of success, code is populated with Success."
+      },
+      "count": {
+        "type": {
+          "$ref": "#/48"
+        },
+        "flags": 1,
+        "description": "The number of resources that the code applies to."
+      },
+      "errorDetails": {
+        "type": {
+          "$ref": "#/85"
+        },
+        "flags": 0,
+        "description": "The error details for the resources. Not populated on success cases."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureCoreFoundationsError",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "One of a server-defined set of error codes."
+      },
+      "message": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "A human-readable representation of the error."
+      },
+      "target": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "The target of the error."
+      },
+      "details": {
+        "type": {
+          "$ref": "#/86"
+        },
+        "flags": 0,
+        "description": "An array of details about specific errors that led to this reported error."
+      },
+      "innererror": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 0,
+        "description": "An object containing more specific information than the current object about the error."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/85"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureCoreFoundationsInnerError",
+    "properties": {
+      "code": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "One of a server-defined set of error codes."
+      },
+      "innererror": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 0,
+        "description": "Inner error."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/84"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Created"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Rescheduling"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Scheduled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Cancelling"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/89"
+      },
+      {
+        "$ref": "#/90"
+      },
+      {
+        "$ref": "#/91"
+      },
+      {
+        "$ref": "#/92"
+      },
+      {
+        "$ref": "#/93"
+      },
+      {
+        "$ref": "#/94"
+      },
+      {
+        "$ref": "#/95"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.ComputeSchedule/scheduledActions/occurrences@2025-04-15-preview",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/81"
+    },
+    "flags": 1
+  }
+]

@@ -7,7 +7,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [LabProperties](#labproperties): The properties of the resource.
+* **properties**: [LabProperties](#labproperties) (Required): The properties of the resource.
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -73,7 +73,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [FormulaProperties](#formulaproperties) (Required): The properties of the resource.
+* **properties**: [FormulaProperties](#formulaproperties) (Required): The properties of the formula.
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/formulas' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -128,7 +128,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [UserProperties](#userproperties): The properties of the resource.
+* **properties**: [UserProperties](#userproperties) (Required): The properties of the resource.
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/users' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -139,7 +139,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [DiskProperties](#diskproperties) (Required): The properties of the resource.
+* **properties**: [DiskProperties](#diskproperties) (Required): The properties of the disk.
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/users/disks' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -150,7 +150,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [EnvironmentProperties](#environmentproperties) (Required): The properties of the resource.
+* **properties**: [EnvironmentProperties](#environmentproperties) (Required): The properties of the environment.
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/users/environments' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -216,7 +216,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **location**: string: The location of the resource.
 * **name**: string (Required, DeployTimeConstant): The resource name
-* **properties**: [VirtualNetworkProperties](#virtualnetworkproperties): The properties of the resource.
+* **properties**: [VirtualNetworkProperties](#virtualnetworkproperties) (Required): The properties of the resource.
 * **tags**: [ResourceTags](#resourcetags): The tags of the resource.
 * **type**: 'Microsoft.DevTestLab/labs/virtualnetworks' (ReadOnly, DeployTimeConstant): The resource type
 
@@ -272,7 +272,7 @@
 
 ## ArmTemplateProperties
 ### Properties
-* **contents**: any (ReadOnly): The contents of the ARM template.
+* **contents**: [ArmTemplatePropertiesContents](#armtemplatepropertiescontents) (ReadOnly): The contents of the ARM template.
 * **createdDate**: string (ReadOnly): The creation date of the armTemplate.
 * **description**: string (ReadOnly): The description of the ARM template.
 * **displayName**: string (ReadOnly): The display name of the ARM template.
@@ -280,6 +280,11 @@
 * **icon**: string (ReadOnly): The URI to the icon of the ARM template.
 * **parametersValueFilesInfo**: [ParametersValueFileInfo](#parametersvaluefileinfo)[] (ReadOnly): File name and parameter values information from all azuredeploy.*.parameters.json for the ARM template.
 * **publisher**: string (ReadOnly): The publisher of the ARM template.
+
+## ArmTemplatePropertiesContents
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## ArtifactDeploymentStatusProperties
 ### Properties
@@ -308,10 +313,15 @@
 * **description**: string (ReadOnly): The artifact's description.
 * **filePath**: string (ReadOnly): The file path to the artifact.
 * **icon**: string (ReadOnly): The URI to the artifact icon.
-* **parameters**: any (ReadOnly): The artifact's parameters.
+* **parameters**: [ArtifactPropertiesParameters](#artifactpropertiesparameters) (ReadOnly): The artifact's parameters.
 * **publisher**: string (ReadOnly): The artifact's publisher.
 * **targetOsType**: string (ReadOnly): The artifact's target OS.
 * **title**: string (ReadOnly): The artifact's title.
+
+## ArtifactPropertiesParameters
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## ArtifactSourceProperties
 ### Properties
@@ -579,8 +589,8 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 
 ## LabVhdList
 ### Properties
-* **nextLink**: string: Link for next set of results.
-* **value**: [LabVhd](#labvhd)[]: Results of the list operation.
+* **nextLink**: string: The link to the next page of items
+* **value**: [LabVhd](#labvhd)[] (Required): The LabVhd items on this page
 
 ## LabVirtualMachineCreationParameter
 ### Properties
@@ -608,11 +618,11 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 * **notes**: string: The notes of the virtual machine.
 * **ownerObjectId**: string: The object identifier of the owner of the virtual machine.
 * **ownerUserPrincipalName**: string: The user principal name of the virtual machine owner.
-* **password**: string {sensitive}: The password of the virtual machine administrator.
+* **password**: string: The password of the virtual machine administrator.
 * **planId**: string: The id of the plan associated with the virtual machine image
 * **scheduleParameters**: [ScheduleCreationParameter](#schedulecreationparameter)[]: Virtual Machine schedules to be created
 * **size**: string: The size of the virtual machine.
-* **sshKey**: string {sensitive}: The SSH key of the virtual machine administrator.
+* **sshKey**: string: The SSH key of the virtual machine administrator.
 * **storageType**: string: Storage type to use for virtual machine (i.e. Standard, Premium).
 * **userName**: string: The user name of the virtual machine.
 
@@ -648,12 +658,12 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 * **osType**: string (ReadOnly): The OS type of the virtual machine.
 * **ownerObjectId**: string: The object identifier of the owner of the virtual machine.
 * **ownerUserPrincipalName**: string: The user principal name of the virtual machine owner.
-* **password**: string {sensitive}: The password of the virtual machine administrator.
+* **password**: string: The password of the virtual machine administrator.
 * **planId**: string: The id of the plan associated with the virtual machine image
 * **provisioningState**: string (ReadOnly): The provisioning status of the resource.
 * **scheduleParameters**: [ScheduleCreationParameter](#schedulecreationparameter)[]: Virtual Machine schedules to be created
 * **size**: string: The size of the virtual machine.
-* **sshKey**: string {sensitive}: The SSH key of the virtual machine administrator.
+* **sshKey**: string: The SSH key of the virtual machine administrator.
 * **storageType**: string: Storage type to use for virtual machine (i.e. Standard, Premium).
 * **uniqueIdentifier**: string (ReadOnly): The unique immutable identifier of a resource (Guid).
 * **userName**: string: The user name of the virtual machine.
@@ -697,7 +707,12 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 ## ParametersValueFileInfo
 ### Properties
 * **fileName**: string: File name.
-* **parametersValueInfo**: any: Contents of the file.
+* **parametersValueInfo**: [ParametersValueFileInfoParametersValueInfo](#parametersvaluefileinfoparametersvalueinfo): Contents of the file.
+
+## ParametersValueFileInfoParametersValueInfo
+### Properties
+### Additional Properties
+* **Additional Properties Type**: any
 
 ## PercentageCostThresholdProperties
 ### Properties
@@ -869,8 +884,8 @@ When its value is 'Disabled', only creation of standard data disks is allowed.
 
 ## ScheduleList
 ### Properties
-* **nextLink**: string: Link for next set of results.
-* **value**: [Schedule](#schedule)[]: Results of the list operation.
+* **nextLink**: string: The link to the next page of items
+* **value**: [Schedule](#schedule)[] (Required): The Schedule items on this page
 
 ## ScheduleProperties
 ### Properties

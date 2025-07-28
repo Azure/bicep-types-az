@@ -1,5 +1,5 @@
 Generating types for 'specification/alertsmanagement/resource-manager/readme.md'
-AutoRest code generation utility [cli version: 3.7.2; node: v22.16.0]
+AutoRest code generation utility [cli version: 3.7.2; node: v22.17.1]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -20,21 +20,67 @@ warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
+warning | PreCheck/SchemaMissingType | The schema 'operation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/AlertsManagement.json:744:5
+warning | PreCheck/SchemaMissingType | The schema 'operationsList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/AlertsManagement.json:775:5
+warning | PreCheck/SchemaMissingType | The schema 'AlertsManagementErrorResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/AlertsManagement.json:794:5
+warning | PreCheck/SchemaMissingType | The schema 'errorResponseBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/AlertsManagement.json:803:5
+warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/AlertsManagement.json:828:5
+warning | PreCheck/SchemaMissingType | The schema 'alert' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/AlertsManagement.json:849:5
+warning | PreCheck/SchemaMissingType | The schema 'alertsList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/AlertsManagement.json:862:5
+warning | PreCheck/SchemaMissingType | The schema 'alertModification' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/AlertsManagement.json:1077:5
+warning | PreCheck/SchemaMissingType | The schema 'alertModificationItem' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/AlertsManagement.json:1108:5
+warning | PreCheck/SchemaMissingType | The schema 'smartGroupModification' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/AlertsManagement.json:1149:5
+warning | PreCheck/SchemaMissingType | The schema 'smartGroupModificationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/AlertsManagement.json:1162:5
+warning | PreCheck/SchemaMissingType | The schema 'smartGroupModificationItem' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/AlertsManagement.json:1183:5
+warning | PreCheck/SchemaMissingType | The schema 'alertsSummary' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/AlertsManagement.json:1225:5
+warning | PreCheck/SchemaMissingType | The schema 'alertsMetaData' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/AlertsManagement.json:1288:5
+warning | PreCheck/SchemaMissingType | The schema 'alertsMetaDataProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/AlertsManagement.json:1296:5
+warning | PreCheck/SchemaMissingType | The schema 'smartGroupsList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/AlertsManagement.json:1316:5
+warning | PreCheck/SchemaMissingType | The schema 'smartGroup' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/AlertsManagement.json:1332:5
+warning | PreCheck/SchemaMissingType | The schema 'MonitorServiceList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/AlertsManagement.json:1470:5
+warning | PreCheck/SchemaMissingType | The schema 'MonitorServiceDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/AlertsManagement.json:1494:5
+warning | PreCheck/SchemaMissingType | The schema 'ActionGroupsInformation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/SmartDetectorAlertRulesApi.json:323:5
+warning | PreCheck/SchemaMissingType | The schema 'ThrottlingInformation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/SmartDetectorAlertRulesApi.json:346:5
+warning | PreCheck/SchemaMissingType | The schema 'AlertRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/SmartDetectorAlertRulesApi.json:378:5
+warning | PreCheck/SchemaMissingType | The schema 'AlertRulesList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/SmartDetectorAlertRulesApi.json:393:5
+warning | PreCheck/SchemaMissingType | The schema 'AlertRulePatchObject' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/SmartDetectorAlertRulesApi.json:409:5
+warning | PreCheck/SchemaMissingType | The schema 'Detector' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/SmartDetectorAlertRulesApi.json:439:5
+warning | PreCheck/SchemaMissingType | The schema 'AlertRuleProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/SmartDetectorAlertRulesApi.json:480:5
+warning | PreCheck/SchemaMissingType | The schema 'AlertRulePatchProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/SmartDetectorAlertRulesApi.json:548:5
 warning | PreCheck/EmptyParentSchemaWarning | Schema 'MonitorServiceList' has an allOf list with an empty object schema as a parent, removing it.
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/preview/2024-01-01-preview/AlertsManagement.json:1386:9
+    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/AlertsManagement.json:1480:9
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (6 differences):
-  - properties.id.$ref: "#/components/schemas/schemas:44" => "#/components/schemas/schemas:191"
-  - properties.id.description: "Azure resource Id" => "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
-  - properties.type.description: "Azure resource type" => "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
-  - properties.name.description: "Azure resource name" => "The name of the resource"
-  - properties.systemData: <none> => {"$ref":"#/components/schemas/schemas:218","description":"Azure Resource Manager metadata containing createdBy and modifiedBy information.","readOnly":true}
-  - title: <none> => "Resource"
-warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorResponse' -> 'ErrorResponseAutoGenerated'
-warning | PreNamer/DeduplicateName | Deduplicating schema name: 'Resource' -> 'ResourceAutoGenerated'
 warning | Skipping Alerts_MetaData due to required query parameter "identifier"
 warning | Skipping Alerts_GetSummary due to required query parameter "groupby"
 warning | Skipping path '/{scope}/providers/Microsoft.AlertsManagement/alerts/{alertId}/history': Found mismatch between type segments (2) and name segments (1)
+warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | Unrecognized property type: any-object. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -147,29 +193,6 @@ warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/EmptyParentSchemaWarning | Schema 'MonitorServiceList' has an allOf list with an empty object schema as a parent, removing it.
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/preview/2023-07-12-preview/AlertsManagement.json:1351:9
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Resource' (6 differences):
-  - properties.id.$ref: "#/components/schemas/schemas:44" => "#/components/schemas/schemas:187"
-  - properties.id.description: "Azure resource Id" => "Fully qualified resource ID for the resource. E.g. \"/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}\""
-  - properties.type.description: "Azure resource type" => "The type of the resource. E.g. \"Microsoft.Compute/virtualMachines\" or \"Microsoft.Storage/storageAccounts\""
-  - properties.name.description: "Azure resource name" => "The name of the resource"
-  - properties.systemData: <none> => {"$ref":"#/components/schemas/schemas:214","description":"Azure Resource Manager metadata containing createdBy and modifiedBy information.","readOnly":true}
-  - title: <none> => "Resource"
-warning | PreNamer/DeduplicateName | Deduplicating schema name: 'ErrorResponse' -> 'ErrorResponseAutoGenerated'
-warning | PreNamer/DeduplicateName | Deduplicating schema name: 'Resource' -> 'ResourceAutoGenerated'
-warning | Skipping Alerts_MetaData due to required query parameter "identifier"
-warning | Skipping Alerts_GetSummary due to required query parameter "groupby"
-warning | Skipping path '/{scope}/providers/Microsoft.AlertsManagement/alerts/{alertId}/history': Found mismatch between type segments (2) and name segments (1)
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
-warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
@@ -205,75 +228,6 @@ warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and 
 warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
 warning | SkippedSemanticValidation | Semantic validation was skipped.
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.3.suppress which is deprecated and will be removed in the future.
-warning | DeprecatedConfig | Using directive.4.suppress which is deprecated and will be removed in the future.
-warning | SkippedSemanticValidation | Semantic validation was skipped.
-warning | PreCheck/SchemaMissingType | The schema 'operation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/AlertsManagement.json:744:5
-warning | PreCheck/SchemaMissingType | The schema 'operationsList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/AlertsManagement.json:775:5
-warning | PreCheck/SchemaMissingType | The schema 'AlertsManagementErrorResponse' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/AlertsManagement.json:794:5
-warning | PreCheck/SchemaMissingType | The schema 'errorResponseBody' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/AlertsManagement.json:803:5
-warning | PreCheck/SchemaMissingType | The schema 'ProxyResource' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/AlertsManagement.json:828:5
-warning | PreCheck/SchemaMissingType | The schema 'alert' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/AlertsManagement.json:849:5
-warning | PreCheck/SchemaMissingType | The schema 'alertsList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/AlertsManagement.json:862:5
-warning | PreCheck/SchemaMissingType | The schema 'alertModification' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/AlertsManagement.json:1077:5
-warning | PreCheck/SchemaMissingType | The schema 'alertModificationItem' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/AlertsManagement.json:1108:5
-warning | PreCheck/SchemaMissingType | The schema 'smartGroupModification' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/AlertsManagement.json:1149:5
-warning | PreCheck/SchemaMissingType | The schema 'smartGroupModificationProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/AlertsManagement.json:1162:5
-warning | PreCheck/SchemaMissingType | The schema 'smartGroupModificationItem' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/AlertsManagement.json:1183:5
-warning | PreCheck/SchemaMissingType | The schema 'alertsSummary' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/AlertsManagement.json:1225:5
-warning | PreCheck/SchemaMissingType | The schema 'alertsMetaData' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/AlertsManagement.json:1288:5
-warning | PreCheck/SchemaMissingType | The schema 'alertsMetaDataProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/AlertsManagement.json:1296:5
-warning | PreCheck/SchemaMissingType | The schema 'smartGroupsList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/AlertsManagement.json:1316:5
-warning | PreCheck/SchemaMissingType | The schema 'smartGroup' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/AlertsManagement.json:1332:5
-warning | PreCheck/SchemaMissingType | The schema 'MonitorServiceList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/AlertsManagement.json:1470:5
-warning | PreCheck/SchemaMissingType | The schema 'MonitorServiceDetails' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/AlertsManagement.json:1494:5
-warning | PreCheck/SchemaMissingType | The schema 'ActionGroupsInformation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/SmartDetectorAlertRulesApi.json:323:5
-warning | PreCheck/SchemaMissingType | The schema 'ThrottlingInformation' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/SmartDetectorAlertRulesApi.json:346:5
-warning | PreCheck/SchemaMissingType | The schema 'AlertRule' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/SmartDetectorAlertRulesApi.json:378:5
-warning | PreCheck/SchemaMissingType | The schema 'AlertRulesList' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/SmartDetectorAlertRulesApi.json:393:5
-warning | PreCheck/SchemaMissingType | The schema 'AlertRulePatchObject' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/SmartDetectorAlertRulesApi.json:409:5
-warning | PreCheck/SchemaMissingType | The schema 'Detector' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/SmartDetectorAlertRulesApi.json:439:5
-warning | PreCheck/SchemaMissingType | The schema 'AlertRuleProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/SmartDetectorAlertRulesApi.json:480:5
-warning | PreCheck/SchemaMissingType | The schema 'AlertRulePatchProperties' with an undefined type and declared properties is a bit ambiguous. This has been auto-corrected to 'type:object'
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/SmartDetectorAlertRulesApi.json:548:5
-warning | PreCheck/EmptyParentSchemaWarning | Schema 'MonitorServiceList' has an allOf list with an empty object schema as a parent, removing it.
-    - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2019-03-01/AlertsManagement.json:1480:9
-warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
-warning | Skipping Alerts_MetaData due to required query parameter "identifier"
-warning | Skipping Alerts_GetSummary due to required query parameter "groupby"
-warning | Skipping path '/{scope}/providers/Microsoft.AlertsManagement/alerts/{alertId}/history': Found mismatch between type segments (2) and name segments (1)
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
-warning | Unrecognized property type: any-object. Returning 'any'.
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.1.suppress which is deprecated and will be removed in the future.
 warning | DeprecatedConfig | Using directive.2.suppress which is deprecated and will be removed in the future.

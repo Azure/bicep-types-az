@@ -204,7 +204,12 @@
 * **principalId**: string (ReadOnly): Service Principal Id backing the Msi
 * **tenantId**: string (ReadOnly): Home Tenant Id
 * **type**: string: Identity type
-* **userAssignedIdentities**: [UserAssignedIdentities](#userassignedidentities): User Assigned Identities
+* **userAssignedIdentities**: [ResourceIdentityUserAssignedIdentities](#resourceidentityuserassignedidentities): User Assigned Identities
+
+## ResourceIdentityUserAssignedIdentities
+### Properties
+### Additional Properties
+* **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
 
 ## ResourceProviderDetails
 ### Properties
@@ -275,11 +280,6 @@
 ## TransportPreferences
 ### Properties
 * **preferredShipmentType**: 'CustomerManaged' | 'MicrosoftManaged' | string (Required): Indicates Shipment Logistics type that the customer preferred.
-
-## UserAssignedIdentities
-### Properties
-### Additional Properties
-* **Additional Properties Type**: [UserAssignedIdentity](#userassignedidentity)
 
 ## UserAssignedIdentity
 ### Properties

@@ -1607,6 +1607,8 @@
 ### AmazonRdsForOracleSource
 #### Properties
 * **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **numberPrecision**: any: The decimal precision used to represent Oracle NUMBER type without precision and scale. The range is 1 to 256 and default value is 256 if not specified. Type: integer (or Expression with resultType integer). Only used for Version 2.0.
+* **numberScale**: any: The decimal scale used to represent Oracle NUMBER type without precision and scale. The range is 0 to 130 and default value is 130 if not specified. Type: integer (or Expression with resultType integer). Only used for Version 2.0.
 * **oracleReaderQuery**: any: AmazonRdsForOracle reader query. Type: string (or Expression with resultType string).
 * **partitionOption**: any: The partition mechanism that will be used for AmazonRdsForOracle read in parallel. Type: string (or Expression with resultType string).
 * **partitionSettings**: [AmazonRdsForOraclePartitionSettings](#amazonrdsfororaclepartitionsettings): The settings that will be leveraged for AmazonRdsForOracle source partitioning.
@@ -2031,6 +2033,8 @@
 ### OracleSource
 #### Properties
 * **additionalColumns**: any: Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+* **numberPrecision**: any: The decimal precision used to represent Oracle NUMBER type without precision and scale. The range is 1 to 256 and default value is 256 if not specified. Type: integer (or Expression with resultType integer). Only used for Version 2.0.
+* **numberScale**: any: The decimal scale used to represent Oracle NUMBER type without precision and scale. The range is 0 to 130 and default value is 130 if not specified. Type: integer (or Expression with resultType integer). Only used for Version 2.0.
 * **oracleReaderQuery**: any: Oracle reader query. Type: string (or Expression with resultType string).
 * **partitionOption**: any: The partition mechanism that will be used for Oracle read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
 * **partitionSettings**: [OraclePartitionSettings](#oraclepartitionsettings): The settings that will be leveraged for Oracle source partitioning.

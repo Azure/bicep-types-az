@@ -3904,6 +3904,7 @@ depending on each OAuth2 provider's implementation.
 * **privateEndpointConnections**: [PrivateEndpointConnection](#privateendpointconnection)[] (ReadOnly): The list of private endpoint connections in the workspace.
 * **privateLinkCount**: int (ReadOnly): Count of private connections in the workspace
 * **provisioningState**: 'Canceled' | 'Creating' | 'Deleting' | 'Failed' | 'Succeeded' | 'Unknown' | 'Updating' | string (ReadOnly): The current deployment state of workspace resource. The provisioningState is to indicate states for resource provisioning.
+* **provisionNetworkNow**: bool: Set to trigger the provisioning of the managed VNet with the default Options when creating a Workspace with the managed VNet enabled, or else it does nothing.
 * **publicNetworkAccess**: 'Disabled' | 'Enabled' | string: Whether requests from Public Network are allowed.
 * **serverlessComputeSettings**: [ServerlessComputeSettings](#serverlesscomputesettings): Settings for serverless compute created in the workspace
 * **serviceManagedResourcesSettings**: [ServiceManagedResourcesSettings](#servicemanagedresourcessettings): The service managed resource settings.

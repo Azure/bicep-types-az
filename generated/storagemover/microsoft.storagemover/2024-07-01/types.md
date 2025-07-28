@@ -215,6 +215,6 @@
 ### Properties
 * **days**: ('Friday' | 'Monday' | 'Saturday' | 'Sunday' | 'Thursday' | 'Tuesday' | 'Wednesday')[] (Required): The set of days of week for the schedule recurrence. A day must not be specified more than once in a recurrence.
 * **endTime**: [Time](#time) (Required): The end time of the schedule recurrence. Full hour and 30-minute intervals are supported.
-* **limitInMbps**: int {minValue: 0, maxValue: 2147483647} (Required): The WAN-link upload bandwidth (maximum data transfer rate) in megabits per second. Value of 0 indicates no throughput is allowed and any running migration job is effectively paused for the duration of this recurrence. Only data plane operations are governed by this limit. Control plane operations ensure seamless functionality. The agent may exceed this limit with control messages, if necessary.
+* **limitInMbps**: int {maxValue: 2147483647} (Required): The WAN-link upload bandwidth (maximum data transfer rate) in megabits per second. Value of 0 indicates no throughput is allowed and any running migration job is effectively paused for the duration of this recurrence. Only data plane operations are governed by this limit. Control plane operations ensure seamless functionality. The agent may exceed this limit with control messages, if necessary.
 * **startTime**: [Time](#time) (Required): The start time of the schedule recurrence. Full hour and 30-minute intervals are supported.
 

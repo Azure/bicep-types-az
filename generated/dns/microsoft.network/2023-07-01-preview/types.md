@@ -6,11 +6,11 @@
 * **apiVersion**: '2023-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The etag of the zone.
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
-* **location**: string (Required): Resource location.
+* **location**: string (Required): The geo-location where the resource lives
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [ZoneProperties](#zoneproperties): The properties of the zone.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
-* **tags**: [ResourceTags](#resourcetags): Resource tags.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Network/dnsZones' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnsZones/A@2023-07-01-preview
@@ -21,6 +21,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [RecordSetProperties](#recordsetproperties): The properties of the record set.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Network/dnsZones/A' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnsZones/AAAA@2023-07-01-preview
@@ -31,6 +32,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [RecordSetProperties](#recordsetproperties): The properties of the record set.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Network/dnsZones/AAAA' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnsZones/CAA@2023-07-01-preview
@@ -41,6 +43,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [RecordSetProperties](#recordsetproperties): The properties of the record set.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Network/dnsZones/CAA' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnsZones/CNAME@2023-07-01-preview
@@ -51,6 +54,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [RecordSetProperties](#recordsetproperties): The properties of the record set.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Network/dnsZones/CNAME' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnsZones/dnssecConfigs@2023-07-01-preview
@@ -61,7 +65,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: 'default' (Required, DeployTimeConstant): The resource name
 * **properties**: [DnssecProperties](#dnssecproperties) (ReadOnly): The DNSSEC properties.
-* **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Network/dnsZones/dnssecConfigs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnsZones/DS@2023-07-01-preview
@@ -72,6 +76,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [RecordSetProperties](#recordsetproperties): The properties of the record set.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Network/dnsZones/DS' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnsZones/MX@2023-07-01-preview
@@ -82,6 +87,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [RecordSetProperties](#recordsetproperties): The properties of the record set.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Network/dnsZones/MX' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnsZones/NAPTR@2023-07-01-preview
@@ -92,6 +98,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [RecordSetProperties](#recordsetproperties): The properties of the record set.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Network/dnsZones/NAPTR' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnsZones/NS@2023-07-01-preview
@@ -102,6 +109,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [RecordSetProperties](#recordsetproperties): The properties of the record set.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Network/dnsZones/NS' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnsZones/PTR@2023-07-01-preview
@@ -112,6 +120,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [RecordSetProperties](#recordsetproperties): The properties of the record set.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Network/dnsZones/PTR' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnsZones/SOA@2023-07-01-preview
@@ -122,6 +131,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [RecordSetProperties](#recordsetproperties): The properties of the record set.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Network/dnsZones/SOA' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnsZones/SRV@2023-07-01-preview
@@ -132,6 +142,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [RecordSetProperties](#recordsetproperties): The properties of the record set.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Network/dnsZones/SRV' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnsZones/TLSA@2023-07-01-preview
@@ -142,6 +153,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [RecordSetProperties](#recordsetproperties): The properties of the record set.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Network/dnsZones/TLSA' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/dnsZones/TXT@2023-07-01-preview
@@ -152,6 +164,7 @@
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **properties**: [RecordSetProperties](#recordsetproperties): The properties of the record set.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Network/dnsZones/TXT' (ReadOnly, DeployTimeConstant): The resource type
 
 ## AaaaRecord
@@ -243,11 +256,6 @@
 ### Additional Properties
 * **Additional Properties Type**: string
 
-## ResourceTags
-### Properties
-### Additional Properties
-* **Additional Properties Type**: string
-
 ## SigningKey
 ### Properties
 * **delegationSignerInfo**: [DelegationSignerInfo](#delegationsignerinfo)[] (ReadOnly): The delegation signer information.
@@ -293,6 +301,11 @@
 * **matchingType**: int: The matching type specifies how the certificate association is presented.
 * **selector**: int: The selector specifies which part of the TLS certificate presented by the server will be matched against the association data.
 * **usage**: int: The usage specifies the provided association that will be used to match the certificate presented in the TLS handshake.
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TxtRecord
 ### Properties
