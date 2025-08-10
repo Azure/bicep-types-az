@@ -1,22 +1,22 @@
 [
   {
     "$type": "StringType",
-    "pattern": "^[a-zA-Z0-9-]{3,24}$"
+    "pattern": "^([a-z]|[0-9])([a-z]|[0-9]|(-(?!-))){1,61}([a-z]|[0-9])$"
   },
   {
     "$type": "StringLiteralType",
-    "value": "Microsoft.HealthDataAIServices/deidServices"
+    "value": "Microsoft.FileShares/fileShares"
   },
   {
     "$type": "StringType"
   },
   {
     "$type": "StringLiteralType",
-    "value": "2024-02-28-preview"
+    "value": "2025-06-01-preview"
   },
   {
     "$type": "ObjectType",
-    "name": "Microsoft.HealthDataAIServices/deidServices",
+    "name": "Microsoft.FileShares/fileShares",
     "properties": {
       "id": {
         "type": {
@@ -53,16 +53,9 @@
         "flags": 0,
         "description": "The resource-specific properties for this resource."
       },
-      "identity": {
-        "type": {
-          "$ref": "#/43"
-        },
-        "flags": 0,
-        "description": "The managed service identities assigned to this resource."
-      },
       "tags": {
         "type": {
-          "$ref": "#/52"
+          "$ref": "#/65"
         },
         "flags": 0,
         "description": "Resource tags."
@@ -76,7 +69,7 @@
       },
       "systemData": {
         "type": {
-          "$ref": "#/28"
+          "$ref": "#/53"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -85,36 +78,258 @@
   },
   {
     "$type": "ObjectType",
-    "name": "DeidServiceProperties",
+    "name": "FileShareProperties",
     "properties": {
-      "provisioningState": {
+      "mountName": {
         "type": {
-          "$ref": "#/13"
+          "$ref": "#/2"
         },
-        "flags": 2,
-        "description": "The status of the last operation."
+        "flags": 0,
+        "description": "The name of the file share as seen by the end user when mounting the share, such as in a URI or UNC format in their operating system."
       },
-      "serviceUrl": {
+      "hostName": {
         "type": {
           "$ref": "#/2"
         },
         "flags": 2,
-        "description": "Deid service url."
+        "description": "The host name of the file share."
       },
-      "privateEndpointConnections": {
+      "mediaTier": {
         "type": {
-          "$ref": "#/39"
+          "$ref": "#/7"
+        },
+        "flags": 0,
+        "description": "The storage media tier of the file share."
+      },
+      "redundancy": {
+        "type": {
+          "$ref": "#/10"
+        },
+        "flags": 0,
+        "description": "The chosen redundancy level of the file share."
+      },
+      "protocol": {
+        "type": {
+          "$ref": "#/12"
+        },
+        "flags": 0,
+        "description": "The file sharing protocol for this file share."
+      },
+      "provisionedStorageGiB": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "The provisioned storage size of the share in GiB (1 GiB is 1024^3 bytes or 1073741824 bytes). A component of the file share's bill is the provisioned storage, regardless of the amount of used storage."
+      },
+      "provisionedStorageNextAllowedDowngrade": {
+        "type": {
+          "$ref": "#/2"
         },
         "flags": 2,
-        "description": "List of private endpoint connections."
+        "description": "A date/time value that specifies when the provisioned storage for the file share is permitted to be reduced."
+      },
+      "provisionedIOPerSec": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "The provisioned IO / sec of the share."
+      },
+      "provisionedIOPerSecNextAllowedDowngrade": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "A date/time value that specifies when the provisioned IOPS for the file share is permitted to be reduced."
+      },
+      "provisionedThroughputMiBPerSec": {
+        "type": {
+          "$ref": "#/13"
+        },
+        "flags": 0,
+        "description": "The provisioned throughput / sec of the share."
+      },
+      "provisionedThroughputNextAllowedDowngrade": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "A date/time value that specifies when the provisioned throughput for the file share is permitted to be reduced."
+      },
+      "includedBurstIOPerSec": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 2,
+        "description": "Burst IOPS are extra buffer IOPS enabling you to consume more than your provisioned IOPS for a short period of time, depending on the burst credits available for your share."
+      },
+      "maxBurstIOPerSecCredits": {
+        "type": {
+          "$ref": "#/15"
+        },
+        "flags": 2,
+        "description": "Max burst IOPS credits shows the maximum number of burst credits the share can have at the current IOPS provisioning level."
+      },
+      "nfsProtocolProperties": {
+        "type": {
+          "$ref": "#/16"
+        },
+        "flags": 0,
+        "description": "Protocol settings specific NFS."
+      },
+      "publicAccessProperties": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0,
+        "description": "The set of properties for control public access."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/35"
+        },
+        "flags": 2,
+        "description": "The status of the last operation."
       },
       "publicNetworkAccess": {
         "type": {
-          "$ref": "#/42"
+          "$ref": "#/38"
         },
         "flags": 0,
-        "description": "Gets or sets allow or disallow public network access to resource"
+        "description": "Gets or sets allow or disallow public network access to azure managed file share"
+      },
+      "privateEndpointConnections": {
+        "type": {
+          "$ref": "#/64"
+        },
+        "flags": 2,
+        "description": "The list of associated private endpoint connections."
       }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SSD"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/6"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Local"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Zone"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/8"
+      },
+      {
+        "$ref": "#/9"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NFS"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/11"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "IntegerType"
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 3000
+  },
+  {
+    "$type": "IntegerType",
+    "minValue": 0
+  },
+  {
+    "$type": "ObjectType",
+    "name": "NfsProtocolProperties",
+    "properties": {
+      "rootSquash": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0,
+        "description": "Root squash defines how root users on clients are mapped to the NFS share."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NoRootSquash"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "RootSquash"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "AllSquash"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/17"
+      },
+      {
+        "$ref": "#/18"
+      },
+      {
+        "$ref": "#/19"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "PublicAccessProperties",
+    "properties": {
+      "allowedSubnets": {
+        "type": {
+          "$ref": "#/22"
+        },
+        "flags": 0,
+        "description": "The allowed set of subnets when access is restricted."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/2"
     }
   },
   {
@@ -146,28 +361,85 @@
     "value": "Accepted"
   },
   {
+    "$type": "StringLiteralType",
+    "value": "Created"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "TransientFailure"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Patching"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Posting"
+  },
+  {
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/6"
+        "$ref": "#/23"
       },
       {
-        "$ref": "#/7"
+        "$ref": "#/24"
       },
       {
-        "$ref": "#/8"
+        "$ref": "#/25"
       },
       {
-        "$ref": "#/9"
+        "$ref": "#/26"
       },
       {
-        "$ref": "#/10"
+        "$ref": "#/27"
       },
       {
-        "$ref": "#/11"
+        "$ref": "#/28"
       },
       {
-        "$ref": "#/12"
+        "$ref": "#/29"
+      },
+      {
+        "$ref": "#/30"
+      },
+      {
+        "$ref": "#/31"
+      },
+      {
+        "$ref": "#/32"
+      },
+      {
+        "$ref": "#/33"
+      },
+      {
+        "$ref": "#/34"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/36"
+      },
+      {
+        "$ref": "#/37"
       },
       {
         "$ref": "#/2"
@@ -180,7 +452,7 @@
     "properties": {
       "properties": {
         "type": {
-          "$ref": "#/15"
+          "$ref": "#/40"
         },
         "flags": 0,
         "description": "Resource properties."
@@ -208,7 +480,7 @@
       },
       "systemData": {
         "type": {
-          "$ref": "#/28"
+          "$ref": "#/53"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -221,28 +493,28 @@
     "properties": {
       "groupIds": {
         "type": {
-          "$ref": "#/16"
+          "$ref": "#/41"
         },
         "flags": 2,
         "description": "The group ids for the private endpoint resource."
       },
       "privateEndpoint": {
         "type": {
-          "$ref": "#/17"
+          "$ref": "#/42"
         },
         "flags": 0,
         "description": "The private endpoint resource."
       },
       "privateLinkServiceConnectionState": {
         "type": {
-          "$ref": "#/18"
+          "$ref": "#/43"
         },
         "flags": 1,
         "description": "A collection of information about the state of the connection between service consumer and provider."
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/27"
+          "$ref": "#/52"
         },
         "flags": 2,
         "description": "The provisioning state of the private endpoint connection resource."
@@ -274,7 +546,7 @@
     "properties": {
       "status": {
         "type": {
-          "$ref": "#/22"
+          "$ref": "#/47"
         },
         "flags": 0,
         "description": "Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service."
@@ -311,13 +583,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/19"
+        "$ref": "#/44"
       },
       {
-        "$ref": "#/20"
+        "$ref": "#/45"
       },
       {
-        "$ref": "#/21"
+        "$ref": "#/46"
       },
       {
         "$ref": "#/2"
@@ -344,16 +616,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/23"
+        "$ref": "#/48"
       },
       {
-        "$ref": "#/24"
+        "$ref": "#/49"
       },
       {
-        "$ref": "#/25"
+        "$ref": "#/50"
       },
       {
-        "$ref": "#/26"
+        "$ref": "#/51"
       },
       {
         "$ref": "#/2"
@@ -373,7 +645,7 @@
       },
       "createdByType": {
         "type": {
-          "$ref": "#/33"
+          "$ref": "#/58"
         },
         "flags": 0,
         "description": "The type of identity that created the resource."
@@ -394,7 +666,7 @@
       },
       "lastModifiedByType": {
         "type": {
-          "$ref": "#/38"
+          "$ref": "#/63"
         },
         "flags": 0,
         "description": "The type of identity that last modified the resource."
@@ -428,16 +700,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/29"
+        "$ref": "#/54"
       },
       {
-        "$ref": "#/30"
+        "$ref": "#/55"
       },
       {
-        "$ref": "#/31"
+        "$ref": "#/56"
       },
       {
-        "$ref": "#/32"
+        "$ref": "#/57"
       },
       {
         "$ref": "#/2"
@@ -464,16 +736,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/34"
+        "$ref": "#/59"
       },
       {
-        "$ref": "#/35"
+        "$ref": "#/60"
       },
       {
-        "$ref": "#/36"
+        "$ref": "#/61"
       },
       {
-        "$ref": "#/37"
+        "$ref": "#/62"
       },
       {
         "$ref": "#/2"
@@ -483,130 +755,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/14"
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Enabled"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Disabled"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/40"
-      },
-      {
-        "$ref": "#/41"
-      }
-    ]
-  },
-  {
-    "$type": "ObjectType",
-    "name": "ManagedServiceIdentity",
-    "properties": {
-      "principalId": {
-        "type": {
-          "$ref": "#/44"
-        },
-        "flags": 2,
-        "description": "The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity."
-      },
-      "tenantId": {
-        "type": {
-          "$ref": "#/44"
-        },
-        "flags": 2,
-        "description": "The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity."
-      },
-      "type": {
-        "type": {
-          "$ref": "#/49"
-        },
-        "flags": 1,
-        "description": "Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed)."
-      },
-      "userAssignedIdentities": {
-        "type": {
-          "$ref": "#/51"
-        },
-        "flags": 0,
-        "description": "The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests."
-      }
-    }
-  },
-  {
-    "$type": "StringType",
-    "minLength": 36,
-    "maxLength": 36,
-    "pattern": "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "None"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "SystemAssigned"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "UserAssigned"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "SystemAssigned,UserAssigned"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/45"
-      },
-      {
-        "$ref": "#/46"
-      },
-      {
-        "$ref": "#/47"
-      },
-      {
-        "$ref": "#/48"
-      },
-      {
-        "$ref": "#/2"
-      }
-    ]
-  },
-  {
-    "$type": "ObjectType",
-    "name": "UserAssignedIdentity",
-    "properties": {
-      "principalId": {
-        "type": {
-          "$ref": "#/44"
-        },
-        "flags": 2,
-        "description": "The principal ID of the assigned identity."
-      },
-      "clientId": {
-        "type": {
-          "$ref": "#/44"
-        },
-        "flags": 2,
-        "description": "The client ID of the assigned identity."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "UserAssignedIdentities",
-    "properties": {},
-    "additionalProperties": {
-      "$ref": "#/50"
+      "$ref": "#/39"
     }
   },
   {
@@ -619,7 +768,7 @@
   },
   {
     "$type": "ResourceType",
-    "name": "Microsoft.HealthDataAIServices/deidServices@2024-02-28-preview",
+    "name": "Microsoft.FileShares/fileShares@2025-06-01-preview",
     "scopeType": 8,
     "body": {
       "$ref": "#/4"
@@ -628,15 +777,15 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "Microsoft.HealthDataAIServices/deidServices/privateEndpointConnections"
+    "value": "Microsoft.FileShares/fileShares/fileShareSnapshots"
   },
   {
     "$type": "StringLiteralType",
-    "value": "2024-02-28-preview"
+    "value": "2025-06-01-preview"
   },
   {
     "$type": "ObjectType",
-    "name": "Microsoft.HealthDataAIServices/deidServices/privateEndpointConnections",
+    "name": "Microsoft.FileShares/fileShares/fileShareSnapshots",
     "properties": {
       "id": {
         "type": {
@@ -647,35 +796,35 @@
       },
       "name": {
         "type": {
-          "$ref": "#/2"
+          "$ref": "#/0"
         },
         "flags": 9,
         "description": "The resource name"
       },
       "type": {
         "type": {
-          "$ref": "#/54"
+          "$ref": "#/67"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/55"
+          "$ref": "#/68"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/15"
+          "$ref": "#/70"
         },
         "flags": 0,
         "description": "The resource-specific properties for this resource."
       },
       "systemData": {
         "type": {
-          "$ref": "#/28"
+          "$ref": "#/53"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
@@ -683,11 +832,46 @@
     }
   },
   {
+    "$type": "ObjectType",
+    "name": "FileShareSnapshotProperties",
+    "properties": {
+      "snapshotTime": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The FileShareSnapshot time in UTC in string representation"
+      },
+      "initiatorId": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2,
+        "description": "The initiator of the FileShareSnapshot. This is a user-defined value."
+      },
+      "metadata": {
+        "type": {
+          "$ref": "#/71"
+        },
+        "flags": 0,
+        "description": "The metadata"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "FileShareSnapshotPropertiesMetadata",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
     "$type": "ResourceType",
-    "name": "Microsoft.HealthDataAIServices/deidServices/privateEndpointConnections@2024-02-28-preview",
+    "name": "Microsoft.FileShares/fileShares/fileShareSnapshots@2025-06-01-preview",
     "scopeType": 8,
     "body": {
-      "$ref": "#/56"
+      "$ref": "#/69"
     },
     "flags": 0
   }

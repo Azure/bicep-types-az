@@ -429,6 +429,10 @@
 * **days**: int {minValue: 1, maxValue: 365}: Indicates the number of days that the deleted item should be retained. The minimum specified value can be 1 and the maximum value can be 365.
 * **enabled**: bool: Indicates whether DeleteRetentionPolicy is enabled.
 
+## DualStackEndpointPreference
+### Properties
+* **publishIpv6Endpoint**: bool: A boolean flag which indicates whether IPv6 storage endpoints are to be published.
+
 ## Encryption
 ### Properties
 * **identity**: [EncryptionIdentity](#encryptionidentity): The identity to be used with service-side encryption at rest.
@@ -480,6 +484,7 @@
 * **dfs**: string (ReadOnly): Gets the dfs endpoint.
 * **file**: string (ReadOnly): Gets the file endpoint.
 * **internetEndpoints**: [StorageAccountInternetEndpoints](#storageaccountinternetendpoints): Gets the internet routing storage endpoints
+* **ipv6Endpoints**: [StorageAccountIpv6Endpoints](#storageaccountipv6endpoints): Gets the IPv6 storage endpoints.
 * **microsoftEndpoints**: [StorageAccountMicrosoftEndpoints](#storageaccountmicrosoftendpoints): Gets the microsoft routing storage endpoints.
 * **queue**: string (ReadOnly): Gets the queue endpoint.
 * **table**: string (ReadOnly): Gets the table endpoint.
@@ -618,7 +623,7 @@
 ## IPRule
 ### Properties
 * **action**: 'Allow': The action of IP ACL rule.
-* **value**: string (Required): Specifies the IP or IP range in CIDR format. Only IPV4 address is allowed.
+* **value**: string (Required): Specifies the IP or IP range in CIDR format.
 
 ## KeyCreationTime
 ### Properties
@@ -746,6 +751,7 @@
 * **bypass**: 'AzureServices' | 'Logging' | 'Metrics' | 'None' | string: Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Possible values are any combination of Logging|Metrics|AzureServices (For example, "Logging, Metrics"), or None to bypass none of those traffics.
 * **defaultAction**: 'Allow' | 'Deny' (Required): Specifies the default action of allow or deny when no other rules match.
 * **ipRules**: [IPRule](#iprule)[]: Sets the IP ACL rules
+* **ipv6Rules**: [IPRule](#iprule)[]: Sets the IPv6 ACL rules.
 * **resourceAccessRules**: [ResourceAccessRule](#resourceaccessrule)[]: Sets the resource access rules
 * **virtualNetworkRules**: [VirtualNetworkRule](#virtualnetworkrule)[]: Sets the virtual network rules
 
@@ -974,6 +980,17 @@
 * **file**: string (ReadOnly): Gets the file endpoint.
 * **web**: string (ReadOnly): Gets the web endpoint.
 
+## StorageAccountIpv6Endpoints
+### Properties
+* **blob**: string (ReadOnly): Gets the blob endpoint.
+* **dfs**: string (ReadOnly): Gets the dfs endpoint.
+* **file**: string (ReadOnly): Gets the file endpoint.
+* **internetEndpoints**: [StorageAccountInternetEndpoints](#storageaccountinternetendpoints): Gets the internet routing storage endpoints
+* **microsoftEndpoints**: [StorageAccountMicrosoftEndpoints](#storageaccountmicrosoftendpoints): Gets the microsoft routing storage endpoints.
+* **queue**: string (ReadOnly): Gets the queue endpoint.
+* **table**: string (ReadOnly): Gets the table endpoint.
+* **web**: string (ReadOnly): Gets the web endpoint.
+
 ## StorageAccountKey
 ### Properties
 * **creationTime**: string (ReadOnly): Creation time of the key, in round trip date format.
@@ -1007,8 +1024,8 @@
 * **creationTime**: string (ReadOnly): Gets the creation date and time of the storage account in UTC.
 * **customDomain**: [CustomDomain](#customdomain): User domain assigned to the storage account. Name is the CNAME source. Only one custom domain is supported per storage account at this time. To clear the existing custom domain, use an empty string for the custom domain name property.
 * **defaultToOAuthAuthentication**: bool: A boolean flag which indicates whether the default authentication is OAuth or not. The default interpretation is false for this property.
-* **deletedAccountCreationTime**: string (WriteOnly): Creation time of the deleted account. This property should only be provided while requesting deleted storage account recovery.
 * **dnsEndpointType**: 'AzureDnsZone' | 'Standard' | string: Allows you to specify the type of endpoint. Set this to AzureDNSZone to create a large number of accounts in a single subscription, which creates accounts in an Azure DNS Zone and the endpoint URL will have an alphanumeric DNS Zone identifier.
+* **dualStackEndpointPreference**: [DualStackEndpointPreference](#dualstackendpointpreference): Maintains information about the Internet protocol opted by the user.
 * **enableExtendedGroups**: bool: Enables extended group support with local users feature, if set to true
 * **encryption**: [Encryption](#encryption): Encryption settings to be used for server-side encryption for the storage account.
 * **failoverInProgress**: bool (ReadOnly): If the failover is in progress, the value will be true, otherwise, it will be null.

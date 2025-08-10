@@ -65,12 +65,12 @@
 ## ApiFlowOptions
 ### Properties
 * **apiMode**: 'Endpoint' | 'SDK' | string: Remote Calling Mode in the Azure Data Transfer API Flow, which describes how the API Flow will be invoked
-* **audienceOverride**: string: Optional field to override the audience of the remote endpoint
+* **audienceOverride**: string: Optional field to override the audience of the remote endpoint. Deprecated starting 2025-05-30-preview.
 * **cname**: string: Unique CNAME to represent the Azure Data Transfer API Flow instance
-* **identityTranslation**: 'ServiceIdentity' | 'UserIdentity' | string: Flag for if Azure Data Transfer API Flow should extract the user token
-* **remoteCallingModeClientId**: string: Remote stub app registration Client ID
-* **remoteEndpoint**: string: Remote host to which communication needs to be made
-* **senderClientId**: string: Sender's app user assigned Manage Identity client ID
+* **identityTranslation**: 'ServiceIdentity' | 'UserIdentity' | string: Determines which identity to use for extracting the user token for Azure Data Transfer API Flow. Deprecated starting 2025-05-30-preview.
+* **remoteCallingModeClientId**: string: Remote stub app registration Client ID. Deprecated starting 2025-05-30-preview.
+* **remoteEndpoint**: string: Remote host to which communication needs to be made. Deprecated starting 2025-05-30-preview.
+* **senderClientId**: string: Sender's app user assigned Manage Identity client ID. Deprecated starting 2025-05-30-preview.
 
 ## ConnectionIdList
 ### Properties
@@ -81,7 +81,7 @@
 * **approver**: string (ReadOnly): Approver of this connection request
 * **dateSubmitted**: string (ReadOnly): The timestamp that this connection request was submitted at
 * **direction**: 'Receive' | 'Send' | string: Direction of data movement
-* **flowTypes**: ('API' | 'BasicFiles' | 'Complex' | 'Data' | 'DevSecOps' | 'DiskImages' | 'Messaging' | 'MicrosoftInternal' | 'Mission' | 'MissionOpaqueXML' | 'Opaque' | 'Standard' | 'StreamingVideo' | 'Unknown' | string)[]: The flow types being requested for this connection
+* **flowTypes**: ('API' | 'BasicFiles' | 'Complex' | 'Data' | 'DevSecOps' | 'DiskImages' | 'Messaging' | 'MicrosoftInternal' | 'Mission' | 'MissionOpaqueXML' | 'Opaque' | 'Standard' | 'StreamingVideo' | 'Unknown' | string)[]: The flow types being requested for this connection. This FlowType property is deprecated starting from version 2025_05_30_preview - please create a FlowProfile resource instead.
 * **forceDisabledStatus**: ('ConnectionForceDisabled' | 'FlowTypeForceDisabled' | string)[] (ReadOnly): Force disablement status of the current connection
 * **justification**: string: Justification for the connection request
 * **linkedConnectionId**: string (ReadOnly): Resource ID of the linked connection
@@ -181,7 +181,7 @@
 * **approver**: string (ReadOnly): Approver of this connection request
 * **dateSubmitted**: string (ReadOnly): The timestamp that this connection request was submitted at
 * **direction**: 'Receive' | 'Send' | string: Direction of data movement
-* **flowTypes**: ('API' | 'BasicFiles' | 'Complex' | 'Data' | 'DevSecOps' | 'DiskImages' | 'Messaging' | 'MicrosoftInternal' | 'Mission' | 'MissionOpaqueXML' | 'Opaque' | 'Standard' | 'StreamingVideo' | 'Unknown' | string)[]: The flow types being requested for this connection
+* **flowTypes**: ('API' | 'BasicFiles' | 'Complex' | 'Data' | 'DevSecOps' | 'DiskImages' | 'Messaging' | 'MicrosoftInternal' | 'Mission' | 'MissionOpaqueXML' | 'Opaque' | 'Standard' | 'StreamingVideo' | 'Unknown' | string)[]: The flow types being requested for this connection. This FlowType property is deprecated starting from version 2025_05_30_preview - please create a FlowProfile resource instead.
 * **forceDisabledStatus**: ('ConnectionForceDisabled' | 'FlowTypeForceDisabled' | string)[] (ReadOnly): Force disablement status of the current connection
 * **id**: string (ReadOnly): Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
 * **justification**: string: Justification for the connection request
@@ -277,7 +277,7 @@
 * **connections**: [ReadPipelineConnection](#readpipelineconnection)[] (ReadOnly): Connections associated with pipeline
 * **disabledFlowTypes**: ('API' | 'BasicFiles' | 'Complex' | 'Data' | 'DevSecOps' | 'DiskImages' | 'Messaging' | 'MicrosoftInternal' | 'Mission' | 'MissionOpaqueXML' | 'Opaque' | 'Standard' | 'StreamingVideo' | 'Unknown' | string)[]: The flow types that are disabled for this pipeline
 * **displayName**: string: Display name of this pipeline
-* **flowTypes**: ('API' | 'BasicFiles' | 'Complex' | 'Data' | 'DevSecOps' | 'DiskImages' | 'Messaging' | 'MicrosoftInternal' | 'Mission' | 'MissionOpaqueXML' | 'Opaque' | 'Standard' | 'StreamingVideo' | 'Unknown' | string)[]: The flow types allowed for this pipeline
+* **flowTypes**: ('API' | 'BasicFiles' | 'Complex' | 'Data' | 'DevSecOps' | 'DiskImages' | 'Messaging' | 'MicrosoftInternal' | 'Mission' | 'MissionOpaqueXML' | 'Opaque' | 'Standard' | 'StreamingVideo' | 'Unknown' | string)[]: The flow type for this flow
 * **policies**: string[]: The policies for this pipeline
 * **provisioningState**: 'Accepted' | 'Canceled' | 'Failed' | 'Succeeded' | string (ReadOnly): Provisioning state of the pipeline
 * **quarantineDownloadStorageAccount**: string: Quarantine Download Storage Account
