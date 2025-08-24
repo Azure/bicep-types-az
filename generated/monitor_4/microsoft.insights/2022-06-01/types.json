@@ -4,7 +4,7 @@
   },
   {
     "$type": "StringLiteralType",
-    "value": "Microsoft.Insights/actionGroups"
+    "value": "Microsoft.Insights/dataCollectionEndpoints"
   },
   {
     "$type": "StringLiteralType",
@@ -12,7 +12,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "Microsoft.Insights/actionGroups",
+    "name": "Microsoft.Insights/dataCollectionEndpoints",
     "properties": {
       "id": {
         "type": {
@@ -47,724 +47,6 @@
           "$ref": "#/4"
         },
         "flags": 0,
-        "description": "The action groups properties of the resource."
-      },
-      "location": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "Resource location"
-      },
-      "tags": {
-        "type": {
-          "$ref": "#/37"
-        },
-        "flags": 0,
-        "description": "Resource tags"
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "ActionGroup",
-    "properties": {
-      "groupShortName": {
-        "type": {
-          "$ref": "#/5"
-        },
-        "flags": 1,
-        "description": "The short name of the action group. This will be used in SMS messages."
-      },
-      "enabled": {
-        "type": {
-          "$ref": "#/6"
-        },
-        "flags": 1,
-        "description": "Indicates whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications."
-      },
-      "emailReceivers": {
-        "type": {
-          "$ref": "#/12"
-        },
-        "flags": 0,
-        "description": "The list of email receivers that are part of this action group."
-      },
-      "smsReceivers": {
-        "type": {
-          "$ref": "#/18"
-        },
-        "flags": 0,
-        "description": "The list of SMS receivers that are part of this action group."
-      },
-      "webhookReceivers": {
-        "type": {
-          "$ref": "#/20"
-        },
-        "flags": 0,
-        "description": "The list of webhook receivers that are part of this action group."
-      },
-      "itsmReceivers": {
-        "type": {
-          "$ref": "#/22"
-        },
-        "flags": 0,
-        "description": "The list of ITSM receivers that are part of this action group."
-      },
-      "azureAppPushReceivers": {
-        "type": {
-          "$ref": "#/24"
-        },
-        "flags": 0,
-        "description": "The list of AzureAppPush receivers that are part of this action group."
-      },
-      "automationRunbookReceivers": {
-        "type": {
-          "$ref": "#/26"
-        },
-        "flags": 0,
-        "description": "The list of AutomationRunbook receivers that are part of this action group."
-      },
-      "voiceReceivers": {
-        "type": {
-          "$ref": "#/28"
-        },
-        "flags": 0,
-        "description": "The list of voice receivers that are part of this action group."
-      },
-      "logicAppReceivers": {
-        "type": {
-          "$ref": "#/30"
-        },
-        "flags": 0,
-        "description": "The list of logic app receivers that are part of this action group."
-      },
-      "azureFunctionReceivers": {
-        "type": {
-          "$ref": "#/32"
-        },
-        "flags": 0,
-        "description": "The list of azure function receivers that are part of this action group."
-      },
-      "armRoleReceivers": {
-        "type": {
-          "$ref": "#/34"
-        },
-        "flags": 0,
-        "description": "The list of ARM role receivers that are part of this action group. Roles are Azure RBAC roles and only built-in roles are supported."
-      },
-      "eventHubReceivers": {
-        "type": {
-          "$ref": "#/36"
-        },
-        "flags": 0,
-        "description": "The list of event hub receivers that are part of this action group."
-      }
-    }
-  },
-  {
-    "$type": "StringType",
-    "maxLength": 12
-  },
-  {
-    "$type": "BooleanType"
-  },
-  {
-    "$type": "ObjectType",
-    "name": "EmailReceiver",
-    "properties": {
-      "name": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "The name of the email receiver. Names must be unique across all receivers within an action group."
-      },
-      "emailAddress": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "The email address of this receiver."
-      },
-      "useCommonAlertSchema": {
-        "type": {
-          "$ref": "#/6"
-        },
-        "flags": 0,
-        "description": "Indicates whether to use common alert schema."
-      },
-      "status": {
-        "type": {
-          "$ref": "#/11"
-        },
-        "flags": 2,
-        "description": "The receiver status of the e-mail."
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "NotSpecified"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Enabled"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Disabled"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/8"
-      },
-      {
-        "$ref": "#/9"
-      },
-      {
-        "$ref": "#/10"
-      }
-    ]
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/7"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "SmsReceiver",
-    "properties": {
-      "name": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "The name of the SMS receiver. Names must be unique across all receivers within an action group."
-      },
-      "countryCode": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "The country code of the SMS receiver."
-      },
-      "phoneNumber": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "The phone number of the SMS receiver."
-      },
-      "status": {
-        "type": {
-          "$ref": "#/17"
-        },
-        "flags": 2,
-        "description": "The status of the receiver."
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "NotSpecified"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Enabled"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Disabled"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/14"
-      },
-      {
-        "$ref": "#/15"
-      },
-      {
-        "$ref": "#/16"
-      }
-    ]
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/13"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "WebhookReceiver",
-    "properties": {
-      "name": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "The name of the webhook receiver. Names must be unique across all receivers within an action group."
-      },
-      "serviceUri": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "The URI where webhooks should be sent."
-      },
-      "useCommonAlertSchema": {
-        "type": {
-          "$ref": "#/6"
-        },
-        "flags": 0,
-        "description": "Indicates whether to use common alert schema."
-      },
-      "useAadAuth": {
-        "type": {
-          "$ref": "#/6"
-        },
-        "flags": 0,
-        "description": "Indicates whether or not use AAD authentication."
-      },
-      "objectId": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "Indicates the webhook app object Id for aad auth."
-      },
-      "identifierUri": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "Indicates the identifier uri for aad auth."
-      },
-      "tenantId": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "Indicates the tenant id for aad auth."
-      }
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/19"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "ItsmReceiver",
-    "properties": {
-      "name": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "The name of the Itsm receiver. Names must be unique across all receivers within an action group."
-      },
-      "workspaceId": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "OMS LA instance identifier."
-      },
-      "connectionId": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "Unique identification of ITSM connection among multiple defined in above workspace."
-      },
-      "ticketConfiguration": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "JSON blob for the configurations of the ITSM action. CreateMultipleWorkItems option will be part of this blob as well."
-      },
-      "region": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "Region in which workspace resides. Supported values:'centralindia','japaneast','southeastasia','australiasoutheast','uksouth','westcentralus','canadacentral','eastus','westeurope'"
-      }
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/21"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "AzureAppPushReceiver",
-    "properties": {
-      "name": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "The name of the Azure mobile app push receiver. Names must be unique across all receivers within an action group."
-      },
-      "emailAddress": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "The email address registered for the Azure mobile app."
-      }
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/23"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "AutomationRunbookReceiver",
-    "properties": {
-      "automationAccountId": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "The Azure automation account Id which holds this runbook and authenticate to Azure resource."
-      },
-      "runbookName": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "The name for this runbook."
-      },
-      "webhookResourceId": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "The resource id for webhook linked to this runbook."
-      },
-      "isGlobalRunbook": {
-        "type": {
-          "$ref": "#/6"
-        },
-        "flags": 1,
-        "description": "Indicates whether this instance is global runbook."
-      },
-      "name": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "Indicates name of the webhook."
-      },
-      "serviceUri": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The URI where webhooks should be sent."
-      },
-      "useCommonAlertSchema": {
-        "type": {
-          "$ref": "#/6"
-        },
-        "flags": 0,
-        "description": "Indicates whether to use common alert schema."
-      }
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/25"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "VoiceReceiver",
-    "properties": {
-      "name": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "The name of the voice receiver. Names must be unique across all receivers within an action group."
-      },
-      "countryCode": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "The country code of the voice receiver."
-      },
-      "phoneNumber": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "The phone number of the voice receiver."
-      }
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/27"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "LogicAppReceiver",
-    "properties": {
-      "name": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "The name of the logic app receiver. Names must be unique across all receivers within an action group."
-      },
-      "resourceId": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "The azure resource id of the logic app receiver."
-      },
-      "callbackUrl": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "The callback url where http request sent to."
-      },
-      "useCommonAlertSchema": {
-        "type": {
-          "$ref": "#/6"
-        },
-        "flags": 0,
-        "description": "Indicates whether to use common alert schema."
-      }
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/29"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "AzureFunctionReceiver",
-    "properties": {
-      "name": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "The name of the azure function receiver. Names must be unique across all receivers within an action group."
-      },
-      "functionAppResourceId": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "The azure resource id of the function app."
-      },
-      "functionName": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "The function name in the function app."
-      },
-      "httpTriggerUrl": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "The http trigger url where http request sent to."
-      },
-      "useCommonAlertSchema": {
-        "type": {
-          "$ref": "#/6"
-        },
-        "flags": 0,
-        "description": "Indicates whether to use common alert schema."
-      }
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/31"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "ArmRoleReceiver",
-    "properties": {
-      "name": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "The name of the arm role receiver. Names must be unique across all receivers within an action group."
-      },
-      "roleId": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "The arm role id."
-      },
-      "useCommonAlertSchema": {
-        "type": {
-          "$ref": "#/6"
-        },
-        "flags": 0,
-        "description": "Indicates whether to use common alert schema."
-      }
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/33"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "EventHubReceiver",
-    "properties": {
-      "name": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "The name of the Event hub receiver. Names must be unique across all receivers within an action group."
-      },
-      "eventHubNameSpace": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "The Event Hub namespace"
-      },
-      "eventHubName": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "The name of the specific Event Hub queue"
-      },
-      "useCommonAlertSchema": {
-        "type": {
-          "$ref": "#/6"
-        },
-        "flags": 0,
-        "description": "Indicates whether to use common alert schema."
-      },
-      "tenantId": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The tenant Id for the subscription containing this event hub"
-      },
-      "subscriptionId": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 1,
-        "description": "The Id for the subscription containing this event hub"
-      }
-    }
-  },
-  {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/35"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "AzureResourceTags",
-    "properties": {},
-    "additionalProperties": {
-      "$ref": "#/0"
-    }
-  },
-  {
-    "$type": "ResourceType",
-    "name": "Microsoft.Insights/actionGroups@2022-06-01",
-    "scopeType": 8,
-    "body": {
-      "$ref": "#/3"
-    },
-    "flags": 0
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Microsoft.Insights/dataCollectionEndpoints"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "2022-06-01"
-  },
-  {
-    "$type": "ObjectType",
-    "name": "Microsoft.Insights/dataCollectionEndpoints",
-    "properties": {
-      "id": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 10,
-        "description": "The resource id"
-      },
-      "name": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 9,
-        "description": "The resource name"
-      },
-      "type": {
-        "type": {
-          "$ref": "#/39"
-        },
-        "flags": 10,
-        "description": "The resource type"
-      },
-      "apiVersion": {
-        "type": {
-          "$ref": "#/40"
-        },
-        "flags": 10,
-        "description": "The resource api version"
-      },
-      "properties": {
-        "type": {
-          "$ref": "#/42"
-        },
-        "flags": 0,
         "description": "Resource properties."
       },
       "location": {
@@ -776,21 +58,21 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/71"
+          "$ref": "#/33"
         },
         "flags": 0,
         "description": "Resource tags."
       },
       "kind": {
         "type": {
-          "$ref": "#/74"
+          "$ref": "#/36"
         },
         "flags": 0,
         "description": "The kind of the resource."
       },
       "identity": {
         "type": {
-          "$ref": "#/75"
+          "$ref": "#/37"
         },
         "flags": 0,
         "description": "Managed service identity of the resource."
@@ -804,7 +86,7 @@
       },
       "systemData": {
         "type": {
-          "$ref": "#/84"
+          "$ref": "#/46"
         },
         "flags": 2,
         "description": "Metadata pertaining to creation and last modification of the resource."
@@ -831,56 +113,56 @@
       },
       "configurationAccess": {
         "type": {
-          "$ref": "#/43"
+          "$ref": "#/5"
         },
         "flags": 0,
         "description": "The endpoint used by clients to access their configuration."
       },
       "logsIngestion": {
         "type": {
-          "$ref": "#/44"
+          "$ref": "#/6"
         },
         "flags": 0,
         "description": "The endpoint used by clients to ingest logs."
       },
       "metricsIngestion": {
         "type": {
-          "$ref": "#/45"
+          "$ref": "#/7"
         },
         "flags": 0,
         "description": "The endpoint used by clients to ingest metrics."
       },
       "networkAcls": {
         "type": {
-          "$ref": "#/46"
+          "$ref": "#/8"
         },
         "flags": 0,
         "description": "Network access control rules for the endpoints."
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/57"
+          "$ref": "#/19"
         },
         "flags": 2,
         "description": "The resource provisioning state. This property is READ-ONLY."
       },
       "privateLinkScopedResources": {
         "type": {
-          "$ref": "#/59"
+          "$ref": "#/21"
         },
         "flags": 2,
         "description": "List of Azure Monitor Private Link Scope Resources to which this data collection endpoint resource is associated. This property is READ-ONLY."
       },
       "failoverConfiguration": {
         "type": {
-          "$ref": "#/60"
+          "$ref": "#/22"
         },
         "flags": 2,
         "description": "Failover configuration on this endpoint. This property is READ-ONLY."
       },
       "metadata": {
         "type": {
-          "$ref": "#/70"
+          "$ref": "#/32"
         },
         "flags": 2,
         "description": "Metadata for the resource. This property is READ-ONLY."
@@ -932,7 +214,7 @@
     "properties": {
       "publicNetworkAccess": {
         "type": {
-          "$ref": "#/50"
+          "$ref": "#/12"
         },
         "flags": 0,
         "description": "The configuration to set whether network access from public internet to the endpoints are allowed."
@@ -955,13 +237,13 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/47"
+        "$ref": "#/9"
       },
       {
-        "$ref": "#/48"
+        "$ref": "#/10"
       },
       {
-        "$ref": "#/49"
+        "$ref": "#/11"
       },
       {
         "$ref": "#/0"
@@ -996,22 +278,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/51"
+        "$ref": "#/13"
       },
       {
-        "$ref": "#/52"
+        "$ref": "#/14"
       },
       {
-        "$ref": "#/53"
+        "$ref": "#/15"
       },
       {
-        "$ref": "#/54"
+        "$ref": "#/16"
       },
       {
-        "$ref": "#/55"
+        "$ref": "#/17"
       },
       {
-        "$ref": "#/56"
+        "$ref": "#/18"
       },
       {
         "$ref": "#/0"
@@ -1041,7 +323,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/58"
+      "$ref": "#/20"
     }
   },
   {
@@ -1057,7 +339,7 @@
       },
       "locations": {
         "type": {
-          "$ref": "#/69"
+          "$ref": "#/31"
         },
         "flags": 0,
         "description": "Locations that are configured for failover."
@@ -1077,10 +359,453 @@
       },
       "provisioningStatus": {
         "type": {
-          "$ref": "#/68"
+          "$ref": "#/30"
         },
         "flags": 0,
         "description": "The resource provisioning state in this location."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Creating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Updating"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Deleting"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Succeeded"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Canceled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Failed"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/24"
+      },
+      {
+        "$ref": "#/25"
+      },
+      {
+        "$ref": "#/26"
+      },
+      {
+        "$ref": "#/27"
+      },
+      {
+        "$ref": "#/28"
+      },
+      {
+        "$ref": "#/29"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/23"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataCollectionEndpointMetadata",
+    "properties": {
+      "provisionedBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Azure offering managing this resource on-behalf-of customer."
+      },
+      "provisionedByResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource Id of azure offering managing this resource on-behalf-of customer."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataCollectionEndpointResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Linux"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Windows"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/34"
+      },
+      {
+        "$ref": "#/35"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataCollectionEndpointResourceIdentity",
+    "properties": {
+      "principalId": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 2,
+        "description": "The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 2,
+        "description": "The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity."
+      },
+      "type": {
+        "type": {
+          "$ref": "#/43"
+        },
+        "flags": 1,
+        "description": "Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed)."
+      },
+      "userAssignedIdentities": {
+        "type": {
+          "$ref": "#/45"
+        },
+        "flags": 0,
+        "description": "The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "minLength": 36,
+    "maxLength": 36,
+    "pattern": "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "None"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SystemAssigned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "UserAssigned"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "SystemAssigned,UserAssigned"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/39"
+      },
+      {
+        "$ref": "#/40"
+      },
+      {
+        "$ref": "#/41"
+      },
+      {
+        "$ref": "#/42"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UserAssignedIdentity",
+    "properties": {
+      "principalId": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 2,
+        "description": "The principal ID of the assigned identity."
+      },
+      "clientId": {
+        "type": {
+          "$ref": "#/38"
+        },
+        "flags": 2,
+        "description": "The client ID of the assigned identity."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "UserAssignedIdentities",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/44"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataCollectionEndpointResourceSystemData",
+    "properties": {
+      "createdBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that created the resource."
+      },
+      "createdByType": {
+        "type": {
+          "$ref": "#/51"
+        },
+        "flags": 0,
+        "description": "The type of identity that created the resource."
+      },
+      "createdAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource creation (UTC)."
+      },
+      "lastModifiedBy": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The identity that last modified the resource."
+      },
+      "lastModifiedByType": {
+        "type": {
+          "$ref": "#/56"
+        },
+        "flags": 0,
+        "description": "The type of identity that last modified the resource."
+      },
+      "lastModifiedAt": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The timestamp of resource last modification (UTC)"
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/47"
+      },
+      {
+        "$ref": "#/48"
+      },
+      {
+        "$ref": "#/49"
+      },
+      {
+        "$ref": "#/50"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "User"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Application"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "ManagedIdentity"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Key"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/52"
+      },
+      {
+        "$ref": "#/53"
+      },
+      {
+        "$ref": "#/54"
+      },
+      {
+        "$ref": "#/55"
+      },
+      {
+        "$ref": "#/0"
+      }
+    ]
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Insights/dataCollectionEndpoints@2022-06-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/3"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Insights/dataCollectionRuleAssociations"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2022-06-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Insights/dataCollectionRuleAssociations",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/58"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/59"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/61"
+        },
+        "flags": 0,
+        "description": "Resource properties."
+      },
+      "etag": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 2,
+        "description": "Resource entity tag (ETag)."
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/70"
+        },
+        "flags": 2,
+        "description": "Metadata pertaining to creation and last modification of the resource."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DataCollectionRuleAssociationProxyOnlyResourceProperties",
+    "properties": {
+      "description": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Description of the association."
+      },
+      "dataCollectionRuleId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The resource ID of the data collection rule that is to be associated."
+      },
+      "dataCollectionEndpointId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The resource ID of the data collection endpoint that is to be associated."
+      },
+      "provisioningState": {
+        "type": {
+          "$ref": "#/68"
+        },
+        "flags": 2,
+        "description": "The resource provisioning state."
+      },
+      "metadata": {
+        "type": {
+          "$ref": "#/69"
+        },
+        "flags": 2,
+        "description": "Metadata about the resource"
       }
     }
   },
@@ -1135,449 +860,6 @@
     ]
   },
   {
-    "$type": "ArrayType",
-    "itemType": {
-      "$ref": "#/61"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "DataCollectionEndpointMetadata",
-    "properties": {
-      "provisionedBy": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "Azure offering managing this resource on-behalf-of customer."
-      },
-      "provisionedByResourceId": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "Resource Id of azure offering managing this resource on-behalf-of customer."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "DataCollectionEndpointResourceTags",
-    "properties": {},
-    "additionalProperties": {
-      "$ref": "#/0"
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Linux"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Windows"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/72"
-      },
-      {
-        "$ref": "#/73"
-      },
-      {
-        "$ref": "#/0"
-      }
-    ]
-  },
-  {
-    "$type": "ObjectType",
-    "name": "DataCollectionEndpointResourceIdentity",
-    "properties": {
-      "principalId": {
-        "type": {
-          "$ref": "#/76"
-        },
-        "flags": 2,
-        "description": "The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity."
-      },
-      "tenantId": {
-        "type": {
-          "$ref": "#/76"
-        },
-        "flags": 2,
-        "description": "The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity."
-      },
-      "type": {
-        "type": {
-          "$ref": "#/81"
-        },
-        "flags": 1,
-        "description": "Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed)."
-      },
-      "userAssignedIdentities": {
-        "type": {
-          "$ref": "#/83"
-        },
-        "flags": 0,
-        "description": "The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests."
-      }
-    }
-  },
-  {
-    "$type": "StringType",
-    "minLength": 36,
-    "maxLength": 36,
-    "pattern": "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "None"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "SystemAssigned"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "UserAssigned"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "SystemAssigned,UserAssigned"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/77"
-      },
-      {
-        "$ref": "#/78"
-      },
-      {
-        "$ref": "#/79"
-      },
-      {
-        "$ref": "#/80"
-      },
-      {
-        "$ref": "#/0"
-      }
-    ]
-  },
-  {
-    "$type": "ObjectType",
-    "name": "UserAssignedIdentity",
-    "properties": {
-      "principalId": {
-        "type": {
-          "$ref": "#/76"
-        },
-        "flags": 2,
-        "description": "The principal ID of the assigned identity."
-      },
-      "clientId": {
-        "type": {
-          "$ref": "#/76"
-        },
-        "flags": 2,
-        "description": "The client ID of the assigned identity."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "UserAssignedIdentities",
-    "properties": {},
-    "additionalProperties": {
-      "$ref": "#/82"
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "DataCollectionEndpointResourceSystemData",
-    "properties": {
-      "createdBy": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The identity that created the resource."
-      },
-      "createdByType": {
-        "type": {
-          "$ref": "#/89"
-        },
-        "flags": 0,
-        "description": "The type of identity that created the resource."
-      },
-      "createdAt": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The timestamp of resource creation (UTC)."
-      },
-      "lastModifiedBy": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The identity that last modified the resource."
-      },
-      "lastModifiedByType": {
-        "type": {
-          "$ref": "#/94"
-        },
-        "flags": 0,
-        "description": "The type of identity that last modified the resource."
-      },
-      "lastModifiedAt": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The timestamp of resource last modification (UTC)"
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "User"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Application"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "ManagedIdentity"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Key"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/85"
-      },
-      {
-        "$ref": "#/86"
-      },
-      {
-        "$ref": "#/87"
-      },
-      {
-        "$ref": "#/88"
-      },
-      {
-        "$ref": "#/0"
-      }
-    ]
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "User"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Application"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "ManagedIdentity"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Key"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/90"
-      },
-      {
-        "$ref": "#/91"
-      },
-      {
-        "$ref": "#/92"
-      },
-      {
-        "$ref": "#/93"
-      },
-      {
-        "$ref": "#/0"
-      }
-    ]
-  },
-  {
-    "$type": "ResourceType",
-    "name": "Microsoft.Insights/dataCollectionEndpoints@2022-06-01",
-    "scopeType": 8,
-    "body": {
-      "$ref": "#/41"
-    },
-    "flags": 0
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Microsoft.Insights/dataCollectionRuleAssociations"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "2022-06-01"
-  },
-  {
-    "$type": "ObjectType",
-    "name": "Microsoft.Insights/dataCollectionRuleAssociations",
-    "properties": {
-      "id": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 10,
-        "description": "The resource id"
-      },
-      "name": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 9,
-        "description": "The resource name"
-      },
-      "type": {
-        "type": {
-          "$ref": "#/96"
-        },
-        "flags": 10,
-        "description": "The resource type"
-      },
-      "apiVersion": {
-        "type": {
-          "$ref": "#/97"
-        },
-        "flags": 10,
-        "description": "The resource api version"
-      },
-      "properties": {
-        "type": {
-          "$ref": "#/99"
-        },
-        "flags": 0,
-        "description": "Resource properties."
-      },
-      "etag": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 2,
-        "description": "Resource entity tag (ETag)."
-      },
-      "systemData": {
-        "type": {
-          "$ref": "#/108"
-        },
-        "flags": 2,
-        "description": "Metadata pertaining to creation and last modification of the resource."
-      }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "DataCollectionRuleAssociationProxyOnlyResourceProperties",
-    "properties": {
-      "description": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "Description of the association."
-      },
-      "dataCollectionRuleId": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The resource ID of the data collection rule that is to be associated."
-      },
-      "dataCollectionEndpointId": {
-        "type": {
-          "$ref": "#/0"
-        },
-        "flags": 0,
-        "description": "The resource ID of the data collection endpoint that is to be associated."
-      },
-      "provisioningState": {
-        "type": {
-          "$ref": "#/106"
-        },
-        "flags": 2,
-        "description": "The resource provisioning state."
-      },
-      "metadata": {
-        "type": {
-          "$ref": "#/107"
-        },
-        "flags": 2,
-        "description": "Metadata about the resource"
-      }
-    }
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Creating"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Updating"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Deleting"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Succeeded"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Canceled"
-  },
-  {
-    "$type": "StringLiteralType",
-    "value": "Failed"
-  },
-  {
-    "$type": "UnionType",
-    "elements": [
-      {
-        "$ref": "#/100"
-      },
-      {
-        "$ref": "#/101"
-      },
-      {
-        "$ref": "#/102"
-      },
-      {
-        "$ref": "#/103"
-      },
-      {
-        "$ref": "#/104"
-      },
-      {
-        "$ref": "#/105"
-      },
-      {
-        "$ref": "#/0"
-      }
-    ]
-  },
-  {
     "$type": "ObjectType",
     "name": "DataCollectionRuleAssociationMetadata",
     "properties": {
@@ -1610,7 +892,7 @@
       },
       "createdByType": {
         "type": {
-          "$ref": "#/113"
+          "$ref": "#/75"
         },
         "flags": 0,
         "description": "The type of identity that created the resource."
@@ -1631,7 +913,7 @@
       },
       "lastModifiedByType": {
         "type": {
-          "$ref": "#/118"
+          "$ref": "#/80"
         },
         "flags": 0,
         "description": "The type of identity that last modified the resource."
@@ -1665,16 +947,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/109"
+        "$ref": "#/71"
       },
       {
-        "$ref": "#/110"
+        "$ref": "#/72"
       },
       {
-        "$ref": "#/111"
+        "$ref": "#/73"
       },
       {
-        "$ref": "#/112"
+        "$ref": "#/74"
       },
       {
         "$ref": "#/0"
@@ -1701,16 +983,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/114"
+        "$ref": "#/76"
       },
       {
-        "$ref": "#/115"
+        "$ref": "#/77"
       },
       {
-        "$ref": "#/116"
+        "$ref": "#/78"
       },
       {
-        "$ref": "#/117"
+        "$ref": "#/79"
       },
       {
         "$ref": "#/0"
@@ -1722,7 +1004,7 @@
     "name": "Microsoft.Insights/dataCollectionRuleAssociations@2022-06-01",
     "scopeType": 0,
     "body": {
-      "$ref": "#/98"
+      "$ref": "#/60"
     },
     "flags": 0
   },
@@ -1754,21 +1036,21 @@
       },
       "type": {
         "type": {
-          "$ref": "#/120"
+          "$ref": "#/82"
         },
         "flags": 10,
         "description": "The resource type"
       },
       "apiVersion": {
         "type": {
-          "$ref": "#/121"
+          "$ref": "#/83"
         },
         "flags": 10,
         "description": "The resource api version"
       },
       "properties": {
         "type": {
-          "$ref": "#/123"
+          "$ref": "#/85"
         },
         "flags": 0,
         "description": "Resource properties."
@@ -1782,21 +1064,21 @@
       },
       "tags": {
         "type": {
-          "$ref": "#/277"
+          "$ref": "#/239"
         },
         "flags": 0,
         "description": "Resource tags."
       },
       "kind": {
         "type": {
-          "$ref": "#/280"
+          "$ref": "#/242"
         },
         "flags": 0,
         "description": "The kind of the resource."
       },
       "identity": {
         "type": {
-          "$ref": "#/281"
+          "$ref": "#/243"
         },
         "flags": 0,
         "description": "Managed service identity of the resource."
@@ -1810,7 +1092,7 @@
       },
       "systemData": {
         "type": {
-          "$ref": "#/288"
+          "$ref": "#/250"
         },
         "flags": 2,
         "description": "Metadata pertaining to creation and last modification of the resource."
@@ -1844,42 +1126,42 @@
       },
       "metadata": {
         "type": {
-          "$ref": "#/124"
+          "$ref": "#/86"
         },
         "flags": 2,
         "description": "Metadata about the resource"
       },
       "streamDeclarations": {
         "type": {
-          "$ref": "#/136"
+          "$ref": "#/98"
         },
         "flags": 0,
         "description": "Declaration of custom streams used in this rule."
       },
       "dataSources": {
         "type": {
-          "$ref": "#/137"
+          "$ref": "#/99"
         },
         "flags": 0,
         "description": "The specification of data sources. \r\nThis property is optional and can be omitted if the rule is meant to be used via direct calls to the provisioned endpoint."
       },
       "destinations": {
         "type": {
-          "$ref": "#/245"
+          "$ref": "#/207"
         },
         "flags": 0,
         "description": "The specification of destinations."
       },
       "dataFlows": {
         "type": {
-          "$ref": "#/269"
+          "$ref": "#/231"
         },
         "flags": 0,
         "description": "The specification of data flows."
       },
       "provisioningState": {
         "type": {
-          "$ref": "#/276"
+          "$ref": "#/238"
         },
         "flags": 2,
         "description": "The resource provisioning state."
@@ -1912,7 +1194,7 @@
     "properties": {
       "columns": {
         "type": {
-          "$ref": "#/135"
+          "$ref": "#/97"
         },
         "flags": 0,
         "description": "List of columns used by data in this stream."
@@ -1932,7 +1214,7 @@
       },
       "type": {
         "type": {
-          "$ref": "#/134"
+          "$ref": "#/96"
         },
         "flags": 0,
         "description": "The type of the column data."
@@ -1971,25 +1253,25 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/127"
+        "$ref": "#/89"
       },
       {
-        "$ref": "#/128"
+        "$ref": "#/90"
       },
       {
-        "$ref": "#/129"
+        "$ref": "#/91"
       },
       {
-        "$ref": "#/130"
+        "$ref": "#/92"
       },
       {
-        "$ref": "#/131"
+        "$ref": "#/93"
       },
       {
-        "$ref": "#/132"
+        "$ref": "#/94"
       },
       {
-        "$ref": "#/133"
+        "$ref": "#/95"
       },
       {
         "$ref": "#/0"
@@ -1999,7 +1281,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/126"
+      "$ref": "#/88"
     }
   },
   {
@@ -2007,7 +1289,7 @@
     "name": "DataCollectionRuleStreamDeclarations",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/125"
+      "$ref": "#/87"
     }
   },
   {
@@ -2016,70 +1298,70 @@
     "properties": {
       "performanceCounters": {
         "type": {
-          "$ref": "#/145"
+          "$ref": "#/107"
         },
         "flags": 0,
         "description": "The list of performance counter data source configurations."
       },
       "windowsEventLogs": {
         "type": {
-          "$ref": "#/152"
+          "$ref": "#/114"
         },
         "flags": 0,
         "description": "The list of Windows Event Log data source configurations."
       },
       "syslog": {
         "type": {
-          "$ref": "#/197"
+          "$ref": "#/159"
         },
         "flags": 0,
         "description": "The list of Syslog data source configurations."
       },
       "extensions": {
         "type": {
-          "$ref": "#/208"
+          "$ref": "#/170"
         },
         "flags": 0,
         "description": "The list of Azure VM extension data source configurations."
       },
       "logFiles": {
         "type": {
-          "$ref": "#/226"
+          "$ref": "#/188"
         },
         "flags": 0,
         "description": "The list of Log files source configurations."
       },
       "iisLogs": {
         "type": {
-          "$ref": "#/230"
+          "$ref": "#/192"
         },
         "flags": 0,
         "description": "The list of IIS logs source configurations."
       },
       "windowsFirewallLogs": {
         "type": {
-          "$ref": "#/233"
+          "$ref": "#/195"
         },
         "flags": 0,
         "description": "The list of Windows Firewall logs source configurations."
       },
       "prometheusForwarder": {
         "type": {
-          "$ref": "#/239"
+          "$ref": "#/201"
         },
         "flags": 0,
         "description": "The list of Prometheus forwarder data source configurations."
       },
       "platformTelemetry": {
         "type": {
-          "$ref": "#/242"
+          "$ref": "#/204"
         },
         "flags": 0,
         "description": "The list of platform telemetry configurations"
       },
       "dataImports": {
         "type": {
-          "$ref": "#/243"
+          "$ref": "#/205"
         },
         "flags": 0,
         "description": "Specifications of pull based data sources"
@@ -2092,21 +1374,21 @@
     "properties": {
       "streams": {
         "type": {
-          "$ref": "#/142"
+          "$ref": "#/104"
         },
         "flags": 0,
         "description": "List of streams that this data source will be sent to.\r\nA stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to."
       },
       "samplingFrequencyInSeconds": {
         "type": {
-          "$ref": "#/143"
+          "$ref": "#/105"
         },
         "flags": 0,
         "description": "The number of seconds between consecutive counter measurements (samples)."
       },
       "counterSpecifiers": {
         "type": {
-          "$ref": "#/144"
+          "$ref": "#/106"
         },
         "flags": 0,
         "description": "A list of specifier names of the performance counters you want to collect.\r\nUse a wildcard (*) to collect a counter for all instances.\r\nTo get a list of performance counters on Windows, run the command 'typeperf'."
@@ -2132,10 +1414,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/139"
+        "$ref": "#/101"
       },
       {
-        "$ref": "#/140"
+        "$ref": "#/102"
       },
       {
         "$ref": "#/0"
@@ -2145,7 +1427,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/141"
+      "$ref": "#/103"
     }
   },
   {
@@ -2160,7 +1442,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/138"
+      "$ref": "#/100"
     }
   },
   {
@@ -2169,14 +1451,14 @@
     "properties": {
       "streams": {
         "type": {
-          "$ref": "#/150"
+          "$ref": "#/112"
         },
         "flags": 0,
         "description": "List of streams that this data source will be sent to.\r\nA stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to."
       },
       "xPathQueries": {
         "type": {
-          "$ref": "#/151"
+          "$ref": "#/113"
         },
         "flags": 0,
         "description": "A list of Windows Event Log queries in XPATH format."
@@ -2202,10 +1484,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/147"
+        "$ref": "#/109"
       },
       {
-        "$ref": "#/148"
+        "$ref": "#/110"
       },
       {
         "$ref": "#/0"
@@ -2215,7 +1497,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/149"
+      "$ref": "#/111"
     }
   },
   {
@@ -2227,7 +1509,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/146"
+      "$ref": "#/108"
     }
   },
   {
@@ -2236,21 +1518,21 @@
     "properties": {
       "streams": {
         "type": {
-          "$ref": "#/156"
+          "$ref": "#/118"
         },
         "flags": 0,
         "description": "List of streams that this data source will be sent to.\r\nA stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to."
       },
       "facilityNames": {
         "type": {
-          "$ref": "#/185"
+          "$ref": "#/147"
         },
         "flags": 0,
         "description": "The list of facility names."
       },
       "logLevels": {
         "type": {
-          "$ref": "#/196"
+          "$ref": "#/158"
         },
         "flags": 0,
         "description": "The log levels to collect."
@@ -2272,7 +1554,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/154"
+        "$ref": "#/116"
       },
       {
         "$ref": "#/0"
@@ -2282,7 +1564,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/155"
+      "$ref": "#/117"
     }
   },
   {
@@ -2397,85 +1679,85 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/157"
+        "$ref": "#/119"
       },
       {
-        "$ref": "#/158"
+        "$ref": "#/120"
       },
       {
-        "$ref": "#/159"
+        "$ref": "#/121"
       },
       {
-        "$ref": "#/160"
+        "$ref": "#/122"
       },
       {
-        "$ref": "#/161"
+        "$ref": "#/123"
       },
       {
-        "$ref": "#/162"
+        "$ref": "#/124"
       },
       {
-        "$ref": "#/163"
+        "$ref": "#/125"
       },
       {
-        "$ref": "#/164"
+        "$ref": "#/126"
       },
       {
-        "$ref": "#/165"
+        "$ref": "#/127"
       },
       {
-        "$ref": "#/166"
+        "$ref": "#/128"
       },
       {
-        "$ref": "#/167"
+        "$ref": "#/129"
       },
       {
-        "$ref": "#/168"
+        "$ref": "#/130"
       },
       {
-        "$ref": "#/169"
+        "$ref": "#/131"
       },
       {
-        "$ref": "#/170"
+        "$ref": "#/132"
       },
       {
-        "$ref": "#/171"
+        "$ref": "#/133"
       },
       {
-        "$ref": "#/172"
+        "$ref": "#/134"
       },
       {
-        "$ref": "#/173"
+        "$ref": "#/135"
       },
       {
-        "$ref": "#/174"
+        "$ref": "#/136"
       },
       {
-        "$ref": "#/175"
+        "$ref": "#/137"
       },
       {
-        "$ref": "#/176"
+        "$ref": "#/138"
       },
       {
-        "$ref": "#/177"
+        "$ref": "#/139"
       },
       {
-        "$ref": "#/178"
+        "$ref": "#/140"
       },
       {
-        "$ref": "#/179"
+        "$ref": "#/141"
       },
       {
-        "$ref": "#/180"
+        "$ref": "#/142"
       },
       {
-        "$ref": "#/181"
+        "$ref": "#/143"
       },
       {
-        "$ref": "#/182"
+        "$ref": "#/144"
       },
       {
-        "$ref": "#/183"
+        "$ref": "#/145"
       },
       {
         "$ref": "#/0"
@@ -2485,7 +1767,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/184"
+      "$ref": "#/146"
     }
   },
   {
@@ -2528,31 +1810,31 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/186"
+        "$ref": "#/148"
       },
       {
-        "$ref": "#/187"
+        "$ref": "#/149"
       },
       {
-        "$ref": "#/188"
+        "$ref": "#/150"
       },
       {
-        "$ref": "#/189"
+        "$ref": "#/151"
       },
       {
-        "$ref": "#/190"
+        "$ref": "#/152"
       },
       {
-        "$ref": "#/191"
+        "$ref": "#/153"
       },
       {
-        "$ref": "#/192"
+        "$ref": "#/154"
       },
       {
-        "$ref": "#/193"
+        "$ref": "#/155"
       },
       {
-        "$ref": "#/194"
+        "$ref": "#/156"
       },
       {
         "$ref": "#/0"
@@ -2562,13 +1844,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/195"
+      "$ref": "#/157"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/153"
+      "$ref": "#/115"
     }
   },
   {
@@ -2577,7 +1859,7 @@
     "properties": {
       "streams": {
         "type": {
-          "$ref": "#/205"
+          "$ref": "#/167"
         },
         "flags": 0,
         "description": "List of streams that this data source will be sent to.\r\nA stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to."
@@ -2591,14 +1873,14 @@
       },
       "extensionSettings": {
         "type": {
-          "$ref": "#/206"
+          "$ref": "#/168"
         },
         "flags": 0,
         "description": "The extension settings. The format is specific for particular extension."
       },
       "inputDataSources": {
         "type": {
-          "$ref": "#/207"
+          "$ref": "#/169"
         },
         "flags": 0,
         "description": "The list of data sources this extension needs data from."
@@ -2636,19 +1918,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/199"
+        "$ref": "#/161"
       },
       {
-        "$ref": "#/200"
+        "$ref": "#/162"
       },
       {
-        "$ref": "#/201"
+        "$ref": "#/163"
       },
       {
-        "$ref": "#/202"
+        "$ref": "#/164"
       },
       {
-        "$ref": "#/203"
+        "$ref": "#/165"
       },
       {
         "$ref": "#/0"
@@ -2658,7 +1940,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/204"
+      "$ref": "#/166"
     }
   },
   {
@@ -2673,7 +1955,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/198"
+      "$ref": "#/160"
     }
   },
   {
@@ -2682,28 +1964,28 @@
     "properties": {
       "streams": {
         "type": {
-          "$ref": "#/210"
+          "$ref": "#/172"
         },
         "flags": 1,
         "description": "List of streams that this data source will be sent to.\r\nA stream indicates what schema will be used for this data source"
       },
       "filePatterns": {
         "type": {
-          "$ref": "#/211"
+          "$ref": "#/173"
         },
         "flags": 1,
         "description": "File Patterns where the log files are located"
       },
       "format": {
         "type": {
-          "$ref": "#/213"
+          "$ref": "#/175"
         },
         "flags": 1,
         "description": "The data format of the log files"
       },
       "settings": {
         "type": {
-          "$ref": "#/214"
+          "$ref": "#/176"
         },
         "flags": 0,
         "description": "The log files specific settings."
@@ -2737,7 +2019,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/212"
+        "$ref": "#/174"
       },
       {
         "$ref": "#/0"
@@ -2750,7 +2032,7 @@
     "properties": {
       "text": {
         "type": {
-          "$ref": "#/215"
+          "$ref": "#/177"
         },
         "flags": 0,
         "description": "Text settings"
@@ -2763,7 +2045,7 @@
     "properties": {
       "recordStartTimestampFormat": {
         "type": {
-          "$ref": "#/225"
+          "$ref": "#/187"
         },
         "flags": 1,
         "description": "One of the supported timestamp formats"
@@ -2810,31 +2092,31 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/216"
+        "$ref": "#/178"
       },
       {
-        "$ref": "#/217"
+        "$ref": "#/179"
       },
       {
-        "$ref": "#/218"
+        "$ref": "#/180"
       },
       {
-        "$ref": "#/219"
+        "$ref": "#/181"
       },
       {
-        "$ref": "#/220"
+        "$ref": "#/182"
       },
       {
-        "$ref": "#/221"
+        "$ref": "#/183"
       },
       {
-        "$ref": "#/222"
+        "$ref": "#/184"
       },
       {
-        "$ref": "#/223"
+        "$ref": "#/185"
       },
       {
-        "$ref": "#/224"
+        "$ref": "#/186"
       },
       {
         "$ref": "#/0"
@@ -2844,7 +2126,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/209"
+      "$ref": "#/171"
     }
   },
   {
@@ -2853,14 +2135,14 @@
     "properties": {
       "streams": {
         "type": {
-          "$ref": "#/228"
+          "$ref": "#/190"
         },
         "flags": 1,
         "description": "IIS streams"
       },
       "logDirectories": {
         "type": {
-          "$ref": "#/229"
+          "$ref": "#/191"
         },
         "flags": 0,
         "description": "Absolute paths file location"
@@ -2889,7 +2171,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/227"
+      "$ref": "#/189"
     }
   },
   {
@@ -2898,7 +2180,7 @@
     "properties": {
       "streams": {
         "type": {
-          "$ref": "#/232"
+          "$ref": "#/194"
         },
         "flags": 1,
         "description": "Firewall logs streams"
@@ -2921,7 +2203,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/231"
+      "$ref": "#/193"
     }
   },
   {
@@ -2930,14 +2212,14 @@
     "properties": {
       "streams": {
         "type": {
-          "$ref": "#/237"
+          "$ref": "#/199"
         },
         "flags": 0,
         "description": "List of streams that this data source will be sent to."
       },
       "labelIncludeFilter": {
         "type": {
-          "$ref": "#/238"
+          "$ref": "#/200"
         },
         "flags": 0,
         "description": "The list of label inclusion filters in the form of label \"name-value\" pairs.\r\nCurrently only one label is supported: 'microsoft_metrics_include_label'.\r\nLabel values are matched case-insensitively."
@@ -2959,7 +2241,7 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/235"
+        "$ref": "#/197"
       },
       {
         "$ref": "#/0"
@@ -2969,7 +2251,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/236"
+      "$ref": "#/198"
     }
   },
   {
@@ -2983,7 +2265,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/234"
+      "$ref": "#/196"
     }
   },
   {
@@ -2992,7 +2274,7 @@
     "properties": {
       "streams": {
         "type": {
-          "$ref": "#/241"
+          "$ref": "#/203"
         },
         "flags": 1,
         "description": "List of platform telemetry streams to collect"
@@ -3015,7 +2297,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/240"
+      "$ref": "#/202"
     }
   },
   {
@@ -3024,7 +2306,7 @@
     "properties": {
       "eventHub": {
         "type": {
-          "$ref": "#/244"
+          "$ref": "#/206"
         },
         "flags": 0,
         "description": "Definition of Event Hub configuration."
@@ -3064,56 +2346,56 @@
     "properties": {
       "logAnalytics": {
         "type": {
-          "$ref": "#/247"
+          "$ref": "#/209"
         },
         "flags": 0,
         "description": "List of Log Analytics destinations."
       },
       "monitoringAccounts": {
         "type": {
-          "$ref": "#/249"
+          "$ref": "#/211"
         },
         "flags": 0,
         "description": "List of monitoring account destinations."
       },
       "azureMonitorMetrics": {
         "type": {
-          "$ref": "#/250"
+          "$ref": "#/212"
         },
         "flags": 0,
         "description": "Azure Monitor Metrics destination."
       },
       "eventHubs": {
         "type": {
-          "$ref": "#/252"
+          "$ref": "#/214"
         },
         "flags": 0,
         "description": "List of Event Hubs destinations."
       },
       "eventHubsDirect": {
         "type": {
-          "$ref": "#/254"
+          "$ref": "#/216"
         },
         "flags": 0,
         "description": "List of Event Hubs Direct destinations."
       },
       "storageBlobsDirect": {
         "type": {
-          "$ref": "#/256"
+          "$ref": "#/218"
         },
         "flags": 0,
         "description": "List of Storage Blob Direct destinations. To be used only for sending data directly to store from the agent."
       },
       "storageTablesDirect": {
         "type": {
-          "$ref": "#/258"
+          "$ref": "#/220"
         },
         "flags": 0,
         "description": "List of Storage Table Direct destinations."
       },
       "storageAccounts": {
         "type": {
-          "$ref": "#/259"
+          "$ref": "#/221"
         },
         "flags": 0,
         "description": "List of storage accounts destinations."
@@ -3150,7 +2432,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/246"
+      "$ref": "#/208"
     }
   },
   {
@@ -3183,7 +2465,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/248"
+      "$ref": "#/210"
     }
   },
   {
@@ -3222,7 +2504,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/251"
+      "$ref": "#/213"
     }
   },
   {
@@ -3248,7 +2530,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/253"
+      "$ref": "#/215"
     }
   },
   {
@@ -3281,7 +2563,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/255"
+      "$ref": "#/217"
     }
   },
   {
@@ -3314,13 +2596,13 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/257"
+      "$ref": "#/219"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/255"
+      "$ref": "#/217"
     }
   },
   {
@@ -3329,14 +2611,14 @@
     "properties": {
       "streams": {
         "type": {
-          "$ref": "#/267"
+          "$ref": "#/229"
         },
         "flags": 0,
         "description": "List of streams for this data flow."
       },
       "destinations": {
         "type": {
-          "$ref": "#/268"
+          "$ref": "#/230"
         },
         "flags": 0,
         "description": "List of destinations for this data flow."
@@ -3388,19 +2670,19 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/261"
+        "$ref": "#/223"
       },
       {
-        "$ref": "#/262"
+        "$ref": "#/224"
       },
       {
-        "$ref": "#/263"
+        "$ref": "#/225"
       },
       {
-        "$ref": "#/264"
+        "$ref": "#/226"
       },
       {
-        "$ref": "#/265"
+        "$ref": "#/227"
       },
       {
         "$ref": "#/0"
@@ -3410,7 +2692,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/266"
+      "$ref": "#/228"
     }
   },
   {
@@ -3422,7 +2704,7 @@
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/260"
+      "$ref": "#/222"
     }
   },
   {
@@ -3453,22 +2735,22 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/270"
+        "$ref": "#/232"
       },
       {
-        "$ref": "#/271"
+        "$ref": "#/233"
       },
       {
-        "$ref": "#/272"
+        "$ref": "#/234"
       },
       {
-        "$ref": "#/273"
+        "$ref": "#/235"
       },
       {
-        "$ref": "#/274"
+        "$ref": "#/236"
       },
       {
-        "$ref": "#/275"
+        "$ref": "#/237"
       },
       {
         "$ref": "#/0"
@@ -3495,10 +2777,10 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/278"
+        "$ref": "#/240"
       },
       {
-        "$ref": "#/279"
+        "$ref": "#/241"
       },
       {
         "$ref": "#/0"
@@ -3511,28 +2793,28 @@
     "properties": {
       "principalId": {
         "type": {
-          "$ref": "#/76"
+          "$ref": "#/38"
         },
         "flags": 2,
         "description": "The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity."
       },
       "tenantId": {
         "type": {
-          "$ref": "#/76"
+          "$ref": "#/38"
         },
         "flags": 2,
         "description": "The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity."
       },
       "type": {
         "type": {
-          "$ref": "#/286"
+          "$ref": "#/248"
         },
         "flags": 1,
         "description": "Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed)."
       },
       "userAssignedIdentities": {
         "type": {
-          "$ref": "#/287"
+          "$ref": "#/249"
         },
         "flags": 0,
         "description": "The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests."
@@ -3559,16 +2841,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/282"
+        "$ref": "#/244"
       },
       {
-        "$ref": "#/283"
+        "$ref": "#/245"
       },
       {
-        "$ref": "#/284"
+        "$ref": "#/246"
       },
       {
-        "$ref": "#/285"
+        "$ref": "#/247"
       },
       {
         "$ref": "#/0"
@@ -3580,7 +2862,7 @@
     "name": "UserAssignedIdentities",
     "properties": {},
     "additionalProperties": {
-      "$ref": "#/82"
+      "$ref": "#/44"
     }
   },
   {
@@ -3596,7 +2878,7 @@
       },
       "createdByType": {
         "type": {
-          "$ref": "#/293"
+          "$ref": "#/255"
         },
         "flags": 0,
         "description": "The type of identity that created the resource."
@@ -3617,7 +2899,7 @@
       },
       "lastModifiedByType": {
         "type": {
-          "$ref": "#/298"
+          "$ref": "#/260"
         },
         "flags": 0,
         "description": "The type of identity that last modified the resource."
@@ -3651,16 +2933,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/289"
+        "$ref": "#/251"
       },
       {
-        "$ref": "#/290"
+        "$ref": "#/252"
       },
       {
-        "$ref": "#/291"
+        "$ref": "#/253"
       },
       {
-        "$ref": "#/292"
+        "$ref": "#/254"
       },
       {
         "$ref": "#/0"
@@ -3687,16 +2969,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/294"
+        "$ref": "#/256"
       },
       {
-        "$ref": "#/295"
+        "$ref": "#/257"
       },
       {
-        "$ref": "#/296"
+        "$ref": "#/258"
       },
       {
-        "$ref": "#/297"
+        "$ref": "#/259"
       },
       {
         "$ref": "#/0"
@@ -3708,7 +2990,725 @@
     "name": "Microsoft.Insights/dataCollectionRules@2022-06-01",
     "scopeType": 8,
     "body": {
-      "$ref": "#/122"
+      "$ref": "#/84"
+    },
+    "flags": 0
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Microsoft.Insights/actionGroups"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2022-06-01"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Microsoft.Insights/actionGroups",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/262"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/263"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/265"
+        },
+        "flags": 0,
+        "description": "The action groups properties of the resource."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Resource location"
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/298"
+        },
+        "flags": 0,
+        "description": "Resource tags"
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ActionGroup",
+    "properties": {
+      "groupShortName": {
+        "type": {
+          "$ref": "#/266"
+        },
+        "flags": 1,
+        "description": "The short name of the action group. This will be used in SMS messages."
+      },
+      "enabled": {
+        "type": {
+          "$ref": "#/267"
+        },
+        "flags": 1,
+        "description": "Indicates whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications."
+      },
+      "emailReceivers": {
+        "type": {
+          "$ref": "#/273"
+        },
+        "flags": 0,
+        "description": "The list of email receivers that are part of this action group."
+      },
+      "smsReceivers": {
+        "type": {
+          "$ref": "#/279"
+        },
+        "flags": 0,
+        "description": "The list of SMS receivers that are part of this action group."
+      },
+      "webhookReceivers": {
+        "type": {
+          "$ref": "#/281"
+        },
+        "flags": 0,
+        "description": "The list of webhook receivers that are part of this action group."
+      },
+      "itsmReceivers": {
+        "type": {
+          "$ref": "#/283"
+        },
+        "flags": 0,
+        "description": "The list of ITSM receivers that are part of this action group."
+      },
+      "azureAppPushReceivers": {
+        "type": {
+          "$ref": "#/285"
+        },
+        "flags": 0,
+        "description": "The list of AzureAppPush receivers that are part of this action group."
+      },
+      "automationRunbookReceivers": {
+        "type": {
+          "$ref": "#/287"
+        },
+        "flags": 0,
+        "description": "The list of AutomationRunbook receivers that are part of this action group."
+      },
+      "voiceReceivers": {
+        "type": {
+          "$ref": "#/289"
+        },
+        "flags": 0,
+        "description": "The list of voice receivers that are part of this action group."
+      },
+      "logicAppReceivers": {
+        "type": {
+          "$ref": "#/291"
+        },
+        "flags": 0,
+        "description": "The list of logic app receivers that are part of this action group."
+      },
+      "azureFunctionReceivers": {
+        "type": {
+          "$ref": "#/293"
+        },
+        "flags": 0,
+        "description": "The list of azure function receivers that are part of this action group."
+      },
+      "armRoleReceivers": {
+        "type": {
+          "$ref": "#/295"
+        },
+        "flags": 0,
+        "description": "The list of ARM role receivers that are part of this action group. Roles are Azure RBAC roles and only built-in roles are supported."
+      },
+      "eventHubReceivers": {
+        "type": {
+          "$ref": "#/297"
+        },
+        "flags": 0,
+        "description": "The list of event hub receivers that are part of this action group."
+      }
+    }
+  },
+  {
+    "$type": "StringType",
+    "maxLength": 12
+  },
+  {
+    "$type": "BooleanType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EmailReceiver",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of the email receiver. Names must be unique across all receivers within an action group."
+      },
+      "emailAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The email address of this receiver."
+      },
+      "useCommonAlertSchema": {
+        "type": {
+          "$ref": "#/267"
+        },
+        "flags": 0,
+        "description": "Indicates whether to use common alert schema."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/272"
+        },
+        "flags": 2,
+        "description": "The receiver status of the e-mail."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/269"
+      },
+      {
+        "$ref": "#/270"
+      },
+      {
+        "$ref": "#/271"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/268"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "SmsReceiver",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of the SMS receiver. Names must be unique across all receivers within an action group."
+      },
+      "countryCode": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The country code of the SMS receiver."
+      },
+      "phoneNumber": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The phone number of the SMS receiver."
+      },
+      "status": {
+        "type": {
+          "$ref": "#/278"
+        },
+        "flags": 2,
+        "description": "The status of the receiver."
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "NotSpecified"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Enabled"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Disabled"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/275"
+      },
+      {
+        "$ref": "#/276"
+      },
+      {
+        "$ref": "#/277"
+      }
+    ]
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/274"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "WebhookReceiver",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of the webhook receiver. Names must be unique across all receivers within an action group."
+      },
+      "serviceUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The URI where webhooks should be sent."
+      },
+      "useCommonAlertSchema": {
+        "type": {
+          "$ref": "#/267"
+        },
+        "flags": 0,
+        "description": "Indicates whether to use common alert schema."
+      },
+      "useAadAuth": {
+        "type": {
+          "$ref": "#/267"
+        },
+        "flags": 0,
+        "description": "Indicates whether or not use AAD authentication."
+      },
+      "objectId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Indicates the webhook app object Id for aad auth."
+      },
+      "identifierUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Indicates the identifier uri for aad auth."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Indicates the tenant id for aad auth."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/280"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ItsmReceiver",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of the Itsm receiver. Names must be unique across all receivers within an action group."
+      },
+      "workspaceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "OMS LA instance identifier."
+      },
+      "connectionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Unique identification of ITSM connection among multiple defined in above workspace."
+      },
+      "ticketConfiguration": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "JSON blob for the configurations of the ITSM action. CreateMultipleWorkItems option will be part of this blob as well."
+      },
+      "region": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "Region in which workspace resides. Supported values:'centralindia','japaneast','southeastasia','australiasoutheast','uksouth','westcentralus','canadacentral','eastus','westeurope'"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/282"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureAppPushReceiver",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of the Azure mobile app push receiver. Names must be unique across all receivers within an action group."
+      },
+      "emailAddress": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The email address registered for the Azure mobile app."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/284"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AutomationRunbookReceiver",
+    "properties": {
+      "automationAccountId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The Azure automation account Id which holds this runbook and authenticate to Azure resource."
+      },
+      "runbookName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name for this runbook."
+      },
+      "webhookResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The resource id for webhook linked to this runbook."
+      },
+      "isGlobalRunbook": {
+        "type": {
+          "$ref": "#/267"
+        },
+        "flags": 1,
+        "description": "Indicates whether this instance is global runbook."
+      },
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "Indicates name of the webhook."
+      },
+      "serviceUri": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The URI where webhooks should be sent."
+      },
+      "useCommonAlertSchema": {
+        "type": {
+          "$ref": "#/267"
+        },
+        "flags": 0,
+        "description": "Indicates whether to use common alert schema."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/286"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "VoiceReceiver",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of the voice receiver. Names must be unique across all receivers within an action group."
+      },
+      "countryCode": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The country code of the voice receiver."
+      },
+      "phoneNumber": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The phone number of the voice receiver."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/288"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "LogicAppReceiver",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of the logic app receiver. Names must be unique across all receivers within an action group."
+      },
+      "resourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The azure resource id of the logic app receiver."
+      },
+      "callbackUrl": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The callback url where http request sent to."
+      },
+      "useCommonAlertSchema": {
+        "type": {
+          "$ref": "#/267"
+        },
+        "flags": 0,
+        "description": "Indicates whether to use common alert schema."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/290"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureFunctionReceiver",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of the azure function receiver. Names must be unique across all receivers within an action group."
+      },
+      "functionAppResourceId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The azure resource id of the function app."
+      },
+      "functionName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The function name in the function app."
+      },
+      "httpTriggerUrl": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The http trigger url where http request sent to."
+      },
+      "useCommonAlertSchema": {
+        "type": {
+          "$ref": "#/267"
+        },
+        "flags": 0,
+        "description": "Indicates whether to use common alert schema."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/292"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "ArmRoleReceiver",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of the arm role receiver. Names must be unique across all receivers within an action group."
+      },
+      "roleId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The arm role id."
+      },
+      "useCommonAlertSchema": {
+        "type": {
+          "$ref": "#/267"
+        },
+        "flags": 0,
+        "description": "Indicates whether to use common alert schema."
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/294"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "EventHubReceiver",
+    "properties": {
+      "name": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of the Event hub receiver. Names must be unique across all receivers within an action group."
+      },
+      "eventHubNameSpace": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The Event Hub namespace"
+      },
+      "eventHubName": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The name of the specific Event Hub queue"
+      },
+      "useCommonAlertSchema": {
+        "type": {
+          "$ref": "#/267"
+        },
+        "flags": 0,
+        "description": "Indicates whether to use common alert schema."
+      },
+      "tenantId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 0,
+        "description": "The tenant Id for the subscription containing this event hub"
+      },
+      "subscriptionId": {
+        "type": {
+          "$ref": "#/0"
+        },
+        "flags": 1,
+        "description": "The Id for the subscription containing this event hub"
+      }
+    }
+  },
+  {
+    "$type": "ArrayType",
+    "itemType": {
+      "$ref": "#/296"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "AzureResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/0"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Microsoft.Insights/actionGroups@2022-06-01",
+    "scopeType": 8,
+    "body": {
+      "$ref": "#/264"
     },
     "flags": 0
   }

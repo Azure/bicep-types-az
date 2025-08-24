@@ -1,5 +1,5 @@
 Generating types for 'specification/securityinsights/resource-manager/readme.md'
-AutoRest code generation utility [cli version: 3.7.2; node: v22.17.1]
+AutoRest code generation utility [cli version: 3.7.2; node: v22.18.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -804,7 +804,7 @@ warning | PreCheck/DuplicateSchema | Duplicate Schema named 'metadataDependencie
   - properties.criteria.$ref: "#/components/schemas/schemas:337" => "#/components/schemas/schemas:777"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'metadataDependencies' (2 differences):
   - properties.criteria.x-ms-identifiers.0: <none> => "contentId"
-  - properties.criteria.$ref: "#/components/schemas/schemas:337" => "#/components/schemas/schemas:1579"
+  - properties.criteria.$ref: "#/components/schemas/schemas:337" => "#/components/schemas/schemas:1577"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'templateList' (1 differences):
   - properties.value.$ref: "#/components/schemas/schemas:348" => "#/components/schemas/schemas:355"
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'templateModel' (1 differences):

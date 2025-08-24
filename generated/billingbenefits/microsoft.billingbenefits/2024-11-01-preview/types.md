@@ -266,7 +266,7 @@
 
 ## ResourceSku
 ### Properties
-* **name**: string: Name of the SKU to be applied
+* **name**: string
 
 ## SavingsPlanModelProperties
 ### Properties

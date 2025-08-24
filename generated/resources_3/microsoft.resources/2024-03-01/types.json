@@ -48,42 +48,34 @@
         "flags": 10,
         "description": "The resource api version"
       },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "Deployment stack properties."
+      },
       "location": {
         "type": {
           "$ref": "#/2"
         },
         "flags": 0,
-        "description": "The location of the Deployment stack. It cannot be changed after creation. It must be one of the supported Azure locations."
+        "description": "The geo-location where the resource lives. Required for subscription and management group scoped stacks. The location is inherited from the resource group for resource group scoped stacks."
       },
       "tags": {
         "type": {
-          "$ref": "#/5"
+          "$ref": "#/69"
         },
         "flags": 0,
-        "description": "Deployment stack resource tags."
-      },
-      "properties": {
-        "type": {
-          "$ref": "#/6"
-        },
-        "flags": 0,
-        "description": "Deployment stack properties."
+        "description": "Resource tags."
       },
       "systemData": {
         "type": {
-          "$ref": "#/68"
+          "$ref": "#/70"
         },
         "flags": 2,
         "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
       }
-    }
-  },
-  {
-    "$type": "ObjectType",
-    "name": "DeploymentStackTags",
-    "properties": {},
-    "additionalProperties": {
-      "$ref": "#/2"
     }
   },
   {
@@ -211,7 +203,7 @@
       },
       "outputs": {
         "type": {
-          "$ref": "#/7"
+          "$ref": "#/68"
         },
         "flags": 2,
         "description": "The outputs of the deployment resource created by the deployment stack."
@@ -234,6 +226,14 @@
   },
   {
     "$type": "AnyType"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeploymentStackPropertiesTemplate",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/6"
+    }
   },
   {
     "$type": "ObjectType",
@@ -282,7 +282,7 @@
     "properties": {
       "value": {
         "type": {
-          "$ref": "#/7"
+          "$ref": "#/6"
         },
         "flags": 0,
         "description": "Input value to the parameter."
@@ -653,7 +653,7 @@
           "$ref": "#/2"
         },
         "flags": 2,
-        "description": "The resourceId of a resource managed by the deployment stack."
+        "description": "The ARM Resource ID of a resource managed by the deployment stack."
       }
     }
   },
@@ -678,7 +678,7 @@
           "$ref": "#/2"
         },
         "flags": 2,
-        "description": "The resourceId of a resource managed by the deployment stack."
+        "description": "The ARM Resource ID of a resource managed by the deployment stack."
       },
       "error": {
         "type": {
@@ -749,7 +749,7 @@
       },
       "info": {
         "type": {
-          "$ref": "#/7"
+          "$ref": "#/6"
         },
         "flags": 2,
         "description": "The additional info."
@@ -791,7 +791,7 @@
           "$ref": "#/2"
         },
         "flags": 2,
-        "description": "The resourceId of a resource managed by the deployment stack."
+        "description": "The ARM Resource ID of a resource managed by the deployment stack."
       }
     }
   },
@@ -882,6 +882,22 @@
   },
   {
     "$type": "ObjectType",
+    "name": "DeploymentStackPropertiesOutputs",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/6"
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "DeploymentStackTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ObjectType",
     "name": "SystemData",
     "properties": {
       "createdBy": {
@@ -893,7 +909,7 @@
       },
       "createdByType": {
         "type": {
-          "$ref": "#/73"
+          "$ref": "#/75"
         },
         "flags": 0,
         "description": "The type of identity that created the resource."
@@ -914,7 +930,7 @@
       },
       "lastModifiedByType": {
         "type": {
-          "$ref": "#/78"
+          "$ref": "#/80"
         },
         "flags": 0,
         "description": "The type of identity that last modified the resource."
@@ -948,16 +964,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/69"
-      },
-      {
-        "$ref": "#/70"
-      },
-      {
         "$ref": "#/71"
       },
       {
         "$ref": "#/72"
+      },
+      {
+        "$ref": "#/73"
+      },
+      {
+        "$ref": "#/74"
       },
       {
         "$ref": "#/2"
@@ -984,16 +1000,16 @@
     "$type": "UnionType",
     "elements": [
       {
-        "$ref": "#/74"
-      },
-      {
-        "$ref": "#/75"
-      },
-      {
         "$ref": "#/76"
       },
       {
         "$ref": "#/77"
+      },
+      {
+        "$ref": "#/78"
+      },
+      {
+        "$ref": "#/79"
       },
       {
         "$ref": "#/2"
