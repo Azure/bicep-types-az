@@ -92,7 +92,7 @@
             "name": "EmptyEnum",
             "modelAsString": true
           },
-          "description": "Description for a empty enum property.",
+          "description": "Description for a empty enum property."
         },
         "skuTier": {
           "$ref": "../../../../../common-types/resource-management/v3/types.json#/definitions/SkuTier"
@@ -154,8 +154,15 @@
           "type": "integer",
           "minimum": 0,
           "maximum": 100
+        },
+        "requiredReadOnlyProperty": {
+          "type": "string",
+          "readOnly": true
         }
-      }
+      },
+      "required": [
+        "requiredReadOnlyProperty"
+      ]
     },
     "ReadOnlyTestType": {
       "allOf": [

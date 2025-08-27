@@ -152,6 +152,7 @@
 * **locationData**: [LocationData](#locationdata) (ReadOnly): Metadata pertaining to the geographic location of the resource.
 * **password**: string {sensitive, pattern: "^[a-zA-Z0-9\.]$"}
 * **percentageProperty**: int {minValue: 0, maxValue: 100} (ReadOnly)
+* **requiredReadOnlyProperty**: string (ReadOnly)
 * **skuTier**: 'Basic' | 'Free' | 'Premium' | 'Standard': This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.
 * **special.char-property**: string
 * **stringEnum**: 'Bar' | 'Foo' | string: Description for a basic enum property.
@@ -169,6 +170,7 @@
 * **locationData**: [LocationData](#locationdata): Metadata pertaining to the geographic location of the resource.
 * **password**: string {sensitive, pattern: "^[a-zA-Z0-9\.]$"}
 * **percentageProperty**: int {minValue: 0, maxValue: 100}
+* **requiredReadOnlyProperty**: string (ReadOnly)
 * **skuTier**: 'Basic' | 'Free' | 'Premium' | 'Standard': This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.
 * **special.char-property**: string
 * **stringEnum**: 'Bar' | 'Foo' | string: Description for a basic enum property.

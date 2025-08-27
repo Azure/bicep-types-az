@@ -172,6 +172,12 @@
           "$ref": "#/25"
         },
         "flags": 2
+      },
+      "requiredReadOnlyProperty": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2
       }
     }
   },
@@ -702,6 +708,12 @@
           "$ref": "#/25"
         },
         "flags": 0
+      },
+      "requiredReadOnlyProperty": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 2
       },
       "basicString": {
         "type": {

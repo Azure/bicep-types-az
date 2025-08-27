@@ -463,6 +463,12 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
       flags |= ObjectTypePropertyFlags.WriteOnly;
     }
 
+    // There is ambiguity between OpenApi v2 & v3 about whether properties can be readonly & required.
+    // We can work around this by just stripping out required if a property is readonly.
+    if (flags & ObjectTypePropertyFlags.ReadOnly) {
+      flags &= ~ObjectTypePropertyFlags.Required;
+    }
+
     return flags;
   }
 
