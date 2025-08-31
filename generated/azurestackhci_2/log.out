@@ -1,5 +1,5 @@
 Generating types for 'specification/azurestackhci/resource-manager/readme.md'
-AutoRest code generation utility [cli version: 3.7.2; node: v22.17.1]
+AutoRest code generation utility [cli version: 3.7.2; node: v22.18.0]
 (C) 2018 Microsoft Corporation.
 https://aka.ms/autorest
 warning | DeprecatedConfig | Using directive.0.suppress which is deprecated and will be removed in the future.
@@ -155,8 +155,8 @@ warning | PreCheck/SchemaMissingType | The schema 'PrecheckResult' with an undef
     - file:///home/runner/work/bicep-types-az/bicep-types-az/workflow-temp/azure-rest-api-specs/specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/preview/2023-08-01-preview/updates.json:553:5
 warning | PreCheck/CheckDuplicateSchemas | Checking for duplicate schemas, this could take a (long) while.  Run with --verbose for more detail.
 warning | PreCheck/DuplicateSchema | Duplicate Schema named 'Cluster' (8 differences):
-  - allOf: [{"$ref":"#/components/schemas/schemas:532"}] => <none>
-  - properties.identity: {"description":"Identity of Cluster resource","$ref":"#/components/schemas/schemas:555","x-ms-client-flatten":true} => <none>
+  - allOf: [{"$ref":"#/components/schemas/schemas:544"}] => <none>
+  - properties.identity: {"description":"Identity of Cluster resource","$ref":"#/components/schemas/schemas:463","x-ms-client-flatten":true} => <none>
   - properties.properties: {"description":"Cluster properties.","$ref":"#/components/schemas/schemas:53","x-ms-client-flatten":true} => <none>
   - properties.name: <none> => {"$ref":"#/components/schemas/schemas:340","description":"The cluster name provided when preparing Active Directory."}
   - properties.witnessType: <none> => {"$ref":"#/components/schemas/schemas:341","description":"Use a cloud witness if you have internet access and if you use an Azure Storage account to provide a vote on cluster quorum. A cloud witness uses Azure Blob Storage to read or write a blob file and then uses it to arbitrate in split-brain resolution. Only allowed values are 'Cloud', 'FileShare'. "}

@@ -3916,7 +3916,9 @@
 
 ## HDInsightLinkedServiceTypeProperties
 ### Properties
+* **clusterAuthType**: 'BasicAuth' | 'SystemAssignedManagedIdentity' | 'UserAssignedManagedIdentity' | string: HDInsight cluster authentication type.
 * **clusterUri**: any (Required): HDInsight cluster URI. Type: string (or Expression with resultType string).
+* **credential**: [CredentialReference](#credentialreference): The credential reference containing MI authentication information for the HDInsight cluster.
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **fileSystem**: any: Specify the FileSystem if the main storage for the HDInsight is ADLS Gen2. Type: string (or Expression with resultType string).
 * **hcatalogLinkedServiceName**: [LinkedServiceReference](#linkedservicereference): A reference to the Azure SQL linked service that points to the HCatalog database.
@@ -4279,6 +4281,8 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## LakeHouseLinkedServiceTypeProperties
 ### Properties
 * **artifactId**: any: The ID of Microsoft Fabric Lakehouse artifact. Type: string (or Expression with resultType string).
+* **authenticationType**: 'ServicePrincipal' | 'SystemAssignedManagedIdentity' | 'UserAssignedManagedIdentity' | string: The authentication type to use.
+* **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **servicePrincipalCredential**: [SecretBase](#secretbase): The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.
 * **servicePrincipalCredentialType**: any: The service principal credential type to use in Server-To-Server authentication. 'ServicePrincipalKey' for key/secret, 'ServicePrincipalCert' for certificate. Type: string (or Expression with resultType string).
@@ -6839,6 +6843,8 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 ## WarehouseLinkedServiceTypeProperties
 ### Properties
 * **artifactId**: any (Required): The ID of Microsoft Fabric Warehouse artifact. Type: string (or Expression with resultType string).
+* **authenticationType**: 'ServicePrincipal' | 'SystemAssignedManagedIdentity' | 'UserAssignedManagedIdentity' | string: The authentication type to use.
+* **credential**: [CredentialReference](#credentialreference): The credential reference containing authentication information.
 * **encryptedCredential**: string: The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.
 * **endpoint**: any (Required): The endpoint of Microsoft Fabric Warehouse server. Type: string (or Expression with resultType string).
 * **servicePrincipalCredential**: [SecretBase](#secretbase): The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.
