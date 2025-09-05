@@ -484,17 +484,17 @@ export function generateSchema(host: AutorestExtensionHost, definition: Provider
         schema: addResourceTypeAndApiVersion(descriptor, schema, isChildDefinition),
       };
     } else {
-      const definition = definitions[0];
-      const schema = processResourceBody(fullyQualifiedType, definition, isChildDefinition);
-      if (!schema) {
-        return null;
-      }
-
-      return {
-        descriptor,
-        schema: addResourceTypeAndApiVersion(descriptor, schema, isChildDefinition),
-      };
+    const definition = definitions[0];
+    const schema = processResourceBody(fullyQualifiedType, definition, isChildDefinition);
+    if (!schema) {
+      return null;
     }
+
+    return {
+      descriptor,
+      schema: addResourceTypeAndApiVersion(descriptor, schema, isChildDefinition),
+    };
+  }
   }
 
   function getObjectName(putSchema: ObjectSchema | undefined) {
@@ -663,22 +663,25 @@ export function generateSchema(host: AutorestExtensionHost, definition: Provider
       generated[fullyQualifiedType.toLowerCase()] = schema;
       const definitionName = descriptor.typeSegments.join('_');
 
-      if (ScopeType.Tenant === (descriptor.scopeType & ScopeType.Tenant)) {
+      // Use modern readableScopes and writableScopes with bitwise
+      const allScopes = descriptor.readableScopes | descriptor.writableScopes;
+
+      if (allScopes & ScopeType.Tenant) {
         schemaData.tenantResources[definitionName] = schema;
       }
-      if (ScopeType.ManagementGroup === (descriptor.scopeType & ScopeType.ManagementGroup)) {
+      if (allScopes & ScopeType.ManagementGroup) {
         schemaData.mgResources[definitionName] = schema;
       }
-      if (ScopeType.Subscription === (descriptor.scopeType & ScopeType.Subscription)) {
+      if (allScopes & ScopeType.Subscription) {
         schemaData.subResources[definitionName] = schema;
       }
-      if (ScopeType.ResourceGroup === (descriptor.scopeType & ScopeType.ResourceGroup)) {
+      if (allScopes & ScopeType.ResourceGroup) {
         schemaData.rgResources[definitionName] = schema;
       }
-      if (ScopeType.Extension === (descriptor.scopeType & ScopeType.Extension)) {
+      if (allScopes & ScopeType.Extension) {
         schemaData.extensionResources[definitionName] = schema;
       }
-      if (descriptor.scopeType === ScopeType.Unknown) {
+      if (allScopes === ScopeType.None) {
         schemaData.unknownResources[definitionName] = schema;
       }
 
