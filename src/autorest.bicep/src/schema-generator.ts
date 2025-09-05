@@ -484,17 +484,17 @@ export function generateSchema(host: AutorestExtensionHost, definition: Provider
         schema: addResourceTypeAndApiVersion(descriptor, schema, isChildDefinition),
       };
     } else {
-    const definition = definitions[0];
-    const schema = processResourceBody(fullyQualifiedType, definition, isChildDefinition);
-    if (!schema) {
-      return null;
-    }
+      const definition = definitions[0];
+      const schema = processResourceBody(fullyQualifiedType, definition, isChildDefinition);
+      if (!schema) {
+        return null;
+      }
 
-    return {
-      descriptor,
-      schema: addResourceTypeAndApiVersion(descriptor, schema, isChildDefinition),
-    };
-  }
+      return {
+        descriptor,
+        schema: addResourceTypeAndApiVersion(descriptor, schema, isChildDefinition),
+      };
+    }
   }
 
   function getObjectName(putSchema: ObjectSchema | undefined) {
