@@ -92,7 +92,7 @@
             "name": "EmptyEnum",
             "modelAsString": true
           },
-          "description": "Description for a empty enum property.",
+          "description": "Description for a empty enum property."
         },
         "skuTier": {
           "$ref": "../../../../../common-types/resource-management/v3/types.json#/definitions/SkuTier"
@@ -825,6 +825,317 @@
             "required": true,
             "schema": {
               "$ref": "#/definitions/DiscriminatedUnionTestType"
+            },
+            "description": "The request parameters"
+          },
+          {
+            "$ref": "../../../../../common-types/resource-management/v3/types.json#/parameters/ApiVersionParameter"
+          }
+        ]
+      }
+    },
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Test.Rp1/writeOnlyTestType/{typeName}": {
+      "put": {
+        "summary": "Create or update a writeOnlyTestType resource",
+        "description": "Create or update a writeOnlyTestType resource (PUT only - no GET)",
+        "operationId": "WriteOnlyTestType_CreateOrUpdate",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/TestType1"
+            }
+          },
+          "201": {
+            "description": "Created",
+            "schema": {
+              "$ref": "#/definitions/TestType1"
+            }
+          },
+          "default": {
+            "description": "Detailed error information.",
+            "schema": {
+              "$ref": "../../../../../common-types/resource-management/v3/types.json#/definitions/ErrorResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "../../../../../common-types/resource-management/v3/types.json#/parameters/SubscriptionIdParameter"
+          },
+          {
+            "$ref": "../../../../../common-types/resource-management/v3/types.json#/parameters/ResourceGroupNameParameter"
+          },
+          {
+            "name": "typeName",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "The writeOnlyTestType resource name."
+          },
+          {
+            "name": "parameters",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/TestType1Input"
+            },
+            "description": "The request parameters"
+          },
+          {
+            "$ref": "../../../../../common-types/resource-management/v3/types.json#/parameters/ApiVersionParameter"
+          }
+        ]
+      }
+    },
+    "/providers/Test.Rp1/tenantScopeType/{typeName}": {
+      "get": {
+        "summary": "Get a tenantScopeType resource",
+        "description": "Get a tenantScopeType resource at tenant scope",
+        "operationId": "TenantScopeType_Get",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/TestType1"
+            }
+          },
+          "default": {
+            "description": "Detailed error information.",
+            "schema": {
+              "$ref": "../../../../../common-types/resource-management/v3/types.json#/definitions/ErrorResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "typeName",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "The tenantScopeType resource name."
+          },
+          {
+            "$ref": "../../../../../common-types/resource-management/v3/types.json#/parameters/ApiVersionParameter"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Create or update a tenantScopeType resource",
+        "description": "Create or update a tenantScopeType resource at tenant scope",
+        "operationId": "TenantScopeType_CreateOrUpdate",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/TestType1"
+            }
+          },
+          "201": {
+            "description": "Created",
+            "schema": {
+              "$ref": "#/definitions/TestType1"
+            }
+          },
+          "default": {
+            "description": "Detailed error information.",
+            "schema": {
+              "$ref": "../../../../../common-types/resource-management/v3/types.json#/definitions/ErrorResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "typeName",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "The tenantScopeType resource name."
+          },
+          {
+            "name": "parameters",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/TestType1Input"
+            },
+            "description": "The request parameters"
+          },
+          {
+            "$ref": "../../../../../common-types/resource-management/v3/types.json#/parameters/ApiVersionParameter"
+          }
+        ]
+      }
+    },
+    "/subscriptions/{subscriptionId}/providers/Test.Rp1/subscriptionScopeType/{typeName}": {
+      "get": {
+        "summary": "Get a subscriptionScopeType resource",
+        "description": "Get a subscriptionScopeType resource at subscription scope",
+        "operationId": "SubscriptionScopeType_Get",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/TestType1"
+            }
+          },
+          "default": {
+            "description": "Detailed error information.",
+            "schema": {
+              "$ref": "../../../../../common-types/resource-management/v3/types.json#/definitions/ErrorResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "../../../../../common-types/resource-management/v3/types.json#/parameters/SubscriptionIdParameter"
+          },
+          {
+            "name": "typeName",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "The subscriptionScopeType resource name."
+          },
+          {
+            "$ref": "../../../../../common-types/resource-management/v3/types.json#/parameters/ApiVersionParameter"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Create or update a subscriptionScopeType resource",
+        "description": "Create or update a subscriptionScopeType resource at subscription scope",
+        "operationId": "SubscriptionScopeType_CreateOrUpdate",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/TestType1"
+            }
+          },
+          "201": {
+            "description": "Created",
+            "schema": {
+              "$ref": "#/definitions/TestType1"
+            }
+          },
+          "default": {
+            "description": "Detailed error information.",
+            "schema": {
+              "$ref": "../../../../../common-types/resource-management/v3/types.json#/definitions/ErrorResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "../../../../../common-types/resource-management/v3/types.json#/parameters/SubscriptionIdParameter"
+          },
+          {
+            "name": "typeName",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "The subscriptionScopeType resource name."
+          },
+          {
+            "name": "parameters",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/TestType1Input"
+            },
+            "description": "The request parameters"
+          },
+          {
+            "$ref": "../../../../../common-types/resource-management/v3/types.json#/parameters/ApiVersionParameter"
+          }
+        ]
+      }
+    },
+    "/providers/Microsoft.Management/managementGroups/{managementGroupId}/providers/Test.Rp1/mgScopeType/{typeName}": {
+      "get": {
+        "summary": "Get a mgScopeType resource",
+        "description": "Get a mgScopeType resource at management group scope",
+        "operationId": "MgScopeType_Get",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/TestType1"
+            }
+          },
+          "default": {
+            "description": "Detailed error information.",
+            "schema": {
+              "$ref": "../../../../../common-types/resource-management/v3/types.json#/definitions/ErrorResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "managementGroupId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "The ID of the management group."
+          },
+          {
+            "name": "typeName",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "The mgScopeType resource name."
+          },
+          {
+            "$ref": "../../../../../common-types/resource-management/v3/types.json#/parameters/ApiVersionParameter"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Create or update a mgScopeType resource",
+        "description": "Create or update a mgScopeType resource at management group scope",
+        "operationId": "MgScopeType_CreateOrUpdate",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/TestType1"
+            }
+          },
+          "201": {
+            "description": "Created",
+            "schema": {
+              "$ref": "#/definitions/TestType1"
+            }
+          },
+          "default": {
+            "description": "Detailed error information.",
+            "schema": {
+              "$ref": "../../../../../common-types/resource-management/v3/types.json#/definitions/ErrorResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "managementGroupId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "The ID of the management group."
+          },
+          {
+            "name": "typeName",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "The mgScopeType resource name."
+          },
+          {
+            "name": "parameters",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/TestType1Input"
             },
             "description": "The request parameters"
           },

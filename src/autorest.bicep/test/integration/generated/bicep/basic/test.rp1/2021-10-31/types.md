@@ -1,7 +1,8 @@
 # Test.Rp1 @ 2021-10-31
 
 ## Resource Test.Rp1/discriminatedUnionTestType@2021-10-31
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-10-31' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -9,8 +10,22 @@
 * **properties**: [DiscriminatedUnionTestTypeProperties](#discriminateduniontesttypeproperties) (Required)
 * **type**: 'Test.Rp1/discriminatedUnionTestType' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Test.Rp1/mgScopeType@2021-10-31
+* **Readable Scope(s)**: ManagementGroup
+* **Writable Scope(s)**: ManagementGroup
+### Properties
+* **apiVersion**: '2021-10-31' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [TestType1CreateOrUpdatePropertiesOrTestType1Properties](#testtype1createorupdatepropertiesortesttype1properties): The resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: 'Test.Rp1/mgScopeType' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Test.Rp1/partlyReadonlyType@2021-10-31
-* **Valid Scope(s)**: Tenant (ReadOnly), ResourceGroup
+* **Readable Scope(s)**: Tenant, ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-10-31' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -21,8 +36,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Test.Rp1/partlyReadonlyType' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Test.Rp1/readOnlyTestType@2021-10-31 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Test.Rp1/readOnlyTestType@2021-10-31
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-10-31' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -34,7 +50,8 @@
 * **type**: 'Test.Rp1/readOnlyTestType' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Test.Rp1/splitPutAndGetType@2021-10-31
-* **Valid Scope(s)**: Subscription
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2021-10-31' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -45,8 +62,35 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Test.Rp1/splitPutAndGetType' (ReadOnly, DeployTimeConstant): The resource type
 
+## Resource Test.Rp1/subscriptionScopeType@2021-10-31
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: Subscription
+### Properties
+* **apiVersion**: '2021-10-31' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [TestType1CreateOrUpdatePropertiesOrTestType1Properties](#testtype1createorupdatepropertiesortesttype1properties): The resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: 'Test.Rp1/subscriptionScopeType' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Test.Rp1/tenantScopeType@2021-10-31
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
+### Properties
+* **apiVersion**: '2021-10-31' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [TestType1CreateOrUpdatePropertiesOrTestType1Properties](#testtype1createorupdatepropertiesortesttype1properties): The resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: 'Test.Rp1/tenantScopeType' (ReadOnly, DeployTimeConstant): The resource type
+
 ## Resource Test.Rp1/testType1@2021-10-31
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-10-31' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -56,6 +100,19 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Test.Rp1/testType1' (ReadOnly, DeployTimeConstant): The resource type
+
+## Resource Test.Rp1/writeOnlyTestType@2021-10-31
+* **Readable Scope(s)**: None
+* **Writable Scope(s)**: ResourceGroup
+### Properties
+* **apiVersion**: '2021-10-31' (ReadOnly, DeployTimeConstant): The resource api version
+* **id**: string (ReadOnly, DeployTimeConstant): The resource id
+* **location**: string (Required): The geo-location where the resource lives
+* **name**: string (Required, DeployTimeConstant): The resource name
+* **properties**: [TestType1CreateOrUpdateProperties](#testtype1createorupdateproperties): The resource properties.
+* **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
+* **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
+* **type**: 'Test.Rp1/writeOnlyTestType' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Function listArrayOfFoos (Test.Rp1/testType1@2021-10-31)
 * **Resource**: Test.Rp1/testType1
@@ -141,6 +198,18 @@
 * **lastModifiedBy**: string: The identity that last modified the resource.
 * **lastModifiedByType**: 'Application' | 'Key' | 'ManagedIdentity' | 'User' | string: The type of identity that last modified the resource.
 
+## TestType1CreateOrUpdateProperties
+### Properties
+* **basicString**: string: Description for a basic string property.
+* **emptyEnum**: string: Description for a empty enum property.
+* **encryptionProperties**: [EncryptionProperties](#encryptionproperties): TestType1 encryption properties
+* **intWithDefaultValue**: int
+* **password**: string {sensitive, pattern: "^[a-zA-Z0-9\.]$"}
+* **skuTier**: 'Basic' | 'Free' | 'Premium' | 'Standard': This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.
+* **special.char-property**: string
+* **stringEnum**: 'Bar' | 'Foo' | string: Description for a basic enum property.
+* **uuidProperty**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}
+
 ## TestType1CreateOrUpdatePropertiesOrTestType1Properties
 ### Properties
 * **base64EncodedBytes**: string (ReadOnly)
@@ -174,6 +243,26 @@
 * **stringEnum**: 'Bar' | 'Foo' | string: Description for a basic enum property.
 * **subnetId**: string: A fully-qualified resource ID
 * **uuidProperty**: string {minLength: 36, maxLength: 36, pattern: "^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$"}
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
+
+## TrackedResourceTags
+### Properties
+### Additional Properties
+* **Additional Properties Type**: string
 
 ## TrackedResourceTags
 ### Properties

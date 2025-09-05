@@ -21,7 +21,7 @@ import {
   UriSchema,
 } from "@autorest/codemodel";
 import { Channel, AutorestExtensionHost } from "@autorest/extension-base";
-import { DiscriminatedObjectType, ObjectTypeProperty, ObjectTypePropertyFlags, ResourceFlags, TypeBaseKind, TypeFactory, TypeReference } from "bicep-types";
+import { DiscriminatedObjectType, ObjectTypeProperty, ObjectTypePropertyFlags, TypeBaseKind, TypeFactory, TypeReference } from "bicep-types";
 import { uniq, keys, Dictionary, chain } from 'lodash';
 import { getFullyQualifiedType, getNameSchema, getSerializedName, NameSchema, ProviderDefinition, ResourceDefinition, ResourceDescriptor, ResourceOperationDefintion } from "./resources";
 import { failure, success } from "./utils";
@@ -160,6 +160,13 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
     return resourceDefinition;
   }
 
+  function getScopesFromDefinition(definition: ResourceDefinition) {
+    return {
+      readableScopes: definition.descriptor.readableScopes,
+      writableScopes: definition.descriptor.writableScopes
+    };
+  }  
+  
   function processResource(fullyQualifiedType: string, definitions: ResourceDefinition[]) {
     if (definitions.length > 1) {
       for (const definition of definitions) {
@@ -220,17 +227,13 @@ export function generateTypes(host: AutorestExtensionHost, definition: ProviderD
       }
 
       const { descriptor, bodyType } = output;
-      let flags = ResourceFlags.None;
-      if (descriptor.readonlyScopes === descriptor.scopeType) {
-        flags |= ResourceFlags.ReadOnly;
-      }
-
+      const { readableScopes, writableScopes } = getScopesFromDefinition(definitions[0]);
       factory.addResourceType(
         `${getFullyQualifiedType(descriptor)}@${descriptor.apiVersion}`,
-        descriptor.scopeType,
-        descriptor.readonlyScopes !== descriptor.scopeType ? descriptor.readonlyScopes : undefined,
         bodyType,
-        flags);
+        readableScopes,
+        writableScopes
+      );
     }
 
     for (const action of resourceActions) {

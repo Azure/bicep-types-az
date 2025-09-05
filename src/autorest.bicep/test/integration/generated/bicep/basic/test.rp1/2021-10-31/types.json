@@ -483,11 +483,11 @@
   {
     "$type": "ResourceType",
     "name": "Test.Rp1/testType1@2021-10-31",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -592,11 +592,11 @@
   {
     "$type": "ResourceType",
     "name": "Test.Rp1/splitPutAndGetType@2021-10-31",
-    "scopeType": 4,
     "body": {
       "$ref": "#/44"
     },
-    "flags": 0
+    "readableScopes": 4,
+    "writableScopes": 4
   },
   {
     "$type": "StringLiteralType",
@@ -830,12 +830,11 @@
   {
     "$type": "ResourceType",
     "name": "Test.Rp1/partlyReadonlyType@2021-10-31",
-    "scopeType": 9,
-    "readOnlyScopes": 1,
     "body": {
       "$ref": "#/49"
     },
-    "flags": 0
+    "readableScopes": 9,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1013,15 +1012,15 @@
   {
     "$type": "ResourceType",
     "name": "Test.Rp1/discriminatedUnionTestType@2021-10-31",
-    "scopeType": 8,
     "body": {
       "$ref": "#/63"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
-    "value": "Test.Rp1/readOnlyTestType"
+    "value": "Test.Rp1/writeOnlyTestType"
   },
   {
     "$type": "StringLiteralType",
@@ -1029,7 +1028,7 @@
   },
   {
     "$type": "ObjectType",
-    "name": "Test.Rp1/readOnlyTestType",
+    "name": "Test.Rp1/writeOnlyTestType",
     "properties": {
       "id": {
         "type": {
@@ -1063,11 +1062,479 @@
         "type": {
           "$ref": "#/75"
         },
+        "flags": 0,
+        "description": "The resource properties."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/84"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TestType1CreateOrUpdateProperties",
+    "properties": {
+      "basicString": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Description for a basic string property."
+      },
+      "stringEnum": {
+        "type": {
+          "$ref": "#/78"
+        },
+        "flags": 0,
+        "description": "Description for a basic enum property."
+      },
+      "emptyEnum": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0,
+        "description": "Description for a empty enum property."
+      },
+      "skuTier": {
+        "type": {
+          "$ref": "#/83"
+        },
+        "flags": 0,
+        "description": "This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT."
+      },
+      "encryptionProperties": {
+        "type": {
+          "$ref": "#/14"
+        },
+        "flags": 0,
+        "description": "TestType1 encryption properties"
+      },
+      "password": {
+        "type": {
+          "$ref": "#/19"
+        },
+        "flags": 0
+      },
+      "uuidProperty": {
+        "type": {
+          "$ref": "#/20"
+        },
+        "flags": 0
+      },
+      "intWithDefaultValue": {
+        "type": {
+          "$ref": "#/21"
+        },
+        "flags": 0
+      },
+      "special.char-property": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 0
+      }
+    }
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Foo"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Bar"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/76"
+      },
+      {
+        "$ref": "#/77"
+      },
+      {
+        "$ref": "#/2"
+      }
+    ]
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Free"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Basic"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Standard"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Premium"
+  },
+  {
+    "$type": "UnionType",
+    "elements": [
+      {
+        "$ref": "#/79"
+      },
+      {
+        "$ref": "#/80"
+      },
+      {
+        "$ref": "#/81"
+      },
+      {
+        "$ref": "#/82"
+      }
+    ]
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Test.Rp1/writeOnlyTestType@2021-10-31",
+    "body": {
+      "$ref": "#/74"
+    },
+    "readableScopes": 0,
+    "writableScopes": 8
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Test.Rp1/tenantScopeType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-10-31"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Test.Rp1/tenantScopeType",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/86"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/87"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "The resource properties."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/89"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Test.Rp1/tenantScopeType@2021-10-31",
+    "body": {
+      "$ref": "#/88"
+    },
+    "readableScopes": 1,
+    "writableScopes": 1
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Test.Rp1/subscriptionScopeType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-10-31"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Test.Rp1/subscriptionScopeType",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/91"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/92"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "The resource properties."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/94"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Test.Rp1/subscriptionScopeType@2021-10-31",
+    "body": {
+      "$ref": "#/93"
+    },
+    "readableScopes": 4,
+    "writableScopes": 4
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Test.Rp1/mgScopeType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-10-31"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Test.Rp1/mgScopeType",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/96"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/97"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/5"
+        },
+        "flags": 0,
+        "description": "The resource properties."
+      },
+      "tags": {
+        "type": {
+          "$ref": "#/99"
+        },
+        "flags": 0,
+        "description": "Resource tags."
+      },
+      "location": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 1,
+        "description": "The geo-location where the resource lives"
+      },
+      "systemData": {
+        "type": {
+          "$ref": "#/27"
+        },
+        "flags": 2,
+        "description": "Azure Resource Manager metadata containing createdBy and modifiedBy information."
+      }
+    }
+  },
+  {
+    "$type": "ObjectType",
+    "name": "TrackedResourceTags",
+    "properties": {},
+    "additionalProperties": {
+      "$ref": "#/2"
+    }
+  },
+  {
+    "$type": "ResourceType",
+    "name": "Test.Rp1/mgScopeType@2021-10-31",
+    "body": {
+      "$ref": "#/98"
+    },
+    "readableScopes": 2,
+    "writableScopes": 2
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "Test.Rp1/readOnlyTestType"
+  },
+  {
+    "$type": "StringLiteralType",
+    "value": "2021-10-31"
+  },
+  {
+    "$type": "ObjectType",
+    "name": "Test.Rp1/readOnlyTestType",
+    "properties": {
+      "id": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 10,
+        "description": "The resource id"
+      },
+      "name": {
+        "type": {
+          "$ref": "#/2"
+        },
+        "flags": 9,
+        "description": "The resource name"
+      },
+      "type": {
+        "type": {
+          "$ref": "#/101"
+        },
+        "flags": 10,
+        "description": "The resource type"
+      },
+      "apiVersion": {
+        "type": {
+          "$ref": "#/102"
+        },
+        "flags": 10,
+        "description": "The resource api version"
+      },
+      "properties": {
+        "type": {
+          "$ref": "#/104"
+        },
         "flags": 2
       },
       "tags": {
         "type": {
-          "$ref": "#/77"
+          "$ref": "#/106"
         },
         "flags": 2,
         "description": "Resource tags."
@@ -1094,7 +1561,7 @@
     "properties": {
       "plan": {
         "type": {
-          "$ref": "#/76"
+          "$ref": "#/105"
         },
         "flags": 0,
         "description": "Plan for the resource."
@@ -1153,11 +1620,11 @@
   {
     "$type": "ResourceType",
     "name": "Test.Rp1/readOnlyTestType@2021-10-31",
-    "scopeType": 8,
     "body": {
-      "$ref": "#/74"
+      "$ref": "#/103"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "ObjectType",
@@ -1198,16 +1665,16 @@
     "resourceType": "Test.Rp1/testType1",
     "apiVersion": "2021-10-31",
     "output": {
-      "$ref": "#/80"
+      "$ref": "#/109"
     },
     "input": {
-      "$ref": "#/79"
+      "$ref": "#/108"
     }
   },
   {
     "$type": "ArrayType",
     "itemType": {
-      "$ref": "#/80"
+      "$ref": "#/109"
     },
     "minLength": 1,
     "maxLength": 10
@@ -1218,7 +1685,7 @@
     "resourceType": "Test.Rp1/testType1",
     "apiVersion": "2021-10-31",
     "output": {
-      "$ref": "#/82"
+      "$ref": "#/111"
     }
   }
 ]
