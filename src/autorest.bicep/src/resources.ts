@@ -5,7 +5,7 @@ import { ChoiceSchema, CodeModel, ComplexSchema, HttpMethod, HttpParameter, Http
 import { Channel, AutorestExtensionHost } from "@autorest/extension-base";
 import { keys, Dictionary, values, groupBy, uniqBy, chain, flatten } from 'lodash';
 import { success, failure, Result } from './utils';
-import { ScopeType } from "bicep-types";
+import { ScopeType, AllExceptExtension } from "bicep-types";
 
 export interface PutExample {
   description: string;
@@ -13,12 +13,12 @@ export interface PutExample {
 }
 
 export interface ResourceDescriptor {
-  scopeType: ScopeType;
   namespace: string;
   typeSegments: string[];
   apiVersion: string;
+  readableScopes: ScopeType;
+  writableScopes: ScopeType;
   constantName?: string;
-  readonlyScopes?: ScopeType;
 }
 
 export interface ProviderDefinition {
@@ -639,12 +639,12 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
     const constantName = isPathVariable(resNameParam) ? undefined : resNameParam;
 
     const descriptors: ResourceDescriptor[] = parseResult.value.map(type => ({
-      scopeType,
       namespace,
       typeSegments: type,
       apiVersion,
+      readableScopes: readable ? scopeType : ScopeType.None,
+      writableScopes: writable ? scopeType : ScopeType.None,
       constantName,
-      readonlyScopes: readable && !writable ? scopeType : undefined,
     }));
 
     return success(descriptors);
@@ -754,37 +754,8 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
       return ScopeType.Extension;
     }
 
-    // ambiguous - without any further information, we have to assume 'all'
-    return ScopeType.Unknown;
-  }
-
-  function mergeScopes(scopeA: ScopeType, scopeB: ScopeType) {
-    // We have to assume any (unknown) scope if either scope is unknown
-    // Bitwise OR will not handle this case correctly as 'unknown' is 0.
-    if (scopeA == ScopeType.Unknown || scopeB == ScopeType.Unknown) {
-      return ScopeType.Unknown;
-    }
-
-    return scopeA | scopeB;
-  }
-
-  function mergeReadonlyScopes(
-    currentScopes: ScopeType,
-    currentReadonlyScopes: ScopeType|undefined,
-    newScopes: ScopeType,
-    newReadonlyScopes: ScopeType|undefined
-  ) {
-    function writableScopes(scopes: ScopeType, readonlyScopes: ScopeType|undefined) {
-      return readonlyScopes !== undefined ? scopes ^ readonlyScopes : scopes;
-    }
-    const mergedScopes = mergeScopes(currentScopes, newScopes);
-    if (mergedScopes === ScopeType.Unknown) {
-      const writingPermittedSomewhere = currentScopes !== currentReadonlyScopes || newScopes !== newReadonlyScopes;
-      return writingPermittedSomewhere ? undefined : ScopeType.Unknown;
-    }
-
-    const mergedWritableScopes = writableScopes(currentScopes, currentReadonlyScopes) | writableScopes(newScopes, newReadonlyScopes);
-    return mergedScopes === mergedWritableScopes ? undefined : mergedScopes ^ mergedWritableScopes;
+    // ambiguous - fallback to all standard scopes except extension
+    return AllExceptExtension;
   }
 
   function collapseDefinitionScopes(resources: ResourceDefinition[]) {
@@ -799,8 +770,8 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
           ...definitionsByName[name],
           descriptor: {
             ...curDescriptor,
-            scopeType: mergeScopes(curDescriptor.scopeType, newDescriptor.scopeType),
-            readonlyScopes: mergeReadonlyScopes(curDescriptor.scopeType, curDescriptor.readonlyScopes, newDescriptor.scopeType, newDescriptor.readonlyScopes),
+            readableScopes: curDescriptor.readableScopes | newDescriptor.readableScopes,
+            writableScopes: curDescriptor.writableScopes | newDescriptor.writableScopes,
           },
         };
       } else {
@@ -846,19 +817,19 @@ export function getProviderDefinitions(codeModel: CodeModel, host: AutorestExten
         hasComparableSchemata(atPath, d => d.putOperation?.requestSchema) &&
         hasComparableSchemata(atPath, d => d.getOperation?.responseSchema)
       ) {
-        let scopeType = atPath[0].descriptor.scopeType;
-        let readonlyScopes = atPath[0].descriptor.readonlyScopes;
-        for (let i = 1; i < atPath.length; i++) {
-          const {scopeType: newScopes, readonlyScopes: newReadonlyScopes} = atPath[i].descriptor;
-          scopeType = mergeScopes(scopeType, newScopes);
-          readonlyScopes = mergeReadonlyScopes(scopeType, readonlyScopes, newScopes, newReadonlyScopes);
+        // Merge all scopes from different constant name variants
+        let readableScopes = ScopeType.None;
+        let writableScopes = ScopeType.None;
+        for (const resource of atPath) {
+          readableScopes |= resource.descriptor.readableScopes;
+          writableScopes |= resource.descriptor.writableScopes;
         }
 
         definitionsByNormalizedPath[path] = [{
           descriptor: {
             ...parameterized[0],
-            scopeType,
-            readonlyScopes,
+            readableScopes,
+            writableScopes,
           },
           putOperation: chain(atPath).map(r => r.putOperation).find().value(),
           getOperation: chain(atPath).map(r => r.getOperation).find().value(),

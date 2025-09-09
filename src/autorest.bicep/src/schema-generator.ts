@@ -663,22 +663,25 @@ export function generateSchema(host: AutorestExtensionHost, definition: Provider
       generated[fullyQualifiedType.toLowerCase()] = schema;
       const definitionName = descriptor.typeSegments.join('_');
 
-      if (ScopeType.Tenant === (descriptor.scopeType & ScopeType.Tenant)) {
+      // Use modern writableScopes only
+      const writableScopes = descriptor.writableScopes;
+
+      if (writableScopes & ScopeType.Tenant) {
         schemaData.tenantResources[definitionName] = schema;
       }
-      if (ScopeType.ManagementGroup === (descriptor.scopeType & ScopeType.ManagementGroup)) {
+      if (writableScopes & ScopeType.ManagementGroup) {
         schemaData.mgResources[definitionName] = schema;
       }
-      if (ScopeType.Subscription === (descriptor.scopeType & ScopeType.Subscription)) {
+      if (writableScopes & ScopeType.Subscription) {
         schemaData.subResources[definitionName] = schema;
       }
-      if (ScopeType.ResourceGroup === (descriptor.scopeType & ScopeType.ResourceGroup)) {
+      if (writableScopes & ScopeType.ResourceGroup) {
         schemaData.rgResources[definitionName] = schema;
       }
-      if (ScopeType.Extension === (descriptor.scopeType & ScopeType.Extension)) {
+      if (writableScopes & ScopeType.Extension) {
         schemaData.extensionResources[definitionName] = schema;
       }
-      if (descriptor.scopeType === ScopeType.Unknown) {
+      if (writableScopes === ScopeType.None) {
         schemaData.unknownResources[definitionName] = schema;
       }
 
