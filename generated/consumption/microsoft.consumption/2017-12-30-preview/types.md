@@ -1,7 +1,8 @@
 # Microsoft.Consumption @ 2017-12-30-preview
 
 ## Resource Microsoft.Consumption/budgets@2017-12-30-preview
-* **Valid Scope(s)**: Subscription
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2017-12-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.

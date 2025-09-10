@@ -325,11 +325,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.ContainerRegistry/registries/agentPools@2025-03-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringType",
@@ -1686,11 +1686,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.ContainerRegistry/registries@2025-03-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/33"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringType",
@@ -3089,11 +3089,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.ContainerRegistry/registries/taskRuns@2025-03-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/150"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringType",
@@ -4016,11 +4016,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.ContainerRegistry/registries/tasks@2025-03-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/238"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringType",
@@ -4211,11 +4211,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.ContainerRegistry/registries/packages/archives@2025-03-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/304"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -4346,11 +4346,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.ContainerRegistry/registries/packages/archives/versions@2025-03-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/319"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -4502,11 +4502,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.ContainerRegistry/registries/cacheRules@2025-03-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/331"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -5150,11 +5150,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.ContainerRegistry/registries/connectedRegistries@2025-03-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/343"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -5410,11 +5410,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.ContainerRegistry/registries/credentialSets@2025-03-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/394"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -5635,11 +5635,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.ContainerRegistry/registries/exportPipelines@2025-03-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/414"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -5930,11 +5930,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.ContainerRegistry/registries/importPipelines@2025-03-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/433"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -6317,11 +6317,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.ContainerRegistry/registries/pipelineRuns@2025-03-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/459"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -6382,11 +6382,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.ContainerRegistry/registries/privateEndpointConnections@2025-03-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/484"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -6575,11 +6575,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.ContainerRegistry/registries/replications@2025-03-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/488"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -6737,11 +6737,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.ContainerRegistry/registries/scopeMaps@2025-03-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/504"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -7056,11 +7056,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.ContainerRegistry/registries/tokens@2025-03-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/517"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -7324,11 +7324,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.ContainerRegistry/registries/webhooks@2025-03-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/543"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -7389,11 +7389,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.ContainerRegistry/registries/runs@2025-03-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/568"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "ObjectType",

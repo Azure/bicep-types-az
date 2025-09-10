@@ -1,7 +1,8 @@
 # Microsoft.Capacity @ 2019-04-01
 
 ## Resource Microsoft.Capacity/reservationOrders@2019-04-01
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2019-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: int (ReadOnly)
@@ -12,8 +13,9 @@
 * **sku**: [SkuName](#skuname) (WriteOnly)
 * **type**: 'Microsoft.Capacity/reservationOrders' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Capacity/reservationOrders/reservations@2019-04-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Capacity/reservationOrders/reservations@2019-04-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: int (ReadOnly)

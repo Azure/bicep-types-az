@@ -1,7 +1,8 @@
 # Microsoft.Migrate @ 2017-11-11-preview
 
 ## Resource Microsoft.Migrate/projects@2017-11-11-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-11-11-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: For optimistic concurrency control.
@@ -13,7 +14,8 @@
 * **type**: 'Microsoft.Migrate/projects' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Migrate/projects/groups@2017-11-11-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-11-11-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: For optimistic concurrency control.
@@ -23,7 +25,8 @@
 * **type**: 'Microsoft.Migrate/projects/groups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Migrate/projects/groups/assessments@2017-11-11-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-11-11-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: For optimistic concurrency control.
@@ -32,8 +35,9 @@
 * **properties**: [AssessmentProperties](#assessmentproperties) (Required): Properties of the assessment.
 * **type**: 'Microsoft.Migrate/projects/groups/assessments' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Migrate/projects/groups/assessments/assessedMachines@2017-11-11-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Migrate/projects/groups/assessments/assessedMachines@2017-11-11-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2017-11-11-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): For optimistic concurrency control.
@@ -42,8 +46,9 @@
 * **properties**: [AssessedMachineProperties](#assessedmachineproperties) (ReadOnly): Properties of an assessed machine.
 * **type**: 'Microsoft.Migrate/projects/groups/assessments/assessedMachines' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Migrate/projects/machines@2017-11-11-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Migrate/projects/machines@2017-11-11-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2017-11-11-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): For optimistic concurrency control.

@@ -1,7 +1,8 @@
 # Microsoft.Network @ 2018-08-01
 
-## Resource Microsoft.Network/trafficManagerGeographicHierarchies@2018-08-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Network/trafficManagerGeographicHierarchies@2018-08-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2018-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -10,7 +11,8 @@
 * **type**: 'Microsoft.Network/trafficManagerGeographicHierarchies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/trafficmanagerprofiles@2018-08-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -21,7 +23,8 @@
 * **type**: 'Microsoft.Network/trafficmanagerprofiles' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/trafficmanagerprofiles/AzureEndpoints@2018-08-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -30,7 +33,8 @@
 * **type**: 'Microsoft.Network/trafficmanagerprofiles/AzureEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/trafficmanagerprofiles/ExternalEndpoints@2018-08-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -38,8 +42,9 @@
 * **properties**: [EndpointProperties](#endpointproperties): The properties of the Traffic Manager endpoint.
 * **type**: 'Microsoft.Network/trafficmanagerprofiles/ExternalEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Network/trafficmanagerprofiles/heatMaps@2018-08-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Network/trafficmanagerprofiles/heatMaps@2018-08-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2018-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -48,7 +53,8 @@
 * **type**: 'Microsoft.Network/trafficmanagerprofiles/heatMaps' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/trafficmanagerprofiles/NestedEndpoints@2018-08-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -57,7 +63,8 @@
 * **type**: 'Microsoft.Network/trafficmanagerprofiles/NestedEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Network/trafficManagerUserMetricsKeys@2018-08-01
-* **Valid Scope(s)**: Subscription
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2018-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

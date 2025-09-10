@@ -1,7 +1,8 @@
 # Microsoft.AnalysisServices @ 2017-07-14
 
 ## Resource Microsoft.AnalysisServices/servers@2017-07-14
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-07-14' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

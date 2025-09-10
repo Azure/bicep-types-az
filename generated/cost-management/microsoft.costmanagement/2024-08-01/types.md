@@ -1,7 +1,8 @@
 # Microsoft.CostManagement @ 2024-08-01
 
-## Resource Microsoft.CostManagement/alerts@2024-08-01 (ReadOnly)
-* **Valid Scope(s)**: Unknown
+## Resource Microsoft.CostManagement/alerts@2024-08-01
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
@@ -11,7 +12,8 @@
 * **type**: 'Microsoft.CostManagement/alerts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.CostManagement/budgets@2024-08-01
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2024-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
@@ -21,7 +23,8 @@
 * **type**: 'Microsoft.CostManagement/budgets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.CostManagement/costAllocationRules@2024-08-01
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2024-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -30,7 +33,8 @@
 * **type**: 'Microsoft.CostManagement/costAllocationRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.CostManagement/exports@2024-08-01
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2024-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
@@ -42,7 +46,8 @@
 * **type**: 'Microsoft.CostManagement/exports' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.CostManagement/scheduledActions@2024-08-01
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2024-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): Resource Etag. For update calls, eTag is optional and can be specified to achieve optimistic concurrency. Fetch the resource's eTag by doing a 'GET' call first and then including the latest eTag as part of the request body or 'If-Match' header while performing the update. For create calls, eTag is not required.
@@ -54,7 +59,8 @@
 * **type**: 'Microsoft.CostManagement/scheduledActions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.CostManagement/settings@2024-08-01
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 * **Discriminator**: kind
 
 ### Base Properties
@@ -70,7 +76,8 @@
 
 
 ## Resource Microsoft.CostManagement/views@2024-08-01
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2024-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.

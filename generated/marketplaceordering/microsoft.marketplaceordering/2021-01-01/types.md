@@ -1,7 +1,8 @@
 # Microsoft.MarketplaceOrdering @ 2021-01-01
 
-## Resource Microsoft.MarketplaceOrdering/agreements/offers/plans@2021-01-01 (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.MarketplaceOrdering/agreements/offers/plans@2021-01-01
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -10,7 +11,8 @@
 * **type**: 'Microsoft.MarketplaceOrdering/agreements/offers/plans' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MarketplaceOrdering/offerTypes/publishers/offers/plans/agreements@2021-01-01
-* **Valid Scope(s)**: Subscription
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2021-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

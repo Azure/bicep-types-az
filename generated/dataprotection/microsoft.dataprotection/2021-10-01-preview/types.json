@@ -517,11 +517,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DataProtection/backupVaults@2021-10-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/3"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1523,11 +1523,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DataProtection/backupVaults/backupPolicies@2021-10-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/48"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2300,11 +2300,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DataProtection/backupVaults/backupInstances@2021-10-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/141"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2517,11 +2517,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DataProtection/resourceGuards@2021-10-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/195"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2618,11 +2618,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DataProtection/backupVaults/operationResults@2021-10-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/210"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -2873,11 +2873,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DataProtection/backupVaults/backupInstances/recoveryPoints@2021-10-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/215"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -3299,10 +3299,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DataProtection/backupVaults/backupJobs@2021-10-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/230"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   }
 ]

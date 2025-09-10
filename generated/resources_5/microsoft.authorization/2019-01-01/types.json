@@ -205,11 +205,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Authorization/policyAssignments@2019-01-01",
-    "scopeType": 0,
     "body": {
       "$ref": "#/3"
     },
-    "flags": 0
+    "readableScopes": 15,
+    "writableScopes": 15
   },
   {
     "$type": "StringLiteralType",
@@ -347,12 +347,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Authorization/policyDefinitions@2019-01-01",
-    "scopeType": 7,
-    "readOnlyScopes": 1,
     "body": {
       "$ref": "#/15"
     },
-    "flags": 0
+    "readableScopes": 7,
+    "writableScopes": 6
   },
   {
     "$type": "StringLiteralType",
@@ -509,11 +508,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Authorization/policySetDefinitions@2019-01-01",
-    "scopeType": 7,
-    "readOnlyScopes": 1,
     "body": {
       "$ref": "#/24"
     },
-    "flags": 0
+    "readableScopes": 7,
+    "writableScopes": 6
   }
 ]

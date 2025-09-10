@@ -1,7 +1,8 @@
 # Microsoft.Billing @ 2020-09-01-preview
 
 ## Resource Microsoft.Billing/promotions@2020-09-01-preview
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2020-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: int (ReadOnly)

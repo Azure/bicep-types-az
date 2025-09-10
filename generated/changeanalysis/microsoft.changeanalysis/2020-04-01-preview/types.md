@@ -1,7 +1,8 @@
 # Microsoft.ChangeAnalysis @ 2020-04-01-preview
 
 ## Resource Microsoft.ChangeAnalysis/profile@2020-04-01-preview
-* **Valid Scope(s)**: Subscription
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2020-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

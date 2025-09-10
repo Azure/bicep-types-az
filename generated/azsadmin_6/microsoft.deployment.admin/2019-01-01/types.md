@@ -1,7 +1,8 @@
 # Microsoft.Deployment.Admin @ 2019-01-01
 
-## Resource Microsoft.Deployment.Admin/locations@2019-01-01 (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.Deployment.Admin/locations@2019-01-01
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): Entity tag of the resource
@@ -11,8 +12,9 @@
 * **properties**: [LocationAdminProperties](#locationadminproperties) (ReadOnly): Location Properties
 * **type**: 'Microsoft.Deployment.Admin/locations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Deployment.Admin/locations/actionPlans@2019-01-01 (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.Deployment.Admin/locations/actionPlans@2019-01-01
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): Entity tag of the resource
@@ -22,8 +24,9 @@
 * **properties**: [ActionPlanAdminProperties](#actionplanadminproperties) (ReadOnly): Action Plan Properties
 * **type**: 'Microsoft.Deployment.Admin/locations/actionPlans' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Deployment.Admin/locations/actionPlans/operations@2019-01-01 (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.Deployment.Admin/locations/actionPlans/operations@2019-01-01
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): Entity tag of the resource
@@ -34,7 +37,8 @@
 * **type**: 'Microsoft.Deployment.Admin/locations/actionPlans/operations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Deployment.Admin/locations/fileContainers@2019-01-01
-* **Valid Scope(s)**: Subscription
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2019-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -43,8 +47,9 @@
 * **properties**: [FileContainerBodyOrFileContainerAdminProperties](#filecontainerbodyorfilecontaineradminproperties): Specifies the file container body
 * **type**: 'Microsoft.Deployment.Admin/locations/fileContainers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Deployment.Admin/locations/productDeployments@2019-01-01 (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.Deployment.Admin/locations/productDeployments@2019-01-01
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): entity tag
@@ -55,7 +60,8 @@
 * **type**: 'Microsoft.Deployment.Admin/locations/productDeployments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Deployment.Admin/locations/productPackages@2019-01-01
-* **Valid Scope(s)**: Subscription
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2019-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -64,8 +70,9 @@
 * **properties**: [ProductPackageBodyOrProductPackageProperties](#productpackagebodyorproductpackageproperties): Specifies the product package
 * **type**: 'Microsoft.Deployment.Admin/locations/productPackages' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Deployment.Admin/locations/productPackages/secrets@2019-01-01 (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.Deployment.Admin/locations/productPackages/secrets@2019-01-01
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

@@ -1,7 +1,8 @@
 # Microsoft.KeyVault @ 2019-09-01
 
 ## Resource Microsoft.KeyVault/vaults@2019-09-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -12,7 +13,8 @@
 * **type**: 'Microsoft.KeyVault/vaults' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.KeyVault/vaults/accessPolicies@2019-09-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: None
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -22,7 +24,8 @@
 * **type**: 'Microsoft.KeyVault/vaults/accessPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.KeyVault/vaults/keys@2019-09-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -32,8 +35,9 @@
 * **tags**: [KeyCreateParametersTags](#keycreateparameterstags): The tags that will be assigned to the key.
 * **type**: 'Microsoft.KeyVault/vaults/keys' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.KeyVault/vaults/keys/versions@2019-09-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.KeyVault/vaults/keys/versions@2019-09-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -44,7 +48,8 @@
 * **type**: 'Microsoft.KeyVault/vaults/keys/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.KeyVault/vaults/privateEndpointConnections@2019-09-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Modified whenever there is a change in the state of private endpoint connection.
@@ -56,7 +61,8 @@
 * **type**: 'Microsoft.KeyVault/vaults/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.KeyVault/vaults/secrets@2019-09-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

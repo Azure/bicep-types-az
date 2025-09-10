@@ -1,7 +1,8 @@
 # microsoft.alertsManagement @ 2019-03-01
 
-## Resource Microsoft.AlertsManagement/alerts@2019-03-01 (ReadOnly)
-* **Valid Scope(s)**: Unknown
+## Resource Microsoft.AlertsManagement/alerts@2019-03-01
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -10,7 +11,8 @@
 * **type**: 'Microsoft.AlertsManagement/alerts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource microsoft.alertsManagement/smartDetectorAlertRules@2019-03-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

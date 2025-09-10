@@ -1,7 +1,8 @@
 # Microsoft.DataMigration @ 2018-04-19
 
 ## Resource Microsoft.DataMigration/services@2018-04-19
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-04-19' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: HTTP strong entity tag value. Ignored if submitted
@@ -15,7 +16,8 @@
 * **type**: 'Microsoft.DataMigration/services' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataMigration/services/projects@2018-04-19
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-04-19' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -26,7 +28,8 @@
 * **type**: 'Microsoft.DataMigration/services/projects' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataMigration/services/projects/tasks@2018-04-19
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-04-19' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: HTTP strong entity tag value. This is ignored if submitted.

@@ -1,7 +1,8 @@
 # Microsoft.BotService @ 2021-03-01
 
 ## Resource Microsoft.BotService/botServices@2021-03-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Entity Tag
@@ -16,7 +17,8 @@
 * **zones**: string[] (ReadOnly): Entity zones
 
 ## Resource Microsoft.BotService/botServices/channels@2021-03-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Entity Tag
@@ -31,7 +33,8 @@
 * **zones**: string[] (ReadOnly): Entity zones
 
 ## Resource Microsoft.BotService/botServices/connections@2021-03-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Entity Tag

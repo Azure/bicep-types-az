@@ -1,7 +1,8 @@
 # Microsoft.Workloads @ 2021-12-01-preview
 
 ## Resource Microsoft.Workloads/monitors@2021-12-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -14,7 +15,8 @@
 * **type**: 'Microsoft.Workloads/monitors' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Workloads/monitors/providerInstances@2021-12-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -25,7 +27,8 @@
 * **type**: 'Microsoft.Workloads/monitors/providerInstances' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Workloads/phpWorkloads@2021-12-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -40,7 +43,8 @@
 * **type**: 'Microsoft.Workloads/phpWorkloads' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Workloads/phpWorkloads/wordpressInstances@2021-12-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -50,7 +54,8 @@
 * **type**: 'Microsoft.Workloads/phpWorkloads/wordpressInstances' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Workloads/sapVirtualInstances@2021-12-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -63,7 +68,8 @@
 * **type**: 'Microsoft.Workloads/sapVirtualInstances' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Workloads/sapVirtualInstances/applicationInstances@2021-12-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -75,7 +81,8 @@
 * **type**: 'Microsoft.Workloads/sapVirtualInstances/applicationInstances' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Workloads/sapVirtualInstances/centralInstances@2021-12-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -87,7 +94,8 @@
 * **type**: 'Microsoft.Workloads/sapVirtualInstances/centralInstances' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Workloads/sapVirtualInstances/databaseInstances@2021-12-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

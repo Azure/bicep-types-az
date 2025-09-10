@@ -1,7 +1,8 @@
 # Microsoft.ResourceHealth @ 2022-05-01-preview
 
-## Resource Microsoft.ResourceHealth/events@2022-05-01-preview (ReadOnly)
-* **Valid Scope(s)**: Tenant, Subscription
+## Resource Microsoft.ResourceHealth/events@2022-05-01-preview
+* **Readable Scope(s)**: Tenant, Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2022-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -10,8 +11,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ResourceHealth/events' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ResourceHealth/events/impactedResources@2022-05-01-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.ResourceHealth/events/impactedResources@2022-05-01-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2022-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

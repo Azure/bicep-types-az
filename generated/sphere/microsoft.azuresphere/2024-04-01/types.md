@@ -1,7 +1,8 @@
 # Microsoft.AzureSphere @ 2024-04-01
 
 ## Resource Microsoft.AzureSphere/catalogs@2024-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -12,8 +13,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.AzureSphere/catalogs' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AzureSphere/catalogs/certificates@2024-04-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.AzureSphere/catalogs/certificates@2024-04-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -23,7 +25,8 @@
 * **type**: 'Microsoft.AzureSphere/catalogs/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AzureSphere/catalogs/images@2024-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -33,7 +36,8 @@
 * **type**: 'Microsoft.AzureSphere/catalogs/images' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AzureSphere/catalogs/products@2024-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -43,7 +47,8 @@
 * **type**: 'Microsoft.AzureSphere/catalogs/products' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AzureSphere/catalogs/products/deviceGroups@2024-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -53,7 +58,8 @@
 * **type**: 'Microsoft.AzureSphere/catalogs/products/deviceGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AzureSphere/catalogs/products/deviceGroups/deployments@2024-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -63,7 +69,8 @@
 * **type**: 'Microsoft.AzureSphere/catalogs/products/deviceGroups/deployments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AzureSphere/catalogs/products/deviceGroups/devices@2024-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

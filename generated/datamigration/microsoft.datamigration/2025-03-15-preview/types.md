@@ -1,7 +1,8 @@
 # Microsoft.DataMigration @ 2025-03-15-preview
 
 ## Resource Microsoft.DataMigration/databaseMigrations@2025-03-15-preview
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2025-03-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -11,7 +12,8 @@
 * **type**: 'Microsoft.DataMigration/databaseMigrations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataMigration/migrationServices@2025-03-15-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-03-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -23,7 +25,8 @@
 * **type**: 'Microsoft.DataMigration/migrationServices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataMigration/services@2025-03-15-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-03-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: HTTP strong entity tag value. Ignored if submitted
@@ -38,7 +41,8 @@
 * **type**: 'Microsoft.DataMigration/services' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataMigration/services/projects@2025-03-15-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-03-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: HTTP strong entity tag value. This is ignored if submitted.
@@ -51,7 +55,8 @@
 * **type**: 'Microsoft.DataMigration/services/projects' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataMigration/services/projects/files@2025-03-15-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-03-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: HTTP strong entity tag value. This is ignored if submitted.
@@ -62,7 +67,8 @@
 * **type**: 'Microsoft.DataMigration/services/projects/files' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataMigration/services/projects/tasks@2025-03-15-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-03-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: HTTP strong entity tag value. This is ignored if submitted.
@@ -73,7 +79,8 @@
 * **type**: 'Microsoft.DataMigration/services/projects/tasks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataMigration/services/serviceTasks@2025-03-15-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-03-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: HTTP strong entity tag value. This is ignored if submitted.
@@ -84,7 +91,8 @@
 * **type**: 'Microsoft.DataMigration/services/serviceTasks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataMigration/sqlMigrationServices@2025-03-15-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-03-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

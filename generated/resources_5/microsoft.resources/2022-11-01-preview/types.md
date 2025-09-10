@@ -1,7 +1,8 @@
 # Microsoft.Resources @ 2022-11-01-preview
 
-## Resource Microsoft.Resources/snapshots@2022-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: Extension
+## Resource Microsoft.Resources/snapshots@2022-11-01-preview
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2022-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

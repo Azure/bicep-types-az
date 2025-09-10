@@ -1,7 +1,8 @@
 # Microsoft.DataShare @ 2021-08-01
 
 ## Resource Microsoft.DataShare/accounts@2021-08-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -14,7 +15,8 @@
 * **type**: 'Microsoft.DataShare/accounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataShare/accounts/shares@2021-08-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -24,7 +26,8 @@
 * **type**: 'Microsoft.DataShare/accounts/shares' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataShare/accounts/shares/dataSets@2021-08-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 * **Discriminator**: kind
 
 ### Base Properties
@@ -106,7 +109,8 @@
 
 
 ## Resource Microsoft.DataShare/accounts/shares/invitations@2021-08-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -115,8 +119,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): System Data of the Azure resource.
 * **type**: 'Microsoft.DataShare/accounts/shares/invitations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DataShare/accounts/shares/providerShareSubscriptions@2021-08-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.DataShare/accounts/shares/providerShareSubscriptions@2021-08-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -126,7 +131,8 @@
 * **type**: 'Microsoft.DataShare/accounts/shares/providerShareSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataShare/accounts/shares/synchronizationSettings@2021-08-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 * **Discriminator**: kind
 
 ### Base Properties
@@ -143,7 +149,8 @@
 
 
 ## Resource Microsoft.DataShare/accounts/shareSubscriptions@2021-08-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -153,7 +160,8 @@
 * **type**: 'Microsoft.DataShare/accounts/shareSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataShare/accounts/shareSubscriptions/dataSetMappings@2021-08-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 * **Discriminator**: kind
 
 ### Base Properties
@@ -225,7 +233,8 @@
 
 
 ## Resource Microsoft.DataShare/accounts/shareSubscriptions/triggers@2021-08-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 * **Discriminator**: kind
 
 ### Base Properties
@@ -241,8 +250,9 @@
 * **properties**: [ScheduledTriggerProperties](#scheduledtriggerproperties) (Required): Properties of scheduled synchronization
 
 
-## Resource Microsoft.DataShare/locations/consumerInvitations@2021-08-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.DataShare/locations/consumerInvitations@2021-08-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

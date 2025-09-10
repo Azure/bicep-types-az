@@ -291,11 +291,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Edge/configTemplates@2025-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringType",
@@ -542,11 +542,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Edge/contexts@2025-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/29"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringType",
@@ -754,11 +754,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Edge/diagnostics@2025-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/50"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringType",
@@ -922,11 +922,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Edge/schemas@2025-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/68"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringType",
@@ -1151,11 +1151,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Edge/solutionTemplates@2025-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/82"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1545,11 +1545,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Edge/targets@2025-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/100"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1680,11 +1680,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Edge/contexts/siteReferences@2025-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/126"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1829,11 +1829,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Edge/contexts/workflows@2025-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/138"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2273,11 +2273,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Edge/contexts/workflows/versions@2025-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/150"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2584,11 +2584,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Edge/contexts/workflows/versions/executions@2025-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/189"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2777,11 +2777,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Edge/schemas/dynamicSchemas@2025-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/210"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringType",
@@ -2923,11 +2923,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Edge/schemas/dynamicSchemas/versions@2025-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/229"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2995,11 +2995,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Edge/schemas/versions@2025-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/241"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3184,11 +3184,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Edge/targets/solutions@2025-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/245"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3439,11 +3439,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Edge/targets/solutions/instances@2025-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/259"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringType",
@@ -3942,11 +3942,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Edge/targets/solutions/versions@2025-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/279"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringType",
@@ -4416,11 +4416,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Edge/jobs@2025-06-01",
-    "scopeType": 0,
     "body": {
       "$ref": "#/318"
     },
-    "flags": 1
+    "readableScopes": 15,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -4558,11 +4558,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Edge/schemaReferences@2025-06-01",
-    "scopeType": 0,
     "body": {
       "$ref": "#/354"
     },
-    "flags": 1
+    "readableScopes": 15,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -4700,11 +4700,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Edge/configTemplates/versions@2025-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/366"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -4879,11 +4879,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Edge/solutionTemplates/versions@2025-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/378"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -5148,10 +5148,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Edge/targets/solutions/instances/histories@2025-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/393"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   }
 ]

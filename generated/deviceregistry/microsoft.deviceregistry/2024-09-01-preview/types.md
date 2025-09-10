@@ -1,7 +1,8 @@
 # Microsoft.DeviceRegistry @ 2024-09-01-preview
 
 ## Resource Microsoft.DeviceRegistry/assetEndpointProfiles@2024-09-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location.
@@ -14,7 +15,8 @@
 * **type**: 'Microsoft.DeviceRegistry/assetEndpointProfiles' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DeviceRegistry/assets@2024-09-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location.
@@ -26,8 +28,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DeviceRegistry/assets' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DeviceRegistry/billingContainers@2024-09-01-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.DeviceRegistry/billingContainers@2024-09-01-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource ETag
@@ -38,7 +41,8 @@
 * **type**: 'Microsoft.DeviceRegistry/billingContainers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DeviceRegistry/discoveredAssetEndpointProfiles@2024-09-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location.
@@ -51,7 +55,8 @@
 * **type**: 'Microsoft.DeviceRegistry/discoveredAssetEndpointProfiles' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DeviceRegistry/discoveredAssets@2024-09-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location.
@@ -64,7 +69,8 @@
 * **type**: 'Microsoft.DeviceRegistry/discoveredAssets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DeviceRegistry/schemaRegistries@2024-09-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -77,7 +83,8 @@
 * **type**: 'Microsoft.DeviceRegistry/schemaRegistries' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DeviceRegistry/schemaRegistries/schemas@2024-09-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -87,7 +94,8 @@
 * **type**: 'Microsoft.DeviceRegistry/schemaRegistries/schemas' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DeviceRegistry/schemaRegistries/schemas/schemaVersions@2024-09-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

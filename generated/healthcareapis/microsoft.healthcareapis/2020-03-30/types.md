@@ -1,7 +1,8 @@
 # Microsoft.HealthcareApis @ 2020-03-30
 
 ## Resource Microsoft.HealthcareApis/services@2020-03-30
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-03-30' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: An etag associated with the resource, used for optimistic concurrency when editing it.
@@ -15,7 +16,8 @@
 * **type**: 'Microsoft.HealthcareApis/services' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HealthcareApis/services/privateEndpointConnections@2020-03-30
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-03-30' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -23,8 +25,9 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
 * **type**: 'Microsoft.HealthcareApis/services/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.HealthcareApis/services/privateLinkResources@2020-03-30 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.HealthcareApis/services/privateLinkResources@2020-03-30
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2020-03-30' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

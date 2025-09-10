@@ -1,7 +1,8 @@
 # Microsoft.Network.Admin @ 2015-06-15
 
 ## Resource Microsoft.Network.Admin/locations/quotas@2015-06-15
-* **Valid Scope(s)**: Subscription
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2015-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

@@ -1,7 +1,8 @@
 # Microsoft.Subscription @ 2024-08-01-preview
 
 ## Resource Microsoft.Subscription/aliases@2024-08-01-preview
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2024-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -11,7 +12,8 @@
 * **type**: 'Microsoft.Subscription/aliases' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Subscription/changeTenantRequest@2024-08-01-preview
-* **Valid Scope(s)**: Subscription
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2024-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -20,7 +22,8 @@
 * **type**: 'Microsoft.Subscription/changeTenantRequest' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Subscription/policies@2024-08-01-preview
-* **Valid Scope(s)**: Tenant, Extension (ReadOnly)
+* **Readable Scope(s)**: Tenant, Extension
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2024-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **blockSubscriptionsIntoTenant**: bool (WriteOnly): Blocks the entering of subscriptions into user's tenant.

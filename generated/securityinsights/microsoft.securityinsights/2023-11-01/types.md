@@ -1,7 +1,8 @@
 # Microsoft.SecurityInsights @ 2023-11-01
 
 ## Resource Microsoft.SecurityInsights/alertRules@2023-11-01
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 * **Discriminator**: kind
 
 ### Base Properties
@@ -29,7 +30,8 @@
 
 
 ## Resource Microsoft.SecurityInsights/alertRules/actions@2023-11-01
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2023-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Etag of the azure resource
@@ -39,8 +41,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.SecurityInsights/alertRules/actions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.SecurityInsights/alertRuleTemplates@2023-11-01 (ReadOnly)
-* **Valid Scope(s)**: Extension
+## Resource Microsoft.SecurityInsights/alertRuleTemplates@2023-11-01
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: None
 * **Discriminator**: kind
 
 ### Base Properties
@@ -67,7 +70,8 @@
 
 
 ## Resource Microsoft.SecurityInsights/automationRules@2023-11-01
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2023-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Etag of the azure resource
@@ -78,7 +82,8 @@
 * **type**: 'Microsoft.SecurityInsights/automationRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/bookmarks@2023-11-01
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2023-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Etag of the azure resource
@@ -89,7 +94,8 @@
 * **type**: 'Microsoft.SecurityInsights/bookmarks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/contentPackages@2023-11-01
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2023-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Etag of the azure resource
@@ -99,8 +105,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.SecurityInsights/contentPackages' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.SecurityInsights/contentProductPackages@2023-11-01 (ReadOnly)
-* **Valid Scope(s)**: Extension
+## Resource Microsoft.SecurityInsights/contentProductPackages@2023-11-01
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Etag of the azure resource
@@ -110,8 +117,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.SecurityInsights/contentProductPackages' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.SecurityInsights/contentproducttemplates@2023-11-01 (ReadOnly)
-* **Valid Scope(s)**: Extension
+## Resource Microsoft.SecurityInsights/contentproducttemplates@2023-11-01
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Etag of the azure resource
@@ -122,7 +130,8 @@
 * **type**: 'Microsoft.SecurityInsights/contentproducttemplates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/contentTemplates@2023-11-01
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2023-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Etag of the azure resource
@@ -133,7 +142,8 @@
 * **type**: 'Microsoft.SecurityInsights/contentTemplates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/dataConnectors@2023-11-01
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 * **Discriminator**: kind
 
 ### Base Properties
@@ -186,7 +196,8 @@
 
 
 ## Resource Microsoft.SecurityInsights/incidents@2023-11-01
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2023-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Etag of the azure resource
@@ -197,7 +208,8 @@
 * **type**: 'Microsoft.SecurityInsights/incidents' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/incidents/comments@2023-11-01
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2023-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Etag of the azure resource
@@ -208,7 +220,8 @@
 * **type**: 'Microsoft.SecurityInsights/incidents/comments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/incidents/relations@2023-11-01
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2023-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Etag of the azure resource
@@ -219,7 +232,8 @@
 * **type**: 'Microsoft.SecurityInsights/incidents/relations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/metadata@2023-11-01
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2023-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Etag of the azure resource
@@ -230,7 +244,8 @@
 * **type**: 'Microsoft.SecurityInsights/metadata' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/onboardingStates@2023-11-01
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2023-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Etag of the azure resource
@@ -241,7 +256,8 @@
 * **type**: 'Microsoft.SecurityInsights/onboardingStates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/securityMLAnalyticsSettings@2023-11-01
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 * **Discriminator**: kind
 
 ### Base Properties
@@ -259,7 +275,8 @@
 
 
 ## Resource Microsoft.SecurityInsights/threatIntelligence/indicators@2023-11-01
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2023-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Etag of the azure resource
@@ -270,7 +287,8 @@
 * **type**: 'Microsoft.SecurityInsights/threatIntelligence/indicators' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/watchlists@2023-11-01
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2023-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Etag of the azure resource
@@ -281,7 +299,8 @@
 * **type**: 'Microsoft.SecurityInsights/watchlists' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.SecurityInsights/watchlists/watchlistItems@2023-11-01
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2023-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Etag of the azure resource

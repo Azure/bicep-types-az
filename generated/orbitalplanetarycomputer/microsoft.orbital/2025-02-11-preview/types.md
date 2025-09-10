@@ -1,7 +1,8 @@
 # Microsoft.Orbital @ 2025-02-11-preview
 
 ## Resource Microsoft.Orbital/geoCatalogs@2025-02-11-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-02-11-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

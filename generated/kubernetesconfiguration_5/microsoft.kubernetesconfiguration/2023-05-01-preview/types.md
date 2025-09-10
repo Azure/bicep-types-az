@@ -1,7 +1,8 @@
 # Microsoft.KubernetesConfiguration @ 2023-05-01-preview
 
-## Resource Microsoft.KubernetesConfiguration/extensionTypes@2023-05-01-preview (ReadOnly)
-* **Valid Scope(s)**: Extension
+## Resource Microsoft.KubernetesConfiguration/extensionTypes@2023-05-01-preview
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -9,8 +10,9 @@
 * **properties**: [ExtensionTypeProperties](#extensiontypeproperties) (ReadOnly)
 * **type**: 'Microsoft.KubernetesConfiguration/extensionTypes' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.KubernetesConfiguration/extensionTypes/versions@2023-05-01-preview (ReadOnly)
-* **Valid Scope(s)**: Extension
+## Resource Microsoft.KubernetesConfiguration/extensionTypes/versions@2023-05-01-preview
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -18,8 +20,9 @@
 * **properties**: [ExtensionTypeVersionForReleaseTrainProperties](#extensiontypeversionforreleasetrainproperties) (ReadOnly)
 * **type**: 'Microsoft.KubernetesConfiguration/extensionTypes/versions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.KubernetesConfiguration/locations/extensionTypes@2023-05-01-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.KubernetesConfiguration/locations/extensionTypes@2023-05-01-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -27,8 +30,9 @@
 * **properties**: [ExtensionTypeProperties](#extensiontypeproperties) (ReadOnly)
 * **type**: 'Microsoft.KubernetesConfiguration/locations/extensionTypes' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.KubernetesConfiguration/locations/extensionTypes/versions@2023-05-01-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.KubernetesConfiguration/locations/extensionTypes/versions@2023-05-01-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

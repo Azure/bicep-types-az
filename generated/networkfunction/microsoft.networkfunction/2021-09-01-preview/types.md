@@ -1,7 +1,8 @@
 # Microsoft.NetworkFunction @ 2021-09-01-preview
 
 ## Resource Microsoft.NetworkFunction/azureTrafficCollectors@2021-09-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
@@ -14,7 +15,8 @@
 * **type**: 'Microsoft.NetworkFunction/azureTrafficCollectors' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetworkFunction/azureTrafficCollectors/collectorPolicies@2021-09-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.

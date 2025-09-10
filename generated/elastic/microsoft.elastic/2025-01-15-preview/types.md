@@ -1,7 +1,8 @@
 # Microsoft.Elastic @ 2025-01-15-preview
 
 ## Resource Microsoft.Elastic/monitors@2025-01-15-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-01-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -16,7 +17,8 @@
 * **type**: 'Microsoft.Elastic/monitors' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Elastic/monitors/monitoredSubscriptions@2025-01-15-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-01-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -25,7 +27,8 @@
 * **type**: 'Microsoft.Elastic/monitors/monitoredSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Elastic/monitors/openAIIntegrations@2025-01-15-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-01-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -34,7 +37,8 @@
 * **type**: 'Microsoft.Elastic/monitors/openAIIntegrations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Elastic/monitors/tagRules@2025-01-15-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-01-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

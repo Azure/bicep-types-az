@@ -1,7 +1,8 @@
 # Microsoft.Network @ 2017-09-01-preview
 
-## Resource Microsoft.Network/trafficmanagerprofiles/heatMaps@2017-09-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Network/trafficmanagerprofiles/heatMaps@2017-09-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2017-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

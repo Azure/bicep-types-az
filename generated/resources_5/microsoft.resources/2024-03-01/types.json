@@ -102,11 +102,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Resources/resourceGroups@2024-03-01",
-    "scopeType": 4,
     "body": {
       "$ref": "#/4"
     },
-    "flags": 0
+    "readableScopes": 4,
+    "writableScopes": 4
   },
   {
     "$type": "StringLiteralType",
@@ -185,10 +185,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Resources/tags@2024-03-01",
-    "scopeType": 0,
     "body": {
       "$ref": "#/11"
     },
-    "flags": 0
+    "readableScopes": 15,
+    "writableScopes": 15
   }
 ]

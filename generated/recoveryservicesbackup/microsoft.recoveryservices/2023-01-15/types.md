@@ -1,7 +1,8 @@
 # Microsoft.RecoveryServices @ 2023-01-15
 
-## Resource Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems/recoveryPoints@2023-01-15 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems/recoveryPoints@2023-01-15
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-01-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): Optional ETag.
@@ -13,7 +14,8 @@
 * **type**: 'Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems/recoveryPoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RecoveryServices/vaults/backupstorageconfig@2023-01-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-01-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: Optional ETag.

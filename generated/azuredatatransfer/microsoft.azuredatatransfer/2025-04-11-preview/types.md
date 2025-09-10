@@ -1,7 +1,8 @@
 # Microsoft.AzureDataTransfer @ 2025-04-11-preview
 
 ## Resource Microsoft.AzureDataTransfer/connections@2025-04-11-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-04-11-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -14,7 +15,8 @@
 * **type**: 'Microsoft.AzureDataTransfer/connections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AzureDataTransfer/connections/flows@2025-04-11-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-04-11-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -28,7 +30,8 @@
 * **type**: 'Microsoft.AzureDataTransfer/connections/flows' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AzureDataTransfer/pipelines@2025-04-11-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-04-11-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

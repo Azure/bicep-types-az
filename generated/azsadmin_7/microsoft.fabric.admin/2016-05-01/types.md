@@ -1,7 +1,8 @@
 # Microsoft.Fabric.Admin @ 2016-05-01
 
-## Resource Microsoft.Fabric.Admin/fabricLocations@2016-05-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Fabric.Admin/fabricLocations@2016-05-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2016-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -11,8 +12,9 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): List of key-value pairs.
 * **type**: 'Microsoft.Fabric.Admin/fabricLocations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Fabric.Admin/fabricLocations/applicationOperationResults@2016-05-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Fabric.Admin/fabricLocations/applicationOperationResults@2016-05-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2016-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -22,8 +24,9 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): List of key-value pairs.
 * **type**: 'Microsoft.Fabric.Admin/fabricLocations/applicationOperationResults' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Fabric.Admin/fabricLocations/computeOperationResults@2016-05-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Fabric.Admin/fabricLocations/computeOperationResults@2016-05-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2016-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -33,8 +36,9 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): List of key-value pairs.
 * **type**: 'Microsoft.Fabric.Admin/fabricLocations/computeOperationResults' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Fabric.Admin/fabricLocations/edgeGatewayPools@2016-05-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Fabric.Admin/fabricLocations/edgeGatewayPools@2016-05-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2016-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -44,8 +48,9 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): List of key-value pairs.
 * **type**: 'Microsoft.Fabric.Admin/fabricLocations/edgeGatewayPools' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Fabric.Admin/fabricLocations/edgeGateways@2016-05-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Fabric.Admin/fabricLocations/edgeGateways@2016-05-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2016-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -55,8 +60,9 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): List of key-value pairs.
 * **type**: 'Microsoft.Fabric.Admin/fabricLocations/edgeGateways' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Fabric.Admin/fabricLocations/fileShares@2016-05-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Fabric.Admin/fabricLocations/fileShares@2016-05-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2016-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -66,8 +72,9 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): List of key-value pairs.
 * **type**: 'Microsoft.Fabric.Admin/fabricLocations/fileShares' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Fabric.Admin/fabricLocations/infraRoleInstances@2016-05-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Fabric.Admin/fabricLocations/infraRoleInstances@2016-05-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2016-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -77,8 +84,9 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): List of key-value pairs.
 * **type**: 'Microsoft.Fabric.Admin/fabricLocations/infraRoleInstances' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Fabric.Admin/fabricLocations/infraRoles@2016-05-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Fabric.Admin/fabricLocations/infraRoles@2016-05-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2016-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -89,7 +97,8 @@
 * **type**: 'Microsoft.Fabric.Admin/fabricLocations/infraRoles' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Fabric.Admin/fabricLocations/ipPools@2016-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -99,8 +108,9 @@
 * **tags**: [ResourceTags](#resourcetags): List of key-value pairs.
 * **type**: 'Microsoft.Fabric.Admin/fabricLocations/ipPools' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Fabric.Admin/fabricLocations/logicalNetworks@2016-05-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Fabric.Admin/fabricLocations/logicalNetworks@2016-05-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2016-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -110,8 +120,9 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): List of key-value pairs.
 * **type**: 'Microsoft.Fabric.Admin/fabricLocations/logicalNetworks' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Fabric.Admin/fabricLocations/logicalNetworks/logicalSubnets@2016-05-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Fabric.Admin/fabricLocations/logicalNetworks/logicalSubnets@2016-05-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2016-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -121,8 +132,9 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): List of key-value pairs.
 * **type**: 'Microsoft.Fabric.Admin/fabricLocations/logicalNetworks/logicalSubnets' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Fabric.Admin/fabricLocations/macAddressPools@2016-05-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Fabric.Admin/fabricLocations/macAddressPools@2016-05-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2016-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -132,8 +144,9 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): List of key-value pairs.
 * **type**: 'Microsoft.Fabric.Admin/fabricLocations/macAddressPools' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Fabric.Admin/fabricLocations/networkOperationResults@2016-05-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Fabric.Admin/fabricLocations/networkOperationResults@2016-05-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2016-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -143,8 +156,9 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): List of key-value pairs.
 * **type**: 'Microsoft.Fabric.Admin/fabricLocations/networkOperationResults' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Fabric.Admin/fabricLocations/scaleUnitNodes@2016-05-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Fabric.Admin/fabricLocations/scaleUnitNodes@2016-05-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2016-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -154,8 +168,9 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): List of key-value pairs.
 * **type**: 'Microsoft.Fabric.Admin/fabricLocations/scaleUnitNodes' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Fabric.Admin/fabricLocations/scaleUnits@2016-05-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Fabric.Admin/fabricLocations/scaleUnits@2016-05-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2016-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -165,8 +180,9 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): List of key-value pairs.
 * **type**: 'Microsoft.Fabric.Admin/fabricLocations/scaleUnits' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Fabric.Admin/fabricLocations/slbMuxInstances@2016-05-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Fabric.Admin/fabricLocations/slbMuxInstances@2016-05-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2016-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -176,8 +192,9 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): List of key-value pairs.
 * **type**: 'Microsoft.Fabric.Admin/fabricLocations/slbMuxInstances' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Fabric.Admin/fabricLocations/storageOperationResults@2016-05-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Fabric.Admin/fabricLocations/storageOperationResults@2016-05-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2016-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -187,8 +204,9 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): List of key-value pairs.
 * **type**: 'Microsoft.Fabric.Admin/fabricLocations/storageOperationResults' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Fabric.Admin/fabricLocations/storageSubSystems@2016-05-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Fabric.Admin/fabricLocations/storageSubSystems@2016-05-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2016-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -198,8 +216,9 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): List of key-value pairs.
 * **type**: 'Microsoft.Fabric.Admin/fabricLocations/storageSubSystems' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Fabric.Admin/fabricLocations/storageSubSystems/storagePools@2016-05-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Fabric.Admin/fabricLocations/storageSubSystems/storagePools@2016-05-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2016-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -209,8 +228,9 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): List of key-value pairs.
 * **type**: 'Microsoft.Fabric.Admin/fabricLocations/storageSubSystems/storagePools' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Fabric.Admin/fabricLocations/storageSubSystems/storagePools/volumes@2016-05-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Fabric.Admin/fabricLocations/storageSubSystems/storagePools/volumes@2016-05-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2016-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

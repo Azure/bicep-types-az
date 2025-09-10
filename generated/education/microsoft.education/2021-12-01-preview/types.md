@@ -1,7 +1,8 @@
 # Microsoft.Education @ 2021-12-01-preview
 
-## Resource Microsoft.Education/grants@2021-12-01-preview (ReadOnly)
-* **Valid Scope(s)**: Extension
+## Resource Microsoft.Education/grants@2021-12-01-preview
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -11,7 +12,8 @@
 * **type**: 'Microsoft.Education/grants' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Education/labs@2021-12-01-preview
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2021-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -20,8 +22,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Education/labs' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Education/labs/joinRequests@2021-12-01-preview (ReadOnly)
-* **Valid Scope(s)**: Extension
+## Resource Microsoft.Education/labs/joinRequests@2021-12-01-preview
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -31,7 +34,8 @@
 * **type**: 'Microsoft.Education/labs/joinRequests' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Education/labs/students@2021-12-01-preview
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2021-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -40,8 +44,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Education/labs/students' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Education/studentLabs@2021-12-01-preview (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Education/studentLabs@2021-12-01-preview
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

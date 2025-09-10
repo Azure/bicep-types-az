@@ -170,12 +170,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Authorization/policyDefinitions@2016-12-01",
-    "scopeType": 7,
-    "readOnlyScopes": 1,
     "body": {
       "$ref": "#/3"
     },
-    "flags": 0
+    "readableScopes": 7,
+    "writableScopes": 6
   },
   {
     "$type": "StringLiteralType",
@@ -270,10 +269,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Authorization/policyAssignments@2016-12-01",
-    "scopeType": 0,
     "body": {
       "$ref": "#/17"
     },
-    "flags": 0
+    "readableScopes": 15,
+    "writableScopes": 15
   }
 ]

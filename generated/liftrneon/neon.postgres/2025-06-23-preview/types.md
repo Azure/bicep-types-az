@@ -1,7 +1,8 @@
 # Neon.Postgres @ 2025-06-23-preview
 
 ## Resource Neon.Postgres/organizations@2025-06-23-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-06-23-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -13,7 +14,8 @@
 * **type**: 'Neon.Postgres/organizations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Neon.Postgres/organizations/projects@2025-06-23-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-06-23-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -23,7 +25,8 @@
 * **type**: 'Neon.Postgres/organizations/projects' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Neon.Postgres/organizations/projects/branches@2025-06-23-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-06-23-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -33,7 +36,8 @@
 * **type**: 'Neon.Postgres/organizations/projects/branches' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Neon.Postgres/organizations/projects/branches/endpoints@2025-06-23-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: None
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-06-23-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -43,7 +47,8 @@
 * **type**: 'Neon.Postgres/organizations/projects/branches/endpoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Neon.Postgres/organizations/projects/branches/neonDatabases@2025-06-23-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: None
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-06-23-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -53,7 +58,8 @@
 * **type**: 'Neon.Postgres/organizations/projects/branches/neonDatabases' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Neon.Postgres/organizations/projects/branches/neonRoles@2025-06-23-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: None
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-06-23-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

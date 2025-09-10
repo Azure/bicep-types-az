@@ -1,7 +1,8 @@
 # Microsoft.AzureStack @ 2016-01-01
 
 ## Resource Microsoft.AzureStack/registrations@2016-01-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The entity tag used for optimistic concurrency when modifying the resource.
@@ -12,8 +13,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags) (ReadOnly): Resource tags.
 * **type**: 'Microsoft.AzureStack/registrations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AzureStack/registrations/products@2016-01-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.AzureStack/registrations/products@2016-01-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2016-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

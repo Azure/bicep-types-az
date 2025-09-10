@@ -1274,10 +1274,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.VirtualMachineImages/imageTemplates@2021-10-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   }
 ]

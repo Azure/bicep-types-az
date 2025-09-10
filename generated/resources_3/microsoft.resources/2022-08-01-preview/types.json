@@ -934,10 +934,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Resources/deploymentStacks@2022-08-01-preview",
-    "scopeType": 14,
     "body": {
       "$ref": "#/4"
     },
-    "flags": 0
+    "readableScopes": 14,
+    "writableScopes": 14
   }
 ]

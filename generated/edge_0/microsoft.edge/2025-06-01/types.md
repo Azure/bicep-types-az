@@ -1,7 +1,8 @@
 # Microsoft.Edge @ 2025-06-01
 
 ## Resource Microsoft.Edge/configTemplates@2025-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
@@ -13,8 +14,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Edge/configTemplates' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Edge/configTemplates/versions@2025-06-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Edge/configTemplates/versions@2025-06-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2025-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
@@ -25,7 +27,8 @@
 * **type**: 'Microsoft.Edge/configTemplates/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Edge/contexts@2025-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -37,7 +40,8 @@
 * **type**: 'Microsoft.Edge/contexts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Edge/contexts/siteReferences@2025-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -47,7 +51,8 @@
 * **type**: 'Microsoft.Edge/contexts/siteReferences' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Edge/contexts/workflows@2025-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
@@ -59,7 +64,8 @@
 * **type**: 'Microsoft.Edge/contexts/workflows' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Edge/contexts/workflows/versions@2025-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
@@ -71,7 +77,8 @@
 * **type**: 'Microsoft.Edge/contexts/workflows/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Edge/contexts/workflows/versions/executions@2025-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
@@ -83,7 +90,8 @@
 * **type**: 'Microsoft.Edge/contexts/workflows/versions/executions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Edge/diagnostics@2025-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
@@ -96,8 +104,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Edge/diagnostics' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Edge/jobs@2025-06-01 (ReadOnly)
-* **Valid Scope(s)**: Unknown
+## Resource Microsoft.Edge/jobs@2025-06-01
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2025-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
@@ -107,8 +116,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Edge/jobs' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Edge/schemaReferences@2025-06-01 (ReadOnly)
-* **Valid Scope(s)**: Unknown
+## Resource Microsoft.Edge/schemaReferences@2025-06-01
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2025-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
@@ -119,7 +129,8 @@
 * **type**: 'Microsoft.Edge/schemaReferences' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Edge/schemas@2025-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
@@ -132,7 +143,8 @@
 * **type**: 'Microsoft.Edge/schemas' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Edge/schemas/dynamicSchemas@2025-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
@@ -143,7 +155,8 @@
 * **type**: 'Microsoft.Edge/schemas/dynamicSchemas' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Edge/schemas/dynamicSchemas/versions@2025-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
@@ -154,7 +167,8 @@
 * **type**: 'Microsoft.Edge/schemas/dynamicSchemas/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Edge/schemas/versions@2025-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
@@ -165,7 +179,8 @@
 * **type**: 'Microsoft.Edge/schemas/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Edge/solutionTemplates@2025-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
@@ -177,8 +192,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.Edge/solutionTemplates' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Edge/solutionTemplates/versions@2025-06-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Edge/solutionTemplates/versions@2025-06-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2025-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
@@ -189,7 +205,8 @@
 * **type**: 'Microsoft.Edge/solutionTemplates/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Edge/targets@2025-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
@@ -203,7 +220,8 @@
 * **type**: 'Microsoft.Edge/targets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Edge/targets/solutions@2025-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
@@ -215,7 +233,8 @@
 * **type**: 'Microsoft.Edge/targets/solutions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Edge/targets/solutions/instances@2025-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
@@ -226,8 +245,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Edge/targets/solutions/instances' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Edge/targets/solutions/instances/histories@2025-06-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Edge/targets/solutions/instances/histories@2025-06-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2025-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
@@ -239,7 +259,8 @@
 * **type**: 'Microsoft.Edge/targets/solutions/instances/histories' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Edge/targets/solutions/versions@2025-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.

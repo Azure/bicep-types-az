@@ -1,7 +1,8 @@
 # Microsoft.Billing @ 2017-02-27-preview
 
-## Resource Microsoft.Billing/invoices@2017-02-27-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.Billing/invoices@2017-02-27-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2017-02-27-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

@@ -1,7 +1,8 @@
 # Microsoft.EdgeZones @ 2024-04-01-preview
 
-## Resource Microsoft.EdgeZones/extendedZones@2024-04-01-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.EdgeZones/extendedZones@2024-04-01-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

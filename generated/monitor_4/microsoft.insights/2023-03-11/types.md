@@ -1,7 +1,8 @@
 # Microsoft.Insights @ 2023-03-11
 
 ## Resource Microsoft.Insights/dataCollectionEndpoints@2023-03-11
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-03-11' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource entity tag (ETag).
@@ -16,7 +17,8 @@
 * **type**: 'Microsoft.Insights/dataCollectionEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Insights/dataCollectionRuleAssociations@2023-03-11
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2023-03-11' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource entity tag (ETag).
@@ -27,7 +29,8 @@
 * **type**: 'Microsoft.Insights/dataCollectionRuleAssociations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Insights/dataCollectionRules@2023-03-11
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-03-11' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource entity tag (ETag).

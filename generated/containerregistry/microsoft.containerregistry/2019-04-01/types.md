@@ -1,7 +1,8 @@
 # Microsoft.ContainerRegistry @ 2019-04-01
 
-## Resource Microsoft.ContainerRegistry/registries/runs@2019-04-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.ContainerRegistry/registries/runs@2019-04-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -10,7 +11,8 @@
 * **type**: 'Microsoft.ContainerRegistry/registries/runs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ContainerRegistry/registries/tasks@2019-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

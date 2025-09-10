@@ -1,7 +1,8 @@
 # Microsoft.Mission @ 2024-12-01-preview
 
 ## Resource Microsoft.Mission/approvals@2024-12-01-preview
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -11,7 +12,8 @@
 * **type**: 'Microsoft.Mission/approvals' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Mission/communities@2024-12-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -24,7 +26,8 @@
 * **type**: 'Microsoft.Mission/communities' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Mission/communities/communityEndpoints@2024-12-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -36,7 +39,8 @@
 * **type**: 'Microsoft.Mission/communities/communityEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Mission/communities/transitHubs@2024-12-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -48,7 +52,8 @@
 * **type**: 'Microsoft.Mission/communities/transitHubs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Mission/enclaveConnections@2024-12-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -60,7 +65,8 @@
 * **type**: 'Microsoft.Mission/enclaveConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Mission/virtualEnclaves@2024-12-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -73,7 +79,8 @@
 * **type**: 'Microsoft.Mission/virtualEnclaves' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Mission/virtualEnclaves/enclaveEndpoints@2024-12-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -85,7 +92,8 @@
 * **type**: 'Microsoft.Mission/virtualEnclaves/enclaveEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Mission/virtualEnclaves/workloads@2024-12-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

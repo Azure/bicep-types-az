@@ -1,7 +1,8 @@
 # Microsoft.VirtualMachineImages @ 2022-02-14
 
 ## Resource Microsoft.VirtualMachineImages/imageTemplates@2022-02-14
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-14' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -13,8 +14,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.VirtualMachineImages/imageTemplates' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.VirtualMachineImages/imageTemplates/runOutputs@2022-02-14 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.VirtualMachineImages/imageTemplates/runOutputs@2022-02-14
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2022-02-14' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

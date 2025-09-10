@@ -1,7 +1,8 @@
 # Microsoft.HDInsight @ 2024-08-01-preview
 
 ## Resource Microsoft.HDInsight/clusters@2024-08-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The ETag for the resource
@@ -16,7 +17,8 @@
 * **zones**: string[]: The availability zones.
 
 ## Resource Microsoft.HDInsight/clusters/applications@2024-08-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The ETag for the application
@@ -28,7 +30,8 @@
 * **type**: 'Microsoft.HDInsight/clusters/applications' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HDInsight/clusters/privateEndpointConnections@2024-08-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -37,8 +40,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.HDInsight/clusters/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.HDInsight/clusters/privateLinkResources@2024-08-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.HDInsight/clusters/privateLinkResources@2024-08-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

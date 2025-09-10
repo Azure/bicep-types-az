@@ -1,7 +1,8 @@
 # Microsoft.StandbyPool @ 2023-12-01-preview
 
 ## Resource Microsoft.StandbyPool/standbyContainerGroupPools@2023-12-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -13,7 +14,8 @@
 * **type**: 'Microsoft.StandbyPool/standbyContainerGroupPools' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StandbyPool/standbyVirtualMachinePools@2023-12-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -24,8 +26,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.StandbyPool/standbyVirtualMachinePools' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.StandbyPool/standbyVirtualMachinePools/standbyVirtualMachines@2023-12-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.StandbyPool/standbyVirtualMachinePools/standbyVirtualMachines@2023-12-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

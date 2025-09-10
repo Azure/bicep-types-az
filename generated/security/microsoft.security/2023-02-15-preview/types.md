@@ -1,7 +1,8 @@
 # Microsoft.Security @ 2023-02-15-preview
 
 ## Resource Microsoft.Security/sensitivitySettings@2023-02-15-preview
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2023-02-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

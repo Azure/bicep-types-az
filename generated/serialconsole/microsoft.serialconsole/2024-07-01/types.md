@@ -1,7 +1,8 @@
 # Microsoft.SerialConsole @ 2024-07-01
 
 ## Resource Microsoft.SerialConsole/serialPorts@2024-07-01
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2024-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

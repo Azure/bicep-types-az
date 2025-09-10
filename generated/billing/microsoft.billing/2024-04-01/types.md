@@ -1,7 +1,8 @@
 # Microsoft.Billing @ 2024-04-01
 
-## Resource Microsoft.Billing/billingAccounts@2024-04-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts@2024-04-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -11,8 +12,9 @@
 * **tags**: [ProxyResourceWithTags](#proxyresourcewithtags) (ReadOnly): Dictionary of metadata associated with the resource. It may not be populated for all resource types. Maximum key/value length supported of 256 characters. Keys/value should not empty value nor null. Keys can not contain < > % & \ ? /
 * **type**: 'Microsoft.Billing/billingAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/agreements@2024-04-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/agreements@2024-04-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -23,7 +25,8 @@
 * **type**: 'Microsoft.Billing/billingAccounts/agreements' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Billing/billingAccounts/associatedTenants@2024-04-01
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -33,8 +36,9 @@
 * **tags**: [ProxyResourceWithTags](#proxyresourcewithtags): Dictionary of metadata associated with the resource. It may not be populated for all resource types. Maximum key/value length supported of 256 characters. Keys/value should not empty value nor null. Keys can not contain < > % & \ ? /
 * **type**: 'Microsoft.Billing/billingAccounts/associatedTenants' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/availableBalance@2024-04-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/availableBalance@2024-04-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -45,7 +49,8 @@
 * **type**: 'Microsoft.Billing/billingAccounts/availableBalance' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Billing/billingAccounts/billingProfiles@2024-04-01
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -55,8 +60,9 @@
 * **tags**: [ProxyResourceWithTags](#proxyresourcewithtags): Dictionary of metadata associated with the resource. It may not be populated for all resource types. Maximum key/value length supported of 256 characters. Keys/value should not empty value nor null. Keys can not contain < > % & \ ? /
 * **type**: 'Microsoft.Billing/billingAccounts/billingProfiles' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/billingProfiles/availableBalance@2024-04-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/billingProfiles/availableBalance@2024-04-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -66,8 +72,9 @@
 * **tags**: [ProxyResourceWithTags](#proxyresourcewithtags) (ReadOnly): Dictionary of metadata associated with the resource. It may not be populated for all resource types. Maximum key/value length supported of 256 characters. Keys/value should not empty value nor null. Keys can not contain < > % & \ ? /
 * **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/availableBalance' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/billingProfiles/billingRoleAssignments@2024-04-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/billingProfiles/billingRoleAssignments@2024-04-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -77,8 +84,9 @@
 * **tags**: [ProxyResourceWithTags](#proxyresourcewithtags) (ReadOnly): Dictionary of metadata associated with the resource. It may not be populated for all resource types. Maximum key/value length supported of 256 characters. Keys/value should not empty value nor null. Keys can not contain < > % & \ ? /
 * **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/billingRoleAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/billingProfiles/billingRoleDefinitions@2024-04-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/billingProfiles/billingRoleDefinitions@2024-04-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -88,8 +96,9 @@
 * **tags**: [ProxyResourceWithTags](#proxyresourcewithtags) (ReadOnly): Dictionary of metadata associated with the resource. It may not be populated for all resource types. Maximum key/value length supported of 256 characters. Keys/value should not empty value nor null. Keys can not contain < > % & \ ? /
 * **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/billingRoleDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/billingProfiles/billingSubscriptions@2024-04-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/billingProfiles/billingSubscriptions@2024-04-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -99,8 +108,9 @@
 * **tags**: [ProxyResourceWithTags](#proxyresourcewithtags) (ReadOnly): Dictionary of metadata associated with the resource. It may not be populated for all resource types. Maximum key/value length supported of 256 characters. Keys/value should not empty value nor null. Keys can not contain < > % & \ ? /
 * **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/billingSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/billingProfiles/customers@2024-04-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/billingProfiles/customers@2024-04-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -110,8 +120,9 @@
 * **tags**: [ProxyResourceWithTags](#proxyresourcewithtags) (ReadOnly): Dictionary of metadata associated with the resource. It may not be populated for all resource types. Maximum key/value length supported of 256 characters. Keys/value should not empty value nor null. Keys can not contain < > % & \ ? /
 * **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/customers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/billingProfiles/customers/billingRoleAssignments@2024-04-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/billingProfiles/customers/billingRoleAssignments@2024-04-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -121,8 +132,9 @@
 * **tags**: [ProxyResourceWithTags](#proxyresourcewithtags) (ReadOnly): Dictionary of metadata associated with the resource. It may not be populated for all resource types. Maximum key/value length supported of 256 characters. Keys/value should not empty value nor null. Keys can not contain < > % & \ ? /
 * **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/customers/billingRoleAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/billingProfiles/customers/billingRoleDefinitions@2024-04-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/billingProfiles/customers/billingRoleDefinitions@2024-04-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -133,7 +145,8 @@
 * **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/customers/billingRoleDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Billing/billingAccounts/billingProfiles/customers/policies@2024-04-01
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -144,7 +157,8 @@
 * **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/customers/policies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Billing/billingAccounts/billingProfiles/customers/transfers@2024-04-01
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -155,7 +169,8 @@
 * **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/customers/transfers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections@2024-04-01
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -165,8 +180,9 @@
 * **tags**: [ProxyResourceWithTags](#proxyresourcewithtags): Dictionary of metadata associated with the resource. It may not be populated for all resource types. Maximum key/value length supported of 256 characters. Keys/value should not empty value nor null. Keys can not contain < > % & \ ? /
 * **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/billingRoleAssignments@2024-04-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/billingRoleAssignments@2024-04-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -176,8 +192,9 @@
 * **tags**: [ProxyResourceWithTags](#proxyresourcewithtags) (ReadOnly): Dictionary of metadata associated with the resource. It may not be populated for all resource types. Maximum key/value length supported of 256 characters. Keys/value should not empty value nor null. Keys can not contain < > % & \ ? /
 * **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/billingRoleAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/billingRoleDefinitions@2024-04-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/billingRoleDefinitions@2024-04-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -188,7 +205,8 @@
 * **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/billingRoleDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/transfers@2024-04-01
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -198,8 +216,9 @@
 * **tags**: [ProxyResourceWithTags](#proxyresourcewithtags) (ReadOnly): Dictionary of metadata associated with the resource. It may not be populated for all resource types. Maximum key/value length supported of 256 characters. Keys/value should not empty value nor null. Keys can not contain < > % & \ ? /
 * **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/invoiceSections/transfers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/billingProfiles/paymentMethodLinks@2024-04-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/billingProfiles/paymentMethodLinks@2024-04-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -210,7 +229,8 @@
 * **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/paymentMethodLinks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Billing/billingAccounts/billingProfiles/policies@2024-04-01
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -221,7 +241,8 @@
 * **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/policies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Billing/billingAccounts/billingRoleAssignments@2024-04-01
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -231,8 +252,9 @@
 * **tags**: [ProxyResourceWithTags](#proxyresourcewithtags): Dictionary of metadata associated with the resource. It may not be populated for all resource types. Maximum key/value length supported of 256 characters. Keys/value should not empty value nor null. Keys can not contain < > % & \ ? /
 * **type**: 'Microsoft.Billing/billingAccounts/billingRoleAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/billingRoleDefinitions@2024-04-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/billingRoleDefinitions@2024-04-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -243,7 +265,8 @@
 * **type**: 'Microsoft.Billing/billingAccounts/billingRoleDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Billing/billingAccounts/billingSubscriptionAliases@2024-04-01
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -253,8 +276,9 @@
 * **tags**: [ProxyResourceWithTags](#proxyresourcewithtags): Dictionary of metadata associated with the resource. It may not be populated for all resource types. Maximum key/value length supported of 256 characters. Keys/value should not empty value nor null. Keys can not contain < > % & \ ? /
 * **type**: 'Microsoft.Billing/billingAccounts/billingSubscriptionAliases' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/billingSubscriptions@2024-04-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/billingSubscriptions@2024-04-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -264,8 +288,9 @@
 * **tags**: [ProxyResourceWithTags](#proxyresourcewithtags) (ReadOnly): Dictionary of metadata associated with the resource. It may not be populated for all resource types. Maximum key/value length supported of 256 characters. Keys/value should not empty value nor null. Keys can not contain < > % & \ ? /
 * **type**: 'Microsoft.Billing/billingAccounts/billingSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/billingSubscriptions/invoices@2024-04-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/billingSubscriptions/invoices@2024-04-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -275,8 +300,9 @@
 * **tags**: [ProxyResourceWithTags](#proxyresourcewithtags) (ReadOnly): Dictionary of metadata associated with the resource. It may not be populated for all resource types. Maximum key/value length supported of 256 characters. Keys/value should not empty value nor null. Keys can not contain < > % & \ ? /
 * **type**: 'Microsoft.Billing/billingAccounts/billingSubscriptions/invoices' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/customers@2024-04-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/customers@2024-04-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -287,7 +313,8 @@
 * **type**: 'Microsoft.Billing/billingAccounts/customers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Billing/billingAccounts/customers/policies@2024-04-01
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -297,8 +324,9 @@
 * **tags**: [ProxyResourceWithTags](#proxyresourcewithtags): Dictionary of metadata associated with the resource. It may not be populated for all resource types. Maximum key/value length supported of 256 characters. Keys/value should not empty value nor null. Keys can not contain < > % & \ ? /
 * **type**: 'Microsoft.Billing/billingAccounts/customers/policies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/departments@2024-04-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/departments@2024-04-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -309,7 +337,8 @@
 * **type**: 'Microsoft.Billing/billingAccounts/departments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Billing/billingAccounts/departments/billingRoleAssignments@2024-04-01
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -319,8 +348,9 @@
 * **tags**: [ProxyResourceWithTags](#proxyresourcewithtags): Dictionary of metadata associated with the resource. It may not be populated for all resource types. Maximum key/value length supported of 256 characters. Keys/value should not empty value nor null. Keys can not contain < > % & \ ? /
 * **type**: 'Microsoft.Billing/billingAccounts/departments/billingRoleAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/departments/billingRoleDefinitions@2024-04-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/departments/billingRoleDefinitions@2024-04-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -330,8 +360,9 @@
 * **tags**: [ProxyResourceWithTags](#proxyresourcewithtags) (ReadOnly): Dictionary of metadata associated with the resource. It may not be populated for all resource types. Maximum key/value length supported of 256 characters. Keys/value should not empty value nor null. Keys can not contain < > % & \ ? /
 * **type**: 'Microsoft.Billing/billingAccounts/departments/billingRoleDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/departments/enrollmentAccounts@2024-04-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/departments/enrollmentAccounts@2024-04-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -341,8 +372,9 @@
 * **tags**: [ProxyResourceWithTags](#proxyresourcewithtags) (ReadOnly): Dictionary of metadata associated with the resource. It may not be populated for all resource types. Maximum key/value length supported of 256 characters. Keys/value should not empty value nor null. Keys can not contain < > % & \ ? /
 * **type**: 'Microsoft.Billing/billingAccounts/departments/enrollmentAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/enrollmentAccounts@2024-04-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/enrollmentAccounts@2024-04-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -353,7 +385,8 @@
 * **type**: 'Microsoft.Billing/billingAccounts/enrollmentAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Billing/billingAccounts/enrollmentAccounts/billingRoleAssignments@2024-04-01
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -363,8 +396,9 @@
 * **tags**: [ProxyResourceWithTags](#proxyresourcewithtags): Dictionary of metadata associated with the resource. It may not be populated for all resource types. Maximum key/value length supported of 256 characters. Keys/value should not empty value nor null. Keys can not contain < > % & \ ? /
 * **type**: 'Microsoft.Billing/billingAccounts/enrollmentAccounts/billingRoleAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/enrollmentAccounts/billingRoleDefinitions@2024-04-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/enrollmentAccounts/billingRoleDefinitions@2024-04-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -374,8 +408,9 @@
 * **tags**: [ProxyResourceWithTags](#proxyresourcewithtags) (ReadOnly): Dictionary of metadata associated with the resource. It may not be populated for all resource types. Maximum key/value length supported of 256 characters. Keys/value should not empty value nor null. Keys can not contain < > % & \ ? /
 * **type**: 'Microsoft.Billing/billingAccounts/enrollmentAccounts/billingRoleDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/invoices@2024-04-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/invoices@2024-04-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -385,8 +420,9 @@
 * **tags**: [ProxyResourceWithTags](#proxyresourcewithtags) (ReadOnly): Dictionary of metadata associated with the resource. It may not be populated for all resource types. Maximum key/value length supported of 256 characters. Keys/value should not empty value nor null. Keys can not contain < > % & \ ? /
 * **type**: 'Microsoft.Billing/billingAccounts/invoices' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/paymentMethods@2024-04-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/paymentMethods@2024-04-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -397,7 +433,8 @@
 * **type**: 'Microsoft.Billing/billingAccounts/paymentMethods' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Billing/billingAccounts/policies@2024-04-01
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -407,8 +444,9 @@
 * **tags**: [ProxyResourceWithTags](#proxyresourcewithtags): Dictionary of metadata associated with the resource. It may not be populated for all resource types. Maximum key/value length supported of 256 characters. Keys/value should not empty value nor null. Keys can not contain < > % & \ ? /
 * **type**: 'Microsoft.Billing/billingAccounts/policies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/products@2024-04-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/products@2024-04-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -418,8 +456,9 @@
 * **tags**: [ProxyResourceWithTags](#proxyresourcewithtags) (ReadOnly): Dictionary of metadata associated with the resource. It may not be populated for all resource types. Maximum key/value length supported of 256 characters. Keys/value should not empty value nor null. Keys can not contain < > % & \ ? /
 * **type**: 'Microsoft.Billing/billingAccounts/products' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/reservationOrders@2024-04-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/reservationOrders@2024-04-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: int (ReadOnly)
@@ -430,8 +469,9 @@
 * **tags**: [Tags](#tags) (ReadOnly): Tags for this reservation
 * **type**: 'Microsoft.Billing/billingAccounts/reservationOrders' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/reservationOrders/reservations@2024-04-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/reservationOrders/reservations@2024-04-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: int (ReadOnly)
@@ -444,8 +484,9 @@
 * **tags**: [Tags](#tags) (ReadOnly): Tags for this reservation
 * **type**: 'Microsoft.Billing/billingAccounts/reservationOrders/reservations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/savingsPlanOrders@2024-04-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/savingsPlanOrders@2024-04-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -456,8 +497,9 @@
 * **tags**: [ProxyResourceWithTags](#proxyresourcewithtags) (ReadOnly): Dictionary of metadata associated with the resource. It may not be populated for all resource types. Maximum key/value length supported of 256 characters. Keys/value should not empty value nor null. Keys can not contain < > % & \ ? /
 * **type**: 'Microsoft.Billing/billingAccounts/savingsPlanOrders' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/savingsPlanOrders/savingsPlans@2024-04-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/savingsPlanOrders/savingsPlans@2024-04-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -468,8 +510,9 @@
 * **tags**: [ProxyResourceWithTags](#proxyresourcewithtags) (ReadOnly): Dictionary of metadata associated with the resource. It may not be populated for all resource types. Maximum key/value length supported of 256 characters. Keys/value should not empty value nor null. Keys can not contain < > % & \ ? /
 * **type**: 'Microsoft.Billing/billingAccounts/savingsPlanOrders/savingsPlans' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingProperty@2024-04-01 (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.Billing/billingProperty@2024-04-01
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -480,7 +523,8 @@
 * **type**: 'Microsoft.Billing/billingProperty' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Billing/billingRequests@2024-04-01
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -490,8 +534,9 @@
 * **tags**: [ProxyResourceWithTags](#proxyresourcewithtags): Dictionary of metadata associated with the resource. It may not be populated for all resource types. Maximum key/value length supported of 256 characters. Keys/value should not empty value nor null. Keys can not contain < > % & \ ? /
 * **type**: 'Microsoft.Billing/billingRequests' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/paymentMethods@2024-04-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/paymentMethods@2024-04-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -501,8 +546,9 @@
 * **tags**: [ProxyResourceWithTags](#proxyresourcewithtags) (ReadOnly): Dictionary of metadata associated with the resource. It may not be populated for all resource types. Maximum key/value length supported of 256 characters. Keys/value should not empty value nor null. Keys can not contain < > % & \ ? /
 * **type**: 'Microsoft.Billing/paymentMethods' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/policies@2024-04-01 (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.Billing/policies@2024-04-01
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -512,8 +558,9 @@
 * **tags**: [ProxyResourceWithTags](#proxyresourcewithtags) (ReadOnly): Dictionary of metadata associated with the resource. It may not be populated for all resource types. Maximum key/value length supported of 256 characters. Keys/value should not empty value nor null. Keys can not contain < > % & \ ? /
 * **type**: 'Microsoft.Billing/policies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/transfers@2024-04-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/transfers@2024-04-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

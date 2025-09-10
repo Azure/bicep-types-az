@@ -213,11 +213,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Authorization/variables@2022-08-01-preview",
-    "scopeType": 6,
     "body": {
       "$ref": "#/3"
     },
-    "flags": 0
+    "readableScopes": 6,
+    "writableScopes": 6
   },
   {
     "$type": "StringLiteralType",
@@ -320,10 +320,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Authorization/variables/values@2022-08-01-preview",
-    "scopeType": 6,
     "body": {
       "$ref": "#/21"
     },
-    "flags": 0
+    "readableScopes": 6,
+    "writableScopes": 6
   }
 ]

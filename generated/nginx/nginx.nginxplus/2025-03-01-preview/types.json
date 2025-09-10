@@ -960,11 +960,11 @@
   {
     "$type": "ResourceType",
     "name": "NGINX.NGINXPLUS/nginxDeployments@2025-03-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1056,11 +1056,11 @@
   {
     "$type": "ResourceType",
     "name": "NGINX.NGINXPLUS/nginxDeployments/apiKeys@2025-03-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/75"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringType",
@@ -1278,11 +1278,11 @@
   {
     "$type": "ResourceType",
     "name": "NGINX.NGINXPLUS/nginxDeployments/certificates@2025-03-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/82"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1540,11 +1540,11 @@
   {
     "$type": "ResourceType",
     "name": "NGINX.NGINXPLUS/nginxDeployments/configurations@2025-03-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/98"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1774,11 +1774,11 @@
   {
     "$type": "ResourceType",
     "name": "NGINX.NGINXPLUS/nginxDeployments/wafPolicies@2025-03-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/119"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "ObjectType",

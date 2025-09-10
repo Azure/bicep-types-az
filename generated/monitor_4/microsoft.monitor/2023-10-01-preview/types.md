@@ -1,7 +1,8 @@
 # Microsoft.Monitor @ 2023-10-01-preview
 
 ## Resource Microsoft.Monitor/accounts@2023-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource entity tag (ETag)
@@ -14,7 +15,8 @@
 * **type**: 'Microsoft.Monitor/accounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Monitor/pipelineGroups@2023-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [AzureResourceManagerCommonTypesExtendedLocation](#azureresourcemanagercommontypesextendedlocation): The extended location for given pipeline group.

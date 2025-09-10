@@ -1,7 +1,8 @@
 # NGINX.NGINXPLUS @ 2025-03-01-preview
 
 ## Resource NGINX.NGINXPLUS/nginxDeployments@2025-03-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -15,7 +16,8 @@
 * **type**: 'NGINX.NGINXPLUS/nginxDeployments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource NGINX.NGINXPLUS/nginxDeployments/apiKeys@2025-03-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -25,7 +27,8 @@
 * **type**: 'NGINX.NGINXPLUS/nginxDeployments/apiKeys' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource NGINX.NGINXPLUS/nginxDeployments/certificates@2025-03-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -35,7 +38,8 @@
 * **type**: 'NGINX.NGINXPLUS/nginxDeployments/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource NGINX.NGINXPLUS/nginxDeployments/configurations@2025-03-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -45,7 +49,8 @@
 * **type**: 'NGINX.NGINXPLUS/nginxDeployments/configurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource NGINX.NGINXPLUS/nginxDeployments/wafPolicies@2025-03-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

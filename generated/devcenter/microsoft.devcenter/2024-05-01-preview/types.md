@@ -1,7 +1,8 @@
 # Microsoft.DevCenter @ 2024-05-01-preview
 
 ## Resource Microsoft.DevCenter/devcenters@2024-05-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -14,7 +15,8 @@
 * **type**: 'Microsoft.DevCenter/devcenters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevCenter/devcenters/attachednetworks@2024-05-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -24,7 +26,8 @@
 * **type**: 'Microsoft.DevCenter/devcenters/attachednetworks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevCenter/devcenters/catalogs@2024-05-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -33,8 +36,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DevCenter/devcenters/catalogs' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DevCenter/devcenters/catalogs/environmentDefinitions@2024-05-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.DevCenter/devcenters/catalogs/environmentDefinitions@2024-05-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -43,8 +47,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DevCenter/devcenters/catalogs/environmentDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DevCenter/devcenters/catalogs/tasks@2024-05-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.DevCenter/devcenters/catalogs/tasks@2024-05-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -54,7 +59,8 @@
 * **type**: 'Microsoft.DevCenter/devcenters/catalogs/tasks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevCenter/devcenters/devboxdefinitions@2024-05-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -66,7 +72,8 @@
 * **type**: 'Microsoft.DevCenter/devcenters/devboxdefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevCenter/devcenters/encryptionSets@2024-05-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -79,7 +86,8 @@
 * **type**: 'Microsoft.DevCenter/devcenters/encryptionSets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevCenter/devcenters/environmentTypes@2024-05-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -90,7 +98,8 @@
 * **type**: 'Microsoft.DevCenter/devcenters/environmentTypes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevCenter/devcenters/galleries@2024-05-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -99,8 +108,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DevCenter/devcenters/galleries' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DevCenter/devcenters/galleries/images@2024-05-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.DevCenter/devcenters/galleries/images@2024-05-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -109,8 +119,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DevCenter/devcenters/galleries/images' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DevCenter/devcenters/galleries/images/versions@2024-05-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.DevCenter/devcenters/galleries/images/versions@2024-05-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -120,7 +131,8 @@
 * **type**: 'Microsoft.DevCenter/devcenters/galleries/images/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevCenter/networkConnections@2024-05-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -131,8 +143,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DevCenter/networkConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DevCenter/networkConnections/healthChecks@2024-05-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.DevCenter/networkConnections/healthChecks@2024-05-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -142,7 +155,8 @@
 * **type**: 'Microsoft.DevCenter/networkConnections/healthChecks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevCenter/plans@2024-05-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -155,7 +169,8 @@
 * **type**: 'Microsoft.DevCenter/plans' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevCenter/plans/members@2024-05-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -166,7 +181,8 @@
 * **type**: 'Microsoft.DevCenter/plans/members' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevCenter/projects@2024-05-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -178,8 +194,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.DevCenter/projects' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DevCenter/projects/allowedEnvironmentTypes@2024-05-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.DevCenter/projects/allowedEnvironmentTypes@2024-05-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -188,8 +205,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DevCenter/projects/allowedEnvironmentTypes' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DevCenter/projects/attachednetworks@2024-05-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.DevCenter/projects/attachednetworks@2024-05-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -199,7 +217,8 @@
 * **type**: 'Microsoft.DevCenter/projects/attachednetworks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevCenter/projects/catalogs@2024-05-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -208,8 +227,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DevCenter/projects/catalogs' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DevCenter/projects/catalogs/environmentDefinitions@2024-05-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.DevCenter/projects/catalogs/environmentDefinitions@2024-05-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -218,8 +238,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.DevCenter/projects/catalogs/environmentDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DevCenter/projects/devboxdefinitions@2024-05-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.DevCenter/projects/devboxdefinitions@2024-05-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -231,7 +252,8 @@
 * **type**: 'Microsoft.DevCenter/projects/devboxdefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevCenter/projects/environmentTypes@2024-05-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -244,7 +266,8 @@
 * **type**: 'Microsoft.DevCenter/projects/environmentTypes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevCenter/projects/pools@2024-05-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -256,7 +279,8 @@
 * **type**: 'Microsoft.DevCenter/projects/pools' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DevCenter/projects/pools/schedules@2024-05-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

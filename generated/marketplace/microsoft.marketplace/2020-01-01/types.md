@@ -1,7 +1,8 @@
 # Microsoft.Marketplace @ 2020-01-01
 
 ## Resource Microsoft.Marketplace/privateStores@2020-01-01
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -10,7 +11,8 @@
 * **type**: 'Microsoft.Marketplace/privateStores' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Marketplace/privateStores/offers@2020-01-01
-* **Valid Scope(s)**: Tenant, Subscription
+* **Readable Scope(s)**: Tenant, Subscription
+* **Writable Scope(s)**: Tenant, Subscription
 ### Properties
 * **apiVersion**: '2020-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

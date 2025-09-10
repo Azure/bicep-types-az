@@ -164,11 +164,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.StorSimple/managers@2016-10-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -483,11 +483,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.StorSimple/managers/certificates@2016-10-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/16"
     },
-    "flags": 0
+    "readableScopes": 0,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -600,11 +600,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.StorSimple/managers/extendedInformation@2016-10-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/56"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -671,11 +671,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.StorSimple/managers/accessControlRecords@2016-10-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/61"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -811,11 +811,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.StorSimple/managers/devices/alertSettings@2016-10-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/67"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -912,11 +912,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.StorSimple/managers/devices/backupScheduleGroups@2016-10-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/79"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1036,11 +1036,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.StorSimple/managers/devices/chapSettings@2016-10-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/87"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1236,11 +1236,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.StorSimple/managers/devices/iscsiservers/disks@2016-10-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/97"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1328,11 +1328,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.StorSimple/managers/devices/fileservers@2016-10-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/115"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1519,11 +1519,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.StorSimple/managers/devices/fileservers/shares@2016-10-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/120"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1618,11 +1618,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.StorSimple/managers/devices/iscsiservers@2016-10-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/136"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1783,11 +1783,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.StorSimple/managers/storageAccountCredentials@2016-10-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/141"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1893,10 +1893,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.StorSimple/managers/storageDomains@2016-10-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/155"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   }
 ]

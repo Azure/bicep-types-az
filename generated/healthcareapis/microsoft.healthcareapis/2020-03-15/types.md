@@ -1,7 +1,8 @@
 # Microsoft.HealthcareApis @ 2020-03-15
 
 ## Resource Microsoft.HealthcareApis/services@2020-03-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-03-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: An etag associated with the resource, used for optimistic concurrency when editing it.

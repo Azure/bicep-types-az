@@ -2869,11 +2869,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SecurityInsights/alertRules@2024-10-01-preview",
-    "scopeType": 16,
     "body": {
       "$ref": "#/3"
     },
-    "flags": 0
+    "readableScopes": 16,
+    "writableScopes": 16
   },
   {
     "$type": "StringLiteralType",
@@ -2972,11 +2972,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SecurityInsights/alertRules/actions@2024-10-01-preview",
-    "scopeType": 16,
     "body": {
       "$ref": "#/281"
     },
-    "flags": 0
+    "readableScopes": 16,
+    "writableScopes": 16
   },
   {
     "$type": "StringLiteralType",
@@ -4687,11 +4687,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SecurityInsights/automationRules@2024-10-01-preview",
-    "scopeType": 16,
     "body": {
       "$ref": "#/287"
     },
-    "flags": 0
+    "readableScopes": 16,
+    "writableScopes": 16
   },
   {
     "$type": "StringLiteralType",
@@ -5294,11 +5294,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SecurityInsights/incidents@2024-10-01-preview",
-    "scopeType": 16,
     "body": {
       "$ref": "#/465"
     },
-    "flags": 0
+    "readableScopes": 16,
+    "writableScopes": 16
   },
   {
     "$type": "StringLiteralType",
@@ -5778,11 +5778,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SecurityInsights/bookmarks@2024-10-01-preview",
-    "scopeType": 16,
     "body": {
       "$ref": "#/514"
     },
-    "flags": 0
+    "readableScopes": 16,
+    "writableScopes": 16
   },
   {
     "$type": "StringType",
@@ -5890,11 +5890,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SecurityInsights/bookmarks/relations@2024-10-01-preview",
-    "scopeType": 16,
     "body": {
       "$ref": "#/552"
     },
-    "flags": 0
+    "readableScopes": 16,
+    "writableScopes": 16
   },
   {
     "$type": "StringType",
@@ -6149,11 +6149,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SecurityInsights/businessApplicationAgents@2024-10-01-preview",
-    "scopeType": 16,
     "body": {
       "$ref": "#/558"
     },
-    "flags": 0
+    "readableScopes": 16,
+    "writableScopes": 16
   },
   {
     "$type": "StringLiteralType",
@@ -6916,11 +6916,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SecurityInsights/businessApplicationAgents/systems@2024-10-01-preview",
-    "scopeType": 16,
     "body": {
       "$ref": "#/578"
     },
-    "flags": 0
+    "readableScopes": 16,
+    "writableScopes": 16
   },
   {
     "$type": "StringLiteralType",
@@ -7867,11 +7867,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SecurityInsights/contentPackages@2024-10-01-preview",
-    "scopeType": 16,
     "body": {
       "$ref": "#/654"
     },
-    "flags": 0
+    "readableScopes": 16,
+    "writableScopes": 16
   },
   {
     "$type": "StringLiteralType",
@@ -8372,11 +8372,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SecurityInsights/contentTemplates@2024-10-01-preview",
-    "scopeType": 16,
     "body": {
       "$ref": "#/743"
     },
-    "flags": 0
+    "readableScopes": 16,
+    "writableScopes": 16
   },
   {
     "$type": "StringType",
@@ -8980,11 +8980,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SecurityInsights/dataConnectorDefinitions@2024-10-01-preview",
-    "scopeType": 16,
     "body": {
       "$ref": "#/784"
     },
-    "flags": 0
+    "readableScopes": 16,
+    "writableScopes": 16
   },
   {
     "$type": "StringLiteralType",
@@ -13190,11 +13190,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SecurityInsights/dataConnectors@2024-10-01-preview",
-    "scopeType": 16,
     "body": {
       "$ref": "#/818"
     },
-    "flags": 0
+    "readableScopes": 16,
+    "writableScopes": 16
   },
   {
     "$type": "StringLiteralType",
@@ -13986,11 +13986,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SecurityInsights/entityQueries@2024-10-01-preview",
-    "scopeType": 16,
     "body": {
       "$ref": "#/1090"
     },
-    "flags": 0
+    "readableScopes": 16,
+    "writableScopes": 16
   },
   {
     "$type": "StringLiteralType",
@@ -14394,11 +14394,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SecurityInsights/fileImports@2024-10-01-preview",
-    "scopeType": 16,
     "body": {
       "$ref": "#/1177"
     },
-    "flags": 0
+    "readableScopes": 16,
+    "writableScopes": 16
   },
   {
     "$type": "StringLiteralType",
@@ -14836,11 +14836,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SecurityInsights/hunts@2024-10-01-preview",
-    "scopeType": 16,
     "body": {
       "$ref": "#/1210"
     },
-    "flags": 0
+    "readableScopes": 16,
+    "writableScopes": 16
   },
   {
     "$type": "StringLiteralType",
@@ -14955,11 +14955,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SecurityInsights/hunts/relations@2024-10-01-preview",
-    "scopeType": 16,
     "body": {
       "$ref": "#/1254"
     },
-    "flags": 0
+    "readableScopes": 16,
+    "writableScopes": 16
   },
   {
     "$type": "StringLiteralType",
@@ -15040,11 +15040,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SecurityInsights/hunts/comments@2024-10-01-preview",
-    "scopeType": 16,
     "body": {
       "$ref": "#/1260"
     },
-    "flags": 0
+    "readableScopes": 16,
+    "writableScopes": 16
   },
   {
     "$type": "StringLiteralType",
@@ -15146,11 +15146,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SecurityInsights/incidents/comments@2024-10-01-preview",
-    "scopeType": 16,
     "body": {
       "$ref": "#/1265"
     },
-    "flags": 0
+    "readableScopes": 16,
+    "writableScopes": 16
   },
   {
     "$type": "StringLiteralType",
@@ -15218,11 +15218,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SecurityInsights/incidents/relations@2024-10-01-preview",
-    "scopeType": 16,
     "body": {
       "$ref": "#/1270"
     },
-    "flags": 0
+    "readableScopes": 16,
+    "writableScopes": 16
   },
   {
     "$type": "StringLiteralType",
@@ -15365,11 +15365,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SecurityInsights/incidents/tasks@2024-10-01-preview",
-    "scopeType": 16,
     "body": {
       "$ref": "#/1274"
     },
-    "flags": 0
+    "readableScopes": 16,
+    "writableScopes": 16
   },
   {
     "$type": "StringType",
@@ -15610,11 +15610,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SecurityInsights/metadata@2024-10-01-preview",
-    "scopeType": 16,
     "body": {
       "$ref": "#/1283"
     },
-    "flags": 0
+    "readableScopes": 16,
+    "writableScopes": 16
   },
   {
     "$type": "StringLiteralType",
@@ -15695,11 +15695,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SecurityInsights/onboardingStates@2024-10-01-preview",
-    "scopeType": 16,
     "body": {
       "$ref": "#/1293"
     },
-    "flags": 0
+    "readableScopes": 16,
+    "writableScopes": 16
   },
   {
     "$type": "StringLiteralType",
@@ -16087,11 +16087,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SecurityInsights/securityMLAnalyticsSettings@2024-10-01-preview",
-    "scopeType": 16,
     "body": {
       "$ref": "#/1298"
     },
-    "flags": 0
+    "readableScopes": 16,
+    "writableScopes": 16
   },
   {
     "$type": "StringType",
@@ -16389,11 +16389,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SecurityInsights/settings@2024-10-01-preview",
-    "scopeType": 16,
     "body": {
       "$ref": "#/1332"
     },
-    "flags": 0
+    "readableScopes": 16,
+    "writableScopes": 16
   },
   {
     "$type": "StringLiteralType",
@@ -17115,11 +17115,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SecurityInsights/sourcecontrols@2024-10-01-preview",
-    "scopeType": 16,
     "body": {
       "$ref": "#/1358"
     },
-    "flags": 0
+    "readableScopes": 16,
+    "writableScopes": 16
   },
   {
     "$type": "StringLiteralType",
@@ -17621,11 +17621,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SecurityInsights/threatIntelligence/indicators@2024-10-01-preview",
-    "scopeType": 16,
     "body": {
       "$ref": "#/1410"
     },
-    "flags": 0
+    "readableScopes": 16,
+    "writableScopes": 16
   },
   {
     "$type": "StringLiteralType",
@@ -17924,11 +17924,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SecurityInsights/watchlists@2024-10-01-preview",
-    "scopeType": 16,
     "body": {
       "$ref": "#/1434"
     },
-    "flags": 0
+    "readableScopes": 16,
+    "writableScopes": 16
   },
   {
     "$type": "StringLiteralType",
@@ -18072,11 +18072,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SecurityInsights/watchlists/watchlistItems@2024-10-01-preview",
-    "scopeType": 16,
     "body": {
       "$ref": "#/1449"
     },
-    "flags": 0
+    "readableScopes": 16,
+    "writableScopes": 16
   },
   {
     "$type": "StringType",
@@ -18244,11 +18244,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SecurityInsights/workspaceManagerAssignments@2024-10-01-preview",
-    "scopeType": 16,
     "body": {
       "$ref": "#/1455"
     },
-    "flags": 0
+    "readableScopes": 16,
+    "writableScopes": 16
   },
   {
     "$type": "StringLiteralType",
@@ -18351,11 +18351,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SecurityInsights/workspaceManagerConfigurations@2024-10-01-preview",
-    "scopeType": 16,
     "body": {
       "$ref": "#/1468"
     },
-    "flags": 0
+    "readableScopes": 16,
+    "writableScopes": 16
   },
   {
     "$type": "StringLiteralType",
@@ -18456,11 +18456,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SecurityInsights/workspaceManagerGroups@2024-10-01-preview",
-    "scopeType": 16,
     "body": {
       "$ref": "#/1476"
     },
-    "flags": 0
+    "readableScopes": 16,
+    "writableScopes": 16
   },
   {
     "$type": "StringLiteralType",
@@ -18548,11 +18548,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SecurityInsights/workspaceManagerMembers@2024-10-01-preview",
-    "scopeType": 16,
     "body": {
       "$ref": "#/1482"
     },
-    "flags": 0
+    "readableScopes": 16,
+    "writableScopes": 16
   },
   {
     "$type": "StringLiteralType",
@@ -20809,11 +20809,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SecurityInsights/alertRuleTemplates@2024-10-01-preview",
-    "scopeType": 16,
     "body": {
       "$ref": "#/1487"
     },
-    "flags": 1
+    "readableScopes": 16,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -24418,11 +24418,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SecurityInsights/entities@2024-10-01-preview",
-    "scopeType": 16,
     "body": {
       "$ref": "#/1706"
     },
-    "flags": 1
+    "readableScopes": 16,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -24526,11 +24526,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SecurityInsights/billingStatistics@2024-10-01-preview",
-    "scopeType": 16,
     "body": {
       "$ref": "#/1937"
     },
-    "flags": 1
+    "readableScopes": 16,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -24914,11 +24914,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SecurityInsights/contentProductPackages@2024-10-01-preview",
-    "scopeType": 16,
     "body": {
       "$ref": "#/1944"
     },
-    "flags": 1
+    "readableScopes": 16,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -25403,11 +25403,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SecurityInsights/contentproducttemplates@2024-10-01-preview",
-    "scopeType": 16,
     "body": {
       "$ref": "#/1967"
     },
-    "flags": 1
+    "readableScopes": 16,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -25475,11 +25475,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SecurityInsights/entities/relations@2024-10-01-preview",
-    "scopeType": 16,
     "body": {
       "$ref": "#/2005"
     },
-    "flags": 1
+    "readableScopes": 16,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -25852,11 +25852,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SecurityInsights/entityQueryTemplates@2024-10-01-preview",
-    "scopeType": 16,
     "body": {
       "$ref": "#/2009"
     },
-    "flags": 1
+    "readableScopes": 16,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -25937,11 +25937,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SecurityInsights/officeConsents@2024-10-01-preview",
-    "scopeType": 16,
     "body": {
       "$ref": "#/2046"
     },
-    "flags": 1
+    "readableScopes": 16,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -26191,11 +26191,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SecurityInsights/recommendations@2024-10-01-preview",
-    "scopeType": 16,
     "body": {
       "$ref": "#/2051"
     },
-    "flags": 1
+    "readableScopes": 16,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -26352,11 +26352,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SecurityInsights/triggeredAnalyticsRuleRuns@2024-10-01-preview",
-    "scopeType": 16,
     "body": {
       "$ref": "#/2066"
     },
-    "flags": 1
+    "readableScopes": 16,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -26638,11 +26638,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SecurityInsights/workspaceManagerAssignments/jobs@2024-10-01-preview",
-    "scopeType": 16,
     "body": {
       "$ref": "#/2078"
     },
-    "flags": 1
+    "readableScopes": 16,
+    "writableScopes": 0
   },
   {
     "$type": "ObjectType",

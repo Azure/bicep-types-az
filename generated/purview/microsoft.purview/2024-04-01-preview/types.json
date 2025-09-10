@@ -1358,11 +1358,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Purview/accounts@2024-04-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1599,11 +1599,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Purview/accounts/kafkaConfigurations@2024-04-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/114"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1664,11 +1664,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Purview/accounts/privateEndpointConnections@2024-04-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/134"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "ObjectType",

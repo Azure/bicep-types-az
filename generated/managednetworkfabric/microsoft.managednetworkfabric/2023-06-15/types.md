@@ -1,7 +1,8 @@
 # Microsoft.ManagedNetworkFabric @ 2023-06-15
 
 ## Resource Microsoft.ManagedNetworkFabric/accessControlLists@2023-06-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -13,7 +14,8 @@
 * **type**: 'Microsoft.ManagedNetworkFabric/accessControlLists' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ManagedNetworkFabric/internetGatewayRules@2023-06-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -25,7 +27,8 @@
 * **type**: 'Microsoft.ManagedNetworkFabric/internetGatewayRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ManagedNetworkFabric/internetGateways@2023-06-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -37,7 +40,8 @@
 * **type**: 'Microsoft.ManagedNetworkFabric/internetGateways' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ManagedNetworkFabric/ipCommunities@2023-06-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -49,7 +53,8 @@
 * **type**: 'Microsoft.ManagedNetworkFabric/ipCommunities' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ManagedNetworkFabric/ipExtendedCommunities@2023-06-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -61,7 +66,8 @@
 * **type**: 'Microsoft.ManagedNetworkFabric/ipExtendedCommunities' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ManagedNetworkFabric/ipPrefixes@2023-06-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -73,7 +79,8 @@
 * **type**: 'Microsoft.ManagedNetworkFabric/ipPrefixes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ManagedNetworkFabric/l2IsolationDomains@2023-06-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -85,7 +92,8 @@
 * **type**: 'Microsoft.ManagedNetworkFabric/l2IsolationDomains' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ManagedNetworkFabric/l3IsolationDomains@2023-06-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -97,7 +105,8 @@
 * **type**: 'Microsoft.ManagedNetworkFabric/l3IsolationDomains' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ManagedNetworkFabric/l3IsolationDomains/externalNetworks@2023-06-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -107,7 +116,8 @@
 * **type**: 'Microsoft.ManagedNetworkFabric/l3IsolationDomains/externalNetworks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ManagedNetworkFabric/l3IsolationDomains/internalNetworks@2023-06-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -117,7 +127,8 @@
 * **type**: 'Microsoft.ManagedNetworkFabric/l3IsolationDomains/internalNetworks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ManagedNetworkFabric/neighborGroups@2023-06-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -129,7 +140,8 @@
 * **type**: 'Microsoft.ManagedNetworkFabric/neighborGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ManagedNetworkFabric/networkDevices@2023-06-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -141,7 +153,8 @@
 * **type**: 'Microsoft.ManagedNetworkFabric/networkDevices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ManagedNetworkFabric/networkDevices/networkInterfaces@2023-06-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -150,8 +163,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ManagedNetworkFabric/networkDevices/networkInterfaces' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ManagedNetworkFabric/networkDeviceSkus@2023-06-15 (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.ManagedNetworkFabric/networkDeviceSkus@2023-06-15
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -161,7 +175,8 @@
 * **type**: 'Microsoft.ManagedNetworkFabric/networkDeviceSkus' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ManagedNetworkFabric/networkFabricControllers@2023-06-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -173,7 +188,8 @@
 * **type**: 'Microsoft.ManagedNetworkFabric/networkFabricControllers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ManagedNetworkFabric/networkFabrics@2023-06-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -185,7 +201,8 @@
 * **type**: 'Microsoft.ManagedNetworkFabric/networkFabrics' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ManagedNetworkFabric/networkFabrics/networkToNetworkInterconnects@2023-06-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -194,8 +211,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ManagedNetworkFabric/networkFabrics/networkToNetworkInterconnects' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ManagedNetworkFabric/networkFabricSkus@2023-06-15 (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.ManagedNetworkFabric/networkFabricSkus@2023-06-15
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -205,7 +223,8 @@
 * **type**: 'Microsoft.ManagedNetworkFabric/networkFabricSkus' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ManagedNetworkFabric/networkPacketBrokers@2023-06-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -217,7 +236,8 @@
 * **type**: 'Microsoft.ManagedNetworkFabric/networkPacketBrokers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ManagedNetworkFabric/networkRacks@2023-06-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -229,7 +249,8 @@
 * **type**: 'Microsoft.ManagedNetworkFabric/networkRacks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ManagedNetworkFabric/networkTapRules@2023-06-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -241,7 +262,8 @@
 * **type**: 'Microsoft.ManagedNetworkFabric/networkTapRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ManagedNetworkFabric/networkTaps@2023-06-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -253,7 +275,8 @@
 * **type**: 'Microsoft.ManagedNetworkFabric/networkTaps' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ManagedNetworkFabric/routePolicies@2023-06-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-06-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

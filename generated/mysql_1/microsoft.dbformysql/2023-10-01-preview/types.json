@@ -1270,11 +1270,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DBforMySQL/flexibleServers@2023-10-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringType",
@@ -1366,11 +1366,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DBforMySQL/flexibleServers/backups@2023-10-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/107"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1529,11 +1529,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DBforMySQL/flexibleServers/backupsV2@2023-10-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/112"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringType",
@@ -1803,11 +1803,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DBforMySQL/flexibleServers/maintenances@2023-10-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/126"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -1968,10 +1968,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DBforMySQL/flexibleServers/advancedThreatProtectionSettings@2023-10-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/150"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   }
 ]

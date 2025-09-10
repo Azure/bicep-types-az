@@ -1,7 +1,8 @@
 # Microsoft.Subscription @ 2019-10-01-preview
 
 ## Resource Microsoft.Subscription/aliases@2019-10-01-preview
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

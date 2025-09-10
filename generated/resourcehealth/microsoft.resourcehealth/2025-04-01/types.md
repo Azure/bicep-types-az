@@ -1,7 +1,8 @@
 # Microsoft.ResourceHealth @ 2025-04-01
 
-## Resource Microsoft.ResourceHealth/emergingIssues@2025-04-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.ResourceHealth/emergingIssues@2025-04-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2025-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -10,8 +11,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ResourceHealth/emergingIssues' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ResourceHealth/events@2025-04-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant, Subscription
+## Resource Microsoft.ResourceHealth/events@2025-04-01
+* **Readable Scope(s)**: Tenant, Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2025-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -20,8 +22,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ResourceHealth/events' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ResourceHealth/events/impactedResources@2025-04-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant, Subscription
+## Resource Microsoft.ResourceHealth/events/impactedResources@2025-04-01
+* **Readable Scope(s)**: Tenant, Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2025-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -30,8 +33,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.ResourceHealth/events/impactedResources' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ResourceHealth/metadata@2025-04-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.ResourceHealth/metadata@2025-04-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2025-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

@@ -1,7 +1,8 @@
 # Microsoft.Fabric @ 2025-01-15-preview
 
 ## Resource Microsoft.Fabric/capacities@2025-01-15-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-01-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

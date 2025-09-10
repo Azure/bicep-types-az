@@ -714,11 +714,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Insights/actionGroups@2022-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/3"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1417,11 +1417,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Insights/dataCollectionEndpoints@2022-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/41"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1720,11 +1720,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Insights/dataCollectionRuleAssociations@2022-06-01",
-    "scopeType": 0,
     "body": {
       "$ref": "#/98"
     },
-    "flags": 0
+    "readableScopes": 15,
+    "writableScopes": 15
   },
   {
     "$type": "StringLiteralType",
@@ -3706,10 +3706,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Insights/dataCollectionRules@2022-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/122"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   }
 ]

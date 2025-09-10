@@ -1,7 +1,8 @@
 # Microsoft.Search @ 2020-03-13
 
 ## Resource Microsoft.Search/searchServices@2020-03-13
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-03-13' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -14,7 +15,8 @@
 * **type**: 'Microsoft.Search/searchServices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Search/searchServices/privateEndpointConnections@2020-03-13
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-03-13' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

@@ -1,7 +1,8 @@
 # Microsoft.HybridContainerService @ 2023-11-15-preview
 
 ## Resource Microsoft.HybridContainerService/kubernetesVersions@2023-11-15-preview
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2023-11-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): Extended Location definition
@@ -12,7 +13,8 @@
 * **type**: 'Microsoft.HybridContainerService/kubernetesVersions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridContainerService/provisionedClusterInstances@2023-11-15-preview
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2023-11-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): Extended Location definition
@@ -23,7 +25,8 @@
 * **type**: 'Microsoft.HybridContainerService/provisionedClusterInstances' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridContainerService/provisionedClusterInstances/agentPools@2023-11-15-preview
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2023-11-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): Extended Location definition
@@ -36,7 +39,8 @@
 * **type**: 'Microsoft.HybridContainerService/provisionedClusterInstances/agentPools' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridContainerService/provisionedClusterInstances/hybridIdentityMetadata@2023-11-15-preview
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2023-11-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -45,8 +49,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.HybridContainerService/provisionedClusterInstances/hybridIdentityMetadata' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.HybridContainerService/provisionedClusterInstances/upgradeProfiles@2023-11-15-preview (ReadOnly)
-* **Valid Scope(s)**: Unknown
+## Resource Microsoft.HybridContainerService/provisionedClusterInstances/upgradeProfiles@2023-11-15-preview
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-11-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -56,7 +61,8 @@
 * **type**: 'Microsoft.HybridContainerService/provisionedClusterInstances/upgradeProfiles' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridContainerService/skus@2023-11-15-preview
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2023-11-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation): Extended Location definition
@@ -67,7 +73,8 @@
 * **type**: 'Microsoft.HybridContainerService/skus' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridContainerService/virtualNetworks@2023-11-15-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-11-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [VirtualNetworkExtendedLocation](#virtualnetworkextendedlocation)

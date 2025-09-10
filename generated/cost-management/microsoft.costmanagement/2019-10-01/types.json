@@ -722,10 +722,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.CostManagement/exports@2019-10-01",
-    "scopeType": 0,
     "body": {
       "$ref": "#/3"
     },
-    "flags": 0
+    "readableScopes": 15,
+    "writableScopes": 15
   }
 ]

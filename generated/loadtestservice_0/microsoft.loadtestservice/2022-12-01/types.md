@@ -1,7 +1,8 @@
 # Microsoft.LoadTestService @ 2022-12-01
 
 ## Resource Microsoft.LoadTestService/loadTests@2022-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -13,8 +14,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.LoadTestService/loadTests' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.LoadTestService/locations/quotas@2022-12-01 (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.LoadTestService/locations/quotas@2022-12-01
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2022-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

@@ -1,7 +1,8 @@
 # Microsoft.Security @ 2025-05-04-preview
 
 ## Resource Microsoft.Security/assessmentMetadata@2025-05-04-preview
-* **Valid Scope(s)**: Tenant (ReadOnly), Subscription
+* **Readable Scope(s)**: Tenant, Subscription
+* **Writable Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2025-05-04-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -10,7 +11,8 @@
 * **type**: 'Microsoft.Security/assessmentMetadata' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/assessments@2025-05-04-preview
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2025-05-04-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

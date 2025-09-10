@@ -1,7 +1,8 @@
 # Microsoft.PowerBI @ 2016-01-29
 
 ## Resource Microsoft.PowerBI/workspaceCollections@2016-01-29
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-01-29' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

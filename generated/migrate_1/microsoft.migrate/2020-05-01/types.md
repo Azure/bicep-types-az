@@ -1,7 +1,8 @@
 # Microsoft.Migrate @ 2020-05-01
 
 ## Resource Microsoft.Migrate/migrateProjects@2020-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: For optimistic concurrency control.
@@ -13,7 +14,8 @@
 * **type**: 'Microsoft.Migrate/migrateProjects' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Migrate/migrateProjects/privateEndpointConnections@2020-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: Gets the tag for optimistic concurrency control.

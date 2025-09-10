@@ -448,11 +448,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Media/videoAnalyzers@2021-05-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/3"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -532,11 +532,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Media/videoAnalyzers/edgeModules@2021-05-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/35"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -716,11 +716,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Media/videoAnalyzers/videos@2021-05-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/41"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1072,11 +1072,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Media/videoAnalyzers/accessPolicies@2021-05-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/52"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "ObjectType",

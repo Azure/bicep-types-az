@@ -1,7 +1,8 @@
 # Microsoft.Devices @ 2020-08-31-preview
 
 ## Resource Microsoft.Devices/IotHubs@2020-08-31-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-08-31-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.
@@ -15,7 +16,8 @@
 * **type**: 'Microsoft.Devices/IotHubs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Devices/IotHubs/certificates@2020-08-31-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-08-31-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The entity tag.
@@ -25,7 +27,8 @@
 * **type**: 'Microsoft.Devices/IotHubs/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Devices/IotHubs/eventHubEndpoints/ConsumerGroups@2020-08-31-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-08-31-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The etag.
@@ -35,7 +38,8 @@
 * **type**: 'Microsoft.Devices/IotHubs/eventHubEndpoints/ConsumerGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Devices/iotHubs/privateEndpointConnections@2020-08-31-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-08-31-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

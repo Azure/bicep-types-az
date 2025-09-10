@@ -102,10 +102,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Resources/resourceGroups@2016-09-01",
-    "scopeType": 4,
     "body": {
       "$ref": "#/4"
     },
-    "flags": 0
+    "readableScopes": 4,
+    "writableScopes": 4
   }
 ]

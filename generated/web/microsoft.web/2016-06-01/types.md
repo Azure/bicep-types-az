@@ -1,7 +1,8 @@
 # Microsoft.Web @ 2016-06-01
 
 ## Resource Microsoft.Web/connectionGateways@2016-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Resource ETag
@@ -13,7 +14,8 @@
 * **type**: 'Microsoft.Web/connectionGateways' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/connections@2016-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Resource ETag
@@ -25,7 +27,8 @@
 * **type**: 'Microsoft.Web/connections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Web/customApis@2016-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Resource ETag
@@ -36,8 +39,9 @@
 * **tags**: [TagsDictionary](#tagsdictionary): Resource tags
 * **type**: 'Microsoft.Web/customApis' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Web/locations/connectionGatewayInstallations@2016-06-01 (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.Web/locations/connectionGatewayInstallations@2016-06-01
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource ETag
@@ -48,8 +52,9 @@
 * **tags**: [TagsDictionary](#tagsdictionary) (ReadOnly): Resource tags
 * **type**: 'Microsoft.Web/locations/connectionGatewayInstallations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Web/locations/managedApis@2016-06-01 (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.Web/locations/managedApis@2016-06-01
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource ETag

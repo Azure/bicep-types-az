@@ -1,7 +1,8 @@
 # microsoft.alertsManagement @ 2019-06-01
 
 ## Resource microsoft.alertsManagement/smartDetectorAlertRules@2019-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

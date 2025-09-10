@@ -1,7 +1,8 @@
 # Microsoft.WindowsIoT @ 2019-06-01
 
 ## Resource Microsoft.WindowsIoT/deviceServices@2019-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.

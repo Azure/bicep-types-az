@@ -1,7 +1,8 @@
 # Microsoft.ResourceConnector @ 2022-10-27
 
 ## Resource Microsoft.ResourceConnector/appliances@2022-10-27
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-10-27' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

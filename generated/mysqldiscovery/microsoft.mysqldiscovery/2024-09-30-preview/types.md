@@ -1,7 +1,8 @@
 # Microsoft.MySQLDiscovery @ 2024-09-30-preview
 
 ## Resource Microsoft.MySQLDiscovery/MySQLSites@2024-09-30-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-09-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): The extended location.
@@ -13,8 +14,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.MySQLDiscovery/MySQLSites' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.MySQLDiscovery/MySQLSites/errorSummaries@2024-09-30-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.MySQLDiscovery/MySQLSites/errorSummaries@2024-09-30-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-09-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -25,7 +27,8 @@
 * **type**: 'Microsoft.MySQLDiscovery/MySQLSites/errorSummaries' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MySQLDiscovery/MySQLSites/MySQLServers@2024-09-30-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-09-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -35,8 +38,9 @@
 * **tags**: [MySQLServerTags](#mysqlservertags): Resource tags
 * **type**: 'Microsoft.MySQLDiscovery/MySQLSites/MySQLServers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.MySQLDiscovery/MySQLSites/summaries@2024-09-30-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.MySQLDiscovery/MySQLSites/summaries@2024-09-30-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-09-30-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

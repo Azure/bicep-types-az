@@ -1,7 +1,8 @@
 # Oracle.Database @ 2025-03-01
 
 ## Resource Oracle.Database/autonomousDatabases@2025-03-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -13,7 +14,8 @@
 * **type**: 'Oracle.Database/autonomousDatabases' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Oracle.Database/autonomousDatabases/autonomousDatabaseBackups@2025-03-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -23,7 +25,8 @@
 * **type**: 'Oracle.Database/autonomousDatabases/autonomousDatabaseBackups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Oracle.Database/cloudExadataInfrastructures@2025-03-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -35,8 +38,9 @@
 * **type**: 'Oracle.Database/cloudExadataInfrastructures' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[] (Required): CloudExadataInfrastructure zones
 
-## Resource Oracle.Database/cloudExadataInfrastructures/dbServers@2025-03-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Oracle.Database/cloudExadataInfrastructures/dbServers@2025-03-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2025-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -46,7 +50,8 @@
 * **type**: 'Oracle.Database/cloudExadataInfrastructures/dbServers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Oracle.Database/cloudVmClusters@2025-03-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -57,8 +62,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Oracle.Database/cloudVmClusters' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Oracle.Database/cloudVmClusters/dbNodes@2025-03-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Oracle.Database/cloudVmClusters/dbNodes@2025-03-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2025-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -68,7 +74,8 @@
 * **type**: 'Oracle.Database/cloudVmClusters/dbNodes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Oracle.Database/cloudVmClusters/virtualNetworkAddresses@2025-03-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -78,7 +85,8 @@
 * **type**: 'Oracle.Database/cloudVmClusters/virtualNetworkAddresses' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Oracle.Database/exadbVmClusters@2025-03-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -90,8 +98,9 @@
 * **type**: 'Oracle.Database/exadbVmClusters' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: The availability zones.
 
-## Resource Oracle.Database/exadbVmClusters/dbNodes@2025-03-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Oracle.Database/exadbVmClusters/dbNodes@2025-03-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2025-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -101,7 +110,8 @@
 * **type**: 'Oracle.Database/exadbVmClusters/dbNodes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Oracle.Database/exascaleDbStorageVaults@2025-03-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -113,8 +123,9 @@
 * **type**: 'Oracle.Database/exascaleDbStorageVaults' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: The availability zones.
 
-## Resource Oracle.Database/locations/autonomousDatabaseCharacterSets@2025-03-01 (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Oracle.Database/locations/autonomousDatabaseCharacterSets@2025-03-01
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2025-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -123,8 +134,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Oracle.Database/locations/autonomousDatabaseCharacterSets' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Oracle.Database/locations/autonomousDatabaseNationalCharacterSets@2025-03-01 (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Oracle.Database/locations/autonomousDatabaseNationalCharacterSets@2025-03-01
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2025-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -133,8 +145,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Oracle.Database/locations/autonomousDatabaseNationalCharacterSets' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Oracle.Database/locations/autonomousDbVersions@2025-03-01 (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Oracle.Database/locations/autonomousDbVersions@2025-03-01
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2025-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -143,8 +156,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Oracle.Database/locations/autonomousDbVersions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Oracle.Database/locations/dbSystemShapes@2025-03-01 (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Oracle.Database/locations/dbSystemShapes@2025-03-01
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2025-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -153,8 +167,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Oracle.Database/locations/dbSystemShapes' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Oracle.Database/locations/dnsPrivateViews@2025-03-01 (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Oracle.Database/locations/dnsPrivateViews@2025-03-01
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2025-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -163,8 +178,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Oracle.Database/locations/dnsPrivateViews' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Oracle.Database/locations/dnsPrivateZones@2025-03-01 (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Oracle.Database/locations/dnsPrivateZones@2025-03-01
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2025-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -173,8 +189,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Oracle.Database/locations/dnsPrivateZones' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Oracle.Database/locations/flexComponents@2025-03-01 (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Oracle.Database/locations/flexComponents@2025-03-01
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2025-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -183,8 +200,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Oracle.Database/locations/flexComponents' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Oracle.Database/locations/giVersions@2025-03-01 (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Oracle.Database/locations/giVersions@2025-03-01
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2025-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -193,8 +211,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Oracle.Database/locations/giVersions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Oracle.Database/locations/giVersions/giMinorVersions@2025-03-01 (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Oracle.Database/locations/giVersions/giMinorVersions@2025-03-01
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2025-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -203,8 +222,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Oracle.Database/locations/giVersions/giMinorVersions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Oracle.Database/locations/systemVersions@2025-03-01 (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Oracle.Database/locations/systemVersions@2025-03-01
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2025-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -214,7 +234,8 @@
 * **type**: 'Oracle.Database/locations/systemVersions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Oracle.Database/oracleSubscriptions@2025-03-01
-* **Valid Scope(s)**: Subscription
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2025-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

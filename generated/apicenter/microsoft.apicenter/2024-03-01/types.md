@@ -1,7 +1,8 @@
 # Microsoft.ApiCenter @ 2024-03-01
 
 ## Resource Microsoft.ApiCenter/services@2024-03-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -14,7 +15,8 @@
 * **type**: 'Microsoft.ApiCenter/services' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiCenter/services/metadataSchemas@2024-03-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -24,7 +26,8 @@
 * **type**: 'Microsoft.ApiCenter/services/metadataSchemas' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiCenter/services/workspaces@2024-03-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -34,7 +37,8 @@
 * **type**: 'Microsoft.ApiCenter/services/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiCenter/services/workspaces/apis@2024-03-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -44,7 +48,8 @@
 * **type**: 'Microsoft.ApiCenter/services/workspaces/apis' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiCenter/services/workspaces/apis/deployments@2024-03-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -54,7 +59,8 @@
 * **type**: 'Microsoft.ApiCenter/services/workspaces/apis/deployments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiCenter/services/workspaces/apis/versions@2024-03-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -64,7 +70,8 @@
 * **type**: 'Microsoft.ApiCenter/services/workspaces/apis/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiCenter/services/workspaces/apis/versions/definitions@2024-03-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -74,7 +81,8 @@
 * **type**: 'Microsoft.ApiCenter/services/workspaces/apis/versions/definitions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiCenter/services/workspaces/environments@2024-03-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

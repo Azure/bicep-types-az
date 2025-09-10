@@ -1,7 +1,8 @@
 # Microsoft.HealthBot @ 2025-05-25
 
 ## Resource Microsoft.HealthBot/healthBots@2025-05-25
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-05-25' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

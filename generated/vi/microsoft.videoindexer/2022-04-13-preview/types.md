@@ -1,7 +1,8 @@
 # Microsoft.VideoIndexer @ 2022-04-13-preview
 
 ## Resource Microsoft.VideoIndexer/accounts@2022-04-13-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-04-13-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

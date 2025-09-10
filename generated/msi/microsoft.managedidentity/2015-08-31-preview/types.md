@@ -1,7 +1,8 @@
 # Microsoft.ManagedIdentity @ 2015-08-31-preview
 
-## Resource Microsoft.ManagedIdentity/identities@2015-08-31-preview (ReadOnly)
-* **Valid Scope(s)**: Unknown
+## Resource Microsoft.ManagedIdentity/identities@2015-08-31-preview
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2015-08-31-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -12,7 +13,8 @@
 * **type**: 'Microsoft.ManagedIdentity/identities' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ManagedIdentity/userAssignedIdentities@2015-08-31-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-08-31-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

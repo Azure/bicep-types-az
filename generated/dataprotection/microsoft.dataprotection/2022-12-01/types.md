@@ -1,7 +1,8 @@
 # Microsoft.DataProtection @ 2022-12-01
 
 ## Resource Microsoft.DataProtection/backupVaults@2022-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: Optional ETag.
@@ -15,7 +16,8 @@
 * **type**: 'Microsoft.DataProtection/backupVaults' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataProtection/backupVaults/backupInstances@2022-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -25,8 +27,9 @@
 * **tags**: [DppProxyResourceTags](#dppproxyresourcetags): Proxy Resource tags.
 * **type**: 'Microsoft.DataProtection/backupVaults/backupInstances' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DataProtection/backupVaults/backupInstances/operationResults@2022-12-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.DataProtection/backupVaults/backupInstances/operationResults@2022-12-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2022-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -36,8 +39,9 @@
 * **tags**: [DppProxyResourceTags](#dppproxyresourcetags) (ReadOnly): Proxy Resource tags.
 * **type**: 'Microsoft.DataProtection/backupVaults/backupInstances/operationResults' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DataProtection/backupVaults/backupInstances/recoveryPoints@2022-12-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.DataProtection/backupVaults/backupInstances/recoveryPoints@2022-12-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2022-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -46,8 +50,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DataProtection/backupVaults/backupInstances/recoveryPoints' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DataProtection/backupVaults/backupJobs@2022-12-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.DataProtection/backupVaults/backupJobs@2022-12-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2022-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -57,7 +62,8 @@
 * **type**: 'Microsoft.DataProtection/backupVaults/backupJobs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataProtection/backupVaults/backupPolicies@2022-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -66,8 +72,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DataProtection/backupVaults/backupPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DataProtection/backupVaults/deletedBackupInstances@2022-12-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.DataProtection/backupVaults/deletedBackupInstances@2022-12-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2022-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -76,8 +83,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.DataProtection/backupVaults/deletedBackupInstances' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DataProtection/backupVaults/operationResults@2022-12-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.DataProtection/backupVaults/operationResults@2022-12-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2022-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): Optional ETag.
@@ -91,7 +99,8 @@
 * **type**: 'Microsoft.DataProtection/backupVaults/operationResults' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataProtection/resourceGuards@2022-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: Optional ETag.

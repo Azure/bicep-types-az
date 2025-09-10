@@ -1,7 +1,8 @@
 # Microsoft.Datadog @ 2023-01-01
 
 ## Resource Microsoft.Datadog/agreements@2023-01-01
-* **Valid Scope(s)**: Subscription
+* **Readable Scope(s)**: None
+* **Writable Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2023-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -11,7 +12,8 @@
 * **type**: 'Microsoft.Datadog/agreements' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Datadog/monitors@2023-01-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -25,7 +27,8 @@
 * **type**: 'Microsoft.Datadog/monitors' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Datadog/monitors/monitoredSubscriptions@2023-01-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -34,7 +37,8 @@
 * **type**: 'Microsoft.Datadog/monitors/monitoredSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Datadog/monitors/singleSignOnConfigurations@2023-01-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -44,7 +48,8 @@
 * **type**: 'Microsoft.Datadog/monitors/singleSignOnConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Datadog/monitors/tagRules@2023-01-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

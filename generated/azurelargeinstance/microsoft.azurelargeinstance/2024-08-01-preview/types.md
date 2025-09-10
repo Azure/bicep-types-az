@@ -1,7 +1,8 @@
 # Microsoft.AzureLargeInstance @ 2024-08-01-preview
 
 ## Resource Microsoft.AzureLargeInstance/azureLargeInstances@2024-08-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -13,7 +14,8 @@
 * **type**: 'Microsoft.AzureLargeInstance/azureLargeInstances' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AzureLargeInstance/azureLargeStorageInstances@2024-08-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

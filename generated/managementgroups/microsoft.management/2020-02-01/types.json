@@ -286,11 +286,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Management/managementGroups@2020-02-01",
-    "scopeType": 1,
     "body": {
       "$ref": "#/3"
     },
-    "flags": 0
+    "readableScopes": 1,
+    "writableScopes": 1
   },
   {
     "$type": "StringLiteralType",
@@ -337,11 +337,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Management/managementGroups/subscriptions@2020-02-01",
-    "scopeType": 1,
     "body": {
       "$ref": "#/21"
     },
-    "flags": 0
+    "readableScopes": 0,
+    "writableScopes": 1
   },
   {
     "$type": "StringLiteralType",
@@ -429,10 +429,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Management/managementGroups/settings@2020-02-01",
-    "scopeType": 1,
     "body": {
       "$ref": "#/26"
     },
-    "flags": 0
+    "readableScopes": 1,
+    "writableScopes": 1
   }
 ]

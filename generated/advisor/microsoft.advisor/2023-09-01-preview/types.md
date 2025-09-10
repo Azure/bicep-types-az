@@ -1,7 +1,8 @@
 # Microsoft.Advisor @ 2023-09-01-preview
 
-## Resource Microsoft.Advisor/advisorScore@2023-09-01-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.Advisor/advisorScore@2023-09-01-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -11,7 +12,8 @@
 * **type**: 'Microsoft.Advisor/advisorScore' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Advisor/assessments@2023-09-01-preview
-* **Valid Scope(s)**: Subscription
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2023-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -21,7 +23,8 @@
 * **type**: 'Microsoft.Advisor/assessments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Advisor/configurations@2023-09-01-preview
-* **Valid Scope(s)**: Subscription, ResourceGroup
+* **Readable Scope(s)**: None
+* **Writable Scope(s)**: Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2023-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -30,8 +33,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Advisor/configurations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Advisor/recommendations@2023-09-01-preview (ReadOnly)
-* **Valid Scope(s)**: Unknown
+## Resource Microsoft.Advisor/recommendations@2023-09-01-preview
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -41,7 +45,8 @@
 * **type**: 'Microsoft.Advisor/recommendations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Advisor/recommendations/suppressions@2023-09-01-preview
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2023-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -50,8 +55,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Advisor/recommendations/suppressions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Advisor/resiliencyReviews@2023-09-01-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.Advisor/resiliencyReviews@2023-09-01-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -60,8 +66,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.Advisor/resiliencyReviews' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Advisor/triageRecommendations@2023-09-01-preview (ReadOnly)
-* **Valid Scope(s)**: Extension
+## Resource Microsoft.Advisor/triageRecommendations@2023-09-01-preview
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-09-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

@@ -1,7 +1,8 @@
 # Microsoft.DataShare @ 2018-11-01-preview
 
 ## Resource Microsoft.DataShare/accounts@2018-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -13,7 +14,8 @@
 * **type**: 'Microsoft.DataShare/accounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataShare/accounts/shares@2018-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -22,7 +24,8 @@
 * **type**: 'Microsoft.DataShare/accounts/shares' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataShare/accounts/shares/dataSets@2018-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 * **Discriminator**: kind
 
 ### Base Properties
@@ -93,7 +96,8 @@
 
 
 ## Resource Microsoft.DataShare/accounts/shares/invitations@2018-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -101,8 +105,9 @@
 * **properties**: [InvitationProperties](#invitationproperties): Properties on the Invitation
 * **type**: 'Microsoft.DataShare/accounts/shares/invitations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DataShare/accounts/shares/providerShareSubscriptions@2018-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.DataShare/accounts/shares/providerShareSubscriptions@2018-11-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -111,7 +116,8 @@
 * **type**: 'Microsoft.DataShare/accounts/shares/providerShareSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataShare/accounts/shares/synchronizationSettings@2018-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 * **Discriminator**: kind
 
 ### Base Properties
@@ -127,7 +133,8 @@
 
 
 ## Resource Microsoft.DataShare/accounts/shareSubscriptions@2018-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -136,7 +143,8 @@
 * **type**: 'Microsoft.DataShare/accounts/shareSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DataShare/accounts/shareSubscriptions/dataSetMappings@2018-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 * **Discriminator**: kind
 
 ### Base Properties
@@ -197,7 +205,8 @@
 
 
 ## Resource Microsoft.DataShare/accounts/shareSubscriptions/triggers@2018-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 * **Discriminator**: kind
 
 ### Base Properties
@@ -212,8 +221,9 @@
 * **properties**: [ScheduledTriggerProperties](#scheduledtriggerproperties) (Required): Properties of scheduled synchronization
 
 
-## Resource Microsoft.DataShare/locations/consumerInvitations@2018-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.DataShare/locations/consumerInvitations@2018-11-01-preview
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

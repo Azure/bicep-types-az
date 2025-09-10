@@ -1,7 +1,8 @@
 # Microsoft.Devices @ 2018-12-01-preview
 
 ## Resource Microsoft.Devices/IotHubs@2018-12-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.
@@ -14,7 +15,8 @@
 * **type**: 'Microsoft.Devices/IotHubs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Devices/IotHubs/certificates@2018-12-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **certificate**: string (WriteOnly): base-64 representation of the X509 leaf certificate .cer file or just .pem file content.
@@ -25,7 +27,8 @@
 * **type**: 'Microsoft.Devices/IotHubs/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Devices/IotHubs/eventHubEndpoints/ConsumerGroups@2018-12-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-12-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The etag.

@@ -1796,11 +1796,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SignalRService/webPubSub@2025-01-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1966,11 +1966,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SignalRService/webPubSub/customCertificates@2025-01-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/155"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2142,11 +2142,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SignalRService/webPubSub/customDomains@2025-01-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/170"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2461,11 +2461,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SignalRService/webPubSub/hubs@2025-01-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/186"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2526,11 +2526,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SignalRService/webPubSub/privateEndpointConnections@2025-01-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/209"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2717,11 +2717,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SignalRService/webPubSub/replicas@2025-01-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/213"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2782,11 +2782,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SignalRService/webPubSub/replicas/sharedPrivateLinkResources@2025-01-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/229"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2847,11 +2847,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.SignalRService/webPubSub/sharedPrivateLinkResources@2025-01-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/233"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "ObjectType",

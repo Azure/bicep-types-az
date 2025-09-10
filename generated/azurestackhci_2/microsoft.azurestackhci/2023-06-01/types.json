@@ -721,11 +721,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/clusters/arcSettings@2023-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/3"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1768,11 +1768,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/clusters@2023-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/81"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2507,11 +2507,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/clusters/arcSettings/extensions@2023-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/167"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2865,11 +2865,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/clusters/updates/updateRuns@2023-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/241"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3528,11 +3528,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/clusters/updateSummaries@2023-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/273"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -4186,11 +4186,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/clusters/updates@2023-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/333"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -4331,11 +4331,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/clusters/publishers/offers@2023-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/396"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -4409,11 +4409,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/clusters/publishers@2023-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/404"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -4528,10 +4528,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AzureStackHCI/clusters/publishers/offers/skus@2023-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/409"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   }
 ]

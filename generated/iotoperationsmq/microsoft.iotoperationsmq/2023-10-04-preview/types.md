@@ -1,7 +1,8 @@
 # Microsoft.IoTOperationsMQ @ 2023-10-04-preview
 
 ## Resource Microsoft.IoTOperationsMQ/mq@2023-10-04-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-10-04-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocationProperty](#extendedlocationproperty) (Required): Extended Location
@@ -14,7 +15,8 @@
 * **type**: 'Microsoft.IoTOperationsMQ/mq' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.IoTOperationsMQ/mq/broker@2023-10-04-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-10-04-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocationProperty](#extendedlocationproperty) (Required): Extended Location
@@ -27,7 +29,8 @@
 * **type**: 'Microsoft.IoTOperationsMQ/mq/broker' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.IoTOperationsMQ/mq/broker/authentication@2023-10-04-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-10-04-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocationProperty](#extendedlocationproperty) (Required): Extended Location
@@ -40,7 +43,8 @@
 * **type**: 'Microsoft.IoTOperationsMQ/mq/broker/authentication' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.IoTOperationsMQ/mq/broker/authorization@2023-10-04-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-10-04-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocationProperty](#extendedlocationproperty) (Required): Extended Location
@@ -53,7 +57,8 @@
 * **type**: 'Microsoft.IoTOperationsMQ/mq/broker/authorization' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.IoTOperationsMQ/mq/broker/listener@2023-10-04-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-10-04-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocationProperty](#extendedlocationproperty) (Required): Extended Location
@@ -66,7 +71,8 @@
 * **type**: 'Microsoft.IoTOperationsMQ/mq/broker/listener' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.IoTOperationsMQ/mq/dataLakeConnector@2023-10-04-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-10-04-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocationProperty](#extendedlocationproperty) (Required): Extended Location
@@ -79,7 +85,8 @@
 * **type**: 'Microsoft.IoTOperationsMQ/mq/dataLakeConnector' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.IoTOperationsMQ/mq/dataLakeConnector/topicMap@2023-10-04-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-10-04-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocationProperty](#extendedlocationproperty) (Required): Extended Location
@@ -92,7 +99,8 @@
 * **type**: 'Microsoft.IoTOperationsMQ/mq/dataLakeConnector/topicMap' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.IoTOperationsMQ/mq/diagnosticService@2023-10-04-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-10-04-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocationProperty](#extendedlocationproperty) (Required): Extended Location
@@ -105,7 +113,8 @@
 * **type**: 'Microsoft.IoTOperationsMQ/mq/diagnosticService' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.IoTOperationsMQ/mq/kafkaConnector@2023-10-04-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-10-04-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocationProperty](#extendedlocationproperty) (Required): Extended Location
@@ -118,7 +127,8 @@
 * **type**: 'Microsoft.IoTOperationsMQ/mq/kafkaConnector' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.IoTOperationsMQ/mq/kafkaConnector/topicMap@2023-10-04-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-10-04-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocationProperty](#extendedlocationproperty) (Required): Extended Location
@@ -131,7 +141,8 @@
 * **type**: 'Microsoft.IoTOperationsMQ/mq/kafkaConnector/topicMap' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.IoTOperationsMQ/mq/mqttBridgeConnector@2023-10-04-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-10-04-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocationProperty](#extendedlocationproperty) (Required): Extended Location
@@ -144,7 +155,8 @@
 * **type**: 'Microsoft.IoTOperationsMQ/mq/mqttBridgeConnector' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.IoTOperationsMQ/mq/mqttBridgeConnector/topicMap@2023-10-04-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-10-04-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocationProperty](#extendedlocationproperty) (Required): Extended Location

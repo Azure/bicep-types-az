@@ -1,7 +1,8 @@
 # Microsoft.Migrate @ 2023-01-01
 
 ## Resource Microsoft.Migrate/migrateProjects@2023-01-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: For optimistic concurrency control.
@@ -13,7 +14,8 @@
 * **type**: 'Microsoft.Migrate/migrateProjects' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Migrate/migrateProjects/privateEndpointConnectionProxies@2023-01-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string
@@ -24,7 +26,8 @@
 * **type**: 'Microsoft.Migrate/migrateProjects/privateEndpointConnectionProxies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Migrate/migrateProjects/privateEndpointConnections@2023-01-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): Gets the tag for optimistic concurrency control.
@@ -35,7 +38,8 @@
 * **type**: 'Microsoft.Migrate/migrateProjects/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Migrate/migrateProjects/solutions@2023-01-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Gets or sets the ETAG for optimistic concurrency control.

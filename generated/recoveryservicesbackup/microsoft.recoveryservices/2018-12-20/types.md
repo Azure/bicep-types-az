@@ -1,7 +1,8 @@
 # Microsoft.RecoveryServices @ 2018-12-20
 
 ## Resource Microsoft.RecoveryServices/vaults/backupstorageconfig@2018-12-20
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-12-20' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: Optional ETag.

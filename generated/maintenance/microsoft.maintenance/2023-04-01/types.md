@@ -1,7 +1,8 @@
 # Microsoft.Maintenance @ 2023-04-01
 
 ## Resource Microsoft.Maintenance/applyUpdates@2023-04-01
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2023-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -11,7 +12,8 @@
 * **type**: 'Microsoft.Maintenance/applyUpdates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Maintenance/configurationAssignments@2023-04-01
-* **Valid Scope(s)**: Subscription, ResourceGroup, Extension
+* **Readable Scope(s)**: Subscription, ResourceGroup, Extension
+* **Writable Scope(s)**: Subscription, ResourceGroup, Extension
 ### Properties
 * **apiVersion**: '2023-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -22,7 +24,8 @@
 * **type**: 'Microsoft.Maintenance/configurationAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Maintenance/maintenanceConfigurations@2023-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -33,8 +36,9 @@
 * **tags**: [MaintenanceConfigurationTags](#maintenanceconfigurationtags): Gets or sets tags of the resource
 * **type**: 'Microsoft.Maintenance/maintenanceConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Maintenance/publicMaintenanceConfigurations@2023-04-01 (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.Maintenance/publicMaintenanceConfigurations@2023-04-01
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

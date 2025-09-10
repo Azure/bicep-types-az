@@ -1,7 +1,8 @@
 # Microsoft.Security @ 2021-08-01-preview
 
 ## Resource Microsoft.Security/assignments@2021-08-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Entity tag is used for comparing two or more entities from the same requested resource.
@@ -15,7 +16,8 @@
 * **type**: 'Microsoft.Security/assignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/standards@2021-08-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-08-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Entity tag is used for comparing two or more entities from the same requested resource.

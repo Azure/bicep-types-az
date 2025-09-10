@@ -892,11 +892,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AppConfiguration/configurationStores@2025-02-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -950,11 +950,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AppConfiguration/configurationStores/privateEndpointConnections@2025-02-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/78"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1078,11 +1078,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AppConfiguration/configurationStores/keyValues@2025-02-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/82"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1213,11 +1213,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AppConfiguration/configurationStores/replicas@2025-02-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/88"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringType",
@@ -1507,11 +1507,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.AppConfiguration/configurationStores/snapshots@2025-02-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/100"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "ObjectType",

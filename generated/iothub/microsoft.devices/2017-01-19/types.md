@@ -1,7 +1,8 @@
 # Microsoft.Devices @ 2017-01-19
 
 ## Resource Microsoft.Devices/IotHubs@2017-01-19
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-01-19' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.
@@ -16,7 +17,8 @@
 * **type**: 'Microsoft.Devices/IotHubs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Devices/IotHubs/eventHubEndpoints/ConsumerGroups@2017-01-19
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-01-19' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

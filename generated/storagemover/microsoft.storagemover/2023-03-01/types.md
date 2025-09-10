@@ -1,7 +1,8 @@
 # Microsoft.StorageMover @ 2023-03-01
 
 ## Resource Microsoft.StorageMover/storageMovers@2023-03-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -13,7 +14,8 @@
 * **type**: 'Microsoft.StorageMover/storageMovers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StorageMover/storageMovers/agents@2023-03-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -23,7 +25,8 @@
 * **type**: 'Microsoft.StorageMover/storageMovers/agents' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StorageMover/storageMovers/endpoints@2023-03-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -33,7 +36,8 @@
 * **type**: 'Microsoft.StorageMover/storageMovers/endpoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StorageMover/storageMovers/projects@2023-03-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -43,7 +47,8 @@
 * **type**: 'Microsoft.StorageMover/storageMovers/projects' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.StorageMover/storageMovers/projects/jobDefinitions@2023-03-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -52,8 +57,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Resource system metadata.
 * **type**: 'Microsoft.StorageMover/storageMovers/projects/jobDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.StorageMover/storageMovers/projects/jobDefinitions/jobRuns@2023-03-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.StorageMover/storageMovers/projects/jobDefinitions/jobRuns@2023-03-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

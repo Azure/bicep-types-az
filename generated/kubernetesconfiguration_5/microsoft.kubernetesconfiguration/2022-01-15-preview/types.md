@@ -1,7 +1,8 @@
 # Microsoft.KubernetesConfiguration @ 2022-01-15-preview
 
-## Resource Microsoft.KubernetesConfiguration/extensionTypes@2022-01-15-preview (ReadOnly)
-* **Valid Scope(s)**: Extension
+## Resource Microsoft.KubernetesConfiguration/extensionTypes@2022-01-15-preview
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2022-01-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

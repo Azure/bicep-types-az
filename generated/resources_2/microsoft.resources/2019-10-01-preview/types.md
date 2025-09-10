@@ -1,7 +1,8 @@
 # Microsoft.Resources @ 2019-10-01-preview
 
 ## Resource Microsoft.Resources/deploymentScripts@2019-10-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 * **Discriminator**: kind
 
 ### Base Properties
@@ -25,8 +26,9 @@
 * **properties**: [AzurePowerShellScriptProperties](#azurepowershellscriptproperties) (Required): Properties of the Azure PowerShell script object.
 
 
-## Resource Microsoft.Resources/deploymentScripts/logs@2019-10-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Resources/deploymentScripts/logs@2019-10-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2019-10-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

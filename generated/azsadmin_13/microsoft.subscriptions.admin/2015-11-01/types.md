@@ -1,7 +1,8 @@
 # Microsoft.Subscriptions.Admin @ 2015-11-01
 
-## Resource Microsoft.Subscriptions.Admin/delegatedProviders@2015-11-01 (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.Subscriptions.Admin/delegatedProviders@2015-11-01
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2015-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **delegatedProviderSubscriptionId**: string (ReadOnly): Parent DelegatedProvider subscription identifier.
@@ -17,8 +18,9 @@
 * **tenantId**: string (ReadOnly): Directory tenant identifier.
 * **type**: 'Microsoft.Subscriptions.Admin/delegatedProviders' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Subscriptions.Admin/delegatedProviders/offers@2015-11-01 (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.Subscriptions.Admin/delegatedProviders/offers@2015-11-01
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2015-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -29,7 +31,8 @@
 * **type**: 'Microsoft.Subscriptions.Admin/delegatedProviders/offers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Subscriptions.Admin/directoryTenants@2015-11-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -40,7 +43,8 @@
 * **type**: 'Microsoft.Subscriptions.Admin/directoryTenants' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Subscriptions.Admin/locations@2015-11-01
-* **Valid Scope(s)**: Subscription
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2015-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **displayName**: string: Display name of the location.
@@ -50,8 +54,9 @@
 * **name**: string (Required, DeployTimeConstant): The resource name
 * **type**: 'Microsoft.Subscriptions.Admin/locations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Subscriptions.Admin/locations/quotas@2015-11-01 (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.Subscriptions.Admin/locations/quotas@2015-11-01
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2015-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -62,7 +67,8 @@
 * **type**: 'Microsoft.Subscriptions.Admin/locations/quotas' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Subscriptions.Admin/offers@2015-11-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -73,7 +79,8 @@
 * **type**: 'Microsoft.Subscriptions.Admin/offers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Subscriptions.Admin/offers/offerDelegations@2015-11-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -84,7 +91,8 @@
 * **type**: 'Microsoft.Subscriptions.Admin/offers/offerDelegations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Subscriptions.Admin/plans@2015-11-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -95,7 +103,8 @@
 * **type**: 'Microsoft.Subscriptions.Admin/plans' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Subscriptions.Admin/subscriptions@2015-11-01
-* **Valid Scope(s)**: Subscription
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2015-11-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **delegatedProviderSubscriptionId**: string: Parent DelegatedProvider subscription identifier.
@@ -112,7 +121,8 @@
 * **type**: 'Microsoft.Subscriptions.Admin/subscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Subscriptions.Admin/subscriptions/acquiredPlans@2015-11-01
-* **Valid Scope(s)**: Subscription
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: Subscription
 ### Properties
 * **acquisitionId**: string: Acquisition identifier.
 * **acquisitionTime**: string: Acquisition time.

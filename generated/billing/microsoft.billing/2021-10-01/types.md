@@ -1,7 +1,8 @@
 # Microsoft.Billing @ 2021-10-01
 
-## Resource Microsoft.Billing/billingAccounts/billingProfiles/paymentMethodLinks@2021-10-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/billingProfiles/paymentMethodLinks@2021-10-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -10,7 +11,8 @@
 * **type**: 'Microsoft.Billing/billingAccounts/billingProfiles/paymentMethodLinks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Billing/billingAccounts/billingSubscriptionAliases@2021-10-01
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2021-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -18,8 +20,9 @@
 * **properties**: [BillingSubscriptionAliasProperties](#billingsubscriptionaliasproperties): Billing subscription alias properties.
 * **type**: 'Microsoft.Billing/billingAccounts/billingSubscriptionAliases' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/billingSubscriptions@2021-10-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/billingSubscriptions@2021-10-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -27,8 +30,9 @@
 * **properties**: [BillingSubscriptionProperties](#billingsubscriptionproperties) (ReadOnly): The billing properties of a subscription.
 * **type**: 'Microsoft.Billing/billingAccounts/billingSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/billingAccounts/paymentMethods@2021-10-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/billingAccounts/paymentMethods@2021-10-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -36,8 +40,9 @@
 * **properties**: [PaymentMethodProperties](#paymentmethodproperties) (ReadOnly): The properties of a payment method.
 * **type**: 'Microsoft.Billing/billingAccounts/paymentMethods' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Billing/paymentMethods@2021-10-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.Billing/paymentMethods@2021-10-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-10-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

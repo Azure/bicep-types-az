@@ -1,7 +1,8 @@
 # Microsoft.Marketplace @ 2023-03-01-preview
 
 ## Resource Microsoft.Marketplace/mysolutions@2023-03-01-preview
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2023-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

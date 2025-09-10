@@ -1,7 +1,8 @@
 # microsoft.Compute @ 2016-03-30
 
-## Resource microsoft.Compute/virtualMachineScaleSets/virtualMachines/networkInterfaces@2016-03-30 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource microsoft.Compute/virtualMachineScaleSets/virtualMachines/networkInterfaces@2016-03-30
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2016-03-30' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Gets a unique read-only string that changes whenever the resource is updated

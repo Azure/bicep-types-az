@@ -1,7 +1,8 @@
 # Microsoft.BotService @ 2023-09-15-preview
 
 ## Resource Microsoft.BotService/botServices@2023-09-15-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-09-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Entity Tag.
@@ -17,7 +18,8 @@
 * **zones**: string[] (ReadOnly): Entity zones
 
 ## Resource Microsoft.BotService/botServices/channels@2023-09-15-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-09-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Entity Tag.
@@ -33,7 +35,8 @@
 * **zones**: string[] (ReadOnly): Entity zones
 
 ## Resource Microsoft.BotService/botServices/connections@2023-09-15-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-09-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Entity Tag.
@@ -48,8 +51,9 @@
 * **type**: 'Microsoft.BotService/botServices/connections' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[] (ReadOnly): Entity zones
 
-## Resource Microsoft.BotService/botServices/networkSecurityPerimeterConfigurations@2023-09-15-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.BotService/botServices/networkSecurityPerimeterConfigurations@2023-09-15-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-09-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -59,7 +63,8 @@
 * **type**: 'Microsoft.BotService/botServices/networkSecurityPerimeterConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.BotService/botServices/privateEndpointConnections@2023-09-15-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-09-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

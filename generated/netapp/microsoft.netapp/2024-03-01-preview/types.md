@@ -1,7 +1,8 @@
 # Microsoft.NetApp @ 2024-03-01-preview
 
-## Resource Microsoft.NetApp/locations/quotaLimits@2024-03-01-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.NetApp/locations/quotaLimits@2024-03-01-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -10,8 +11,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.NetApp/locations/quotaLimits' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.NetApp/locations/regionInfos@2024-03-01-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.NetApp/locations/regionInfos@2024-03-01-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -21,7 +23,8 @@
 * **type**: 'Microsoft.NetApp/locations/regionInfos' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetApp/netAppAccounts@2024-03-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
@@ -35,7 +38,8 @@
 * **type**: 'Microsoft.NetApp/netAppAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetApp/netAppAccounts/backupPolicies@2024-03-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
@@ -48,7 +52,8 @@
 * **type**: 'Microsoft.NetApp/netAppAccounts/backupPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetApp/netAppAccounts/backupVaults@2024-03-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -60,7 +65,8 @@
 * **type**: 'Microsoft.NetApp/netAppAccounts/backupVaults' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetApp/netAppAccounts/backupVaults/backups@2024-03-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -70,7 +76,8 @@
 * **type**: 'Microsoft.NetApp/netAppAccounts/backupVaults/backups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetApp/netAppAccounts/capacityPools@2024-03-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
@@ -83,7 +90,8 @@
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes@2024-03-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
@@ -97,7 +105,8 @@
 * **zones**: (string {minLength: 1, maxLength: 255})[]: Availability Zone
 
 ## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots@2024-03-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -108,7 +117,8 @@
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes/subvolumes@2024-03-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -118,7 +128,8 @@
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/subvolumes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetApp/netAppAccounts/capacityPools/volumes/volumeQuotaRules@2024-03-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -130,7 +141,8 @@
 * **type**: 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/volumeQuotaRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetApp/netAppAccounts/snapshotPolicies@2024-03-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.
@@ -143,7 +155,8 @@
 * **type**: 'Microsoft.NetApp/netAppAccounts/snapshotPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetApp/netAppAccounts/volumeGroups@2024-03-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

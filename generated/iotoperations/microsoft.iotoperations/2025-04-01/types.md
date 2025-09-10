@@ -1,7 +1,8 @@
 # Microsoft.IoTOperations @ 2025-04-01
 
 ## Resource Microsoft.IoTOperations/instances@2025-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): Edge location of the resource.
@@ -15,7 +16,8 @@
 * **type**: 'Microsoft.IoTOperations/instances' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.IoTOperations/instances/brokers@2025-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): Edge location of the resource.
@@ -26,7 +28,8 @@
 * **type**: 'Microsoft.IoTOperations/instances/brokers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.IoTOperations/instances/brokers/authentications@2025-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): Edge location of the resource.
@@ -37,7 +40,8 @@
 * **type**: 'Microsoft.IoTOperations/instances/brokers/authentications' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.IoTOperations/instances/brokers/authorizations@2025-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): Edge location of the resource.
@@ -48,7 +52,8 @@
 * **type**: 'Microsoft.IoTOperations/instances/brokers/authorizations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.IoTOperations/instances/brokers/listeners@2025-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): Edge location of the resource.
@@ -59,7 +64,8 @@
 * **type**: 'Microsoft.IoTOperations/instances/brokers/listeners' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.IoTOperations/instances/dataflowEndpoints@2025-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): Edge location of the resource.
@@ -70,7 +76,8 @@
 * **type**: 'Microsoft.IoTOperations/instances/dataflowEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.IoTOperations/instances/dataflowProfiles@2025-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): Edge location of the resource.
@@ -81,7 +88,8 @@
 * **type**: 'Microsoft.IoTOperations/instances/dataflowProfiles' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.IoTOperations/instances/dataflowProfiles/dataflows@2025-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ExtendedLocation](#extendedlocation) (Required): Edge location of the resource.

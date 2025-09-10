@@ -1,7 +1,8 @@
 # Microsoft.Compute @ 2025-06-05
 
-## Resource Microsoft.Compute/locations/placementScores@2025-06-05 (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.Compute/locations/placementScores@2025-06-05
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2025-06-05' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

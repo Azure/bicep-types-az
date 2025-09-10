@@ -1,7 +1,8 @@
 # Microsoft.RedHatOpenShift @ 2022-09-04
 
 ## Resource Microsoft.RedHatOpenShift/openShiftClusters@2022-09-04
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-09-04' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -13,7 +14,8 @@
 * **type**: 'Microsoft.RedHatOpenShift/openShiftClusters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RedHatOpenShift/openshiftclusters/machinePool@2022-09-04
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-09-04' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -23,7 +25,8 @@
 * **type**: 'Microsoft.RedHatOpenShift/openshiftclusters/machinePool' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RedHatOpenShift/openshiftclusters/secret@2022-09-04
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-09-04' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -33,7 +36,8 @@
 * **type**: 'Microsoft.RedHatOpenShift/openshiftclusters/secret' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RedHatOpenShift/openshiftclusters/syncIdentityProvider@2022-09-04
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-09-04' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -43,7 +47,8 @@
 * **type**: 'Microsoft.RedHatOpenShift/openshiftclusters/syncIdentityProvider' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.RedHatOpenShift/openshiftclusters/syncSet@2022-09-04
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-09-04' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

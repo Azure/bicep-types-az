@@ -1,7 +1,8 @@
 # Microsoft.Network @ 2021-03-01-preview
 
 ## Resource Microsoft.Network/networkSecurityPerimeters@2021-03-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): A unique read-only string that changes whenever the resource is updated.

@@ -1,7 +1,8 @@
 # Microsoft.HybridNetwork @ 2024-04-15
 
 ## Resource Microsoft.HybridNetwork/configurationGroupValues@2024-04-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -13,7 +14,8 @@
 * **type**: 'Microsoft.HybridNetwork/configurationGroupValues' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridNetwork/networkFunctions@2024-04-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: A unique read-only string that changes whenever the resource is updated.
@@ -26,8 +28,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.HybridNetwork/networkFunctions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.HybridNetwork/networkFunctions/components@2024-04-15 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.HybridNetwork/networkFunctions/components@2024-04-15
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-04-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -37,7 +40,8 @@
 * **type**: 'Microsoft.HybridNetwork/networkFunctions/components' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridNetwork/publishers@2024-04-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -50,7 +54,8 @@
 * **type**: 'Microsoft.HybridNetwork/publishers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridNetwork/publishers/artifactStores@2024-04-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -62,7 +67,8 @@
 * **type**: 'Microsoft.HybridNetwork/publishers/artifactStores' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridNetwork/publishers/artifactStores/artifactManifests@2024-04-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -74,7 +80,8 @@
 * **type**: 'Microsoft.HybridNetwork/publishers/artifactStores/artifactManifests' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridNetwork/publishers/configurationGroupSchemas@2024-04-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -86,7 +93,8 @@
 * **type**: 'Microsoft.HybridNetwork/publishers/configurationGroupSchemas' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridNetwork/publishers/networkFunctionDefinitionGroups@2024-04-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -98,7 +106,8 @@
 * **type**: 'Microsoft.HybridNetwork/publishers/networkFunctionDefinitionGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridNetwork/publishers/networkFunctionDefinitionGroups/networkFunctionDefinitionVersions@2024-04-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -110,7 +119,8 @@
 * **type**: 'Microsoft.HybridNetwork/publishers/networkFunctionDefinitionGroups/networkFunctionDefinitionVersions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridNetwork/publishers/networkServiceDesignGroups@2024-04-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -122,7 +132,8 @@
 * **type**: 'Microsoft.HybridNetwork/publishers/networkServiceDesignGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridNetwork/publishers/networkServiceDesignGroups/networkServiceDesignVersions@2024-04-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -134,7 +145,8 @@
 * **type**: 'Microsoft.HybridNetwork/publishers/networkServiceDesignGroups/networkServiceDesignVersions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridNetwork/siteNetworkServices@2024-04-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -148,7 +160,8 @@
 * **type**: 'Microsoft.HybridNetwork/siteNetworkServices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridNetwork/sites@2024-04-15
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

@@ -1,7 +1,8 @@
 # Microsoft.ContainerInstance @ 2024-05-01-preview
 
 ## Resource Microsoft.ContainerInstance/containerGroupProfiles@2024-05-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -12,8 +13,9 @@
 * **type**: 'Microsoft.ContainerInstance/containerGroupProfiles' (ReadOnly, DeployTimeConstant): The resource type
 * **zones**: string[]: The zones for the container group.
 
-## Resource Microsoft.ContainerInstance/containerGroupProfiles/revisions@2024-05-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.ContainerInstance/containerGroupProfiles/revisions@2024-05-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -25,7 +27,8 @@
 * **zones**: string[] (ReadOnly): The zones for the container group.
 
 ## Resource Microsoft.ContainerInstance/containerGroups@2024-05-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

@@ -903,11 +903,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DataProtection/backupVaults@2023-05-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/3"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1903,11 +1903,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DataProtection/backupVaults/backupPolicies@2023-05-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/86"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2937,11 +2937,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DataProtection/backupVaults/backupInstances@2023-05-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/177"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3147,11 +3147,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DataProtection/resourceGuards@2023-05-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/250"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringType",
@@ -3270,11 +3270,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DataProtection/backupVaults/backupResourceGuardProxies@2023-05-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/266"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3371,11 +3371,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DataProtection/backupVaults/operationResults@2023-05-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/273"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -3451,11 +3451,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DataProtection/backupVaults/backupInstances/operationResults@2023-05-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/278"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -3712,11 +3712,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DataProtection/backupVaults/backupInstances/recoveryPoints@2023-05-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/283"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -4145,11 +4145,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DataProtection/backupVaults/backupJobs@2023-05-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/298"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -4454,10 +4454,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.DataProtection/backupVaults/deletedBackupInstances@2023-05-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/311"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   }
 ]

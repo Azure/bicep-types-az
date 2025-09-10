@@ -1,7 +1,8 @@
 # Microsoft.HealthcareApis @ 2018-08-20-preview
 
 ## Resource Microsoft.HealthcareApis/services@2018-08-20-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-08-20-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: An etag associated with the resource, used for optimistic concurrency when editing it.

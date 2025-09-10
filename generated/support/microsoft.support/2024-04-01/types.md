@@ -1,7 +1,8 @@
 # Microsoft.Support @ 2024-04-01
 
 ## Resource Microsoft.Support/fileWorkspaces@2024-04-01
-* **Valid Scope(s)**: Tenant, Subscription
+* **Readable Scope(s)**: Tenant, Subscription
+* **Writable Scope(s)**: Tenant, Subscription
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -11,7 +12,8 @@
 * **type**: 'Microsoft.Support/fileWorkspaces' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Support/fileWorkspaces/files@2024-04-01
-* **Valid Scope(s)**: Tenant, Subscription
+* **Readable Scope(s)**: Tenant, Subscription
+* **Writable Scope(s)**: Tenant, Subscription
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -21,7 +23,8 @@
 * **type**: 'Microsoft.Support/fileWorkspaces/files' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Support/supportTickets@2024-04-01
-* **Valid Scope(s)**: Tenant, Subscription
+* **Readable Scope(s)**: Tenant, Subscription
+* **Writable Scope(s)**: Tenant, Subscription
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -29,8 +32,9 @@
 * **properties**: [SupportTicketDetailsProperties](#supportticketdetailsproperties) (Required): Properties of the resource.
 * **type**: 'Microsoft.Support/supportTickets' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Support/supportTickets/chatTranscripts@2024-04-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant, Subscription
+## Resource Microsoft.Support/supportTickets/chatTranscripts@2024-04-01
+* **Readable Scope(s)**: Tenant, Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -40,7 +44,8 @@
 * **type**: 'Microsoft.Support/supportTickets/chatTranscripts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Support/supportTickets/communications@2024-04-01
-* **Valid Scope(s)**: Tenant, Subscription
+* **Readable Scope(s)**: Tenant, Subscription
+* **Writable Scope(s)**: Tenant, Subscription
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

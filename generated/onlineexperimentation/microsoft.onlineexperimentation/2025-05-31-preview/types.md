@@ -1,7 +1,8 @@
 # Microsoft.OnlineExperimentation @ 2025-05-31-preview
 
 ## Resource Microsoft.OnlineExperimentation/workspaces@2025-05-31-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-05-31-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

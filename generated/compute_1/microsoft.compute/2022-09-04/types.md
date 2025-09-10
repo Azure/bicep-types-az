@@ -1,7 +1,8 @@
 # Microsoft.Compute @ 2022-09-04
 
 ## Resource Microsoft.Compute/cloudServices@2022-09-04
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-09-04' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -14,7 +15,8 @@
 * **zones**: string[]: List of logical availability zone of the resource. List should contain only 1 zone where cloud service should be provisioned. This field is optional.
 
 ## Resource Microsoft.Compute/cloudServices/updateDomains@2022-09-04
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-09-04' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

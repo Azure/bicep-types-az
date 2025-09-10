@@ -1,7 +1,8 @@
 # Microsoft.KubernetesConfiguration @ 2021-03-01
 
 ## Resource Microsoft.KubernetesConfiguration/sourceControlConfigurations@2021-03-01
-* **Valid Scope(s)**: Extension
+* **Readable Scope(s)**: Extension
+* **Writable Scope(s)**: Extension
 ### Properties
 * **apiVersion**: '2021-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

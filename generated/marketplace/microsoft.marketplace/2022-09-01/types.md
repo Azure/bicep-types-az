@@ -1,7 +1,8 @@
 # Microsoft.Marketplace @ 2022-09-01
 
 ## Resource Microsoft.Marketplace/privateStores@2022-09-01
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2022-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -11,7 +12,8 @@
 * **type**: 'Microsoft.Marketplace/privateStores' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Marketplace/privateStores/adminRequestApprovals@2022-09-01
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: None
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2022-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -21,7 +23,8 @@
 * **type**: 'Microsoft.Marketplace/privateStores/adminRequestApprovals' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Marketplace/privateStores/collections@2022-09-01
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2022-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -31,7 +34,8 @@
 * **type**: 'Microsoft.Marketplace/privateStores/collections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Marketplace/privateStores/collections/offers@2022-09-01
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2022-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -41,7 +45,8 @@
 * **type**: 'Microsoft.Marketplace/privateStores/collections/offers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Marketplace/privateStores/requestApprovals@2022-09-01
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2022-09-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

@@ -907,11 +907,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Batch/batchAccounts@2024-07-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringType",
@@ -1053,11 +1053,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Batch/batchAccounts/applications/versions@2024-07-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/79"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringType",
@@ -1166,11 +1166,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Batch/batchAccounts/applications@2024-07-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/89"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringType",
@@ -1449,11 +1449,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Batch/batchAccounts/certificates@2024-07-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/96"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -4239,11 +4239,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Batch/batchAccounts/pools@2024-07-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/116"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -4332,11 +4332,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Batch/batchAccounts/detectors@2024-07-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/314"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringType",
@@ -4457,11 +4457,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Batch/batchAccounts/privateLinkResources@2024-07-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/321"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -4537,11 +4537,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Batch/batchAccounts/privateEndpointConnections@2024-07-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/329"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringType",
@@ -5242,11 +5242,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Batch/batchAccounts/networkSecurityPerimeterConfigurations@2024-07-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/335"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "ObjectType",

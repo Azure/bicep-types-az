@@ -1,7 +1,8 @@
 # Microsoft.Update.Admin @ 2016-05-01
 
-## Resource Microsoft.Update.Admin/updateLocations@2016-05-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Update.Admin/updateLocations@2016-05-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2016-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -11,8 +12,9 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): List of key-value pairs.
 * **type**: 'Microsoft.Update.Admin/updateLocations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Update.Admin/updateLocations/updateRuns@2016-05-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Update.Admin/updateLocations/updateRuns@2016-05-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2016-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -22,8 +24,9 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): List of key-value pairs.
 * **type**: 'Microsoft.Update.Admin/updateLocations/updateRuns' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Update.Admin/updateLocations/updates@2016-05-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Update.Admin/updateLocations/updates@2016-05-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2016-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -33,8 +36,9 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): List of key-value pairs.
 * **type**: 'Microsoft.Update.Admin/updateLocations/updates' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Update.Admin/updateLocations/updates/updateRuns@2016-05-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Update.Admin/updateLocations/updates/updateRuns@2016-05-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2016-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

@@ -1678,11 +1678,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.ServiceFabric/clusters@2023-11-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/3"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1785,11 +1785,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.ServiceFabric/clusters/applicationTypes@2023-11-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/127"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1914,11 +1914,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.ServiceFabric/clusters/applicationTypes/versions@2023-11-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/133"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2483,11 +2483,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.ServiceFabric/clusters/applications@2023-11-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/140"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3102,11 +3102,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.ServiceFabric/clusters/applications/services@2023-11-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/172"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "ObjectType",

@@ -1,7 +1,8 @@
 # Microsoft.AlertsManagement @ 2018-05-05-preview
 
-## Resource Microsoft.AlertsManagement/alerts@2018-05-05-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.AlertsManagement/alerts@2018-05-05-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2018-05-05-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -9,8 +10,9 @@
 * **properties**: [AlertProperties](#alertproperties) (ReadOnly): An alert created in alert management service.
 * **type**: 'Microsoft.AlertsManagement/alerts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AlertsManagement/smartGroups@2018-05-05-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.AlertsManagement/smartGroups@2018-05-05-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2018-05-05-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

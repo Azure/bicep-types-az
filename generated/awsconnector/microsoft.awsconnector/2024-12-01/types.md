@@ -1,7 +1,8 @@
 # Microsoft.AwsConnector @ 2024-12-01
 
 ## Resource Microsoft.AwsConnector/accessAnalyzerAnalyzers@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -13,7 +14,8 @@
 * **type**: 'Microsoft.AwsConnector/accessAnalyzerAnalyzers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/acmCertificateSummaries@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -25,7 +27,8 @@
 * **type**: 'Microsoft.AwsConnector/acmCertificateSummaries' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/apiGatewayRestApis@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -37,7 +40,8 @@
 * **type**: 'Microsoft.AwsConnector/apiGatewayRestApis' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/apiGatewayStages@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -49,7 +53,8 @@
 * **type**: 'Microsoft.AwsConnector/apiGatewayStages' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/appSyncGraphqlApis@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -61,7 +66,8 @@
 * **type**: 'Microsoft.AwsConnector/appSyncGraphqlApis' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/autoScalingAutoScalingGroups@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -73,7 +79,8 @@
 * **type**: 'Microsoft.AwsConnector/autoScalingAutoScalingGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/cloudFormationStacks@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -85,7 +92,8 @@
 * **type**: 'Microsoft.AwsConnector/cloudFormationStacks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/cloudFormationStackSets@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -97,7 +105,8 @@
 * **type**: 'Microsoft.AwsConnector/cloudFormationStackSets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/cloudFrontDistributions@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -109,7 +118,8 @@
 * **type**: 'Microsoft.AwsConnector/cloudFrontDistributions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/cloudTrailTrails@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -121,7 +131,8 @@
 * **type**: 'Microsoft.AwsConnector/cloudTrailTrails' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/cloudWatchAlarms@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -133,7 +144,8 @@
 * **type**: 'Microsoft.AwsConnector/cloudWatchAlarms' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/codeBuildProjects@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -145,7 +157,8 @@
 * **type**: 'Microsoft.AwsConnector/codeBuildProjects' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/codeBuildSourceCredentialsInfos@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -157,7 +170,8 @@
 * **type**: 'Microsoft.AwsConnector/codeBuildSourceCredentialsInfos' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/configServiceConfigurationRecorders@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -169,7 +183,8 @@
 * **type**: 'Microsoft.AwsConnector/configServiceConfigurationRecorders' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/configServiceConfigurationRecorderStatuses@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -181,7 +196,8 @@
 * **type**: 'Microsoft.AwsConnector/configServiceConfigurationRecorderStatuses' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/configServiceDeliveryChannels@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -193,7 +209,8 @@
 * **type**: 'Microsoft.AwsConnector/configServiceDeliveryChannels' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/databaseMigrationServiceReplicationInstances@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -205,7 +222,8 @@
 * **type**: 'Microsoft.AwsConnector/databaseMigrationServiceReplicationInstances' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/daxClusters@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -217,7 +235,8 @@
 * **type**: 'Microsoft.AwsConnector/daxClusters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/dynamoDBContinuousBackupsDescriptions@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -229,7 +248,8 @@
 * **type**: 'Microsoft.AwsConnector/dynamoDBContinuousBackupsDescriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/dynamoDBTables@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -241,7 +261,8 @@
 * **type**: 'Microsoft.AwsConnector/dynamoDBTables' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/ec2AccountAttributes@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -253,7 +274,8 @@
 * **type**: 'Microsoft.AwsConnector/ec2AccountAttributes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/ec2Addresses@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -265,7 +287,8 @@
 * **type**: 'Microsoft.AwsConnector/ec2Addresses' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/ec2FlowLogs@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -277,7 +300,8 @@
 * **type**: 'Microsoft.AwsConnector/ec2FlowLogs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/ec2Images@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -289,7 +313,8 @@
 * **type**: 'Microsoft.AwsConnector/ec2Images' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/ec2Instances@2024-12-01
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -299,7 +324,8 @@
 * **type**: 'Microsoft.AwsConnector/ec2Instances' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/ec2InstanceStatuses@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -311,7 +337,8 @@
 * **type**: 'Microsoft.AwsConnector/ec2InstanceStatuses' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/ec2Ipams@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -323,7 +350,8 @@
 * **type**: 'Microsoft.AwsConnector/ec2Ipams' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/ec2KeyPairs@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -335,7 +363,8 @@
 * **type**: 'Microsoft.AwsConnector/ec2KeyPairs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/ec2NetworkAcls@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -347,7 +376,8 @@
 * **type**: 'Microsoft.AwsConnector/ec2NetworkAcls' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/ec2NetworkInterfaces@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -359,7 +389,8 @@
 * **type**: 'Microsoft.AwsConnector/ec2NetworkInterfaces' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/ec2RouteTables@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -371,7 +402,8 @@
 * **type**: 'Microsoft.AwsConnector/ec2RouteTables' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/ec2SecurityGroups@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -383,7 +415,8 @@
 * **type**: 'Microsoft.AwsConnector/ec2SecurityGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/ec2Snapshots@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -395,7 +428,8 @@
 * **type**: 'Microsoft.AwsConnector/ec2Snapshots' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/ec2Subnets@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -407,7 +441,8 @@
 * **type**: 'Microsoft.AwsConnector/ec2Subnets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/ec2Volumes@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -419,7 +454,8 @@
 * **type**: 'Microsoft.AwsConnector/ec2Volumes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/ec2VPCEndpoints@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -431,7 +467,8 @@
 * **type**: 'Microsoft.AwsConnector/ec2VPCEndpoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/ec2VPCPeeringConnections@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -443,7 +480,8 @@
 * **type**: 'Microsoft.AwsConnector/ec2VPCPeeringConnections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/ec2Vpcs@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -455,7 +493,8 @@
 * **type**: 'Microsoft.AwsConnector/ec2Vpcs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/ecrImageDetails@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -467,7 +506,8 @@
 * **type**: 'Microsoft.AwsConnector/ecrImageDetails' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/ecrRepositories@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -479,7 +519,8 @@
 * **type**: 'Microsoft.AwsConnector/ecrRepositories' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/ecsClusters@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -491,7 +532,8 @@
 * **type**: 'Microsoft.AwsConnector/ecsClusters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/ecsServices@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -503,7 +545,8 @@
 * **type**: 'Microsoft.AwsConnector/ecsServices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/ecsTaskDefinitions@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -515,7 +558,8 @@
 * **type**: 'Microsoft.AwsConnector/ecsTaskDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/efsFileSystems@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -527,7 +571,8 @@
 * **type**: 'Microsoft.AwsConnector/efsFileSystems' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/efsMountTargets@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -539,7 +584,8 @@
 * **type**: 'Microsoft.AwsConnector/efsMountTargets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/eksClusters@2024-12-01
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -549,7 +595,8 @@
 * **type**: 'Microsoft.AwsConnector/eksClusters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/eksNodegroups@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -561,7 +608,8 @@
 * **type**: 'Microsoft.AwsConnector/eksNodegroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/elasticBeanstalkApplications@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -573,7 +621,8 @@
 * **type**: 'Microsoft.AwsConnector/elasticBeanstalkApplications' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/elasticBeanstalkConfigurationTemplates@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -585,7 +634,8 @@
 * **type**: 'Microsoft.AwsConnector/elasticBeanstalkConfigurationTemplates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/elasticBeanstalkEnvironments@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -597,7 +647,8 @@
 * **type**: 'Microsoft.AwsConnector/elasticBeanstalkEnvironments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/elasticLoadBalancingV2Listeners@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -609,7 +660,8 @@
 * **type**: 'Microsoft.AwsConnector/elasticLoadBalancingV2Listeners' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/elasticLoadBalancingV2LoadBalancers@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -621,7 +673,8 @@
 * **type**: 'Microsoft.AwsConnector/elasticLoadBalancingV2LoadBalancers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/elasticLoadBalancingV2TargetGroups@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -633,7 +686,8 @@
 * **type**: 'Microsoft.AwsConnector/elasticLoadBalancingV2TargetGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/elasticLoadBalancingV2TargetHealthDescriptions@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -645,7 +699,8 @@
 * **type**: 'Microsoft.AwsConnector/elasticLoadBalancingV2TargetHealthDescriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/emrClusters@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -657,7 +712,8 @@
 * **type**: 'Microsoft.AwsConnector/emrClusters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/guardDutyDetectors@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -669,7 +725,8 @@
 * **type**: 'Microsoft.AwsConnector/guardDutyDetectors' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/iamAccessKeyLastUseds@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -681,7 +738,8 @@
 * **type**: 'Microsoft.AwsConnector/iamAccessKeyLastUseds' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/iamAccessKeyMetadata@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -693,7 +751,8 @@
 * **type**: 'Microsoft.AwsConnector/iamAccessKeyMetadata' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/iamGroups@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -705,7 +764,8 @@
 * **type**: 'Microsoft.AwsConnector/iamGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/iamInstanceProfiles@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -717,7 +777,8 @@
 * **type**: 'Microsoft.AwsConnector/iamInstanceProfiles' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/iamMFADevices@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -729,7 +790,8 @@
 * **type**: 'Microsoft.AwsConnector/iamMFADevices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/iamPasswordPolicies@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -741,7 +803,8 @@
 * **type**: 'Microsoft.AwsConnector/iamPasswordPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/iamPolicyVersions@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -753,7 +816,8 @@
 * **type**: 'Microsoft.AwsConnector/iamPolicyVersions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/iamRoles@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -765,7 +829,8 @@
 * **type**: 'Microsoft.AwsConnector/iamRoles' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/iamServerCertificates@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -777,7 +842,8 @@
 * **type**: 'Microsoft.AwsConnector/iamServerCertificates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/iamVirtualMFADevices@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -789,7 +855,8 @@
 * **type**: 'Microsoft.AwsConnector/iamVirtualMFADevices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/kmsAliases@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -801,7 +868,8 @@
 * **type**: 'Microsoft.AwsConnector/kmsAliases' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/kmsKeys@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -813,7 +881,8 @@
 * **type**: 'Microsoft.AwsConnector/kmsKeys' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/lambdaFunctionCodeLocations@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -825,7 +894,8 @@
 * **type**: 'Microsoft.AwsConnector/lambdaFunctionCodeLocations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/lambdaFunctions@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -837,7 +907,8 @@
 * **type**: 'Microsoft.AwsConnector/lambdaFunctions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/lightsailBuckets@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -849,7 +920,8 @@
 * **type**: 'Microsoft.AwsConnector/lightsailBuckets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/lightsailInstances@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -861,7 +933,8 @@
 * **type**: 'Microsoft.AwsConnector/lightsailInstances' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/logsLogGroups@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -873,7 +946,8 @@
 * **type**: 'Microsoft.AwsConnector/logsLogGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/logsLogStreams@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -885,7 +959,8 @@
 * **type**: 'Microsoft.AwsConnector/logsLogStreams' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/logsMetricFilters@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -897,7 +972,8 @@
 * **type**: 'Microsoft.AwsConnector/logsMetricFilters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/logsSubscriptionFilters@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -909,7 +985,8 @@
 * **type**: 'Microsoft.AwsConnector/logsSubscriptionFilters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/macie2JobSummaries@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -921,7 +998,8 @@
 * **type**: 'Microsoft.AwsConnector/macie2JobSummaries' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/macieAllowLists@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -933,7 +1011,8 @@
 * **type**: 'Microsoft.AwsConnector/macieAllowLists' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/networkFirewallFirewallPolicies@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -945,7 +1024,8 @@
 * **type**: 'Microsoft.AwsConnector/networkFirewallFirewallPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/networkFirewallFirewalls@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -957,7 +1037,8 @@
 * **type**: 'Microsoft.AwsConnector/networkFirewallFirewalls' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/networkFirewallRuleGroups@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -969,7 +1050,8 @@
 * **type**: 'Microsoft.AwsConnector/networkFirewallRuleGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/openSearchDomainStatuses@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -981,7 +1063,8 @@
 * **type**: 'Microsoft.AwsConnector/openSearchDomainStatuses' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/organizationsAccounts@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -993,7 +1076,8 @@
 * **type**: 'Microsoft.AwsConnector/organizationsAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/organizationsOrganizations@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -1005,7 +1089,8 @@
 * **type**: 'Microsoft.AwsConnector/organizationsOrganizations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/rdsDBClusters@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -1017,7 +1102,8 @@
 * **type**: 'Microsoft.AwsConnector/rdsDBClusters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/rdsDBInstances@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -1029,7 +1115,8 @@
 * **type**: 'Microsoft.AwsConnector/rdsDBInstances' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/rdsDBSnapshotAttributesResults@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -1041,7 +1128,8 @@
 * **type**: 'Microsoft.AwsConnector/rdsDBSnapshotAttributesResults' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/rdsDBSnapshots@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -1053,7 +1141,8 @@
 * **type**: 'Microsoft.AwsConnector/rdsDBSnapshots' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/rdsEventSubscriptions@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -1065,7 +1154,8 @@
 * **type**: 'Microsoft.AwsConnector/rdsEventSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/rdsExportTasks@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -1077,7 +1167,8 @@
 * **type**: 'Microsoft.AwsConnector/rdsExportTasks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/redshiftClusterParameterGroups@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -1089,7 +1180,8 @@
 * **type**: 'Microsoft.AwsConnector/redshiftClusterParameterGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/redshiftClusters@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -1101,7 +1193,8 @@
 * **type**: 'Microsoft.AwsConnector/redshiftClusters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/route53DomainsDomainSummaries@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -1113,7 +1206,8 @@
 * **type**: 'Microsoft.AwsConnector/route53DomainsDomainSummaries' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/route53HostedZones@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -1125,7 +1219,8 @@
 * **type**: 'Microsoft.AwsConnector/route53HostedZones' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/route53ResourceRecordSets@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -1137,7 +1232,8 @@
 * **type**: 'Microsoft.AwsConnector/route53ResourceRecordSets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/s3AccessControlPolicies@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -1149,7 +1245,8 @@
 * **type**: 'Microsoft.AwsConnector/s3AccessControlPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/s3AccessPoints@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -1161,7 +1258,8 @@
 * **type**: 'Microsoft.AwsConnector/s3AccessPoints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/s3BucketPolicies@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -1173,7 +1271,8 @@
 * **type**: 'Microsoft.AwsConnector/s3BucketPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/s3Buckets@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -1185,7 +1284,8 @@
 * **type**: 'Microsoft.AwsConnector/s3Buckets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/s3ControlMultiRegionAccessPointPolicyDocuments@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -1197,7 +1297,8 @@
 * **type**: 'Microsoft.AwsConnector/s3ControlMultiRegionAccessPointPolicyDocuments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/sageMakerApps@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -1209,7 +1310,8 @@
 * **type**: 'Microsoft.AwsConnector/sageMakerApps' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/sageMakerNotebookInstanceSummaries@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -1221,7 +1323,8 @@
 * **type**: 'Microsoft.AwsConnector/sageMakerNotebookInstanceSummaries' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/secretsManagerResourcePolicies@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -1233,7 +1336,8 @@
 * **type**: 'Microsoft.AwsConnector/secretsManagerResourcePolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/secretsManagerSecrets@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -1245,7 +1349,8 @@
 * **type**: 'Microsoft.AwsConnector/secretsManagerSecrets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/snsSubscriptions@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -1257,7 +1362,8 @@
 * **type**: 'Microsoft.AwsConnector/snsSubscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/snsTopics@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -1269,7 +1375,8 @@
 * **type**: 'Microsoft.AwsConnector/snsTopics' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/sqsQueues@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -1281,7 +1388,8 @@
 * **type**: 'Microsoft.AwsConnector/sqsQueues' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/ssmInstanceInformations@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -1293,7 +1401,8 @@
 * **type**: 'Microsoft.AwsConnector/ssmInstanceInformations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/ssmParameters@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -1305,7 +1414,8 @@
 * **type**: 'Microsoft.AwsConnector/ssmParameters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/ssmResourceComplianceSummaryItems@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -1317,7 +1427,8 @@
 * **type**: 'Microsoft.AwsConnector/ssmResourceComplianceSummaryItems' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/wafv2LoggingConfigurations@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -1329,7 +1440,8 @@
 * **type**: 'Microsoft.AwsConnector/wafv2LoggingConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AwsConnector/wafWebACLSummaries@2024-12-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-12-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

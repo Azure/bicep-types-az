@@ -1,7 +1,8 @@
 # Microsoft.Blueprint @ 2018-11-01-preview
 
 ## Resource Microsoft.Blueprint/blueprintAssignments@2018-11-01-preview
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -11,8 +12,9 @@
 * **properties**: [AssignmentProperties](#assignmentproperties) (Required): Properties for blueprint assignment object.
 * **type**: 'Microsoft.Blueprint/blueprintAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Blueprint/blueprintAssignments/assignmentOperations@2018-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: Unknown
+## Resource Microsoft.Blueprint/blueprintAssignments/assignmentOperations@2018-11-01-preview
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -21,7 +23,8 @@
 * **type**: 'Microsoft.Blueprint/blueprintAssignments/assignmentOperations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Blueprint/blueprints@2018-11-01-preview
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -30,7 +33,8 @@
 * **type**: 'Microsoft.Blueprint/blueprints' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Blueprint/blueprints/artifacts@2018-11-01-preview
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 * **Discriminator**: kind
 
 ### Base Properties
@@ -56,7 +60,8 @@
 
 
 ## Resource Microsoft.Blueprint/blueprints/versions@2018-11-01-preview
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2018-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -64,8 +69,9 @@
 * **properties**: [PublishedBlueprintProperties](#publishedblueprintproperties) (Required): Detailed properties for published blueprint.
 * **type**: 'Microsoft.Blueprint/blueprints/versions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Blueprint/blueprints/versions/artifacts@2018-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: Unknown
+## Resource Microsoft.Blueprint/blueprints/versions/artifacts@2018-11-01-preview
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: None
 * **Discriminator**: kind
 
 ### Base Properties

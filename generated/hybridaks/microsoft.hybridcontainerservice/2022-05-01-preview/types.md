@@ -1,7 +1,8 @@
 # Microsoft.HybridContainerService @ 2022-05-01-preview
 
 ## Resource Microsoft.HybridContainerService/provisionedClusters@2022-05-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [ProvisionedClustersExtendedLocationOrProvisionedClustersResponseExtendedLocation](#provisionedclustersextendedlocationorprovisionedclustersresponseextendedlocation)
@@ -15,7 +16,8 @@
 * **type**: 'Microsoft.HybridContainerService/provisionedClusters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridContainerService/provisionedClusters/agentPools@2022-05-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [AgentPoolExtendedLocation](#agentpoolextendedlocation)
@@ -28,7 +30,8 @@
 * **type**: 'Microsoft.HybridContainerService/provisionedClusters/agentPools' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridContainerService/provisionedClusters/hybridIdentityMetadata@2022-05-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -38,7 +41,8 @@
 * **type**: 'Microsoft.HybridContainerService/provisionedClusters/hybridIdentityMetadata' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridContainerService/storageSpaces@2022-05-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [StorageSpacesExtendedLocation](#storagespacesextendedlocation)
@@ -51,7 +55,8 @@
 * **type**: 'Microsoft.HybridContainerService/storageSpaces' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridContainerService/virtualNetworks@2022-05-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **extendedLocation**: [VirtualNetworksExtendedLocation](#virtualnetworksextendedlocation)

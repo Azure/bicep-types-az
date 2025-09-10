@@ -1,7 +1,8 @@
 # Microsoft.Confluent @ 2025-07-17-preview
 
 ## Resource Microsoft.Confluent/agreements@2025-07-17-preview
-* **Valid Scope(s)**: Subscription
+* **Readable Scope(s)**: None
+* **Writable Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2025-07-17-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -11,7 +12,8 @@
 * **type**: 'Microsoft.Confluent/agreements' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Confluent/organizations@2025-07-17-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-07-17-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -23,7 +25,8 @@
 * **type**: 'Microsoft.Confluent/organizations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Confluent/organizations/environments@2025-07-17-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-07-17-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -34,7 +37,8 @@
 * **type**: 'Microsoft.Confluent/organizations/environments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Confluent/organizations/environments/clusters@2025-07-17-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-07-17-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -45,7 +49,8 @@
 * **type**: 'Microsoft.Confluent/organizations/environments/clusters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Confluent/organizations/environments/clusters/connectors@2025-07-17-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-07-17-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -55,7 +60,8 @@
 * **type**: 'Microsoft.Confluent/organizations/environments/clusters/connectors' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Confluent/organizations/environments/clusters/topics@2025-07-17-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-07-17-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

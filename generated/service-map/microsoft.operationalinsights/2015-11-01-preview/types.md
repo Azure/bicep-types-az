@@ -1,7 +1,8 @@
 # Microsoft.OperationalInsights @ 2015-11-01-preview
 
-## Resource Microsoft.OperationalInsights/workspaces/features/clientGroups@2015-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.OperationalInsights/workspaces/features/clientGroups@2015-11-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2015-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource ETAG.
@@ -12,7 +13,8 @@
 * **type**: 'Microsoft.OperationalInsights/workspaces/features/clientGroups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.OperationalInsights/workspaces/features/machineGroups@2015-11-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Resource ETAG.
@@ -22,8 +24,9 @@
 * **properties**: [MachineGroupProperties](#machinegroupproperties): Resource properties.
 * **type**: 'Microsoft.OperationalInsights/workspaces/features/machineGroups' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.OperationalInsights/workspaces/features/machines@2015-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.OperationalInsights/workspaces/features/machines@2015-11-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2015-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource ETAG.
@@ -33,8 +36,9 @@
 * **properties**: [MachineProperties](#machineproperties) (ReadOnly): Resource properties.
 * **type**: 'Microsoft.OperationalInsights/workspaces/features/machines' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.OperationalInsights/workspaces/features/machines/ports@2015-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.OperationalInsights/workspaces/features/machines/ports@2015-11-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2015-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource ETAG.
@@ -44,8 +48,9 @@
 * **properties**: [PortProperties](#portproperties) (ReadOnly): Resource properties.
 * **type**: 'Microsoft.OperationalInsights/workspaces/features/machines/ports' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.OperationalInsights/workspaces/features/machines/processes@2015-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.OperationalInsights/workspaces/features/machines/processes@2015-11-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2015-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource ETAG.
@@ -55,8 +60,9 @@
 * **properties**: [ProcessProperties](#processproperties) (ReadOnly): Resource properties.
 * **type**: 'Microsoft.OperationalInsights/workspaces/features/machines/processes' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.OperationalInsights/workspaces/features/summaries@2015-11-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.OperationalInsights/workspaces/features/summaries@2015-11-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2015-11-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

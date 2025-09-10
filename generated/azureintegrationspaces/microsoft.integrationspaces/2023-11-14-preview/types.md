@@ -1,7 +1,8 @@
 # Microsoft.IntegrationSpaces @ 2023-11-14-preview
 
 ## Resource Microsoft.IntegrationSpaces/spaces@2023-11-14-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-11-14-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -13,7 +14,8 @@
 * **type**: 'Microsoft.IntegrationSpaces/spaces' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.IntegrationSpaces/spaces/applications@2023-11-14-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-11-14-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -25,7 +27,8 @@
 * **type**: 'Microsoft.IntegrationSpaces/spaces/applications' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.IntegrationSpaces/spaces/applications/businessProcesses@2023-11-14-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-11-14-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -34,8 +37,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.IntegrationSpaces/spaces/applications/businessProcesses' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.IntegrationSpaces/spaces/applications/businessProcesses/versions@2023-11-14-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.IntegrationSpaces/spaces/applications/businessProcesses/versions@2023-11-14-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-11-14-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -45,7 +49,8 @@
 * **type**: 'Microsoft.IntegrationSpaces/spaces/applications/businessProcesses/versions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.IntegrationSpaces/spaces/applications/resources@2023-11-14-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-11-14-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -55,7 +60,8 @@
 * **type**: 'Microsoft.IntegrationSpaces/spaces/applications/resources' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.IntegrationSpaces/spaces/infrastructureResources@2023-11-14-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-11-14-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

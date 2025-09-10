@@ -1,7 +1,8 @@
 # Microsoft.Compute @ 2022-04-04
 
 ## Resource Microsoft.Compute/cloudServices@2022-04-04
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-04-04' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -13,7 +14,8 @@
 * **type**: 'Microsoft.Compute/cloudServices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Compute/cloudServices/updateDomains@2022-04-04
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-04-04' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

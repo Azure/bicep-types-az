@@ -1,7 +1,8 @@
 # Nginx.NginxPlus @ 2024-01-01-preview
 
 ## Resource Nginx.NginxPlus/nginxDeployments@2024-01-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -15,7 +16,8 @@
 * **type**: 'Nginx.NginxPlus/nginxDeployments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Nginx.NginxPlus/nginxDeployments/certificates@2024-01-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -26,7 +28,8 @@
 * **type**: 'Nginx.NginxPlus/nginxDeployments/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Nginx.NginxPlus/nginxDeployments/configurations@2024-01-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

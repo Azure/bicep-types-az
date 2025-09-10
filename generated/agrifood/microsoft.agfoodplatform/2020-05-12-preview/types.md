@@ -1,7 +1,8 @@
 # Microsoft.AgFoodPlatform @ 2020-05-12-preview
 
 ## Resource Microsoft.AgFoodPlatform/farmBeats@2020-05-12-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-05-12-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -14,7 +15,8 @@
 * **type**: 'Microsoft.AgFoodPlatform/farmBeats' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AgFoodPlatform/farmBeats/extensions@2020-05-12-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-05-12-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string (ReadOnly): The ETag value to implement optimistic concurrency.
@@ -24,8 +26,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Metadata pertaining to creation and last modification of the resource.
 * **type**: 'Microsoft.AgFoodPlatform/farmBeats/extensions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AgFoodPlatform/farmBeatsExtensionDefinitions@2020-05-12-preview (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.AgFoodPlatform/farmBeatsExtensionDefinitions@2020-05-12-preview
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2020-05-12-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

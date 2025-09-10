@@ -1,7 +1,8 @@
 # PaloAltoNetworks.Cloudngfw @ 2022-08-29
 
 ## Resource PaloAltoNetworks.Cloudngfw/firewalls@2022-08-29
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-08-29' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -13,8 +14,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'PaloAltoNetworks.Cloudngfw/firewalls' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource PaloAltoNetworks.Cloudngfw/firewalls/statuses@2022-08-29 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource PaloAltoNetworks.Cloudngfw/firewalls/statuses@2022-08-29
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2022-08-29' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -24,7 +26,8 @@
 * **type**: 'PaloAltoNetworks.Cloudngfw/firewalls/statuses' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource PaloAltoNetworks.Cloudngfw/globalRulestacks@2022-08-29
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2022-08-29' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -36,7 +39,8 @@
 * **type**: 'PaloAltoNetworks.Cloudngfw/globalRulestacks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource PaloAltoNetworks.Cloudngfw/globalRulestacks/certificates@2022-08-29
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2022-08-29' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -46,7 +50,8 @@
 * **type**: 'PaloAltoNetworks.Cloudngfw/globalRulestacks/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource PaloAltoNetworks.Cloudngfw/globalRulestacks/fqdnlists@2022-08-29
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2022-08-29' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -56,7 +61,8 @@
 * **type**: 'PaloAltoNetworks.Cloudngfw/globalRulestacks/fqdnlists' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource PaloAltoNetworks.Cloudngfw/globalRulestacks/postRules@2022-08-29
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2022-08-29' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -66,7 +72,8 @@
 * **type**: 'PaloAltoNetworks.Cloudngfw/globalRulestacks/postRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource PaloAltoNetworks.Cloudngfw/globalRulestacks/prefixlists@2022-08-29
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2022-08-29' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -76,7 +83,8 @@
 * **type**: 'PaloAltoNetworks.Cloudngfw/globalRulestacks/prefixlists' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource PaloAltoNetworks.Cloudngfw/globalRulestacks/preRules@2022-08-29
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2022-08-29' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -86,7 +94,8 @@
 * **type**: 'PaloAltoNetworks.Cloudngfw/globalRulestacks/preRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource PaloAltoNetworks.Cloudngfw/localRulestacks@2022-08-29
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-08-29' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -99,7 +108,8 @@
 * **type**: 'PaloAltoNetworks.Cloudngfw/localRulestacks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource PaloAltoNetworks.Cloudngfw/localRulestacks/certificates@2022-08-29
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-08-29' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -109,7 +119,8 @@
 * **type**: 'PaloAltoNetworks.Cloudngfw/localRulestacks/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource PaloAltoNetworks.Cloudngfw/localRulestacks/fqdnlists@2022-08-29
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-08-29' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -119,7 +130,8 @@
 * **type**: 'PaloAltoNetworks.Cloudngfw/localRulestacks/fqdnlists' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource PaloAltoNetworks.Cloudngfw/localRulestacks/localRules@2022-08-29
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-08-29' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -129,7 +141,8 @@
 * **type**: 'PaloAltoNetworks.Cloudngfw/localRulestacks/localRules' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource PaloAltoNetworks.Cloudngfw/localRulestacks/prefixlists@2022-08-29
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-08-29' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

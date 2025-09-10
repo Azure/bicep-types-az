@@ -1,7 +1,8 @@
 # Microsoft.Automation @ 2022-02-22
 
 ## Resource Microsoft.Automation/automationAccounts/hybridRunbookWorkerGroups@2022-02-22
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-02-22' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

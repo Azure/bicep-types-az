@@ -1,7 +1,8 @@
 # Microsoft.NetworkCloud @ 2025-02-01
 
 ## Resource Microsoft.NetworkCloud/bareMetalMachines@2025-02-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource ETag.
@@ -15,7 +16,8 @@
 * **type**: 'Microsoft.NetworkCloud/bareMetalMachines' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetworkCloud/cloudServicesNetworks@2025-02-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource ETag.
@@ -29,7 +31,8 @@
 * **type**: 'Microsoft.NetworkCloud/cloudServicesNetworks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetworkCloud/clusterManagers@2025-02-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource ETag.
@@ -43,7 +46,8 @@
 * **type**: 'Microsoft.NetworkCloud/clusterManagers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetworkCloud/clusters@2025-02-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource ETag.
@@ -58,7 +62,8 @@
 * **type**: 'Microsoft.NetworkCloud/clusters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetworkCloud/clusters/bareMetalMachineKeySets@2025-02-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource ETag.
@@ -72,7 +77,8 @@
 * **type**: 'Microsoft.NetworkCloud/clusters/bareMetalMachineKeySets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetworkCloud/clusters/bmcKeySets@2025-02-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource ETag.
@@ -86,7 +92,8 @@
 * **type**: 'Microsoft.NetworkCloud/clusters/bmcKeySets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetworkCloud/clusters/metricsConfigurations@2025-02-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource ETag.
@@ -100,7 +107,8 @@
 * **type**: 'Microsoft.NetworkCloud/clusters/metricsConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetworkCloud/kubernetesClusters@2025-02-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource ETag.
@@ -114,7 +122,8 @@
 * **type**: 'Microsoft.NetworkCloud/kubernetesClusters' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetworkCloud/kubernetesClusters/agentPools@2025-02-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource ETag.
@@ -128,7 +137,8 @@
 * **type**: 'Microsoft.NetworkCloud/kubernetesClusters/agentPools' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetworkCloud/kubernetesClusters/features@2025-02-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource ETag.
@@ -141,7 +151,8 @@
 * **type**: 'Microsoft.NetworkCloud/kubernetesClusters/features' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetworkCloud/l2Networks@2025-02-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource ETag.
@@ -155,7 +166,8 @@
 * **type**: 'Microsoft.NetworkCloud/l2Networks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetworkCloud/l3Networks@2025-02-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource ETag.
@@ -169,7 +181,8 @@
 * **type**: 'Microsoft.NetworkCloud/l3Networks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetworkCloud/racks@2025-02-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource ETag.
@@ -182,8 +195,9 @@
 * **tags**: [TrackedResourceTags](#trackedresourcetags): Resource tags.
 * **type**: 'Microsoft.NetworkCloud/racks' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.NetworkCloud/rackSkus@2025-02-01 (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.NetworkCloud/rackSkus@2025-02-01
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2025-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -193,7 +207,8 @@
 * **type**: 'Microsoft.NetworkCloud/rackSkus' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetworkCloud/storageAppliances@2025-02-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource ETag.
@@ -207,7 +222,8 @@
 * **type**: 'Microsoft.NetworkCloud/storageAppliances' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetworkCloud/trunkedNetworks@2025-02-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource ETag.
@@ -221,7 +237,8 @@
 * **type**: 'Microsoft.NetworkCloud/trunkedNetworks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetworkCloud/virtualMachines@2025-02-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource ETag.
@@ -235,7 +252,8 @@
 * **type**: 'Microsoft.NetworkCloud/virtualMachines' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetworkCloud/virtualMachines/consoles@2025-02-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource ETag.
@@ -249,7 +267,8 @@
 * **type**: 'Microsoft.NetworkCloud/virtualMachines/consoles' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.NetworkCloud/volumes@2025-02-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2025-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Resource ETag.

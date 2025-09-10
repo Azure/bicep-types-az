@@ -1,7 +1,8 @@
 # Microsoft.Addons @ 2017-05-15
 
 ## Resource Microsoft.Addons/supportProviders/supportPlanTypes@2017-05-15
-* **Valid Scope(s)**: Subscription
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2017-05-15' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

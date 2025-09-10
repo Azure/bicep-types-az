@@ -1,7 +1,8 @@
 # Microsoft.ApiManagement @ 2024-05-01
 
 ## Resource Microsoft.ApiManagement/gateways@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): ETag of the resource.
@@ -15,7 +16,8 @@
 * **type**: 'Microsoft.ApiManagement/gateways' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/gateways/configConnections@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): ETag of the resource.
@@ -24,8 +26,9 @@
 * **properties**: [GatewayConfigConnectionBaseProperties](#gatewayconfigconnectionbaseproperties) (Required): Properties of the API Management gateway config connection.
 * **type**: 'Microsoft.ApiManagement/gateways/configConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/locations/deletedservices@2024-05-01 (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.ApiManagement/locations/deletedservices@2024-05-01
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -35,7 +38,8 @@
 * **type**: 'Microsoft.ApiManagement/locations/deletedservices' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): ETag of the resource.
@@ -51,7 +55,8 @@
 * **zones**: string[]: A list of availability zones denoting where the resource needs to come from.
 
 ## Resource Microsoft.ApiManagement/service/apis@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -60,7 +65,8 @@
 * **type**: 'Microsoft.ApiManagement/service/apis' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/apis/diagnostics@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -69,7 +75,8 @@
 * **type**: 'Microsoft.ApiManagement/service/apis/diagnostics' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/apis/issues@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -78,7 +85,8 @@
 * **type**: 'Microsoft.ApiManagement/service/apis/issues' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/apis/issues/attachments@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -87,7 +95,8 @@
 * **type**: 'Microsoft.ApiManagement/service/apis/issues/attachments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/apis/issues/comments@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -96,7 +105,8 @@
 * **type**: 'Microsoft.ApiManagement/service/apis/issues/comments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/apis/operations@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -105,7 +115,8 @@
 * **type**: 'Microsoft.ApiManagement/service/apis/operations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/apis/operations/policies@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -114,7 +125,8 @@
 * **type**: 'Microsoft.ApiManagement/service/apis/operations/policies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/apis/operations/tags@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -123,7 +135,8 @@
 * **type**: 'Microsoft.ApiManagement/service/apis/operations/tags' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/apis/policies@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -132,7 +145,8 @@
 * **type**: 'Microsoft.ApiManagement/service/apis/policies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/apis/releases@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -141,7 +155,8 @@
 * **type**: 'Microsoft.ApiManagement/service/apis/releases' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/apis/resolvers@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -150,7 +165,8 @@
 * **type**: 'Microsoft.ApiManagement/service/apis/resolvers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/apis/resolvers/policies@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -159,7 +175,8 @@
 * **type**: 'Microsoft.ApiManagement/service/apis/resolvers/policies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/apis/schemas@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -168,7 +185,8 @@
 * **type**: 'Microsoft.ApiManagement/service/apis/schemas' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/apis/tagDescriptions@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -177,7 +195,8 @@
 * **type**: 'Microsoft.ApiManagement/service/apis/tagDescriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/apis/tags@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -186,7 +205,8 @@
 * **type**: 'Microsoft.ApiManagement/service/apis/tags' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/apis/wikis@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -195,7 +215,8 @@
 * **type**: 'Microsoft.ApiManagement/service/apis/wikis' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/apiVersionSets@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -204,7 +225,8 @@
 * **type**: 'Microsoft.ApiManagement/service/apiVersionSets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/authorizationProviders@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -213,7 +235,8 @@
 * **type**: 'Microsoft.ApiManagement/service/authorizationProviders' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/authorizationProviders/authorizations@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -222,7 +245,8 @@
 * **type**: 'Microsoft.ApiManagement/service/authorizationProviders/authorizations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/authorizationProviders/authorizations/accessPolicies@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -231,7 +255,8 @@
 * **type**: 'Microsoft.ApiManagement/service/authorizationProviders/authorizations/accessPolicies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/authorizationServers@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -240,7 +265,8 @@
 * **type**: 'Microsoft.ApiManagement/service/authorizationServers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/backends@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -249,7 +275,8 @@
 * **type**: 'Microsoft.ApiManagement/service/backends' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/caches@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -258,7 +285,8 @@
 * **type**: 'Microsoft.ApiManagement/service/caches' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/certificates@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -267,7 +295,8 @@
 * **type**: 'Microsoft.ApiManagement/service/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/contentTypes@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -276,7 +305,8 @@
 * **type**: 'Microsoft.ApiManagement/service/contentTypes' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/contentTypes/contentItems@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -285,7 +315,8 @@
 * **type**: 'Microsoft.ApiManagement/service/contentTypes/contentItems' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/diagnostics@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -294,7 +325,8 @@
 * **type**: 'Microsoft.ApiManagement/service/diagnostics' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/documentations@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -303,7 +335,8 @@
 * **type**: 'Microsoft.ApiManagement/service/documentations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/gateways@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -312,7 +345,8 @@
 * **type**: 'Microsoft.ApiManagement/service/gateways' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/gateways/apis@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: None
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -321,7 +355,8 @@
 * **type**: 'Microsoft.ApiManagement/service/gateways/apis' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/gateways/certificateAuthorities@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -330,7 +365,8 @@
 * **type**: 'Microsoft.ApiManagement/service/gateways/certificateAuthorities' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/gateways/hostnameConfigurations@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -339,7 +375,8 @@
 * **type**: 'Microsoft.ApiManagement/service/gateways/hostnameConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/groups@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -348,7 +385,8 @@
 * **type**: 'Microsoft.ApiManagement/service/groups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/groups/users@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: None
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -356,7 +394,8 @@
 * **type**: 'Microsoft.ApiManagement/service/groups/users' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/identityProviders@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -364,8 +403,9 @@
 * **properties**: [IdentityProviderCreateContractPropertiesOrIdentityProviderContractProperties](#identityprovidercreatecontractpropertiesoridentityprovidercontractproperties): Identity Provider contract properties.
 * **type**: 'Microsoft.ApiManagement/service/identityProviders' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/issues@2024-05-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.ApiManagement/service/issues@2024-05-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -374,7 +414,8 @@
 * **type**: 'Microsoft.ApiManagement/service/issues' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/loggers@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -383,7 +424,8 @@
 * **type**: 'Microsoft.ApiManagement/service/loggers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/namedValues@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -392,7 +434,8 @@
 * **type**: 'Microsoft.ApiManagement/service/namedValues' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/notifications@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -401,7 +444,8 @@
 * **type**: 'Microsoft.ApiManagement/service/notifications' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/notifications/recipientEmails@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: None
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -409,7 +453,8 @@
 * **type**: 'Microsoft.ApiManagement/service/notifications/recipientEmails' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/notifications/recipientUsers@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: None
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -417,7 +462,8 @@
 * **type**: 'Microsoft.ApiManagement/service/notifications/recipientUsers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/openidConnectProviders@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -426,7 +472,8 @@
 * **type**: 'Microsoft.ApiManagement/service/openidConnectProviders' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/policies@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -435,7 +482,8 @@
 * **type**: 'Microsoft.ApiManagement/service/policies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/policyFragments@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -444,7 +492,8 @@
 * **type**: 'Microsoft.ApiManagement/service/policyFragments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/policyRestrictions@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -453,7 +502,8 @@
 * **type**: 'Microsoft.ApiManagement/service/policyRestrictions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/portalconfigs@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -462,7 +512,8 @@
 * **type**: 'Microsoft.ApiManagement/service/portalconfigs' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/portalRevisions@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -471,7 +522,8 @@
 * **type**: 'Microsoft.ApiManagement/service/portalRevisions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/portalsettings@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 * **Discriminator**: name
 
 ### Base Properties
@@ -502,7 +554,8 @@
 
 
 ## Resource Microsoft.ApiManagement/service/privateEndpointConnections@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -510,8 +563,9 @@
 * **properties**: [PrivateEndpointConnectionRequestPropertiesOrPrivateEndpointConnectionProperties](#privateendpointconnectionrequestpropertiesorprivateendpointconnectionproperties): The connection state of the private endpoint connection.
 * **type**: 'Microsoft.ApiManagement/service/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/privateLinkResources@2024-05-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.ApiManagement/service/privateLinkResources@2024-05-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -520,7 +574,8 @@
 * **type**: 'Microsoft.ApiManagement/service/privateLinkResources' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/products@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -529,7 +584,8 @@
 * **type**: 'Microsoft.ApiManagement/service/products' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/products/apiLinks@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -538,7 +594,8 @@
 * **type**: 'Microsoft.ApiManagement/service/products/apiLinks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/products/apis@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: None
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -546,7 +603,8 @@
 * **type**: 'Microsoft.ApiManagement/service/products/apis' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/products/groupLinks@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -555,7 +613,8 @@
 * **type**: 'Microsoft.ApiManagement/service/products/groupLinks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/products/groups@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: None
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -563,7 +622,8 @@
 * **type**: 'Microsoft.ApiManagement/service/products/groups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/products/policies@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -572,7 +632,8 @@
 * **type**: 'Microsoft.ApiManagement/service/products/policies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/products/tags@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -581,7 +642,8 @@
 * **type**: 'Microsoft.ApiManagement/service/products/tags' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/products/wikis@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -590,7 +652,8 @@
 * **type**: 'Microsoft.ApiManagement/service/products/wikis' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/schemas@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -598,8 +661,9 @@
 * **properties**: [GlobalSchemaContractProperties](#globalschemacontractproperties): Properties of the Global Schema.
 * **type**: 'Microsoft.ApiManagement/service/schemas' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/settings@2024-05-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.ApiManagement/service/settings@2024-05-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -608,7 +672,8 @@
 * **type**: 'Microsoft.ApiManagement/service/settings' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/subscriptions@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -617,7 +682,8 @@
 * **type**: 'Microsoft.ApiManagement/service/subscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/tags@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -626,7 +692,8 @@
 * **type**: 'Microsoft.ApiManagement/service/tags' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/tags/apiLinks@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -635,7 +702,8 @@
 * **type**: 'Microsoft.ApiManagement/service/tags/apiLinks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/tags/operationLinks@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -644,7 +712,8 @@
 * **type**: 'Microsoft.ApiManagement/service/tags/operationLinks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/tags/productLinks@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -653,7 +722,8 @@
 * **type**: 'Microsoft.ApiManagement/service/tags/productLinks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/templates@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -662,7 +732,8 @@
 * **type**: 'Microsoft.ApiManagement/service/templates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/tenant@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -671,7 +742,8 @@
 * **type**: 'Microsoft.ApiManagement/service/tenant' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/users@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -679,8 +751,9 @@
 * **properties**: [UserCreateParameterPropertiesOrUserContractProperties](#usercreateparameterpropertiesorusercontractproperties): User entity create contract properties.
 * **type**: 'Microsoft.ApiManagement/service/users' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/users/subscriptions@2024-05-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.ApiManagement/service/users/subscriptions@2024-05-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -688,8 +761,9 @@
 * **properties**: [SubscriptionContractProperties](#subscriptioncontractproperties) (ReadOnly): Subscription contract properties.
 * **type**: 'Microsoft.ApiManagement/service/users/subscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.ApiManagement/service/workspaceLinks@2024-05-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.ApiManagement/service/workspaceLinks@2024-05-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): ETag of the resource.
@@ -699,7 +773,8 @@
 * **type**: 'Microsoft.ApiManagement/service/workspaceLinks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/workspaces@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -708,7 +783,8 @@
 * **type**: 'Microsoft.ApiManagement/service/workspaces' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/workspaces/apis@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -717,7 +793,8 @@
 * **type**: 'Microsoft.ApiManagement/service/workspaces/apis' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/workspaces/apis/diagnostics@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -726,7 +803,8 @@
 * **type**: 'Microsoft.ApiManagement/service/workspaces/apis/diagnostics' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/workspaces/apis/operations@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -735,7 +813,8 @@
 * **type**: 'Microsoft.ApiManagement/service/workspaces/apis/operations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/workspaces/apis/operations/policies@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -744,7 +823,8 @@
 * **type**: 'Microsoft.ApiManagement/service/workspaces/apis/operations/policies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/workspaces/apis/policies@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -753,7 +833,8 @@
 * **type**: 'Microsoft.ApiManagement/service/workspaces/apis/policies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/workspaces/apis/releases@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -762,7 +843,8 @@
 * **type**: 'Microsoft.ApiManagement/service/workspaces/apis/releases' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/workspaces/apis/schemas@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -771,7 +853,8 @@
 * **type**: 'Microsoft.ApiManagement/service/workspaces/apis/schemas' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/workspaces/apiVersionSets@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -780,7 +863,8 @@
 * **type**: 'Microsoft.ApiManagement/service/workspaces/apiVersionSets' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/workspaces/backends@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -789,7 +873,8 @@
 * **type**: 'Microsoft.ApiManagement/service/workspaces/backends' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/workspaces/certificates@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -798,7 +883,8 @@
 * **type**: 'Microsoft.ApiManagement/service/workspaces/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/workspaces/diagnostics@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -807,7 +893,8 @@
 * **type**: 'Microsoft.ApiManagement/service/workspaces/diagnostics' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/workspaces/groups@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -816,7 +903,8 @@
 * **type**: 'Microsoft.ApiManagement/service/workspaces/groups' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/workspaces/groups/users@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: None
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -824,7 +912,8 @@
 * **type**: 'Microsoft.ApiManagement/service/workspaces/groups/users' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/workspaces/loggers@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -833,7 +922,8 @@
 * **type**: 'Microsoft.ApiManagement/service/workspaces/loggers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/workspaces/namedValues@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -842,7 +932,8 @@
 * **type**: 'Microsoft.ApiManagement/service/workspaces/namedValues' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/workspaces/notifications@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -851,7 +942,8 @@
 * **type**: 'Microsoft.ApiManagement/service/workspaces/notifications' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/workspaces/notifications/recipientEmails@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: None
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -859,7 +951,8 @@
 * **type**: 'Microsoft.ApiManagement/service/workspaces/notifications/recipientEmails' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/workspaces/notifications/recipientUsers@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: None
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -867,7 +960,8 @@
 * **type**: 'Microsoft.ApiManagement/service/workspaces/notifications/recipientUsers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/workspaces/policies@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -876,7 +970,8 @@
 * **type**: 'Microsoft.ApiManagement/service/workspaces/policies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/workspaces/policyFragments@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -885,7 +980,8 @@
 * **type**: 'Microsoft.ApiManagement/service/workspaces/policyFragments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/workspaces/products@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -894,7 +990,8 @@
 * **type**: 'Microsoft.ApiManagement/service/workspaces/products' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/workspaces/products/apiLinks@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -903,7 +1000,8 @@
 * **type**: 'Microsoft.ApiManagement/service/workspaces/products/apiLinks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/workspaces/products/groupLinks@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -912,7 +1010,8 @@
 * **type**: 'Microsoft.ApiManagement/service/workspaces/products/groupLinks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/workspaces/products/policies@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -921,7 +1020,8 @@
 * **type**: 'Microsoft.ApiManagement/service/workspaces/products/policies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/workspaces/schemas@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -930,7 +1030,8 @@
 * **type**: 'Microsoft.ApiManagement/service/workspaces/schemas' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/workspaces/subscriptions@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -939,7 +1040,8 @@
 * **type**: 'Microsoft.ApiManagement/service/workspaces/subscriptions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/workspaces/tags@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -948,7 +1050,8 @@
 * **type**: 'Microsoft.ApiManagement/service/workspaces/tags' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/workspaces/tags/apiLinks@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -957,7 +1060,8 @@
 * **type**: 'Microsoft.ApiManagement/service/workspaces/tags/apiLinks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/workspaces/tags/operationLinks@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -966,7 +1070,8 @@
 * **type**: 'Microsoft.ApiManagement/service/workspaces/tags/operationLinks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.ApiManagement/service/workspaces/tags/productLinks@2024-05-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-05-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

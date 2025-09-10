@@ -1,7 +1,8 @@
 # Microsoft.MachineLearning @ 2016-05-01-preview
 
 ## Resource Microsoft.MachineLearning/commitmentPlans@2016-05-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: An entity tag used to enforce optimistic concurrency.
@@ -13,8 +14,9 @@
 * **tags**: [Tags](#tags): User-defined tags for the resource.
 * **type**: 'Microsoft.MachineLearning/commitmentPlans' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.MachineLearning/commitmentPlans/commitmentAssociations@2016-05-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.MachineLearning/commitmentPlans/commitmentAssociations@2016-05-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2016-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): An entity tag used to enforce optimistic concurrency.
@@ -26,7 +28,8 @@
 * **type**: 'Microsoft.MachineLearning/commitmentPlans/commitmentAssociations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.MachineLearning/webServices@2016-05-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-05-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

@@ -1,7 +1,8 @@
 # Microsoft.Security @ 2020-01-01-preview
 
 ## Resource Microsoft.Security/connectors@2020-01-01-preview
-* **Valid Scope(s)**: Subscription
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -9,8 +10,9 @@
 * **properties**: [ConnectorSettingProperties](#connectorsettingproperties): Connector setting data
 * **type**: 'Microsoft.Security/connectors' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Security/secureScores@2020-01-01-preview (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.Security/secureScores@2020-01-01-preview
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -19,7 +21,8 @@
 * **type**: 'Microsoft.Security/secureScores' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/securityContacts@2020-01-01-preview
-* **Valid Scope(s)**: Subscription
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2020-01-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

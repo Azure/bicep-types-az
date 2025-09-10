@@ -1,7 +1,8 @@
 # Microsoft.Security @ 2021-07-01-preview
 
 ## Resource Microsoft.Security/customAssessmentAutomations@2021-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -11,7 +12,8 @@
 * **type**: 'Microsoft.Security/customAssessmentAutomations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/customEntityStoreAssignments@2021-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -21,7 +23,8 @@
 * **type**: 'Microsoft.Security/customEntityStoreAssignments' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Security/securityConnectors@2021-07-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2021-07-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Entity tag is used for comparing two or more entities from the same requested resource.

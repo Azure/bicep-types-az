@@ -1,7 +1,8 @@
 # Microsoft.Migrate @ 2022-08-01
 
 ## Resource Microsoft.Migrate/moveCollections@2022-08-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): The etag of the resource.
@@ -15,7 +16,8 @@
 * **type**: 'Microsoft.Migrate/moveCollections' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Migrate/moveCollections/moveResources@2022-08-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-08-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

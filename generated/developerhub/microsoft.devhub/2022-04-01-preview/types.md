@@ -1,7 +1,8 @@
 # Microsoft.DevHub @ 2022-04-01-preview
 
 ## Resource Microsoft.DevHub/workflows@2022-04-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-04-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

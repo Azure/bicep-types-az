@@ -1,7 +1,8 @@
 # Microsoft.Quota @ 2021-03-15-preview
 
 ## Resource Microsoft.Quota/quotas@2021-03-15-preview
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2021-03-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -9,8 +10,9 @@
 * **properties**: [QuotaProperties](#quotaproperties): Quota properties for the specified resource, based on the API called, Quotas or Usages.
 * **type**: 'Microsoft.Quota/quotas' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Quota/usages@2021-03-15-preview (ReadOnly)
-* **Valid Scope(s)**: Unknown
+## Resource Microsoft.Quota/usages@2021-03-15-preview
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2021-03-15-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

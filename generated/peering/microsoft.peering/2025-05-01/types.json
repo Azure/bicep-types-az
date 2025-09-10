@@ -221,11 +221,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Peering/peerAsns@2025-05-01",
-    "scopeType": 4,
     "body": {
       "$ref": "#/4"
     },
-    "flags": 0
+    "readableScopes": 4,
+    "writableScopes": 4
   },
   {
     "$type": "StringLiteralType",
@@ -349,11 +349,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Peering/peerings/registeredAsns@2025-05-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/24"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -548,11 +548,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Peering/peerings/registeredPrefixes@2025-05-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/35"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1645,11 +1645,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Peering/peerings@2025-05-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/54"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1807,11 +1807,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Peering/peeringServices/connectionMonitorTests@2025-05-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/157"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2096,11 +2096,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Peering/peeringServices/prefixes@2025-05-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/169"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2320,10 +2320,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Peering/peeringServices@2025-05-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/194"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   }
 ]

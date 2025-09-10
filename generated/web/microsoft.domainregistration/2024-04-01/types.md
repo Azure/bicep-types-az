@@ -1,7 +1,8 @@
 # Microsoft.DomainRegistration @ 2024-04-01
 
 ## Resource Microsoft.DomainRegistration/domains@2024-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -13,7 +14,8 @@
 * **type**: 'Microsoft.DomainRegistration/domains' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.DomainRegistration/domains/domainOwnershipIdentifiers@2024-04-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -22,8 +24,9 @@
 * **properties**: [DomainOwnershipIdentifierProperties](#domainownershipidentifierproperties): DomainOwnershipIdentifier resource specific properties
 * **type**: 'Microsoft.DomainRegistration/domains/domainOwnershipIdentifiers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.DomainRegistration/topLevelDomains@2024-04-01 (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.DomainRegistration/topLevelDomains@2024-04-01
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-04-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

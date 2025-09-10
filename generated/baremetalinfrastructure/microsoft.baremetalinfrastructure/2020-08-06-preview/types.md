@@ -1,7 +1,8 @@
 # Microsoft.BareMetalInfrastructure @ 2020-08-06-preview
 
-## Resource Microsoft.BareMetalInfrastructure/bareMetalInstances@2020-08-06-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.BareMetalInfrastructure/bareMetalInstances@2020-08-06-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2020-08-06-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

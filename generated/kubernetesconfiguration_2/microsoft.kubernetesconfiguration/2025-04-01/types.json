@@ -1416,10 +1416,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.KubernetesConfiguration/fluxConfigurations@2025-04-01",
-    "scopeType": 16,
     "body": {
       "$ref": "#/3"
     },
-    "flags": 0
+    "readableScopes": 16,
+    "writableScopes": 16
   }
 ]

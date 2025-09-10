@@ -85,10 +85,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Resources/snapshots@2022-11-01-preview",
-    "scopeType": 16,
     "body": {
       "$ref": "#/3"
     },
-    "flags": 1
+    "readableScopes": 16,
+    "writableScopes": 0
   }
 ]

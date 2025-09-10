@@ -1,7 +1,8 @@
 # Microsoft.AzureBridge.Admin @ 2016-01-01
 
 ## Resource Microsoft.AzureBridge.Admin/activations@2016-01-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **azureRegistrationResourceIdentifier**: string (WriteOnly): Azure registration resource identifier.
@@ -18,7 +19,8 @@
 * **usageReportingEnabled**: bool (WriteOnly): Value indicating whether the usage reporting feature is enabled.
 
 ## Resource Microsoft.AzureBridge.Admin/activations/downloadedProducts@2016-01-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -28,8 +30,9 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): List of key value pairs.
 * **type**: 'Microsoft.AzureBridge.Admin/activations/downloadedProducts' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AzureBridge.Admin/activations/products@2016-01-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.AzureBridge.Admin/activations/products@2016-01-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2016-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

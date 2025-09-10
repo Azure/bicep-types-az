@@ -557,11 +557,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.MobileNetwork/packetCoreControlPlanes/packetCoreDataPlanes/attachedDataNetworks@2024-04-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -721,11 +721,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.MobileNetwork/mobileNetworks/dataNetworks@2024-04-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/48"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringType",
@@ -911,11 +911,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.MobileNetwork/packetCoreControlPlanes/diagnosticsPackages@2024-04-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/63"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1291,11 +1291,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.MobileNetwork/mobileNetworks@2024-04-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/81"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1546,11 +1546,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.MobileNetwork/packetCoreControlPlanes/packetCaptures@2024-04-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/112"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2623,11 +2623,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.MobileNetwork/packetCoreControlPlanes@2024-04-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/135"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2800,11 +2800,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.MobileNetwork/packetCoreControlPlanes/packetCoreDataPlanes@2024-04-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/237"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringType",
@@ -3379,11 +3379,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.MobileNetwork/mobileNetworks/services@2024-04-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/253"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3789,11 +3789,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.MobileNetwork/simGroups/sims@2024-04-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/303"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3997,11 +3997,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.MobileNetwork/simGroups@2024-04-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/340"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -4520,11 +4520,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.MobileNetwork/mobileNetworks/simPolicies@2024-04-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/357"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -4703,11 +4703,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.MobileNetwork/mobileNetworks/sites@2024-04-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/404"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -4898,11 +4898,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.MobileNetwork/mobileNetworks/slices@2024-04-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/420"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -5087,11 +5087,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.MobileNetwork/packetCoreControlPlanes/routingInfo@2024-04-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/437"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -5412,11 +5412,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.MobileNetwork/packetCoreControlPlaneVersions@2024-04-01",
-    "scopeType": 5,
     "body": {
       "$ref": "#/451"
     },
-    "flags": 1
+    "readableScopes": 5,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -6492,11 +6492,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.MobileNetwork/packetCoreControlPlanes/ues/extendedInformation@2024-04-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/484"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "ObjectType",

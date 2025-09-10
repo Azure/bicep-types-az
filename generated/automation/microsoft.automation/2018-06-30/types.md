@@ -1,7 +1,8 @@
 # Microsoft.Automation @ 2018-06-30
 
 ## Resource Microsoft.Automation/automationAccounts/python2Packages@2018-06-30
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-30' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Gets or sets the etag of the resource.
@@ -13,7 +14,8 @@
 * **type**: 'Microsoft.Automation/automationAccounts/python2Packages' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/runbooks@2018-06-30
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2018-06-30' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string (ReadOnly): Gets or sets the etag of the resource.
@@ -25,7 +27,8 @@
 * **type**: 'Microsoft.Automation/automationAccounts/runbooks' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Automation/automationAccounts/runbooks/draft@2018-06-30
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 * **Discriminator**: name
 
 ### Base Properties

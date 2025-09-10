@@ -683,11 +683,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Cdn/profiles/customDomains@2025-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/3"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -954,11 +954,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Cdn/profiles/afdEndpoints@2025-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/70"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1356,11 +1356,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Cdn/profiles/originGroups@2025-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/95"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1717,11 +1717,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Cdn/profiles/originGroups/origins@2025-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/131"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2214,11 +2214,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Cdn/profiles/afdEndpoints/routes@2025-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/161"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2384,11 +2384,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Cdn/profiles/ruleSets@2025-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/206"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -10408,11 +10408,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Cdn/profiles/ruleSets/rules@2025-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/222"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -10665,11 +10665,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Cdn/profiles/securityPolicies@2025-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1169"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -11075,11 +11075,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Cdn/profiles/secrets@2025-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1192"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -11721,11 +11721,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Cdn/profiles@2025-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1219"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -12720,11 +12720,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Cdn/profiles/endpoints@2025-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1282"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -13004,11 +13004,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Cdn/profiles/endpoints/origins@2025-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1355"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -13195,11 +13195,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Cdn/profiles/endpoints/originGroups@2025-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1376"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -13809,11 +13809,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Cdn/profiles/endpoints/customDomains@2025-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1392"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringType",
@@ -14895,10 +14895,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Cdn/cdnWebApplicationFirewallPolicies@2025-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1452"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   }
 ]

@@ -1,7 +1,8 @@
 # Microsoft.Advisor @ 2023-01-01
 
-## Resource Microsoft.Advisor/advisorScore@2023-01-01 (ReadOnly)
-* **Valid Scope(s)**: Subscription
+## Resource Microsoft.Advisor/advisorScore@2023-01-01
+* **Readable Scope(s)**: Subscription
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -11,7 +12,8 @@
 * **type**: 'Microsoft.Advisor/advisorScore' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Advisor/configurations@2023-01-01
-* **Valid Scope(s)**: Subscription, ResourceGroup
+* **Readable Scope(s)**: None
+* **Writable Scope(s)**: Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2023-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -20,8 +22,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.Advisor/configurations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Advisor/recommendations@2023-01-01 (ReadOnly)
-* **Valid Scope(s)**: Unknown
+## Resource Microsoft.Advisor/recommendations@2023-01-01
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2023-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -31,7 +34,8 @@
 * **type**: 'Microsoft.Advisor/recommendations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Advisor/recommendations/suppressions@2023-01-01
-* **Valid Scope(s)**: Unknown
+* **Readable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
+* **Writable Scope(s)**: Tenant, ManagementGroup, Subscription, ResourceGroup
 ### Properties
 * **apiVersion**: '2023-01-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

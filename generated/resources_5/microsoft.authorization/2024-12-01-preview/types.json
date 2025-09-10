@@ -424,11 +424,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Authorization/policyExemptions@2024-12-01-preview",
-    "scopeType": 0,
     "body": {
       "$ref": "#/3"
     },
-    "flags": 0
+    "readableScopes": 15,
+    "writableScopes": 15
   },
   {
     "$type": "StringLiteralType",
@@ -521,11 +521,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Authorization/variables@2024-12-01-preview",
-    "scopeType": 6,
     "body": {
       "$ref": "#/40"
     },
-    "flags": 0
+    "readableScopes": 6,
+    "writableScopes": 6
   },
   {
     "$type": "StringLiteralType",
@@ -625,10 +625,10 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Authorization/variables/values@2024-12-01-preview",
-    "scopeType": 6,
     "body": {
       "$ref": "#/47"
     },
-    "flags": 0
+    "readableScopes": 6,
+    "writableScopes": 6
   }
 ]

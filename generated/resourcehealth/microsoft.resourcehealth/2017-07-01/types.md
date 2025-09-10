@@ -1,7 +1,8 @@
 # Microsoft.ResourceHealth @ 2017-07-01
 
-## Resource Microsoft.ResourceHealth/emergingIssues@2017-07-01 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.ResourceHealth/emergingIssues@2017-07-01
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2017-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

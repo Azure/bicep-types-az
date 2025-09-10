@@ -350,11 +350,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/certificates@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/3"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -460,11 +460,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/publishingUsers@2020-06-01",
-    "scopeType": 1,
     "body": {
       "$ref": "#/26"
     },
-    "flags": 0
+    "readableScopes": 1,
+    "writableScopes": 1
   },
   {
     "$type": "StringLiteralType",
@@ -559,11 +559,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sourcecontrols@2020-06-01",
-    "scopeType": 1,
     "body": {
       "$ref": "#/31"
     },
-    "flags": 0
+    "readableScopes": 1,
+    "writableScopes": 1
   },
   {
     "$type": "StringLiteralType",
@@ -2925,11 +2925,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/36"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3081,11 +3081,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/basicPublishingCredentialsPolicies@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/183"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -7165,11 +7165,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/config@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/404"
     },
-    "flags": 0
+    "readableScopes": 0,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -7299,11 +7299,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/deployments@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/408"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -7377,11 +7377,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/domainOwnershipIdentifiers@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/413"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -7584,11 +7584,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/extensions@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/419"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -7754,11 +7754,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/functions@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/431"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -7812,11 +7812,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/functions/keys@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/437"
     },
-    "flags": 0
+    "readableScopes": 0,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -8029,11 +8029,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/hostNameBindings@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/441"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -8156,11 +8156,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/hybridConnectionNamespaces/relays@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/459"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -8269,11 +8269,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/hybridconnection@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/464"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -8338,11 +8338,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/instances/extensions@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/470"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -8427,11 +8427,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/networkConfig@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/475"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -8555,11 +8555,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/premieraddons@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/480"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -8710,11 +8710,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/privateAccess@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/487"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -8828,11 +8828,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/publicCertificates@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/496"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -9063,11 +9063,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/siteextensions@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/505"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -9157,11 +9157,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/slots@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/514"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -9836,11 +9836,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/slots/config@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/561"
     },
-    "flags": 0
+    "readableScopes": 0,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -9901,11 +9901,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/slots/deployments@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/565"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -9966,11 +9966,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/slots/domainOwnershipIdentifiers@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/569"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -10035,11 +10035,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/slots/extensions@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/574"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -10100,11 +10100,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/slots/functions@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/578"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -10158,11 +10158,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/slots/functions/keys@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/582"
     },
-    "flags": 0
+    "readableScopes": 0,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -10223,11 +10223,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/slots/hostNameBindings@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/586"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -10288,11 +10288,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/slots/hybridConnectionNamespaces/relays@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/590"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -10353,11 +10353,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/slots/hybridconnection@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/594"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -10422,11 +10422,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/slots/instances/extensions@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/599"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -10491,11 +10491,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/slots/networkConfig@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/604"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -10578,11 +10578,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/slots/premieraddons@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/608"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -10647,11 +10647,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/slots/privateAccess@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/614"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -10777,11 +10777,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/privateEndpointConnections@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/618"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -10842,11 +10842,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/slots/publicCertificates@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/625"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -10907,11 +10907,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/slots/siteextensions@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/629"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -11024,11 +11024,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/slots/sourcecontrols@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/634"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -11247,11 +11247,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/slots/virtualNetworkConnections@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/639"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -11332,11 +11332,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/slots/virtualNetworkConnections/gateways@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/651"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -11401,11 +11401,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/sourcecontrols@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/657"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -11466,11 +11466,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/virtualNetworkConnections@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/661"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -11531,11 +11531,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/virtualNetworkConnections/gateways@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/665"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -11841,11 +11841,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/staticSites@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/669"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -11918,11 +11918,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/staticSites/builds/config@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/683"
     },
-    "flags": 0
+    "readableScopes": 0,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -11995,11 +11995,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/staticSites/config@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/689"
     },
-    "flags": 0
+    "readableScopes": 0,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -12046,11 +12046,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/staticSites/customDomains@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/694"
     },
-    "flags": 0
+    "readableScopes": 0,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -12928,11 +12928,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/hostingEnvironments@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/698"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -13004,11 +13004,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/hostingEnvironments/multiRolePools@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/753"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -13076,11 +13076,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/hostingEnvironments/workerPools@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/757"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -13375,11 +13375,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/serverfarms@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/761"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -13440,11 +13440,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/serverfarms/virtualNetworkConnections/gateways@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/777"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -13505,11 +13505,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/serverfarms/virtualNetworkConnections/routes@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/781"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -13632,11 +13632,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/locations/deletedSites@2020-06-01",
-    "scopeType": 4,
     "body": {
       "$ref": "#/785"
     },
-    "flags": 1
+    "readableScopes": 4,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -13909,11 +13909,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/hostingEnvironments/detectors@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/790"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -13974,11 +13974,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/detectors@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/809"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -14052,11 +14052,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/diagnostics@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/813"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -14130,11 +14130,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/diagnostics/analyses@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/818"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -14229,11 +14229,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/diagnostics/detectors@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/823"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -14294,11 +14294,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/slots/detectors@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/828"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -14359,11 +14359,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/slots/diagnostics@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/832"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -14424,11 +14424,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/slots/diagnostics/analyses@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/836"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -14489,11 +14489,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/slots/diagnostics/detectors@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/840"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -14730,11 +14730,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/hostingEnvironments/recommendations@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/844"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -14795,11 +14795,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/recommendations@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/861"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -15045,11 +15045,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/backups@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/865"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -15110,11 +15110,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/config/snapshots@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/882"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -15318,11 +15318,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/continuouswebjobs@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/886"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -15686,11 +15686,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/instances@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/901"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -16296,11 +16296,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/instances/processes@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/918"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -16361,11 +16361,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/instances/processes/modules@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/932"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -16497,11 +16497,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/migratemysql@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/937"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -16731,11 +16731,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/networkFeatures@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/948"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -16796,11 +16796,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/processes@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/958"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -16861,11 +16861,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/processes/modules@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/962"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -16926,11 +16926,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/slots/backups@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/966"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -16991,11 +16991,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/slots/config/snapshots@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/970"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -17056,11 +17056,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/slots/continuouswebjobs@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/974"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -17121,11 +17121,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/slots/instances@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/978"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -17186,11 +17186,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/slots/instances/processes@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/982"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -17251,11 +17251,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/slots/instances/processes/modules@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/986"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -17320,11 +17320,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/slots/migratemysql@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/991"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -17385,11 +17385,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/slots/networkFeatures@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/995"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -17450,11 +17450,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/slots/processes@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/999"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -17515,11 +17515,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/slots/processes/modules@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1003"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -17833,11 +17833,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/slots/triggeredwebjobs@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1007"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -17917,11 +17917,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/slots/triggeredwebjobs/history@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1022"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -18064,11 +18064,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/slots/webjobs@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1028"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -18129,11 +18129,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/triggeredwebjobs@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1037"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -18194,11 +18194,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/triggeredwebjobs/history@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1041"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -18259,11 +18259,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/webjobs@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1045"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -18436,11 +18436,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/staticSites/builds@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1049"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -18551,11 +18551,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/hostingEnvironments/capacities@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1063"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -18616,11 +18616,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/serverfarms/hybridConnectionNamespaces/relays@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1070"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -18705,11 +18705,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/serverfarms/hybridConnectionPlanLimits@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1075"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -18770,11 +18770,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/serverfarms/virtualNetworkConnections@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1080"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -18859,11 +18859,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/resourceHealthMetadata@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1085"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -18928,11 +18928,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.Web/sites/slots/resourceHealthMetadata@2020-06-01",
-    "scopeType": 8,
     "body": {
       "$ref": "#/1091"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "ObjectType",

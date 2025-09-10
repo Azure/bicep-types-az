@@ -1,7 +1,8 @@
 # Microsoft.HybridData @ 2016-06-01
 
 ## Resource Microsoft.HybridData/dataManagers@2016-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **etag**: string: Etag of the Resource.
@@ -16,7 +17,8 @@ region is specified on update the request will succeed.
 * **type**: 'Microsoft.HybridData/dataManagers' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridData/dataManagers/dataServices/jobDefinitions@2016-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -25,7 +27,8 @@ region is specified on update the request will succeed.
 * **type**: 'Microsoft.HybridData/dataManagers/dataServices/jobDefinitions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.HybridData/dataManagers/dataStores@2016-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

@@ -1,7 +1,8 @@
 # Microsoft.RecoveryServices @ 2017-07-01
 
 ## Resource Microsoft.RecoveryServices/vaults/backupFabrics/backupProtectionIntent@2017-07-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2017-07-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: Optional ETag.

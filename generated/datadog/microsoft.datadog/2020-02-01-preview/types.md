@@ -1,7 +1,8 @@
 # Microsoft.Datadog @ 2020-02-01-preview
 
 ## Resource Microsoft.Datadog/agreements@2020-02-01-preview
-* **Valid Scope(s)**: Subscription
+* **Readable Scope(s)**: None
+* **Writable Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2020-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -10,7 +11,8 @@
 * **type**: 'Microsoft.Datadog/agreements' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Datadog/monitors@2020-02-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -23,7 +25,8 @@
 * **type**: 'Microsoft.Datadog/monitors' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Datadog/monitors/singleSignOnConfigurations@2020-02-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -32,7 +35,8 @@
 * **type**: 'Microsoft.Datadog/monitors/singleSignOnConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Datadog/monitors/tagRules@2020-02-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

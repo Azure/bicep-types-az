@@ -1,7 +1,8 @@
 # Microsoft.DevOpsInfrastructure @ 2023-12-13-preview
 
 ## Resource Microsoft.DevOpsInfrastructure/pools@2023-12-13-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-12-13-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

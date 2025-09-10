@@ -1,7 +1,8 @@
 # Microsoft.WindowsESU @ 2019-09-16-preview
 
 ## Resource Microsoft.WindowsESU/multipleActivationKeys@2019-09-16-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2019-09-16-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

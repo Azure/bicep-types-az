@@ -422,11 +422,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.EventHub/clusters@2025-05-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/4"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringType",
@@ -1284,11 +1284,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.EventHub/namespaces@2025-05-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/41"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1532,11 +1532,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.EventHub/namespaces/networkRuleSets@2025-05-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/104"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringType",
@@ -1656,11 +1656,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.EventHub/namespaces/authorizationRules@2025-05-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/124"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1728,11 +1728,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.EventHub/namespaces/privateEndpointConnections@2025-05-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/134"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringType",
@@ -1898,11 +1898,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.EventHub/namespaces/disasterRecoveryConfigs@2025-05-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/139"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -1970,11 +1970,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.EventHub/namespaces/eventhubs/authorizationRules@2025-05-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/152"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringType",
@@ -2489,11 +2489,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.EventHub/namespaces/eventhubs@2025-05-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/157"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2588,11 +2588,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.EventHub/namespaces/eventhubs/consumergroups@2025-05-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/193"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2778,11 +2778,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.EventHub/namespaces/schemagroups@2025-05-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/198"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -2968,11 +2968,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.EventHub/namespaces/applicationGroups@2025-05-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/213"
     },
-    "flags": 0
+    "readableScopes": 8,
+    "writableScopes": 8
   },
   {
     "$type": "StringLiteralType",
@@ -3496,11 +3496,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.EventHub/namespaces/networkSecurityPerimeterConfigurations@2025-05-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/227"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "StringLiteralType",
@@ -3568,11 +3568,11 @@
   {
     "$type": "ResourceType",
     "name": "Microsoft.EventHub/namespaces/disasterRecoveryConfigs/authorizationRules@2025-05-01-preview",
-    "scopeType": 8,
     "body": {
       "$ref": "#/268"
     },
-    "flags": 1
+    "readableScopes": 8,
+    "writableScopes": 0
   },
   {
     "$type": "ObjectType",

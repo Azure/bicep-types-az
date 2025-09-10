@@ -1,7 +1,8 @@
 # Microsoft.Logic @ 2015-02-01-preview
 
 ## Resource Microsoft.Logic/workflows@2015-02-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -12,7 +13,8 @@
 * **type**: 'Microsoft.Logic/workflows' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Logic/workflows/accessKeys@2015-02-01-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -20,8 +22,9 @@
 * **properties**: [WorkflowAccessKeyProperties](#workflowaccesskeyproperties): Gets or sets the workflow access key properties.
 * **type**: 'Microsoft.Logic/workflows/accessKeys' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Logic/workflows/runs@2015-02-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Logic/workflows/runs@2015-02-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2015-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -29,8 +32,9 @@
 * **properties**: [WorkflowRunProperties](#workflowrunproperties) (ReadOnly): Gets or sets the workflow run properties.
 * **type**: 'Microsoft.Logic/workflows/runs' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Logic/workflows/runs/actions@2015-02-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Logic/workflows/runs/actions@2015-02-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2015-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -38,8 +42,9 @@
 * **properties**: [WorkflowRunActionProperties](#workflowrunactionproperties) (ReadOnly): Gets or sets the workflow run action properties.
 * **type**: 'Microsoft.Logic/workflows/runs/actions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Logic/workflows/triggers@2015-02-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Logic/workflows/triggers@2015-02-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2015-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -47,8 +52,9 @@
 * **properties**: [WorkflowTriggerProperties](#workflowtriggerproperties) (ReadOnly): Gets or sets the workflow trigger properties.
 * **type**: 'Microsoft.Logic/workflows/triggers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Logic/workflows/triggers/histories@2015-02-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Logic/workflows/triggers/histories@2015-02-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2015-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -56,8 +62,9 @@
 * **properties**: [WorkflowTriggerHistoryProperties](#workflowtriggerhistoryproperties) (ReadOnly): Gets the workflow trigger history properties.
 * **type**: 'Microsoft.Logic/workflows/triggers/histories' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Logic/workflows/versions@2015-02-01-preview (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Logic/workflows/versions@2015-02-01-preview
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2015-02-01-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

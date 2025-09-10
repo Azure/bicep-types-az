@@ -1,7 +1,8 @@
 # Qumulo.Storage @ 2022-10-12-preview
 
 ## Resource Qumulo.Storage/fileSystems@2022-10-12-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2022-10-12-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

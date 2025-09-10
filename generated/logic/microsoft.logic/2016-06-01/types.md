@@ -1,7 +1,8 @@
 # Microsoft.Logic @ 2016-06-01
 
 ## Resource Microsoft.Logic/integrationAccounts@2016-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -13,7 +14,8 @@
 * **type**: 'Microsoft.Logic/integrationAccounts' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Logic/integrationAccounts/agreements@2016-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -24,7 +26,8 @@
 * **type**: 'Microsoft.Logic/integrationAccounts/agreements' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Logic/integrationAccounts/assemblies@2016-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -35,7 +38,8 @@
 * **type**: 'Microsoft.Logic/integrationAccounts/assemblies' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Logic/integrationAccounts/batchConfigurations@2016-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -46,7 +50,8 @@
 * **type**: 'Microsoft.Logic/integrationAccounts/batchConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Logic/integrationAccounts/certificates@2016-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -57,7 +62,8 @@
 * **type**: 'Microsoft.Logic/integrationAccounts/certificates' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Logic/integrationAccounts/maps@2016-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -68,7 +74,8 @@
 * **type**: 'Microsoft.Logic/integrationAccounts/maps' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Logic/integrationAccounts/partners@2016-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -79,7 +86,8 @@
 * **type**: 'Microsoft.Logic/integrationAccounts/partners' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Logic/integrationAccounts/rosettanetprocessconfigurations@2016-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -90,7 +98,8 @@
 * **type**: 'Microsoft.Logic/integrationAccounts/rosettanetprocessconfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Logic/integrationAccounts/schemas@2016-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -101,7 +110,8 @@
 * **type**: 'Microsoft.Logic/integrationAccounts/schemas' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Logic/integrationAccounts/sessions@2016-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -112,7 +122,8 @@
 * **type**: 'Microsoft.Logic/integrationAccounts/sessions' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Logic/workflows@2016-06-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -122,8 +133,9 @@
 * **tags**: [ResourceTags](#resourcetags): The resource tags.
 * **type**: 'Microsoft.Logic/workflows' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Logic/workflows/runs@2016-06-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Logic/workflows/runs@2016-06-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -131,8 +143,9 @@
 * **properties**: [WorkflowRunProperties](#workflowrunproperties) (ReadOnly): The workflow run properties.
 * **type**: 'Microsoft.Logic/workflows/runs' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Logic/workflows/runs/actions@2016-06-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Logic/workflows/runs/actions@2016-06-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -140,8 +153,9 @@
 * **properties**: [WorkflowRunActionProperties](#workflowrunactionproperties) (ReadOnly): The workflow run action properties.
 * **type**: 'Microsoft.Logic/workflows/runs/actions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Logic/workflows/runs/actions/repetitions@2016-06-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Logic/workflows/runs/actions/repetitions@2016-06-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -151,8 +165,9 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): The resource tags.
 * **type**: 'Microsoft.Logic/workflows/runs/actions/repetitions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Logic/workflows/runs/actions/repetitions/requestHistories@2016-06-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Logic/workflows/runs/actions/repetitions/requestHistories@2016-06-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -162,8 +177,9 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): The resource tags.
 * **type**: 'Microsoft.Logic/workflows/runs/actions/repetitions/requestHistories' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Logic/workflows/runs/actions/requestHistories@2016-06-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Logic/workflows/runs/actions/requestHistories@2016-06-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -173,8 +189,9 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): The resource tags.
 * **type**: 'Microsoft.Logic/workflows/runs/actions/requestHistories' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Logic/workflows/runs/actions/scopeRepetitions@2016-06-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Logic/workflows/runs/actions/scopeRepetitions@2016-06-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -184,8 +201,9 @@
 * **tags**: [ResourceTags](#resourcetags) (ReadOnly): The resource tags.
 * **type**: 'Microsoft.Logic/workflows/runs/actions/scopeRepetitions' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Logic/workflows/runs/operations@2016-06-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Logic/workflows/runs/operations@2016-06-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -193,8 +211,9 @@
 * **properties**: [WorkflowRunProperties](#workflowrunproperties) (ReadOnly): The workflow run properties.
 * **type**: 'Microsoft.Logic/workflows/runs/operations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Logic/workflows/triggers@2016-06-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Logic/workflows/triggers@2016-06-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -202,8 +221,9 @@
 * **properties**: [WorkflowTriggerProperties](#workflowtriggerproperties) (ReadOnly): The workflow trigger properties.
 * **type**: 'Microsoft.Logic/workflows/triggers' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Logic/workflows/triggers/histories@2016-06-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Logic/workflows/triggers/histories@2016-06-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -211,8 +231,9 @@
 * **properties**: [WorkflowTriggerHistoryProperties](#workflowtriggerhistoryproperties) (ReadOnly): Gets the workflow trigger history properties.
 * **type**: 'Microsoft.Logic/workflows/triggers/histories' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.Logic/workflows/versions@2016-06-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource Microsoft.Logic/workflows/versions@2016-06-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2016-06-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

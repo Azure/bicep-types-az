@@ -1,7 +1,8 @@
 # microsoft.aadiam @ 2020-03-01
 
 ## Resource microsoft.aadiam/privateLinkForAzureAd@2020-03-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **allTenants**: bool: Flag indicating whether all tenants are allowed
 * **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant): The resource api version
@@ -16,7 +17,8 @@
 * **type**: 'microsoft.aadiam/privateLinkForAzureAd' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource microsoft.aadiam/privateLinkForAzureAd/privateEndpointConnections@2020-03-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -24,8 +26,9 @@
 * **properties**: [PrivateEndpointConnectionProperties](#privateendpointconnectionproperties): Resource properties.
 * **type**: 'microsoft.aadiam/privateLinkForAzureAd/privateEndpointConnections' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource microsoft.aadiam/privateLinkForAzureAd/privateLinkResources@2020-03-01 (ReadOnly)
-* **Valid Scope(s)**: ResourceGroup
+## Resource microsoft.aadiam/privateLinkForAzureAd/privateLinkResources@2020-03-01
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2020-03-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

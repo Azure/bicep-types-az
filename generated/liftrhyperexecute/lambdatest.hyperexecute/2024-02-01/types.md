@@ -1,7 +1,8 @@
 # LambdaTest.HyperExecute @ 2024-02-01
 
 ## Resource LambdaTest.HyperExecute/organizations@2024-02-01
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2024-02-01' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

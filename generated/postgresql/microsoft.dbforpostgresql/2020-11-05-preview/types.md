@@ -1,7 +1,8 @@
 # Microsoft.DBForPostgreSql @ 2020-11-05-preview
 
 ## Resource Microsoft.DBForPostgreSql/flexibleServers/databases@2020-11-05-preview
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2020-11-05-preview' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

@@ -1,7 +1,8 @@
 # Microsoft.AppComplianceAutomation @ 2024-06-27
 
 ## Resource Microsoft.AppComplianceAutomation/reports@2024-06-27
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2024-06-27' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -11,7 +12,8 @@
 * **type**: 'Microsoft.AppComplianceAutomation/reports' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AppComplianceAutomation/reports/evidences@2024-06-27
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2024-06-27' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -21,7 +23,8 @@
 * **type**: 'Microsoft.AppComplianceAutomation/reports/evidences' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AppComplianceAutomation/reports/scopingConfigurations@2024-06-27
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2024-06-27' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -30,8 +33,9 @@
 * **systemData**: [SystemData](#systemdata) (ReadOnly): Azure Resource Manager metadata containing createdBy and modifiedBy information.
 * **type**: 'Microsoft.AppComplianceAutomation/reports/scopingConfigurations' (ReadOnly, DeployTimeConstant): The resource type
 
-## Resource Microsoft.AppComplianceAutomation/reports/snapshots@2024-06-27 (ReadOnly)
-* **Valid Scope(s)**: Tenant
+## Resource Microsoft.AppComplianceAutomation/reports/snapshots@2024-06-27
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: None
 ### Properties
 * **apiVersion**: '2024-06-27' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -41,7 +45,8 @@
 * **type**: 'Microsoft.AppComplianceAutomation/reports/snapshots' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.AppComplianceAutomation/reports/webhooks@2024-06-27
-* **Valid Scope(s)**: Tenant
+* **Readable Scope(s)**: Tenant
+* **Writable Scope(s)**: Tenant
 ### Properties
 * **apiVersion**: '2024-06-27' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

@@ -1,7 +1,8 @@
 # Microsoft.Confluent @ 2023-08-22
 
 ## Resource Microsoft.Confluent/agreements@2023-08-22
-* **Valid Scope(s)**: Subscription
+* **Readable Scope(s)**: None
+* **Writable Scope(s)**: Subscription
 ### Properties
 * **apiVersion**: '2023-08-22' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id
@@ -11,7 +12,8 @@
 * **type**: 'Microsoft.Confluent/agreements' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.Confluent/organizations@2023-08-22
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2023-08-22' (ReadOnly, DeployTimeConstant): The resource api version
 * **id**: string (ReadOnly, DeployTimeConstant): The resource id

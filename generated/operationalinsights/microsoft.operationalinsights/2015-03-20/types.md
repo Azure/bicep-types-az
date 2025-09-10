@@ -1,7 +1,8 @@
 # Microsoft.OperationalInsights @ 2015-03-20
 
 ## Resource Microsoft.OperationalInsights/workspaces/savedSearches@2015-03-20
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-03-20' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: The ETag of the saved search.
@@ -11,7 +12,8 @@
 * **type**: 'Microsoft.OperationalInsights/workspaces/savedSearches' (ReadOnly, DeployTimeConstant): The resource type
 
 ## Resource Microsoft.OperationalInsights/workspaces/storageInsightConfigs@2015-03-20
-* **Valid Scope(s)**: ResourceGroup
+* **Readable Scope(s)**: ResourceGroup
+* **Writable Scope(s)**: ResourceGroup
 ### Properties
 * **apiVersion**: '2015-03-20' (ReadOnly, DeployTimeConstant): The resource api version
 * **eTag**: string: The ETag of the storage insight.
